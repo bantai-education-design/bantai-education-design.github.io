@@ -1,8 +1,8 @@
-# Ban.Tai Education Design 公式サイト
+# Ban.Tai Education Design 公式サイト v2
 
-GitHub Pages 用の静的サイト一式です。
+アップロード画像を検証し、五線紙作成メーカー、画像文字入れツール、証明写真メーカーのページを追加した版です。
 
 公開想定URL:
 https://bantai-education-design.github.io/
 
-このZIPの中身を `bantai-education-design/bantai-education-design.github.io` リポジトリのルートに置いてください。
+ZIPを展開し、フォルダごとではなく中身をリポジトリ直下へアップロードしてください。
