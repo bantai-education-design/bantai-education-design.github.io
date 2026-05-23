@@ -98,3 +98,56 @@ h2{color:var(--navy);font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.35;margin:
   color:var(--muted);
   margin-top:8px;
 }
+
+/* v6: 画像切れ防止を最優先 */
+.product img,
+.gallery img,
+.visual img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #fff !important;
+}
+.product img {
+  padding: 10px !important;
+}
+.gallery img {
+  padding: 8px !important;
+}
+.product {
+  overflow: visible !important;
+}
+.visual {
+  overflow: visible !important;
+}
+
+/* v7 banner studio */
+.banner-studio-hero{
+  min-height:560px;
+  background:
+    linear-gradient(90deg,rgba(7,27,54,.96) 0%,rgba(7,27,54,.86) 42%,rgba(7,27,54,.32) 100%),
+    url("/assets/images/banner-studio-screenshot.jpg") right center/68% auto no-repeat,
+    linear-gradient(135deg,#071b36,#102e57);
+}
+.banner-studio-hero h1{font-size:clamp(2.1rem,4.5vw,4.4rem)}
+.problem-list{display:grid;gap:14px}
+.problem-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid rgba(7,27,54,.08);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(7,27,54,.08)}
+.problem-item .num{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#c8a45d,#edd996);color:#071b36;font-weight:800}
+.story-box{background:linear-gradient(180deg,#fff,#fffaf0);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.download-cta{background:linear-gradient(135deg,#071b36,#102e57);color:#fff;border-radius:30px;padding:42px;box-shadow:var(--shadow);border:1px solid rgba(200,164,93,.42)}
+.download-cta h2{color:#fff}
+.download-cta .note{color:rgba(255,255,255,.78)}
+.btn-download-large{display:inline-flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1.08rem;color:#071b36;background:linear-gradient(135deg,#c8a45d,#edd996);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.btn-download-large:hover{transform:translateY(-2px)}
+.spec-list{list-style:none;padding:0;margin:0}
+.spec-list li{padding:11px 0;border-bottom:1px solid rgba(7,27,54,.08)}
+.article-link-box{background:#fff;border-left:5px solid var(--gold);border-radius:16px;padding:22px;box-shadow:0 10px 28px rgba(7,27,54,.08)}
+@media(max-width:860px){
+  .banner-studio-hero{
+    background:
+      linear-gradient(135deg,rgba(7,27,54,.96),rgba(7,27,54,.86)),
+      url("/assets/images/banner-studio-screenshot.jpg") center bottom/120% auto no-repeat;
+  }
+}
