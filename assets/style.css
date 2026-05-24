@@ -185,3 +185,11 @@ h2{color:var(--navy);font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.35;margin:
 @media(max-width:860px){
   .latest-release .latest-box{grid-template-columns:1fr}
 }
+
+/* v12 staff clean */
+.products-staff-note{color:var(--muted)}
+.gallery img,
+.visual.contain img{
+  object-fit:contain !important;
+  background:#fff !important;
+}
