@@ -1,67 +1,22 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>モニター利用者募集 | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/">ホーム</a><a href="/#concept">考え方</a><a href="/products/education-planning/">教育計画</a><a href="/products/staff-paper/">五線紙</a><a href="/products/text-overlay/">画像文字入れ</a><a href="/products/banner-studio/">Noteバナー</a><a href="/monitor/">モニター募集</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header>
+# 画像資料の検証メモ
 
-<main>
-<section class="page-hero">
-  <div class="container">
-    <div class="kicker">Monitor Program</div>
-    <h1>モニター利用者募集中</h1>
-    <p class="lead">小学校教育計画作成・運営システム Ver.5.70.7 モニター版</p>
-  </div>
-</section>
+- staff-infographic: Gemini_Generated_Image_j2y8voj2y8voj2y8.png / (2048, 1117) / PNG
+- id-photo-steps: 1774710117-b8pZP4cTXq6zBDMUREydoOJr.webp / (807, 440) / WEBP
+- id-photo-okng: 1774710145-pIMUHNGrd2BOoL8hkQSznftW.webp / (816, 439) / WEBP
+- id-photo-roadmap: 証明写真.webp / (810, 448) / WEBP
+- staff-icon-source: スクリーンショット 2026-04-27 135649.png / (406, 407) / PNG
+- staff-splash-source: スクリーンショット 2026-04-29 191255.png / (789, 625) / PNG
+- staff-hero: ChatGPT Image 2026年5月3日 21_13_41.png / (1536, 1024) / PNG
+- text-tool-features-blue: 特色.png / (1200, 630) / PNG
+- text-tool-features-light: 特色2.png / (1152, 619) / PNG
+- text-tool-overview: 特色3.png / (2048, 1143) / PNG
+- staff-usecases: unnamed (1).png / (2048, 1143) / PNG
+- staff-clefs: スクリーンショット 2026-05-03 143519.png / (936, 638) / PNG
+- staff-settings: スクリーンショット 2026-05-03 143613.png / (948, 580) / PNG
+- staff-icon-ico: icon.ico / (256, 256) / ICO
 
-<section class="section">
-  <div class="container grid grid-2">
-    <div class="card gold">
-      <h2>登録後、メールでライセンスキーをご案内します</h2>
-      <p>モニター用ライセンスキーは、Webページ上には直接表示せず、Googleフォームから登録された方へ自動返信メールでお知らせします。</p>
-      <p>登録後のメールには、ダウンロード案内、起動時の注意、ライセンスキー、利用期限、問い合わせ先を記載します。</p>
-      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform">モニター登録フォームを開く</a>
-    </div>
-
-    <div class="card">
-      <h3>モニター利用期間</h3>
-      <p><strong>小学校教育計画作成・運営システム</strong>は、2027年3月31日までのモニター利用を予定しています。</p>
-      <p><strong>その他のアプリ</strong>については、原則として10日間の試用期間を想定しています。</p>
-      <p class="note">正式な利用条件は、各アプリの公開時に商品ページでご案内します。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background:#fff">
-  <div class="container">
-    <div class="sub">Flow</div>
-    <h2>モニター利用の流れ</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="mark">1</div>
-        <h3>フォーム登録</h3>
-        <p>お名前、メールアドレス、利用したいシステム、利用目的などを入力します。</p>
-      </div>
-      <div class="card">
-        <div class="mark">2</div>
-        <h3>自動返信メールを確認</h3>
-        <p>登録後、ライセンスキー、ダウンロード案内、利用上の注意をメールで確認します。</p>
-      </div>
-      <div class="card">
-        <div class="mark">3</div>
-        <h3>ZIPを展開して利用開始</h3>
-        <p>ダウンロードしたZIPは、必ず「すべて展開」してから起動してください。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-narrow">
-  <div class="container warning">
-    <h3>利用前の注意</h3>
-    <ul class="notice-list">
-      <li>学校や職場のPCで使用する場合は、管理者または情報担当者に確認してください。</li>
-      <li>Windows SmartScreen やセキュリティ警告が出る場合があります。</li>
-      <li>ZIPファイルの中から直接 exe を起動せず、必ず展開してから使用してください。</li>
-      <li>不具合、分かりにくい点、改善してほしい点をお知らせいただけると、正式版の改善に活用できます。</li>
-    </ul>
-  </div>
-</section>
-</main>
-
-<a class="home-floating" href="/">ホームへ</a><footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
+使用方針:
+- 五線紙作成メーカー資料は `products/staff-paper/` に使用。
+- 画像文字入れツール資料は `products/text-overlay/` に使用。
+- 証明写真メーカー資料は `products/id-photo/` に使用。
+- 教育計画システムの主力商品ページとは混在させない。
