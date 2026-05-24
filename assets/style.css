@@ -193,3 +193,19 @@ h2{color:var(--navy);font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.35;margin:
   object-fit:contain !important;
   background:#fff !important;
 }
+
+/* v13 staff image replacement */
+.staff-single-visual{
+  margin-top:24px;
+  border-radius:26px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+.staff-single-visual img{
+  width:100% !important;
+  height:auto !important;
+  object-fit:contain !important;
+  display:block;
+  padding:0 !important;
+}
