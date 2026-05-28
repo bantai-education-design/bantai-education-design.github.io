@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">学級名簿メーカーの紹介画像</title>
+  <desc id="desc">落ち着いた青緑色の背景に、名簿表とチェック欄を重ねたイメージ画像です。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f7f3"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0b355f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#102e57" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="990" cy="125" r="170" fill="#c8a45d" opacity=".13"/>
+  <circle cx="145" cy="650" r="210" fill="#0f766e" opacity=".10"/>
+  <rect x="105" y="88" width="990" height="584" rx="34" fill="#fff" filter="url(#shadow)"/>
+  <rect x="105" y="88" width="990" height="96" rx="34" fill="url(#card)"/>
+  <text x="154" y="150" font-family="'Yu Gothic','Noto Sans JP',sans-serif" font-size="36" font-weight="700" fill="#fff">学級名簿メーカー</text>
+  <text x="154" y="218" font-family="'Yu Gothic','Noto Sans JP',sans-serif" font-size="24" font-weight="700" fill="#0b355f">1年1組 提出物チェック表</text>
+  <rect x="154" y="244" width="890" height="350" rx="14" fill="#ffffff" stroke="#c9d8e6" stroke-width="3"/>
+  <g font-family="'Yu Gothic','Noto Sans JP',sans-serif" font-size="20" fill="#17324f">
+    <rect x="154" y="244" width="890" height="48" fill="#eef7f6"/>
+    <text x="176" y="276" font-weight="700">番号</text>
+    <text x="262" y="276" font-weight="700">氏名</text>
+    <text x="515" y="276" font-weight="700">月</text>
+    <text x="635" y="276" font-weight="700">火</text>
+    <text x="755" y="276" font-weight="700">水</text>
+    <text x="875" y="276" font-weight="700">木</text>
+    <text x="995" y="276" font-weight="700">金</text>
+  </g>
+  <g stroke="#d9e4ee" stroke-width="2">
+    <line x1="230" y1="244" x2="230" y2="594"/>
+    <line x1="470" y1="244" x2="470" y2="594"/>
+    <line x1="590" y1="244" x2="590" y2="594"/>
+    <line x1="710" y1="244" x2="710" y2="594"/>
+    <line x1="830" y1="244" x2="830" y2="594"/>
+    <line x1="950" y1="244" x2="950" y2="594"/>
+    <line x1="154" y1="292" x2="1044" y2="292"/>
+    <line x1="154" y1="342" x2="1044" y2="342"/>
+    <line x1="154" y1="392" x2="1044" y2="392"/>
+    <line x1="154" y1="442" x2="1044" y2="442"/>
+    <line x1="154" y1="492" x2="1044" y2="492"/>
+    <line x1="154" y1="542" x2="1044" y2="542"/>
+  </g>
+  <g font-family="'Yu Gothic','Noto Sans JP',sans-serif" font-size="22" fill="#17324f">
+    <text x="184" y="326" text-anchor="middle">1</text>
+    <text x="262" y="326">あおき ひな</text>
+    <text x="184" y="376" text-anchor="middle">2</text>
+    <text x="262" y="376">いしかわ れん</text>
+    <text x="184" y="426" text-anchor="middle">3</text>
+    <text x="262" y="426">ささき ゆうま</text>
+    <text x="184" y="476" text-anchor="middle">4</text>
+    <text x="262" y="476">なかむら あさひ</text>
+    <text x="184" y="526" text-anchor="middle">5</text>
+    <text x="262" y="526">はせがわ ことね</text>
+  </g>
+  <g fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M526 319l18 18 34-42"/>
+    <path d="M646 369l18 18 34-42"/>
+    <path d="M766 419l18 18 34-42"/>
+    <path d="M886 469l18 18 34-42"/>
+  </g>
+  <rect x="730" y="615" width="314" height="44" rx="22" fill="#fff8e7" stroke="#c8a45d"/>
+  <text x="887" y="644" text-anchor="middle" font-family="'Yu Gothic','Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#715922">無料で使えます</text>
+</svg>

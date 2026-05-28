@@ -44,6 +44,7 @@ h2{color:var(--navy);font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.35;margin:
 .footer{background:#06172d;color:rgba(255,255,255,.76);padding:54px 0 28px;border-top:4px solid var(--gold)}.footer h2{color:#fff;font-size:1.6rem}.footer a{color:#fff}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:22px;font-size:.85rem;color:rgba(255,255,255,.58)}
 @media(max-width:980px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){.menu{display:none}.hero{min-height:560px}.hero:before{background-size:130% auto;background-position:center bottom;opacity:.10}.grid-2,.grid-3,.grid-4,.download,.footer-grid{grid-template-columns:1fr}.monitor-panel{padding:30px}.row{grid-template-columns:1fr}.home-floating{right:14px;bottom:14px;padding:10px 14px;font-size:.9rem}}
+@media(max-width:860px){body{overflow-x:hidden}.btn{max-width:100%;white-space:normal;text-align:center}.actions{align-items:flex-start}.product,.visual,.roster-card{min-width:0}}
 
 /* v3: 商品カード画像を切らずに見せる */
 .product{
@@ -208,4 +209,113 @@ h2{color:var(--navy);font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.35;margin:
   object-fit:contain !important;
   display:block;
   padding:0 !important;
+}
+
+/* class roster maker */
+.class-roster-section{
+  background:linear-gradient(180deg,#f4fbf9,#fff 48%,#f8fbff);
+  border-top:1px solid rgba(15,118,110,.14);
+  border-bottom:1px solid rgba(15,118,110,.12);
+}
+.roster-feature{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:30px;
+  align-items:center;
+}
+.roster-copy{
+  max-width:680px;
+}
+.roster-lead{
+  font-size:1.14rem;
+  color:#243852;
+  font-weight:700;
+}
+.roster-card{
+  position:relative;
+  background:#fff;
+  border:1px solid rgba(7,27,54,.08);
+  border-radius:28px;
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+.roster-card img{
+  width:100%;
+  border-radius:20px;
+  background:#f8fbff;
+  border:1px solid rgba(15,118,110,.12);
+}
+.roster-card h3{
+  margin-top:18px;
+}
+.free-label{
+  position:absolute;
+  top:34px;
+  right:34px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#c8a45d,#edd996);
+  color:#071b36;
+  font-weight:900;
+  box-shadow:0 10px 24px rgba(7,27,54,.16);
+}
+.privacy-note{
+  margin-top:20px;
+  padding:16px 18px;
+  border-radius:16px;
+  background:#fffaf0;
+  border:1px solid var(--line);
+  color:#31405a;
+  font-size:.95rem;
+}
+.roster-details{
+  margin-top:54px;
+}
+.roster-points{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin-top:22px;
+}
+.roster-point{
+  background:#fff;
+  border:1px solid rgba(7,27,54,.08);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 28px rgba(7,27,54,.08);
+}
+.roster-point strong{
+  display:block;
+  color:var(--navy);
+  font-size:1.02rem;
+  margin-bottom:6px;
+}
+.roster-point span{
+  color:var(--muted);
+  font-size:.94rem;
+}
+.roster-steps{
+  margin-top:32px;
+  background:linear-gradient(135deg,#071b36,#102e57);
+  color:#fff;
+  border-radius:26px;
+  padding:28px 34px;
+  box-shadow:var(--shadow);
+}
+.roster-steps h3{
+  color:#fff;
+}
+.roster-steps ol{
+  margin:10px 0 0;
+  padding-left:1.3em;
+}
+@media(max-width:980px){
+  .roster-points{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:860px){
+  .roster-feature,
+  .roster-points{grid-template-columns:1fr}
+  .roster-copy .actions .btn{width:100%}
+  .free-label{position:static;display:inline-flex;margin:14px 0 0}
+  .roster-steps{padding:24px}
 }
