@@ -1,6 +1,430 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>モニター利用者募集 | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-icon.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/#concept">考え方</a><a href="/products/education-planning/">主力商品</a><a href="/monitor/">モニター募集</a><a href="/products/staff-paper/">五線紙</a><a href="/about/">開発者の思い</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header>
-<main><section class="page-hero"><div class="container"><div class="kicker">Monitor Program</div><h1>無料モニター募集中</h1><p class="lead">小学校教育計画作成・運営システム（教務支援・週案） Ver.5.70.7 モニター版</p></div></section>
-<section class="section"><div class="container grid grid-2"><div class="card gold"><h2>2027年3月31日まで無償利用</h2><p>無料モニター登録後、自動返信メールにて固定ライセンスキーをお送りします。使用感、不具合、分かりにくい点、改善してほしい点をお知らせください。</p><p style="margin-top:15px;">※ダウンロードは無料モニター登録完了メールに記載されたリンク、または公式HPの主力商品詳細ページから行うことができます。</p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform" style="margin-top:15px; display:inline-block;">無料モニター登録はこちら</a></div><div class="card"><h3>ご利用の流れ</h3><ol style="line-height:1.8; padding-left:20px; margin:0 0 20px 0; color:#333;"><li><strong>無料モニター登録</strong><br>登録フォームボタンから、Googleフォームに必要事項を入力して送信します。</li><li><strong>自動返信メールを受信</strong><br>登録完了後、自動返信メールにて「固定ライセンスキー」が届きます。</li><li><strong>ダウンロード＆インストール</strong><br>メール内リンクまたは公式HPからご希望のバージョンのZIPファイルをダウンロードし、インストールします。</li><li><strong>利用開始</strong><br>初回起動時に、送付された「固定ライセンスキー」を入力して利用を開始します。</li></ol></div></div></section>
-<section class="section" style="background:#fff"><div class="container"><div style="max-width:800px; margin:0 auto;"><h2>選べる3つの配布形態</h2><p style="margin-bottom:20px; color:#333;">学校の状況や用途に合わせて、以下の3つの配布形態から選択してご利用いただけます。</p><div style="display:flex; flex-direction:column; gap:20px; text-align:left;"><div style="padding:20px; background:#f9f9f9; border-radius:6px; border:1px solid #eee;"><h3 style="margin-top:0; color:#b25900;">■ 統合版</h3><p style="margin:5px 0 0 0; color:#333; line-height:1.6;">教務支援システムと週案システムを連携して使う方向けのパッケージです。教育計画から日々の週案実施、時数集計までを一気通貫で管理できます。</p></div><div style="padding:20px; background:#f9f9f9; border-radius:6px; border:1px solid #eee;"><h3>■ 教務支援システム単体版</h3><p style="margin:5px 0 0 0; color:#333; line-height:1.6;">教育計画、採択設定、時数確認、提出書類作成を中心に使う方向けのパッケージです。</p></div><div style="padding:20px; background:#f9f9f9; border-radius:6px; border:1px solid #eee;"><h3>■ 週案システム単体版</h3><p style="margin:5px 0 0 0; color:#333; line-height:1.6;">週案作成、週案印刷、週案データ管理を中心に使う方向けのパッケージです。</p></div></div></div></div></section></main>
-<footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
-<!-- Force Rebuild: 2026-05-30 Monitor Guidance -->
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>モニター利用者募集 | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css"><style>
+    /* monitor募集ページ専用：完全画像無しのモダンLP設計 */
+    
+    /* 共通リセットと干渉排除 */
+    .monitor-hero, .monitor-hero::after, .monitor-hero::before,
+    .product-cards-section, .product-cards-section::after, .product-cards-section::before,
+    .flow-section, .flow-section::after, .flow-section::before,
+    .warning-section, .warning-section::after, .warning-section::before {
+      background-image: none !important;
+      content: none !important;
+    }
+
+    /* ヒーローセクション */
+    .monitor-hero {
+      background: linear-gradient(180deg, #FAF8F5 0%, #F3EFEA 100%) !important;
+      color: var(--navy);
+      padding: 90px 0 70px;
+      text-align: center;
+      border-bottom: 1px solid rgba(200, 164, 93, 0.25);
+    }
+    .monitor-hero h1 {
+      font-size: clamp(1.8rem, 4.2vw, 2.8rem);
+      line-height: 1.4;
+      margin: 15px 0 20px;
+      color: var(--navy);
+      font-weight: 700;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      font-family: "Yu Mincho", "YuMincho", Georgia, serif;
+    }
+    .monitor-hero .lead {
+      font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+      max-width: 800px;
+      margin: 0 auto 35px;
+      color: #31405a;
+      line-height: 1.85;
+    }
+    .monitor-hero .actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    .monitor-hero .btn-primary {
+      box-shadow: 0 8px 20px rgba(200, 164, 93, 0.25);
+      background: linear-gradient(135deg, var(--gold), #edd996);
+      color: #071b36;
+      padding: 14px 30px;
+      font-size: 1.05rem;
+    }
+
+    /* ファーストビューサマリー */
+    .hero-summary {
+      background: #fff;
+      border: 1px solid rgba(200, 164, 93, 0.22);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 780px;
+      margin: -35px auto 50px;
+      box-shadow: 0 15px 35px rgba(7, 27, 54, 0.06);
+      position: relative;
+      z-index: 10;
+      text-align: left;
+    }
+    .hero-summary h3 {
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-summary h3::before {
+      content: "🎁";
+    }
+    .hero-summary ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #333;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .hero-summary li {
+      margin-bottom: 8px;
+    }
+    .hero-summary li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 3種類配布形態カード */
+    .product-cards-section {
+      padding: 70px 0;
+      background: #fff !important;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+      font-family: "Yu Mincho", "YuMincho", Georgia, serif;
+    }
+    .section-title h2 {
+      font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .section-title p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .prod-card {
+      background: #fff;
+      border: 1px solid rgba(7, 27, 54, 0.08);
+      border-radius: 24px;
+      padding: 35px 25px;
+      box-shadow: 0 10px 30px rgba(7, 27, 54, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .prod-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(7, 27, 54, 0.08);
+    }
+    .prod-card.gold-border {
+      border: 2px solid var(--gold);
+      background: linear-gradient(180deg, #fff 0%, #FFFDF9 100%);
+    }
+    .prod-tag {
+      align-self: flex-start;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: #f0f4f8;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+    .prod-card.gold-border .prod-tag {
+      background: linear-gradient(135deg, var(--gold), #edd996);
+      color: #071b36;
+    }
+    .prod-title {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .prod-desc {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #4a5568;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .prod-meta {
+      border-top: 1px solid rgba(7, 27, 54, 0.06);
+      padding-top: 15px;
+      margin-bottom: 25px;
+    }
+    .prod-meta-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .prod-meta-val {
+      font-size: 0.88rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .prod-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 99px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: background-color 0.2s, transform 0.2s;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .prod-btn-primary {
+      background: var(--navy);
+      color: #fff;
+    }
+    .prod-btn-primary:hover {
+      background: var(--navy2);
+    }
+    .prod-btn-gold {
+      background: linear-gradient(135deg, var(--gold), #edd996);
+      color: #071b36;
+    }
+    .prod-btn-gold:hover {
+      transform: translateY(-1px);
+    }
+
+    /* ご利用の流れ 6ステップ */
+    .flow-section {
+      padding: 80px 0;
+      background: #F7F8FA !important;
+      border-top: 1px solid rgba(7, 27, 54, 0.04);
+      border-bottom: 1px solid rgba(7, 27, 54, 0.04);
+    }
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .flow-card {
+      background: #fff;
+      border: 1px solid rgba(7, 27, 54, 0.05);
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 24px rgba(7, 27, 54, 0.02);
+      position: relative;
+    }
+    .flow-num {
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 10px rgba(7, 27, 54, 0.15);
+      font-family: Georgia, serif;
+    }
+    .flow-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .flow-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .flow-desc {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Google Drive警告ボックス */
+    .warning-section {
+      padding: 80px 0;
+      background: #fff !important;
+    }
+    .warning-box {
+      background: #FFFBF0;
+      border: 2px solid rgba(200, 164, 93, 0.4);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(200, 164, 93, 0.08);
+      text-align: left;
+    }
+    .warning-box h3 {
+      margin-top: 0;
+      color: #856404;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(200, 164, 93, 0.2);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .warning-box ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.75;
+      font-size: 0.94rem;
+      color: #664d03;
+    }
+    .warning-box li {
+      margin-bottom: 12px;
+    }
+    .warning-box li:last-child {
+      margin-bottom: 0;
+    }
+    .warning-box strong {
+      color: #b25900;
+    }
+
+    /* CTAセクション */
+    .cta-section {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #071b36 0%, #102e57 100%) !important;
+      color: #fff;
+      text-align: center;
+    }
+    .cta-container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      color: #fff;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-family: "Yu Mincho", "YuMincho", Georgia, serif;
+    }
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+      margin-bottom: 35px;
+      line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-buttons .btn {
+      min-width: 220px;
+    }
+    .cta-buttons .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #edd996);
+      color: #071b36;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+    .cta-buttons .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .cta-buttons .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+    .cta-buttons .btn-email {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--navy);
+      border: 1px solid #fff;
+    }
+    .cta-buttons .btn-email:hover {
+      background: #fff;
+    }
+
+    /* 右下フローティングの改善 (より小さく控えめに、または角丸でシンプルなスタイル) */
+    .about-floating-home {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 4px 15px rgba(7, 27, 54, 0.15);
+      border: 1px solid rgba(200, 164, 93, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .about-floating-home:hover {
+      transform: scale(1.08);
+      background-color: #fffaf0;
+    }
+
+    /* レスポンシブ */
+    @media(max-width: 960px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .flow-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+    @media(max-width: 600px) {
+      .monitor-hero {
+        padding: 60px 0 50px;
+      }
+      .hero-summary {
+        margin: -25px 15px 40px;
+        padding: 20px;
+      }
+      .product-cards-section, .flow-section, .warning-section {
+        padding: 50px 0;
+      }
+      .flow-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      .warning-box {
+        padding: 24px 20px;
+      }
+      .cta-section {
+        padding: 60px 0;
+      }
+      .cta-buttons .btn {
+        width: 100%;
+      }
+      .about-floating-home {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/">ホーム</a><a href="/#concept">考え方</a><a href="/products/education-planning/">教育計画</a><a href="/products/staff-paper/">五線紙</a><a href="/products/text-overlay/">画像文字入れ</a><a href="/products/banner-studio/">Noteバナースタジオ</a><a href="/monitor/">モニター募集</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header><main><section class="monitor-hero"><div class="container"><div class="kicker">Monitor Program</div><h1>無料モニター利用者募集中</h1><p class="lead">小学校教育計画作成・運営システム（教務支援・週案） Ver.5.70.7 モニター版を無償で提供します。学校の実務軽減を実感してください。</p><div class="actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform">無料モニターに登録する</a></div></div></section><div class="container"><div class="hero-summary"><h3>モニター登録すると届くもの</h3><ul><li><strong>固定ライセンスキー</strong>（自動返信メールで即時にお送りします。2027年3月31日まで無償でご利用いただけます）</li><li><strong>ダウンロード案内URL</strong>（統合版、および2つの単体版を自由に選んでダウンロードできます）</li><li><strong>利用サポート案内</strong>（不具合報告や、改善・機能追加のリクエスト窓口をご利用いただけます）</li></ul></div></div><section class="product-cards-section"><div class="container"><div class="section-title"><h2>選べる3つの配布形態</h2><p>用途や学校の状況に合わせて、ご希望の構成をダウンロードしてください。</p></div><div class="product-grid"><div class="prod-card gold-border"><div class="prod-tag">おすすめ</div><h3 class="prod-title">① 統合版</h3><p class="prod-desc">教務支援システムと週案システムを連携して使う方向けの全部入りパッケージです。教育計画から日々の週案実施、時数集計までを一気通貫で管理できます。</p><div class="prod-meta"><div class="prod-meta-label">向いている人</div><div class="prod-meta-val">教務と週案を連携させて効率化したい先生</div></div><a class="prod-btn prod-btn-gold" href="https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk">統合版をダウンロード</a></div><div class="prod-card"><div class="prod-tag">単体版</div><h3 class="prod-title">② 教務支援システム単体版</h3><p class="prod-desc">教育計画設定、採択設定、授業時数確認、提出書類作成を中心に使う方向けのパッケージです。週案機能は不要で、教務事務をメインで整理したい場合に向いています。</p><div class="prod-meta"><div class="prod-meta-label">向いている人</div><div class="prod-meta-val">学年主任や教務主任など、全体の時数・計画を扱う先生</div></div><a class="prod-btn prod-btn-primary" href="https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk">教務単体版をダウンロード</a></div><div class="prod-card"><div class="prod-tag">単体版</div><h3 class="prod-title">③ 週案システム単体版</h3><p class="prod-desc">日々の週案作成、週案の印刷、週案データ管理を中心に使う方向けのパッケージです。時数自動集計により、手計算の手間を完全に削減します。</p><div class="prod-meta"><div class="prod-meta-label">向いている人</div><div class="prod-meta-val">日々の週案作成と授業時数管理を手早く終わらせたい担任の先生</div></div><a class="prod-btn prod-btn-primary" href="https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk">週案単体版をダウンロード</a></div></div></div></section><section class="flow-section"><div class="container"><div class="section-title"><h2>モニター利用開始の流れ</h2><p>ご利用開始まで、迷わずスムーズに進められる6つのステップです。</p></div><div class="flow-grid"><div class="flow-card"><span class="flow-num">1</span><span class="flow-icon">📝</span><h4 class="flow-title">登録フォームへ進む</h4><p class="flow-desc">「無料モニター登録」ボタンから、Googleフォームに必要事項を入力して送信します。</p></div><div class="flow-card"><span class="flow-num">2</span><span class="flow-icon">✉️</span><h4 class="flow-title">自動返信メールを受信</h4><p class="flow-desc">送信後、数分以内にシステムから登録完了の自動返信メールが届きます。</p></div><div class="flow-card"><span class="flow-num">3</span><span class="flow-icon">🔑</span><h4 class="flow-title">キーと案内を確認</h4><p class="flow-desc">メールに記載されている「固定ライセンスキー」と「ダウンロード手順」を確認します。</p></div><div class="flow-card"><span class="flow-num">4</span><span class="flow-icon">💾</span><h4 class="flow-title">ZIPをダウンロード</h4><p class="flow-desc">本ページの「ダウンロード」ボタン、またはメール記載のURLからZIPを保存します。</p></div><div class="flow-card"><span class="flow-num">5</span><span class="flow-icon">📦</span><h4 class="flow-title">ZIPを「すべて展開」</h4><p class="flow-desc">保存したZIPファイルを右クリックし、「すべて展開」（解凍）を実行します。</p></div><div class="flow-card"><span class="flow-num">6</span><span class="flow-icon">🚀</span><h4 class="flow-title">アプリ起動・キー入力</h4><p class="flow-desc">展開したフォルダ内の実行用exeを起動し、メール記載のキーを入力して利用を開始します。</p></div></div></div></section><section class="warning-section"><div class="container"><div class="warning-box"><h3>⚠️ Google Drive ダウンロード時の重要なお願い</h3><ul><li>Google Driveのダウンロード画面で<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。異常ではありませんので、画面内の<strong>「ダウンロード」</strong>ボタンをクリックしてください。</li><li>「ZIPエクストラクター」「CloudConvert」「Zip, UnZip」などの<strong>外部アプリを接続・選択する必要は一切ありません。</strong></li><li>ダウンロードした後は、必ずZIPファイルを右クリックして<strong>「すべて展開」</strong>（解凍）してからご利用ください。</li><li>解凍後に生成された<strong>「実行用フォルダ（中身全体）」を同じフォルダに置いたまま</strong>お使いください。<code>KyomuSystem.exe</code> や <code>WeekplanSystem.exe</code> などの本体ファイルだけをデスクトップ等へ単体で移動させると、関連ファイルが読み込めず起動しません。</li></ul></div></div></section><section class="cta-section"><div class="container cta-container"><h2>学校実務をよりシンプルに、スマートに。</h2><p>自動の時数計算や、学校の年間日程に合わせた週案作成により、日々の時間を大きく生み出します。まずは無料モニターとして、その軽快さを体験してください。</p><div class="cta-buttons"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform">無料モニター登録フォームを開く</a><a class="btn btn-secondary" href="../products/education-planning/">教育計画作成システム詳細</a><a class="btn btn-secondary btn-email" href="mailto:ban.tai3educationdesign@gmail.com">お問い合わせ</a></div></div></section></main><a class="about-floating-home" href="/">ホーム</a><footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
