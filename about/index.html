@@ -1,1 +1,311 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>開発者の思い | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/">ホーム</a><a href="/#concept">考え方</a><a href="/products/education-planning/">教育計画</a><a href="/products/staff-paper/">五線紙</a><a href="/products/text-overlay/">画像文字入れ</a><a href="/products/banner-studio/">Noteバナースタジオ</a><a href="/monitor/">モニター募集</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header><main><section class="page-hero"><div class="container"><div class="kicker">Ban.Tai Education Design</div><h1>開発者の思い</h1><p class="lead">教育現場の実務を知る立場から、先生方の日常を少しでも軽くするために開発しています。</p></div></section><section class="section"><div class="container card gold"><h2>開発者の思い</h2><p>教育現場の実務を知る立場から、先生方の日常を少しでも軽くするために開発しています。</p></div></section></main><a class="home-floating" href="/">ホームへ</a><footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>開発者の思い | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css"><style>
+    /* about ページ専用のブランド紹介LP用追加スタイル */
+    .about-hero {
+      background: radial-gradient(circle at 80% 20%, rgba(200, 164, 93, 0.08), transparent 45%),
+                  linear-gradient(135deg, #fdfbfa 0%, #f7f5f0 100%);
+      color: var(--navy);
+      padding: 90px 0 70px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(200, 164, 93, 0.2);
+    }
+    .about-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.35;
+      margin: 15px 0 20px;
+      color: var(--navy);
+      font-weight: 700;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    .about-hero .lead {
+      font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+      max-width: 780px;
+      margin: 0 auto 35px;
+      color: var(--ink);
+      line-height: 1.8;
+    }
+    .about-hero .actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .about-hero .btn-primary {
+      box-shadow: 0 8px 20px rgba(200,164,93,0.3);
+    }
+    .about-hero .btn-light {
+      background: #fff;
+      border: 1px solid rgba(7, 27, 54, 0.15);
+      color: var(--navy);
+    }
+
+    /* 実績サマリーカード */
+    .stats-section {
+      padding: 70px 0;
+      background: #fff;
+    }
+    .stats-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .stats-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .stats-header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid rgba(200, 164, 93, 0.28);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(7, 27, 54, 0.04);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(7, 27, 54, 0.08);
+    }
+    .stat-num-wrapper {
+      margin-bottom: 10px;
+    }
+    .stat-num {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      font-weight: bold;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
+    }
+    .stat-desc {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* 本文詳細セクション */
+    .about-story {
+      padding: 20px 0 80px;
+      background: #f8f9fc;
+    }
+    .story-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .story-card {
+      background: #fff;
+      border: 1px solid rgba(7, 27, 54, 0.06);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(7, 27, 54, 0.03);
+    }
+    .story-card.alt {
+      background: linear-gradient(180deg, #fff, #fffaf3);
+      border-color: rgba(200, 164, 93, 0.2);
+    }
+    .story-card h3 {
+      font-family: "Yu Mincho", "YuMincho", Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(7, 27, 54, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .story-card h3::before {
+      content: "";
+      width: 6px;
+      height: 1.2em;
+      background: var(--gold);
+      border-radius: 99px;
+      display: inline-block;
+    }
+    .story-card-body {
+      color: #333;
+      font-size: 1.02rem;
+      line-height: 1.9;
+    }
+    .story-card-body p {
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+    }
+    .story-card-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 役割リストスタイル */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .role-tag {
+      background: #f5f7fa;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--navy);
+      font-weight: 500;
+      border: 1px solid rgba(7, 27, 54, 0.04);
+    }
+
+    /* CTAセクション */
+    .cta-section {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #071b36 0%, #0d274c 50%, #12335e 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .cta-container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      color: #fff;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+      margin-bottom: 35px;
+      line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-buttons .btn {
+      min-width: 220px;
+    }
+    .cta-buttons .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #edd996);
+      color: #071b36;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+    .cta-buttons .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .cta-buttons .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+    .cta-buttons .btn-email {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--navy);
+      border: 1px solid #fff;
+    }
+    .cta-buttons .btn-email:hover {
+      background: #fff;
+    }
+
+    /* 右下フローティングの改善 (より小さく控えめに、または角丸でシンプルなスタイル) */
+    .about-floating-home {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 4px 15px rgba(7, 27, 54, 0.15);
+      border: 1px solid rgba(200, 164, 93, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .about-floating-home:hover {
+      transform: scale(1.08);
+      background-color: #fffaf0;
+    }
+
+    /* レスポンシブ */
+    @media(max-width: 960px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .story-card {
+        padding: 30px;
+      }
+    }
+    @media(max-width: 600px) {
+      .about-hero {
+        padding: 60px 0 50px;
+      }
+      .stats-section {
+        padding: 50px 0;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .story-card {
+        padding: 24px 20px;
+      }
+      .roles-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-story {
+        padding-bottom: 50px;
+      }
+      .cta-section {
+        padding: 60px 0;
+      }
+      .cta-buttons .btn {
+        width: 100%;
+      }
+      .about-floating-home {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/">ホーム</a><a href="/#concept">考え方</a><a href="/products/education-planning/">教育計画</a><a href="/products/staff-paper/">五線紙</a><a href="/products/text-overlay/">画像文字入れ</a><a href="/products/banner-studio/">Noteバナースタジオ</a><a href="/monitor/">モニター募集</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header><main><section class="about-hero"><div class="container"><div class="kicker">Brand Story</div><h1>現場40年の経験から生まれた教育支援ソフト</h1><p class="lead">Ban.Tai Education Design は、学校現場で本当に役立つソフトウェアを目指して開発を続けています。日常の煩雑な実務を軽減し、子供たちと向き合う時間を生み出します。</p><div class="actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform">無料モニター登録</a><a class="btn btn-light" href="../products/education-planning/">主力商品を見る</a></div></div></section><section class="stats-section"><div class="container"><div class="stats-header"><h2>実績と強み</h2><p>約40年間の現場経験に裏打ちされた、確かな実用性を提供します。</p></div><div class="stats-grid"><div class="stat-card"><div class="stat-num-wrapper"><span class="stat-num">40</span><span class="stat-desc"> 年</span></div><div class="stat-label">現場経験 約40年</div><p class="stat-desc">公立小学校、公立中学校、私立高等学校などで長年勤務してきた確かな現場感覚。</p></div><div class="stat-card"><div class="stat-num-wrapper"><span class="stat-num">36</span><span class="stat-desc"> 年</span></div><div class="stat-label">教職経験 36年</div><p class="stat-desc">教務主任、研究主幹、生活指導主任など多岐にわたる校内役職を実際に経験。</p></div><div class="stat-card"><div class="stat-num-wrapper"><span class="stat-num">現役</span></div><div class="stat-label">学校現場で活動中</div><p class="stat-desc">現在も副校長補佐として学校現場に深く携わり、日常的な実務課題に向き合っています。</p></div><div class="stat-card"><div class="stat-num-wrapper"><span class="stat-num">実体験</span></div><div class="stat-label">実体験から開発</div><p class="stat-desc">実際に担当した教務、週案、生活指導、教材作成などの実務経験をソフトに直結。</p></div></div></div></section><section class="about-story"><div class="container"><div class="story-card-list"><div class="story-card"><h3 id="profile">開発者について</h3><div class="story-card-body"><p>開発者は、公立小学校、公立中学校、私立高等学校などで勤務し、教育現場に約40年間携わってきました。</p><p>パソコンについては、教員になる以前の黎明期から活用しており、テクノロジーの進化と学校現場への導入プロセスを身をもって体験しています。</p><p>現在は「副校長補佐」として学校現場に籍を置き、変化し続ける現在の学校実務の現場を直接支え、日常的な先生方の悩みに向き合っています。</p></div></div><div class="story-card"><h3 id="experience">学校現場での多彩な経験</h3><div class="story-card-body"><p>教職経験36年の中で、学校運営から教科指導、生活指導に至るまで、学校現場における多岐にわたる重要な役職を歴任してきました。</p><p>これら全ての業務において、自ら実際に汗を流して実務を担当した経験こそが、Ban.Tai Education Design の各ツールの源泉となっています。</p><div class="roles-grid"><div class="role-tag">教務主任・教務主幹</div><div class="role-tag">研究主幹</div><div class="role-tag">生活指導主任</div><div class="role-tag">情報教育部長</div><div class="role-tag">体育主任・理科主任</div><div class="role-tag">視聴覚主任</div></div></div></div><div class="story-card"><h3 id="ict">ICT教育と教材作成への取り組み</h3><div class="story-card-body"><p>視聴覚教育やICT活用の分野には長年取り組んでおり、学校におけるIT環境の整備や実践に早くから携わってきました。</p><p>開発されたソフトウェア（教務支援・週案・名簿メーカー・五線紙作成・文字入れ等）は、現場で実際に担当したからこそわかる「日々の細かな手間」や「あと一歩届かない機能」を埋めるために設計されています。</p><p>単なる大きなシステムではなく、先生方の日常にフィットする軽快で無駄のない道具を目指しています。</p></div></div><div class="story-card alt"><h3 id="philosophy">ソフト開発への思い</h3><div class="story-card-body"><p>「現場で本当に使えること」を第一に考え、先生方の負担軽減と、その結果として生まれる教育活動の充実を支援することを目指しています。</p><p>市販の一般的な汎用ソフトや、教育委員会から一律で提供される大規模システムでは届きにくい、現場の細かな課題や日常業務の時短をサポートします。</p><p>先生方が日々の細かな事務作業から解放され、目の前の子供たちと向き合う時間を少しでも増やせること。それが、このソフトウェア開発の究極の願いです。</p></div></div></div></div></section><section class="cta-section"><div class="container cta-container"><h2>先生方の毎日を、もっと身軽に。</h2><p>小学校教育計画作成・運営システム（モニター版）は、無料モニター登録を行うことでどなたでもお試しいただけます。ぜひご活用いただき、実際の使用感や改善点をお寄せください。</p><div class="cta-buttons"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform">無料モニター登録はこちら</a><a class="btn btn-secondary" href="../products/education-planning/">教育計画作成システムを見る</a><a class="btn btn-secondary btn-email" href="mailto:ban.tai3educationdesign@gmail.com">お問い合わせメールを送る</a></div></div></section></main><a class="about-floating-home" href="/">ホーム</a><footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
