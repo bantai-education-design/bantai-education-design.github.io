@@ -52,10 +52,46 @@
   </div>
 </section>
 
-<section class="section-narrow">
+<section class="section" style="background:#fff">
+  <div class="container">
+    <div class="sub">Activation Flow</div>
+    <h2>購入から製品版アクティベーション（有効化）の流れ</h2>
+    <p>本アプリは、<strong>公式HP（GitHub Pages）</strong>を経由したBOOTHでの購入、および登録フォームからのライセンス登録による完全自動発行システムを採用しています。</p>
+    
+    <div class="flow-brief-container" style="margin: 30px 0; background: #FAF8F5; border: 1px solid rgba(200, 164, 93, 0.22); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(7, 27, 54, 0.03);">
+      <h3 style="margin-top:0; color:var(--navy); display:flex; align-items:center; gap:8px;">🔑 ライセンス有効化の6ステップ</h3>
+      <ol style="line-height: 1.8; padding-left: 20px; margin: 15px 0; color: #333; font-size: 0.95rem;">
+        <li style="margin-bottom: 8px;"><strong>note記事</strong>などから<strong>公式HP（GitHub Pages）</strong>へアクセスし、本ページ下部の購入ボタンをクリック。</li>
+        <li style="margin-bottom: 8px;"><strong>BOOTH（決済プラットフォーム）にてご購入・決済</strong>を行います。</li>
+        <li style="margin-bottom: 8px;">決済完了後、<strong>BOOTHの購入履歴画面から製品（ZIPファイル）をダウンロード</strong>します。</li>
+        <li style="margin-bottom: 8px;">ZIPファイルに同梱されている「ライセンス発行のご案内.txt」に記載された<strong>購入者登録フォームにアクセスし、必要事項（メールアドレス、8桁のBOOTH注文番号）を入力・送信</strong>します。</li>
+        <li style="margin-bottom: 8px;">Licensesスプレッドシート上の未使用キーがGoogle Apps Script（GAS）によって自動割り当てされ、<strong>登録されたメールアドレス宛てに個別ライセンスキーが即座に自動送信</strong>されます。</li>
+        <li style="margin-bottom: 8px;">アプリを起動してライセンス画面でメールアドレスと個別キーを入力し、<strong>オンライン認証（GAS）を行って有効化（製品版に切り替え）</strong>します。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section-narrow" style="padding-top:0;">
   <div class="container warning">
-    <h3>試用期間について</h3>
-    <p>このアプリは、公開後、原則として<strong>10日間の試用期間</strong>を想定しています。正式な配布方法、ライセンス方式、価格、利用条件は、公開準備が整い次第ご案内します。</p>
+    <h3>重要なお知らせ</h3>
+    <ul style="font-size:0.92rem; line-height:1.75; padding-left:20px; color:#664d03; margin:0;">
+      <li style="margin-bottom: 10px;"><strong>BOOTHでの購入・決済:</strong> 安全な決済を行うため、ご購入・お支払いはすべてBOOTH上で行っていただきます。</li>
+      <li style="margin-bottom: 10px;"><strong>Vectorの取扱いについて:</strong> Vectorは紹介・誘導ページとして利用しています。本体プログラムの配布や購入手続きは行っておりませんので、最新版のダウンロードやライセンス取得は必ず本公式HP（GitHub Pages）をご利用ください。</li>
+      <li style="margin-bottom: 10px;"><strong>個別ライセンスキー方式:</strong> 発行されるライセンスキーは購入者ごとの<strong>「個別キー」</strong>です。全員共通の固定キーではありませんので、第三者への開示・転売はお控えください。</li>
+      <li style="margin-bottom: 10px;"><strong>無料体験期間:</strong> アプリはインストール後10日間は体験版（印刷や画像書き出し時にSAMPLE透かしが入る状態）としてお試しいただけます。体験期間終了後はデータの保存や印刷機能が制限されますので、上記手順でライセンスキーを取得の上、有効化を行ってください。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" style="background:#F7F8FA; text-align:center; padding: 60px 0; border-top: 1px solid rgba(7, 27, 54, 0.04);">
+  <div class="container">
+    <h2>製品版のご購入はこちら</h2>
+    <p style="margin-bottom:30px; color:var(--muted);">BOOTHの販売ページより、製品の購入・ダウンロードを行っていただけます。</p>
+    <div class="actions" style="justify-content:center; display:flex; gap:16px; flex-wrap:wrap;">
+      <a class="btn btn-primary" href="https://booth.pm/ja/items/【BOOTH商品ID】" target="_blank" style="background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 8px 20px rgba(200, 164, 93, 0.25);">BOOTHで購入・ダウンロード</a>
+      <a class="btn btn-light" href="https://docs.google.com/forms/d/e/【あなたのGoogleフォームID】/viewform" target="_blank" style="background:#fff; color:var(--navy); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; border:1px solid rgba(7, 27, 54, 0.15);">購入後のライセンスキー申請</a>
+    </div>
   </div>
 </section>
 </main>
