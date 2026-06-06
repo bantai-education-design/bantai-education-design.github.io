@@ -194,13 +194,9 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   overflow: visible !important;
 }
 
-/* v7 banner studio */
+/* Note Banner Studio Styles */
 .banner-studio-hero{
-  min-height:560px;
-  background:
-    linear-gradient(90deg,rgba(7,27,54,.96) 0%,rgba(7,27,54,.86) 42%,rgba(7,27,54,.32) 100%),
-    url("/assets/images/banner-studio-screenshot.jpg") right center/68% auto no-repeat,
-    linear-gradient(135deg,#071b36,#102e57);
+  background: radial-gradient(circle at 85% 30%,rgba(197,160,89,.15),transparent 35%), linear-gradient(135deg,#06241b 0%,#0f3b2e 50%,#1b5443 100%) !important;
 }
 .banner-studio-hero h1{font-size:clamp(2.1rem,4.5vw,4.4rem)}
 .problem-list{display:grid;gap:14px}
@@ -217,9 +213,7 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 .article-link-box{background:#fff;border-left:5px solid var(--gold);border-radius:16px;padding:22px;box-shadow:0 10px 28px rgba(7,27,54,.08)}
 @media(max-width:860px){
   .banner-studio-hero{
-    background:
-      linear-gradient(135deg,rgba(7,27,54,.96),rgba(7,27,54,.86)),
-      url("/assets/images/banner-studio-screenshot.jpg") center bottom/120% auto no-repeat;
+    background: radial-gradient(circle at 85% 30%,rgba(197,160,89,.15),transparent 35%), linear-gradient(135deg,#06241b 0%,#0f3b2e 50%,#1b5443 100%) !important;
   }
 }
 
