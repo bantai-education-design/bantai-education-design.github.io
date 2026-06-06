@@ -498,3 +498,44 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 .kanji-practice-hero {
   background: radial-gradient(circle at 85% 30%,rgba(197,160,89,.15),transparent 35%), linear-gradient(135deg,#05241b 0%,#0c3b2e 50%,#1b5443 100%) !important;
 }
+
+/* Unified Product Card Layout */
+.product .body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-desc {
+  height: 72px;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #31405a;
+}
+.product-features {
+  height: 110px;
+  overflow: hidden;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 0.86rem;
+  color: var(--muted);
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.6;
+}
+.product-features li {
+  margin: 2px 0;
+}
+.product-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 15px;
+}
+.product-actions .btn {
+  margin-top: 0 !important;
+}
