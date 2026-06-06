@@ -17,6 +17,6 @@
 
 使用方針:
 - 五線紙作成メーカー資料は `products/staff-paper/` に使用。
-- 画像文字入れツール資料は `products/text-overlay/` に使用。
+- 画像文字入れくん資料は `products/text-overlay/` に使用。
 - 証明写真メーカー資料は `products/id-photo/` に使用。
 - 教育計画システムの主力商品ページとは混在させない。
