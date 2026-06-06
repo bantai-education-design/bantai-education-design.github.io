@@ -445,6 +445,28 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   box-shadow: 0 15px 35px rgba(7, 27, 54, 0.07) !important;
   border: 1px solid rgba(7, 27, 54, 0.05) !important;
 }
+.monitor-hero-desc {
+  font-size: clamp(0.94rem, 1.4vw, 1.05rem);
+  color: #3c4a60 !important;
+  line-height: 1.85 !important;
+  max-width: 640px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+.monitor-hero-desc + .monitor-hero-desc {
+  margin-top: 14px;
+}
+@media(max-width:1024px){
+  .monitor-hero-desc {
+    max-width: 100%;
+    line-height: 1.75 !important;
+    text-align: center;
+  }
+  .monitor-hero-desc + .monitor-hero-desc {
+    margin-top: 10px;
+  }
+}
 
 /* Hero Content Mobile responsiveness */
 @media(max-width:1024px){
