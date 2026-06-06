@@ -543,17 +543,16 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   background: #fffdf9 !important;
 }
 .product .body h3.highlight-title {
-  font-size: 1.6rem !important;
+  font-size: 1.8rem !important;
   color: var(--navy) !important;
   margin-bottom: 8px !important;
   font-weight: 700;
+  line-height: 1.25;
 }
-.badge-new {
-  background: var(--gold) !important;
-  color: #fff !important;
-  border-color: var(--gold) !important;
+.new-label-text {
+  display: block;
+  font-size: 1.15rem;
   font-weight: 800;
-  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.25);
-  font-size: 0.85rem !important;
-  padding: 5px 12px !important;
+  color: var(--gold);
+  margin-bottom: 6px;
 }
