@@ -35,6 +35,15 @@ img{max-width:100%;display:block;height:auto;}
 .menu{display:flex;gap:24px;align-items:center;font-size:.95rem;color:#31405a;flex-wrap:wrap;justify-content:flex-end}
 .menu a{text-decoration:none;font-weight:600;}.menu a:hover{color:var(--gold)}.menu .mini{padding:.5rem 1.1rem;border:1px solid var(--gold);border-radius:6px;background:#fffaf0;color:var(--navy);font-weight:700}
 .menu .mini:hover{background:var(--gold);color:#fff}
+.menu a.active:not(.mini) {
+  color: var(--gold) !important;
+  border-bottom: 2px solid rgba(197, 160, 89, 0.5);
+  padding-bottom: 4px;
+}
+.menu a.active.mini {
+  background: var(--gold) !important;
+  color: #fff !important;
+}
 
 /* Hero Section (Revised to 2-column) */
 .hero{
