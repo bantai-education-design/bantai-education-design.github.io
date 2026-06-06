@@ -494,3 +494,7 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
     text-align: center;
   }
 }
+/* Kanji Practice Notebook Styles */
+.kanji-practice-hero {
+  background: radial-gradient(circle at 85% 30%,rgba(197,160,89,.15),transparent 35%), linear-gradient(135deg,#05241b 0%,#0c3b2e 50%,#1b5443 100%) !important;
+}
