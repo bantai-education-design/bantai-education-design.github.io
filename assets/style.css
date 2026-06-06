@@ -401,6 +401,11 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   border-bottom: 1px solid rgba(15,118,110,.1);
 }
 
+/* Monitor Recruitment Styles */
+.monitor-hero {
+  background: radial-gradient(circle at 85% 30%,rgba(197,160,89,.15),transparent 35%), linear-gradient(135deg,#0a2e25 0%,#144034 50%,#1f5748 100%) !important;
+}
+
 /* Hero Content Mobile responsiveness */
 @media(max-width:1024px){
   .hero-content {
