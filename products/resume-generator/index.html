@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>スマート履歴書ジェネレーター | Ban.Tai Education Design</title>
+  <meta name="description" content="スマート履歴書ジェネレーターは、履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=586a1d0_v2">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <nav class="menu">
+        <a href="/">ホーム</a>
+        <a class="active" href="/#products">製品一覧</a>
+        <a href="#features">主な機能</a>
+        <a href="#screenshots">画面イメージ</a>
+        <a href="#distribution">公開準備</a>
+        <a class="mini" href="/contact/">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero kanji-practice-hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="kicker">Smart Resume Generator</div>
+          <h1>スマート履歴書ジェネレーター</h1>
+          <p class="lead">履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。</p>
+          <p class="hero-note">現在、公式HP掲載と配布ページ公開に向けた準備を進めています。BOOTH / Vector / ダウンロード導線は準備中です。</p>
+          <div class="actions">
+            <a class="btn btn-secondary" href="#screenshots">画面イメージを見る</a>
+            <a class="btn btn-secondary" href="#distribution">公開準備を見る</a>
+          </div>
+        </div>
+        <div class="hero-image-container">
+          <img src="/assets/images/resume-generator/resume-main-screen.png" alt="スマート履歴書ジェネレーターのメイン画面">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2" style="align-items:center;">
+        <div>
+          <div class="sub">Overview</div>
+          <h2>履歴書づくりを、ひとつの画面で見やすく整える。</h2>
+          <p>スマート履歴書ジェネレーターは、日本向けの履歴書をブラウザ上で整え、入力から印刷・PDF保存までを一つの流れで進められる支援ツールです。</p>
+          <p>JIS標準、転職用、アルバイト用のテンプレートを切り替えながら、基本情報、学歴、職歴、資格、志望動機、自己PRなどを編集できます。写真配置や印刷前プレビューにも対応しており、応募書類の仕上がりを確認しやすい構成です。</p>
+        </div>
+        <div class="card gold">
+          <span class="badge" style="width:fit-content; margin-bottom:12px;">準備中</span>
+          <h3>現在の掲載方針</h3>
+          <p>GitHubリポジトリは private のため、このページでは GitHub へのリンクを掲載していません。BOOTH / Vector / ダウンロードURL も、公開準備が整ってから追加します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section" style="background:#fff;">
+      <div class="container">
+        <div class="sub">Features</div>
+        <h2>主な機能</h2>
+        <div class="grid grid-3">
+          <div class="card"><div class="mark">書</div><h3>履歴書テンプレート切替</h3><p>JIS標準、転職用、アルバイト用のテンプレートを切り替えて利用できます。</p></div>
+          <div class="card"><div class="mark">写</div><h3>写真アップロードと配置調整</h3><p>写真のアップロード、トリミング、位置調整を行い、履歴書レイアウトに合わせられます。</p></div>
+          <div class="card"><div class="mark">文</div><h3>文章入力とAI補助</h3><p>志望動機・自己PRを手動入力でき、Gemini API を使った文章生成にも対応しています。</p></div>
+        </div>
+        <div class="grid grid-2" style="margin-top:24px;">
+          <div class="card">
+            <h3>入力・編集機能</h3>
+            <ul class="notice-list">
+              <li>JIS標準 / 転職用 / アルバイト用テンプレート切替</li>
+              <li>フォント切替</li>
+              <li>ふりがな形式切替</li>
+              <li>学歴 / 職歴 / 資格の動的追加</li>
+              <li>志望動機 / 自己PR入力</li>
+              <li>localStorage保存</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>出力・補助機能</h3>
+            <ul class="notice-list">
+              <li>印刷 / PDF保存</li>
+              <li>写真アップロードとトリミング</li>
+              <li>Gemini API を使ったAI文章生成</li>
+              <li>APIキー未設定時のテンプレート文フォールバック</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2" style="align-items:start;">
+        <div class="card gold">
+          <div class="sub">Highlights</div>
+          <h2>特色</h2>
+          <ul class="notice-list">
+            <li>ブラウザ中心で扱えるため、軽量で導入しやすい構成です。</li>
+            <li>履歴書テンプレート、写真配置、文章入力、印刷前確認を一画面で進めやすくしています。</li>
+            <li>AI支援がなくても基本利用でき、必要に応じて文章生成を補助できます。</li>
+          </ul>
+        </div>
+        <div class="warning">
+          <h3>AI機能について</h3>
+          <p>AI文章生成を使う場合は、利用者自身のGemini APIキー設定が必要になる場合があります。履歴書には個人情報が含まれるため、AI機能に入力する内容は利用者自身で確認してください。</p>
+          <h3 style="margin-top:20px;">個人情報についての注意</h3>
+          <p>入力内容は基本的に利用者のブラウザ内で扱う設計ですが、AI機能を使う場合は外部APIとの通信が発生する可能性があります。公開前に、この点の説明をさらに整備する必要があります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section" style="background:#fff;">
+      <div class="container">
+        <div class="sub">Screenshots</div>
+        <h2>画面イメージ</h2>
+        <div class="grid grid-2 gallery">
+          <div class="visual">
+            <img src="/assets/images/resume-generator/resume-main-screen.png" alt="スマート履歴書ジェネレーターのメイン画面">
+          </div>
+          <div class="visual">
+            <img src="/assets/images/resume-generator/resume-print-preview.png" alt="スマート履歴書ジェネレーターの印刷前プレビュー">
+          </div>
+        </div>
+        <div class="grid grid-2" style="margin-top:24px; align-items:start;">
+          <div class="card">
+            <h3>入力画面と履歴書プレビュー</h3>
+            <p>左側に入力パネル、右側に履歴書プレビューを配置した構成です。入力内容を見ながら、その場で仕上がりを確認できます。</p>
+          </div>
+          <div class="card">
+            <h3>印刷前の確認</h3>
+            <p>完成イメージを見ながら、印刷またはPDF保存の前にレイアウトを確認できます。</p>
+          </div>
+        </div>
+        <div class="grid grid-1" style="margin-top:24px;">
+          <div class="visual">
+            <img src="/assets/images/resume-generator/resume-ai-assistant.png" alt="スマート履歴書ジェネレーターのAI文章作成アシスタント">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="distribution" class="section" style="background:#f9f9f9;">
+      <div class="container">
+        <div class="sub">Distribution</div>
+        <h2>配布ページ</h2>
+        <p>BOOTH / Vector / ダウンロードページは準備中です。公開時には、このページから正式導線を案内します。</p>
+        <div class="grid grid-3" style="margin-top:22px;">
+          <div class="card">
+            <span class="badge" style="width:fit-content; margin-bottom:12px;">BOOTH準備中</span>
+            <h3>BOOTHで購入・ダウンロードする（準備中）</h3>
+            <p>Windows向け配布導線の整備を進めています。</p>
+          </div>
+          <div class="card">
+            <span class="badge" style="width:fit-content; margin-bottom:12px;">Vector準備中</span>
+            <h3>Vectorで配布する（準備中）</h3>
+            <p>掲載説明、スクリーンショット、配布構成を調整中です。</p>
+          </div>
+          <div class="card">
+            <span class="badge" style="width:fit-content; margin-bottom:12px;">ダウンロード準備中</span>
+            <h3>公式HPからの配布（準備中）</h3>
+            <p>ZIP / EXE / private GitHub への直接リンクは、現在は掲載していません。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="home-floating" href="/">ホームへ</a>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Ban.Tai Education Design</h2>
+        <p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p>
+      </div>
+      <div>
+        <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+        <p><a href="/legal/">利用規約・免責事項</a></p>
+      </div>
+    </div>
+    <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+  </footer>
+</body>
+</html>
