@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=black-gold-20260613-frame3">
+  <link rel="stylesheet" href="/assets/style.css?v=black-gold-20260613-featured">
 </head>
 <body>
   <header class="site-header">
@@ -42,41 +42,48 @@
 
     <section class="ivory-section catalog-products-section">
       <div class="container catalog-groups">
-        <section class="catalog-group" aria-labelledby="school-work-heading">
+        <section class="catalog-group catalog-featured-group" aria-labelledby="featured-products-heading">
           <div class="catalog-group-heading">
-            <h2 id="school-work-heading">学校業務支援</h2>
-            <a href="/products/school-work/">カテゴリ詳細を見る</a>
+            <h2 id="featured-products-heading">主力製品</h2>
           </div>
-          <div class="catalog-grid">
-            <article class="catalog-card">
+          <div class="catalog-grid catalog-featured-grid">
+            <article class="catalog-card catalog-feature-card">
               <div class="catalog-card-media">
                 <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システム">
               </div>
               <div class="catalog-card-body">
-                <span class="status-badge">無料モニター募集中</span>
-                <h3>小学校教育計画作成・運営システム</h3>
+                <span class="status-badge">主力製品</span>
+                <h3>学校業務支援・教育計画システム</h3>
                 <p>教育計画、週案、時数管理、提出書類作成を一つの流れにまとめます。</p>
-                <a class="secondary-button" href="/products/education-planning/">詳細を見る</a>
+                <ul class="catalog-feature-list">
+                  <li>教育計画・週案・時数管理を一体で支援</li>
+                  <li>学校現場の提出書類づくりを効率化</li>
+                </ul>
+                <div class="catalog-card-actions">
+                  <a class="secondary-button" href="/products/school-work/">分野を見る</a>
+                  <a class="secondary-button" href="/products/education-planning/">詳細を見る</a>
+                </div>
               </div>
             </article>
-          </div>
-        </section>
-
-        <section class="catalog-group" aria-labelledby="music-heading">
-          <div class="catalog-group-heading">
-            <h2 id="music-heading">五線紙・音楽教材</h2>
-            <a href="/products/music-tools/">カテゴリ詳細を見る</a>
-          </div>
-          <div class="catalog-grid">
-            <article class="catalog-card">
+            <article class="catalog-card catalog-feature-card">
               <div class="catalog-card-media">
                 <img src="/assets/images/staff-paper-v13-card.jpg" alt="楽譜・五線紙 作成メーカー">
               </div>
               <div class="catalog-card-body">
-                <span class="status-badge">販売中</span>
+                <div class="catalog-badge-row">
+                  <span class="status-badge">主力製品</span>
+                  <span class="status-badge">希少な専門ツール</span>
+                </div>
                 <h3>楽譜・五線紙 作成メーカー</h3>
                 <p>段数、音部記号、用紙サイズを選び、美しい五線紙をPDF・SVGで出力できます。</p>
-                <a class="secondary-button" href="/products/staff-paper/">詳細を見る</a>
+                <ul class="catalog-feature-list">
+                  <li>五線紙・楽譜用紙の細かな指定に対応</li>
+                  <li>PDF・SVGで教材作成や印刷に使いやすい出力</li>
+                </ul>
+                <div class="catalog-card-actions">
+                  <a class="secondary-button" href="/products/music-tools/">分野を見る</a>
+                  <a class="secondary-button" href="/products/staff-paper/">詳細を見る</a>
+                </div>
               </div>
             </article>
           </div>
@@ -84,15 +91,9 @@
 
         <section class="catalog-group" aria-labelledby="class-heading">
           <div class="catalog-group-heading">
-            <h2 id="class-heading">学級・教材支援</h2>
+            <h2 id="class-heading">その他の教育・実用ツール</h2>
           </div>
           <div class="catalog-grid catalog-grid-compact">
-            <article class="catalog-card">
-              <div class="catalog-card-media">
-                <img src="/assets/images/class-roster-maker-thumbnail.svg" alt="学級名簿メーカー">
-              </div>
-              <div class="catalog-card-body"><span class="status-badge">無料</span><h3>学級名簿メーカー</h3><p>名簿、提出物チェック、誕生日一覧などを作成します。</p></div>
-            </article>
             <article class="catalog-card">
               <div class="catalog-card-media">
                 <img src="/assets/images/kanji-practice/card-thumbnail.png" alt="漢字練習帳">
@@ -107,18 +108,22 @@
             </article>
             <article class="catalog-card">
               <div class="catalog-card-media">
+                <img src="/assets/images/class-roster-maker-thumbnail.svg" alt="学級名簿メーカー">
+              </div>
+              <div class="catalog-card-body"><span class="status-badge">無料</span><h3>学級名簿メーカー</h3><p>名簿、提出物チェック、誕生日一覧などを作成します。</p></div>
+            </article>
+            <article class="catalog-card">
+              <div class="catalog-card-media">
                 <div class="catalog-placeholder" aria-hidden="true"></div>
               </div>
               <div class="catalog-card-body"><span class="status-badge">HTML単体版</span><h3>絵日記・観察カード作成メーカー</h3><p>絵の欄と文章欄を組み合わせた観察カードをブラウザで作成できます。</p><a class="secondary-button" href="/products/observation-card/">詳細を見る</a></div>
             </article>
-          </div>
-        </section>
-
-        <section class="catalog-group" aria-labelledby="document-heading">
-          <div class="catalog-group-heading">
-            <h2 id="document-heading">文書・画像支援</h2>
-          </div>
-          <div class="catalog-grid catalog-grid-compact">
+            <article class="catalog-card">
+              <div class="catalog-card-media">
+                <img src="/assets/images/resume-generator/resume-main-screen.png" alt="スマート履歴書ジェネレーター">
+              </div>
+              <div class="catalog-card-body"><span class="status-badge">公開準備中</span><h3>スマート履歴書ジェネレーター</h3><p>履歴書入力、写真配置、印刷、PDF保存を支援します。</p><a class="secondary-button" href="/products/resume-generator/">詳細を見る</a></div>
+            </article>
             <article class="catalog-card">
               <div class="catalog-card-media">
                 <img src="/assets/images/text-tool-features-light.jpg" alt="画像文字入れくん">
@@ -130,12 +135,6 @@
                 <img src="/assets/images/id-photo/id-photo-hero-pc-workflow.png" alt="証明写真メーカー">
               </div>
               <div class="catalog-card-body"><span class="status-badge">販売中</span><h3>証明写真メーカー</h3><p>自宅で証明写真を整え、印刷用レイアウトまで作成できます。</p><a class="secondary-button" href="/products/id-photo/">詳細を見る</a></div>
-            </article>
-            <article class="catalog-card">
-              <div class="catalog-card-media">
-                <img src="/assets/images/resume-generator/resume-main-screen.png" alt="スマート履歴書ジェネレーター">
-              </div>
-              <div class="catalog-card-body"><span class="status-badge">公開準備中</span><h3>スマート履歴書ジェネレーター</h3><p>履歴書入力、写真配置、印刷、PDF保存を支援します。</p><a class="secondary-button" href="/products/resume-generator/">詳細を見る</a></div>
             </article>
             <article class="catalog-card">
               <div class="catalog-card-media">
