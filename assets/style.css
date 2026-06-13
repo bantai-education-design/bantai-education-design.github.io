@@ -1134,11 +1134,7 @@ button:focus-visible {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  background: #ffffff;
-  border: 2px solid #b58a3b;
-  border-radius: 18px;
   padding: 0;
-  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.12);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -1284,4 +1280,16 @@ button:focus-visible {
   .catalog-card {
     min-width: 0;
   }
+}
+
+.catalog-products-section .catalog-card {
+  border: 3px solid #9b6b17;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.14);
+  overflow: hidden;
+}
+
+.catalog-products-section .catalog-card:hover {
+  border-color: #6f490d;
 }
