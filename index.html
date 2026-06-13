@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=586a1d0_v2">
+  <link rel="stylesheet" href="/assets/style.css?v=black-gold-1">
   <!-- deployed-modern-monitor-flow-v3 -->
 </head>
 <body>
@@ -19,12 +19,25 @@
         <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
         <span>Ban.Tai Education Design</span>
       </a>
-      <nav class="menu">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
         <a class="active" href="/">ホーム</a>
-        <a href="/#products">製品一覧</a>
-        <a href="/monitor/">モニター募集</a>
-        <a href="/#concept">考え方</a>
-        <a class="mini" href="/contact/">お問い合わせ</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/#products">すべての製品を見る</a>
       </nav>
     </div>
   </header>
@@ -32,57 +45,77 @@
     <section class="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <div class="kicker">Ban.Tai Education Design</div>
-          <h1>教育現場を、<br>やさしいアプリで支える。</h1>
+          <h1>学校の仕事を軽く。<br><span>学びの道具を自由に。</span></h1>
           <p class="lead">
-            教務支援、名簿、座席、五線紙、画像文字入れくん、証明写真など、先生と学びの毎日に役立つ実用ツールを届けます。
+            教育経験36年と現在の学校現場での実務経験をもとに、教育計画・週案・時数管理を支える学校業務システムと、用途に合わせて自由に設計できる五線紙作成ツールを開発しています。
           </p>
           <div class="actions">
-            <a class="btn btn-primary" href="/#products">製品を見る</a>
-            <a class="btn btn-secondary" href="/monitor/">モニター募集を見る</a>
+            <a class="btn btn-primary" href="/#school-work-core">学校業務支援を見る</a>
+            <a class="btn btn-secondary" href="/#music-tools-core">五線紙作成ツールを見る</a>
+            <a class="btn btn-light" href="/#products">すべての製品を見る</a>
           </div>
         </div>
-        <div class="hero-image-container">
-          <img src="/assets/images/brand-education-hero.png" alt="Ban.Tai Education Design ワークスペース">
+        <div class="hero-showcase" aria-label="主力製品の画面イメージ">
+          <figure class="showcase-panel showcase-panel-primary">
+            <img src="/assets/images/education-hero.png" alt="教育計画システムの実画面">
+            <figcaption>教育計画・週案・時数管理</figcaption>
+          </figure>
+          <figure class="showcase-panel showcase-panel-secondary">
+            <img src="/assets/images/staff-paper-v13-main.jpg" alt="五線紙作成メーカーの画面">
+            <figcaption>五線紙作成・印刷</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-  <section class="section" style="background:#f9f9f9">
+  <section class="ivory-section core-products-section" aria-labelledby="core-products-heading">
     <div class="container">
-      <div style="max-width:900px; margin:0 auto; text-align:center;">
-        <h2>現場40年の経験から生まれた教育支援ソフト</h2>
-        <p style="line-height:1.8; margin-top:20px; margin-bottom:40px; color:#333; text-align:center;">公立小中学校や私立高校での約40年の現場経験、教職経験36年の実体験から生まれた、先生方のための教育支援ツールです。</p>
-        <div class="grid grid-4" style="margin-bottom:40px;">
-          <div class="card" style="padding:25px 15px; border-top:4px solid var(--gold); border-radius:16px; text-align:center; background:#fff; box-shadow:0 8px 24px rgba(7,27,54,0.04);">
-            <div style="font-family:Georgia, serif; font-size:2.2rem; font-weight:bold; color:var(--gold); line-height:1.1; margin-bottom:5px;">40<span style="font-size:0.9rem; font-weight:normal; color:var(--muted);"> 年</span></div>
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem; margin-bottom:8px;">現場経験 約40年</div>
-            <p style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin:0;">公立小中学校や私立高校などの確かな現場感覚。</p>
+      <div class="section-heading">
+        <h2 id="core-products-heading">二つの主力分野</h2>
+        <p class="section-lead">学校現場の実務を支えるシステムと、音楽教材を自由に作るための道具。Ban.Tai Education Design はこの二つを中心に、現場で使える形へ整えています。</p>
+      </div>
+      <div class="core-product-grid">
+        <article id="school-work-core" class="category-card category-card-feature">
+          <div class="category-card-media">
+            <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システムの画面">
           </div>
-          <div class="card" style="padding:25px 15px; border-top:4px solid var(--gold); border-radius:16px; text-align:center; background:#fff; box-shadow:0 8px 24px rgba(7,27,54,0.04);">
-            <div style="font-family:Georgia, serif; font-size:2.2rem; font-weight:bold; color:var(--gold); line-height:1.1; margin-bottom:5px;">36<span style="font-size:0.9rem; font-weight:normal; color:var(--muted);"> 年</span></div>
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem; margin-bottom:8px;">教職経験 36年</div>
-            <p style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin:0;">教務主任、情報教育部長などの主要役職を歴任。</p>
+          <div class="category-card-body">
+            <h3>学校業務支援</h3>
+            <p>年間計画から週案、時数管理、提出書類までを一つの流れに。</p>
+            <ul>
+              <li>教育計画</li>
+              <li>週案作成</li>
+              <li>授業時数管理</li>
+              <li>教務・担任連携</li>
+              <li>提出書類</li>
+              <li>評価・所見</li>
+            </ul>
+            <a class="secondary-button" href="/products/education-planning/">学校業務支援を見る</a>
           </div>
-          <div class="card" style="padding:25px 15px; border-top:4px solid var(--gold); border-radius:16px; text-align:center; background:#fff; box-shadow:0 8px 24px rgba(7,27,54,0.04);">
-            <div style="font-family:Georgia, serif; font-size:2.2rem; font-weight:bold; color:var(--gold); line-height:1.1; margin-bottom:5px;">現役</div>
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem; margin-bottom:8px;">学校現場で活動中</div>
-            <p style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin:0;">現在も副校長補佐として実務課題に向き合っています。</p>
+        </article>
+        <article id="music-tools-core" class="category-card category-card-feature">
+          <div class="category-card-media">
+            <img src="/assets/images/staff-paper-v13-main.jpg" alt="楽譜・五線紙作成メーカーの画面">
           </div>
-          <div class="card" style="padding:25px 15px; border-top:4px solid var(--gold); border-radius:16px; text-align:center; background:#fff; box-shadow:0 8px 24px rgba(7,27,54,0.04);">
-            <div style="font-family:Georgia, serif; font-size:2.2rem; font-weight:bold; color:var(--gold); line-height:1.1; margin-bottom:5px;">実体験</div>
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem; margin-bottom:8px;">実体験からの開発</div>
-            <p style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin:0;">教務、週案、教材作成など実際の業務経験を反映。</p>
+          <div class="category-card-body">
+            <h3>五線紙・音楽教材</h3>
+            <p>年齢、楽器、学習段階に合う五線紙を自由に設計。</p>
+            <ul>
+              <li>五線間隔</li>
+              <li>段数</li>
+              <li>音部記号</li>
+              <li>単線・ピアノ譜</li>
+              <li>A4・B5・Letter</li>
+              <li>PDF・SVG・印刷</li>
+            </ul>
+            <a class="secondary-button" href="/products/staff-paper/">五線紙作成ツールを見る</a>
           </div>
-        </div>
-        <div class="actions" style="justify-content:center;">
-          <a class="btn btn-light" href="/about/" style="border:1px solid rgba(7, 27, 54, 0.15);">開発者の経歴と開発への思いを読む</a>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section latest-release">
+  <section id="free-tools" class="section latest-release">
     <div class="container latest-box">
       <div>
         <span class="latest-badge">無料ツール</span>
@@ -331,4 +364,4 @@
     </div>
   </section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
+<footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer><script src="/assets/site.js?v=black-gold-1"></script></body></html>
