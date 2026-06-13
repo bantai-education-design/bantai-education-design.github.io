@@ -1087,6 +1087,10 @@ button:focus-visible {
   gap: 46px;
 }
 
+.catalog-products-section {
+  background: #f7f4ec;
+}
+
 .catalog-group {
   display: grid;
   gap: 20px;
@@ -1130,17 +1134,17 @@ button:focus-visible {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  background: var(--white);
-  border: 2px solid rgba(198, 161, 91, 0.82);
+  background: #ffffff;
+  border: 2px solid #b58a3b;
   border-radius: 18px;
   padding: 0;
-  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.08);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.12);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .catalog-card:hover {
-  border-color: var(--gold);
-  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.13);
+  border-color: #8f6824;
+  box-shadow: 0 14px 32px rgba(17, 17, 17, 0.16);
   transform: translateY(-3px);
 }
 
@@ -1150,8 +1154,8 @@ button:focus-visible {
 
 .catalog-card-media {
   flex: 0 0 auto;
-  background: var(--white);
-  border-bottom: 1px solid rgba(198, 161, 91, 0.24);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(181, 138, 59, 0.3);
 }
 
 .catalog-card img,
@@ -1160,7 +1164,7 @@ button:focus-visible {
   display: block;
   aspect-ratio: 16 / 10;
   object-fit: contain;
-  background: var(--white);
+  background: #ffffff;
   border: 0;
   border-radius: 0;
   padding: 10px;
