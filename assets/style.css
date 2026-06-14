@@ -1369,3 +1369,423 @@ button:focus-visible {
 .catalog-products-section .catalog-card:hover {
   border-color: #6f490d;
 }
+
+.product-detail-education .education-detail-hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(198, 161, 91, 0.22), transparent 30%),
+    linear-gradient(135deg, #111111 0%, #1b1712 58%, #292016 100%);
+  color: #ffffff;
+  padding: 78px 0 70px;
+  border-bottom: 4px solid #c6a15b;
+}
+
+.product-detail-education .education-detail-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.product-detail-education .education-detail-copy {
+  max-width: 620px;
+}
+
+.product-detail-education .education-detail-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.product-detail-education .education-detail-labels span {
+  border: 1px solid rgba(198, 161, 91, 0.9);
+  border-radius: 999px;
+  color: #f2d48f;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  padding: 7px 13px;
+}
+
+.product-detail-education .education-detail-kicker {
+  color: #c6a15b;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.product-detail-education .education-detail-copy h1 {
+  color: #ffffff;
+  font-size: clamp(2.15rem, 4.2vw, 4.35rem);
+  line-height: 1.12;
+  margin: 0;
+}
+
+.product-detail-education .education-detail-lead {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  line-height: 1.9;
+  margin: 24px 0 30px;
+}
+
+.product-detail-education .education-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.product-detail-education .education-detail-visual {
+  background: linear-gradient(180deg, #2a241a 0%, #0f0f0f 100%);
+  border: 3px solid #c6a15b;
+  border-radius: 18px;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.36);
+  overflow: hidden;
+  padding: 12px;
+}
+
+.product-detail-education .education-detail-visual img {
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  object-position: right center;
+  width: 100%;
+}
+
+.product-detail-education .education-workflow {
+  background: #f7f4ec;
+  padding: 58px 0 64px;
+}
+
+.product-detail-education .education-workflow-heading {
+  max-width: 860px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.product-detail-education .education-workflow-kicker {
+  color: #9b6b17;
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.product-detail-education .education-workflow-heading h2 {
+  color: #111111;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.35;
+  margin: 0 0 14px;
+}
+
+.product-detail-education .education-workflow-heading p {
+  color: #3d382f;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.product-detail-education .education-flow-steps {
+  counter-reset: none;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  margin: 32px 0 32px;
+  padding: 0;
+}
+
+.product-detail-education .education-flow-steps li {
+  align-items: center;
+  background: #15120d;
+  border: 1px solid rgba(198, 161, 91, 0.62);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  min-height: 118px;
+  padding: 18px 14px;
+  position: relative;
+  text-align: center;
+}
+
+.product-detail-education .education-flow-steps li:first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+.product-detail-education .education-flow-steps li:last-child {
+  border-radius: 0 16px 16px 0;
+}
+
+.product-detail-education .education-flow-steps li:not(:last-child)::after {
+  background: #c6a15b;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  content: "";
+  height: 22px;
+  position: absolute;
+  right: -13px;
+  top: calc(50% - 11px);
+  width: 18px;
+  z-index: 2;
+}
+
+.product-detail-education .education-flow-steps span {
+  color: #e9c983;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.product-detail-education .education-flow-steps strong {
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.product-detail-education .education-feature-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-detail-education .education-feature-card {
+  background: #ffffff;
+  border: 2px solid #9b6b17;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(17, 17, 17, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.product-detail-education .education-feature-head {
+  align-items: flex-start;
+  background: linear-gradient(135deg, #15120d 0%, #2a2115 100%);
+  color: #ffffff;
+  display: flex;
+  gap: 14px;
+  min-height: 118px;
+  padding: 20px;
+}
+
+.product-detail-education .education-feature-head span {
+  color: #e9c983;
+  flex: 0 0 auto;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.product-detail-education .education-feature-head h3 {
+  color: #ffffff;
+  font-size: 1.18rem;
+  line-height: 1.45;
+  margin: 0 0 7px;
+}
+
+.product-detail-education .education-feature-head p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.product-detail-education .education-feature-card ul {
+  display: grid;
+  gap: 9px;
+  list-style: none;
+  margin: 0;
+  padding: 20px 22px 18px;
+}
+
+.product-detail-education .education-feature-card li {
+  color: #2e2a24;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+}
+
+.product-detail-education .education-feature-card li::before {
+  background: #9b6b17;
+  border-radius: 999px;
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 0.68em;
+  width: 6px;
+}
+
+.product-detail-education .education-feature-result {
+  background: #f4ead6;
+  border-top: 1px solid rgba(155, 107, 23, 0.38);
+  color: #332819;
+  font-weight: 700;
+  line-height: 1.75;
+  margin: auto 0 0;
+  padding: 18px 20px;
+}
+
+.product-detail-education .vs-excel-section {
+  background: #ffffff;
+}
+
+.product-detail-education .vs-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-detail-education .vs-card {
+  align-items: flex-start;
+  background: #fffdf8;
+  border: 2px solid rgba(155, 107, 23, 0.55);
+  border-radius: 16px;
+  box-shadow: none;
+  display: flex;
+  gap: 18px;
+  min-height: 168px;
+  padding: 28px;
+}
+
+.product-detail-education .vs-number {
+  color: #9b6b17;
+  flex: 0 0 auto;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.4;
+  padding-top: 2px;
+}
+
+.product-detail-education .vs-title {
+  color: #111111;
+  font-size: 1.04rem;
+  line-height: 1.55;
+  margin: 0 0 9px;
+}
+
+.product-detail-education .vs-desc {
+  color: #4b463d;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .product-detail-education .education-detail-hero {
+    padding: 46px 0 42px;
+  }
+
+  .product-detail-education .education-detail-hero-grid,
+  .product-detail-education .education-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-education .education-detail-hero-grid {
+    gap: 30px;
+  }
+
+  .product-detail-education .education-detail-copy {
+    max-width: none;
+  }
+
+  .product-detail-education .education-detail-actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .product-detail-education .education-workflow {
+    padding: 42px 0 46px;
+  }
+
+  .product-detail-education .education-flow-steps {
+    grid-template-columns: 1fr;
+    margin: 26px 0 28px;
+  }
+
+  .product-detail-education .education-flow-steps li,
+  .product-detail-education .education-flow-steps li:first-child,
+  .product-detail-education .education-flow-steps li:last-child {
+    border-radius: 0;
+    min-height: 82px;
+  }
+
+  .product-detail-education .education-flow-steps li:first-child {
+    border-radius: 14px 14px 0 0;
+  }
+
+  .product-detail-education .education-flow-steps li:last-child {
+    border-radius: 0 0 14px 14px;
+  }
+
+  .product-detail-education .education-flow-steps li:not(:last-child)::after {
+    bottom: -14px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    height: 18px;
+    left: calc(50% - 11px);
+    right: auto;
+    top: auto;
+    width: 22px;
+  }
+
+  .product-detail-education .vs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .product-detail-education .education-detail-hero {
+    padding: 34px 0 34px;
+  }
+
+  .product-detail-education .education-detail-labels {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .product-detail-education .education-detail-labels span {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+
+  .product-detail-education .education-detail-lead {
+    margin: 18px 0 22px;
+  }
+
+  .product-detail-education .education-detail-visual {
+    border-width: 2px;
+    padding: 8px;
+  }
+
+  .product-detail-education .education-detail-visual img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .product-detail-education .education-workflow-heading {
+    text-align: left;
+  }
+
+  .product-detail-education .education-workflow-heading p {
+    font-size: 0.96rem;
+  }
+
+  .product-detail-education .education-feature-head {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .product-detail-education .education-feature-card ul {
+    padding: 18px;
+  }
+
+  .product-detail-education .vs-card {
+    gap: 14px;
+    min-height: auto;
+    padding: 20px;
+  }
+}
