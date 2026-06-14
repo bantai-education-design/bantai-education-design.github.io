@@ -197,7 +197,7 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   padding: 8px !important;
 }
 .product {
-  overflow: visible !important;
+  overflow: hidden;
 }
 .visual {
   overflow: visible !important;
@@ -536,11 +536,60 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
   margin-top: 0 !important;
 }
 
+#products .grid-3 {
+  align-items: stretch;
+}
+
+#products .product {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 3px solid #b58a3b;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.12);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+#products .product[data-href] {
+  cursor: pointer;
+}
+
+#products .product[data-href]:hover {
+  border-color: #7b5412;
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.17);
+  transform: translateY(-3px);
+}
+
+#products .product[data-href]:focus-visible {
+  outline: 4px solid #c6a15b;
+  outline-offset: 5px;
+}
+
+#products .product .body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+  background: #ffffff;
+}
+
+#products .product-actions {
+  margin-top: auto;
+}
+
 /* Highlights for New Product Kanji Practice Notebook */
 .product.highlight-card {
-  border: 2px solid var(--gold) !important;
-  box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15) !important;
-  background: #fffdf9 !important;
+  border: 3px solid #b58a3b !important;
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.12) !important;
+  background: #ffffff !important;
 }
 .product .body h3.highlight-title {
   font-size: 2.1rem !important;

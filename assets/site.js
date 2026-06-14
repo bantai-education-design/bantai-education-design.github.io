@@ -39,3 +39,30 @@
     if (event.key === "Escape") closeMenu();
   });
 })();
+
+(function () {
+  const cards = document.querySelectorAll(
+    "#products .product[data-href]"
+  );
+
+  cards.forEach((card) => {
+    const navigate = () => {
+      const href = card.dataset.href;
+      if (href) window.location.href = href;
+    };
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) return;
+      navigate();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.target.closest("a, button")) return;
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        navigate();
+      }
+    });
+  });
+})();
