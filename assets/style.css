@@ -1177,6 +1177,8 @@ button:focus-visible {
   height: 100%;
   overflow: hidden;
   padding: 0;
+  position: relative;
+  cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -1184,6 +1186,32 @@ button:focus-visible {
   border-color: #8f6824;
   box-shadow: 0 14px 32px rgba(17, 17, 17, 0.16);
   transform: translateY(-3px);
+}
+
+.catalog-card-hit-area {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+.catalog-card > :not(.catalog-card-hit-area) {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.catalog-card a:not(.catalog-card-hit-area),
+.catalog-card button {
+  pointer-events: auto;
+}
+
+.catalog-card:has(.catalog-card-hit-area:focus-visible),
+.catalog-card:focus-within {
+  outline: 3px solid #c6a15b;
+  outline-offset: 4px;
 }
 
 .catalog-grid-compact .catalog-card {
