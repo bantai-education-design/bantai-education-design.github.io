@@ -1146,6 +1146,259 @@ button:focus-visible {
   }
 }
 
+.product-detail-class-roster .class-roster-hero {
+  background:
+    linear-gradient(135deg, rgba(17, 17, 17, 0.94), rgba(41, 35, 24, 0.92)),
+    radial-gradient(circle at 82% 22%, rgba(198, 161, 91, 0.22), transparent 34%);
+  color: #ffffff;
+  padding: clamp(64px, 8vw, 104px) 0;
+}
+
+.product-detail-class-roster .class-roster-hero-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(36px, 5vw, 68px);
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.86fr);
+}
+
+.product-detail-class-roster .class-roster-kicker {
+  color: #e2c98a;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.product-detail-class-roster .class-roster-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.product-detail-class-roster .class-roster-badges span {
+  border: 1px solid rgba(226, 201, 138, 0.62);
+  border-radius: 6px;
+  color: #f5e7bd;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 7px 10px;
+}
+
+.product-detail-class-roster .class-roster-copy h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
+
+.product-detail-class-roster .class-roster-lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.02rem, 1.55vw, 1.18rem);
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+.product-detail-class-roster .class-roster-note {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.product-detail-class-roster .class-roster-visual {
+  background: #ffffff;
+  border: 3px solid #b58a3b;
+  border-radius: 18px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  padding: clamp(16px, 2.5vw, 26px);
+}
+
+.product-detail-class-roster .class-roster-visual img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.product-detail-class-roster .class-roster-section {
+  background: #f7f4ec;
+}
+
+.product-detail-class-roster .class-roster-section-heading {
+  margin-bottom: 30px;
+  max-width: 860px;
+}
+
+.product-detail-class-roster .class-roster-section-heading h2,
+.product-detail-class-roster .class-roster-split h2,
+.product-detail-class-roster .class-roster-status-card h2 {
+  color: #111111;
+}
+
+.product-detail-class-roster .class-roster-feature-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-detail-class-roster .class-roster-feature-card {
+  background: #ffffff;
+  border: 2px solid #b58a3b;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.product-detail-class-roster .class-roster-card-head {
+  background: #111111;
+  color: #ffffff;
+  padding: 18px 18px 14px;
+}
+
+.product-detail-class-roster .class-roster-card-head span {
+  color: #e2c98a;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.product-detail-class-roster .class-roster-card-head h3 {
+  color: #ffffff;
+  font-size: 1.12rem;
+  margin: 0;
+}
+
+.product-detail-class-roster .class-roster-feature-card ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 18px 20px 18px 32px;
+}
+
+.product-detail-class-roster .class-roster-feature-card li {
+  line-height: 1.55;
+}
+
+.product-detail-class-roster .class-roster-result {
+  background: #f7f4ec;
+  border-top: 1px solid rgba(181, 138, 59, 0.35);
+  color: #292929;
+  font-weight: 600;
+  line-height: 1.65;
+  margin: auto 0 0;
+  padding: 16px 18px;
+}
+
+.product-detail-class-roster .class-roster-documents {
+  background: #ffffff;
+}
+
+.product-detail-class-roster .class-roster-split {
+  align-items: start;
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+}
+
+.product-detail-class-roster .class-roster-document-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-detail-class-roster .class-roster-document-list li {
+  background: #ffffff;
+  border: 1px solid rgba(181, 138, 59, 0.55);
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 14px 16px;
+}
+
+.product-detail-class-roster .class-roster-steps {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-detail-class-roster .class-roster-steps li {
+  background: #ffffff;
+  border: 2px solid #b58a3b;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+}
+
+.product-detail-class-roster .class-roster-steps li:not(:last-child)::after {
+  color: #b58a3b;
+  content: "→";
+  font-size: 1.4rem;
+  font-weight: 800;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-detail-class-roster .class-roster-steps span {
+  color: #9b6b17;
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+
+.product-detail-class-roster .class-roster-steps strong {
+  color: #111111;
+  line-height: 1.5;
+}
+
+.product-detail-class-roster .class-roster-distribution {
+  background: #ffffff;
+}
+
+.product-detail-class-roster .class-roster-status-card {
+  background: #f7f4ec;
+  border: 2px solid #b58a3b;
+  border-radius: 14px;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+@media (max-width: 1080px) {
+  .product-detail-class-roster .class-roster-feature-grid,
+  .product-detail-class-roster .class-roster-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-detail-class-roster .class-roster-steps li:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .product-detail-class-roster .class-roster-hero-grid,
+  .product-detail-class-roster .class-roster-split {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-class-roster .class-roster-feature-grid,
+  .product-detail-class-roster .class-roster-document-list,
+  .product-detail-class-roster .class-roster-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* product catalog and category pages */
 .catalog-hero {
   background: linear-gradient(135deg, var(--black), var(--charcoal));
