@@ -1159,7 +1159,7 @@ button:focus-visible {
   align-items: center;
   display: grid;
   gap: clamp(40px, 5.5vw, 78px);
-  grid-template-columns: minmax(0, 1fr) minmax(440px, 0.96fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
 }
 
 .product-detail-class-roster .class-roster-labels {
@@ -1196,9 +1196,15 @@ button:focus-visible {
 
 .product-detail-class-roster .class-roster-copy h1 {
   color: #ffffff;
-  font-size: clamp(2.8rem, 5.4vw, 5rem);
+  font-size: clamp(2.7rem, 4.4vw, 4.5rem);
   line-height: 1.12;
   margin: 0 0 22px;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.product-detail-class-roster .class-roster-copy h1 span {
+  display: inline-block;
 }
 
 .product-detail-class-roster .class-roster-sublead {
@@ -1441,6 +1447,13 @@ button:focus-visible {
   border: 2px solid #b58a3b;
   border-radius: 14px;
   padding: clamp(24px, 4vw, 40px);
+}
+
+.product-detail-class-roster .home-floating {
+  display: flex;
+  margin: 28px auto;
+  position: static;
+  width: fit-content;
 }
 
 @media (max-width: 1080px) {
