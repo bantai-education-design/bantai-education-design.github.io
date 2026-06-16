@@ -1,0 +1,169 @@
+{
+  "pageTitle": "漢字練習帳 - 子どもに合わせた漢字ノート作成ソフト | Ban.Tai",
+  "metaDescription": "漢字練習帳は、マス目、余白、線の色や太さを自由に選んで、子どもに合わせた最適な漢字練習用紙をいつでも作成・印刷できるWindowsアプリです。",
+  "bodyClass": "",
+  "styleVersion": "586a1d0_v2",
+  "menuToggle": false,
+  "navLinks": [
+    { "href": "/", "label": "ホーム" },
+    { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "#trial", "label": "無料体験版" },
+    { "href": "#faq", "label": "よくある質問" },
+    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+  ],
+  "productName": "漢字練習帳",
+  "englishName": "Kanji Practice",
+  "boothUrl": "https://bantai3.booth.pm/items/8305799",
+  "images": [
+    "/assets/images/kanji-practice/booth-1-main.png",
+    "/assets/images/kanji-practice/booth-2-diff.png",
+    "/assets/images/kanji-practice/booth-3-grid.png",
+    "/assets/images/kanji-practice/booth-4-lines.png",
+    "/assets/images/kanji-practice/booth-10-purchase.png"
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "class": "hero kanji-practice-hero",
+      "containerClass": "container hero-content",
+      "textClass": "hero-text",
+      "imageContainerClass": "hero-image-container",
+      "kicker": "Kanji Practice",
+      "headingLines": ["子どもに合わせた", "漢字練習ノートを自由に作成。"],
+      "lead": "マス目、余白、罫線の色や濃さまで、すべてを調整できるWindows用印刷用紙作成アプリ。",
+      "note": "※ Windows PC専用。インストール版とポータブル版を同梱しています。",
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8305799",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        },
+        { "class": "btn btn-secondary", "href": "#trial", "label": "10日間無料体験版" }
+      ],
+      "image": {
+        "src": "/assets/images/kanji-practice/booth-1-main.png",
+        "alt": "漢字練習帳 メインビジュアル"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "left",
+      "background": "#fdfbf7",
+      "cardClass": "card",
+      "badge": "作る漢字ノート",
+      "headingLines": ["市販の漢字ノートにない、", "圧倒的な自由度。"],
+      "paragraphs": [
+        "「マスのサイズが細かすぎる」「余白が狭くて書きづらい」「罫線の色が鉛筆と混ざって見にくい」といった、子どもたちの学習時の小さなストレスをすべて解消します。",
+        "マスの数、余白サイズ、罫線の色や濃さを自由にカスタマイズして、今その子に必要な最適なノートをいつでも何枚でも印刷できます。"
+      ],
+      "image": {
+        "src": "/assets/images/kanji-practice/booth-2-diff.png",
+        "alt": "市販ノートと漢字練習帳の違い"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "right",
+      "background": "#fff",
+      "cardClass": "card gold",
+      "badge": "成長に合わせたマス目設定",
+      "headingLines": ["幼児用の大きなマスから、", "高学年用の細かなマスまで。"],
+      "paragraphs": [
+        "マス目は 5×5、10×7、15×12、20×20 など、縦マスの数・横マスの数を自由自在に設定可能。",
+        "マスのサイズは、自動的に正方形（漢字の練習に最適な比率）になるようにシステムが自動調整します。幼児期の発達段階から、中学年・高学年・大人の練習用まで幅広く活用できます。"
+      ],
+      "image": {
+        "src": "/assets/images/kanji-practice/booth-3-grid.png",
+        "alt": "マス目の自由設定"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "left",
+      "background": "#f9f9f9",
+      "cardClass": "card",
+      "badge": "書きやすさを追求する",
+      "headingLines": ["鉛筆の文字を邪魔しない、", "最適な罫線の色と太さ。"],
+      "paragraphs": [
+        "罫線の色は「黒」「青」「緑」「グレー」の4色から選択できます。鉛筆で書いた漢字がはっきり見分けられるように、青や緑などの線を選ぶと非常に見やすく学習がはかどります。",
+        "また、外枠線や十字点線の太さ・濃さもスライダーで微調整が可能。極薄グレーに設定して「なぞり書き」用のガイド用紙を作ることもできます。"
+      ],
+      "image": {
+        "src": "/assets/images/kanji-practice/booth-4-lines.png",
+        "alt": "線の色・濃さ調整"
+      }
+    },
+    {
+      "type": "purchase",
+      "id": "trial",
+      "imagePosition": "right",
+      "background": "#fff",
+      "cardClass": "card gold",
+      "badge": "安心の無料体験",
+      "headingLines": ["まずはすべての機能を、", "10日間の無料体験でお試し。"],
+      "paragraphs": [
+        "「漢字練習帳」は、すべての機能を制限なくお使いいただける10日間の無料体験版を提供しています。",
+        "面倒な会員登録やクレジットカードの登録は一切不要。体験期間終了後に自動で課金されるような心配もありません。まずは使いやすさや実際の印刷の仕上がりを無料でお試しください。"
+      ],
+      "actionsStyle": "margin-top:14px;",
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8305799",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        }
+      ],
+      "image": {
+        "src": "/assets/images/kanji-practice/booth-10-purchase.png",
+        "alt": "無料体験とライセンス登録の流れ"
+      }
+    },
+    {
+      "type": "downloadCta",
+      "heading": "漢字練習帳ライセンス購入",
+      "description": "10日間の体験後も引き続きご利用いただく場合は、BOOTHでシリアルキーの購入をお願いいたします。",
+      "actions": [
+        {
+          "class": "btn-download-large",
+          "href": "https://bantai3.booth.pm/items/8305799",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        }
+      ],
+      "note": "シリアルキーをアプリに入力するだけで即座に制限が解除され、永続的にご利用いただけます。"
+    },
+    {
+      "type": "specs",
+      "background": "#f9f9f9",
+      "heading": "動作環境",
+      "items": [
+        { "label": "OS", "text": "Windows 10 / 11" },
+        { "label": "形式", "text": "インストール版、ポータブル版（USB起動可能）を同梱" },
+        { "label": "必要環境", "text": "プリンター（A4またはB5印刷対応）、またはPDFファイルを外部デバイスへ出力可能な環境" }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "background": "#fff",
+      "eyebrow": "FAQ",
+      "heading": "よくある質問",
+      "items": [
+        {
+          "question": "Q. 無料体験はありますか？",
+          "answer": "A. はい、ございます。アプリを起動してから10日間はすべての機能を無料で制限なくお試しいただけます。アカウント作成やカード登録は不要です。BOOTHから体験版をダウンロードしてご利用ください。"
+        },
+        {
+          "question": "Q. 作成した用紙をPDFで保存できますか？",
+          "answer": "A. はい、保存できます。作成した漢字練習用紙は高精度なPDFファイルとして書き出すことができ、メールで送ったり、コンビニ等で印刷したりすることが可能です。"
+        },
+        {
+          "question": "Q. A4サイズとB5サイズに対応していますか？",
+          "answer": "A. はい、どちらのサイズにも対応しています。用紙サイズ設定スライダーから「A4」または「B5」を選択するだけで、紙面に合わせた最適なレイアウトが自動的に生成されます。"
+        }
+      ]
+    }
+  ]
+}

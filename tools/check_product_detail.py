@@ -191,6 +191,25 @@ def validate_houganshi(data: dict, html: str, parser: DetailPageParser) -> None:
     require(html.count(data["boothUrl"]) == 3, "BOOTH link count changed")
 
 
+def validate_kanji_practice(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"boothUrl", "images", "englishName"}, "kanji-practice root")
+    validate_url(data["boothUrl"], "boothUrl")
+    require(data["boothUrl"] in html, "BOOTH URL missing from generated HTML")
+    require(len(data["images"]) == 5, "kanji-practice images must have 5 items")
+    for src in data["images"]:
+        validate_image_path(src, "kanji-practice image")
+        require(src in html, f"kanji-practice image missing from HTML: {src}")
+    section_types = [section["type"] for section in data["sections"]]
+    require(section_types.count("imageText") + section_types.count("purchase") == 4, "description sections must total 4")
+    require("downloadCta" in section_types, "downloadCta section missing")
+    specs = next((section for section in data["sections"] if section["type"] == "specs"), None)
+    require(specs is not None and len(specs["items"]) == 3, "specs must have 3 items")
+    faq = next((section for section in data["sections"] if section["type"] == "faq"), None)
+    require(faq is not None and len(faq["items"]) == 3, "FAQ must have 3 items")
+    require(parser.class_counts.get("visual", 0) >= 4, "visual image sections missing")
+    require(html.count(data["boothUrl"]) == 3, "BOOTH link count changed")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -209,6 +228,8 @@ def main() -> None:
         validate_class_roster(data, html, page)
     elif args.slug == "houganshi":
         validate_houganshi(data, html, page)
+    elif args.slug == "kanji-practice":
+        validate_kanji_practice(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 
