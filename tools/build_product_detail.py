@@ -71,6 +71,38 @@ def render_actions(actions: list[dict[str, Any]], spaces: int = 12, style: str |
     return f'{" " * spaces}<div class="actions"{style_attr}>\n{links}\n{" " * spaces}</div>'
 
 
+def render_paper_placeholder(spaces: int = 10) -> str:
+    html = "\n".join(
+        [
+            '<div style="background:#fff; padding:22px;">',
+            '  <div style="border:1px solid rgba(7,27,54,.12); border-radius:18px; background:#fff; padding:18px; box-shadow:0 10px 26px rgba(7,27,54,.08);">',
+            '    <div style="height:132px; border:3px double rgba(7,27,54,.28); border-radius:8px; margin-bottom:14px; background:#fcfcfc;"></div>',
+            '    <div style="height:176px; border:1px solid rgba(7,27,54,.22); background-image:linear-gradient(rgba(7,27,54,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(7,27,54,.18) 1px,transparent 1px); background-size:22px 22px;"></div>',
+            "  </div>",
+            "</div>",
+        ]
+    )
+    return indent_block(html, spaces)
+
+
+def render_visual(section: dict[str, Any], spaces: int = 8) -> str:
+    if section.get("placeholderVisual") == "paper":
+        return "\n".join(
+            [
+                f'{" " * spaces}<div class="{html_attr(section.get("imageContainerClass", "hero-image-container"))}">',
+                render_paper_placeholder(spaces + 2),
+                f'{" " * spaces}</div>',
+            ]
+        )
+    return "\n".join(
+        [
+            f'{" " * spaces}<div class="{html_attr(section["imageContainerClass"])}">',
+            f'{" " * (spaces + 2)}<img src="{html_attr(section["image"]["src"])}" alt="{html_attr(section["image"]["alt"])}">',
+            f'{" " * spaces}</div>',
+        ]
+    )
+
+
 def render_nav_links(data: dict[str, Any]) -> str:
     lines = []
     for item in data["navLinks"]:
@@ -283,9 +315,7 @@ def render_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
             f'          <p class="hero-note">{html_text(section["note"])}</p>',
             actions,
             '        </div>',
-            f'        <div class="{html_attr(section["imageContainerClass"])}">',
-            f'          <img src="{html_attr(section["image"]["src"])}" alt="{html_attr(section["image"]["alt"])}">',
-            '        </div>',
+            render_visual(section, spaces=8),
             '      </div>',
             '    </section>',
         ]
@@ -391,6 +421,143 @@ def render_faq(section: dict[str, Any], data: dict[str, Any]) -> str:
     )
 
 
+def render_paragraph_list(paragraphs: list[str], spaces: int) -> str:
+    return "\n".join(f'{" " * spaces}<p>{html_text(paragraph)}</p>' for paragraph in paragraphs)
+
+
+def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
+    cards = []
+    for item in section["items"]:
+        lines = ['          <div class="card">']
+        if item.get("mark"):
+            lines.append(f'            <div class="mark">{html_text(item["mark"])}</div>')
+        if item.get("badge"):
+            lines.append(f'            <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(item["badge"])}</span>')
+        lines.extend(
+            [
+                f'            <h3>{html_text(item["heading"])}</h3>',
+                f'            <p>{html_text(item["text"])}</p>',
+                '          </div>',
+            ]
+        )
+        cards.append("\n".join(lines))
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    return "\n".join(
+        [
+            f'    <section{section_id} class="section"{background}>',
+            '      <div class="container">',
+            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            *([f'        <p>{html_text(section["description"])}</p>'] if section.get("description") else []),
+            f'        <div class="grid grid-3"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
+            "\n".join(cards),
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_split_text_card(section: dict[str, Any], data: dict[str, Any]) -> str:
+    card = section["card"]
+    return "\n".join(
+        [
+            f'    <section class="section"{render_attrs({"style": "background:" + section["background"] + ";"}) if section.get("background") else ""}>',
+            '      <div class="container grid grid-2" style="align-items:center;">',
+            '        <div>',
+            f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            render_paragraph_list(section["paragraphs"], spaces=10),
+            '        </div>',
+            f'        <div class="{html_attr(card.get("class", "card"))}">',
+            f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(card["badge"])}</span>',
+            f'          <h3>{html_text(card["heading"])}</h3>',
+            f'          <p>{html_text(card["text"])}</p>',
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_ordered_list_with_info(section: dict[str, Any], data: dict[str, Any]) -> str:
+    steps = "\n".join(f'            <li>{html_text(item)}</li>' for item in section["steps"])
+    rows = "\n".join(
+        f'            <tr{render_attrs({"style": row.get("rowStyle", "")}) if row.get("rowStyle") else ""}><td style="padding:8px; font-weight:bold;{(" width:" + row["labelWidth"] + ";") if row.get("labelWidth") else ""}">{html_text(row["label"])}</td><td style="padding:8px;">{html_text(row["text"])}</td></tr>'
+        for row in section["info"]["rows"]
+    )
+    return "\n".join(
+        [
+            f'    <section class="section"{render_attrs({"style": "background:" + section["background"] + ";"}) if section.get("background") else ""}>',
+            '      <div class="container grid grid-2" style="align-items:start;">',
+            '        <div>',
+            f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            '          <ol style="line-height:1.9; padding-left:1.4em;">',
+            steps,
+            '          </ol>',
+            '        </div>',
+            f'        <div class="{html_attr(section["info"].get("class", "info-box"))}">',
+            f'          <h3>{html_text(section["info"]["heading"])}</h3>',
+            '          <table style="width:100%; border-collapse:collapse; font-size:.94rem; line-height:1.8;">',
+            rows,
+            '          </table>',
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_video_placeholder(section: dict[str, Any], data: dict[str, Any]) -> str:
+    steps = "\n".join(f'            <li>{html_text(item)}</li>' for item in section["steps"])
+    placeholder = section["placeholder"]
+    return "\n".join(
+        [
+            f'    <section id="{html_attr(section["id"])}" class="section">',
+            '      <div class="container grid grid-2" style="align-items:center;">',
+            '        <div>',
+            f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            f'          <p>{html_text(section["description"])}</p>',
+            '          <ol style="line-height:1.9; padding-left:1.4em;">',
+            steps,
+            '          </ol>',
+            '        </div>',
+            '        <div class="card gold" style="min-height:260px; display:flex; flex-direction:column; justify-content:center;">',
+            '          <!--',
+            '            将来の差し替え例:',
+            '            <video controls playsinline poster="/assets/images/observation-card/video-poster.png">',
+            '              <source src="/assets/videos/observation-card-demo.mp4" type="video/mp4">',
+            '            </video>',
+            '          -->',
+            f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(placeholder["badge"])}</span>',
+            f'          <h3>{html_text(placeholder["heading"])}</h3>',
+            f'          <p>{html_text(placeholder["text"])}</p>',
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_notice_list(section: dict[str, Any], data: dict[str, Any]) -> str:
+    items = "\n".join(f'          <li>{html_text(item)}</li>' for item in section["items"])
+    return "\n".join(
+        [
+            f'    <section id="{html_attr(section["id"])}" class="{html_attr(section.get("class", "section-narrow"))}">',
+            '      <div class="container warning">',
+            f'        <h3>{html_text(section["heading"])}</h3>',
+            '        <ul class="notice-list">',
+            items,
+            '        </ul>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
 SECTION_RENDERERS = {
     "classRosterHero": render_class_roster_hero,
     "summaryGrid": render_class_roster_summary,
@@ -404,6 +571,11 @@ SECTION_RENDERERS = {
     "downloadCta": render_download_cta,
     "specs": render_specs,
     "faq": render_faq,
+    "splitTextCard": render_split_text_card,
+    "textCardGrid": render_text_card_grid,
+    "orderedListWithInfo": render_ordered_list_with_info,
+    "videoPlaceholder": render_video_placeholder,
+    "noticeList": render_notice_list,
 }
 
 

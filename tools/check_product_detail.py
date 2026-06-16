@@ -210,6 +210,40 @@ def validate_kanji_practice(data: dict, html: str, parser: DetailPageParser) -> 
     require(html.count(data["boothUrl"]) == 3, "BOOTH link count changed")
 
 
+def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"englishName", "versionLabel"}, "observation-card root")
+    require(data["versionLabel"] in html, "version label missing")
+    require("BOOTH準備中" in html and "Vector準備中" in html and "note準備中" in html, "distribution pending cards missing")
+    forbidden = [
+        "bantai3.booth.pm",
+        "vector.co.jp",
+        "note.com",
+        "github.com/",
+        "/assets/images/observation-card/",
+        "/assets/videos/observation-card",
+    ]
+    visible_html = re.sub(r"<!--.*?-->", "", html, flags=re.S)
+    for value in forbidden:
+        require(value not in visible_html, f"forbidden live link or asset reference found: {value}")
+    section_types = [section["type"] for section in data["sections"]]
+    require("hero" in section_types, "hero section missing")
+    targets = next((section for section in data["sections"] if section["type"] == "textCardGrid" and section.get("eyebrow") == "For Whom"), None)
+    require(targets is not None and len(targets["items"]) == 3, "target cards must have 3 items")
+    features = next((section for section in data["sections"] if section.get("id") == "features"), None)
+    require(features is not None and len(features["items"]) == 3, "feature cards must have 3 items")
+    howto = next((section for section in data["sections"] if section["type"] == "orderedListWithInfo"), None)
+    require(howto is not None and len(howto["steps"]) == 4, "howto must have 4 steps")
+    require(howto is not None and len(howto["info"]["rows"]) == 3, "environment info must have 3 rows")
+    video = next((section for section in data["sections"] if section["type"] == "videoPlaceholder"), None)
+    require(video is not None and len(video["steps"]) == 5, "video steps must have 5 items")
+    distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
+    require(distribution is not None and len(distribution["items"]) == 3, "distribution cards must have 3 items")
+    notes = next((section for section in data["sections"] if section["type"] == "noticeList"), None)
+    require(notes is not None and len(notes["items"]) == 5, "notice list must have 5 items")
+    require("PDF出力 / 印刷" in html, "print/PDF wording missing")
+    require("画像なしでも崩れない掲載構成" in html, "placeholder explanation missing")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -230,6 +264,8 @@ def main() -> None:
         validate_houganshi(data, html, page)
     elif args.slug == "kanji-practice":
         validate_kanji_practice(data, html, page)
+    elif args.slug == "observation-card":
+        validate_observation_card(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 
