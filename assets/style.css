@@ -1148,25 +1148,32 @@ button:focus-visible {
 
 .product-detail-class-roster .class-roster-hero {
   background:
-    linear-gradient(135deg, rgba(17, 17, 17, 0.94), rgba(41, 35, 24, 0.92)),
-    radial-gradient(circle at 82% 22%, rgba(198, 161, 91, 0.22), transparent 34%);
+    radial-gradient(circle at 82% 20%, rgba(198, 161, 91, 0.18), transparent 36%),
+    linear-gradient(135deg, #111111 0%, #171a21 48%, #06172d 100%);
+  border-bottom: 5px solid #b58a3b;
   color: #ffffff;
-  padding: clamp(64px, 8vw, 104px) 0;
+  padding: clamp(72px, 8vw, 116px) 0 clamp(56px, 7vw, 88px);
 }
 
 .product-detail-class-roster .class-roster-hero-grid {
   align-items: center;
   display: grid;
-  gap: clamp(36px, 5vw, 68px);
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.86fr);
+  gap: clamp(40px, 5.5vw, 78px);
+  grid-template-columns: minmax(0, 1fr) minmax(440px, 0.96fr);
 }
 
-.product-detail-class-roster .class-roster-kicker {
+.product-detail-class-roster .class-roster-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.product-detail-class-roster .class-roster-labels span {
   color: #e2c98a;
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  margin: 0 0 16px;
   text-transform: uppercase;
 }
 
@@ -1178,7 +1185,8 @@ button:focus-visible {
 }
 
 .product-detail-class-roster .class-roster-badges span {
-  border: 1px solid rgba(226, 201, 138, 0.62);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 201, 138, 0.72);
   border-radius: 6px;
   color: #f5e7bd;
   font-size: 0.86rem;
@@ -1188,37 +1196,97 @@ button:focus-visible {
 
 .product-detail-class-roster .class-roster-copy h1 {
   color: #ffffff;
-  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-size: clamp(2.8rem, 5.4vw, 5rem);
   line-height: 1.12;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
+}
+
+.product-detail-class-roster .class-roster-sublead {
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2.1vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.55;
+  margin: 0 0 22px;
 }
 
 .product-detail-class-roster .class-roster-lead {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.02rem, 1.55vw, 1.18rem);
+  color: rgba(255, 255, 255, 0.84);
+  display: grid;
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  gap: 12px;
   line-height: 1.85;
-  margin: 0 0 16px;
+  margin: 0 0 28px;
+  max-width: 720px;
 }
 
-.product-detail-class-roster .class-roster-note {
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.7;
+.product-detail-class-roster .class-roster-lead p {
   margin: 0;
 }
 
 .product-detail-class-roster .class-roster-visual {
-  background: #ffffff;
+  background: #f7f4ec;
   border: 3px solid #b58a3b;
-  border-radius: 18px;
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.34);
   overflow: hidden;
-  padding: clamp(16px, 2.5vw, 26px);
+  padding: clamp(16px, 2.5vw, 28px);
+}
+
+.product-detail-class-roster .class-roster-visual p {
+  color: #5b431b;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 14px;
 }
 
 .product-detail-class-roster .class-roster-visual img {
+  background: #ffffff;
+  border-radius: 12px;
   display: block;
   height: auto;
   width: 100%;
+}
+
+.product-detail-class-roster .class-roster-summary {
+  background: #f7f4ec;
+  border-bottom: 1px solid rgba(181, 138, 59, 0.24);
+  padding: 24px 0;
+}
+
+.product-detail-class-roster .class-roster-summary-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-detail-class-roster .class-roster-summary-item {
+  background: #ffffff;
+  border: 2px solid #b58a3b;
+  border-radius: 12px;
+  min-width: 0;
+  padding: 16px 18px;
+}
+
+.product-detail-class-roster .class-roster-summary-item span {
+  color: #9b6b17;
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+
+.product-detail-class-roster .class-roster-summary-item h2 {
+  color: #111111;
+  font-size: 1.08rem;
+  margin: 0 0 6px;
+}
+
+.product-detail-class-roster .class-roster-summary-item p {
+  color: #3c3c3c;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .product-detail-class-roster .class-roster-section {
@@ -1376,6 +1444,16 @@ button:focus-visible {
 }
 
 @media (max-width: 1080px) {
+  .product-detail-class-roster .class-roster-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-class-roster .class-roster-visual {
+    margin-inline: auto;
+    max-width: 780px;
+  }
+
+  .product-detail-class-roster .class-roster-summary-grid,
   .product-detail-class-roster .class-roster-feature-grid,
   .product-detail-class-roster .class-roster-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1387,7 +1465,6 @@ button:focus-visible {
 }
 
 @media (max-width: 860px) {
-  .product-detail-class-roster .class-roster-hero-grid,
   .product-detail-class-roster .class-roster-split {
     grid-template-columns: 1fr;
   }
@@ -1395,6 +1472,20 @@ button:focus-visible {
   .product-detail-class-roster .class-roster-feature-grid,
   .product-detail-class-roster .class-roster-document-list,
   .product-detail-class-roster .class-roster-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .product-detail-class-roster .class-roster-hero {
+    padding: 56px 0 46px;
+  }
+
+  .product-detail-class-roster .class-roster-copy h1 {
+    font-size: clamp(2.35rem, 12vw, 3.05rem);
+  }
+
+  .product-detail-class-roster .class-roster-summary-grid {
     grid-template-columns: 1fr;
   }
 }
