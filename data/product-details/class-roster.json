@@ -1,0 +1,122 @@
+{
+  "pageTitle": "学級名簿メーカー | Ban.Tai Education Design",
+  "metaDescription": "名簿、提出物チェック表、誕生日一覧など、学級で繰り返し使う一覧表を見やすく作成・印刷できる無料ツールです。",
+  "bodyClass": "product-detail-page product-detail-class-roster",
+  "styleVersion": "class-roster-polish-20260616-1",
+  "scriptVersion": "class-roster-detail-20260615-1",
+  "productName": "学級名簿メーカー",
+  "productNameParts": ["学級名簿", "メーカー"],
+  "englishLabels": ["FREE WINDOWS TOOL", "CLASS ROSTER MAKER"],
+  "badges": ["無料", "インストール不要", "学級事務", "印刷対応"],
+  "heroLeadLines": [
+    "名簿から提出物チェック表まで、",
+    "学級事務で繰り返し使う一覧表を一つのツールで。"
+  ],
+  "heroDescription": [
+    "児童名簿をもとに、通常の学級名簿、提出物チェック表、集金確認表、誕生日順一覧などを作成できます。",
+    "出席番号順、男女別、五十音順、誕生日順への並べ替え、チェック欄数、ふりがな、書体、行間、余白も調整できます。"
+  ],
+  "image": {
+    "src": "/assets/images/class-roster-maker-thumbnail.svg",
+    "alt": "学級名簿メーカーの画面イメージ",
+    "caption": "提出物チェック表の作成例"
+  },
+  "downloadUrl": "https://github.com/bantai-education-design/gakkyu-meibo-maker/releases/download/class-roster-maker-v0.6.5/ClassRosterMaker-v0.6.5-Windows.zip",
+  "heroActions": {
+    "downloadLabel": "Windows版を無料ダウンロード",
+    "featuresLabel": "主な機能を見る"
+  },
+  "summary": [
+    {
+      "number": "01",
+      "title": "並べ替え",
+      "text": "出席番号・男女・五十音・誕生日順"
+    },
+    {
+      "number": "02",
+      "title": "チェック表",
+      "text": "チェック欄を0〜15列で設定"
+    },
+    {
+      "number": "03",
+      "title": "表示調整",
+      "text": "ふりがな・書体・行間・余白"
+    },
+    {
+      "number": "04",
+      "title": "印刷",
+      "text": "1段・2段・印刷プレビュー"
+    }
+  ],
+  "summaryAriaLabel": "学級名簿メーカーの概要",
+  "featuresSection": {
+    "eyebrow": "Features",
+    "heading": "学級で使う名簿を、目的に合わせて整える",
+    "descriptionLines": [
+      "児童名簿を一度用意すれば、並べ方や表示項目、チェック欄を変更しながら、",
+      "用途の異なる一覧表を作成できます。"
+    ],
+    "items": [
+      {
+        "number": "01",
+        "title": "名簿の並べ替え",
+        "bullets": ["出席番号順", "男女別", "五十音順", "誕生日順", "表示しない児童の一時除外"],
+        "result": "用途に合わせた並び順へ、名簿を書き直さず切り替えられます。"
+      },
+      {
+        "number": "02",
+        "title": "提出物チェック表",
+        "bullets": ["チェック欄数を0列から15列まで調整", "表のタイトルを自由入力", "行の高さを調整", "1段組み／2段組み"],
+        "result": "宿題、集金、配布物など、確認項目に合わせたチェック表を作成できます。"
+      },
+      {
+        "number": "03",
+        "title": "表示と文字の調整",
+        "bullets": ["明朝体／ゴシック体", "ふりがなの表示／非表示", "行間の調整", "用紙周囲の余白調整"],
+        "result": "低学年用の読みやすい名簿から、職員用の簡潔な名簿まで整えられます。"
+      },
+      {
+        "number": "04",
+        "title": "印刷プレビュー",
+        "bullets": ["作成内容をその場で確認", "用紙上の完成イメージを表示", "印刷時は操作パネルを非表示", "表の途中で行が分断されにくい印刷設定"],
+        "result": "画面で確認した名簿を、そのまま紙へ印刷できます。"
+      }
+    ]
+  },
+  "documentsSection": {
+    "eyebrow": "Documents",
+    "heading": "一つの児童名簿から作成できるもの",
+    "description": "日々の学級事務で繰り返し使う一覧表を、同じ児童名簿から用途別に整えられます。",
+    "items": ["通常の学級名簿", "提出物チェック表", "集金確認表", "配布物確認表", "誕生日順一覧", "五十音順一覧", "男女別一覧", "ふりがな付き名簿"]
+  },
+  "howtoSection": {
+    "eyebrow": "How To",
+    "heading": "基本の使い方",
+    "steps": [
+      {
+        "number": "01",
+        "text": "名簿データを確認する"
+      },
+      {
+        "number": "02",
+        "text": "並べ替えと表示方法を選ぶ"
+      },
+      {
+        "number": "03",
+        "text": "チェック欄・書体・余白を調整する"
+      },
+      {
+        "number": "04",
+        "text": "プレビューを確認して印刷する"
+      }
+    ]
+  },
+  "distributionSection": {
+    "status": "無料ソフト",
+    "heading": "Windows版を無料ダウンロードできます。",
+    "description": "学級名簿メーカー v0.6.5 のWindows版ZIPファイルを、GitHub Releasesからダウンロードできます。",
+    "downloadLabel": "Windows版を無料ダウンロード",
+    "backLabel": "製品一覧へ戻る",
+    "backUrl": "/products/"
+  }
+}
