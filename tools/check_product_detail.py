@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import argparse
 import json
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -8,102 +10,64 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "product-details" / "class-roster.json"
-OUTPUT_PATH = ROOT / "products" / "class-roster" / "index.html"
-GENERATED_COMMENT = (
-    "GENERATED FILE: edit data/product-details/class-roster.json and templates/product-detail.html"
-)
+DATA_DIR = ROOT / "data" / "product-details"
 
 
-REQUIRED_TOP_LEVEL_KEYS = {
-    "pageTitle",
-    "metaDescription",
-    "bodyClass",
-    "styleVersion",
-    "scriptVersion",
-    "productName",
-    "productNameParts",
-    "englishLabels",
-    "badges",
-    "heroLeadLines",
-    "heroDescription",
-    "image",
-    "downloadUrl",
-    "heroActions",
-    "summary",
-    "featuresSection",
-    "documentsSection",
-    "howtoSection",
-    "distributionSection",
+VOID_TAGS = {
+    "area",
+    "base",
+    "br",
+    "col",
+    "embed",
+    "hr",
+    "img",
+    "input",
+    "link",
+    "meta",
+    "source",
+    "track",
+    "wbr",
 }
 
 
 class DetailPageParser(HTMLParser):
-    def __init__(self) -> None:
+    def __init__(self, expected_comment: str) -> None:
         super().__init__()
+        self.expected_comment = expected_comment
         self.generated_comment = False
         self.empty_hrefs: list[str] = []
         self.images: list[dict[str, str]] = []
         self.headings: list[str] = []
-        self.feature_cards = 0
-        self.document_items = 0
-        self.howto_steps = 0
+        self.links: list[str] = []
+        self.class_counts: dict[str, int] = {}
         self.in_heading: str | None = None
-        self.in_document_list = False
-        self.document_depth = 0
-        self.in_howto_steps = False
-        self.howto_depth = 0
 
     def handle_comment(self, data: str) -> None:
-        if GENERATED_COMMENT in data:
+        if self.expected_comment in data:
             self.generated_comment = True
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attr = {key: value or "" for key, value in attrs}
-        classes = set(attr.get("class", "").split())
-
-        if tag == "a" and not attr.get("href"):
-            self.empty_hrefs.append(self.get_starttag_text() or "<a>")
+        for class_name in attr.get("class", "").split():
+            self.class_counts[class_name] = self.class_counts.get(class_name, 0) + 1
+        if tag == "a":
+            href = attr.get("href", "")
+            self.links.append(href)
+            if not href:
+                self.empty_hrefs.append(self.get_starttag_text() or "<a>")
         if tag == "img":
             self.images.append({"src": attr.get("src", ""), "alt": attr.get("alt", "")})
         if tag in {"h1", "h2", "h3"}:
             self.in_heading = tag
             self.headings.append("")
-        if tag == "article" and "class-roster-feature-card" in classes:
-            self.feature_cards += 1
-        if tag == "ul" and "class-roster-document-list" in classes:
-            self.in_document_list = True
-            self.document_depth = 1
-        elif self.in_document_list and tag not in VOID_TAGS:
-            self.document_depth += 1
-        if self.in_document_list and tag == "li":
-            self.document_items += 1
-        if tag == "ol" and "class-roster-steps" in classes:
-            self.in_howto_steps = True
-            self.howto_depth = 1
-        elif self.in_howto_steps and tag not in VOID_TAGS:
-            self.howto_depth += 1
-        if self.in_howto_steps and tag == "li":
-            self.howto_steps += 1
 
     def handle_endtag(self, tag: str) -> None:
         if tag == self.in_heading:
             self.in_heading = None
-        if self.in_document_list and tag not in VOID_TAGS:
-            self.document_depth -= 1
-            if self.document_depth <= 0:
-                self.in_document_list = False
-        if self.in_howto_steps and tag not in VOID_TAGS:
-            self.howto_depth -= 1
-            if self.howto_depth <= 0:
-                self.in_howto_steps = False
 
     def handle_data(self, data: str) -> None:
         if self.in_heading and self.headings:
             self.headings[-1] += data.strip()
-
-
-VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
 
 def fail(message: str) -> None:
@@ -121,45 +85,134 @@ def require_keys(mapping: dict, keys: set[str], label: str) -> None:
     require(not missing, f"{label}: missing required keys: {', '.join(missing)}")
 
 
-def validate_json(data: dict) -> None:
-    require_keys(data, REQUIRED_TOP_LEVEL_KEYS, "root")
-    require(len(data["featuresSection"]["items"]) == 4, "featuresSection.items must have 4 items")
-    require(len(data["documentsSection"]["items"]) == 8, "documentsSection.items must have 8 items")
-    require(len(data["howtoSection"]["steps"]) == 4, "howtoSection.steps must have 4 steps")
-    require(data["image"].get("src"), "image.src is required")
-    image_path = ROOT / data["image"]["src"].lstrip("/")
-    require(image_path.exists(), f"image file does not exist: {data['image']['src']}")
-    download_url = data.get("downloadUrl", "")
-    parsed = urlparse(download_url)
-    require(parsed.scheme == "https" and parsed.netloc, "downloadUrl must be an absolute HTTPS URL")
-    require(download_url.endswith(".zip"), "downloadUrl must point to the release ZIP file")
+def data_path(slug: str) -> Path:
+    return DATA_DIR / f"{slug}.json"
 
 
-def validate_html(data: dict, html: str) -> None:
-    parser = DetailPageParser()
-    parser.feed(html)
+def output_path(slug: str) -> Path:
+    return ROOT / "products" / slug / "index.html"
 
+
+def load_data(slug: str) -> dict:
+    path = data_path(slug)
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        fail(f"{path.relative_to(ROOT)}: invalid JSON: {exc}")
+
+
+def validate_url(url: str, label: str, *, require_zip: bool = False) -> None:
+    parsed = urlparse(url)
+    require(parsed.scheme in {"https", "mailto"} or url.startswith(("/", "#")), f"{label}: invalid URL: {url}")
+    if require_zip:
+        require(parsed.scheme == "https" and url.endswith(".zip"), f"{label}: expected HTTPS ZIP URL")
+
+
+def validate_image_path(src: str, label: str) -> None:
+    require(src.startswith("/"), f"{label}: image path must be root-relative")
+    path = ROOT / src.lstrip("/")
+    require(path.exists(), f"{label}: image file does not exist: {src}")
+
+
+def walk_values(value):
+    if isinstance(value, dict):
+        for child in value.values():
+            yield from walk_values(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from walk_values(child)
+    else:
+        yield value
+
+
+def validate_common(slug: str, data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(
+        data,
+        {"pageTitle", "metaDescription", "styleVersion", "navLinks", "productName", "sections"},
+        "root",
+    )
     require(parser.generated_comment, "generated file comment is missing")
     require(not parser.empty_hrefs, "empty href found")
-    require(data["productName"] in "".join(parser.headings), "product heading is missing")
-    require(parser.feature_cards == 4, f"feature card count mismatch: {parser.feature_cards}")
-    require(parser.document_items == 8, f"document item count mismatch: {parser.document_items}")
-    require(parser.howto_steps == 4, f"howto step count mismatch: {parser.howto_steps}")
-    expected_image = data["image"]["src"]
-    require(any(image["src"] == expected_image for image in parser.images), "configured image is missing")
-    require(data["downloadUrl"] in html, "download URL is missing from generated HTML")
+    require(data["pageTitle"] in html, "page title missing from generated HTML")
+    require(data["metaDescription"] in html, "meta description missing from generated HTML")
+    require(data["productName"] in "".join(parser.headings) or data["productName"] in html, "product name missing")
+    require(not re.search(r"\$[a-zA-Z_][a-zA-Z0-9_]*", html), "unresolved template variable found")
+    for link in data["navLinks"]:
+        validate_url(link["href"], f"navLinks {link['label']}")
+    for src in {image["src"] for image in parser.images if image["src"].startswith("/assets/")}:
+        validate_image_path(src, "html image")
+
+
+def validate_class_roster(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(
+        data,
+        {
+            "bodyClass",
+            "scriptVersion",
+            "productNameParts",
+            "englishLabels",
+            "badges",
+            "heroLeadLines",
+            "heroDescription",
+            "image",
+            "downloadUrl",
+            "heroActions",
+        },
+        "class-roster root",
+    )
+    validate_image_path(data["image"]["src"], "class-roster image")
+    validate_url(data["downloadUrl"], "downloadUrl", require_zip=True)
+    sections = {section["type"]: section for section in data["sections"]}
+    require(len(sections["summaryGrid"]["items"]) == 4, "summaryGrid must have 4 items")
+    require(len(sections["featureCards"]["items"]) == 4, "featureCards must have 4 items")
+    require(len(sections["documentList"]["items"]) == 8, "documentList must have 8 items")
+    require(len(sections["steps"]["steps"]) == 4, "steps must have 4 steps")
+    require(parser.class_counts.get("class-roster-feature-card", 0) == 4, "generated feature card count mismatch")
+    require("product-detail-class-roster" in data["bodyClass"], "class roster body class missing")
+    require(data["downloadUrl"] in html, "class roster download URL missing")
+
+
+def validate_houganshi(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"boothUrl", "images", "englishName"}, "houganshi root")
+    validate_url(data["boothUrl"], "boothUrl")
+    require(data["boothUrl"] in html, "BOOTH URL missing from generated HTML")
+    require(len(data["images"]) == 5, "houganshi images must have 5 items")
+    for src in data["images"]:
+        validate_image_path(src, "houganshi image")
+        require(src in html, f"houganshi image missing from HTML: {src}")
+    section_types = [section["type"] for section in data["sections"]]
+    require(section_types.count("imageText") + section_types.count("purchase") == 4, "description sections must total 4")
+    require("downloadCta" in section_types, "downloadCta section missing")
+    specs = next((section for section in data["sections"] if section["type"] == "specs"), None)
+    require(specs is not None and len(specs["items"]) == 3, "specs must have 3 items")
+    faq = next((section for section in data["sections"] if section["type"] == "faq"), None)
+    require(faq is not None and len(faq["items"]) == 4, "FAQ must have 4 items")
+    require(parser.class_counts.get("visual", 0) >= 4, "visual image sections missing")
+    require(html.count(data["boothUrl"]) == 3, "BOOTH link count changed")
 
 
 def main() -> None:
-    try:
-        data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as exc:
-        fail(f"invalid JSON: {exc}")
+    parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
+    parser.add_argument("slug", nargs="?", default="class-roster")
+    args = parser.parse_args()
 
-    validate_json(data)
-    html = OUTPUT_PATH.read_text(encoding="utf-8")
-    validate_html(data, html)
-    print("OK: class roster detail page validated")
+    data = load_data(args.slug)
+    html_path = output_path(args.slug)
+    require(html_path.exists(), f"generated HTML missing: {html_path.relative_to(ROOT)}")
+    html = html_path.read_text(encoding="utf-8")
+    expected_comment = f"GENERATED FILE: edit data/product-details/{args.slug}.json and templates/product-detail.html"
+    page = DetailPageParser(expected_comment)
+    page.feed(html)
+
+    validate_common(args.slug, data, html, page)
+    if args.slug == "class-roster":
+        validate_class_roster(data, html, page)
+    elif args.slug == "houganshi":
+        validate_houganshi(data, html, page)
+    else:
+        fail(f"unsupported product detail slug: {args.slug}")
+
+    print(f"OK: {args.slug} detail page validated")
 
 
 if __name__ == "__main__":

@@ -11,116 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css?v=$style_version">
 </head>
-<body class="$body_class">
-  <!-- GENERATED FILE: edit data/product-details/class-roster.json and templates/product-detail.html -->
+$body_tag
+  <!-- GENERATED FILE: edit data/product-details/$slug.json and templates/product-detail.html -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="/">
         <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
         <span>Ban.Tai Education Design</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
-      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
-        <a href="/">ホーム</a>
-        <a class="active" href="/products/">製品一覧</a>
-        <a href="#features">できること</a>
-        <a href="#documents">作成できる書類</a>
-        <a href="#howto">使い方</a>
-        <a href="#distribution">公開準備</a>
-        <a class="mini" href="/contact/">お問い合わせ</a>
+$menu_toggle
+      <nav$nav_attrs>
+$nav_links
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="class-roster-hero">
-      <div class="container class-roster-hero-grid">
-        <div class="class-roster-copy">
-          <div class="class-roster-labels">
-$english_labels
-          </div>
-          <div class="class-roster-badges">
-$badges
-          </div>
-          <h1>$product_name_parts</h1>
-          <p class="class-roster-sublead">
-$hero_lead
-          </p>
-          <div class="class-roster-lead">
-$hero_description
-          </div>
-          <div class="actions">
-            <a class="btn btn-primary" href="$download_url">$hero_download_label</a>
-            <a class="btn btn-light" href="#features">$hero_features_label</a>
-          </div>
-        </div>
-        <div class="class-roster-visual">
-          <p>$image_caption</p>
-          <img src="$image_src" alt="$image_alt">
-        </div>
-      </div>
-    </section>
-
-    <section class="class-roster-summary" aria-label="$summary_aria_label">
-      <div class="container class-roster-summary-grid">
-$summary_items
-      </div>
-    </section>
-
-    <section id="features" class="section class-roster-section">
-      <div class="container">
-        <div class="class-roster-section-heading">
-          <p class="sub">$features_eyebrow</p>
-          <h2>$features_heading</h2>
-          <p>
-$features_description
-          </p>
-        </div>
-
-        <div class="class-roster-feature-grid">
-$feature_cards
-        </div>
-      </div>
-    </section>
-
-    <section id="documents" class="section class-roster-documents">
-      <div class="container class-roster-split">
-        <div>
-          <p class="sub">$documents_eyebrow</p>
-          <h2>$documents_heading</h2>
-          <p>$documents_description</p>
-        </div>
-        <ul class="class-roster-document-list">
-$document_items
-        </ul>
-      </div>
-    </section>
-
-    <section id="howto" class="section class-roster-section">
-      <div class="container">
-        <div class="class-roster-section-heading">
-          <p class="sub">$howto_eyebrow</p>
-          <h2>$howto_heading</h2>
-        </div>
-        <ol class="class-roster-steps">
-$howto_steps
-        </ol>
-      </div>
-    </section>
-
-    <section id="distribution" class="section class-roster-distribution">
-      <div class="container">
-        <div class="class-roster-status-card">
-          <span class="status-badge">$distribution_status</span>
-          <h2>$distribution_heading</h2>
-          <p>$distribution_description</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="$download_url">$distribution_download_label</a>
-            <a class="secondary-button" href="$distribution_back_url">$distribution_back_label</a>
-          </div>
-        </div>
-      </div>
-    </section>
+$main_html
   </main>
 
   <a class="home-floating" href="/">ホームへ</a>
@@ -137,6 +44,6 @@ $howto_steps
     </div>
     <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
   </footer>
-  <script src="/assets/site.js?v=$script_version"></script>
+$script_html
 </body>
 </html>

@@ -1,0 +1,173 @@
+{
+  "pageTitle": "方眼紙メーカー - A4・B5対応の印刷用方眼紙作成Windowsアプリ | Ban.Tai",
+  "metaDescription": "方眼紙メーカーは、家庭や学校で使いやすい方眼紙を作成・印刷できるWindows用アプリです。A4・B5に合わせて、マス目サイズ、余白、線色、線の濃さなどを調整できます。",
+  "bodyClass": "",
+  "styleVersion": "586a1d0_v2",
+  "menuToggle": false,
+  "navLinks": [
+    { "href": "/", "label": "ホーム" },
+    { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "#booth", "label": "BOOTH" },
+    { "href": "#faq", "label": "よくある質問" },
+    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+  ],
+  "productName": "方眼紙メーカー",
+  "englishName": "Graph Paper Maker",
+  "boothUrl": "https://bantai3.booth.pm/items/8479863",
+  "images": [
+    "/assets/images/houganshi/booth-1-main.png",
+    "/assets/images/houganshi/booth-2-layout.png",
+    "/assets/images/houganshi/booth-3-color.png",
+    "/assets/images/houganshi/booth-4-print.png",
+    "/assets/images/houganshi/booth-10-purchase.png"
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "class": "hero kanji-practice-hero",
+      "containerClass": "container hero-content",
+      "textClass": "hero-text",
+      "imageContainerClass": "hero-image-container",
+      "kicker": "Graph Paper Maker",
+      "headingLines": ["マス目のサイズを、", "自分で決める。"],
+      "lead": "家庭や学校で使いやすい方眼紙を作成・印刷できるWindows用アプリです。A4・B5などの用紙に合わせて、マス目サイズ、余白、線色、線の濃さなどを調整できます。",
+      "note": "算数、理科、図工、家庭学習、教材づくりに活用できます。BOOTHでは「体験版・本体」と「製品版ライセンス」の2つのバリエーションで販売しています。",
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8479863",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        },
+        { "class": "btn btn-secondary", "href": "#faq", "label": "よくある質問" }
+      ],
+      "image": {
+        "src": "/assets/images/houganshi/booth-1-main.png",
+        "alt": "方眼紙メーカー Graph Paper Maker のメイン画像"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "left",
+      "background": "#fdfbf7",
+      "cardClass": "card",
+      "badge": "用紙のレイアウト設定",
+      "headingLines": ["市販の方眼ノートにない、", "mm単位の自由度。"],
+      "paragraphs": [
+        "「マスが大きすぎる」「余白が微妙」「線が濃すぎて書きにくい」。そんな悩みを、すべて自分で調整できます。",
+        "A4（210×297mm）とB5（182×257mm）をワンタッチで切り替え。マス目サイズはmm単位で直接指定でき、右端・下端でマスが途切れないよう自動計算して、余ったスペースは均等に余白へ割り振ります。"
+      ],
+      "image": {
+        "src": "/assets/images/houganshi/booth-2-layout.png",
+        "alt": "方眼紙メーカーの用紙サイズと余白設定"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "right",
+      "background": "#fff",
+      "cardClass": "card gold",
+      "badge": "見やすさの調整",
+      "headingLines": ["鉛筆や線を邪魔しない、", "最適な罫線の色と太さ。"],
+      "paragraphs": [
+        "線の色は黒・青・緑・グレーの4色から選択できます。鉛筆で書いた文字がはっきり見えるように、青や緑を選ぶと学習用紙として使いやすくなります。",
+        "スライダーで濃さを細かく調整できるため、下書き用の薄いガイド線から、しっかりした方眼線まで自在に作れます。"
+      ],
+      "image": {
+        "src": "/assets/images/houganshi/booth-3-color.png",
+        "alt": "方眼紙メーカーの罫線色と濃さ調整"
+      }
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "left",
+      "background": "#f9f9f9",
+      "cardClass": "card",
+      "badge": "実寸出力",
+      "headingLines": ["設定した1mmが、", "そのまま紙に出る。"],
+      "paragraphs": [
+        "印刷設定で余白を「なし」に指定するだけで、画面上で設定したmm単位の寸法が正確に再現されます。",
+        "PDF保存にも対応しているため、コンビニや外部プリンターでの印刷にも使えます。教材の配布前にPDFとして保管したい場合にも便利です。"
+      ],
+      "image": {
+        "src": "/assets/images/houganshi/booth-4-print.png",
+        "alt": "方眼紙メーカーの印刷とPDF保存"
+      }
+    },
+    {
+      "type": "purchase",
+      "id": "booth",
+      "imagePosition": "right",
+      "background": "#fff",
+      "cardClass": "card gold",
+      "badge": "BOOTHで公開中",
+      "headingLines": ["体験版で確認してから、", "ライセンスを購入できます。"],
+      "paragraphs": [
+        "この商品には「体験版・本体」と「製品版ライセンス」の2つのバリエーションがあります。まず体験版・本体で動作を確認し、継続利用する場合は製品版ライセンスをご購入ください。",
+        "ライセンスキーは自動発行ではなく、購入後に同梱の案内に従って申請する方式です。"
+      ],
+      "actionsStyle": "margin-top:14px;",
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8479863",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        }
+      ],
+      "image": {
+        "src": "/assets/images/houganshi/booth-10-purchase.png",
+        "alt": "方眼紙メーカーのBOOTHバリエーション案内"
+      }
+    },
+    {
+      "type": "downloadCta",
+      "heading": "BOOTH販売ページ",
+      "description": "ダウンロード導線はBOOTHに集約しています。公式HPからZIPやEXEへの直接リンクは掲載していません。",
+      "actions": [
+        {
+          "class": "btn-download-large",
+          "href": "https://bantai3.booth.pm/items/8479863",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        }
+      ],
+      "note": "本ソフトはWindows用アプリです。Mac、iPhone、Androidでは動作しません。初回起動時にWindows Defender SmartScreenの警告が表示される場合があります。"
+    },
+    {
+      "type": "specs",
+      "background": "#f9f9f9",
+      "heading": "動作環境",
+      "items": [
+        { "label": "OS", "text": "Windows 10 / 11" },
+        { "label": "動作形式", "text": "ブラウザ内蔵型（インストール版とポータブル版を同梱）" },
+        { "label": "必要環境", "text": "プリンター（A4またはB5印刷対応）、またはPDFを外部デバイスへ出力できる環境" }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "background": "#fff",
+      "eyebrow": "FAQ",
+      "heading": "よくある質問",
+      "items": [
+        {
+          "question": "Q. BOOTHでは何を選べばよいですか？",
+          "answer": "A. まず「体験版・本体」で動作を確認し、継続利用する場合は「製品版ライセンス」をご購入ください。ライセンスキーは購入後に同梱の案内に従って申請する方式です。"
+        },
+        {
+          "question": "Q. マス目のサイズはどこまで細かく設定できますか？",
+          "answer": "A. mm単位で数値を直接入力して指定できます。小さなマスから大きなマスまで幅広く対応しています。"
+        },
+        {
+          "question": "Q. PDFで保存できますか？",
+          "answer": "A. はい。ブラウザの印刷機能からPDF保存が可能です。印刷余白を「なし」に設定することで、実寸のPDFを作れます。"
+        },
+        {
+          "question": "Q. A4とB5以外の用紙サイズには対応していますか？",
+          "answer": "A. 現時点ではA4とB5に対応しています。他のサイズへの対応は今後のアップデートで検討中です。"
+        }
+      ]
+    }
+  ]
+}
