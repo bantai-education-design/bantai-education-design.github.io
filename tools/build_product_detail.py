@@ -71,6 +71,24 @@ def render_actions(actions: list[dict[str, Any]], spaces: int = 12, style: str |
     return f'{" " * spaces}<div class="actions"{style_attr}>\n{links}\n{" " * spaces}</div>'
 
 
+def stylesheet_href(data: dict[str, Any]) -> str:
+    if data.get("styleHref"):
+        return str(data["styleHref"])
+    return f'/assets/style.css?v={data["styleVersion"]}'
+
+
+def render_font_links(data: dict[str, Any]) -> str:
+    if data.get("includeFonts", True) is False:
+        return ""
+    return "\n".join(
+        [
+            '  <link rel="preconnect" href="https://fonts.googleapis.com">',
+            '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+            '  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">',
+        ]
+    )
+
+
 def render_paper_placeholder(spaces: int = 10) -> str:
     html = "\n".join(
         [
@@ -322,6 +340,23 @@ def render_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
     )
 
 
+def render_page_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
+    style = ""
+    if section.get("backgroundImage"):
+        style = f' style=\'--page-bg:url("{html_attr(section["backgroundImage"])}")\''
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "page-hero"))}"{style}>',
+            '      <div class="container">',
+            f'        <div class="kicker">{html_text(section["kicker"])}</div>',
+            f'        <h1>{html_text(section["heading"])}</h1>',
+            f'        <p class="lead">{html_text(section["lead"])}</p>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
 def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
     image_html = "\n".join(
         [
@@ -330,6 +365,27 @@ def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
             '        </div>',
         ]
     )
+    if section.get("simpleText"):
+        text_lines = [
+            "        <div>",
+            f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+        ]
+        text_lines.extend(f'          <p>{html_text(paragraph)}</p>' for paragraph in section["paragraphs"])
+        text_lines.append("        </div>")
+        text_html = "\n".join(text_lines)
+        columns = [image_html, text_html] if section.get("imagePosition") == "left" else [text_html, image_html]
+        section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+        background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+        return "\n".join(
+            [
+                f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
+                f'      <div class="{html_attr(section.get("containerClass", "container grid grid-2"))}" style="align-items:center;">',
+                "\n".join(columns),
+                '      </div>',
+                '    </section>',
+            ]
+        )
     card_lines = [
         f'        <div class="{html_attr(section.get("cardClass", "card"))}" style="display:flex; flex-direction:column; justify-content:center;">',
         f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(section["badge"])}</span>',
@@ -354,6 +410,29 @@ def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
 
 
 def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    section_class = section.get("sectionClass")
+    container_class = section.get("containerClass")
+    heading_tag = section.get("headingTag", "h2")
+    if section_class or container_class or heading_tag != "h2":
+        note = section.get("note")
+        note_html = (
+            f'        <p class="note"{render_attrs({"style": section.get("noteStyle", "")}) if section.get("noteStyle") else ""}>{html_text(note)}</p>'
+            if note
+            else ""
+        )
+        return "\n".join(
+            [
+                f'    <section{section_id} class="{html_attr(section_class or "section")}">',
+                f'      <div class="{html_attr(container_class or "container download-cta")}"{render_attrs({"style": section["containerStyle"]}) if section.get("containerStyle") else ""}>',
+                f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
+                f'        <p>{html_text(section["description"])}</p>',
+                render_actions(section["actions"], spaces=8, style=section.get("actionsStyle", "justify-content:center; margin-top:20px;")),
+                note_html,
+                '      </div>',
+                '    </section>',
+            ]
+        )
     return "\n".join(
         [
             '    <section class="section">',
@@ -450,8 +529,30 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
             f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
             f'        <h2>{html_text(section["heading"])}</h2>',
             *([f'        <p>{html_text(section["description"])}</p>'] if section.get("description") else []),
-            f'        <div class="grid grid-3"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
+            f'        <div class="{html_attr(section.get("gridClass", "grid grid-3"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
             "\n".join(cards),
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_image_gallery(section: dict[str, Any], data: dict[str, Any]) -> str:
+    images = "\n".join(
+        f'          <img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
+        for image in section["images"]
+    )
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    return "\n".join(
+        [
+            f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
+            '      <div class="container">',
+            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            f'        <div class="{html_attr(section.get("gridClass", "grid grid-2 gallery"))}">',
+            images,
             '        </div>',
             '      </div>',
             '    </section>',
@@ -566,6 +667,7 @@ SECTION_RENDERERS = {
     "steps": render_class_roster_steps,
     "classRosterDownloadCta": render_class_roster_download_cta,
     "hero": render_hero,
+    "pageHero": render_page_hero,
     "imageText": render_image_text,
     "purchase": render_image_text,
     "downloadCta": render_download_cta,
@@ -573,6 +675,7 @@ SECTION_RENDERERS = {
     "faq": render_faq,
     "splitTextCard": render_split_text_card,
     "textCardGrid": render_text_card_grid,
+    "imageGallery": render_image_gallery,
     "orderedListWithInfo": render_ordered_list_with_info,
     "videoPlaceholder": render_video_placeholder,
     "noticeList": render_notice_list,
@@ -612,7 +715,8 @@ def build(slug: str) -> Path:
     output = template.substitute(
         page_title=html_text(data["pageTitle"]),
         meta_description=html_attr(data["metaDescription"]),
-        style_version=html_attr(data["styleVersion"]),
+        stylesheet_href=html_attr(stylesheet_href(data)),
+        font_links=render_font_links(data),
         body_tag=body_tag,
         slug=html_text(slug),
         menu_toggle=render_menu_toggle(data),

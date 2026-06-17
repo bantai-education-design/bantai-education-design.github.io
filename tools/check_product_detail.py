@@ -128,9 +128,10 @@ def walk_values(value):
 def validate_common(slug: str, data: dict, html: str, parser: DetailPageParser) -> None:
     require_keys(
         data,
-        {"pageTitle", "metaDescription", "styleVersion", "navLinks", "productName", "sections"},
+        {"pageTitle", "metaDescription", "navLinks", "productName", "sections"},
         "root",
     )
+    require("styleVersion" in data or "styleHref" in data, "root: missing styleVersion or styleHref")
     require(parser.generated_comment, "generated file comment is missing")
     require(not parser.empty_hrefs, "empty href found")
     require(data["pageTitle"] in html, "page title missing from generated HTML")
@@ -244,6 +245,38 @@ def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -
     require("画像なしでも崩れない掲載構成" in html, "placeholder explanation missing")
 
 
+def validate_text_overlay(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"englishName", "vectorUrl", "images"}, "text-overlay root")
+    validate_url(data["vectorUrl"], "vectorUrl")
+    require(data["vectorUrl"] in html, "Vector URL missing from generated HTML")
+    require(len(data["images"]) == 3, "text-overlay images must have 3 items")
+    for src in data["images"]:
+        validate_image_path(src, "text-overlay image")
+        require(src in html, f"text-overlay image missing from HTML: {src}")
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == ["pageHero", "imageText", "textCardGrid", "imageGallery", "downloadCta"],
+        "text-overlay section order changed",
+    )
+    features = next((section for section in data["sections"] if section.get("id") == "howto"), None)
+    require(features is not None and len(features["items"]) == 4, "feature cards must have 4 items")
+    gallery = next((section for section in data["sections"] if section["type"] == "imageGallery"), None)
+    require(gallery is not None and len(gallery["images"]) == 2, "gallery must have 2 images")
+    require("10日間無料で試用" in html, "10-day trial wording missing")
+    require("Vectorからダウンロード・購入" in html, "Vector button label missing")
+    require('target="_blank"' in html and 'rel="noopener noreferrer"' in html, "external link attributes missing")
+    forbidden = [
+        "bantai3.booth.pm",
+        "note.com",
+        "github.com/bantai-education-design/",
+        ".zip",
+        ".exe",
+    ]
+    for value in forbidden:
+        require(value not in html, f"forbidden distribution link found: {value}")
+    require(html.count(data["vectorUrl"]) == 1, "Vector link count changed")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -266,6 +299,8 @@ def main() -> None:
         validate_kanji_practice(data, html, page)
     elif args.slug == "observation-card":
         validate_observation_card(data, html, page)
+    elif args.slug == "text-overlay":
+        validate_text_overlay(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 
