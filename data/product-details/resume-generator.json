@@ -1,0 +1,229 @@
+{
+  "pageTitle": "スマート履歴書ジェネレーター | Ban.Tai Education Design",
+  "metaDescription": "スマート履歴書ジェネレーターは、履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。",
+  "bodyClass": "product-detail-resume",
+  "styleVersion": "staff-resume-final-20260614-2",
+  "menuToggle": false,
+  "navLinks": [
+    { "href": "/", "label": "ホーム" },
+    { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "#features", "label": "主な機能" },
+    { "href": "#screenshots", "label": "画面イメージ" },
+    { "href": "#distribution", "label": "公開準備" },
+    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+  ],
+  "productName": "スマート履歴書ジェネレーター",
+  "englishName": "Smart Resume Generator",
+  "images": [
+    "/assets/images/resume-generator/resume-main-screen.png",
+    "/assets/images/resume-generator/resume-print-preview.png",
+    "/assets/images/resume-generator/resume-ai-assistant.png"
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "class": "hero resume-generator-hero",
+      "containerClass": "container hero-content",
+      "textClass": "hero-text",
+      "imageContainerClass": "hero-image-container",
+      "kicker": "Smart Resume Generator",
+      "headingLines": ["スマート履歴書ジェネレーター"],
+      "lead": "履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。",
+      "note": "最新UIでは、全画面表示、プレビュー拡大、基本情報の保存 / 読込 / 削除に対応しました。BOOTH / Vector / ダウンロード導線は引き続き準備中です。",
+      "actions": [
+        { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" },
+        { "class": "btn btn-secondary", "href": "#distribution", "label": "公開準備を見る" }
+      ],
+      "image": {
+        "src": "/assets/images/resume-generator/resume-main-screen.png",
+        "alt": "スマート履歴書ジェネレーターのメイン画面"
+      }
+    },
+    {
+      "type": "splitTextCard",
+      "eyebrow": "Overview",
+      "heading": "履歴書づくりを、ひとつの画面で見やすく整える。",
+      "paragraphs": [
+        "スマート履歴書ジェネレーターは、日本向けの履歴書をブラウザ上で整え、入力から印刷・PDF保存までを一つの流れで進められる支援ツールです。",
+        "JIS標準、転職用、アルバイト用のテンプレートを切り替えながら、基本情報、学歴、職歴、資格、志望動機、自己PRなどを編集できます。最新UIでは広い画面を使いやすく整理し、写真配置や印刷前プレビューも見やすく確認できる構成に整えています。"
+      ],
+      "card": {
+        "class": "card gold",
+        "badge": "準備中",
+        "heading": "現在の掲載方針",
+        "text": "GitHubリポジトリは private のため、このページでは GitHub へのリンクを掲載していません。BOOTH / Vector / ダウンロードURL も、公開準備が整ってから追加します。"
+      }
+    },
+    {
+      "type": "textCardGrid",
+      "id": "features",
+      "background": "#fff",
+      "eyebrow": "Features",
+      "heading": "主な機能",
+      "items": [
+        {
+          "mark": "書",
+          "heading": "履歴書テンプレート切替",
+          "text": "JIS標準、転職用、アルバイト用のテンプレートを切り替えて利用できます。"
+        },
+        {
+          "mark": "広",
+          "heading": "全画面表示とプレビュー拡大",
+          "text": "広い画面で入力とプレビューを見比べやすくし、履歴書の仕上がりを大きく確認できます。"
+        },
+        {
+          "mark": "文",
+          "heading": "文章入力とAI補助",
+          "text": "志望動機・自己PRを手動入力でき、Gemini API を使った文章生成にも対応しています。AIアシスタントUI自体は引き続き利用できます。"
+        }
+      ],
+      "extraGrids": [
+        {
+          "gridClass": "grid grid-2",
+          "gridStyle": "margin-top:24px;",
+          "items": [
+            {
+              "heading": "入力・編集機能",
+              "bullets": [
+                "JIS標準 / 転職用 / アルバイト用テンプレート切替",
+                "フォント切替",
+                "ふりがな形式切替",
+                "学歴 / 職歴 / 資格の動的追加",
+                "志望動機 / 自己PR入力",
+                "基本情報の保存 / 読込 / 削除",
+                "localStorage保存"
+              ]
+            },
+            {
+              "heading": "出力・補助機能",
+              "bullets": [
+                "Ban.Tai ロゴ表示",
+                "全体デザイン整理",
+                "印刷 / PDF保存",
+                "写真アップロードとトリミング",
+                "Gemini API を使ったAI文章生成",
+                "APIキー未設定時のテンプレート文フォールバック"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "splitListNotice",
+      "eyebrow": "Highlights",
+      "heading": "特色",
+      "listCard": {
+        "class": "card gold",
+        "items": [
+          "ブラウザ中心で扱えるため、軽量で導入しやすい構成です。",
+          "全画面表示ボタンとプレビュー拡大表示により、仕上がり確認をより大きく行えます。",
+          "氏名、住所、連絡先などの基本情報をプロフィールとして保存し、入力の繰り返しを減らせます。",
+          "スマホ幅でも横スクロールが出ないことを確認済みです。"
+        ]
+      },
+      "noticeClass": "warning",
+      "notices": [
+        {
+          "heading": "AI機能について",
+          "paragraphs": [
+            "AI文章生成を使う場合は、利用者自身のGemini APIキー設定が必要になる場合があります。履歴書には個人情報が含まれるため、AI機能に入力する内容は利用者自身で確認してください。",
+            "なお、AIアシスタントUIは維持していますが、外部API実行によるAI機能本体の確認は、現時点ではまだ未実施です。"
+          ]
+        },
+        {
+          "heading": "個人情報についての注意",
+          "headingStyle": "margin-top:20px;",
+          "paragraphs": [
+            "入力内容は基本的に利用者のブラウザ内で扱う設計ですが、AI機能を使う場合は外部APIとの通信が発生する可能性があります。公開前に、この点の説明をさらに整備する必要があります。"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "imageGallery",
+      "id": "screenshots",
+      "background": "#fff",
+      "eyebrow": "Screenshots",
+      "heading": "画面イメージ",
+      "gridClass": "grid grid-2 gallery",
+      "images": [
+        {
+          "src": "/assets/images/resume-generator/resume-main-screen.png",
+          "alt": "スマート履歴書ジェネレーターのメイン画面",
+          "wrapClass": "visual"
+        },
+        {
+          "src": "/assets/images/resume-generator/resume-print-preview.png",
+          "alt": "スマート履歴書ジェネレーターの印刷前プレビュー",
+          "wrapClass": "visual"
+        }
+      ],
+      "cardGrids": [
+        {
+          "gridClass": "grid grid-2",
+          "gridStyle": "margin-top:24px; align-items:start;",
+          "items": [
+            {
+              "heading": "入力画面と履歴書プレビュー",
+              "text": "最新UIでは、Ban.Tai ロゴを含む上部ヘッダー、広く整理した入力パネル、右側の履歴書プレビューを見比べながら操作できます。"
+            },
+            {
+              "heading": "印刷前の確認",
+              "text": "プレビュー拡大表示を使って、完成イメージを大きく見ながら印刷またはPDF保存前の確認を行えます。"
+            }
+          ]
+        }
+      ],
+      "extraImageGrids": [
+        {
+          "gridClass": "grid grid-1",
+          "gridStyle": "margin-top:24px;",
+          "images": [
+            {
+              "src": "/assets/images/resume-generator/resume-ai-assistant.png",
+              "alt": "スマート履歴書ジェネレーターのAI文章作成アシスタント",
+              "wrapClass": "visual"
+            }
+          ]
+        }
+      ],
+      "footerCards": [
+        {
+          "class": "card",
+          "style": "margin-top:24px;",
+          "heading": "基本情報の保存とAIアシスタント",
+          "paragraphs": [
+            "よく使う氏名、住所、連絡先、生年月日などはブラウザ内に保存して再利用できます。文章作成ではAIアシスタントUIを維持しており、テンプレート文フォールバックも利用できます。"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "textCardGrid",
+      "id": "distribution",
+      "background": "#f9f9f9",
+      "eyebrow": "Distribution",
+      "heading": "配布ページ",
+      "description": "BOOTH / Vector / ダウンロードページは準備中です。公開時には、このページから正式導線を案内します。",
+      "gridStyle": "margin-top:22px;",
+      "items": [
+        {
+          "badge": "BOOTH準備中",
+          "heading": "BOOTHで購入・ダウンロードする（準備中）",
+          "text": "Windows向け配布導線の整備を進めています。"
+        },
+        {
+          "badge": "Vector準備中",
+          "heading": "Vectorで配布する（準備中）",
+          "text": "掲載説明、スクリーンショット、配布構成を調整中です。"
+        },
+        {
+          "badge": "ダウンロード準備中",
+          "heading": "公式HPからの配布（準備中）",
+          "text": "ZIP / EXE / private GitHub への直接リンクは、現在は掲載していません。"
+        }
+      ]
+    }
+  ]
+}

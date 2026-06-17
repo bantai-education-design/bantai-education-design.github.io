@@ -505,23 +505,44 @@ def render_paragraph_list(paragraphs: list[str], spaces: int) -> str:
 
 
 def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
+    def render_card(item: dict[str, Any], spaces: int = 10) -> str:
+        pad = " " * spaces
+        inner = " " * (spaces + 2)
+        lines = [f'{pad}<div class="{html_attr(item.get("class", "card"))}">']
+        if item.get("mark"):
+            lines.append(f'{inner}<div class="mark">{html_text(item["mark"])}</div>')
+        if item.get("badge"):
+            lines.append(f'{inner}<span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(item["badge"])}</span>')
+        if item.get("heading"):
+            lines.append(f'{inner}<h3>{html_text(item["heading"])}</h3>')
+        for paragraph in item.get("paragraphs", []):
+            lines.append(f'{inner}<p>{html_text(paragraph)}</p>')
+        if item.get("text"):
+            lines.append(f'{inner}<p>{html_text(item["text"])}</p>')
+        if item.get("bullets"):
+            lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
+            lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
+            lines.append(f'{inner}</ul>')
+        lines.append(f'{pad}</div>')
+        return "\n".join(lines)
+
     cards = []
     for item in section["items"]:
-        lines = ['          <div class="card">']
-        if item.get("mark"):
-            lines.append(f'            <div class="mark">{html_text(item["mark"])}</div>')
-        if item.get("badge"):
-            lines.append(f'            <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(item["badge"])}</span>')
-        lines.extend(
-            [
-                f'            <h3>{html_text(item["heading"])}</h3>',
-                f'            <p>{html_text(item["text"])}</p>',
-                '          </div>',
-            ]
-        )
-        cards.append("\n".join(lines))
+        cards.append(render_card(item))
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    extra_grids = []
+    for grid in section.get("extraGrids", []):
+        extra_cards = "\n".join(render_card(item, spaces=10) for item in grid["items"])
+        extra_grids.append(
+            "\n".join(
+                [
+                    f'        <div class="{html_attr(grid.get("gridClass", "grid grid-2"))}"{render_attrs({"style": grid["gridStyle"]}) if grid.get("gridStyle") else ""}>',
+                    extra_cards,
+                    '        </div>',
+                ]
+            )
+        )
     return "\n".join(
         [
             f'    <section{section_id} class="section"{background}>',
@@ -532,6 +553,7 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
             f'        <div class="{html_attr(section.get("gridClass", "grid grid-3"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
             "\n".join(cards),
             '        </div>',
+            *extra_grids,
             '      </div>',
             '    </section>',
         ]
@@ -539,10 +561,57 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
 
 
 def render_image_gallery(section: dict[str, Any], data: dict[str, Any]) -> str:
-    images = "\n".join(
-        f'          <img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
-        for image in section["images"]
-    )
+    def render_image(image: dict[str, Any], spaces: int = 10) -> str:
+        pad = " " * spaces
+        inner = " " * (spaces + 2)
+        img = f'{inner}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
+        if image.get("wrapClass"):
+            return "\n".join([f'{pad}<div class="{html_attr(image["wrapClass"])}">', img, f'{pad}</div>'])
+        return f'{pad}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
+
+    images = "\n".join(render_image(image) for image in section["images"])
+    card_blocks = []
+    for grid in section.get("cardGrids", []):
+        cards = []
+        for item in grid["items"]:
+            lines = ['          <div class="card">']
+            if item.get("heading"):
+                lines.append(f'            <h3>{html_text(item["heading"])}</h3>')
+            for paragraph in item.get("paragraphs", []):
+                lines.append(f'            <p>{html_text(paragraph)}</p>')
+            if item.get("text"):
+                lines.append(f'            <p>{html_text(item["text"])}</p>')
+            lines.append('          </div>')
+            cards.append("\n".join(lines))
+        card_blocks.append(
+            "\n".join(
+                [
+                    f'        <div class="{html_attr(grid.get("gridClass", "grid grid-2"))}"{render_attrs({"style": grid["gridStyle"]}) if grid.get("gridStyle") else ""}>',
+                    "\n".join(cards),
+                    '        </div>',
+                ]
+            )
+        )
+    extra_images = []
+    for block in section.get("extraImageGrids", []):
+        block_images = "\n".join(render_image(image) for image in block["images"])
+        extra_images.append(
+            "\n".join(
+                [
+                    f'        <div class="{html_attr(block.get("gridClass", "grid grid-1"))}"{render_attrs({"style": block["gridStyle"]}) if block.get("gridStyle") else ""}>',
+                    block_images,
+                    '        </div>',
+                ]
+            )
+        )
+    footer_cards = []
+    for item in section.get("footerCards", []):
+        lines = [f'        <div class="{html_attr(item.get("class", "card"))}"{render_attrs({"style": item["style"]}) if item.get("style") else ""}>']
+        lines.append(f'          <h3>{html_text(item["heading"])}</h3>')
+        for paragraph in item.get("paragraphs", []):
+            lines.append(f'          <p>{html_text(paragraph)}</p>')
+        lines.append('        </div>')
+        footer_cards.append("\n".join(lines))
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
     return "\n".join(
@@ -553,6 +622,36 @@ def render_image_gallery(section: dict[str, Any], data: dict[str, Any]) -> str:
             f'        <h2>{html_text(section["heading"])}</h2>',
             f'        <div class="{html_attr(section.get("gridClass", "grid grid-2 gallery"))}">',
             images,
+            '        </div>',
+            *card_blocks,
+            *extra_images,
+            *footer_cards,
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_split_list_notice(section: dict[str, Any], data: dict[str, Any]) -> str:
+    list_card = section["listCard"]
+    bullets = "\n".join(f'            <li>{html_text(item)}</li>' for item in list_card["items"])
+    notices = []
+    for notice in section["notices"]:
+        notices.append(f'          <h3{render_attrs({"style": notice["headingStyle"]}) if notice.get("headingStyle") else ""}>{html_text(notice["heading"])}</h3>')
+        notices.extend(f'          <p>{html_text(paragraph)}</p>' for paragraph in notice["paragraphs"])
+    return "\n".join(
+        [
+            f'    <section class="section"{render_attrs({"style": "background:" + section["background"] + ";"}) if section.get("background") else ""}>',
+            '      <div class="container grid grid-2" style="align-items:start;">',
+            f'        <div class="{html_attr(list_card.get("class", "card gold"))}">',
+            f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            '          <ul class="notice-list">',
+            bullets,
+            '          </ul>',
+            '        </div>',
+            f'        <div class="{html_attr(section.get("noticeClass", "warning"))}">',
+            "\n".join(notices),
             '        </div>',
             '      </div>',
             '    </section>',
@@ -676,6 +775,7 @@ SECTION_RENDERERS = {
     "splitTextCard": render_split_text_card,
     "textCardGrid": render_text_card_grid,
     "imageGallery": render_image_gallery,
+    "splitListNotice": render_split_list_notice,
     "orderedListWithInfo": render_ordered_list_with_info,
     "videoPlaceholder": render_video_placeholder,
     "noticeList": render_notice_list,

@@ -277,6 +277,42 @@ def validate_text_overlay(data: dict, html: str, parser: DetailPageParser) -> No
     require(html.count(data["vectorUrl"]) == 1, "Vector link count changed")
 
 
+def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"englishName", "images", "bodyClass"}, "resume-generator root")
+    require("product-detail-resume" in data["bodyClass"], "resume body class missing")
+    require("resume-generator-hero" in html, "resume hero class missing")
+    require(len(data["images"]) == 3, "resume images must have 3 items")
+    for src in data["images"]:
+        validate_image_path(src, "resume image")
+        require(src in html, f"resume image missing from HTML: {src}")
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == ["hero", "splitTextCard", "textCardGrid", "splitListNotice", "imageGallery", "textCardGrid"],
+        "resume section order changed",
+    )
+    features = next((section for section in data["sections"] if section.get("id") == "features"), None)
+    require(features is not None and len(features["items"]) == 3, "resume feature cards must have 3 items")
+    require(features is not None and len(features.get("extraGrids", [])[0]["items"]) == 2, "resume input/output cards must total 2")
+    screenshots = next((section for section in data["sections"] if section.get("id") == "screenshots"), None)
+    require(screenshots is not None and len(screenshots["images"]) == 2, "resume screenshot image grid must have 2 images")
+    require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 1, "resume AI assistant image missing")
+    distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
+    require(distribution is not None and len(distribution["items"]) == 3, "resume distribution cards must have 3 items")
+    require("BOOTH準備中" in html and "Vector準備中" in html and "ダウンロード準備中" in html, "distribution pending labels missing")
+    require("外部API実行によるAI機能本体の確認は、現時点ではまだ未実施です。" in html, "AI external API caution missing")
+    require("個人情報についての注意" in html, "personal information caution missing")
+    require("GitHubリポジトリは private" in html, "private GitHub policy wording missing")
+    forbidden = [
+        "bantai3.booth.pm",
+        "vector.co.jp",
+        "github.com/",
+        ".zip",
+        ".exe",
+    ]
+    for value in forbidden:
+        require(value not in html, f"forbidden live link or asset reference found: {value}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -301,6 +337,8 @@ def main() -> None:
         validate_observation_card(data, html, page)
     elif args.slug == "text-overlay":
         validate_text_overlay(data, html, page)
+    elif args.slug == "resume-generator":
+        validate_resume_generator(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 
