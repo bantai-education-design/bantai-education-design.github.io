@@ -313,6 +313,49 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
         require(value not in html, f"forbidden live link or asset reference found: {value}")
 
 
+def validate_banner_studio(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"englishName", "downloadUrl", "images"}, "banner-studio root")
+    validate_url(data["downloadUrl"], "downloadUrl")
+    require(data["downloadUrl"].startswith("/") and data["downloadUrl"].endswith(".zip"), "downloadUrl must be a local ZIP path")
+    require((ROOT / data["downloadUrl"].lstrip("/")).exists(), "download ZIP file does not exist")
+    require(data["downloadUrl"] in html, "download URL missing")
+    require(html.count(data["downloadUrl"]) == 2, "download URL count changed")
+    require(html.count("download=\"\"") == 2, "download attribute count changed")
+    require(len(data["images"]) == 2, "banner-studio images must have 2 items")
+    for src in data["images"]:
+        validate_image_path(src, "banner-studio image")
+        require(src in html, f"banner-studio image missing from HTML: {src}")
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == [
+            "hero",
+            "imageText",
+            "numberedTextList",
+            "textCardGrid",
+            "splitTextCard",
+            "downloadCta",
+            "narrowTextBox",
+            "narrowTextBox",
+        ],
+        "banner-studio section order changed",
+    )
+    problems = next((section for section in data["sections"] if section["type"] == "numberedTextList"), None)
+    require(problems is not None and len(problems["items"]) == 4, "problem list must have 4 items")
+    howto = next((section for section in data["sections"] if section.get("id") == "howto"), None)
+    require(howto is not None and len(howto["items"]) == 3, "howto cards must have 3 items")
+    story = next((section for section in data["sections"] if section["type"] == "splitTextCard"), None)
+    require(story is not None and len(story["card"]["bullets"]) == 6, "spec list must have 6 items")
+    require("note記事から来てくださった方へ" in html, "article guidance section missing")
+    require("ダウンロードできない場合" in html, "download warning section missing")
+    forbidden = [
+        "bantai3.booth.pm",
+        "vector.co.jp",
+        "github.com/",
+    ]
+    for value in forbidden:
+        require(value not in html, f"forbidden external distribution link found: {value}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -339,6 +382,8 @@ def main() -> None:
         validate_text_overlay(data, html, page)
     elif args.slug == "resume-generator":
         validate_resume_generator(data, html, page)
+    elif args.slug == "banner-studio":
+        validate_banner_studio(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 

@@ -89,6 +89,12 @@ def render_font_links(data: dict[str, Any]) -> str:
     )
 
 
+def render_home_floating(data: dict[str, Any]) -> str:
+    if data.get("homeFloating", True) is False:
+        return ""
+    return '  <a class="home-floating" href="/">ホームへ</a>'
+
+
 def render_paper_placeholder(spaces: int = 10) -> str:
     html = "\n".join(
         [
@@ -322,6 +328,17 @@ def render_class_roster_download_cta(section: dict[str, Any], data: dict[str, An
 
 def render_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
     actions = render_actions(section["actions"], spaces=10)
+    note = ""
+    if section.get("noteLines"):
+        note = "\n".join(
+            [
+                f'          <p class="{html_attr(section.get("noteClass", "hero-note"))}">',
+                render_lines_with_breaks(section["noteLines"], spaces=12),
+                '          </p>',
+            ]
+        )
+    elif section.get("note"):
+        note = f'          <p class="{html_attr(section.get("noteClass", "hero-note"))}">{html_text(section["note"])}</p>'
     return "\n".join(
         [
             f'    <section class="{html_attr(section["class"])}">',
@@ -329,8 +346,8 @@ def render_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
             f'        <div class="{html_attr(section["textClass"])}">',
             f'          <div class="kicker">{html_text(section["kicker"])}</div>',
             f'          <h1>{render_heading_lines(section["headingLines"])}</h1>',
-            f'          <p class="lead">{html_text(section["lead"])}</p>',
-            f'          <p class="hero-note">{html_text(section["note"])}</p>',
+            f'          <p class="lead"{render_attrs({"style": section["leadStyle"]}) if section.get("leadStyle") else ""}>{html_text(section["lead"])}</p>',
+            note,
             actions,
             '        </div>',
             render_visual(section, spaces=8),
@@ -380,7 +397,7 @@ def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
         return "\n".join(
             [
                 f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
-                f'      <div class="{html_attr(section.get("containerClass", "container grid grid-2"))}" style="align-items:center;">',
+                f'      <div class="{html_attr(section.get("containerClass", "container grid grid-2"))}"{render_attrs({"style": section.get("containerStyle", "align-items:center;")}) if section.get("containerStyle", "align-items:center;") else ""}>',
                 "\n".join(columns),
                 '      </div>',
                 '    </section>',
@@ -415,6 +432,8 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
     container_class = section.get("containerClass")
     heading_tag = section.get("headingTag", "h2")
     if section_class or container_class or heading_tag != "h2":
+        paragraphs = section.get("descriptionParagraphs", [section["description"]])
+        paragraph_html = "\n".join(f'        <p>{html_text(paragraph)}</p>' for paragraph in paragraphs)
         note = section.get("note")
         note_html = (
             f'        <p class="note"{render_attrs({"style": section.get("noteStyle", "")}) if section.get("noteStyle") else ""}>{html_text(note)}</p>'
@@ -425,8 +444,9 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
             [
                 f'    <section{section_id} class="{html_attr(section_class or "section")}">',
                 f'      <div class="{html_attr(container_class or "container download-cta")}"{render_attrs({"style": section["containerStyle"]}) if section.get("containerStyle") else ""}>',
+                *([f'        <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []),
                 f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
-                f'        <p>{html_text(section["description"])}</p>',
+                paragraph_html,
                 render_actions(section["actions"], spaces=8, style=section.get("actionsStyle", "justify-content:center; margin-top:20px;")),
                 note_html,
                 '      </div>',
@@ -531,6 +551,16 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
         cards.append(render_card(item))
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    if section.get("cardsOnly"):
+        return "\n".join(
+            [
+                f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
+                f'      <div class="{html_attr(section.get("gridClass", "container grid grid-3"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
+                "\n".join(cards),
+                '      </div>',
+                '    </section>',
+            ]
+        )
     extra_grids = []
     for grid in section.get("extraGrids", []):
         extra_cards = "\n".join(render_card(item, spaces=10) for item in grid["items"])
@@ -661,20 +691,89 @@ def render_split_list_notice(section: dict[str, Any], data: dict[str, Any]) -> s
 
 def render_split_text_card(section: dict[str, Any], data: dict[str, Any]) -> str:
     card = section["card"]
+    bullet_html = ""
+    if card.get("bullets"):
+        separator = card.get("separator", ":")
+        bullet_html = "\n".join(
+            [
+                f'          <ul class="{html_attr(card.get("listClass", "spec-list"))}">',
+                *[f'            <li><strong>{html_text(item["label"])}{html_text(separator)}</strong> {html_text(item["text"])}</li>' for item in card["bullets"]],
+                '          </ul>',
+            ]
+        )
     return "\n".join(
         [
             f'    <section class="section"{render_attrs({"style": "background:" + section["background"] + ";"}) if section.get("background") else ""}>',
             '      <div class="container grid grid-2" style="align-items:center;">',
-            '        <div>',
+            f'        <div{render_attrs({"class": section["textClass"]}) if section.get("textClass") else ""}>',
             f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
             f'          <h2>{html_text(section["heading"])}</h2>',
             render_paragraph_list(section["paragraphs"], spaces=10),
             '        </div>',
             f'        <div class="{html_attr(card.get("class", "card"))}">',
-            f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(card["badge"])}</span>',
+            *([f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(card["badge"])}</span>'] if card.get("badge") else []),
             f'          <h3>{html_text(card["heading"])}</h3>',
-            f'          <p>{html_text(card["text"])}</p>',
+            *([f'          <p>{html_text(card["text"])}</p>'] if card.get("text") else []),
+            bullet_html,
             '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_numbered_text_list(section: dict[str, Any], data: dict[str, Any]) -> str:
+    items = []
+    for item in section["items"]:
+        items.append(
+            "\n".join(
+                [
+                    f'      <div class="{html_attr(section.get("itemClass", "problem-item"))}">',
+                    f'        <div class="{html_attr(section.get("numberClass", "num"))}">{html_text(item["number"])}</div>',
+                    '        <div>',
+                    f'          <h3>{html_text(item["heading"])}</h3>',
+                    f'          <p>{html_text(item["text"])}</p>',
+                    '        </div>',
+                    '      </div>',
+                ]
+            )
+        )
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    return "\n".join(
+        [
+            f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
+            '      <div class="container">',
+            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            f'        <div class="{html_attr(section.get("listClass", "problem-list"))}">',
+            "\n".join(items),
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_narrow_text_box(section: dict[str, Any], data: dict[str, Any]) -> str:
+    paragraphs = []
+    for paragraph in section["paragraphs"]:
+        if isinstance(paragraph, dict):
+            if paragraph.get("html"):
+                body = paragraph["html"]
+            else:
+                body = html_text(paragraph["text"])
+                if paragraph.get("strong"):
+                    body = f'<strong>{html_text(paragraph["strong"])}</strong><br><a href="{html_attr(paragraph["href"])}">{html_text(paragraph["text"])}</a>'
+            paragraphs.append(f'        <p>{body}</p>')
+        else:
+            paragraphs.append(f'        <p>{html_text(paragraph)}</p>')
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "section-narrow"))}">',
+            f'      <div class="{html_attr(section.get("containerClass", "container article-link-box"))}">',
+            f'        <h3>{html_text(section["heading"])}</h3>',
+            "\n".join(paragraphs),
             '      </div>',
             '    </section>',
         ]
@@ -775,6 +874,8 @@ SECTION_RENDERERS = {
     "splitTextCard": render_split_text_card,
     "textCardGrid": render_text_card_grid,
     "imageGallery": render_image_gallery,
+    "numberedTextList": render_numbered_text_list,
+    "narrowTextBox": render_narrow_text_box,
     "splitListNotice": render_split_list_notice,
     "orderedListWithInfo": render_ordered_list_with_info,
     "videoPlaceholder": render_video_placeholder,
@@ -823,6 +924,7 @@ def build(slug: str) -> Path:
         nav_attrs=render_nav_attrs(data),
         nav_links=render_nav_links(data),
         main_html=render_sections(data),
+        home_floating=render_home_floating(data),
         script_html=script_html,
     )
     path = output_path(slug)
