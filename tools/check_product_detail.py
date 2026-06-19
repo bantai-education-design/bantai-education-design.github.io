@@ -356,6 +356,62 @@ def validate_banner_studio(data: dict, html: str, parser: DetailPageParser) -> N
         require(value not in html, f"forbidden external distribution link found: {value}")
 
 
+def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(
+        data,
+        {"englishName", "image", "imageAlt", "trialDownloadUrl", "boothUrl", "licenseRequestUrl"},
+        "staff-paper root",
+    )
+    validate_image_path(data["image"], "staff-paper image")
+    require(html.count(data["image"]) == 2, "staff-paper image reference count changed")
+    require(data["imageAlt"] in html, "staff-paper image alt missing")
+    validate_url(data["trialDownloadUrl"], "trialDownloadUrl")
+    validate_url(data["boothUrl"], "boothUrl")
+    validate_url(data["licenseRequestUrl"], "licenseRequestUrl")
+    require(html.count(data["trialDownloadUrl"]) == 1, "trial download URL count changed")
+    require(html.count(data["boothUrl"]) == 1, "BOOTH URL count changed")
+    require(html.count(data["licenseRequestUrl"]) == 1, "license request URL count changed")
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == [
+            "pageHero",
+            "textCardGrid",
+            "textCardGrid",
+            "workflowSteps",
+            "groupedNotice",
+            "downloadCta",
+        ],
+        "staff-paper section order changed",
+    )
+    overview = data["sections"][1]
+    require(len(overview["items"]) == 3, "overview quote cards must have 3 items")
+    features = data["sections"][2]
+    require(len(features["items"]) == 3, "feature cards must have 3 items")
+    require(len(features["tableCards"]) == 1 and len(features["tableCards"][0]["rows"]) == 4, "spec table must have 4 rows")
+    workflow = data["sections"][3]
+    require(len(workflow["steps"]) == 7, "workflow must have 7 steps")
+    notices = data["sections"][4]
+    require(len(notices["groups"]) == 2, "license notice must have 2 groups")
+    require(len(notices["groups"][0]["items"]) == 4, "trial notice must have 4 items")
+    require(len(notices["groups"][1]["items"]) == 3, "product license notice must have 3 items")
+    require("ライセンスキーなしで10日間試用" in html, "10-day trial step missing")
+    require("SAMPLE透かし" in html, "SAMPLE watermark notice missing")
+    require("個別ライセンスキー方式" in html, "individual license notice missing")
+    require("購入後ライセンスキー申請" in html, "license request button missing")
+    require(html.count('target="_blank"') == 3, "external target count changed")
+    require(not re.search(r"<a\b[^>]*\brel=", html), "unexpected rel attribute added to staff paper links")
+    require(not re.search(r"<a\b[^>]*\bdownload=", html), "unexpected download attribute added to staff paper links")
+    forbidden = [
+        "vector.co.jp",
+        "note.com",
+        "github.com/bantai-education-design/",
+        "ClassRosterMaker",
+        "BanTai_BannerStudio",
+    ]
+    for value in forbidden:
+        require(value not in html, f"forbidden unrelated link or asset reference found: {value}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -384,6 +440,8 @@ def main() -> None:
         validate_resume_generator(data, html, page)
     elif args.slug == "banner-studio":
         validate_banner_studio(data, html, page)
+    elif args.slug == "staff-paper":
+        validate_staff_paper(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 

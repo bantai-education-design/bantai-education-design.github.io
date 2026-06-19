@@ -435,14 +435,20 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
         paragraphs = section.get("descriptionParagraphs", [section["description"]])
         paragraph_html = "\n".join(f'        <p>{html_text(paragraph)}</p>' for paragraph in paragraphs)
         note = section.get("note")
+        note_attrs = {}
+        note_class = section.get("noteClass", "note")
+        if note_class:
+            note_attrs["class"] = note_class
+        if section.get("noteStyle"):
+            note_attrs["style"] = section["noteStyle"]
         note_html = (
-            f'        <p class="note"{render_attrs({"style": section.get("noteStyle", "")}) if section.get("noteStyle") else ""}>{html_text(note)}</p>'
+            f'        <p{render_attrs(note_attrs)}>{html_text(note)}</p>'
             if note
             else ""
         )
         return "\n".join(
             [
-                f'    <section{section_id} class="{html_attr(section_class or "section")}">',
+                f'    <section{section_id} class="{html_attr(section_class or "section")}"{render_attrs({"style": section["sectionStyle"]}) if section.get("sectionStyle") else ""}>',
                 f'      <div class="{html_attr(container_class or "container download-cta")}"{render_attrs({"style": section["containerStyle"]}) if section.get("containerStyle") else ""}>',
                 *([f'        <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []),
                 f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
@@ -528,7 +534,7 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
     def render_card(item: dict[str, Any], spaces: int = 10) -> str:
         pad = " " * spaces
         inner = " " * (spaces + 2)
-        lines = [f'{pad}<div class="{html_attr(item.get("class", "card"))}">']
+        lines = [f'{pad}<div class="{html_attr(item.get("class", "card"))}"{render_attrs({"style": item["style"]}) if item.get("style") else ""}>']
         if item.get("mark"):
             lines.append(f'{inner}<div class="mark">{html_text(item["mark"])}</div>')
         if item.get("badge"):
@@ -536,9 +542,9 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
         if item.get("heading"):
             lines.append(f'{inner}<h3>{html_text(item["heading"])}</h3>')
         for paragraph in item.get("paragraphs", []):
-            lines.append(f'{inner}<p>{html_text(paragraph)}</p>')
+            lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(paragraph)}</p>')
         if item.get("text"):
-            lines.append(f'{inner}<p>{html_text(item["text"])}</p>')
+            lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(item["text"])}</p>')
         if item.get("bullets"):
             lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
             lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
@@ -573,17 +579,115 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
                 ]
             )
         )
+    table_cards = []
+    for table_card in section.get("tableCards", []):
+        rows = []
+        for row in table_card["rows"]:
+            label_width = f' width:{html_attr(row["labelWidth"])};' if row.get("labelWidth") else ""
+            row_style = render_attrs({"style": row["rowStyle"]}) if row.get("rowStyle") else ""
+            rows.append(
+                f'          <tr{row_style}><td style="padding:8px; font-weight:bold;{label_width}">{html_text(row["label"])}</td><td style="padding:8px;">{html_text(row["text"])}</td></tr>'
+            )
+        table_cards.append(
+            "\n".join(
+                [
+                    f'        <div class="{html_attr(table_card.get("class", "card"))}"{render_attrs({"style": table_card["style"]}) if table_card.get("style") else ""}>',
+                    f'          <h3{render_attrs({"style": table_card["headingStyle"]}) if table_card.get("headingStyle") else ""}>{html_text(table_card["heading"])}</h3>',
+                    f'          <table{render_attrs({"style": table_card["tableStyle"]}) if table_card.get("tableStyle") else ""}>',
+                    "\n".join(rows),
+                    '          </table>',
+                    '        </div>',
+                ]
+            )
+        )
+    visual_blocks = []
+    if section.get("visual"):
+        image = section["visual"]["image"]
+        visual_blocks.append(
+            "\n".join(
+                [
+                    f'        <div class="{html_attr(section["visual"].get("class", "visual"))}">',
+                    f'          <img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">',
+                    '        </div>',
+                ]
+            )
+        )
     return "\n".join(
         [
             f'    <section{section_id} class="section"{background}>',
             '      <div class="container">',
             f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
             f'        <h2>{html_text(section["heading"])}</h2>',
+            *[f'        <p>{html_text(paragraph)}</p>' for paragraph in section.get("descriptionParagraphs", [])],
             *([f'        <p>{html_text(section["description"])}</p>'] if section.get("description") else []),
             f'        <div class="{html_attr(section.get("gridClass", "grid grid-3"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
             "\n".join(cards),
             '        </div>',
             *extra_grids,
+            *table_cards,
+            *visual_blocks,
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_workflow_steps(section: dict[str, Any], data: dict[str, Any]) -> str:
+    steps = []
+    for item in section["steps"]:
+        steps.append(
+            "\n".join(
+                [
+                    f'          <div{render_attrs({"style": section.get("stepStyle", "display: flex; align-items: flex-start; gap: 15px;")})}>',
+                    f'            <div{render_attrs({"style": section.get("numberStyle", "background: var(--gold); color: #071b36; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;")})}>{html_text(item["number"])}</div>',
+                    '            <div>',
+                    f'              <h4{render_attrs({"style": section.get("headingStyle", "margin: 0 0 5px 0; color: var(--navy);")})}>{html_text(item["heading"])}</h4>',
+                    f'              <p{render_attrs({"style": section.get("textStyle", "margin: 0; font-size: 0.9rem; color: var(--muted);")})}>{html_text(item["text"])}</p>',
+                    '            </div>',
+                    '          </div>',
+                ]
+            )
+        )
+    return "\n".join(
+        [
+            f'    <section id="{html_attr(section["id"])}" class="{html_attr(section.get("class", "section"))}"{render_attrs({"style": section["style"]}) if section.get("style") else ""}>',
+            '      <div class="container">',
+            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            f'        <p>{html_text(section["description"])}</p>',
+            f'        <div class="{html_attr(section.get("containerClass", "flow-brief-container"))}"{render_attrs({"style": section["containerStyle"]}) if section.get("containerStyle") else ""}>',
+            f'          <div{render_attrs({"style": section.get("listStyle", "display: flex; flex-direction: column; gap: 15px;")})}>',
+            "\n".join(steps),
+            '          </div>',
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_grouped_notice(section: dict[str, Any], data: dict[str, Any]) -> str:
+    groups = []
+    for group in section["groups"]:
+        items = []
+        for item in group["items"]:
+            items.append(
+                f'        <li{render_attrs({"style": section["itemStyle"]}) if section.get("itemStyle") else ""}><strong>{html_text(item["label"])}</strong> {html_text(item["text"])}</li>'
+            )
+        groups.extend(
+            [
+                f'        <h4{render_attrs({"style": section["groupHeadingStyle"]}) if section.get("groupHeadingStyle") else ""}>{html_text(group["heading"])}</h4>',
+                f'        <ul{render_attrs({"style": section["listStyle"]}) if section.get("listStyle") else ""}>',
+                "\n".join(items),
+                '        </ul>',
+            ]
+        )
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "section-narrow"))}"{render_attrs({"style": section["style"]}) if section.get("style") else ""}>',
+            f'      <div class="{html_attr(section.get("containerClass", "container warning"))}">',
+            f'        <h3>{html_text(section["heading"])}</h3>',
+            "\n".join(groups),
             '      </div>',
             '    </section>',
         ]
@@ -701,6 +805,15 @@ def render_split_text_card(section: dict[str, Any], data: dict[str, Any]) -> str
                 '          </ul>',
             ]
         )
+    card_lines = [
+        f'        <div class="{html_attr(card.get("class", "card"))}">',
+        *([f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(card["badge"])}</span>'] if card.get("badge") else []),
+        f'          <h3>{html_text(card["heading"])}</h3>',
+        *([f'          <p>{html_text(card["text"])}</p>'] if card.get("text") else []),
+    ]
+    if bullet_html:
+        card_lines.append(bullet_html)
+    card_lines.append('        </div>')
     return "\n".join(
         [
             f'    <section class="section"{render_attrs({"style": "background:" + section["background"] + ";"}) if section.get("background") else ""}>',
@@ -710,12 +823,7 @@ def render_split_text_card(section: dict[str, Any], data: dict[str, Any]) -> str
             f'          <h2>{html_text(section["heading"])}</h2>',
             render_paragraph_list(section["paragraphs"], spaces=10),
             '        </div>',
-            f'        <div class="{html_attr(card.get("class", "card"))}">',
-            *([f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(card["badge"])}</span>'] if card.get("badge") else []),
-            f'          <h3>{html_text(card["heading"])}</h3>',
-            *([f'          <p>{html_text(card["text"])}</p>'] if card.get("text") else []),
-            bullet_html,
-            '        </div>',
+            *card_lines,
             '      </div>',
             '    </section>',
         ]
@@ -873,6 +981,8 @@ SECTION_RENDERERS = {
     "faq": render_faq,
     "splitTextCard": render_split_text_card,
     "textCardGrid": render_text_card_grid,
+    "workflowSteps": render_workflow_steps,
+    "groupedNotice": render_grouped_notice,
     "imageGallery": render_image_gallery,
     "numberedTextList": render_numbered_text_list,
     "narrowTextBox": render_narrow_text_box,
