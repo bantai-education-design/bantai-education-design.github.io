@@ -62,13 +62,15 @@ def render_action(action: dict[str, Any]) -> str:
         "href": action["href"],
     }
     attrs.update(action.get("attrs", {}))
+    if "labelHtml" in action:
+        return f'<a{render_attrs(attrs)}>{action["labelHtml"]}</a>'
     return f'<a{render_attrs(attrs)}>{html_text(action["label"])}</a>'
 
 
-def render_actions(actions: list[dict[str, Any]], spaces: int = 12, style: str | None = None) -> str:
+def render_actions(actions: list[dict[str, Any]], spaces: int = 12, style: str | None = None, class_name: str = "actions") -> str:
     style_attr = f' style="{html_attr(style)}"' if style else ""
     links = "\n".join(indent_block(render_action(action), spaces + 2) for action in actions)
-    return f'{" " * spaces}<div class="actions"{style_attr}>\n{links}\n{" " * spaces}</div>'
+    return f'{" " * spaces}<div class="{html_attr(class_name)}"{style_attr}>\n{links}\n{" " * spaces}</div>'
 
 
 def stylesheet_href(data: dict[str, Any]) -> str:
@@ -339,12 +341,22 @@ def render_hero(section: dict[str, Any], data: dict[str, Any]) -> str:
         )
     elif section.get("note"):
         note = f'          <p class="{html_attr(section.get("noteClass", "hero-note"))}">{html_text(section["note"])}</p>'
+
+    kicker_tag = section.get("kickerTag", "div")
+    kicker_class = section.get("kickerClass", "kicker")
+    kicker_html = f'          <{kicker_tag} class="{html_attr(kicker_class)}">{html_text(section["kicker"])}</{kicker_tag}>'
+
+    labels_html = ""
+    if section.get("labels"):
+        labels_lines = "\n".join(f'            <span>{html_text(label)}</span>' for label in section["labels"])
+        labels_html = f'          <div class="{html_attr(section.get("labelsClass", "labels"))}">\n{labels_lines}\n          </div>\n'
+
     return "\n".join(
         [
             f'    <section class="{html_attr(section["class"])}">',
             f'      <div class="{html_attr(section["containerClass"])}">',
             f'        <div class="{html_attr(section["textClass"])}">',
-            f'          <div class="kicker">{html_text(section["kicker"])}</div>',
+            f'{labels_html}{kicker_html}',
             f'          <h1>{render_heading_lines(section["headingLines"])}</h1>',
             f'          <p class="lead"{render_attrs({"style": section["leadStyle"]}) if section.get("leadStyle") else ""}>{html_text(section["lead"])}</p>',
             note,
@@ -460,15 +472,60 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
             if note
             else ""
         )
+
+        box_class = section.get("boxClass")
+        if box_class:
+            box_paragraph_html = "\n".join(f'          <p>{html_text(paragraph)}</p>' for paragraph in paragraphs)
+            box_html = "\n".join(
+                [
+                    f'        <div class="{html_attr(box_class)}">',
+                    *([f'          <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []),
+                    f'          <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
+                    box_paragraph_html,
+                    render_actions(section["actions"], spaces=10, style=section.get("actionsStyle"), class_name=section.get("actionsClass", "actions")),
+                    '        </div>',
+                ]
+            )
+            main_content = box_html
+        else:
+            main_content = "\n".join(
+                [
+                    *([f'        <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []),
+                    f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
+                    paragraph_html,
+                    render_actions(section["actions"], spaces=8, style=section.get("actionsStyle", "justify-content:center; margin-top:20px;")),
+                ]
+            )
+
+        warning_html = ""
+        if section.get("warningBox"):
+            wb = section["warningBox"]
+            wb_id = f' id="{html_attr(wb["id"])}"' if wb.get("id") else ""
+            wb_class = wb.get("class", "warning-box")
+            wb_heading = wb.get("heading", "")
+            wb_bullets = wb.get("bullets", [])
+            bullets_html = "\n".join(f'          <li>{bullet}</li>' for bullet in wb_bullets)
+            warning_html = "\n" + indent_block(
+                "\n".join(
+                    [
+                        f'<div{wb_id} class="{html_attr(wb_class)}">',
+                        f'  <h3>{wb_heading}</h3>',
+                        '  <ul>',
+                        bullets_html,
+                        '  </ul>',
+                        '</div>',
+                    ]
+                ),
+                8
+            )
+
         return "\n".join(
             [
                 f'    <section{section_id} class="{html_attr(section_class or "section")}"{render_attrs({"style": section["sectionStyle"]}) if section.get("sectionStyle") else ""}>',
                 f'      <div class="{html_attr(container_class or "container download-cta")}"{render_attrs({"style": section["containerStyle"]}) if section.get("containerStyle") else ""}>',
-                *([f'        <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []),
-                f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
-                paragraph_html,
-                render_actions(section["actions"], spaces=8, style=section.get("actionsStyle", "justify-content:center; margin-top:20px;")),
-                note_html,
+                main_content,
+                *( [indent_block(note_html, 8)] if note_html else [] ),
+                *( [warning_html] if warning_html else [] ),
                 '      </div>',
                 '    </section>',
             ]
@@ -549,20 +606,32 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
         pad = " " * spaces
         inner = " " * (spaces + 2)
         lines = [f'{pad}<div class="{html_attr(item.get("class", "card"))}"{render_attrs({"style": item["style"]}) if item.get("style") else ""}>']
-        if item.get("mark"):
-            lines.append(f'{inner}<div class="mark">{html_text(item["mark"])}</div>')
-        if item.get("badge"):
-            lines.append(f'{inner}<span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(item["badge"])}</span>')
-        if item.get("heading"):
-            lines.append(f'{inner}<h3>{html_text(item["heading"])}</h3>')
-        for paragraph in item.get("paragraphs", []):
-            lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(paragraph)}</p>')
-        if item.get("text"):
-            lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(item["text"])}</p>')
-        if item.get("bullets"):
-            lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
-            lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
-            lines.append(f'{inner}</ul>')
+        if section.get("nestedLayout") or item.get("nestedLayout"):
+            span_class = item.get("spanClass", "vs-number")
+            heading_tag = item.get("headingTag", "h4")
+            heading_class = item.get("headingClass", "vs-title")
+            desc_class = item.get("descClass", "vs-desc")
+            nested_inner = " " * (spaces + 4)
+            lines.append(f'{inner}<span class="{html_attr(span_class)}">{html_text(item["spanText"])}</span>')
+            lines.append(f'{inner}<div>')
+            lines.append(f'{nested_inner}<{heading_tag} class="{html_attr(heading_class)}">{html_text(item["heading"])}</{heading_tag}>')
+            lines.append(f'{nested_inner}<p class="{html_attr(desc_class)}">{html_text(item["text"])}</p>')
+            lines.append(f'{inner}</div>')
+        else:
+            if item.get("mark"):
+                lines.append(f'{inner}<div class="mark">{html_text(item["mark"])}</div>')
+            if item.get("badge"):
+                lines.append(f'{inner}<span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(item["badge"])}</span>')
+            if item.get("heading"):
+                lines.append(f'{inner}<h3>{html_text(item["heading"])}</h3>')
+            for paragraph in item.get("paragraphs", []):
+                lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(paragraph)}</p>')
+            if item.get("text"):
+                lines.append(f'{inner}<p{render_attrs({"style": item["paragraphStyle"]}) if item.get("paragraphStyle") else ""}>{html_text(item["text"])}</p>')
+            if item.get("bullets"):
+                lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
+                lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
+                lines.append(f'{inner}</ul>')
         lines.append(f'{pad}</div>')
         return "\n".join(lines)
 
@@ -634,11 +703,13 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
         if section.get("headingContainerClass"):
             attrs["class"] = section["headingContainerClass"]
         heading_html.append(f'        <div{render_attrs(attrs)}>')
-        heading_html.append(f'          <div class="sub">{html_text(section["eyebrow"])}</div>')
+        if section.get("eyebrow"):
+            heading_html.append(f'          <div class="sub">{html_text(section["eyebrow"])}</div>')
         heading_html.append(f'          <h2>{html_text(section["heading"])}</h2>')
         heading_html.append('        </div>')
     else:
-        heading_html.append(f'        <div class="sub">{html_text(section["eyebrow"])}</div>')
+        if section.get("eyebrow"):
+            heading_html.append(f'        <div class="sub">{html_text(section["eyebrow"])}</div>')
         heading_html.append(f'        <h2>{html_text(section["heading"])}</h2>')
 
     return "\n".join(
@@ -1004,6 +1075,100 @@ def render_notice_list(section: dict[str, Any], data: dict[str, Any]) -> str:
     )
 
 
+def render_education_workflow(section: dict[str, Any], data: dict[str, Any]) -> str:
+    heading = section["heading"]
+    heading_html = "\n".join([
+        '      <div class="education-workflow-heading">',
+        f'        <p class="education-workflow-kicker">{html_text(heading["kicker"])}</p>',
+        f'        <h2>{html_text(heading["title"])}</h2>',
+        f'        <p>{html_text(heading["description"])}</p>',
+        '      </div>'
+    ])
+
+    steps_list = []
+    for step in section["steps"]:
+        steps_list.append(
+            f'        <li><span>{html_text(step["number"])}</span><strong>{html_text(step["text"])}</strong></li>'
+        )
+    steps_html = "\n".join([
+        '      <ol class="education-flow-steps" aria-label="教育計画システムの業務フロー">',
+        "\n".join(steps_list),
+        '      </ol>'
+    ])
+
+    features_list = []
+    for item in section["features"]:
+        bullets = "\n".join(f'            <li>{html_text(bullet)}</li>' for bullet in item["bullets"])
+        features_list.append(
+            "\n".join([
+                '        <article class="education-feature-card">',
+                '          <div class="education-feature-head">',
+                f'            <span>{html_text(item["number"])}</span>',
+                '            <div>',
+                f'              <h3>{html_text(item["title"])}</h3>',
+                f'              <p>{html_text(item["subtitle"])}</p>',
+                '            </div>',
+                '          </div>',
+                '          <ul>',
+                bullets,
+                '          </ul>',
+                f'          <p class="education-feature-result">{html_text(item["result"])}</p>',
+                '        </article>'
+            ])
+        )
+    features_html = "\n".join([
+        '      <div class="education-feature-grid">',
+        "\n".join(features_list),
+        '      </div>'
+    ])
+
+    section_class = section.get("class", "education-workflow")
+    return "\n".join([
+        f'    <section class="{html_attr(section_class)}">',
+        '      <div class="container">',
+        heading_html,
+        '',
+        steps_html,
+        '',
+        features_html,
+        '      </div>',
+        '    </section>'
+    ])
+
+
+def render_flow_brief(section: dict[str, Any], data: dict[str, Any]) -> str:
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    section_class = section.get("class", "flow-brief")
+    container_class = section.get("containerClass", "container flow-brief-container")
+
+    bullets = "\n".join(f'        <li>{html_text(item)}</li>' for item in section["items"])
+
+    note_html = ""
+    if section.get("note"):
+        note_style = render_attrs({"style": section["noteStyle"]}) if section.get("noteStyle") else ""
+        note_html = f'      <p{note_style}>{html_text(section["note"])}</p>'
+
+    action_html = ""
+    if section.get("actions"):
+        action_style = render_attrs({"style": section["actionsStyle"]}) if section.get("actionsStyle") else ""
+        action_html = f'      <div{action_style}>\n' + "\n".join(indent_block(render_action(act), 8) for act in section["actions"]) + '\n      </div>'
+
+    return "\n".join(
+        [
+            f'    <section{section_id} class="{html_attr(section_class)}">',
+            f'      <div class="{html_attr(container_class)}">',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            '        <ol>',
+            bullets,
+            '        </ol>',
+            *( [note_html] if note_html else [] ),
+            *( [action_html] if action_html else [] ),
+            '      </div>',
+            '    </section>'
+        ]
+    )
+
+
 SECTION_RENDERERS = {
     "classRosterHero": render_class_roster_hero,
     "summaryGrid": render_class_roster_summary,
@@ -1029,6 +1194,8 @@ SECTION_RENDERERS = {
     "orderedListWithInfo": render_ordered_list_with_info,
     "videoPlaceholder": render_video_placeholder,
     "noticeList": render_notice_list,
+    "educationWorkflow": render_education_workflow,
+    "flowBrief": render_flow_brief,
 }
 
 

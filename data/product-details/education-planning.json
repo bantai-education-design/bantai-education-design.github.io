@@ -1,0 +1,252 @@
+{
+  "pageTitle": "小学校教育計画作成・運営システム | Ban.Tai Education Design",
+  "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
+  "styleVersion": "education-detail-rebuild-20260613-1",
+  "bodyClass": "product-detail-page product-detail-education",
+  "navLinks": [
+    {
+      "label": "ホーム",
+      "href": "/"
+    },
+    {
+      "label": "製品一覧",
+      "href": "/#products",
+      "class": "active"
+    },
+    {
+      "label": "無料ダウンロード",
+      "href": "#download"
+    },
+    {
+      "label": "使い方",
+      "href": "#howto"
+    },
+    {
+      "label": "お問い合わせ",
+      "href": "/contact/",
+      "class": "mini"
+    }
+  ],
+  "productName": "小学校教育計画作成・運営システム",
+  "sections": [
+    {
+      "type": "hero",
+      "class": "education-detail-hero",
+      "containerClass": "container education-detail-hero-grid",
+      "textClass": "education-detail-copy",
+      "labels": [
+        "主力製品",
+        "学校業務支援"
+      ],
+      "labelsClass": "education-detail-labels",
+      "kicker": "Ban.Tai School Management Series",
+      "kickerTag": "p",
+      "kickerClass": "education-detail-kicker",
+      "headingLines": [
+        "小学校教育計画",
+        "作成・運営システム"
+      ],
+      "lead": "年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。",
+      "actions": [
+        {
+          "label": "無料モニター登録",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "class": "btn btn-primary",
+          "attrs": {
+            "style": "background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;"
+          }
+        },
+        {
+          "label": "機能を見る",
+          "href": "#features",
+          "class": "btn btn-light",
+          "attrs": {
+            "style": "background:#fff; color:var(--navy); border:1px solid rgba(7, 27, 54, 0.15);"
+          }
+        }
+      ],
+      "imageContainerClass": "education-detail-visual",
+      "image": {
+        "src": "/assets/images/education-hero.png",
+        "alt": "小学校教育計画作成・運営システムの実際の画面"
+      }
+    },
+    {
+      "type": "educationWorkflow",
+      "class": "education-workflow",
+      "heading": {
+        "kicker": "School Workflow",
+        "title": "年間計画から日々の週案、提出書類まで",
+        "description": "教務が整えた年間計画や行事、時間割を担任の週案へつなぎ、授業実績を時数集計と提出書類へ反映します。"
+      },
+      "steps": [
+        {
+          "number": "01",
+          "text": "年間計画を整える"
+        },
+        {
+          "number": "02",
+          "text": "教務データを担任へ渡す"
+        },
+        {
+          "number": "03",
+          "text": "担任が週案を作成する"
+        },
+        {
+          "number": "04",
+          "text": "授業実績を入力する"
+        },
+        {
+          "number": "05",
+          "text": "時数・提出書類へ反映する"
+        }
+      ],
+      "features": [
+        {
+          "number": "01",
+          "title": "教育計画・教務支援",
+          "subtitle": "学校全体の年間計画を一元管理",
+          "bullets": [
+            "学期・月・週の設定",
+            "学校行事と授業日の登録",
+            "学年・教科別の標準時数設定",
+            "基本時間割の作成",
+            "年間・月別・学期別計画の確認",
+            "担任用週案へ渡すデータの作成"
+          ],
+          "result": "教務が作成した学校全体の計画を、各担任の週案作成へそのままつなげられます。"
+        },
+        {
+          "number": "02",
+          "title": "週案作成・担任業務",
+          "subtitle": "毎週の授業計画を分かりやすく作成",
+          "bullets": [
+            "基本時間割から週案を展開",
+            "教科・単元・学習内容の入力",
+            "学校行事や変更授業の反映",
+            "週ごとの授業計画の整理",
+            "実施済み授業の記録",
+            "教務へ提出する週案データの作成"
+          ],
+          "result": "毎週ゼロから表を作らず、学校の計画に沿った週案を効率よく作成できます。"
+        },
+        {
+          "number": "03",
+          "title": "時数管理・提出書類",
+          "subtitle": "実施時数を自動で集計",
+          "bullets": [
+            "週案の実績から時数を集計",
+            "教科別の週時数・累計時数を表示",
+            "標準時数に対する過不足を確認",
+            "年間・月別・学期別の集計",
+            "教務用データの確認",
+            "Excel形式・印刷用書類の出力"
+          ],
+          "result": "時数の不足や偏りを早めに確認し、教務用の提出書類作成までつなげられます。"
+        }
+      ]
+    },
+    {
+      "type": "textCardGrid",
+      "class": "vs-excel-section",
+      "headingContainerClass": "section-title",
+      "eyebrow": "",
+      "heading": "Excelシートではなく「専用アプリ」である利点",
+      "description": "壊れやすく複雑なExcelマクロでの運用から、安心・軽快な専用ソフトへ。",
+      "gridClass": "vs-grid",
+      "nestedLayout": true,
+      "items": [
+        {
+          "class": "vs-card",
+          "spanText": "01",
+          "heading": "数式の破損や誤消去がない専用画面",
+          "text": "セルや計算式を誤って消去し、マクロや集計が壊れる心配はありません。"
+        },
+        {
+          "class": "vs-card",
+          "spanText": "02",
+          "heading": "学校現場の実務に沿った操作",
+          "text": "日程設定から週案作成、書類提出まで、実際の教務の流れに沿って直感的に進められます。"
+        },
+        {
+          "class": "vs-card",
+          "spanText": "03",
+          "heading": "時数累計と過不足の自動計算",
+          "text": "週案への入力と同時に授業時数が集計され、年間の進度や過不足がリアルタイムで算出されます。"
+        },
+        {
+          "class": "vs-card",
+          "spanText": "04",
+          "heading": "週案と教務のシームレスなデータ連携",
+          "text": "管理用の教務データと担任用の週案データが同期されるため、面倒なコピー作業は不要です。"
+        }
+      ]
+    },
+    {
+      "type": "downloadCta",
+      "id": "download",
+      "sectionClass": "download-section",
+      "containerClass": "container",
+      "boxClass": "download-box",
+      "heading": "Ver.5.70.7 モニター版 ダウンロード",
+      "description": "本ソフトウェアは、無料モニター登録後に自動返信メールで即時にお送りする固定ライセンスキーを入力することで、すべての機能をご利用いただけます。",
+      "actionsClass": "dl-grid",
+      "actions": [
+        {
+          "label": "",
+          "labelHtml": "<strong>① 統合版をダウンロード</strong><span>教務支援＋週案連携（約130MB）</span>",
+          "href": "https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>② 教務支援システム単体版</strong><span>教育計画・時数・提出書類中心（約60MB）</span>",
+          "href": "https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>③ 週案システム単体版</strong><span>週案作成・印刷・集計中心（約70MB）</span>",
+          "href": "https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk",
+          "class": "dl-item"
+        }
+      ],
+      "warningBox": {
+        "class": "warning-box",
+        "heading": "⚠️ Google Drive ダウンロード時の重要なお願い",
+        "bullets": [
+          "Google Driveで<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。画面の<strong>「ダウンロード」</strong>ボタンを押してください。",
+          "ZIPエクストラクター、CloudConvertなどの<strong>外部アプリは使いません。</strong>",
+          "保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。",
+          "展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。"
+        ]
+      }
+    },
+    {
+      "type": "flowBrief",
+      "id": "howto",
+      "class": "flow-brief",
+      "containerClass": "container flow-brief-container",
+      "heading": "ご利用の流れ",
+      "items": [
+        "無料モニター登録フォームから送信します。",
+        "自動返信メールで「固定ライセンスキー」が届きます。",
+        "ご希望のバージョンのZIPをダウンロードします。",
+        "解凍したフォルダ内のアプリを起動し、キーを入力して開始します。"
+      ],
+      "note": "※モニター利用期限は 2027年3月31日予定です。外部へのオンライン認証等は行いません。",
+      "noteStyle": "font-size:0.9rem; color:#666;",
+      "actionsStyle": "margin-top:30px;",
+      "actions": [
+        {
+          "label": "詳しい登録の流れを読む",
+          "href": "/monitor/",
+          "class": "btn btn-secondary",
+          "attrs": {
+            "style": "border:1px solid rgba(7, 27, 54, 0.15); color:var(--navy); background:#fff;"
+          }
+        }
+      ]
+    }
+  ]
+}

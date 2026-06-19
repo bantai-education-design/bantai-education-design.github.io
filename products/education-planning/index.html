@@ -1,260 +1,60 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>小学校教育計画作成・運営システム | Ban.Tai Education Design</title><meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css?v=education-detail-rebuild-20260613-1"><!-- deployed-modern-monitor-flow-v3 --><style>
-    /* products詳細専用スタイル：完全画像無しのCSS設計 */
-    
-    /* 共通リセットと干渉排除 */
-    .products-hero, .products-hero::after, .products-hero::before,
-    .features-section, .features-section::after, .features-section::before,
-    .vs-excel-section, .vs-excel-section::after, .vs-excel-section::before,
-    .download-section, .download-section::after, .download-section::before {
-      background-image: none !important;
-      content: none !important;
-    }
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小学校教育計画作成・運営システム | Ban.Tai Education Design</title>
+  <meta name="description" content="先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=education-detail-rebuild-20260613-1">
+</head>
+<body class="product-detail-page product-detail-education">
+  <!-- GENERATED FILE: edit data/product-details/education-planning.json and templates/product-detail.html -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
 
-    /* ヒーローセクション */
-    .products-hero {
-      background: linear-gradient(180deg, #FAF8F5 0%, #F3EFEA 100%) !important;
-      color: var(--navy);
-      padding: 90px 0 70px;
-      text-align: center;
-      border-bottom: 1px solid rgba(200, 164, 93, 0.25);
-    }
-    .products-hero h1 {
-      font-size: clamp(1.8rem, 4.2vw, 2.8rem);
-      line-height: 1.4;
-      margin: 15px 0 20px;
-      color: var(--navy);
-      font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: break-word;
-      font-family: "Yu Gothic", "YuGothic", sans-serif;
-    }
-    .products-hero .lead {
-      font-size: clamp(1.02rem, 1.8vw, 1.15rem);
-      max-width: 800px;
-      margin: 0 auto 35px;
-      color: #31405a;
-      line-height: 1.85;
-    }
-    .products-hero .actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    /* 概要セクション */
-    .overview-section {
-      padding: 70px 0;
-      background: #fff;
-    }
-    .overview-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    /* Windowsアプリであることの利点 */
-    .vs-excel-section {
-      padding: 80px 0;
-      background: #fff !important;
-    }
-    .vs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    .vs-card {
-      background: #FAF8F5;
-      border: 1px solid rgba(200, 164, 93, 0.25);
-      border-radius: 20px;
-      padding: 30px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .vs-title {
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-    }
-    .vs-desc {
-      font-size: 0.88rem;
-      line-height: 1.6;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    /* ダウンロード・警告エリア */
-    .download-section {
-      padding: 80px 0;
-      background: #F7F8FA !important;
-      border-top: 1px solid rgba(7, 27, 54, 0.04);
-    }
-    .download-box {
-      background: linear-gradient(135deg, var(--navy) 0%, #102e57 100%);
-      color: #fff;
-      border-radius: 28px;
-      padding: 45px;
-      box-shadow: var(--shadow);
-      margin-bottom: 40px;
-    }
-    .download-box h2 {
-      color: #fff;
-      font-family: "Yu Gothic", "YuGothic", sans-serif;
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-    .download-box p {
-      color: rgba(255,255,255,0.9);
-      font-size: 0.98rem;
-      margin-bottom: 30px;
-      line-height: 1.7;
-    }
-    .dl-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .dl-item {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 18px;
-      padding: 22px 20px;
-      color: #fff;
-      text-decoration: none;
-      transition: background-color 0.2s, transform 0.2s;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .dl-item:hover {
-      background: rgba(255,255,255,0.15);
-      transform: translateY(-2px);
-    }
-    .dl-item strong {
-      font-size: 1.05rem;
-      display: block;
-      margin-bottom: 6px;
-    }
-    .dl-item span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.7);
-    }
-
-    /* 重要注意ボックス */
-    .warning-box {
-      background: #FFFBF0;
-      border: 2px solid rgba(200, 164, 93, 0.4);
-      border-radius: 24px;
-      padding: 40px;
-      max-width: 800px;
-      margin: 0 auto;
-      box-shadow: 0 10px 30px rgba(200, 164, 93, 0.08);
-      text-align: left;
-    }
-    .warning-box h3 {
-      margin-top: 0;
-      color: #856404;
-      font-size: 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-bottom: 1px solid rgba(200, 164, 93, 0.2);
-      padding-bottom: 12px;
-      margin-bottom: 20px;
-    }
-    .warning-box ul {
-      margin: 0;
-      padding-left: 20px;
-      line-height: 1.75;
-      font-size: 0.94rem;
-      color: #664d03;
-    }
-    .warning-box li {
-      margin-bottom: 12px;
-    }
-    .warning-box li:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ご利用の流れ */
-    .flow-brief {
-      padding: 80px 0;
-      background: #fff;
-      text-align: center;
-    }
-    .flow-brief-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .flow-brief ol {
-      text-align: left;
-      line-height: 1.8;
-      padding-left: 20px;
-      margin: 30px 0;
-      color: #333;
-    }
-    .flow-brief li {
-      margin-bottom: 10px;
-    }
-
-    /* レスポンシブ */
-    @media(max-width: 960px) {
-      .overview-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .vs-grid {
-        grid-template-columns: 1fr;
-      }
-      .dl-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-      .download-box {
-        padding: 30px 20px;
-      }
-    }
-    @media(max-width: 600px) {
-      .products-hero {
-        padding: 60px 0 50px;
-      }
-      .overview-section, .vs-excel-section, .download-section, .flow-brief {
-        padding: 50px 0;
-      }
-      .warning-box {
-        padding: 24px 20px;
-      }
-    }
-  </style></head><body class="product-detail-page product-detail-education"><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/">ホーム</a><a class="active" href="/#products">製品一覧</a><a href="#download">無料ダウンロード</a><a href="#howto">使い方</a><a class="mini" href="/contact/">お問い合わせ</a></nav></div></header>
-<main>
-  <section class="education-detail-hero">
-    <div class="container education-detail-hero-grid">
-      <div class="education-detail-copy">
-        <div class="education-detail-labels">
-          <span>主力製品</span>
-          <span>学校業務支援</span>
-        </div>
-        <p class="education-detail-kicker">Ban.Tai School Management Series</p>
-        <h1>小学校教育計画<br>作成・運営システム</h1>
-        <p class="education-detail-lead">年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。</p>
-        <div class="education-detail-actions">
-          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform" style="background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;">無料モニター登録</a>
-          <a class="btn btn-light" href="#features" style="background:#fff; color:var(--navy); border:1px solid rgba(7, 27, 54, 0.15);">機能を見る</a>
-        </div>
-      </div>
-      <div class="education-detail-visual">
-        <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システムの実際の画面">
-      </div>
+      <nav class="menu">
+        <a href="/">ホーム</a>
+        <a href="/#products" class="active">製品一覧</a>
+        <a href="#download">無料ダウンロード</a>
+        <a href="#howto">使い方</a>
+        <a href="/contact/" class="mini">お問い合わせ</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="education-workflow">
-    <div class="container">
+  <main>
+    <section class="education-detail-hero">
+      <div class="container education-detail-hero-grid">
+        <div class="education-detail-copy">
+          <div class="education-detail-labels">
+            <span>主力製品</span>
+            <span>学校業務支援</span>
+          </div>
+          <p class="education-detail-kicker">Ban.Tai School Management Series</p>
+          <h1>小学校教育計画<br>作成・運営システム</h1>
+          <p class="lead">年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform" style="background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;">無料モニター登録</a>
+            <a class="btn btn-light" href="#features" style="background:#fff; color:var(--navy); border:1px solid rgba(7, 27, 54, 0.15);">機能を見る</a>
+          </div>
+        </div>
+        <div class="education-detail-visual">
+          <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システムの実際の画面">
+        </div>
+      </div>
+    </section>
+
+    <section class="education-workflow">
+      <div class="container">
       <div class="education-workflow-heading">
         <p class="education-workflow-kicker">School Workflow</p>
         <h2>年間計画から日々の週案、提出書類まで</h2>
@@ -288,7 +88,6 @@
           </ul>
           <p class="education-feature-result">教務が作成した学校全体の計画を、各担任の週案作成へそのままつなげられます。</p>
         </article>
-
         <article class="education-feature-card">
           <div class="education-feature-head">
             <span>02</span>
@@ -307,7 +106,6 @@
           </ul>
           <p class="education-feature-result">毎週ゼロから表を作らず、学校の計画に沿った週案を効率よく作成できます。</p>
         </article>
-
         <article class="education-feature-card">
           <div class="education-feature-head">
             <span>03</span>
@@ -327,85 +125,103 @@
           <p class="education-feature-result">時数の不足や偏りを早めに確認し、教務用の提出書類作成までつなげられます。</p>
         </article>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="vs-excel-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Excelシートではなく「専用アプリ」である利点</h2>
+    <section class="vs-excel-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Excelシートではなく「専用アプリ」である利点</h2>
+        </div>
         <p>壊れやすく複雑なExcelマクロでの運用から、安心・軽快な専用ソフトへ。</p>
+        <div class="vs-grid">
+          <div class="vs-card">
+            <span class="vs-number">01</span>
+            <div>
+              <h4 class="vs-title">数式の破損や誤消去がない専用画面</h4>
+              <p class="vs-desc">セルや計算式を誤って消去し、マクロや集計が壊れる心配はありません。</p>
+            </div>
+          </div>
+          <div class="vs-card">
+            <span class="vs-number">02</span>
+            <div>
+              <h4 class="vs-title">学校現場の実務に沿った操作</h4>
+              <p class="vs-desc">日程設定から週案作成、書類提出まで、実際の教務の流れに沿って直感的に進められます。</p>
+            </div>
+          </div>
+          <div class="vs-card">
+            <span class="vs-number">03</span>
+            <div>
+              <h4 class="vs-title">時数累計と過不足の自動計算</h4>
+              <p class="vs-desc">週案への入力と同時に授業時数が集計され、年間の進度や過不足がリアルタイムで算出されます。</p>
+            </div>
+          </div>
+          <div class="vs-card">
+            <span class="vs-number">04</span>
+            <div>
+              <h4 class="vs-title">週案と教務のシームレスなデータ連携</h4>
+              <p class="vs-desc">管理用の教務データと担任用の週案データが同期されるため、面倒なコピー作業は不要です。</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="vs-grid">
-        <div class="vs-card">
-          <span class="vs-number">01</span>
-          <div>
-            <h4 class="vs-title">数式の破損や誤消去がない専用画面</h4>
-            <p class="vs-desc">セルや計算式を誤って消去し、マクロや集計が壊れる心配はありません。</p>
-          </div>
-        </div>
-        <div class="vs-card">
-          <span class="vs-number">02</span>
-          <div>
-            <h4 class="vs-title">学校現場の実務に沿った操作</h4>
-            <p class="vs-desc">日程設定から週案作成、書類提出まで、実際の教務の流れに沿って直感的に進められます。</p>
-          </div>
-        </div>
-        <div class="vs-card">
-          <span class="vs-number">03</span>
-          <div>
-            <h4 class="vs-title">時数累計と過不足の自動計算</h4>
-            <p class="vs-desc">週案への入力と同時に授業時数が集計され、年間の進度や過不足がリアルタイムで算出されます。</p>
-          </div>
-        </div>
-        <div class="vs-card">
-          <span class="vs-number">04</span>
-          <div>
-            <h4 class="vs-title">週案と教務のシームレスなデータ連携</h4>
-            <p class="vs-desc">管理用の教務データと担任用の週案データが同期されるため、面倒なコピー作業は不要です。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="download" class="download-section">
-    <div class="container">
-      <div class="download-box">
-        <h2>Ver.5.70.7 モニター版 ダウンロード</h2>
-        <p>本ソフトウェアは、無料モニター登録後に自動返信メールで即時にお送りする固定ライセンスキーを入力することで、すべての機能をご利用いただけます。</p>
-        <div class="dl-grid">
-          <a class="dl-item" href="https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk"><strong>① 統合版をダウンロード</strong><span>教務支援＋週案連携（約130MB）</span></a>
-          <a class="dl-item" href="https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk"><strong>② 教務支援システム単体版</strong><span>教育計画・時数・提出書類中心（約60MB）</span></a>
-          <a class="dl-item" href="https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk"><strong>③ 週案システム単体版</strong><span>週案作成・印刷・集計中心（約70MB）</span></a>
+    <section id="download" class="download-section">
+      <div class="container">
+        <div class="download-box">
+          <h2>Ver.5.70.7 モニター版 ダウンロード</h2>
+          <p>本ソフトウェアは、無料モニター登録後に自動返信メールで即時にお送りする固定ライセンスキーを入力することで、すべての機能をご利用いただけます。</p>
+          <div class="dl-grid">
+            <a class="dl-item" href="https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk"><strong>① 統合版をダウンロード</strong><span>教務支援＋週案連携（約130MB）</span></a>
+            <a class="dl-item" href="https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk"><strong>② 教務支援システム単体版</strong><span>教育計画・時数・提出書類中心（約60MB）</span></a>
+            <a class="dl-item" href="https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk"><strong>③ 週案システム単体版</strong><span>週案作成・印刷・集計中心（約70MB）</span></a>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <h3>⚠️ Google Drive ダウンロード時の重要なお願い</h3>
+          <ul>
+                  <li>Google Driveで<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。画面の<strong>「ダウンロード」</strong>ボタンを押してください。</li>
+                  <li>ZIPエクストラクター、CloudConvertなどの<strong>外部アプリは使いません。</strong></li>
+                  <li>保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。</li>
+                  <li>展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。</li>
+          </ul>
         </div>
       </div>
-      <div class="warning-box">
-        <h3>⚠️ Google Drive ダウンロード時の重要なお願い</h3>
-        <ul>
-          <li>Google Driveで<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。画面の<strong>「ダウンロード」</strong>ボタンを押してください。</li>
-          <li>ZIPエクストラクター、CloudConvertなどの<strong>外部アプリは使いません。</strong></li>
-          <li>保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。</li>
-          <li>展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="howto" class="flow-brief">
-    <div class="container flow-brief-container">
-      <h2>ご利用の流れ</h2>
-      <ol>
+    <section id="howto" class="flow-brief">
+      <div class="container flow-brief-container">
+        <h2>ご利用の流れ</h2>
+        <ol>
         <li>無料モニター登録フォームから送信します。</li>
         <li>自動返信メールで「固定ライセンスキー」が届きます。</li>
         <li>ご希望のバージョンのZIPをダウンロードします。</li>
         <li>解凍したフォルダ内のアプリを起動し、キーを入力して開始します。</li>
-      </ol>
+        </ol>
       <p style="font-size:0.9rem; color:#666;">※モニター利用期限は 2027年3月31日予定です。外部へのオンライン認証等は行いません。</p>
       <div style="margin-top:30px;">
         <a class="btn btn-secondary" href="/monitor/" style="border:1px solid rgba(7, 27, 54, 0.15); color:var(--navy); background:#fff;">詳しい登録の流れを読む</a>
       </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="home-floating" href="/">ホームへ</a>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Ban.Tai Education Design</h2>
+        <p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p>
+      </div>
+      <div>
+        <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+        <p><a href="/legal/">利用規約・免責事項</a></p>
+      </div>
     </div>
-  </section>
-</main>
-<footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer></body></html>
+    <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+  </footer>
+
+</body>
+</html>

@@ -446,6 +446,35 @@ def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
     require(html.count("画面で確認しながら、印刷・保存へ。") == 2, "Preview heading must be duplicated exactly 2 times")
 
 
+def validate_education_planning(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"sections"}, "education-planning root")
+
+    # 4 links: 1 Form, 3 Drive downloads
+    form_url = "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform"
+    drive1 = "https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk"
+    drive2 = "https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk"
+    drive3 = "https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk"
+
+    require(form_url in html, "Form URL missing")
+    require(drive1 in html, "Drive URL 1 missing")
+    require(drive2 in html, "Drive URL 2 missing")
+    require(drive3 in html, "Drive URL 3 missing")
+
+    # Check section order
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == ["hero", "educationWorkflow", "textCardGrid", "downloadCta", "flowBrief"],
+        "education-planning section order changed"
+    )
+
+    # Check headings
+    require("小学校教育計画" in html, "Hero heading missing")
+    require("年間計画から日々の週案、提出書類まで" in html, "Workflow heading missing")
+    require("Excelシートではなく「専用アプリ」である利点" in html, "Excel vs App heading missing")
+    require("Ver.5.70.7 モニター版 ダウンロード" in html, "Download heading missing")
+    require("ご利用の流れ" in html, "Flow brief heading missing")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
     parser.add_argument("slug", nargs="?", default="class-roster")
@@ -478,6 +507,8 @@ def main() -> None:
         validate_staff_paper(data, html, page)
     elif args.slug == "id-photo":
         validate_id_photo(data, html, page)
+    elif args.slug == "education-planning":
+        validate_education_planning(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 
