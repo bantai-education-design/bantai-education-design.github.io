@@ -414,7 +414,7 @@ def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> Non
 def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
     require_keys(data, {"englishName", "sections"}, "id-photo root")
     require(len(parser.images) >= 6, "id-photo must have at least 6 images")
-    
+
     # Check that booth link is present
     booth_url = "https://bantai3.booth.pm/items/8467855"
     require(booth_url in html, "BOOTH URL missing from generated HTML")
@@ -439,7 +439,7 @@ def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
         ],
         "id-photo section order changed",
     )
-    
+
     # Check that duplication of "画面で確認しながら、印刷・保存へ。" is present
     require("画面で確認しながら、印刷・保存へ。" in html, "Preview heading missing")
     # Verify that the text appears twice in the DOM (under H2 headings)

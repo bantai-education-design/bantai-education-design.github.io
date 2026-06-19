@@ -73,6 +73,7 @@
     },
     {
       "type": "educationWorkflow",
+      "id": "features",
       "class": "education-workflow",
       "heading": {
         "kicker": "School Workflow",

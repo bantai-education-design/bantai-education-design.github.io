@@ -468,7 +468,7 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
         if section.get("noteStyle"):
             note_attrs["style"] = section["noteStyle"]
         note_html = (
-            f'        <p{render_attrs(note_attrs)}>{html_text(note)}</p>'
+            f'<p{render_attrs(note_attrs)}>{html_text(note)}</p>'
             if note
             else ""
         )
@@ -1122,9 +1122,10 @@ def render_education_workflow(section: dict[str, Any], data: dict[str, Any]) -> 
         '      </div>'
     ])
 
+    section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     section_class = section.get("class", "education-workflow")
     return "\n".join([
-        f'    <section class="{html_attr(section_class)}">',
+        f'    <section{section_id} class="{html_attr(section_class)}">',
         '      <div class="container">',
         heading_html,
         '',
