@@ -382,22 +382,32 @@ def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
             '        </div>',
         ]
     )
+    paragraphs_html = []
+    for paragraph in section["paragraphs"]:
+        if isinstance(paragraph, dict):
+            style_str = render_attrs({"style": paragraph["style"]}) if paragraph.get("style") else ""
+            paragraphs_html.append(f'          <p{style_str}>{html_text(paragraph["text"])}</p>')
+        else:
+            paragraphs_html.append(f'          <p>{html_text(paragraph)}</p>')
     if section.get("simpleText"):
         text_lines = [
             "        <div>",
             f'          <div class="sub">{html_text(section["eyebrow"])}</div>',
             f'          <h2>{html_text(section["heading"])}</h2>',
         ]
-        text_lines.extend(f'          <p>{html_text(paragraph)}</p>' for paragraph in section["paragraphs"])
+        text_lines.extend(paragraphs_html)
         text_lines.append("        </div>")
         text_html = "\n".join(text_lines)
         columns = [image_html, text_html] if section.get("imagePosition") == "left" else [text_html, image_html]
         section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+        section_class = section.get("class", "section")
         background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+        container_class = section.get("containerClass", "container grid grid-2")
+        container_style = render_attrs({"style": section.get("containerStyle", "align-items:center;")}) if section.get("containerStyle", "align-items:center;") else ""
         return "\n".join(
             [
-                f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
-                f'      <div class="{html_attr(section.get("containerClass", "container grid grid-2"))}"{render_attrs({"style": section.get("containerStyle", "align-items:center;")}) if section.get("containerStyle", "align-items:center;") else ""}>',
+                f'    <section{section_id} class="{html_attr(section_class)}"{background}>',
+                f'      <div class="{html_attr(container_class)}"{container_style}>',
                 "\n".join(columns),
                 '      </div>',
                 '    </section>',
@@ -405,20 +415,24 @@ def render_image_text(section: dict[str, Any], data: dict[str, Any]) -> str:
         )
     card_lines = [
         f'        <div class="{html_attr(section.get("cardClass", "card"))}" style="display:flex; flex-direction:column; justify-content:center;">',
-        f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(section["badge"])}</span>',
+        *([f'          <span class="badge" style="width:fit-content; margin-bottom:12px;">{html_text(section["badge"])}</span>'] if section.get("badge") else []),
         f'          <h2>{render_heading_lines(section["headingLines"])}</h2>',
     ]
-    card_lines.extend(f'          <p>{html_text(paragraph)}</p>' for paragraph in section["paragraphs"])
+    card_lines.extend(paragraphs_html)
     if section.get("actions"):
         card_lines.append(render_actions(section["actions"], spaces=10, style=section.get("actionsStyle")))
     card_lines.append('        </div>')
     card_html = "\n".join(card_lines)
     columns = [image_html, card_html] if section.get("imagePosition") == "left" else [card_html, image_html]
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+    section_class = section.get("class", "section")
+    background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    container_class = section.get("containerClass", "container grid grid-2")
+    container_style = render_attrs({"style": section.get("containerStyle", "align-items:center;")}) if section.get("containerStyle", "align-items:center;") else ""
     return "\n".join(
         [
-            f'    <section{section_id} class="section" style="background:{html_attr(section["background"])};">',
-            '      <div class="container grid grid-2" style="align-items:center;">',
+            f'    <section{section_id} class="{html_attr(section_class)}"{background}>',
+            f'      <div class="{html_attr(container_class)}"{container_style}>',
             "\n".join(columns),
             '      </div>',
             '    </section>',
@@ -432,7 +446,7 @@ def render_download_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
     container_class = section.get("containerClass")
     heading_tag = section.get("headingTag", "h2")
     if section_class or container_class or heading_tag != "h2":
-        paragraphs = section.get("descriptionParagraphs", [section["description"]])
+        paragraphs = section.get("descriptionParagraphs") or [section.get("description", "")]
         paragraph_html = "\n".join(f'        <p>{html_text(paragraph)}</p>' for paragraph in paragraphs)
         note = section.get("note")
         note_attrs = {}
@@ -612,12 +626,26 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
                 ]
             )
         )
+    heading_html = []
+    if section.get("headingContainerStyle") or section.get("headingContainerClass"):
+        attrs = {}
+        if section.get("headingContainerStyle"):
+            attrs["style"] = section["headingContainerStyle"]
+        if section.get("headingContainerClass"):
+            attrs["class"] = section["headingContainerClass"]
+        heading_html.append(f'        <div{render_attrs(attrs)}>')
+        heading_html.append(f'          <div class="sub">{html_text(section["eyebrow"])}</div>')
+        heading_html.append(f'          <h2>{html_text(section["heading"])}</h2>')
+        heading_html.append('        </div>')
+    else:
+        heading_html.append(f'        <div class="sub">{html_text(section["eyebrow"])}</div>')
+        heading_html.append(f'        <h2>{html_text(section["heading"])}</h2>')
+
     return "\n".join(
         [
-            f'    <section{section_id} class="section"{background}>',
+            f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
             '      <div class="container">',
-            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
-            f'        <h2>{html_text(section["heading"])}</h2>',
+            *heading_html,
             *[f'        <p>{html_text(paragraph)}</p>' for paragraph in section.get("descriptionParagraphs", [])],
             *([f'        <p>{html_text(section["description"])}</p>'] if section.get("description") else []),
             f'        <div class="{html_attr(section.get("gridClass", "grid grid-3"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
@@ -698,10 +726,16 @@ def render_image_gallery(section: dict[str, Any], data: dict[str, Any]) -> str:
     def render_image(image: dict[str, Any], spaces: int = 10) -> str:
         pad = " " * spaces
         inner = " " * (spaces + 2)
-        img = f'{inner}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
-        if image.get("wrapClass"):
-            return "\n".join([f'{pad}<div class="{html_attr(image["wrapClass"])}">', img, f'{pad}</div>'])
-        return f'{pad}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}">'
+        img_style = render_attrs({"style": image["style"]}) if image.get("style") else ""
+        img = f'{inner}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}"{img_style}>'
+        if image.get("wrapClass") or image.get("wrapStyle"):
+            attrs = {}
+            if image.get("wrapClass"):
+                attrs["class"] = image["wrapClass"]
+            if image.get("wrapStyle"):
+                attrs["style"] = image["wrapStyle"]
+            return "\n".join([f'{pad}<div{render_attrs(attrs)}>', img, f'{pad}</div>'])
+        return f'{pad}<img src="{html_attr(image["src"])}" alt="{html_attr(image["alt"])}"{img_style}>'
 
     images = "\n".join(render_image(image) for image in section["images"])
     card_blocks = []
@@ -748,13 +782,17 @@ def render_image_gallery(section: dict[str, Any], data: dict[str, Any]) -> str:
         footer_cards.append("\n".join(lines))
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     background = f' style="background:{html_attr(section["background"])};"' if section.get("background") else ""
+    eyebrow_html = [f'        <div class="sub">{html_text(section["eyebrow"])}</div>'] if section.get("eyebrow") else []
+    heading_tag = section.get("headingTag", "h2")
+    heading_style = render_attrs({"style": section["headingStyle"]}) if section.get("headingStyle") else ""
+    heading_html = [f'        <{heading_tag}{heading_style}>{html_text(section["heading"])}</{heading_tag}>'] if section.get("heading") else []
     return "\n".join(
         [
             f'    <section{section_id} class="{html_attr(section.get("class", "section"))}"{background}>',
             '      <div class="container">',
-            f'        <div class="sub">{html_text(section["eyebrow"])}</div>',
-            f'        <h2>{html_text(section["heading"])}</h2>',
-            f'        <div class="{html_attr(section.get("gridClass", "grid grid-2 gallery"))}">',
+            *eyebrow_html,
+            *heading_html,
+            f'        <div class="{html_attr(section.get("gridClass", "grid grid-2 gallery"))}"{render_attrs({"style": section["gridStyle"]}) if section.get("gridStyle") else ""}>',
             images,
             '        </div>',
             *card_blocks,
@@ -876,11 +914,12 @@ def render_narrow_text_box(section: dict[str, Any], data: dict[str, Any]) -> str
             paragraphs.append(f'        <p>{body}</p>')
         else:
             paragraphs.append(f'        <p>{html_text(paragraph)}</p>')
+    heading_tag = section.get("headingTag", "h3")
     return "\n".join(
         [
             f'    <section class="{html_attr(section.get("class", "section-narrow"))}">',
             f'      <div class="{html_attr(section.get("containerClass", "container article-link-box"))}">',
-            f'        <h3>{html_text(section["heading"])}</h3>',
+            f'        <{heading_tag}>{html_text(section["heading"])}</{heading_tag}>',
             "\n".join(paragraphs),
             '      </div>',
             '    </section>',

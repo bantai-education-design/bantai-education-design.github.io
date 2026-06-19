@@ -411,6 +411,40 @@ def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> Non
     for value in forbidden:
         require(value not in html, f"forbidden unrelated link or asset reference found: {value}")
 
+def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
+    require_keys(data, {"englishName", "sections"}, "id-photo root")
+    require(len(parser.images) >= 6, "id-photo must have at least 6 images")
+    
+    # Check that booth link is present
+    booth_url = "https://bantai3.booth.pm/items/8467855"
+    require(booth_url in html, "BOOTH URL missing from generated HTML")
+    require(html.count(booth_url) == 2, "BOOTH URL must appear exactly 2 times")
+
+    # Check for duplicate preview image references
+    preview_img = "/assets/images/id-photo/id-photo-hero-summary.png"
+    require(html.count(preview_img) == 2, "Preview image must appear exactly 2 times (reproducing duplicate)")
+
+    # Check sections
+    section_types = [section["type"] for section in data["sections"]]
+    require(
+        section_types == [
+            "hero",
+            "imageText",
+            "imageText",
+            "textCardGrid",
+            "imageText",
+            "imageGallery",
+            "narrowTextBox",
+            "downloadCta",
+        ],
+        "id-photo section order changed",
+    )
+    
+    # Check that duplication of "画面で確認しながら、印刷・保存へ。" is present
+    require("画面で確認しながら、印刷・保存へ。" in html, "Preview heading missing")
+    # Verify that the text appears twice in the DOM (under H2 headings)
+    require(html.count("画面で確認しながら、印刷・保存へ。") == 2, "Preview heading must be duplicated exactly 2 times")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
@@ -442,6 +476,8 @@ def main() -> None:
         validate_banner_studio(data, html, page)
     elif args.slug == "staff-paper":
         validate_staff_paper(data, html, page)
+    elif args.slug == "id-photo":
+        validate_id_photo(data, html, page)
     else:
         fail(f"unsupported product detail slug: {args.slug}")
 

@@ -1,0 +1,227 @@
+{
+  "pageTitle": "証明写真メーカー Ver.3.8.2 AI | Ban.Tai",
+  "metaDescription": "証明写真メーカー Ver.3.8.2 AI は、自宅で証明写真を整え、背景調整・サイズ選択・印刷用レイアウト作成まで行えるWindowsアプリです。",
+  "styleHref": "/assets/style.css",
+  "includeFonts": false,
+  "menuToggle": false,
+  "navLinks": [
+    { "href": "/", "label": "ホーム" },
+    { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "#vector", "label": "無料ダウンロード" },
+    { "href": "#howto", "label": "使い方" },
+    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+  ],
+  "productName": "証明写真メーカー",
+  "englishName": "ID Photo Maker",
+  "sections": [
+    {
+      "type": "hero",
+      "class": "hero id-photo-hero",
+      "containerClass": "container hero-content",
+      "textClass": "hero-text",
+      "imageContainerClass": "hero-image-container",
+      "kicker": "ID Photo Maker",
+      "headingLines": [
+        "スマホで撮った写真を、",
+        "PCで整えて証明写真に。"
+      ],
+      "lead": "Windowsアプリで、サイズ調整・明るさ補正・A4印刷レイアウトまで。",
+      "note": "※ Windows PC専用。スマートフォンだけではご利用いただけません。",
+      "noteClass": "hero-note",
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8467855",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "#vector",
+          "label": "無料ダウンロード (体験版準備中)"
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "https://note.com/note20251212/n/n92e5960dc401",
+          "label": "使い方を見る",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      ],
+      "image": {
+        "src": "/assets/images/id-photo/id-photo-hero-pc-workflow.png",
+        "alt": "スマホで撮った写真を、PCで整えて証明写真に。"
+      }
+    },
+    {
+      "type": "imageText",
+      "id": "howto",
+      "class": "section steps-section",
+      "background": "#f4fbf9; border-top:1px solid rgba(15,118,110,.1); border-bottom:1px solid rgba(15,118,110,.1)",
+      "imagePosition": "left",
+      "image": {
+        "src": "/assets/images/id-photo/id-photo-hero-steps.png",
+        "alt": "撮って、取り込んで、A4で印刷。3ステップの流れ"
+      },
+      "cardClass": "card",
+      "badge": "3ステップでかんたん作成",
+      "headingLines": [
+        "スマホ写真をPCに取り込んで、A4プリントするだけ。"
+      ],
+      "paragraphs": [
+        {
+          "style": "font-weight:700; color:var(--navy); margin-bottom:14px;",
+          "text": "スマホで撮った写真をPCに取り込んで編集し、Windows PCで仕上げる「スマホ写真対応のPCアプリ」です。"
+        },
+        "写真の読み込み、AI背景除去、背景色変更、写真サイズ選択、印刷用レイアウト作成、保存までをまとめて行えます。家庭用プリンターやコンビニ印刷に使いやすい画像がすばやく作れます。"
+      ],
+      "actionsStyle": "margin-top:10px;",
+      "actions": [
+        {
+          "class": "btn btn-light",
+          "href": "https://note.com/note20251212/n/n92e5960dc401",
+          "label": "使い方の詳細記事を読む",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      ]
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "right",
+      "image": {
+        "src": "/assets/images/id-photo/id-photo-hero-summary.png",
+        "alt": "証明写真メーカーのアプリ画面"
+      },
+      "cardClass": "card gold",
+      "badge": "プレビュー機能",
+      "headingLines": [
+        "画面で確認しながら、印刷・保存へ。"
+      ],
+      "paragraphs": [
+        "読み込んだ写真をプレビューしながら、背景、顔の位置、余白、レイアウトを確認できます。",
+        "購入後は、BOOTH公開用ZIPに同梱されている固定ライセンスキーを使って利用する方式です。ライセンスは1人1ライセンスです。"
+      ]
+    },
+    {
+      "type": "textCardGrid",
+      "headingContainerStyle": "text-align:center; margin-bottom:34px;",
+      "eyebrow": "Features",
+      "heading": "主な機能",
+      "cardsOnly": false,
+      "items": [
+        {
+          "heading": "AI背景除去",
+          "text": "人物の背景を整え、証明写真に使いやすい背景色へ調整できます。"
+        },
+        {
+          "heading": "サイズ選択",
+          "text": "履歴書、資格試験、各種申請など、用途に合わせた写真サイズを選べます。"
+        },
+        {
+          "heading": "印刷用レイアウト",
+          "text": "家庭用プリンターやコンビニ印刷に使いやすい保存画像を作成できます。"
+        }
+      ]
+    },
+    {
+      "type": "imageText",
+      "imagePosition": "right",
+      "image": {
+        "src": "/assets/images/id-photo/id-photo-hero-summary.png",
+        "alt": "証明写真メーカーのアプリ画面"
+      },
+      "cardClass": "card gold",
+      "badge": "プレビュー機能",
+      "headingLines": [
+        "画面で確認しながら、印刷・保存へ。"
+      ],
+      "paragraphs": [
+        "読み込んだ写真をプレビューしながら、背景、顔の位置、余白、レイアウトを確認できます。",
+        "購入後は、BOOTH公開用ZIPに同梱されている固定ライセンスキーを使って利用する方式です。ライセンスは1人1ライセンスです。"
+      ]
+    },
+    {
+      "type": "imageGallery",
+      "class": "section-narrow",
+      "background": "#fcfbfa; border-top:1px solid rgba(7,27,54,.04)",
+      "headingTag": "h3",
+      "heading": "製品詳細・参考マニュアル画像",
+      "headingStyle": "text-align:center; margin-bottom:24px; font-size:1.05rem; color:var(--muted);",
+      "gridClass": "grid grid-3",
+      "gridStyle": "max-width:800px; margin:0 auto; gap:16px;",
+      "images": [
+        {
+          "src": "/assets/images/id-photo-maker/feature-overview.png",
+          "alt": "証明写真メーカーの機能紹介",
+          "wrapStyle": "border-radius:8px; overflow:hidden; border:1px solid rgba(7,27,54,.08); background:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.03);",
+          "style": "width:100%; height:auto; display:block;"
+        },
+        {
+          "src": "/assets/images/id-photo-maker/howto-step.png",
+          "alt": "証明写真メーカーの使い方",
+          "wrapStyle": "border-radius:8px; overflow:hidden; border:1px solid rgba(7,27,54,.08); background:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.03);",
+          "style": "width:100%; height:auto; display:block;"
+        },
+        {
+          "src": "/assets/images/id-photo-maker/notice-rules.png",
+          "alt": "証明写真作成時の注意事項",
+          "wrapStyle": "border-radius:8px; overflow:hidden; border:1px solid rgba(7,27,54,.08); background:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.03);",
+          "style": "width:100%; height:auto; display:block;"
+        }
+      ]
+    },
+    {
+      "type": "narrowTextBox",
+      "class": "section-narrow",
+      "containerClass": "container warning",
+      "headingTag": "h2",
+      "heading": "ご利用前の注意事項",
+      "paragraphs": [
+        "証明写真は提出先ごとに必要な規格が異なります。写真サイズ、背景色、顔の大きさ、余白、撮影時期などを必ず提出先の案内で確認してください。",
+        "パスポート、公的申請、資格試験等では、背景色、顔サイズ、余白、影、表情、眼鏡、髪型などに細かな規定があります。必ず提出先の最新規格をご確認ください。",
+        "本アプリで作成した写真の最終的な使用可否は、提出先の判断によります。"
+      ]
+    },
+    {
+      "type": "downloadCta",
+      "id": "vector",
+      "sectionClass": "section",
+      "containerClass": "container download-cta",
+      "heading": "購入・ダウンロード",
+      "descriptionParagraphs": [
+        "正式版はBOOTHの商品ページから購入・ダウンロードできます。公式ホームページから直接ZIPやEXEは配布しません。"
+      ],
+      "actions": [
+        {
+          "class": "btn-download-large",
+          "href": "https://bantai3.booth.pm/items/8467855",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "https://note.com/note20251212/n/n92e5960dc401",
+          "label": "開発背景・使い方記事を読む",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      ],
+      "note": "Vector無料体験版は準備中です。公開後、こちらのページでもご案内します。",
+      "noteClass": "note",
+      "noteStyle": "margin-top:18px;"
+    }
+  ]
+}
