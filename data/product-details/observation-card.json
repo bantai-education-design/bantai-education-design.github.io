@@ -9,12 +9,13 @@
     { "href": "/#products", "label": "製品一覧", "class": "active" },
     { "href": "#features", "label": "主な機能" },
     { "href": "#video", "label": "動画で見る使い方" },
-    { "href": "#distribution", "label": "配布予定" },
+    { "href": "#distribution", "label": "配布ページ" },
     { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
   ],
   "productName": "絵日記・観察カード作成メーカー",
   "englishName": "Picture Diary & Observation Card Maker",
-  "versionLabel": "HTML単体版 v1.0.2",
+  "versionLabel": "Windows EXE版 v1.2.0",
+  "boothUrl": "https://bantai3.booth.pm/items/8579732",
   "sections": [
     {
       "type": "hero",
@@ -25,9 +26,15 @@
       "kicker": "Picture Diary & Observation Card Maker",
       "headingLines": ["絵日記・観察カード作成メーカー"],
       "lead": "小学生の「見たこと」「気づいたこと」「考えたこと」を、紙に残しやすくする印刷用紙作成ツールです。",
-      "note": "HTML単体版 v1.0.2。BOOTH / Vectorでの公開準備を進めています。",
+      "note": "Windows EXE版 v1.2.0 をBOOTHで公開中です。10日間無料で試用できます。",
       "actions": [
-        { "class": "btn btn-secondary", "href": "#distribution", "label": "配布予定を見る" },
+        {
+          "class": "btn btn-primary",
+          "href": "https://bantai3.booth.pm/items/8579732",
+          "label": "BOOTHで購入・ダウンロードする",
+          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+        },
+        { "class": "btn btn-secondary", "href": "#distribution", "label": "配布ページを見る" },
         { "class": "btn btn-secondary", "href": "#notes", "label": "注意事項" }
       ],
       "placeholderVisual": "paper"
@@ -37,8 +44,9 @@
       "eyebrow": "Overview",
       "heading": "絵の欄と文章欄を組み合わせた、観察カードをすぐに作成。",
       "paragraphs": [
-        "Ban.Tai 絵日記・観察カード作成メーカーは、小学校低学年、生活科、理科、夏休みの自由研究、家庭学習で使える観察カードや絵日記用紙を作成するためのHTML単体アプリです。",
-        "ブラウザでHTMLファイルを開き、用紙サイズ、絵の広さ、マス目、横罫線、縦罫線、余白、線の色、線の濃さを選んで印刷できます。PDF保存にも対応しているため、授業用プリントや家庭学習用の用紙を事前に準備しやすくなります。"
+        "Ban.Tai 絵日記・観察カード作成メーカーは、小学校低学年、生活科、理科、夏休みの自由研究、家庭学習で使える観察カードや絵日記用紙を作成するためのWindows用アプリです。",
+        "アプリを起動し、用紙サイズ、絵の広さ、マス目、横罫線、縦罫線、余白、線の色、線の濃さを選んで印刷できます。PDF保存にも対応しているため、授業用プリントや家庭学習用の用紙を事前に準備しやすくなります。",
+        "10日間無料で試用できます。試用中の印刷/PDF保存には「SAMPLE / サンプル」の透かしが入り、ライセンスキー（480円）の認証で透かしと期限が解除されます。"
       ],
       "card": {
         "class": "card gold",
@@ -75,7 +83,7 @@
       "eyebrow": "How To Use",
       "heading": "使い方",
       "steps": [
-        "ZIPを展開し、HTMLファイルをブラウザで開きます。",
+        "ZIPを展開し、インストーラーEXEを実行してアプリを起動します。",
         "用紙サイズ、絵の広さ、文章欄のスタイルを選びます。",
         "必要に応じて余白、線の色、線の濃さを調整します。",
         "「PDF出力 / 印刷」ボタンから印刷またはPDF保存を行います。"
@@ -85,8 +93,9 @@
         "heading": "動作環境・配布形式",
         "rows": [
           { "label": "動作環境", "text": "Windows 10 / 11、Google Chrome、Microsoft Edgeなど", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);", "labelWidth": "34%" },
-          { "label": "形式", "text": "HTML単体版 v1.0.2", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);" },
-          { "label": "配布予定", "text": "BOOTH用ZIP、Vector用ZIP" }
+          { "label": "形式", "text": "Windows EXE版 v1.2.0（HTML単体版を同梱）", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);" },
+          { "label": "試用・ライセンス", "text": "10日間無料試用（透かしあり）／ライセンスキー480円で解除", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);" },
+          { "label": "配布", "text": "BOOTH（公開中）、Vector用ZIP（準備中）" }
         ]
       }
     },
@@ -115,13 +124,13 @@
       "background": "#f9f9f9",
       "eyebrow": "Distribution",
       "heading": "配布ページ",
-      "description": "BOOTH / Vector / note の公開URLは準備中です。確定後、このページのボタンを実URLに差し替えます。",
+      "description": "BOOTHで公開中です。Vector / note の公開URLは準備中で、確定後にこのページのボタンを実URLに差し替えます。",
       "gridStyle": "margin-top:22px;",
       "items": [
         {
-          "badge": "BOOTH準備中",
-          "heading": "BOOTHで購入・ダウンロードする（準備中）",
-          "text": "HTML単体版 v1.0.2 の配布準備中です。ZIPを展開し、HTMLファイルをブラウザで開いて使えます。"
+          "badge": "BOOTH公開中",
+          "heading": "BOOTHで購入・ダウンロードする",
+          "text": "Windows EXE版 v1.2.0。アプリ本体は無料でダウンロードでき、10日間試用できます。ライセンスキー（480円）で透かしと期限が解除されます。ページ上部のボタンからBOOTHの商品ページへ移動できます。"
         },
         {
           "badge": "Vector準備中",
@@ -141,8 +150,9 @@
       "class": "section-narrow",
       "heading": "注意書き",
       "items": [
-        "現在はHTML単体版です。Windows用EXE版ではありません。",
-        "今後、ElectronによるWindows用EXE版を検討しています。",
+        "Windows用EXE版はコード署名を行っていないため、初回起動時にWindows SmartScreen等の確認画面が表示される場合があります。",
+        "EXEを実行できない環境向けに、HTML単体版を保険として同梱しています。",
+        "未認証・試用中の印刷/PDF保存には「SAMPLE / サンプル」の透かしが入ります。",
         "オフライン環境では、外部CDNに依存する表示の一部が変わる可能性があります。",
         "印刷結果はブラウザやプリンター設定により変わる場合があります。",
         "GitHubは開発管理用であり、一般利用者向けの直接配布先にはしません。"

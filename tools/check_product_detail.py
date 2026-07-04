@@ -212,11 +212,12 @@ def validate_kanji_practice(data: dict, html: str, parser: DetailPageParser) -> 
 
 
 def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -> None:
-    require_keys(data, {"englishName", "versionLabel"}, "observation-card root")
+    require_keys(data, {"englishName", "versionLabel", "boothUrl"}, "observation-card root")
     require(data["versionLabel"] in html, "version label missing")
-    require("BOOTH準備中" in html and "Vector準備中" in html and "note準備中" in html, "distribution pending cards missing")
+    validate_url(data["boothUrl"], "boothUrl")
+    require(data["boothUrl"] in html, "BOOTH URL missing from generated HTML")
+    require("BOOTH公開中" in html and "Vector準備中" in html and "note準備中" in html, "distribution cards missing")
     forbidden = [
-        "bantai3.booth.pm",
         "vector.co.jp",
         "note.com",
         "github.com/",
@@ -234,13 +235,13 @@ def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -
     require(features is not None and len(features["items"]) == 3, "feature cards must have 3 items")
     howto = next((section for section in data["sections"] if section["type"] == "orderedListWithInfo"), None)
     require(howto is not None and len(howto["steps"]) == 4, "howto must have 4 steps")
-    require(howto is not None and len(howto["info"]["rows"]) == 3, "environment info must have 3 rows")
+    require(howto is not None and len(howto["info"]["rows"]) == 4, "environment info must have 4 rows")
     video = next((section for section in data["sections"] if section["type"] == "videoPlaceholder"), None)
     require(video is not None and len(video["steps"]) == 5, "video steps must have 5 items")
     distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
     require(distribution is not None and len(distribution["items"]) == 3, "distribution cards must have 3 items")
     notes = next((section for section in data["sections"] if section["type"] == "noticeList"), None)
-    require(notes is not None and len(notes["items"]) == 5, "notice list must have 5 items")
+    require(notes is not None and len(notes["items"]) == 6, "notice list must have 6 items")
     require("PDF出力 / 印刷" in html, "print/PDF wording missing")
     require("画像なしでも崩れない掲載構成" in html, "placeholder explanation missing")
 
