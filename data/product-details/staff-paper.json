@@ -142,7 +142,7 @@
       "style": "background:#F7F8FA;",
       "eyebrow": "Workflow",
       "heading": "導入から製品版有効化（アクティベーション）の流れ",
-      "description": "体験版のダウンロードから、BOOTHでの購入、個別ライセンスキーの自動発行による有効化までの流れは以下の通りです。",
+      "description": "体験版のダウンロードから、BOOTHでの購入、購入後ライセンスキー申請フォームによる個別ライセンスキー発行までの流れは以下の通りです。",
       "containerClass": "flow-brief-container",
       "containerStyle": "margin: 30px 0; background: #fff; border: 1px solid rgba(7, 27, 54, 0.08); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(7, 27, 54, 0.02);",
       "steps": [
