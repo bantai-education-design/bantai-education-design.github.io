@@ -95,6 +95,9 @@ function getAppNameFromContext(url, text) {
   if (lowerUrl.includes('id-photo') || lowerUrl.includes('8467855')) {
     return '証明写真メーカー';
   }
+  if (lowerUrl.includes('first-staff-paper')) {
+    return 'はじめての五線紙メーカー';
+  }
   if (lowerUrl.includes('staff-paper') || lowerUrl.includes('8302315') || lowerUrl.includes('1faipqlsc76qki1tyyd3uke_42lb3rmgpxcwcwkfirz_7szifphq1c_g')) {
     return '五線紙作成メーカー';
   }
@@ -120,6 +123,7 @@ function getAppNameFromContext(url, text) {
   if (title.includes('漢字') || path.includes('kanji-practice')) return '漢字練習帳';
   if (title.includes('方眼紙') || path.includes('houganshi')) return '方眼紙メーカー';
   if (title.includes('証明写真') || path.includes('id-photo')) return '証明写真メーカー';
+  if (title.includes('はじめての五線紙') || path.includes('first-staff-paper')) return 'はじめての五線紙メーカー';
   if (title.includes('五線紙') || title.includes('楽譜') || path.includes('staff-paper')) return '五線紙作成メーカー';
   if (title.includes('観察') || path.includes('observation-card')) return '観察カード';
   if (title.includes('文字入れ') || path.includes('text-overlay')) return '画像文字入れくん';
@@ -132,6 +136,7 @@ function getAppNameFromContext(url, text) {
   if (text.includes('漢字')) return '漢字練習帳';
   if (text.includes('方眼紙')) return '方眼紙メーカー';
   if (text.includes('証明写真')) return '証明写真メーカー';
+  if (text.includes('はじめての五線紙')) return 'はじめての五線紙メーカー';
   if (text.includes('五線紙') || text.includes('楽譜')) return '五線紙作成メーカー';
   if (text.includes('観察カード')) return '観察カード';
   if (text.includes('文字入れ')) return '画像文字入れくん';
