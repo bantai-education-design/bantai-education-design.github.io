@@ -6,7 +6,9 @@
       "category": "featured",
       "order": 1,
       "status": "主力製品",
-      "badges": ["主力製品"],
+      "badges": [
+        "主力製品"
+      ],
       "summary": "教育計画、週案、時数管理、提出書類作成を一つの流れにまとめます。",
       "features": [
         "教育計画・週案・時数管理を一体で支援",
@@ -23,11 +25,13 @@
     {
       "id": "staff-paper",
       "name": "楽譜・五線紙 作成メーカー",
-      "category": "featured",
-      "order": 2,
-      "status": "主力製品",
-      "badges": ["主力製品", "希少な専門ツール"],
-      "summary": "段数、音部記号、用紙サイズを選び、美しい五線紙をPDF・SVGで出力できます。",
+      "category": "standard",
+      "order": 11,
+      "status": "一時休止中",
+      "badges": [
+        "一時休止中"
+      ],
+      "summary": "現在、通常版「楽譜（五線紙）作成メーカー」はバージョンアップ準備のため、一時的にご案内を休止しています。",
       "features": [
         "五線紙・楽譜用紙の細かな指定に対応",
         "PDF・SVGで教材作成や印刷に使いやすい出力"
@@ -36,7 +40,7 @@
       "imageAlt": "楽譜・五線紙 作成メーカー",
       "detailUrl": "/products/staff-paper/",
       "categoryUrl": "/products/music-tools/",
-      "primaryActionLabel": "分野を見る",
+      "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
       "published": true
     },
@@ -46,7 +50,9 @@
       "category": "standard",
       "order": 3,
       "status": "10日間無料体験",
-      "badges": ["10日間無料体験"],
+      "badges": [
+        "10日間無料体験"
+      ],
       "summary": "子どもに合わせた漢字練習プリントを作成できます。",
       "features": [],
       "image": "/assets/images/kanji-practice/card-thumbnail.png",
@@ -63,7 +69,9 @@
       "category": "standard",
       "order": 4,
       "status": "販売中",
-      "badges": ["販売中"],
+      "badges": [
+        "販売中"
+      ],
       "summary": "mm単位でマス目を指定し、実寸印刷できる方眼紙作成アプリです。",
       "features": [],
       "image": "/assets/images/houganshi/card-thumbnail.png",
@@ -80,7 +88,9 @@
       "category": "standard",
       "order": 5,
       "status": "無料",
-      "badges": ["無料"],
+      "badges": [
+        "無料"
+      ],
       "summary": "名簿、提出物チェック、誕生日一覧などを作成します。",
       "features": [],
       "image": "/assets/images/class-roster-maker-thumbnail.svg",
@@ -97,7 +107,9 @@
       "category": "standard",
       "order": 6,
       "status": "販売中",
-      "badges": ["販売中"],
+      "badges": [
+        "販売中"
+      ],
       "summary": "絵の欄と文章欄を組み合わせた観察カードを作成できます。10日間無料で試用できます。",
       "features": [],
       "image": null,
@@ -115,7 +127,9 @@
       "category": "standard",
       "order": 7,
       "status": "公開準備中",
-      "badges": ["公開準備中"],
+      "badges": [
+        "公開準備中"
+      ],
       "summary": "履歴書入力、写真配置、印刷、PDF保存を支援します。",
       "features": [],
       "image": "/assets/images/resume-generator/resume-main-screen.png",
@@ -132,7 +146,9 @@
       "category": "standard",
       "order": 8,
       "status": "10日間無料体験",
-      "badges": ["10日間無料体験"],
+      "badges": [
+        "10日間無料体験"
+      ],
       "summary": "教材や案内画像に、文字を自然に重ねるためのツールです。",
       "features": [],
       "image": "/assets/images/text-tool-features-light.jpg",
@@ -149,7 +165,9 @@
       "category": "standard",
       "order": 9,
       "status": "販売中",
-      "badges": ["販売中"],
+      "badges": [
+        "販売中"
+      ],
       "summary": "自宅で証明写真を整え、印刷用レイアウトまで作成できます。",
       "features": [],
       "image": "/assets/images/id-photo/id-photo-hero-pc-workflow.png",
@@ -166,7 +184,9 @@
       "category": "standard",
       "order": 10,
       "status": "無料",
-      "badges": ["無料"],
+      "badges": [
+        "無料"
+      ],
       "summary": "note向けの見出し画像を、余白と安全範囲を意識して作成できます。",
       "features": [],
       "image": "/assets/images/note-banner-studio/note-banner-studio-hero-v2.png",
@@ -174,6 +194,29 @@
       "detailUrl": "/products/banner-studio/",
       "categoryUrl": null,
       "primaryActionLabel": null,
+      "secondaryActionLabel": "詳細を見る",
+      "published": true
+    },
+    {
+      "id": "first-staff-paper",
+      "name": "Ban.Tai はじめての五線紙メーカー",
+      "category": "featured",
+      "order": 2,
+      "status": "公開準備中",
+      "badges": [
+        "公開準備中",
+        "入門版"
+      ],
+      "summary": "はじめて五線にふれる子どものための、やさしい五線紙作成アプリ。",
+      "features": [
+        "記号・音符なぞり書き用紙や見やすい五線紙",
+        "4歳から8歳くらいの子ども、保護者、音楽教室向け"
+      ],
+      "image": "/assets/images/first-staff-paper-thumbnail.png",
+      "imageAlt": "Ban.Tai はじめての五線紙メーカー",
+      "detailUrl": "/products/first-staff-paper/",
+      "categoryUrl": "/products/music-tools/",
+      "primaryActionLabel": "分野を見る",
       "secondaryActionLabel": "詳細を見る",
       "published": true
     }
