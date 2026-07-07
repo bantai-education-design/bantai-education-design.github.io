@@ -42,10 +42,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. 検索イベントリスナーの登録
-  keywordInput.addEventListener('input', performSearch);
-  citySelect.addEventListener('change', performSearch);
-  typeCheckboxes.forEach(cb => cb.addEventListener('change', performSearch));
+  // 3. 検索・イベント計測リスナーの登録
+  let searchTimeout;
+  keywordInput.addEventListener('input', () => {
+    performSearch();
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      const keyword = keywordInput.value.trim();
+      if (keyword) {
+        trackEvent('school_search', {
+          'search_keyword': keyword
+        });
+      }
+    }, 1500); // 1.5秒間入力が停止したら検索イベントを送信
+  });
+
+  citySelect.addEventListener('change', () => {
+    performSearch();
+    const city = citySelect.value;
+    trackEvent('school_municipality_filter', {
+      'municipality': city || 'all'
+    });
+  });
+
+  typeCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      performSearch();
+      const checkedTypes = Array.from(typeCheckboxes)
+        .filter(c => c.checked)
+        .map(c => c.value)
+        .join(',');
+      trackEvent('school_type_filter', {
+        'checked_types': checkedTypes || 'none'
+      });
+    });
+  });
 
   // 4. 敬称ラジオボタンの変更監視
   honorificRadios.forEach(radio => {
@@ -95,8 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // パフォーマンス向上のため、大量データ時は段階的に描画するか、DOMのバッチ処理を行います。
-    // ここでは通常の描画でも1800件程度であれば瞬時に動作します。
     const fragment = document.createDocumentFragment();
 
     results.forEach((school, index) => {
@@ -133,6 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
       copyBtn.addEventListener('click', () => {
         const textToCopy = formatAddress(school, selectedHonorific);
         copyToClipboard(textToCopy);
+        
+        // 宛名コピーイベントの計測
+        trackEvent('school_address_copy', {
+          'school_name': school.school_name,
+          'honorific': selectedHonorific
+        });
       });
 
       fragment.appendChild(card);
@@ -148,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const schoolIndex = parseInt(copyBtn.getAttribute('data-index'), 10);
       const schoolId = copyBtn.getAttribute('data-id');
       
-      // インデックスを元に直接アクセスして高速化
       const school = schoolData[schoolIndex];
       
       if (school) {
@@ -164,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (honorific === '御中') {
       nameWithHonorific = `${school.school_name} 御中`;
     } else if (honorific === '校長先生') {
-      // 特徴的な「〇〇学校 校長 殿」形式に対応
       nameWithHonorific = `${school.school_name}\n校長 殿`;
     } else if (honorific === '副校長先生') {
       nameWithHonorific = `${school.school_name}\n副校長 殿`;
@@ -224,5 +257,36 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.classList.remove('show');
     }, 2500);
+  }
+
+  // 10. CSVダウンロードおよびプロモーションバナークリックイベントの計測
+  const downloadBtn = document.getElementById('csv-download-btn');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      trackEvent('school_csv_download', {
+        'file_name': 'tokyo_public_schools_address_2025.csv'
+      });
+    });
+  }
+
+  const promoBtn = document.getElementById('envelope-promo-btn');
+  if (promoBtn) {
+    promoBtn.addEventListener('click', () => {
+      trackEvent('envelope_app_click', {
+        'button_text': promoBtn.textContent.trim(),
+        'destination_url': promoBtn.getAttribute('href')
+      });
+    });
+  }
+
+  // 11. 統合アクセス解析イベント送信関数
+  function trackEvent(eventName, params = {}) {
+    // Google Analytics (GA4) の送信
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+      console.log(`[GA4 Event] ${eventName}`, params);
+    } else {
+      console.warn(`[GA4 Warning] gtag is not defined. Failed to track event: ${eventName}`);
+    }
   }
 });

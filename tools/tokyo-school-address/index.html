@@ -12,6 +12,15 @@
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="style.css">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE_ME"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-REPLACE_ME');
+  </script>
+
   <!-- KARTE Tag -->
   <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
   <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
@@ -117,7 +126,7 @@
         <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
           <div class="results-count">検索結果:<span id="count">0</span>件</div>
           <div>
-            <a class="btn btn-light" href="/downloads/tokyo_public_schools_address_2025.csv" download="tokyo_public_schools_address_2025.csv" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 10px 20px; border-radius: 6px; font-weight: 700; border: 1px solid var(--gold); color: var(--navy); background: #fffdf8; text-decoration: none; transition: all 0.2s ease;">
+            <a class="btn btn-light" id="csv-download-btn" href="/downloads/tokyo_public_schools_address_2025.csv" download="tokyo_public_schools_address_2025.csv" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 10px 20px; border-radius: 6px; font-weight: 700; border: 1px solid var(--gold); color: var(--navy); background: #fffdf8; text-decoration: none; transition: all 0.2s ease;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
               東京都公立小中学校 宛先データCSVをダウンロード
             </a>
@@ -137,7 +146,7 @@
             <p>学校名を選択するだけで、窓付き封筒や定形・不定形封筒、集金袋のレイアウトを自動生成し、プリンターで実寸印刷・PDF保存できるアプリを開発予定です。本データベースと連動した自動入力にも対応します。</p>
           </div>
           <div class="promo-action">
-            <a class="btn btn-primary" href="/contact/" style="border-radius: 99px;">開発について問い合わせる</a>
+            <a class="btn btn-primary" id="envelope-promo-btn" href="/contact/" style="border-radius: 99px;">開発について問い合わせる</a>
           </div>
         </div>
 
