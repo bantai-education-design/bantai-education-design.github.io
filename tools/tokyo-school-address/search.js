@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
 
-  // 1. サンプルデータの読み込み
-  fetch('/data/tokyo_public_schools_address_sample.json')
+  // 1. 本データ（2025年版全件データ）の読み込み
+  fetch('/data/tokyo_public_schools_address_2025.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -31,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. 区市町村セレクトボックスの初期化
   function initCitySelect(data) {
-    const cities = [...new Set(data.map(item => item.city))].sort();
+    const cities = [...new Set(data.map(item => item.municipality))].sort();
     cities.forEach(city => {
-      const option = document.createElement('option');
-      option.value = city;
-      option.textContent = city;
-      citySelect.appendChild(option);
+      if (city && city !== '東京都') {
+        const option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      }
     });
   }
 
@@ -67,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtered = schoolData.filter(school => {
       // キーワードマッチ（学校名、よみがな、住所）
       const matchesKeyword = !keyword || 
-        school.name.toLowerCase().includes(keyword) ||
-        school.kana.toLowerCase().includes(keyword) ||
-        (school.prefecture + school.city + school.address).toLowerCase().includes(keyword);
+        school.school_name.toLowerCase().includes(keyword) ||
+        school.school_name_kana.toLowerCase().includes(keyword) ||
+        school.address.toLowerCase().includes(keyword);
 
       // 区市町村マッチ
-      const matchesCity = !selectedCity || school.city === selectedCity;
+      const matchesCity = !selectedCity || school.municipality === selectedCity;
 
       // 学校種マッチ
-      const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.type);
+      const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
 
       return matchesKeyword && matchesCity && matchesType;
     });
@@ -93,31 +95,36 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    results.forEach(school => {
+    // パフォーマンス向上のため、大量データ時は段階的に描画するか、DOMのバッチ処理を行います。
+    // ここでは通常の描画でも1800件程度であれば瞬時に動作します。
+    const fragment = document.createDocumentFragment();
+
+    results.forEach((school, index) => {
       const card = document.createElement('div');
       card.className = 'school-card';
       
       const copyText = formatAddress(school, selectedHonorific);
+      const schoolId = `school-2025-${index}`;
 
       card.innerHTML = `
         <div class="school-info">
           <div class="school-badges">
-            <span class="school-badge-type">${school.type}</span>
-            <span class="school-badge-city">${school.city}</span>
+            <span class="school-badge-type">${school.school_type}</span>
+            <span class="school-badge-city">${school.municipality}</span>
           </div>
-          <h3 class="school-name">${school.name}</h3>
+          <h3 class="school-name">${school.school_name}</h3>
           <div class="school-address-row">
-            <span class="zip">〒${school.postcode}</span>
-            <span class="addr">${school.prefecture}${school.city}${school.address}</span>
+            <span class="zip">〒${school.postal_code}</span>
+            <span class="addr">${school.address}</span>
           </div>
-          <div class="school-tel-row">TEL: ${school.tel}</div>
+          <div class="school-tel-row">TEL: ${school.phone}</div>
         </div>
         <div class="school-actions">
-          <button class="btn-copy" data-id="${school.id}" type="button">
+          <button class="btn-copy" data-id="${schoolId}" data-index="${index}" type="button">
             <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
             住所コピー
           </button>
-          <div class="copy-preview" id="preview-${school.id}">${copyText}</div>
+          <div class="copy-preview" id="preview-${schoolId}">${copyText}</div>
         </div>
       `;
 
@@ -128,16 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
         copyToClipboard(textToCopy);
       });
 
-      resultsContainer.appendChild(card);
+      fragment.appendChild(card);
     });
+
+    resultsContainer.appendChild(fragment);
   }
 
   // 7. プレビューのリアルタイム更新
   function updatePreviews() {
     resultsContainer.querySelectorAll('.school-card').forEach(card => {
       const copyBtn = card.querySelector('.btn-copy');
+      const schoolIndex = parseInt(copyBtn.getAttribute('data-index'), 10);
       const schoolId = copyBtn.getAttribute('data-id');
-      const school = schoolData.find(s => s.id === schoolId);
+      
+      // インデックスを元に直接アクセスして高速化
+      const school = schoolData[schoolIndex];
       
       if (school) {
         const previewDiv = card.querySelector('.copy-preview');
@@ -148,23 +160,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. 住所フォーマットユーティリティ
   function formatAddress(school, honorific) {
-    // 敬称によって御中か個人名宛てにするか切り替える
     let nameWithHonorific = '';
     if (honorific === '御中') {
-      nameWithHonorific = `${school.name} 御中`;
+      nameWithHonorific = `${school.school_name} 御中`;
     } else if (honorific === '校長先生') {
-      nameWithHonorific = `${school.name}\n校長 殿`;
+      // 特徴的な「〇〇学校 校長 殿」形式に対応
+      nameWithHonorific = `${school.school_name}\n校長 殿`;
     } else if (honorific === '副校長先生') {
-      nameWithHonorific = `${school.name}\n副校長 殿`;
+      nameWithHonorific = `${school.school_name}\n副校長 殿`;
     } else if (honorific === '事務室御中') {
-      nameWithHonorific = `${school.name} 事務室 御中`;
+      nameWithHonorific = `${school.school_name} 事務室 御中`;
     } else if (honorific === 'ご担当者様') {
-      nameWithHonorific = `${school.name}\nご担当者 様`;
+      nameWithHonorific = `${school.school_name}\nご担当者 様`;
     } else {
-      nameWithHonorific = `${school.name} ${honorific}`;
+      nameWithHonorific = `${school.school_name} ${honorific}`;
     }
 
-    return `〒${school.postcode}\n${school.prefecture}${school.city}${school.address}\n${nameWithHonorific}`;
+    return `〒${school.postal_code}\n${school.address}\n${nameWithHonorific}`;
   }
 
   // 9. クリップボードへのコピーとトースト通知
@@ -184,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fallbackCopyToClipboard(text) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
-    textArea.style.position = 'fixed'; // 画面外へ
+    textArea.style.position = 'fixed';
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
