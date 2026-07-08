@@ -428,13 +428,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // クリックでページ最上部までスムーズスクロール
-    backToTopBtn.addEventListener('click', () => {
+    function scrollToPageTop() {
+      // window と scrollingElement の両方に対してスムーズスクロールを実行
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       const scrollRoot = document.scrollingElement || document.documentElement;
-      scrollRoot.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    });
+      if (scrollRoot !== document.documentElement) {
+        scrollRoot.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
+    }
+
+    backToTopBtn.addEventListener('click', scrollToPageTop);
   }
 });
