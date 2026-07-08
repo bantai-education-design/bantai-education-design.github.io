@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from html import escape
 from pathlib import Path
 from string import Template
@@ -148,6 +149,34 @@ def render_card(product: dict, template: Template) -> str:
     )
 
 
+def update_index_html_stats(products: list) -> None:
+    total = len(products)
+    sales = sum(1 for p in products if p.get("status") in ("販売中", "10日間無料体験"))
+    free = sum(1 for p in products if p.get("status") == "無料")
+    preparing = sum(1 for p in products if p.get("status") in ("公開準備中", "準備中"))
+    paused = sum(1 for p in products if p.get("status") == "一時休止中")
+
+    index_path = ROOT / "index.html"
+    if not index_path.exists():
+        print(f"Error: index.html not found at {index_path}")
+        return
+
+    html = index_path.read_text(encoding="utf-8")
+
+    def replace_placeholder(content: str, tag: str, value: int) -> str:
+        pattern = rf"(<!--\s*{tag}\s*-->).*?(<!--\s*/{tag}\s*-->)"
+        return re.sub(pattern, rf"\g<1>{value}\g<2>", content)
+
+    html = replace_placeholder(html, "STAT_TOTAL", total)
+    html = replace_placeholder(html, "STAT_SALES", sales)
+    html = replace_placeholder(html, "STAT_FREE", free)
+    html = replace_placeholder(html, "STAT_PREPARING", preparing)
+    html = replace_placeholder(html, "STAT_PAUSED", paused)
+
+    index_path.write_text(html, encoding="utf-8", newline="\n")
+    print(f"Updated index.html stats (Total: {total}, Sales: {sales}, Free: {free}, Preparing: {preparing}, Paused: {paused})")
+
+
 def main() -> None:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     products = sorted(data["products"], key=lambda item: item["order"])
@@ -170,6 +199,10 @@ def main() -> None:
     OUTPUT_PATH.write_text(output.rstrip() + "\n", encoding="utf-8", newline="\n")
     print(f"Generated {OUTPUT_PATH.relative_to(ROOT)} from data/products.json")
 
+    # Update home page stats
+    update_index_html_stats(products)
+
 
 if __name__ == "__main__":
     main()
+
