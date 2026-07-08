@@ -48,6 +48,75 @@
       </div>
     </section>
 
+    <!-- 検索・絞り込みパネル -->
+    <section class="search-filter-section">
+      <div class="container">
+        <div class="search-filter-container">
+          
+          <!-- キーワード検索 -->
+          <div class="search-row">
+            <div class="search-input-wrapper">
+              <input type="text" id="catalog-search-input" placeholder="商品名、説明、特徴からキーワードで探す..." aria-label="検索キーワード">
+            </div>
+            <div class="results-info">
+              <span id="matching-count">11</span>件中 <span id="visible-count">11</span>件を表示
+            </div>
+            <button id="reset-filter-btn" class="reset-button">条件をリセット</button>
+          </div>
+          
+          <!-- フィルターチェックボックス -->
+          <div class="filter-row">
+            <!-- 属性フィルター -->
+            <div class="filter-group">
+              <span class="filter-group-label">特徴・販路</span>
+              <div class="filter-chips">
+                <label class="filter-chip">
+                  <input type="checkbox" class="attribute-filter" value="flagship">
+                  <span>主力製品</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="attribute-filter" value="hasTrial">
+                  <span>体験版あり</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="attribute-filter" value="hasBooth">
+                  <span>BOOTHあり</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="attribute-filter" value="hasVector">
+                  <span>Vectorあり</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- 状態区分フィルター -->
+            <div class="filter-group">
+              <span class="filter-group-label">販売状態</span>
+              <div class="filter-chips">
+                <label class="filter-chip">
+                  <input type="checkbox" class="status-filter" value="無料">
+                  <span>無料</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="status-filter" value="販売中">
+                  <span>販売中</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="status-filter" value="公開準備中">
+                  <span>準備中 / 公開準備中</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" class="status-filter" value="一時休止中">
+                  <span>一時休止中</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
     <section class="ivory-section catalog-products-section">
       <div class="container catalog-groups">
         <section class="catalog-group catalog-featured-group" aria-labelledby="featured-products-heading">
@@ -73,5 +142,6 @@ $standard_cards
 
   <footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常業務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer>
   <script src="/assets/site.js?v=black-gold-1"></script>
+  <script src="/assets/js/product-search.js" defer></script>
 </body>
 </html>
