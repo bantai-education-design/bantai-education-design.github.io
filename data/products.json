@@ -20,7 +20,12 @@
       "categoryUrl": "/products/school-work/",
       "primaryActionLabel": "分野を見る",
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": true
     },
     {
       "id": "staff-paper",
@@ -42,7 +47,12 @@
       "categoryUrl": "/products/music-tools/",
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8302315",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": false
     },
     {
       "id": "kanji-practice",
@@ -61,7 +71,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8305799",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": false
     },
     {
       "id": "houganshi",
@@ -80,7 +95,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8479863",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": false
     },
     {
       "id": "class-roster",
@@ -99,7 +119,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": false
     },
     {
       "id": "observation-card",
@@ -119,7 +144,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8579732",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": false
     },
     {
       "id": "resume-generator",
@@ -138,7 +168,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": false
     },
     {
       "id": "text-overlay",
@@ -157,7 +192,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": "https://www.vector.co.jp/soft/winnt/art/se528755.html",
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": false
     },
     {
       "id": "id-photo",
@@ -176,7 +216,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8467855",
+      "vectorUrl": null,
+      "noteUrl": "https://note.com/note20251212/n/n92e5960dc401",
+      "hasTrial": true,
+      "isFlagship": false
     },
     {
       "id": "banner-studio",
@@ -195,7 +240,12 @@
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": false
     },
     {
       "id": "first-staff-paper",
@@ -218,7 +268,12 @@
       "categoryUrl": "/products/music-tools/",
       "primaryActionLabel": "分野を見る",
       "secondaryActionLabel": "詳細を見る",
-      "published": true
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": true
     }
   ]
 }
