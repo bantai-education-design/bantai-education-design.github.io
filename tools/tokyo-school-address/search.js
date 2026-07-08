@@ -29,11 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
       resultsContainer.innerHTML = '<p style="color:red; text-align:center; padding: 20px;">データの読み込みに失敗しました。時間をおいて再度お試しください。</p>';
     });
 
-  // 2. 区市町村セレクトボックスの初期化
+  // 東京都の行政順（23区 → 市部 → 町村部）
+  const MUNICIPALITY_ORDER = [
+    // 23区
+    '千代田区', '中央区', '港区', '新宿区', '文京区',
+    '台東区', '墨田区', '江東区', '品川区', '目黒区',
+    '大田区', '世田谷区', '渋谷区', '中野区', '杉並区',
+    '豊島区', '北区', '荒川区', '板橋区', '練馬区',
+    '足立区', '葛飾区', '江戸川区',
+    // 市部
+    '八王子市', '立川市', '武蔵野市', '三鷹市', '青梅市',
+    '府中市', '昭島市', '調布市', '町田市', '小金井市',
+    '小平市', '日野市', '東村山市', '国分寺市', '国立市',
+    '福生市', '狛江市', '東大和市', '清瀬市', '東久留米市',
+    '武蔵村山市', '多摩市', '稲城市', '羽村市', 'あきる野市',
+    '西東京市',
+    // 町村部
+    '瑞穂町', '日の出町', '檜原村', '奥多摩町',
+    '大島町', '利島村', '新島村', '神津島村',
+    '三宅村', '御蔵島村', '八丈町', '青ヶ島村', '小笠原村'
+  ];
+
+  // 2. 区市町村セレクトボックスの初期化（行政順）
   function initCitySelect(data) {
-    const cities = [...new Set(data.map(item => item.municipality))].sort();
-    cities.forEach(city => {
-      if (city && city !== '東京都') {
+    const availableCities = new Set(
+      data.map(item => item.municipality).filter(c => c && c !== '東京都')
+    );
+    // 行政順で、データに存在する自治体だけを追加
+    MUNICIPALITY_ORDER.forEach(city => {
+      if (availableCities.has(city)) {
         const option = document.createElement('option');
         option.value = city;
         option.textContent = city;
@@ -279,14 +303,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 11. 統合アクセス解析イベント送信関数
+  // 11. GA4イベント送信関数
   function trackEvent(eventName, params = {}) {
-    // Google Analytics (GA4) の送信
     if (typeof gtag === 'function') {
       gtag('event', eventName, params);
       console.log(`[GA4 Event] ${eventName}`, params);
     } else {
       console.warn(`[GA4 Warning] gtag is not defined. Failed to track event: ${eventName}`);
     }
+  }
+
+  // 12. 「上に戻る」ボタンの制御
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    // スクロール量が400pxを超えたらボタンを表示
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    // クリックで検索結果の先頭（#results-list）までスムーズスクロール
+    backToTopBtn.addEventListener('click', () => {
+      const target = document.getElementById('results-list');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   }
 });
