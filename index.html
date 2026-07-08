@@ -18,25 +18,25 @@
   <script src="/assets/js/analytics-events.js" defer></script>
 
   <style>
-    /* 無料Webツールセクション レスポンシブ対応 */
-    .free-web-card-inner {
+    /* 学校宛先DBセクション レスポンシブ対応 */
+    .school-db-card {
       display: flex;
       gap: 36px;
       align-items: flex-start;
     }
-    .free-web-card-preview {
+    .school-db-preview {
       width: 220px;
       flex-shrink: 0;
     }
     @media (max-width: 760px) {
-      .free-web-card-inner {
+      .school-db-card {
         flex-direction: column;
         gap: 24px;
       }
-      .free-web-card-preview {
+      .school-db-preview {
         width: 100%;
       }
-      #free-web-tools {
+      #school-address-db {
         padding: 48px 0;
       }
     }
@@ -97,6 +97,43 @@
         </div>
       </div>
     </section>
+
+  <!-- ==================================================
+    東京都公立小中学校 宛先検索データベース — 独立導線
+    ヒーロー直下に配置。無料ツール群・製品一覧とは別扱い。
+  =================================================== -->
+  <section id="school-address-db" style="background:linear-gradient(135deg,#071b36 0%,#0f2a4a 60%,#162540 100%); padding:64px 0; border-bottom:3px solid var(--gold);">
+    <div class="container">
+      <div class="school-db-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(197,160,89,0.45); border-radius:20px; padding:40px 44px; backdrop-filter:blur(6px);">
+
+        <!-- テキストエリア -->
+        <div style="flex:1; min-width:0;">
+
+          <!-- バッジ行 -->
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px;">
+            <span style="background:var(--gold); color:#071b36; font-size:0.68rem; font-weight:900; padding:4px 12px; border-radius:99px; letter-spacing:0.06em;">東京都公立校 1,869校</span>
+            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">CSV対応</span>
+            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">宛名コピー</span>
+            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">ブラウザで利用可</span>
+          </div>
+
+          <h2 style="color:#fff; font-size:clamp(1.3rem,2.6vw,1.75rem); font-weight:700; margin:0 0 10px; line-height:1.35;">東京都公立小中学校<br>宛先検索データベース</h2>
+          <p style="color:var(--gold2); font-size:0.88rem; font-weight:600; margin:0 0 14px;">学校封筒印刷・宛名作成に使える、Ban.Tai公式HPの無料学校データベース</p>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 24px;">東京都教育委員会の公開データをもとに、公立小学校・中学校・義務教育学校1,869校の住所・電話番号を検索できます。学校名・区市町村・学校種で絞り込み、封筒宛名形式でコピーできます。CSVダウンロードにも対応しています。</p>
+
+          <a class="btn btn-primary" href="/tools/tokyo-school-address/" style="font-size:0.9rem; padding:13px 30px;">東京都学校宛先データベースを開く</a>
+        </div>
+
+        <!-- プレビューカード -->
+        <div class="school-db-preview" style="background:rgba(0,0,0,0.3); border-radius:14px; padding:20px; border:1px solid rgba(197,160,89,0.25);">
+          <div style="font-family:'Noto Serif JP',serif; color:var(--gold2); font-weight:700; font-size:0.8rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px; margin-bottom:13px;">宛先検索プレビュー</div>
+          <div style="background:rgba(255,255,255,0.05); border-radius:8px; padding:12px; font-family:monospace; font-size:0.76rem; border-left:3px solid var(--gold); color:var(--gold2); line-height:1.55; margin-bottom:13px;">〒102-0083<br>東京都千代田区麹町２丁目４<br>千代田区立麹町小学校 御中</div>
+          <div style="font-size:0.72rem; color:rgba(255,255,255,0.4); text-align:center; line-height:1.5;">インストール不要<br>ブラウザで即利用可</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <section class="ivory-section core-products-section" aria-labelledby="core-products-heading">
     <div class="container">
@@ -181,57 +218,6 @@
         <h3>インストール不要のWindows版</h3>
         <p>ファイルを展開して、中のアプリを起動するだけですぐに使えます。</p>
       </div>
-    </div>
-  </section>
-
-  <!-- =============================================
-    無料Webツールセクション（ダウンロードアプリとは別ブロック）
-  ============================================== -->
-  <section id="free-web-tools" class="section" style="background: linear-gradient(160deg, #0c1b33 0%, #172e54 100%); padding: 72px 0;">
-    <div class="container">
-
-      <!-- セクション見出し -->
-      <div style="text-align:center; margin-bottom:48px;">
-        <div class="sub" style="color:var(--gold2); font-weight:700; letter-spacing:0.12em; font-size:0.78rem; text-transform:uppercase;">Free Web Tool</div>
-        <h2 style="color:#fff; font-size:clamp(1.4rem,3vw,2rem); margin:10px 0 12px;">無料Webツール</h2>
-        <p style="color:rgba(255,255,255,0.72); font-size:0.95rem; max-width:540px; margin:0 auto;">学校現場でそのまま使える便利データベース・検索ツール。インストール不要、ブラウザからすぐ利用できます。</p>
-      </div>
-
-      <!-- ツールカード -->
-      <div style="max-width:800px; margin:0 auto;">
-        <div class="free-web-card-inner" style="background:rgba(255,255,255,0.05); border:1px solid rgba(197,160,89,0.4); border-radius:20px; padding:36px 40px; backdrop-filter:blur(8px);">
-
-          <!-- 左︁テキストコンテンツ -->
-          <div style="flex:1; min-width:0;">
-            <!-- バッジレール -->
-            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px;">
-              <span style="background:var(--gold); color:#0c1b33; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:99px; letter-spacing:0.04em;">無料Webツール</span>
-              <span style="background:rgba(255,255,255,0.1); color:var(--gold2); font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:99px; border:1px solid rgba(197,160,89,0.3);">データベース</span>
-              <span style="background:rgba(255,255,255,0.1); color:var(--gold2); font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:99px; border:1px solid rgba(197,160,89,0.3);">CSV対応</span>
-              <span style="background:rgba(255,255,255,0.1); color:var(--gold2); font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:99px; border:1px solid rgba(197,160,89,0.3);">ブラウザで利用可</span>
-            </div>
-            <h3 style="color:#fff; font-size:1.3rem; font-weight:700; margin:0 0 12px; line-height:1.4;">東京都公立小中学校<br>宛先検索データベース</h3>
-            <p style="color:rgba(255,255,255,0.82); font-size:0.88rem; line-height:1.7; margin:0 0 22px;">学校封筒印刷・宛名作成に使える、東京都公立小学校・中学校・義務教育学校の無料検索データベースです。学校名・区市町村・学校種で検索し、封筒宛名形式でコピーできます。CSVダウンロードにも対応しています。</p>
-            <!-- 機能一覧 -->
-            <ul style="list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:6px;">
-              <li style="color:rgba(255,255,255,0.75); font-size:0.83rem;"><span style="color:var(--gold2); margin-right:8px;">&#10003;</span>令和7年度版（1,869校）データ対応</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.83rem;"><span style="color:var(--gold2); margin-right:8px;">&#10003;</span>小学校・中学校・義務教育学校対応</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.83rem;"><span style="color:var(--gold2); margin-right:8px;">&#10003;</span>区市町村フィルター（行政順並び）</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.83rem;"><span style="color:var(--gold2); margin-right:8px;">&#10003;</span>宛名コピー（御中・先生方・様）・CSVダウンロード</li>
-            </ul>
-            <a class="btn btn-primary" href="/tools/tokyo-school-address/" style="font-size:0.9rem; padding:12px 28px;">無料で学校宛先を検索する</a>
-          </div>
-
-          <!-- 右︁プレビューカード -->
-          <div class="free-web-card-preview" style="background:rgba(0,0,0,0.25); border-radius:12px; padding:18px; border:1px solid rgba(197,160,89,0.2); font-size:0.8rem; color:rgba(255,255,255,0.88); line-height:1.6;">
-            <div style="font-family:'Noto Serif JP',serif; color:var(--gold2); font-weight:700; font-size:0.82rem; border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:8px; margin-bottom:12px;">宛先検索プレビュー</div>
-            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:12px; font-family:monospace; font-size:0.78rem; border-left:3px solid var(--gold); color:var(--gold2); line-height:1.5; margin-bottom:14px;">『102-0083』<br>東京都千代田区麹町２丁目４<br>千代田区立麹町小学校 御中</div>
-            <div style="font-size:0.73rem; color:rgba(255,255,255,0.45); text-align:center;">インストール不要・ブラウザで即利用可</div>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </section>
 
