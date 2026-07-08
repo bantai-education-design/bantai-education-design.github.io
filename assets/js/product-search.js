@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const listContainer = document.querySelector('.catalog-groups');
   const emptyState = document.createElement('div');
   emptyState.className = 'catalog-empty-state';
-  emptyState.innerHTML = '<p style="text-align:center; padding:50px 20px; color:var(--muted); font-size:1.05rem; font-weight:600;">該当する製品が見見つかりませんでした。<br>条件を変更してお試しください。</p>';
+  emptyState.innerHTML = '<p style="text-align:center; padding:50px 20px; color:var(--muted); font-size:1.05rem; font-weight:600;">該当する製品が見つかりませんでした。<br>条件を変更してお試しください。</p>';
   emptyState.style.display = 'none';
   if (listContainer) {
     listContainer.appendChild(emptyState);
