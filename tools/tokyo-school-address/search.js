@@ -2,11 +2,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   let schoolData = [];
+  let currentFilteredResults = []; // 現在のフィルター結果を保持
   let selectedHonorific = '御中';
 
   const keywordInput = document.getElementById('keyword');
   const citySelect = document.getElementById('city');
   const typeCheckboxes = document.querySelectorAll('.type-checkbox');
+  const estCheckboxes = document.querySelectorAll('.est-checkbox'); // 設置区分
   const resultsContainer = document.getElementById('results-list');
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
@@ -21,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       schoolData = data;
+      currentFilteredResults = data;
       initCitySelect(data);
       performSearch();
     })
@@ -102,6 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 設置区分チェックボックスの変更監視
+  estCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      performSearch();
+      const checkedEsts = Array.from(estCheckboxes)
+        .filter(c => c.checked)
+        .map(c => c.value)
+        .join(',');
+      trackEvent('school_establishment_filter', {
+        'checked_establishments': checkedEsts || 'none'
+      });
+    });
+  });
+
   // 4. 敬称ラジオボタンの変更監視
   honorificRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
@@ -120,6 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(cb => cb.checked)
       .map(cb => cb.value);
 
+    // チェックされている設置区分を取得
+    const checkedEsts = Array.from(estCheckboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
     // フィルタリング
     const filtered = schoolData.filter(school => {
       // キーワードマッチ（学校名、よみがな、住所）
@@ -134,9 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // 学校種マッチ
       const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
 
-      return matchesKeyword && matchesCity && matchesType;
+      // 設置区分マッチ（将来のデータ拡張を見据え、データにフィールドがない場合は公立として処理）
+      const estType = school.establishment_type || '公立';
+      const matchesEst = checkedEsts.length === 0 || checkedEsts.includes(estType);
+
+      return matchesKeyword && matchesCity && matchesType && matchesEst;
     });
 
+    currentFilteredResults = filtered; // CSVダウンロード用
     renderResults(filtered);
   }
 
@@ -286,11 +313,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. CSVダウンロードおよびプロモーションバナークリックイベントの計測
   const downloadBtn = document.getElementById('csv-download-btn');
   if (downloadBtn) {
-    downloadBtn.addEventListener('click', () => {
+    downloadBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // ハッシュリンク等のデフォルト動作防止
+      
+      downloadFilteredCSV(currentFilteredResults);
+
       trackEvent('school_csv_download', {
-        'file_name': 'tokyo_public_schools_address_2025.csv'
+        'file_name': 'tokyo_schools_address_filtered.csv',
+        'results_count': currentFilteredResults.length
       });
     });
+  }
+
+  // 検索結果連動の動的CSVダウンロード生成処理
+  function downloadFilteredCSV(data) {
+    if (!data || data.length === 0) {
+      alert('ダウンロードするデータがありません。');
+      return;
+    }
+
+    // Excel文字化け防止のためBOM付与
+    let csvContent = '\ufeff';
+    // ヘッダー
+    csvContent += '"学校名","学校種","郵便番号","区市町村","住所","電話番号"\n';
+
+    data.forEach(item => {
+      const row = [
+        item.school_name || '',
+        item.school_type || '',
+        item.postal_code || '',
+        item.municipality || '',
+        item.address || '',
+        item.phone || ''
+      ].map(val => `"${val.replace(/"/g, '""')}"`); // ダブルクォーテーションエスケープ
+
+      csvContent += row.join(',') + '\n';
+    });
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `tokyo_schools_address_filtered_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   const promoBtn = document.getElementById('envelope-promo-btn');
