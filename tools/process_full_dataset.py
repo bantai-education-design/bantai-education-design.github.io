@@ -8,6 +8,7 @@ import re
 root_dir = r'C:\Users\User\Documents\アプリ\小学校教育計画教務支援システム\_site_work'
 
 urls = {
+    '幼稚園': 'https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/r7_youchien_address',
     '小学校': 'https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/r7_shougakkou_address',
     '中学校': 'https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/r7_chuugakkou_address',
     '義務教育学校': 'https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/r7_gimu_address',
@@ -17,6 +18,30 @@ urls = {
 }
 
 # Municipality to Hiragana mapping
+muni_kana_map = {
+    # 23 Wards
+    '千代田区': 'ちよだ', '中央区': 'ちゅうおう', '港区': 'みなと', '新宿区': 'しんじゅく',
+    '文京区': 'ぶんきょう', '台東区': 'たいとう', '墨田区': 'すみだ', '江東区': 'こうとう',
+    '品川区': 'しながわ', '目黒区': 'めぐろ', '大田区': 'おおた', '世田谷区': 'せたがや',
+    '渋谷区': 'しぶや', '中野区': 'なかの', '杉並区': 'すぎなみ', '豊島区': 'toshima',
+    '北区': 'きた', '荒川区': 'あらかわ', '板橋区': 'いたばし', '練馬区': 'ねりま',
+    '足立区': 'あだち', '葛飾区': 'かつしか', '江戸川区': 'えどがわ',
+    # Cities
+    '八王子市': 'はちおうじ', '立川市': 'たちかわ', '武蔵野市': 'むさしの', '三鷹市': 'みたか',
+    '青梅市': 'おうめ', '府中市': 'ふちゅう', '昭島市': 'あきしま', '調布市': 'ちょうふ',
+    '町田市': 'まちだ', '小金井市': 'こがねい', '小平市': 'こだいら', '日野市': 'ひの',
+    '東村山市': 'ひがしむらやま', '国分寺市': 'こくぶんじ', '国立市': 'くにたち', '福生市': 'ふっさ',
+    '狛江市': 'こまえ', '東大和市': 'ひがしやまと', '清瀬市': 'きよせ', '東久留米市': 'ひがしくるめ',
+    '武蔵村山市': 'むさしむらやま', '多摩市': 'たま', '稲城市': 'いなぎ', '羽村市': 'はむら',
+    'あきる野市': 'あきるの', '西東京市': 'にしとうきょう',
+    # Towns & Villages
+    '大島町': 'おおしま', '八丈町': 'はちじょう', '瑞穂町': 'みずほ', '日の出町': 'ひので', '奥多摩町': 'おくたま',
+    '利島村': 'としま', '新島村': 'にいじま', '神津島村': 'こうづしま', '三宅村': 'みやけ',
+    '御蔵島村': 'みくらじま', '青ヶ島村': 'aogashima', # Avoid duplicate key warning
+    '御蔵島村': 'みくらじま', '青ヶ島村': 'あおがしま', '小笠原村': 'おがさわら', '檜原村': 'ひのはら'
+}
+
+# Clean duplicate keys
 muni_kana_map = {
     # 23 Wards
     '千代田区': 'ちよだ', '中央区': 'ちゅうおう', '港区': 'みなと', '新宿区': 'しんじゅく',
@@ -82,11 +107,11 @@ for school_type, url in urls.items():
             
             # Dynamically find column indices based on header names
             col_muni = header.index('所在地区市町村') if '所在地区市町村' in header else header.index('設置者')
-            col_name = header.index('学校名')
+            col_name = header.index('園名') if '園名' in header else header.index('学校名')
             col_zip = header.index('郵便番号')
             col_addr = header.index('住所')
             col_tel = header.index('電話番号')
-            col_kana = header.index('学校名(フリガナ)')
+            col_kana = header.index('園名（フリガナ）') if '園名（フリガナ）' in header else header.index('学校名(フリガナ)')
             
             count = 0
             for row in reader:
@@ -100,10 +125,41 @@ for school_type, url in urls.items():
                 tel = row[col_tel].strip()
                 kana_raw = row[col_kana].strip()
                 
-                # Determine establishment and formal names based on school type
-                establishment_type = "公立" # Currently all public
+                establishment_type = "公立"
+                tags = ["宛名印刷"]
                 
-                if school_type in ['小学校', '中学校', '義務教育学校']:
+                if school_type == '幼稚園':
+                    formal_name = name_raw
+                    if not (formal_name.endswith('幼稚園') or formal_name.endswith('こども園') or formal_name.endswith('学校') or formal_name.endswith('学園')):
+                        formal_name += '幼稚園'
+                    
+                    if muni_raw == '東京都':
+                        formal_name = f"東京都立{formal_name}"
+                        kana_hira = katakana_to_hiragana(kana_raw)
+                        if not (kana_hira.endswith('ようちえん') or kana_hira.endswith('こどもえん') or kana_hira.endswith('がっこう') or kana_hira.endswith('がくえん')):
+                            kana_hira += 'ようちえん'
+                        school_name_kana = f"とうきょうとりつ{kana_hira}"
+                        
+                        m_match = re.match(r'^([^市区町村]+[市区町村])', addr_raw)
+                        physical_muni = m_match.group(1) if m_match else '東京都'
+                    else:
+                        formal_name = f"{muni_raw}立{formal_name}"
+                        kana_prefix = get_kana_prefix(muni_raw)
+                        kana_hira = katakana_to_hiragana(kana_raw)
+                        if not (kana_hira.endswith('ようちえん') or kana_hira.endswith('こどもえん') or kana_hira.endswith('がっこう') or kana_hira.endswith('がくえん')):
+                            kana_hira += 'ようちえん'
+                        school_name_kana = f"{kana_prefix}{kana_hira}"
+                        physical_muni = muni_raw
+                        
+                    if addr_raw.startswith('東京都'):
+                        full_address = addr_raw
+                    elif addr_raw.startswith(physical_muni):
+                        full_address = f"東京都{addr_raw}"
+                    else:
+                        full_address = f"東京都{physical_muni}{addr_raw}"
+                    tags = ["宛名印刷", "幼少連携", "就学前連携"]
+
+                elif school_type in ['小学校', '中学校', '義務教育学校']:
                     # Existing logic
                     if muni_raw == '東京都':
                         formal_name = name_raw
@@ -112,7 +168,8 @@ for school_type, url in urls.items():
                         elif school_type == '中学校' and not (formal_name.endswith('中学校') or formal_name.endswith('学校')):
                             formal_name += '中学校'
                         elif school_type == '義務教育学校' and not (formal_name.endswith('学園') or formal_name.endswith('学校') or formal_name.endswith('義務教育学校')):
-                            formal_name += '義務教育学校'
+                            formal_name += '義務教育school'
+                            formal_name = formal_name.replace('義務教育school', '義務教育学校')
                         
                         formal_name = f"東京都立{formal_name}"
                         
@@ -155,7 +212,6 @@ for school_type, url in urls.items():
                         physical_muni = muni_raw
 
                 elif school_type == '高等学校':
-                    # All are metropolitan public high schools (東京都立)
                     formal_name = name_raw
                     if not (formal_name.endswith('高等学校') or formal_name.endswith('高校') or formal_name.endswith('学校')):
                         formal_name += '高等学校'
@@ -165,19 +221,17 @@ for school_type, url in urls.items():
                     if not (kana_hira.endswith('こうとうがっこう') or kana_hira.endswith('こうこう') or kana_hira.endswith('がっこう')):
                         kana_hira += 'こうとうがっこう'
                     school_name_kana = f"とうきょうとりつ{kana_hira}"
-                    
                     physical_muni = muni_raw
                     
-                    # Address prefixing
                     if addr_raw.startswith('東京都'):
                         full_address = addr_raw
                     elif addr_raw.startswith(physical_muni):
                         full_address = f"東京都{addr_raw}"
                     else:
                         full_address = f"東京都{physical_muni}{addr_raw}"
+                    tags = ["宛名印刷", "高校連携"]
                         
                 elif school_type == '中等教育学校':
-                    # Municipal or Metropolitan
                     formal_name = name_raw
                     if not formal_name.endswith('中等教育学校'):
                         formal_name += '中等教育学校'
@@ -206,9 +260,9 @@ for school_type, url in urls.items():
                         full_address = f"東京都{addr_raw}"
                     else:
                         full_address = f"東京都{physical_muni}{addr_raw}"
+                    tags = ["宛名印刷", "高校連携"]
 
                 elif school_type == '特別支援学校':
-                    # Municipal or Metropolitan. Names already end in 盲学校/ろう学校/特別支援学校/学園
                     formal_name = name_raw
                     if muni_raw == '東京都':
                         formal_name = f"東京都立{formal_name}"
@@ -230,8 +284,9 @@ for school_type, url in urls.items():
                         full_address = f"東京都{addr_raw}"
                     else:
                         full_address = f"東京都{physical_muni}{addr_raw}"
+                    tags = ["宛名印刷", "高校連携"]
                 
-                # Cleanup potential duplicate prefix of municipality name in full_address
+                # Cleanup duplicate prefix
                 if physical_muni != '東京都':
                     dup_pattern = f"東京都{physical_muni}{physical_muni}"
                     if full_address.startswith(dup_pattern):
@@ -249,9 +304,9 @@ for school_type, url in urls.items():
                     "addressee_default": f"{formal_name} 御中",
                     "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
                     "data_date": "2025-05-01",
-                    "address_date": "2025-05-01"
+                    "address_date": "2025-05-01",
+                    "tags": tags
                 }
-                
                 schools_dataset.append(record)
                 count += 1
             print(f"Loaded {count} schools for {school_type}.")
@@ -259,6 +314,82 @@ for school_type, url in urls.items():
         print(f"Error processing {school_type}: {e}")
         import sys
         sys.exit(1)
+
+# Download and append private kindergartens
+print("Downloading and processing 私立幼稚園 data...")
+private_youchien_url = 'https://www.seikatubunka.metro.tokyo.lg.jp/documents/d/seikatubunka/03yochien_ichiran_r80401_142'
+req_p = urllib.request.Request(private_youchien_url, headers=headers_request)
+try:
+    with urllib.request.urlopen(req_p) as res:
+        content = res.read().decode('utf-8')
+        lines = content.splitlines()
+        reader = csv.reader(lines)
+        
+        current_city = ""
+        count = 0
+        for idx, row in enumerate(reader):
+            if not row or len(row) < 5:
+                continue
+            
+            # Skip header lines
+            if idx < 3 or '区市名' in row[0] or '園名' in row[1] or '郵便番号' in row[2] or '位\u3000\u3000\u3000置' in row[3]:
+                continue
+                
+            city_col = row[0].strip()
+            if city_col:
+                m_match = re.match(r'^([^（\(]+)', city_col)
+                if m_match:
+                    current_city = m_match.group(1).strip()
+            
+            name_raw = row[1].strip()
+            if not name_raw:
+                continue
+                
+            zip_code = row[2].strip()
+            addr_raw = row[3].strip()
+            tel = row[4].strip()
+            
+            formal_name = name_raw
+            if not (formal_name.endswith('幼稚園') or formal_name.endswith('こども園') or formal_name.endswith('学校') or formal_name.endswith('学園')):
+                formal_name += '幼稚園'
+                
+            school_name_kana = "" # Private kindergarten kana is empty (no translation/guessing)
+            
+            # Address prefixing
+            if addr_raw.startswith('東京都'):
+                full_address = addr_raw
+            elif addr_raw.startswith(current_city):
+                full_address = f"東京都{addr_raw}"
+            else:
+                full_address = f"東京都{current_city}{addr_raw}"
+                
+            # Cleanup potential duplicate prefix
+            dup_pattern = f"東京都{current_city}{current_city}"
+            if full_address.startswith(dup_pattern):
+                full_address = full_address.replace(dup_pattern, f"東京都{current_city}", 1)
+
+            record = {
+                "school_type": "幼稚園",
+                "establishment_type": "私立",
+                "municipality": current_city,
+                "school_name": formal_name,
+                "school_name_kana": school_name_kana,
+                "postal_code": zip_code,
+                "address": full_address,
+                "phone": tel,
+                "addressee_default": f"{formal_name} 御中",
+                "source": "東京都生活文化スポーツ局「東京都内の私立幼稚園一覧」",
+                "data_date": "2026-04-01",
+                "address_date": "2026-04-01",
+                "tags": ["宛名印刷", "幼少連携", "就学前連携"]
+            }
+            schools_dataset.append(record)
+            count += 1
+        print(f"Loaded {count} schools for 私立幼稚園.")
+except Exception as e:
+    print(f"Error processing 私立幼稚園: {e}")
+    import sys
+    sys.exit(1)
 
 # Save JSON file
 json_output_path = os.path.join(root_dir, 'data', 'tokyo_public_schools_address_2025.json')
@@ -272,7 +403,7 @@ csv_output_path = os.path.join(root_dir, 'downloads', 'tokyo_public_schools_addr
 os.makedirs(os.path.dirname(csv_output_path), exist_ok=True)
 with open(csv_output_path, 'w', encoding='utf-8-sig', newline='') as f:
     writer = csv.writer(f)
-    writer.writerow(['学校種別', '設置区分', '区市町村', '学校名', '学校名（ふりがな）', '郵便番号', '所在地', '電話番号', 'デフォルト宛名'])
+    writer.writerow(['学校種別', '設置区分', '区市町村', '学校名', '学校名（ふりがな）', '郵便番号', '所在地', '電話番号', 'デフォルト宛名', '用途タグ'])
     for r in schools_dataset:
         writer.writerow([
             r['school_type'],
@@ -283,6 +414,7 @@ with open(csv_output_path, 'w', encoding='utf-8-sig', newline='') as f:
             r['postal_code'],
             r['address'],
             r['phone'],
-            r['addressee_default']
+            r['addressee_default'],
+            ",".join(r.get('tags', []))
         ])
 print(f"Saved CSV (UTF-8 BOM): {csv_output_path}")

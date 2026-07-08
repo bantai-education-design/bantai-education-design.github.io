@@ -57,7 +57,7 @@
     <div style="background:var(--navy); border-bottom:2px solid var(--gold); padding:14px 0;">
       <div class="container" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
         <span style="background:var(--gold); color:#0c1b33; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:99px; white-space:nowrap; flex-shrink:0;">学校データベース</span>
-        <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;">このページは、Ban.Tai Education Design が提供する<strong style="color:#fff;">東京都学校宛先データベース</strong>です。アプリのインストール不要で、東京都の学校（現在は公立の小・中・義務教育学校、公立高校・中等・特別支援学校の計2,142校を収録。順次拡張予定）の学校宛先検索、宛名コピー、CSVダウンロードを利用できます。</p>
+        <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;">このページは、Ban.Tai Education Design が提供する<strong style="color:#fff;">東京都学校宛先データベース</strong>です。アプリのインストール不要で、東京都の学校（現在は公立の小・中・義務・高校・中等・特別支援学校、および公立・私立幼稚園の計3,023校・園を収録。順次拡張予定）の学校宛先検索、宛名コピー、CSVダウンロードを利用できます。</p>
       </div>
     </div>
 
@@ -67,7 +67,7 @@
         <!-- 検索パネル -->
         <div class="search-box">
           <div style="background:#fffdf5; border:1px solid var(--gold); border-radius:8px; padding:12px 16px; font-size:0.86rem; color:#8c6b00; margin-bottom:20px; font-weight:600; line-height:1.5;">
-            💡 東京都教育委員会公開データをもとにした令和7年度版データです（現在は公立の小学校・中学校・義務教育学校、高等学校、中等教育学校、特別支援学校が収録されています。私立・国立学校や幼稚園は順次拡張予定です）。学校名・住所・電話番号等は変更される場合があります。正式な送付前には各学校・自治体の公式情報をご確認ください。
+            💡 東京都教育委員会および東京都生活文化スポーツ局公開データをもとにしたデータです（現在は公立の小学校・中学校・義務教育学校、高等学校、中等教育学校、特別支援学校、および公立・私立幼稚園が収録されています。私立の小・中・高校や国立学校は順次拡張予定です）。学校名・住所・電話番号等は変更される場合があります。正式な送付前には各学校・自治体の公式情報をご確認ください。
           </div>
           <h2 class="search-title">検索条件を指定</h2>
           <form id="search-form" onsubmit="return false;">
@@ -93,9 +93,9 @@
                   <input type="checkbox" class="est-checkbox" value="公立" checked>
                   公立
                 </label>
-                <label class="checkbox-label" style="opacity: 0.5; cursor: not-allowed;" title="将来の拡張で私立学校のデータを追加予定です">
-                  <input type="checkbox" class="est-checkbox" value="私立" disabled>
-                  私立（準備中）
+                <label class="checkbox-label">
+                  <input type="checkbox" class="est-checkbox" value="私立" checked>
+                  私立
                 </label>
                 <label class="checkbox-label" style="opacity: 0.5; cursor: not-allowed;" title="将来の拡張で国立学校のデータを追加予定です">
                   <input type="checkbox" class="est-checkbox" value="国立" disabled>
@@ -119,9 +119,9 @@
                   <input type="checkbox" class="type-checkbox" value="義務教育学校" checked>
                   義務教育学校
                 </label>
-                <label class="checkbox-label" style="opacity: 0.5; cursor: not-allowed;" title="将来の拡張で幼稚園のデータを追加予定です">
-                  <input type="checkbox" class="type-checkbox" value="幼稚園" disabled>
-                  幼稚園（準備中）
+                <label class="checkbox-label">
+                  <input type="checkbox" class="type-checkbox" value="幼稚園" checked>
+                  幼稚園
                 </label>
                 <label class="checkbox-label">
                   <input type="checkbox" class="type-checkbox" value="高等学校" checked>
@@ -197,7 +197,7 @@
         <div class="notice-box">
           <div class="info-card">
             <h4>出典について</h4>
-            <p>本データベースの学校情報は、東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」（データ基準日・連絡先基準日：2025年5月1日）をもとに、Ban.Tai Education Design が学校封筒印刷・宛名作成で使いやすい形式（設置者による名称補完・かな変換等）に整理・統合したものです。</p>
+            <p>本データベースの学校情報は、東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」（公立校・園のデータ基準日：2025年5月1日）および東京都生活文化スポーツ局「東京都内の私立幼稚園一覧」（私立幼稚園のデータ基準日：2026年4月1日）をもとに、Ban.Tai Education Design が学校封筒印刷・宛名作成で使いやすい形式（設置者による名称補完・かな変換等）に整理・統合したものです。</p>
           </div>
           <div class="info-card">
             <h4>ご利用上の注意</h4>

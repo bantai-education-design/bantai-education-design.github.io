@@ -335,17 +335,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Excel文字化け防止のためBOM付与
     let csvContent = '\ufeff';
     // ヘッダー
-    csvContent += '"学校名","学校種","郵便番号","区市町村","住所","電話番号"\n';
+    csvContent += '"学校種別","設置区分","区市町村","学校名","学校名（ふりがな）","郵便番号","所在地","電話番号","デフォルト宛名","用途タグ"\n';
 
     data.forEach(item => {
       const row = [
-        item.school_name || '',
         item.school_type || '',
-        item.postal_code || '',
+        item.establishment_type || '公立',
         item.municipality || '',
+        item.school_name || '',
+        item.school_name_kana || '',
+        item.postal_code || '',
         item.address || '',
-        item.phone || ''
-      ].map(val => `"${val.replace(/"/g, '""')}"`); // ダブルクォーテーションエスケープ
+        item.phone || '',
+        item.addressee_default || '',
+        (item.tags || []).join(',')
+      ].map(val => `"${(val || '').replace(/"/g, '""')}"`); // ダブルクォーテーションエスケープ
 
       csvContent += row.join(',') + '\n';
     });
