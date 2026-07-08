@@ -1,4 +1,12 @@
-<article class="$card_class">
+<article class="$card_class"
+         data-name="$name"
+         data-summary="$summary"
+         data-features="$features_data"
+         data-flagship="$is_flagship"
+         data-has-trial="$has_trial"
+         data-has-booth="$has_booth"
+         data-has-vector="$has_vector"
+         data-status="$status">
   <a class="catalog-card-hit-area" href="$detail_url" aria-label="$aria_label" onkeydown="if(event.key==='Enter'){this.click();}"></a>
   <div class="catalog-card-media">
 $media_html

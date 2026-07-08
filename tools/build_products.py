@@ -85,6 +85,14 @@ def render_actions(product: dict) -> str:
 def render_card(product: dict, template: Template) -> str:
     detail_url = product.get("detailUrl")
     card_class = "catalog-card catalog-feature-card" if product.get("category") == "featured" else "catalog-card"
+    
+    is_flagship_str = "true" if product.get("isFlagship") else "false"
+    has_trial_str = "true" if product.get("hasTrial") else "false"
+    has_booth_str = "true" if product.get("boothUrl") else "false"
+    has_vector_str = "true" if product.get("vectorUrl") else "false"
+    status_str = product.get("status") or ""
+    features_data_str = " ".join(product.get("features") or [])
+
     return template.substitute(
         card_class=card_class,
         detail_url=html_attr(detail_url),
@@ -95,6 +103,12 @@ def render_card(product: dict, template: Template) -> str:
         summary=html_text(product["summary"]),
         features_html=render_features(product),
         actions_html=render_actions(product),
+        is_flagship=is_flagship_str,
+        has_trial=has_trial_str,
+        has_booth=has_booth_str,
+        has_vector=has_vector_str,
+        status=html_attr(status_str),
+        features_data=html_attr(features_data_str),
     )
 
 
