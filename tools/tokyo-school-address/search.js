@@ -400,12 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // クリックで検索結果の先頭（#results-list）までスムーズスクロール
     backToTopBtn.addEventListener('click', () => {
-      const target = document.getElementById('results-list');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 });
