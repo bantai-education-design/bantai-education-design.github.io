@@ -60,26 +60,62 @@ def render_features(product: dict) -> str:
 
 
 def render_actions(product: dict) -> str:
+    status = product.get("status")
+    booth_url = product.get("boothUrl")
+    vector_url = product.get("vectorUrl")
+    note_url = product.get("noteUrl")
+    download_url = product.get("downloadUrl")
+    detail_url = product.get("detailUrl")
+    category_url = product.get("categoryUrl")
     primary_label = product.get("primaryActionLabel")
     secondary_label = product.get("secondaryActionLabel")
-    category_url = product.get("categoryUrl")
-    detail_url = product.get("detailUrl")
 
     links: list[str] = []
+
+    # 1. 一時休止中 または 公開準備中 の場合は、非活性ステータス表示を先頭に配置 (外部リンクは出力しない)
+    if status == "一時休止中":
+        links.append('      <span class="catalog-btn catalog-btn-disabled">現在一時休止中</span>')
+    elif status in ("公開準備中", "準備中"):
+        links.append('      <span class="catalog-btn catalog-btn-disabled">公開準備中</span>')
+    else:
+        # 2. 無料ダウンロード
+        if status == "無料" and download_url:
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}" download>無料でダウンロードする</a>'
+            )
+        
+        # 3. BOOTH
+        if booth_url:
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHで購入・ダウンロードする</a>'
+            )
+            
+        # 4. Vector
+        if vector_url:
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(vector_url)}" target="_blank" rel="noopener noreferrer">Vectorからダウンロードする</a>'
+            )
+
+        # 5. note
+        if note_url:
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-note" href="{html_attr(note_url)}" target="_blank" rel="noopener noreferrer">noteで紹介記事を読む</a>'
+            )
+
+    # 6. 分野を見る / 詳細を見る (既存の導線を維持)
     if primary_label and category_url:
         links.append(
-            f'      <a class="secondary-button" href="{html_attr(category_url)}">{html_text(primary_label)}</a>'
+            f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(category_url)}">{html_text(primary_label)}</a>'
         )
     if secondary_label and detail_url:
         links.append(
-            f'      <a class="secondary-button" href="{html_attr(detail_url)}">{html_text(secondary_label)}</a>'
+            f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">{html_text(secondary_label)}</a>'
         )
 
     if not links:
         return ""
-    if product.get("category") == "featured":
-        return '<div class="catalog-card-actions">\n' + "\n".join(links) + "\n    </div>"
-    return "\n".join(line[6:] if line.startswith("      ") else line for line in links)
+    
+    return '<div class="catalog-card-actions">\n' + "\n".join(links) + "\n    </div>"
 
 
 def render_card(product: dict, template: Template) -> str:

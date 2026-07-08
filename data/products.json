@@ -123,6 +123,7 @@
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
+      "downloadUrl": "https://github.com/bantai-education-design/gakkyu-meibo-maker/releases/download/class-roster-maker-v0.6.5/ClassRosterMaker-v0.6.5-Windows.zip",
       "hasTrial": false,
       "isFlagship": false
     },
@@ -244,6 +245,7 @@
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
+      "downloadUrl": "/downloads/BanTai_BannerStudioV2_Final.zip",
       "hasTrial": false,
       "isFlagship": false
     },
