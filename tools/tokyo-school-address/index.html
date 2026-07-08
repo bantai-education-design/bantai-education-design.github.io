@@ -34,12 +34,26 @@
         <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
         <span>Ban.Tai Education Design</span>
       </a>
-      <nav class="menu">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
         <a href="/">ホーム</a>
-        <a href="/#products">製品一覧</a>
-        <a href="/#free-tools" class="active">無料ツール</a>
-        <a href="/about/">考え方</a>
-        <a class="mini" href="/contact/">お問い合わせ</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a class="active" href="/tools/tokyo-school-address/">学校宛先DB</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/products/">すべての製品を見る</a>
       </nav>
     </div>
   </header>
@@ -271,5 +285,6 @@
     </div>
     <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
   </footer>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>
