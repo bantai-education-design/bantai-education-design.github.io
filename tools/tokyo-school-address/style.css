@@ -76,7 +76,7 @@
   padding: 8px 0;
 }
 
-.checkbox-label {
+.checkbox-label, .filter-chip {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -87,7 +87,7 @@
   user-select: none;
 }
 
-.checkbox-label input {
+.checkbox-label input, .filter-chip input {
   width: 18px;
   height: 18px;
   accent-color: var(--gold);
