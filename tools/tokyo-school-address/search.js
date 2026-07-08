@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let schoolData = [];
   let currentFilteredResults = []; // 現在のフィルター結果を保持
   let selectedHonorific = '御中';
+  let displayedCount = 100;
 
   const keywordInput = document.getElementById('keyword');
   const citySelect = document.getElementById('city');
@@ -129,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. 検索処理の本体
   function performSearch() {
+    displayedCount = 100;
     const keyword = keywordInput.value.trim().toLowerCase();
     const selectedCity = citySelect.value;
     
@@ -178,8 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const fragment = document.createDocumentFragment();
+    const itemsToRender = results.slice(0, displayedCount);
 
-    results.forEach((school, index) => {
+    itemsToRender.forEach((school, index) => {
       const card = document.createElement('div');
       card.className = 'school-card';
       
@@ -225,6 +228,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resultsContainer.appendChild(fragment);
+
+    // さらに表示ボタンの制御
+    if (results.length > displayedCount) {
+      const showMoreContainer = document.createElement('div');
+      showMoreContainer.className = 'show-more-container';
+      showMoreContainer.style.textAlign = 'center';
+      showMoreContainer.style.padding = '24px 0 10px';
+
+      const showMoreBtn = document.createElement('button');
+      showMoreBtn.className = 'btn btn-light';
+      showMoreBtn.id = 'btn-show-more';
+      showMoreBtn.type = 'button';
+      showMoreBtn.innerHTML = `さらに表示する (${displayedCount} / ${results.length}件表示中)`;
+      showMoreBtn.style.minWidth = '240px';
+      showMoreBtn.style.borderColor = 'var(--gold)';
+      showMoreBtn.style.color = 'var(--navy)';
+      showMoreBtn.style.boxShadow = '0 4px 10px rgba(197, 160, 89, 0.15)';
+
+      showMoreBtn.addEventListener('click', () => {
+        displayedCount += 100;
+        renderResults(results);
+      });
+
+      showMoreContainer.appendChild(showMoreBtn);
+      resultsContainer.appendChild(showMoreContainer);
+    }
   }
 
   // 7. プレビューのリアルタイム更新
@@ -234,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const schoolIndex = parseInt(copyBtn.getAttribute('data-index'), 10);
       const schoolId = copyBtn.getAttribute('data-id');
       
-      const school = schoolData[schoolIndex];
+      const school = currentFilteredResults[schoolIndex];
       
       if (school) {
         const previewDiv = card.querySelector('.copy-preview');
@@ -398,9 +427,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
 
-    // クリックで検索結果の先頭（#results-list）までスムーズスクロール
+    // クリックでページ最上部までスムーズスクロール
     backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const scrollRoot = document.scrollingElement || document.documentElement;
+      scrollRoot.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     });
   }
 });
