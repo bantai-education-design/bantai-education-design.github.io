@@ -2628,7 +2628,7 @@ button:focus-visible {
 /* Top Page Stats Styles */
 .top-stats-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   max-width: 960px;
   margin: 0 auto 40px;
@@ -2671,19 +2671,13 @@ button:focus-visible {
 
 @media (max-width: 768px) {
   .top-stats-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .top-stats-container > :first-child {
-    grid-column: span 2;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 480px) {
   .top-stats-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-  }
-  .top-stats-container > :first-child {
-    grid-column: span 1;
   }
 }
 
