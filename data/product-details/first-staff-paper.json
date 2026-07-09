@@ -253,7 +253,7 @@
       "actions": [
         {
           "class": "btn btn-light",
-          "href": "#",
+          "href": "https://bantai3.booth.pm/items/8587307",
           "label": "無料体験版をダウンロード（準備中）",
           "attrs": {
             "style": "background:#fff; color:var(--muted); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; border:1px solid rgba(7, 27, 54, 0.15); cursor:not-allowed;"
@@ -261,7 +261,7 @@
         },
         {
           "class": "btn btn-primary",
-          "href": "#",
+          "href": "https://bantai3.booth.pm/items/8587307",
           "label": "BOOTHで購入する（準備中）",
           "attrs": {
             "style": "background:linear-gradient(135deg,#e2e2e2,#f5f5f5); color:var(--muted); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:none; cursor:not-allowed;"
