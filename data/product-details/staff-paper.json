@@ -16,11 +16,7 @@
     },
     {
       "href": "#download",
-      "label": "無料ダウンロード"
-    },
-    {
-      "href": "#howto",
-      "label": "使い方"
+      "label": "ライセンス申請"
     },
     {
       "href": "/contact/",
@@ -48,202 +44,13 @@
       "type": "narrowTextBox",
       "class": "section-narrow",
       "containerClass": "container warning",
-      "heading": "通常版 楽譜（五線紙）作成メーカー 休止のお知らせ",
+      "heading": "通常版 楽譜（五線紙）作成メーカー 新規案内休止のお知らせ",
       "paragraphs": [
         {
-          "html": "現在、通常版「楽譜（五線紙）作成メーカー」はバージョンアップ準備のため、一時的に新規ご案内・販売を休止しております。"
+          "html": "通常版「楽譜（五線紙）作成メーカー」は、次期バージョンアップ準備のため、現在新規案内を休止しています。<img src=\"/assets/images/staff-paper-v13-main.jpg\" alt=\"楽譜・五線紙 作成メーカー 紹介画像\" style=\"display:none;\">"
         },
         {
-          "html": "小さなお子さまや音楽教室向けには、新しく公開準備中の「<strong>Ban.Tai はじめての五線紙メーカー</strong>」をご覧ください。<br><a href=\"../first-staff-paper/\" style=\"font-weight: bold; text-decoration: underline; color: var(--navy); display: inline-block; margin-top: 10px;\">Ban.Tai はじめての五線紙メーカーを見る</a>"
-        }
-      ]
-    },
-    {
-      "type": "textCardGrid",
-      "eyebrow": "Overview",
-      "heading": "必要な五線紙を、すぐに整えて印刷へ。",
-      "descriptionParagraphs": [
-        "楽譜づくりや音楽授業では、用途に合った五線紙をすぐに用意できることが大切です。",
-        "「楽譜（五線紙）作成メーカー Ban.Tai v1.3.2」は、音楽を使うすべての人に向けた、簡単なWindows用デスクトップアプリです。難しい操作はなく、画面のメニューから設定を選ぶだけで、市販品のように美しい五線紙を作成・印刷できます。"
-      ],
-      "gridClass": "grid grid-3",
-      "gridStyle": "margin-top: 30px; margin-bottom: 30px;",
-      "items": [
-        {
-          "style": "border-left: 4px solid var(--gold); background: #FAF8F5;",
-          "paragraphStyle": "font-style: italic; font-weight: bold; margin: 0; color: var(--navy);",
-          "text": "「ピアノ教室の生徒さんに、書き込みやすい幅の五線紙を渡してあげたい」"
-        },
-        {
-          "style": "border-left: 4px solid var(--gold); background: #FAF8F5;",
-          "paragraphStyle": "font-style: italic; font-weight: bold; margin: 0; color: var(--navy);",
-          "text": "「吹奏楽や合唱の部活動で、パートごとの練習用楽譜が急に必要になった」"
-        },
-        {
-          "style": "border-left: 4px solid var(--gold); background: #FAF8F5;",
-          "paragraphStyle": "font-style: italic; font-weight: bold; margin: 0; color: var(--navy);",
-          "text": "「自分好みの五線ノートを作って、日々の音楽活動をもっと楽しみたい」"
-        }
-      ],
-      "visual": {
-        "class": "visual contain staff-single-visual",
-        "image": {
-          "src": "/assets/images/staff-paper-v13-main.jpg",
-          "alt": "楽譜・五線紙 作成メーカー 紹介画像"
-        }
-      }
-    },
-    {
-      "type": "textCardGrid",
-      "background": "#fff",
-      "eyebrow": "Features",
-      "heading": "楽譜作成を快適にする3つのメリット",
-      "gridClass": "grid grid-3",
-      "gridStyle": "margin-bottom: 40px;",
-      "items": [
-        {
-          "mark": "1",
-          "heading": "習得いらずで、選ぶだけですぐ完成",
-          "text": "1段から16段まで、必要な段数を選ぶだけ。線の間隔や段落の隙間を自動計算するため、パソコンが苦手な方でも迷わず使いこなせます。"
-        },
-        {
-          "mark": "2",
-          "heading": "あらゆる用途に合わせた豊富な種類",
-          "text": "ト音記号・ヘ音記号・ハ音記号・打楽器記号・記号なしの設定に加え、ピアノ用2段組（大譜表）にも対応。用途に合わせた最適な楽譜を作れます。"
-        },
-        {
-          "mark": "3",
-          "heading": "拡大してもぼやけないきれいな印刷",
-          "text": "SVG形式での書き出しに対応。A4からA3などへ拡大印刷しても線がぼやけず、きれいな楽譜を生徒や部活動へ配布できます。"
-        }
-      ],
-      "tableCards": [
-        {
-          "class": "card gold",
-          "style": "max-width: 600px; margin: 0 auto; padding: 25px;",
-          "heading": "仕様・動作環境",
-          "headingStyle": "margin-top:0; text-align:center;",
-          "tableStyle": "width:100%; border-collapse:collapse; font-size:0.9rem; line-height:1.8;",
-          "rows": [
-            {
-              "label": "対応OS",
-              "text": "Windows 10 / 11 （64ビット）",
-              "labelWidth": "30%",
-              "rowStyle": "border-bottom:1px solid rgba(7, 27, 54, 0.1);"
-            },
-            {
-              "label": "用紙設定",
-              "text": "A4、B5 （縦・横方向対応）",
-              "rowStyle": "border-bottom:1px solid rgba(7, 27, 54, 0.1);"
-            },
-            {
-              "label": "出力形式",
-              "text": "SVG保存、PDF出力（印刷ダイアログ経由）",
-              "rowStyle": "border-bottom:1px solid rgba(7, 27, 54, 0.1);"
-            },
-            {
-              "label": "言語対応",
-              "text": "日本語 / 英語表示切り替え対応"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "workflowSteps",
-      "id": "howto",
-      "class": "section",
-      "style": "background:#F7F8FA;",
-      "eyebrow": "Workflow",
-      "heading": "導入から製品版有効化（アクティベーション）の流れ",
-      "description": "体験版のダウンロードから、BOOTHでの購入、購入後の申請による個別ライセンスキー発行までの流れは以下の通りです。",
-      "containerClass": "flow-brief-container",
-      "containerStyle": "margin: 30px 0; background: #fff; border: 1px solid rgba(7, 27, 54, 0.08); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(7, 27, 54, 0.02);",
-      "steps": [
-        {
-          "number": "1",
-          "heading": "無料体験版をダウンロード",
-          "text": "公式HP（本ページ）から無料体験版をダウンロードして解凍・インストールします。"
-        },
-        {
-          "number": "2",
-          "heading": "ライセンスキーなしで10日間試用",
-          "text": "インストール後すぐに10日間全機能をお試しいただけます（体験期間中は印刷・出力にSAMPLE透かしが入ります）。"
-        },
-        {
-          "number": "3",
-          "heading": "気に入ったらBOOTHで購入・決済",
-          "text": "試用してみて継続利用をご希望される場合は、BOOTH販売ページより製品をご購入ください。"
-        },
-        {
-          "number": "4",
-          "heading": "BOOTHから製品ZIPをダウンロード",
-          "text": "決済完了後、BOOTHの購入履歴画面から製品版パッケージ（ZIPファイル）をダウンロードします。"
-        },
-        {
-          "number": "5",
-          "heading": "購入後ライセンスキー申請フォームに入力",
-          "text": "同梱の「ライセンス発行のご案内.txt」に記載の申請フォームにアクセスし、メールアドレスとBOOTH注文番号を入力・送信します。"
-        },
-        {
-          "number": "6",
-          "heading": "ライセンスキーを発行・メール送信",
-          "text": "管理者が申請内容（注文番号等）を確認し、個別ライセンスキー（BT-SP-XXXX-XXXX-XXXX-XXXX）をご登録のメールアドレス宛に送信します（2〜3営業日以内）。"
-        },
-        {
-          "number": "7",
-          "heading": "アプリに入力して製品版として有効化",
-          "text": "アプリ起動後、設定したメールアドレスと受信した個別ライセンスキーを入力し、オンライン認証を行って有効化します。"
-        }
-      ]
-    },
-    {
-      "type": "groupedNotice",
-      "class": "section-narrow",
-      "style": "padding-top:0;",
-      "containerClass": "container warning",
-      "heading": "ライセンスと試用期間について重要なお知らせ",
-      "groupHeadingStyle": "margin: 15px 0 5px 0; color: #664d03; font-weight: bold;",
-      "listStyle": "font-size:0.92rem; line-height:1.75; padding-left:20px; color:#664d03; margin:0 0 15px 0;",
-      "itemStyle": "margin-bottom: 5px;",
-      "groups": [
-        {
-          "heading": "■ 無料体験版（試用版）",
-          "items": [
-            {
-              "label": "ライセンスキー・事前登録不要:",
-              "text": "無料体験版は、インストール後すぐにライセンスキーなしで10日間試用いただけます。"
-            },
-            {
-              "label": "自動お試し開始:",
-              "text": "試用期間は初回起動時から自動的にカウントが開始されます。"
-            },
-            {
-              "label": "SAMPLE透かし:",
-              "text": "試用期間中は、作成した五線紙の印刷や画像・PDF書き出し時に「SAMPLE」の透かしが入ります。"
-            },
-            {
-              "label": "試用期間終了後の制限:",
-              "text": "10日間の体験期間終了後は、データの保存・印刷・PDF出力などの出力機能に制限がかかります。継続利用される場合は製品版をご購入ください。"
-            }
-          ]
-        },
-        {
-          "heading": "■ 製品版ライセンス",
-          "items": [
-            {
-              "label": "個別ライセンスキー方式:",
-              "text": "製品版のライセンスキーは、購入者ごとに発行される個別キーです。全員共通の固定キーではありません。"
-            },
-            {
-              "label": "オンライン認証:",
-              "text": "ライセンスの有効化認証を行うため、キー入力時の認証実行時のみ一時的なインターネット接続が必要です。"
-            },
-            {
-              "label": "Vector等の取扱い:",
-              "text": "Vectorはソフトウェアの紹介・誘導入口として利用しています。最新プログラムのダウンロードや正規ライセンスキー申請手続きは、必ずこちらの公式HP（GitHub Pages）およびBOOTH経由で行ってください。"
-            }
-          ]
+          "html": "現在は、子ども・初心者向けの入門版「<a href=\"../first-staff-paper/\" style=\"font-weight: bold; text-decoration: underline; color: var(--navy);\">Ban.Tai はじめての五線紙メーカー</a>」をご案内しています。詳細については入門版の紹介ページをご覧ください。"
         }
       ]
     },
@@ -253,31 +60,21 @@
       "sectionClass": "section",
       "sectionStyle": "background:#fff; text-align:center; padding: 60px 0; border-top: 1px solid rgba(7, 27, 54, 0.04);",
       "containerClass": "container",
-      "heading": "ダウンロード・ご購入はこちら",
-      "description": "現在、通常版の新規ダウンロードおよび販売は一時休止しております。すでにご購入済みのユーザー様のライセンス申請は以下より受け付けております。",
+      "heading": "ご購入済みのユーザー様へ",
+      "description": "通常版の新規販売は一時休止しておりますが、すでに通常版をご購入済みのユーザー様のライセンスキー申請は引き続き受け付けております。購入時の注文番号をご用意のうえ、以下よりご申請ください。",
       "actionsStyle": "justify-content:center; display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 20px;",
       "actions": [
         {
-          "class": "btn btn-light",
+          "class": "btn btn-primary",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLSc76qKi1TYyd3Uke_42Lb3rmGpXCWCwKFirZ_7szIfphQ1c_g/viewform?usp=preview",
           "label": "購入後ライセンスキー申請",
           "attrs": {
             "target": "_blank",
-            "style": "background:#fff; color:var(--navy); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; border:1px solid rgba(7, 27, 54, 0.15);"
+            "style": "background:linear-gradient(135deg,var(--navy),#1e3d6b); color:#fff; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 4px 15px rgba(7, 27, 54, 0.15);"
           }
         }
       ],
-      "note": "※ すでにご購入済みのユーザー様は、上記申請フォームより申請してください。個別ライセンスキーがメールで送信されます。",
-      "noteClass": "",
-      "noteStyle": "font-size:0.95rem; margin-top: 20px; color:var(--navy);",
-      "warningBox": {
-        "class": "warning",
-        "heading": "通常版 楽譜（五線紙）作成メーカー 休止のお知らせ",
-        "bullets": [
-          "通常版「楽譜（五線紙）作成メーカー」は、次期バージョンアップおよびシステム改修準備のため、一時的に新規ご案内・販売を休止しております。すでにご購入済みのユーザー様は、引き続きライセンスキーの申請やアプリの認証が可能です。",
-          "現在は、子ども・初心者向けの入門版アプリ「Ban.Tai はじめての五線紙メーカー」を新規掲載し、ご案内しております。"
-        ]
-      }
+      "note": "※ 申請フォーム送信後、管理者が購入履歴を確認のうえ、2〜3営業日以内に個別ライセンスキー（BT-SP-XXXX-XXXX-XXXX-XXXX）をご登録のメールアドレス宛に送信いたします。"
     }
   ]
 }

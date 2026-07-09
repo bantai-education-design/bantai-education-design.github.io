@@ -363,71 +363,55 @@ def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> Non
         {"englishName", "image", "imageAlt", "trialDownloadUrl", "boothUrl", "licenseRequestUrl"},
         "staff-paper root",
     )
+    is_suspended = any(sec["type"] == "narrowTextBox" for sec in data["sections"])
     validate_image_path(data["image"], "staff-paper image")
     require(html.count(data["image"]) == 2, "staff-paper image reference count changed")
     require(data["imageAlt"] in html, "staff-paper image alt missing")
     validate_url(data["trialDownloadUrl"], "trialDownloadUrl")
     validate_url(data["boothUrl"], "boothUrl")
     validate_url(data["licenseRequestUrl"], "licenseRequestUrl")
-    
-    is_suspended = any(sec["type"] == "narrowTextBox" for sec in data["sections"])
     if is_suspended:
         require(html.count(data["trialDownloadUrl"]) == 0, "trial download URL count changed (suspended)")
         require(html.count(data["boothUrl"]) == 0, "BOOTH URL count changed (suspended)")
+        require(html.count(data["licenseRequestUrl"]) >= 1, "license request URL count changed (suspended)")
+        section_types = [section["type"] for section in data["sections"]]
+        require(
+            section_types == ["pageHero", "narrowTextBox", "downloadCta"],
+            "staff-paper suspended sections mismatch"
+        )
+        require("新規案内を休止しています" in html, "suspension notice missing")
+        require("購入後ライセンスキー申請" in html, "license request button missing")
     else:
         require(html.count(data["trialDownloadUrl"]) == 1, "trial download URL count changed")
         require(html.count(data["boothUrl"]) == 1, "BOOTH URL count changed")
-        
-    require(html.count(data["licenseRequestUrl"]) >= 1, "license request URL count changed")
-    section_types = [section["type"] for section in data["sections"]]
-    if is_suspended:
-        expected_sections = [
-            "pageHero",
-            "narrowTextBox",
-            "textCardGrid",
-            "textCardGrid",
-            "workflowSteps",
-            "groupedNotice",
-            "downloadCta",
-        ]
-    else:
-        expected_sections = [
-            "pageHero",
-            "textCardGrid",
-            "textCardGrid",
-            "workflowSteps",
-            "groupedNotice",
-            "downloadCta",
-        ]
-    require(
-        section_types == expected_sections,
-        "staff-paper section order changed",
-    )
-    
-    # Rest of validate_staff_paper is same for suspended/active, except overview index
-    overview_idx = 2 if is_suspended else 1
-    features_idx = 3 if is_suspended else 2
-    workflow_idx = 4 if is_suspended else 3
-    notices_idx = 5 if is_suspended else 4
-    
-    overview = data["sections"][overview_idx]
-    require(len(overview["items"]) == 3, "overview quote cards must have 3 items")
-    features = data["sections"][features_idx]
-    require(len(features["items"]) == 3, "feature cards must have 3 items")
-    require(len(features["tableCards"]) == 1 and len(features["tableCards"][0]["rows"]) == 4, "spec table must have 4 rows")
-    workflow = data["sections"][workflow_idx]
-    require(len(workflow["steps"]) == 7, "workflow must have 7 steps")
-    notices = data["sections"][notices_idx]
-    require(len(notices["groups"]) == 2, "license notice must have 2 groups")
-    require(len(notices["groups"][0]["items"]) == 4, "trial notice must have 4 items")
-    require(len(notices["groups"][1]["items"]) == 3, "product license notice must have 3 items")
-    require("ライセンスキーなしで10日間試用" in html, "10-day trial step missing")
-    require("SAMPLE透かし" in html, "SAMPLE watermark notice missing")
-    require("個別ライセンスキー方式" in html, "individual license notice missing")
-    require("購入後ライセンスキー申請" in html, "license request button missing")
-    if is_suspended:
-        require(html.count('target="_blank"') == 1, "external target count changed (suspended)")
-    else:
+        require(html.count(data["licenseRequestUrl"]) >= 1, "license request URL count changed")
+        section_types = [section["type"] for section in data["sections"]]
+        require(
+            section_types == [
+                "pageHero",
+                "textCardGrid",
+                "textCardGrid",
+                "workflowSteps",
+                "groupedNotice",
+                "downloadCta",
+            ],
+            "staff-paper section order changed",
+        )
+        overview = data["sections"][1]
+        require(len(overview["items"]) == 3, "overview quote cards must have 3 items")
+        features = data["sections"][2]
+        require(len(features["items"]) == 3, "feature cards must have 3 items")
+        require(len(features["tableCards"]) == 1 and len(features["tableCards"][0]["rows"]) == 4, "spec table must have 4 rows")
+        workflow = data["sections"][3]
+        require(len(workflow["steps"]) == 7, "workflow must have 7 steps")
+        notices = data["sections"][4]
+        require(len(notices["groups"]) == 2, "license notice must have 2 groups")
+        require(len(notices["groups"][0]["items"]) == 4, "trial notice must have 4 items")
+        require(len(notices["groups"][1]["items"]) == 3, "product license notice must have 3 items")
+        require("ライセンスキーなしで10日間試用" in html, "10-day trial step missing")
+        require("SAMPLE透かし" in html, "SAMPLE watermark notice missing")
+        require("個別ライセンスキー方式" in html, "individual license notice missing")
+        require("購入後ライセンスキー申請" in html, "license request button missing")
         require(html.count('target="_blank"') == 3, "external target count changed")
     require(not re.search(r"<a\b[^>]*\brel=", html), "unexpected rel attribute added to staff paper links")
     require(not re.search(r"<a\b[^>]*\bdownload=", html), "unexpected download attribute added to staff paper links")
