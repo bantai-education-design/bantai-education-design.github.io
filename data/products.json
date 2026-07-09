@@ -254,9 +254,9 @@
       "name": "Ban.Tai はじめての五線紙メーカー",
       "category": "featured",
       "order": 2,
-      "status": "公開準備中",
+      "status": "10日間無料体験",
       "badges": [
-        "公開準備中",
+        "10日間無料体験",
         "入門版"
       ],
       "summary": "はじめて五線にふれる子どものための、やさしい五線紙作成アプリ。",
@@ -271,7 +271,7 @@
       "primaryActionLabel": "分野を見る",
       "secondaryActionLabel": "詳細を見る",
       "published": true,
-      "boothUrl": null,
+      "boothUrl": "https://bantai3.booth.pm/items/8587307",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
