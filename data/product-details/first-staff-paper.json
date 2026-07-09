@@ -142,7 +142,7 @@
       "style": "background:#F7F8FA;",
       "eyebrow": "Workflow",
       "heading": "導入から製品版有効化（アクティベーション）の流れ",
-      "description": "体験版のダウンロードから、BOOTHでの購入、購入後ライセンスキー申請フォームによる個別ライセンスキー発行までの流れは以下の通りです。",
+      "description": "体験版のダウンロードから、BOOTHでの「製品版ライセンス申請用」購入、申請フォーム入力による個別ライセンスキー発行までの流れは以下の通りです。",
       "containerClass": "flow-brief-container",
       "containerStyle": "margin: 30px 0; background: #fff; border: 1px solid rgba(7, 27, 54, 0.08); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(7, 27, 54, 0.02);",
       "steps": [
@@ -158,18 +158,18 @@
         },
         {
           "number": "3",
-          "heading": "気に入ったらBOOTHで購入・決済",
-          "text": "試用してみて継続利用をご希望される場合は、BOOTH販売ページより製品をご購入ください。"
+          "heading": "気に入ったら製品版ライセンス申請用を購入",
+          "text": "試用してみて継続利用をご希望される場合は、BOOTHの商品ページで「製品版ライセンス申請用（3,700円）」をご購入ください。"
         },
         {
           "number": "4",
-          "heading": "BOOTH/Gumroadから製品ZIPをダウンロード",
-          "text": "決済完了後、購入先のストア履歴から製品版パッケージ（ZIPファイル）をダウンロードします。"
+          "heading": "ライセンス申請案内PDFをダウンロード",
+          "text": "ご購入後、BOOTHよりライセンス申請案内PDF（License_Request_Guide_BOOTH_v2.0.0.pdf）をダウンロードします。"
         },
         {
           "number": "5",
-          "heading": "購入後ライセンスキー申請フォームに入力",
-          "text": "同梱されている「License_Guide.pdf」の案内に従い、専用の申請フォームにアクセスしてお名前、メールアドレス、注文番号を送信します。"
+          "heading": "ライセンスキー申請フォームに入力",
+          "text": "ダウンロードしたPDFに記載されている申請フォームにアクセスし、お名前、メールアドレス、BOOTH注文番号を入力・送信します。"
         },
         {
           "number": "6",
