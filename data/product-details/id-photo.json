@@ -7,7 +7,7 @@
   "navLinks": [
     { "href": "/", "label": "ホーム" },
     { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "#vector", "label": "無料ダウンロード" },
+    { "href": "#vector", "label": "購入・ダウンロード" },
     { "href": "#howto", "label": "使い方" },
     { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
   ],
@@ -37,11 +37,6 @@
             "target": "_blank",
             "rel": "noopener noreferrer"
           }
-        },
-        {
-          "class": "btn btn-secondary",
-          "href": "#vector",
-          "label": "無料ダウンロード (体験版準備中)"
         },
         {
           "class": "btn btn-secondary",
@@ -218,10 +213,7 @@
             "rel": "noopener noreferrer"
           }
         }
-      ],
-      "note": "Vector無料体験版は準備中です。公開後、こちらのページでもご案内します。",
-      "noteClass": "note",
-      "noteStyle": "margin-top:18px;"
+      ]
     }
   ]
 }

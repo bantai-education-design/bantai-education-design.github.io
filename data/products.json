@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "education-planning",
-      "name": "学校業務支援・教育計画システム",
+      "name": "小学校教育計画作成・運営システム",
       "category": "featured",
       "order": 1,
       "status": "主力製品",
@@ -221,7 +221,7 @@
       "boothUrl": "https://bantai3.booth.pm/items/8467855",
       "vectorUrl": null,
       "noteUrl": "https://note.com/note20251212/n/n92e5960dc401",
-      "hasTrial": true,
+      "hasTrial": false,
       "isFlagship": false
     },
     {
