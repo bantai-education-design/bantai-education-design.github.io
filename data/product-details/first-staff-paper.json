@@ -240,35 +240,31 @@
       "sectionStyle": "background:#fff; text-align:center; padding: 60px 0; border-top: 1px solid rgba(7, 27, 54, 0.04);",
       "containerClass": "container",
       "heading": "ダウンロード・ご購入はこちら",
-      "description": "現在、公開準備中です。準備が整いしだい、BOOTHでの配布・販売ページをご案内します。",
-      "warningBox": {
-        "class": "warning",
-        "heading": "Ban.Tai はじめての五線紙メーカー 公開準備中",
-        "bullets": [
-          "現在、公開準備中です。準備が整いしだい、BOOTHでの配布・販売ページをご案内します。",
-          "準備が整いしだい、無料体験版のダウンロードおよびBOOTHでの製品ライセンス販売を開始予定です。今しばらくお待ちください。"
-        ]
-      },
+      "description": "10日試用版はBOOTHの商品ページから0円でダウンロードできます。継続利用をご希望の場合は、同じBOOTH商品ページで「製品版ライセンス申請用（3,700円）」をご購入ください。",
       "actionsStyle": "justify-content:center; display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 20px;",
       "actions": [
         {
           "class": "btn btn-light",
           "href": "https://bantai3.booth.pm/items/8587307",
-          "label": "無料体験版をダウンロード（準備中）",
+          "label": "10日試用版をBOOTHでダウンロード（0円）",
           "attrs": {
-            "style": "background:#fff; color:var(--muted); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; border:1px solid rgba(7, 27, 54, 0.15); cursor:not-allowed;"
+            "target": "_blank",
+            "rel": "noopener",
+            "style": "background:#fff; color:var(--navy); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; border:1px solid rgba(7, 27, 54, 0.15);"
           }
         },
         {
           "class": "btn btn-primary",
           "href": "https://bantai3.booth.pm/items/8587307",
-          "label": "BOOTHで購入する（準備中）",
+          "label": "製品版ライセンス申請用をBOOTHで購入（3,700円）",
           "attrs": {
-            "style": "background:linear-gradient(135deg,#e2e2e2,#f5f5f5); color:var(--muted); font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:none; cursor:not-allowed;"
+            "target": "_blank",
+            "rel": "noopener",
+            "style": "background:linear-gradient(135deg,var(--navy),#1e3d6b); color:#fff; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 4px 15px rgba(7, 27, 54, 0.15);"
           }
         }
       ],
-      "note": "※ 公開開始後、こちらのページから体験版のダウンロードおよびBOOTHストアへのリンクをご案内します。",
+      "note": "※ 10日試用版のインストール後は、ライセンス認証を行わずにすぐにお試しいただけます。",
       "noteClass": "",
       "noteStyle": "font-size:0.95rem; margin-top: 20px; color:var(--navy);"
     }

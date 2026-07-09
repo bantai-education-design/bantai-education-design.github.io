@@ -454,8 +454,9 @@ def validate_first_staff_paper(data: dict, html: str, parser: DetailPageParser) 
     validate_url(data["boothUrl"], "boothUrl")
     validate_url(data["licenseRequestUrl"], "licenseRequestUrl")
     
-    # Since it is in "準備中" state, the active links are not in the generated HTML actions
-    require(html.count("公開準備中") >= 1, "first-staff-paper page must mention 公開準備中")
+    # Since it is published, verify active BOOTH link presence in download action buttons
+    require("https://bantai3.booth.pm/items/8587307" in html, "first-staff-paper page must link to active BOOTH product")
+    require("公開準備中" not in html, "first-staff-paper page must not mention 公開準備中")
     
     section_types = [section["type"] for section in data["sections"]]
     require(

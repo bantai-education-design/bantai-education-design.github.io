@@ -156,7 +156,7 @@
       "style": "background:#F7F8FA;",
       "eyebrow": "Workflow",
       "heading": "導入から製品版有効化（アクティベーション）の流れ",
-      "description": "体験版のダウンロードから、BOOTHでの購入、個別ライセンスキーの自動発行による有効化までの流れは以下の通りです。",
+      "description": "体験版のダウンロードから、BOOTHでの購入、購入後の申請による個別ライセンスキー発行までの流れは以下の通りです。",
       "containerClass": "flow-brief-container",
       "containerStyle": "margin: 30px 0; background: #fff; border: 1px solid rgba(7, 27, 54, 0.08); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(7, 27, 54, 0.02);",
       "steps": [
@@ -187,8 +187,8 @@
         },
         {
           "number": "6",
-          "heading": "ライセンスキーを自動発行・自動返信",
-          "text": "スプレッドシート（licenses）の未使用キーがGASにより自動割り当てされ、登録メールアドレス宛に個別キーが即座に自動送信されます。"
+          "heading": "ライセンスキーを発行・メール送信",
+          "text": "管理者が申請内容（注文番号等）を確認し、個別ライセンスキー（BT-SP-XXXX-XXXX-XXXX-XXXX）をご登録のメールアドレス宛に送信します（2〜3営業日以内）。"
         },
         {
           "number": "7",
