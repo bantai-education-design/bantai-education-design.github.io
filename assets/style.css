@@ -2625,5 +2625,62 @@ button:focus-visible {
   box-shadow: none;
 }
 
+/* Top Page Stats Styles */
+.top-stats-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 16px;
+  background: #fbfaf7;
+  border: 1px solid rgba(7, 27, 54, 0.08);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.top-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  background: #ffffff;
+  border: 1px solid rgba(7, 27, 54, 0.04);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(7, 27, 54, 0.02);
+  box-sizing: border-box;
+}
+.top-stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6c757d;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.top-stat-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #071b36;
+  font-family: 'Noto Serif JP', serif;
+}
+.top-stat-unit {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .top-stats-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .top-stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+
 
 
