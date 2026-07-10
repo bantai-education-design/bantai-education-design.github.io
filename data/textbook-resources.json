@@ -1,0 +1,81 @@
+{
+  "lastUpdated": "2026-07-10",
+  "purpose": "各教科書会社の公式資料を確認しながら、Ban.Tai教育計画システムで週案づくりを進めやすくするためのリンク集です。",
+  "publishers": [
+    {
+      "id": "mitsumura",
+      "publisherName": "光村図書",
+      "description": "国語・書写を中心に、生活、英語、道徳などの教科書・教材情報を公開している教科書会社です。",
+      "subjects": ["国語", "書写", "生活", "英語", "道徳"],
+      "grades": "小学校・中学校・高等学校",
+      "headOffice": "〒141-8675 東京都品川区上大崎2-19-9",
+      "officialUrl": "https://www.mitsumura-tosho.co.jp/",
+      "planUrl": "https://www.mitsumura-tosho.co.jp/kyokasho/s-kokugo/keikaku",
+      "banTaiStatus": "公式資料を確認しながら、教育計画システムへの変換手順を検証中です。",
+      "banTaiDownloadUrl": null,
+      "banTaiDataLabel": "変換検証中",
+      "notes": "小学校国語の年間指導計画・評価計画資料ページを代表リンクとして掲載しています。",
+      "lastChecked": "2026-07-10"
+    },
+    {
+      "id": "keirinkan",
+      "publisherName": "啓林館",
+      "description": "算数・数学、理科を中心に、カリキュラム作成資料や評価関連資料を公開している教科書会社です。",
+      "subjects": ["算数", "数学", "理科", "生活", "英語"],
+      "grades": "小学校・中学校・高等学校",
+      "headOffice": "〒543-0052 大阪市天王寺区大道4丁目3番25号",
+      "officialUrl": "https://www.shinko-keirin.co.jp/",
+      "planUrl": "https://www.shinko-keirin.co.jp/keirinkan/sho_r6/sansu/curriculum.html",
+      "banTaiStatus": "公式資料を確認しながら、教育計画システムへの変換手順を検証中です。",
+      "banTaiDownloadUrl": null,
+      "banTaiDataLabel": "変換検証中",
+      "notes": "令和6年度用小学校算数のカリキュラム作成資料ページを代表リンクとして掲載しています。",
+      "lastChecked": "2026-07-10"
+    },
+    {
+      "id": "tokyo-shoseki",
+      "publisherName": "東京書籍",
+      "description": "小学校から高等学校までの教科書、教師用指導書、教材、教育用デジタルコンテンツを扱う教科書会社です。",
+      "subjects": ["国語", "社会", "算数", "理科", "生活", "英語", "道徳"],
+      "grades": "小学校・中学校・高等学校",
+      "headOffice": "〒114-8524 東京都北区堀船2-17-1",
+      "officialUrl": "https://www.tokyo-shoseki.co.jp/",
+      "planUrl": "https://ten.tokyo-shoseki.co.jp/text/shou/sansu/keikaku/",
+      "banTaiStatus": "公式資料を確認しながら、教育計画システムへの変換手順を検証中です。",
+      "banTaiDownloadUrl": null,
+      "banTaiDataLabel": "変換検証中",
+      "notes": "小学校算数の年間指導計画作成資料ページを代表リンクとして掲載しています。",
+      "lastChecked": "2026-07-10"
+    },
+    {
+      "id": "kyoiku-shuppan",
+      "publisherName": "教育出版",
+      "description": "国語、社会、算数、理科、生活、音楽、英語、道徳など、複数教科の教育資料を公開している教科書会社です。",
+      "subjects": ["国語", "書写", "社会", "算数", "理科", "生活", "音楽", "英語", "道徳"],
+      "grades": "小学校・中学校・高等学校",
+      "headOffice": "〒135-0063 東京都江東区有明3-4-10 TFTビル西館5F",
+      "officialUrl": "https://www.kyoiku-shuppan.co.jp/",
+      "planUrl": "https://www.kyoiku-shuppan.co.jp/tokushu/r6plan.html",
+      "banTaiStatus": "公式資料を確認しながら、教育計画システムへの変換手順を検証中です。",
+      "banTaiDownloadUrl": null,
+      "banTaiDataLabel": "変換検証中",
+      "notes": "令和6年度版小学校教科書の年間指導計画・評価計画（案）ページを掲載しています。",
+      "lastChecked": "2026-07-10"
+    },
+    {
+      "id": "nichibun",
+      "publisherName": "日本文教出版",
+      "description": "社会、算数、図画工作、道徳、美術、情報などの教科書・教材情報とサポート資料を公開している教科書会社です。",
+      "subjects": ["社会", "算数", "図画工作", "道徳", "美術", "情報"],
+      "grades": "小学校・中学校・高等学校",
+      "headOffice": "大阪本社：〒558-0041 大阪市住吉区南住吉4-7-5 ／ 東京本社：〒165-0026 東京都中野区新井1-2-16",
+      "officialUrl": "https://www.nichibun-g.co.jp/",
+      "planUrl": "https://www.nichibun-g.co.jp/textbooks/s-shakai/useful/",
+      "banTaiStatus": "今後、公式資料を確認しながら対応可否を検討します。",
+      "banTaiDownloadUrl": null,
+      "banTaiDataLabel": "今後対応",
+      "notes": "小学校社会のサポート資料ページを代表リンクとして掲載しています。",
+      "lastChecked": "2026-07-10"
+    }
+  ]
+}
