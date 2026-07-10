@@ -226,17 +226,17 @@
     },
     {
       "id": "banner-studio",
-      "name": "Noteバナースタジオ",
+      "name": "Ban.Tai バナースタジオ",
       "category": "standard",
       "order": 10,
       "status": "無料",
       "badges": [
         "無料"
       ],
-      "summary": "note向けの見出し画像を、余白と安全範囲を意識して作成できます。",
+      "summary": "note・ホームページ・ブログ・SNS・販売ページ向けのバナー画像を作成できます。",
       "features": [],
       "image": "/assets/images/note-banner-studio/note-banner-studio-hero-v2.png",
-      "imageAlt": "Noteバナースタジオ",
+      "imageAlt": "Ban.Tai バナースタジオ",
       "detailUrl": "/products/banner-studio/",
       "categoryUrl": null,
       "primaryActionLabel": null,
@@ -245,7 +245,7 @@
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "downloadUrl": "/downloads/BanTai_BannerStudioV2_Final.zip",
+      "downloadUrl": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
       "hasTrial": false,
       "isFlagship": false
     },

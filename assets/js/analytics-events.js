@@ -81,7 +81,7 @@ function getAppNameFromContext(url, text) {
   // URLに含まれるキーワードから判定
   const lowerUrl = url.toLowerCase();
   if (lowerUrl.includes('bannerstudio') || lowerUrl.includes('banner-studio')) {
-    return 'Noteバナースタジオ';
+    return 'Ban.Tai バナースタジオ';
   }
   if (lowerUrl.includes('classrostermaker') || lowerUrl.includes('gakkyu-meibo')) {
     return '学級名簿メーカー';
@@ -118,7 +118,7 @@ function getAppNameFromContext(url, text) {
   const title = document.title || '';
   const path = window.location.pathname;
 
-  if (title.includes('Noteバナー') || path.includes('banner-studio')) return 'Noteバナースタジオ';
+  if (title.includes('Noteバナー') || path.includes('banner-studio')) return 'Ban.Tai バナースタジオ';
   if (title.includes('名簿') || path.includes('gakkyu-meibo')) return '学級名簿メーカー';
   if (title.includes('漢字') || path.includes('kanji-practice')) return '漢字練習帳';
   if (title.includes('方眼紙') || path.includes('houganshi')) return '方眼紙メーカー';
@@ -131,7 +131,7 @@ function getAppNameFromContext(url, text) {
   if (title.includes('教育計画') || path.includes('education-planning')) return '小学校教育計画作成・運営システム';
 
   // テキスト情報からのフォールバック
-  if (text.includes('バナー')) return 'Noteバナースタジオ';
+  if (text.includes('バナー')) return 'Ban.Tai バナースタジオ';
   if (text.includes('名簿')) return '学級名簿メーカー';
   if (text.includes('漢字')) return '漢字練習帳';
   if (text.includes('方眼紙')) return '方眼紙メーカー';
