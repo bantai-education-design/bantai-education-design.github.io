@@ -276,6 +276,35 @@
       "noteUrl": null,
       "hasTrial": true,
       "isFlagship": true
+    },
+    {
+      "id": "classroom-seat-designer",
+      "name": "学級座席デザイナー",
+      "category": "standard",
+      "order": 12,
+      "status": "無料",
+      "badges": [
+        "無料"
+      ],
+      "summary": "担任の判断を助ける、半自動の座席表作成ツールです。",
+      "features": [
+        "1人席・2人組席・班席に対応",
+        "Web版・Windowsポータブル版の両方を無料提供"
+      ],
+      "image": null,
+      "imageAlt": null,
+      "usePlaceholder": true,
+      "detailUrl": "/products/classroom-seat-designer/",
+      "categoryUrl": null,
+      "primaryActionLabel": null,
+      "secondaryActionLabel": "詳細を見る",
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "downloadUrl": "https://github.com/bantai-education-design/classroom-seat-designer/releases/download/v1.0.0/classroom-seat-designer-v1.0.0-Windows-portable.zip",
+      "hasTrial": false,
+      "isFlagship": false
     }
   ]
 }
