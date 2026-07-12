@@ -291,9 +291,9 @@
         "1人席・2人組席・班席に対応",
         "Web版・Windowsポータブル版の両方を無料提供"
       ],
-      "image": null,
-      "imageAlt": null,
-      "usePlaceholder": true,
+      "image": "/assets/images/products/classroom-seat-designer-card.svg",
+      "imageAlt": "学級座席デザイナーの座席表作成画面イメージ",
+      "usePlaceholder": false,
       "detailUrl": "/products/classroom-seat-designer/",
       "categoryUrl": null,
       "primaryActionLabel": null,
