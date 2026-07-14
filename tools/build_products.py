@@ -62,6 +62,8 @@ def render_features(product: dict) -> str:
 
 def render_actions(product: dict) -> str:
     status = product.get("status")
+    trial_download_url = product.get("trialDownloadUrl")
+    trial_download_label = product.get("trialDownloadLabel") or "試用版をダウンロード"
     booth_url = product.get("boothUrl")
     vector_url = product.get("vectorUrl")
     note_url = product.get("noteUrl")
@@ -84,26 +86,34 @@ def render_actions(product: dict) -> str:
             links.append(
                 f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}" download>無料でダウンロードする</a>'
             )
-        
-        # 3. BOOTH
-        if booth_url:
+
+        # 3. 試用版ダウンロード (販売導線方針: 試用版DL → BOOTH購入 → Vector掲載)
+        if trial_download_url:
             links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHで購入・ダウンロードする</a>'
-            )
-            
-        # 4. Vector
-        if vector_url:
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(vector_url)}" target="_blank" rel="noopener noreferrer">Vectorからダウンロードする</a>'
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_download_url)}" download>{html_text(trial_download_label)}</a>'
             )
 
-        # 5. note
+        # 4. BOOTH (試用版DLがある製品ではライセンス購入の位置づけになる)
+        if booth_url:
+            booth_label = "BOOTHでライセンスを購入" if trial_download_url else "BOOTHで購入・ダウンロードする"
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">{html_text(booth_label)}</a>'
+            )
+
+        # 5. Vector (試用版DLがある製品では掲載紹介の位置づけになる)
+        if vector_url:
+            vector_label = "Vector掲載ページを見る" if trial_download_url else "Vectorからダウンロードする"
+            links.append(
+                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(vector_url)}" target="_blank" rel="noopener noreferrer">{html_text(vector_label)}</a>'
+            )
+
+        # 6. note
         if note_url:
             links.append(
                 f'      <a class="catalog-btn catalog-btn-note" href="{html_attr(note_url)}" target="_blank" rel="noopener noreferrer">noteで紹介記事を読む</a>'
             )
 
-    # 6. 分野を見る / 詳細を見る (既存の導線を維持)
+    # 7. 分野を見る / 詳細を見る (既存の導線を維持)
     if primary_label and category_url:
         links.append(
             f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(category_url)}">{html_text(primary_label)}</a>'
