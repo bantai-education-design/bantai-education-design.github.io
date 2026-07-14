@@ -39,7 +39,7 @@
       "actions": [
         {
           "class": "btn btn-primary",
-          "href": "/downloads/BanTai_BannerStudioV2_Final.zip",
+          "href": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
           "label": "無料ダウンロード",
           "attrs": { "download": "" }
         },
