@@ -13,8 +13,29 @@
   - 方眼紙メーカー（BOOTH内体験版・本体）
   - 絵日記・観察カード作成メーカー（BOOTH内10日試用）
   - 小学校教育計画作成・運営システム モニター版（BOOTH、約60〜130MBの3構成 → 大容量のためGitHub Releases併用の第一候補）
-- 決定事項を本書に追記してから第2段階へ進む。
-- あわせて /downloads/ 内の残存物（BanTai_BannerStudioV2_Final.zip、プレースホルダーtxt）の扱いを決める。
+### 第1段階の決定事項（2026-07-14 確定）
+
+- 試用版ZIPは原則 `/downloads/trials/` 配下に配置する。
+- 無料ツールZIPは `/downloads/free-tools/` 配下とする。ただし現行リンクの維持が必要な場合（外部サイト・note記事等からの直リンク）は互換性を考慮して整理する。
+- 大容量・履歴管理が必要なものは GitHub Releases を併用できる（教育計画モニター版が第一候補）。
+- 利用者向け表示は、どの場合も「公式HPの商品ページからダウンロード」で統一する。
+- `/downloads/` 直下の旧版ZIPやプレースホルダーは、参照リンクがなければ削除対象とする。
+- 旧版 BanTai_BannerStudioV2_Final.zip は削除対象とする（下記の参照確認結果に基づく）。
+- プレースホルダーtxt（ここに_BanTai_BannerStudioV2_Final.zip_を入れてください.txt）は削除対象とする。
+- 実際の削除は本追記とは別のコミットで行い、削除時に README.md と data/product-details/banner-studio.json の旧版参照もあわせて更新する。
+
+### 残存物2件の参照確認結果（2026-07-14 実施）
+
+リポジトリ全体（HTML・JSON・JS・Markdown等）を対象に検索した。
+
+- 旧版 BanTai_BannerStudioV2_Final.zip への参照:
+  - 利用者向けページ（index.html、products/ 配下のHTML、data/products.json）には参照なし。現行 v3.0.0 ZIPへの参照のみ存在（index.html、products/index.html、products/banner-studio/index.html、data/products.json の4系統）。
+  - 参照が残るのは次の3箇所のみで、いずれも利用者導線ではない。
+    1. README.md（66・73・74・113行目。旧Dropbox URLと「バックアップとして保持」の記述）
+    2. data/product-details/banner-studio.json（42行目。実ページと乖離した未使用の生成用データ）
+    3. プレースホルダーtxt自身の本文
+  - 結論: 現行版への参照が別に存在し、旧版への利用者向け参照はないため、削除対象の条件を満たす。
+- プレースホルダーtxtへの参照: リポジトリ内のどのファイルからも参照されていない。削除対象の条件を満たす。
 
 ## 第2段階: data/products.json に trial_download_url 等を追加
 
