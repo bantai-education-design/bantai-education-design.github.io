@@ -69,3 +69,25 @@
 1. 観察カードの案A／案Bの判断。
 2. /downloads/trials/ を作成し、確定した2ファイルを新ファイル名でコピー・コミット。
 3. data/products.json への trial_download_url 追加（build_products.py 改修とセット）。
+
+## 配置記録（第2段階B・2026-07-14 実施）
+
+観察カードは案B（README差し替え）で確定し、以下の2件を配置した。
+
+| 配置ファイル | サイズ | 元ファイル | 加工 |
+|---|---|---|---|
+| downloads/trials/bantai_graph_paper_trial_v3.1.2.zip | 73.8MB | 方眼紙メーカー-v3.1.2-体験版.zip | なし（そのままコピー） |
+| downloads/trials/bantai_observation_card_trial_v1.2.0.zip | 76.9MB | 絵日記・観察カード作成メーカー-v1.2.0-Vector-Trial-Windows.zip | README差し替えのうえ再ZIP化（下記） |
+
+観察カードZIPの調整内容:
+
+1. README_Vector.txt を README_試用版.txt に改名し、表題「絵日記・観察カード作成メーカー／Vector掲載・配布向け説明（10日間試用版）」を「Ban.Tai 絵日記・観察カード作成メーカー v1.2.0 試用版 README」に変更。本文（BOOTHでのライセンス購入導線480円・BOOTH商品URL・公式HP商品ページURL）は維持。
+2. はじめにお読みください.txt の「BOOTHで入手した場合: README_BOOTH.txt」（同梱されていないファイルへの参照）を「配布内容・試用期間・ライセンスの説明: README_試用版.txt」に修正。
+3. その他のファイル（EXE・HTML単体版・CHANGELOG.md・MANUAL.md・VERSION）は無加工。CHANGELOG.md に「BOOTH / Vector / 公式HP 掲載に向けた名称ルールを整理」という履歴1行が残るが、変更履歴の記録として自然なため残置。
+4. テキストは元と同じBOMなしUTF-8で保存し、ZIPエントリ名もUTF-8で再作成。
+
+配置後の検証結果:
+
+- 両ZIPとも100MB未満（73.8MB／76.9MB）で、正常に開封できることを確認。
+- 両ZIPとも、ライセンスキー・購入者情報・危険語（license_key／serial／secret／token／使用禁止／キー同梱 等）に該当するエントリがないことを再確認。
+- 再ZIP版のREADME表題変更と参照修正が反映されていること、README_BOOTH.txt への参照が残っていないことをZIP内で直接確認。
