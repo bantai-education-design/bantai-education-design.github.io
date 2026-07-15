@@ -156,17 +156,17 @@
     },
     {
       "id": "resume-generator",
-      "name": "スマート履歴書ジェネレーター",
+      "name": "スマート履歴書作成ツール",
       "category": "standard",
       "order": 7,
       "status": "公開準備中",
       "badges": [
-        "公開準備中"
+        "近日公開"
       ],
-      "summary": "履歴書入力、写真配置、印刷、PDF保存を支援します。",
+      "summary": "表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツール。印刷・PDF保存に対応。",
       "features": [],
       "image": "/assets/images/resume-generator/resume-main-screen.png",
-      "imageAlt": "スマート履歴書ジェネレーター",
+      "imageAlt": "スマート履歴書作成ツール",
       "detailUrl": "/products/resume-generator/",
       "categoryUrl": null,
       "primaryActionLabel": null,
