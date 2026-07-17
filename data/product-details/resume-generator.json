@@ -1,6 +1,6 @@
 {
-  "pageTitle": "スマート履歴書作成ツール | Ban.Tai Education Design",
-  "metaDescription": "スマート履歴書作成ツール（Smart Resume Generator）は、履歴書の入力・写真配置・志望動機/自己PR作成に対応し、表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツールです。",
+  "pageTitle": "スマート履歴書ジェネレーター | Ban.Tai Education Design",
+  "metaDescription": "スマート履歴書ジェネレーター（Smart Resume Generator）は、履歴書の入力・写真配置・志望動機/自己PR作成に対応し、表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツールです。",
   "bodyClass": "product-detail-resume",
   "styleVersion": "staff-resume-final-20260614-2",
   "menuToggle": false,
@@ -12,7 +12,7 @@
     { "href": "#distribution", "label": "配布・購入" },
     { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
   ],
-  "productName": "スマート履歴書作成ツール",
+  "productName": "スマート履歴書ジェネレーター",
   "englishName": "Smart Resume Generator",
   "images": [
     "/assets/images/resume-generator/booth-1-main.png",
@@ -29,7 +29,7 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "kicker": "Smart Resume Generator",
-      "headingLines": ["スマート履歴書作成ツール"],
+      "headingLines": ["スマート履歴書ジェネレーター"],
       "lead": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツールです。基本情報、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄を順番に入力できます。",
       "note": "対応OS：Windows 10 / 11。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキー認証で SAMPLE 表示を解除できます。",
       "actions": [
@@ -38,7 +38,7 @@
       ],
       "image": {
         "src": "/assets/images/resume-generator/booth-1-main.png",
-        "alt": "スマート履歴書作成ツールのBOOTHメイン画像"
+        "alt": "スマート履歴書ジェネレーターのBOOTHメイン画像"
       }
     },
     {
@@ -46,7 +46,7 @@
       "eyebrow": "Overview",
       "heading": "履歴書づくりを、ひとつの画面で見やすく整える。",
       "paragraphs": [
-        "スマート履歴書作成ツールは、写真付き履歴書をかんたんに作成できるWindows用アプリです。氏名・住所・生年月日などの基本情報から、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄まで、履歴書に必要な項目を順番に入力できます。",
+        "スマート履歴書ジェネレーターは、写真付き履歴書をかんたんに作成できるWindows用アプリです。氏名・住所・生年月日などの基本情報から、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄まで、履歴書に必要な項目を順番に入力できます。",
         "画面右側には履歴書のプレビューが表示されるため、仕上がりを確認しながら編集できます。証明写真画像の読み込みにも対応しており、JPG / PNG の写真を読み込み、履歴書の写真枠に合わせて位置や大きさを調整できます。",
         "作成した履歴書は、表面・裏面を正しい向きの2ページPDFとして出力できます。実際に両面印刷を行う場合は、作成されたPDFを開き、PDFビューアーまたはプリンター側の印刷画面で「両面印刷」を選択してください。プリンターによっては、プリンタードライバー側で両面印刷設定が必要になる場合があります。"
       ],
@@ -154,12 +154,12 @@
       "images": [
         {
           "src": "/assets/images/resume-generator/booth-1-main.png",
-          "alt": "スマート履歴書作成ツールのBOOTHメイン画像",
+          "alt": "スマート履歴書ジェネレーターのBOOTHメイン画像",
           "wrapClass": "visual"
         },
         {
           "src": "/assets/images/resume-generator/booth-2-complete.png",
-          "alt": "スマート履歴書作成ツールの完成イメージ",
+          "alt": "スマート履歴書ジェネレーターの完成イメージ",
           "wrapClass": "visual"
         }
       ],
@@ -186,17 +186,17 @@
           "images": [
             {
               "src": "/assets/images/resume-generator/booth-3-steps.png",
-              "alt": "スマート履歴書作成ツールのかんたん3ステップ",
+              "alt": "スマート履歴書ジェネレーターのかんたん3ステップ",
               "wrapClass": "visual"
             },
             {
               "src": "/assets/images/resume-generator/booth-4-features.png",
-              "alt": "スマート履歴書作成ツールの便利機能紹介",
+              "alt": "スマート履歴書ジェネレーターの便利機能紹介",
               "wrapClass": "visual"
             },
             {
               "src": "/assets/images/resume-generator/booth-5-trial-license.png",
-              "alt": "スマート履歴書作成ツールの試用とライセンス説明",
+              "alt": "スマート履歴書ジェネレーターの試用とライセンス説明",
               "wrapClass": "visual"
             }
           ]

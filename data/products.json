@@ -156,7 +156,7 @@
     },
     {
       "id": "resume-generator",
-      "name": "スマート履歴書作成ツール",
+      "name": "スマート履歴書ジェネレーター",
       "category": "standard",
       "order": 7,
       "status": "10日間無料体験",
@@ -167,7 +167,7 @@
       "summary": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツール。BOOTHで10日間試用版を公開中です。",
       "features": [],
       "image": "/assets/images/resume-generator/booth-1-main.png",
-      "imageAlt": "スマート履歴書作成ツール",
+      "imageAlt": "スマート履歴書ジェネレーター",
       "detailUrl": "/products/resume-generator/",
       "categoryUrl": null,
       "primaryActionLabel": null,
