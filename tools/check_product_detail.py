@@ -282,7 +282,7 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require_keys(data, {"englishName", "images", "bodyClass"}, "resume-generator root")
     require("product-detail-resume" in data["bodyClass"], "resume body class missing")
     require("resume-generator-hero" in html, "resume hero class missing")
-    require(len(data["images"]) == 3, "resume images must have 3 items")
+    require(len(data["images"]) == 5, "resume images must have 5 items")
     for src in data["images"]:
         validate_image_path(src, "resume image")
         require(src in html, f"resume image missing from HTML: {src}")
@@ -296,7 +296,7 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require(features is not None and len(features.get("extraGrids", [])[0]["items"]) == 2, "resume input/output cards must total 2")
     screenshots = next((section for section in data["sections"] if section.get("id") == "screenshots"), None)
     require(screenshots is not None and len(screenshots["images"]) == 2, "resume screenshot image grid must have 2 images")
-    require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 1, "resume AI assistant image missing")
+    require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 3, "resume BOOTH support images missing")
     distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
     require(distribution is not None and len(distribution["items"]) == 3, "resume distribution cards must have 3 items")
     booth_url = "https://booth.pm/ja/items/8551539"

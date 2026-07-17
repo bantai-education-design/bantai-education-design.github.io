@@ -15,9 +15,11 @@
   "productName": "スマート履歴書作成ツール",
   "englishName": "Smart Resume Generator",
   "images": [
-    "/assets/images/resume-generator/resume-main-screen.png",
-    "/assets/images/resume-generator/resume-print-preview.png",
-    "/assets/images/resume-generator/resume-ai-assistant.png"
+    "/assets/images/resume-generator/booth-1-main.png",
+    "/assets/images/resume-generator/booth-2-complete.png",
+    "/assets/images/resume-generator/booth-3-steps.png",
+    "/assets/images/resume-generator/booth-4-features.png",
+    "/assets/images/resume-generator/booth-5-trial-license.png"
   ],
   "sections": [
     {
@@ -35,8 +37,8 @@
         { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" }
       ],
       "image": {
-        "src": "/assets/images/resume-generator/resume-main-screen.png",
-        "alt": "スマート履歴書作成ツールのメイン画面"
+        "src": "/assets/images/resume-generator/booth-1-main.png",
+        "alt": "スマート履歴書作成ツールのBOOTHメイン画像"
       }
     },
     {
@@ -151,13 +153,13 @@
       "gridClass": "grid grid-2 gallery",
       "images": [
         {
-          "src": "/assets/images/resume-generator/resume-main-screen.png",
-          "alt": "スマート履歴書作成ツールのメイン画面",
+          "src": "/assets/images/resume-generator/booth-1-main.png",
+          "alt": "スマート履歴書作成ツールのBOOTHメイン画像",
           "wrapClass": "visual"
         },
         {
-          "src": "/assets/images/resume-generator/resume-print-preview.png",
-          "alt": "スマート履歴書作成ツールの印刷前プレビュー",
+          "src": "/assets/images/resume-generator/booth-2-complete.png",
+          "alt": "スマート履歴書作成ツールの完成イメージ",
           "wrapClass": "visual"
         }
       ],
@@ -168,23 +170,33 @@
           "items": [
             {
               "heading": "入力画面と履歴書プレビュー",
-              "text": "最新UIでは、Ban.Tai ロゴを含む上部ヘッダー、広く整理した入力パネル、右側の履歴書プレビューを見比べながら操作できます。"
+              "text": "BOOTH掲載用のメイン画像で、入力パネル、写真設定、履歴書プレビューの全体像を確認できます。"
             },
             {
               "heading": "印刷前の確認",
-              "text": "プレビュー拡大表示を使って、完成イメージを大きく見ながら印刷またはPDF保存前の確認を行えます。"
+              "text": "表面・裏面の完成イメージ、写真付き履歴書、PDF保存までの流れを確認できます。"
             }
           ]
         }
       ],
       "extraImageGrids": [
         {
-          "gridClass": "grid grid-1",
+          "gridClass": "grid grid-3",
           "gridStyle": "margin-top:24px;",
           "images": [
             {
-              "src": "/assets/images/resume-generator/resume-ai-assistant.png",
-              "alt": "スマート履歴書作成ツールのAI文章作成アシスタント",
+              "src": "/assets/images/resume-generator/booth-3-steps.png",
+              "alt": "スマート履歴書作成ツールのかんたん3ステップ",
+              "wrapClass": "visual"
+            },
+            {
+              "src": "/assets/images/resume-generator/booth-4-features.png",
+              "alt": "スマート履歴書作成ツールの便利機能紹介",
+              "wrapClass": "visual"
+            },
+            {
+              "src": "/assets/images/resume-generator/booth-5-trial-license.png",
+              "alt": "スマート履歴書作成ツールの試用とライセンス説明",
               "wrapClass": "visual"
             }
           ]

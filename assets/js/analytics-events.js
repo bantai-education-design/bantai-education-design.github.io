@@ -108,7 +108,7 @@ function getAppNameFromContext(url, text) {
     return '画像文字入れくん';
   }
   if (lowerUrl.includes('resume-generator')) {
-    return 'スマート履歴書ジェネレーター';
+    return 'スマート履歴書作成ツール';
   }
   if (lowerUrl.includes('education-planning') || lowerUrl.includes('education-hero')) {
     return '小学校教育計画作成・運営システム';
@@ -127,7 +127,7 @@ function getAppNameFromContext(url, text) {
   if (title.includes('五線紙') || title.includes('楽譜') || path.includes('staff-paper')) return '五線紙作成メーカー';
   if (title.includes('観察') || path.includes('observation-card')) return '観察カード';
   if (title.includes('文字入れ') || path.includes('text-overlay')) return '画像文字入れくん';
-  if (title.includes('履歴書') || path.includes('resume-generator')) return 'スマート履歴書ジェネレーター';
+  if (title.includes('履歴書') || path.includes('resume-generator')) return 'スマート履歴書作成ツール';
   if (title.includes('教育計画') || path.includes('education-planning')) return '小学校教育計画作成・運営システム';
 
   // テキスト情報からのフォールバック
@@ -140,7 +140,7 @@ function getAppNameFromContext(url, text) {
   if (text.includes('五線紙') || text.includes('楽譜')) return '五線紙作成メーカー';
   if (text.includes('観察カード')) return '観察カード';
   if (text.includes('文字入れ')) return '画像文字入れくん';
-  if (text.includes('履歴書')) return 'スマート履歴書ジェネレーター';
+  if (text.includes('履歴書')) return 'スマート履歴書作成ツール';
   if (text.includes('教育計画') || text.includes('モニター')) return '小学校教育計画作成・運営システム';
 
   return 'その他の製品';
