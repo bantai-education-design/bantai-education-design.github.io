@@ -299,12 +299,13 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 1, "resume AI assistant image missing")
     distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
     require(distribution is not None and len(distribution["items"]) == 3, "resume distribution cards must have 3 items")
-    require("BOOTH準備中" in html and "Vector準備中" in html and "ダウンロード準備中" in html, "distribution pending labels missing")
-    require("外部API実行によるAI機能本体の確認は、現時点ではまだ未実施です。" in html, "AI external API caution missing")
+    booth_url = "https://bantai3.booth.pm/items/8551539"
+    require("BOOTH公開中" in html and "10日間試用版あり" in html, "BOOTH release labels missing")
+    require("Vector申請中" in html and "Vector URL はまだ未確定" in html, "Vector pending wording missing")
+    require(booth_url in html and html.count(booth_url) == 1, "BOOTH URL count changed")
+    require("PDFビューアーまたはプリンター側" in html, "duplex print caution missing")
     require("個人情報についての注意" in html, "personal information caution missing")
-    require("GitHubリポジトリは private" in html, "private GitHub policy wording missing")
     forbidden = [
-        "bantai3.booth.pm",
         "vector.co.jp",
         "github.com/",
         ".zip",

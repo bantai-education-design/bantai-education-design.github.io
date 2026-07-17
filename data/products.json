@@ -159,11 +159,12 @@
       "name": "スマート履歴書作成ツール",
       "category": "standard",
       "order": 7,
-      "status": "公開準備中",
+      "status": "10日間無料体験",
       "badges": [
-        "近日公開"
+        "BOOTH公開中",
+        "10日間試用版あり"
       ],
-      "summary": "表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツール。印刷・PDF保存に対応。",
+      "summary": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツール。BOOTHで10日間試用版を公開中です。",
       "features": [],
       "image": "/assets/images/resume-generator/resume-main-screen.png",
       "imageAlt": "スマート履歴書作成ツール",
@@ -172,10 +173,10 @@
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
       "published": true,
-      "boothUrl": null,
+      "boothUrl": "https://bantai3.booth.pm/items/8551539",
       "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": false,
+      "hasTrial": true,
       "isFlagship": false
     },
     {
