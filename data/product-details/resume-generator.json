@@ -31,7 +31,7 @@
       "lead": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツールです。基本情報、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄を順番に入力できます。",
       "note": "対応OS：Windows 10 / 11。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキー認証で SAMPLE 表示を解除できます。",
       "actions": [
-        { "class": "btn btn-primary", "href": "https://bantai3.booth.pm/items/8551539", "label": "BOOTHでダウンロード・ライセンス確認", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } },
+        { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } },
         { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" }
       ],
       "image": {
@@ -50,7 +50,7 @@
       ],
       "card": {
         "class": "card gold",
-        "badge": "BOOTH公開中",
+        "badge": "BOOTHで公開中",
         "heading": "10日間試用版あり",
         "text": "BOOTHで公開中です。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキーを入力すると SAMPLE 表示が解除されます。"
       }
@@ -130,7 +130,7 @@
           "heading": "ライセンスと SAMPLE について",
           "paragraphs": [
             "10日間の試用に対応しています。試用中・未認証時は、印刷物・PDFの表面・裏面に SAMPLE 透かしが入ります。ライセンスキーを入力すると SAMPLE 表示が解除されます。",
-            "BOOTHではアプリ本体を試用版として公開し、ライセンスキー購入により製品利用できる形にします。Vectorは現在申請中のため、外部リンクはまだ掲載していません。"
+            "BOOTHではアプリ本体を試用版として公開し、ライセンスキー購入により製品利用できる形にします。Vectorは現在登録申請中のため、外部リンクはまだ掲載していません。"
           ]
         },
         {
@@ -211,19 +211,19 @@
       "gridStyle": "margin-top:22px;",
       "items": [
         {
-          "badge": "BOOTH公開中",
-          "heading": "BOOTHでダウンロード・ライセンス確認",
+          "badge": "BOOTHで公開中",
+          "heading": "BOOTHでダウンロードできます",
           "text": "BOOTHで10日間試用版を公開中です。未認証時はPDF・印刷物に SAMPLE 表示が入り、ライセンスキー認証で解除できます。"
         },
         {
-          "badge": "Vector申請中",
-          "heading": "Vectorは申請登録中",
+          "badge": "Vector登録申請中",
+          "heading": "Vectorは登録申請中",
           "text": "Vector URL はまだ未確定のため、外部ボタンは掲載していません。掲載完了後に正式導線を追加します。"
         },
         {
           "badge": "公式HP",
-          "heading": "公式HPは案内ページとして掲載",
-          "text": "ZIP / EXE / private GitHub への直接リンクは掲載せず、BOOTHへの案内を中心にしています。"
+          "heading": "現在はBOOTHで配布中",
+          "text": "公式HPからの直接ZIP配布リンクは掲載せず、BOOTHへの案内を中心にしています。"
         }
       ]
     }
