@@ -301,8 +301,8 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require(distribution is not None and len(distribution["items"]) == 3, "resume distribution cards must have 3 items")
     booth_url = "https://booth.pm/ja/items/8551539"
     require("BOOTHで公開中" in html and "10日間試用版あり" in html, "BOOTH release labels missing")
-    require("Vector登録申請中" in html and "Vector URL はまだ未確定" in html, "Vector pending wording missing")
-    require(booth_url in html and html.count(booth_url) == 1, "BOOTH URL count changed")
+    require("Vector登録申請中" in html and "Vector版は現在、登録申請中です。" in html, "Vector pending wording missing")
+    require(booth_url in html and html.count(booth_url) == 2, "BOOTH URL count changed")
     require("PDFビューアーまたはプリンター側" in html, "duplex print caution missing")
     require("個人情報についての注意" in html, "personal information caution missing")
     forbidden = [

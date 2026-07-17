@@ -213,17 +213,20 @@
         {
           "badge": "BOOTHで公開中",
           "heading": "BOOTHでダウンロードできます",
-          "text": "BOOTHで10日間試用版を公開中です。未認証時はPDF・印刷物に SAMPLE 表示が入り、ライセンスキー認証で解除できます。"
+          "text": "10日間試用できるアプリ本体をBOOTHで公開しています。未認証時はPDF・印刷物に SAMPLE 表示が入り、ライセンスキー認証で解除できます。",
+          "actions": [
+            { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } }
+          ]
         },
         {
           "badge": "Vector登録申請中",
           "heading": "Vectorは登録申請中",
-          "text": "Vector URL はまだ未確定のため、外部ボタンは掲載していません。掲載完了後に正式導線を追加します。"
+          "text": "Vector版は現在、登録申請中です。公開され次第、このページでご案内します。"
         },
         {
           "badge": "公式HP",
-          "heading": "現在はBOOTHで配布中",
-          "text": "公式HPからの直接ZIP配布リンクは掲載せず、BOOTHへの案内を中心にしています。"
+          "heading": "公式HPからの直接配布について",
+          "text": "現在はBOOTHで配布しています。公式HPからの直接ZIP配布は行っていません。"
         }
       ]
     }

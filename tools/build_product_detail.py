@@ -632,6 +632,8 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
                 lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
                 lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
                 lines.append(f'{inner}</ul>')
+            if item.get("actions"):
+                lines.append(render_actions(item["actions"], spaces=spaces + 2, style=item.get("actionsStyle", "margin-top:16px;")))
         lines.append(f'{pad}</div>')
         return "\n".join(lines)
 
