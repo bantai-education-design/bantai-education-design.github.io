@@ -860,32 +860,45 @@ button:focus-visible {
 /* ヒーロー背景装飾（静止CSSパターン + 軽量アニメーション）
    docs/design/home-hero-video-plan.md の「まず静止画像＋CSSアニメーション案」に基づく最小実装。
    動画・画像素材は追加せず、CSSのグラデーションのみで五線紙/週案表/座席表のグリッド感と
-   金色の光がゆっくり動く表現を再現する。 */
+   金色の光がゆっくり動く表現を再現する。
+   PC標準（本ブロック）は五線紙の五線を模した横線グループ＋週案表/座席表を思わせる縦グリッドで
+   「教育ツールの道具感」を少しだけ出す。スマホは下部の @media (max-width: 860px) で
+   従来どおり控えめな表現に上書きする（本ブロックの変更はスマホに影響しない）。 */
 .hero-bg-deco {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.75;
   background-image:
     repeating-linear-gradient(
       to bottom,
-      rgba(198, 161, 91, 0.09) 0,
-      rgba(198, 161, 91, 0.09) 1px,
-      transparent 1px,
-      transparent 64px
+      rgba(198, 161, 91, 0.16) 0, rgba(198, 161, 91, 0.16) 1px, transparent 1px, transparent 8px,
+      rgba(198, 161, 91, 0.16) 8px, rgba(198, 161, 91, 0.16) 9px, transparent 9px, transparent 16px,
+      rgba(198, 161, 91, 0.16) 16px, rgba(198, 161, 91, 0.16) 17px, transparent 17px, transparent 24px,
+      rgba(198, 161, 91, 0.16) 24px, rgba(198, 161, 91, 0.16) 25px, transparent 25px, transparent 32px,
+      rgba(198, 161, 91, 0.16) 32px, rgba(198, 161, 91, 0.16) 33px, transparent 33px, transparent 96px
     ),
     repeating-linear-gradient(
       to right,
-      rgba(198, 161, 91, 0.05) 0,
-      rgba(198, 161, 91, 0.05) 1px,
+      rgba(198, 161, 91, 0.07) 0,
+      rgba(198, 161, 91, 0.07) 1px,
       transparent 1px,
-      transparent 160px
+      transparent 168px
     ),
-    linear-gradient(115deg, transparent 0%, rgba(226, 201, 138, 0.12) 45%, transparent 62%);
-  background-size: 100% 64px, 160px 100%, 240% 240%;
+    linear-gradient(115deg, transparent 0%, rgba(226, 201, 138, 0.15) 45%, transparent 62%);
+  background-size: 100% 96px, 168px 100%, 240% 240%;
   background-position: 0 0, 0 0, 0% 0%;
   animation: heroGoldDrift 18s ease-in-out infinite;
+}
+
+/* PC表示のみ：黒〜濃紺の奥行きを少し強める（スマホは従来の黒〜チャコールのまま） */
+@media (min-width: 861px) {
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(12, 27, 51, 0.94), rgba(23, 46, 84, 0.88)),
+      url("assets/images/brand-education-hero.png") center/cover no-repeat;
+  }
 }
 
 /* .hero-content (z-index:2) が常に手前に表示されるため、文字の可読性には影響しない */
