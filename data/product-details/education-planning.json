@@ -1,7 +1,8 @@
 {
   "pageTitle": "小学校教育計画作成・運営システム | Ban.Tai Education Design",
   "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
-  "styleVersion": "education-detail-rebuild-20260613-1",
+  "styleVersion": "education-monitor-pv-20260721-1",
+  "scriptVersion": "education-monitor-pv-20260721-1",
   "bodyClass": "product-detail-page product-detail-education",
   "navLinks": [
     {
@@ -51,18 +52,12 @@
         {
           "label": "無料モニター登録",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
-          "class": "btn btn-primary",
-          "attrs": {
-            "style": "background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;"
-          }
+          "class": "btn btn-primary"
         },
         {
           "label": "機能を見る",
           "href": "#features",
-          "class": "btn btn-light",
-          "attrs": {
-            "style": "background:#fff; color:var(--navy); border:1px solid rgba(7, 27, 54, 0.15);"
-          }
+          "class": "btn btn-light"
         }
       ],
       "imageContainerClass": "education-detail-visual",
@@ -70,6 +65,59 @@
         "src": "/assets/images/education-hero.png",
         "alt": "小学校教育計画作成・運営システムの実際の画面"
       }
+    },
+    {
+      "type": "videoFeature",
+      "id": "official-pv",
+      "class": "education-pv-section",
+      "eyebrow": "OFFICIAL PROMOTION VIDEO",
+      "heading": "約43秒で分かる 小学校教育計画作成・運営システム",
+      "description": "年間教育計画、週案作成、授業時数の集計、提出書類の作成まで。教務と担任の仕事を一つの流れにつなぐ仕組みを、短い動画でご紹介します。",
+      "video": {
+        "src": "/assets/videos/education-planning-monitor-pv.mp4",
+        "poster": "/assets/images/education-planning-pv-poster.jpg",
+        "type": "video/mp4",
+        "fallback": "動画を再生できない場合は、ページ下部の機能説明をご覧ください。"
+      },
+      "meta": [
+        "再生時間：約43秒",
+        "音声があります。周囲の環境にご配慮ください。"
+      ],
+      "actionsClass": "education-pv-actions",
+      "actions": [
+        {
+          "label": "無料モニターに登録する",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "class": "btn btn-primary education-pv-monitor-button",
+          "attrs": {
+            "data-education-event": "education_pv_monitor_click"
+          }
+        }
+      ]
+    },
+    {
+      "type": "audienceCards",
+      "class": "education-audience-section",
+      "eyebrow": "RECOMMENDED FOR",
+      "heading": "このような先生・学校におすすめです",
+      "items": [
+        {
+          "number": "01",
+          "text": "年間指導計画や学校行事を一つの流れで管理したい教務主任・担当の先生"
+        },
+        {
+          "number": "02",
+          "text": "毎週の週案作成と授業実績の記録を、できるだけ簡単にしたい担任の先生"
+        },
+        {
+          "number": "03",
+          "text": "教科ごとの授業時数の不足・超過を早めに確認したい学校"
+        },
+        {
+          "number": "04",
+          "text": "複雑なExcelマクロに頼らず、学校で継続して使える仕組みを探している方"
+        }
+      ]
     },
     {
       "type": "educationWorkflow",
@@ -148,6 +196,20 @@
       ]
     },
     {
+      "type": "educationResourceLink",
+      "class": "education-resource-section",
+      "cardClass": "container education-resource-card",
+      "kickerClass": "education-resource-kicker",
+      "eyebrow": "Related Resources",
+      "heading": "教科書会社の年間指導計画・評価計画資料を確認する",
+      "description": "各教科書会社の公式資料を確認しながら、教育計画システムで週案づくりを進めやすくするためのリンク集です。",
+      "action": {
+        "label": "教科書会社別 年間指導計画リンク集を見る",
+        "href": "/resources/textbook-plans/",
+        "class": "btn btn-light"
+      }
+    },
+    {
       "type": "textCardGrid",
       "class": "vs-excel-section",
       "headingContainerClass": "section-title",
@@ -180,6 +242,56 @@
           "spanText": "04",
           "heading": "週案と教務のシームレスなデータ連携",
           "text": "管理用の教務データと担任用の週案データが同期されるため、面倒なコピー作業は不要です。"
+        }
+      ]
+    },
+    {
+      "type": "monitorProgram",
+      "id": "monitor-program",
+      "class": "education-monitor-section",
+      "eyebrow": "FREE MONITOR PROGRAM",
+      "heading": "無料モニターを募集しています",
+      "description": "実際の学校現場でお使いいただき、操作性や分かりやすさについてご意見をお寄せいただける小学校の先生方を募集しています。",
+      "details": [
+        {
+          "label": "対象",
+          "text": "小学校の教職員、教務主任、管理職、または学校業務改善に関わる方"
+        },
+        {
+          "label": "費用",
+          "text": "無料"
+        },
+        {
+          "label": "利用できる機能",
+          "text": "モニター期間中は対象版の機能を利用可能"
+        },
+        {
+          "label": "お願い",
+          "text": "使用後の簡単なアンケートや感想へのご協力"
+        },
+        {
+          "label": "動作環境",
+          "text": "Windows 10 / Windows 11"
+        },
+        {
+          "label": "通信",
+          "text": "基本機能はオフラインで利用可能"
+        },
+        {
+          "label": "個人情報",
+          "text": "児童・保護者の実名や機密情報を登録フォームやアンケート等へ記載しないようお願いします"
+        },
+        {
+          "label": "期間",
+          "text": "モニター期間は募集案内または登録後の案内をご確認ください"
+        }
+      ],
+      "actionsClass": "education-monitor-actions",
+      "actions": [
+        {
+          "label": "無料モニターに登録する",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "class": "btn btn-primary education-monitor-button"
         }
       ]
     },
@@ -230,24 +342,65 @@
       "containerClass": "container flow-brief-container",
       "heading": "ご利用の流れ",
       "items": [
-        "無料モニター登録フォームから送信します。",
-        "自動返信メールで「固定ライセンスキー」が届きます。",
-        "ご希望のバージョンのZIPをダウンロードします。",
-        "解凍したフォルダ内のアプリを起動し、キーを入力して開始します。"
+        "無料モニター登録フォームを送信",
+        "案内メールとライセンスキーを確認",
+        "希望する版をダウンロードしてZIPを展開",
+        "アプリを起動し、ライセンスキーを入力して利用開始"
       ],
-      "note": "※モニター利用期限は 2027年3月31日予定です。外部へのオンライン認証等は行いません。",
-      "noteStyle": "font-size:0.9rem; color:#666;",
-      "actionsStyle": "margin-top:30px;",
-      "actions": [
+      "note": "モニター期間は募集案内または登録後の案内をご確認ください。Google Driveでプレビューできない表示が出ても、ダウンロードは可能です。ZIPはWindowsの「すべて展開」を使用し、exeだけをフォルダ外へ移動しないでください。",
+      "actions": []
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "class": "education-faq-section",
+      "details": true,
+      "eyebrow": "FAQ",
+      "heading": "よくある質問",
+      "items": [
         {
-          "label": "詳しい登録の流れを読む",
-          "href": "/monitor/",
-          "class": "btn btn-secondary",
-          "attrs": {
-            "style": "border:1px solid rgba(7, 27, 54, 0.15); color:var(--navy); background:#fff;"
-          }
+          "question": "モニター利用に費用はかかりますか？",
+          "answer": "無料です。利用条件と案内内容をご確認のうえ、ご参加ください。"
+        },
+        {
+          "question": "学校の児童情報をインターネットへ送信しますか？",
+          "answer": "基本機能はオフラインで動作します。ただし、登録フォームやファイルのダウンロードにはインターネット接続が必要です。"
+        },
+        {
+          "question": "Excelが入っていなくても使えますか？",
+          "answer": "アプリ本体の利用条件と、Excel形式の出力ファイルを開く場合の条件を分けて、実装内容をご確認のうえで正確に記載してください。未確認で断定しないでください。"
+        },
+        {
+          "question": "教育計画システムと週案システムは別々に使えますか？",
+          "answer": "統合版と単体版が用意されていることを、現在のダウンロード構成に合わせて説明しています。"
+        },
+        {
+          "question": "不具合や改善要望はどこへ連絡しますか？",
+          "answer": "登録後の案内、または公式お問い合わせ窓口から受け付ける旨をご確認ください。"
         }
       ]
+    },
+    {
+      "type": "finalCta",
+      "class": "education-final-cta",
+      "eyebrow": "START WITH BANTAI",
+      "heading": "先生の仕事を少し楽にし、子どもと向き合う時間を少し増やす。",
+      "description": "教育現場40年の経験をもとに、学校で本当に使いやすい道具を目指して改良を続けています。まずは無料モニターとしてお試しください。",
+      "actionsClass": "education-final-actions",
+      "actions": [
+        {
+          "label": "無料モニターに登録する",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "class": "btn btn-primary education-final-monitor-button",
+          "attrs": {
+            "data-education-event": "education_final_monitor_click"
+          }
+        }
+      ],
+      "secondaryLink": {
+        "label": "お問い合わせ",
+        "href": "/contact/"
+      }
     }
   ]
 }
