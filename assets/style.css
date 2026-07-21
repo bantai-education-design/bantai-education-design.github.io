@@ -2713,6 +2713,40 @@ button:focus-visible {
   margin-bottom: 10px;
 }
 
+@media (min-width: 861px) {
+  .product-detail-education .site-header {
+    min-height: 68px;
+  }
+
+  .product-detail-education .nav {
+    min-height: 68px;
+  }
+
+  .product-detail-education .brand {
+    gap: 10px;
+  }
+
+  .product-detail-education .brand img {
+    border-radius: 10px;
+    height: 42px;
+    width: 42px;
+  }
+
+  .product-detail-education .brand span {
+    font-size: 1.08rem;
+    line-height: 1.25;
+  }
+
+  .product-detail-education .menu a {
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+
+  .product-detail-education .menu .mini {
+    padding: 10px 14px;
+  }
+}
+
 .product-detail-education .education-pv-section,
 .product-detail-education .education-audience-section,
 .product-detail-education .education-monitor-section,
@@ -2725,6 +2759,12 @@ button:focus-visible {
   background: linear-gradient(180deg, #15120d 0%, #080808 100%);
   color: #fff;
   padding: 72px 0 76px;
+}
+
+@media (min-width: 861px) {
+  .product-detail-education .education-pv-section {
+    padding-top: 52px;
+  }
 }
 
 .product-detail-education .education-pv-header,
@@ -2780,6 +2820,25 @@ button:focus-visible {
   border-radius: 10px;
   display: block;
   width: 100%;
+}
+
+@media (min-width: 861px) and (max-height: 800px) {
+  .product-detail-education .education-pv-section {
+    padding-top: 48px;
+  }
+
+  .product-detail-education .education-pv-header {
+    margin-bottom: 24px;
+  }
+
+  .product-detail-education .education-pv-frame {
+    max-width: 760px;
+    padding: 8px;
+  }
+
+  .product-detail-education .education-pv-meta {
+    margin-top: 12px;
+  }
 }
 
 .product-detail-education .education-pv-meta {
