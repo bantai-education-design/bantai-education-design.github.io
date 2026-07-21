@@ -71,6 +71,59 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const sendEducationEvent = (eventName, params = {}) => {
+    if (typeof krt === 'function') {
+      krt('send', eventName, params);
+      console.log(`[KARTE Event] ${eventName}`, params);
+    }
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  };
+
+  const pv = document.querySelector('[data-education-pv]');
+  if (pv) {
+    let played = false;
+    let halfway = false;
+    let completed = false;
+
+    pv.addEventListener('play', () => {
+      if (played) return;
+      played = true;
+      sendEducationEvent('education_pv_play', {
+        item_name: '小学校教育計画作成・運営システム - PV再生開始'
+      });
+    });
+
+    pv.addEventListener('timeupdate', () => {
+      if (halfway || !pv.duration || Number.isNaN(pv.duration)) return;
+      if (pv.currentTime / pv.duration >= 0.5) {
+        halfway = true;
+        sendEducationEvent('education_pv_50', {
+          item_name: '小学校教育計画作成・運営システム - PV 50%視聴'
+        });
+      }
+    });
+
+    pv.addEventListener('ended', () => {
+      if (completed) return;
+      completed = true;
+      sendEducationEvent('education_pv_complete', {
+        item_name: '小学校教育計画作成・運営システム - PV完了'
+      });
+    });
+  }
+
+  document.querySelectorAll('[data-education-event]').forEach(element => {
+    element.addEventListener('click', () => {
+      sendEducationEvent(element.dataset.educationEvent, {
+        item_name: (element.textContent || '').trim()
+      });
+    });
+  });
+});
+
 /**
  * リンクのURLやボタンのテキスト、現在のページのタイトルからアプリ名を推測するヘルパー関数
  * @param {string} url - リンク先URL
