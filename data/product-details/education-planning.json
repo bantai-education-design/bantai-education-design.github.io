@@ -196,6 +196,20 @@
       ]
     },
     {
+      "type": "educationResourceLink",
+      "class": "education-resource-section",
+      "cardClass": "container education-resource-card",
+      "kickerClass": "education-resource-kicker",
+      "eyebrow": "Related Resources",
+      "heading": "教科書会社の年間指導計画・評価計画資料を確認する",
+      "description": "各教科書会社の公式資料を確認しながら、教育計画システムで週案づくりを進めやすくするためのリンク集です。",
+      "action": {
+        "label": "教科書会社別 年間指導計画リンク集を見る",
+        "href": "/resources/textbook-plans/",
+        "class": "btn btn-light"
+      }
+    },
+    {
       "type": "textCardGrid",
       "class": "vs-excel-section",
       "headingContainerClass": "section-title",

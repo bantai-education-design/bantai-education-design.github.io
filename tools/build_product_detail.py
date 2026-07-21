@@ -1169,6 +1169,24 @@ def render_education_workflow(section: dict[str, Any], data: dict[str, Any]) -> 
     ])
 
 
+def render_education_resource_link(section: dict[str, Any], data: dict[str, Any]) -> str:
+    action = section["action"]
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "education-resource-section"))}">',
+            f'      <div class="{html_attr(section.get("cardClass", "container education-resource-card"))}">',
+            '        <div>',
+            f'          <p class="{html_attr(section.get("kickerClass", "education-resource-kicker"))}">{html_text(section["eyebrow"])}</p>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            f'          <p>{html_text(section["description"])}</p>',
+            '        </div>',
+            f'        <a class="{html_attr(action.get("class", "btn btn-light"))}" href="{html_attr(action["href"])}">{html_text(action["label"])}</a>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
 def render_education_video_feature(section: dict[str, Any], data: dict[str, Any]) -> str:
     video = section["video"]
     actions = render_actions(section["actions"], spaces=10, class_name=section.get("actionsClass", "education-pv-actions"))
@@ -1351,6 +1369,7 @@ SECTION_RENDERERS = {
     "videoPlaceholder": render_video_placeholder,
     "noticeList": render_notice_list,
     "educationWorkflow": render_education_workflow,
+    "educationResourceLink": render_education_resource_link,
     "videoFeature": render_education_video_feature,
     "audienceCards": render_education_audience_cards,
     "monitorProgram": render_education_monitor_program,
