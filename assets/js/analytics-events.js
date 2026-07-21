@@ -87,8 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let played = false;
     let halfway = false;
     let completed = false;
+    let playbackEnded = false;
+
+    const resetPlaybackTracking = () => {
+      played = false;
+      halfway = false;
+      completed = false;
+      playbackEnded = false;
+    };
 
     pv.addEventListener('play', () => {
+      if (playbackEnded) {
+        resetPlaybackTracking();
+      }
       if (played) return;
       played = true;
       sendEducationEvent('education_pv_play', {
@@ -112,10 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
       sendEducationEvent('education_pv_complete', {
         item_name: '小学校教育計画作成・運営システム - PV完了'
       });
+      playbackEnded = true;
     });
   }
 
   document.querySelectorAll('[data-education-event]').forEach(element => {
+    // Keep the site-wide click_action and these campaign events as separate measurements.
     element.addEventListener('click', () => {
       sendEducationEvent(element.dataset.educationEvent, {
         item_name: (element.textContent || '').trim()
