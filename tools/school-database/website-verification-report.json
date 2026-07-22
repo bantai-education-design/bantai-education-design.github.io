@@ -1,22 +1,22 @@
 {
   "checked_date": "2026-07-23",
-  "phase": "Phase A-1完了 / Phase A継続中",
-  "total_verified_all": 160,
+  "phase": "Phase A-2 (Public & Metropolitan Schools Expansion)",
+  "total_verified_all": 200,
   "saitama": {
     "total_schools": 1932,
     "verified_websites": 131,
     "unverified_websites": 1801,
     "broken_websites": 0,
-    "primary_source": "埼玉県教育委員会「公立高校のホームページ」",
+    "primary_source": "埼玉県教育委員会「公立学校ホームページ」",
     "primary_source_url": "https://www.pref.saitama.lg.jp/e2201/school01.html"
   },
   "tokyo": {
     "total_schools": 3509,
-    "verified_websites": 29,
-    "unverified_websites": 3480,
+    "verified_websites": 69,
+    "unverified_websites": 3440,
     "broken_websites": 0,
-    "primary_source": "東京都教育委員会「都立特別支援学校検索」",
-    "primary_source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
+    "primary_source": "東京都教育委員会「都立学校等一覧」",
+    "primary_source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/high_school/list"
   },
   "reports": [
     {
@@ -1483,6 +1483,50 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立小平特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "小平市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kodaira-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立北特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "北区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kita-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立城南特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "大田区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/jonan-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立村山特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "武蔵村",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/murayama-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立町田の丘学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
@@ -1494,12 +1538,45 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立八王子東特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "八王子市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hachiojihigashi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立大泉特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "練馬区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/oizumi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立多摩桜の丘学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
       "establishment_type": "公立",
       "municipality": "多摩市",
       "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tama-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立墨東特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江東区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/bokuto-sh",
       "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
@@ -1604,12 +1681,243 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立青鳥特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "世田谷区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/seicho-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立王子特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "北区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/oji-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立八王子特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "八王子市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/oji-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立七生特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "日野市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/nanao-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立町田の丘学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
       "establishment_type": "公立",
       "municipality": "東京都",
       "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/machida-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立高島特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "板橋区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/takashima-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立矢口特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "大田区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/yaguchi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立羽村特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "羽村",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hamura-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立調布特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "調布市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/chofu-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立小金井特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "小金井市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/koganei-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立水元特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "葛飾区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/mizumoto-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立墨田特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "墨田区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/sumida-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立江東特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江東区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/koto-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立中野特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "中野区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/nakano-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立足立特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "足立区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/adachi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立清瀬特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "清瀬市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kiyose-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立葛飾特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "葛飾区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/katsushika-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立港特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "港区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/minato-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立石神井特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "練馬区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shakujii-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立白鷺特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江戸川区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shirasagi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立板橋特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "板橋区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/itabashi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立田無特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "西東京市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tanashi-sh",
       "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
@@ -1632,6 +1940,17 @@
       "establishment_type": "公立",
       "municipality": "杉並区",
       "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/eifuku-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立田園調布特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "大田区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/chofu-sh",
       "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
@@ -1681,6 +2000,28 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立品川特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "品川区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shinagawa-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立練馬特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "練馬区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/nerima-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立府中けやきの森学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
@@ -1714,6 +2055,17 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立青山特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "港区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/aoyama-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立鹿本学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
@@ -1736,6 +2088,28 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立城東特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江東区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/joto-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立臨海青海特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江東区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/rinkai-j-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立花畑学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
@@ -1747,12 +2121,45 @@
       "status": "verified"
     },
     {
+      "school_name": "東京都立八王子西特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "八王子市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hachiojinishi-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立東久留米特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "東久留米市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kurume-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
       "school_name": "東京都立立川学園",
       "prefecture": "東京都",
       "school_type": "特別支援学校",
       "establishment_type": "公立",
       "municipality": "立川市",
       "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tachikawa-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立八王子南特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "八王子市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hachiojiminami-sh",
       "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
@@ -1775,6 +2182,39 @@
       "establishment_type": "公立",
       "municipality": "世田谷区",
       "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/komei-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立小平特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "小平市",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kodaira-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立北特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "北区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kita-sh",
+      "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
+      "verification_method": "board_of_education_school_list",
+      "status": "verified"
+    },
+    {
+      "school_name": "東京都立墨東特別支援学校",
+      "prefecture": "東京都",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "municipality": "江東区",
+      "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/bokuto-sh",
       "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
