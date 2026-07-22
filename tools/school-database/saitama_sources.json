@@ -1,0 +1,122 @@
+{
+  "description": "埼玉県学校データベース変換元一覧。file は data-source/saitama/2025/ からの相対パス。",
+  "sources": [
+    {
+      "file": "07-02_01_kouritusyou.xlsx",
+      "school_type": "小学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 公立小学校",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/266682/07-02_01_kouritusyou.xlsx",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_02_01_kenrituchuu.xlsx",
+      "school_type": "中学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 県立中学校",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_02_02_shichousonrituchuu.xlsx",
+      "school_type": "中学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 市町村立中学校",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/266682/07-02_02_02_shichousonrituchuu.xlsx",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_03_gimukyouiku.xlsx",
+      "school_type": "義務教育学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 義務教育学校",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_04_01_kenritukouzennichi.xlsx",
+      "school_type": "高等学校",
+      "establishment_type": "公立",
+      "course": "全日制",
+      "source_name": "令和7年度埼玉県学校便覧 県立高等学校全日制",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/266682/07-02_04_01_kenritukouzennichi.xlsx",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_04_02_shiritukouzennichi.xlsx",
+      "school_type": "高等学校",
+      "establishment_type": "公立",
+      "course": "全日制",
+      "source_name": "令和7年度埼玉県学校便覧 市立高等学校全日制",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_04_03_kenritukouteiji.xlsx",
+      "school_type": "高等学校",
+      "establishment_type": "公立",
+      "course": "定時制",
+      "source_name": "令和7年度埼玉県学校便覧 県立高等学校定時制",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_04_04_shiritukouteiji.xlsx",
+      "school_type": "高等学校",
+      "establishment_type": "公立",
+      "course": "定時制",
+      "source_name": "令和7年度埼玉県学校便覧 市立高等学校定時制",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_04_05_kenritukoutsushin.xlsx",
+      "school_type": "高等学校",
+      "establishment_type": "公立",
+      "course": "通信制",
+      "source_name": "令和7年度埼玉県学校便覧 県立高等学校通信制",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_05_chuutou.xlsx",
+      "school_type": "中等教育学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 中等教育学校",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_06_01_kenritutokusi.xlsx",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 県立特別支援学校",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/266682/07-02_06_01_kenritutokusi.xlsx",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_06_02_shiritutokusi.xlsx",
+      "school_type": "特別支援学校",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 市立特別支援学校",
+      "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2025.html",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "07-02_07_kourituyouchien.xlsx",
+      "school_type": "幼稚園",
+      "establishment_type": "公立",
+      "source_name": "令和7年度埼玉県学校便覧 公立幼稚園",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/266682/07-02_07_kourituyouchien.xlsx",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "r80401-youchien.xlsx",
+      "school_type": "幼稚園",
+      "establishment_type": "私立",
+      "source_name": "埼玉県 私立幼稚園一覧（令和8年4月1日現在）",
+      "source_url": "https://www.pref.saitama.lg.jp/documents/24407/r80401-youchien.xlsx",
+      "source_date": "2026-04-01"
+    }
+  ]
+}
