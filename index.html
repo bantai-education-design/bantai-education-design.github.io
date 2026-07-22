@@ -72,7 +72,7 @@
         <a class="active" href="/">ホーム</a>
         <a href="/#school-work-core">学校業務支援</a>
         <a href="/#music-tools-core">五線紙・音楽教材</a>
-        <a href="/tools/tokyo-school-address/">学校宛先DB</a>
+        <a href="/tools/school-database/">学校宛先DB</a>
         <a href="/#products">その他の製品</a>
         <a href="/#free-tools">無料ツール</a>
         <a href="/contact/">サポート</a>
@@ -114,7 +114,7 @@
     </section>
 
   <!-- ==================================================
-    東京都学校宛先データベース — 独立導線
+    全国学校宛先データベース — 独立導線
     ヒーロー直下に配置。無料ツール群・製品一覧とは別扱い。
   =================================================== -->
   <section id="school-address-db" style="background:linear-gradient(135deg,#071b36 0%,#0f2a4a 60%,#162540 100%); padding:64px 0; border-bottom:3px solid var(--gold);">
@@ -126,55 +126,20 @@
 
           <!-- バッジ行 -->
           <div style="display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px;">
-            <span style="background:var(--gold); color:#071b36; font-size:0.68rem; font-weight:900; padding:4px 12px; border-radius:99px; letter-spacing:0.06em;">東京都内 3,509校・園（順次拡張中）</span>
+            <span style="background:var(--gold); color:#071b36; font-size:0.68rem; font-weight:900; padding:4px 12px; border-radius:99px; letter-spacing:0.06em;">全国学校データベース（東京都・埼玉県対応）</span>
             <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">CSV対応</span>
             <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">宛名コピー</span>
-            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">ブラウザで利用可</span>
+            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">Google Maps連携</span>
           </div>
 
-          <h2 style="color:#fff; font-size:clamp(1.3rem,2.6vw,1.75rem); font-weight:700; margin:0 0 10px; line-height:1.35;">東京都学校宛先データベース</h2>
+          <h2 style="color:#fff; font-size:clamp(1.3rem,2.6vw,1.75rem); font-weight:700; margin:0 0 10px; line-height:1.35;">Ban.Tai 全国学校データベース</h2>
           <p style="color:var(--gold2); font-size:0.88rem; font-weight:600; margin:0 0 14px;">学校封筒印刷・宛名作成に使える、Ban.Tai公式HPの無料学校データベース</p>
-          <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 16px;">東京都教育委員会や東京都生活文化スポーツ局の公開データをもとに、東京都の学校・園の住所や電話番号を検索できます。学校名・区市町村・学校種・設置区分で絞り込み、封筒宛名形式でのコピーやCSVダウンロードが可能です。</p>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 20px;">各都道府県教育委員会等の公式公開データをもとに、学校・園の住所や電話番号を検索できます。東京都（3,509校・園）に加え、新たに埼玉県（1,929校・園）をサポート。都道府県・自治体・学校種・設置区分で絞り込み、封筒宛名コピーやCSVダウンロード、Google Maps連携が可能です。</p>
 
-          <!-- 収録範囲の表 -->
-          <table style="width:100%; max-width:440px; border-collapse:collapse; margin:0 0 24px; font-size:0.76rem; color:rgba(255,255,255,0.85); background:rgba(0,0,0,0.25); border-radius:8px; overflow:hidden; border:1px solid rgba(197,160,89,0.3); text-align:left;">
-            <thead>
-              <tr style="background:rgba(197,160,89,0.15); border-bottom:1px solid rgba(197,160,89,0.3); font-weight:bold; color:var(--gold2);">
-                <th style="padding:6px 12px;">学校種別</th>
-                <th style="padding:6px 12px; text-align:center;">公立</th>
-                <th style="padding:6px 12px; text-align:center;">私立</th>
-                <th style="padding:6px 12px; text-align:center;">国立</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                <td style="padding:6px 12px; font-weight:bold;">幼稚園</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (148園)</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (733園)</td>
-                <td style="padding:6px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-              </tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                <td style="padding:6px 12px; font-weight:bold;">小学校・中学校・義務教育</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (1,869校)</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (238校)</td>
-                <td style="padding:6px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-              </tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                <td style="padding:6px 12px; font-weight:bold;">高等学校・中等教育</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (193校)</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (244校)</td>
-                <td style="padding:6px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-              </tr>
-              <tr>
-                <td style="padding:6px 12px; font-weight:bold;">特別支援学校</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (80校)</td>
-                <td style="padding:6px 12px; text-align:center; color:#2ecc71;">✓ (4校)</td>
-                <td style="padding:6px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <a class="btn btn-primary" href="/tools/tokyo-school-address/" style="font-size:0.9rem; padding:13px 30px;">東京都学校宛先データベースを開く</a>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+            <a class="btn btn-primary" href="/tools/school-database/" style="font-size:0.9rem; padding:13px 26px;">全国データベース（都道府県選択）を開く</a>
+            <a class="btn btn-secondary" href="/tools/school-database/saitama/" style="font-size:0.9rem; padding:13px 24px; background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.3);">埼玉県版を開く</a>
+          </div>
         </div>
 
         <!-- プレビューカード -->

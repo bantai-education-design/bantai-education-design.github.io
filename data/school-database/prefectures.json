@@ -1,0 +1,17 @@
+[
+  {
+    "id": "tokyo",
+    "name": "東京都",
+    "url": "/tools/school-database/tokyo/",
+    "legacy_url": "/tools/tokyo-school-address/",
+    "count": 3509,
+    "available": true
+  },
+  {
+    "id": "saitama",
+    "name": "埼玉県",
+    "url": "/tools/school-database/saitama/",
+    "count": 1929,
+    "available": true
+  }
+]
