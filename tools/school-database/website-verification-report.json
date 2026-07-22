@@ -1,8 +1,21 @@
 {
   "checked_date": "2026-07-23",
-  "phase": "Phase A (Official Lists Direct)",
-  "saitama_verified": 131,
-  "saitama_unverified": 1801,
-  "tokyo_verified": 29,
-  "tokyo_unverified": 3480
+  "phase": "Phase A-1完了 / Phase A継続中",
+  "saitama": {
+    "total_schools": 1932,
+    "verified_websites": 131,
+    "unverified_websites": 1801,
+    "broken_websites": 0,
+    "source": "埼玉県教育委員会「公立高校のホームページ」",
+    "source_url": "https://www.pref.saitama.lg.jp/e2201/school01.html"
+  },
+  "tokyo": {
+    "total_schools": 3509,
+    "verified_websites": 29,
+    "unverified_websites": 3480,
+    "broken_websites": 0,
+    "source": "東京都教育委員会「都立特別支援学校検索」",
+    "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
+  },
+  "total_verified_all": 160
 }

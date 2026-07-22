@@ -244,6 +244,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
+      // 地図ボタンのイベント登録 (GA4: school_map)
+      const mapBtn = card.querySelector('.btn-map');
+      if (mapBtn) {
+        mapBtn.addEventListener('click', () => {
+          trackEvent('school_map', {
+            prefecture: 'tokyo',
+            school_type: school.school_type,
+            establishment_type: school.establishment_type || '公立',
+            municipality: school.municipality
+          });
+        });
+      }
+
       // 公式HPボタンのイベント登録 (GA4: school_website_open)
       const websiteBtn = card.querySelector('.btn-website');
       if (websiteBtn) {
@@ -397,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Excel文字化け防止のためBOM付与
     let csvContent = '\ufeff';
     // ヘッダー
-    csvContent += '"学校種別","設置区分","区市町村","学校名","学校名（ふりがな）","郵便番号","所在地","電話番号","デフォルト宛名","用途タグ"\n';
+    csvContent += '"学校種別","設置区分","区市町村","学校名","学校名（ふりがな）","郵便番号","所在地","電話番号","デフォルト宛名","用途タグ","公式ホームページ"\n';
 
     data.forEach(item => {
       const row = [
@@ -410,7 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
         item.address || '',
         item.phone || '',
         item.addressee_default || '',
-        (item.tags || []).join(',')
+        (item.tags || []).join(','),
+        item.website || ''
       ].map(val => `"${(val || '').replace(/"/g, '""')}"`); // ダブルクォーテーションエスケープ
 
       csvContent += row.join(',') + '\n';
