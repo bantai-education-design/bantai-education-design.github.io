@@ -1,7 +1,7 @@
 {
   "pageTitle": "小学校教育計画作成・運営システム | Ban.Tai Education Design",
   "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
-  "styleVersion": "education-compact-header-pv-20260721-1",
+  "styleVersion": "education-monitor-conversion-phase1-20260722-1",
   "scriptVersion": "education-monitor-pv-20260721-1",
   "bodyClass": "product-detail-page product-detail-education",
   "navLinks": [
@@ -50,7 +50,7 @@
       "lead": "年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。",
       "actions": [
         {
-          "label": "無料モニター登録",
+          "label": "無料モニターに登録して試してみる",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
           "class": "btn btn-primary"
         },
@@ -83,17 +83,29 @@
         "再生時間：約43秒",
         "音声があります。周囲の環境にご配慮ください。"
       ],
+      "assurance": [
+        "完全無料",
+        "Windows 10・11対応",
+        "基本機能はオフラインで利用可能"
+      ],
+      "quickFlow": [
+        "登録",
+        "案内メールを確認",
+        "ダウンロード",
+        "利用開始"
+      ],
       "actionsClass": "education-pv-actions",
       "actions": [
         {
-          "label": "無料モニターに登録する",
+          "label": "無料モニターに登録して試してみる",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
           "class": "btn btn-primary education-pv-monitor-button",
           "attrs": {
             "data-education-event": "education_pv_monitor_click"
           }
         }
-      ]
+      ],
+      "actionNote": "登録後、案内メールとライセンスキーを確認し、アプリをダウンロードしてご利用いただけます。"
     },
     {
       "type": "audienceCards",
@@ -259,7 +271,8 @@
         },
         {
           "label": "費用",
-          "text": "無料"
+          "text": "無料",
+          "class": "education-monitor-detail-highlight"
         },
         {
           "label": "利用できる機能",
@@ -289,7 +302,7 @@
       "actionsClass": "education-monitor-actions",
       "actions": [
         {
-          "label": "無料モニターに登録する",
+          "label": "無料モニターに登録して試してみる",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
           "class": "btn btn-primary education-monitor-button"
         }
@@ -389,7 +402,7 @@
       "actionsClass": "education-final-actions",
       "actions": [
         {
-          "label": "無料モニターに登録する",
+          "label": "無料モニターに登録して試してみる",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
           "class": "btn btn-primary education-final-monitor-button",
           "attrs": {
@@ -397,6 +410,7 @@
           }
         }
       ],
+      "actionNote": "登録フォーム送信後、案内メールをご確認ください。登録だけで料金が発生することはありません。",
       "secondaryLink": {
         "label": "お問い合わせ",
         "href": "/contact/"

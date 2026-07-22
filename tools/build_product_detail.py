@@ -1200,6 +1200,35 @@ def render_education_video_feature(section: dict[str, Any], data: dict[str, Any]
                 '          </div>',
             ]
         )
+    assurance_html = ""
+    if section.get("assurance"):
+        assurance_html = "\n".join(
+            [
+                '          <div class="education-pv-assurance">',
+                *[
+                    f'            <span class="education-pv-assurance-item">{html_text(item)}</span>'
+                    for item in section["assurance"]
+                ],
+                '          </div>',
+            ]
+        )
+    quick_flow_html = ""
+    if section.get("quickFlow"):
+        flow_parts = []
+        for index, item in enumerate(section["quickFlow"]):
+            flow_parts.append(f'            <span class="education-pv-quick-flow-step">{html_text(item)}</span>')
+            if index < len(section["quickFlow"]) - 1:
+                flow_parts.append('            <span class="education-pv-quick-flow-arrow" aria-hidden="true">→</span>')
+        quick_flow_html = "\n".join(
+            [
+                '          <div class="education-pv-quick-flow">',
+                *flow_parts,
+                '          </div>',
+            ]
+        )
+    action_note_html = ""
+    if section.get("actionNote"):
+        action_note_html = f'          <p class="education-pv-action-note">{html_text(section["actionNote"])}</p>'
     fallback = video.get("fallback", "動画を再生できない場合は、ページ下部の機能説明をご覧ください。")
     return "\n".join(
         [
@@ -1218,7 +1247,10 @@ def render_education_video_feature(section: dict[str, Any], data: dict[str, Any]
             '          </video>',
             '        </div>',
             meta_html,
+            assurance_html,
+            quick_flow_html,
             actions,
+            action_note_html,
             '      </div>',
             '    </section>',
         ]
@@ -1259,7 +1291,7 @@ def render_education_monitor_program(section: dict[str, Any], data: dict[str, An
     details = "\n".join(
         "\n".join(
             [
-                '            <li>',
+                f'            <li{render_attrs({"class": item["class"]}) if item.get("class") else ""}>',
                 f'              <strong>{html_text(item["label"])}</strong>',
                 f'              <span>{html_text(item["text"])}</span>',
                 '            </li>',
@@ -1291,6 +1323,9 @@ def render_education_monitor_program(section: dict[str, Any], data: dict[str, An
 
 def render_education_final_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
     actions = render_actions(section["actions"], spaces=10, class_name=section.get("actionsClass", "education-final-actions"))
+    action_note = ""
+    if section.get("actionNote"):
+        action_note = f'        <p class="education-final-action-note">{html_text(section["actionNote"])}</p>'
     secondary = ""
     if section.get("secondaryLink"):
         link = section["secondaryLink"]
@@ -1303,6 +1338,7 @@ def render_education_final_cta(section: dict[str, Any], data: dict[str, Any]) ->
             f'        <h2>{html_text(section["heading"])}</h2>',
             f'        <p>{html_text(section["description"])}</p>',
             actions,
+            *([action_note] if action_note else []),
             *([secondary] if secondary else []),
             '      </div>',
             '    </section>',
