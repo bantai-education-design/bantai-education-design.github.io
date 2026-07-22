@@ -1,4 +1,31 @@
-/* 宛先検索ツール専用スタイル */
+/* 都道府県選択画面へ戻るボタン */
+.prefecture-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  min-height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fffdf5;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  border-radius: 99px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.prefecture-back-link:hover,
+.prefecture-back-link:focus-visible {
+  background: var(--gold, #c5a059);
+  color: #0c1b33;
+  border-color: var(--gold, #c5a059);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+  outline: 2px solid var(--gold, #c5a059);
+  outline-offset: 2px;
+}
 
 .search-section {
   background: var(--ivory);
