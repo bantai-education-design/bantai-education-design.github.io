@@ -367,6 +367,36 @@
   fill: currentColor;
 }
 
+.btn-website {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  min-height: 40px;
+  border: 1px solid rgba(12, 27, 51, 0.2);
+  border-radius: 6px;
+  background: #f8fafc;
+  color: var(--navy, #0c1b33);
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-website:hover {
+  background: var(--navy, #0c1b33);
+  color: #ffffff;
+  border-color: var(--navy, #0c1b33);
+}
+
+.btn-website svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
 .copy-preview {
   background: rgba(7, 27, 54, 0.03);
   border: 1px dashed rgba(7, 27, 54, 0.12);
