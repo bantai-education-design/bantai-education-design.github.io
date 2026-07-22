@@ -58,7 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 専用イベントは増やさず、サイト共通の click_action として計測する。
     else if (
       element.classList.contains('showcase-panel-link') ||
-      element.classList.contains('category-card-media-link')
+      element.classList.contains('category-card-media-link') ||
+      element.classList.contains('feature-image-link') ||
+      element.classList.contains('product-card-image-link')
     ) {
       let appName = getAppNameFromContext(href, text);
       itemName = `${appName} - 詳細ページ遷移`;
