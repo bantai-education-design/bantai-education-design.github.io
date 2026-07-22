@@ -295,6 +295,63 @@
   color: #fff;
 }
 
+.btn-map svg {
+  width: 15px;
+  height: 15px;
+  fill: #e74c3c;
+}
+
+.btn-website {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  min-height: 40px;
+  border: 1px solid rgba(7, 27, 54, 0.2);
+  border-radius: 6px;
+  background: #f8fafc;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-website:hover {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+}
+
+.btn-website svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.btn-back-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-back-portal:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
 .btn-copy svg {
   width: 16px;
   height: 16px;
