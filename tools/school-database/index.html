@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ban.Tai 全国学校データベース | 都道府県選択</title>
+  <meta name="description" content="学校封筒印刷・宛名作成に使える、全国の学校宛先データベースのポータルページです。東京都版（3,509校・園）および埼玉県版（1,929校・園）を公開中。学校名・住所・電話番号検索、宛名コピー、CSV出力、Google Maps連携に対応。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/css/school-database.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a class="active" href="/tools/school-database/">学校宛先DB</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/products/">すべての製品を見る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="kicker">Free Web Tool</div>
+        <h1>Ban.Tai 全国学校データベース</h1>
+        <p class="lead">学校封筒印刷・宛名作成・広域連携に使える、全国の学校宛先データベースです。都道府県を選択してご利用ください。</p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        
+        <h2 style="font-size:1.4rem; color:var(--navy,#0c1b33); border-bottom:2px solid var(--gold,#c5a059); padding-bottom:10px; margin-bottom:24px;">都道府県を選択</h2>
+
+        <div class="prefectures-grid">
+          
+          <!-- 東京都カード -->
+          <div class="pref-card active-card">
+            <div>
+              <div class="pref-card-header">
+                <span class="pref-badge">公開中</span>
+                <span style="font-size:0.8rem; color:#718096;">公式データ準拠</span>
+              </div>
+              <h2>東京都</h2>
+              <div class="pref-count">収録数: 3,509 校・園</div>
+              <ul class="pref-features">
+                <li>公立・私立の小・中・高校・特別支援・幼稚園</li>
+                <li>区市町村・校種・設置区分フィルター</li>
+                <li>ワンクリック宛名コピー（敬称選択）</li>
+                <li>検索結果CSVダウンロード・Google Maps連携</li>
+              </ul>
+            </div>
+            <div>
+              <a href="/tools/tokyo-school-address/" class="pref-action-btn">東京都データベースを開く</a>
+            </div>
+          </div>
+
+          <!-- 埼玉県カード -->
+          <div class="pref-card active-card">
+            <div>
+              <div class="pref-card-header">
+                <span class="pref-badge" style="background:#27ae60;">NEW</span>
+                <span style="font-size:0.8rem; color:#718096;">令和8年度版更新</span>
+              </div>
+              <h2>埼玉県</h2>
+              <div class="pref-count">収録数: 1,929 校・園</div>
+              <ul class="pref-features">
+                <li>公立・私立の小・中・高校・特別支援・幼稚園</li>
+                <li>市町村・校種・設置区分フィルター</li>
+                <li>ワンクリック宛名コピー（敬称選択）</li>
+                <li>検索結果CSVダウンロード・Google Maps連携</li>
+              </ul>
+            </div>
+            <div>
+              <a href="/tools/school-database/saitama/" class="pref-action-btn">埼玉県データベースを開く</a>
+            </div>
+          </div>
+
+          <!-- 他都道府県 カード（順次拡張） -->
+          <div class="pref-card" style="opacity:0.75; background:#fafafa;">
+            <div>
+              <div class="pref-card-header">
+                <span class="pref-badge" style="background:#718096;">順次拡張予定</span>
+              </div>
+              <h2 style="color:#718096;">全国他都道府県</h2>
+              <div class="pref-count" style="color:#a0aec0;">準備中</div>
+              <p style="font-size:0.88rem; color:#718096; line-height:1.6;">
+                神奈川県、千葉県をはじめ全国都道府県の学校宛先データベースを順次追加予定です。
+              </p>
+            </div>
+            <div>
+              <button disabled class="pref-action-btn" style="background:#cbd5e0; cursor:not-allowed; border:none; width:100%;">順次追加予定</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- データベース概要案内 -->
+        <div style="margin-top:50px; background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(7,27,54,0.04);">
+          <h3 style="margin-top:0; color:var(--navy,#0c1b33); font-size:1.15rem;">Ban.Tai 全国学校データベースの特徴</h3>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; margin-top:16px;">
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">① 公式データ完全準拠</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">各都道府県教育委員会および学事課の最新公式公開データのみを使用。民間サイトによる未検証データは含みません。</span>
+            </div>
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">② 封筒宛名コピー機能</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">「御中」「校長先生」「園長先生」などの敬称を選択し、郵便番号・住所・宛名をワンクリックでコピーできます。</span>
+            </div>
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">③ CSV出力＆Maps連携</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">絞り込んだ検索結果のみをExcel互換（UTF-8 BOM付き）CSVとしてダウンロード可能。Google Maps連携で所在地確認も簡単です。</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Ban.Tai Education Design</h2>
+        <p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p>
+      </div>
+      <div>
+        <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+        <p><a href="/legal/">利用規約・免責事項</a></p>
+      </div>
+    </div>
+    <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
