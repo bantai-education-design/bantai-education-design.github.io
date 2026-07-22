@@ -54,6 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
       itemName = `${appName} - ${actionType}`;
     }
 
+    // --- 4. 製品画像から詳細ページへの遷移の判定 ---
+    // 専用イベントは増やさず、サイト共通の click_action として計測する。
+    else if (
+      element.classList.contains('showcase-panel-link') ||
+      element.classList.contains('category-card-media-link') ||
+      element.classList.contains('feature-image-link') ||
+      element.classList.contains('product-card-image-link')
+    ) {
+      let appName = getAppNameFromContext(href, text);
+      itemName = `${appName} - 詳細ページ遷移`;
+    }
+
     // イベントが特定できた場合のみ、クリックリスナーを登録
     if (itemName) {
       element.addEventListener('click', () => {
