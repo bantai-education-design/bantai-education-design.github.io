@@ -1,4 +1,4 @@
-// 埼玉県学校宛先データベース - 検索制御用JS (assets/js/school-database/search-saitama.js)
+// 埼玉県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-saitama.js)
 
 document.addEventListener('DOMContentLoaded', () => {
   let schoolData = [];
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const keywordInput = document.getElementById('keyword');
   const citySelect = document.getElementById('city');
+  const sortSelect = document.getElementById('sort-order');
   const typeCheckboxes = document.querySelectorAll('.type-checkbox');
   const estCheckboxes = document.querySelectorAll('.est-checkbox');
   const resultsContainer = document.getElementById('results-list');
@@ -31,6 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     '美里町', '神川町', '上里町', '寄居町', '宮代町', '杉戸町', '松伏町'
   ];
 
+  const SCHOOL_TYPE_ORDER = [
+    '幼稚園', '小学校', '中学校', '義務教育学校', '高等学校', '中等教育学校', '特別支援学校'
+  ];
+
+  const ESTABLISHMENT_TYPE_ORDER = [
+    '公立', '私立'
+  ];
+
   // 1. 埼玉県データの読み込み
   fetch('/data/school-database/saitama.json')
     .then(response => {
@@ -41,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       schoolData = data;
-      currentFilteredResults = data;
       initCitySelect(data);
       performSearch();
     })
@@ -63,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         citySelect.appendChild(option);
       }
     });
-    // 万一リストに含まれない自治体があれば末尾に追加
     availableCities.forEach(city => {
       if (!MUNICIPALITY_ORDER.includes(city)) {
         const option = document.createElement('option');
@@ -74,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. イベントリスナーの登録 (GA4規約遵守: 入力文字列は絶対送信しない)
+  // 3. イベントリスナーの登録
   let searchTimeout;
   if (keywordInput) {
     keywordInput.addEventListener('input', () => {
@@ -95,6 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
       performSearch();
       trackEvent('school_filter', {
         'filter_type': 'municipality',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'sort_order',
+        'sort_order': sortSelect.value,
         'results_count': currentFilteredResults.length
       });
     });
@@ -127,11 +145,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. 検索フィルタリング
+  // 4. 並び替えロジック
+  function applySorting(items, mode = 'admin') {
+    const sorted = [...items];
+    sorted.sort((a, b) => {
+      if (mode === 'admin') {
+        // ① 市町村 (行政順)
+        const mIdxA = MUNICIPALITY_ORDER.indexOf(a.municipality);
+        const mIdxB = MUNICIPALITY_ORDER.indexOf(b.municipality);
+        const mDiff = (mIdxA >= 0 ? mIdxA : 999) - (mIdxB >= 0 ? mIdxB : 999);
+        if (mDiff !== 0) return mDiff;
+
+        // ② 校種 (幼稚園 -> 小学校 -> 中学校 -> 義務教育 -> 高校 -> 中等 -> 特別支援)
+        const tIdxA = SCHOOL_TYPE_ORDER.indexOf(a.school_type);
+        const tIdxB = SCHOOL_TYPE_ORDER.indexOf(b.school_type);
+        const tDiff = (tIdxA >= 0 ? tIdxA : 999) - (tIdxB >= 0 ? tIdxB : 999);
+        if (tDiff !== 0) return tDiff;
+
+        // ③ 設置区分 (公立 -> 私立)
+        const eIdxA = ESTABLISHMENT_TYPE_ORDER.indexOf(a.establishment_type);
+        const eIdxB = ESTABLISHMENT_TYPE_ORDER.indexOf(b.establishment_type);
+        const eDiff = (eIdxA >= 0 ? eIdxA : 999) - (eIdxB >= 0 ? eIdxB : 999);
+        if (eDiff !== 0) return eDiff;
+
+        // ④ 学校名 (五十音順)
+        const nameA = a.school_name_kana || a.school_name;
+        const nameB = b.school_name_kana || b.school_name;
+        return nameA.localeCompare(nameB, 'ja');
+      } else if (mode === 'name') {
+        const nameA = a.school_name_kana || a.school_name;
+        const nameB = b.school_name_kana || b.school_name;
+        return nameA.localeCompare(nameB, 'ja');
+      } else if (mode === 'zip') {
+        return (a.postal_code || '').localeCompare(b.postal_code || '');
+      } else if (mode === 'est') {
+        const eIdxA = ESTABLISHMENT_TYPE_ORDER.indexOf(a.establishment_type);
+        const eIdxB = ESTABLISHMENT_TYPE_ORDER.indexOf(b.establishment_type);
+        const eDiff = (eIdxA >= 0 ? eIdxA : 999) - (eIdxB >= 0 ? eIdxB : 999);
+        if (eDiff !== 0) return eDiff;
+        const nameA = a.school_name_kana || a.school_name;
+        const nameB = b.school_name_kana || b.school_name;
+        return nameA.localeCompare(nameB, 'ja');
+      } else if (mode === 'type') {
+        const tIdxA = SCHOOL_TYPE_ORDER.indexOf(a.school_type);
+        const tIdxB = SCHOOL_TYPE_ORDER.indexOf(b.school_type);
+        const tDiff = (tIdxA >= 0 ? tIdxA : 999) - (tIdxB >= 0 ? tIdxB : 999);
+        if (tDiff !== 0) return tDiff;
+        const nameA = a.school_name_kana || a.school_name;
+        const nameB = b.school_name_kana || b.school_name;
+        return nameA.localeCompare(nameB, 'ja');
+      }
+      return 0;
+    });
+    return sorted;
+  }
+
+  // 5. 検索処理の本体
   function performSearch() {
     displayedCount = 100;
-    const keyword = keywordInput.value.trim().toLowerCase();
-    const selectedCity = citySelect.value;
+    const keyword = keywordInput ? keywordInput.value.trim().toLowerCase() : '';
+    const selectedCity = citySelect ? citySelect.value : '';
+    const sortMode = sortSelect ? sortSelect.value : 'admin';
     
     const checkedTypes = Array.from(typeCheckboxes)
       .filter(cb => cb.checked)
@@ -157,11 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return matchesKeyword && matchesCity && matchesType && matchesEst;
     });
 
-    currentFilteredResults = filtered;
-    renderResults(filtered);
+    const sortedResults = applySorting(filtered, sortMode);
+    currentFilteredResults = sortedResults;
+    renderResults(sortedResults);
   }
 
-  // 5. 検索結果のレンダリング
+  // 6. 検索結果の描画
   function renderResults(results) {
     resultsContainer.innerHTML = '';
     countSpan.textContent = results.length.toLocaleString();
@@ -212,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      // コピーボタンイベント
       const copyBtn = card.querySelector('.btn-copy');
       copyBtn.addEventListener('click', () => {
         const textToCopy = formatAddress(school, selectedHonorific);
@@ -223,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // Google Mapsボタンイベント
       const mapBtn = card.querySelector('.btn-map');
       mapBtn.addEventListener('click', () => {
         trackEvent('school_map', {
@@ -237,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resultsContainer.appendChild(fragment);
 
-    // さらに表示ボタン
     if (results.length > displayedCount) {
       const showMoreContainer = document.createElement('div');
       showMoreContainer.className = 'show-more-container';
@@ -264,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 6. プレビュー更新
+  // 7. プレビュー更新
   function updatePreviews() {
     resultsContainer.querySelectorAll('.school-card').forEach(card => {
       const copyBtn = card.querySelector('.btn-copy');
@@ -278,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. 住所フォーマット
+  // 8. 住所フォーマット
   function formatAddress(school, honorific) {
     let nameWithHonorific = '';
     if (honorific === '御中') {
@@ -300,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return `〒${school.postal_code}\n${school.address}\n${nameWithHonorific}`;
   }
 
-  // 8. クリップボード機能
+  // 9. クリップボード機能
   function copyToClipboard(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text)
@@ -346,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   }
 
-  // 9. CSVダウンロード (Phase 8: 数式インジェクション対策 & UTF-8 BOM & 検索結果のみ)
+  // 10. CSVダウンロード
   const downloadBtn = document.getElementById('csv-download-btn');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', (e) => {
@@ -365,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    let csvContent = '\ufeff'; // UTF-8 BOM
+    let csvContent = '\ufeff';
     csvContent += '"都道府県","市町村","設置区分","学校種別","学校名","学校名（かな）","郵便番号","所在地","電話番号","出典元"\n';
 
     data.forEach(item => {
@@ -397,17 +469,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.removeChild(link);
   }
 
-  // 数式インジェクション対策 (Formula Injection Protection)
   function sanitizeForCSV(val) {
     if (val === null || val === undefined) val = '';
-    let str = String(val).trim();
+    let str = String(val).strip ? String(val).trim() : String(val);
     if (str.startsWith('=') || str.startsWith('+') || str.startsWith('-') || str.startsWith('@')) {
-      str = "'" + str; // 前置シングルクォートで数式実行を防止
+      str = "'" + str;
     }
     return `"${str.replace(/"/g, '""')}"`;
   }
 
-  // 10. GA4 イベント送信
+  // 11. GA4 イベント送信
   function trackEvent(eventName, params = {}) {
     if (typeof gtag === 'function') {
       gtag('event', eventName, params);
@@ -415,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 11. 上に戻るボタン
+  // 12. 上に戻るボタン
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {

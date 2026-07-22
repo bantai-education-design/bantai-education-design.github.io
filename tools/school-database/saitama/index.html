@@ -136,7 +136,7 @@
           <h2 class="search-title">検索条件を指定</h2>
           <form id="search-form" onsubmit="return false;">
             
-            <div class="search-form-grid">
+            <div class="search-form-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
               <div class="form-group">
                 <label for="keyword">キーワードで検索</label>
                 <input type="text" id="keyword" class="form-control" placeholder="学校名・かな・市町村・郵便番号・住所・電話番号">
@@ -145,6 +145,16 @@
                 <label for="city">市町村を選択</label>
                 <select id="city" class="form-control">
                   <option value="">すべての市町村</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sort-order">並び順</label>
+                <select id="sort-order" class="form-control">
+                  <option value="admin" selected>行政順（初期値）</option>
+                  <option value="name">学校名順（五十音順）</option>
+                  <option value="zip">郵便番号順</option>
+                  <option value="est">公立・私立順</option>
+                  <option value="type">校種順</option>
                 </select>
               </div>
             </div>
