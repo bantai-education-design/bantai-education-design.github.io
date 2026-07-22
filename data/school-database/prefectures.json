@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "prefectures": [
+    {
+      "id": "tokyo",
+      "name": "東京都",
+      "status": "published",
+      "dataUrl": "/data/tokyo_public_schools_address_2025.json",
+      "pageUrl": "/tools/tokyo-school-address/",
+      "municipalityLabel": "区市町村",
+      "sourceYear": "令和7年度・令和8年度の各最新資料",
+      "publishedCount": 3509
+    },
+    {
+      "id": "saitama",
+      "name": "埼玉県",
+      "status": "preparing",
+      "dataUrl": "/data/school-database/saitama.json",
+      "pageUrl": "/tools/saitama-school-address/",
+      "municipalityLabel": "市町村",
+      "sourceYear": "令和7年度",
+      "publishedCount": 0
+    }
+  ]
+}
