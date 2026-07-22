@@ -189,25 +189,34 @@ document.addEventListener('DOMContentLoaded', () => {
       const copyText = formatAddress(school, selectedHonorific);
       const schoolId = `school-2025-${index}`;
 
+      const mapQuery = encodeURIComponent(`${school.school_name} ${school.address}`);
+      const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+
       card.innerHTML = `
         <div class="school-info">
           <div class="school-badges">
-            <span class="school-badge-type">${school.school_type}</span>
-            <span class="school-badge-city">${school.municipality}</span>
+            <span class="school-badge-type">${escapeHtml(school.school_type)}</span>
+            <span class="school-badge-city">${escapeHtml(school.municipality)}</span>
           </div>
-          <h3 class="school-name">${school.school_name}</h3>
+          <h3 class="school-name">${escapeHtml(school.school_name)}</h3>
           <div class="school-address-row">
-            <span class="zip">〒${school.postal_code}</span>
-            <span class="addr">${school.address}</span>
+            <span class="zip">〒${escapeHtml(school.postal_code)}</span>
+            <span class="addr">${escapeHtml(school.address)}</span>
           </div>
-          <div class="school-tel-row">TEL: ${school.phone}</div>
+          <div class="school-tel-row">TEL: ${escapeHtml(school.phone)}</div>
         </div>
         <div class="school-actions">
-          <button class="btn-copy" data-id="${schoolId}" data-index="${index}" type="button">
-            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            住所コピー
-          </button>
-          <div class="copy-preview" id="preview-${schoolId}">${copyText}</div>
+          <div class="action-buttons-group">
+            <button class="btn-copy" data-id="${schoolId}" data-index="${index}" type="button">
+              <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              住所コピー
+            </button>
+            <a class="btn-map" href="${mapUrl}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(school.school_name)}をGoogle Mapsで開く" title="Google Mapsで場所を確認">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              地図
+            </a>
+          </div>
+          <div class="copy-preview" id="preview-${schoolId}">${escapeHtml(copyText)}</div>
         </div>
       `;
 
@@ -221,6 +230,17 @@ document.addEventListener('DOMContentLoaded', () => {
         trackEvent('school_address_copy', {
           'school_name': school.school_name,
           'honorific': selectedHonorific
+        });
+      });
+
+      // 地図ボタンのイベント登録 (GA4: school_map)
+      const mapBtn = card.querySelector('.btn-map');
+      mapBtn.addEventListener('click', () => {
+        trackEvent('school_map', {
+          prefecture: 'tokyo',
+          school_type: school.school_type,
+          establishment_type: school.establishment_type || '公立',
+          municipality: school.municipality
         });
       });
 
@@ -438,5 +458,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     backToTopBtn.addEventListener('click', scrollToPageTop);
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 });
