@@ -268,12 +268,8 @@
         "記号・音符なぞり書き用紙や見やすい五線紙",
         "4歳から8歳くらいの子ども、保護者、音楽教室向け"
       ],
-      "image": "/assets/images/first-staff-paper-card-v2.jpg",
+      "image": "/assets/images/first-staff-paper-thumbnail.png",
       "imageAlt": "Ban.Tai はじめての五線紙メーカー",
-      "imageWidth": 600,
-      "imageHeight": 600,
-      "imageLoading": "eager",
-      "imageDecoding": "sync",
       "detailUrl": "/products/first-staff-paper/",
       "categoryUrl": "/products/music-tools/",
       "primaryActionLabel": "分野を見る",

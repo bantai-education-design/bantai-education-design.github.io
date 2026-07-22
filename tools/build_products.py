@@ -49,16 +49,7 @@ def render_media(product: dict) -> str:
     if not image:
         raise ValueError(f"{product['id']}: image is required unless usePlaceholder is true")
     alt = product.get("imageAlt") or product.get("name") or ""
-    attrs = [f'src="{html_attr(image)}"', f'alt="{html_attr(alt)}"']
-    for key, attr_name in (
-        ("imageWidth", "width"),
-        ("imageHeight", "height"),
-        ("imageLoading", "loading"),
-        ("imageDecoding", "decoding"),
-    ):
-        if product.get(key):
-            attrs.append(f'{attr_name}="{html_attr(product[key])}"')
-    return f'    <img {" ".join(attrs)}>'
+    return f'    <img src="{html_attr(image)}" alt="{html_attr(alt)}">'
 
 
 def render_features(product: dict) -> str:
