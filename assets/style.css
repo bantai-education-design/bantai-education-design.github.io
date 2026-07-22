@@ -153,7 +153,7 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 }
 
 /* v4 logo adjustment */
-.brand{min-width:260px}
+.brand{min-width:236px}
 @media(max-width:860px){
   .brand{min-width:auto}
   .brand span{font-size:1rem}
@@ -667,36 +667,44 @@ button:focus-visible {
 
 .site-header {
   background: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.04);
+  border-bottom: 1px solid rgba(198, 161, 91, 0.18);
+  box-shadow: 0 2px 10px rgba(17, 17, 17, 0.04);
 }
 
 .nav {
-  min-height: 76px;
+  min-height: 69px;
 }
 
 .brand {
   color: var(--black);
+  gap: 10px;
 }
 
 .brand img {
   background: var(--black);
   box-shadow: none;
+  height: 42px;
+  width: 42px;
 }
 
 .brand span {
   letter-spacing: 0;
+  font-size: 1.08rem;
+  line-height: 1.25;
 }
 
 .menu {
-  gap: 16px;
+  gap: 12px;
   color: var(--charcoal);
-  font-size: 0.88rem;
+  flex-wrap: nowrap;
+  font-size: 0.86rem;
 }
 
 .menu a {
   border-bottom: 2px solid transparent;
-  padding: 8px 0;
+  line-height: 1.35;
+  padding: 7px 0;
+  white-space: nowrap;
 }
 
 .menu a:hover,
@@ -710,7 +718,8 @@ button:focus-visible {
   border-radius: 6px;
   background: var(--black);
   color: var(--white);
-  padding: 10px 16px;
+  min-height: 44px;
+  padding: 9px 12px;
 }
 
 .menu .mini:hover {
@@ -1165,11 +1174,61 @@ button:focus-visible {
   .menu .mini {
     padding-inline: 12px;
   }
+
+  .nav:has(.menu-toggle) .menu-toggle {
+    display: flex;
+  }
+
+  .nav:has(.menu-toggle) .menu {
+    position: absolute;
+    top: 100%;
+    left: 5vw;
+    right: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 22px 50px rgba(17, 17, 17, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  .menu-open .nav:has(.menu-toggle) .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav:has(.menu-toggle) .menu a {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .nav:has(.menu-toggle) .menu a.active:not(.mini) {
+    border-bottom-color: rgba(17, 17, 17, 0.08);
+  }
+
+  .nav:has(.menu-toggle) .menu .mini {
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 860px) {
   .nav {
     min-height: 68px;
+  }
+
+  .brand img {
+    height: 44px;
+    width: 44px;
   }
 
   .menu-toggle {
@@ -1256,6 +1315,52 @@ button:focus-visible {
   .core-product-grid,
   .two-column-section {
     grid-template-columns: 1fr;
+  }
+
+  .nav:not(:has(.menu-toggle)) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    min-height: auto;
+    padding-block: 12px;
+  }
+
+  .nav:not(:has(.menu-toggle)) .menu {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    width: 100%;
+    padding: 8px 0 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .nav:not(:has(.menu-toggle)) .menu a {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    white-space: normal;
+  }
+
+  .nav:not(:has(.menu-toggle)) .menu .mini {
+    margin-top: 0;
+    min-height: 44px;
+    padding: 9px 12px;
+  }
+
+  .flow-brief-container [style*="display: flex"] > div:last-child {
+    min-width: 0;
+  }
+
+  .flow-brief-container h4,
+  .flow-brief-container p {
+    overflow-wrap: anywhere;
   }
 }
 
@@ -2800,40 +2905,6 @@ button:focus-visible {
 }
 .product-detail-education .flow-brief li {
   margin-bottom: 10px;
-}
-
-@media (min-width: 861px) {
-  .product-detail-education .site-header {
-    min-height: 68px;
-  }
-
-  .product-detail-education .nav {
-    min-height: 68px;
-  }
-
-  .product-detail-education .brand {
-    gap: 10px;
-  }
-
-  .product-detail-education .brand img {
-    border-radius: 10px;
-    height: 42px;
-    width: 42px;
-  }
-
-  .product-detail-education .brand span {
-    font-size: 1.08rem;
-    line-height: 1.25;
-  }
-
-  .product-detail-education .menu a {
-    padding-bottom: 7px;
-    padding-top: 7px;
-  }
-
-  .product-detail-education .menu .mini {
-    padding: 10px 14px;
-  }
 }
 
 .product-detail-education .education-pv-section,
