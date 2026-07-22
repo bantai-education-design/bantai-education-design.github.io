@@ -2857,6 +2857,60 @@ button:focus-visible {
   padding: 7px 12px;
 }
 
+.product-detail-education .education-pv-assurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 16px auto 0;
+  max-width: 860px;
+}
+
+.product-detail-education .education-pv-assurance-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(216, 182, 108, 0.36);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.88);
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 800;
+  gap: 7px;
+  line-height: 1.4;
+  padding: 7px 12px;
+}
+
+.product-detail-education .education-pv-assurance-item::before {
+  color: #e9c983;
+  content: "✓";
+  font-weight: 900;
+}
+
+.product-detail-education .education-pv-quick-flow {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.78);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  font-weight: 800;
+  gap: 8px 10px;
+  justify-content: center;
+  line-height: 1.5;
+  margin: 16px auto 0;
+  max-width: 760px;
+}
+
+.product-detail-education .education-pv-quick-flow-step {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.product-detail-education .education-pv-quick-flow-arrow {
+  color: rgba(216, 182, 108, 0.76);
+  font-weight: 900;
+}
+
 .product-detail-education .education-pv-actions,
 .product-detail-education .education-monitor-actions,
 .product-detail-education .education-final-actions {
@@ -2878,6 +2932,16 @@ button:focus-visible {
 .product-detail-education .education-monitor-button:hover,
 .product-detail-education .education-final-monitor-button:hover {
   filter: brightness(1.05);
+}
+
+.product-detail-education .education-pv-action-note,
+.product-detail-education .education-final-action-note {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 12px auto 0;
+  max-width: 720px;
+  text-align: center;
 }
 
 .product-detail-education .education-audience-section {
@@ -2975,6 +3039,16 @@ button:focus-visible {
   line-height: 1.65;
 }
 
+.product-detail-education .education-monitor-details .education-monitor-detail-highlight {
+  background: rgba(216, 182, 108, 0.09);
+  border-top-color: rgba(216, 182, 108, 0.45);
+}
+
+.product-detail-education .education-monitor-details .education-monitor-detail-highlight span {
+  color: #fff4cf;
+  font-weight: 900;
+}
+
 .product-detail-education .education-faq-section {
   background: #f7f4ec;
   padding: 72px 0;
@@ -3032,6 +3106,13 @@ button:focus-visible {
   line-height: 1.85;
   margin: 0 auto;
   max-width: 720px;
+}
+
+.product-detail-education .education-final-cta p.education-final-action-note {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-top: 12px;
 }
 
 .product-detail-education .education-final-link {
@@ -3100,6 +3181,19 @@ button:focus-visible {
     justify-content: center;
     min-height: 48px;
     width: 100%;
+  }
+  .product-detail-education .education-pv-assurance,
+  .product-detail-education .education-pv-quick-flow {
+    justify-content: flex-start;
+  }
+  .product-detail-education .education-pv-assurance-item,
+  .product-detail-education .education-pv-quick-flow-step {
+    font-size: 0.86rem;
+  }
+  .product-detail-education .education-pv-action-note,
+  .product-detail-education .education-final-action-note {
+    font-size: 0.9rem;
+    text-align: left;
   }
   .product-detail-education .education-monitor-card {
     padding: 28px 20px;
