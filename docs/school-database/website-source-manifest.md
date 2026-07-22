@@ -24,54 +24,18 @@
 
 ---
 
-## 2. 報告データフォーマット仕様 (`website-verification-report.json`)
-
-```json
-{
-  "school_name": "○○市立○○小学校",
-  "website": "https://学校個別ホームページ/",
-  "source_url": "https://○○市教育委員会の学校一覧/",
-  "verification_method": "board_of_education_school_list",
-  "status": "verified"
-}
-```
-
----
-
-## 3. 自治体単位（市区町村）処理フロー
-
-```text
-自治体の教育委員会公式ページを確認
-  ↓
-学校一覧ページを特定
-  ↓
-掲載されている学校個別リンクを抽出
-  ↓
-学校名・校種・住所・自治体を照合
-  ↓
-一致した学校だけJSONへ登録
-  ↓
-未一致・複数候補は manual_review へ分類
-```
-
----
-
-## 4. Phase A 収録実績（教育委員会公式一覧直接取得分）
+## 2. 収録実績（教育委員会公式一覧直接取得分）
 
 | 都道府県 | 校種 | 設置区分 | 確認元の公式一覧 | 確認元URL | 確認日 | 取得件数 | 未確認件数 | 備考 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **埼玉県** | 高等学校 | 公立 | 埼玉県教育委員会「公立高校のホームページ」 | `https://www.pref.saitama.lg.jp/e2201/school01.html` | 2026-07-23 | **131 件** | **1,801 件** | `*.spec.ed.jp` 等の埼玉県教育委員会公式ドメインを直接取得・HTTP 200確認済み |
-| **東京都** | 特別支援学校 | 都立 | 東京都教育委員会「都立特別支援学校検索」 | `https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name` | 2026-07-23 | **29 件** | **3,480 件** | 東京都教育委員会公式ドメインの都立特別支援学校個別ページを取得・検証済み |
+| **東京都** | 特別支援学校・都立校 | 都立 | 東京都教育委員会「都立学校等一覧」 | `https://www.kyoiku.metro.tokyo.lg.jp/` | 2026-07-23 | **69 件** | **3440 件** | 東京都教育委員会公式ドメインの学校個別ページを取得・検証済み |
 
-- **ステータス**: Phase A-1完了 / Phase A継続中
-- **確認済み合計**: **160 件** (埼玉県 131件 + 東京都 29件)
+- **ステータス**: **Phase A-2 進行中**
+- **確認済み合計**: **200 件** (埼玉県 131件 + 東京都 69件)
 
 ---
 
-## 5. 自動検証項目
-スクリプト `tools/school-database/validate_school_websites.py` にて以下を全自動検証：
-1. **公式ドメイン判定**: 確認元 `source_url` が都道府県または自治体の公式ドメインか確認。
-2. **個別リンク検証**: 確認元一覧から学校個別URLへ実際にリンクされているか確認。
-3. **一覧ページ誤登録防止**: 一覧ページそのものを学校 `website` として登録していないか確認。
-4. **多重共有URL検出**: 同一URLが多数校の `website` に登録されていないか確認。
-5. **危険スキーム排除**: `javascript:`, `data:`, `file:` 等を100%排除。
+## 3. 自動検証スクリプト
+- スクリプトパス: [validate_school_websites.py](file:///C:/Users/User/Documents/bantai-education-design.github.io/tools/school-database/validate_school_websites.py)
+- 結果データ: [website-verification-report.json](file:///C:/Users/User/Documents/bantai-education-design.github.io/tools/school-database/website-verification-report.json)
