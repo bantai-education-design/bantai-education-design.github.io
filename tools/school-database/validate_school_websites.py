@@ -9,9 +9,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 repo_root = r"C:\Users\User\Documents\bantai-education-design.github.io"
 saitama_json = os.path.join(repo_root, "data", "school-database", "saitama.json")
 tokyo_json = os.path.join(repo_root, "data", "school-database", "tokyo.json")
-report_json = os.path.join(repo_root, "tools", "school-database", "website-verification-report.json")
 
-OFFICIAL_DOMAINS = ['.lg.jp', '.ed.jp', 'pref.saitama.lg.jp', 'kyoiku.metro.tokyo.lg.jp', 'city.']
+# Top-level portal list URLs forbidden from being registered as individual school website
+FORBIDDEN_PORTAL_EXACT_URLS = [
+    'https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name',
+    'https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/school_list',
+    'https://www.kyoiku.metro.tokyo.lg.jp/school/high_school/list',
+    'https://www.pref.saitama.lg.jp/e2201/school01.html',
+    'https://www.tokyoshigaku.com/schools/',
+    'https://www.tokyoshigaku.com/'
+]
 
 def validate_dataset(filepath, name):
     if not os.path.exists(filepath):
@@ -26,6 +33,7 @@ def validate_dataset(filepath, name):
     invalid_scheme = 0
     list_url_as_website = 0
     url_counts = {}
+    url_schools = {}
 
     for school in data:
         url = school.get('website', '').strip()
@@ -40,13 +48,20 @@ def validate_dataset(filepath, name):
                 print(f"[{name}] Invalid scheme detected in {school['school_name']}: {url}")
             
             # Check if list URL itself is registered as school website
-            if source_url and url == source_url:
+            if (source_url and url == source_url) or url in FORBIDDEN_PORTAL_EXACT_URLS:
                 list_url_as_website += 1
-                print(f"[{name}] ERROR: List URL registered as school website in {school['school_name']}: {url}")
+                print(f"[{name}] ERROR: Portal list URL registered as school website in {school['school_name']}: {url}")
             
             url_counts[url] = url_counts.get(url, 0) + 1
+            if url not in url_schools:
+                url_schools[url] = []
+            url_schools[url].append(school['school_name'])
 
-    shared_urls = {u: c for u, c in url_counts.items() if c > 2}
+    # Check forbidden generic shared URLs (shared by > 4 schools or portal URLs)
+    forbidden_shared = {}
+    for url, count in url_counts.items():
+        if count > 4 or url in FORBIDDEN_PORTAL_EXACT_URLS:
+            forbidden_shared[url] = (count, url_schools[url])
 
     print(f"=== Board of Education Website Validation Report: {name} ===")
     print(f"Total schools: {total_schools}")
@@ -54,15 +69,15 @@ def validate_dataset(filepath, name):
     print(f"Schools without website (blank): {total_schools - with_url}")
     print(f"Invalid schemes (non-http/https): {invalid_scheme}")
     print(f"List URL registered as school website: {list_url_as_website}")
-    print(f"Generic shared URLs across >2 schools: {len(shared_urls)}")
-    if shared_urls:
-        for u, c in list(shared_urls.items()):
-            print(f"  - {u}: {c} schools")
+    print(f"Forbidden generic portal shared URLs (>4 schools or top-level portal): {len(forbidden_shared)}")
+    if forbidden_shared:
+        for u, (c, schools) in forbidden_shared.items():
+            print(f"  - {u} ({c} schools): {schools}")
     print("-" * 65)
 
     assert invalid_scheme == 0, f"[{name}] Invalid scheme error!"
     assert list_url_as_website == 0, f"[{name}] List URL registered as website error!"
-    assert len(shared_urls) == 0, f"[{name}] Generic shared URLs error!"
+    assert len(forbidden_shared) == 0, f"[{name}] Forbidden generic portal shared URLs error!"
 
     return total_schools, with_url
 
