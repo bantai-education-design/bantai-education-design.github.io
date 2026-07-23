@@ -5,72 +5,111 @@
       "name": "小学校教育計画作成・運営システム",
       "category": "featured",
       "order": 1,
-      "status": "主力製品",
+      "status": "モニター募集中",
+      "recommendation": "主力製品",
       "badges": [
-        "主力製品"
+        "モニター募集中"
       ],
-      "summary": "教育計画、週案、時数管理、提出書類作成を一つの流れにまとめます。",
-      "features": [
-        "教育計画・週案・時数管理を一体で支援",
-        "学校現場の提出書類づくりを効率化"
+      "targetUsers": [
+        "教務担当",
+        "小学校教員"
       ],
+      "summary": "年間教育計画から週案作成、授業時数管理、提出書類作成までをひとつの流れで効率化する学校業務支援システムです。",
+      "features": [],
       "image": "/assets/images/education-hero.png",
       "imageAlt": "小学校教育計画作成・運営システム",
       "detailUrl": "/products/education-planning/",
       "categoryUrl": "/products/school-work/",
-      "primaryActionLabel": "分野を見る",
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "モニターに参加する",
       "published": true,
+      "monitorUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeIM0bNoL4mKfycoYLAkC11ajGvjRQ3NsX4cB_Y5lP0w840ww/viewform",
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": false,
+      "hasTrial": true,
+      "isFlagship": true
+    },
+    {
+      "id": "first-staff-paper",
+      "name": "Ban.Tai はじめての五線紙メーカー",
+      "category": "featured",
+      "order": 2,
+      "status": "10日間無料体験",
+      "recommendation": "おすすめ",
+      "badges": [
+        "10日間無料体験"
+      ],
+      "targetUsers": [
+        "幼児・児童",
+        "保護者・音楽教室"
+      ],
+      "summary": "はじめて五線に触れる子どものための、記号なぞり書きや見やすい五線紙を自由に設計・印刷できるアプリです。",
+      "features": [],
+      "image": "/assets/images/first-staff-paper-thumbnail.png",
+      "imageAlt": "Ban.Tai はじめての五線紙メーカー",
+      "detailUrl": "/products/first-staff-paper/",
+      "categoryUrl": "/products/music-tools/",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料で試す",
+      "published": true,
+      "boothUrl": "https://bantai3.booth.pm/items/8587307",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
       "isFlagship": true
     },
     {
       "id": "staff-paper",
       "name": "楽譜・五線紙 作成メーカー",
       "category": "standard",
-      "order": 11,
+      "order": 3,
       "status": "一時休止中",
+      "recommendation": null,
       "badges": [
         "一時休止中"
       ],
-      "summary": "現在、通常版「楽譜（五線紙）作成メーカー」はバージョンアップ準備のため、一時的にご案内を休止しています。",
-      "features": [
-        "五線紙・楽譜用紙の細かな指定に対応",
-        "PDF・SVGで教材作成や印刷に使いやすい出力"
+      "targetUsers": [
+        "音楽教員",
+        "一般利用者"
       ],
+      "summary": "現在、通常版楽譜作成メーカーはバージョンアップ準備のため、一時的にご案内を休止しています。",
+      "features": [],
       "image": "/assets/images/staff-paper-v13-card.jpg",
       "imageAlt": "楽譜・五線紙 作成メーカー",
       "detailUrl": "/products/staff-paper/",
       "categoryUrl": "/products/music-tools/",
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": null,
       "published": true,
-      "boothUrl": "https://bantai3.booth.pm/items/8302315",
+      "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": true,
+      "hasTrial": false,
       "isFlagship": false
     },
     {
       "id": "kanji-practice",
       "name": "漢字練習帳",
       "category": "standard",
-      "order": 3,
+      "order": 4,
       "status": "10日間無料体験",
+      "recommendation": null,
       "badges": [
         "10日間無料体験"
       ],
-      "summary": "子どもに合わせた漢字練習プリントを作成できます。",
+      "targetUsers": [
+        "小学校教員",
+        "保護者"
+      ],
+      "summary": "児童の発達や学習段階に合わせて、マス目や配置を自由に変更できる漢字練習プリント作成ツールです。",
       "features": [],
       "image": "/assets/images/kanji-practice/card-thumbnail.png",
       "imageAlt": "漢字練習帳",
       "detailUrl": "/products/kanji-practice/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料で試す",
       "published": true,
       "boothUrl": "https://bantai3.booth.pm/items/8305799",
       "vectorUrl": null,
@@ -82,19 +121,24 @@
       "id": "houganshi",
       "name": "方眼紙メーカー",
       "category": "standard",
-      "order": 4,
-      "status": "販売中",
+      "order": 5,
+      "status": "10日間無料体験",
+      "recommendation": null,
       "badges": [
-        "販売中"
+        "10日間無料体験"
       ],
-      "summary": "mm単位でマス目を指定し、実寸印刷できる方眼紙作成アプリです。",
+      "targetUsers": [
+        "小学校教員",
+        "一般利用者"
+      ],
+      "summary": "mm単位でマス目を指定し、実寸サイズで正確に印刷できるWindows用方眼紙作成アプリです。",
       "features": [],
       "image": "/assets/images/houganshi/card-thumbnail.png",
       "imageAlt": "方眼紙メーカー",
       "detailUrl": "/products/houganshi/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料で試す",
       "published": true,
       "trialDownloadUrl": "/downloads/trials/bantai_graph_paper_trial_v3.1.2.zip",
       "boothUrl": "https://bantai3.booth.pm/items/8479863",
@@ -104,38 +148,17 @@
       "isFlagship": false
     },
     {
-      "id": "class-roster",
-      "name": "学級名簿メーカー",
-      "category": "standard",
-      "order": 5,
-      "status": "無料",
-      "badges": [
-        "無料"
-      ],
-      "summary": "名簿、提出物チェック、誕生日一覧などを作成します。",
-      "features": [],
-      "image": "/assets/images/class-roster-maker-thumbnail.svg",
-      "imageAlt": "学級名簿メーカー",
-      "detailUrl": "/products/class-roster/",
-      "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
-      "published": true,
-      "boothUrl": null,
-      "vectorUrl": null,
-      "noteUrl": null,
-      "downloadUrl": "https://github.com/bantai-education-design/gakkyu-meibo-maker/releases/download/class-roster-maker-v0.6.5/ClassRosterMaker-v0.6.5-Windows.zip",
-      "hasTrial": false,
-      "isFlagship": false
-    },
-    {
       "id": "observation-card",
       "name": "絵日記・観察カード作成メーカー",
       "category": "standard",
       "order": 6,
       "status": "販売中",
+      "recommendation": null,
       "badges": [
         "販売中"
+      ],
+      "targetUsers": [
+        "小学校教員"
       ],
       "summary": "絵の欄と文章欄を組み合わせた観察カードを作成できます。10日間無料で試用できます。",
       "features": [],
@@ -144,7 +167,7 @@
       "usePlaceholder": true,
       "detailUrl": "/products/observation-card/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
+      "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": "詳細を見る",
       "published": true,
       "trialDownloadUrl": "/downloads/trials/bantai_observation_card_trial_v1.2.0.zip",
@@ -160,19 +183,21 @@
       "category": "standard",
       "order": 7,
       "status": "10日間無料体験",
+      "recommendation": null,
       "badges": [
-        "BOOTHで公開中",
-        "10日間試用版あり"
+        "10日間無料体験"
       ],
-      "summary": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツール。BOOTHで10日間試用版を公開中です。",
+      "targetUsers": [
+        "一般利用者"
+      ],
+      "summary": "入力から写真配置、両面2ページPDFの作成までスムーズに行えるWindows用履歴書作成アプリです。",
       "features": [],
       "image": "/assets/images/resume-generator/booth-1-main.png",
       "imageAlt": "スマート履歴書ジェネレーター",
       "detailUrl": "/products/resume-generator/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
-      "boothActionLabel": "BOOTHでダウンロードする",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料で試す",
       "published": true,
       "boothUrl": "https://booth.pm/ja/items/8551539",
       "vectorUrl": null,
@@ -186,22 +211,27 @@
       "category": "standard",
       "order": 8,
       "status": "10日間無料体験",
+      "recommendation": null,
       "badges": [
         "10日間無料体験"
       ],
-      "summary": "教材や案内画像に、文字を自然に重ねるためのツールです。",
+      "targetUsers": [
+        "小学校教員",
+        "一般利用者"
+      ],
+      "summary": "教材や案内の画像に文字を自然になじませて配置・装飾できるデザインサポートツールです。",
       "features": [],
       "image": "/assets/images/text-tool-features-light.jpg",
       "imageAlt": "画像文字入れくん",
       "detailUrl": "/products/text-overlay/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料で試す",
       "published": true,
       "boothUrl": null,
       "vectorUrl": "https://www.vector.co.jp/soft/winnt/art/se528755.html",
       "noteUrl": null,
-      "hasTrial": false,
+      "hasTrial": true,
       "isFlagship": false
     },
     {
@@ -210,17 +240,21 @@
       "category": "standard",
       "order": 9,
       "status": "販売中",
+      "recommendation": null,
       "badges": [
         "販売中"
       ],
-      "summary": "自宅で証明写真を整え、印刷用レイアウトまで作成できます。",
+      "targetUsers": [
+        "一般利用者"
+      ],
+      "summary": "背景自動処理から各種規格サイズの切りだし、印刷用配置まで対応した証明写真作成アプリです。",
       "features": [],
       "image": "/assets/images/id-photo/id-photo-hero-pc-workflow.png",
       "imageAlt": "証明写真メーカー",
       "detailUrl": "/products/id-photo/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "BOOTHで購入する",
       "published": true,
       "boothUrl": "https://bantai3.booth.pm/items/8467855",
       "vectorUrl": null,
@@ -233,80 +267,88 @@
       "name": "Ban.Tai バナースタジオ",
       "category": "standard",
       "order": 10,
-      "status": "無料",
+      "status": "無料ツール",
+      "recommendation": "おすすめ",
       "badges": [
-        "無料"
+        "無料ツール"
       ],
-      "summary": "note・ホームページ・ブログ・SNS・販売ページ向けのバナー画像を作成できます。",
+      "targetUsers": [
+        "小学校教員",
+        "広報・一般"
+      ],
+      "summary": "note・SNS・Webサイト向けの各種バナー画像を推奨サイズで手軽に作成できる無料アプリです。",
       "features": [],
-      "image": "/assets/images/note-banner-studio/note-banner-studio-hero-v2.png",
+      "image": "/assets/images/banner-studio-screenshot.jpg",
       "imageAlt": "Ban.Tai バナースタジオ",
       "detailUrl": "/products/banner-studio/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "無料で使う",
       "published": true,
+      "downloadUrl": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "downloadUrl": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
       "hasTrial": false,
       "isFlagship": false
     },
     {
-      "id": "first-staff-paper",
-      "name": "Ban.Tai はじめての五線紙メーカー",
-      "category": "featured",
-      "order": 2,
-      "status": "10日間無料体験",
+      "id": "class-roster",
+      "name": "学級名簿メーカー",
+      "category": "standard",
+      "order": 11,
+      "status": "無料ツール",
+      "recommendation": null,
       "badges": [
-        "10日間無料体験",
-        "入門版"
+        "無料ツール"
       ],
-      "summary": "はじめて五線にふれる子どものための、やさしい五線紙作成アプリ。",
-      "features": [
-        "記号・音符なぞり書き用紙や見やすい五線紙",
-        "4歳から8歳くらいの子ども、保護者、音楽教室向け"
+      "targetUsers": [
+        "学級担任",
+        "教務担当"
       ],
-      "image": "/assets/images/first-staff-paper-thumbnail.png",
-      "imageAlt": "Ban.Tai はじめての五線紙メーカー",
-      "detailUrl": "/products/first-staff-paper/",
-      "categoryUrl": "/products/music-tools/",
-      "primaryActionLabel": "分野を見る",
-      "secondaryActionLabel": "詳細を見る",
+      "summary": "名簿管理、提出物チェック表、誕生日一覧などの学級掲示・配布書類を素早く作成できる無料ツールです。",
+      "features": [],
+      "image": "/assets/images/class-roster-maker-thumbnail.svg",
+      "imageAlt": "学級名簿メーカー",
+      "detailUrl": "/products/class-roster/",
+      "categoryUrl": null,
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "無料で使う",
       "published": true,
-      "boothUrl": "https://bantai3.booth.pm/items/8587307",
+      "downloadUrl": "https://github.com/bantai-education-design/gakkyu-meibo-maker/releases/download/class-roster-maker-v0.6.5/ClassRosterMaker-v0.6.5-Windows.zip",
+      "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": true,
-      "isFlagship": true
+      "hasTrial": false,
+      "isFlagship": false
     },
     {
       "id": "classroom-seat-designer",
       "name": "学級座席デザイナー",
       "category": "standard",
       "order": 12,
-      "status": "無料",
+      "status": "無料ツール",
+      "recommendation": null,
       "badges": [
-        "無料"
+        "無料ツール"
       ],
-      "summary": "担任の判断を助ける、半自動の座席表作成ツールです。",
-      "features": [
-        "1人席・2人組席・班席に対応",
-        "Web版・Windowsポータブル版の両方を無料提供"
+      "targetUsers": [
+        "学級担任"
       ],
+      "summary": "1人席・2人組・班配置に対応し、ドラッグ＆ドロップと自動配置で座席表を作成できる無料ツールです。",
+      "features": [],
       "image": "/assets/images/products/classroom-seat-designer-card.svg",
-      "imageAlt": "学級座席デザイナーの座席表作成画面イメージ",
-      "usePlaceholder": false,
+      "imageAlt": "学級座席デザイナー",
       "detailUrl": "/products/classroom-seat-designer/",
       "categoryUrl": null,
-      "primaryActionLabel": null,
-      "secondaryActionLabel": "詳細を見る",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "無料で使う",
       "published": true,
+      "webUrl": "https://bantai-education-design.github.io/classroom-seat-designer/",
+      "downloadUrl": "https://github.com/bantai-education-design/classroom-seat-designer/releases/download/v1.0.0/classroom-seat-designer-v1.0.0-Windows-portable.zip",
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
-      "downloadUrl": "https://github.com/bantai-education-design/classroom-seat-designer/releases/download/v1.0.0/classroom-seat-designer-v1.0.0-Windows-portable.zip",
       "hasTrial": false,
       "isFlagship": false
     }

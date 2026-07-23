@@ -27,19 +27,33 @@ def indent_block(text: str, spaces: int) -> str:
     return "\n".join(prefix + line if line else line for line in text.splitlines())
 
 
+def render_recommend(product: dict) -> str:
+    recommendation = product.get("recommendation")
+    if recommendation:
+        return f'    <span class="recommend-badge">{html_text(recommendation)}</span>'
+    return ""
+
+
 def render_badges(product: dict) -> str:
-    badges = product.get("badges") or []
-    if len(badges) > 1:
-        spans = "\n".join(
-            f'      <span class="status-badge">{html_text(badge)}</span>' for badge in badges
-        )
-        return f'    <div class="catalog-badge-row">\n{spans}\n    </div>'
-    if badges:
-        return f'    <span class="status-badge">{html_text(badges[0])}</span>'
+    # 絵日記・観察カードは一時除外のため旧互換処理
+    if product.get("id") == "observation-card":
+        badges = product.get("badges") or []
+        if badges:
+            return f'    <span class="status-badge">{html_text(badges[0])}</span>'
+        return ""
+
     status = product.get("status")
     if status:
         return f'    <span class="status-badge">{html_text(status)}</span>'
     return ""
+
+
+def render_target_users(product: dict) -> str:
+    users = product.get("targetUsers") or []
+    if not users:
+        return ""
+    tags = "".join(f'<span class="user-tag">{html_text(u)}</span>' for u in users)
+    return f'    <div class="target-users-row">{tags}</div>'
 
 
 def render_media(product: dict) -> str:
@@ -49,79 +63,60 @@ def render_media(product: dict) -> str:
     if not image:
         raise ValueError(f"{product['id']}: image is required unless usePlaceholder is true")
     alt = product.get("imageAlt") or product.get("name") or ""
-    return f'    <img src="{html_attr(image)}" alt="{html_attr(alt)}">'
-
-
-def render_features(product: dict) -> str:
-    features = product.get("features") or []
-    if not features:
-        return ""
-    items = "\n".join(f"      <li>{html_text(feature)}</li>" for feature in features)
-    return f'    <ul class="catalog-feature-list">\n{items}\n    </ul>'
+    return f'    <img src="{html_attr(image)}" alt="{html_attr(alt)}" class="card-img">'
 
 
 def render_actions(product: dict) -> str:
-    status = product.get("status")
-    trial_download_url = product.get("trialDownloadUrl")
-    trial_download_label = product.get("trialDownloadLabel") or "試用版をダウンロード"
-    booth_url = product.get("boothUrl")
-    vector_url = product.get("vectorUrl")
-    note_url = product.get("noteUrl")
-    download_url = product.get("downloadUrl")
-    detail_url = product.get("detailUrl")
-    category_url = product.get("categoryUrl")
-    primary_label = product.get("primaryActionLabel")
-    secondary_label = product.get("secondaryActionLabel")
+    # 絵日記・観察カード作成メーカーは今回は統一対象から一時除外（既存の3ボタンを維持）
+    if product.get("id") == "observation-card":
+        trial_download_url = product.get("trialDownloadUrl")
+        booth_url = product.get("boothUrl")
+        detail_url = product.get("detailUrl")
+        links: list[str] = []
+        if trial_download_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_download_url)}" download>試用版をダウンロード</a>')
+        if booth_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHでライセンスを購入</a>')
+        if detail_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳細を見る</a>')
+        return '<div class="catalog-card-actions">\n' + "\n".join(links) + "\n    </div>"
 
+    status = product.get("status")
+    detail_url = product.get("detailUrl")
     links: list[str] = []
 
-    # 1. 一時休止中 または 公開準備中 の場合は、非活性ステータス表示を先頭に配置 (外部リンクは出力しない)
+    # 1. 第1ボタン: 詳しく見る
+    if detail_url:
+        links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
+
+    # 2. 第2ボタン (状態に応じて決定)
     if status == "一時休止中":
-        links.append('      <span class="catalog-btn catalog-btn-disabled">現在一時休止中</span>')
-    elif status in ("公開準備中", "準備中"):
-        links.append('      <span class="catalog-btn catalog-btn-disabled">公開準備中</span>')
-    else:
-        # 2. 無料ダウンロード
-        if status == "無料" and download_url:
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}" download>無料でダウンロードする</a>'
-            )
-
-        # 3. 試用版ダウンロード (販売導線方針: 試用版DL → BOOTH購入 → Vector掲載)
-        if trial_download_url:
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_download_url)}" download>{html_text(trial_download_label)}</a>'
-            )
-
-        # 4. BOOTH (試用版DLがある製品ではライセンス購入の位置づけになる)
-        if booth_url:
-            booth_label = product.get("boothActionLabel") or ("BOOTHでライセンスを購入" if trial_download_url else "BOOTHで購入・ダウンロードする")
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">{html_text(booth_label)}</a>'
-            )
-
-        # 5. Vector (試用版DLがある製品では掲載紹介の位置づけになる)
-        if vector_url:
-            vector_label = "Vector掲載ページを見る" if trial_download_url else "Vectorからダウンロードする"
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(vector_url)}" target="_blank" rel="noopener noreferrer">{html_text(vector_label)}</a>'
-            )
-
-        # 6. note
-        if note_url:
-            links.append(
-                f'      <a class="catalog-btn catalog-btn-note" href="{html_attr(note_url)}" target="_blank" rel="noopener noreferrer">noteで紹介記事を読む</a>'
-            )
-
-    # 7. 分野を見る / 詳細を見る (既存の導線を維持)
-    if primary_label and category_url:
-        links.append(
-            f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(category_url)}">{html_text(primary_label)}</a>'
-        )
-    if secondary_label and detail_url:
-        links.append(
-            f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">{html_text(secondary_label)}</a>'
-        )
+        pass  # 一時休止中は「詳しく見る」の1ボタンのみ
+    elif status == "モニター募集中":
+        monitor_url = product.get("monitorUrl") or "https://docs.google.com/forms/d/e/1FAIpQLSeIM0bNoL4mKfycoYLAkC11ajGvjRQ3NsX4cB_Y5lP0w840ww/viewform"
+        links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}" target="_blank" rel="noopener noreferrer">モニターに参加する</a>')
+    elif status == "10日間無料体験":
+        trial_dl = product.get("trialDownloadUrl")
+        booth = product.get("boothUrl")
+        vector = product.get("vectorUrl")
+        action_url = trial_dl or booth or vector
+        if trial_dl:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(action_url)}" download>10日間無料で試す</a>')
+        elif action_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(action_url)}" target="_blank" rel="noopener noreferrer">10日間無料で試す</a>')
+    elif status == "無料ツール":
+        web_url = product.get("webUrl")
+        download_url = product.get("downloadUrl")
+        if web_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(web_url)}">無料で使う</a>')
+        elif download_url:
+            dl_attr = " download" if download_url.startswith("/") or download_url.endswith(".zip") else ""
+            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr else ""
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}"{dl_attr}{rel_attr}>無料で使う</a>')
+    elif status == "販売中":
+        booth = product.get("boothUrl")
+        if booth:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth)}" target="_blank" rel="noopener noreferrer">BOOTHで購入する</a>')
 
     if not links:
         return ""
@@ -145,10 +140,11 @@ def render_card(product: dict, template: Template) -> str:
         detail_url=html_attr(detail_url),
         aria_label=html_attr(f"{product['name']}の詳細を見る"),
         media_html=render_media(product),
+        recommend_html=render_recommend(product),
         badges_html=render_badges(product),
+        target_users_html=render_target_users(product),
         name=html_text(product["name"]),
         summary=html_text(product["summary"]),
-        features_html=render_features(product),
         actions_html=render_actions(product),
         is_flagship=is_flagship_str,
         has_trial=has_trial_str,
@@ -162,10 +158,10 @@ def render_card(product: dict, template: Template) -> str:
 def update_index_html_stats(products: list) -> None:
     total = len(products)
     sales = sum(1 for p in products if p.get("status") in ("販売中", "10日間無料体験"))
-    free = sum(1 for p in products if p.get("status") == "無料")
+    free = sum(1 for p in products if p.get("status") == "無料ツール")
     preparing = sum(1 for p in products if p.get("status") in ("公開準備中", "準備中"))
     paused = sum(1 for p in products if p.get("status") == "一時休止中")
-    monitor = sum(1 for p in products if p.get("status") == "主力製品")
+    monitor = sum(1 for p in products if p.get("status") == "モニター募集中")
 
     index_path = ROOT / "index.html"
     if not index_path.exists():
@@ -217,4 +213,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
