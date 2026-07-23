@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">絵日記・観察カード作成メーカーの紹介画像</title>
+  <desc id="desc">左に絵の欄と文章欄の比率を調整する設定パネル、右に完成した観察カードの印刷見本と比率違いの2例、小さく葉と虫のアイコンを配置した紹介画像です。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfaf7"/>
+      <stop offset="1" stop-color="#f3f0e8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#172e54"/>
+      <stop offset="1" stop-color="#0c1b33"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edd996"/>
+      <stop offset="1" stop-color="#c5a059"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#0c1b33" flood-opacity=".16"/>
+    </filter>
+    <style>
+      .sans{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif}
+      .navy{fill:#0c1b33}
+      .muted{fill:#5c6b82}
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- タイトル -->
+  <text x="48" y="72" class="sans navy" style="font-size:34px;font-weight:900">絵日記・観察カード作成メーカー</text>
+  <text x="48" y="104" class="sans" style="font-size:20px;font-weight:700;fill:#c5a059">絵と文章の比率を自由に決めて、その場で印刷</text>
+
+  <!-- 左: 設定パネル -->
+  <rect x="48" y="140" width="500" height="520" rx="26" fill="url(#panel)" filter="url(#shadow)"/>
+  <text x="80" y="192" class="sans" style="font-size:24px;font-weight:900;fill:#ffffff">設定パネル</text>
+
+  <g class="sans" style="font-size:19px;font-weight:800">
+    <text x="80" y="240" fill="#edd996">用紙サイズ</text>
+    <rect x="80" y="256" width="436" height="46" rx="12" fill="#ffffff"/>
+    <text x="104" y="287" fill="#0c1b33">A4 / B5</text>
+
+    <text x="80" y="330" fill="#edd996">絵の欄</text>
+    <rect x="80" y="346" width="436" height="20" rx="10" fill="#284169"/>
+    <rect x="80" y="346" width="290" height="20" rx="10" fill="url(#gold)"/>
+
+    <text x="80" y="398" fill="#edd996">文章欄</text>
+    <rect x="80" y="414" width="436" height="20" rx="10" fill="#284169"/>
+    <rect x="80" y="414" width="170" height="20" rx="10" fill="url(#gold)"/>
+
+    <text x="80" y="470" fill="#edd996">罫線・マス目</text>
+    <rect x="80" y="486" width="210" height="44" rx="12" fill="#ffffff"/>
+    <text x="102" y="515" fill="#0c1b33" style="font-size:17px">横罫線</text>
+    <rect x="306" y="486" width="210" height="44" rx="12" fill="#ffffff"/>
+    <text x="328" y="515" fill="#0c1b33" style="font-size:17px">マス目</text>
+  </g>
+
+  <rect x="80" y="560" width="436" height="66" rx="20" fill="url(#gold)"/>
+  <text x="298" y="601" text-anchor="middle" class="sans" style="font-size:24px;font-weight:900;fill:#0c1b33">印刷 / PDF出力</text>
+
+  <!-- 右: 完成した観察カード（メイン） -->
+  <g filter="url(#shadow)">
+    <rect x="600" y="140" width="420" height="520" rx="20" fill="#ffffff" stroke="#e7d6ae" stroke-width="2"/>
+  </g>
+  <!-- 絵の欄 -->
+  <rect x="628" y="168" width="364" height="260" rx="14" fill="#f7fbf7" stroke="#0c1b33" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <!-- 葉のアイコン(観察例) -->
+  <g transform="translate(760,240)" fill="none" stroke="#3f7a4d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 60 C -6 10, 40 -30, 100 -30 C 100 20, 60 60, 0 60 Z"/>
+    <path d="M4 52 C 30 20, 60 0, 96 -24"/>
+  </g>
+  <!-- てんとう虫アイコン -->
+  <g transform="translate(900,300)">
+    <circle cx="0" cy="0" r="20" fill="#c0392b"/>
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#0c1b33" stroke-width="3"/>
+    <circle cx="-8" cy="-6" r="3.5" fill="#0c1b33"/>
+    <circle cx="8" cy="-6" r="3.5" fill="#0c1b33"/>
+    <circle cx="-8" cy="8" r="3.5" fill="#0c1b33"/>
+  </g>
+  <text x="810" y="410" text-anchor="middle" class="sans muted" style="font-size:15px;font-weight:700">絵の欄（観察したものを描く）</text>
+
+  <!-- 文章欄 -->
+  <g stroke="#c9d8e6" stroke-width="2">
+    <line x1="628" y1="452" x2="992" y2="452"/>
+    <line x1="628" y1="486" x2="992" y2="486"/>
+    <line x1="628" y1="520" x2="992" y2="520"/>
+    <line x1="628" y1="554" x2="992" y2="554"/>
+  </g>
+  <text x="810" y="600" text-anchor="middle" class="sans muted" style="font-size:15px;font-weight:700">文章欄（気づいたことを書く）</text>
+
+  <!-- 比率違いの2例 -->
+  <g transform="translate(1044,168)">
+    <rect x="0" y="0" width="188" height="230" rx="14" fill="#ffffff" stroke="#e7d6ae" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="14" y="14" width="160" height="130" rx="8" fill="#f7fbf7" stroke="#0c1b33" stroke-width="2" stroke-dasharray="2 8"/>
+    <g stroke="#c9d8e6" stroke-width="2">
+      <line x1="14" y1="164" x2="174" y2="164"/>
+      <line x1="14" y1="188" x2="174" y2="188"/>
+      <line x1="14" y1="212" x2="174" y2="212"/>
+    </g>
+  </g>
+  <text x="1138" y="416" text-anchor="middle" class="sans" style="font-size:16px;font-weight:800;fill:#0c1b33">絵を大きく</text>
+
+  <g transform="translate(1044,436)">
+    <rect x="0" y="0" width="188" height="224" rx="14" fill="#ffffff" stroke="#e7d6ae" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="14" y="14" width="160" height="70" rx="8" fill="#f7fbf7" stroke="#0c1b33" stroke-width="2" stroke-dasharray="2 8"/>
+    <g stroke="#c9d8e6" stroke-width="2">
+      <line x1="14" y1="102" x2="174" y2="102"/>
+      <line x1="14" y1="126" x2="174" y2="126"/>
+      <line x1="14" y1="150" x2="174" y2="150"/>
+      <line x1="14" y1="174" x2="174" y2="174"/>
+      <line x1="14" y1="198" x2="174" y2="198"/>
+    </g>
+  </g>
+  <text x="1138" y="678" text-anchor="middle" class="sans" style="font-size:16px;font-weight:800;fill:#0c1b33">文章を大きく</text>
+</svg>

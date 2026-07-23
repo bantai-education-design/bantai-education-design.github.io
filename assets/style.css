@@ -2230,8 +2230,7 @@ button:focus-visible {
   border-bottom: 1px solid rgba(181, 138, 59, 0.3);
 }
 
-.catalog-card img,
-.catalog-placeholder {
+.catalog-card img {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 10;
@@ -2248,14 +2247,6 @@ button:focus-visible {
   flex-direction: column;
   align-items: flex-start;
   padding: 18px;
-}
-
-.catalog-placeholder {
-  background:
-    linear-gradient(rgba(17, 17, 17, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 17, 0.14) 1px, transparent 1px),
-    var(--white);
-  background-size: 18px 18px;
 }
 
 .catalog-card h3 {
