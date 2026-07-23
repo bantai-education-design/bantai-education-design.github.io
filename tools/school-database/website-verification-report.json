@@ -1,6 +1,6 @@
 {
   "checked_date": "2026-07-23",
-  "phase": "Phase B (Private Schools Integration)",
+  "phase": "Phase B-1 (Tokyo Private Schools Integration)",
   "total_verified_all": 596,
   "saitama": {
     "total_schools": 1932,
@@ -6574,6 +6574,1441 @@
       "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
       "verification_method": "board_of_education_school_list",
       "status": "verified"
+    }
+  ],
+  "shared_url_register": [
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kugayama-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立久我山青光学園",
+        "東京都立久我山青光学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tachikawa-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立立川学園",
+        "東京都立立川学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kodaira-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立小平特別支援学校",
+        "東京都立小平特別支援学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kita-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立北特別支援学校",
+        "東京都立北特別支援学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/machida-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立町田の丘学園",
+        "東京都立町田の丘学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tama-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立多摩桜の丘学園",
+        "東京都立多摩桜の丘学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/bokuto-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立墨東特別支援学校",
+        "東京都立墨東特別支援学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/akiruno-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立あきる野学園",
+        "東京都立あきる野学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/eifuku-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立永福学園",
+        "東京都立永福学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/seiho-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立青峰学園",
+        "東京都立青峰学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/fuchu-keyaki-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立府中けやきの森学園",
+        "東京都立府中けやきの森学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shimuragakuen-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立志村学園",
+        "東京都立志村学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shikamotogakuen-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立鹿本学園",
+        "東京都立鹿本学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/mizumotokoai-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立水元小合学園",
+        "東京都立水元小合学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/komei-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立光明学園",
+        "東京都立光明学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hanahata-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立花畑学園",
+        "東京都立花畑学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/oji-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立王子特別支援学校",
+        "東京都立八王子特別支援学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/chofu-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立調布特別支援学校",
+        "東京都立田園調布特別支援学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/musashidai-sh",
+      "school_count": 2,
+      "school_names": [
+        "東京都立武蔵台学園",
+        "東京都立武蔵台学園"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.azabu-jh.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "麻布中学校",
+        "麻布高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.adachigakuen-jh.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "足立学園中学校",
+        "足立学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.atomi.ac.jp/jh/",
+      "school_count": 2,
+      "school_names": [
+        "跡見学園中学校",
+        "跡見学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.emk.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "穎明館中学校",
+        "穎明館高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://eimei-frontier.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "英明フロンティア中学校",
+        "英明フロンティア高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.edojo.jp/",
+      "school_count": 3,
+      "school_names": [
+        "江戸川女子中学校",
+        "江戸川女子高等学校",
+        "立川女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.oin.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "桜蔭中学校",
+        "桜蔭高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.obirin.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "桜美林中学校",
+        "桜美林高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.otsuma-tama.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "大妻多摩中学校",
+        "大妻多摩高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.otsumanakano.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "大妻中野中学校",
+        "大妻中野高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kaijo.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "海城中学校",
+        "海城高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://kaiseigakuen.jp/",
+      "school_count": 2,
+      "school_names": [
+        "開成中学校",
+        "開成高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://kng.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "開智日本橋学園中学校",
+        "開智日本橋学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.ariake.kaetsu.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "かえつ有明中学校",
+        "かえつ有明高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.gakushuin.ac.jp/girl/",
+      "school_count": 2,
+      "school_names": [
+        "学習院女子中等科",
+        "学習院女子高等科"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kawamura.ac.jp/cyu-kou/",
+      "school_count": 2,
+      "school_names": [
+        "川村中学校",
+        "川村高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kandajogakuen.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "神田女学園中学校",
+        "神田女学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.junten.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "北里大学附属順天中学校",
+        "北里大学附属順天高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "http://www.kitatoshima.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "北豊島中学校",
+        "北豊島高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kichijo-joshi.jp/",
+      "school_count": 2,
+      "school_names": [
+        "吉祥女子中学校",
+        "吉祥女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://kyoei-g.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "共栄学園中学校",
+        "共栄学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.gyosei-h.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "暁星中学校",
+        "暁星高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoritsu-wu.ac.jp/chukou/",
+      "school_count": 2,
+      "school_names": [
+        "共立女子中学校",
+        "共立女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kyoritsu-wu.ac.jp/nichukou/",
+      "school_count": 2,
+      "school_names": [
+        "共立女子第二中学校",
+        "共立女子第二高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://kunimoto.ac.jp/jsh/",
+      "school_count": 2,
+      "school_names": [
+        "国本女子中学校",
+        "国本女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.keika.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "京華中学校",
+        "京華高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.keika-g.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "京華女子中学校",
+        "京華女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.keisen.jp/",
+      "school_count": 2,
+      "school_names": [
+        "恵泉女学園中学校",
+        "恵泉女学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.keimei.ac.jp/jsh/",
+      "school_count": 2,
+      "school_names": [
+        "啓明学園中学校",
+        "啓明学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.koen-ejh.ed.jp/jh/",
+      "school_count": 2,
+      "school_names": [
+        "光塩女子学院中等科",
+        "光塩女子学院高等科"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://jhs.kokagakuen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "晃華学園中学校",
+        "晃華学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.js.kogakuin.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "工学院大学附属中学校",
+        "工学院大学附属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kogyokusha.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "攻玉社中学校",
+        "攻玉社高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kosei.ac.jp/boys/",
+      "school_count": 4,
+      "school_names": [
+        "佼成学園中学校",
+        "成立学園中学校",
+        "佼成学園高等学校",
+        "成立学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.girls.kosei.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "佼成学園女子中学校",
+        "佼成学園女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.koran.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "香蘭女学校中等科",
+        "香蘭女学校高等科"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.komagome.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "駒込中学校",
+        "駒込高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.komajo.ac.jp/jsh/",
+      "school_count": 2,
+      "school_names": [
+        "駒沢学園女子中学校",
+        "駒沢学園女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.komabajh.toho-u.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "駒場東邦中学校",
+        "駒場東邦高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.salesian.international.seibi.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "サレジアン国際学園中学校",
+        "サレジアン国際学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://salesian-setagaya.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "サレジアン国際学園世田谷中学校",
+        "サレジアン国際学園世田谷高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://hs.jissen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "実践女子学園中学校",
+        "実践女子学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shinagawa-shouei.ac.jp/jhhs/",
+      "school_count": 2,
+      "school_names": [
+        "品川翔英中学校",
+        "品川翔英高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shinagawajoshigakuin.jp",
+      "school_count": 2,
+      "school_names": [
+        "品川女子学院中等部",
+        "品川女子学院高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shiba-kokusai.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "芝国際中学校",
+        "芝国際高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.fzk.shibaura-it.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "芝浦工業大学附属中学校",
+        "芝浦工業大学附属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shibushibu.jp",
+      "school_count": 2,
+      "school_names": [
+        "渋谷教育学園渋谷中学校",
+        "渋谷教育学園渋谷高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://jiyu.school",
+      "school_count": 2,
+      "school_names": [
+        "自由学園中等部",
+        "自由学園高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "http://www.shutoku.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "修徳中学校",
+        "修徳高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "http://js.jumonji-u.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "十文字中学校",
+        "十文字高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shukutoku.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "淑徳中学校",
+        "淑徳高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://ssc1892.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "小石川淑徳学園中学校",
+        "小石川淑徳学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shukusu.ed.jp",
+      "school_count": 4,
+      "school_names": [
+        "淑徳巣鴨中学校",
+        "巣鴨中学校",
+        "淑徳巣鴨高等学校",
+        "巣鴨高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shoei.ed.jp",
+      "school_count": 4,
+      "school_names": [
+        "頌栄女子学院中学校",
+        "女子学院中学校",
+        "頌栄女子学院高等学校",
+        "女子学院高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://josaigakuen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "城西大学附属城西中学校",
+        "城西大学附属城西高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shotoku.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "聖徳学園中学校",
+        "聖徳学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.johoku.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "城北中学校",
+        "城北高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://jhs.swu.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "昭和女子大学附属昭和中学校",
+        "昭和女子大学附属昭和高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.joshiseigakuin.ed.jp",
+      "school_count": 4,
+      "school_names": [
+        "女子聖学院中学校",
+        "聖学院中学校",
+        "女子聖学院高等学校",
+        "聖学院高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.fuzoku.joshibi.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "女子美術大学付属中学校",
+        "女子美術大学付属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.shirayuri.ed.jp/top.html",
+      "school_count": 2,
+      "school_names": [
+        "白百合学園中学校",
+        "白百合学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.sundaigakuen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "駿台学園中学校",
+        "駿台学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.seikei.ac.jp/jsh/",
+      "school_count": 2,
+      "school_names": [
+        "成蹊中学校",
+        "成蹊高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.seijogakko.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "成城中学校",
+        "成城高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.seijogakuen.ed.jp/chukou/",
+      "school_count": 2,
+      "school_names": [
+        "成城学園中学校",
+        "成城学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tky-sacred-heart.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "聖心女子学院中等科",
+        "聖心女子学院高等科"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.dominic.ed.jp/highschool/",
+      "school_count": 2,
+      "school_names": [
+        "聖ドミニコ学園中学校",
+        "聖ドミニコ学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.seiryo-js.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "青稜中学校",
+        "青稜高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.setagayagakuen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "世田谷学園中学校",
+        "世田谷学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.takanawa.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "高輪中学校",
+        "高輪高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.takinogawa.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "瀧野川女子学園中学校",
+        "瀧野川女子学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tamagawa.jp/academy/lower_upper_d/",
+      "school_count": 2,
+      "school_names": [
+        "玉川学園中学部",
+        "玉川学園高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://tamasei.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "玉川聖学院中等部",
+        "玉川聖学院高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tmh.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "多摩大学目黒中学校",
+        "多摩大学目黒高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.hs.chuo-u.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "中央大学附属中学校",
+        "中央大学附属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://chiyoda.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "千代田中学校",
+        "千代田高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.teikyo.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "帝京中学校",
+        "帝京高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.teikyo-u.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "帝京大学中学校",
+        "帝京大学高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://teihachi.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "帝京八王子中学校",
+        "帝京八王子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.chofu.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "田園調布学園中等部",
+        "田園調布学園高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.denenchofufutaba.ed.jp/juniorandsenior/index.html",
+      "school_count": 4,
+      "school_names": [
+        "田園調布雙葉中学校",
+        "雙葉中学校",
+        "田園調布雙葉高等学校",
+        "雙葉高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.takanawadai.tokai.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東海大学付属高輪台高等学校中等部",
+        "東海大学付属高輪台高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.kasei-gakuin.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東京家政学院中学校",
+        "東京家政学院高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tokyo-kasei.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東京家政大学附属女子中学校",
+        "東京家政大学附属女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.t-junshin.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "東京純心女子中学校",
+        "東京純心女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://mhs.tjk.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "東京女学館中学校",
+        "東京女学館高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.dendai.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "東京電機大学中学校",
+        "東京電機大学高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tcu-todoroki.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東京都市大学等々力中学校",
+        "東京都市大学等々力高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tcu-jsh.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東京都市大学付属中学校",
+        "東京都市大学付属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.nodai-1-h.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "東京農業大学第一高等学校中等部",
+        "東京農業大学第一高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tokyorissho.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "東京立正中学校",
+        "東京立正高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.tosei.ed.jp/jhschool/",
+      "school_count": 2,
+      "school_names": [
+        "東星学園中学校",
+        "東星学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.toho.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "桐朋中学校",
+        "桐朋高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://chuko.toho.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "桐朋女子中学校",
+        "桐朋女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.toyoeiwa.ac.jp/chu-ko/",
+      "school_count": 2,
+      "school_names": [
+        "東洋英和女学院中学部",
+        "東洋英和女学院高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.toyo.ac.jp/toyodaikeihoku/",
+      "school_count": 2,
+      "school_names": [
+        "東洋大学京北中学校",
+        "東洋大学京北高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://tokiwamatsu.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "トキワ松学園中学校",
+        "トキワ松学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.toshimagaoka.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "豊島岡女子学園中学校",
+        "豊島岡女子学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.dokkyo.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "獨協中学校",
+        "獨協高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.daltontokyo.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "ドルトン東京学園中等部",
+        "ドルトン東京学園高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://nakamura.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "中村中学校",
+        "中村高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.nitobebunka.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "新渡戸文化中学校",
+        "新渡戸文化高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.nichidai2.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "日本大学第二中学校",
+        "日本大学第二高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.nichidai3.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "日本大学第三中学校",
+        "日本大学第三高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.buzan.hs.nihon-u.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "日本大学豊山中学校",
+        "日本大学豊山高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.buzan-joshi.hs.nihon-u.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "日本大学豊山女子中学校",
+        "日本大学豊山女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.hiroogakuen.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "広尾学園中学校",
+        "広尾学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://hiroo-koishikawa.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "広尾学園小石川中学校",
+        "広尾学園小石川高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.fujimi.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "富士見中学校",
+        "富士見高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.fujimigaoka.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "富士見丘中学校",
+        "富士見丘高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://kichijoji-yusui.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "藤村女子中学校",
+        "藤村女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.friends.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "普連土学園中学校",
+        "普連土学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://bunsugi.jp",
+      "school_count": 2,
+      "school_names": [
+        "文化学園大学杉並中学校",
+        "文化学園大学杉並高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.hs.bgu.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "文京学院大学女子中学校",
+        "文京学院大学女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.bunkyo.ac.jp/jsh/",
+      "school_count": 2,
+      "school_names": [
+        "文教大学付属中学校",
+        "文教大学付属高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.hosei.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "法政大学中学校",
+        "法政大学高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.hongo.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "本郷中学校",
+        "本郷高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.mita-is.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "三田国際科学学園中学校",
+        "三田国際科学学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.miwada.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "三輪田学園中学校",
+        "三輪田学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.musashi.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "武蔵中学校",
+        "武蔵高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.musashino.ac.jp/mjhs/",
+      "school_count": 2,
+      "school_names": [
+        "武蔵野中学校",
+        "武蔵野高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.musashino-u.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "武蔵野大学中学校",
+        "武蔵野大学高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.meijigakuin-higashi.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "明治学院中学校",
+        "明治学院東村山高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.meijisetagaya.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "明治大学付属世田谷中学校",
+        "明治大学付属世田谷高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.nakanogakuen.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "明治大学付属中野中学校",
+        "明治大学付属中野高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.mnh.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "明治大学付属八王子中学校",
+        "明治大学付属八王子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.meiji.ac.jp/ko_chu/",
+      "school_count": 2,
+      "school_names": [
+        "明治大学付属明治中学校",
+        "明治大学付属明治高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.meiho.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "明法中学校",
+        "明法高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.meguro.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "目黒学院中学校",
+        "目黒学院高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://mk.mejiro.ac.jp",
+      "school_count": 2,
+      "school_names": [
+        "目白研心中学校",
+        "目白研心高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.yakumo.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "八雲学園中学校",
+        "八雲学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.yasuda.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "安田学園中学校",
+        "安田学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.yamawaki.ed.jp",
+      "school_count": 2,
+      "school_names": [
+        "山脇学園中学校",
+        "山脇学園高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://ikebukuro.rikkyo.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "立教池袋中学校",
+        "立教池袋高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.rissho-hs.ac.jp/",
+      "school_count": 2,
+      "school_names": [
+        "立正大学付属立正中学校",
+        "立正大学付属立正高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.waseda-h.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "早稲田中学校",
+        "早稲田高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.wasedajg.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "早稲田大学系属早稲田実業学校中等部",
+        "早稲田大学系属早稲田実業学校高等部"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.wayokudan.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "和洋九段女子中学校",
+        "和洋九段女子高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
+    },
+    {
+      "shared_url": "https://www.ikubunkan.ed.jp/",
+      "school_count": 2,
+      "school_names": [
+        "郁文館高等学校",
+        "郁文館グローバル高等学校"
+      ],
+      "reason": "中高一貫校・同一法人キャンパス共通公式サイト"
     }
   ]
 }
