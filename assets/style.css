@@ -1126,7 +1126,10 @@ button:focus-visible {
 
 #products .first-staff-paper-image-link img {
   display: block;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .category-card-media img {
