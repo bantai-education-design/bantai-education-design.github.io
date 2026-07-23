@@ -3835,15 +3835,21 @@ button:focus-visible {
 .catalog-card-actions,
 .product-actions {
   display: flex;
+  flex-direction: row;
   gap: 8px;
   margin-top: auto;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .catalog-card-actions .catalog-btn,
 .product-actions .btn {
   flex: 1 1 calc(50% - 4px);
-  min-width: 110px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: center;
   justify-content: center;
   padding: 10px 12px;
@@ -3858,8 +3864,20 @@ button:focus-visible {
 @media (max-width: 480px) {
   .catalog-card-actions .catalog-btn,
   .product-actions .btn {
-    flex: 1 1 100%; /* スマホでは縦積みで押しやすく */
+    flex: 0 0 100%; /* スマホでは縦積みで押しやすく */
+    width: 100%;
   }
+}
+
+/* 絵日記・観察カードの旧3ボタン構造は専用修飾クラスで常に縦積み */
+.catalog-card-actions.is-three-actions {
+  flex-direction: column;
+}
+
+.catalog-card-actions.is-three-actions .catalog-btn {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 

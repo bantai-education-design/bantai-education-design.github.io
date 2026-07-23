@@ -79,7 +79,7 @@ def render_actions(product: dict) -> str:
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHでライセンスを購入</a>')
         if detail_url:
             links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳細を見る</a>')
-        return '<div class="catalog-card-actions">\n' + "\n".join(links) + "\n    </div>"
+        return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
 
     status = product.get("status")
     detail_url = product.get("detailUrl")
