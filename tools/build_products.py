@@ -95,7 +95,7 @@ def render_actions(product: dict) -> str:
 
         # 4. BOOTH (試用版DLがある製品ではライセンス購入の位置づけになる)
         if booth_url:
-            booth_label = "BOOTHでライセンスを購入" if trial_download_url else "BOOTHで購入・ダウンロードする"
+            booth_label = product.get("boothActionLabel") or ("BOOTHでライセンスを購入" if trial_download_url else "BOOTHで購入・ダウンロードする")
             links.append(
                 f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">{html_text(booth_label)}</a>'
             )

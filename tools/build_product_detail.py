@@ -568,6 +568,36 @@ def render_specs(section: dict[str, Any], data: dict[str, Any]) -> str:
 
 
 def render_faq(section: dict[str, Any], data: dict[str, Any]) -> str:
+    if section.get("details"):
+        items = []
+        for item in section["items"]:
+            items.append(
+                "\n".join(
+                    [
+                        '          <details class="education-faq-item">',
+                        f'            <summary>{html_text(item["question"])}</summary>',
+                        f'            <p>{html_text(item["answer"])}</p>',
+                        '          </details>',
+                    ]
+                )
+            )
+        section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
+        return "\n".join(
+            [
+                f'    <section{section_id} class="{html_attr(section.get("class", "education-faq-section"))}">',
+                '      <div class="container">',
+                '        <div class="education-section-heading">',
+                f'          <p>{html_text(section["eyebrow"])}</p>',
+                f'          <h2>{html_text(section["heading"])}</h2>',
+                '        </div>',
+                '        <div class="education-faq-list">',
+                "\n".join(items),
+                '        </div>',
+                '      </div>',
+                '    </section>',
+            ]
+        )
+
     items = []
     for item in section["items"]:
         items.append(
@@ -632,6 +662,8 @@ def render_text_card_grid(section: dict[str, Any], data: dict[str, Any]) -> str:
                 lines.append(f'{inner}<ul class="{html_attr(item.get("listClass", "notice-list"))}">')
                 lines.extend(f'{" " * (spaces + 4)}<li>{html_text(bullet)}</li>' for bullet in item["bullets"])
                 lines.append(f'{inner}</ul>')
+            if item.get("actions"):
+                lines.append(render_actions(item["actions"], spaces=spaces + 2, style=item.get("actionsStyle", "margin-top:16px;")))
         lines.append(f'{pad}</div>')
         return "\n".join(lines)
 
@@ -1137,6 +1169,183 @@ def render_education_workflow(section: dict[str, Any], data: dict[str, Any]) -> 
     ])
 
 
+def render_education_resource_link(section: dict[str, Any], data: dict[str, Any]) -> str:
+    action = section["action"]
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "education-resource-section"))}">',
+            f'      <div class="{html_attr(section.get("cardClass", "container education-resource-card"))}">',
+            '        <div>',
+            f'          <p class="{html_attr(section.get("kickerClass", "education-resource-kicker"))}">{html_text(section["eyebrow"])}</p>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            f'          <p>{html_text(section["description"])}</p>',
+            '        </div>',
+            f'        <a class="{html_attr(action.get("class", "btn btn-light"))}" href="{html_attr(action["href"])}">{html_text(action["label"])}</a>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_education_video_feature(section: dict[str, Any], data: dict[str, Any]) -> str:
+    video = section["video"]
+    actions = render_actions(section["actions"], spaces=10, class_name=section.get("actionsClass", "education-pv-actions"))
+    meta = section.get("meta", [])
+    meta_html = ""
+    if meta:
+        meta_html = "\n".join(
+            [
+                '          <div class="education-pv-meta">',
+                *[f'            <span>{html_text(item)}</span>' for item in meta],
+                '          </div>',
+            ]
+        )
+    assurance_html = ""
+    if section.get("assurance"):
+        assurance_html = "\n".join(
+            [
+                '          <div class="education-pv-assurance">',
+                *[
+                    f'            <span class="education-pv-assurance-item">{html_text(item)}</span>'
+                    for item in section["assurance"]
+                ],
+                '          </div>',
+            ]
+        )
+    quick_flow_html = ""
+    if section.get("quickFlow"):
+        flow_parts = []
+        for index, item in enumerate(section["quickFlow"]):
+            flow_parts.append(f'            <span class="education-pv-quick-flow-step">{html_text(item)}</span>')
+            if index < len(section["quickFlow"]) - 1:
+                flow_parts.append('            <span class="education-pv-quick-flow-arrow" aria-hidden="true">→</span>')
+        quick_flow_html = "\n".join(
+            [
+                '          <div class="education-pv-quick-flow">',
+                *flow_parts,
+                '          </div>',
+            ]
+        )
+    action_note_html = ""
+    if section.get("actionNote"):
+        action_note_html = f'          <p class="education-pv-action-note">{html_text(section["actionNote"])}</p>'
+    fallback = video.get("fallback", "動画を再生できない場合は、ページ下部の機能説明をご覧ください。")
+    return "\n".join(
+        [
+            f'    <section id="{html_attr(section["id"])}" class="{html_attr(section.get("class", "education-pv-section"))}">',
+            '      <div class="container">',
+            '        <div class="education-pv-header">',
+            f'          <p class="education-pv-kicker">{html_text(section["eyebrow"])}</p>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            f'          <p>{html_text(section["description"])}</p>',
+            '        </div>',
+            '        <div class="education-pv-frame">',
+            '          <video controls playsinline preload="metadata"'
+            f' poster="{html_attr(video["poster"])}" data-education-pv>',
+            f'            <source src="{html_attr(video["src"])}" type="{html_attr(video.get("type", "video/mp4"))}">',
+            f'            {html_text(fallback)}',
+            '          </video>',
+            '        </div>',
+            meta_html,
+            assurance_html,
+            quick_flow_html,
+            actions,
+            action_note_html,
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_education_audience_cards(section: dict[str, Any], data: dict[str, Any]) -> str:
+    cards = []
+    for item in section["items"]:
+        cards.append(
+            "\n".join(
+                [
+                    '          <article class="education-audience-card">',
+                    f'            <span>{html_text(item["number"])}</span>',
+                    f'            <p>{html_text(item["text"])}</p>',
+                    '          </article>',
+                ]
+            )
+        )
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "education-audience-section"))}">',
+            '      <div class="container">',
+            '        <div class="education-section-heading">',
+            f'          <p>{html_text(section["eyebrow"])}</p>',
+            f'          <h2>{html_text(section["heading"])}</h2>',
+            '        </div>',
+            '        <div class="education-audience-grid">',
+            "\n".join(cards),
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_education_monitor_program(section: dict[str, Any], data: dict[str, Any]) -> str:
+    details = "\n".join(
+        "\n".join(
+            [
+                f'            <li{render_attrs({"class": item["class"]}) if item.get("class") else ""}>',
+                f'              <strong>{html_text(item["label"])}</strong>',
+                f'              <span>{html_text(item["text"])}</span>',
+                '            </li>',
+            ]
+        )
+        for item in section["details"]
+    )
+    actions = render_actions(section["actions"], spaces=10, class_name=section.get("actionsClass", "education-monitor-actions"))
+    return "\n".join(
+        [
+            f'    <section id="{html_attr(section["id"])}" class="{html_attr(section.get("class", "education-monitor-section"))}">',
+            '      <div class="container">',
+            '        <div class="education-monitor-card">',
+            '          <div>',
+            f'            <p class="education-monitor-kicker">{html_text(section["eyebrow"])}</p>',
+            f'            <h2>{html_text(section["heading"])}</h2>',
+            f'            <p>{html_text(section["description"])}</p>',
+            '          </div>',
+            '          <ul class="education-monitor-details">',
+            details,
+            '          </ul>',
+            actions,
+            '        </div>',
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
+def render_education_final_cta(section: dict[str, Any], data: dict[str, Any]) -> str:
+    actions = render_actions(section["actions"], spaces=10, class_name=section.get("actionsClass", "education-final-actions"))
+    action_note = ""
+    if section.get("actionNote"):
+        action_note = f'        <p class="education-final-action-note">{html_text(section["actionNote"])}</p>'
+    secondary = ""
+    if section.get("secondaryLink"):
+        link = section["secondaryLink"]
+        secondary = f'          <a class="education-final-link" href="{html_attr(link["href"])}">{html_text(link["label"])}</a>'
+    return "\n".join(
+        [
+            f'    <section class="{html_attr(section.get("class", "education-final-cta"))}">',
+            '      <div class="container education-final-cta-inner">',
+            f'        <p class="education-final-kicker">{html_text(section["eyebrow"])}</p>',
+            f'        <h2>{html_text(section["heading"])}</h2>',
+            f'        <p>{html_text(section["description"])}</p>',
+            actions,
+            *([action_note] if action_note else []),
+            *([secondary] if secondary else []),
+            '      </div>',
+            '    </section>',
+        ]
+    )
+
+
 def render_flow_brief(section: dict[str, Any], data: dict[str, Any]) -> str:
     section_id = f' id="{html_attr(section["id"])}"' if section.get("id") else ""
     section_class = section.get("class", "flow-brief")
@@ -1196,7 +1405,12 @@ SECTION_RENDERERS = {
     "videoPlaceholder": render_video_placeholder,
     "noticeList": render_notice_list,
     "educationWorkflow": render_education_workflow,
+    "educationResourceLink": render_education_resource_link,
+    "videoFeature": render_education_video_feature,
+    "audienceCards": render_education_audience_cards,
+    "monitorProgram": render_education_monitor_program,
     "flowBrief": render_flow_brief,
+    "finalCta": render_education_final_cta,
 }
 
 

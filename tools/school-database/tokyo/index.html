@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東京都学校宛先データベース | Ban.Tai Education Design</title>
+  <meta name="description" content="学校封筒印刷・宛名作成に使える、東京都学校宛先データベースの検索ページです。公立・私立の幼稚園・小学校・中学校・義務教育学校・高等学校・中等教育学校・特別支援学校を収録。学校名、区市町村、学校種等で検索し、封筒宛名用の住所表記をコピーできます。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/tools/tokyo-school-address/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+  <script src="/tools/tokyo-school-address/search.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a class="active" href="/tools/school-database/">学校宛先DB</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/products/">すべての製品を見る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="kicker">Free Web Tool</div>
+        <h1>東京都学校宛先データベース</h1>
+        <p class="lead">学校封筒印刷・宛名作成に使える、東京都の学校の住所検索データベースです。</p>
+        <div style="margin-top:16px;">
+          <a class="btn-back-portal" href="/tools/school-database/" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.15); color:#ffffff; border:1px solid rgba(255,255,255,0.3); border-radius:6px; font-size:0.84rem; font-weight:700; text-decoration:none; transition:all 0.2s ease;">
+            ← 都道府県選択へ戻る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 学校宛先検索データベース説明バナー -->
+    <div style="background:var(--navy); border-bottom:2px solid var(--gold); padding:14px 0;">
+      <div class="container" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <span style="background:var(--gold); color:#0c1b33; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:99px; white-space:nowrap; flex-shrink:0;">東京都版</span>
+        <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;">このページは、Ban.Tai Education Design が提供する<strong style="color:#fff;">東京都学校宛先データベース</strong>です。アプリのインストール不要で、東京都の学校・園の宛先検索、宛名コピー、CSVダウンロードを利用できます（収録範囲の詳細は下記の『現在の収録範囲』表をご覧ください）。</p>
+      </div>
+    </div>
+
+    <section class="search-section">
+      <div class="container">
+        
+        <!-- 検索パネル -->
+        <div class="search-box">
+          <div style="background:#fffdf5; border:1px solid var(--gold); border-radius:8px; padding:16px; margin-bottom:20px; font-size:0.84rem; line-height:1.6; color:#705300;">
+            <div style="font-weight:700; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+              <span>💡 本データベースの収録範囲（合計 3,509 校・園）</span>
+            </div>
+            
+            <table style="width:100%; max-width:600px; border-collapse:collapse; margin-bottom:12px; font-size:0.8rem; background:#fff; border:1px solid #e6dbb8; text-align:left;">
+              <thead>
+                <tr style="background:#fcf8e3; border-bottom:1px solid #e6dbb8; font-weight:700; color:#8c6b00;">
+                  <th style="padding:6px 10px;">学校種別</th>
+                  <th style="padding:6px 10px; text-align:center;">公立</th>
+                  <th style="padding:6px 10px; text-align:center;">私立</th>
+                  <th style="padding:6px 10px; text-align:center;">国立</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #f2e9cc;">
+                  <td style="padding:6px 10px; font-weight:600;">幼稚園</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (148園)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (733園)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#95a5a6;">準備中</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f2e9cc;">
+                  <td style="padding:6px 10px; font-weight:600;">小学校・中学校・義務教育</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (1,869校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (238校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#95a5a6;">準備中</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f2e9cc;">
+                  <td style="padding:6px 10px; font-weight:600;">高等学校・中等教育</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (193校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (244校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#95a5a6;">準備中</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f2e9cc;">
+                  <td style="padding:6px 10px; font-weight:600;">特別支援学校</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (80校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#27ae60; font-weight:700;">✓ (4校)</td>
+                  <td style="padding:6px 10px; text-align:center; color:#95a5a6;">準備中</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <p style="margin:0; font-size:0.78rem; color:#8c6b00;">
+              ※公立校・園は令和7年度版、私立校・園は令和8年度版の公開データを使用しています。
+            </p>
+          </div>
+          <h2 class="search-title">検索条件を指定</h2>
+          <form id="search-form" onsubmit="return false;">
+            
+            <div class="search-form-grid">
+              <div class="form-group">
+                <label for="keyword">キーワードで検索</label>
+                <input type="text" id="keyword" class="form-control" placeholder="学校名・よみがな・住所（例：麹町、こうじまち）">
+              </div>
+              <div class="form-group">
+                <label for="city">区市町村を選択</label>
+                <select id="city" class="form-control">
+                  <option value="">すべての区市町村</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 設置区分フィルター -->
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label>設置区分</label>
+              <div class="checkbox-group">
+                <label class="filter-chip">
+                  <input type="checkbox" name="establishment-type" class="est-checkbox" value="公立" checked>
+                  <span>公立</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="establishment-type" class="est-checkbox" value="私立" checked>
+                  <span>私立</span>
+                </label>
+                <label class="filter-chip" style="opacity: 0.5; cursor: not-allowed;" title="将来の拡張で国立学校のデータを追加予定です">
+                  <input type="checkbox" name="establishment-type" class="est-checkbox" value="国立" disabled>
+                  <span>国立（準備中）</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>学校種で絞り込み</label>
+              <div class="checkbox-group" style="display: flex; flex-wrap: wrap; gap: 12px 18px;">
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="小学校" checked>
+                  <span>小学校</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="中学校" checked>
+                  <span>中学校</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="義務教育学校" checked>
+                  <span>義務教育学校</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="幼稚園" checked>
+                  <span>幼稚園</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="高等学校" checked>
+                  <span>高等学校</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="中等教育学校" checked>
+                  <span>中等教育学校</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="checkbox" name="school-type" class="type-checkbox" value="特別支援学校" checked>
+                  <span>特別支援学校</span>
+                </label>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- 敬称選択エリア -->
+        <div class="honorific-section">
+          <div class="honorific-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" style="vertical-align: middle;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            コピー用宛名敬称の選択
+          </div>
+          <div class="honorific-options">
+            <input type="radio" id="hon-1" name="honorific" class="honorific-radio" value="御中" checked>
+            <label for="hon-1" class="honorific-label">御中</label>
+
+            <input type="radio" id="hon-2" name="honorific" class="honorific-radio" value="校長先生">
+            <label for="hon-2" class="honorific-label">校長先生宛て</label>
+
+            <input type="radio" id="hon-3" name="honorific" class="honorific-radio" value="副校長先生">
+            <label for="hon-3" class="honorific-label">副校長先生宛て</label>
+
+            <input type="radio" id="hon-4" name="honorific" class="honorific-radio" value="事務室御中">
+            <label for="hon-4" class="honorific-label">事務室御中</label>
+
+            <input type="radio" id="hon-5" name="honorific" class="honorific-radio" value="ご担当者様">
+            <label for="hon-5" class="honorific-label">ご担当者様</label>
+          </div>
+        </div>
+
+        <!-- 検索結果ヘッダー -->
+        <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+          <div class="results-count">検索結果:<span id="count">0</span>件</div>
+          <div>
+            <a class="btn btn-light" id="csv-download-btn" href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 10px 20px; border-radius: 6px; font-weight: 700; border: 1px solid var(--gold); color: var(--navy); background: #fffdf8; text-decoration: none; transition: all 0.2s ease;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              検索結果の宛先データCSVをダウンロード
+            </a>
+          </div>
+        </div>
+
+        <!-- 検索結果リスト -->
+        <div id="results-list" class="results-list">
+          <!-- JSで動的に追加されます -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="一覧の先頭に戻る">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    上へ戻る
+  </button>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Ban.Tai Education Design</h2>
+        <p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p>
+      </div>
+      <div>
+        <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+        <p><a href="/legal/">利用規約・免責事項</a></p>
+      </div>
+    </div>
+    <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

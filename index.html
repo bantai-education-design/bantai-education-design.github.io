@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css?v=staff-resume-final-20260614-2">
+  <link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
   <!-- deployed-modern-monitor-flow-v3 -->
 
   <!-- Google tag (gtag.js) -->
@@ -72,7 +72,7 @@
         <a class="active" href="/">ホーム</a>
         <a href="/#school-work-core">学校業務支援</a>
         <a href="/#music-tools-core">五線紙・音楽教材</a>
-        <a href="/tools/tokyo-school-address/">学校宛先DB</a>
+        <a href="/tools/school-database/">学校宛先DB</a>
         <a href="/#products">その他の製品</a>
         <a href="/#free-tools">無料ツール</a>
         <a href="/contact/">サポート</a>
@@ -83,6 +83,7 @@
   </header>
   <main>
     <section class="hero">
+      <div class="hero-bg-deco" aria-hidden="true"></div>
       <div class="container hero-content">
         <div class="hero-text">
           <h1><span>学校の仕事を軽く。</span><br><span>学びの道具を自由に。</span></h1>
@@ -97,19 +98,23 @@
         </div>
         <div class="hero-showcase" aria-label="主力製品の画面イメージ">
           <figure class="showcase-panel showcase-panel-primary">
-            <img src="/assets/images/education-hero.png" alt="教育計画システムの実画面">
-            <figcaption>教育計画・週案・時数管理</figcaption>
+            <a class="showcase-panel-link" href="/products/education-planning/" aria-label="小学校教育計画作成・運営システムの詳細を見る">
+              <img src="/assets/images/education-hero.png" alt="教育計画システムの実画面">
+              <figcaption>教育計画・週案・時数管理</figcaption>
+            </a>
           </figure>
           <figure class="showcase-panel showcase-panel-secondary">
-            <img src="/assets/images/staff-paper-v13-main.jpg" alt="五線紙作成メーカーの画面">
-            <figcaption>五線紙作成・印刷</figcaption>
+            <a class="showcase-panel-link" href="/products/staff-paper/" aria-label="楽譜・五線紙 作成メーカーの詳細を見る">
+              <img src="/assets/images/staff-paper-v13-main.jpg" alt="五線紙作成メーカーの画面">
+              <figcaption>五線紙作成・印刷</figcaption>
+            </a>
           </figure>
         </div>
       </div>
     </section>
 
   <!-- ==================================================
-    東京都学校宛先データベース — 独立導線
+    全国学校宛先データベース — 独立導線
     ヒーロー直下に配置。無料ツール群・製品一覧とは別扱い。
   =================================================== -->
   <section id="school-address-db" style="background:linear-gradient(135deg,#071b36 0%,#0f2a4a 60%,#162540 100%); padding:64px 0; border-bottom:3px solid var(--gold);">
@@ -121,15 +126,15 @@
 
           <!-- バッジ行 -->
           <div style="display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px;">
-            <span style="background:var(--gold); color:#071b36; font-size:0.68rem; font-weight:900; padding:4px 12px; border-radius:99px; letter-spacing:0.06em;">東京都内 3,509校・園（順次拡張中）</span>
+            <span style="background:var(--gold); color:#071b36; font-size:0.68rem; font-weight:900; padding:4px 12px; border-radius:99px; letter-spacing:0.06em;">全国学校データベース（東京都・埼玉県対応）</span>
             <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">CSV対応</span>
             <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">宛名コピー</span>
-            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">ブラウザで利用可</span>
+            <span style="background:rgba(255,255,255,0.08); color:var(--gold2); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(197,160,89,0.4);">Google Maps連携</span>
           </div>
 
-          <h2 style="color:#fff; font-size:clamp(1.3rem,2.6vw,1.75rem); font-weight:700; margin:0 0 10px; line-height:1.35;">東京都学校宛先データベース</h2>
+          <h2 style="color:#fff; font-size:clamp(1.3rem,2.6vw,1.75rem); font-weight:700; margin:0 0 10px; line-height:1.35;">Ban.Tai 全国学校データベース</h2>
           <p style="color:var(--gold2); font-size:0.88rem; font-weight:600; margin:0 0 14px;">学校封筒印刷・宛名作成に使える、Ban.Tai公式HPの無料学校データベース</p>
-          <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 16px;">東京都教育委員会や東京都生活文化スポーツ局の公開データをもとに、東京都の学校・園の住所や電話番号を検索できます。学校名・区市町村・学校種・設置区分で絞り込み、封筒宛名形式でのコピーやCSVダウンロードが可能です。</p>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 20px;">各都道府県教育委員会等の公式公開データをもとに、学校・園の住所や電話番号を検索できます。東京都（3,509校・園）に加え、新たに埼玉県（1,929校・園）をサポート。都道府県・自治体・学校種・設置区分で絞り込み、封筒宛名コピーやCSVダウンロード、Google Maps連携が可能です。</p>
 
           <!-- 収録範囲の表 -->
           <div class="table-responsive" style="margin-bottom:24px;">
@@ -171,7 +176,10 @@
             </table>
           </div>
 
-          <a class="btn btn-primary" href="/tools/tokyo-school-address/" style="font-size:0.9rem; padding:13px 30px;">東京都学校宛先データベースを開く</a>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+            <a class="btn btn-primary" href="/tools/school-database/" style="font-size:0.9rem; padding:13px 26px;">全国データベース（都道府県選択）を開く</a>
+            <a class="btn btn-secondary" href="/tools/school-database/saitama/" style="font-size:0.9rem; padding:13px 24px; background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.3);">埼玉県版を開く</a>
+          </div>
         </div>
 
         <!-- プレビューカード -->
@@ -194,7 +202,9 @@
       <div class="core-product-grid">
         <article id="school-work-core" class="category-card category-card-feature">
           <div class="category-card-media">
-            <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システムの画面">
+            <a class="category-card-media-link" href="/products/education-planning/" aria-label="小学校教育計画作成・運営システムの詳細を見る">
+              <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システムの画面">
+            </a>
           </div>
           <div class="category-card-body">
             <h3>学校業務支援</h3>
@@ -212,7 +222,9 @@
         </article>
         <article id="music-tools-core" class="category-card category-card-feature">
           <div class="category-card-media">
-            <img src="/assets/images/staff-paper-v13-main.jpg" alt="楽譜・五線紙作成メーカーの画面">
+            <a class="category-card-media-link" href="/products/staff-paper/" aria-label="楽譜・五線紙 作成メーカーの詳細を見る">
+              <img src="/assets/images/staff-paper-v13-main.jpg" alt="楽譜・五線紙作成メーカーの画面">
+            </a>
           </div>
           <div class="category-card-body">
             <h3>五線紙・音楽教材</h3>
@@ -247,7 +259,9 @@
         <p class="direct-download-note">このボタンは、サイト内のZIPファイルを直接ダウンロードするためのリンクです。</p>
       </div>
       <div class="visual contain">
-        <img src="/assets/images/banner-studio-screenshot.jpg" alt="Ban.Tai バナースタジオ v3.0.0">
+        <a class="feature-image-link" href="/products/banner-studio/" aria-label="Ban.Tai バナースタジオの詳細を見る">
+          <img src="/assets/images/banner-studio-screenshot.jpg" alt="Ban.Tai バナースタジオ v3.0.0" width="1360" height="754" loading="lazy" decoding="async">
+        </a>
       </div>
     </div>
   </section>
@@ -340,7 +354,7 @@
         </div>
         <div class="top-stat-card">
           <span class="top-stat-label">販売中・体験版あり</span>
-          <span class="top-stat-val"><!-- STAT_SALES -->6<!-- /STAT_SALES --></span>
+          <span class="top-stat-val"><!-- STAT_SALES -->7<!-- /STAT_SALES --></span>
           <span class="top-stat-unit">件</span>
         </div>
         <div class="top-stat-card">
@@ -355,7 +369,7 @@
         </div>
         <div class="top-stat-card">
           <span class="top-stat-label">公開準備中</span>
-          <span class="top-stat-val"><!-- STAT_PREPARING -->1<!-- /STAT_PREPARING --></span>
+          <span class="top-stat-val"><!-- STAT_PREPARING -->0<!-- /STAT_PREPARING --></span>
           <span class="top-stat-unit">件</span>
         </div>
         <div class="top-stat-card">
@@ -366,7 +380,9 @@
       </div>
       <div class="grid grid-3">
         <article class="product" data-href="/products/education-planning/" tabindex="0" role="link" aria-label="小学校教育計画作成・運営システムの詳細を見る">
-          <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システム">
+          <a class="product-card-image-link" href="/products/education-planning/" aria-label="小学校教育計画作成・運営システムの詳細を見る">
+            <img src="/assets/images/education-hero.png" alt="小学校教育計画作成・運営システム">
+          </a>
           <div class="body">
             <span class="badge">主力商品</span>
             <h3>小学校教育計画作成・運営システム</h3>
@@ -386,7 +402,9 @@
         </article>
 
         <article class="product" data-href="/products/first-staff-paper/" tabindex="0" role="link" aria-label="Ban.Tai はじめての五線紙メーカーの詳細を見る">
-          <img src="/assets/images/first-staff-paper-thumbnail.png" alt="Ban.Tai はじめての五線紙メーカー">
+          <a class="product-card-image-link first-staff-paper-image-link" href="/products/first-staff-paper/" aria-label="Ban.Tai はじめての五線紙メーカーの詳細を見る">
+            <img src="/assets/images/first-staff-paper-thumbnail.png" alt="Ban.Tai はじめての五線紙メーカー" width="600" height="600" loading="lazy" decoding="async">
+          </a>
           <div class="body">
             <span class="badge" style="background:#28a745; color:#fff; font-weight:bold;">10日間無料体験</span>
             <span class="badge">入門版</span>
@@ -407,7 +425,9 @@
         </article>
 
         <article class="product" data-href="/products/staff-paper/" tabindex="0" role="link" aria-label="楽譜・五線紙 作成メーカーの詳細を見る">
-          <img src="/assets/images/staff-paper-v13-card.jpg" alt="楽譜・五線紙 作成メーカー">
+          <a class="product-card-image-link" href="/products/staff-paper/" aria-label="楽譜・五線紙 作成メーカーの詳細を見る">
+            <img src="/assets/images/staff-paper-v13-card.jpg" alt="楽譜・五線紙 作成メーカー">
+          </a>
           <div class="body">
             <span class="badge" style="background:#788699; color:#fff;">一時休止中</span>
             <h3>楽譜・五線紙 作成メーカー</h3>
@@ -427,7 +447,9 @@
         </article>
 
         <article class="product highlight-card" data-href="/products/kanji-practice/" tabindex="0" role="link" aria-label="漢字練習帳の詳細を見る">
-          <img src="/assets/images/kanji-practice/card-thumbnail.png" alt="漢字練習帳">
+          <a class="product-card-image-link" href="/products/kanji-practice/" aria-label="漢字練習帳の詳細を見る">
+            <img src="/assets/images/kanji-practice/card-thumbnail.png" alt="漢字練習帳">
+          </a>
           <div class="body">
             <span class="new-label-text">🆕 NEW</span>
             <h3 class="highlight-title">漢字練習帳</h3>
@@ -447,7 +469,9 @@
         </article>
 
         <article class="product highlight-card" data-href="/products/houganshi/" tabindex="0" role="link" aria-label="方眼紙メーカーの詳細を見る">
-          <img src="/assets/images/houganshi/card-thumbnail.png" alt="方眼紙メーカー">
+          <a class="product-card-image-link" href="/products/houganshi/" aria-label="方眼紙メーカーの詳細を見る">
+            <img src="/assets/images/houganshi/card-thumbnail.png" alt="方眼紙メーカー">
+          </a>
           <div class="body">
             <span class="new-label-text">BOOTHで公開中</span>
             <h3 class="highlight-title">方眼紙メーカー</h3>
@@ -494,29 +518,33 @@
         </article>
 
         <article class="product" data-href="/products/resume-generator/" tabindex="0" role="link" aria-label="スマート履歴書ジェネレーターの詳細を見る">
-          <img src="/assets/images/resume-generator/resume-main-screen.png" alt="スマート履歴書ジェネレーター">
+          <a class="product-card-image-link" href="/products/resume-generator/" aria-label="スマート履歴書ジェネレーターの詳細を見る">
+            <img src="/assets/images/resume-generator/booth-1-main.png" alt="スマート履歴書ジェネレーター">
+          </a>
           <div class="body">
-            <span class="badge">準備中</span>
+            <span class="badge">BOOTHで公開中</span>
             <h3>スマート履歴書ジェネレーター</h3>
             <p class="product-card-note">Smart Resume Generator</p>
-            <p class="product-desc">履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。新UIでは全画面表示、プレビュー拡大、基本情報保存にも対応しています。</p>
+            <p class="product-desc">スマート履歴書ジェネレーターは、写真付き履歴書を入力・確認・PDF保存まで進められるWindows用ツールです。10日間試用でき、未認証時はPDF・印刷物にSAMPLE表示が入ります。ライセンスキー認証でSAMPLE表示を解除できます。</p>
             <ul class="product-features">
-              <li>・履歴書テンプレート切替</li>
-              <li>・全画面表示とプレビュー拡大</li>
-              <li>・基本情報の保存 / 読込 / 削除</li>
-              <li>・印刷 / PDF保存導線を維持</li>
+              <li>・履歴書テンプレート切替（JIS / 転職 / アルバイト）</li>
+              <li>・表裏を正しい向きの2ページPDFで作成</li>
+              <li>・両面印刷はPDFビューアー / ドライバー側で設定</li>
+              <li>・10日間試用・ライセンスキーで SAMPLE 解除</li>
               <li>・AIアシスタントUIを維持</li>
-              <li>・BOOTH / Vector公開準備中</li>
+              <li>・BOOTHで公開中 / Vector登録申請中</li>
             </ul>
             <div class="product-actions">
-              <span class="btn btn-disabled">公開準備中</span>
+              <a class="btn btn-primary" href="https://booth.pm/ja/items/8551539" target="_blank" rel="noopener noreferrer">BOOTHでダウンロードする</a>
               <a class="btn btn-light" href="/products/resume-generator/">詳細を見る</a>
             </div>
           </div>
         </article>
 
         <article class="product" data-href="/products/text-overlay/" tabindex="0" role="link" aria-label="画像文字入れくんの詳細を見る">
-          <img src="/assets/images/text-tool-features-light.jpg" alt="画像文字入れくん">
+          <a class="product-card-image-link" href="/products/text-overlay/" aria-label="画像文字入れくんの詳細を見る">
+            <img src="/assets/images/text-tool-features-light.jpg" alt="画像文字入れくん">
+          </a>
           <div class="body">
             <span class="badge">Vectorで公開中</span>
             <h3>画像文字入れくん</h3>
@@ -536,7 +564,9 @@
         </article>
 
         <article class="product" data-href="/products/id-photo/" tabindex="0" role="link" aria-label="証明写真メーカーの詳細を見る">
-          <img src="/assets/images/id-photo/id-photo-hero-pc-workflow.png" alt="証明写真メーカー">
+          <a class="product-card-image-link" href="/products/id-photo/" aria-label="証明写真メーカーの詳細を見る">
+            <img src="/assets/images/id-photo/id-photo-hero-pc-workflow.png" alt="証明写真メーカー">
+          </a>
           <div class="body">
             <span class="badge">BOOTHで公開中</span>
             <h3>証明写真メーカー</h3>

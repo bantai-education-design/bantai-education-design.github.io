@@ -54,6 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
       itemName = `${appName} - ${actionType}`;
     }
 
+    // --- 4. 製品画像から詳細ページへの遷移の判定 ---
+    // 専用イベントは増やさず、サイト共通の click_action として計測する。
+    else if (
+      element.classList.contains('showcase-panel-link') ||
+      element.classList.contains('category-card-media-link') ||
+      element.classList.contains('feature-image-link') ||
+      element.classList.contains('product-card-image-link')
+    ) {
+      let appName = getAppNameFromContext(href, text);
+      itemName = `${appName} - 詳細ページ遷移`;
+    }
+
     // イベントが特定できた場合のみ、クリックリスナーを登録
     if (itemName) {
       element.addEventListener('click', () => {
@@ -68,6 +80,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sendEducationEvent = (eventName, params = {}) => {
+    if (typeof krt === 'function') {
+      krt('send', eventName, params);
+      console.log(`[KARTE Event] ${eventName}`, params);
+    }
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  };
+
+  const pv = document.querySelector('[data-education-pv]');
+  if (pv) {
+    let played = false;
+    let halfway = false;
+    let completed = false;
+    let playbackEnded = false;
+
+    const resetPlaybackTracking = () => {
+      played = false;
+      halfway = false;
+      completed = false;
+      playbackEnded = false;
+    };
+
+    pv.addEventListener('play', () => {
+      if (playbackEnded) {
+        resetPlaybackTracking();
+      }
+      if (played) return;
+      played = true;
+      sendEducationEvent('education_pv_play', {
+        item_name: '小学校教育計画作成・運営システム - PV再生開始'
+      });
+    });
+
+    pv.addEventListener('timeupdate', () => {
+      if (halfway || !pv.duration || Number.isNaN(pv.duration)) return;
+      if (pv.currentTime / pv.duration >= 0.5) {
+        halfway = true;
+        sendEducationEvent('education_pv_50', {
+          item_name: '小学校教育計画作成・運営システム - PV 50%視聴'
+        });
+      }
+    });
+
+    pv.addEventListener('ended', () => {
+      if (completed) return;
+      completed = true;
+      sendEducationEvent('education_pv_complete', {
+        item_name: '小学校教育計画作成・運営システム - PV完了'
+      });
+      playbackEnded = true;
+    });
+  }
+
+  document.querySelectorAll('[data-education-event]').forEach(element => {
+    // Keep the site-wide click_action and these campaign events as separate measurements.
+    element.addEventListener('click', () => {
+      sendEducationEvent(element.dataset.educationEvent, {
+        item_name: (element.textContent || '').trim()
+      });
+    });
   });
 });
 

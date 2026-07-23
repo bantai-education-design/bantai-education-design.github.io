@@ -1,6 +1,6 @@
 {
   "pageTitle": "スマート履歴書ジェネレーター | Ban.Tai Education Design",
-  "metaDescription": "スマート履歴書ジェネレーターは、履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。",
+  "metaDescription": "スマート履歴書ジェネレーター（Smart Resume Generator）は、履歴書の入力・写真配置・志望動機/自己PR作成に対応し、表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツールです。",
   "bodyClass": "product-detail-resume",
   "styleVersion": "staff-resume-final-20260614-2",
   "menuToggle": false,
@@ -9,15 +9,17 @@
     { "href": "/#products", "label": "製品一覧", "class": "active" },
     { "href": "#features", "label": "主な機能" },
     { "href": "#screenshots", "label": "画面イメージ" },
-    { "href": "#distribution", "label": "公開準備" },
+    { "href": "#distribution", "label": "配布・購入" },
     { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
   ],
   "productName": "スマート履歴書ジェネレーター",
   "englishName": "Smart Resume Generator",
   "images": [
-    "/assets/images/resume-generator/resume-main-screen.png",
-    "/assets/images/resume-generator/resume-print-preview.png",
-    "/assets/images/resume-generator/resume-ai-assistant.png"
+    "/assets/images/resume-generator/booth-1-main.png",
+    "/assets/images/resume-generator/booth-2-complete.png",
+    "/assets/images/resume-generator/booth-3-steps.png",
+    "/assets/images/resume-generator/booth-4-features.png",
+    "/assets/images/resume-generator/booth-5-trial-license.png"
   ],
   "sections": [
     {
@@ -28,15 +30,15 @@
       "imageContainerClass": "hero-image-container",
       "kicker": "Smart Resume Generator",
       "headingLines": ["スマート履歴書ジェネレーター"],
-      "lead": "履歴書の入力、写真配置、志望動機・自己PRの作成、印刷・PDF保存をブラウザで行える履歴書作成支援ツールです。",
-      "note": "最新UIでは、全画面表示、プレビュー拡大、基本情報の保存 / 読込 / 削除に対応しました。BOOTH / Vector / ダウンロード導線は引き続き準備中です。",
+      "lead": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツールです。基本情報、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄を順番に入力できます。",
+      "note": "対応OS：Windows 10 / 11。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキー認証で SAMPLE 表示を解除できます。",
       "actions": [
-        { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" },
-        { "class": "btn btn-secondary", "href": "#distribution", "label": "公開準備を見る" }
+        { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } },
+        { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" }
       ],
       "image": {
-        "src": "/assets/images/resume-generator/resume-main-screen.png",
-        "alt": "スマート履歴書ジェネレーターのメイン画面"
+        "src": "/assets/images/resume-generator/booth-1-main.png",
+        "alt": "スマート履歴書ジェネレーターのBOOTHメイン画像"
       }
     },
     {
@@ -44,14 +46,15 @@
       "eyebrow": "Overview",
       "heading": "履歴書づくりを、ひとつの画面で見やすく整える。",
       "paragraphs": [
-        "スマート履歴書ジェネレーターは、日本向けの履歴書をブラウザ上で整え、入力から印刷・PDF保存までを一つの流れで進められる支援ツールです。",
-        "JIS標準、転職用、アルバイト用のテンプレートを切り替えながら、基本情報、学歴、職歴、資格、志望動機、自己PRなどを編集できます。最新UIでは広い画面を使いやすく整理し、写真配置や印刷前プレビューも見やすく確認できる構成に整えています。"
+        "スマート履歴書ジェネレーターは、写真付き履歴書をかんたんに作成できるWindows用アプリです。氏名・住所・生年月日などの基本情報から、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄まで、履歴書に必要な項目を順番に入力できます。",
+        "画面右側には履歴書のプレビューが表示されるため、仕上がりを確認しながら編集できます。証明写真画像の読み込みにも対応しており、JPG / PNG の写真を読み込み、履歴書の写真枠に合わせて位置や大きさを調整できます。",
+        "作成した履歴書は、表面・裏面を正しい向きの2ページPDFとして出力できます。実際に両面印刷を行う場合は、作成されたPDFを開き、PDFビューアーまたはプリンター側の印刷画面で「両面印刷」を選択してください。プリンターによっては、プリンタードライバー側で両面印刷設定が必要になる場合があります。"
       ],
       "card": {
         "class": "card gold",
-        "badge": "準備中",
-        "heading": "現在の掲載方針",
-        "text": "GitHubリポジトリは private のため、このページでは GitHub へのリンクを掲載していません。BOOTH / Vector / ダウンロードURL も、公開準備が整ってから追加します。"
+        "badge": "BOOTHで公開中",
+        "heading": "10日間試用版あり",
+        "text": "BOOTHで公開中です。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキーを入力すると SAMPLE 表示が解除されます。"
       }
     },
     {
@@ -63,18 +66,18 @@
       "items": [
         {
           "mark": "書",
-          "heading": "履歴書テンプレート切替",
-          "text": "JIS標準、転職用、アルバイト用のテンプレートを切り替えて利用できます。"
+          "heading": "写真付き履歴書の作成",
+          "text": "基本情報、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄を入力できます。"
         },
         {
-          "mark": "広",
-          "heading": "全画面表示とプレビュー拡大",
-          "text": "広い画面で入力とプレビューを見比べやすくし、履歴書の仕上がりを大きく確認できます。"
+          "mark": "刷",
+          "heading": "表裏2ページPDFの作成",
+          "text": "表面・裏面を正しい向きの2ページPDFとして作成できます。両面印刷はPDFを開いてPDFビューアーまたはプリンタードライバー側で設定します。"
         },
         {
           "mark": "文",
-          "heading": "文章入力とAI補助",
-          "text": "志望動機・自己PRを手動入力でき、Gemini API を使った文章生成にも対応しています。AIアシスタントUI自体は引き続き利用できます。"
+          "heading": "10日間試用とライセンス認証",
+          "text": "試用中・未認証時は SAMPLE 表示が入り、ライセンスキー認証で SAMPLE 表示を解除できます。"
         }
       ],
       "extraGrids": [
@@ -86,10 +89,12 @@
               "heading": "入力・編集機能",
               "bullets": [
                 "JIS標準 / 転職用 / アルバイト用テンプレート切替",
-                "フォント切替",
-                "ふりがな形式切替",
+                "フォント切替 / ふりがな形式切替",
                 "学歴 / 職歴 / 資格の動的追加",
-                "志望動機 / 自己PR入力",
+                "志望動機 / 自己PR / 本人希望欄の入力",
+                "証明写真画像の読み込み",
+                "写真の位置 / 大きさの調整",
+                "サンプルデータの読み込み",
                 "基本情報の保存 / 読込 / 削除",
                 "localStorage保存"
               ]
@@ -97,12 +102,11 @@
             {
               "heading": "出力・補助機能",
               "bullets": [
-                "Ban.Tai ロゴ表示",
-                "全体デザイン整理",
-                "印刷 / PDF保存",
-                "写真アップロードとトリミング",
-                "Gemini API を使ったAI文章生成",
-                "APIキー未設定時のテンプレート文フォールバック"
+                "表面・裏面を正しい向きの2ページPDFとして作成",
+                "印刷用PDFの作成",
+                "両面印刷はPDFビューアー / プリンタードライバー側で設定",
+                "Gemini API を使ったAI文章生成（APIキー未設定時はテンプレート文）",
+                "10日間試用・ライセンスキーで SAMPLE 解除"
               ]
             }
           ]
@@ -116,26 +120,26 @@
       "listCard": {
         "class": "card gold",
         "items": [
-          "ブラウザ中心で扱えるため、軽量で導入しやすい構成です。",
-          "全画面表示ボタンとプレビュー拡大表示により、仕上がり確認をより大きく行えます。",
+          "対応OS は Windows 10 / 11。exe を起動して利用します。",
+          "表面・裏面を正しい向きの2ページPDFとして作成でき、片面ずつの印刷にも対応します。",
           "氏名、住所、連絡先などの基本情報をプロフィールとして保存し、入力の繰り返しを減らせます。",
-          "スマホ幅でも横スクロールが出ないことを確認済みです。"
+          "履歴書の入力・写真配置・保存・PDF作成・印刷はオフラインで利用できます（AI文章作成のみインターネットとGemini APIキーが必要）。"
         ]
       },
       "noticeClass": "warning",
       "notices": [
         {
-          "heading": "AI機能について",
+          "heading": "ライセンスと SAMPLE について",
           "paragraphs": [
-            "AI文章生成を使う場合は、利用者自身のGemini APIキー設定が必要になる場合があります。履歴書には個人情報が含まれるため、AI機能に入力する内容は利用者自身で確認してください。",
-            "なお、AIアシスタントUIは維持していますが、外部API実行によるAI機能本体の確認は、現時点ではまだ未実施です。"
+            "10日間の試用に対応しています。試用中・未認証時は、印刷物・PDFの表面・裏面に SAMPLE 透かしが入ります。ライセンスキーを入力すると SAMPLE 表示が解除されます。",
+            "BOOTHではアプリ本体を試用版として公開し、ライセンスキー購入により製品利用できる形にします。Vectorは現在登録申請中のため、外部リンクはまだ掲載していません。"
           ]
         },
         {
-          "heading": "個人情報についての注意",
+          "heading": "AI機能・個人情報についての注意",
           "headingStyle": "margin-top:20px;",
           "paragraphs": [
-            "入力内容は基本的に利用者のブラウザ内で扱う設計ですが、AI機能を使う場合は外部APIとの通信が発生する可能性があります。公開前に、この点の説明をさらに整備する必要があります。"
+            "AI文章生成を使う場合は、利用者自身の Gemini API キー設定が必要になる場合があります。履歴書には個人情報が含まれるため、AI機能に入力する内容は利用者自身で確認してください。AIを使わない通常機能はオフラインで利用できます。"
           ]
         }
       ]
@@ -149,13 +153,13 @@
       "gridClass": "grid grid-2 gallery",
       "images": [
         {
-          "src": "/assets/images/resume-generator/resume-main-screen.png",
-          "alt": "スマート履歴書ジェネレーターのメイン画面",
+          "src": "/assets/images/resume-generator/booth-1-main.png",
+          "alt": "スマート履歴書ジェネレーターのBOOTHメイン画像",
           "wrapClass": "visual"
         },
         {
-          "src": "/assets/images/resume-generator/resume-print-preview.png",
-          "alt": "スマート履歴書ジェネレーターの印刷前プレビュー",
+          "src": "/assets/images/resume-generator/booth-2-complete.png",
+          "alt": "スマート履歴書ジェネレーターの完成イメージ",
           "wrapClass": "visual"
         }
       ],
@@ -166,23 +170,33 @@
           "items": [
             {
               "heading": "入力画面と履歴書プレビュー",
-              "text": "最新UIでは、Ban.Tai ロゴを含む上部ヘッダー、広く整理した入力パネル、右側の履歴書プレビューを見比べながら操作できます。"
+              "text": "BOOTH掲載用のメイン画像で、入力パネル、写真設定、履歴書プレビューの全体像を確認できます。"
             },
             {
               "heading": "印刷前の確認",
-              "text": "プレビュー拡大表示を使って、完成イメージを大きく見ながら印刷またはPDF保存前の確認を行えます。"
+              "text": "表面・裏面の完成イメージ、写真付き履歴書、PDF保存までの流れを確認できます。"
             }
           ]
         }
       ],
       "extraImageGrids": [
         {
-          "gridClass": "grid grid-1",
+          "gridClass": "grid grid-3",
           "gridStyle": "margin-top:24px;",
           "images": [
             {
-              "src": "/assets/images/resume-generator/resume-ai-assistant.png",
-              "alt": "スマート履歴書ジェネレーターのAI文章作成アシスタント",
+              "src": "/assets/images/resume-generator/booth-3-steps.png",
+              "alt": "スマート履歴書ジェネレーターのかんたん3ステップ",
+              "wrapClass": "visual"
+            },
+            {
+              "src": "/assets/images/resume-generator/booth-4-features.png",
+              "alt": "スマート履歴書ジェネレーターの便利機能紹介",
+              "wrapClass": "visual"
+            },
+            {
+              "src": "/assets/images/resume-generator/booth-5-trial-license.png",
+              "alt": "スマート履歴書ジェネレーターの試用とライセンス説明",
               "wrapClass": "visual"
             }
           ]
@@ -205,23 +219,26 @@
       "background": "#f9f9f9",
       "eyebrow": "Distribution",
       "heading": "配布ページ",
-      "description": "BOOTH / Vector / ダウンロードページは準備中です。公開時には、このページから正式導線を案内します。",
+      "description": "BOOTHで10日間試用版を公開中です。Vectorは現在申請中のため、外部ボタンはまだ掲載していません。",
       "gridStyle": "margin-top:22px;",
       "items": [
         {
-          "badge": "BOOTH準備中",
-          "heading": "BOOTHで購入・ダウンロードする（準備中）",
-          "text": "Windows向け配布導線の整備を進めています。"
+          "badge": "BOOTHで公開中",
+          "heading": "BOOTHでダウンロードできます",
+          "text": "10日間試用できるアプリ本体をBOOTHで公開しています。未認証時はPDF・印刷物に SAMPLE 表示が入り、ライセンスキー認証で解除できます。",
+          "actions": [
+            { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } }
+          ]
         },
         {
-          "badge": "Vector準備中",
-          "heading": "Vectorで配布する（準備中）",
-          "text": "掲載説明、スクリーンショット、配布構成を調整中です。"
+          "badge": "Vector登録申請中",
+          "heading": "Vectorは登録申請中",
+          "text": "Vector版は現在、登録申請中です。公開され次第、このページでご案内します。"
         },
         {
-          "badge": "ダウンロード準備中",
-          "heading": "公式HPからの配布（準備中）",
-          "text": "ZIP / EXE / private GitHub への直接リンクは、現在は掲載していません。"
+          "badge": "公式HP",
+          "heading": "公式HPからの直接配布について",
+          "text": "現在はBOOTHで配布しています。公式HPからの直接ZIP配布は行っていません。"
         }
       ]
     }

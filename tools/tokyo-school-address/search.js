@@ -189,25 +189,45 @@ document.addEventListener('DOMContentLoaded', () => {
       const copyText = formatAddress(school, selectedHonorific);
       const schoolId = `school-2025-${index}`;
 
+      const mapQuery = encodeURIComponent(`${school.school_name} ${school.address}`);
+      const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+
+      let websiteBtnHtml = '';
+      if (school.website && (school.website.startsWith('http://') || school.website.startsWith('https://'))) {
+        websiteBtnHtml = `
+          <a class="btn-website" href="${escapeHtml(school.website)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(school.school_name)}の公式ホームページを開く" title="公式ホームページを開く">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            公式HP
+          </a>
+        `;
+      }
+
       card.innerHTML = `
         <div class="school-info">
           <div class="school-badges">
-            <span class="school-badge-type">${school.school_type}</span>
-            <span class="school-badge-city">${school.municipality}</span>
+            <span class="school-badge-type">${escapeHtml(school.school_type)}</span>
+            <span class="school-badge-city">${escapeHtml(school.municipality)}</span>
           </div>
-          <h3 class="school-name">${school.school_name}</h3>
+          <h3 class="school-name">${escapeHtml(school.school_name)}</h3>
           <div class="school-address-row">
-            <span class="zip">〒${school.postal_code}</span>
-            <span class="addr">${school.address}</span>
+            <span class="zip">〒${escapeHtml(school.postal_code)}</span>
+            <span class="addr">${escapeHtml(school.address)}</span>
           </div>
-          <div class="school-tel-row">TEL: ${school.phone}</div>
+          <div class="school-tel-row">TEL: ${escapeHtml(school.phone)}</div>
         </div>
         <div class="school-actions">
-          <button class="btn-copy" data-id="${schoolId}" data-index="${index}" type="button">
-            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            住所コピー
-          </button>
-          <div class="copy-preview" id="preview-${schoolId}">${copyText}</div>
+          <div class="action-buttons-group">
+            <button class="btn-copy" data-id="${schoolId}" data-index="${index}" type="button">
+              <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              住所コピー
+            </button>
+            <a class="btn-map" href="${mapUrl}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(school.school_name)}をGoogle Mapsで開く" title="Google Mapsで場所を確認">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              地図
+            </a>
+            ${websiteBtnHtml}
+          </div>
+          <div class="copy-preview" id="preview-${schoolId}">${escapeHtml(copyText)}</div>
         </div>
       `;
 
@@ -223,6 +243,32 @@ document.addEventListener('DOMContentLoaded', () => {
           'honorific': selectedHonorific
         });
       });
+
+      // 地図ボタンのイベント登録 (GA4: school_map)
+      const mapBtn = card.querySelector('.btn-map');
+      if (mapBtn) {
+        mapBtn.addEventListener('click', () => {
+          trackEvent('school_map', {
+            prefecture: 'tokyo',
+            school_type: school.school_type,
+            establishment_type: school.establishment_type || '公立',
+            municipality: school.municipality
+          });
+        });
+      }
+
+      // 公式HPボタンのイベント登録 (GA4: school_website_open)
+      const websiteBtn = card.querySelector('.btn-website');
+      if (websiteBtn) {
+        websiteBtn.addEventListener('click', () => {
+          trackEvent('school_website_open', {
+            prefecture: 'tokyo',
+            school_type: school.school_type,
+            establishment_type: school.establishment_type || '公立',
+            municipality: school.municipality
+          });
+        });
+      }
 
       fragment.appendChild(card);
     });
@@ -364,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Excel文字化け防止のためBOM付与
     let csvContent = '\ufeff';
     // ヘッダー
-    csvContent += '"学校種別","設置区分","区市町村","学校名","学校名（ふりがな）","郵便番号","所在地","電話番号","デフォルト宛名","用途タグ"\n';
+    csvContent += '"学校種別","設置区分","区市町村","学校名","学校名（ふりがな）","郵便番号","所在地","電話番号","デフォルト宛名","用途タグ","公式ホームページ"\n';
 
     data.forEach(item => {
       const row = [
@@ -377,7 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
         item.address || '',
         item.phone || '',
         item.addressee_default || '',
-        (item.tags || []).join(',')
+        (item.tags || []).join(','),
+        item.website || ''
       ].map(val => `"${(val || '').replace(/"/g, '""')}"`); // ダブルクォーテーションエスケープ
 
       csvContent += row.join(',') + '\n';

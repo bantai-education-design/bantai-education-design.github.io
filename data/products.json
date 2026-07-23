@@ -159,23 +159,25 @@
       "name": "スマート履歴書ジェネレーター",
       "category": "standard",
       "order": 7,
-      "status": "公開準備中",
+      "status": "10日間無料体験",
       "badges": [
-        "公開準備中"
+        "BOOTHで公開中",
+        "10日間試用版あり"
       ],
-      "summary": "履歴書入力、写真配置、印刷、PDF保存を支援します。",
+      "summary": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツール。BOOTHで10日間試用版を公開中です。",
       "features": [],
-      "image": "/assets/images/resume-generator/resume-main-screen.png",
+      "image": "/assets/images/resume-generator/booth-1-main.png",
       "imageAlt": "スマート履歴書ジェネレーター",
       "detailUrl": "/products/resume-generator/",
       "categoryUrl": null,
       "primaryActionLabel": null,
       "secondaryActionLabel": "詳細を見る",
+      "boothActionLabel": "BOOTHでダウンロードする",
       "published": true,
-      "boothUrl": null,
+      "boothUrl": "https://booth.pm/ja/items/8551539",
       "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": false,
+      "hasTrial": true,
       "isFlagship": false
     },
     {

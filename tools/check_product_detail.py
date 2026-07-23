@@ -282,7 +282,7 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require_keys(data, {"englishName", "images", "bodyClass"}, "resume-generator root")
     require("product-detail-resume" in data["bodyClass"], "resume body class missing")
     require("resume-generator-hero" in html, "resume hero class missing")
-    require(len(data["images"]) == 3, "resume images must have 3 items")
+    require(len(data["images"]) == 5, "resume images must have 5 items")
     for src in data["images"]:
         validate_image_path(src, "resume image")
         require(src in html, f"resume image missing from HTML: {src}")
@@ -296,15 +296,16 @@ def validate_resume_generator(data: dict, html: str, parser: DetailPageParser) -
     require(features is not None and len(features.get("extraGrids", [])[0]["items"]) == 2, "resume input/output cards must total 2")
     screenshots = next((section for section in data["sections"] if section.get("id") == "screenshots"), None)
     require(screenshots is not None and len(screenshots["images"]) == 2, "resume screenshot image grid must have 2 images")
-    require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 1, "resume AI assistant image missing")
+    require(screenshots is not None and len(screenshots.get("extraImageGrids", [])[0]["images"]) == 3, "resume BOOTH support images missing")
     distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
     require(distribution is not None and len(distribution["items"]) == 3, "resume distribution cards must have 3 items")
-    require("BOOTH準備中" in html and "Vector準備中" in html and "ダウンロード準備中" in html, "distribution pending labels missing")
-    require("外部API実行によるAI機能本体の確認は、現時点ではまだ未実施です。" in html, "AI external API caution missing")
+    booth_url = "https://booth.pm/ja/items/8551539"
+    require("BOOTHで公開中" in html and "10日間試用版あり" in html, "BOOTH release labels missing")
+    require("Vector登録申請中" in html and "Vector版は現在、登録申請中です。" in html, "Vector pending wording missing")
+    require(booth_url in html and html.count(booth_url) == 2, "BOOTH URL count changed")
+    require("PDFビューアーまたはプリンター側" in html, "duplex print caution missing")
     require("個人情報についての注意" in html, "personal information caution missing")
-    require("GitHubリポジトリは private" in html, "private GitHub policy wording missing")
     forbidden = [
-        "bantai3.booth.pm",
         "vector.co.jp",
         "github.com/",
         ".zip",
