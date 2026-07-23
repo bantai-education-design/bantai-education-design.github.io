@@ -4,6 +4,7 @@
   "styleVersion": "education-monitor-conversion-phase1-20260722-1",
   "scriptVersion": "education-monitor-pv-20260721-1",
   "bodyClass": "product-detail-page product-detail-education",
+  "menuToggle": true,
   "navLinks": [
     {
       "label": "ホーム",

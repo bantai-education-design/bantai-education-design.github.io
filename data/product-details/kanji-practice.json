@@ -3,7 +3,7 @@
   "metaDescription": "漢字練習帳は、マス目、余白、線の色や太さを自由に選んで、子どもに合わせた最適な漢字練習用紙をいつでも作成・印刷できるWindowsアプリです。",
   "bodyClass": "",
   "styleVersion": "586a1d0_v2",
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
     { "href": "/", "label": "ホーム" },
     { "href": "/#products", "label": "製品一覧", "class": "active" },

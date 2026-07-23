@@ -17,6 +17,18 @@ body{
 a{color:inherit; transition:color 0.2s ease;}
 img{max-width:100%;display:block;height:auto;}
 .container{width:min(1140px,90vw);margin:auto}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-inline: 16px;
+  }
+}
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 /* Header & Navigation */
 .site-header{
@@ -123,7 +135,7 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 .footer{background:#06172d;color:rgba(255,255,255,.76);padding:54px 0 28px;border-top:4px solid var(--gold)}.footer h2{color:#fff;font-size:1.6rem}.footer a{color:#fff}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:22px;font-size:.85rem;color:rgba(255,255,255,.58)}
 @media(max-width:980px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){.menu{display:none}.hero{min-height:560px}.hero:before{background-size:130% auto;background-position:center bottom;opacity:.10}.grid-2,.grid-3,.grid-4,.download,.footer-grid{grid-template-columns:1fr}.monitor-panel{padding:30px}.row{grid-template-columns:1fr}.home-floating{right:14px;bottom:14px;padding:10px 14px;font-size:.9rem}}
-@media(max-width:860px){body{overflow-x:hidden}.btn{max-width:100%;white-space:normal;text-align:center}.actions{align-items:flex-start}.product,.visual,.roster-card{min-width:0}}
+@media(max-width:860px){.btn{max-width:100%;white-space:normal;text-align:center}.actions{align-items:flex-start}.product,.visual,.roster-card{min-width:0}}
 
 /* v3: 商品カード画像を切らずに見せる */
 .product{
@@ -776,13 +788,14 @@ button:focus-visible {
 
 .hero h1 {
   color: var(--white);
-  font-size: clamp(2.2rem, 4.35vw, 4rem);
-  line-height: 1.18;
+  font-size: clamp(1.8rem, 4.35vw, 4rem);
+  line-height: 1.25;
   letter-spacing: 0;
   margin: 0 0 22px;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-  word-break: keep-all;
-  overflow-wrap: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 
 .hero h1 span {
@@ -1224,6 +1237,7 @@ button:focus-visible {
 @media (max-width: 860px) {
   .nav {
     min-height: 68px;
+    position: relative;
   }
 
   .brand img {
@@ -1238,8 +1252,11 @@ button:focus-visible {
   .menu {
     position: absolute;
     top: 100%;
-    left: 5vw;
-    right: 5vw;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
@@ -1253,6 +1270,7 @@ button:focus-visible {
     transform: translateY(-8px);
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 100;
   }
 
   .menu-open .menu {
@@ -1287,8 +1305,8 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 8.5vw, 2.25rem);
-    line-height: 1.25;
+    font-size: clamp(1.45rem, 6.5vw, 2.1rem);
+    line-height: 1.3;
   }
 
   .hero-content .actions,
@@ -1364,15 +1382,22 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .brand span {
-    max-width: 190px;
-    font-size: 0.92rem;
-    line-height: 1.25;
+    max-width: 180px;
+    font-size: 0.9rem;
+    line-height: 1.2;
   }
 
   .category-card ul {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand span {
+    max-width: 140px;
+    font-size: 0.82rem;
   }
 }
 
@@ -2424,9 +2449,12 @@ button:focus-visible {
 
 .product-detail-education .education-detail-copy h1 {
   color: #ffffff;
-  font-size: clamp(2.15rem, 4.2vw, 4.35rem);
-  line-height: 1.12;
+  font-size: clamp(1.7rem, 4.2vw, 4.35rem);
+  line-height: 1.2;
   margin: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 
 .product-detail-education .education-detail-lead {
@@ -2747,6 +2775,11 @@ button:focus-visible {
 @media (max-width: 520px) {
   .product-detail-education .education-detail-hero {
     padding: 34px 0 34px;
+  }
+
+  .product-detail-education .education-detail-copy h1 {
+    font-size: clamp(1.4rem, 6.5vw, 1.85rem);
+    line-height: 1.25;
   }
 
   .product-detail-education .education-detail-labels {
@@ -3650,6 +3683,22 @@ button:focus-visible {
     gap: 10px;
   }
 }
+
+/* Footer & Mail link overflow prevention */
+.footer a[href^="mailto:"],
+.copy-preview {
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+/* School DB card mobile padding */
+@media (max-width: 768px) {
+  .school-db-card {
+    padding: 24px 16px !important;
+    border-radius: 14px !important;
+  }
+}
+
 
 
 

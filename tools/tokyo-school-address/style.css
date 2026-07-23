@@ -15,6 +15,13 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .search-box {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+}
+
 .search-title {
   font-size: 1.4rem;
   color: var(--navy);
@@ -42,6 +49,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .form-group label {
@@ -51,6 +59,7 @@
 }
 
 .form-control {
+  box-sizing: border-box;
   padding: 12px 16px;
   border: 1px solid rgba(7, 27, 54, 0.15);
   border-radius: 8px;
@@ -60,6 +69,7 @@
   background: #fff;
   transition: border-color 0.2s, box-shadow 0.2s;
   width: 100%;
+  max-width: 100%;
 }
 
 .form-control:focus {
