@@ -89,21 +89,20 @@ def render_actions(product: dict) -> str:
     if detail_url:
         links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
 
-    # 2. 第2ボタン (状態に応じて決定)
+    # 2. 第2ボタン (状態に応じて厳密に決定)
     if status == "一時休止中":
-        pass  # 一時休止中は「詳しく見る」の1ボタンのみ
+        pass  # 一時休止中は外部ボタンを出さず「詳しく見る」のみ
     elif status == "モニター募集中":
-        monitor_url = product.get("monitorUrl") or "https://docs.google.com/forms/d/e/1FAIpQLSeIM0bNoL4mKfycoYLAkC11ajGvjRQ3NsX4cB_Y5lP0w840ww/viewform"
-        links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}" target="_blank" rel="noopener noreferrer">モニターに参加する</a>')
+        monitor_url = product.get("monitorUrl")
+        if monitor_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}" target="_blank" rel="noopener noreferrer">モニターに参加する</a>')
     elif status == "10日間無料体験":
-        trial_dl = product.get("trialDownloadUrl")
-        booth = product.get("boothUrl")
-        vector = product.get("vectorUrl")
-        action_url = trial_dl or booth or vector
-        if trial_dl:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(action_url)}" download>10日間無料で試す</a>')
-        elif action_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(action_url)}" target="_blank" rel="noopener noreferrer">10日間無料で試す</a>')
+        # 実際に無料体験/試用版をダウンロードできるURLが存在する場合のみ表示 (BOOTH購入ページやVectorページへの誤導線を排除)
+        trial_url = product.get("trialDownloadUrl") or product.get("trialUrl")
+        if trial_url:
+            dl_attr = " download" if trial_url.startswith("/") or trial_url.endswith(".zip") else ""
+            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr and trial_url.startswith("http") else ""
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_url)}"{dl_attr}{rel_attr}>10日間無料で試す</a>')
     elif status == "無料ツール":
         web_url = product.get("webUrl")
         download_url = product.get("downloadUrl")
@@ -111,7 +110,7 @@ def render_actions(product: dict) -> str:
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(web_url)}">無料で使う</a>')
         elif download_url:
             dl_attr = " download" if download_url.startswith("/") or download_url.endswith(".zip") else ""
-            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr else ""
+            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr and download_url.startswith("http") else ""
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}"{dl_attr}{rel_attr}>無料で使う</a>')
     elif status == "販売中":
         booth = product.get("boothUrl")
