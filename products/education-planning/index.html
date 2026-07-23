@@ -11,15 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css?v=education-detail-rebuild-20260613-1">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KPGJ0R2KXR');
-  </script>
-
   <!-- KARTE Tag -->
   <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
   <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
@@ -33,8 +24,8 @@
         <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
         <span>Ban.Tai Education Design</span>
       </a>
-
-      <nav class="menu">
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+      <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
         <a href="/">ホーム</a>
         <a href="/#products" class="active">製品一覧</a>
         <a href="#download">無料ダウンロード</a>
@@ -57,7 +48,7 @@
           <p class="lead">年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。</p>
 
           <div class="actions">
-            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeIM0bNoL4mKfycoYLAkC11ajGvjRQ3NsX4cB_Y5lP0w840ww/viewform" style="background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;">無料モニター登録</a>
+            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform" style="background:linear-gradient(135deg,var(--gold),#edd996); color:#071b36;">無料モニター登録</a>
             <a class="btn btn-light" href="#features" style="background:#fff; color:var(--navy); border:1px solid rgba(7, 27, 54, 0.15);">機能を見る</a>
           </div>
         </div>
@@ -142,17 +133,6 @@
       </div>
     </section>
 
-    <section class="education-resource-section">
-      <div class="container education-resource-card">
-        <div>
-          <p class="education-resource-kicker">Related Resources</p>
-          <h2>教科書会社の年間指導計画・評価計画資料を確認する</h2>
-          <p>各教科書会社の公式資料を確認しながら、教育計画システムで週案づくりを進めやすくするためのリンク集です。</p>
-        </div>
-        <a class="btn btn-light" href="/resources/textbook-plans/">教科書会社別 年間指導計画リンク集を見る</a>
-      </div>
-    </section>
-
     <section class="vs-excel-section">
       <div class="container">
         <div class="section-title">
@@ -198,23 +178,20 @@
           <h2>Ver.5.70.7 モニター版 ダウンロード</h2>
           <p>本ソフトウェアは、無料モニター登録後に自動返信メールで即時にお送りする固定ライセンスキーを入力することで、すべての機能をご利用いただけます。</p>
           <div class="dl-grid">
-            <a class="dl-item" href="https://bantai3.booth.pm/items/8547376"><strong>BOOTHからダウンロードする</strong><span>教務支援＋週案連携（約130MB）</span></a>
-            <a class="dl-item" href="https://bantai3.booth.pm/items/8547376"><strong>BOOTHからダウンロードする</strong><span>教育計画・時数・提出書類中心（約60MB）</span></a>
-            <a class="dl-item" href="https://bantai3.booth.pm/items/8547376"><strong>BOOTHからダウンロードする</strong><span>週案作成・印刷・集計中心（約70MB）</span></a>
+            <a class="dl-item" href="https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk"><strong>① 統合版をダウンロード</strong><span>教務支援＋週案連携（約130MB）</span></a>
+            <a class="dl-item" href="https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk"><strong>② 教務支援システム単体版</strong><span>教育計画・時数・提出書類中心（約60MB）</span></a>
+            <a class="dl-item" href="https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk"><strong>③ 週案システム単体版</strong><span>週案作成・印刷・集計中心（約70MB）</span></a>
           </div>
         </div>
 
         <div class="warning-box">
-          <h3>⚠️ ダウンロード時の注意</h3>
+          <h3>⚠️ Google Drive ダウンロード時の重要なお願い</h3>
           <ul>
-            <li>BOOTHのダウンロードボタンからZIPファイルを保存してください。</li>
-            <li>ダウンロード後は、右クリック →「すべて展開」で解凍してください。</li>
-            <li>展開後は「はじめにお読みください.txt」を先にご確認ください。</li>
+                  <li>Google Driveで<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。画面の<strong>「ダウンロード」</strong>ボタンを押してください。</li>
+                  <li>ZIPエクストラクター、CloudConvertなどの<strong>外部アプリは使いません。</strong></li>
+                  <li>保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。</li>
+                  <li>展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。</li>
           </ul>
-          <p><strong>■ Windowsの警告について</strong><br>
-          初回起動時にSmartScreen警告が表示される場合があります。その場合は「詳細情報」→「実行」を選択してください。</p>
-          <p><strong>■ 学校・職場で利用する場合</strong><br>
-          管理者の指示に従ってご利用ください。</p>
         </div>
       </div>
     </section>

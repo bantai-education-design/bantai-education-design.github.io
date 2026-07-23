@@ -3,6 +3,7 @@
   "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
   "styleVersion": "education-detail-rebuild-20260613-1",
   "bodyClass": "product-detail-page product-detail-education",
+  "menuToggle": true,
   "navLinks": [
     {
       "label": "ホーム",
