@@ -1,0 +1,100 @@
+{
+  "description": "千葉県学校データベース変換元一覧。file は data-source/chiba/2025/ からの相対パス。埼玉県版（saitama_sources.json）と異なり、公立学校は学校種別ファイルではなく単一ファイルにまとまっているため、school_types に複数値を持つ。",
+  "sources": [
+    {
+      "file": "5-1-r7_koritsu_meibo.xls",
+      "role": "base",
+      "school_types": [
+        "幼稚園",
+        "幼保連携型認定こども園",
+        "小学校",
+        "中学校",
+        "義務教育学校",
+        "中等教育学校",
+        "高等学校",
+        "特別支援学校"
+      ],
+      "establishment_type": "国立・公立",
+      "source_name": "令和7年版千葉県教育便覧 V学校名簿 5-1 国・公立学校名簿",
+      "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
+      "source_page": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/r7.html",
+      "source_date": "2025-05-01",
+      "note": "学校種ごとにシートまたはブロックが分かれている想定。変換スクリプトでシート単位に分割する。"
+    },
+    {
+      "file": "5-1-r7_koritsu_meibo.pdf",
+      "role": "cross_check",
+      "source_name": "令和7年版千葉県教育便覧 V学校名簿 5-1 国・公立学校名簿（PDF照合用）",
+      "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.pdf",
+      "source_date": "2025-05-01"
+    },
+    {
+      "file": "r8-gakkouichiran-2_henkou_ichiran.xls",
+      "role": "correction",
+      "school_types": ["複数（新設・統合・廃止・名称変更の対象校）"],
+      "establishment_type": "公立",
+      "source_name": "公立学校一覧（令和7→8年度 学校新設・統合・廃止・名称変更 変更一覧）",
+      "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/gakkou-ichiran/documents/r8-gakkouichiran-2.xls",
+      "source_page": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/gakkou-ichiran/index.html",
+      "source_date": "2026-04-24",
+      "note": "5-1-r7の基準日(2025-05-01)以降に生じた新設・統合・廃止・名称変更の反映に使用する。"
+    },
+    {
+      "file": "r8youchien_shiritsu.xlsx",
+      "role": "base",
+      "school_types": ["幼稚園"],
+      "establishment_type": "私立",
+      "source_name": "私立幼稚園名簿（令和8年5月1日現在）",
+      "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8youchien.xlsx",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/youchienmeibo.html",
+      "source_date": "2026-05-01"
+    },
+    {
+      "file": "r8syougaku_shiritsu.xlsx",
+      "role": "base",
+      "school_types": ["小学校"],
+      "establishment_type": "私立",
+      "source_name": "私立小学校名簿（令和8年5月1日現在）",
+      "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8syougaku.xlsx",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/shougaku-meibo.html",
+      "source_date": "2026-05-01"
+    },
+    {
+      "file": "r8chugaku_shiritsu.xlsx",
+      "role": "base",
+      "school_types": ["中学校", "中等教育学校（前期課程）"],
+      "establishment_type": "私立",
+      "source_name": "私立中学校・中等教育学校（前期）名簿（令和8年5月1日現在）",
+      "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8chugaku.xlsx",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/chuugaku-meibo.html",
+      "source_date": "2026-05-01"
+    },
+    {
+      "file": "r8koukou_shiritsu.xlsx",
+      "role": "base",
+      "school_types": ["高等学校", "中等教育学校（後期課程）"],
+      "establishment_type": "私立",
+      "source_name": "私立高等学校・中等教育学校（後期）名簿（令和8年5月1日現在）",
+      "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8koukou.xlsx",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/koukou-meibo.html",
+      "source_date": "2026-05-01"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "source_name": "私立各種学校名簿",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/kakushu-meibo.html",
+      "reason": "各種学校はスコープ対象外"
+    },
+    {
+      "source_name": "私立専修学校名簿",
+      "source_page": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/senshuu-meibo.html",
+      "reason": "専修学校はスコープ対象外"
+    },
+    {
+      "source_name": "県立学校名簿",
+      "source_page": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/miryoku/kenritsu.html",
+      "reason": "令和5年度時点で更新停止。教育便覧5-1(R7)+変更一覧(R8)を優先採用"
+    }
+  ]
+}

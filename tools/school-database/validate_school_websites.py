@@ -3,12 +3,16 @@ import os
 import re
 import urllib.parse
 import sys
+from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-repo_root = r"C:\Users\User\Documents\bantai-education-design.github.io"
+# tools/school-database/validate_school_websites.py からリポジトリルートを解決する
+# （固定パスだと clone 先が変わると動かないため、スクリプト位置基準に変更）
+repo_root = str(Path(__file__).resolve().parents[2])
 saitama_json = os.path.join(repo_root, "data", "school-database", "saitama.json")
 tokyo_json = os.path.join(repo_root, "data", "school-database", "tokyo.json")
+chiba_json = os.path.join(repo_root, "data", "school-database", "chiba.json")
 
 # Top-level portal list URLs forbidden from being registered as individual school website
 FORBIDDEN_PORTAL_EXACT_URLS = [
@@ -38,24 +42,25 @@ def validate_dataset(filepath, name):
     for school in data:
         url = school.get('website', '').strip()
         source_url = school.get('source_url', '').strip()
-        
+        school_name = school.get('school_name') or school.get('name') or '(不明)'
+
         if url:
             with_url += 1
             # Check scheme
             parsed = urllib.parse.urlparse(url)
             if parsed.scheme not in ['http', 'https']:
                 invalid_scheme += 1
-                print(f"[{name}] Invalid scheme detected in {school['school_name']}: {url}")
-            
+                print(f"[{name}] Invalid scheme detected in {school_name}: {url}")
+
             # Check if list URL itself is registered as school website
             if (source_url and url == source_url) or url in FORBIDDEN_PORTAL_EXACT_URLS:
                 list_url_as_website += 1
-                print(f"[{name}] ERROR: Portal list URL registered as school website in {school['school_name']}: {url}")
-            
+                print(f"[{name}] ERROR: Portal list URL registered as school website in {school_name}: {url}")
+
             url_counts[url] = url_counts.get(url, 0) + 1
             if url not in url_schools:
                 url_schools[url] = []
-            url_schools[url].append(school['school_name'])
+            url_schools[url].append(school_name)
 
     # Check forbidden generic shared URLs (shared by > 4 schools or portal URLs)
     forbidden_shared = {}
@@ -84,6 +89,7 @@ def validate_dataset(filepath, name):
 if __name__ == '__main__':
     s_tot, s_ver = validate_dataset(saitama_json, "Saitama Database")
     t_tot, t_ver = validate_dataset(tokyo_json, "Tokyo Database")
+    c_tot, c_ver = validate_dataset(chiba_json, "Chiba Database")
 
-    print(f"\n[SUMMARY] Total Schools: {s_tot + t_tot}, Total Verified Official Websites: {s_ver + t_ver}")
+    print(f"\n[SUMMARY] Total Schools: {s_tot + t_tot + c_tot}, Total Verified Official Websites: {s_ver + t_ver + c_ver}")
     print("ALL BOARD OF EDUCATION VALIDATION CHECKS PASSED PERFECTLY!")

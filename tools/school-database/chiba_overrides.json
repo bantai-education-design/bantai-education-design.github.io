@@ -1,0 +1,29 @@
+{
+  "description": "令和8年度新設・改編校のうち、公式Excel名簿や令和7→8年度変更一覧に住所・郵便番号・電話番号・公式HPが未掲載の学校を、学校/教育委員会の公式ページで確認できた範囲で補完する。確認できなかった項目はキーを設けず空欄のまま変換スクリプト側のデフォルト値に委ねる。詳細な出典は docs/school-database/chiba/new-schools-verification.md を参照。",
+  "overrides": {
+    "館山市立まなびの杜房南小学校": {
+      "postal_code": "294-0225",
+      "address": "千葉県館山市佐野2070",
+      "phone": "0470-28-0059",
+      "website": "https://bounan-shou.my.canva.site",
+      "source_url": "https://www.city.tateyama.chiba.jp/gakukyouiku/page000268.html",
+      "reason": "館山市役所公式サイト「市立小学校（10校）」一覧および学校公式サイト（お問い合わせページ）で確認。令和8年度に房南小学校が小規模特認校へ改編され名称表記が変わったもの。"
+    },
+    "館山市立まなびの杜房南小学校神余分校": {
+      "postal_code": "294-0023",
+      "address": "千葉県館山市神余1363",
+      "phone": "0470-28-0065",
+      "website": "https://kanamari-shou.my.canva.site",
+      "source_url": "https://www.city.tateyama.chiba.jp/gakukyouiku/page000268.html",
+      "reason": "館山市役所公式サイト「市立小学校（10校）」一覧および学校公式サイト（お問い合わせページ）で確認。令和8年度に神余小学校が房南小学校の分校へ改編されたもの。"
+    },
+    "館山市立那古船形小学校": {
+      "postal_code": "294-0055",
+      "address": "千葉県館山市那古272番地",
+      "phone": "0470-27-2644",
+      "website": "https://www.city.tateyama.chiba.jp/school/nagohunakata/",
+      "source_url": "https://www.city.tateyama.chiba.jp/gakukyouiku/page000268.html",
+      "reason": "学校公式ホームページ（館山市立那古船形小学校、2026年5月12日開設）のトップページ記載内容を確認。館山市役所公式サイトの小学校一覧とも住所・電話番号が一致。"
+    }
+  }
+}

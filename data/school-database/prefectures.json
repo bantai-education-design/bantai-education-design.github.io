@@ -13,5 +13,12 @@
     "url": "/tools/school-database/saitama/",
     "count": 1929,
     "available": true
+  },
+  {
+    "id": "chiba",
+    "name": "千葉県",
+    "url": "/tools/school-database/chiba/",
+    "count": 1823,
+    "available": true
   }
 ]
