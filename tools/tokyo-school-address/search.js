@@ -169,6 +169,17 @@ document.addEventListener('DOMContentLoaded', () => {
     renderResults(filtered);
   }
 
+  // HTMLエスケープユーティリティ（学校名・住所・URL等を安全に描画するため）
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   // 6. 結果の描画
   function renderResults(results) {
     resultsContainer.innerHTML = '';
