@@ -20,5 +20,12 @@
     "url": "/tools/school-database/chiba/",
     "count": 1823,
     "available": true
+  },
+  {
+    "id": "kanagawa",
+    "name": "神奈川県",
+    "url": "/tools/school-database/kanagawa/",
+    "count": 2227,
+    "available": true
   }
 ]
