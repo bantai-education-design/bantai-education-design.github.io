@@ -493,25 +493,44 @@
 }
 
 /* 全国入口ページ用スタイル */
+/* 都道府県カードグリッド: 320-640px=1列, 641-900px=2列, 901-1199px=3列,
+   1200px以上=4列。固定列数＋minmax(0,1fr)なので、auto-fit系のような
+   最小幅による横あふれは発生しない。 */
 .prefectures-grid {
   display: grid;
-  /* minmax(320px, 1fr) だけだと320px未満の狭幅端末（.container幅は90vwのため
-     320px時点で288px）でトラック最小幅が親要素を超え横スクロールの原因になる。
-     min(320px, 100%) にして親要素幅を上回らないようにする。 */
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+@media (min-width: 641px) {
+  .prefectures-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 901px) {
+  .prefectures-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .prefectures-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .pref-card {
   background: #ffffff;
   border: 2px solid rgba(7, 27, 54, 0.08);
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 16px;
+  padding: 22px 22px 20px;
   box-shadow: 0 10px 30px rgba(7, 27, 54, 0.05);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -523,28 +542,50 @@
 
 .pref-card.active-card {
   border-color: var(--gold, #c5a059);
+  /* 下部ボタンを廃止しカード全体がリンクになったため、右下の矢印で
+     クリック可能であることを補助的に示す（hover/focusで濃く表示）。 */
+  padding-bottom: 34px;
 }
 
 .pref-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(7, 27, 54, 0.1);
   border-color: var(--gold, #c5a059);
+  background: #fffdf7;
 }
 
 /* カード全体がリンクの場合のキーボードフォーカス表示 */
 .pref-card:focus-visible {
   outline: 3px solid var(--gold, #c5a059);
   outline-offset: 3px;
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(7, 27, 54, 0.1);
   border-color: var(--gold, #c5a059);
+}
+
+.pref-card.active-card::after {
+  content: "→";
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold, #c5a059);
+  opacity: 0.55;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pref-card.active-card:hover::after,
+.pref-card.active-card:focus-visible::after {
+  opacity: 1;
+  transform: translateX(3px);
 }
 
 .pref-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .pref-badge {
@@ -557,39 +598,46 @@
 }
 
 .pref-card h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--navy, #0c1b33);
-  margin: 0 0 10px;
+  margin: 0 0 6px;
 }
 
 .pref-count {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--gold, #c5a059);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pref-features {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 0;
-  margin: 0 0 24px;
-  font-size: 0.9rem;
+  margin: 0;
+  font-size: 0.86rem;
   color: var(--ink, #2d3748);
-  line-height: 1.8;
 }
 
 .pref-features li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
+  line-height: 1.45;
 }
 
 .pref-features li::before {
   content: "✓";
   color: #27ae60;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
+/* 「順次拡張予定」プレースホルダーカード（<div>のまま、非リンク）専用。
+   実カードから下部ボタン風要素は削除したが、このクラス自体は
+   プレースホルダーの無効ボタンで引き続き使用しているため残す。 */
 .pref-action-btn {
   display: block;
   text-align: center;
