@@ -27,5 +27,12 @@
     "url": "/tools/school-database/kanagawa/",
     "count": 2227,
     "available": true
+  },
+  {
+    "id": "fukushima",
+    "name": "福島県",
+    "url": "/tools/school-database/fukushima/",
+    "count": 794,
+    "available": true
   }
 ]
