@@ -34,5 +34,12 @@
     "url": "/tools/school-database/fukushima/",
     "count": 794,
     "available": true
+  },
+  {
+    "id": "miyagi",
+    "name": "宮城県",
+    "url": "/tools/school-database/miyagi/",
+    "count": 809,
+    "available": true
   }
 ]
