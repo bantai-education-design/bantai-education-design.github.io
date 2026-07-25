@@ -13,6 +13,7 @@ repo_root = str(Path(__file__).resolve().parents[2])
 saitama_json = os.path.join(repo_root, "data", "school-database", "saitama.json")
 tokyo_json = os.path.join(repo_root, "data", "school-database", "tokyo.json")
 chiba_json = os.path.join(repo_root, "data", "school-database", "chiba.json")
+kanagawa_json = os.path.join(repo_root, "data", "school-database", "kanagawa.json")
 
 # Top-level portal list URLs forbidden from being registered as individual school website
 FORBIDDEN_PORTAL_EXACT_URLS = [
@@ -90,6 +91,7 @@ if __name__ == '__main__':
     s_tot, s_ver = validate_dataset(saitama_json, "Saitama Database")
     t_tot, t_ver = validate_dataset(tokyo_json, "Tokyo Database")
     c_tot, c_ver = validate_dataset(chiba_json, "Chiba Database")
+    k_tot, k_ver = validate_dataset(kanagawa_json, "Kanagawa Database")
 
-    print(f"\n[SUMMARY] Total Schools: {s_tot + t_tot + c_tot}, Total Verified Official Websites: {s_ver + t_ver + c_ver}")
+    print(f"\n[SUMMARY] Total Schools: {s_tot + t_tot + c_tot + k_tot}, Total Verified Official Websites: {s_ver + t_ver + c_ver + k_ver}")
     print("ALL BOARD OF EDUCATION VALIDATION CHECKS PASSED PERFECTLY!")

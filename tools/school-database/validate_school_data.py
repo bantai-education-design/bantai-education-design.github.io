@@ -171,11 +171,15 @@ def validate(records: list[dict[str, Any]], prefecture: str) -> tuple[list[str],
         municipality = get_field(record, "municipality")
         if prefecture == "千葉県" and municipality == "千葉市":
             errors.append(f"{label}: 市町村名が区まで含まれていません（`千葉市`のみ）。")
+        if prefecture == "神奈川県" and municipality in ("横浜市", "川崎市", "相模原市"):
+            errors.append(f"{label}: 市町村名が区まで含まれていません（`{municipality}`のみ）。")
 
-        exact_key = (name, address, phone)
-        if all(exact_key):
+        # school_type も含めて完全一致を判定する。同一住所・同一電話番号の建物に
+        # 小学校の分校と中学校の分校が同居するなど、校種が異なれば別レコードとして正当。
+        exact_key = (name, address, phone, school_type)
+        if all(exact_key[:3]):
             if exact_key in seen_exact:
-                errors.append(f"{label}: 学校名・住所・電話番号が完全一致する重複です。")
+                errors.append(f"{label}: 学校名・住所・電話番号・校種が完全一致する重複です。")
             seen_exact.add(exact_key)
 
         if prefecture == "千葉県":
