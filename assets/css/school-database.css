@@ -1,5 +1,35 @@
 /* Ban.Tai 全国学校データベース CSS (assets/css/school-database.css) */
 
+/* ヒーロー領域（全国ポータル・都道府県版共通のコンパクト化）
+   既存の .page-hero（assets/style.css, min-height:260px）はサイト全体で
+   共有されているため、ここでは学校データベース系ページ限定の上書きクラスとして
+   .page-hero--compact を用意する。他ページの .page-hero には影響しない。 */
+.page-hero--compact {
+  min-height: 180px;
+}
+
+.page-hero--compact .kicker {
+  margin-bottom: 4px;
+}
+
+.page-hero--compact h1 {
+  margin: 0.14em 0;
+}
+
+.page-hero--compact .lead {
+  margin: 4px 0 0;
+}
+
+.hero-back-link {
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .page-hero--compact {
+    min-height: 160px;
+  }
+}
+
 .search-section {
   background: var(--ivory, #fbfaf5);
   padding: 50px 0;
@@ -434,7 +464,10 @@
 /* 全国入口ページ用スタイル */
 .prefectures-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* minmax(320px, 1fr) だけだと320px未満の狭幅端末（.container幅は90vwのため
+     320px時点で288px）でトラック最小幅が親要素を超え横スクロールの原因になる。
+     min(320px, 100%) にして親要素幅を上回らないようにする。 */
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 30px;
   margin-top: 30px;
 }
@@ -451,6 +484,10 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  /* .pref-card はカード全体を<a>にする都道府県版で使われるため、
+     アンカーの既定装飾（下線・リンク色）を打ち消しておく。 */
+  text-decoration: none;
+  color: inherit;
 }
 
 .pref-card.active-card {
@@ -458,6 +495,15 @@
 }
 
 .pref-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(7, 27, 54, 0.1);
+  border-color: var(--gold, #c5a059);
+}
+
+/* カード全体がリンクの場合のキーボードフォーカス表示 */
+.pref-card:focus-visible {
+  outline: 3px solid var(--gold, #c5a059);
+  outline-offset: 3px;
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(7, 27, 54, 0.1);
   border-color: var(--gold, #c5a059);
