@@ -493,9 +493,14 @@
 }
 
 /* 全国入口ページ用スタイル */
-/* 都道府県カードグリッド: 320-640px=1列, 641-900px=2列, 901-1199px=3列,
-   1200px以上=4列。固定列数＋minmax(0,1fr)なので、auto-fit系のような
-   最小幅による横あふれは発生しない。 */
+/* 都道府県カードグリッド: 320-640px=1列, 641-900px=2列, 901-1023px=3列,
+   1024px以上=4列。固定列数＋minmax(0,1fr)なので、auto-fit系のような
+   最小幅による横あふれは発生しない。
+   4列のしきい値は当初1200pxだったが、1366×768等の一般的なノートPCで
+   Windowsの推奨拡大率（125%など）が適用されると実効幅（window.innerWidth）
+   が1100px前後まで下がるケースが多く、その場合1200pxを下回って3列に
+   なってしまう不具合があったため、1024pxに引き下げて対応（PR #63の
+   本番確認で発覚・修正）。 */
 .prefectures-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -515,9 +520,18 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .prefectures-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* 大画面（拡大率100%相当で幅に余裕がある場合）ではカード領域をやや
+   広げ、4列時のカード幅に余裕を持たせる。ヘッダー・フッターの
+   .container には影響しないよう検索セクション配下に限定。 */
+@media (min-width: 1267px) {
+  .search-section .container {
+    width: min(1320px, 90vw);
   }
 }
 
