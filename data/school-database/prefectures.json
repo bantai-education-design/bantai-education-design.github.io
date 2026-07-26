@@ -62,5 +62,12 @@
     "url": "/tools/school-database/aichi/",
     "count": 2021,
     "available": true
+  },
+  {
+    "id": "yamanashi",
+    "name": "山梨県",
+    "url": "/tools/school-database/yamanashi/",
+    "count": 351,
+    "available": true
   }
 ]
