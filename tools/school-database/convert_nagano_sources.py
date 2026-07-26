@@ -150,17 +150,21 @@ def normalize_address(value: str, municipality_hint: str = "") -> str:
     return f"長野県{address}" if address else ""
 
 
+def normalize_municipality(value: str) -> str:
+    return re.sub(r"\s+", "", clean_text(value))
+
+
 def municipality_from_address(address: str) -> str:
     text = address.replace("長野県", "")
     match = re.match(r"([^郡市]+市)", text)
     if match:
-        return match.group(1)
+        return normalize_municipality(match.group(1))
     match = re.match(r"([^郡]+郡[^町村]+[町村])", text)
     if match:
-        return match.group(1)
+        return normalize_municipality(match.group(1))
     for town, full_name in TOWN_TO_DISTRICT.items():
         if text.startswith(town):
-            return full_name
+            return normalize_municipality(full_name)
     return ""
 
 
@@ -373,7 +377,7 @@ def extract_private_kindergarten(records: list[ExtractedRecord], exclusions: lis
         if len(values) < 6:
             continue
         if values[0]:
-            current_municipality = clean_text(values[0]).replace(" ", "")
+            current_municipality = normalize_municipality(values[0])
         name = clean_name(values[1])
         if "休園" in name or "休校" in name:
             exclusions.append({"name": name, "reason": "公式名簿に休園中または休校中と明記され、現行の送付先データとして扱わないため除外", "source_url": url})
@@ -383,7 +387,7 @@ def extract_private_kindergarten(records: list[ExtractedRecord], exclusions: lis
             continue
         postal = normalize_postal(values[-3])
         address = normalize_address(values[-2], current_municipality)
-        municipality = current_municipality or municipality_from_address(address)
+        municipality = normalize_municipality(current_municipality or municipality_from_address(address))
         if municipality and municipality not in municipality_order:
             municipality_order.append(municipality)
         records.append(

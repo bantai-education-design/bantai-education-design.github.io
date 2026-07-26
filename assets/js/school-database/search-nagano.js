@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
 
-  // 長野県行政順（長野県教育委員会の地区別リンクページ順と各表の出現順に準拠）
+  // ?????????????????????????????????????
   const MUNICIPALITY_ORDER = [
     "長野市",
     "松本市",
@@ -94,13 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "下高井郡木島平村",
     "下高井郡野沢温泉村",
     "上水内郡小川村",
-    "下水内郡栄村",
-    "埴科郡 坂城町",
-    "北佐久郡 軽井沢町",
-    "北佐久郡 御代田町",
-    "諏訪郡 原村",
-    "上伊那郡 辰野町",
-    "北安曇郡 白馬村"
+    "下水内郡栄村"
   ];
 
   const SCHOOL_TYPE_ORDER = [
