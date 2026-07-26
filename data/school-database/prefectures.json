@@ -55,5 +55,12 @@
     "url": "/tools/school-database/nagano/",
     "count": 766,
     "available": true
+  },
+  {
+    "id": "aichi",
+    "name": "???",
+    "url": "/tools/school-database/aichi/",
+    "count": 2021,
+    "available": true
   }
 ]
