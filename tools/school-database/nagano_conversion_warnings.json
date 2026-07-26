@@ -1,0 +1,673 @@
+{
+  "generated_at": "2026-07-26",
+  "total_records": 766,
+  "website_supplements_from_nagano_city": 0,
+  "postal_code_supplements_from_japan_post": 1,
+  "exclusions": [
+    {
+      "name": "青沼小学校閉校(令和5年度より臼田小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html"
+    },
+    {
+      "name": "切原小学校閉校(令和5年度より臼田小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html"
+    },
+    {
+      "name": "田口小学校閉校(令和5年度より臼田小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html"
+    },
+    {
+      "name": "西内小学校閉校(令和6年度より丸子中央小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html"
+    },
+    {
+      "name": "川島小学校閉校(令和7年度より辰野西小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html"
+    },
+    {
+      "name": "大町西小学校閉校(令和8年度より大町北部小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html"
+    },
+    {
+      "name": "大町北小学校閉校(令和8年度より大町北部小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html"
+    },
+    {
+      "name": "大町南小学校閉校(令和8年度より大町南部小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html"
+    },
+    {
+      "name": "大町東小学校閉校(令和8年度より大町北部小学校、大町南部小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html"
+    },
+    {
+      "name": "坂井小学校閉校(令和2年度より筑北小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html"
+    },
+    {
+      "name": "清野小学校閉校(令和7年度より松代小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "信更小学校閉校(令和6年度より塩崎小学校、篠ノ井西小学校、信州新町小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "長丘小学校閉校(令和2年度より高社小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "科野小学校閉校(令和2年度より高社小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "倭小学校閉校(令和2年度より高社小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "豊井小学校閉校(令和3年度より豊田小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "永田小学校閉校(令和3年度より豊田小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "泉台小学校閉校(令和7年度より城北小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "常盤小学校閉校(令和7年度より城北小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "戸狩小学校閉校(令和7年度より城北小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "東小学校閉校(令和7年度より城北小学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "栄小学校秋山分校閉校(令和8年度よりさかえ小中学校へ)",
+      "reason": "長野県教育委員会小学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html"
+    },
+    {
+      "name": "和田中学校閉校(H29年度より依田窪南部中学校へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "第一中学校閉校(令和5年度より大町中学校へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "日義中学校閉校(令和8年度より木曽町中学校へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "開田中学校閉校(令和8年度より木曽町中学校へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "芋井中学校閉校(平成24年3月)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "七二会中学校閉校(令和6年より川中島中、信州新町中、裾花中へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "信更中学校閉校(令和5年より篠ノ井西中、信州新町中へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "中条中学校閉校(令和8年度より小川中、信州新町中、川中島中、裾花中へ)",
+      "reason": "長野県教育委員会中学校リンク上で閉校注記のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html"
+    },
+    {
+      "name": "須坂商業高等学校",
+      "reason": "長野県高等学校リンク上で閉校・統合先のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/ko.html"
+    },
+    {
+      "name": "須坂園芸高等学校",
+      "reason": "長野県高等学校リンク上で閉校・統合先のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/ko.html"
+    },
+    {
+      "name": "小諸商業高等学校",
+      "reason": "長野県高等学校リンク上で閉校・統合先のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/ko.html"
+    },
+    {
+      "name": "小諸高等学校",
+      "reason": "長野県高等学校リンク上で閉校・統合先のみが示され、現行校としての住所・電話番号がないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/ko.html"
+    },
+    {
+      "name": "認定こども園旭幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼稚園型認定こども園松代幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園円福幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園吉田マリア幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園ひかり園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園若穂幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園朝陽学園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園信濃ひまわり幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "こどもの森幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園川田",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "フレンドこども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園芹田東部こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "信学会若槻こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "信学会栗田こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "川中島こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園マリアこども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園須坂双葉幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園中野マリア幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園稲荷山くるみこども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "西望幼稚園(休園中)",
+      "reason": "公式名簿に休園中または休校中と明記され、現行の送付先データとして扱わないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園キッズ・うえだみなみ",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園芙蓉園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園にしおか",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園かんぎおん",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園あそびの森あきわ",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園小諸幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園浅科幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園ねねいふたば",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園慈光幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園飯田ルーテル幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園聖クララ幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園勅使河原学園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "風越こども未来園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "羽場こども未来園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "慈光松尾こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園伊那緑ヶ丘幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園緑ヶ丘敬愛幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "よこうち認定こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園聖十字幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "ささべ認定こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定なぎさこども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型やよい認定こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園ふたご",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園深志",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "信学会松本こども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園大町幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定こども園こまくさ幼稚園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "幼保連携型認定こども園サン・サンこども園グレイスフル塩尻",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "認定やまぶきこども園",
+      "reason": "共通方針で認定こども園を初版収録対象外としているため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/shien/hoikujo/yochien/mebo.html"
+    },
+    {
+      "name": "大日向【休校中】",
+      "reason": "公式名簿に休校中と明記され、現行の送付先データとして扱わないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/gakko/shochu/shiritsuchu/mebo.html"
+    },
+    {
+      "name": "長野女子【休校中】",
+      "reason": "公式名簿に休校中と明記され、現行の送付先データとして扱わないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/gakkoukou/koukou/koukou/mebo.html"
+    },
+    {
+      "name": "天龍興譲【休校中】",
+      "reason": "公式名簿に休校中と明記され、現行の送付先データとして扱わないため除外",
+      "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/gakkoukou/koukou/koukou/mebo.html"
+    }
+  ],
+  "corrections": [
+    {
+      "name": "ビバ・チャイルド",
+      "field": "postal_code",
+      "before": "",
+      "after": "395-0806",
+      "reason": "長野県私立幼稚園名簿の郵便番号欄が空欄のため、日本郵便公式検索の長野県飯田市鼎上山（395-0806）で補完",
+      "source_url": "https://www.post.japanpost.jp/cgi-zip/zipcode.php?zip=3950806"
+    },
+    {
+      "name": "長野日本大学",
+      "field": "course",
+      "before": "普通 探求創造",
+      "after": "普通 / 普通 探求創造",
+      "reason": "同一校が複数表に掲載されていたため課程を統合"
+    },
+    {
+      "name": "松商学園",
+      "field": "course",
+      "before": "普通 商業",
+      "after": "普通 / 普通 商業",
+      "reason": "同一校が複数表に掲載されていたため課程を統合"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "nagano_city_supplement_unmatched",
+      "name": "山王",
+      "postal_code": "380-0935",
+      "phone": "026-226-4405",
+      "source_url": "https://www.city.nagano.nagano.jp/n601000/contents/p001572.html"
+    },
+    {
+      "type": "nagano_city_supplement_unmatched",
+      "name": "緑ヶ丘",
+      "postal_code": "381-0034",
+      "phone": "026-222-2900",
+      "source_url": "https://www.city.nagano.nagano.jp/n601000/contents/p001572.html"
+    },
+    {
+      "type": "nagano_city_supplement_unmatched",
+      "name": "松ヶ丘",
+      "postal_code": "380-0961",
+      "phone": "026-227-5344",
+      "source_url": "https://www.city.nagano.nagano.jp/n601000/contents/p001572.html"
+    },
+    {
+      "type": "nagano_city_supplement_unmatched",
+      "name": "綿内",
+      "postal_code": "381-0101",
+      "phone": "026-282-2164",
+      "source_url": "https://www.city.nagano.nagano.jp/n601000/contents/p001572.html"
+    },
+    {
+      "type": "nagano_city_supplement_unmatched",
+      "name": "西部",
+      "postal_code": "380-0871",
+      "phone": "026-234-2265",
+      "source_url": "https://www.city.nagano.nagano.jp/n601000/contents/p001572.html"
+    }
+  ],
+  "municipality_order": [
+    "長野市",
+    "松本市",
+    "小諸市",
+    "佐久市",
+    "南佐久郡小海町",
+    "南佐久郡佐久穂町",
+    "北佐久郡軽井沢町",
+    "北佐久郡御代田町",
+    "北佐久郡立科町",
+    "南佐久郡川上村",
+    "南佐久郡南牧村",
+    "南佐久郡南相木村",
+    "南佐久郡北相木村",
+    "上田市",
+    "東御市",
+    "小県郡長和町",
+    "小県郡青木村",
+    "伊那市",
+    "駒ヶ根市",
+    "岡谷市",
+    "諏訪市",
+    "茅野市",
+    "上伊那郡辰野町",
+    "上伊那郡箕輪町",
+    "上伊那郡飯島町",
+    "諏訪郡下諏訪町",
+    "諏訪郡富士見町",
+    "上伊那郡南箕輪村",
+    "上伊那郡中川村",
+    "上伊那郡宮田村",
+    "諏訪郡原村",
+    "飯田市",
+    "下伊那郡松川町",
+    "下伊那郡高森町",
+    "下伊那郡阿南町",
+    "下伊那郡阿智村",
+    "下伊那郡平谷村",
+    "下伊那郡根羽村",
+    "下伊那郡下條村",
+    "下伊那郡売木村",
+    "下伊那郡天龍村",
+    "下伊那郡泰阜村",
+    "下伊那郡喬木村",
+    "下伊那郡豊丘村",
+    "下伊那郡大鹿村",
+    "塩尻市",
+    "大町市",
+    "安曇野市",
+    "木曽郡上松町",
+    "木曽郡南木曽町",
+    "木曽郡木曽町",
+    "北安曇郡池田町",
+    "東筑摩郡麻績村",
+    "東筑摩郡生坂村",
+    "東筑摩郡山形村",
+    "東筑摩郡朝日村",
+    "東筑摩郡筑北村",
+    "木曽郡木祖村",
+    "木曽郡王滝村",
+    "木曽郡大桑村",
+    "北安曇郡松川村",
+    "北安曇郡白馬村",
+    "北安曇郡小谷村",
+    "須坂市",
+    "中野市",
+    "飯山市",
+    "千曲市",
+    "埴科郡坂城町",
+    "上高井郡小布施町",
+    "下高井郡山ノ内町",
+    "上水内郡信濃町",
+    "上水内郡飯綱町",
+    "上高井郡高山村",
+    "下高井郡木島平村",
+    "下高井郡野沢温泉村",
+    "上水内郡小川村",
+    "下水内郡栄村"
+  ],
+  "counts": {
+    "by_type": {
+      "幼稚園": 89,
+      "小学校": 353,
+      "中学校": 190,
+      "高等学校": 109,
+      "中等教育学校": 3,
+      "特別支援学校": 21,
+      "義務教育学校": 1
+    },
+    "by_establishment": {
+      "私立": 128,
+      "国立": 6,
+      "公立": 632
+    },
+    "by_municipality": {
+      "長野市": 128,
+      "松本市": 87,
+      "小諸市": 14,
+      "佐久市": 37,
+      "南佐久郡小海町": 3,
+      "南佐久郡佐久穂町": 4,
+      "北佐久郡軽井沢町": 10,
+      "北佐久郡御代田町": 5,
+      "北佐久郡立科町": 3,
+      "南佐久郡川上村": 3,
+      "南佐久郡南牧村": 3,
+      "南佐久郡南相木村": 1,
+      "南佐久郡北相木村": 1,
+      "上田市": 57,
+      "東御市": 10,
+      "小県郡長和町": 2,
+      "小県郡青木村": 2,
+      "伊那市": 27,
+      "駒ヶ根市": 12,
+      "岡谷市": 18,
+      "諏訪市": 15,
+      "茅野市": 18,
+      "上伊那郡辰野町": 8,
+      "上伊那郡箕輪町": 7,
+      "上伊那郡飯島町": 3,
+      "諏訪郡下諏訪町": 6,
+      "諏訪郡富士見町": 6,
+      "上伊那郡南箕輪村": 4,
+      "上伊那郡中川村": 3,
+      "上伊那郡宮田村": 2,
+      "諏訪郡原村": 3,
+      "飯田市": 35,
+      "下伊那郡松川町": 4,
+      "下伊那郡高森町": 3,
+      "下伊那郡阿南町": 7,
+      "下伊那郡阿智村": 7,
+      "下伊那郡平谷村": 1,
+      "下伊那郡根羽村": 2,
+      "下伊那郡下條村": 2,
+      "下伊那郡売木村": 2,
+      "下伊那郡天龍村": 4,
+      "下伊那郡泰阜村": 2,
+      "下伊那郡喬木村": 4,
+      "下伊那郡豊丘村": 3,
+      "下伊那郡大鹿村": 2,
+      "塩尻市": 21,
+      "大町市": 9,
+      "安曇野市": 22,
+      "木曽郡上松町": 2,
+      "木曽郡南木曽町": 4,
+      "木曽郡木曽町": 7,
+      "北安曇郡池田町": 5,
+      "東筑摩郡麻績村": 2,
+      "東筑摩郡生坂村": 2,
+      "東筑摩郡山形村": 1,
+      "東筑摩郡朝日村": 2,
+      "東筑摩郡筑北村": 3,
+      "木曽郡木祖村": 2,
+      "木曽郡王滝村": 2,
+      "木曽郡大桑村": 2,
+      "北安曇郡松川村": 2,
+      "北安曇郡白馬村": 5,
+      "北安曇郡小谷村": 2,
+      "須坂市": 21,
+      "中野市": 14,
+      "飯山市": 9,
+      "千曲市": 18,
+      "埴科郡坂城町": 6,
+      "上高井郡小布施町": 2,
+      "下高井郡山ノ内町": 4,
+      "上水内郡信濃町": 2,
+      "上水内郡飯綱町": 4,
+      "上高井郡高山村": 2,
+      "下高井郡木島平村": 3,
+      "下高井郡野沢温泉村": 2,
+      "上水内郡小川村": 2,
+      "下水内郡栄村": 2
+    }
+  }
+}
