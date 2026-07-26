@@ -48,5 +48,12 @@
     "url": "/tools/school-database/niigata/",
     "count": 831,
     "available": true
+  },
+  {
+    "id": "nagano",
+    "name": "長野県",
+    "url": "/tools/school-database/nagano/",
+    "count": 766,
+    "available": true
   }
 ]
