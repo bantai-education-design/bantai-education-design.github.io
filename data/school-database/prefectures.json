@@ -83,5 +83,12 @@
     "url": "/tools/school-database/aichi/",
     "count": 2021,
     "available": true
+  },
+  {
+    "id": "hokkaido",
+    "name": "北海道",
+    "url": "/tools/school-database/hokkaido/",
+    "count": 1998,
+    "available": true
   }
 ]
