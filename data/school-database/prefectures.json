@@ -64,6 +64,13 @@
     "available": true
   },
   {
+    "id": "iwate",
+    "name": "岩手県",
+    "url": "/tools/school-database/iwate/",
+    "count": 502,
+    "available": true
+  },
+  {
     "id": "niigata",
     "name": "新潟県",
     "url": "/tools/school-database/niigata/",
