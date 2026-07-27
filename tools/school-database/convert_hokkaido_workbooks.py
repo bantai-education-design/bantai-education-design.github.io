@@ -1043,6 +1043,120 @@ def fill_missing_municipality() -> None:
             rec["municipality"] = ""
 
 
+FULL_NAME_SUFFIXES = (
+    "幼稚園", "小学校", "中学校", "義務教育学校", "高等学校", "中等教育学校",
+    "特別支援学校", "認定こども園", "学園", "学院",
+)
+
+SINGLE_CHAR_SUFFIX = {"小学校": "小", "中学校": "中"}
+
+NAME_BUILD_TYPES = {"幼稚園", "小学校", "中学校", "義務教育学校", "高等学校", "中等教育学校"}
+
+COURSE_QUALIFIER_RE = re.compile(r"[（(][^（）()]*[）)]\s*$")
+
+
+def strip_course_qualifier(name: str) -> str:
+    """「岩見沢東（全日制）」のような課程・分校の注記を除去する(正式名称には含めない)。"""
+    return COURSE_QUALIFIER_RE.sub("", name).strip()
+
+
+def looks_like_official_name(name: str) -> bool:
+    return "立" in name and any(name.endswith(s) for s in FULL_NAME_SUFFIXES)
+
+
+def municipal_legal_name(municipality: str) -> str:
+    """学校の正式名称の設置者表記では、札幌市は区名を含めず「札幌市」とする。"""
+    if municipality.startswith("札幌市"):
+        return "札幌市"
+    return municipality
+
+
+INSTITUTION_PREFIX_RE = re.compile(r"^(市立|町立|村立|道立|国立)")
+
+NATIONAL_UNIV_MARKER = "北海道教育大学附属"
+
+
+def fix_misclassified_establishment() -> None:
+    """教育局のHTML表に他設置者の学校が紛れ込んでいた場合の設置区分を補正する。
+    (例: 釧路教育局の一覧に混在する私立中学校、国立大学附属校の重複行)"""
+    fixed: list[dict[str, Any]] = []
+    for rec in records:
+        name = rec["name"]
+        if NATIONAL_UNIV_MARKER in name and rec["establishment"] != "国立":
+            # 北海道教育大学附属校はparse_national()側で正式名称を別途収録済みのため、
+            # 各教育局の一覧に紛れ込んだ重複行はここで除外する。
+            continue
+        if name.startswith("私立") and rec["establishment"] not in ("私立",):
+            rec["establishment"] = "私立"
+            rec["name"] = name[len("私立"):]
+        fixed.append(rec)
+    records.clear()
+    records.extend(fixed)
+
+
+def collapse_repeated_block(name: str) -> str:
+    """「茶路中学校茶路中学校」のように原本側の抽出崩れで名称全体が連続して
+    重複した場合に、後半の重複ブロックを取り除く。"""
+    n = len(name)
+    for block_len in range(2, n // 2 + 1):
+        if name[-block_len:] == name[-2 * block_len : -block_len]:
+            return name[:-block_len]
+    return name
+
+
+def build_official_names() -> None:
+    """略称のまま収録された学校名を「{設置者}立{校名}{校種}」の正式名称に組み立てる。
+    原本の表記がすでに正式名称の場合は変更しない。私立・国立は原本が正式名称の
+    ため対象外。特別支援学校は別途手作業で正式名称を収録済みのため対象外。"""
+    for rec in records:
+        establishment = rec["establishment"]
+        school_type = rec["school_type"]
+        if establishment in ("私立", "国立"):
+            continue
+        if school_type not in NAME_BUILD_TYPES:
+            continue
+
+        name = strip_course_qualifier(rec["name"])
+
+        if looks_like_official_name(name):
+            rec["name"] = name
+            continue
+
+        # 原本側にすでに「市立」等の設置者表記のみが付いている場合(例:「市立札幌新川」)は
+        # 一旦取り除き、establishmentに基づく正しい設置者表記で組み直す。
+        name = INSTITUTION_PREFIX_RE.sub("", name)
+
+        full_suffix = school_type
+        suffix = full_suffix
+        if name.endswith(full_suffix):
+            core = name[: -len(full_suffix)]
+        elif name.endswith("分校"):
+            # 「○○中学校△△分校」のように分校名で完結する場合は校種を重ねて付けない。
+            core = name
+            suffix = ""
+        else:
+            single = SINGLE_CHAR_SUFFIX.get(school_type)
+            if single and name.endswith(single):
+                core = name[:-1]
+            elif school_type == "義務教育学校" and name.endswith("校"):
+                # 「○○学校」のように末尾が「校」で完結する名称も多いため、
+                # その場合は「義務教育学校」を重ねて付けない。
+                core = name
+                suffix = ""
+            else:
+                core = name
+
+        if not core:
+            continue
+
+        if school_type in ("高等学校", "中等教育学校"):
+            prefix = "北海道" if establishment == "道立" else municipal_legal_name(rec["municipality"])
+        else:
+            prefix = municipal_legal_name(rec["municipality"])
+
+        rec["name"] = f"{prefix}立{core}{suffix}" if prefix else f"{core}{suffix}"
+
+
 ESTABLISHMENT_NORMALIZE = {
     "道立": "公立",
     "市町村立": "公立",
@@ -1067,11 +1181,18 @@ DROP_SCHOOL_TYPES = {"専修学校", "各種学校"}
 
 BAD_ADDRESS_TOKENS = ("市町村名", "学校名", "学校種別", "小学校函館", "中学校函館")
 
+BARE_TYPE_NAMES = {
+    "幼稚園", "小学校", "中学校", "義務教育学校", "高等学校", "中等教育学校", "特別支援学校",
+}
+
 
 def clean_records() -> None:
     cleaned: list[dict[str, Any]] = []
     for rec in records:
         if rec["school_type"] in DROP_SCHOOL_TYPES:
+            continue
+        if rec["name"] in BARE_TYPE_NAMES:
+            # 校種名のみが学校名として残った抽出崩れの行は除外する
             continue
         if rec["school_type"] == "認定こども園":
             rec["school_type"] = "幼保連携型認定こども園"
@@ -1212,10 +1333,14 @@ def main() -> None:
     parse_national()
     parse_private_excel()
 
-    clean_records()
     fill_missing_municipality()
+    fix_misclassified_establishment()
+    build_official_names()
+    clean_records()
     drop_incomplete_records()
     fill_missing_postal()
+    for rec in records:
+        rec["name"] = collapse_repeated_block(rec["name"])
     result = dedup_and_assign_ids()
     result.sort(key=lambda r: (r["municipality"], r["school_type"], r["name"]))
 
