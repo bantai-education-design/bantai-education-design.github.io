@@ -29,6 +29,27 @@
     "available": true
   },
   {
+    "id": "yamanashi",
+    "name": "山梨県",
+    "url": "/tools/school-database/yamanashi/",
+    "count": 351,
+    "available": true
+  },
+  {
+    "id": "ibaraki",
+    "name": "茨城県",
+    "url": "/tools/school-database/ibaraki/",
+    "count": 872,
+    "available": true
+  },
+  {
+    "id": "tochigi",
+    "name": "栃木県",
+    "url": "/tools/school-database/tochigi/",
+    "count": 678,
+    "available": true
+  },
+  {
     "id": "fukushima",
     "name": "福島県",
     "url": "/tools/school-database/fukushima/",
@@ -61,20 +82,6 @@
     "name": "愛知県",
     "url": "/tools/school-database/aichi/",
     "count": 2021,
-    "available": true
-  },
-  {
-    "id": "yamanashi",
-    "name": "山梨県",
-    "url": "/tools/school-database/yamanashi/",
-    "count": 351,
-    "available": true
-  },
-  {
-    "id": "ibaraki",
-    "name": "茨城県",
-    "url": "/tools/school-database/ibaraki/",
-    "count": 872,
     "available": true
   }
 ]
