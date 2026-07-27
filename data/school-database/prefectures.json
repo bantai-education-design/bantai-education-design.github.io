@@ -58,7 +58,7 @@
   },
   {
     "id": "aichi",
-    "name": "???",
+    "name": "愛知県",
     "url": "/tools/school-database/aichi/",
     "count": 2021,
     "available": true
@@ -68,6 +68,13 @@
     "name": "山梨県",
     "url": "/tools/school-database/yamanashi/",
     "count": 351,
+    "available": true
+  },
+  {
+    "id": "ibaraki",
+    "name": "茨城県",
+    "url": "/tools/school-database/ibaraki/",
+    "count": 872,
     "available": true
   }
 ]
