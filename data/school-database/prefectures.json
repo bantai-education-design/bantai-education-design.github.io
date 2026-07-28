@@ -97,5 +97,12 @@
     "url": "/tools/school-database/hokkaido/",
     "count": 1988,
     "available": true
+  },
+  {
+    "id": "osaka",
+    "name": "大阪府",
+    "url": "/tools/school-database/osaka/",
+    "count": 2087,
+    "available": true
   }
 ]
