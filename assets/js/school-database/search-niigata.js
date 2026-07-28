@@ -1,4 +1,4 @@
-// 新潟県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-niigata.js)
+// 新潟県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-niigata.js)
 // フィールド名は福島県版・宮城県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {

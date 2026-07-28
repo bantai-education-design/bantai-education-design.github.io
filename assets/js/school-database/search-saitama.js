@@ -1,4 +1,4 @@
-// 埼玉県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-saitama.js)
+// 埼玉県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-saitama.js)
 
 document.addEventListener('DOMContentLoaded', () => {
   let schoolData = [];

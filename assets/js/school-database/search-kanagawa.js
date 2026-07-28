@@ -1,4 +1,4 @@
-// 神奈川県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-kanagawa.js)
+// 神奈川県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-kanagawa.js)
 // フィールド名は千葉県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {

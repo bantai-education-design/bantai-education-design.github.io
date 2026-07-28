@@ -1,4 +1,4 @@
-// 宮城県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-miyagi.js)
+// 宮城県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-miyagi.js)
 // フィールド名は千葉県版・神奈川県版・福島県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {

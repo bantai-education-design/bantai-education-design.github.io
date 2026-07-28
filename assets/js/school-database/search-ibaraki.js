@@ -1,4 +1,4 @@
-// 茨城県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-ibaraki.js)
+// 茨城県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-ibaraki.js)
 // フィールド名は千葉県版・神奈川県版・山梨県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,4 +1,4 @@
-// 広島県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-hiroshima.js)
+// 広島県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-hiroshima.js)
 // フィールド名は他都道府県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {

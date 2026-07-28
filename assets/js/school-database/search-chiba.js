@@ -1,4 +1,4 @@
-// 千葉県学校宛先データベース - 検索・並び替え制御JS (assets/js/school-database/search-chiba.js)
+// 千葉県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-chiba.js)
 // フィールド名は saitama/tokyo 版と異なる（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {
