@@ -29,6 +29,27 @@
     "available": true
   },
   {
+    "id": "yamanashi",
+    "name": "山梨県",
+    "url": "/tools/school-database/yamanashi/",
+    "count": 351,
+    "available": true
+  },
+  {
+    "id": "ibaraki",
+    "name": "茨城県",
+    "url": "/tools/school-database/ibaraki/",
+    "count": 872,
+    "available": true
+  },
+  {
+    "id": "tochigi",
+    "name": "栃木県",
+    "url": "/tools/school-database/tochigi/",
+    "count": 678,
+    "available": true
+  },
+  {
     "id": "fukushima",
     "name": "福島県",
     "url": "/tools/school-database/fukushima/",
@@ -40,6 +61,13 @@
     "name": "宮城県",
     "url": "/tools/school-database/miyagi/",
     "count": 809,
+    "available": true
+  },
+  {
+    "id": "iwate",
+    "name": "岩手県",
+    "url": "/tools/school-database/iwate/",
+    "count": 502,
     "available": true
   },
   {
@@ -64,17 +92,10 @@
     "available": true
   },
   {
-    "id": "yamanashi",
-    "name": "山梨県",
-    "url": "/tools/school-database/yamanashi/",
-    "count": 351,
-    "available": true
-  },
-  {
-    "id": "ibaraki",
-    "name": "茨城県",
-    "url": "/tools/school-database/ibaraki/",
-    "count": 872,
+    "id": "hokkaido",
+    "name": "北海道",
+    "url": "/tools/school-database/hokkaido/",
+    "count": 1988,
     "available": true
   }
 ]
