@@ -223,7 +223,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
     if excel_path.exists():
         print(f"Reading EXCEL: {excel_path}")
         df = pd.read_excel(excel_path, header=1, dtype=str)
-        df.columns = [c.replace("\n", "").strip() for c in df.columns]
+            df.columns = [c.replace("\n", "").strip() for c in df.columns]
         df = df[df["都道府県番号"].astype(str).str.contains("09|栃木", na=False)]
     elif csv_path.exists():
         print(f"Reading CSV fallback: {csv_path}")

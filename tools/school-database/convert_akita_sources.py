@@ -299,7 +299,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
 
     print(f"Reading: {excel_path}")
     df = pd.read_excel(excel_path, header=1, dtype=str)
-    df.columns = [c.replace("\n", "").strip() for c in df.columns]
+            df.columns = [c.replace("\n", "").strip() for c in df.columns]
 
     yama = df[df["都道府県番号"] == "05(秋田)"].copy()
 

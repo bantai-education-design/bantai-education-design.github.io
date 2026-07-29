@@ -294,7 +294,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
 
     print(f"Reading: {excel_path}")
     df = pd.read_csv(excel_path, encoding='cp932', header=1, dtype=str)
-    df.columns = [c.replace("\n", "").strip() for c in df.columns]
+            df.columns = [c.replace("\n", "").strip() for c in df.columns]
 
     yama = df[df["都道府県番号"] == "47(沖縄)"].copy()
 
