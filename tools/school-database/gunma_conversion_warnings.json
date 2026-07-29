@@ -1,0 +1,2606 @@
+[
+  {
+    "context": "row_10739",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市若宮町2-5-3"
+  },
+  {
+    "context": "row_10740",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市若宮町4-32-4"
+  },
+  {
+    "context": "row_10741",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市末広町88-1"
+  },
+  {
+    "context": "row_10742",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市山名町140-1"
+  },
+  {
+    "context": "row_10743",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉賀野町4293-5"
+  },
+  {
+    "context": "row_10744",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市飯塚町1721"
+  },
+  {
+    "context": "row_10745",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市小曽根町6番1号"
+  },
+  {
+    "context": "row_10750",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町2丁目408番地の9"
+  },
+  {
+    "context": "row_10752",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市曲輪町24番地26号"
+  },
+  {
+    "context": "row_10754",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上植木本町2740番地2"
+  },
+  {
+    "context": "row_10757",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市田中島町1486-8"
+  },
+  {
+    "context": "row_10758",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市堀口町260番地"
+  },
+  {
+    "context": "row_10761",
+    "message": "Could not infer municipality from: 山形県群馬県館林市台宿町9番1号"
+  },
+  {
+    "context": "row_10763",
+    "message": "Could not infer municipality from: 山形県群馬県館林市大島町4364-1"
+  },
+  {
+    "context": "row_10764",
+    "message": "Could not infer municipality from: 山形県群馬県館林市新宿2丁目14番18号"
+  },
+  {
+    "context": "row_10765",
+    "message": "Could not infer municipality from: 山形県群馬県館林市近藤町178番地の273"
+  },
+  {
+    "context": "row_10766",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川1773-1"
+  },
+  {
+    "context": "row_10767",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市赤城町勝保沢110-6"
+  },
+  {
+    "context": "row_10768",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市吹屋658-30"
+  },
+  {
+    "context": "row_10769",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北橘町真壁2376-4"
+  },
+  {
+    "context": "row_10770",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市河原浜町491番地1"
+  },
+  {
+    "context": "row_10772",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉渕町岩氷724-2"
+  },
+  {
+    "context": "row_10773",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市村上3751-1"
+  },
+  {
+    "context": "row_10776",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町小串119-1"
+  },
+  {
+    "context": "row_10777",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町吉井338-1"
+  },
+  {
+    "context": "row_10778",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町長根1923-1"
+  },
+  {
+    "context": "row_10782",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字伊勢町1005-1"
+  },
+  {
+    "context": "row_10783",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字下沢渡38-2"
+  },
+  {
+    "context": "row_10784",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字箱島1270-11"
+  },
+  {
+    "context": "row_10785",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字植栗3333"
+  },
+  {
+    "context": "row_10786",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字原町5160"
+  },
+  {
+    "context": "row_10787",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字本宿407番地1"
+  },
+  {
+    "context": "row_10788",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字岩下45"
+  },
+  {
+    "context": "row_10789",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町応桑19-1"
+  },
+  {
+    "context": "row_10790",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町大字大津4番地"
+  },
+  {
+    "context": "row_10791",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村鎌原1339"
+  },
+  {
+    "context": "row_10792",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村大字大笹176-1"
+  },
+  {
+    "context": "row_10793",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字生須528番地3"
+  },
+  {
+    "context": "row_10794",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡高山村大字中山3406-2"
+  },
+  {
+    "context": "row_10795",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市西久保町2丁目100番地"
+  },
+  {
+    "context": "row_10796",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市東町2672-1"
+  },
+  {
+    "context": "row_10797",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町板井53-2"
+  },
+  {
+    "context": "row_10802",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町狸塚1256"
+  },
+  {
+    "context": "row_10803",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町中野3176"
+  },
+  {
+    "context": "row_10804",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡榛東村大字山子田1322番地1"
+  },
+  {
+    "context": "row_10805",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市元総社町152"
+  },
+  {
+    "context": "row_10806",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市南町1-21-28"
+  },
+  {
+    "context": "row_10807",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市城東町1丁目2番地の7"
+  },
+  {
+    "context": "row_10808",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市堤町537-11"
+  },
+  {
+    "context": "row_10810",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市並榎町99"
+  },
+  {
+    "context": "row_10811",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市矢中町159-1"
+  },
+  {
+    "context": "row_10812",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市竜見町256"
+  },
+  {
+    "context": "row_10813",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新宿1-4-54"
+  },
+  {
+    "context": "row_10814",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町3丁目4475"
+  },
+  {
+    "context": "row_10815",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市馬見塚町831番地1"
+  },
+  {
+    "context": "row_10817",
+    "message": "Could not infer municipality from: 山形県群馬県太田市金山町37-8"
+  },
+  {
+    "context": "row_10818",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新井町556-1"
+  },
+  {
+    "context": "row_10819",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市西倉内町663-4"
+  },
+  {
+    "context": "row_10823",
+    "message": "Could not infer municipality from: 山形県群馬県安中市原市1-14-16"
+  },
+  {
+    "context": "row_10824",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中3-10-33"
+  },
+  {
+    "context": "row_10825",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市大橋町18-1"
+  },
+  {
+    "context": "row_10828",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市半田2410"
+  },
+  {
+    "context": "row_10830",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市田口町545-1"
+  },
+  {
+    "context": "row_10831",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市藤岡260-2"
+  },
+  {
+    "context": "row_10832",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市綿貫町346-2"
+  },
+  {
+    "context": "row_10833",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中大類町506-1"
+  },
+  {
+    "context": "row_10835",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市波志江町681"
+  },
+  {
+    "context": "row_10836",
+    "message": "Could not infer municipality from: 山形県群馬県太田市成塚町512-2"
+  },
+  {
+    "context": "row_10838",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町時沢2120-8"
+  },
+  {
+    "context": "row_10839",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市粕川町女渕446-4"
+  },
+  {
+    "context": "row_10842",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下里見町468"
+  },
+  {
+    "context": "row_10844",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新町3133"
+  },
+  {
+    "context": "row_10846",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町阿左美967‐2"
+  },
+  {
+    "context": "row_10847",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町西小泉3-6-22"
+  },
+  {
+    "context": "row_10848",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町日の出56-1"
+  },
+  {
+    "context": "row_10849",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市金古町1912-8"
+  },
+  {
+    "context": "row_10851",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市剣崎町409-4"
+  },
+  {
+    "context": "row_10852",
+    "message": "Could not infer municipality from: 山形県群馬県太田市高林西町474-7"
+  },
+  {
+    "context": "row_10854",
+    "message": "Could not infer municipality from: 山形県群馬県太田市宝町148"
+  },
+  {
+    "context": "row_10857",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市北新波町197番地6"
+  },
+  {
+    "context": "row_10858",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市田部井町2丁目458番地"
+  },
+  {
+    "context": "row_10859",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下豊岡町242-2"
+  },
+  {
+    "context": "row_10860",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市箕郷町西明屋67-2"
+  },
+  {
+    "context": "row_10861",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町南玉758"
+  },
+  {
+    "context": "row_10862",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市東貝沢町2丁目5番地10"
+  },
+  {
+    "context": "row_10863",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町大間々895-1"
+  },
+  {
+    "context": "row_10864",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡板倉町籾谷1344"
+  },
+  {
+    "context": "row_10865",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市棟高町2227番地の2"
+  },
+  {
+    "context": "row_10866",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市今井町367"
+  },
+  {
+    "context": "row_10867",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下室田町1377-8"
+  },
+  {
+    "context": "row_11098",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市若宮町2-8-1"
+  },
+  {
+    "context": "row_11099",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市大手町2-16-4"
+  },
+  {
+    "context": "row_11100",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市三河町2-1-3"
+  },
+  {
+    "context": "row_11101",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市昭和町1-22-8"
+  },
+  {
+    "context": "row_11102",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市六供町1-13-2"
+  },
+  {
+    "context": "row_11103",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市城東町1-35-7"
+  },
+  {
+    "context": "row_11104",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市若宮町4-12-24"
+  },
+  {
+    "context": "row_11105",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市文京町3-18-4"
+  },
+  {
+    "context": "row_11106",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市岩神町4-4-1"
+  },
+  {
+    "context": "row_11107",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市朝倉町466番地"
+  },
+  {
+    "context": "row_11108",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市鶴光路町38番地1"
+  },
+  {
+    "context": "row_11109",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上泉町178番地"
+  },
+  {
+    "context": "row_11110",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市堤町471"
+  },
+  {
+    "context": "row_11111",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市勝沢町719"
+  },
+  {
+    "context": "row_11112",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市総社町総社1625番地"
+  },
+  {
+    "context": "row_11113",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市元総社町1-33-11"
+  },
+  {
+    "context": "row_11114",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市箱田町1452-1"
+  },
+  {
+    "context": "row_11115",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市下細井町67-1"
+  },
+  {
+    "context": "row_11116",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市荒牧町1-46-11"
+  },
+  {
+    "context": "row_11117",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市青梨子町446"
+  },
+  {
+    "context": "row_11118",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上大島町655"
+  },
+  {
+    "context": "row_11119",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市駒形町1172"
+  },
+  {
+    "context": "row_11120",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市荒子町1240"
+  },
+  {
+    "context": "row_11121",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市西大室町2817"
+  },
+  {
+    "context": "row_11122",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市二之宮町1841"
+  },
+  {
+    "context": "row_11123",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市笂井町1160"
+  },
+  {
+    "context": "row_11124",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市広瀬町3-19"
+  },
+  {
+    "context": "row_11125",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市大利根町2-12-1"
+  },
+  {
+    "context": "row_11126",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市西片貝町三丁目343番地"
+  },
+  {
+    "context": "row_11127",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市荒牧町4-9-2"
+  },
+  {
+    "context": "row_11128",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市総社町植野123"
+  },
+  {
+    "context": "row_11129",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市元総社町80番地2"
+  },
+  {
+    "context": "row_11130",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上沖町732-1"
+  },
+  {
+    "context": "row_11131",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市山王町160-1"
+  },
+  {
+    "context": "row_11132",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上新田町1160"
+  },
+  {
+    "context": "row_11133",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市総社町総社3149番地"
+  },
+  {
+    "context": "row_11134",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市常盤町48-1"
+  },
+  {
+    "context": "row_11135",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市請地町20-2"
+  },
+  {
+    "context": "row_11136",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市八島町70-1"
+  },
+  {
+    "context": "row_11137",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市弓町121-1"
+  },
+  {
+    "context": "row_11138",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市並榎町109-1"
+  },
+  {
+    "context": "row_11139",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市飯玉町134-1"
+  },
+  {
+    "context": "row_11140",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市片岡町2-12-1"
+  },
+  {
+    "context": "row_11141",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上佐野町918-2"
+  },
+  {
+    "context": "row_11142",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市筑縄町32-2"
+  },
+  {
+    "context": "row_11143",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新後閑町301-1"
+  },
+  {
+    "context": "row_11144",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市江木町128-1"
+  },
+  {
+    "context": "row_11145",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市日高町592-1"
+  },
+  {
+    "context": "row_11146",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市小八木町1860-1"
+  },
+  {
+    "context": "row_11147",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市八幡町179-1"
+  },
+  {
+    "context": "row_11148",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中豊岡町24番地"
+  },
+  {
+    "context": "row_11149",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市南新波町77-1"
+  },
+  {
+    "context": "row_11150",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市南大類町543-1"
+  },
+  {
+    "context": "row_11151",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市山名町24-1"
+  },
+  {
+    "context": "row_11152",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉賀野町1744"
+  },
+  {
+    "context": "row_11153",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市台新田町1"
+  },
+  {
+    "context": "row_11154",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市京目町44-1"
+  },
+  {
+    "context": "row_11155",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下滝町585-2"
+  },
+  {
+    "context": "row_11156",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市寺尾町290"
+  },
+  {
+    "context": "row_11157",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上大類町1372"
+  },
+  {
+    "context": "row_11158",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中居町3-28-1"
+  },
+  {
+    "context": "row_11159",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下小塙町719-1"
+  },
+  {
+    "context": "row_11160",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市八幡町1414"
+  },
+  {
+    "context": "row_11161",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市乗附町155-1"
+  },
+  {
+    "context": "row_11162",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市浜尻町210番地1"
+  },
+  {
+    "context": "row_11163",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市城山町2-16-1"
+  },
+  {
+    "context": "row_11164",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市矢中町160-1"
+  },
+  {
+    "context": "row_11165",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市鼻高町58-2"
+  },
+  {
+    "context": "row_11166",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市仲町2丁目4番21号"
+  },
+  {
+    "context": "row_11167",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市小曽根町1-9"
+  },
+  {
+    "context": "row_11168",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新宿2丁目7番1号"
+  },
+  {
+    "context": "row_11169",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市西久方町2-1-5"
+  },
+  {
+    "context": "row_11170",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市境野町6丁目1616-1"
+  },
+  {
+    "context": "row_11171",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町四丁目2044番地の2"
+  },
+  {
+    "context": "row_11172",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市梅田町2丁目179番地"
+  },
+  {
+    "context": "row_11173",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町2丁目420番地"
+  },
+  {
+    "context": "row_11174",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町1丁目383番地"
+  },
+  {
+    "context": "row_11175",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市菱町2丁目1919番地1"
+  },
+  {
+    "context": "row_11176",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町5丁目713番地1"
+  },
+  {
+    "context": "row_11177",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町2丁目3242-1"
+  },
+  {
+    "context": "row_11178",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市川内町3-572"
+  },
+  {
+    "context": "row_11179",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市曲輪町28番24号"
+  },
+  {
+    "context": "row_11180",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上泉町310"
+  },
+  {
+    "context": "row_11181",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上植木本町2763"
+  },
+  {
+    "context": "row_11182",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市茂呂町2-2169-1"
+  },
+  {
+    "context": "row_11183",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市波志江町1620"
+  },
+  {
+    "context": "row_11184",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市田中島町1475-4"
+  },
+  {
+    "context": "row_11185",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市堀口町502-1"
+  },
+  {
+    "context": "row_11186",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市馬見塚町1130"
+  },
+  {
+    "context": "row_11187",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市宗高町125"
+  },
+  {
+    "context": "row_11188",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市下植木町1203番地"
+  },
+  {
+    "context": "row_11189",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市新栄町4074-1"
+  },
+  {
+    "context": "row_11190",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市除ヶ町422"
+  },
+  {
+    "context": "row_11191",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市連取町3069-1"
+  },
+  {
+    "context": "row_11192",
+    "message": "Could not infer municipality from: 山形県群馬県太田市本町31-1"
+  },
+  {
+    "context": "row_11193",
+    "message": "Could not infer municipality from: 山形県群馬県太田市飯塚町1534"
+  },
+  {
+    "context": "row_11194",
+    "message": "Could not infer municipality from: 山形県群馬県太田市福沢町226-1"
+  },
+  {
+    "context": "row_11195",
+    "message": "Could not infer municipality from: 山形県群馬県太田市台之郷町999"
+  },
+  {
+    "context": "row_11196",
+    "message": "Could not infer municipality from: 山形県群馬県太田市鶴生田町83-2"
+  },
+  {
+    "context": "row_11198",
+    "message": "Could not infer municipality from: 山形県群馬県太田市高林東町1372"
+  },
+  {
+    "context": "row_11199",
+    "message": "Could not infer municipality from: 山形県群馬県太田市龍舞町3816-3"
+  },
+  {
+    "context": "row_11200",
+    "message": "Could not infer municipality from: 山形県群馬県太田市天良町858-2"
+  },
+  {
+    "context": "row_11201",
+    "message": "Could not infer municipality from: 山形県群馬県太田市由良町1738-1"
+  },
+  {
+    "context": "row_11202",
+    "message": "Could not infer municipality from: 山形県群馬県太田市中根町261-1"
+  },
+  {
+    "context": "row_11203",
+    "message": "Could not infer municipality from: 山形県群馬県太田市只上町970-1"
+  },
+  {
+    "context": "row_11204",
+    "message": "Could not infer municipality from: 山形県群馬県太田市飯田町1166"
+  },
+  {
+    "context": "row_11205",
+    "message": "Could not infer municipality from: 山形県群馬県太田市藤久良町1"
+  },
+  {
+    "context": "row_11207",
+    "message": "Could not infer municipality from: 山形県群馬県太田市東矢島町1249"
+  },
+  {
+    "context": "row_11208",
+    "message": "Could not infer municipality from: 山形県群馬県太田市植木野町7"
+  },
+  {
+    "context": "row_11209",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新野町127"
+  },
+  {
+    "context": "row_11210",
+    "message": "Could not infer municipality from: 山形県群馬県太田市富沢町73"
+  },
+  {
+    "context": "row_11211",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市西倉内町746"
+  },
+  {
+    "context": "row_11212",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市東原新町1801-1"
+  },
+  {
+    "context": "row_11213",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市栄町141"
+  },
+  {
+    "context": "row_11214",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市上久屋町2135"
+  },
+  {
+    "context": "row_11215",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市発知新田町533番地"
+  },
+  {
+    "context": "row_11216",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市善桂寺町32"
+  },
+  {
+    "context": "row_11217",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市下川田町540"
+  },
+  {
+    "context": "row_11218",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市高橋場町4898"
+  },
+  {
+    "context": "row_11219",
+    "message": "Could not infer municipality from: 山形県群馬県館林市代官町9番1号"
+  },
+  {
+    "context": "row_11220",
+    "message": "Could not infer municipality from: 山形県群馬県館林市本町3丁目6番1号"
+  },
+  {
+    "context": "row_11221",
+    "message": "Could not infer municipality from: 山形県群馬県館林市尾曳町14の1"
+  },
+  {
+    "context": "row_11222",
+    "message": "Could not infer municipality from: 山形県群馬県館林市大島町4355"
+  },
+  {
+    "context": "row_11223",
+    "message": "Could not infer municipality from: 山形県群馬県館林市羽附町乙1565番地"
+  },
+  {
+    "context": "row_11224",
+    "message": "Could not infer municipality from: 山形県群馬県館林市新宿2-15-1"
+  },
+  {
+    "context": "row_11225",
+    "message": "Could not infer municipality from: 山形県群馬県館林市上三林町599番地"
+  },
+  {
+    "context": "row_11226",
+    "message": "Could not infer municipality from: 山形県群馬県館林市西高根町45-1"
+  },
+  {
+    "context": "row_11227",
+    "message": "Could not infer municipality from: 山形県群馬県館林市足次町172番地"
+  },
+  {
+    "context": "row_11228",
+    "message": "Could not infer municipality from: 山形県群馬県館林市近藤町178番地の39"
+  },
+  {
+    "context": "row_11229",
+    "message": "Could not infer municipality from: 山形県群馬県館林市美園町27番1号"
+  },
+  {
+    "context": "row_11230",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川681-2"
+  },
+  {
+    "context": "row_11231",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川2573番地1"
+  },
+  {
+    "context": "row_11232",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市金井2310"
+  },
+  {
+    "context": "row_11233",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市八木原852"
+  },
+  {
+    "context": "row_11234",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市石原1001"
+  },
+  {
+    "context": "row_11235",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市金井2817"
+  },
+  {
+    "context": "row_11236",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市藤岡1848-2"
+  },
+  {
+    "context": "row_11237",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市藤岡991"
+  },
+  {
+    "context": "row_11238",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市下戸塚190"
+  },
+  {
+    "context": "row_11239",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市森541"
+  },
+  {
+    "context": "row_11240",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市下大塚222"
+  },
+  {
+    "context": "row_11241",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市本郷2067"
+  },
+  {
+    "context": "row_11242",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市三本木769"
+  },
+  {
+    "context": "row_11243",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市緑埜388"
+  },
+  {
+    "context": "row_11245",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市富岡1359"
+  },
+  {
+    "context": "row_11246",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市七日市1073-1"
+  },
+  {
+    "context": "row_11247",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市下黒岩1870-1"
+  },
+  {
+    "context": "row_11249",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市中高瀬761-1"
+  },
+  {
+    "context": "row_11250",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市南後箇275"
+  },
+  {
+    "context": "row_11251",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市相野田711-2"
+  },
+  {
+    "context": "row_11254",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中3-10-43"
+  },
+  {
+    "context": "row_11255",
+    "message": "Could not infer municipality from: 山形県群馬県安中市原市1-10-23"
+  },
+  {
+    "context": "row_11256",
+    "message": "Could not infer municipality from: 山形県群馬県安中市磯部4-12-8"
+  },
+  {
+    "context": "row_11257",
+    "message": "Could not infer municipality from: 山形県群馬県安中市鷺宮3139-2"
+  },
+  {
+    "context": "row_11258",
+    "message": "Could not infer municipality from: 山形県群馬県安中市岩井62"
+  },
+  {
+    "context": "row_11259",
+    "message": "Could not infer municipality from: 山形県群馬県安中市東上秋間1831"
+  },
+  {
+    "context": "row_11261",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北橘町真壁524"
+  },
+  {
+    "context": "row_11262",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北橘町八崎995"
+  },
+  {
+    "context": "row_11263",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市赤城町上三原田851-1"
+  },
+  {
+    "context": "row_11264",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市赤城町津久田1905"
+  },
+  {
+    "context": "row_11265",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町原ノ郷1933-1"
+  },
+  {
+    "context": "row_11266",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町石井546-1"
+  },
+  {
+    "context": "row_11267",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町時沢3164-1"
+  },
+  {
+    "context": "row_11268",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町小暮2425-63"
+  },
+  {
+    "context": "row_11269",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市堀越町1161"
+  },
+  {
+    "context": "row_11270",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市滝窪町185-1"
+  },
+  {
+    "context": "row_11271",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市東金丸町136-1"
+  },
+  {
+    "context": "row_11272",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市河原浜町870-1"
+  },
+  {
+    "context": "row_11273",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市鼻毛石町1507-1"
+  },
+  {
+    "context": "row_11274",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市粕川町女渕521-2"
+  },
+  {
+    "context": "row_11275",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市粕川町月田273"
+  },
+  {
+    "context": "row_11276",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市朝倉町165番地1"
+  },
+  {
+    "context": "row_11277",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新里町小林甲60"
+  },
+  {
+    "context": "row_11278",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新里町新川2072"
+  },
+  {
+    "context": "row_11279",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新里町大久保302"
+  },
+  {
+    "context": "row_11282",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下室田町1206"
+  },
+  {
+    "context": "row_11283",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中室田町1561-1"
+  },
+  {
+    "context": "row_11284",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上室田町4210"
+  },
+  {
+    "context": "row_11285",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上里見町42-2"
+  },
+  {
+    "context": "row_11286",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市高浜町2321-1"
+  },
+  {
+    "context": "row_11287",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下里見町380"
+  },
+  {
+    "context": "row_11288",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市宮沢町1100-1"
+  },
+  {
+    "context": "row_11289",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉渕町権田314-1"
+  },
+  {
+    "context": "row_11290",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市箕郷町西明屋196-1"
+  },
+  {
+    "context": "row_11291",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市箕郷町富岡255-1"
+  },
+  {
+    "context": "row_11292",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市箕郷町生原922-2"
+  },
+  {
+    "context": "row_11293",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市金古町1271-1"
+  },
+  {
+    "context": "row_11294",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市後疋間町184-1"
+  },
+  {
+    "context": "row_11295",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市棟高町2227-1"
+  },
+  {
+    "context": "row_11296",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市保渡田町2107-1"
+  },
+  {
+    "context": "row_11297",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市金古町658"
+  },
+  {
+    "context": "row_11298",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市棟高町2489-1"
+  },
+  {
+    "context": "row_11299",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北牧85"
+  },
+  {
+    "context": "row_11300",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市中郷2626"
+  },
+  {
+    "context": "row_11301",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市村上3767番地1"
+  },
+  {
+    "context": "row_11302",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市伊香保町伊香保322-1"
+  },
+  {
+    "context": "row_11303",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡榛東村山子田1261"
+  },
+  {
+    "context": "row_11304",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡榛東村広馬場1142"
+  },
+  {
+    "context": "row_11305",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡吉岡町北下433"
+  },
+  {
+    "context": "row_11306",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡吉岡町漆原1016"
+  },
+  {
+    "context": "row_11307",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新町345-1"
+  },
+  {
+    "context": "row_11308",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新町2010-1"
+  },
+  {
+    "context": "row_11309",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市浄法寺842"
+  },
+  {
+    "context": "row_11310",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市鬼石439"
+  },
+  {
+    "context": "row_11311",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町吉井235-1"
+  },
+  {
+    "context": "row_11312",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町塩24-3"
+  },
+  {
+    "context": "row_11313",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町小串130"
+  },
+  {
+    "context": "row_11314",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町下奥平205-1"
+  },
+  {
+    "context": "row_11315",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町馬庭1033-1"
+  },
+  {
+    "context": "row_11316",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町長根1930-1"
+  },
+  {
+    "context": "row_11317",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町南陽台3-16-1"
+  },
+  {
+    "context": "row_11318",
+    "message": "Could not infer municipality from: 山形県群馬県多野郡神流町万場84-2"
+  },
+  {
+    "context": "row_11319",
+    "message": "Could not infer municipality from: 山形県群馬県多野郡上野村新羽32"
+  },
+  {
+    "context": "row_11320",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市妙義町下高田1552-1"
+  },
+  {
+    "context": "row_11321",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市妙義町諸戸150"
+  },
+  {
+    "context": "row_11322",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡下仁田町下仁田73"
+  },
+  {
+    "context": "row_11324",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡甘楽町小幡846"
+  },
+  {
+    "context": "row_11325",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡甘楽町福島939-1"
+  },
+  {
+    "context": "row_11326",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡甘楽町大字天引38-1"
+  },
+  {
+    "context": "row_11329",
+    "message": "Could not infer municipality from: 山形県群馬県安中市松井田町二軒在家887"
+  },
+  {
+    "context": "row_11332",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字伊勢町1035-1"
+  },
+  {
+    "context": "row_11333",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町箱島1596-1"
+  },
+  {
+    "context": "row_11334",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字原町5228"
+  },
+  {
+    "context": "row_11335",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町植栗1104"
+  },
+  {
+    "context": "row_11336",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町本宿389"
+  },
+  {
+    "context": "row_11337",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町岩下46"
+  },
+  {
+    "context": "row_11338",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町大津4"
+  },
+  {
+    "context": "row_11342",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村大字大前805番地1"
+  },
+  {
+    "context": "row_11343",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村三原679-3"
+  },
+  {
+    "context": "row_11344",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡草津町大字草津3-1"
+  },
+  {
+    "context": "row_11345",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字小雨599-1"
+  },
+  {
+    "context": "row_11346",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡高山村大字中山2792-1"
+  },
+  {
+    "context": "row_11347",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市白沢町高平94-1"
+  },
+  {
+    "context": "row_11349",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市利根町追貝93"
+  },
+  {
+    "context": "row_11350",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡片品村鎌田3952"
+  },
+  {
+    "context": "row_11355",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町藤原3491"
+  },
+  {
+    "context": "row_11356",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町新巻208"
+  },
+  {
+    "context": "row_11357",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町湯原222番地"
+  },
+  {
+    "context": "row_11358",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡昭和村大字川額123"
+  },
+  {
+    "context": "row_11359",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡昭和村大字糸井1287"
+  },
+  {
+    "context": "row_11360",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡昭和村大字糸井5455-354"
+  },
+  {
+    "context": "row_11361",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市西久保町1丁目72番地"
+  },
+  {
+    "context": "row_11362",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市堀下町264-1"
+  },
+  {
+    "context": "row_11363",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市香林町1-260-2"
+  },
+  {
+    "context": "row_11364",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市東町2770番地"
+  },
+  {
+    "context": "row_11365",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市三室町4290"
+  },
+  {
+    "context": "row_11366",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市国定町2-1627"
+  },
+  {
+    "context": "row_11367",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境下渕名2020"
+  },
+  {
+    "context": "row_11368",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境下武士831"
+  },
+  {
+    "context": "row_11369",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境515"
+  },
+  {
+    "context": "row_11370",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境米岡253-2"
+  },
+  {
+    "context": "row_11371",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町下新田99-1"
+  },
+  {
+    "context": "row_11372",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町大字樋越921-1"
+  },
+  {
+    "context": "row_11373",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町飯倉39"
+  },
+  {
+    "context": "row_11374",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町福島401"
+  },
+  {
+    "context": "row_11375",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町角渕5011"
+  },
+  {
+    "context": "row_11376",
+    "message": "Could not infer municipality from: 山形県群馬県太田市亀岡町甲61-2"
+  },
+  {
+    "context": "row_11377",
+    "message": "Could not infer municipality from: 山形県群馬県太田市世良田町3113番地7"
+  },
+  {
+    "context": "row_11378",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田木崎町1121"
+  },
+  {
+    "context": "row_11379",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田村田町1365"
+  },
+  {
+    "context": "row_11380",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田上田中町795-3"
+  },
+  {
+    "context": "row_11381",
+    "message": "Could not infer municipality from: 山形県群馬県太田市藪塚町1741"
+  },
+  {
+    "context": "row_11382",
+    "message": "Could not infer municipality from: 山形県群馬県太田市大原町2201-1"
+  },
+  {
+    "context": "row_11383",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町鹿346"
+  },
+  {
+    "context": "row_11384",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町阿左美1010番地"
+  },
+  {
+    "context": "row_11385",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町阿左美3730"
+  },
+  {
+    "context": "row_11386",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町大間々884"
+  },
+  {
+    "context": "row_11387",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町桐原653番地"
+  },
+  {
+    "context": "row_11388",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町大間々456-1"
+  },
+  {
+    "context": "row_11389",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡板倉町海老瀬4822"
+  },
+  {
+    "context": "row_11390",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡板倉町岩田971"
+  },
+  {
+    "context": "row_11391",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡明和町千津井293"
+  },
+  {
+    "context": "row_11392",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡明和町川俣26"
+  },
+  {
+    "context": "row_11393",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡千代田町上五箇316"
+  },
+  {
+    "context": "row_11394",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡千代田町赤岩1755"
+  },
+  {
+    "context": "row_11395",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町仙石2-1-1"
+  },
+  {
+    "context": "row_11396",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町城之内1-21-1"
+  },
+  {
+    "context": "row_11397",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町古氷106-1"
+  },
+  {
+    "context": "row_11398",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町朝日3-7-1"
+  },
+  {
+    "context": "row_11399",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町中野3021"
+  },
+  {
+    "context": "row_11400",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町大字藤川379"
+  },
+  {
+    "context": "row_11401",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町篠塚1278"
+  },
+  {
+    "context": "row_11402",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町明野51"
+  },
+  {
+    "context": "row_11403",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市川原町826"
+  },
+  {
+    "context": "row_11404",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町鹿3060番地1"
+  },
+  {
+    "context": "row_11405",
+    "message": "Could not infer municipality from: 山形県群馬県安中市松井田町松井田953番地"
+  },
+  {
+    "context": "row_11406",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町大字応桑1543番地310"
+  },
+  {
+    "context": "row_11407",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市一ノ宮1702番地"
+  },
+  {
+    "context": "row_11408",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町月夜野583"
+  },
+  {
+    "context": "row_11409",
+    "message": "Could not infer municipality from: 山形県群馬県太田市西本町69-1"
+  },
+  {
+    "context": "row_11410",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町飯塚328番地"
+  },
+  {
+    "context": "row_11411",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市小屋原町1097-2"
+  },
+  {
+    "context": "row_11412",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町北軽井沢1924-44"
+  },
+  {
+    "context": "row_11413",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上沖町612"
+  },
+  {
+    "context": "row_11414",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市南町1-20-5"
+  },
+  {
+    "context": "row_11415",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市平和町2-13-24"
+  },
+  {
+    "context": "row_11416",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市文京町3-20-5"
+  },
+  {
+    "context": "row_11417",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市総社町総社1762-1"
+  },
+  {
+    "context": "row_11418",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市宮地町260-1"
+  },
+  {
+    "context": "row_11419",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上泉町175"
+  },
+  {
+    "context": "row_11420",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市鳥取町796"
+  },
+  {
+    "context": "row_11421",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市総社町総社3060"
+  },
+  {
+    "context": "row_11422",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市光が丘町3"
+  },
+  {
+    "context": "row_11423",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市荒牧町975番地"
+  },
+  {
+    "context": "row_11424",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市小屋原町1811-1"
+  },
+  {
+    "context": "row_11425",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市荒子町1338"
+  },
+  {
+    "context": "row_11428",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上細井町2130"
+  },
+  {
+    "context": "row_11429",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市前箱田町396-1"
+  },
+  {
+    "context": "row_11430",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市川原町826"
+  },
+  {
+    "context": "row_11431",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市日吉町3-9-2"
+  },
+  {
+    "context": "row_11432",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上和田町16-1"
+  },
+  {
+    "context": "row_11433",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市並榎町60"
+  },
+  {
+    "context": "row_11434",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中豊岡町350-2"
+  },
+  {
+    "context": "row_11435",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中尾町791"
+  },
+  {
+    "context": "row_11436",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市飯玉町109"
+  },
+  {
+    "context": "row_11437",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市片岡町1-14-1"
+  },
+  {
+    "context": "row_11438",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上中居町345"
+  },
+  {
+    "context": "row_11439",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市山名町30-1"
+  },
+  {
+    "context": "row_11440",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉賀野町1270"
+  },
+  {
+    "context": "row_11441",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上滝町1032-2"
+  },
+  {
+    "context": "row_11442",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上小塙町325-1"
+  },
+  {
+    "context": "row_11443",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市南大類町1455"
+  },
+  {
+    "context": "row_11444",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市寺尾町2710"
+  },
+  {
+    "context": "row_11445",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市八幡町1300-1"
+  },
+  {
+    "context": "row_11446",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市矢中町700-1"
+  },
+  {
+    "context": "row_11447",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市高松町5-3"
+  },
+  {
+    "context": "row_11448",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市境野町6-1673"
+  },
+  {
+    "context": "row_11449",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町4-1864-2"
+  },
+  {
+    "context": "row_11450",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市梅田町2-347-1"
+  },
+  {
+    "context": "row_11451",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町5-247"
+  },
+  {
+    "context": "row_11452",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市川内町5-358"
+  },
+  {
+    "context": "row_11453",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町1-2874"
+  },
+  {
+    "context": "row_11454",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市美原町2-15"
+  },
+  {
+    "context": "row_11455",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市東3-7-1"
+  },
+  {
+    "context": "row_11456",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市茂呂町1-24-1"
+  },
+  {
+    "context": "row_11457",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市堀口町237-1"
+  },
+  {
+    "context": "row_11458",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市波志江町1903番地1"
+  },
+  {
+    "context": "row_11459",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上植木本町2152-2"
+  },
+  {
+    "context": "row_11460",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市田中島町1065"
+  },
+  {
+    "context": "row_11461",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市下道寺町26"
+  },
+  {
+    "context": "row_11462",
+    "message": "Could not infer municipality from: 山形県群馬県太田市八幡町24-1"
+  },
+  {
+    "context": "row_11464",
+    "message": "Could not infer municipality from: 山形県群馬県太田市飯塚町80"
+  },
+  {
+    "context": "row_11465",
+    "message": "Could not infer municipality from: 山形県群馬県太田市高林北町955-1"
+  },
+  {
+    "context": "row_11466",
+    "message": "Could not infer municipality from: 山形県群馬県太田市龍舞町3867-2"
+  },
+  {
+    "context": "row_11467",
+    "message": "Could not infer municipality from: 山形県群馬県太田市天良町72-3"
+  },
+  {
+    "context": "row_11468",
+    "message": "Could not infer municipality from: 山形県群馬県太田市宝町735"
+  },
+  {
+    "context": "row_11469",
+    "message": "Could not infer municipality from: 山形県群馬県太田市矢田堀町242-2"
+  },
+  {
+    "context": "row_11470",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新野町74"
+  },
+  {
+    "context": "row_11471",
+    "message": "Could not infer municipality from: 山形県群馬県太田市韮川町1"
+  },
+  {
+    "context": "row_11472",
+    "message": "Could not infer municipality from: 山形県群馬県太田市東矢島町1082"
+  },
+  {
+    "context": "row_11473",
+    "message": "Could not infer municipality from: 山形県群馬県太田市細谷町1510"
+  },
+  {
+    "context": "row_11474",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市東原新町1801-1"
+  },
+  {
+    "context": "row_11475",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市薄根町3580"
+  },
+  {
+    "context": "row_11476",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市発知新田町533番地"
+  },
+  {
+    "context": "row_11477",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市善桂寺町40"
+  },
+  {
+    "context": "row_11478",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市戸鹿野町726"
+  },
+  {
+    "context": "row_11479",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市横塚町1118"
+  },
+  {
+    "context": "row_11480",
+    "message": "Could not infer municipality from: 山形県群馬県館林市台宿町9番1号"
+  },
+  {
+    "context": "row_11481",
+    "message": "Could not infer municipality from: 山形県群馬県館林市加法師町8番20号"
+  },
+  {
+    "context": "row_11482",
+    "message": "Could not infer municipality from: 山形県群馬県館林市上赤生田町3471-1"
+  },
+  {
+    "context": "row_11483",
+    "message": "Could not infer municipality from: 山形県群馬県館林市西高根町50番地の23"
+  },
+  {
+    "context": "row_11484",
+    "message": "Could not infer municipality from: 山形県群馬県館林市青柳町1751-78"
+  },
+  {
+    "context": "row_11485",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川2555-2"
+  },
+  {
+    "context": "row_11486",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市金井2007-1"
+  },
+  {
+    "context": "row_11487",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市有馬753"
+  },
+  {
+    "context": "row_11488",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市金井1044"
+  },
+  {
+    "context": "row_11489",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市上大塚639"
+  },
+  {
+    "context": "row_11490",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市本郷786"
+  },
+  {
+    "context": "row_11491",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市下栗須283-2"
+  },
+  {
+    "context": "row_11492",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市立石407"
+  },
+  {
+    "context": "row_11493",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市富岡864番地"
+  },
+  {
+    "context": "row_11495",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市宮崎20"
+  },
+  {
+    "context": "row_11496",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市相野田636"
+  },
+  {
+    "context": "row_11497",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市中高瀬1118"
+  },
+  {
+    "context": "row_11498",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中5-8-1"
+  },
+  {
+    "context": "row_11499",
+    "message": "Could not infer municipality from: 山形県群馬県安中市原市2245-2"
+  },
+  {
+    "context": "row_11500",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北橘町真壁46"
+  },
+  {
+    "context": "row_11501",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市赤城町滝沢191-1"
+  },
+  {
+    "context": "row_11502",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市赤城町津久田2280"
+  },
+  {
+    "context": "row_11503",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市富士見町田島954-1"
+  },
+  {
+    "context": "row_11504",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市堀越町1152"
+  },
+  {
+    "context": "row_11505",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市鼻毛石町1564-1"
+  },
+  {
+    "context": "row_11506",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市粕川町西田面138"
+  },
+  {
+    "context": "row_11507",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市新里町山上827番地"
+  },
+  {
+    "context": "row_11510",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市上里見町430"
+  },
+  {
+    "context": "row_11511",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市倉渕町岩氷215-1"
+  },
+  {
+    "context": "row_11512",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市箕郷町生原654"
+  },
+  {
+    "context": "row_11513",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市金古町352-1"
+  },
+  {
+    "context": "row_11514",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市三ッ寺町712"
+  },
+  {
+    "context": "row_11515",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市中郷2258-3"
+  },
+  {
+    "context": "row_11516",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市伊香保町伊香保544-16"
+  },
+  {
+    "context": "row_11517",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡榛東村新井598-1"
+  },
+  {
+    "context": "row_11518",
+    "message": "Could not infer municipality from: 山形県群馬県北群馬郡吉岡町南下1383-2"
+  },
+  {
+    "context": "row_11519",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新町361-1"
+  },
+  {
+    "context": "row_11520",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市鬼石235-1"
+  },
+  {
+    "context": "row_11521",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町石神321-1"
+  },
+  {
+    "context": "row_11522",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町吉井川581"
+  },
+  {
+    "context": "row_11523",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町本郷45"
+  },
+  {
+    "context": "row_11524",
+    "message": "Could not infer municipality from: 山形県群馬県多野郡神流町大字神ヶ原422"
+  },
+  {
+    "context": "row_11525",
+    "message": "Could not infer municipality from: 山形県群馬県多野郡上野村大字楢原113"
+  },
+  {
+    "context": "row_11526",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市妙義町中里218"
+  },
+  {
+    "context": "row_11527",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡下仁田町大字下仁田26"
+  },
+  {
+    "context": "row_11529",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡甘楽町大字白倉1411"
+  },
+  {
+    "context": "row_11533",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字中之条町1395-1"
+  },
+  {
+    "context": "row_11534",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡東吾妻町大字原町5230番地"
+  },
+  {
+    "context": "row_11537",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村大字大笹1654-2"
+  },
+  {
+    "context": "row_11538",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡草津町大字草津464-27"
+  },
+  {
+    "context": "row_11539",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字生須543-1"
+  },
+  {
+    "context": "row_11540",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡高山村中山3750-1"
+  },
+  {
+    "context": "row_11541",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市白沢町高平75-1"
+  },
+  {
+    "context": "row_11542",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市利根町追貝334"
+  },
+  {
+    "context": "row_11544",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡片品村鎌田4480"
+  },
+  {
+    "context": "row_11550",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡昭和村大字橡久保488-1"
+  },
+  {
+    "context": "row_11551",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市西久保町2-329-1"
+  },
+  {
+    "context": "row_11552",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市東町2707-2"
+  },
+  {
+    "context": "row_11553",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境下渕名2011-1"
+  },
+  {
+    "context": "row_11554",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境下武士872番地2"
+  },
+  {
+    "context": "row_11555",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境188番地"
+  },
+  {
+    "context": "row_11556",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町福島913"
+  },
+  {
+    "context": "row_11557",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町上之手1748"
+  },
+  {
+    "context": "row_11558",
+    "message": "Could not infer municipality from: 山形県群馬県太田市亀岡町584-1"
+  },
+  {
+    "context": "row_11559",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田木崎町301"
+  },
+  {
+    "context": "row_11560",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田市野井町121"
+  },
+  {
+    "context": "row_11561",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田上田中町182-1"
+  },
+  {
+    "context": "row_11562",
+    "message": "Could not infer municipality from: 山形県群馬県太田市大原町695"
+  },
+  {
+    "context": "row_11563",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町鹿362-1"
+  },
+  {
+    "context": "row_11564",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町阿左美829"
+  },
+  {
+    "context": "row_11565",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町桐原217"
+  },
+  {
+    "context": "row_11566",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町大間々1829-1"
+  },
+  {
+    "context": "row_11567",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡板倉町板倉2770"
+  },
+  {
+    "context": "row_11568",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡明和町新里298-1"
+  },
+  {
+    "context": "row_11569",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡千代田町赤岩1920"
+  },
+  {
+    "context": "row_11570",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町大字吉田2465"
+  },
+  {
+    "context": "row_11571",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町城之内二丁目24-1"
+  },
+  {
+    "context": "row_11572",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町寄木戸533"
+  },
+  {
+    "context": "row_11573",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町中野2371"
+  },
+  {
+    "context": "row_11574",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡邑楽町篠塚1445"
+  },
+  {
+    "context": "row_11575",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市後閑町50番地4"
+  },
+  {
+    "context": "row_11576",
+    "message": "Could not infer municipality from: 山形県群馬県安中市新堀236番地16"
+  },
+  {
+    "context": "row_11577",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町月夜野80番地"
+  },
+  {
+    "context": "row_11578",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町大字長野原1110番地1"
+  },
+  {
+    "context": "row_11579",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市今泉町1丁目233-2"
+  },
+  {
+    "context": "row_11580",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市小屋原町1115-3"
+  },
+  {
+    "context": "row_11581",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中3702"
+  },
+  {
+    "context": "row_11582",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字入山1-1"
+  },
+  {
+    "context": "row_11583",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市稲荷町4-12"
+  },
+  {
+    "context": "row_11584",
+    "message": "Could not infer municipality from: 山形県群馬県太田市内ヶ島町1361-4"
+  },
+  {
+    "context": "row_11585",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市小曾根町9-17"
+  },
+  {
+    "context": "row_11586",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市石原町3430"
+  },
+  {
+    "context": "row_11587",
+    "message": "Could not infer municipality from: 山形県群馬県太田市熊野町2番1号"
+  },
+  {
+    "context": "row_11588",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市黒保根町400番地"
+  },
+  {
+    "context": "row_11589",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市東町神戸10番地"
+  },
+  {
+    "context": "row_11590",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡南牧村大字千原412番地2"
+  },
+  {
+    "context": "row_11591",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡川場村大字谷地2402番地1"
+  },
+  {
+    "context": "row_11592",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市下沖町321-1"
+  },
+  {
+    "context": "row_11593",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市八千代町2-4-1"
+  },
+  {
+    "context": "row_11594",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市美原町1-39"
+  },
+  {
+    "context": "row_11595",
+    "message": "Could not infer municipality from: 山形県群馬県太田市西本町12-2"
+  },
+  {
+    "context": "row_11597",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川678-3"
+  },
+  {
+    "context": "row_11598",
+    "message": "Could not infer municipality from: 山形県群馬県館林市富士原町1241"
+  },
+  {
+    "context": "row_11600",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下室田町953"
+  },
+  {
+    "context": "row_11601",
+    "message": "Could not infer municipality from: 山形県群馬県多野郡神流町生利1549-1"
+  },
+  {
+    "context": "row_11602",
+    "message": "Could not infer municipality from: 山形県群馬県甘楽郡下仁田町下仁田550-1"
+  },
+  {
+    "context": "row_11603",
+    "message": "Could not infer municipality from: 山形県群馬県安中市松井田町松井田803-1"
+  },
+  {
+    "context": "row_11604",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡長野原町与喜屋21-1"
+  },
+  {
+    "context": "row_11605",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡嬬恋村三原482-1"
+  },
+  {
+    "context": "row_11606",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市利根町平川1406"
+  },
+  {
+    "context": "row_11607",
+    "message": "Could not infer municipality from: 山形県群馬県佐波郡玉村町与六分14"
+  },
+  {
+    "context": "row_11608",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市大間々町桐原193-1"
+  },
+  {
+    "context": "row_11609",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡板倉町板倉2406-2"
+  },
+  {
+    "context": "row_11610",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市文京町2-20-3"
+  },
+  {
+    "context": "row_11611",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市吉井町馬庭1478-1"
+  },
+  {
+    "context": "row_11612",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市紅雲町2-19-1"
+  },
+  {
+    "context": "row_11613",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市稲荷町20"
+  },
+  {
+    "context": "row_11615",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市今泉町2-331-6"
+  },
+  {
+    "context": "row_11616",
+    "message": "Could not infer municipality from: 山形県群馬県太田市八幡町16-7"
+  },
+  {
+    "context": "row_11618",
+    "message": "Could not infer municipality from: 山形県群馬県館林市尾曳町6-1"
+  },
+  {
+    "context": "row_11619",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川2684"
+  },
+  {
+    "context": "row_11620",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市亀里町1"
+  },
+  {
+    "context": "row_11621",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町朝日2-3-1"
+  },
+  {
+    "context": "row_11622",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川3912-1"
+  },
+  {
+    "context": "row_11623",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市井出町1080"
+  },
+  {
+    "context": "row_11624",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市江木町800"
+  },
+  {
+    "context": "row_11626",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市清野町180"
+  },
+  {
+    "context": "row_11627",
+    "message": "Could not infer municipality from: 山形県群馬県太田市台之郷町448"
+  },
+  {
+    "context": "row_11628",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市元島名町1510"
+  },
+  {
+    "context": "row_11629",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市中栗須909"
+  },
+  {
+    "context": "row_11630",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市南千木町1670"
+  },
+  {
+    "context": "row_11631",
+    "message": "Could not infer municipality from: 山形県群馬県太田市下田島町1243-1"
+  },
+  {
+    "context": "row_11632",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中1-2-8"
+  },
+  {
+    "context": "row_11633",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市日吉町2-25-1"
+  },
+  {
+    "context": "row_11634",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上泉町212"
+  },
+  {
+    "context": "row_11635",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市栄町165-2"
+  },
+  {
+    "context": "row_11636",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市富岡451"
+  },
+  {
+    "context": "row_11637",
+    "message": "Could not infer municipality from: 山形県群馬県太田市新田大根町999"
+  },
+  {
+    "context": "row_11638",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡大泉町北小泉2-16-1"
+  },
+  {
+    "context": "row_11639",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市篠塚90"
+  },
+  {
+    "context": "row_11640",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市石関町137-1"
+  },
+  {
+    "context": "row_11641",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市江木町700"
+  },
+  {
+    "context": "row_11642",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市西久方町1-1-41"
+  },
+  {
+    "context": "row_11643",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市中央町3-8"
+  },
+  {
+    "context": "row_11644",
+    "message": "Could not infer municipality from: 山形県群馬県太田市茂木町380"
+  },
+  {
+    "context": "row_11645",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市下戸塚47-2"
+  },
+  {
+    "context": "row_11646",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市南町4-35-1"
+  },
+  {
+    "context": "row_11647",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市東貝沢町3-4"
+  },
+  {
+    "context": "row_11648",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市波志江町1116"
+  },
+  {
+    "context": "row_11649",
+    "message": "Could not infer municipality from: 山形県群馬県邑楽郡明和町南大島660"
+  },
+  {
+    "context": "row_11650",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市七日市1425-1"
+  },
+  {
+    "context": "row_11651",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字中之条町1303"
+  },
+  {
+    "context": "row_11652",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上細井町2211番地3"
+  },
+  {
+    "context": "row_11653",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市清瀬町6-1"
+  },
+  {
+    "context": "row_11654",
+    "message": "Could not infer municipality from: 山形県群馬県太田市細谷町1510"
+  },
+  {
+    "context": "row_11655",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川8-1"
+  },
+  {
+    "context": "row_11656",
+    "message": "Could not infer municipality from: 山形県群馬県利根郡みなかみ町月夜野591"
+  },
+  {
+    "context": "row_11657",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市浜川町1650-1"
+  },
+  {
+    "context": "row_11658",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市相生町3丁目551-1"
+  },
+  {
+    "context": "row_11659",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市沼田市西原新町1510"
+  },
+  {
+    "context": "row_11660",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市小屋原町1115-3"
+  },
+  {
+    "context": "row_11661",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市朝日が丘町13"
+  },
+  {
+    "context": "row_11662",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市大橋町237-1"
+  },
+  {
+    "context": "row_11663",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市石原町3430"
+  },
+  {
+    "context": "row_11664",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市小曽根町1番5号"
+  },
+  {
+    "context": "row_11665",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市錦町1-1-20"
+  },
+  {
+    "context": "row_11666",
+    "message": "Could not infer municipality from: 山形県群馬県太田市飯塚町141-1"
+  },
+  {
+    "context": "row_11667",
+    "message": "Could not infer municipality from: 山形県群馬県館林市大谷町625"
+  },
+  {
+    "context": "row_11668",
+    "message": "Could not infer municipality from: 山形県群馬県安中市安中3702"
+  },
+  {
+    "context": "row_11669",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市中大類町531"
+  },
+  {
+    "context": "row_11670",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町大字入山1-1"
+  },
+  {
+    "context": "row_11671",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市金古町28"
+  },
+  {
+    "context": "row_11672",
+    "message": "Could not infer municipality from: 山形県群馬県太田市内ヶ島町1361-4"
+  },
+  {
+    "context": "row_11673",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市梅田町一丁目185-1"
+  },
+  {
+    "context": "row_11674",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市新保田中町184番地"
+  },
+  {
+    "context": "row_11675",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市上植木本町1702-1"
+  },
+  {
+    "context": "row_11676",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市若宮町2-8-1"
+  },
+  {
+    "context": "row_11677",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市南町4-5-1"
+  },
+  {
+    "context": "row_11678",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市天川原町1-4"
+  },
+  {
+    "context": "row_11679",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市足門町120"
+  },
+  {
+    "context": "row_11680",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市乗附町3947"
+  },
+  {
+    "context": "row_11681",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市渋川3641-2"
+  },
+  {
+    "context": "row_11682",
+    "message": "Could not infer municipality from: 山形県群馬県みどり市笠懸町鹿2812"
+  },
+  {
+    "context": "row_11683",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市東上野町459-1"
+  },
+  {
+    "context": "row_11684",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市下滝町772-1"
+  },
+  {
+    "context": "row_11685",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市広沢町間ノ島440"
+  },
+  {
+    "context": "row_11686",
+    "message": "Could not infer municipality from: 山形県群馬県桐生市菱町2丁目1955-1"
+  },
+  {
+    "context": "row_11687",
+    "message": "Could not infer municipality from: 山形県群馬県太田市藤阿久町26-1"
+  },
+  {
+    "context": "row_11688",
+    "message": "Could not infer municipality from: 山形県群馬県吾妻郡中之条町伊勢町1035番地1"
+  },
+  {
+    "context": "row_11689",
+    "message": "Could not infer municipality from: 山形県群馬県太田市藤阿久町12-1"
+  },
+  {
+    "context": "row_11690",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市青梨子町233-1"
+  },
+  {
+    "context": "row_11691",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市柴崎町1838-2"
+  },
+  {
+    "context": "row_11692",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市上小出町1-5-15"
+  },
+  {
+    "context": "row_11693",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市東大室町177-1"
+  },
+  {
+    "context": "row_11694",
+    "message": "Could not infer municipality from: 山形県群馬県高崎市足門町110"
+  },
+  {
+    "context": "row_11695",
+    "message": "Could not infer municipality from: 山形県群馬県渋川市北橘町下箱田779"
+  },
+  {
+    "context": "row_11696",
+    "message": "Could not infer municipality from: 山形県群馬県沼田市東原新町1801-1"
+  },
+  {
+    "context": "row_11697",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市境492"
+  },
+  {
+    "context": "row_11698",
+    "message": "Could not infer municipality from: 山形県群馬県館林市上三林町197"
+  },
+  {
+    "context": "row_11699",
+    "message": "Could not infer municipality from: 山形県群馬県伊勢崎市粕川町1003"
+  },
+  {
+    "context": "row_11700",
+    "message": "Could not infer municipality from: 山形県群馬県館林市上三林町579-1"
+  },
+  {
+    "context": "row_11701",
+    "message": "Could not infer municipality from: 山形県群馬県富岡市七日市1116-1"
+  },
+  {
+    "context": "row_11702",
+    "message": "Could not infer municipality from: 山形県群馬県藤岡市本郷463"
+  },
+  {
+    "context": "row_11703",
+    "message": "Could not infer municipality from: 山形県群馬県前橋市苗ヶ島町2258-4"
+  }
+]

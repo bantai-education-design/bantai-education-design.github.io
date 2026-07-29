@@ -1,0 +1,930 @@
+[
+  {
+    "context": "row_9534",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町北2-465"
+  },
+  {
+    "context": "row_9535",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市福部町高江188番地"
+  },
+  {
+    "context": "row_9536",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市河原町長瀬48番地1"
+  },
+  {
+    "context": "row_9537",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市鹿野町鹿野583-3"
+  },
+  {
+    "context": "row_9538",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西町1丁目455"
+  },
+  {
+    "context": "row_9540",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西町1-226"
+  },
+  {
+    "context": "row_9542",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市元大工町46"
+  },
+  {
+    "context": "row_9544",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市両三柳2755"
+  },
+  {
+    "context": "row_9545",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市車尾3丁目12番56号"
+  },
+  {
+    "context": "row_9546",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市陰田町324-6"
+  },
+  {
+    "context": "row_9547",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市夜見町2568"
+  },
+  {
+    "context": "row_9548",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市河崎1660"
+  },
+  {
+    "context": "row_9549",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市中町106"
+  },
+  {
+    "context": "row_9551",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市福市1730-9"
+  },
+  {
+    "context": "row_9552",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市二本木259-6"
+  },
+  {
+    "context": "row_9553",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市美萩野2丁目233"
+  },
+  {
+    "context": "row_9614",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町南4-101"
+  },
+  {
+    "context": "row_9615",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市東町二丁目201番地"
+  },
+  {
+    "context": "row_9616",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西町五丁目353番地"
+  },
+  {
+    "context": "row_9617",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市本町一丁目108番地1"
+  },
+  {
+    "context": "row_9618",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市立川町五丁目339番地"
+  },
+  {
+    "context": "row_9619",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市吉方温泉一丁目131番地"
+  },
+  {
+    "context": "row_9620",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西品治134番地"
+  },
+  {
+    "context": "row_9621",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市卯垣二丁目657番地"
+  },
+  {
+    "context": "row_9622",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市田園町4丁目324番地"
+  },
+  {
+    "context": "row_9623",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市吉成一丁目10番25号"
+  },
+  {
+    "context": "row_9624",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市賀露町4150番地"
+  },
+  {
+    "context": "row_9625",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市行徳一丁目201番地3"
+  },
+  {
+    "context": "row_9626",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市八坂54番地1"
+  },
+  {
+    "context": "row_9627",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市古郡家75番地1"
+  },
+  {
+    "context": "row_9628",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市雲山42番地"
+  },
+  {
+    "context": "row_9629",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市古海291番地3"
+  },
+  {
+    "context": "row_9630",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市篠坂6番地1"
+  },
+  {
+    "context": "row_9631",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市松上159番地"
+  },
+  {
+    "context": "row_9632",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市徳尾407番地"
+  },
+  {
+    "context": "row_9633",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町南一丁目656番地"
+  },
+  {
+    "context": "row_9634",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市伏野2256番地61"
+  },
+  {
+    "context": "row_9635",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市桂木238番地の1"
+  },
+  {
+    "context": "row_9636",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市浜坂一丁目14番1号"
+  },
+  {
+    "context": "row_9637",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市立川町七丁目110番地"
+  },
+  {
+    "context": "row_9638",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市宮長200番地1"
+  },
+  {
+    "context": "row_9639",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市陽田町74-2"
+  },
+  {
+    "context": "row_9640",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市義方町9-20"
+  },
+  {
+    "context": "row_9641",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市博労町4-290"
+  },
+  {
+    "context": "row_9642",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市愛宕町94番地"
+  },
+  {
+    "context": "row_9643",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市車尾2丁目27番1号"
+  },
+  {
+    "context": "row_9644",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市皆生5-18-32"
+  },
+  {
+    "context": "row_9645",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市東福原5丁目7-1"
+  },
+  {
+    "context": "row_9646",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市両三柳4610"
+  },
+  {
+    "context": "row_9647",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市旗ヶ崎5丁目17番1号"
+  },
+  {
+    "context": "row_9648",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市彦名町4500-2"
+  },
+  {
+    "context": "row_9649",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市大崎3244"
+  },
+  {
+    "context": "row_9650",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市大篠津町190番地"
+  },
+  {
+    "context": "row_9651",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市和田町3271番地"
+  },
+  {
+    "context": "row_9652",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市富益町1194"
+  },
+  {
+    "context": "row_9653",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市下新印204番地2"
+  },
+  {
+    "context": "row_9654",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市榎原1897"
+  },
+  {
+    "context": "row_9655",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市奈喜良81"
+  },
+  {
+    "context": "row_9656",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市尾高418-1"
+  },
+  {
+    "context": "row_9657",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市西福原8丁目16番62号"
+  },
+  {
+    "context": "row_9658",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市河崎2677"
+  },
+  {
+    "context": "row_9659",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市諏訪1695"
+  },
+  {
+    "context": "row_9660",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市下余戸114番地"
+  },
+  {
+    "context": "row_9661",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市海田西町1丁目130"
+  },
+  {
+    "context": "row_9662",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市余戸谷町3059"
+  },
+  {
+    "context": "row_9664",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市上灘町136番地"
+  },
+  {
+    "context": "row_9669",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市国分寺88"
+  },
+  {
+    "context": "row_9671",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市渡町901番地"
+  },
+  {
+    "context": "row_9672",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市外江町2105"
+  },
+  {
+    "context": "row_9673",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市湊町27"
+  },
+  {
+    "context": "row_9674",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市上道町3026"
+  },
+  {
+    "context": "row_9675",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市竹内町3117"
+  },
+  {
+    "context": "row_9676",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市麦垣町432"
+  },
+  {
+    "context": "row_9677",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町宮下26番地"
+  },
+  {
+    "context": "row_9678",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町稲荷310"
+  },
+  {
+    "context": "row_9679",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町郡家541"
+  },
+  {
+    "context": "row_9680",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市河原町渡一木179番地1"
+  },
+  {
+    "context": "row_9681",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市河原町牛戸14番地1"
+  },
+  {
+    "context": "row_9682",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市河原町佐貫761番地5"
+  },
+  {
+    "context": "row_9683",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡若桜町浅井289"
+  },
+  {
+    "context": "row_9684",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市用瀬町用瀬75番地1"
+  },
+  {
+    "context": "row_9685",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市佐治町福園41番地"
+  },
+  {
+    "context": "row_9686",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市気高町宝木989番地"
+  },
+  {
+    "context": "row_9687",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市気高町下坂本48番地"
+  },
+  {
+    "context": "row_9688",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市気高町八幡382番地3"
+  },
+  {
+    "context": "row_9690",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市青谷町青谷3459番地"
+  },
+  {
+    "context": "row_9691",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町泊280番地"
+  },
+  {
+    "context": "row_9692",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡北栄町国坂680番地"
+  },
+  {
+    "context": "row_9693",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡北栄町由良宿213番地"
+  },
+  {
+    "context": "row_9694",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町下伊勢504番地1"
+  },
+  {
+    "context": "row_9695",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町八橋705"
+  },
+  {
+    "context": "row_9696",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町赤碕264"
+  },
+  {
+    "context": "row_9697",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡南部町法勝寺336番地"
+  },
+  {
+    "context": "row_9698",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡南部町宮前568"
+  },
+  {
+    "context": "row_9699",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡南部町池野451-1"
+  },
+  {
+    "context": "row_9700",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町吉長78-2"
+  },
+  {
+    "context": "row_9701",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町真野971"
+  },
+  {
+    "context": "row_9702",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡日吉津村日吉津872-12"
+  },
+  {
+    "context": "row_9703",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市淀江町西原244-2"
+  },
+  {
+    "context": "row_9704",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町末長81-1"
+  },
+  {
+    "context": "row_9705",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町佐摩340"
+  },
+  {
+    "context": "row_9706",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町名和610"
+  },
+  {
+    "context": "row_9709",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町二部1617"
+  },
+  {
+    "context": "row_9710",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町下甲1022"
+  },
+  {
+    "context": "row_9711",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町西一丁目541番地"
+  },
+  {
+    "context": "row_9712",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市上福原5丁目4番1号"
+  },
+  {
+    "context": "row_9713",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市新田405番地1"
+  },
+  {
+    "context": "row_9714",
+    "message": "Could not infer municipality from: 山形県鳥取県岩美郡岩美町大谷2343"
+  },
+  {
+    "context": "row_9715",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市円護寺268番地"
+  },
+  {
+    "context": "row_9716",
+    "message": "Could not infer municipality from: 山形県鳥取県岩美郡岩美町浦富2128"
+  },
+  {
+    "context": "row_9717",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市若葉台南二丁目17番1号"
+  },
+  {
+    "context": "row_9718",
+    "message": "Could not infer municipality from: 山形県鳥取県岩美郡岩美町新井419-2"
+  },
+  {
+    "context": "row_9719",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町谷3番地"
+  },
+  {
+    "context": "row_9720",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町小鹿谷820"
+  },
+  {
+    "context": "row_9721",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町はわい長瀬535"
+  },
+  {
+    "context": "row_9722",
+    "message": "Could not infer municipality from: 山形県鳥取県日野郡日南町生山450-2"
+  },
+  {
+    "context": "row_9724",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡智頭町智頭320"
+  },
+  {
+    "context": "row_9725",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町釛529"
+  },
+  {
+    "context": "row_9726",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町佐崎16番地"
+  },
+  {
+    "context": "row_9727",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市関金町関金宿666"
+  },
+  {
+    "context": "row_9728",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町溝口309"
+  },
+  {
+    "context": "row_9729",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町坂田11"
+  },
+  {
+    "context": "row_9730",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町富枝6番地1"
+  },
+  {
+    "context": "row_9731",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡三朝町本泉480番地5"
+  },
+  {
+    "context": "row_9732",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市仲ノ町733"
+  },
+  {
+    "context": "row_9733",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市上福田722番地2"
+  },
+  {
+    "context": "row_9734",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市中河原775番地1"
+  },
+  {
+    "context": "row_9735",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町南4-101"
+  },
+  {
+    "context": "row_9736",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市立川町六丁目164番地"
+  },
+  {
+    "context": "row_9737",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市寿町907番地"
+  },
+  {
+    "context": "row_9738",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市興南町91番地"
+  },
+  {
+    "context": "row_9739",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市東町三丁目371番地1"
+  },
+  {
+    "context": "row_9740",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市徳尾108番地1"
+  },
+  {
+    "context": "row_9741",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町北六丁目323番地"
+  },
+  {
+    "context": "row_9742",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市桜谷227"
+  },
+  {
+    "context": "row_9743",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市浜坂東一丁目22番17号"
+  },
+  {
+    "context": "row_9744",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市車尾617"
+  },
+  {
+    "context": "row_9745",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市上福原20"
+  },
+  {
+    "context": "row_9746",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市愛宕町84"
+  },
+  {
+    "context": "row_9747",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市上後藤1-1-1"
+  },
+  {
+    "context": "row_9748",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市大篠津町3657番地1"
+  },
+  {
+    "context": "row_9749",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市富益町2070番地"
+  },
+  {
+    "context": "row_9750",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市日原146"
+  },
+  {
+    "context": "row_9751",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市両三柳3883番地"
+  },
+  {
+    "context": "row_9752",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市下新印196-4"
+  },
+  {
+    "context": "row_9753",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市新開5丁目9番1号"
+  },
+  {
+    "context": "row_9754",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市宮川町2-76"
+  },
+  {
+    "context": "row_9755",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市西倉吉町170"
+  },
+  {
+    "context": "row_9756",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市横田568-1"
+  },
+  {
+    "context": "row_9757",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市上井430番地"
+  },
+  {
+    "context": "row_9758",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市上道町1840"
+  },
+  {
+    "context": "row_9759",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市竹内町2438"
+  },
+  {
+    "context": "row_9760",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市外江町1372"
+  },
+  {
+    "context": "row_9761",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町町屋720番地"
+  },
+  {
+    "context": "row_9762",
+    "message": "Could not infer municipality from: 山形県鳥取県岩美郡岩美町浦富707"
+  },
+  {
+    "context": "row_9763",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市河原町曳田298番地"
+  },
+  {
+    "context": "row_9764",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡若桜町浅井289"
+  },
+  {
+    "context": "row_9765",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡智頭町智頭688番地"
+  },
+  {
+    "context": "row_9766",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市気高町浜村784番地51"
+  },
+  {
+    "context": "row_9767",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市青谷町青谷4190番地1"
+  },
+  {
+    "context": "row_9768",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡三朝町本泉430"
+  },
+  {
+    "context": "row_9769",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市関金町大鳥居25"
+  },
+  {
+    "context": "row_9770",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡北栄町由良宿340"
+  },
+  {
+    "context": "row_9771",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町徳万236"
+  },
+  {
+    "context": "row_9772",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町赤碕1922-1"
+  },
+  {
+    "context": "row_9773",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡南部町馬場630-1"
+  },
+  {
+    "context": "row_9774",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡南部町天萬583"
+  },
+  {
+    "context": "row_9775",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町吉長90-1"
+  },
+  {
+    "context": "row_9776",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市淀江町西原660番地"
+  },
+  {
+    "context": "row_9777",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町所子313"
+  },
+  {
+    "context": "row_9778",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町名和648"
+  },
+  {
+    "context": "row_9779",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡大山町下甲951-1"
+  },
+  {
+    "context": "row_9780",
+    "message": "Could not infer municipality from: 山形県鳥取県日野郡日南町霞740"
+  },
+  {
+    "context": "row_9782",
+    "message": "Could not infer municipality from: 山形県鳥取県西伯郡伯耆町長山481"
+  },
+  {
+    "context": "row_9784",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡北栄町土下100-1"
+  },
+  {
+    "context": "row_9785",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市泉706"
+  },
+  {
+    "context": "row_9786",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市立川町5丁目417"
+  },
+  {
+    "context": "row_9787",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市用瀬町別府65番地"
+  },
+  {
+    "context": "row_9788",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町郡家296"
+  },
+  {
+    "context": "row_9789",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町長江51番地"
+  },
+  {
+    "context": "row_9790",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町北5丁目202番地"
+  },
+  {
+    "context": "row_9791",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市夜見町50"
+  },
+  {
+    "context": "row_9792",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町田畑32-1"
+  },
+  {
+    "context": "row_9793",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町新通り3丁目301-2"
+  },
+  {
+    "context": "row_9794",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市六反田1番地の5"
+  },
+  {
+    "context": "row_9795",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市福部町高江188番地"
+  },
+  {
+    "context": "row_9796",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市鹿野町鹿野2888番地"
+  },
+  {
+    "context": "row_9797",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市竹生64番地"
+  },
+  {
+    "context": "row_9798",
+    "message": "Could not infer municipality from: 山形県鳥取県日野郡江府町洲河崎85番地"
+  },
+  {
+    "context": "row_9799",
+    "message": "Could not infer municipality from: 山形県鳥取県日野郡日野町野田271"
+  },
+  {
+    "context": "row_9800",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市立川町5丁目210"
+  },
+  {
+    "context": "row_9801",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市東町2-112"
+  },
+  {
+    "context": "row_9802",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町北2丁目401"
+  },
+  {
+    "context": "row_9803",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市生山111"
+  },
+  {
+    "context": "row_9804",
+    "message": "Could not infer municipality from: 山形県鳥取県岩美郡岩美町浦富708-2"
+  },
+  {
+    "context": "row_9805",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡八頭町久能寺725"
+  },
+  {
+    "context": "row_9806",
+    "message": "Could not infer municipality from: 山形県鳥取県八頭郡智頭町智頭711-1"
+  },
+  {
+    "context": "row_9807",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市青谷町青谷2912"
+  },
+  {
+    "context": "row_9808",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市下田中町801"
+  },
+  {
+    "context": "row_9809",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市秋喜20番地"
+  },
+  {
+    "context": "row_9810",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市大谷166"
+  },
+  {
+    "context": "row_9811",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市勝田町1番地"
+  },
+  {
+    "context": "row_9812",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市大谷町200"
+  },
+  {
+    "context": "row_9813",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市長砂町216"
+  },
+  {
+    "context": "row_9814",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市博労町4丁目220"
+  },
+  {
+    "context": "row_9815",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市橋本30-1"
+  },
+  {
+    "context": "row_9816",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市上道町3030"
+  },
+  {
+    "context": "row_9817",
+    "message": "Could not infer municipality from: 山形県鳥取県日野郡日野町根雨310"
+  },
+  {
+    "context": "row_9818",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町北3丁目250"
+  },
+  {
+    "context": "row_9819",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市小田204-5"
+  },
+  {
+    "context": "row_9820",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡北栄町由良宿291-1"
+  },
+  {
+    "context": "row_9821",
+    "message": "Could not infer municipality from: 山形県鳥取県境港市竹内町925番地"
+  },
+  {
+    "context": "row_9822",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町南3丁目848"
+  },
+  {
+    "context": "row_9823",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市淀江町福岡24"
+  },
+  {
+    "context": "row_9824",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西町1-111"
+  },
+  {
+    "context": "row_9825",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市西品治848番地"
+  },
+  {
+    "context": "row_9826",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市福庭町1-180"
+  },
+  {
+    "context": "row_9827",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市米原6-14-1"
+  },
+  {
+    "context": "row_9828",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市二本木316-1"
+  },
+  {
+    "context": "row_9829",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市夜見町50"
+  },
+  {
+    "context": "row_9830",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡湯梨浜町田畑32-1"
+  },
+  {
+    "context": "row_9831",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町新通り3丁目301-2"
+  },
+  {
+    "context": "row_9832",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市湖山町西2-149"
+  },
+  {
+    "context": "row_9833",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町宮下1265"
+  },
+  {
+    "context": "row_9834",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市国府町宮下1261番地"
+  },
+  {
+    "context": "row_9835",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市上福原7丁目13番1号"
+  },
+  {
+    "context": "row_9836",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市上福原7-13-4"
+  },
+  {
+    "context": "row_9837",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市伏野1550-1"
+  },
+  {
+    "context": "row_9838",
+    "message": "Could not infer municipality from: 山形県鳥取県鳥取市江津260"
+  },
+  {
+    "context": "row_9839",
+    "message": "Could not infer municipality from: 山形県鳥取県米子市蚊屋343"
+  },
+  {
+    "context": "row_9840",
+    "message": "Could not infer municipality from: 山形県鳥取県倉吉市長坂新町1231"
+  },
+  {
+    "context": "row_9841",
+    "message": "Could not infer municipality from: 山形県鳥取県東伯郡琴浦町赤崎1957-1"
+  }
+]
