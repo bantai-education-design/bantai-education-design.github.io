@@ -21,10 +21,10 @@ def replace_card(match):
         return full_match # unchanged
         
     est_parts = []
-    if m['establishment_counts']['national'] > 0: est_parts.append(f"国{m['establishment_counts']['national']}")
-    if m['establishment_counts']['public'] > 0: est_parts.append(f"公{m['establishment_counts']['public']}")
-    if m['establishment_counts']['private'] > 0: est_parts.append(f"私{m['establishment_counts']['private']}")
-    if m['establishment_counts']['other'] > 0: est_parts.append(f"他{m['establishment_counts']['other']}")
+    if m['establishment_counts']['national'] > 0: est_parts.append(f"国{m['establishment_counts']['national']:,}")
+    if m['establishment_counts']['public'] > 0: est_parts.append(f"公{m['establishment_counts']['public']:,}")
+    if m['establishment_counts']['private'] > 0: est_parts.append(f"私{m['establishment_counts']['private']:,}")
+    if m['establishment_counts']['other'] > 0: est_parts.append(f"他{m['establishment_counts']['other']:,}")
     
     est_str = "・".join(est_parts) if est_parts else "ー"
     total_str = f"{m['total']:,}"
@@ -40,23 +40,19 @@ def replace_card(match):
             </div>
           """
     
-    # We replace everything from <div class="pref-count"> or <div class="pref-meta-grid"> to the </a>
-    # Actually, it's safer to find the <h2>(.*?)</h2> and replace everything after it until </a>
-    
-    # regex inside the card
     h2_end = full_match.find('</h2>') + 5
     if h2_end < 5: return full_match
     
     prefix = full_match[:h2_end]
     return prefix + new_inner + "\n          </a>"
 
-# We use re.sub with a custom function.
-# The card starts with <a class="pref-card... and ends with </a>
-# We must capture the slug inside href
 pattern = r'<a class="[^"]*pref-card[^"]*".*?href=".*?/([^/]+)/?".*?<h2>.*?</h2>.*?</a>'
 new_html = re.sub(pattern, replace_card, html, flags=re.DOTALL)
 
 with open(html_path, "w", encoding="utf-8") as f:
     f.write(new_html)
 
-print("Updated index.html")
+with open("tools/school-database/update_index.py", "w", encoding="utf-8") as f:
+    f.write(open("fix_commas.py", encoding="utf-8").read())
+
+print("Updated index.html with commas, and updated update_index.py")
