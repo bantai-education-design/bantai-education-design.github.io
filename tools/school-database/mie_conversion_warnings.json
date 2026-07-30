@@ -1,0 +1,2946 @@
+[
+  {
+    "context": "row_33439",
+    "message": "Could not infer municipality from: 三重県津市観音寺町523"
+  },
+  {
+    "context": "row_33440",
+    "message": "Could not infer municipality from: 三重県津市桜橋2丁目39"
+  },
+  {
+    "context": "row_33441",
+    "message": "Could not infer municipality from: 三重県津市中河原南浦445"
+  },
+  {
+    "context": "row_33443",
+    "message": "Could not infer municipality from: 三重県津市藤方1627"
+  },
+  {
+    "context": "row_33449",
+    "message": "Could not infer municipality from: 三重県津市久居東鷹跡町177-5"
+  },
+  {
+    "context": "row_33450",
+    "message": "Could not infer municipality from: 三重県津市久居北口町554-2"
+  },
+  {
+    "context": "row_33451",
+    "message": "Could not infer municipality from: 三重県津市新家町873-1"
+  },
+  {
+    "context": "row_33452",
+    "message": "Could not infer municipality from: 三重県津市戸木町2337"
+  },
+  {
+    "context": "row_33454",
+    "message": "Could not infer municipality from: 三重県津市榊原町5156"
+  },
+  {
+    "context": "row_33455",
+    "message": "Could not infer municipality from: 三重県津市久居野村町542-3"
+  },
+  {
+    "context": "row_33457",
+    "message": "Could not infer municipality from: 三重県津市河芸町北黒田109-1"
+  },
+  {
+    "context": "row_33459",
+    "message": "Could not infer municipality from: 三重県津市河芸町千里ヶ丘13"
+  },
+  {
+    "context": "row_33461",
+    "message": "Could not infer municipality from: 三重県津市安濃町内多476"
+  },
+  {
+    "context": "row_33462",
+    "message": "Could not infer municipality from: 三重県津市安濃町大塚253-2"
+  },
+  {
+    "context": "row_33463",
+    "message": "Could not infer municipality from: 三重県津市安濃町連部91-5"
+  },
+  {
+    "context": "row_33464",
+    "message": "Could not infer municipality from: 三重県津市美里町家所2054"
+  },
+  {
+    "context": "row_33465",
+    "message": "Could not infer municipality from: 三重県津市一志町八太1164-1"
+  },
+  {
+    "context": "row_33467",
+    "message": "Could not infer municipality from: 三重県四日市市大宮西町19番22号"
+  },
+  {
+    "context": "row_33468",
+    "message": "Could not infer municipality from: 三重県四日市市大字東阿倉川580番地"
+  },
+  {
+    "context": "row_33472",
+    "message": "Could not infer municipality from: 三重県四日市市ときわ5丁目4-53"
+  },
+  {
+    "context": "row_33473",
+    "message": "Could not infer municipality from: 三重県四日市市采女町911番地"
+  },
+  {
+    "context": "row_33478",
+    "message": "Could not infer municipality from: 三重県四日市市大矢知町3255番地"
+  },
+  {
+    "context": "row_33481",
+    "message": "Could not infer municipality from: 三重県四日市市前田町1番19号"
+  },
+  {
+    "context": "row_33483",
+    "message": "Could not infer municipality from: 三重県四日市市笹川3丁目157番地"
+  },
+  {
+    "context": "row_33493",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町本町1"
+  },
+  {
+    "context": "row_33494",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町明野1481"
+  },
+  {
+    "context": "row_33495",
+    "message": "Could not infer municipality from: 三重県松阪市伊勢寺町304"
+  },
+  {
+    "context": "row_33496",
+    "message": "Could not infer municipality from: 三重県松阪市小阿坂町3325番地"
+  },
+  {
+    "context": "row_33500",
+    "message": "Could not infer municipality from: 三重県松阪市豊原町1120"
+  },
+  {
+    "context": "row_33502",
+    "message": "Could not infer municipality from: 三重県松阪市丹生寺633"
+  },
+  {
+    "context": "row_33503",
+    "message": "Could not infer municipality from: 三重県松阪市大黒田町635-1"
+  },
+  {
+    "context": "row_33504",
+    "message": "Could not infer municipality from: 三重県松阪市山室町1807"
+  },
+  {
+    "context": "row_33505",
+    "message": "Could not infer municipality from: 三重県松阪市庄町737"
+  },
+  {
+    "context": "row_33507",
+    "message": "Could not infer municipality from: 三重県松阪市鎌田町805"
+  },
+  {
+    "context": "row_33508",
+    "message": "Could not infer municipality from: 三重県松阪市荒木町16"
+  },
+  {
+    "context": "row_33509",
+    "message": "Could not infer municipality from: 三重県松阪市川井町366-1"
+  },
+  {
+    "context": "row_33510",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野下之庄町327-1"
+  },
+  {
+    "context": "row_33511",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野田村町399-2"
+  },
+  {
+    "context": "row_33512",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野中川町1854"
+  },
+  {
+    "context": "row_33513",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野川北町1346-8"
+  },
+  {
+    "context": "row_33516",
+    "message": "Could not infer municipality from: 三重県桑名市吉之丸10"
+  },
+  {
+    "context": "row_33517",
+    "message": "Could not infer municipality from: 三重県桑名市大字東方302番地の5"
+  },
+  {
+    "context": "row_33518",
+    "message": "Could not infer municipality from: 三重県桑名市大字東方2157番地"
+  },
+  {
+    "context": "row_33519",
+    "message": "Could not infer municipality from: 三重県桑名市蓮花寺129-2"
+  },
+  {
+    "context": "row_33520",
+    "message": "Could not infer municipality from: 三重県桑名市芳ヶ崎1232-2"
+  },
+  {
+    "context": "row_33521",
+    "message": "Could not infer municipality from: 三重県桑名市下深谷部3683の1"
+  },
+  {
+    "context": "row_33522",
+    "message": "Could not infer municipality from: 三重県桑名市志知3846-1"
+  },
+  {
+    "context": "row_33523",
+    "message": "Could not infer municipality from: 三重県桑名市大山田6丁目8番地"
+  },
+  {
+    "context": "row_33524",
+    "message": "Could not infer municipality from: 三重県桑名市藤が丘6-109-2"
+  },
+  {
+    "context": "row_33525",
+    "message": "Could not infer municipality from: 三重県桑名市多度町北猪飼299-1"
+  },
+  {
+    "context": "row_33526",
+    "message": "Could not infer municipality from: 三重県桑名市長島町源部外面215番地"
+  },
+  {
+    "context": "row_33527",
+    "message": "Could not infer municipality from: 三重県鈴鹿市国府町3519-1"
+  },
+  {
+    "context": "row_33531",
+    "message": "Could not infer municipality from: 三重県鈴鹿市三日市南2-1-7"
+  },
+  {
+    "context": "row_33533",
+    "message": "Could not infer municipality from: 三重県鈴鹿市北玉垣町734"
+  },
+  {
+    "context": "row_33534",
+    "message": "Could not infer municipality from: 三重県鈴鹿市神戸7-4-12"
+  },
+  {
+    "context": "row_33537",
+    "message": "Could not infer municipality from: 三重県鈴鹿市東旭が丘5-3-33"
+  },
+  {
+    "context": "row_33541",
+    "message": "Could not infer municipality from: 三重県亀山市江ヶ室1丁目2番10号"
+  },
+  {
+    "context": "row_33542",
+    "message": "Could not infer municipality from: 三重県亀山市本町1丁目9番17号"
+  },
+  {
+    "context": "row_33543",
+    "message": "Could not infer municipality from: 三重県亀山市みどり町53番地の1"
+  },
+  {
+    "context": "row_33544",
+    "message": "Could not infer municipality from: 三重県亀山市みずほ台14番地の295"
+  },
+  {
+    "context": "row_33545",
+    "message": "Could not infer municipality from: 三重県鳥羽市大明西町4-12"
+  },
+  {
+    "context": "row_33551",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町鵜方1547"
+  },
+  {
+    "context": "row_33554",
+    "message": "Could not infer municipality from: 三重県伊賀市上野丸之内177番地1"
+  },
+  {
+    "context": "row_33555",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町長深690番地"
+  },
+  {
+    "context": "row_33556",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町大字大木1075番地"
+  },
+  {
+    "context": "row_33557",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町六杷野新田111"
+  },
+  {
+    "context": "row_33558",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町笹尾西2丁目31番1"
+  },
+  {
+    "context": "row_33559",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町笹尾東4-28"
+  },
+  {
+    "context": "row_33560",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町城山1丁目44"
+  },
+  {
+    "context": "row_33562",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町大字音羽2240"
+  },
+  {
+    "context": "row_33565",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町大字永井59"
+  },
+  {
+    "context": "row_33566",
+    "message": "Could not infer municipality from: 三重県三重郡朝日町小向2068-1"
+  },
+  {
+    "context": "row_33567",
+    "message": "Could not infer municipality from: 三重県三重郡川越町豊田一色384-1"
+  },
+  {
+    "context": "row_33569",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町長島286番地の3"
+  },
+  {
+    "context": "row_33571",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町鵜殿1232-1"
+  },
+  {
+    "context": "row_33572",
+    "message": "Could not infer municipality from: 三重県津市丸之内34-16"
+  },
+  {
+    "context": "row_33573",
+    "message": "Could not infer municipality from: 三重県津市一身田町746"
+  },
+  {
+    "context": "row_33574",
+    "message": "Could not infer municipality from: 三重県津市大谷町240"
+  },
+  {
+    "context": "row_33575",
+    "message": "Could not infer municipality from: 三重県津市白塚町3647-1"
+  },
+  {
+    "context": "row_33576",
+    "message": "Could not infer municipality from: 三重県津市久居二ノ町1855"
+  },
+  {
+    "context": "row_33577",
+    "message": "Could not infer municipality from: 三重県津市河辺町字長2273-8"
+  },
+  {
+    "context": "row_33578",
+    "message": "Could not infer municipality from: 三重県津市白山町八対野2739"
+  },
+  {
+    "context": "row_33579",
+    "message": "Could not infer municipality from: 三重県四日市市天カ須賀五丁目2-5"
+  },
+  {
+    "context": "row_33580",
+    "message": "Could not infer municipality from: 三重県四日市市茂福905-4"
+  },
+  {
+    "context": "row_33581",
+    "message": "Could not infer municipality from: 三重県四日市市十七軒町2-4"
+  },
+  {
+    "context": "row_33582",
+    "message": "Could not infer municipality from: 三重県四日市市大矢知町2700"
+  },
+  {
+    "context": "row_33583",
+    "message": "Could not infer municipality from: 三重県四日市市西松本町15-10"
+  },
+  {
+    "context": "row_33584",
+    "message": "Could not infer municipality from: 三重県四日市市伊倉2-8-23"
+  },
+  {
+    "context": "row_33585",
+    "message": "Could not infer municipality from: 三重県四日市市千代田町459番地"
+  },
+  {
+    "context": "row_33586",
+    "message": "Could not infer municipality from: 三重県四日市市松本3丁目1番37号"
+  },
+  {
+    "context": "row_33587",
+    "message": "Could not infer municipality from: 三重県四日市市別名5-4-31"
+  },
+  {
+    "context": "row_33588",
+    "message": "Could not infer municipality from: 三重県四日市市笹川1丁目106-2"
+  },
+  {
+    "context": "row_33589",
+    "message": "Could not infer municipality from: 三重県四日市市笹川7丁目52"
+  },
+  {
+    "context": "row_33590",
+    "message": "Could not infer municipality from: 三重県四日市市智積町6104"
+  },
+  {
+    "context": "row_33591",
+    "message": "Could not infer municipality from: 三重県四日市市川島町6513"
+  },
+  {
+    "context": "row_33592",
+    "message": "Could not infer municipality from: 三重県四日市市室山町475-1"
+  },
+  {
+    "context": "row_33593",
+    "message": "Could not infer municipality from: 三重県伊勢市岩渕1-6-32"
+  },
+  {
+    "context": "row_33594",
+    "message": "Could not infer municipality from: 三重県伊勢市宇治中之切町38-2"
+  },
+  {
+    "context": "row_33595",
+    "message": "Could not infer municipality from: 三重県伊勢市八日市場町17-20"
+  },
+  {
+    "context": "row_33596",
+    "message": "Could not infer municipality from: 三重県伊勢市一之木1-8-3"
+  },
+  {
+    "context": "row_33597",
+    "message": "Could not infer municipality from: 三重県伊勢市黒瀬町562-13"
+  },
+  {
+    "context": "row_33598",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町元町214番地3"
+  },
+  {
+    "context": "row_33599",
+    "message": "Could not infer municipality from: 三重県松阪市久保町1843-10"
+  },
+  {
+    "context": "row_33600",
+    "message": "Could not infer municipality from: 三重県松阪市中央町468"
+  },
+  {
+    "context": "row_33601",
+    "message": "Could not infer municipality from: 三重県桑名市西方笹山787"
+  },
+  {
+    "context": "row_33602",
+    "message": "Could not infer municipality from: 三重県桑名市清竹の丘9"
+  },
+  {
+    "context": "row_33603",
+    "message": "Could not infer municipality from: 三重県桑名市大字西汰上656番地"
+  },
+  {
+    "context": "row_33604",
+    "message": "Could not infer municipality from: 三重県桑名市野田5-3-12"
+  },
+  {
+    "context": "row_33605",
+    "message": "Could not infer municipality from: 三重県桑名市大字桑部字矢間2068番地"
+  },
+  {
+    "context": "row_33607",
+    "message": "Could not infer municipality from: 三重県鈴鹿市神戸2-20-18"
+  },
+  {
+    "context": "row_33608",
+    "message": "Could not infer municipality from: 三重県鈴鹿市白子本町2-38"
+  },
+  {
+    "context": "row_33610",
+    "message": "Could not infer municipality from: 三重県鈴鹿市岸岡町2815"
+  },
+  {
+    "context": "row_33611",
+    "message": "Could not infer municipality from: 三重県鈴鹿市道伯1丁目12-27"
+  },
+  {
+    "context": "row_33612",
+    "message": "Could not infer municipality from: 三重県鈴鹿市鈴鹿ハイツ5-45"
+  },
+  {
+    "context": "row_33613",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘1番町2街区6番地"
+  },
+  {
+    "context": "row_33614",
+    "message": "Could not infer municipality from: 三重県名張市梅が丘南2番町278番地"
+  },
+  {
+    "context": "row_33616",
+    "message": "Could not infer municipality from: 三重県熊野市有馬町650番地"
+  },
+  {
+    "context": "row_33618",
+    "message": "Could not infer municipality from: 三重県伊賀市上野伊予町1067-1"
+  },
+  {
+    "context": "row_33733",
+    "message": "Could not infer municipality from: 三重県津市観音寺町359"
+  },
+  {
+    "context": "row_33734",
+    "message": "Could not infer municipality from: 三重県津市丸之内養正町14-1"
+  },
+  {
+    "context": "row_33735",
+    "message": "Could not infer municipality from: 三重県津市修成町9-1"
+  },
+  {
+    "context": "row_33736",
+    "message": "Could not infer municipality from: 三重県津市桜橋2丁目39番地"
+  },
+  {
+    "context": "row_33737",
+    "message": "Could not infer municipality from: 三重県津市江戸橋1-30"
+  },
+  {
+    "context": "row_33738",
+    "message": "Could not infer municipality from: 三重県津市中河原445番地"
+  },
+  {
+    "context": "row_33739",
+    "message": "Could not infer municipality from: 三重県津市下弁財町津興1350"
+  },
+  {
+    "context": "row_33740",
+    "message": "Could not infer municipality from: 三重県津市八町3丁目3-1"
+  },
+  {
+    "context": "row_33741",
+    "message": "Could not infer municipality from: 三重県津市藤方1627"
+  },
+  {
+    "context": "row_33742",
+    "message": "Could not infer municipality from: 三重県津市高茶屋3丁目1番1号"
+  },
+  {
+    "context": "row_33743",
+    "message": "Could not infer municipality from: 三重県津市神戸332-1"
+  },
+  {
+    "context": "row_33744",
+    "message": "Could not infer municipality from: 三重県津市納所町245"
+  },
+  {
+    "context": "row_33745",
+    "message": "Could not infer municipality from: 三重県津市分部1211-1"
+  },
+  {
+    "context": "row_33746",
+    "message": "Could not infer municipality from: 三重県津市雲出本郷町1164"
+  },
+  {
+    "context": "row_33747",
+    "message": "Could not infer municipality from: 三重県津市一身田大古曽355番地"
+  },
+  {
+    "context": "row_33748",
+    "message": "Could not infer municipality from: 三重県津市白塚町4463"
+  },
+  {
+    "context": "row_33749",
+    "message": "Could not infer municipality from: 三重県津市栗真中山町452"
+  },
+  {
+    "context": "row_33750",
+    "message": "Could not infer municipality from: 三重県津市栗真町屋町524"
+  },
+  {
+    "context": "row_33751",
+    "message": "Could not infer municipality from: 三重県津市片田井戸町22"
+  },
+  {
+    "context": "row_33752",
+    "message": "Could not infer municipality from: 三重県津市大里窪田町1821"
+  },
+  {
+    "context": "row_33753",
+    "message": "Could not infer municipality from: 三重県津市高野尾町5226-1"
+  },
+  {
+    "context": "row_33754",
+    "message": "Could not infer municipality from: 三重県津市長岡町800-437"
+  },
+  {
+    "context": "row_33755",
+    "message": "Could not infer municipality from: 三重県津市豊が丘2丁目34-1"
+  },
+  {
+    "context": "row_33756",
+    "message": "Could not infer municipality from: 三重県津市垂水2538-1"
+  },
+  {
+    "context": "row_33757",
+    "message": "Could not infer municipality from: 三重県津市河芸町上野2963"
+  },
+  {
+    "context": "row_33758",
+    "message": "Could not infer municipality from: 三重県津市河芸町一色1680"
+  },
+  {
+    "context": "row_33759",
+    "message": "Could not infer municipality from: 三重県津市河芸町北黒田109-1"
+  },
+  {
+    "context": "row_33760",
+    "message": "Could not infer municipality from: 三重県津市河芸町千里ヶ丘13番地"
+  },
+  {
+    "context": "row_33761",
+    "message": "Could not infer municipality from: 三重県津市芸濃町林325"
+  },
+  {
+    "context": "row_33762",
+    "message": "Could not infer municipality from: 三重県津市芸濃町椋本5047番地"
+  },
+  {
+    "context": "row_33763",
+    "message": "Could not infer municipality from: 三重県津市安濃町粟加978"
+  },
+  {
+    "context": "row_33764",
+    "message": "Could not infer municipality from: 三重県津市安濃町内多451"
+  },
+  {
+    "context": "row_33765",
+    "message": "Could not infer municipality from: 三重県津市安濃町連部68"
+  },
+  {
+    "context": "row_33766",
+    "message": "Could not infer municipality from: 三重県津市安濃町草生4209"
+  },
+  {
+    "context": "row_33767",
+    "message": "Could not infer municipality from: 三重県津市久居西鷹跡町424"
+  },
+  {
+    "context": "row_33768",
+    "message": "Could not infer municipality from: 三重県津市久居新町737"
+  },
+  {
+    "context": "row_33769",
+    "message": "Could not infer municipality from: 三重県津市野村町560番地"
+  },
+  {
+    "context": "row_33770",
+    "message": "Could not infer municipality from: 三重県津市新家町1350"
+  },
+  {
+    "context": "row_33771",
+    "message": "Could not infer municipality from: 三重県津市戸木町880"
+  },
+  {
+    "context": "row_33772",
+    "message": "Could not infer municipality from: 三重県津市森町270番地"
+  },
+  {
+    "context": "row_33773",
+    "message": "Could not infer municipality from: 三重県津市榊原町5848"
+  },
+  {
+    "context": "row_33774",
+    "message": "Could not infer municipality from: 三重県津市香良洲町2190-1"
+  },
+  {
+    "context": "row_33775",
+    "message": "Could not infer municipality from: 三重県津市一志町田尻353-1"
+  },
+  {
+    "context": "row_33776",
+    "message": "Could not infer municipality from: 三重県津市一志町八太785-1"
+  },
+  {
+    "context": "row_33777",
+    "message": "Could not infer municipality from: 三重県津市白山町南家城647"
+  },
+  {
+    "context": "row_33778",
+    "message": "Could not infer municipality from: 三重県津市白山町川口1991"
+  },
+  {
+    "context": "row_33779",
+    "message": "Could not infer municipality from: 三重県津市白山町八対野2480"
+  },
+  {
+    "context": "row_33780",
+    "message": "Could not infer municipality from: 三重県津市白山町二本木296"
+  },
+  {
+    "context": "row_33781",
+    "message": "Could not infer municipality from: 三重県津市白山町上ノ村183"
+  },
+  {
+    "context": "row_33782",
+    "message": "Could not infer municipality from: 三重県津市美杉町奥津1025"
+  },
+  {
+    "context": "row_33783",
+    "message": "Could not infer municipality from: 三重県四日市市北町2-23"
+  },
+  {
+    "context": "row_33784",
+    "message": "Could not infer municipality from: 三重県四日市市北浜田町13-6"
+  },
+  {
+    "context": "row_33785",
+    "message": "Could not infer municipality from: 三重県四日市市大宮町16-35"
+  },
+  {
+    "context": "row_33786",
+    "message": "Could not infer municipality from: 三重県四日市市東阿倉川578-1"
+  },
+  {
+    "context": "row_33787",
+    "message": "Could not infer municipality from: 三重県四日市市富洲原31-14"
+  },
+  {
+    "context": "row_33788",
+    "message": "Could not infer municipality from: 三重県四日市市富田一丁目24-49"
+  },
+  {
+    "context": "row_33789",
+    "message": "Could not infer municipality from: 三重県四日市市日永4-5-13"
+  },
+  {
+    "context": "row_33790",
+    "message": "Could not infer municipality from: 三重県四日市市西日野町3207-1"
+  },
+  {
+    "context": "row_33791",
+    "message": "Could not infer municipality from: 三重県四日市市高花平2丁目1番地"
+  },
+  {
+    "context": "row_33792",
+    "message": "Could not infer municipality from: 三重県四日市市城西町9-14"
+  },
+  {
+    "context": "row_33793",
+    "message": "Could not infer municipality from: 三重県四日市市采女町888番地の1"
+  },
+  {
+    "context": "row_33794",
+    "message": "Could not infer municipality from: 三重県四日市市山田町1373-1"
+  },
+  {
+    "context": "row_33795",
+    "message": "Could not infer municipality from: 三重県四日市市河原田町70"
+  },
+  {
+    "context": "row_33796",
+    "message": "Could not infer municipality from: 三重県四日市市川島町2046"
+  },
+  {
+    "context": "row_33797",
+    "message": "Could not infer municipality from: 三重県四日市市曽井町493-1"
+  },
+  {
+    "context": "row_33798",
+    "message": "Could not infer municipality from: 三重県四日市市桜町1257"
+  },
+  {
+    "context": "row_33799",
+    "message": "Could not infer municipality from: 三重県四日市市赤水町1002番地"
+  },
+  {
+    "context": "row_33800",
+    "message": "Could not infer municipality from: 三重県四日市市東坂部町222-2"
+  },
+  {
+    "context": "row_33801",
+    "message": "Could not infer municipality from: 三重県四日市市大矢知1212"
+  },
+  {
+    "context": "row_33802",
+    "message": "Could not infer municipality from: 三重県四日市市平津町99-1"
+  },
+  {
+    "context": "row_33803",
+    "message": "Could not infer municipality from: 三重県四日市市朝明町475-1"
+  },
+  {
+    "context": "row_33804",
+    "message": "Could not infer municipality from: 三重県四日市市水沢町2491番地"
+  },
+  {
+    "context": "row_33805",
+    "message": "Could not infer municipality from: 三重県四日市市西村町2741"
+  },
+  {
+    "context": "row_33806",
+    "message": "Could not infer municipality from: 三重県四日市市大字日永5530-19"
+  },
+  {
+    "context": "row_33807",
+    "message": "Could not infer municipality from: 三重県四日市市松本764"
+  },
+  {
+    "context": "row_33808",
+    "message": "Could not infer municipality from: 三重県四日市市三重3-129"
+  },
+  {
+    "context": "row_33809",
+    "message": "Could not infer municipality from: 三重県四日市市大谷台1-204"
+  },
+  {
+    "context": "row_33810",
+    "message": "Could not infer municipality from: 三重県四日市市桜台1丁目32番地"
+  },
+  {
+    "context": "row_33811",
+    "message": "Could not infer municipality from: 三重県四日市市萱生町1086番地"
+  },
+  {
+    "context": "row_33812",
+    "message": "Could not infer municipality from: 三重県四日市市山之一色町90番地"
+  },
+  {
+    "context": "row_33813",
+    "message": "Could not infer municipality from: 三重県四日市市大字羽津500番地"
+  },
+  {
+    "context": "row_33814",
+    "message": "Could not infer municipality from: 三重県四日市市釆女町423-4"
+  },
+  {
+    "context": "row_33815",
+    "message": "Could not infer municipality from: 三重県四日市市元新町2-36"
+  },
+  {
+    "context": "row_33816",
+    "message": "Could not infer municipality from: 三重県四日市市川原町25番22号"
+  },
+  {
+    "context": "row_33817",
+    "message": "Could not infer municipality from: 三重県四日市市塩浜町一番地"
+  },
+  {
+    "context": "row_33818",
+    "message": "Could not infer municipality from: 三重県四日市市笹川6-25"
+  },
+  {
+    "context": "row_33819",
+    "message": "Could not infer municipality from: 三重県四日市市楠町北五味塚2060-9"
+  },
+  {
+    "context": "row_33820",
+    "message": "Could not infer municipality from: 三重県伊勢市宇治浦田2丁目16番43号"
+  },
+  {
+    "context": "row_33821",
+    "message": "Could not infer municipality from: 三重県伊勢市久世戸町5-1"
+  },
+  {
+    "context": "row_33822",
+    "message": "Could not infer municipality from: 三重県伊勢市船江2-2-5"
+  },
+  {
+    "context": "row_33823",
+    "message": "Could not infer municipality from: 三重県伊勢市常磐3-10-19"
+  },
+  {
+    "context": "row_33824",
+    "message": "Could not infer municipality from: 三重県伊勢市二俣1-2-17"
+  },
+  {
+    "context": "row_33825",
+    "message": "Could not infer municipality from: 三重県伊勢市岡本1-18-21"
+  },
+  {
+    "context": "row_33826",
+    "message": "Could not infer municipality from: 三重県伊勢市一志町1-4"
+  },
+  {
+    "context": "row_33829",
+    "message": "Could not infer municipality from: 三重県伊勢市佐八町2278-12"
+  },
+  {
+    "context": "row_33830",
+    "message": "Could not infer municipality from: 三重県伊勢市旭町319"
+  },
+  {
+    "context": "row_33831",
+    "message": "Could not infer municipality from: 三重県伊勢市黒瀬町1648-1"
+  },
+  {
+    "context": "row_33832",
+    "message": "Could not infer municipality from: 三重県伊勢市楠部町2484"
+  },
+  {
+    "context": "row_33833",
+    "message": "Could not infer municipality from: 三重県伊勢市東豊浜町299-1"
+  },
+  {
+    "context": "row_33834",
+    "message": "Could not infer municipality from: 三重県伊勢市西豊浜町1779"
+  },
+  {
+    "context": "row_33835",
+    "message": "Could not infer municipality from: 三重県伊勢市村松町3285-1"
+  },
+  {
+    "context": "row_33836",
+    "message": "Could not infer municipality from: 三重県伊勢市東大淀町351番地"
+  },
+  {
+    "context": "row_33837",
+    "message": "Could not infer municipality from: 三重県伊勢市上地町1494番地"
+  },
+  {
+    "context": "row_33838",
+    "message": "Could not infer municipality from: 三重県伊勢市上野町2841-2"
+  },
+  {
+    "context": "row_33839",
+    "message": "Could not infer municipality from: 三重県伊勢市二見町光の街907番地7"
+  },
+  {
+    "context": "row_33840",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町元町663番地1"
+  },
+  {
+    "context": "row_33841",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町明野1939"
+  },
+  {
+    "context": "row_33842",
+    "message": "Could not infer municipality from: 三重県伊勢市御薗町長屋1074-9"
+  },
+  {
+    "context": "row_33843",
+    "message": "Could not infer municipality from: 三重県伊勢市大湊町1282番地"
+  },
+  {
+    "context": "row_33844",
+    "message": "Could not infer municipality from: 三重県松阪市殿町1349-1"
+  },
+  {
+    "context": "row_33846",
+    "message": "Could not infer municipality from: 三重県松阪市垣鼻町633"
+  },
+  {
+    "context": "row_33847",
+    "message": "Could not infer municipality from: 三重県松阪市西之庄町150"
+  },
+  {
+    "context": "row_33848",
+    "message": "Could not infer municipality from: 三重県松阪市鎌田町428-4"
+  },
+  {
+    "context": "row_33849",
+    "message": "Could not infer municipality from: 三重県松阪市久保町276"
+  },
+  {
+    "context": "row_33850",
+    "message": "Could not infer municipality from: 三重県松阪市殿町1198-2"
+  },
+  {
+    "context": "row_33851",
+    "message": "Could not infer municipality from: 三重県松阪市川井町380-1"
+  },
+  {
+    "context": "row_33852",
+    "message": "Could not infer municipality from: 三重県松阪市伊勢寺町26"
+  },
+  {
+    "context": "row_33853",
+    "message": "Could not infer municipality from: 三重県松阪市小阿坂町3325"
+  },
+  {
+    "context": "row_33855",
+    "message": "Could not infer municipality from: 三重県松阪市荒木町16"
+  },
+  {
+    "context": "row_33856",
+    "message": "Could not infer municipality from: 三重県松阪市垣内田町6-1"
+  },
+  {
+    "context": "row_33857",
+    "message": "Could not infer municipality from: 三重県松阪市西黒部町713-1"
+  },
+  {
+    "context": "row_33858",
+    "message": "Could not infer municipality from: 三重県松阪市六根町16-1"
+  },
+  {
+    "context": "row_33861",
+    "message": "Could not infer municipality from: 三重県松阪市目田町207"
+  },
+  {
+    "context": "row_33862",
+    "message": "Could not infer municipality from: 三重県松阪市大黒田町757"
+  },
+  {
+    "context": "row_33863",
+    "message": "Could not infer municipality from: 三重県松阪市丹生寺町566"
+  },
+  {
+    "context": "row_33864",
+    "message": "Could not infer municipality from: 三重県松阪市矢津町1775"
+  },
+  {
+    "context": "row_33865",
+    "message": "Could not infer municipality from: 三重県松阪市小片野町945"
+  },
+  {
+    "context": "row_33866",
+    "message": "Could not infer municipality from: 三重県松阪市射和町557-1"
+  },
+  {
+    "context": "row_33867",
+    "message": "Could not infer municipality from: 三重県松阪市光町1"
+  },
+  {
+    "context": "row_33868",
+    "message": "Could not infer municipality from: 三重県松阪市上川町197-4"
+  },
+  {
+    "context": "row_33869",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野堀之内町229"
+  },
+  {
+    "context": "row_33870",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野中川町1057"
+  },
+  {
+    "context": "row_33871",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野川北町1338-2"
+  },
+  {
+    "context": "row_33872",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野田村町44"
+  },
+  {
+    "context": "row_33873",
+    "message": "Could not infer municipality from: 三重県松阪市曽原町774"
+  },
+  {
+    "context": "row_33874",
+    "message": "Could not infer municipality from: 三重県松阪市笠松町279番地"
+  },
+  {
+    "context": "row_33875",
+    "message": "Could not infer municipality from: 三重県松阪市小野江町355"
+  },
+  {
+    "context": "row_33877",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町上仁柿194"
+  },
+  {
+    "context": "row_33878",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町有間野1064"
+  },
+  {
+    "context": "row_33879",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町深野3688"
+  },
+  {
+    "context": "row_33880",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町粥見3969"
+  },
+  {
+    "context": "row_33881",
+    "message": "Could not infer municipality from: 三重県松阪市飯高町森1810-2"
+  },
+  {
+    "context": "row_33882",
+    "message": "Could not infer municipality from: 三重県松阪市飯高町宮前1022"
+  },
+  {
+    "context": "row_33883",
+    "message": "Could not infer municipality from: 三重県松阪市飯高町波瀬675"
+  },
+  {
+    "context": "row_33884",
+    "message": "Could not infer municipality from: 三重県松阪市飯高町粟野481"
+  },
+  {
+    "context": "row_33885",
+    "message": "Could not infer municipality from: 三重県松阪市大宮田町195"
+  },
+  {
+    "context": "row_33886",
+    "message": "Could not infer municipality from: 三重県松阪市豊原町1120"
+  },
+  {
+    "context": "row_33887",
+    "message": "Could not infer municipality from: 三重県松阪市市場庄町20"
+  },
+  {
+    "context": "row_33888",
+    "message": "Could not infer municipality from: 三重県桑名市新屋敷126"
+  },
+  {
+    "context": "row_33889",
+    "message": "Could not infer municipality from: 三重県桑名市寿町3-28"
+  },
+  {
+    "context": "row_33890",
+    "message": "Could not infer municipality from: 三重県桑名市吉之丸10番地"
+  },
+  {
+    "context": "row_33891",
+    "message": "Could not infer municipality from: 三重県桑名市大字小貝須1883-2"
+  },
+  {
+    "context": "row_33892",
+    "message": "Could not infer municipality from: 三重県桑名市益生町59"
+  },
+  {
+    "context": "row_33893",
+    "message": "Could not infer municipality from: 三重県桑名市東方302番地5"
+  },
+  {
+    "context": "row_33894",
+    "message": "Could not infer municipality from: 三重県桑名市東方2157"
+  },
+  {
+    "context": "row_33895",
+    "message": "Could not infer municipality from: 三重県桑名市桑部479-1"
+  },
+  {
+    "context": "row_33896",
+    "message": "Could not infer municipality from: 三重県桑名市蓮花寺129-2"
+  },
+  {
+    "context": "row_33897",
+    "message": "Could not infer municipality from: 三重県桑名市芳ヶ崎1232-2"
+  },
+  {
+    "context": "row_33898",
+    "message": "Could not infer municipality from: 三重県桑名市下深谷部3683-1"
+  },
+  {
+    "context": "row_33899",
+    "message": "Could not infer municipality from: 三重県桑名市志知3846-1"
+  },
+  {
+    "context": "row_33900",
+    "message": "Could not infer municipality from: 三重県桑名市和泉269-1"
+  },
+  {
+    "context": "row_33901",
+    "message": "Could not infer municipality from: 三重県桑名市大字播磨770番地"
+  },
+  {
+    "context": "row_33902",
+    "message": "Could not infer municipality from: 三重県桑名市筒尾8-11-1"
+  },
+  {
+    "context": "row_33903",
+    "message": "Could not infer municipality from: 三重県桑名市大山田6丁目8番地"
+  },
+  {
+    "context": "row_33904",
+    "message": "Could not infer municipality from: 三重県桑名市野田二丁目8番地"
+  },
+  {
+    "context": "row_33905",
+    "message": "Could not infer municipality from: 三重県桑名市松ノ木6-11-1"
+  },
+  {
+    "context": "row_33906",
+    "message": "Could not infer municipality from: 三重県桑名市藤が丘6-109-1"
+  },
+  {
+    "context": "row_33907",
+    "message": "Could not infer municipality from: 三重県桑名市星見ヶ丘8-501"
+  },
+  {
+    "context": "row_33912",
+    "message": "Could not infer municipality from: 三重県桑名市長島町西川423"
+  },
+  {
+    "context": "row_33913",
+    "message": "Could not infer municipality from: 三重県桑名市長島町西外面2188"
+  },
+  {
+    "context": "row_33914",
+    "message": "Could not infer municipality from: 三重県桑名市長島町福吉567"
+  },
+  {
+    "context": "row_33915",
+    "message": "Could not infer municipality from: 三重県桑名市横満蔵568番地3"
+  },
+  {
+    "context": "row_33916",
+    "message": "Could not infer municipality from: 三重県鈴鹿市国府町2373-1"
+  },
+  {
+    "context": "row_33917",
+    "message": "Could not infer municipality from: 三重県鈴鹿市庄野東2-5-35"
+  },
+  {
+    "context": "row_33918",
+    "message": "Could not infer municipality from: 三重県鈴鹿市高塚町1069番地"
+  },
+  {
+    "context": "row_33919",
+    "message": "Could not infer municipality from: 三重県鈴鹿市岡田1-29-1"
+  },
+  {
+    "context": "row_33920",
+    "message": "Could not infer municipality from: 三重県鈴鹿市石薬師町1713番地"
+  },
+  {
+    "context": "row_33921",
+    "message": "Could not infer municipality from: 三重県鈴鹿市白子1-12-12"
+  },
+  {
+    "context": "row_33922",
+    "message": "Could not infer municipality from: 三重県鈴鹿市東江島町23-15"
+  },
+  {
+    "context": "row_33923",
+    "message": "Could not infer municipality from: 三重県鈴鹿市稲生3-10-1"
+  },
+  {
+    "context": "row_33924",
+    "message": "Could not infer municipality from: 三重県鈴鹿市三日市南二丁目1番7号"
+  },
+  {
+    "context": "row_33925",
+    "message": "Could not infer municipality from: 三重県鈴鹿市十宮町719番地の2"
+  },
+  {
+    "context": "row_33926",
+    "message": "Could not infer municipality from: 三重県鈴鹿市一ノ宮町557"
+  },
+  {
+    "context": "row_33927",
+    "message": "Could not infer municipality from: 三重県鈴鹿市長太旭町5-4-5"
+  },
+  {
+    "context": "row_33928",
+    "message": "Could not infer municipality from: 三重県鈴鹿市南堀江1-1-1"
+  },
+  {
+    "context": "row_33929",
+    "message": "Could not infer municipality from: 三重県鈴鹿市若松中1-4-1"
+  },
+  {
+    "context": "row_33930",
+    "message": "Could not infer municipality from: 三重県鈴鹿市北玉垣町947"
+  },
+  {
+    "context": "row_33931",
+    "message": "Could not infer municipality from: 三重県鈴鹿市神戸二丁目12-10"
+  },
+  {
+    "context": "row_33934",
+    "message": "Could not infer municipality from: 三重県鈴鹿市五祝町1845-2"
+  },
+  {
+    "context": "row_33935",
+    "message": "Could not infer municipality from: 三重県鈴鹿市深溝町3172-1"
+  },
+  {
+    "context": "row_33936",
+    "message": "Could not infer municipality from: 三重県鈴鹿市山本町750"
+  },
+  {
+    "context": "row_33937",
+    "message": "Could not infer municipality from: 三重県鈴鹿市東旭が丘五丁目3-18"
+  },
+  {
+    "context": "row_33938",
+    "message": "Could not infer municipality from: 三重県鈴鹿市伊船町1693"
+  },
+  {
+    "context": "row_33939",
+    "message": "Could not infer municipality from: 三重県鈴鹿市東庄内町2458-1"
+  },
+  {
+    "context": "row_33940",
+    "message": "Could not infer municipality from: 三重県鈴鹿市和泉町814番地"
+  },
+  {
+    "context": "row_33941",
+    "message": "Could not infer municipality from: 三重県鈴鹿市寺家1-41-1"
+  },
+  {
+    "context": "row_33942",
+    "message": "Could not infer municipality from: 三重県鈴鹿市桜島町4-12"
+  },
+  {
+    "context": "row_33943",
+    "message": "Could not infer municipality from: 三重県鈴鹿市大池二丁目13番1号"
+  },
+  {
+    "context": "row_33944",
+    "message": "Could not infer municipality from: 三重県鈴鹿市算所5-21-12"
+  },
+  {
+    "context": "row_33946",
+    "message": "Could not infer municipality from: 三重県鈴鹿市郡山町710番地の6"
+  },
+  {
+    "context": "row_33947",
+    "message": "Could not infer municipality from: 三重県名張市丸之内55"
+  },
+  {
+    "context": "row_33948",
+    "message": "Could not infer municipality from: 三重県名張市蔵持町原出338"
+  },
+  {
+    "context": "row_33949",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘3-2-67"
+  },
+  {
+    "context": "row_33950",
+    "message": "Could not infer municipality from: 三重県名張市薦生1595"
+  },
+  {
+    "context": "row_33951",
+    "message": "Could not infer municipality from: 三重県名張市下比奈知1422"
+  },
+  {
+    "context": "row_33952",
+    "message": "Could not infer municipality from: 三重県名張市新田117-2"
+  },
+  {
+    "context": "row_33953",
+    "message": "Could not infer municipality from: 三重県名張市夏見351"
+  },
+  {
+    "context": "row_33954",
+    "message": "Could not infer municipality from: 三重県名張市赤目町檀116番地"
+  },
+  {
+    "context": "row_33955",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘5-12-38"
+  },
+  {
+    "context": "row_33956",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘7-1-86"
+  },
+  {
+    "context": "row_33957",
+    "message": "Could not infer municipality from: 三重県名張市つつじが丘北3-5"
+  },
+  {
+    "context": "row_33958",
+    "message": "Could not infer municipality from: 三重県名張市すずらん台東3-219"
+  },
+  {
+    "context": "row_33959",
+    "message": "Could not infer municipality from: 三重県名張市梅が丘北1-340"
+  },
+  {
+    "context": "row_33960",
+    "message": "Could not infer municipality from: 三重県名張市百合が丘東9-1"
+  },
+  {
+    "context": "row_33961",
+    "message": "Could not infer municipality from: 三重県尾鷲市中村町4-58"
+  },
+  {
+    "context": "row_33962",
+    "message": "Could not infer municipality from: 三重県尾鷲市宮ノ上町6-48"
+  },
+  {
+    "context": "row_33963",
+    "message": "Could not infer municipality from: 三重県尾鷲市矢浜2-3-52"
+  },
+  {
+    "context": "row_33964",
+    "message": "Could not infer municipality from: 三重県尾鷲市大字向井134-12"
+  },
+  {
+    "context": "row_33965",
+    "message": "Could not infer municipality from: 三重県尾鷲市須賀利町107"
+  },
+  {
+    "context": "row_33966",
+    "message": "Could not infer municipality from: 三重県尾鷲市九鬼町374-1"
+  },
+  {
+    "context": "row_33969",
+    "message": "Could not infer municipality from: 三重県尾鷲市賀田町319"
+  },
+  {
+    "context": "row_33970",
+    "message": "Could not infer municipality from: 三重県尾鷲市梶賀町333"
+  },
+  {
+    "context": "row_33971",
+    "message": "Could not infer municipality from: 三重県亀山市本丸町585番地"
+  },
+  {
+    "context": "row_33972",
+    "message": "Could not infer municipality from: 三重県亀山市本町1-9-9"
+  },
+  {
+    "context": "row_33973",
+    "message": "Could not infer municipality from: 三重県亀山市中庄町1405"
+  },
+  {
+    "context": "row_33974",
+    "message": "Could not infer municipality from: 三重県亀山市能褒野町77-22"
+  },
+  {
+    "context": "row_33975",
+    "message": "Could not infer municipality from: 三重県亀山市両尾町2124"
+  },
+  {
+    "context": "row_33976",
+    "message": "Could not infer municipality from: 三重県亀山市白木町2739番地"
+  },
+  {
+    "context": "row_33977",
+    "message": "Could not infer municipality from: 三重県亀山市太岡寺町1310"
+  },
+  {
+    "context": "row_33978",
+    "message": "Could not infer municipality from: 三重県亀山市みどり町52番地"
+  },
+  {
+    "context": "row_33979",
+    "message": "Could not infer municipality from: 三重県亀山市天神3-10-25"
+  },
+  {
+    "context": "row_33980",
+    "message": "Could not infer municipality from: 三重県亀山市関町木崎1416番地"
+  },
+  {
+    "context": "row_33981",
+    "message": "Could not infer municipality from: 三重県亀山市加太板屋4569"
+  },
+  {
+    "context": "row_33982",
+    "message": "Could not infer municipality from: 三重県鳥羽市堅神町805-2"
+  },
+  {
+    "context": "row_33983",
+    "message": "Could not infer municipality from: 三重県鳥羽市答志町941-1"
+  },
+  {
+    "context": "row_33984",
+    "message": "Could not infer municipality from: 三重県鳥羽市神島町358-3"
+  },
+  {
+    "context": "row_33985",
+    "message": "Could not infer municipality from: 三重県鳥羽市菅島町1-2"
+  },
+  {
+    "context": "row_33986",
+    "message": "Could not infer municipality from: 三重県鳥羽市岩倉27-1"
+  },
+  {
+    "context": "row_33987",
+    "message": "Could not infer municipality from: 三重県鳥羽市安楽島町377"
+  },
+  {
+    "context": "row_33989",
+    "message": "Could not infer municipality from: 三重県鳥羽市相差町1014"
+  },
+  {
+    "context": "row_33990",
+    "message": "Could not infer municipality from: 三重県熊野市ニ木島町729"
+  },
+  {
+    "context": "row_33991",
+    "message": "Could not infer municipality from: 三重県熊野市甫母町364"
+  },
+  {
+    "context": "row_33992",
+    "message": "Could not infer municipality from: 三重県熊野市遊木町108"
+  },
+  {
+    "context": "row_33993",
+    "message": "Could not infer municipality from: 三重県熊野市新鹿町916-4"
+  },
+  {
+    "context": "row_33994",
+    "message": "Could not infer municipality from: 三重県熊野市波田須町602"
+  },
+  {
+    "context": "row_33995",
+    "message": "Could not infer municipality from: 三重県熊野市木本町349-10"
+  },
+  {
+    "context": "row_33996",
+    "message": "Could not infer municipality from: 三重県熊野市井戸町238"
+  },
+  {
+    "context": "row_33997",
+    "message": "Could not infer municipality from: 三重県熊野市有馬町530"
+  },
+  {
+    "context": "row_33998",
+    "message": "Could not infer municipality from: 三重県熊野市金山町2370-2"
+  },
+  {
+    "context": "row_33999",
+    "message": "Could not infer municipality from: 三重県熊野市育生町尾川41"
+  },
+  {
+    "context": "row_34000",
+    "message": "Could not infer municipality from: 三重県熊野市赤倉538"
+  },
+  {
+    "context": "row_34001",
+    "message": "Could not infer municipality from: 三重県熊野市神川町神上63"
+  },
+  {
+    "context": "row_34002",
+    "message": "Could not infer municipality from: 三重県熊野市神川町柳谷265"
+  },
+  {
+    "context": "row_34003",
+    "message": "Could not infer municipality from: 三重県熊野市五郷町桃崎1698番地1"
+  },
+  {
+    "context": "row_34004",
+    "message": "Could not infer municipality from: 三重県熊野市飛鳥町野口375"
+  },
+  {
+    "context": "row_34005",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町楊枝2"
+  },
+  {
+    "context": "row_34006",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町大栗須1"
+  },
+  {
+    "context": "row_34007",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町長尾850"
+  },
+  {
+    "context": "row_34008",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町矢ノ川455"
+  },
+  {
+    "context": "row_34009",
+    "message": "Could not infer municipality from: 三重県いなべ市北勢町阿下喜2562-1"
+  },
+  {
+    "context": "row_34010",
+    "message": "Could not infer municipality from: 三重県いなべ市北勢町東村30-1"
+  },
+  {
+    "context": "row_34011",
+    "message": "Could not infer municipality from: 三重県いなべ市北勢町畑毛634"
+  },
+  {
+    "context": "row_34012",
+    "message": "Could not infer municipality from: 三重県いなべ市北勢町大辻新田276"
+  },
+  {
+    "context": "row_34013",
+    "message": "Could not infer municipality from: 三重県いなべ市員弁町笠田新田607"
+  },
+  {
+    "context": "row_34014",
+    "message": "Could not infer municipality from: 三重県いなべ市員弁町大泉1201番地"
+  },
+  {
+    "context": "row_34015",
+    "message": "Could not infer municipality from: 三重県いなべ市大安町門前561"
+  },
+  {
+    "context": "row_34016",
+    "message": "Could not infer municipality from: 三重県いなべ市大安町平塚1247"
+  },
+  {
+    "context": "row_34017",
+    "message": "Could not infer municipality from: 三重県いなべ市大安町石榑南611"
+  },
+  {
+    "context": "row_34018",
+    "message": "Could not infer municipality from: 三重県いなべ市大安町丹生川中1189"
+  },
+  {
+    "context": "row_34019",
+    "message": "Could not infer municipality from: 三重県いなべ市藤原町市場491"
+  },
+  {
+    "context": "row_34020",
+    "message": "Could not infer municipality from: 三重県志摩市浜島町1112番地"
+  },
+  {
+    "context": "row_34021",
+    "message": "Could not infer municipality from: 三重県志摩市大王町波切877-3"
+  },
+  {
+    "context": "row_34022",
+    "message": "Could not infer municipality from: 三重県志摩市志摩町和具314番地1"
+  },
+  {
+    "context": "row_34023",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町鵜方1775"
+  },
+  {
+    "context": "row_34024",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町神明522-1"
+  },
+  {
+    "context": "row_34025",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町甲賀1518"
+  },
+  {
+    "context": "row_34026",
+    "message": "Could not infer municipality from: 三重県志摩市磯部町恵利原1275"
+  },
+  {
+    "context": "row_34027",
+    "message": "Could not infer municipality from: 三重県伊賀市緑ケ丘中町4352番地"
+  },
+  {
+    "context": "row_34028",
+    "message": "Could not infer municipality from: 三重県伊賀市上野丸之内112"
+  },
+  {
+    "context": "row_34029",
+    "message": "Could not infer municipality from: 三重県伊賀市久米町544番地"
+  },
+  {
+    "context": "row_34030",
+    "message": "Could not infer municipality from: 三重県伊賀市西高倉3146"
+  },
+  {
+    "context": "row_34031",
+    "message": "Could not infer municipality from: 三重県伊賀市東条88"
+  },
+  {
+    "context": "row_34032",
+    "message": "Could not infer municipality from: 三重県伊賀市西明寺105"
+  },
+  {
+    "context": "row_34033",
+    "message": "Could not infer municipality from: 三重県伊賀市ゆめが丘2-11"
+  },
+  {
+    "context": "row_34037",
+    "message": "Could not infer municipality from: 三重県伊賀市猪田1350番地"
+  },
+  {
+    "context": "row_34038",
+    "message": "Could not infer municipality from: 三重県伊賀市大内624番地"
+  },
+  {
+    "context": "row_34039",
+    "message": "Could not infer municipality from: 三重県伊賀市三田1652番地"
+  },
+  {
+    "context": "row_34040",
+    "message": "Could not infer municipality from: 三重県伊賀市柘植町2343"
+  },
+  {
+    "context": "row_34041",
+    "message": "Could not infer municipality from: 三重県伊賀市大字新堂160番地"
+  },
+  {
+    "context": "row_34042",
+    "message": "Could not infer municipality from: 三重県伊賀市川東1786-3"
+  },
+  {
+    "context": "row_34043",
+    "message": "Could not infer municipality from: 三重県伊賀市島ヶ原514-2"
+  },
+  {
+    "context": "row_34045",
+    "message": "Could not infer municipality from: 三重県伊賀市馬場1045番地"
+  },
+  {
+    "context": "row_34046",
+    "message": "Could not infer municipality from: 三重県伊賀市平田25"
+  },
+  {
+    "context": "row_34047",
+    "message": "Could not infer municipality from: 三重県伊賀市阿保1789"
+  },
+  {
+    "context": "row_34048",
+    "message": "Could not infer municipality from: 三重県伊賀市沖265番地"
+  },
+  {
+    "context": "row_34049",
+    "message": "Could not infer municipality from: 三重県桑名郡木曽岬町大字田代160"
+  },
+  {
+    "context": "row_34050",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町長深700"
+  },
+  {
+    "context": "row_34051",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町大木944"
+  },
+  {
+    "context": "row_34052",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町六把野新田100"
+  },
+  {
+    "context": "row_34053",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町笹尾西2-1-1"
+  },
+  {
+    "context": "row_34054",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町笹尾東4丁目28番地"
+  },
+  {
+    "context": "row_34055",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町城山1-48"
+  },
+  {
+    "context": "row_34056",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町菰野1490"
+  },
+  {
+    "context": "row_34057",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町千草3861"
+  },
+  {
+    "context": "row_34058",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町田光66"
+  },
+  {
+    "context": "row_34059",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町大強原913"
+  },
+  {
+    "context": "row_34060",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町竹成2593-5"
+  },
+  {
+    "context": "row_34061",
+    "message": "Could not infer municipality from: 三重県三重郡朝日町大字柿750"
+  },
+  {
+    "context": "row_34062",
+    "message": "Could not infer municipality from: 三重県三重郡川越町豊田一色69"
+  },
+  {
+    "context": "row_34063",
+    "message": "Could not infer municipality from: 三重県三重郡川越町大字高松258番地"
+  },
+  {
+    "context": "row_34064",
+    "message": "Could not infer municipality from: 三重県多気郡多気町兄国464"
+  },
+  {
+    "context": "row_34065",
+    "message": "Could not infer municipality from: 三重県多気郡多気町仁田120"
+  },
+  {
+    "context": "row_34066",
+    "message": "Could not infer municipality from: 三重県多気郡多気町井内林138"
+  },
+  {
+    "context": "row_34067",
+    "message": "Could not infer municipality from: 三重県多気郡多気町森荘534-1"
+  },
+  {
+    "context": "row_34068",
+    "message": "Could not infer municipality from: 三重県多気郡多気町片野2343"
+  },
+  {
+    "context": "row_34072",
+    "message": "Could not infer municipality from: 三重県多気郡明和町斎宮3385-2"
+  },
+  {
+    "context": "row_34073",
+    "message": "Could not infer municipality from: 三重県多気郡明和町明星1547"
+  },
+  {
+    "context": "row_34075",
+    "message": "Could not infer municipality from: 三重県多気郡明和町大字馬之上902番地1"
+  },
+  {
+    "context": "row_34076",
+    "message": "Could not infer municipality from: 三重県多気郡大台町新田278"
+  },
+  {
+    "context": "row_34077",
+    "message": "Could not infer municipality from: 三重県多気郡大台町上楠420番地"
+  },
+  {
+    "context": "row_34078",
+    "message": "Could not infer municipality from: 三重県多気郡大台町佐原107"
+  },
+  {
+    "context": "row_34079",
+    "message": "Could not infer municipality from: 三重県多気郡大台町茂原543-3"
+  },
+  {
+    "context": "row_34080",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町佐田1247"
+  },
+  {
+    "context": "row_34081",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町長更376"
+  },
+  {
+    "context": "row_34082",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町蚊野2018"
+  },
+  {
+    "context": "row_34083",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町小社曽根776"
+  },
+  {
+    "context": "row_34084",
+    "message": "Could not infer municipality from: 三重県度会郡度会町棚橋1679-1"
+  },
+  {
+    "context": "row_34085",
+    "message": "Could not infer municipality from: 三重県度会郡大紀町打見388"
+  },
+  {
+    "context": "row_34086",
+    "message": "Could not infer municipality from: 三重県度会郡大紀町滝原1748-1"
+  },
+  {
+    "context": "row_34087",
+    "message": "Could not infer municipality from: 三重県度会郡大紀町大内山875"
+  },
+  {
+    "context": "row_34089",
+    "message": "Could not infer municipality from: 三重県度会郡南伊勢町五ヵ所浦3755-4"
+  },
+  {
+    "context": "row_34090",
+    "message": "Could not infer municipality from: 三重県度会郡南伊勢町贄浦188-2"
+  },
+  {
+    "context": "row_34091",
+    "message": "Could not infer municipality from: 三重県度会郡南伊勢町村山1036"
+  },
+  {
+    "context": "row_34092",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町三浦432"
+  },
+  {
+    "context": "row_34094",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町長島1538"
+  },
+  {
+    "context": "row_34095",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町東長島2458"
+  },
+  {
+    "context": "row_34096",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町島原2708-2"
+  },
+  {
+    "context": "row_34097",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町相賀368-3"
+  },
+  {
+    "context": "row_34099",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町船津1057"
+  },
+  {
+    "context": "row_34100",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町上里801"
+  },
+  {
+    "context": "row_34101",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町志原16"
+  },
+  {
+    "context": "row_34102",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町下市木1956"
+  },
+  {
+    "context": "row_34103",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町阿田和1791-1"
+  },
+  {
+    "context": "row_34104",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町上野535-5"
+  },
+  {
+    "context": "row_34105",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町井田1787-2"
+  },
+  {
+    "context": "row_34106",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町神内493"
+  },
+  {
+    "context": "row_34107",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町成川632"
+  },
+  {
+    "context": "row_34108",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町井内98-1"
+  },
+  {
+    "context": "row_34109",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町鵜殿1232-1"
+  },
+  {
+    "context": "row_34110",
+    "message": "Could not infer municipality from: 三重県四日市市蒔田3丁目3-37"
+  },
+  {
+    "context": "row_34111",
+    "message": "Could not infer municipality from: 三重県桑名市野田5-3-12"
+  },
+  {
+    "context": "row_34112",
+    "message": "Could not infer municipality from: 三重県津市観音寺町471"
+  },
+  {
+    "context": "row_34113",
+    "message": "Could not infer municipality from: 三重県津市柳山津興1239"
+  },
+  {
+    "context": "row_34114",
+    "message": "Could not infer municipality from: 三重県津市桜橋2丁目38-1"
+  },
+  {
+    "context": "row_34115",
+    "message": "Could not infer municipality from: 三重県津市中河原356-2"
+  },
+  {
+    "context": "row_34116",
+    "message": "Could not infer municipality from: 三重県津市東古河町7-1"
+  },
+  {
+    "context": "row_34117",
+    "message": "Could not infer municipality from: 三重県津市上弁財町津興2537-4"
+  },
+  {
+    "context": "row_34118",
+    "message": "Could not infer municipality from: 三重県津市高茶屋4丁目44-1"
+  },
+  {
+    "context": "row_34119",
+    "message": "Could not infer municipality from: 三重県津市一色町219"
+  },
+  {
+    "context": "row_34120",
+    "message": "Could not infer municipality from: 三重県津市一身田中野880-1"
+  },
+  {
+    "context": "row_34121",
+    "message": "Could not infer municipality from: 三重県津市栗真町屋町524"
+  },
+  {
+    "context": "row_34122",
+    "message": "Could not infer municipality from: 三重県津市大里睦合町820-1"
+  },
+  {
+    "context": "row_34123",
+    "message": "Could not infer municipality from: 三重県津市垂水2622番地の1"
+  },
+  {
+    "context": "row_34124",
+    "message": "Could not infer municipality from: 三重県津市河芸町上野2010"
+  },
+  {
+    "context": "row_34125",
+    "message": "Could not infer municipality from: 三重県津市芸濃町椋本5147"
+  },
+  {
+    "context": "row_34126",
+    "message": "Could not infer municipality from: 三重県津市安濃町東観音寺494番地1"
+  },
+  {
+    "context": "row_34127",
+    "message": "Could not infer municipality from: 三重県津市久居西鷹跡町494"
+  },
+  {
+    "context": "row_34128",
+    "message": "Could not infer municipality from: 三重県津市久居一色町940"
+  },
+  {
+    "context": "row_34129",
+    "message": "Could not infer municipality from: 三重県津市久居井戸山町721-1"
+  },
+  {
+    "context": "row_34130",
+    "message": "Could not infer municipality from: 三重県津市香良洲町128"
+  },
+  {
+    "context": "row_34131",
+    "message": "Could not infer municipality from: 三重県津市一志町高野2609"
+  },
+  {
+    "context": "row_34132",
+    "message": "Could not infer municipality from: 三重県津市白山町川口471-6"
+  },
+  {
+    "context": "row_34133",
+    "message": "Could not infer municipality from: 三重県津市美杉町八知5800"
+  },
+  {
+    "context": "row_34134",
+    "message": "Could not infer municipality from: 三重県四日市市西浦2-5-36"
+  },
+  {
+    "context": "row_34135",
+    "message": "Could not infer municipality from: 三重県四日市市高浜町1-4"
+  },
+  {
+    "context": "row_34136",
+    "message": "Could not infer municipality from: 三重県四日市市十七軒町10番41号"
+  },
+  {
+    "context": "row_34137",
+    "message": "Could not infer municipality from: 三重県四日市市塩浜4096"
+  },
+  {
+    "context": "row_34138",
+    "message": "Could not infer municipality from: 三重県四日市市東阿倉川70"
+  },
+  {
+    "context": "row_34139",
+    "message": "Could not infer municipality from: 三重県四日市市天カ須賀5-3-10"
+  },
+  {
+    "context": "row_34140",
+    "message": "Could not infer municipality from: 三重県四日市市東茂福町4-19"
+  },
+  {
+    "context": "row_34141",
+    "message": "Could not infer municipality from: 三重県四日市市西日野町268番地の2"
+  },
+  {
+    "context": "row_34142",
+    "message": "Could not infer municipality from: 三重県四日市市前田町18-17"
+  },
+  {
+    "context": "row_34143",
+    "message": "Could not infer municipality from: 三重県四日市市西山町7229"
+  },
+  {
+    "context": "row_34144",
+    "message": "Could not infer municipality from: 三重県四日市市高角町2068番地の2"
+  },
+  {
+    "context": "row_34145",
+    "message": "Could not infer municipality from: 三重県四日市市下海老町2662番地の1"
+  },
+  {
+    "context": "row_34146",
+    "message": "Could not infer municipality from: 三重県四日市市平津町409-2"
+  },
+  {
+    "context": "row_34147",
+    "message": "Could not infer municipality from: 三重県四日市市西村町2787-2"
+  },
+  {
+    "context": "row_34148",
+    "message": "Could not infer municipality from: 三重県四日市市大字松本810"
+  },
+  {
+    "context": "row_34149",
+    "message": "Could not infer municipality from: 三重県四日市市笹川4-104"
+  },
+  {
+    "context": "row_34150",
+    "message": "Could not infer municipality from: 三重県四日市市三重8-1"
+  },
+  {
+    "context": "row_34151",
+    "message": "Could not infer municipality from: 三重県四日市市羽津甲26番地"
+  },
+  {
+    "context": "row_34152",
+    "message": "Could not infer municipality from: 三重県四日市市北山町1169"
+  },
+  {
+    "context": "row_34153",
+    "message": "Could not infer municipality from: 三重県四日市市桜町1604"
+  },
+  {
+    "context": "row_34154",
+    "message": "Could not infer municipality from: 三重県四日市市波木町697"
+  },
+  {
+    "context": "row_34155",
+    "message": "Could not infer municipality from: 三重県四日市市楠町北五味塚2092番地"
+  },
+  {
+    "context": "row_34156",
+    "message": "Could not infer municipality from: 三重県伊勢市神田久志本町1645-2"
+  },
+  {
+    "context": "row_34157",
+    "message": "Could not infer municipality from: 三重県伊勢市一之木5-5-3"
+  },
+  {
+    "context": "row_34158",
+    "message": "Could not infer municipality from: 三重県伊勢市竹ヶ鼻町78-10"
+  },
+  {
+    "context": "row_34159",
+    "message": "Could not infer municipality from: 三重県伊勢市粟野町472"
+  },
+  {
+    "context": "row_34160",
+    "message": "Could not infer municipality from: 三重県伊勢市中村町444"
+  },
+  {
+    "context": "row_34161",
+    "message": "Could not infer municipality from: 三重県伊勢市二俣4-5-3"
+  },
+  {
+    "context": "row_34162",
+    "message": "Could not infer municipality from: 三重県伊勢市植山町461"
+  },
+  {
+    "context": "row_34163",
+    "message": "Could not infer municipality from: 三重県伊勢市二見町光の街907番地7"
+  },
+  {
+    "context": "row_34164",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町相合750"
+  },
+  {
+    "context": "row_34165",
+    "message": "Could not infer municipality from: 三重県伊勢市磯町尾立2225"
+  },
+  {
+    "context": "row_34166",
+    "message": "Could not infer municipality from: 三重県松阪市殿町1508-1"
+  },
+  {
+    "context": "row_34168",
+    "message": "Could not infer municipality from: 三重県松阪市鎌田町656"
+  },
+  {
+    "context": "row_34169",
+    "message": "Could not infer municipality from: 三重県松阪市垣鼻町1790-1"
+  },
+  {
+    "context": "row_34170",
+    "message": "Could not infer municipality from: 三重県松阪市魚見町884"
+  },
+  {
+    "context": "row_34171",
+    "message": "Could not infer municipality from: 三重県松阪市立野町1344"
+  },
+  {
+    "context": "row_34172",
+    "message": "Could not infer municipality from: 三重県松阪市小片野町228番地"
+  },
+  {
+    "context": "row_34173",
+    "message": "Could not infer municipality from: 三重県松阪市曲町4-8"
+  },
+  {
+    "context": "row_34174",
+    "message": "Could not infer municipality from: 三重県松阪市嬉野下之庄町1725"
+  },
+  {
+    "context": "row_34175",
+    "message": "Could not infer municipality from: 三重県松阪市中道町345"
+  },
+  {
+    "context": "row_34176",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町粥見566"
+  },
+  {
+    "context": "row_34177",
+    "message": "Could not infer municipality from: 三重県松阪市飯高町宮前927"
+  },
+  {
+    "context": "row_34178",
+    "message": "Could not infer municipality from: 三重県桑名市東汰上415-1"
+  },
+  {
+    "context": "row_34179",
+    "message": "Could not infer municipality from: 三重県桑名市明正町31番地"
+  },
+  {
+    "context": "row_34180",
+    "message": "Could not infer municipality from: 三重県桑名市新矢田二丁目37番地"
+  },
+  {
+    "context": "row_34181",
+    "message": "Could not infer municipality from: 三重県桑名市小貝須1408-4"
+  },
+  {
+    "context": "row_34182",
+    "message": "Could not infer municipality from: 三重県桑名市坂井339-25"
+  },
+  {
+    "context": "row_34183",
+    "message": "Could not infer municipality from: 三重県桑名市筒尾8-12"
+  },
+  {
+    "context": "row_34184",
+    "message": "Could not infer municipality from: 三重県桑名市大山田5-12"
+  },
+  {
+    "context": "row_34186",
+    "message": "Could not infer municipality from: 三重県桑名市長島町西外面2175"
+  },
+  {
+    "context": "row_34187",
+    "message": "Could not infer municipality from: 三重県桑名市長島町横満蔵568番地3"
+  },
+  {
+    "context": "row_34188",
+    "message": "Could not infer municipality from: 三重県鈴鹿市国府町9105番地の1"
+  },
+  {
+    "context": "row_34189",
+    "message": "Could not infer municipality from: 三重県鈴鹿市加佐登3丁目1番1号"
+  },
+  {
+    "context": "row_34190",
+    "message": "Could not infer municipality from: 三重県鈴鹿市十宮町1335番地"
+  },
+  {
+    "context": "row_34191",
+    "message": "Could not infer municipality from: 三重県鈴鹿市北堀江2-15-1"
+  },
+  {
+    "context": "row_34192",
+    "message": "Could not infer municipality from: 三重県鈴鹿市東玉垣町2863番地"
+  },
+  {
+    "context": "row_34193",
+    "message": "Could not infer municipality from: 三重県鈴鹿市中旭が丘4-5-62"
+  },
+  {
+    "context": "row_34194",
+    "message": "Could not infer municipality from: 三重県鈴鹿市秋永町1839"
+  },
+  {
+    "context": "row_34195",
+    "message": "Could not infer municipality from: 三重県鈴鹿市長澤町1867番地の1"
+  },
+  {
+    "context": "row_34196",
+    "message": "Could not infer municipality from: 三重県鈴鹿市寺家4-11-1"
+  },
+  {
+    "context": "row_34197",
+    "message": "Could not infer municipality from: 三重県鈴鹿市三日市町1803番地の8"
+  },
+  {
+    "context": "row_34198",
+    "message": "Could not infer municipality from: 三重県名張市丸之内15番地"
+  },
+  {
+    "context": "row_34199",
+    "message": "Could not infer municipality from: 三重県名張市箕曲中村219"
+  },
+  {
+    "context": "row_34200",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘7番町1街区1926番地1"
+  },
+  {
+    "context": "row_34201",
+    "message": "Could not infer municipality from: 三重県名張市美旗中村2380"
+  },
+  {
+    "context": "row_34202",
+    "message": "Could not infer municipality from: 三重県名張市つつじが丘南1-241"
+  },
+  {
+    "context": "row_34203",
+    "message": "Could not infer municipality from: 三重県尾鷲市矢浜2-16-7"
+  },
+  {
+    "context": "row_34204",
+    "message": "Could not infer municipality from: 三重県尾鷲市須賀利町387"
+  },
+  {
+    "context": "row_34205",
+    "message": "Could not infer municipality from: 三重県尾鷲市三木里町205"
+  },
+  {
+    "context": "row_34206",
+    "message": "Could not infer municipality from: 三重県尾鷲市賀田町572"
+  },
+  {
+    "context": "row_34207",
+    "message": "Could not infer municipality from: 三重県亀山市西丸町564"
+  },
+  {
+    "context": "row_34208",
+    "message": "Could not infer municipality from: 三重県亀山市田村町75"
+  },
+  {
+    "context": "row_34209",
+    "message": "Could not infer municipality from: 三重県亀山市関町新所1863番地"
+  },
+  {
+    "context": "row_34211",
+    "message": "Could not infer municipality from: 三重県鳥羽市答志町2220-5"
+  },
+  {
+    "context": "row_34212",
+    "message": "Could not infer municipality from: 三重県鳥羽市神島町358-3"
+  },
+  {
+    "context": "row_34215",
+    "message": "Could not infer municipality from: 三重県鳥羽市安楽島町1451番地19"
+  },
+  {
+    "context": "row_34216",
+    "message": "Could not infer municipality from: 三重県熊野市二木島町432"
+  },
+  {
+    "context": "row_34217",
+    "message": "Could not infer municipality from: 三重県熊野市新鹿町916-4"
+  },
+  {
+    "context": "row_34218",
+    "message": "Could not infer municipality from: 三重県熊野市井戸町4877-1"
+  },
+  {
+    "context": "row_34219",
+    "message": "Could not infer municipality from: 三重県熊野市有馬町1398"
+  },
+  {
+    "context": "row_34220",
+    "message": "Could not infer municipality from: 三重県熊野市神川町神上63"
+  },
+  {
+    "context": "row_34221",
+    "message": "Could not infer municipality from: 三重県熊野市五郷町桃崎1698-1"
+  },
+  {
+    "context": "row_34222",
+    "message": "Could not infer municipality from: 三重県熊野市飛鳥町小阪499"
+  },
+  {
+    "context": "row_34223",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町楊枝2"
+  },
+  {
+    "context": "row_34224",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町小栗須27"
+  },
+  {
+    "context": "row_34225",
+    "message": "Could not infer municipality from: 三重県熊野市紀和町長尾1114"
+  },
+  {
+    "context": "row_34226",
+    "message": "Could not infer municipality from: 三重県いなべ市北勢町阿下喜2480番地"
+  },
+  {
+    "context": "row_34227",
+    "message": "Could not infer municipality from: 三重県いなべ市員弁町大泉新田1739"
+  },
+  {
+    "context": "row_34228",
+    "message": "Could not infer municipality from: 三重県いなべ市大安町石榑東2977"
+  },
+  {
+    "context": "row_34229",
+    "message": "Could not infer municipality from: 三重県いなべ市藤原町市場491"
+  },
+  {
+    "context": "row_34230",
+    "message": "Could not infer municipality from: 三重県志摩市浜島町塩屋604-5"
+  },
+  {
+    "context": "row_34231",
+    "message": "Could not infer municipality from: 三重県志摩市大王町波切1506-2"
+  },
+  {
+    "context": "row_34232",
+    "message": "Could not infer municipality from: 三重県志摩市志摩町和具303"
+  },
+  {
+    "context": "row_34233",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町鵜方3347-2"
+  },
+  {
+    "context": "row_34234",
+    "message": "Could not infer municipality from: 三重県志摩市阿児町甲賀2088-1"
+  },
+  {
+    "context": "row_34235",
+    "message": "Could not infer municipality from: 三重県志摩市磯部町恵利原1300"
+  },
+  {
+    "context": "row_34236",
+    "message": "Could not infer municipality from: 三重県伊賀市上野丸之内78番地"
+  },
+  {
+    "context": "row_34237",
+    "message": "Could not infer municipality from: 三重県伊賀市緑ケ丘本町4153"
+  },
+  {
+    "context": "row_34238",
+    "message": "Could not infer municipality from: 三重県伊賀市印代450"
+  },
+  {
+    "context": "row_34239",
+    "message": "Could not infer municipality from: 三重県伊賀市森寺1488番地"
+  },
+  {
+    "context": "row_34240",
+    "message": "Could not infer municipality from: 三重県伊賀市柘植町1881"
+  },
+  {
+    "context": "row_34241",
+    "message": "Could not infer municipality from: 三重県伊賀市新堂160"
+  },
+  {
+    "context": "row_34242",
+    "message": "Could not infer municipality from: 三重県伊賀市島ヶ原514-2"
+  },
+  {
+    "context": "row_34243",
+    "message": "Could not infer municipality from: 三重県伊賀市千貝10"
+  },
+  {
+    "context": "row_34244",
+    "message": "Could not infer municipality from: 三重県伊賀市平田655番地"
+  },
+  {
+    "context": "row_34245",
+    "message": "Could not infer municipality from: 三重県伊賀市阿保1870"
+  },
+  {
+    "context": "row_34246",
+    "message": "Could not infer municipality from: 三重県桑名郡木曽岬町中和泉361番地"
+  },
+  {
+    "context": "row_34247",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町六把野新田557"
+  },
+  {
+    "context": "row_34248",
+    "message": "Could not infer municipality from: 三重県員弁郡東員町城山2丁目1"
+  },
+  {
+    "context": "row_34249",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町菰野1192"
+  },
+  {
+    "context": "row_34250",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町田光3808-18"
+  },
+  {
+    "context": "row_34251",
+    "message": "Could not infer municipality from: 三重県三重郡朝日町大字柿2838"
+  },
+  {
+    "context": "row_34252",
+    "message": "Could not infer municipality from: 三重県三重郡川越町豊田一色67"
+  },
+  {
+    "context": "row_34253",
+    "message": "Could not infer municipality from: 三重県多気郡多気町片野2254"
+  },
+  {
+    "context": "row_34254",
+    "message": "Could not infer municipality from: 三重県多気郡多気町相可1540"
+  },
+  {
+    "context": "row_34255",
+    "message": "Could not infer municipality from: 三重県多気郡明和町坂本1237-1"
+  },
+  {
+    "context": "row_34256",
+    "message": "Could not infer municipality from: 三重県多気郡大台町上三瀬903-1"
+  },
+  {
+    "context": "row_34257",
+    "message": "Could not infer municipality from: 三重県多気郡大台町茂原643-8"
+  },
+  {
+    "context": "row_34258",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町田丸114-1"
+  },
+  {
+    "context": "row_34259",
+    "message": "Could not infer municipality from: 三重県度会郡度会町棚橋300"
+  },
+  {
+    "context": "row_34261",
+    "message": "Could not infer municipality from: 三重県度会郡大紀町滝原1889番地7"
+  },
+  {
+    "context": "row_34262",
+    "message": "Could not infer municipality from: 三重県度会郡南伊勢町船越2100"
+  },
+  {
+    "context": "row_34263",
+    "message": "Could not infer municipality from: 三重県度会郡南伊勢町東宮1033"
+  },
+  {
+    "context": "row_34264",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町長島444"
+  },
+  {
+    "context": "row_34265",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町島原2697-2"
+  },
+  {
+    "context": "row_34266",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町相賀499-3"
+  },
+  {
+    "context": "row_34267",
+    "message": "Could not infer municipality from: 三重県北牟婁郡紀北町上里543"
+  },
+  {
+    "context": "row_34268",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町志原1737"
+  },
+  {
+    "context": "row_34269",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町阿田和3996-1"
+  },
+  {
+    "context": "row_34270",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町上野535-5"
+  },
+  {
+    "context": "row_34271",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町大里1546"
+  },
+  {
+    "context": "row_34272",
+    "message": "Could not infer municipality from: 三重県南牟婁郡紀宝町鵜殿20番地"
+  },
+  {
+    "context": "row_34273",
+    "message": "Could not infer municipality from: 三重県津市一身田町2843"
+  },
+  {
+    "context": "row_34274",
+    "message": "Could not infer municipality from: 三重県津市半田1330"
+  },
+  {
+    "context": "row_34275",
+    "message": "Could not infer municipality from: 三重県四日市市萱生町238番地"
+  },
+  {
+    "context": "row_34276",
+    "message": "Could not infer municipality from: 三重県四日市市追分1-9-34"
+  },
+  {
+    "context": "row_34277",
+    "message": "Could not infer municipality from: 三重県四日市市平尾町2800"
+  },
+  {
+    "context": "row_34278",
+    "message": "Could not infer municipality from: 三重県伊勢市楠部町138"
+  },
+  {
+    "context": "row_34279",
+    "message": "Could not infer municipality from: 三重県松阪市久保町1232"
+  },
+  {
+    "context": "row_34280",
+    "message": "Could not infer municipality from: 三重県桑名市野田5-3-12"
+  },
+  {
+    "context": "row_34281",
+    "message": "Could not infer municipality from: 三重県伊賀市下神戸2756"
+  },
+  {
+    "context": "row_34282",
+    "message": "Could not infer municipality from: 三重県津市美里町三郷84番地"
+  },
+  {
+    "context": "row_34283",
+    "message": "Could not infer municipality from: 三重県桑名市多度町小山2330"
+  },
+  {
+    "context": "row_34284",
+    "message": "Could not infer municipality from: 三重県桑名市東方1795"
+  },
+  {
+    "context": "row_34285",
+    "message": "Could not infer municipality from: 三重県桑名市大字志知字東山2839"
+  },
+  {
+    "context": "row_34286",
+    "message": "Could not infer municipality from: 三重県桑名市下深谷部字山王2527"
+  },
+  {
+    "context": "row_34287",
+    "message": "Could not infer municipality from: 三重県桑名市芳ヶ崎1330-1"
+  },
+  {
+    "context": "row_34288",
+    "message": "Could not infer municipality from: 三重県いなべ市員弁町御薗632"
+  },
+  {
+    "context": "row_34289",
+    "message": "Could not infer municipality from: 三重県三重郡川越町豊田2302-1"
+  },
+  {
+    "context": "row_34290",
+    "message": "Could not infer municipality from: 三重県四日市市富田4-1-43"
+  },
+  {
+    "context": "row_34291",
+    "message": "Could not infer municipality from: 三重県四日市市大字日永字岡山4917"
+  },
+  {
+    "context": "row_34292",
+    "message": "Could not infer municipality from: 三重県四日市市桜町6100番地"
+  },
+  {
+    "context": "row_34293",
+    "message": "Could not infer municipality from: 三重県四日市市中野町2216"
+  },
+  {
+    "context": "row_34294",
+    "message": "Could not infer municipality from: 三重県四日市市八王子町字高花1654"
+  },
+  {
+    "context": "row_34295",
+    "message": "Could not infer municipality from: 三重県四日市市河原田町2847"
+  },
+  {
+    "context": "row_34296",
+    "message": "Could not infer municipality from: 三重県四日市市日永東3丁目4番63号"
+  },
+  {
+    "context": "row_34297",
+    "message": "Could not infer municipality from: 三重県四日市市菅原町678"
+  },
+  {
+    "context": "row_34298",
+    "message": "Could not infer municipality from: 三重県四日市市尾平町字永代寺2745"
+  },
+  {
+    "context": "row_34299",
+    "message": "Could not infer municipality from: 三重県四日市市大字茂福字横座668-1"
+  },
+  {
+    "context": "row_34300",
+    "message": "Could not infer municipality from: 三重県三重郡菰野町大字福村870番地"
+  },
+  {
+    "context": "row_34301",
+    "message": "Could not infer municipality from: 三重県鈴鹿市神戸4丁目1番80号"
+  },
+  {
+    "context": "row_34302",
+    "message": "Could not infer municipality from: 三重県鈴鹿市白子4-17-1"
+  },
+  {
+    "context": "row_34303",
+    "message": "Could not infer municipality from: 三重県鈴鹿市石薬師町字寺東452"
+  },
+  {
+    "context": "row_34304",
+    "message": "Could not infer municipality from: 三重県鈴鹿市稲生町8232-1"
+  },
+  {
+    "context": "row_34305",
+    "message": "Could not infer municipality from: 三重県鈴鹿市三日市町字東新田場1695"
+  },
+  {
+    "context": "row_34306",
+    "message": "Could not infer municipality from: 三重県亀山市本町1-10-1"
+  },
+  {
+    "context": "row_34307",
+    "message": "Could not infer municipality from: 三重県津市新町3-1-1"
+  },
+  {
+    "context": "row_34308",
+    "message": "Could not infer municipality from: 三重県津市河辺町2210-2"
+  },
+  {
+    "context": "row_34309",
+    "message": "Could not infer municipality from: 三重県津市一身田上津部田1470"
+  },
+  {
+    "context": "row_34310",
+    "message": "Could not infer municipality from: 三重県津市半田534"
+  },
+  {
+    "context": "row_34311",
+    "message": "Could not infer municipality from: 三重県津市渋見町699"
+  },
+  {
+    "context": "row_34312",
+    "message": "Could not infer municipality from: 三重県津市柳山津興1239"
+  },
+  {
+    "context": "row_34313",
+    "message": "Could not infer municipality from: 三重県津市戸木町3569-1"
+  },
+  {
+    "context": "row_34314",
+    "message": "Could not infer municipality from: 三重県津市久居東鷹跡町105"
+  },
+  {
+    "context": "row_34315",
+    "message": "Could not infer municipality from: 三重県津市白山町大字南家城678"
+  },
+  {
+    "context": "row_34316",
+    "message": "Could not infer municipality from: 三重県松阪市垣鼻町1664"
+  },
+  {
+    "context": "row_34317",
+    "message": "Could not infer municipality from: 三重県松阪市殿町1417番地"
+  },
+  {
+    "context": "row_34318",
+    "message": "Could not infer municipality from: 三重県松阪市豊原町1600"
+  },
+  {
+    "context": "row_34319",
+    "message": "Could not infer municipality from: 三重県松阪市飯南町粥見5480-1"
+  },
+  {
+    "context": "row_34320",
+    "message": "Could not infer municipality from: 三重県多気郡多気町相可50"
+  },
+  {
+    "context": "row_34321",
+    "message": "Could not infer municipality from: 三重県多気郡大台町茂原48"
+  },
+  {
+    "context": "row_34322",
+    "message": "Could not infer municipality from: 三重県伊勢市浦口3-13-1"
+  },
+  {
+    "context": "row_34323",
+    "message": "Could not infer municipality from: 三重県伊勢市神田久志本町1703-1"
+  },
+  {
+    "context": "row_34324",
+    "message": "Could not infer municipality from: 三重県伊勢市神久2-7-18"
+  },
+  {
+    "context": "row_34325",
+    "message": "Could not infer municipality from: 三重県伊勢市黒瀬町1193"
+  },
+  {
+    "context": "row_34326",
+    "message": "Could not infer municipality from: 三重県伊勢市神田久志本町1560"
+  },
+  {
+    "context": "row_34327",
+    "message": "Could not infer municipality from: 三重県伊勢市小俣町明野1481"
+  },
+  {
+    "context": "row_34329",
+    "message": "Could not infer municipality from: 三重県度会郡度会町大野木2831"
+  },
+  {
+    "context": "row_34330",
+    "message": "Could not infer municipality from: 三重県鳥羽市安楽島町1459"
+  },
+  {
+    "context": "row_34331",
+    "message": "Could not infer municipality from: 三重県志摩市磯部町恵利原1308"
+  },
+  {
+    "context": "row_34332",
+    "message": "Could not infer municipality from: 三重県志摩市志摩町和具2578"
+  },
+  {
+    "context": "row_34333",
+    "message": "Could not infer municipality from: 三重県伊賀市上野丸之内107"
+  },
+  {
+    "context": "row_34334",
+    "message": "Could not infer municipality from: 三重県伊賀市緑ヶ丘西町2270-1"
+  },
+  {
+    "context": "row_34335",
+    "message": "Could not infer municipality from: 三重県伊賀市川東412"
+  },
+  {
+    "context": "row_34336",
+    "message": "Could not infer municipality from: 三重県名張市百合が丘東6-1"
+  },
+  {
+    "context": "row_34337",
+    "message": "Could not infer municipality from: 三重県名張市東町2067-2"
+  },
+  {
+    "context": "row_34338",
+    "message": "Could not infer municipality from: 三重県尾鷲市古戸野町3-12"
+  },
+  {
+    "context": "row_34339",
+    "message": "Could not infer municipality from: 三重県熊野市木本町1101-4"
+  },
+  {
+    "context": "row_34340",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町阿田和1960"
+  },
+  {
+    "context": "row_34341",
+    "message": "Could not infer municipality from: 三重県熊野市木本町1101-4"
+  },
+  {
+    "context": "row_34342",
+    "message": "Could not infer municipality from: 三重県南牟婁郡御浜町阿田和1960"
+  },
+  {
+    "context": "row_34343",
+    "message": "Could not infer municipality from: 三重県桑名市野田5丁目3-12"
+  },
+  {
+    "context": "row_34344",
+    "message": "Could not infer municipality from: 三重県四日市市萱生町238番地"
+  },
+  {
+    "context": "row_34345",
+    "message": "Could not infer municipality from: 三重県四日市市追分1-9-34"
+  },
+  {
+    "context": "row_34346",
+    "message": "Could not infer municipality from: 三重県四日市市平尾町2800"
+  },
+  {
+    "context": "row_34347",
+    "message": "Could not infer municipality from: 三重県鈴鹿市庄野町1260"
+  },
+  {
+    "context": "row_34348",
+    "message": "Could not infer municipality from: 三重県津市一身田町2843"
+  },
+  {
+    "context": "row_34349",
+    "message": "Could not infer municipality from: 三重県津市半田1330"
+  },
+  {
+    "context": "row_34350",
+    "message": "Could not infer municipality from: 三重県津市白山町八対野2739"
+  },
+  {
+    "context": "row_34351",
+    "message": "Could not infer municipality from: 三重県松阪市久保町1232"
+  },
+  {
+    "context": "row_34352",
+    "message": "Could not infer municipality from: 三重県伊勢市楠部町138"
+  },
+  {
+    "context": "row_34353",
+    "message": "Could not infer municipality from: 三重県伊勢市黒瀬町562-13"
+  },
+  {
+    "context": "row_34354",
+    "message": "Could not infer municipality from: 三重県伊賀市別府690"
+  },
+  {
+    "context": "row_34355",
+    "message": "Could not infer municipality from: 三重県伊賀市下神戸2756"
+  },
+  {
+    "context": "row_34356",
+    "message": "Could not infer municipality from: 三重県四日市市大字塩浜149-8"
+  },
+  {
+    "context": "row_34357",
+    "message": "Could not infer municipality from: 三重県亀山市和賀町1789番地の4"
+  },
+  {
+    "context": "row_34358",
+    "message": "Could not infer municipality from: 三重県津市一志町大仰326"
+  },
+  {
+    "context": "row_34359",
+    "message": "Could not infer municipality from: 三重県伊勢市河崎1-3-25"
+  },
+  {
+    "context": "row_34360",
+    "message": "Could not infer municipality from: 三重県志摩市磯部町山原785番地"
+  },
+  {
+    "context": "row_34361",
+    "message": "Could not infer municipality from: 三重県伊賀市北山1373"
+  },
+  {
+    "context": "row_34362",
+    "message": "Could not infer municipality from: 三重県名張市桔梗が丘1番町5街区13番地"
+  },
+  {
+    "context": "row_34363",
+    "message": "Could not infer municipality from: 三重県多気郡大台町小滝151番地"
+  },
+  {
+    "context": "row_34364",
+    "message": "Could not infer municipality from: 三重県鈴鹿市庄野町1230"
+  },
+  {
+    "context": "row_34365",
+    "message": "Could not infer municipality from: 三重県津市観音寺町484"
+  },
+  {
+    "context": "row_34366",
+    "message": "Could not infer municipality from: 三重県津市高茶屋4丁目39番1号"
+  },
+  {
+    "context": "row_34367",
+    "message": "Could not infer municipality from: 三重県津市藤方2304-2"
+  },
+  {
+    "context": "row_34368",
+    "message": "Could not infer municipality from: 三重県津市城山一丁目5番29号"
+  },
+  {
+    "context": "row_34369",
+    "message": "Could not infer municipality from: 三重県鈴鹿市加佐登三丁目2番2号"
+  },
+  {
+    "context": "row_34370",
+    "message": "Could not infer municipality from: 三重県鈴鹿市石薬師町字寺東452番地"
+  },
+  {
+    "context": "row_34371",
+    "message": "Could not infer municipality from: 三重県津市大里窪田町357番地"
+  },
+  {
+    "context": "row_34372",
+    "message": "Could not infer municipality from: 三重県津市大里窪田町340番地5"
+  },
+  {
+    "context": "row_34373",
+    "message": "Could not infer municipality from: 三重県津市大里窪田町340番地5"
+  },
+  {
+    "context": "row_34374",
+    "message": "Could not infer municipality from: 三重県津市稲葉町字上野4101"
+  },
+  {
+    "context": "row_34375",
+    "message": "Could not infer municipality from: 三重県名張市美旗町南西原229番地の2"
+  },
+  {
+    "context": "row_34376",
+    "message": "Could not infer municipality from: 三重県松阪市久保町1846番195"
+  },
+  {
+    "context": "row_34377",
+    "message": "Could not infer municipality from: 三重県度会郡玉城町宮古726-17"
+  },
+  {
+    "context": "row_34378",
+    "message": "Could not infer municipality from: 三重県四日市市西日野町4070番地35"
+  },
+  {
+    "context": "row_34379",
+    "message": "Could not infer municipality from: 三重県四日市市下海老町字高松161番地"
+  },
+  {
+    "context": "row_34380",
+    "message": "Could not infer municipality from: 三重県桑名市大字東方字尾弓田1073番地"
+  },
+  {
+    "context": "row_34381",
+    "message": "Could not infer municipality from: 三重県度会郡度会町大野木1825番地"
+  },
+  {
+    "context": "row_34382",
+    "message": "Could not infer municipality from: 三重県熊野市金山町2496"
+  },
+  {
+    "context": "row_34383",
+    "message": "Could not infer municipality from: 三重県尾鷲市光ケ丘28-61"
+  },
+  {
+    "context": "row_34384",
+    "message": "Could not infer municipality from: 三重県四日市市波木町330-5"
+  },
+  {
+    "context": "row_34385",
+    "message": "Could not infer municipality from: 三重県いなべ市藤原町石川989"
+  }
+]

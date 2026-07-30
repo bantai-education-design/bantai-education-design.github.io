@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""石川県学校データベース変換スクリプト
+"""三重県学校データベース変換スクリプト
 
 原本: 文部科学省「学校コード一覧（全国公立・国立・私立学校等）」
       sc_20260529-mxt_chousa01-000011635_1.xlsx（2026-05-29版）
@@ -67,8 +67,8 @@ def normalize_address(value: Any) -> str:
         return ""
     text = re.sub(r"[ \t　]+", "", text)
     text = re.sub(r"[−―ー]", "-", text)
-    if text and not text.startswith("石川県"):
-        text = "石川県" + text
+    if text and not text.startswith("三重県"):
+        text = "三重県" + text
     return text
 
 
@@ -79,26 +79,26 @@ def slug(value: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 石川県 市区町村一覧（行政表示順）
+# 三重県 市区町村一覧（行政表示順）
 # ---------------------------------------------------------------------------
 
-ISHIKAWA_CITIES = [
+MIE_CITIES = [
     "あわら市", "勝山市", "坂井市", "大野市", "小浜市", "敦賀市", "福井市", "越前市", "鯖江市"
 ]
 
-ISHIKAWA_GUN_TOWNS = [
+MIE_GUN_TOWNS = [
     "三方上中郡若狭町", "三方郡美浜町", "三方郡美浜町河原市", "丹生郡越前町", "今立郡池田町", "南条郡南越前町", "吉田郡永平寺町", "吉田郡永平寺町市", "吉田郡永平寺町東古市", "大飯郡おおい町", "大飯郡高浜町"
 ]
 
-MUNICIPALITY_ORDER = ISHIKAWA_CITIES + ISHIKAWA_GUN_TOWNS
+MUNICIPALITY_ORDER = MIE_CITIES + MIE_GUN_TOWNS
 
 # 郡名なし → 正式名称へのマッピング（分詞が重なる村名・町名の解決）
 _BARE_TO_CANONICAL: dict[str, str] = {}
-for full in ISHIKAWA_GUN_TOWNS:
+for full in MIE_GUN_TOWNS:
     m = re.match(r"^.+郡(.+)$", full)
     if m:
         bare = m.group(1)
-        # 同じ bare 名が複数の郡に存在しないことを前提（石川県は問題なし）
+        # 同じ bare 名が複数の郡に存在しないことを前提（三重県は問題なし）
         _BARE_TO_CANONICAL[bare] = full
 
 _MUNI_CANDIDATES = sorted(MUNICIPALITY_ORDER, key=len, reverse=True)
@@ -107,8 +107,8 @@ _BARE_CANDIDATES = sorted(_BARE_TO_CANONICAL, key=len, reverse=True)
 
 def infer_municipality(address: str) -> str:
     text = address
-    if text.startswith("石川県"):
-        text = text[len("石川県"):]
+    if text.startswith("三重県"):
+        text = text[len("三重県"):]
     # First pass: try full canonical names (including 郡+町村) in descending length order
     for cand in _MUNI_CANDIDATES:
         if text.startswith(cand):
@@ -119,7 +119,7 @@ def infer_municipality(address: str) -> str:
         if text.startswith(bare):
             return _BARE_TO_CANONICAL[bare]
     # Third pass: for 市 names try direct match (already covered above, but just in case)
-    for cand in ISHIKAWA_CITIES:
+    for cand in MIE_CITIES:
         if text.startswith(cand):
             return cand
     return ""
@@ -147,8 +147,8 @@ COMPLETE_NAME_SUFFIXES = (
     "中等部", "小学部", "こども園", "キンダーガーテン", "分校", "分教室",
 )
 
-_ISHIKAWA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
-_ISHIKAWA_MUNI_NAMES.update(ISHIKAWA_CITIES)
+_MIE_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
+_MIE_MUNI_NAMES.update(MIE_CITIES)
 
 
 def build_official_name(*, establishment: str, raw_name: str,
@@ -158,7 +158,7 @@ def build_official_name(*, establishment: str, raw_name: str,
     重要なケース:
     1. 既に校種サフィックスで終わる名称はそのまま（重複防止）
     2. MEXT名称が「○○市立△△高等学校」のように設置者を含む場合は
-       「石川県立」を重ねて付けない（市立商業高等学校等）
+       「三重県立」を重ねて付けない（市立商業高等学校等）
     3. 分校名（「〜山形校」「〜金山校」等）は「立」を含む完全な固有名称
        → 校種サフィックスを追加しない
     """
@@ -177,8 +177,8 @@ def build_official_name(*, establishment: str, raw_name: str,
 
     # 公立
     # ----- 既に設置者表現（○立）を含む場合はそのまま返す -----
-    # 例: 「山形市立商業高等学校」「石川県立致道館中学校」
-    # 「石川県立村山特別支援学校山形校」（分校も含む）
+    # 例: 「山形市立商業高等学校」「三重県立致道館中学校」
+    # 「三重県立村山特別支援学校山形校」（分校も含む）
     if re.search(r'[都道府県市区町村]立', raw_name):
         # 分校名「〜○○校」で且つ校種サフィックスなし → 校種付けず分校名をそのまま
         if re.search(r'校$', raw_name) and not already_complete:
@@ -189,14 +189,14 @@ def build_official_name(*, establishment: str, raw_name: str,
     is_pref_level = school_type in ("高等学校", "中等教育学校", "特別支援学校")
 
     if is_pref_level:
-        core = f"石川県立{raw_name}"
+        core = f"三重県立{raw_name}"
         return core if already_complete else core + school_type
 
     # 市町村立（幼稚園・小・中・義務教育）
     bare_muni = re.sub(r"^.+郡", "", municipality)  # 郡名なし
 
     # raw_name がすでに自治体名を含む場合
-    for mname in _ISHIKAWA_MUNI_NAMES:
+    for mname in _MIE_MUNI_NAMES:
         if raw_name.startswith(mname + "立") or raw_name.startswith(mname):
             return raw_name if already_complete else raw_name + school_type
 
@@ -243,8 +243,8 @@ def make_record(
     municipality = infer_municipality(address)
     stable_key = "|".join((establishment, school_type, municipality, name, ",".join(course)))
     return {
-        "id": f"ishikawa-{slug(stable_key)}",
-        "prefecture": "石川県",
+        "id": f"mie-{slug(stable_key)}",
+        "prefecture": "三重県",
         "name": name,
         "name_kana": normalize_name(name_kana),
         "postal_code": normalize_postal_code(postal_code),
@@ -285,7 +285,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
         
     df = pd.concat(df_list, ignore_index=True)
 
-    yama = df[df["都道府県番号"] == "17(石川)"].copy()
+    yama = df[df["都道府県番号"] == "24(三重)"].copy()
 
 
     # 廃止校を除外
@@ -385,9 +385,9 @@ def sort_key(record: dict[str, Any]):
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-root", type=Path, default=Path("data-source/tochigi"))
-    parser.add_argument("--output", type=Path, default=Path("data/school-database/ishikawa.json"))
+    parser.add_argument("--output", type=Path, default=Path("data/school-database/mie.json"))
     parser.add_argument("--warnings-output", type=Path,
-                        default=Path("tools/school-database/ishikawa_conversion_warnings.json"))
+                        default=Path("tools/school-database/mie_conversion_warnings.json"))
     args = parser.parse_args()
 
     all_records = load_mext_data(args.source_root)
