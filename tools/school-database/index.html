@@ -1,5 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ban.Tai 全国学校データベース | 都道府県選択</title>
+  <meta name="description" content="学校封筒印刷・宛名作成に使える、全国の学校データベースのポータルページです。東京都版（3,509校・園）、埼玉県版（1,929校・園）、千葉県版（1,823校・園）、神奈川県版（2,227校・園）、山梨県版（351校・園）、茨城県版（872校・園）、栃木県版（678校・園）、福島県版（794校・園）、宮城県版（809校・園）、新潟県版（831校・園）、長野県版（766校・園）、愛知県版（2,021校・園）、北海道版（1,988校・園）を公開中。学校名・住所・電話番号検索、宛名コピー、CSV出力、Google Maps連携に対応。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/css/school-database.css">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
 
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a class="active" href="/tools/school-database/">全国学校DB</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/products/">すべての製品を見る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <div class="kicker">Free Web Tool</div>
+        <h1>Ban.Tai 全国学校データベース</h1>
+        <p class="lead">学校封筒印刷・宛名作成・広域連携に使える、全国の学校データベースです。都道府県を選択してご利用ください。</p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        
+        <h2 style="font-size:1.4rem; color:var(--navy,#0c1b33); border-bottom:2px solid var(--gold,#c5a059); padding-bottom:10px; margin-bottom:24px;">都道府県を選択</h2>
+
+        
+        <div class="common-features-notice" style="background:#fff; border:1px solid rgba(7,27,54,0.1); border-radius:12px; padding:20px; margin-bottom:30px;">
+          <h3 style="margin-top:0; font-size:1.1rem; color:var(--navy,#0c1b33); display:flex; align-items:center; gap:8px;">
+            <i class="fas fa-info-circle" style="color:var(--gold,#c5a059);"></i> 共通機能
+          </h3>
+          <p style="margin:0; font-size:0.9rem; color:#4a5568; line-height:1.6;">
+            各都道府県版では、学校名・市区町村・校種・設置区分による検索、宛名コピー、CSV出力、Google Maps連携を利用できます。
+          </p>
+        </div>
+        <div class="prefectures-grid">
+          
+          <!-- ===== 関東地方（東京を先頭） ===== -->
+
+          <!-- 東京都カード -->
           
 <!-- DATABASE_CARDS_START -->
 
@@ -16,10 +101,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,988</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">200</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,988</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国10・公1,630・私348</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">8<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -36,10 +120,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">809</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">39</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他809</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国1・公643・私165</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 青森県カード -->
@@ -52,10 +135,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">551</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">40</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他551</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公449・私98</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 岩手県カード -->
@@ -68,10 +150,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">502</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">33</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他502</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公446・私52</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 秋田県カード -->
@@ -84,10 +165,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">362</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">25</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他362</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公323・私35</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 山形県カード -->
@@ -100,10 +180,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">442</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">35</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他442</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公381・私57</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 福島県カード -->
@@ -116,10 +195,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">794</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">59</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他794</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国1・公677・私116</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -136,10 +214,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">3,493</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">66</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他3,493</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公2,274・私1,219</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 神奈川県カード -->
@@ -152,10 +229,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">2,227</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">58</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他2,227</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国6・公1,502・私719</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 埼玉県カード -->
@@ -168,10 +244,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,929</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">72</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,929</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公1,423・私506</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 千葉県カード -->
@@ -184,10 +259,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,823</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">59</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,823</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公1,366・私452</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">8<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 茨城県カード -->
@@ -200,10 +274,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">872</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">44</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他872</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国3・公766・私103</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 栃木県カード -->
@@ -216,10 +289,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">678</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">25</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他678</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公578・私96</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 群馬県カード -->
@@ -232,10 +304,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">651</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他651</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公576・私71</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -252,10 +323,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">2,021</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">69</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他2,021</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国8・公1,619・私394</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 新潟県カード -->
@@ -268,10 +338,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">831</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">37</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他831</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公772・私59</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 富山県カード -->
@@ -284,10 +353,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">333</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">18</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他333</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公300・私29</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 石川県カード -->
@@ -300,10 +368,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">386</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他386</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公327・私54</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 福井県カード -->
@@ -316,10 +383,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">358</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">20</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他358</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国3・公329・私26</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 山梨県カード -->
@@ -332,10 +398,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">351</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">27</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他351</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公285・私62</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">5<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 長野県カード -->
@@ -348,10 +413,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">766</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">77</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他766</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国6・公632・私128</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 岐阜県カード -->
@@ -364,10 +428,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">735</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他735</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国1・公619・私115</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 静岡県カード -->
@@ -380,10 +443,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,241</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,241</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国7・公1,005・私229</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -400,10 +462,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">2,087</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">72</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他2,087</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国11・公1,589・私487</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 三重県カード -->
@@ -416,10 +477,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">736</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他736</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公654・私78</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 滋賀県カード -->
@@ -432,10 +492,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">498</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">20</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他498</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公460・私34</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 京都府カード -->
@@ -448,10 +507,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">859</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他859</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国6・公631・私222</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 兵庫県カード -->
@@ -464,10 +522,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,743</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">41</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,743</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国7・公1,453・私283</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 奈良県カード -->
@@ -480,10 +537,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">473</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他473</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公395・私73</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 和歌山県カード -->
@@ -496,10 +552,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">467</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">34</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他467</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国3・公418・私46</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -516,10 +571,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,048</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">31</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,048</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国11・公767・私270</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 鳥取県カード -->
@@ -532,10 +586,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">232</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他232</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公205・私23</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 島根県カード -->
@@ -548,10 +601,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">402</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">0</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他402</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国2・公379・私21</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 岡山県カード -->
@@ -564,10 +616,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">772</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">27</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他772</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公696・私72</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 山口県カード -->
@@ -580,10 +631,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">680</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">19</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他680</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公520・私155</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -600,10 +650,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">379</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">17</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他379</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国6・公322・私51</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">5<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 徳島県カード -->
@@ -616,10 +665,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">401</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">29</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他401</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公379・私18</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 愛媛県カード -->
@@ -632,10 +680,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">582</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">23</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他582</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公491・私86</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 高知県カード -->
@@ -648,10 +695,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">430</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">39</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他430</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公383・私43</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
@@ -668,10 +714,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,659</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">60</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他1,659</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国7・公1,181・私471</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 佐賀県カード -->
@@ -684,10 +729,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">340</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">22</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他340</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公289・私47</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 長崎県カード -->
@@ -700,10 +744,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">671</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">21</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他671</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公552・私115</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 熊本県カード -->
@@ -716,10 +759,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">687</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">46</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他687</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公577・私106</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 大分県カード -->
@@ -732,10 +774,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">561</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">25</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他561</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公486・私71</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 宮崎県カード -->
@@ -748,10 +789,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">505</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">28</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他505</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国3・公403・私99</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 鹿児島県カード -->
@@ -764,10 +804,9 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">905</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">48</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他905</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国4・公801・私100</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
 
           <!-- 沖縄県カード -->
@@ -780,16 +819,28 @@
             <div class="pref-meta-grid">
               <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">626</span></div>
               <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">41</span></div>
-              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">他626</span></div>
+              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国2・公572・私52</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">5<span class="meta-unit">種類</span></span></div>
             </div>
-          
           </a>
           </div>
 
           <!-- DATABASE_CARDS_END -->
 
-        </div>
+
+
+          <!-- 他都道府県 カード（順次拡張） -->
+          <div class="pref-card" style="opacity:0.75; background:#fafafa;">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#718096;">順次拡張予定</span>
+            </div>
+            <h2 style="color:#718096;">全国他都道府県</h2>
+            <div class="pref-count" style="color:#a0aec0;">準備中</div>
+            <p style="font-size:0.86rem; color:#718096; line-height:1.5; margin:0 0 14px;">
+              全国都道府県の学校データベースを順次追加予定です。
+            </p>
+            <button disabled class="pref-action-btn" style="background:#cbd5e0; cursor:not-allowed; border:none; width:100%; margin-top:auto;">順次追加予定</button>
+          </div>
 
         </div>
 
