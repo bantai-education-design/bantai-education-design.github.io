@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宮崎県 学校データベース（名簿作成・CSVダウンロード対応） | 先生のための便利帳</title>
+    <meta name="description" content="宮崎県の幼稚園・小学校・中学校・高校・特別支援学校のデータベース。学校長名での宛名作成、CSVダウンロード、Google Maps連携など、教職員の業務を効率化する無料ツールです。">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/school-database.css">
+</head>
+<body class="school-database-page">
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="site-logo">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>先生のための便利帳</span>
+        </a>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="/tools/">ツール一覧</a></li>
+                <li><a href="/templates/">テンプレート</a></li>
+                <li><a href="/about/">このサイトについて</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="db-header">
+        <div class="db-header-inner">
+            <div class="breadcrumbs">
+                <a href="/"><i class="fas fa-home"></i> ホーム</a> &gt; 
+                <a href="/tools/">ツール一覧</a> &gt; 
+                <a href="/tools/school-database/">学校データベース一覧</a> &gt; 
+                <span>宮崎県</span>
+            </div>
+            
+            <h1 class="db-title">宮崎県 学校データベース</h1>
+            <p class="db-description">
+                宮崎県内の学校（幼稚園・小中高・特別支援）を検索し、宛名のコピーやCSVダウンロードが可能です。
+                <br>※データは令和5年度 文部科学省「学校コード一覧」を元に加工しています。
+            </p>
+
+            <div class="external-links">
+                <a href="https://www.pref.miyazaki.lg.jp/" target="_blank" class="boe-link">
+                    <i class="fas fa-external-link-alt"></i> 宮崎県 教育委員会の情報を見る
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ここに検索UI・結果テーブルが入る（共通JSで描画） -->
+    <div id="school-search-app" class="app-container">
+        <!-- JSでロード表示・UI構築 -->
+        <div class="loading-state">
+            <i class="fas fa-spinner fa-spin"></i> データベースを読み込んでいます...
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <!-- 共通フッター -->
+</footer>
+
+<script src="/assets/js/school-database/search-core.js"></script>
+<script src="/assets/js/school-database/search-miyazaki.js"></script>
+</body>
+</html>
