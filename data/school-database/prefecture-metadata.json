@@ -1,0 +1,1749 @@
+[
+  {
+    "prefecture": "愛知県",
+    "slug": "aichi",
+    "total": 2021,
+    "municipality_count": 69,
+    "establishment_counts": {
+      "national": 8,
+      "public": 1619,
+      "private": 394,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "中学校": 435,
+      "高等学校": 218,
+      "幼稚園": 357,
+      "小学校": 965,
+      "特別支援学校": 43,
+      "義務教育学校": 2,
+      "中等教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2025-04-01"
+      }
+    ],
+    "warnings_count": 118,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "秋田県",
+    "slug": "akita",
+    "total": 362,
+    "municipality_count": 25,
+    "establishment_counts": {
+      "national": 4,
+      "public": 323,
+      "private": 35,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 31,
+      "小学校": 163,
+      "中学校": 100,
+      "高等学校": 50,
+      "特別支援学校": 15,
+      "義務教育学校": 3
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "青森県",
+    "slug": "aomori",
+    "total": 551,
+    "municipality_count": 40,
+    "establishment_counts": {
+      "national": 4,
+      "public": 449,
+      "private": 98,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 78,
+      "小学校": 237,
+      "中学校": 151,
+      "高等学校": 63,
+      "特別支援学校": 21,
+      "義務教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "千葉県",
+    "slug": "chiba",
+    "total": 1823,
+    "municipality_count": 59,
+    "establishment_counts": {
+      "national": 5,
+      "public": 1366,
+      "private": 452,
+      "other": 0
+    },
+    "school_type_count": 8,
+    "school_type_counts": {
+      "幼稚園": 408,
+      "小学校": 749,
+      "中学校": 385,
+      "高等学校": 189,
+      "特別支援学校": 46,
+      "中等教育学校": 3,
+      "幼保連携型認定こども園": 39,
+      "義務教育学校": 4
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01 / 2026-04-24"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "愛媛県",
+    "slug": "ehime",
+    "total": 582,
+    "municipality_count": 23,
+    "establishment_counts": {
+      "national": 5,
+      "public": 491,
+      "private": 86,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 100,
+      "小学校": 267,
+      "中学校": 127,
+      "高等学校": 72,
+      "中等教育学校": 5,
+      "特別支援学校": 11
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "福井県",
+    "slug": "fukui",
+    "total": 358,
+    "municipality_count": 20,
+    "establishment_counts": {
+      "national": 3,
+      "public": 329,
+      "private": 26,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "小学校": 183,
+      "中学校": 77,
+      "高等学校": 33,
+      "特別支援学校": 12,
+      "幼稚園": 52,
+      "義務教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "福岡県",
+    "slug": "fukuoka",
+    "total": 1659,
+    "municipality_count": 60,
+    "establishment_counts": {
+      "national": 7,
+      "public": 1181,
+      "private": 471,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 387,
+      "小学校": 697,
+      "中学校": 355,
+      "高等学校": 165,
+      "特別支援学校": 43,
+      "義務教育学校": 10,
+      "中等教育学校": 2
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "福島県",
+    "slug": "fukushima",
+    "total": 794,
+    "municipality_count": 59,
+    "establishment_counts": {
+      "national": 1,
+      "public": 677,
+      "private": 116,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 84,
+      "小学校": 368,
+      "中学校": 204,
+      "義務教育学校": 10,
+      "高等学校": 98,
+      "特別支援学校": 30
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-04-01"
+      }
+    ],
+    "warnings_count": 2,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "岐阜県",
+    "slug": "gifu",
+    "total": 735,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 1,
+      "public": 619,
+      "private": 115,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 113,
+      "小学校": 331,
+      "中学校": 170,
+      "義務教育学校": 11,
+      "高等学校": 87,
+      "特別支援学校": 23
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 735,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "群馬県",
+    "slug": "gunma",
+    "total": 651,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 4,
+      "public": 576,
+      "private": 71,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 90,
+      "小学校": 293,
+      "中学校": 156,
+      "義務教育学校": 5,
+      "高等学校": 77,
+      "中等教育学校": 2,
+      "特別支援学校": 28
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 651,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "広島県",
+    "slug": "hiroshima",
+    "total": 1048,
+    "municipality_count": 31,
+    "establishment_counts": {
+      "national": 11,
+      "public": 767,
+      "private": 270,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "中学校": 248,
+      "小学校": 446,
+      "幼保連携型認定こども園": 109,
+      "幼稚園": 89,
+      "特別支援学校": 21,
+      "高等学校": 135
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-01"
+      }
+    ],
+    "warnings_count": 2,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "北海道",
+    "slug": "hokkaido",
+    "total": 1988,
+    "municipality_count": 200,
+    "establishment_counts": {
+      "national": 10,
+      "public": 1630,
+      "private": 348,
+      "other": 0
+    },
+    "school_type_count": 8,
+    "school_type_counts": {
+      "中学校": 482,
+      "小学校": 861,
+      "高等学校": 270,
+      "幼稚園": 283,
+      "特別支援学校": 74,
+      "義務教育学校": 7,
+      "幼保連携型認定こども園": 9,
+      "中等教育学校": 2
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-01"
+      }
+    ],
+    "warnings_count": 6,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "兵庫県",
+    "slug": "hyogo",
+    "total": 1743,
+    "municipality_count": 41,
+    "establishment_counts": {
+      "national": 7,
+      "public": 1453,
+      "private": 283,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 376,
+      "小学校": 717,
+      "中学校": 373,
+      "義務教育学校": 10,
+      "高等学校": 216,
+      "中等教育学校": 2,
+      "特別支援学校": 49
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "茨城県",
+    "slug": "ibaraki",
+    "total": 872,
+    "municipality_count": 44,
+    "establishment_counts": {
+      "national": 3,
+      "public": 766,
+      "private": 103,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 46,
+      "小学校": 434,
+      "中学校": 218,
+      "義務教育学校": 16,
+      "高等学校": 128,
+      "中等教育学校": 6,
+      "特別支援学校": 24
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2025-04-01 / 2026-07-27"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      }
+    ],
+    "warnings_count": 3,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "石川県",
+    "slug": "ishikawa",
+    "total": 386,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 5,
+      "public": 327,
+      "private": 54,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 37,
+      "小学校": 186,
+      "中学校": 86,
+      "義務教育学校": 6,
+      "高等学校": 58,
+      "特別支援学校": 13
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 386,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "岩手県",
+    "slug": "iwate",
+    "total": 502,
+    "municipality_count": 33,
+    "establishment_counts": {
+      "national": 4,
+      "public": 446,
+      "private": 52,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "中学校": 143,
+      "小学校": 251,
+      "特別支援学校": 16,
+      "幼稚園": 39,
+      "高等学校": 40,
+      "幼保連携型認定こども園": 13
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-01"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "香川県",
+    "slug": "kagawa",
+    "total": 379,
+    "municipality_count": 17,
+    "establishment_counts": {
+      "national": 6,
+      "public": 322,
+      "private": 51,
+      "other": 0
+    },
+    "school_type_count": 5,
+    "school_type_counts": {
+      "幼稚園": 98,
+      "小学校": 155,
+      "中学校": 73,
+      "高等学校": 43,
+      "特別支援学校": 10
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "鹿児島県",
+    "slug": "kagoshima",
+    "total": 905,
+    "municipality_count": 48,
+    "establishment_counts": {
+      "national": 4,
+      "public": 801,
+      "private": 100,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 115,
+      "小学校": 460,
+      "中学校": 203,
+      "義務教育学校": 21,
+      "高等学校": 90,
+      "特別支援学校": 16
+    },
+    "source_dates": [
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "神奈川県",
+    "slug": "kanagawa",
+    "total": 2227,
+    "municipality_count": 58,
+    "establishment_counts": {
+      "national": 6,
+      "public": 1502,
+      "private": 719,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 568,
+      "小学校": 871,
+      "中学校": 468,
+      "高等学校": 231,
+      "特別支援学校": 79,
+      "義務教育学校": 6,
+      "中等教育学校": 4
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-04-01"
+      }
+    ],
+    "warnings_count": 4,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "高知県",
+    "slug": "kochi",
+    "total": 430,
+    "municipality_count": 39,
+    "establishment_counts": {
+      "national": 4,
+      "public": 383,
+      "private": 43,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 32,
+      "小学校": 218,
+      "中学校": 116,
+      "義務教育学校": 4,
+      "高等学校": 43,
+      "特別支援学校": 17
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "熊本県",
+    "slug": "kumamoto",
+    "total": 687,
+    "municipality_count": 46,
+    "establishment_counts": {
+      "national": 4,
+      "public": 577,
+      "private": 106,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "小学校": 325,
+      "中学校": 168,
+      "高等学校": 77,
+      "幼稚園": 88,
+      "特別支援学校": 24,
+      "義務教育学校": 5
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "京都府",
+    "slug": "kyoto",
+    "total": 859,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 6,
+      "public": 631,
+      "private": 222,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 177,
+      "小学校": 351,
+      "中学校": 185,
+      "義務教育学校": 13,
+      "高等学校": 107,
+      "特別支援学校": 26
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 859,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "三重県",
+    "slug": "mie",
+    "total": 736,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 4,
+      "public": 654,
+      "private": 78,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 118,
+      "小学校": 351,
+      "中学校": 164,
+      "義務教育学校": 2,
+      "高等学校": 79,
+      "中等教育学校": 1,
+      "特別支援学校": 21
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 736,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "宮城県",
+    "slug": "miyagi",
+    "total": 809,
+    "municipality_count": 39,
+    "establishment_counts": {
+      "national": 1,
+      "public": 643,
+      "private": 165,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 130,
+      "小学校": 347,
+      "中学校": 195,
+      "高等学校": 100,
+      "中等教育学校": 1,
+      "特別支援学校": 31,
+      "義務教育学校": 5
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01 / 2026-07-13"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      }
+    ],
+    "warnings_count": 2,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "宮崎県",
+    "slug": "miyazaki",
+    "total": 505,
+    "municipality_count": 28,
+    "establishment_counts": {
+      "national": 3,
+      "public": 403,
+      "private": 99,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 83,
+      "小学校": 223,
+      "中学校": 127,
+      "義務教育学校": 5,
+      "高等学校": 50,
+      "中等教育学校": 1,
+      "特別支援学校": 16
+    },
+    "source_dates": [
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "長野県",
+    "slug": "nagano",
+    "total": 766,
+    "municipality_count": 77,
+    "establishment_counts": {
+      "national": 6,
+      "public": 632,
+      "private": 128,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 89,
+      "小学校": 353,
+      "中学校": 190,
+      "高等学校": 109,
+      "中等教育学校": 3,
+      "特別支援学校": 21,
+      "義務教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-07-26"
+      },
+      {
+        "scope": "公",
+        "date": "2026-07-26"
+      }
+    ],
+    "warnings_count": 34,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "長崎県",
+    "slug": "nagasaki",
+    "total": 671,
+    "municipality_count": 21,
+    "establishment_counts": {
+      "national": 4,
+      "public": 552,
+      "private": 115,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 85,
+      "小学校": 304,
+      "中学校": 179,
+      "高等学校": 81,
+      "特別支援学校": 19,
+      "義務教育学校": 3
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "奈良県",
+    "slug": "nara",
+    "total": 473,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 5,
+      "public": 395,
+      "private": 73,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 110,
+      "小学校": 185,
+      "中学校": 104,
+      "義務教育学校": 10,
+      "高等学校": 52,
+      "中等教育学校": 2,
+      "特別支援学校": 10
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 473,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "新潟県",
+    "slug": "niigata",
+    "total": 831,
+    "municipality_count": 37,
+    "establishment_counts": {
+      "national": 0,
+      "public": 772,
+      "private": 59,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 41,
+      "小学校": 414,
+      "中学校": 226,
+      "高等学校": 104,
+      "特別支援学校": 38,
+      "中等教育学校": 7,
+      "義務教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-06-03"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01 / 2026-05-01"
+      }
+    ],
+    "warnings_count": 33,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "大分県",
+    "slug": "oita",
+    "total": 561,
+    "municipality_count": 25,
+    "establishment_counts": {
+      "national": 4,
+      "public": 486,
+      "private": 71,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 113,
+      "小学校": 249,
+      "中学校": 122,
+      "義務教育学校": 3,
+      "高等学校": 55,
+      "特別支援学校": 19
+    },
+    "source_dates": [
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "岡山県",
+    "slug": "okayama",
+    "total": 772,
+    "municipality_count": 27,
+    "establishment_counts": {
+      "national": 4,
+      "public": 696,
+      "private": 72,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 152,
+      "小学校": 350,
+      "中学校": 155,
+      "義務教育学校": 7,
+      "高等学校": 90,
+      "中等教育学校": 2,
+      "特別支援学校": 16
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 1,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "沖縄県",
+    "slug": "okinawa",
+    "total": 626,
+    "municipality_count": 41,
+    "establishment_counts": {
+      "national": 2,
+      "public": 572,
+      "private": 52,
+      "other": 0
+    },
+    "school_type_count": 5,
+    "school_type_counts": {
+      "幼稚園": 118,
+      "小学校": 263,
+      "中学校": 152,
+      "高等学校": 71,
+      "特別支援学校": 22
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "大阪府",
+    "slug": "osaka",
+    "total": 2087,
+    "municipality_count": 72,
+    "establishment_counts": {
+      "national": 11,
+      "public": 1589,
+      "private": 487,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "中学校": 515,
+      "小学校": 964,
+      "幼保連携型認定こども園": 139,
+      "幼稚園": 166,
+      "特別支援学校": 40,
+      "義務教育学校": 18,
+      "高等学校": 245
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-01"
+      }
+    ],
+    "warnings_count": 11,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "佐賀県",
+    "slug": "saga",
+    "total": 340,
+    "municipality_count": 22,
+    "establishment_counts": {
+      "national": 4,
+      "public": 289,
+      "private": 47,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 35,
+      "小学校": 154,
+      "中学校": 89,
+      "義務教育学校": 7,
+      "高等学校": 44,
+      "特別支援学校": 11
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "埼玉県",
+    "slug": "saitama",
+    "total": 1929,
+    "municipality_count": 72,
+    "establishment_counts": {
+      "national": 0,
+      "public": 1423,
+      "private": 506,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 444,
+      "小学校": 787,
+      "中学校": 442,
+      "高等学校": 191,
+      "特別支援学校": 58,
+      "中等教育学校": 2,
+      "義務教育学校": 5
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-07-08"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "滋賀県",
+    "slug": "shiga",
+    "total": 498,
+    "municipality_count": 20,
+    "establishment_counts": {
+      "national": 4,
+      "public": 460,
+      "private": 34,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 101,
+      "小学校": 217,
+      "中学校": 102,
+      "高等学校": 58,
+      "特別支援学校": 17,
+      "中等教育学校": 1,
+      "義務教育学校": 2
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "島根県",
+    "slug": "shimane",
+    "total": 402,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 2,
+      "public": 379,
+      "private": 21,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 68,
+      "小学校": 180,
+      "中学校": 92,
+      "義務教育学校": 3,
+      "高等学校": 47,
+      "特別支援学校": 12
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 402,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "静岡県",
+    "slug": "shizuoka",
+    "total": 1241,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 7,
+      "public": 1005,
+      "private": 229,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 297,
+      "小学校": 473,
+      "中学校": 284,
+      "義務教育学校": 3,
+      "高等学校": 141,
+      "特別支援学校": 43
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 1241,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "栃木県",
+    "slug": "tochigi",
+    "total": 678,
+    "municipality_count": 25,
+    "establishment_counts": {
+      "national": 4,
+      "public": 578,
+      "private": 96,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 74,
+      "小学校": 345,
+      "中学校": 161,
+      "高等学校": 76,
+      "特別支援学校": 17,
+      "義務教育学校": 4,
+      "中等教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "国",
+        "date": "2023-01-30"
+      },
+      {
+        "scope": "私",
+        "date": "2023-01-30"
+      },
+      {
+        "scope": "公",
+        "date": "2023-01-30"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "徳島県",
+    "slug": "tokushima",
+    "total": 401,
+    "municipality_count": 29,
+    "establishment_counts": {
+      "national": 4,
+      "public": 379,
+      "private": 18,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 80,
+      "小学校": 181,
+      "中学校": 89,
+      "高等学校": 38,
+      "中等教育学校": 1,
+      "特別支援学校": 12
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "東京都",
+    "slug": "tokyo",
+    "total": 3493,
+    "municipality_count": 66,
+    "establishment_counts": {
+      "national": 0,
+      "public": 2274,
+      "private": 1219,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 881,
+      "小学校": 1309,
+      "中学校": 787,
+      "義務教育学校": 11,
+      "高等学校": 431,
+      "中等教育学校": 6,
+      "特別支援学校": 68
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2024-12-01 / 2025-04-01 / 2026-04-01"
+      }
+    ],
+    "warnings_count": 28,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "鳥取県",
+    "slug": "tottori",
+    "total": 232,
+    "municipality_count": 0,
+    "establishment_counts": {
+      "national": 4,
+      "public": 205,
+      "private": 23,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 16,
+      "小学校": 111,
+      "中学校": 57,
+      "義務教育学校": 6,
+      "高等学校": 32,
+      "特別支援学校": 10
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 232,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "富山県",
+    "slug": "toyama",
+    "total": 333,
+    "municipality_count": 18,
+    "establishment_counts": {
+      "national": 4,
+      "public": 300,
+      "private": 29,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 24,
+      "小学校": 166,
+      "中学校": 73,
+      "義務教育学校": 6,
+      "高等学校": 49,
+      "特別支援学校": 15
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "和歌山県",
+    "slug": "wakayama",
+    "total": 467,
+    "municipality_count": 34,
+    "establishment_counts": {
+      "national": 3,
+      "public": 418,
+      "private": 46,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 57,
+      "小学校": 231,
+      "中学校": 120,
+      "義務教育学校": 1,
+      "高等学校": 47,
+      "特別支援学校": 11
+    },
+    "source_dates": [
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "山形県",
+    "slug": "yamagata",
+    "total": 442,
+    "municipality_count": 35,
+    "establishment_counts": {
+      "national": 4,
+      "public": 381,
+      "private": 57,
+      "other": 0
+    },
+    "school_type_count": 6,
+    "school_type_counts": {
+      "幼稚園": 51,
+      "小学校": 219,
+      "中学校": 92,
+      "高等学校": 58,
+      "特別支援学校": 19,
+      "義務教育学校": 3
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "山口県",
+    "slug": "yamaguchi",
+    "total": 680,
+    "municipality_count": 19,
+    "establishment_counts": {
+      "national": 5,
+      "public": 520,
+      "private": 155,
+      "other": 0
+    },
+    "school_type_count": 7,
+    "school_type_counts": {
+      "幼稚園": 146,
+      "小学校": 282,
+      "中学校": 161,
+      "高等学校": 75,
+      "中等教育学校": 1,
+      "特別支援学校": 14,
+      "義務教育学校": 1
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      }
+    ],
+    "warnings_count": 1,
+    "missing_count": 0
+  },
+  {
+    "prefecture": "山梨県",
+    "slug": "yamanashi",
+    "total": 351,
+    "municipality_count": 27,
+    "establishment_counts": {
+      "national": 4,
+      "public": 285,
+      "private": 62,
+      "other": 0
+    },
+    "school_type_count": 5,
+    "school_type_counts": {
+      "幼稚園": 43,
+      "小学校": 170,
+      "中学校": 85,
+      "高等学校": 41,
+      "特別支援学校": 12
+    },
+    "source_dates": [
+      {
+        "scope": "私",
+        "date": "2025-04-01 / 2025-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      }
+    ],
+    "warnings_count": 0,
+    "missing_count": 0
+  }
+]
