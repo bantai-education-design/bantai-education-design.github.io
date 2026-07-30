@@ -18,12 +18,12 @@ def test_process_prefecture_data():
         {"name": "School D", "municipality": "City C", "school_type": "特別支援学校"},
     ]
     
-    meta = gm.process_prefecture_data(fake_data, "test_slug", "Test Prefecture")
+    meta, warnings = gm.process_prefecture_data(fake_data, "test_slug", "Test Prefecture")
     
     assert meta["total"] == 6, f"Expected 6, got {meta['total']}"
     assert meta["municipality_count"] == 3, f"Expected 3, got {meta['municipality_count']}"
     assert sum(meta["establishment_counts"].values()) == 5, f"Expected 5, got {sum(meta['establishment_counts'].values())}"
-    assert len(meta["warnings"]) > 0, "Should have warnings"
+    assert len(warnings) > 0, "Should have warnings"
     print("Test passed successfully.")
 
 if __name__ == "__main__":
