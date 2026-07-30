@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""山形県学校データベース変換スクリプト
+"""島根県学校データベース変換スクリプト
 
 原本: 文部科学省「学校コード一覧（全国公立・国立・私立学校等）」
-      sc_20260529-mxt_chousa01-000011635_3.xlsx（2026-05-29版）
+      sc_20260529-mxt_chousa01-000011635_1.xlsx（2026-05-29版）
 
 山梨県版での略称問題、茨城・栃木県版での build_official_name による
 正式名称の構築ルールを踏襲する。
@@ -67,8 +67,8 @@ def normalize_address(value: Any) -> str:
         return ""
     text = re.sub(r"[ \t　]+", "", text)
     text = re.sub(r"[−―ー]", "-", text)
-    if text and not text.startswith("山形県"):
-        text = "山形県" + text
+    if text and not text.startswith("島根県"):
+        text = "島根県" + text
     return text
 
 
@@ -79,43 +79,22 @@ def slug(value: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 山形県 市区町村一覧（行政表示順）
+# 島根県 市区町村一覧（行政表示順）
 # ---------------------------------------------------------------------------
 
-YAMAGATA_CITIES = [
-    "山形市", "米沢市", "鶴岡市", "酒田市", "新庄市", "寒河江市",
-    "上山市", "村山市", "長井市", "天童市", "東根市", "尾花沢市", "南陽市",
-]
+SHIMANE_CITIES = ['松江市', '浜田市', '出雲市', '益田市', '大田市', '安来市', '江津市', '雲南市']
 
-YAMAGATA_GUN_TOWNS = [
-    # 東村山郡
-    "東村山郡山辺町", "東村山郡中山町",
-    # 西村山郡
-    "西村山郡河北町", "西村山郡西川町", "西村山郡朝日町", "西村山郡大江町",
-    # 北村山郡
-    "北村山郡大石田町",
-    # 最上郡
-    "最上郡金山町", "最上郡最上町", "最上郡舟形町", "最上郡真室川町",
-    "最上郡大蔵村", "最上郡鮭川村", "最上郡戸沢村",
-    # 東置賜郡
-    "東置賜郡高畠町", "東置賜郡川西町",
-    # 西置賜郡
-    "西置賜郡小国町", "西置賜郡白鷹町", "西置賜郡飯豊町",
-    # 東田川郡
-    "東田川郡三川町", "東田川郡庄内町",
-    # 飽海郡
-    "飽海郡遊佐町",
-]
+SHIMANE_GUN_TOWNS = ['仁多郡奥出雲町', '飯石郡飯南町', '邑智郡川本町', '邑智郡美郷町', '邑智郡邑南町', '鹿足郡津和野町', '鹿足郡吉賀町', '隠岐郡海士町', '隠岐郡西ノ島町', '隠岐郡知夫村', '隠岐郡隠岐の島町']
 
-MUNICIPALITY_ORDER = YAMAGATA_CITIES + YAMAGATA_GUN_TOWNS
+MUNICIPALITY_ORDER = SHIMANE_CITIES + SHIMANE_GUN_TOWNS
 
 # 郡名なし → 正式名称へのマッピング（分詞が重なる村名・町名の解決）
 _BARE_TO_CANONICAL: dict[str, str] = {}
-for full in YAMAGATA_GUN_TOWNS:
+for full in SHIMANE_GUN_TOWNS:
     m = re.match(r"^.+郡(.+)$", full)
     if m:
         bare = m.group(1)
-        # 同じ bare 名が複数の郡に存在しないことを前提（山形県は問題なし）
+        # 同じ bare 名が複数の郡に存在しないことを前提（島根県は問題なし）
         _BARE_TO_CANONICAL[bare] = full
 
 _MUNI_CANDIDATES = sorted(MUNICIPALITY_ORDER, key=len, reverse=True)
@@ -124,8 +103,8 @@ _BARE_CANDIDATES = sorted(_BARE_TO_CANONICAL, key=len, reverse=True)
 
 def infer_municipality(address: str) -> str:
     text = address
-    if text.startswith("山形県"):
-        text = text[len("山形県"):]
+    if text.startswith("島根県"):
+        text = text[len("島根県"):]
     # First pass: try full canonical names (including 郡+町村) in descending length order
     for cand in _MUNI_CANDIDATES:
         if text.startswith(cand):
@@ -136,7 +115,7 @@ def infer_municipality(address: str) -> str:
         if text.startswith(bare):
             return _BARE_TO_CANONICAL[bare]
     # Third pass: for 市 names try direct match (already covered above, but just in case)
-    for cand in YAMAGATA_CITIES:
+    for cand in SHIMANE_CITIES:
         if text.startswith(cand):
             return cand
     return ""
@@ -164,8 +143,8 @@ COMPLETE_NAME_SUFFIXES = (
     "中等部", "小学部", "こども園", "キンダーガーテン", "分校", "分教室",
 )
 
-_YAMAGATA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
-_YAMAGATA_MUNI_NAMES.update(YAMAGATA_CITIES)
+_SHIMANE_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
+_SHIMANE_MUNI_NAMES.update(SHIMANE_CITIES)
 
 
 def build_official_name(*, establishment: str, raw_name: str,
@@ -175,7 +154,7 @@ def build_official_name(*, establishment: str, raw_name: str,
     重要なケース:
     1. 既に校種サフィックスで終わる名称はそのまま（重複防止）
     2. MEXT名称が「○○市立△△高等学校」のように設置者を含む場合は
-       「山形県立」を重ねて付けない（市立商業高等学校等）
+       「島根県立」を重ねて付けない（市立商業高等学校等）
     3. 分校名（「〜山形校」「〜金山校」等）は「立」を含む完全な固有名称
        → 校種サフィックスを追加しない
     """
@@ -194,8 +173,8 @@ def build_official_name(*, establishment: str, raw_name: str,
 
     # 公立
     # ----- 既に設置者表現（○立）を含む場合はそのまま返す -----
-    # 例: 「山形市立商業高等学校」「山形県立致道館中学校」
-    # 「山形県立村山特別支援学校山形校」（分校も含む）
+    # 例: 「山形市立商業高等学校」「島根県立致道館中学校」
+    # 「島根県立村山特別支援学校山形校」（分校も含む）
     if re.search(r'[都道府県市区町村]立', raw_name):
         # 分校名「〜○○校」で且つ校種サフィックスなし → 校種付けず分校名をそのまま
         if re.search(r'校$', raw_name) and not already_complete:
@@ -206,14 +185,14 @@ def build_official_name(*, establishment: str, raw_name: str,
     is_pref_level = school_type in ("高等学校", "中等教育学校", "特別支援学校")
 
     if is_pref_level:
-        core = f"山形県立{raw_name}"
+        core = f"島根県立{raw_name}"
         return core if already_complete else core + school_type
 
     # 市町村立（幼稚園・小・中・義務教育）
     bare_muni = re.sub(r"^.+郡", "", municipality)  # 郡名なし
 
     # raw_name がすでに自治体名を含む場合
-    for mname in _YAMAGATA_MUNI_NAMES:
+    for mname in _SHIMANE_MUNI_NAMES:
         if raw_name.startswith(mname + "立") or raw_name.startswith(mname):
             return raw_name if already_complete else raw_name + school_type
 
@@ -261,7 +240,7 @@ def make_record(
     stable_key = "|".join((establishment, school_type, municipality, name, ",".join(course)))
     return {
         "id": f"shimane-{slug(stable_key)}",
-        "prefecture": "山形県",
+        "prefecture": "島根県",
         "name": name,
         "name_kana": normalize_name(name_kana),
         "postal_code": normalize_postal_code(postal_code),
@@ -285,29 +264,34 @@ def make_record(
 # ---------------------------------------------------------------------------
 
 def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
-    # Find latest MEXT file in source_root or tochigi dir
-    candidates = [
-        source_root / "sc_20260529-mxt_chousa01-000011635_3.xlsx",
-        Path("data-source/tochigi") / "sc_20260529-mxt_chousa01-000011635_3.xlsx",
-    ]
-    excel_path = None
-    for c in candidates:
-        if c.exists():
-            excel_path = c
-            break
-
-    if excel_path is None:
+    import pandas as pd
+    files = ['sc_20260529-mxt_chousa01-000011635_1.xlsx', 'sc_20260529-mxt_chousa01-000011635_3.xlsx', 'sc_20260529-mxt_chousa01-000011635_5.xlsx']
+    df_list = []
+    for f in files:
+        file_p = Path('data-source/tochigi') / f
+        if file_p.exists():
+            print(f'Reading: {file_p}')
+            df = pd.read_excel(file_p, header=1, dtype=str)
+            df.columns = [c.replace("\n", "").strip() for c in df.columns]
+            df_list.append(df)
+    
+    if not df_list:
         warn("source_load", "MEXT Excel not found")
         return []
+        
+    df = pd.concat(df_list, ignore_index=True)
 
-    print(f"Reading: {excel_path}")
-    df = pd.read_excel(excel_path, header=1, dtype=str)
-            df.columns = [c.replace("\n", "").strip() for c in df.columns]
+    yama = df[df["都道府県番号"] == "32(島根)"].copy()
 
-    yama = df[df["都道府県番号"].fillna("").str.startswith("32(")].copy()
 
     # 廃止校を除外
-    active = yama[yama["属性情報廃止年月日"].isna() | (yama["属性情報廃止年月日"] == "nan")]
+    
+    col_name = "属性情報廃止年月日" if "属性情報廃止年月日" in yama.columns else "廃止年月日" if "廃止年月日" in yama.columns else None
+    if col_name:
+        active = yama[yama[col_name].isna() | (yama[col_name] == "nan")]
+    else:
+        active = yama
+    
 
     records: list[dict[str, Any]] = []
     skipped = 0

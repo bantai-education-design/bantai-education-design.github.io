@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""鳥取県学校データベース変換スクリプト
+"""富山県学校データベース変換スクリプト
 
 原本: 文部科学省「学校コード一覧（全国公立・国立・私立学校等）」
       sc_20260529-mxt_chousa01-000011635_1.xlsx（2026-05-29版）
@@ -67,8 +67,8 @@ def normalize_address(value: Any) -> str:
         return ""
     text = re.sub(r"[ \t　]+", "", text)
     text = re.sub(r"[−―ー]", "-", text)
-    if text and not text.startswith("鳥取県"):
-        text = "鳥取県" + text
+    if text and not text.startswith("富山県"):
+        text = "富山県" + text
     return text
 
 
@@ -79,32 +79,47 @@ def slug(value: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 鳥取県 市区町村一覧（行政表示順）
+# 富山県 市区町村一覧（行政表示順）
 # ---------------------------------------------------------------------------
 
-TOTTORI_CITIES = ['鳥取市', '米子市', '倉吉市', '境港市']
+FUKUI_CITIES = [
+    "あわら市", "勝山市", "坂井市", "大野市", "小浜市", "敦賀市", "富山市", "越前市", "鯖江市"
+]
 
-TOTTORI_GUN_TOWNS = ['岩美郡岩美町', '八頭郡若桜町', '八頭郡智頭町', '八頭郡八頭町', '東伯郡三朝町', '東伯郡湯梨浜町', '東伯郡琴浦町', '東伯郡北栄町', '西伯郡日吉津村', '西伯郡大山町', '西伯郡南部町', '西伯郡伯耆町', '日野郡日南町', '日野郡日野町', '日野郡江府町']
+FUKUI_GUN_TOWNS = [
+    "三方上中郡若狭町", "三方郡美浜町", "三方郡美浜町河原市", "丹生郡越前町", "今立郡池田町", "南条郡南越前町", "吉田郡永平寺町", "吉田郡永平寺町市", "吉田郡永平寺町東古市", "大飯郡おおい町", "大飯郡高浜町"
+]
 
-MUNICIPALITY_ORDER = TOTTORI_CITIES + TOTTORI_GUN_TOWNS
+MUNICIPALITY_ORDER = FUKUI_CITIES + FUKUI_GUN_TOWNS
 
 # 郡名なし → 正式名称へのマッピング（分詞が重なる村名・町名の解決）
 _BARE_TO_CANONICAL: dict[str, str] = {}
-for full in TOTTORI_GUN_TOWNS:
+for full in FUKUI_GUN_TOWNS:
     m = re.match(r"^.+郡(.+)$", full)
     if m:
         bare = m.group(1)
-        # 同じ bare 名が複数の郡に存在しないことを前提（鳥取県は問題なし）
+        # 同じ bare 名が複数の郡に存在しないことを前提（富山県は問題なし）
         _BARE_TO_CANONICAL[bare] = full
 
 _MUNI_CANDIDATES = sorted(MUNICIPALITY_ORDER, key=len, reverse=True)
 _BARE_CANDIDATES = sorted(_BARE_TO_CANONICAL, key=len, reverse=True)
 
 
+import re
 def infer_municipality(address: str) -> str:
     text = address
-    if text.startswith("鳥取県"):
-        text = text[len("鳥取県"):]
+    for pref_name in ["富山県", "徳島県", "愛媛県", "高知県", "富山県", "石川県", "滋賀県", "岐阜県", "三重県", "兵庫県", "岡山県", "山口県", "広島県", "鳥取県", "島根県"]:
+        if text.startswith(pref_name):
+            text = text[len(pref_name):]
+    m = re.match(r'^([^郡]+市|[^郡]+区|.+?郡.+?[町村]|.+?[町村])', text)
+    if m:
+        return m.group(1)
+    return ""
+
+def infer_municipality_dummy(address: str) -> str:
+    text = address
+    if text.startswith("富山県"):
+        text = text[len("富山県"):]
     # First pass: try full canonical names (including 郡+町村) in descending length order
     for cand in _MUNI_CANDIDATES:
         if text.startswith(cand):
@@ -115,7 +130,7 @@ def infer_municipality(address: str) -> str:
         if text.startswith(bare):
             return _BARE_TO_CANONICAL[bare]
     # Third pass: for 市 names try direct match (already covered above, but just in case)
-    for cand in TOTTORI_CITIES:
+    for cand in FUKUI_CITIES:
         if text.startswith(cand):
             return cand
     return ""
@@ -143,8 +158,8 @@ COMPLETE_NAME_SUFFIXES = (
     "中等部", "小学部", "こども園", "キンダーガーテン", "分校", "分教室",
 )
 
-_TOTTORI_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
-_TOTTORI_MUNI_NAMES.update(TOTTORI_CITIES)
+_FUKUI_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
+_FUKUI_MUNI_NAMES.update(FUKUI_CITIES)
 
 
 def build_official_name(*, establishment: str, raw_name: str,
@@ -154,7 +169,7 @@ def build_official_name(*, establishment: str, raw_name: str,
     重要なケース:
     1. 既に校種サフィックスで終わる名称はそのまま（重複防止）
     2. MEXT名称が「○○市立△△高等学校」のように設置者を含む場合は
-       「鳥取県立」を重ねて付けない（市立商業高等学校等）
+       「富山県立」を重ねて付けない（市立商業高等学校等）
     3. 分校名（「〜山形校」「〜金山校」等）は「立」を含む完全な固有名称
        → 校種サフィックスを追加しない
     """
@@ -173,8 +188,8 @@ def build_official_name(*, establishment: str, raw_name: str,
 
     # 公立
     # ----- 既に設置者表現（○立）を含む場合はそのまま返す -----
-    # 例: 「山形市立商業高等学校」「鳥取県立致道館中学校」
-    # 「鳥取県立村山特別支援学校山形校」（分校も含む）
+    # 例: 「山形市立商業高等学校」「富山県立致道館中学校」
+    # 「富山県立村山特別支援学校山形校」（分校も含む）
     if re.search(r'[都道府県市区町村]立', raw_name):
         # 分校名「〜○○校」で且つ校種サフィックスなし → 校種付けず分校名をそのまま
         if re.search(r'校$', raw_name) and not already_complete:
@@ -185,14 +200,14 @@ def build_official_name(*, establishment: str, raw_name: str,
     is_pref_level = school_type in ("高等学校", "中等教育学校", "特別支援学校")
 
     if is_pref_level:
-        core = f"鳥取県立{raw_name}"
+        core = f"富山県立{raw_name}"
         return core if already_complete else core + school_type
 
     # 市町村立（幼稚園・小・中・義務教育）
     bare_muni = re.sub(r"^.+郡", "", municipality)  # 郡名なし
 
     # raw_name がすでに自治体名を含む場合
-    for mname in _TOTTORI_MUNI_NAMES:
+    for mname in _FUKUI_MUNI_NAMES:
         if raw_name.startswith(mname + "立") or raw_name.startswith(mname):
             return raw_name if already_complete else raw_name + school_type
 
@@ -239,8 +254,8 @@ def make_record(
     municipality = infer_municipality(address)
     stable_key = "|".join((establishment, school_type, municipality, name, ",".join(course)))
     return {
-        "id": f"tottori-{slug(stable_key)}",
-        "prefecture": "鳥取県",
+        "id": f"toyama-{slug(stable_key)}",
+        "prefecture": "富山県",
         "name": name,
         "name_kana": normalize_name(name_kana),
         "postal_code": normalize_postal_code(postal_code),
@@ -281,7 +296,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
         
     df = pd.concat(df_list, ignore_index=True)
 
-    yama = df[df["都道府県番号"] == "31(鳥取)"].copy()
+    yama = df[df["都道府県番号"] == "16(富山)"].copy()
 
 
     # 廃止校を除外
@@ -381,9 +396,9 @@ def sort_key(record: dict[str, Any]):
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-root", type=Path, default=Path("data-source/tochigi"))
-    parser.add_argument("--output", type=Path, default=Path("data/school-database/tottori.json"))
+    parser.add_argument("--output", type=Path, default=Path("data/school-database/toyama.json"))
     parser.add_argument("--warnings-output", type=Path,
-                        default=Path("tools/school-database/tottori_conversion_warnings.json"))
+                        default=Path("tools/school-database/toyama_conversion_warnings.json"))
     args = parser.parse_args()
 
     all_records = load_mext_data(args.source_root)
