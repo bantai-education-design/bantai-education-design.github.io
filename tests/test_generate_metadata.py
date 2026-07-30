@@ -70,6 +70,35 @@ def test_html_structure():
     has_comma = any("," in n for n in comma_numbers)
     assert has_comma, "Expected commas in numbers but found none!"
     
+    
+    # 6. Check that old phrases are completely removed from the card body area
+    # Note: the cards area is between <!-- DATABASE_CARDS_START --> and <!-- DATABASE_CARDS_END -->
+    m = re.search(r'<!-- DATABASE_CARDS_START -->(.*?)<!-- DATABASE_CARDS_END -->', html, re.DOTALL)
+    assert m is not None, "Could not find DATABASE_CARDS_START and END"
+    cards_html = m.group(1)
+    
+    old_phrases = [
+        "国公私立の幼稚園",
+        "市部・郡部",
+        "市町村・校種",
+        "宛名コピー",
+        "CSV",
+        "Google Maps連携"
+    ]
+    for phrase in old_phrases:
+        assert phrase not in cards_html, f"Old phrase '{phrase}' found in cards_html!"
+        
+    # 7. Check that new phrases appear exactly 47 times in the cards area
+    new_phrases = [
+        "収録校・園",
+        "対象地域",
+        "設置区分",
+        "校種"
+    ]
+    for phrase in new_phrases:
+        count = cards_html.count(f'<span class="meta-label">{phrase}</span>')
+        assert count == 47, f"Expected 47 instances of '{phrase}', got {count}"
+
     print("HTML Structure tests passed successfully.")
 
 if __name__ == "__main__":
