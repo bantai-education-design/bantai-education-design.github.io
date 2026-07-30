@@ -1,0 +1,1175 @@
+{
+  "aichi": {
+    "slug": "aichi",
+    "total_schools": 2021,
+    "municipalities_count": 69,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 2021
+    },
+    "school_type_counts": {
+      "幼稚園": 357,
+      "認定こども園": 0,
+      "小学校": 965,
+      "中学校": 435,
+      "義務教育学校": 2,
+      "高等学校": 218,
+      "中等教育学校": 1,
+      "特別支援学校": 43
+    },
+    "last_updated": "2026-07-30"
+  },
+  "akita": {
+    "slug": "akita",
+    "total_schools": 362,
+    "municipalities_count": 25,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 362
+    },
+    "school_type_counts": {
+      "幼稚園": 31,
+      "認定こども園": 0,
+      "小学校": 163,
+      "中学校": 100,
+      "義務教育学校": 3,
+      "高等学校": 50,
+      "中等教育学校": 0,
+      "特別支援学校": 15
+    },
+    "last_updated": "2026-07-30"
+  },
+  "aomori": {
+    "slug": "aomori",
+    "total_schools": 551,
+    "municipalities_count": 40,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 551
+    },
+    "school_type_counts": {
+      "幼稚園": 78,
+      "認定こども園": 0,
+      "小学校": 237,
+      "中学校": 151,
+      "義務教育学校": 1,
+      "高等学校": 63,
+      "中等教育学校": 0,
+      "特別支援学校": 21
+    },
+    "last_updated": "2026-07-30"
+  },
+  "chiba": {
+    "slug": "chiba",
+    "total_schools": 1823,
+    "municipalities_count": 59,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1823
+    },
+    "school_type_counts": {
+      "幼稚園": 408,
+      "認定こども園": 39,
+      "小学校": 749,
+      "中学校": 385,
+      "義務教育学校": 4,
+      "高等学校": 189,
+      "中等教育学校": 3,
+      "特別支援学校": 46
+    },
+    "last_updated": "2026-07-30"
+  },
+  "ehime": {
+    "slug": "ehime",
+    "total_schools": 582,
+    "municipalities_count": 23,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 582
+    },
+    "school_type_counts": {
+      "幼稚園": 100,
+      "認定こども園": 0,
+      "小学校": 267,
+      "中学校": 127,
+      "義務教育学校": 0,
+      "高等学校": 72,
+      "中等教育学校": 5,
+      "特別支援学校": 11
+    },
+    "last_updated": "2026-07-30"
+  },
+  "fukui": {
+    "slug": "fukui",
+    "total_schools": 358,
+    "municipalities_count": 20,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 358
+    },
+    "school_type_counts": {
+      "幼稚園": 52,
+      "認定こども園": 0,
+      "小学校": 183,
+      "中学校": 77,
+      "義務教育学校": 1,
+      "高等学校": 33,
+      "中等教育学校": 0,
+      "特別支援学校": 12
+    },
+    "last_updated": "2026-07-30"
+  },
+  "fukuoka": {
+    "slug": "fukuoka",
+    "total_schools": 1659,
+    "municipalities_count": 60,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1659
+    },
+    "school_type_counts": {
+      "幼稚園": 387,
+      "認定こども園": 0,
+      "小学校": 697,
+      "中学校": 355,
+      "義務教育学校": 10,
+      "高等学校": 165,
+      "中等教育学校": 2,
+      "特別支援学校": 43
+    },
+    "last_updated": "2026-07-30"
+  },
+  "fukushima": {
+    "slug": "fukushima",
+    "total_schools": 794,
+    "municipalities_count": 59,
+    "primary_data_date": "2026-04-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 794
+    },
+    "school_type_counts": {
+      "幼稚園": 84,
+      "認定こども園": 0,
+      "小学校": 368,
+      "中学校": 204,
+      "義務教育学校": 10,
+      "高等学校": 98,
+      "中等教育学校": 0,
+      "特別支援学校": 30
+    },
+    "last_updated": "2026-07-30"
+  },
+  "gifu": {
+    "slug": "gifu",
+    "total_schools": 735,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 735
+    },
+    "school_type_counts": {
+      "幼稚園": 113,
+      "認定こども園": 0,
+      "小学校": 331,
+      "中学校": 170,
+      "義務教育学校": 11,
+      "高等学校": 87,
+      "中等教育学校": 0,
+      "特別支援学校": 23
+    },
+    "last_updated": "2026-07-30"
+  },
+  "gunma": {
+    "slug": "gunma",
+    "total_schools": 651,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 651
+    },
+    "school_type_counts": {
+      "幼稚園": 90,
+      "認定こども園": 0,
+      "小学校": 293,
+      "中学校": 156,
+      "義務教育学校": 5,
+      "高等学校": 77,
+      "中等教育学校": 2,
+      "特別支援学校": 28
+    },
+    "last_updated": "2026-07-30"
+  },
+  "hiroshima": {
+    "slug": "hiroshima",
+    "total_schools": 1048,
+    "municipalities_count": 31,
+    "primary_data_date": "2026-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1048
+    },
+    "school_type_counts": {
+      "幼稚園": 89,
+      "認定こども園": 109,
+      "小学校": 446,
+      "中学校": 248,
+      "義務教育学校": 0,
+      "高等学校": 135,
+      "中等教育学校": 0,
+      "特別支援学校": 21
+    },
+    "last_updated": "2026-07-30"
+  },
+  "hokkaido": {
+    "slug": "hokkaido",
+    "total_schools": 1988,
+    "municipalities_count": 200,
+    "primary_data_date": "2026-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1988
+    },
+    "school_type_counts": {
+      "幼稚園": 283,
+      "認定こども園": 9,
+      "小学校": 861,
+      "中学校": 482,
+      "義務教育学校": 7,
+      "高等学校": 270,
+      "中等教育学校": 2,
+      "特別支援学校": 74
+    },
+    "last_updated": "2026-07-30"
+  },
+  "hyogo": {
+    "slug": "hyogo",
+    "total_schools": 1743,
+    "municipalities_count": 41,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1743
+    },
+    "school_type_counts": {
+      "幼稚園": 376,
+      "認定こども園": 0,
+      "小学校": 717,
+      "中学校": 373,
+      "義務教育学校": 10,
+      "高等学校": 216,
+      "中等教育学校": 2,
+      "特別支援学校": 49
+    },
+    "last_updated": "2026-07-30"
+  },
+  "ibaraki": {
+    "slug": "ibaraki",
+    "total_schools": 872,
+    "municipalities_count": 44,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 872
+    },
+    "school_type_counts": {
+      "幼稚園": 46,
+      "認定こども園": 0,
+      "小学校": 434,
+      "中学校": 218,
+      "義務教育学校": 16,
+      "高等学校": 128,
+      "中等教育学校": 6,
+      "特別支援学校": 24
+    },
+    "last_updated": "2026-07-30"
+  },
+  "ishikawa": {
+    "slug": "ishikawa",
+    "total_schools": 386,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 386
+    },
+    "school_type_counts": {
+      "幼稚園": 37,
+      "認定こども園": 0,
+      "小学校": 186,
+      "中学校": 86,
+      "義務教育学校": 6,
+      "高等学校": 58,
+      "中等教育学校": 0,
+      "特別支援学校": 13
+    },
+    "last_updated": "2026-07-30"
+  },
+  "iwate": {
+    "slug": "iwate",
+    "total_schools": 502,
+    "municipalities_count": 33,
+    "primary_data_date": "2026-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 502
+    },
+    "school_type_counts": {
+      "幼稚園": 39,
+      "認定こども園": 13,
+      "小学校": 251,
+      "中学校": 143,
+      "義務教育学校": 0,
+      "高等学校": 40,
+      "中等教育学校": 0,
+      "特別支援学校": 16
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kagawa": {
+    "slug": "kagawa",
+    "total_schools": 379,
+    "municipalities_count": 17,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 379
+    },
+    "school_type_counts": {
+      "幼稚園": 98,
+      "認定こども園": 0,
+      "小学校": 155,
+      "中学校": 73,
+      "義務教育学校": 0,
+      "高等学校": 43,
+      "中等教育学校": 0,
+      "特別支援学校": 10
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kagoshima": {
+    "slug": "kagoshima",
+    "total_schools": 905,
+    "municipalities_count": 48,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 905
+    },
+    "school_type_counts": {
+      "幼稚園": 115,
+      "認定こども園": 0,
+      "小学校": 460,
+      "中学校": 203,
+      "義務教育学校": 21,
+      "高等学校": 90,
+      "中等教育学校": 0,
+      "特別支援学校": 16
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kanagawa": {
+    "slug": "kanagawa",
+    "total_schools": 2227,
+    "municipalities_count": 58,
+    "primary_data_date": "2026-04-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 2227
+    },
+    "school_type_counts": {
+      "幼稚園": 568,
+      "認定こども園": 0,
+      "小学校": 871,
+      "中学校": 468,
+      "義務教育学校": 6,
+      "高等学校": 231,
+      "中等教育学校": 4,
+      "特別支援学校": 79
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kochi": {
+    "slug": "kochi",
+    "total_schools": 430,
+    "municipalities_count": 39,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 430
+    },
+    "school_type_counts": {
+      "幼稚園": 32,
+      "認定こども園": 0,
+      "小学校": 218,
+      "中学校": 116,
+      "義務教育学校": 4,
+      "高等学校": 43,
+      "中等教育学校": 0,
+      "特別支援学校": 17
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kumamoto": {
+    "slug": "kumamoto",
+    "total_schools": 687,
+    "municipalities_count": 46,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 687
+    },
+    "school_type_counts": {
+      "幼稚園": 88,
+      "認定こども園": 0,
+      "小学校": 325,
+      "中学校": 168,
+      "義務教育学校": 5,
+      "高等学校": 77,
+      "中等教育学校": 0,
+      "特別支援学校": 24
+    },
+    "last_updated": "2026-07-30"
+  },
+  "kyoto": {
+    "slug": "kyoto",
+    "total_schools": 859,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 859
+    },
+    "school_type_counts": {
+      "幼稚園": 177,
+      "認定こども園": 0,
+      "小学校": 351,
+      "中学校": 185,
+      "義務教育学校": 13,
+      "高等学校": 107,
+      "中等教育学校": 0,
+      "特別支援学校": 26
+    },
+    "last_updated": "2026-07-30"
+  },
+  "mie": {
+    "slug": "mie",
+    "total_schools": 736,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 736
+    },
+    "school_type_counts": {
+      "幼稚園": 118,
+      "認定こども園": 0,
+      "小学校": 351,
+      "中学校": 164,
+      "義務教育学校": 2,
+      "高等学校": 79,
+      "中等教育学校": 1,
+      "特別支援学校": 21
+    },
+    "last_updated": "2026-07-30"
+  },
+  "miyagi": {
+    "slug": "miyagi",
+    "total_schools": 809,
+    "municipalities_count": 39,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 809
+    },
+    "school_type_counts": {
+      "幼稚園": 130,
+      "認定こども園": 0,
+      "小学校": 347,
+      "中学校": 195,
+      "義務教育学校": 5,
+      "高等学校": 100,
+      "中等教育学校": 1,
+      "特別支援学校": 31
+    },
+    "last_updated": "2026-07-30"
+  },
+  "miyazaki": {
+    "slug": "miyazaki",
+    "total_schools": 505,
+    "municipalities_count": 28,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 505
+    },
+    "school_type_counts": {
+      "幼稚園": 83,
+      "認定こども園": 0,
+      "小学校": 223,
+      "中学校": 127,
+      "義務教育学校": 5,
+      "高等学校": 50,
+      "中等教育学校": 1,
+      "特別支援学校": 16
+    },
+    "last_updated": "2026-07-30"
+  },
+  "nagano": {
+    "slug": "nagano",
+    "total_schools": 766,
+    "municipalities_count": 77,
+    "primary_data_date": "2026-07-26",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 766
+    },
+    "school_type_counts": {
+      "幼稚園": 89,
+      "認定こども園": 0,
+      "小学校": 353,
+      "中学校": 190,
+      "義務教育学校": 1,
+      "高等学校": 109,
+      "中等教育学校": 3,
+      "特別支援学校": 21
+    },
+    "last_updated": "2026-07-30"
+  },
+  "nagasaki": {
+    "slug": "nagasaki",
+    "total_schools": 671,
+    "municipalities_count": 21,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 671
+    },
+    "school_type_counts": {
+      "幼稚園": 85,
+      "認定こども園": 0,
+      "小学校": 304,
+      "中学校": 179,
+      "義務教育学校": 3,
+      "高等学校": 81,
+      "中等教育学校": 0,
+      "特別支援学校": 19
+    },
+    "last_updated": "2026-07-30"
+  },
+  "nara": {
+    "slug": "nara",
+    "total_schools": 473,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 473
+    },
+    "school_type_counts": {
+      "幼稚園": 110,
+      "認定こども園": 0,
+      "小学校": 185,
+      "中学校": 104,
+      "義務教育学校": 10,
+      "高等学校": 52,
+      "中等教育学校": 2,
+      "特別支援学校": 10
+    },
+    "last_updated": "2026-07-30"
+  },
+  "niigata": {
+    "slug": "niigata",
+    "total_schools": 831,
+    "municipalities_count": 37,
+    "primary_data_date": "2026-04-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 831
+    },
+    "school_type_counts": {
+      "幼稚園": 41,
+      "認定こども園": 0,
+      "小学校": 414,
+      "中学校": 226,
+      "義務教育学校": 1,
+      "高等学校": 104,
+      "中等教育学校": 7,
+      "特別支援学校": 38
+    },
+    "last_updated": "2026-07-30"
+  },
+  "oita": {
+    "slug": "oita",
+    "total_schools": 561,
+    "municipalities_count": 25,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 561
+    },
+    "school_type_counts": {
+      "幼稚園": 113,
+      "認定こども園": 0,
+      "小学校": 249,
+      "中学校": 122,
+      "義務教育学校": 3,
+      "高等学校": 55,
+      "中等教育学校": 0,
+      "特別支援学校": 19
+    },
+    "last_updated": "2026-07-30"
+  },
+  "okayama": {
+    "slug": "okayama",
+    "total_schools": 772,
+    "municipalities_count": 27,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 772
+    },
+    "school_type_counts": {
+      "幼稚園": 152,
+      "認定こども園": 0,
+      "小学校": 350,
+      "中学校": 155,
+      "義務教育学校": 7,
+      "高等学校": 90,
+      "中等教育学校": 2,
+      "特別支援学校": 16
+    },
+    "last_updated": "2026-07-30"
+  },
+  "okinawa": {
+    "slug": "okinawa",
+    "total_schools": 626,
+    "municipalities_count": 41,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 626
+    },
+    "school_type_counts": {
+      "幼稚園": 118,
+      "認定こども園": 0,
+      "小学校": 263,
+      "中学校": 152,
+      "義務教育学校": 0,
+      "高等学校": 71,
+      "中等教育学校": 0,
+      "特別支援学校": 22
+    },
+    "last_updated": "2026-07-30"
+  },
+  "osaka": {
+    "slug": "osaka",
+    "total_schools": 2087,
+    "municipalities_count": 72,
+    "primary_data_date": "2026-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 2087
+    },
+    "school_type_counts": {
+      "幼稚園": 166,
+      "認定こども園": 139,
+      "小学校": 964,
+      "中学校": 515,
+      "義務教育学校": 18,
+      "高等学校": 245,
+      "中等教育学校": 0,
+      "特別支援学校": 40
+    },
+    "last_updated": "2026-07-30"
+  },
+  "saga": {
+    "slug": "saga",
+    "total_schools": 340,
+    "municipalities_count": 22,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 340
+    },
+    "school_type_counts": {
+      "幼稚園": 35,
+      "認定こども園": 0,
+      "小学校": 154,
+      "中学校": 89,
+      "義務教育学校": 7,
+      "高等学校": 44,
+      "中等教育学校": 0,
+      "特別支援学校": 11
+    },
+    "last_updated": "2026-07-30"
+  },
+  "saitama": {
+    "slug": "saitama",
+    "total_schools": 1932,
+    "municipalities_count": 72,
+    "primary_data_date": "2026-07-08",
+    "establishment_counts": {
+      "公立": 1423,
+      "私立": 509,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0
+    },
+    "school_type_counts": {
+      "幼稚園": 444,
+      "認定こども園": 0,
+      "小学校": 788,
+      "中学校": 443,
+      "義務教育学校": 5,
+      "高等学校": 192,
+      "中等教育学校": 2,
+      "特別支援学校": 58
+    },
+    "last_updated": "2026-07-30"
+  },
+  "shiga": {
+    "slug": "shiga",
+    "total_schools": 498,
+    "municipalities_count": 20,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 498
+    },
+    "school_type_counts": {
+      "幼稚園": 101,
+      "認定こども園": 0,
+      "小学校": 217,
+      "中学校": 102,
+      "義務教育学校": 2,
+      "高等学校": 58,
+      "中等教育学校": 1,
+      "特別支援学校": 17
+    },
+    "last_updated": "2026-07-30"
+  },
+  "shimane": {
+    "slug": "shimane",
+    "total_schools": 402,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 402
+    },
+    "school_type_counts": {
+      "幼稚園": 68,
+      "認定こども園": 0,
+      "小学校": 180,
+      "中学校": 92,
+      "義務教育学校": 3,
+      "高等学校": 47,
+      "中等教育学校": 0,
+      "特別支援学校": 12
+    },
+    "last_updated": "2026-07-30"
+  },
+  "shizuoka": {
+    "slug": "shizuoka",
+    "total_schools": 1241,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 1241
+    },
+    "school_type_counts": {
+      "幼稚園": 297,
+      "認定こども園": 0,
+      "小学校": 473,
+      "中学校": 284,
+      "義務教育学校": 3,
+      "高等学校": 141,
+      "中等教育学校": 0,
+      "特別支援学校": 43
+    },
+    "last_updated": "2026-07-30"
+  },
+  "tochigi": {
+    "slug": "tochigi",
+    "total_schools": 678,
+    "municipalities_count": 25,
+    "primary_data_date": "2023-01-30",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 678
+    },
+    "school_type_counts": {
+      "幼稚園": 74,
+      "認定こども園": 0,
+      "小学校": 345,
+      "中学校": 161,
+      "義務教育学校": 4,
+      "高等学校": 76,
+      "中等教育学校": 1,
+      "特別支援学校": 17
+    },
+    "last_updated": "2026-07-30"
+  },
+  "tokushima": {
+    "slug": "tokushima",
+    "total_schools": 401,
+    "municipalities_count": 29,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 401
+    },
+    "school_type_counts": {
+      "幼稚園": 80,
+      "認定こども園": 0,
+      "小学校": 181,
+      "中学校": 89,
+      "義務教育学校": 0,
+      "高等学校": 38,
+      "中等教育学校": 1,
+      "特別支援学校": 12
+    },
+    "last_updated": "2026-07-30"
+  },
+  "tokyo": {
+    "slug": "tokyo",
+    "total_schools": 3509,
+    "municipalities_count": 66,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 2290,
+      "私立": 1219,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0
+    },
+    "school_type_counts": {
+      "幼稚園": 881,
+      "認定こども園": 0,
+      "小学校": 1309,
+      "中学校": 787,
+      "義務教育学校": 11,
+      "高等学校": 431,
+      "中等教育学校": 6,
+      "特別支援学校": 84
+    },
+    "last_updated": "2026-07-30"
+  },
+  "tottori": {
+    "slug": "tottori",
+    "total_schools": 232,
+    "municipalities_count": 0,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 232
+    },
+    "school_type_counts": {
+      "幼稚園": 16,
+      "認定こども園": 0,
+      "小学校": 111,
+      "中学校": 57,
+      "義務教育学校": 6,
+      "高等学校": 32,
+      "中等教育学校": 0,
+      "特別支援学校": 10
+    },
+    "last_updated": "2026-07-30"
+  },
+  "toyama": {
+    "slug": "toyama",
+    "total_schools": 333,
+    "municipalities_count": 18,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 333
+    },
+    "school_type_counts": {
+      "幼稚園": 24,
+      "認定こども園": 0,
+      "小学校": 166,
+      "中学校": 73,
+      "義務教育学校": 6,
+      "高等学校": 49,
+      "中等教育学校": 0,
+      "特別支援学校": 15
+    },
+    "last_updated": "2026-07-30"
+  },
+  "wakayama": {
+    "slug": "wakayama",
+    "total_schools": 467,
+    "municipalities_count": 34,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 467
+    },
+    "school_type_counts": {
+      "幼稚園": 57,
+      "認定こども園": 0,
+      "小学校": 231,
+      "中学校": 120,
+      "義務教育学校": 1,
+      "高等学校": 47,
+      "中等教育学校": 0,
+      "特別支援学校": 11
+    },
+    "last_updated": "2026-07-30"
+  },
+  "yamagata": {
+    "slug": "yamagata",
+    "total_schools": 442,
+    "municipalities_count": 35,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 442
+    },
+    "school_type_counts": {
+      "幼稚園": 51,
+      "認定こども園": 0,
+      "小学校": 219,
+      "中学校": 92,
+      "義務教育学校": 3,
+      "高等学校": 58,
+      "中等教育学校": 0,
+      "特別支援学校": 19
+    },
+    "last_updated": "2026-07-30"
+  },
+  "yamaguchi": {
+    "slug": "yamaguchi",
+    "total_schools": 680,
+    "municipalities_count": 19,
+    "primary_data_date": "2026-05-29",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 680
+    },
+    "school_type_counts": {
+      "幼稚園": 146,
+      "認定こども園": 0,
+      "小学校": 282,
+      "中学校": 161,
+      "義務教育学校": 1,
+      "高等学校": 75,
+      "中等教育学校": 1,
+      "特別支援学校": 14
+    },
+    "last_updated": "2026-07-30"
+  },
+  "yamanashi": {
+    "slug": "yamanashi",
+    "total_schools": 351,
+    "municipalities_count": 27,
+    "primary_data_date": "2025-05-01",
+    "establishment_counts": {
+      "公立": 0,
+      "私立": 0,
+      "国立": 0,
+      "組合立": 0,
+      "株式会社立": 0,
+      "不明": 351
+    },
+    "school_type_counts": {
+      "幼稚園": 43,
+      "認定こども園": 0,
+      "小学校": 170,
+      "中学校": 85,
+      "義務教育学校": 0,
+      "高等学校": 41,
+      "中等教育学校": 0,
+      "特別支援学校": 12
+    },
+    "last_updated": "2026-07-30"
+  }
+}
