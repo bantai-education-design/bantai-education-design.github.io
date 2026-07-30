@@ -36,10 +36,21 @@ def test_html_structure():
     regions = re.findall(r'<h3 class="region-header[^"]*">(.*?)</h3>', html)
     assert len(regions) == 8, f"Expected 8 regions, got {len(regions)}"
     
+    expected_regions = [
+        "関東地方", "北海道地方", "東北地方", "中部地方", 
+        "近畿地方", "中国地方", "四国地方", "九州・沖縄地方"
+    ]
+    assert regions == expected_regions, f"Region order mismatch. Expected {expected_regions}, got {regions}"
+    assert regions[0] == "関東地方", "最初の地方見出しが関東地方ではありません"
+    assert regions[1] == "北海道地方", "2番目の地方見出しが北海道地方ではありません"
+    assert regions[2] == "東北地方", "3番目の地方見出しが東北地方ではありません"
+    
     # 2. 47 prefectures total
     cards = re.findall(r'<a class="[^"]*pref-card[^"]*".*?<h2>(.*?)</h2>', html, re.DOTALL)
     assert len(cards) == 47, f"Expected 47 cards, got {len(cards)}"
-    assert len(set(cards)) == 47, "Expected 47 unique prefectures"
+    assert len(set(cards)) == 47, "全47都道府県が重複なく1回ずつ存在していません"
+    
+    assert cards[0] == "東京都", f"最初の都道府県カードが東京都ではありません。得られたのは {cards[0]}"
     
     # 3. Check specific leading prefectures per region
     blocks = html.split('<h3 class="region-header')
@@ -50,6 +61,8 @@ def test_html_structure():
         
         if region_name == "関東地方":
             assert first_pref == "東京都", f"Expected 東京都 to lead 関東地方, got {first_pref}"
+        elif region_name == "東北地方":
+            assert first_pref == "宮城県", f"東北地方の最初のカードが宮城県ではありません。得られたのは {first_pref}"
         elif region_name == "中部地方":
             assert first_pref == "愛知県", f"Expected 愛知県 to lead 中部地方, got {first_pref}"
         elif region_name == "近畿地方":
