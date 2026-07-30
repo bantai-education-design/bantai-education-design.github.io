@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 鳥取県行政順（市部 -> 郡部）
   const MUNICIPALITY_ORDER = [
-    '鳥取市', '米沢市', '鶴岡市', '酒田市', '新庄市', '寒河江市',
+    '山形市', '米沢市', '鶴岡市', '酒田市', '新庄市', '寒河江市',
     '上山市', '村山市', '長井市', '天童市', '東根市', '尾花沢市', '南陽市',
     '東村山郡山辺町', '東村山郡中山町',
     '西村山郡河北町', '西村山郡西川町', '西村山郡朝日町', '西村山郡大江町',
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       performSearch();
     })
     .catch(error => {
-      console.error('Error fetching Yamagata school data:', error);
+      console.error('Error fetching Fukui school data:', error);
       resultsContainer.innerHTML = '<p style="color:red; text-align:center; padding: 20px;">データの読み込みに失敗しました。時間をおいて再度お試しください。</p>';
     });
 

@@ -1,4 +1,4 @@
-// 島根県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-shimane.js)
+// 富山県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-toyama.js)
 // フィールド名は千葉県版・神奈川県版・山梨県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,19 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
 
-  // 島根県行政順（市部 -> 郡部）
+  // 富山県行政順（市部 -> 郡部）
   const MUNICIPALITY_ORDER = [
-    '山形市', '米沢市', '鶴岡市', '酒田市', '新庄市', '寒河江市',
-    '上山市', '村山市', '長井市', '天童市', '東根市', '尾花沢市', '南陽市',
-    '東村山郡山辺町', '東村山郡中山町',
-    '西村山郡河北町', '西村山郡西川町', '西村山郡朝日町', '西村山郡大江町',
-    '北村山郡大石田町',
-    '最上郡金山町', '最上郡最上町', '最上郡舟形町', '最上郡真室川町',
-    '最上郡大蔵村', '最上郡鮭川村', '最上郡戸沢村',
-    '東置賜郡高畠町', '東置賜郡川西町',
-    '西置賜郡小国町', '西置賜郡白鷹町', '西置賜郡飯豊町',
-    '東田川郡三川町', '東田川郡庄内町',
-    '飽海郡遊佐町'
+    '下新川郡入善町', '下新川郡朝日町', '中新川郡上市町', '中新川郡立山町', '中新川郡舟橋村', '南砺市', '富山市', '富山市中市', '富山市布市', '射水市', '小矢部市', '氷見市', '滑川市', '砺波市', '高岡市', '魚津市', '黒部市', '黒部市三日市'
   ];
 
   const SCHOOL_TYPE_ORDER = [
@@ -39,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '国立', '公立', '私立'
   ];
 
-  // 1. 島根県データの読み込み
-  fetch('/data/school-database/shimane.json')
+  // 1. 富山県データの読み込み
+  fetch('/data/school-database/toyama.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -60,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. 市町村セレクトボックスの初期化
   function initCitySelect(data) {
     const availableCities = new Set(
-      data.map(item => item.municipality).filter(c => c && c !== '島根県')
+      data.map(item => item.municipality).filter(c => c && c !== '富山県')
     );
     MUNICIPALITY_ORDER.forEach(city => {
       if (availableCities.has(city)) {
@@ -249,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.className = 'school-card';
 
       const copyText = formatAddress(school, selectedHonorific);
-      const schoolId = `school-shimane-${index}`;
+      const schoolId = `school-toyama-${index}`;
       const estBadgeClass = school.establishment === '私立' ? 'school-badge-est-private' : 'school-badge-est-public';
       const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(school.name + ' ' + school.address)}`;
       const courseText = Array.isArray(school.course) && school.course.length > 0 ? school.course.join('・') : '';
@@ -317,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (websiteBtn) {
         websiteBtn.addEventListener('click', () => {
           trackEvent('school_website_open', {
-            prefecture: 'shimane',
+            prefecture: 'toyama',
             school_type: school.school_type,
             establishment_type: school.establishment,
             municipality: school.municipality
@@ -445,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       downloadFilteredCSV(currentFilteredResults);
       trackEvent('school_csv', {
-        'file_name': 'shimane_schools_address_filtered.csv',
+        'file_name': 'toyama_schools_address_filtered.csv',
         'results_count': currentFilteredResults.length
       });
     });
@@ -462,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     data.forEach(item => {
       const row = [
-        item.prefecture || '島根県',
+        item.prefecture || '富山県',
         item.municipality || '',
         item.establishment || '',
         item.school_type || '',
@@ -484,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', `shimane_schools_address_filtered_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `toyama_schools_address_filtered_${new Date().toISOString().slice(0, 10)}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
