@@ -495,7 +495,7 @@ def parse_public_koukou() -> None:
             phone = row.get("電話番号", "")
             full_addr = normalize_address(addr)
             muni = municipality_from_address(full_addr)
-            prefix_for_name = "広島市" if current_est == "市立" else muni
+            prefix_for_name = muni if current_est == "市立" else "広島県"
             official = build_official_name(raw_name, "高等学校", "公立", prefix_for_name)
             add_record(
                 name=official,
