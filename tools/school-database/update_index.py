@@ -92,9 +92,9 @@ with open(meta_path, "r", encoding="utf-8") as f:
 meta_map = {m['prefecture']: m for m in metadata}
 
 regions = [
+    {"name": "関東地方", "class": "region-kanto", "prefectures": ["東京都", "神奈川県", "埼玉県", "千葉県", "茨城県", "栃木県", "群馬県"]},
     {"name": "北海道地方", "class": "region-hokkaido", "prefectures": ["北海道"]},
     {"name": "東北地方", "class": "region-tohoku", "prefectures": ["宮城県", "青森県", "岩手県", "秋田県", "山形県", "福島県"]},
-    {"name": "関東地方", "class": "region-kanto", "prefectures": ["東京都", "神奈川県", "埼玉県", "千葉県", "茨城県", "栃木県", "群馬県"]},
     {"name": "中部地方", "class": "region-chubu", "prefectures": ["愛知県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県", "岐阜県", "静岡県"]},
     {"name": "近畿地方", "class": "region-kinki", "prefectures": ["大阪府", "三重県", "滋賀県", "京都府", "兵庫県", "奈良県", "和歌山県"]},
     {"name": "中国地方", "class": "region-chugoku", "prefectures": ["広島県", "鳥取県", "島根県", "岡山県", "山口県"]},
