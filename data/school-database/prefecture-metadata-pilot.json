@@ -2,11 +2,11 @@
   {
     "prefecture": "東京都",
     "slug": "tokyo",
-    "total": 3509,
+    "total": 3493,
     "municipality_count": 66,
     "establishment_counts": {
       "national": 0,
-      "public": 2290,
+      "public": 2274,
       "private": 1219,
       "other": 0
     },
@@ -18,7 +18,7 @@
       "義務教育学校": 11,
       "高等学校": 431,
       "中等教育学校": 6,
-      "特別支援学校": 84
+      "特別支援学校": 68
     },
     "schema": {
       "name_key": "school_name",
@@ -34,26 +34,26 @@
         "date": "2024-12-01 / 2025-04-01 / 2026-04-01"
       }
     ],
-    "warnings_count": 31,
+    "warnings_count": 15,
     "missing_count": 0
   },
   {
     "prefecture": "埼玉県",
     "slug": "saitama",
-    "total": 1932,
+    "total": 1929,
     "municipality_count": 72,
     "establishment_counts": {
       "national": 0,
       "public": 1423,
-      "private": 509,
+      "private": 506,
       "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
       "幼稚園": 444,
-      "小学校": 788,
-      "中学校": 443,
-      "高等学校": 192,
+      "小学校": 787,
+      "中学校": 442,
+      "高等学校": 191,
       "特別支援学校": 58,
       "中等教育学校": 2,
       "義務教育学校": 5
@@ -72,7 +72,7 @@
         "date": "2026-07-08"
       }
     ],
-    "warnings_count": 5,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
