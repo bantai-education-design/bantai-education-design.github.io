@@ -106,7 +106,7 @@ cards_html = ""
 
 for region in regions:
     cards_html += f'\n          <h3 class="region-header {region["class"]}">{region["name"]}</h3>\n'
-    cards_html += '          <div class="pref-grid">\n'
+    cards_html += '          <div class="prefectures-grid">\n'
     
     for pref in region["prefectures"]:
         m = meta_map.get(pref)
