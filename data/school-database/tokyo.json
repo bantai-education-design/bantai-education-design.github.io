@@ -40852,25 +40852,6 @@
   {
     "school_type": "特別支援学校",
     "establishment_type": "公立",
-    "municipality": "東京都",
-    "school_name": "東京都立町田の丘学園",
-    "school_name_kana": "とうきょうとりつまちだのおかがくえん",
-    "postal_code": "195-0063",
-    "address": "東京都東京都町田市野津田町2003",
-    "phone": "042-737-0570",
-    "addressee_default": "東京都立町田の丘学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/machida-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
     "municipality": "板橋区",
     "school_name": "東京都立高島特別支援学校",
     "school_name_kana": "とうきょうとりつたかしまとくべつしえんがっこう",
@@ -41211,44 +41192,6 @@
   {
     "school_type": "特別支援学校",
     "establishment_type": "公立",
-    "municipality": "あきる野市",
-    "school_name": "東京都立あきる野学園",
-    "school_name_kana": "とうきょうとりつあきるのがくえん",
-    "postal_code": "197-0832",
-    "address": "東京都あきる野市上代継123-1",
-    "phone": "042-558-0222",
-    "addressee_default": "東京都立あきる野学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/akiruno-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "杉並区",
-    "school_name": "東京都立永福学園",
-    "school_name_kana": "とうきょうとりつえいふくがくえん",
-    "postal_code": "168-0064",
-    "address": "東京都杉並区永福1-7-28",
-    "phone": "03-3323-1380",
-    "addressee_default": "東京都立永福学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/eifuku-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
     "municipality": "大田区",
     "school_name": "東京都立田園調布特別支援学校",
     "school_name_kana": "とうきょうとりつでんえんちょうふとくべつしえんがっこう",
@@ -41269,44 +41212,6 @@
   {
     "school_type": "特別支援学校",
     "establishment_type": "公立",
-    "municipality": "多摩市",
-    "school_name": "東京都立多摩桜の丘学園",
-    "school_name_kana": "とうきょうとりつたまさくらのおかがくえん",
-    "postal_code": "206-0022",
-    "address": "東京都多摩市聖ヶ丘1-17-1",
-    "phone": "042-374-8111",
-    "addressee_default": "東京都立多摩桜の丘学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tama-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "青梅市",
-    "school_name": "東京都立青峰学園",
-    "school_name_kana": "とうきょうとりつせいほうがくえん",
-    "postal_code": "198-0014",
-    "address": "東京都青梅市大門3-12",
-    "phone": "0428-32-3811",
-    "addressee_default": "東京都立青峰学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/seiho-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
     "municipality": "八王子市",
     "school_name": "東京都立南大沢学園",
     "school_name_kana": "とうきょうとりつみなみおおさわがくえん",
@@ -41322,25 +41227,6 @@
       "高校連携"
     ],
     "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/minamioosawa-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "世田谷区",
-    "school_name": "東京都立久我山青光学園",
-    "school_name_kana": "とうきょうとりつくがやませいこうがくえん",
-    "postal_code": "157-0061",
-    "address": "東京都世田谷区北烏山4-37-1",
-    "phone": "03-3300-6235",
-    "addressee_default": "東京都立久我山青光学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kugayama-sh"
   },
   {
     "school_type": "特別支援学校",
@@ -41386,44 +41272,6 @@
     "school_type": "特別支援学校",
     "establishment_type": "公立",
     "municipality": "府中市",
-    "school_name": "東京都立府中けやきの森学園",
-    "school_name_kana": "とうきょうとりつふちゅうけやきのもりがくえん",
-    "postal_code": "183-0003",
-    "address": "東京都府中市朝日町3-14-1",
-    "phone": "042-367-2511",
-    "addressee_default": "東京都立府中けやきの森学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/fuchu-keyaki-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "板橋区",
-    "school_name": "東京都立志村学園",
-    "school_name_kana": "とうきょうとりつしむらがくえん",
-    "postal_code": "174-0045",
-    "address": "東京都板橋区西台1-41-10",
-    "phone": "03-3931-2323",
-    "addressee_default": "東京都立志村学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shimuragakuen-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "府中市",
     "school_name": "東京都立武蔵台学園",
     "school_name_kana": "とうきょうとりつむさしだいがくえん",
     "postal_code": "183-0042",
@@ -41458,44 +41306,6 @@
     ],
     "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/aoyama-sh",
     "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "江戸川区",
-    "school_name": "東京都立鹿本学園",
-    "school_name_kana": "とうきょうとりつしかもとがくえん",
-    "postal_code": "133-0044",
-    "address": "東京都江戸川区本一色2-24-11",
-    "phone": "03-3653-7355",
-    "addressee_default": "東京都立鹿本学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/shikamotogakuen-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "葛飾区",
-    "school_name": "東京都立水元小合学園",
-    "school_name_kana": "とうきょうとりつみずもとこあいがくえん",
-    "postal_code": "125-0032",
-    "address": "東京都葛飾区水元1-24-1",
-    "phone": "03-5699-0141",
-    "addressee_default": "東京都立水元小合学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/mizumotokoai-sh"
   },
   {
     "school_type": "特別支援学校",
@@ -41540,25 +41350,6 @@
   {
     "school_type": "特別支援学校",
     "establishment_type": "公立",
-    "municipality": "足立区",
-    "school_name": "東京都立花畑学園",
-    "school_name_kana": "とうきょうとりつはなはたがくえん",
-    "postal_code": "121-0062",
-    "address": "東京都足立区南花畑5-24-49",
-    "phone": "03-3883-7200",
-    "addressee_default": "東京都立花畑学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/hanahata-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
     "municipality": "八王子市",
     "school_name": "東京都立八王子西特別支援学校",
     "school_name_kana": "とうきょうとりつはちおうじにしとくべつしえんがっこう",
@@ -41599,25 +41390,6 @@
   {
     "school_type": "特別支援学校",
     "establishment_type": "公立",
-    "municipality": "立川市",
-    "school_name": "東京都立立川学園",
-    "school_name_kana": "とうきょうとりつたちかわがくえん",
-    "postal_code": "190-0003",
-    "address": "東京都立川市栄町1-15-7",
-    "phone": "042-523-1358",
-    "addressee_default": "東京都立立川学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/tachikawa-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
     "municipality": "八王子市",
     "school_name": "東京都立八王子南特別支援学校",
     "school_name_kana": "とうきょうとりつはちおうじみなみとくべつしえんがっこう",
@@ -41653,85 +41425,6 @@
       "高校連携"
     ],
     "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/musashidai-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "世田谷区",
-    "school_name": "東京都立光明学園",
-    "school_name_kana": "とうきょうとりつこうめいがくえん",
-    "postal_code": "156-0043",
-    "address": "東京都世田谷区松原6-38-27",
-    "phone": "03-3323-8421",
-    "addressee_default": "東京都立光明学園 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/komei-sh"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "小平市",
-    "school_name": "東京都立小平特別支援学校",
-    "school_name_kana": "とうきょうとりつこだいらとくべつしえんがっこう",
-    "postal_code": "187-0035",
-    "address": "東京都小平市小川西町2-33-1",
-    "phone": "042-342-1671",
-    "addressee_default": "東京都立小平特別支援学校 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kodaira-sh",
-    "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "北区",
-    "school_name": "東京都立北特別支援学校",
-    "school_name_kana": "とうきょうとりつきたとくべつしえんがっこう",
-    "postal_code": "114-0033",
-    "address": "東京都北区十条台1-1-1",
-    "phone": "03-3906-2321",
-    "addressee_default": "東京都立北特別支援学校 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/kita-sh",
-    "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
-  },
-  {
-    "school_type": "特別支援学校",
-    "establishment_type": "公立",
-    "municipality": "江東区",
-    "school_name": "東京都立墨東特別支援学校",
-    "school_name_kana": "とうきょうとりつぼくとうとくべつしえんがっこう",
-    "postal_code": "135-0003",
-    "address": "東京都江東区猿江2-16-18",
-    "phone": "03-3634-8431",
-    "addressee_default": "東京都立墨東特別支援学校 御中",
-    "source": "東京都教育委員会「令和7年度 公立学校統計調査報告書【東京都公立学校一覧】」",
-    "data_date": "2025-05-01",
-    "address_date": "2025-05-01",
-    "tags": [
-      "宛名印刷",
-      "高校連携"
-    ],
-    "website": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/bokuto-sh",
-    "source_url": "https://www.kyoiku.metro.tokyo.lg.jp/school/special_needs_school/search/name"
   },
   {
     "school_type": "特別支援学校",
