@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ban.Tai 全国学校データベース | 都道府県選択</title>
+  <meta name="description" content="学校封筒印刷・宛名作成に使える、全国の学校データベースのポータルページです。東京都版（3,509校・園）、埼玉県版（1,929校・園）、千葉県版（1,823校・園）、神奈川県版（2,227校・園）、山梨県版（351校・園）、茨城県版（872校・園）、栃木県版（678校・園）、福島県版（794校・園）、宮城県版（809校・園）、新潟県版（831校・園）、長野県版（766校・園）、愛知県版（2,021校・園）、北海道版（1,988校・園）を公開中。学校名・住所・電話番号検索、宛名コピー、CSV出力、Google Maps連携に対応。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/css/school-database.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/#school-work-core">学校業務支援</a>
+        <a href="/#music-tools-core">五線紙・音楽教材</a>
+        <a class="active" href="/tools/school-database/">全国学校DB</a>
+        <a href="/#products">その他の製品</a>
+        <a href="/#free-tools">無料ツール</a>
+        <a href="/contact/">サポート</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a class="mini" href="/products/">すべての製品を見る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <div class="kicker">Free Web Tool</div>
+        <h1>Ban.Tai 全国学校データベース</h1>
+        <p class="lead">学校封筒印刷・宛名作成・広域連携に使える、全国の学校データベースです。都道府県を選択してご利用ください。</p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        
+        <h2 style="font-size:1.4rem; color:var(--navy,#0c1b33); border-bottom:2px solid var(--gold,#c5a059); padding-bottom:10px; margin-bottom:24px;">都道府県を選択</h2>
+
+        <div class="prefectures-grid">
+          
+          <!-- ===== 関東地方（東京を先頭） ===== -->
+
+          <!-- 東京都カード -->
+          <a class="pref-card active-card" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge">公開中</span>
+              <span style="font-size:0.8rem; color:#718096;">公式データ準拠</span>
+            </div>
+            <h2>東京都</h2>
+            <div class="pref-count">収録数: 3,509 校・園</div>
+            <ul class="pref-features">
+              <li>公立・私立の小・中・高・特別支援・幼稚園</li>
+              <li>区市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 埼玉県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/saitama/" aria-label="埼玉県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版更新</span>
+            </div>
+            <h2>埼玉県</h2>
+            <div class="pref-count">収録数: 1,929 校・園</div>
+            <ul class="pref-features">
+              <li>公立・私立の小・中・高・特別支援・幼稚園</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 千葉県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/chiba/" aria-label="千葉県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7〜8年度版</span>
+            </div>
+            <h2>千葉県</h2>
+            <div class="pref-count">収録数: 1,823 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・認定こども園・小中高・特別支援</li>
+              <li>市町村（千葉市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 神奈川県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kanagawa/" aria-label="神奈川県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>神奈川県</h2>
+            <div class="pref-count">収録数: 2,227 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村（横浜・川崎・相模原市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 茨城県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/ibaraki/" aria-label="茨城県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>茨城県</h2>
+            <div class="pref-count">収録数: 872 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・義務教育・中等教育・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 栃木県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/tochigi/" aria-label="栃木県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>栃木県</h2>
+            <div class="pref-count">収録数: 678 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・義務教育・中等教育・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 群馬県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/gunma/" aria-label="群馬県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>群馬県</h2>
+            <div class="pref-count">収録数: 651 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 北海道地方 ===== -->
+
+          <!-- 北海道カード -->
+          <a class="pref-card active-card" href="/tools/school-database/hokkaido/" aria-label="北海道学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7〜8年度版</span>
+            </div>
+            <h2>北海道</h2>
+            <div class="pref-count">収録数: 1,988 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・認定こども園・小中高・特別支援</li>
+              <li>市町村（札幌市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 東北地方（仙台＝宮城を先頭） ===== -->
+
+          <!-- 宮城県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/miyagi/" aria-label="宮城県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>宮城県</h2>
+            <div class="pref-count">収録数: 809 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・中等教育・特別支援</li>
+              <li>市町村（仙台市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 岩手県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/iwate/" aria-label="岩手県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>岩手県</h2>
+            <div class="pref-count">収録数: 502 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 福島県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/fukushima/" aria-label="福島県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7〜8年度版</span>
+            </div>
+            <h2>福島県</h2>
+            <div class="pref-count">収録数: 794 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村（広域振興局区分順）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 青森県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/aomori/" aria-label="青森県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>青森県</h2>
+            <div class="pref-count">収録数: 551 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 秋田県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/akita/" aria-label="秋田県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>秋田県</h2>
+            <div class="pref-count">収録数: 362 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 山形県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/yamagata/" aria-label="山形県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>山形県</h2>
+            <div class="pref-count">収録数: 442 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・義務教育・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 中部地方（名古屋＝愛知を先頭、以降は北から） ===== -->
+
+          <!-- 愛知県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/aichi/" aria-label="愛知県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>愛知県</h2>
+            <div class="pref-count">収録数: 2,021 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・中等教育・特別支援</li>
+              <li>名古屋市区・市町村（郡部は郡名付き）で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 新潟県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/niigata/" aria-label="新潟県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>新潟県</h2>
+            <div class="pref-count">収録数: 831 校・園</div>
+            <ul class="pref-features">
+              <li>公私立の幼稚園・小中高・中等教育・特別支援</li>
+              <li>市町村（新潟市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 長野県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/nagano/" aria-label="長野県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>長野県</h2>
+            <div class="pref-count">収録数: 766 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・中等教育・特別支援</li>
+              <li>市町村（郡部は郡名付き）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 山梨県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/yamanashi/" aria-label="山梨県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+            </div>
+            <h2>山梨県</h2>
+            <div class="pref-count">収録数: 351 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 静岡県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/shizuoka/" aria-label="静岡県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>静岡県</h2>
+            <div class="pref-count">収録数: 1,844 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+                    <!-- 富山県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/toyama/" aria-label="富山県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>富山県</h2>
+            <div class="pref-count">収録数: 333 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 石川県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/ishikawa/" aria-label="石川県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>石川県</h2>
+            <div class="pref-count">収録数: 386 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 福井県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/fukui/" aria-label="福井県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>福井県</h2>
+            <div class="pref-count">収録数: 358 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+          <!-- 岐阜県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/gifu/" aria-label="岐阜県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>岐阜県</h2>
+            <div class="pref-count">収録数: 735 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 近畿地方（大阪を先頭） ===== -->
+          <!-- 和歌山県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/wakayama/" aria-label="和歌山県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>和歌山県</h2>
+            <div class="pref-count">収録数: 467 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+
+          <!-- 大阪府カード -->
+          <a class="pref-card active-card" href="/tools/school-database/osaka/" aria-label="大阪府学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>大阪府</h2>
+            <div class="pref-count">収録数: 2,087 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村（大阪市・堺市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 京都府カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kyoto/" aria-label="京都府学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>京都府</h2>
+            <div class="pref-count">収録数: 1,203 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 奈良県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/nara/" aria-label="奈良県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>奈良県</h2>
+            <div class="pref-count">収録数: 769 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+          <!-- 滋賀県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/shiga/" aria-label="滋賀県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>滋賀県</h2>
+            <div class="pref-count">収録数: 498 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+          <!-- 三重県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/mie/" aria-label="三重県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>三重県</h2>
+            <div class="pref-count">収録数: 736 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+          <!-- 兵庫県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/hyogo/" aria-label="兵庫県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和6年度版</span>
+            </div>
+            <h2>兵庫県</h2>
+            <div class="pref-count">収録数: 1743 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立・幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 中国地方（広島を先頭に） ===== -->
+
+          <!-- 広島県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/hiroshima/" aria-label="広島県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>広島県</h2>
+            <div class="pref-count">収録数: 1,048 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村（広島市は区別）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 鳥取県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/tottori/" aria-label="鳥取県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>鳥取県</h2>
+            <div class="pref-count">収録数: 232 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 島根県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/shimane/" aria-label="島根県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>島根県</h2>
+            <div class="pref-count">収録数: 402 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          
+          <!-- 岡山県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/okayama/" aria-label="岡山県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和6年度版</span>
+            </div>
+            <h2>岡山県</h2>
+            <div class="pref-count">収録数: 772 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立・幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 山口県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/yamaguchi/" aria-label="山口県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和6年度版</span>
+            </div>
+            <h2>山口県</h2>
+            <div class="pref-count">収録数: 680 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立・幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 四国地方 ===== -->
+
+          <!-- 香川県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kagawa/" aria-label="香川県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>香川県</h2>
+            <div class="pref-count">収録数: 379 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+
+          
+          <!-- 徳島県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/tokushima/" aria-label="徳島県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>徳島県</h2>
+            <div class="pref-count">収録数: 401 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 愛媛県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/ehime/" aria-label="愛媛県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>愛媛県</h2>
+            <div class="pref-count">収録数: 582 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 高知県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kochi/" aria-label="高知県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>高知県</h2>
+            <div class="pref-count">収録数: 430 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- ===== 九州・沖縄地方 ===== -->
+          <!-- 鹿児島県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kagoshima/" aria-label="鹿児島県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>鹿児島県</h2>
+            <div class="pref-count">収録数: 905 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 宮崎県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/miyazaki/" aria-label="宮崎県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>宮崎県</h2>
+            <div class="pref-count">収録数: 505 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 大分県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/oita/" aria-label="大分県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和5年度版</span>
+            </div>
+            <h2>大分県</h2>
+            <div class="pref-count">収録数: 561 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市部・郡部（郡名付き）・校種・設置区分検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+
+          <!-- 福岡県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/fukuoka/" aria-label="福岡県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>福岡県</h2>
+            <div class="pref-count">収録数: 1,659 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 佐賀県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/saga/" aria-label="佐賀県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>佐賀県</h2>
+            <div class="pref-count">収録数: 510 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 長崎県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/nagasaki/" aria-label="長崎県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>長崎県</h2>
+            <div class="pref-count">収録数: 901 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 熊本県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/kumamoto/" aria-label="熊本県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>熊本県</h2>
+            <div class="pref-count">収録数: 953 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+          <!-- 沖縄県カード -->
+          <a class="pref-card active-card" href="/tools/school-database/okinawa/" aria-label="沖縄県学校データベースを開く">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#27ae60;">NEW</span>
+              <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+            </div>
+            <h2>沖縄県</h2>
+            <div class="pref-count">収録数: 626 校・園</div>
+            <ul class="pref-features">
+              <li>国公私立の幼稚園・小中高・特別支援</li>
+              <li>市町村・校種・設置区分で検索</li>
+              <li>宛名コピー・CSV・Google Maps連携</li>
+            </ul>
+          </a>
+
+
+          <!-- 他都道府県 カード（順次拡張） -->
+          <div class="pref-card" style="opacity:0.75; background:#fafafa;">
+            <div class="pref-card-header">
+              <span class="pref-badge" style="background:#718096;">順次拡張予定</span>
+            </div>
+            <h2 style="color:#718096;">全国他都道府県</h2>
+            <div class="pref-count" style="color:#a0aec0;">準備中</div>
+            <p style="font-size:0.86rem; color:#718096; line-height:1.5; margin:0 0 14px;">
+              全国都道府県の学校データベースを順次追加予定です。
+            </p>
+            <button disabled class="pref-action-btn" style="background:#cbd5e0; cursor:not-allowed; border:none; width:100%; margin-top:auto;">順次追加予定</button>
+          </div>
+
+        </div>
+
+        <!-- データベース概要案内 -->
+        <div style="margin-top:50px; background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(7,27,54,0.04);">
+          <h3 style="margin-top:0; color:var(--navy,#0c1b33); font-size:1.15rem;">Ban.Tai 全国学校データベースの特徴</h3>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; margin-top:16px;">
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">① 公式データ完全準拠</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">各都道府県教育委員会および学事課の最新公式公開データのみを使用。民間サイトによる未検証データは含みません。</span>
+            </div>
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">② 封筒宛名コピー機能</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">「御中」「校長先生」「園長先生」などの敬称を選択し、郵便番号・住所・宛名をワンクリックでコピーできます。</span>
+            </div>
+            <div>
+              <strong style="color:var(--navy,#0c1b33); display:block; margin-bottom:6px;">③ CSV出力＆Maps連携</strong>
+              <span style="font-size:0.86rem; color:#718096; line-height:1.5;">絞り込んだ検索結果のみをExcel互換（UTF-8 BOM付き）CSVとしてダウンロード可能。Google Maps連携で所在地確認も簡単です。</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Ban.Tai Education Design</h2>
+        <p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p>
+      </div>
+      <div>
+        <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+        <p><a href="/legal/">利用規約・免責事項</a></p>
+      </div>
+    </div>
+    <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

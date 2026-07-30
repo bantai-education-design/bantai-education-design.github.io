@@ -1,0 +1,140 @@
+diff --git a/tools/school-database/index.html b/tools/school-database/index.html
+index d76a947..7207b58 100644
+--- a/tools/school-database/index.html
++++ b/tools/school-database/index.html
+@@ -71,6 +71,15 @@
+         
+         <h2 style="font-size:1.4rem; color:var(--navy,#0c1b33); border-bottom:2px solid var(--gold,#c5a059); padding-bottom:10px; margin-bottom:24px;">都道府県を選択</h2>
+ 
++        
++        <div class="common-features-notice" style="background:#fff; border:1px solid rgba(7,27,54,0.1); border-radius:12px; padding:20px; margin-bottom:30px;">
++          <h3 style="margin-top:0; font-size:1.1rem; color:var(--navy,#0c1b33); display:flex; align-items:center; gap:8px;">
++            <i class="fas fa-info-circle" style="color:var(--gold,#c5a059);"></i> 共通機能
++          </h3>
++          <p style="margin:0; font-size:0.9rem; color:#4a5568; line-height:1.6;">
++            各都道府県版では、学校名・市区町村・校種・設置区分による検索、宛名コピー、CSV出力、Google Maps連携を利用できます。
++          </p>
++        </div>
+         <div class="prefectures-grid">
+           
+           <!-- ===== 関東地方（東京を先頭） ===== -->
+@@ -82,12 +91,13 @@
+               <span style="font-size:0.8rem; color:#718096;">公式データ準拠</span>
+             </div>
+             <h2>東京都</h2>
+-            <div class="pref-count">収録数: 3,509 校・園</div>
+-            <ul class="pref-features">
+-              <li>公立・私立の小・中・高・特別支援・幼稚園</li>
+-              <li>区市町村・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">3,509</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">66</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公2,290・私1,219</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 埼玉県カード -->
+@@ -97,12 +107,13 @@
+               <span style="font-size:0.8rem; color:#718096;">令和8年度版更新</span>
+             </div>
+             <h2>埼玉県</h2>
+-            <div class="pref-count">収録数: 1,929 校・園</div>
+-            <ul class="pref-features">
+-              <li>公立・私立の小・中・高・特別支援・幼稚園</li>
+-              <li>市町村・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,932</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">72</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公1,423・私509</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 千葉県カード -->
+@@ -112,12 +123,13 @@
+               <span style="font-size:0.8rem; color:#718096;">令和7〜8年度版</span>
+             </div>
+             <h2>千葉県</h2>
+-            <div class="pref-count">収録数: 1,823 校・園</div>
+-            <ul class="pref-features">
+-              <li>国公私立の幼稚園・認定こども園・小中高・特別支援</li>
+-              <li>市町村（千葉市は区別）・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">1,823</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">59</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国5・公1,366・私452</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">8<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 神奈川県カード -->
+@@ -127,12 +139,13 @@
+               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
+             </div>
+             <h2>神奈川県</h2>
+-            <div class="pref-count">収録数: 2,227 校・園</div>
+-            <ul class="pref-features">
+-              <li>国公私立の幼稚園・小中高・特別支援</li>
+-              <li>市町村（横浜・川崎・相模原市は区別）・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">2,227</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">58</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国6・公1,502・私719</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 茨城県カード -->
+@@ -206,12 +219,13 @@
+               <span style="font-size:0.8rem; color:#718096;">令和7年度版</span>
+             </div>
+             <h2>宮城県</h2>
+-            <div class="pref-count">収録数: 809 校・園</div>
+-            <ul class="pref-features">
+-              <li>国公私立の幼稚園・小中高・中等教育・特別支援</li>
+-              <li>市町村（仙台市は区別）・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">809</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">39</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国1・公643・私165</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 岩手県カード -->
+@@ -236,12 +250,13 @@
+               <span style="font-size:0.8rem; color:#718096;">令和7〜8年度版</span>
+             </div>
+             <h2>福島県</h2>
+-            <div class="pref-count">収録数: 794 校・園</div>
+-            <ul class="pref-features">
+-              <li>国公私立の幼稚園・小中高・特別支援</li>
+-              <li>市町村（広域振興局区分順）・校種・設置区分で検索</li>
+-              <li>宛名コピー・CSV・Google Maps連携</li>
+-            </ul>
++            <div class="pref-meta-grid">
++              <div class="meta-row"><span class="meta-label">収録校・園</span><span class="meta-value">794</span></div>
++              <div class="meta-row"><span class="meta-label">対象地域</span><span class="meta-value">59</span></div>
++              <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">国1・公677・私116</span></div>
++              <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">6<span class="meta-unit">種類</span></span></div>
++            </div>
++          
+           </a>
+ 
+           <!-- 青森県カード -->
