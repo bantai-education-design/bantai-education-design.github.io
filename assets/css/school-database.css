@@ -1,3 +1,11 @@
+main {
+  padding-top: 74px;
+}
+
+h3.region-header {
+  scroll-margin-top: 80px;
+}
+
 /* Ban.Tai 全国学校データベース CSS (assets/css/school-database.css) */
 
 /* ヒーロー領域（全国ポータル・都道府県版共通のコンパクト化）
@@ -506,7 +514,9 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 18px;
   margin-top: 24px;
-}
+
+  align-items: start;
+  grid-auto-rows: auto;}
 
 @media (min-width: 641px) {
   .prefectures-grid {
@@ -543,7 +553,6 @@
   box-shadow: 0 10px 30px rgba(7, 27, 54, 0.05);
   display: flex;
   flex-direction: column;
-  height: 100%;
   box-sizing: border-box;
   transition: all 0.3s ease;
   position: relative;
@@ -552,6 +561,10 @@
      アンカーの既定装飾（下線・リンク色）を打ち消しておく。 */
   text-decoration: none;
   color: inherit;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  align-self: start;
 }
 
 .pref-card.active-card {
