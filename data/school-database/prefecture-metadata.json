@@ -5,10 +5,10 @@
     "total": 2021,
     "municipality_count": 69,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 2021
+      "national": 8,
+      "public": 1619,
+      "private": 394,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -22,11 +22,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2025-04-01 / 2025-05-01"
+        "scope": "国",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2025-04-01"
       }
     ],
-    "warnings_count": 2139,
+    "warnings_count": 118,
     "missing_count": 0
   },
   {
@@ -35,10 +43,10 @@
     "total": 362,
     "municipality_count": 25,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 362
+      "national": 4,
+      "public": 323,
+      "private": 35,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -51,11 +59,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 362,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -64,10 +80,10 @@
     "total": 551,
     "municipality_count": 40,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 551
+      "national": 4,
+      "public": 449,
+      "private": 98,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -80,11 +96,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 551,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -93,10 +117,10 @@
     "total": 1823,
     "municipality_count": 59,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1823
+      "national": 5,
+      "public": 1366,
+      "private": 452,
+      "other": 0
     },
     "school_type_count": 8,
     "school_type_counts": {
@@ -111,11 +135,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2025-05-01 / 2026-04-24 / 2026-05-01"
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01 / 2026-04-24"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
       }
     ],
-    "warnings_count": 1823,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -124,10 +156,10 @@
     "total": 582,
     "municipality_count": 23,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 582
+      "national": 5,
+      "public": 491,
+      "private": 86,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -140,11 +172,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 582,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -153,10 +193,10 @@
     "total": 358,
     "municipality_count": 20,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 358
+      "national": 3,
+      "public": 329,
+      "private": 26,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -169,11 +209,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 358,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -182,10 +230,10 @@
     "total": 1659,
     "municipality_count": 60,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1659
+      "national": 7,
+      "public": 1181,
+      "private": 471,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -199,11 +247,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1659,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -212,10 +268,10 @@
     "total": 794,
     "municipality_count": 59,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 794
+      "national": 1,
+      "public": 677,
+      "private": 116,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -228,11 +284,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2025-05-01 / 2026-04-01"
+        "scope": "私",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-04-01"
       }
     ],
-    "warnings_count": 796,
+    "warnings_count": 2,
     "missing_count": 0
   },
   {
@@ -241,10 +305,10 @@
     "total": 735,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 735
+      "national": 1,
+      "public": 619,
+      "private": 115,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -257,11 +321,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1470,
+    "warnings_count": 735,
     "missing_count": 0
   },
   {
@@ -270,10 +342,10 @@
     "total": 651,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 651
+      "national": 4,
+      "public": 576,
+      "private": 71,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -287,11 +359,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1302,
+    "warnings_count": 651,
     "missing_count": 0
   },
   {
@@ -300,10 +380,10 @@
     "total": 1048,
     "municipality_count": 31,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1048
+      "national": 11,
+      "public": 767,
+      "private": 270,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -316,11 +396,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-01"
       }
     ],
-    "warnings_count": 1050,
+    "warnings_count": 2,
     "missing_count": 0
   },
   {
@@ -329,10 +417,10 @@
     "total": 1988,
     "municipality_count": 200,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1988
+      "national": 10,
+      "public": 1630,
+      "private": 348,
+      "other": 0
     },
     "school_type_count": 8,
     "school_type_counts": {
@@ -347,11 +435,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-01"
       }
     ],
-    "warnings_count": 1994,
+    "warnings_count": 6,
     "missing_count": 0
   },
   {
@@ -360,10 +456,10 @@
     "total": 1743,
     "municipality_count": 41,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1743
+      "national": 7,
+      "public": 1453,
+      "private": 283,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -377,11 +473,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1743,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -390,10 +494,10 @@
     "total": 872,
     "municipality_count": 44,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 872
+      "national": 3,
+      "public": 766,
+      "private": 103,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -407,11 +511,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2025-04-01 / 2025-05-01 / 2026-07-27"
+        "scope": "私",
+        "date": "2025-04-01 / 2026-07-27"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
       }
     ],
-    "warnings_count": 875,
+    "warnings_count": 3,
     "missing_count": 0
   },
   {
@@ -420,10 +532,10 @@
     "total": 386,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 386
+      "national": 5,
+      "public": 327,
+      "private": 54,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -436,11 +548,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 772,
+    "warnings_count": 386,
     "missing_count": 0
   },
   {
@@ -449,10 +569,10 @@
     "total": 502,
     "municipality_count": 33,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 502
+      "national": 4,
+      "public": 446,
+      "private": 52,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -465,11 +585,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-01"
       }
     ],
-    "warnings_count": 502,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -478,10 +606,10 @@
     "total": 379,
     "municipality_count": 17,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 379
+      "national": 6,
+      "public": 322,
+      "private": 51,
+      "other": 0
     },
     "school_type_count": 5,
     "school_type_counts": {
@@ -493,11 +621,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 379,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -506,10 +642,10 @@
     "total": 905,
     "municipality_count": 48,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 905
+      "national": 4,
+      "public": 801,
+      "private": 100,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -522,11 +658,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 905,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -535,10 +679,10 @@
     "total": 2227,
     "municipality_count": 58,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 2227
+      "national": 6,
+      "public": 1502,
+      "private": 719,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -552,11 +696,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2026-04-01 / 2026-05-01"
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-04-01"
       }
     ],
-    "warnings_count": 2231,
+    "warnings_count": 4,
     "missing_count": 0
   },
   {
@@ -565,10 +717,10 @@
     "total": 430,
     "municipality_count": 39,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 430
+      "national": 4,
+      "public": 383,
+      "private": 43,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -581,11 +733,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 430,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -594,10 +754,10 @@
     "total": 687,
     "municipality_count": 46,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 687
+      "national": 4,
+      "public": 577,
+      "private": 106,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -610,11 +770,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 687,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -623,10 +791,10 @@
     "total": 859,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 859
+      "national": 6,
+      "public": 631,
+      "private": 222,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -639,11 +807,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1718,
+    "warnings_count": 859,
     "missing_count": 0
   },
   {
@@ -652,10 +828,10 @@
     "total": 736,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 736
+      "national": 4,
+      "public": 654,
+      "private": 78,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -669,11 +845,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1472,
+    "warnings_count": 736,
     "missing_count": 0
   },
   {
@@ -682,10 +866,10 @@
     "total": 809,
     "municipality_count": 39,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 809
+      "national": 1,
+      "public": 643,
+      "private": 165,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -699,11 +883,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
         "date": "2025-05-01 / 2026-07-13"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
       }
     ],
-    "warnings_count": 811,
+    "warnings_count": 2,
     "missing_count": 0
   },
   {
@@ -712,10 +904,10 @@
     "total": 505,
     "municipality_count": 28,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 505
+      "national": 3,
+      "public": 403,
+      "private": 99,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -729,11 +921,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 505,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -742,10 +942,10 @@
     "total": 766,
     "municipality_count": 77,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 766
+      "national": 6,
+      "public": 632,
+      "private": 128,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -759,11 +959,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2026-04-01 / 2026-07-26"
+        "scope": "私",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "国",
+        "date": "2026-07-26"
+      },
+      {
+        "scope": "公",
+        "date": "2026-07-26"
       }
     ],
-    "warnings_count": 800,
+    "warnings_count": 34,
     "missing_count": 0
   },
   {
@@ -772,10 +980,10 @@
     "total": 671,
     "municipality_count": 21,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 671
+      "national": 4,
+      "public": 552,
+      "private": 115,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -788,11 +996,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 671,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -801,10 +1017,10 @@
     "total": 473,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 473
+      "national": 5,
+      "public": 395,
+      "private": 73,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -818,11 +1034,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 946,
+    "warnings_count": 473,
     "missing_count": 0
   },
   {
@@ -832,9 +1056,9 @@
     "municipality_count": 37,
     "establishment_counts": {
       "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 831
+      "public": 772,
+      "private": 59,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -848,11 +1072,15 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2026-04-01 / 2026-05-01 / 2026-06-03"
+        "scope": "私",
+        "date": "2026-06-03"
+      },
+      {
+        "scope": "公",
+        "date": "2026-04-01 / 2026-05-01"
       }
     ],
-    "warnings_count": 864,
+    "warnings_count": 33,
     "missing_count": 0
   },
   {
@@ -861,10 +1089,10 @@
     "total": 561,
     "municipality_count": 25,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 561
+      "national": 4,
+      "public": 486,
+      "private": 71,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -877,11 +1105,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 561,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -890,10 +1126,10 @@
     "total": 772,
     "municipality_count": 27,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 772
+      "national": 4,
+      "public": 696,
+      "private": 72,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -907,11 +1143,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 773,
+    "warnings_count": 1,
     "missing_count": 0
   },
   {
@@ -920,10 +1164,10 @@
     "total": 626,
     "municipality_count": 41,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 626
+      "national": 2,
+      "public": 572,
+      "private": 52,
+      "other": 0
     },
     "school_type_count": 5,
     "school_type_counts": {
@@ -935,11 +1179,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 626,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -948,10 +1200,10 @@
     "total": 2087,
     "municipality_count": 72,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 2087
+      "national": 11,
+      "public": 1589,
+      "private": 487,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -965,11 +1217,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-01"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-01"
       }
     ],
-    "warnings_count": 2098,
+    "warnings_count": 11,
     "missing_count": 0
   },
   {
@@ -978,10 +1238,10 @@
     "total": 340,
     "municipality_count": 22,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 340
+      "national": 4,
+      "public": 289,
+      "private": 47,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -994,11 +1254,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 340,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1008,9 +1276,9 @@
     "municipality_count": 72,
     "establishment_counts": {
       "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1929
+      "public": 1423,
+      "private": 506,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -1024,11 +1292,15 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2026-04-01 / 2026-07-08"
+        "scope": "私",
+        "date": "2026-04-01"
+      },
+      {
+        "scope": "公",
+        "date": "2026-07-08"
       }
     ],
-    "warnings_count": 1929,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1037,10 +1309,10 @@
     "total": 498,
     "municipality_count": 20,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 498
+      "national": 4,
+      "public": 460,
+      "private": 34,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -1054,11 +1326,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 498,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1067,10 +1347,10 @@
     "total": 402,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 402
+      "national": 2,
+      "public": 379,
+      "private": 21,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1083,11 +1363,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 804,
+    "warnings_count": 402,
     "missing_count": 0
   },
   {
@@ -1096,10 +1384,10 @@
     "total": 1241,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 1241
+      "national": 7,
+      "public": 1005,
+      "private": 229,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1112,11 +1400,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 2482,
+    "warnings_count": 1241,
     "missing_count": 0
   },
   {
@@ -1125,10 +1421,10 @@
     "total": 678,
     "municipality_count": 25,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 678
+      "national": 4,
+      "public": 578,
+      "private": 96,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -1142,11 +1438,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "国",
+        "date": "2023-01-30"
+      },
+      {
+        "scope": "私",
+        "date": "2023-01-30"
+      },
+      {
+        "scope": "公",
         "date": "2023-01-30"
       }
     ],
-    "warnings_count": 678,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1155,10 +1459,10 @@
     "total": 401,
     "municipality_count": 29,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 401
+      "national": 4,
+      "public": 379,
+      "private": 18,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1171,11 +1475,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 401,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1185,9 +1497,9 @@
     "municipality_count": 66,
     "establishment_counts": {
       "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 3493
+      "public": 2274,
+      "private": 1219,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -1201,11 +1513,15 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
-        "date": "2024-12-01 / 2025-04-01 / 2025-05-01 / 2026-04-01"
+        "scope": "公",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "私",
+        "date": "2024-12-01 / 2025-04-01 / 2026-04-01"
       }
     ],
-    "warnings_count": 3521,
+    "warnings_count": 28,
     "missing_count": 0
   },
   {
@@ -1214,10 +1530,10 @@
     "total": 232,
     "municipality_count": 0,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 232
+      "national": 4,
+      "public": 205,
+      "private": 23,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1230,11 +1546,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 464,
+    "warnings_count": 232,
     "missing_count": 0
   },
   {
@@ -1243,10 +1567,10 @@
     "total": 333,
     "municipality_count": 18,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 333
+      "national": 4,
+      "public": 300,
+      "private": 29,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1259,11 +1583,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 333,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1272,10 +1604,10 @@
     "total": 467,
     "municipality_count": 34,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 467
+      "national": 3,
+      "public": 418,
+      "private": 46,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1288,11 +1620,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 467,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1301,10 +1641,10 @@
     "total": 442,
     "municipality_count": 35,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 442
+      "national": 4,
+      "public": 381,
+      "private": 57,
+      "other": 0
     },
     "school_type_count": 6,
     "school_type_counts": {
@@ -1317,11 +1657,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 442,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1330,10 +1678,10 @@
     "total": 680,
     "municipality_count": 19,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 680
+      "national": 5,
+      "public": 520,
+      "private": 155,
+      "other": 0
     },
     "school_type_count": 7,
     "school_type_counts": {
@@ -1347,11 +1695,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "公",
+        "date": "2026-05-29"
+      },
+      {
+        "scope": "国",
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 681,
+    "warnings_count": 1,
     "missing_count": 0
   },
   {
@@ -1360,10 +1716,10 @@
     "total": 351,
     "municipality_count": 27,
     "establishment_counts": {
-      "national": 0,
-      "public": 0,
-      "private": 0,
-      "other": 351
+      "national": 4,
+      "public": 285,
+      "private": 62,
+      "other": 0
     },
     "school_type_count": 5,
     "school_type_counts": {
@@ -1375,11 +1731,19 @@
     },
     "source_dates": [
       {
-        "scope": "その他",
+        "scope": "私",
         "date": "2025-04-01 / 2025-05-01"
+      },
+      {
+        "scope": "国",
+        "date": "2025-05-01"
+      },
+      {
+        "scope": "公",
+        "date": "2025-05-01"
       }
     ],
-    "warnings_count": 351,
+    "warnings_count": 0,
     "missing_count": 0
   }
 ]

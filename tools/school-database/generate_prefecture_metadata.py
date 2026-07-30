@@ -89,7 +89,13 @@ def process_prefecture_data(data, slug, pref_name):
         else:
             est = est_raw
             
-        if est not in ["国", "公", "私"]:
+        if "国" in est or "国立" in est:
+            est = "国"
+        elif "公" in est or "公立" in est or "県立" in est or "市立" in est or "町立" in est or "村立" in est or "都立" in est or "道立" in est or "府立" in est:
+            est = "公"
+        elif "私" in est or "私立" in est:
+            est = "私"
+        else:
             warnings_list.append(f"Unexpected establishment: {est} for {name}")
             est = "その他"
             
