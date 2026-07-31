@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-07-31",
+  "pilot_scope": "tokyo-only",
+  "prefectures": {
+    "tokyo": {
+      "prefecture_code": "13",
+      "prefecture_name": "東京都",
+      "reference_date": "2026-01-01",
+      "population_definition": "住民基本台帳に記載された日本人人口",
+      "total_population": 13293851,
+      "age_groups": {
+        "preschool_3_5": {
+          "label": "幼稚園相当年齢",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "population": 266188,
+          "share_percent": 2.002339
+        },
+        "elementary_6_11": {
+          "label": "小学校相当年齢",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "population": 610624,
+          "share_percent": 4.593282
+        },
+        "junior_high_12_14": {
+          "label": "中学校相当年齢",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "population": 313542,
+          "share_percent": 2.358549
+        },
+        "high_school_15_17": {
+          "label": "高等学校相当年齢",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "population": 316843,
+          "share_percent": 2.38338
+        },
+        "education_age_3_17": {
+          "label": "校種相当年齢人口",
+          "school_type": "幼稚園・小学校・中学校・高等学校相当",
+          "age_range": [
+            3,
+            17
+          ],
+          "population": 1507197,
+          "share_percent": 11.33755
+        }
+      },
+      "source": {
+        "publisher": "東京都総務局統計部",
+        "title": "住民基本台帳による東京都の世帯と人口 令和8年1月 第6表 区市町村、年齢（各歳）及び男女別日本人人口",
+        "page_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26q10601.htm",
+        "csv_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0600.csv",
+        "format": "CSV",
+        "accessed_at": "2026-07-31"
+      },
+      "additional_analysis": {
+        "population_per_school_simple_ratio": {
+          "preschool_3_5": {
+            "school_type": "幼稚園",
+            "school_count": 881,
+            "population": 266188,
+            "population_per_school": 302.14
+          },
+          "elementary_6_11": {
+            "school_type": "小学校",
+            "school_count": 1309,
+            "population": 610624,
+            "population_per_school": 466.48
+          },
+          "junior_high_12_14": {
+            "school_type": "中学校",
+            "school_count": 787,
+            "population": 313542,
+            "population_per_school": 398.4
+          },
+          "high_school_15_17": {
+            "school_type": "高等学校",
+            "school_count": 431,
+            "population": 316843,
+            "population_per_school": 735.13
+          }
+        },
+        "note": "校種相当年齢人口を同校種の収録校数で割った単純比率です。在学者数、定員、通学区域、国私立の越境通学は反映していません。"
+      }
+    }
+  }
+}

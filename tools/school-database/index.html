@@ -87,7 +87,7 @@
           <div class="prefectures-grid">
 
           <!-- 東京都カード -->
-          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">
+          <article class="pref-card prefecture-card active-card region-kanto population-pilot-card" aria-label="東京都学校データベース">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -99,7 +99,29 @@
               <div class="meta-row"><span class="meta-label">設置区分</span><span class="meta-value">公2,274・私1,219</span></div>
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">7<span class="meta-unit">種類</span></span></div>
             </div>
-          </a>
+            <div class="population-summary" aria-label="東京都の人口メタデータ試験表示">
+              <div class="population-summary-row">
+                <span class="population-summary-label">総人口</span>
+                <strong>13,293,851<span>人</span></strong>
+              </div>
+              <div class="population-summary-row">
+                <span class="population-summary-label">校種相当年齢</span>
+                <strong>1,507,197<span>人</span></strong>
+              </div>
+              <div class="population-share">総人口比 11.3%</div>
+            </div>
+            <details class="population-age-details">
+              <summary>校種別の年齢人口</summary>
+              <dl>
+                <div><dt>幼稚園相当 3-5歳</dt><dd>266,188人・2.0%</dd></div>
+                <div><dt>小学校相当 6-11歳</dt><dd>610,624人・4.6%</dd></div>
+                <div><dt>中学校相当 12-14歳</dt><dd>313,542人・2.4%</dd></div>
+                <div><dt>高等学校相当 15-17歳</dt><dd>316,843人・2.4%</dd></div>
+              </dl>
+            </details>
+            <p class="population-note">学齢人口は各校種に相当する年齢層の人口であり、実際の在学者数ではありません。</p>
+            <a class="population-card-link" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">東京都版を開く</a>
+          </article>
 
           <!-- 神奈川県カード -->
           <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/kanagawa/" aria-label="神奈川県学校データベースを開く">

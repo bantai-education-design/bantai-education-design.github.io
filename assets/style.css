@@ -1257,7 +1257,7 @@ button:focus-visible {
     top: 100%;
     left: 0;
     right: 0;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     box-sizing: border-box;
     display: grid;

@@ -946,3 +946,117 @@ h3.region-header {
   margin-left: 2px;
   color: #718096;
 }
+
+/* Tokyo population metadata pilot */
+.population-pilot-card {
+  gap: 10px;
+}
+
+.population-summary {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-radius: 12px;
+  background: #fffaf0;
+}
+
+.population-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.population-summary-label {
+  font-size: 0.76rem;
+  color: #5d6675;
+}
+
+.population-summary strong {
+  font-size: 0.95rem;
+  color: var(--navy, #0c1b33);
+  white-space: nowrap;
+}
+
+.population-summary strong span {
+  margin-left: 2px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.population-share {
+  justify-self: start;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--navy, #0c1b33);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.population-age-details {
+  border-top: 1px dashed rgba(7, 27, 54, 0.12);
+  padding-top: 8px;
+}
+
+.population-age-details summary {
+  cursor: pointer;
+  color: var(--navy, #0c1b33);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.population-age-details dl {
+  display: grid;
+  gap: 5px;
+  margin: 8px 0 0;
+}
+
+.population-age-details dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.population-age-details dt,
+.population-age-details dd,
+.population-note {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.population-age-details dt,
+.population-note {
+  color: #5d6675;
+}
+
+.population-age-details dd {
+  color: var(--navy, #0c1b33);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.population-card-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--navy, #0c1b33);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.population-card-link:hover,
+.population-card-link:focus-visible {
+  background: var(--gold, #c5a059);
+  color: #fff;
+}
