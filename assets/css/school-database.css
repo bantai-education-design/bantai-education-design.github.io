@@ -997,7 +997,9 @@ h3.region-header {
 /* Prefecture card population metadata */
 .pref-card:has(.population-summary) {
   gap: 5px;
-  padding: 16px 18px 28px;
+  padding: 16px 18px 30px;
+  overflow: visible;
+  max-height: none;
 }
 
 .population-summary {
@@ -1043,6 +1045,7 @@ h3.region-header {
 .population-age-details {
   border-top: 1px dashed rgba(7, 27, 54, 0.12);
   padding-top: 6px;
+  overflow: visible;
 }
 
 .population-age-details summary {
@@ -1088,6 +1091,7 @@ h3.region-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: calc(100% - 58px);
   margin-top: 0;
   padding: 2px 0;
   color: var(--navy, #0c1b33);
@@ -1095,6 +1099,7 @@ h3.region-header {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
+  white-space: nowrap;
 }
 
 .population-card-link:hover,
