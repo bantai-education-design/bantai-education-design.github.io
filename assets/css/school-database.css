@@ -22,6 +22,17 @@ h3.region-header {
   margin-bottom: 0;
 }
 
+/* 北海道地方と東北地方の間だけ、他の地方間より余白を詰める
+   （関東地方の次に北海道地方、その直後に東北地方という並びを
+   1つの地理的まとまりとして視覚的に近づけるための例外。他の
+   地方間隔（2.5rem）はこの指定では変更しない）。
+   注: region-hokkaido / region-tohoku クラスは地方カード側にも
+   色分け用に付与されているため、セクション要素に限定するセレクタ
+   （.region-section.region-hokkaido）を用いる。 */
+.region-section.region-hokkaido {
+  margin-bottom: 1rem;
+}
+
 .region-title {
   display: block;
   width: 100%;

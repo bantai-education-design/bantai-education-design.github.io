@@ -6,6 +6,9 @@
 中に、地方ごとの内側.prefectures-gridが子要素として並ぶ構造になっていた）、
 カード幅が実測60px程度まで潰れ、都道府県名が1文字ずつ折り返される・横スクロール
 が発生する重大な表示不具合が本番で発生した。本テストはこの不具合の再発を防ぐ。
+
+北海道地方・東北地方は別見出しの独立した2セクションとして維持しつつ、
+両セクション間の余白だけを他の地方間より詰める（region-compact-after）。
 """
 import os
 import re
@@ -18,13 +21,13 @@ CSS_PATH = os.path.abspath(
 )
 
 EXPECTED_REGIONS = [
-    "関東地方", "北海道・東北地方", "中部地方",
+    "関東地方", "北海道地方", "東北地方", "中部地方",
     "近畿地方", "中国地方", "四国地方", "九州・沖縄地方",
 ]
 
 REGION_LEADERS = {
     "関東地方": "東京都",
-    "北海道・東北地方": "北海道",
+    "東北地方": "宮城県",
     "中部地方": "愛知県",
     "近畿地方": "大阪府",
     "中国地方": "広島県",
@@ -39,23 +42,24 @@ def _read(path):
 
 
 def _region_sections(html):
-    """<section class="region-section">...</section> ブロックを順に抜き出す。"""
+    """<section class="region-section ...">...</section> ブロックを順に
+    (クラス属性全体, 中身) のタプルとして抜き出す。region-hokkaido /
+    region-compact-after のような追加クラスを許容するため、class属性は
+    先頭が "region-section" であることのみを要件とする。"""
     return re.findall(
-        r'<section class="region-section">(.*?)</section>', html, re.DOTALL
+        r'<section class="(region-section[^"]*)">(.*?)</section>', html, re.DOTALL
     )
 
 
 def check_region_section_structure(html=None):
     html = html or _read(INDEX_PATH)
 
-    # region-section が7個（北海道地方と東北地方は「北海道・東北地方」として
-    # 1セクションに統合）、かつ外側でgrid/flexの横並びコンテナになっていない
-    # こと（region-sectionは常に縦積み）。
+    # 地方見出しは8個、北海道地方と東北地方は別々に存在する。
     sections = _region_sections(html)
-    assert len(sections) == 7, f"Expected 7 region-section blocks, got {len(sections)}"
+    assert len(sections) == 8, f"Expected 8 region-section blocks, got {len(sections)}"
 
     # 各region-section直下にregion-titleとprefectures-gridが1つずつ。
-    for i, block in enumerate(sections):
+    for i, (cls, block) in enumerate(sections):
         titles = re.findall(r'<h3 class="[^"]*region-title[^"]*">(.*?)</h3>', block)
         grids = re.findall(r'<div class="prefectures-grid">', block)
         assert len(titles) == 1, f"section {i}: expected 1 region-title, got {len(titles)}"
@@ -64,16 +68,18 @@ def check_region_section_structure(html=None):
             f"section {i}: expected heading {EXPECTED_REGIONS[i]!r}, got {titles[0]!r}"
         )
 
-    # prefectures-grid の合計が7個（region-sectionの外に余分なgridが無い）。
+    # prefectures-grid の合計が8個（region-sectionの外に余分なgridが無い）。
     total_grids = len(re.findall(r'<div class="prefectures-grid">', html))
-    assert total_grids == 7, f"Expected 7 prefectures-grid total, got {total_grids}"
+    assert total_grids == 8, f"Expected 8 prefectures-grid total, got {total_grids}"
 
-    # prefecture-card（= pref-card エイリアス）の合計が47個。
+    # prefecture-card（= pref-card エイリアス）の合計が47個、重複なし。
     cards = re.findall(r'<a class="[^"]*prefecture-card[^"]*".*?</a>', html, re.DOTALL)
     assert len(cards) == 47, f"Expected 47 prefecture-card total, got {len(cards)}"
+    names = re.findall(r'<a class="[^"]*prefecture-card[^"]*".*?<h2>(.*?)</h2>', html, re.DOTALL)
+    assert len(set(names)) == 47, f"47都道府県が重複なく1回ずつ存在していません: {names}"
 
     # 関東地方の最初が東京都。
-    kanto_block = sections[0]
+    kanto_cls, kanto_block = sections[0]
     first_pref = re.search(r"<h2>(.*?)</h2>", kanto_block).group(1)
     assert first_pref == "東京都", f"関東地方の最初のカードが東京都ではありません: {first_pref}"
 
@@ -81,25 +87,60 @@ def check_region_section_structure(html=None):
     for i, region_name in enumerate(EXPECTED_REGIONS):
         if region_name not in REGION_LEADERS:
             continue
-        first = re.search(r"<h2>(.*?)</h2>", sections[i]).group(1)
+        _cls, block = sections[i]
+        first = re.search(r"<h2>(.*?)</h2>", block).group(1)
         assert first == REGION_LEADERS[region_name], (
             f"{region_name}の先頭都道府県が{REGION_LEADERS[region_name]}ではありません: {first}"
         )
 
-    # 北海道・東北地方の先頭が北海道であり、7道県（北海道+東北6県）が
-    # 含まれる。
-    hokkaido_tohoku_block = sections[1]
-    hokkaido_tohoku_prefs = re.findall(r"<h2>(.*?)</h2>", hokkaido_tohoku_block)
-    assert hokkaido_tohoku_prefs[0] == "北海道", (
-        f"北海道・東北地方の先頭が北海道ではありません: {hokkaido_tohoku_prefs}"
+    # 北海道地方のカードは北海道1枚のみ。
+    hokkaido_cls, hokkaido_block = sections[1]
+    hokkaido_prefs = re.findall(r"<h2>(.*?)</h2>", hokkaido_block)
+    assert hokkaido_prefs == ["北海道"], (
+        f"北海道地方には北海道のみが含まれるべきです: {hokkaido_prefs}"
     )
-    assert len(hokkaido_tohoku_prefs) == 7, (
-        f"北海道・東北地方には北海道+東北6県の計7件が含まれるべきです: {hokkaido_tohoku_prefs}"
-    )
+
+    # 東北地方の先頭は宮城県、6県すべてを含む。
+    tohoku_cls, tohoku_block = sections[2]
+    tohoku_prefs = re.findall(r"<h2>(.*?)</h2>", tohoku_block)
+    assert tohoku_prefs[0] == "宮城県", f"東北地方の先頭が宮城県ではありません: {tohoku_prefs}"
+    assert len(tohoku_prefs) == 6, f"東北地方は6県のはずです: {tohoku_prefs}"
 
     # 北海道が関東地方のブロックに含まれていない。
     kanto_prefs = re.findall(r"<h2>(.*?)</h2>", kanto_block)
     assert "北海道" not in kanto_prefs, "北海道が関東地方のprefectures-gridに含まれています"
+
+    # 北海道が東北地方のブロックに含まれていない。
+    assert "北海道" not in tohoku_prefs, "北海道が東北地方のprefectures-gridに含まれています"
+
+    # 関東地方 → 北海道地方 → 東北地方 の順であること。
+    assert EXPECTED_REGIONS[0] == "関東地方"
+    assert EXPECTED_REGIONS[1] == "北海道地方"
+    assert EXPECTED_REGIONS[2] == "東北地方"
+
+    # 北海道地方と東北地方の間だけcompact用クラスが適用されている。
+    # （北海道地方セクション自体、または東北地方セクションのどちらかに
+    #  マーカークラスが付いていればよいが、他の地方セクションには
+    #  一切付いていないこと。）
+    for i, (cls, _block) in enumerate(sections):
+        has_compact = "region-compact-after" in cls or (
+            i == 1 and "region-hokkaido" in cls
+        )
+        if i == 1:
+            # 北海道地方セクション: region-hokkaido クラス自体がCSSの
+            # 余白詰め対象（.region-section.region-hokkaido）になっている。
+            assert "region-hokkaido" in cls, (
+                f"北海道地方セクションに region-hokkaido クラスがありません: {cls}"
+            )
+        elif i == 2:
+            assert "region-compact-after" in cls, (
+                f"東北地方セクションに region-compact-after クラスがありません: {cls}"
+            )
+        else:
+            assert "region-compact-after" not in cls, (
+                f"section {i} ({EXPECTED_REGIONS[i]}) に "
+                f"region-compact-after が誤って付与されています: {cls}"
+            )
 
     return True
 
@@ -108,9 +149,6 @@ def check_no_layout_breaking_css_rules(css=None):
     css = css or _read(CSS_PATH)
 
     # writing-mode: vertical-* がカード系CSSに存在しない。
-    assert "writing-mode: vertical" not in css.replace(" ", ""), (
-        "writing-mode: vertical-* が school-database.css に存在します"
-    )
     assert re.search(r"writing-mode:\s*vertical", css) is None, (
         "writing-mode: vertical-* が school-database.css に存在します"
     )
@@ -128,6 +166,16 @@ def check_no_layout_breaking_css_rules(css=None):
         "固定220px幅のminmax指定が存在します"
     )
     assert "width: fit-content" not in css, "width: fit-content が存在します"
+
+    # 北海道地方・東北地方の間だけ余白を詰めるルールが存在し、かつ
+    # 通常の.region-sectionの余白（2.5rem）自体は変更されていない。
+    assert re.search(r"\.region-section\s*\{[^}]*margin:\s*0\s+0\s+2\.5rem", css), (
+        "通常の地方間隔（.region-section の margin-bottom: 2.5rem）が"
+        "変更されています"
+    )
+    assert re.search(
+        r"\.region-section\.region-hokkaido\s*\{[^}]*margin-bottom:\s*1rem", css
+    ), "北海道地方セクション専用の詰め余白ルールが見つかりません"
 
     return True
 
