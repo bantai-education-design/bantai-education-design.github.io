@@ -1083,26 +1083,3 @@ h3.region-header {
   color: var(--navy, #0c1b33);
   font-weight: 700;
 }
-
-.population-card-link {
-  position: absolute;
-  left: 18px;
-  bottom: 7px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: calc(100% - 58px);
-  margin-top: 0;
-  padding: 2px 0;
-  color: var(--navy, #0c1b33);
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  white-space: nowrap;
-}
-
-.population-card-link:hover,
-.population-card-link:focus-visible {
-  color: var(--gold, #c5a059);
-}
