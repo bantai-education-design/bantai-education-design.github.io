@@ -68,14 +68,25 @@ async function main() {
     "人口（日本国籍）",
     "13,293,851人",
     "3～17歳人口",
-    "1,507,197人",
-    "人口に占める割合 11.3%",
-    "実際の在学者数ではありません。",
+    "1,507,197人（11.3%）",
   ]) {
     if (!defaultText.includes(expected)) throw new Error(`missing default text: ${expected}`);
   }
   for (const prohibited of ["総人口", "日本人人口", "日本人人口比", "学齢人口", "教育年齢人口"]) {
     if (defaultText.includes(prohibited)) throw new Error(`prohibited text in card: ${prohibited}`);
+  }
+  if (defaultText.includes("外国籍の住民は含みません。")) {
+    throw new Error("long population note should not be visible in Tokyo default state");
+  }
+  if (defaultText.includes("実際の在学者数ではありません。")) {
+    throw new Error("enrollment caveat should not be visible in Tokyo default state");
+  }
+  if (defaultText.includes("割合は、人口（日本国籍）13,293,851人を分母として計算しています。")) {
+    throw new Error("denominator note should not be visible in Tokyo default state");
+  }
+  const agePopulationRow = await card.locator(".population-summary-row", { hasText: "3～17歳人口" }).innerText();
+  if (!agePopulationRow.includes("1,507,197人（11.3%）")) {
+    throw new Error(`3-17 share should stay on the same row: ${agePopulationRow}`);
   }
   for (const name of ["千葉県", "茨城県", "栃木県"]) {
     const text = await page.locator(".pref-card.prefecture-card", { hasText: name }).innerText();
@@ -100,6 +111,7 @@ async function main() {
     "313,542人・2.4%",
     "高校期相当 15～17歳",
     "316,843人・2.4%",
+    "基準日：2026-01-01",
   ]) {
     if (!detailsText.includes(expected)) throw new Error(`missing detail text: ${expected}`);
   }

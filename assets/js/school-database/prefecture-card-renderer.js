@@ -63,19 +63,11 @@
     ageRow.append(createElement("span", "population-summary-label", "3～17歳人口"));
     const ageValue = createElement("strong", "", formatNumber(population.japanese_age_3_17));
     ageValue.append(createElement("span", "", "人"));
+    ageValue.append(createElement("span", "population-inline-share", `（${population.share_of_japanese_population_percent.toFixed(1)}%）`));
     ageRow.append(ageValue);
     summary.append(ageRow);
 
-    summary.append(
-      createElement(
-        "div",
-        "population-share",
-        `人口に占める割合 ${population.share_of_japanese_population_percent.toFixed(1)}%`,
-      ),
-    );
     card.append(summary);
-
-    card.append(createElement("p", "population-note population-note--compact", "※実際の在学者数ではありません。"));
 
     const details = createElement("details", "population-age-details");
     details.append(createElement("summary", "", "年齢別人口"));
@@ -93,6 +85,7 @@
       list.append(item);
     });
     details.append(list);
+    details.append(createElement("p", "population-note", `基準日：${population.reference_date}`));
     if (population.summary_note) {
       details.append(createElement("p", "population-note", population.summary_note));
     }

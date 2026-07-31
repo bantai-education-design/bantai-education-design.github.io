@@ -956,6 +956,28 @@ h3.region-header {
   color: #718096;
 }
 
+.pref-card:has(.population-summary) .pref-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 12px;
+  margin-top: 6px;
+  padding-top: 8px;
+}
+
+.pref-card:has(.population-summary) .meta-row {
+  display: grid;
+  gap: 1px;
+  line-height: 1.18;
+}
+
+.pref-card:has(.population-summary) .meta-label {
+  font-size: 0.68rem;
+}
+
+.pref-card:has(.population-summary) .meta-value {
+  font-size: 0.78rem;
+}
+
 @media (max-width: 860px) {
   .site-header .nav:has(.menu-toggle) .menu {
     width: auto;
@@ -974,15 +996,15 @@ h3.region-header {
 
 /* Prefecture card population metadata */
 .pref-card:has(.population-summary) {
-  gap: 6px;
-  padding: 18px 18px 34px;
+  gap: 5px;
+  padding: 16px 18px 28px;
 }
 
 .population-summary {
   display: grid;
-  gap: 3px;
+  gap: 2px;
   margin-top: 2px;
-  padding: 7px;
+  padding: 6px 7px;
   border: 1px solid rgba(197, 160, 89, 0.28);
   border-radius: 8px;
   background: #fffaf0;
@@ -1014,14 +1036,8 @@ h3.region-header {
   font-weight: 500;
 }
 
-.population-share {
-  justify-self: start;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--navy, #0c1b33);
-  color: #fff;
-  font-size: 0.68rem;
-  font-weight: 700;
+.population-inline-share {
+  color: #5d6675;
 }
 
 .population-age-details {
@@ -1060,11 +1076,6 @@ h3.region-header {
   color: #5d6675;
 }
 
-.population-note--compact {
-  font-size: 0.68rem;
-  line-height: 1.25;
-}
-
 .population-age-details dd {
   color: var(--navy, #0c1b33);
   font-weight: 700;
@@ -1073,7 +1084,7 @@ h3.region-header {
 .population-card-link {
   position: absolute;
   left: 18px;
-  bottom: 11px;
+  bottom: 7px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
