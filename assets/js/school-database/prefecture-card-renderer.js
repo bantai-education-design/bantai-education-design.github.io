@@ -110,6 +110,19 @@
     const badge = createElement("span", "pref-badge", prefecture.status_label);
     badge.style.background = "#27ae60";
     header.append(badge);
+    if (prefecture.symbol_mark && prefecture.symbol_mark.available === true) {
+      const symbol = createElement("span", "pref-symbol-mark");
+      const image = createElement("img", "");
+      image.src = prefecture.symbol_mark.image_url;
+      image.alt = `${prefecture.prefecture_name}のシンボルマーク`;
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", () => {
+        symbol.hidden = true;
+      });
+      symbol.append(image);
+      header.append(symbol);
+    }
     const edition = createElement("span", "", prefecture.edition);
     edition.style.fontSize = "0.8rem";
     edition.style.color = "#718096";
