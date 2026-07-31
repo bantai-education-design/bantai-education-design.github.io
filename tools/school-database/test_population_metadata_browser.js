@@ -18,6 +18,16 @@ async function main() {
   const pilotCount = await page.locator(".population-pilot-card").count();
   if (cardCount !== 47) throw new Error(`expected 47 prefecture cards, got ${cardCount}`);
   if (pilotCount !== 1) throw new Error(`expected 1 pilot card, got ${pilotCount}`);
+  const bodyText = await page.locator("body").innerText();
+  for (const prohibited of [
+    "全国他都道府県",
+    "準備中",
+    "順次拡張予定",
+    "順次追加予定",
+    "全国都道府県の学校データベースを順次追加予定です。",
+  ]) {
+    if (bodyText.includes(prohibited)) throw new Error(`placeholder text remains: ${prohibited}`);
+  }
 
   const card = page.locator(".population-pilot-card");
   const defaultText = await card.innerText();

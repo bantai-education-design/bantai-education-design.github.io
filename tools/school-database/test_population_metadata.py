@@ -23,6 +23,13 @@ EXPECTED_GROUPS = {
 }
 
 PROHIBITED_CARD_LABELS = ("総人口", "東京都の人口", "学齢人口", "教育年齢人口")
+PROHIBITED_PLACEHOLDER_TEXT = (
+    "全国他都道府県",
+    "準備中",
+    "順次拡張予定",
+    "順次追加予定",
+    "全国都道府県の学校データベースを順次追加予定です。",
+)
 
 
 class CardParser(HTMLParser):
@@ -108,6 +115,8 @@ def test_portal_html() -> None:
 
     assert len(parser.prefecture_cards) == 47
     assert parser.population_pilot_cards == 1
+    for prohibited in PROHIBITED_PLACEHOLDER_TEXT:
+        assert prohibited not in html
     assert "population-pilot-card" in html
     assert "人口（日本国籍）" in html
     assert "日本人人口" not in html
