@@ -23,6 +23,13 @@ EXPECTED_GROUPS = {
 }
 
 PROHIBITED_CARD_LABELS = ("総人口", "東京都の人口", "学齢人口", "教育年齢人口")
+PROHIBITED_PLACEHOLDER_TEXT = (
+    "全国他都道府県",
+    "準備中",
+    "順次拡張予定",
+    "順次追加予定",
+    "全国都道府県の学校データベースを順次追加予定です。",
+)
 
 
 class CardParser(HTMLParser):
@@ -30,14 +37,41 @@ class CardParser(HTMLParser):
         super().__init__()
         self.prefecture_cards: list[set[str]] = []
         self.population_pilot_cards = 0
+        self.prefecture_links: list[str] = []
+        self.headings: list[str] = []
+        self._card_depth = 0
+        self._heading_depth = 0
+        self._heading_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attr = {key: value or "" for key, value in attrs}
         classes = set(attr.get("class", "").split())
         if {"pref-card", "prefecture-card"}.issubset(classes):
             self.prefecture_cards.append(classes)
+            self._card_depth = 1
+            if tag == "a":
+                self.prefecture_links.append(attr.get("href", ""))
         if "population-pilot-card" in classes:
             self.population_pilot_cards += 1
+            if attr.get("data-card-href"):
+                self.prefecture_links.append(attr["data-card-href"])
+        elif self._card_depth:
+            self._card_depth += 1
+        if self._card_depth and tag == "h2":
+            self._heading_depth = 1
+            self._heading_parts = []
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._heading_depth:
+            self._heading_depth -= 1
+            if self._heading_depth == 0:
+                self.headings.append("".join(self._heading_parts).strip())
+        if self._card_depth:
+            self._card_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self._heading_depth:
+            self._heading_parts.append(data)
 
 
 def assert_number(value: object, name: str) -> float:
@@ -108,6 +142,16 @@ def test_portal_html() -> None:
 
     assert len(parser.prefecture_cards) == 47
     assert parser.population_pilot_cards == 1
+    assert len(parser.prefecture_links) == 47
+    assert all(link.startswith("/tools/") for link in parser.prefecture_links)
+    assert len(set(parser.prefecture_links)) == 47
+    assert parser.prefecture_links[0] == "/tools/school-database/tokyo/"
+    assert parser.headings[:4] == ["東京都", "神奈川県", "埼玉県", "千葉県"]
+    assert parser.headings[-1] == "沖縄県"
+    for prohibited in PROHIBITED_PLACEHOLDER_TEXT:
+        assert prohibited not in html
+    assert "<button disabled" not in html
+    assert "東京都版を開く" not in html
     assert "population-pilot-card" in html
     assert "人口（日本国籍）" in html
     assert "日本人人口" not in html

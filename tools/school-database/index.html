@@ -87,7 +87,7 @@
           <div class="prefectures-grid">
 
           <!-- 東京都カード -->
-          <article class="pref-card prefecture-card active-card region-kanto population-pilot-card" aria-label="東京都学校データベース">
+          <article class="pref-card prefecture-card active-card region-kanto population-pilot-card" data-card-href="/tools/school-database/tokyo/" aria-label="東京都学校データベース">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -121,7 +121,7 @@
             </details>
             <p class="population-note">人口は、2026年1月1日現在の住民基本台帳に記載された日本国籍の住民を対象としています。外国籍の住民は含みません。</p>
             <p class="population-note">年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。割合は、人口（日本国籍）13,293,851人を分母として計算しています。</p>
-            <a class="population-card-link" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">東京都版を開く</a>
+            <a class="population-card-link" href="/tools/school-database/tokyo/" aria-label="東京都学校データベースを開く">詳しく見る</a>
           </article>
 
           <!-- 神奈川県カード -->
@@ -860,23 +860,6 @@
 
           <!-- DATABASE_CARDS_END -->
 
-
-
-          <!-- 他都道府県 カード（順次拡張） -->
-        <div style="max-width:400px; margin-top:2.5rem;">
-          <div class="pref-card" style="opacity:0.75; background:#fafafa;">
-            <div class="pref-card-header">
-              <span class="pref-badge" style="background:#718096;">順次拡張予定</span>
-            </div>
-            <h2 style="color:#718096;">全国他都道府県</h2>
-            <div class="pref-count" style="color:#a0aec0;">準備中</div>
-            <p style="font-size:0.86rem; color:#718096; line-height:1.5; margin:0 0 14px;">
-              全国都道府県の学校データベースを順次追加予定です。
-            </p>
-            <button disabled class="pref-action-btn" style="background:#cbd5e0; cursor:not-allowed; border:none; width:100%; margin-top:auto;">順次追加予定</button>
-          </div>
-        </div>
-
         <!-- データベース概要案内 -->
         <div style="margin-top:50px; background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(7,27,54,0.04);">
           <h3 style="margin-top:0; color:var(--navy,#0c1b33); font-size:1.15rem;">Ban.Tai 全国学校データベースの特徴</h3>
@@ -914,5 +897,15 @@
     <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
   </footer>
   <script src="/assets/site.js"></script>
+  <script>
+    document.querySelectorAll('[data-card-href]').forEach((card) => {
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, button, summary, details, input, select, textarea')) {
+          return;
+        }
+        window.location.href = card.dataset.cardHref;
+      });
+    });
+  </script>
 </body>
 </html>
