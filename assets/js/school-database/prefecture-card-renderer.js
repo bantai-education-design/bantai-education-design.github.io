@@ -101,6 +101,8 @@
     if (hasDetails) {
       card.dataset.cardHref = prefecture.url;
       card.setAttribute("aria-label", `${prefecture.prefecture_name}学校データベース`);
+      card.setAttribute("role", "link");
+      card.tabIndex = 0;
     } else {
       card.href = prefecture.url;
       card.setAttribute("aria-label", `${prefecture.prefecture_name}学校データベースを開く`);
@@ -127,13 +129,6 @@
     card.append(metaGrid);
 
     appendPopulationSummary(card, prefecture);
-
-    if (hasDetails) {
-      const link = createElement("a", "population-card-link", `${prefecture.prefecture_name}の学校データベースを開く →`);
-      link.href = prefecture.url;
-      link.setAttribute("aria-label", `${prefecture.prefecture_name}学校データベースを開く`);
-      card.append(link);
-    }
 
     return card;
   };
@@ -164,6 +159,13 @@
         if (event.target.closest("a, button, summary, details, input, select, textarea")) {
           return;
         }
+        window.location.href = card.dataset.cardHref;
+      });
+      card.addEventListener("keydown", (event) => {
+        if (event.target !== card || event.key !== "Enter") {
+          return;
+        }
+        event.preventDefault();
         window.location.href = card.dataset.cardHref;
       });
     });
