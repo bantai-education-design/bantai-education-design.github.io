@@ -80,19 +80,14 @@
             各都道府県版では、学校名・市区町村・校種・設置区分による検索、宛名コピー、CSV出力、Google Maps連携を利用できます。
           </p>
         </div>
-        <div class="prefectures-grid">
-          
-          <!-- ===== 関東地方（東京を先頭） ===== -->
+        <!-- DATABASE_CARDS_START -->
 
-          <!-- 東京都カード -->
-          
-<!-- DATABASE_CARDS_START -->
-
-          <h3 class="region-header region-kanto">関東地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-kanto">関東地方</h3>
           <div class="prefectures-grid">
 
           <!-- 東京都カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -107,7 +102,7 @@
           </a>
 
           <!-- 神奈川県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/kanagawa/" aria-label="神奈川県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/kanagawa/" aria-label="神奈川県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -122,7 +117,7 @@
           </a>
 
           <!-- 埼玉県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/saitama/" aria-label="埼玉県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/saitama/" aria-label="埼玉県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -137,7 +132,7 @@
           </a>
 
           <!-- 千葉県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/chiba/" aria-label="千葉県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/chiba/" aria-label="千葉県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -152,7 +147,7 @@
           </a>
 
           <!-- 茨城県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/ibaraki/" aria-label="茨城県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/ibaraki/" aria-label="茨城県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -167,7 +162,7 @@
           </a>
 
           <!-- 栃木県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/tochigi/" aria-label="栃木県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/tochigi/" aria-label="栃木県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -182,7 +177,7 @@
           </a>
 
           <!-- 群馬県カード -->
-          <a class="pref-card active-card region-kanto" href="/tools/school-database/gunma/" aria-label="群馬県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kanto" href="/tools/school-database/gunma/" aria-label="群馬県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -196,12 +191,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-hokkaido">北海道地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-hokkaido">北海道・東北地方</h3>
           <div class="prefectures-grid">
 
           <!-- 北海道カード -->
-          <a class="pref-card active-card region-hokkaido" href="/tools/school-database/hokkaido/" aria-label="北海道学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-hokkaido" href="/tools/school-database/hokkaido/" aria-label="北海道学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -214,13 +211,9 @@
               <div class="meta-row"><span class="meta-label">校種</span><span class="meta-value">8<span class="meta-unit">種類</span></span></div>
             </div>
           </a>
-          </div>
-
-          <h3 class="region-header region-tohoku">東北地方</h3>
-          <div class="prefectures-grid">
 
           <!-- 宮城県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/miyagi/" aria-label="宮城県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/miyagi/" aria-label="宮城県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -235,7 +228,7 @@
           </a>
 
           <!-- 青森県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/aomori/" aria-label="青森県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/aomori/" aria-label="青森県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -250,7 +243,7 @@
           </a>
 
           <!-- 岩手県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/iwate/" aria-label="岩手県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/iwate/" aria-label="岩手県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -265,7 +258,7 @@
           </a>
 
           <!-- 秋田県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/akita/" aria-label="秋田県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/akita/" aria-label="秋田県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -280,7 +273,7 @@
           </a>
 
           <!-- 山形県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/yamagata/" aria-label="山形県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/yamagata/" aria-label="山形県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -295,7 +288,7 @@
           </a>
 
           <!-- 福島県カード -->
-          <a class="pref-card active-card region-tohoku" href="/tools/school-database/fukushima/" aria-label="福島県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-tohoku" href="/tools/school-database/fukushima/" aria-label="福島県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -309,12 +302,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-chubu">中部地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-chubu">中部地方</h3>
           <div class="prefectures-grid">
 
           <!-- 愛知県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/aichi/" aria-label="愛知県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/aichi/" aria-label="愛知県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -329,7 +324,7 @@
           </a>
 
           <!-- 新潟県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/niigata/" aria-label="新潟県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/niigata/" aria-label="新潟県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -344,7 +339,7 @@
           </a>
 
           <!-- 富山県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/toyama/" aria-label="富山県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/toyama/" aria-label="富山県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -359,7 +354,7 @@
           </a>
 
           <!-- 石川県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/ishikawa/" aria-label="石川県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/ishikawa/" aria-label="石川県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -374,7 +369,7 @@
           </a>
 
           <!-- 福井県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/fukui/" aria-label="福井県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/fukui/" aria-label="福井県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -389,7 +384,7 @@
           </a>
 
           <!-- 山梨県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/yamanashi/" aria-label="山梨県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/yamanashi/" aria-label="山梨県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -404,7 +399,7 @@
           </a>
 
           <!-- 長野県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/nagano/" aria-label="長野県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/nagano/" aria-label="長野県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -419,7 +414,7 @@
           </a>
 
           <!-- 岐阜県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/gifu/" aria-label="岐阜県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/gifu/" aria-label="岐阜県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -434,7 +429,7 @@
           </a>
 
           <!-- 静岡県カード -->
-          <a class="pref-card active-card region-chubu" href="/tools/school-database/shizuoka/" aria-label="静岡県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chubu" href="/tools/school-database/shizuoka/" aria-label="静岡県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -448,12 +443,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-kinki">近畿地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-kinki">近畿地方</h3>
           <div class="prefectures-grid">
 
           <!-- 大阪府カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/osaka/" aria-label="大阪府学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/osaka/" aria-label="大阪府学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -468,7 +465,7 @@
           </a>
 
           <!-- 三重県カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/mie/" aria-label="三重県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/mie/" aria-label="三重県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -483,7 +480,7 @@
           </a>
 
           <!-- 滋賀県カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/shiga/" aria-label="滋賀県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/shiga/" aria-label="滋賀県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -498,7 +495,7 @@
           </a>
 
           <!-- 京都府カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/kyoto/" aria-label="京都府学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/kyoto/" aria-label="京都府学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -513,7 +510,7 @@
           </a>
 
           <!-- 兵庫県カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/hyogo/" aria-label="兵庫県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/hyogo/" aria-label="兵庫県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -528,7 +525,7 @@
           </a>
 
           <!-- 奈良県カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/nara/" aria-label="奈良県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/nara/" aria-label="奈良県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -543,7 +540,7 @@
           </a>
 
           <!-- 和歌山県カード -->
-          <a class="pref-card active-card region-kinki" href="/tools/school-database/wakayama/" aria-label="和歌山県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kinki" href="/tools/school-database/wakayama/" aria-label="和歌山県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -557,12 +554,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-chugoku">中国地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-chugoku">中国地方</h3>
           <div class="prefectures-grid">
 
           <!-- 広島県カード -->
-          <a class="pref-card active-card region-chugoku" href="/tools/school-database/hiroshima/" aria-label="広島県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chugoku" href="/tools/school-database/hiroshima/" aria-label="広島県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -577,7 +576,7 @@
           </a>
 
           <!-- 鳥取県カード -->
-          <a class="pref-card active-card region-chugoku" href="/tools/school-database/tottori/" aria-label="鳥取県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chugoku" href="/tools/school-database/tottori/" aria-label="鳥取県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -592,7 +591,7 @@
           </a>
 
           <!-- 島根県カード -->
-          <a class="pref-card active-card region-chugoku" href="/tools/school-database/shimane/" aria-label="島根県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chugoku" href="/tools/school-database/shimane/" aria-label="島根県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -607,7 +606,7 @@
           </a>
 
           <!-- 岡山県カード -->
-          <a class="pref-card active-card region-chugoku" href="/tools/school-database/okayama/" aria-label="岡山県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chugoku" href="/tools/school-database/okayama/" aria-label="岡山県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -622,7 +621,7 @@
           </a>
 
           <!-- 山口県カード -->
-          <a class="pref-card active-card region-chugoku" href="/tools/school-database/yamaguchi/" aria-label="山口県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-chugoku" href="/tools/school-database/yamaguchi/" aria-label="山口県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -636,12 +635,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-shikoku">四国地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-shikoku">四国地方</h3>
           <div class="prefectures-grid">
 
           <!-- 香川県カード -->
-          <a class="pref-card active-card region-shikoku" href="/tools/school-database/kagawa/" aria-label="香川県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-shikoku" href="/tools/school-database/kagawa/" aria-label="香川県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -656,7 +657,7 @@
           </a>
 
           <!-- 徳島県カード -->
-          <a class="pref-card active-card region-shikoku" href="/tools/school-database/tokushima/" aria-label="徳島県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-shikoku" href="/tools/school-database/tokushima/" aria-label="徳島県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -671,7 +672,7 @@
           </a>
 
           <!-- 愛媛県カード -->
-          <a class="pref-card active-card region-shikoku" href="/tools/school-database/ehime/" aria-label="愛媛県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-shikoku" href="/tools/school-database/ehime/" aria-label="愛媛県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -686,7 +687,7 @@
           </a>
 
           <!-- 高知県カード -->
-          <a class="pref-card active-card region-shikoku" href="/tools/school-database/kochi/" aria-label="高知県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-shikoku" href="/tools/school-database/kochi/" aria-label="高知県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -700,12 +701,14 @@
             </div>
           </a>
           </div>
+        </section>
 
-          <h3 class="region-header region-kyushu">九州・沖縄地方</h3>
+          <section class="region-section">
+          <h3 class="region-header region-title region-kyushu">九州・沖縄地方</h3>
           <div class="prefectures-grid">
 
           <!-- 福岡県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/fukuoka/" aria-label="福岡県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/fukuoka/" aria-label="福岡県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -720,7 +723,7 @@
           </a>
 
           <!-- 佐賀県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/saga/" aria-label="佐賀県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/saga/" aria-label="佐賀県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -735,7 +738,7 @@
           </a>
 
           <!-- 長崎県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/nagasaki/" aria-label="長崎県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/nagasaki/" aria-label="長崎県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -750,7 +753,7 @@
           </a>
 
           <!-- 熊本県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/kumamoto/" aria-label="熊本県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/kumamoto/" aria-label="熊本県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -765,7 +768,7 @@
           </a>
 
           <!-- 大分県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/oita/" aria-label="大分県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/oita/" aria-label="大分県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -780,7 +783,7 @@
           </a>
 
           <!-- 宮崎県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/miyazaki/" aria-label="宮崎県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/miyazaki/" aria-label="宮崎県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -795,7 +798,7 @@
           </a>
 
           <!-- 鹿児島県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/kagoshima/" aria-label="鹿児島県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/kagoshima/" aria-label="鹿児島県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -810,7 +813,7 @@
           </a>
 
           <!-- 沖縄県カード -->
-          <a class="pref-card active-card region-kyushu" href="/tools/school-database/okinawa/" aria-label="沖縄県学校データベースを開く">
+          <a class="pref-card prefecture-card active-card region-kyushu" href="/tools/school-database/okinawa/" aria-label="沖縄県学校データベースを開く">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -824,12 +827,14 @@
             </div>
           </a>
           </div>
+        </section>
 
           <!-- DATABASE_CARDS_END -->
 
 
 
           <!-- 他都道府県 カード（順次拡張） -->
+        <div style="max-width:400px; margin-top:2.5rem;">
           <div class="pref-card" style="opacity:0.75; background:#fafafa;">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#718096;">順次拡張予定</span>
@@ -841,7 +846,6 @@
             </p>
             <button disabled class="pref-action-btn" style="background:#cbd5e0; cursor:not-allowed; border:none; width:100%; margin-top:auto;">順次追加予定</button>
           </div>
-
         </div>
 
         <!-- データベース概要案内 -->
