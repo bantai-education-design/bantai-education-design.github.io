@@ -6,6 +6,39 @@ h3.region-header {
   scroll-margin-top: 80px;
 }
 
+/* 地方セクション（都道府県カードグリッドの入れ子バグを修正するための
+   明示的な構造固定。region-section は必ず縦積みで、内部に地方見出し
+   region-title と、その地方のカードだけを囲む prefectures-grid を
+   1つずつ持つ。region-section 自体を grid/flex の横並びコンテナに
+   してはならない — 過去に .prefectures-grid が二重ネストされ、
+   カード幅が1/4以下に潰れる不具合が発生したため、この構造を基準として
+   固定する。） */
+.region-section {
+  width: 100%;
+  margin: 0 0 2.5rem;
+}
+
+.region-section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 北海道地方と東北地方の間だけ、他の地方間より余白を詰める
+   （関東地方の次に北海道地方、その直後に東北地方という並びを
+   1つの地理的まとまりとして視覚的に近づけるための例外。他の
+   地方間隔（2.5rem）はこの指定では変更しない）。
+   注: region-hokkaido / region-tohoku クラスは地方カード側にも
+   色分け用に付与されているため、セクション要素に限定するセレクタ
+   （.region-section.region-hokkaido）を用いる。 */
+.region-section.region-hokkaido {
+  margin-bottom: 1rem;
+}
+
+.region-title {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem;
+}
+
 /* Ban.Tai 全国学校データベース CSS (assets/css/school-database.css) */
 
 /* ヒーロー領域（全国ポータル・都道府県版共通のコンパクト化）
@@ -501,36 +534,47 @@ h3.region-header {
 }
 
 /* 全国入口ページ用スタイル */
-/* 都道府県カードグリッド: 320-640px=1列, 641-900px=2列, 901-1023px=3列,
-   1024px以上=4列。固定列数＋minmax(0,1fr)なので、auto-fit系のような
+/* 都道府県カードグリッド: 〜640px=1列, 641〜900px=2列, 901〜1199px=3列,
+   1200px以上=4列。固定列数＋minmax(0,1fr)なので、auto-fit系のような
    最小幅による横あふれは発生しない。
-   4列のしきい値は当初1200pxだったが、1366×768等の一般的なノートPCで
-   Windowsの推奨拡大率（125%など）が適用されると実効幅（window.innerWidth）
-   が1100px前後まで下がるケースが多く、その場合1200pxを下回って3列に
-   なってしまう不具合があったため、1024pxに引き下げて対応（PR #63の
-   本番確認で発覚・修正）。 */
+
+   注意（過去の経緯）: 4列のしきい値はかつて1024pxまで引き下げられていた
+   （PR #63）。理由は、1366×768等の一般的なノートPCでWindowsの推奨拡大率
+   （125%など）が適用されると実効幅（window.innerWidth）が1100px前後まで
+   下がるケースがあり、1200pxのままだと3列になってしまうため。今回、
+   本番で発生したカード幅崩壊（.prefectures-grid の二重ネスト）の修正に
+   あたり、しきい値を要求仕様どおり1200px（max-width:1199pxで3列）に
+   統一した。上記のWindows拡大率環境では再び3列表示に戻る可能性がある点は
+   既知のトレードオフとして残る。 */
 .prefectures-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 18px;
+  gap: 1.25rem;
   margin-top: 24px;
-
+  width: 100%;
   align-items: start;
-  grid-auto-rows: auto;}
+  grid-auto-rows: auto;
+}
 
-@media (min-width: 641px) {
+@media (max-width: 640px) {
+  .prefectures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
   .prefectures-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1199px) {
   .prefectures-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .prefectures-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -561,10 +605,41 @@ h3.region-header {
      アンカーの既定装飾（下線・リンク色）を打ち消しておく。 */
   text-decoration: none;
   color: inherit;
+  /* グリッドセルいっぱいに広がることを明示（幅がコンテンツに収縮する
+     不具合の再発防止）。実際の高さはコンテンツに応じて自然に決まる。 */
+  width: 100%;
+  min-width: 0;
   height: auto;
   min-height: 0;
   max-height: none;
   align-self: start;
+}
+
+/* prefecture-card は .pref-card のエイリアスクラス（同一要素に併記）。
+   都道府県名等のテキストが縦書きや1文字ずつの折り返しにならないよう、
+   横書き・自然な折り返しを明示的に固定する。 */
+.pref-card.prefecture-card,
+.prefecture-card {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  box-sizing: border-box;
+  align-self: start;
+  overflow-wrap: normal;
+  word-break: normal;
+  writing-mode: horizontal-tb;
+}
+
+.pref-card h2,
+.prefecture-card h2,
+.pref-card .prefecture-name,
+.prefecture-card .prefecture-name {
+  writing-mode: horizontal-tb;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: normal;
 }
 
 .pref-card.active-card {

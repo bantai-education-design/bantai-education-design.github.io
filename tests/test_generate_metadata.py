@@ -32,12 +32,12 @@ def test_html_structure():
     with open("tools/school-database/index.html", "r", encoding="utf-8") as f:
         html = f.read()
     
-    # 1. 8 regions
+    # 1. 8 regions（北海道地方と東北地方は別々の見出しとして維持）
     regions = re.findall(r'<h3 class="region-header[^"]*">(.*?)</h3>', html)
     assert len(regions) == 8, f"Expected 8 regions, got {len(regions)}"
-    
+
     expected_regions = [
-        "関東地方", "北海道地方", "東北地方", "中部地方", 
+        "関東地方", "北海道地方", "東北地方", "中部地方",
         "近畿地方", "中国地方", "四国地方", "九州・沖縄地方"
     ]
     assert regions == expected_regions, f"Region order mismatch. Expected {expected_regions}, got {regions}"
@@ -61,6 +61,8 @@ def test_html_structure():
         
         if region_name == "関東地方":
             assert first_pref == "東京都", f"Expected 東京都 to lead 関東地方, got {first_pref}"
+        elif region_name == "北海道地方":
+            assert first_pref == "北海道", f"北海道地方の最初のカードが北海道ではありません。得られたのは {first_pref}"
         elif region_name == "東北地方":
             assert first_pref == "宮城県", f"東北地方の最初のカードが宮城県ではありません。得られたのは {first_pref}"
         elif region_name == "中部地方":
