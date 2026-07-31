@@ -129,7 +129,7 @@
     appendPopulationSummary(card, prefecture);
 
     if (hasDetails) {
-      const link = createElement("a", "population-card-link", "詳しく見る");
+      const link = createElement("a", "population-card-link", `${prefecture.prefecture_name}の学校データベースを開く →`);
       link.href = prefecture.url;
       link.setAttribute("aria-label", `${prefecture.prefecture_name}学校データベースを開く`);
       card.append(link);
