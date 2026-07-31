@@ -613,6 +613,7 @@ h3.region-header {
   min-height: 0;
   max-height: none;
   align-self: start;
+  cursor: pointer;
 }
 
 /* prefecture-card は .pref-card のエイリアスクラス（同一要素に併記）。
@@ -656,6 +657,13 @@ h3.region-header {
   background: #fffdf7;
 }
 
+.pref-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(7, 27, 54, 0.1);
+  border-color: var(--gold, #c5a059);
+  background: #fffdf7;
+}
+
 /* カード全体がリンクの場合のキーボードフォーカス表示 */
 .pref-card:focus-visible {
   outline: 3px solid var(--gold, #c5a059);
@@ -678,7 +686,8 @@ h3.region-header {
 }
 
 .pref-card.active-card:hover::after,
-.pref-card.active-card:focus-visible::after {
+.pref-card.active-card:focus-visible::after,
+.pref-card.active-card:focus-within::after {
   opacity: 1;
   transform: translateX(3px);
 }
@@ -1050,17 +1059,15 @@ h3.region-header {
   align-items: center;
   justify-content: center;
   margin-top: 2px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: var(--navy, #0c1b33);
-  color: #fff;
+  padding: 2px 0;
+  color: var(--navy, #0c1b33);
   font-size: 0.78rem;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .population-card-link:hover,
 .population-card-link:focus-visible {
-  background: var(--gold, #c5a059);
-  color: #fff;
+  color: var(--gold, #c5a059);
 }

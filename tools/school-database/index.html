@@ -87,7 +87,7 @@
           <div class="prefectures-grid">
 
           <!-- 東京都カード -->
-          <article class="pref-card prefecture-card active-card region-kanto population-pilot-card" aria-label="東京都学校データベース">
+          <article class="pref-card prefecture-card active-card region-kanto population-pilot-card" data-card-href="/tools/school-database/tokyo/" aria-label="東京都学校データベース">
             <div class="pref-card-header">
               <span class="pref-badge" style="background:#27ae60;">NEW</span>
               <span style="font-size:0.8rem; color:#718096;">令和8年度版</span>
@@ -121,7 +121,7 @@
             </details>
             <p class="population-note">人口は、2026年1月1日現在の住民基本台帳に記載された日本国籍の住民を対象としています。外国籍の住民は含みません。</p>
             <p class="population-note">年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。割合は、人口（日本国籍）13,293,851人を分母として計算しています。</p>
-            <a class="population-card-link" href="/tools/tokyo-school-address/" aria-label="東京都学校データベースを開く">東京都版を開く</a>
+            <a class="population-card-link" href="/tools/school-database/tokyo/" aria-label="東京都学校データベースを開く">詳しく見る</a>
           </article>
 
           <!-- 神奈川県カード -->
@@ -897,5 +897,15 @@
     <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
   </footer>
   <script src="/assets/site.js"></script>
+  <script>
+    document.querySelectorAll('[data-card-href]').forEach((card) => {
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, button, summary, details, input, select, textarea')) {
+          return;
+        }
+        window.location.href = card.dataset.cardHref;
+      });
+    });
+  </script>
 </body>
 </html>
