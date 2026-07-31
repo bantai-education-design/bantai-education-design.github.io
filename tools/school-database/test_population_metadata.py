@@ -15,12 +15,14 @@ POPULATION_JSON = ROOT / "data" / "school-database" / "prefecture-population-pil
 INDEX_HTML = ROOT / "tools" / "school-database" / "index.html"
 
 EXPECTED_GROUPS = {
-    "preschool_3_5": (3, 5),
-    "elementary_6_11": (6, 11),
-    "junior_high_12_14": (12, 14),
-    "high_school_15_17": (15, 17),
-    "education_age_3_17": (3, 17),
+    "japanese_preschool_3_5": (3, 5),
+    "japanese_elementary_6_11": (6, 11),
+    "japanese_junior_high_12_14": (12, 14),
+    "japanese_high_school_15_17": (15, 17),
+    "japanese_age_3_17": (3, 17),
 }
+
+PROHIBITED_CARD_LABELS = ("総人口", "東京都の人口", "学齢人口", "教育年齢人口")
 
 
 class CardParser(HTMLParser):
@@ -55,8 +57,14 @@ def test_population_json() -> None:
     assert tokyo["source"]["publisher"] == "東京都総務局統計部"
     assert tokyo["source"]["csv_url"].startswith("https://www.toukei.metro.tokyo.lg.jp/")
 
-    total_population = assert_number(tokyo["total_population"], "total_population")
-    assert total_population > 0
+    assert tokyo["population_scope"] == "Japanese residents"
+    assert tokyo["denominator"] == "japanese_population"
+    assert tokyo["foreign_residents_included"] is False
+    assert tokyo["all_residents_age_3_17"] is None
+    assert "total_population" not in tokyo
+
+    japanese_population = assert_number(tokyo["japanese_population"], "japanese_population")
+    assert japanese_population == 13293851
 
     groups = tokyo["age_groups"]
     assert set(groups) == set(EXPECTED_GROUPS)
@@ -65,18 +73,28 @@ def test_population_json() -> None:
     for key, age_range in EXPECTED_GROUPS.items():
         group = groups[key]
         assert group["age_range"] == list(age_range)
+        assert group["denominator"] == "japanese_population"
         population = assert_number(group["population"], f"{key}.population")
-        share = assert_number(group["share_percent"], f"{key}.share_percent")
+        share = assert_number(
+            group["share_of_japanese_population_percent"],
+            f"{key}.share_of_japanese_population_percent",
+        )
         assert population > 0
         assert 0 < share < 100
-        assert math.isclose(share, round(population / total_population * 100, 6), abs_tol=0.000001)
-        if key != "education_age_3_17":
+        assert math.isclose(share, round(population / japanese_population * 100, 6), abs_tol=0.000001)
+        if key != "japanese_age_3_17":
             component_population += int(population)
 
-    assert groups["education_age_3_17"]["population"] == component_population
+    assert groups["japanese_age_3_17"]["population"] == 1507197
+    assert groups["japanese_age_3_17"]["population"] == component_population
 
     ratios = tokyo["additional_analysis"]["population_per_school_simple_ratio"]
-    for key in ("preschool_3_5", "elementary_6_11", "junior_high_12_14", "high_school_15_17"):
+    for key in (
+        "japanese_preschool_3_5",
+        "japanese_elementary_6_11",
+        "japanese_junior_high_12_14",
+        "japanese_high_school_15_17",
+    ):
         ratio = ratios[key]
         assert ratio["school_count"] > 0
         assert ratio["population"] == groups[key]["population"]
@@ -91,11 +109,23 @@ def test_portal_html() -> None:
     assert len(parser.prefecture_cards) == 47
     assert parser.population_pilot_cards == 1
     assert "population-pilot-card" in html
-    assert "学齢人口は各校種に相当する年齢層の人口であり、実際の在学者数ではありません。" in html
+    assert "日本人人口" in html
+    assert "外国人人口は含みません。" in html
+    assert "実際の在学者数ではありません。" in html
+    assert "割合は日本人人口13,293,851人を分母として計算しています。" in html
     assert "13,293,851" in html
     assert "1,507,197" in html
-    assert "総人口比 11.3%" in html
+    assert "日本人人口比 11.3%" in html
     assert html.count("population-pilot-card") == 1
+
+    pilot_card = re.search(
+        r'<article class="pref-card prefecture-card active-card region-kanto population-pilot-card".*?</article>',
+        html,
+        re.DOTALL,
+    )
+    assert pilot_card
+    for prohibited in PROHIBITED_CARD_LABELS:
+        assert prohibited not in pilot_card.group(0)
 
     non_tokyo_population_regions = re.findall(r"region-(?!kanto)[a-z]+[^>]*population-pilot-card", html)
     assert not non_tokyo_population_regions

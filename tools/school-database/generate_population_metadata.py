@@ -87,8 +87,8 @@ def load_csv(source_url: str, source_file: Path | None) -> list[dict[str, str]]:
         return decode_csv_bytes(response.read())
 
 
-def tokyo_total_rows(rows: Iterable[dict[str, str]]) -> tuple[int, dict[int, int]]:
-    total_population: int | None = None
+def tokyo_japanese_rows(rows: Iterable[dict[str, str]]) -> tuple[int, dict[int, int]]:
+    japanese_population: int | None = None
     age_populations: dict[int, int] = {}
 
     for row in rows:
@@ -100,23 +100,23 @@ def tokyo_total_rows(rows: Iterable[dict[str, str]]) -> tuple[int, dict[int, int
         age_label = normalize_text(row["年齢"]).replace(" ", "")
         if age_label == "総数":
             population = parse_int(row["総数(人)"])
-            total_population = population
+            japanese_population = population
             continue
         if age_label.isdecimal():
             age = int(age_label)
             if age <= 17:
                 age_populations[age] = parse_int(row["総数(人)"])
 
-    if total_population is None:
+    if japanese_population is None:
         raise ValueError("Tokyo total row was not found")
     missing = [age for age in range(0, 18) if age not in age_populations]
     if missing:
         raise ValueError(f"Tokyo age rows are missing: {missing}")
-    return total_population, age_populations
+    return japanese_population, age_populations
 
 
-def share(population: int, total_population: int) -> float:
-    return round((population / total_population) * 100, 6)
+def share(population: int, japanese_population: int) -> float:
+    return round((population / japanese_population) * 100, 6)
 
 
 def load_school_counts() -> Counter[str]:
@@ -125,37 +125,40 @@ def load_school_counts() -> Counter[str]:
 
 
 def build_payload(rows: list[dict[str, str]], accessed_at: str) -> dict[str, object]:
-    total_population, age_populations = tokyo_total_rows(rows)
+    japanese_population, age_populations = tokyo_japanese_rows(rows)
     school_counts = load_school_counts()
 
     groups: dict[str, object] = {}
-    education_population = 0
+    japanese_age_3_17_population = 0
     population_per_school: dict[str, object] = {}
 
     for key, config in AGE_GROUPS.items():
+        output_key = f"japanese_{key}"
         population = sum(age_populations[age] for age in config["ages"])
-        education_population += population
+        japanese_age_3_17_population += population
         school_count = school_counts[config["school_type"]]
-        groups[key] = {
+        groups[output_key] = {
             "label": config["label"],
             "school_type": config["school_type"],
             "age_range": config["age_range"],
             "population": population,
-            "share_percent": share(population, total_population),
+            "share_of_japanese_population_percent": share(population, japanese_population),
+            "denominator": "japanese_population",
         }
-        population_per_school[key] = {
+        population_per_school[output_key] = {
             "school_type": config["school_type"],
             "school_count": school_count,
             "population": population,
             "population_per_school": round(population / school_count, 2) if school_count else None,
         }
 
-    groups["education_age_3_17"] = {
-        "label": "校種相当年齢人口",
+    groups["japanese_age_3_17"] = {
+        "label": "日本人の校種相当年齢人口",
         "school_type": "幼稚園・小学校・中学校・高等学校相当",
         "age_range": [3, 17],
-        "population": education_population,
-        "share_percent": share(education_population, total_population),
+        "population": japanese_age_3_17_population,
+        "share_of_japanese_population_percent": share(japanese_age_3_17_population, japanese_population),
+        "denominator": "japanese_population",
     }
 
     return {
@@ -167,7 +170,12 @@ def build_payload(rows: list[dict[str, str]], accessed_at: str) -> dict[str, obj
                 "prefecture_name": "東京都",
                 "reference_date": "2026-01-01",
                 "population_definition": "住民基本台帳に記載された日本人人口",
-                "total_population": total_population,
+                "population_scope": "Japanese residents",
+                "denominator": "japanese_population",
+                "japanese_population": japanese_population,
+                "foreign_residents_included": False,
+                "all_residents_age_3_17": None,
+                "all_residents_age_3_17_status": "not_available_from_single-year-age official source",
                 "age_groups": groups,
                 "source": {
                     "publisher": "東京都総務局統計部",
