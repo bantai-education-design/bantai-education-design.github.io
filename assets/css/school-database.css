@@ -962,19 +962,31 @@ h3.region-header {
   }
 }
 
-/* Tokyo population metadata pilot */
-.population-pilot-card {
-  gap: 10px;
+.prefecture-card-root {
+  display: grid;
+  gap: 0;
+}
+
+.prefecture-card-loading {
+  margin: 0;
+  color: #5d6675;
+}
+
+/* Prefecture card population metadata */
+.pref-card:has(.population-summary) {
+  gap: 6px;
+  padding: 18px 18px 34px;
 }
 
 .population-summary {
   display: grid;
-  gap: 6px;
-  margin-top: 10px;
-  padding: 12px;
+  gap: 3px;
+  margin-top: 2px;
+  padding: 7px;
   border: 1px solid rgba(197, 160, 89, 0.28);
-  border-radius: 12px;
+  border-radius: 8px;
   background: #fffaf0;
+  line-height: 1.15;
 }
 
 .population-summary-row {
@@ -985,36 +997,36 @@ h3.region-header {
 }
 
 .population-summary-label {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   color: #5d6675;
   white-space: nowrap;
 }
 
 .population-summary strong {
-  font-size: 0.92rem;
+  font-size: 0.78rem;
   color: var(--navy, #0c1b33);
   white-space: nowrap;
 }
 
 .population-summary strong span {
   margin-left: 2px;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 500;
 }
 
 .population-share {
   justify-self: start;
-  padding: 3px 8px;
+  padding: 2px 8px;
   border-radius: 999px;
   background: var(--navy, #0c1b33);
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 
 .population-age-details {
   border-top: 1px dashed rgba(7, 27, 54, 0.12);
-  padding-top: 8px;
+  padding-top: 6px;
 }
 
 .population-age-details summary {
@@ -1048,17 +1060,24 @@ h3.region-header {
   color: #5d6675;
 }
 
+.population-note--compact {
+  font-size: 0.68rem;
+  line-height: 1.25;
+}
+
 .population-age-details dd {
   color: var(--navy, #0c1b33);
   font-weight: 700;
 }
 
 .population-card-link {
-  align-self: flex-start;
+  position: absolute;
+  left: 18px;
+  bottom: 11px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
+  margin-top: 0;
   padding: 2px 0;
   color: var(--navy, #0c1b33);
   font-size: 0.78rem;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Tokyo population metadata pilot."""
+"""Validate the prefecture card metadata renderer."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 POPULATION_JSON = ROOT / "data" / "school-database" / "prefecture-population-pilot.json"
+CARD_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-card-metadata.json"
 INDEX_HTML = ROOT / "tools" / "school-database" / "index.html"
 
 EXPECTED_GROUPS = {
@@ -32,46 +33,18 @@ PROHIBITED_PLACEHOLDER_TEXT = (
 )
 
 
-class CardParser(HTMLParser):
+class PortalParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
-        self.prefecture_cards: list[set[str]] = []
-        self.population_pilot_cards = 0
-        self.prefecture_links: list[str] = []
-        self.headings: list[str] = []
-        self._card_depth = 0
-        self._heading_depth = 0
-        self._heading_parts: list[str] = []
+        self.prefecture_card_roots = 0
+        self.renderer_scripts = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attr = {key: value or "" for key, value in attrs}
-        classes = set(attr.get("class", "").split())
-        if {"pref-card", "prefecture-card"}.issubset(classes):
-            self.prefecture_cards.append(classes)
-            self._card_depth = 1
-            if tag == "a":
-                self.prefecture_links.append(attr.get("href", ""))
-        if "population-pilot-card" in classes:
-            self.population_pilot_cards += 1
-            if attr.get("data-card-href"):
-                self.prefecture_links.append(attr["data-card-href"])
-        elif self._card_depth:
-            self._card_depth += 1
-        if self._card_depth and tag == "h2":
-            self._heading_depth = 1
-            self._heading_parts = []
-
-    def handle_endtag(self, tag: str) -> None:
-        if self._heading_depth:
-            self._heading_depth -= 1
-            if self._heading_depth == 0:
-                self.headings.append("".join(self._heading_parts).strip())
-        if self._card_depth:
-            self._card_depth -= 1
-
-    def handle_data(self, data: str) -> None:
-        if self._heading_depth:
-            self._heading_parts.append(data)
+        if attr.get("data-prefecture-card-root") is not None:
+            self.prefecture_card_roots += 1
+        if attr.get("src") == "/assets/js/school-database/prefecture-card-renderer.js":
+            self.renderer_scripts += 1
 
 
 def assert_number(value: object, name: str) -> float:
@@ -135,49 +108,63 @@ def test_population_json() -> None:
         assert ratio["population_per_school"] > 0
 
 
+def test_card_metadata_json() -> None:
+    payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
+    assert payload["population_policy"]["no_dummy_values"] is True
+    assert payload["population_policy"]["no_estimates"] is True
+
+    prefectures = payload["prefectures"]
+    assert len(prefectures) == 47
+    assert prefectures[0]["prefecture_name"] == "東京都"
+    assert prefectures[1]["prefecture_name"] == "神奈川県"
+    assert prefectures[2]["prefecture_name"] == "埼玉県"
+    assert prefectures[3]["prefecture_name"] == "千葉県"
+    assert prefectures[-1]["prefecture_name"] == "沖縄県"
+
+    urls = [prefecture["url"] for prefecture in prefectures]
+    assert len(set(urls)) == 47
+    assert all(url.startswith("/tools/school-database/") for url in urls)
+
+    available_population = [prefecture for prefecture in prefectures if prefecture["population"]["available"]]
+    assert [prefecture["prefecture_code"] for prefecture in available_population] == ["tokyo"]
+
+    tokyo = available_population[0]
+    assert tokyo["school_database"]["record_count"] == 3493
+    assert tokyo["population"]["japanese_population"] == 13293851
+    assert tokyo["population"]["japanese_age_3_17"] == 1507197
+    assert tokyo["population"]["share_of_japanese_population_percent"] == 11.3
+    assert tokyo["population"]["denominator"] == "japanese_population"
+    assert tokyo["population"]["all_residents_age_3_17"] is None
+
+    for prefecture in prefectures:
+        school_database = prefecture["school_database"]
+        assert school_database["record_count"] > 0
+        assert school_database["municipality_count"] >= 0
+        assert school_database["school_type_count"] > 0
+        assert set(school_database["establishment"]) == {"national", "public", "private", "other"}
+        if prefecture["prefecture_code"] != "tokyo":
+            assert prefecture["population"] == {"available": False}
+            assert "japanese_population" not in prefecture["population"]
+
+
 def test_portal_html() -> None:
     html = INDEX_HTML.read_text(encoding="utf-8")
-    parser = CardParser()
+    parser = PortalParser()
     parser.feed(html)
 
-    assert len(parser.prefecture_cards) == 47
-    assert parser.population_pilot_cards == 1
-    assert len(parser.prefecture_links) == 47
-    assert all(link.startswith("/tools/") for link in parser.prefecture_links)
-    assert len(set(parser.prefecture_links)) == 47
-    assert parser.prefecture_links[0] == "/tools/school-database/tokyo/"
-    assert parser.headings[:4] == ["東京都", "神奈川県", "埼玉県", "千葉県"]
-    assert parser.headings[-1] == "沖縄県"
+    assert parser.prefecture_card_roots == 1
+    assert parser.renderer_scripts == 1
     for prohibited in PROHIBITED_PLACEHOLDER_TEXT:
         assert prohibited not in html
     assert "<button disabled" not in html
     assert "東京都版を開く" not in html
-    assert "population-pilot-card" in html
-    assert "人口（日本国籍）" in html
     assert "日本人人口" not in html
     assert "日本人人口比" not in html
-    assert "外国籍の住民は含みません。" in html
-    assert "実際の在学者数ではありません。" in html
-    assert "割合は、人口（日本国籍）13,293,851人を分母として計算しています。" in html
-    assert "13,293,851" in html
-    assert "1,507,197" in html
-    assert "人口に占める割合 11.3%" in html
-    assert html.count("population-pilot-card") == 1
-
-    pilot_card = re.search(
-        r'<article class="pref-card prefecture-card active-card region-kanto population-pilot-card".*?</article>',
-        html,
-        re.DOTALL,
-    )
-    assert pilot_card
-    for prohibited in PROHIBITED_CARD_LABELS:
-        assert prohibited not in pilot_card.group(0)
-
-    non_tokyo_population_regions = re.findall(r"region-(?!kanto)[a-z]+[^>]*population-pilot-card", html)
-    assert not non_tokyo_population_regions
+    assert "population-pilot-card" not in html
 
 
 if __name__ == "__main__":
     test_population_json()
+    test_card_metadata_json()
     test_portal_html()
-    print("population metadata pilot validation passed")
+    print("prefecture card metadata validation passed")
