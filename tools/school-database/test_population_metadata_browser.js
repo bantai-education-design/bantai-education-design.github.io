@@ -22,16 +22,18 @@ async function main() {
   const card = page.locator(".population-pilot-card");
   const defaultText = await card.innerText();
   for (const expected of [
-    "日本人人口",
+    "人口（日本国籍）",
     "13,293,851人",
-    "日本人3～17歳人口",
+    "3～17歳人口",
     "1,507,197人",
-    "日本人人口比 11.3%",
+    "人口に占める割合 11.3%",
     "収録校・園",
+    "外国籍の住民は含みません。",
+    "実際の在学者数ではありません。",
   ]) {
     if (!defaultText.includes(expected)) throw new Error(`missing default text: ${expected}`);
   }
-  for (const prohibited of ["総人口", "東京都の人口", "学齢人口", "教育年齢人口"]) {
+  for (const prohibited of ["総人口", "日本人人口", "日本人人口比", "学齢人口", "教育年齢人口"]) {
     if (defaultText.includes(prohibited)) throw new Error(`prohibited text in card: ${prohibited}`);
   }
   await card.screenshot({ path: path.join(outDir, "tokyo-card-proposal-a-1280.png") });
@@ -42,7 +44,7 @@ async function main() {
   if (page.url() !== beforeUrl) throw new Error("summary Enter navigated unexpectedly");
   const detailsText = await card.locator(".population-age-details").innerText();
   for (const expected of [
-    "日本人の校種相当年齢人口",
+    "年齢別人口",
     "幼児期相当 3～5歳",
     "266,188人・2.0%",
     "小学校期相当 6～11歳",

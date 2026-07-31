@@ -109,13 +109,15 @@ def test_portal_html() -> None:
     assert len(parser.prefecture_cards) == 47
     assert parser.population_pilot_cards == 1
     assert "population-pilot-card" in html
-    assert "日本人人口" in html
-    assert "外国人人口は含みません。" in html
+    assert "人口（日本国籍）" in html
+    assert "日本人人口" not in html
+    assert "日本人人口比" not in html
+    assert "外国籍の住民は含みません。" in html
     assert "実際の在学者数ではありません。" in html
-    assert "割合は日本人人口13,293,851人を分母として計算しています。" in html
+    assert "割合は、人口（日本国籍）13,293,851人を分母として計算しています。" in html
     assert "13,293,851" in html
     assert "1,507,197" in html
-    assert "日本人人口比 11.3%" in html
+    assert "人口に占める割合 11.3%" in html
     assert html.count("population-pilot-card") == 1
 
     pilot_card = re.search(
