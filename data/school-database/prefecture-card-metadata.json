@@ -1,0 +1,1248 @@
+{
+  "generated_at": "2026-07-31",
+  "schema_version": 1,
+  "description": "全国学校データベースの都道府県カード表示用メタデータ。学校DB情報を主情報、確認済み人口情報を補足情報として扱う。",
+  "population_policy": {
+    "no_dummy_values": true,
+    "no_estimates": true,
+    "unavailable_shape": {
+      "available": false
+    }
+  },
+  "prefectures": [
+    {
+      "prefecture_code": "tokyo",
+      "prefecture_name": "東京都",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/tokyo/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 3493,
+        "municipality_count": 66,
+        "establishment": {
+          "national": 0,
+          "public": 2274,
+          "private": 1219,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": true,
+        "population_scope_label": "人口（日本国籍）",
+        "population_scope": "Japanese residents",
+        "population_definition": "住民基本台帳に記載された日本人人口",
+        "japanese_population": 13293851,
+        "japanese_age_3_17": 1507197,
+        "share_of_japanese_population_percent": 11.3,
+        "denominator": "japanese_population",
+        "reference_date": "2026-01-01",
+        "foreign_residents_included": false,
+        "all_residents_age_3_17": null,
+        "summary_note": "※日本国籍の住民を対象。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2026年1月1日現在の住民基本台帳に記載された日本国籍の住民を対象としています。外国籍の住民は含みません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。",
+          "割合は、人口（日本国籍）13,293,851人を分母として計算しています。"
+        ],
+        "age_groups": [
+          {
+            "key": "japanese_preschool_3_5",
+            "label": "幼児期相当",
+            "age_range_label": "3～5歳",
+            "population": 266188,
+            "share_of_japanese_population_percent": 2.0,
+            "denominator": "japanese_population"
+          },
+          {
+            "key": "japanese_elementary_6_11",
+            "label": "小学校期相当",
+            "age_range_label": "6～11歳",
+            "population": 610624,
+            "share_of_japanese_population_percent": 4.6,
+            "denominator": "japanese_population"
+          },
+          {
+            "key": "japanese_junior_high_12_14",
+            "label": "中学校期相当",
+            "age_range_label": "12～14歳",
+            "population": 313542,
+            "share_of_japanese_population_percent": 2.4,
+            "denominator": "japanese_population"
+          },
+          {
+            "key": "japanese_high_school_15_17",
+            "label": "高校期相当",
+            "age_range_label": "15～17歳",
+            "population": 316843,
+            "share_of_japanese_population_percent": 2.4,
+            "denominator": "japanese_population"
+          }
+        ],
+        "source": {
+          "publisher": "東京都総務局統計部",
+          "title": "住民基本台帳による東京都の世帯と人口 令和8年1月 第6表 区市町村、年齢（各歳）及び男女別日本人人口",
+          "page_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26q10601.htm",
+          "csv_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0600.csv",
+          "format": "CSV",
+          "accessed_at": "2026-07-31"
+        }
+      }
+    },
+    {
+      "prefecture_code": "kanagawa",
+      "prefecture_name": "神奈川県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/kanagawa/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 2227,
+        "municipality_count": 58,
+        "establishment": {
+          "national": 6,
+          "public": 1502,
+          "private": 719,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "saitama",
+      "prefecture_name": "埼玉県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/saitama/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1929,
+        "municipality_count": 72,
+        "establishment": {
+          "national": 0,
+          "public": 1423,
+          "private": 506,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "chiba",
+      "prefecture_name": "千葉県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/chiba/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1823,
+        "municipality_count": 59,
+        "establishment": {
+          "national": 5,
+          "public": 1366,
+          "private": 452,
+          "other": 0
+        },
+        "school_type_count": 8
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "ibaraki",
+      "prefecture_name": "茨城県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/ibaraki/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 872,
+        "municipality_count": 44,
+        "establishment": {
+          "national": 3,
+          "public": 766,
+          "private": 103,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "tochigi",
+      "prefecture_name": "栃木県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/tochigi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 678,
+        "municipality_count": 25,
+        "establishment": {
+          "national": 4,
+          "public": 578,
+          "private": 96,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "gunma",
+      "prefecture_name": "群馬県",
+      "region": {
+        "code": "kanto",
+        "name": "関東地方"
+      },
+      "url": "/tools/school-database/gunma/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 651,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 4,
+          "public": 576,
+          "private": 71,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "hokkaido",
+      "prefecture_name": "北海道",
+      "region": {
+        "code": "hokkaido",
+        "name": "北海道地方"
+      },
+      "url": "/tools/school-database/hokkaido/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1988,
+        "municipality_count": 200,
+        "establishment": {
+          "national": 10,
+          "public": 1630,
+          "private": 348,
+          "other": 0
+        },
+        "school_type_count": 8
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "miyagi",
+      "prefecture_name": "宮城県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/miyagi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 809,
+        "municipality_count": 39,
+        "establishment": {
+          "national": 1,
+          "public": 643,
+          "private": 165,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "aomori",
+      "prefecture_name": "青森県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/aomori/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 551,
+        "municipality_count": 40,
+        "establishment": {
+          "national": 4,
+          "public": 449,
+          "private": 98,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "iwate",
+      "prefecture_name": "岩手県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/iwate/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 502,
+        "municipality_count": 33,
+        "establishment": {
+          "national": 4,
+          "public": 446,
+          "private": 52,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "akita",
+      "prefecture_name": "秋田県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/akita/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 362,
+        "municipality_count": 25,
+        "establishment": {
+          "national": 4,
+          "public": 323,
+          "private": 35,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "yamagata",
+      "prefecture_name": "山形県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/yamagata/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 442,
+        "municipality_count": 35,
+        "establishment": {
+          "national": 4,
+          "public": 381,
+          "private": 57,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "fukushima",
+      "prefecture_name": "福島県",
+      "region": {
+        "code": "tohoku",
+        "name": "東北地方"
+      },
+      "url": "/tools/school-database/fukushima/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 794,
+        "municipality_count": 59,
+        "establishment": {
+          "national": 1,
+          "public": 677,
+          "private": 116,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "aichi",
+      "prefecture_name": "愛知県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/aichi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 2021,
+        "municipality_count": 69,
+        "establishment": {
+          "national": 8,
+          "public": 1619,
+          "private": 394,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "niigata",
+      "prefecture_name": "新潟県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/niigata/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 831,
+        "municipality_count": 37,
+        "establishment": {
+          "national": 0,
+          "public": 772,
+          "private": 59,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "toyama",
+      "prefecture_name": "富山県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/toyama/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 333,
+        "municipality_count": 18,
+        "establishment": {
+          "national": 4,
+          "public": 300,
+          "private": 29,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "ishikawa",
+      "prefecture_name": "石川県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/ishikawa/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 386,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 5,
+          "public": 327,
+          "private": 54,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "fukui",
+      "prefecture_name": "福井県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/fukui/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 358,
+        "municipality_count": 20,
+        "establishment": {
+          "national": 3,
+          "public": 329,
+          "private": 26,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "yamanashi",
+      "prefecture_name": "山梨県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/yamanashi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 351,
+        "municipality_count": 27,
+        "establishment": {
+          "national": 4,
+          "public": 285,
+          "private": 62,
+          "other": 0
+        },
+        "school_type_count": 5
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "nagano",
+      "prefecture_name": "長野県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/nagano/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 766,
+        "municipality_count": 77,
+        "establishment": {
+          "national": 6,
+          "public": 632,
+          "private": 128,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "gifu",
+      "prefecture_name": "岐阜県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/gifu/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 735,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 1,
+          "public": 619,
+          "private": 115,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "shizuoka",
+      "prefecture_name": "静岡県",
+      "region": {
+        "code": "chubu",
+        "name": "中部地方"
+      },
+      "url": "/tools/school-database/shizuoka/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1241,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 7,
+          "public": 1005,
+          "private": 229,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "osaka",
+      "prefecture_name": "大阪府",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/osaka/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 2087,
+        "municipality_count": 72,
+        "establishment": {
+          "national": 11,
+          "public": 1589,
+          "private": 487,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "mie",
+      "prefecture_name": "三重県",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/mie/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 736,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 4,
+          "public": 654,
+          "private": 78,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "shiga",
+      "prefecture_name": "滋賀県",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/shiga/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 498,
+        "municipality_count": 20,
+        "establishment": {
+          "national": 4,
+          "public": 460,
+          "private": 34,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "kyoto",
+      "prefecture_name": "京都府",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/kyoto/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 859,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 6,
+          "public": 631,
+          "private": 222,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "hyogo",
+      "prefecture_name": "兵庫県",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/hyogo/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1743,
+        "municipality_count": 41,
+        "establishment": {
+          "national": 7,
+          "public": 1453,
+          "private": 283,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "nara",
+      "prefecture_name": "奈良県",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/nara/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 473,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 5,
+          "public": 395,
+          "private": 73,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "wakayama",
+      "prefecture_name": "和歌山県",
+      "region": {
+        "code": "kinki",
+        "name": "近畿地方"
+      },
+      "url": "/tools/school-database/wakayama/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 467,
+        "municipality_count": 34,
+        "establishment": {
+          "national": 3,
+          "public": 418,
+          "private": 46,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "hiroshima",
+      "prefecture_name": "広島県",
+      "region": {
+        "code": "chugoku",
+        "name": "中国地方"
+      },
+      "url": "/tools/school-database/hiroshima/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1048,
+        "municipality_count": 31,
+        "establishment": {
+          "national": 11,
+          "public": 767,
+          "private": 270,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "tottori",
+      "prefecture_name": "鳥取県",
+      "region": {
+        "code": "chugoku",
+        "name": "中国地方"
+      },
+      "url": "/tools/school-database/tottori/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 232,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 4,
+          "public": 205,
+          "private": 23,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "shimane",
+      "prefecture_name": "島根県",
+      "region": {
+        "code": "chugoku",
+        "name": "中国地方"
+      },
+      "url": "/tools/school-database/shimane/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 402,
+        "municipality_count": 0,
+        "establishment": {
+          "national": 2,
+          "public": 379,
+          "private": 21,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "okayama",
+      "prefecture_name": "岡山県",
+      "region": {
+        "code": "chugoku",
+        "name": "中国地方"
+      },
+      "url": "/tools/school-database/okayama/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 772,
+        "municipality_count": 27,
+        "establishment": {
+          "national": 4,
+          "public": 696,
+          "private": 72,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "yamaguchi",
+      "prefecture_name": "山口県",
+      "region": {
+        "code": "chugoku",
+        "name": "中国地方"
+      },
+      "url": "/tools/school-database/yamaguchi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 680,
+        "municipality_count": 19,
+        "establishment": {
+          "national": 5,
+          "public": 520,
+          "private": 155,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "kagawa",
+      "prefecture_name": "香川県",
+      "region": {
+        "code": "shikoku",
+        "name": "四国地方"
+      },
+      "url": "/tools/school-database/kagawa/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 379,
+        "municipality_count": 17,
+        "establishment": {
+          "national": 6,
+          "public": 322,
+          "private": 51,
+          "other": 0
+        },
+        "school_type_count": 5
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "tokushima",
+      "prefecture_name": "徳島県",
+      "region": {
+        "code": "shikoku",
+        "name": "四国地方"
+      },
+      "url": "/tools/school-database/tokushima/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 401,
+        "municipality_count": 29,
+        "establishment": {
+          "national": 4,
+          "public": 379,
+          "private": 18,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "ehime",
+      "prefecture_name": "愛媛県",
+      "region": {
+        "code": "shikoku",
+        "name": "四国地方"
+      },
+      "url": "/tools/school-database/ehime/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 582,
+        "municipality_count": 23,
+        "establishment": {
+          "national": 5,
+          "public": 491,
+          "private": 86,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "kochi",
+      "prefecture_name": "高知県",
+      "region": {
+        "code": "shikoku",
+        "name": "四国地方"
+      },
+      "url": "/tools/school-database/kochi/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 430,
+        "municipality_count": 39,
+        "establishment": {
+          "national": 4,
+          "public": 383,
+          "private": 43,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "fukuoka",
+      "prefecture_name": "福岡県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/fukuoka/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 1659,
+        "municipality_count": 60,
+        "establishment": {
+          "national": 7,
+          "public": 1181,
+          "private": 471,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "saga",
+      "prefecture_name": "佐賀県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/saga/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 340,
+        "municipality_count": 22,
+        "establishment": {
+          "national": 4,
+          "public": 289,
+          "private": 47,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "nagasaki",
+      "prefecture_name": "長崎県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/nagasaki/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 671,
+        "municipality_count": 21,
+        "establishment": {
+          "national": 4,
+          "public": 552,
+          "private": 115,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "kumamoto",
+      "prefecture_name": "熊本県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/kumamoto/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 687,
+        "municipality_count": 46,
+        "establishment": {
+          "national": 4,
+          "public": 577,
+          "private": 106,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "oita",
+      "prefecture_name": "大分県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/oita/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 561,
+        "municipality_count": 25,
+        "establishment": {
+          "national": 4,
+          "public": 486,
+          "private": 71,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "miyazaki",
+      "prefecture_name": "宮崎県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/miyazaki/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 505,
+        "municipality_count": 28,
+        "establishment": {
+          "national": 3,
+          "public": 403,
+          "private": 99,
+          "other": 0
+        },
+        "school_type_count": 7
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "kagoshima",
+      "prefecture_name": "鹿児島県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/kagoshima/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 905,
+        "municipality_count": 48,
+        "establishment": {
+          "national": 4,
+          "public": 801,
+          "private": 100,
+          "other": 0
+        },
+        "school_type_count": 6
+      },
+      "population": {
+        "available": false
+      }
+    },
+    {
+      "prefecture_code": "okinawa",
+      "prefecture_name": "沖縄県",
+      "region": {
+        "code": "kyushu",
+        "name": "九州・沖縄地方"
+      },
+      "url": "/tools/school-database/okinawa/",
+      "edition": "令和8年度版",
+      "status_label": "NEW",
+      "school_database": {
+        "record_count": 626,
+        "municipality_count": 41,
+        "establishment": {
+          "national": 2,
+          "public": 572,
+          "private": 52,
+          "other": 0
+        },
+        "school_type_count": 5
+      },
+      "population": {
+        "available": false
+      }
+    }
+  ]
+}
+
