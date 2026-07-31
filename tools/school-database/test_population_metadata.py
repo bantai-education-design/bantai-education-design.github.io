@@ -112,6 +112,7 @@ def test_card_metadata_json() -> None:
     payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
     assert payload["population_policy"]["no_dummy_values"] is True
     assert payload["population_policy"]["no_estimates"] is True
+    assert payload["symbol_mark_policy"]["no_dummy_values"] is True
 
     prefectures = payload["prefectures"]
     assert len(prefectures) == 47
@@ -142,6 +143,12 @@ def test_card_metadata_json() -> None:
         assert school_database["municipality_count"] >= 0
         assert school_database["school_type_count"] > 0
         assert set(school_database["establishment"]) == {"national", "public", "private", "other"}
+        symbol_mark = prefecture["symbol_mark"]
+        assert symbol_mark["available"] is True
+        assert symbol_mark["label"] == "シンボルマーク"
+        assert symbol_mark["image_url"].startswith("https://upload.wikimedia.org/wikipedia/commons/")
+        assert symbol_mark["source_page_url"].startswith("https://commons.wikimedia.org/wiki/File:")
+        assert symbol_mark["file_name"].endswith(".svg")
         if prefecture["prefecture_code"] != "tokyo":
             assert prefecture["population"] == {"available": False}
             assert "japanese_population" not in prefecture["population"]

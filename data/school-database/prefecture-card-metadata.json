@@ -91,6 +91,14 @@
           "format": "CSV",
           "accessed_at": "2026-07-31"
         }
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Tokyo Metropolis.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Flag_of_Tokyo_Metropolis.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Tokyo%20Metropolis.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -116,6 +124,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kanagawa Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Kanagawa_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kanagawa%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -141,6 +157,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Saitama Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Flag_of_Saitama_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Saitama%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -166,6 +190,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Chiba Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Chiba_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Chiba%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -191,6 +223,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Ibaraki Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Ibaraki_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Ibaraki%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -216,6 +256,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Tochigi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_Tochigi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Tochigi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -241,6 +289,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Gunma Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Gunma_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Gunma%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -266,6 +322,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Hokkaido Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Hokkaido_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Hokkaido%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -291,6 +355,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Miyagi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Miyagi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Miyagi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -316,6 +388,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Aomori Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Aomori_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Aomori%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -341,6 +421,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Iwate Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Iwate_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Iwate%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -366,6 +454,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Akita Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Akita_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Akita%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -391,6 +487,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Yamagata Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Yamagata_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Yamagata%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -416,6 +520,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Fukushima Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Fukushima_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Fukushima%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -441,6 +553,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Aichi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Aichi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Aichi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -466,6 +586,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Niigata Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Niigata_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Niigata%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -491,6 +619,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Toyama Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Flag_of_Toyama_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Toyama%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -516,6 +652,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Ishikawa Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Ishikawa_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Ishikawa%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -541,6 +685,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Fukui Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Fukui_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Fukui%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -566,6 +718,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Yamanashi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Yamanashi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Yamanashi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -591,6 +751,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Nagano Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Nagano_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Nagano%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -616,6 +784,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Gifu Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Gifu_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Gifu%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -641,6 +817,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Shizuoka Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Shizuoka_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Shizuoka%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -666,6 +850,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Osaka Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Osaka_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Osaka%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -691,6 +883,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Mie Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Mie_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Mie%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -716,6 +916,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Shiga Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Shiga_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Shiga%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -741,6 +949,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kyoto Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Kyoto_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kyoto%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -766,6 +982,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Hyogo Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_Hyogo_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Hyogo%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -791,6 +1015,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Nara Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Nara_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Nara%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -816,6 +1048,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Wakayama Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Wakayama_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Wakayama%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -841,6 +1081,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Hiroshima Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Hiroshima_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Hiroshima%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -866,6 +1114,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Tottori Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Tottori_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Tottori%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -891,6 +1147,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Shimane Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Shimane_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Shimane%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -916,6 +1180,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Okayama Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Okayama_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Okayama%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -941,6 +1213,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Yamaguchi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Yamaguchi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Yamaguchi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -966,6 +1246,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kagawa Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Kagawa_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kagawa%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -991,6 +1279,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Tokushima Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Tokushima_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Tokushima%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1016,6 +1312,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Ehime Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Ehime_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Ehime%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1041,6 +1345,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kochi Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Kochi_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kochi%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1066,6 +1378,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Fukuoka Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Fukuoka_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Fukuoka%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1091,6 +1411,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Saga Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Saga_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Saga%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1116,6 +1444,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Nagasaki Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Nagasaki_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Nagasaki%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1141,6 +1477,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kumamoto Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Kumamoto_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kumamoto%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1166,6 +1510,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Oita Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Flag_of_Oita_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Oita%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1191,6 +1543,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Miyazaki Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Flag_of_Miyazaki_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Miyazaki%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1216,6 +1576,14 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Kagoshima Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Flag_of_Kagoshima_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Kagoshima%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     },
     {
@@ -1241,8 +1609,23 @@
       },
       "population": {
         "available": false
+      },
+      "symbol_mark": {
+        "available": true,
+        "label": "シンボルマーク",
+        "file_name": "Flag of Okinawa Prefecture.svg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Okinawa_Prefecture.svg",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Flag%20of%20Okinawa%20Prefecture.svg",
+        "source_note": "Wikimedia Commons official prefectural flag/emblem file; usage restrictions for official symbols may apply."
       }
     }
-  ]
+  ],
+  "symbol_mark_policy": {
+    "source": "Wikimedia Commons official prefectural flag/emblem files",
+    "license_note": "公式記章は著作権状態とは別に利用制限がある場合があります。カード上の小さな識別表示として扱います。",
+    "no_dummy_values": true,
+    "unavailable_shape": {
+      "available": false
+    }
+  }
 }
-

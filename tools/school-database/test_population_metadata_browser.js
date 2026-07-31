@@ -27,6 +27,8 @@ async function main() {
         disabledButtons: card.querySelectorAll("button[disabled]").length,
         hasPopulation: Boolean(card.querySelector(".population-summary")),
         schoolMetaRows: card.querySelectorAll(".pref-meta-grid .meta-row").length,
+        symbolCount: card.querySelectorAll(".pref-symbol-mark img").length,
+        symbolAlt: card.querySelector(".pref-symbol-mark img")?.getAttribute("alt") || "",
       };
     });
   });
@@ -34,6 +36,8 @@ async function main() {
   if (cardAudit.some((card) => !card.href)) throw new Error("empty prefecture link found");
   if (cardAudit.some((card) => card.disabledButtons > 0)) throw new Error("disabled transition button remains");
   if (cardAudit.some((card) => card.schoolMetaRows !== 4)) throw new Error("every card should keep 4 school database metadata rows");
+  if (cardAudit.some((card) => card.symbolCount !== 1)) throw new Error("every card should render one symbol mark image");
+  if (cardAudit.some((card) => !card.symbolAlt.includes(card.name))) throw new Error("symbol mark alt text should include prefecture name");
   const cardsWithPopulation = cardAudit.filter((card) => card.hasPopulation);
   if (cardsWithPopulation.length !== 1 || cardsWithPopulation[0].name !== "東京都") {
     throw new Error(`population should render only on Tokyo card: ${JSON.stringify(cardsWithPopulation)}`);

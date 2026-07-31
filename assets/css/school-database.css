@@ -696,6 +696,7 @@ h3.region-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   margin-bottom: 10px;
 }
 
@@ -706,6 +707,31 @@ h3.region-header {
   font-weight: 700;
   padding: 4px 12px;
   border-radius: 99px;
+}
+
+.pref-symbol-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: auto;
+  border: 1px solid rgba(7, 27, 54, 0.08);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.pref-symbol-mark img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.pref-symbol-mark[hidden] {
+  display: none;
 }
 
 .pref-card h2 {
@@ -961,7 +987,7 @@ h3.region-header {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 4px 12px;
   margin-top: 6px;
-  padding-top: 8px;
+  padding-top: 6px;
 }
 
 .pref-card:has(.population-summary) .meta-row {
@@ -997,7 +1023,7 @@ h3.region-header {
 /* Prefecture card population metadata */
 .pref-card:has(.population-summary) {
   gap: 5px;
-  padding: 16px 18px 28px;
+  padding: 14px 18px 26px;
 }
 
 .population-summary {
@@ -1084,7 +1110,7 @@ h3.region-header {
 .population-card-link {
   position: absolute;
   left: 18px;
-  bottom: 7px;
+  bottom: 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
