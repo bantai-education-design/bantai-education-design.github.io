@@ -55,25 +55,25 @@ def parse_cell_int(value: object) -> int:
 
 AGE_GROUPS = {
     "census_preschool_3_5": {
-        "label": "幼稚園相当年齢",
+        "label": "幼児期",
         "school_type": "幼稚園",
         "age_range": [3, 5],
         "ages": range(3, 6),
     },
     "census_elementary_6_11": {
-        "label": "小学校相当年齢",
+        "label": "小学校期",
         "school_type": "小学校",
         "age_range": [6, 11],
         "ages": range(6, 12),
     },
     "census_junior_high_12_14": {
-        "label": "中学校相当年齢",
+        "label": "中学校期",
         "school_type": "中学校",
         "age_range": [12, 14],
         "ages": range(12, 15),
     },
     "census_high_school_15_17": {
-        "label": "高等学校相当年齢",
+        "label": "高校期",
         "school_type": "高等学校",
         "age_range": [15, 17],
         "ages": range(15, 18),
@@ -85,9 +85,12 @@ SOURCE_TITLE = (
     "国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，"
     "21大都市，特別区，人口50万以上の市"
 )
+SOURCE_SHORT_LABEL = "令和2年国勢調査"
 SOURCE_URL = "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102"
 SOURCE_TABLE_ID = "000032142404"
 REFERENCE_DATE = "2020-10-01"
+REFERENCE_DATE_LABEL = "統計基準日"
+REFERENCE_DATE_DISPLAY = "2020年10月1日現在"
 POPULATION_SCOPE = "census_japanese_population"
 DEFINITION_NOTE = (
     "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。"
@@ -203,8 +206,11 @@ def build_payload(rows: list[dict[str, object]], slug_map: dict[str, dict[str, s
                 "share_of_census_population_percent": share(age_3_17, total),
                 "age_groups": age_groups,
                 "source_title": SOURCE_TITLE,
+                "source_short_label": SOURCE_SHORT_LABEL,
                 "source_url": SOURCE_URL,
                 "source_table_id": SOURCE_TABLE_ID,
+                "reference_date_label": REFERENCE_DATE_LABEL,
+                "reference_date_display": REFERENCE_DATE_DISPLAY,
                 "accessed_at": accessed_at,
                 "definition_note": DEFINITION_NOTE,
             }

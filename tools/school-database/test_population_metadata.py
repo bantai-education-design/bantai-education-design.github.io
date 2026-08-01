@@ -132,7 +132,17 @@ def test_card_metadata_population_integration() -> None:
 
         assert pop["source"]["table_id"] == source_ref["source_table_id"]
         assert pop["notes"], f"{prefecture['prefecture_name']}: notes が空です"
-        assert pop["population_scope_label"] == "人口（2020年国勢調査・日本人）"
+        assert pop["population_scope_label"] == "人口（日本国籍）"
+        assert pop["reference_date_label"] == "統計基準日"
+        assert pop["reference_date_display"] == "2020年10月1日現在"
+        assert pop["source_short_label"] == "令和2年国勢調査"
+        assert pop["age_groups_label"] == "校種相当年齢人口"
+        assert pop["footer_note"], f"{prefecture['prefecture_name']}: footer_note が空です"
+        assert "実際の在学者数ではありません" in pop["footer_note"]
+        for group in pop["age_groups"]:
+            assert group["label"] in ("幼児期", "小学校期", "中学校期", "高校期"), (
+                f"{prefecture['prefecture_name']}: 想定外の年齢区分ラベル {group['label']!r}"
+            )
 
     # 東京都だけ別のキー・定義になっていないことを明示的に確認する。
     tokyo = next(p for p in prefectures if p["prefecture_code"] == "tokyo")

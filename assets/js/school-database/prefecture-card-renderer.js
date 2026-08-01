@@ -67,14 +67,25 @@
     ageRow.append(ageValue);
     summary.append(ageRow);
 
+    const sourceLine = createElement(
+      "p",
+      "population-source-line",
+      `出典：${population.source_short_label}　${population.reference_date_label}：${population.reference_date_display}`,
+    );
+    summary.append(sourceLine);
+
+    if (population.footer_note) {
+      summary.append(createElement("p", "population-footer-note", population.footer_note));
+    }
+
     card.append(summary);
 
     const details = createElement("details", "population-age-details");
-    details.append(createElement("summary", "", "年齢別人口"));
+    details.append(createElement("summary", "", population.age_groups_label || "校種相当年齢人口"));
     const list = createElement("dl", "");
     population.age_groups.forEach((group) => {
       const item = createElement("div", "");
-      item.append(createElement("dt", "", `${group.label} ${group.age_range_label}`));
+      item.append(createElement("dt", "", `${group.label}（${group.age_range_label}）`));
       item.append(
         createElement(
           "dd",
@@ -85,7 +96,6 @@
       list.append(item);
     });
     details.append(list);
-    details.append(createElement("p", "population-note", `基準日：${population.reference_date}`));
     if (population.summary_note) {
       details.append(createElement("p", "population-note", population.summary_note));
     }
