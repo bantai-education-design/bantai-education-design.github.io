@@ -1,0 +1,3255 @@
+{
+  "generated_at": "2026-08-01",
+  "population_scope": "census_japanese_population",
+  "reference_date": "2020-10-01",
+  "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+  "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+  "source_table_id": "000032142404",
+  "accessed_at": "2026-08-01",
+  "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。",
+  "prefectures": [
+    {
+      "prefecture_code": "tokyo",
+      "prefecture_name": "東京都",
+      "census_prefecture_code": "13000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 13233213,
+      "census_age_3_17": 1518414,
+      "share_of_census_population_percent": 11.474266,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 314040,
+          "share_of_census_population_percent": 2.37312
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 613198,
+          "share_of_census_population_percent": 4.63378
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 297590,
+          "share_of_census_population_percent": 2.248811
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 293586,
+          "share_of_census_population_percent": 2.218554
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kanagawa",
+      "prefecture_name": "神奈川県",
+      "census_prefecture_code": "14000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 8876834,
+      "census_age_3_17": 1107759,
+      "share_of_census_population_percent": 12.479213,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 206779,
+          "share_of_census_population_percent": 2.329423
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 440796,
+          "share_of_census_population_percent": 4.965689
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 228780,
+          "share_of_census_population_percent": 2.57727
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 231404,
+          "share_of_census_population_percent": 2.60683
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "saitama",
+      "prefecture_name": "埼玉県",
+      "census_prefecture_code": "11000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 7055679,
+      "census_age_3_17": 879968,
+      "share_of_census_population_percent": 12.471769,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 162609,
+          "share_of_census_population_percent": 2.304654
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 348531,
+          "share_of_census_population_percent": 4.939723
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 183044,
+          "share_of_census_population_percent": 2.594279
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 185784,
+          "share_of_census_population_percent": 2.633113
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "chiba",
+      "prefecture_name": "千葉県",
+      "census_prefecture_code": "12000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 6040814,
+      "census_age_3_17": 755470,
+      "share_of_census_population_percent": 12.506096,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 138833,
+          "share_of_census_population_percent": 2.29825
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 298837,
+          "share_of_census_population_percent": 4.946966
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 157362,
+          "share_of_census_population_percent": 2.60498
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 160438,
+          "share_of_census_population_percent": 2.6559
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "ibaraki",
+      "prefecture_name": "茨城県",
+      "census_prefecture_code": "08000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 2763432,
+      "census_age_3_17": 352352,
+      "share_of_census_population_percent": 12.750522,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 62271,
+          "share_of_census_population_percent": 2.253394
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 138142,
+          "share_of_census_population_percent": 4.998929
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 74226,
+          "share_of_census_population_percent": 2.686008
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 77713,
+          "share_of_census_population_percent": 2.812192
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "tochigi",
+      "prefecture_name": "栃木県",
+      "census_prefecture_code": "09000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1869256,
+      "census_age_3_17": 240037,
+      "share_of_census_population_percent": 12.841312,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 43100,
+          "share_of_census_population_percent": 2.30573
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 93529,
+          "share_of_census_population_percent": 5.003542
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 50634,
+          "share_of_census_population_percent": 2.708778
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 52774,
+          "share_of_census_population_percent": 2.823262
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "gunma",
+      "prefecture_name": "群馬県",
+      "census_prefecture_code": "10000",
+      "region_code": "kanto",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1860213,
+      "census_age_3_17": 235174,
+      "share_of_census_population_percent": 12.642316,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 40551,
+          "share_of_census_population_percent": 2.179912
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 91322,
+          "share_of_census_population_percent": 4.909223
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 50229,
+          "share_of_census_population_percent": 2.700175
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 53072,
+          "share_of_census_population_percent": 2.853007
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "hokkaido",
+      "prefecture_name": "北海道",
+      "census_prefecture_code": "01000",
+      "region_code": "hokkaido",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 5151366,
+      "census_age_3_17": 591690,
+      "share_of_census_population_percent": 11.48608,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 105208,
+          "share_of_census_population_percent": 2.042332
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 232550,
+          "share_of_census_population_percent": 4.514337
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 123496,
+          "share_of_census_population_percent": 2.397345
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 130436,
+          "share_of_census_population_percent": 2.532066
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "miyagi",
+      "prefecture_name": "宮城県",
+      "census_prefecture_code": "04000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 2242701,
+      "census_age_3_17": 283495,
+      "share_of_census_population_percent": 12.640784,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 51651,
+          "share_of_census_population_percent": 2.303071
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 111855,
+          "share_of_census_population_percent": 4.987513
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 58788,
+          "share_of_census_population_percent": 2.621304
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 61201,
+          "share_of_census_population_percent": 2.728897
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "aomori",
+      "prefecture_name": "青森県",
+      "census_prefecture_code": "02000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1224334,
+      "census_age_3_17": 140171,
+      "share_of_census_population_percent": 11.448755,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 24324,
+          "share_of_census_population_percent": 1.986713
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 53796,
+          "share_of_census_population_percent": 4.393899
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 29590,
+          "share_of_census_population_percent": 2.416824
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 32461,
+          "share_of_census_population_percent": 2.651319
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "iwate",
+      "prefecture_name": "岩手県",
+      "census_prefecture_code": "03000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1194745,
+      "census_age_3_17": 143840,
+      "share_of_census_population_percent": 12.039389,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 24913,
+          "share_of_census_population_percent": 2.085215
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 55899,
+          "share_of_census_population_percent": 4.678739
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 30385,
+          "share_of_census_population_percent": 2.543221
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 32643,
+          "share_of_census_population_percent": 2.732215
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "akita",
+      "prefecture_name": "秋田県",
+      "census_prefecture_code": "05000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 950192,
+      "census_age_3_17": 101826,
+      "share_of_census_population_percent": 10.71636,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 16947,
+          "share_of_census_population_percent": 1.783534
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 39275,
+          "share_of_census_population_percent": 4.133375
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 22186,
+          "share_of_census_population_percent": 2.334897
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 23418,
+          "share_of_census_population_percent": 2.464555
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "yamagata",
+      "prefecture_name": "山形県",
+      "census_prefecture_code": "06000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1056617,
+      "census_age_3_17": 129377,
+      "share_of_census_population_percent": 12.244456,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 22491,
+          "share_of_census_population_percent": 2.128586
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 50289,
+          "share_of_census_population_percent": 4.759435
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 27576,
+          "share_of_census_population_percent": 2.609839
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 29021,
+          "share_of_census_population_percent": 2.746596
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "fukushima",
+      "prefecture_name": "福島県",
+      "census_prefecture_code": "07000",
+      "region_code": "tohoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1797450,
+      "census_age_3_17": 221388,
+      "share_of_census_population_percent": 12.316782,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 39835,
+          "share_of_census_population_percent": 2.216195
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 84936,
+          "share_of_census_population_percent": 4.725361
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 46390,
+          "share_of_census_population_percent": 2.580878
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 50227,
+          "share_of_census_population_percent": 2.794348
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "aichi",
+      "prefecture_name": "愛知県",
+      "census_prefecture_code": "23000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 7164758,
+      "census_age_3_17": 978422,
+      "share_of_census_population_percent": 13.656037,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 184415,
+          "share_of_census_population_percent": 2.573918
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 391101,
+          "share_of_census_population_percent": 5.458677
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 200935,
+          "share_of_census_population_percent": 2.804491
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 201971,
+          "share_of_census_population_percent": 2.818951
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "niigata",
+      "prefecture_name": "新潟県",
+      "census_prefecture_code": "15000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 2168416,
+      "census_age_3_17": 264030,
+      "share_of_census_population_percent": 12.176169,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 46525,
+          "share_of_census_population_percent": 2.145575
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 104205,
+          "share_of_census_population_percent": 4.805582
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 55535,
+          "share_of_census_population_percent": 2.561086
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 57765,
+          "share_of_census_population_percent": 2.663926
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "toyama",
+      "prefecture_name": "富山県",
+      "census_prefecture_code": "16000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1009388,
+      "census_age_3_17": 122313,
+      "share_of_census_population_percent": 12.117541,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 21504,
+          "share_of_census_population_percent": 2.1304
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 47124,
+          "share_of_census_population_percent": 4.668571
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 25974,
+          "share_of_census_population_percent": 2.573242
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 27711,
+          "share_of_census_population_percent": 2.745327
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "ishikawa",
+      "prefecture_name": "石川県",
+      "census_prefecture_code": "17000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1102692,
+      "census_age_3_17": 144364,
+      "share_of_census_population_percent": 13.09196,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 26373,
+          "share_of_census_population_percent": 2.391692
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 56298,
+          "share_of_census_population_percent": 5.105505
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 30205,
+          "share_of_census_population_percent": 2.739206
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 31488,
+          "share_of_census_population_percent": 2.855557
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "fukui",
+      "prefecture_name": "福井県",
+      "census_prefecture_code": "18000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 746068,
+      "census_age_3_17": 100865,
+      "share_of_census_population_percent": 13.519545,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 17885,
+          "share_of_census_population_percent": 2.397235
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 39493,
+          "share_of_census_population_percent": 5.293485
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 21268,
+          "share_of_census_population_percent": 2.850678
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 22219,
+          "share_of_census_population_percent": 2.978147
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "yamanashi",
+      "prefecture_name": "山梨県",
+      "census_prefecture_code": "19000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 786673,
+      "census_age_3_17": 97389,
+      "share_of_census_population_percent": 12.379858,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 17082,
+          "share_of_census_population_percent": 2.171423
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 37452,
+          "share_of_census_population_percent": 4.760809
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 20376,
+          "share_of_census_population_percent": 2.590149
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 22479,
+          "share_of_census_population_percent": 2.857477
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "nagano",
+      "prefecture_name": "長野県",
+      "census_prefecture_code": "20000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1997083,
+      "census_age_3_17": 257833,
+      "share_of_census_population_percent": 12.91048,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 45147,
+          "share_of_census_population_percent": 2.260647
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 100471,
+          "share_of_census_population_percent": 5.030888
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 54872,
+          "share_of_census_population_percent": 2.747607
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 57343,
+          "share_of_census_population_percent": 2.871338
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "gifu",
+      "prefecture_name": "岐阜県",
+      "census_prefecture_code": "21000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1900727,
+      "census_age_3_17": 252893,
+      "share_of_census_population_percent": 13.305067,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 43919,
+          "share_of_census_population_percent": 2.310642
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 99415,
+          "share_of_census_population_percent": 5.230367
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 53461,
+          "share_of_census_population_percent": 2.812661
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 56098,
+          "share_of_census_population_percent": 2.951397
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "shizuoka",
+      "prefecture_name": "静岡県",
+      "census_prefecture_code": "22000",
+      "region_code": "chubu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 3523817,
+      "census_age_3_17": 456912,
+      "share_of_census_population_percent": 12.966394,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 81088,
+          "share_of_census_population_percent": 2.301141
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 180766,
+          "share_of_census_population_percent": 5.129835
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 96174,
+          "share_of_census_population_percent": 2.729256
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 98884,
+          "share_of_census_population_percent": 2.806162
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "osaka",
+      "prefecture_name": "大阪府",
+      "census_prefecture_code": "27000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 8411856,
+      "census_age_3_17": 1044061,
+      "share_of_census_population_percent": 12.411779,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 193586,
+          "share_of_census_population_percent": 2.301347
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 412214,
+          "share_of_census_population_percent": 4.900393
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 216566,
+          "share_of_census_population_percent": 2.574533
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 221695,
+          "share_of_census_population_percent": 2.635506
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "mie",
+      "prefecture_name": "三重県",
+      "census_prefecture_code": "24000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1698876,
+      "census_age_3_17": 219773,
+      "share_of_census_population_percent": 12.936377,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 38675,
+          "share_of_census_population_percent": 2.276505
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 86380,
+          "share_of_census_population_percent": 5.084538
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 46384,
+          "share_of_census_population_percent": 2.730276
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 48334,
+          "share_of_census_population_percent": 2.845058
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "shiga",
+      "prefecture_name": "滋賀県",
+      "census_prefecture_code": "25000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1359501,
+      "census_age_3_17": 197341,
+      "share_of_census_population_percent": 14.515694,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 36307,
+          "share_of_census_population_percent": 2.670612
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 78891,
+          "share_of_census_population_percent": 5.802938
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 40980,
+          "share_of_census_population_percent": 3.014341
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 41163,
+          "share_of_census_population_percent": 3.027802
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kyoto",
+      "prefecture_name": "京都府",
+      "census_prefecture_code": "26000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 2460764,
+      "census_age_3_17": 306243,
+      "share_of_census_population_percent": 12.445037,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 55904,
+          "share_of_census_population_percent": 2.271815
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 120303,
+          "share_of_census_population_percent": 4.888848
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 63926,
+          "share_of_census_population_percent": 2.597811
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 66110,
+          "share_of_census_population_percent": 2.686564
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "hyogo",
+      "prefecture_name": "兵庫県",
+      "census_prefecture_code": "28000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 5215927,
+      "census_age_3_17": 686120,
+      "share_of_census_population_percent": 13.154325,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 125526,
+          "share_of_census_population_percent": 2.40659
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 272215,
+          "share_of_census_population_percent": 5.218919
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 142774,
+          "share_of_census_population_percent": 2.73727
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 145605,
+          "share_of_census_population_percent": 2.791546
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "nara",
+      "prefecture_name": "奈良県",
+      "census_prefecture_code": "29000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1302289,
+      "census_age_3_17": 165656,
+      "share_of_census_population_percent": 12.720372,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 28953,
+          "share_of_census_population_percent": 2.223239
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 64463,
+          "share_of_census_population_percent": 4.949977
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 34987,
+          "share_of_census_population_percent": 2.686577
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 37253,
+          "share_of_census_population_percent": 2.860579
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "wakayama",
+      "prefecture_name": "和歌山県",
+      "census_prefecture_code": "30000",
+      "region_code": "kinki",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 911408,
+      "census_age_3_17": 112537,
+      "share_of_census_population_percent": 12.347598,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 20065,
+          "share_of_census_population_percent": 2.201539
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 44105,
+          "share_of_census_population_percent": 4.839216
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 23445,
+          "share_of_census_population_percent": 2.572393
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 24922,
+          "share_of_census_population_percent": 2.73445
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "hiroshima",
+      "prefecture_name": "広島県",
+      "census_prefecture_code": "34000",
+      "region_code": "chugoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 2713163,
+      "census_age_3_17": 364592,
+      "share_of_census_population_percent": 13.437895,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 67049,
+          "share_of_census_population_percent": 2.471249
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 146913,
+          "share_of_census_population_percent": 5.414824
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 74905,
+          "share_of_census_population_percent": 2.7608
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 75725,
+          "share_of_census_population_percent": 2.791023
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "tottori",
+      "prefecture_name": "鳥取県",
+      "census_prefecture_code": "31000",
+      "region_code": "chugoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 543979,
+      "census_age_3_17": 72008,
+      "share_of_census_population_percent": 13.237276,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 13272,
+          "share_of_census_population_percent": 2.4398
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 28229,
+          "share_of_census_population_percent": 5.189355
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 14821,
+          "share_of_census_population_percent": 2.724554
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 15686,
+          "share_of_census_population_percent": 2.883567
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "shimane",
+      "prefecture_name": "島根県",
+      "census_prefecture_code": "32000",
+      "region_code": "chugoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 656197,
+      "census_age_3_17": 86250,
+      "share_of_census_population_percent": 13.143919,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 15940,
+          "share_of_census_population_percent": 2.429149
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 33769,
+          "share_of_census_population_percent": 5.146168
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 17540,
+          "share_of_census_population_percent": 2.672978
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 19001,
+          "share_of_census_population_percent": 2.895624
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "okayama",
+      "prefecture_name": "岡山県",
+      "census_prefecture_code": "33000",
+      "region_code": "chugoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1810900,
+      "census_age_3_17": 238998,
+      "share_of_census_population_percent": 13.197747,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 43828,
+          "share_of_census_population_percent": 2.420233
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 94597,
+          "share_of_census_population_percent": 5.223756
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 49235,
+          "share_of_census_population_percent": 2.718814
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 51338,
+          "share_of_census_population_percent": 2.834944
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "yamaguchi",
+      "prefecture_name": "山口県",
+      "census_prefecture_code": "35000",
+      "region_code": "chugoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1313593,
+      "census_age_3_17": 162735,
+      "share_of_census_population_percent": 12.38854,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 28919,
+          "share_of_census_population_percent": 2.201519
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 64671,
+          "share_of_census_population_percent": 4.923214
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 33943,
+          "share_of_census_population_percent": 2.583981
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 35202,
+          "share_of_census_population_percent": 2.679825
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kagawa",
+      "prefecture_name": "香川県",
+      "census_prefecture_code": "37000",
+      "region_code": "shikoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 920884,
+      "census_age_3_17": 120195,
+      "share_of_census_population_percent": 13.052133,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 21641,
+          "share_of_census_population_percent": 2.350025
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 47497,
+          "share_of_census_population_percent": 5.157761
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 24724,
+          "share_of_census_population_percent": 2.684812
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 26333,
+          "share_of_census_population_percent": 2.859535
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "tokushima",
+      "prefecture_name": "徳島県",
+      "census_prefecture_code": "36000",
+      "region_code": "shikoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 693084,
+      "census_age_3_17": 81795,
+      "share_of_census_population_percent": 11.8016,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 14782,
+          "share_of_census_population_percent": 2.132786
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 32093,
+          "share_of_census_population_percent": 4.630463
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 16959,
+          "share_of_census_population_percent": 2.44689
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 17961,
+          "share_of_census_population_percent": 2.591461
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "ehime",
+      "prefecture_name": "愛媛県",
+      "census_prefecture_code": "38000",
+      "region_code": "shikoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1296806,
+      "census_age_3_17": 163736,
+      "share_of_census_population_percent": 12.626098,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 28724,
+          "share_of_census_population_percent": 2.21498
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 64895,
+          "share_of_census_population_percent": 5.004218
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 34284,
+          "share_of_census_population_percent": 2.643726
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 35833,
+          "share_of_census_population_percent": 2.763174
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kochi",
+      "prefecture_name": "高知県",
+      "census_prefecture_code": "39000",
+      "region_code": "shikoku",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 677762,
+      "census_age_3_17": 80080,
+      "share_of_census_population_percent": 11.815357,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 14296,
+          "share_of_census_population_percent": 2.109295
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 31102,
+          "share_of_census_population_percent": 4.588926
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 16782,
+          "share_of_census_population_percent": 2.47609
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 17900,
+          "share_of_census_population_percent": 2.641045
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "fukuoka",
+      "prefecture_name": "福岡県",
+      "census_prefecture_code": "40000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 4923076,
+      "census_age_3_17": 672327,
+      "share_of_census_population_percent": 13.656645,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 129216,
+          "share_of_census_population_percent": 2.6247
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 272922,
+          "share_of_census_population_percent": 5.543729
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 136397,
+          "share_of_census_population_percent": 2.770565
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 133792,
+          "share_of_census_population_percent": 2.717651
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "saga",
+      "prefecture_name": "佐賀県",
+      "census_prefecture_code": "41000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 796285,
+      "census_age_3_17": 113922,
+      "share_of_census_population_percent": 14.306687,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 20614,
+          "share_of_census_population_percent": 2.588772
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 44877,
+          "share_of_census_population_percent": 5.635796
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 23907,
+          "share_of_census_population_percent": 3.002317
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 24524,
+          "share_of_census_population_percent": 3.079802
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "nagasaki",
+      "prefecture_name": "長崎県",
+      "census_prefecture_code": "42000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1296014,
+      "census_age_3_17": 172618,
+      "share_of_census_population_percent": 13.319146,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 31657,
+          "share_of_census_population_percent": 2.442643
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 68512,
+          "share_of_census_population_percent": 5.286363
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 35543,
+          "share_of_census_population_percent": 2.742486
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 36906,
+          "share_of_census_population_percent": 2.847654
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kumamoto",
+      "prefecture_name": "熊本県",
+      "census_prefecture_code": "43000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1705205,
+      "census_age_3_17": 237067,
+      "share_of_census_population_percent": 13.902551,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 44395,
+          "share_of_census_population_percent": 2.603499
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 95324,
+          "share_of_census_population_percent": 5.590178
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 48251,
+          "share_of_census_population_percent": 2.82963
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 49097,
+          "share_of_census_population_percent": 2.879243
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "oita",
+      "prefecture_name": "大分県",
+      "census_prefecture_code": "44000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1098735,
+      "census_age_3_17": 141706,
+      "share_of_census_population_percent": 12.897195,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 25774,
+          "share_of_census_population_percent": 2.345789
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 56565,
+          "share_of_census_population_percent": 5.148193
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 29594,
+          "share_of_census_population_percent": 2.693461
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 29773,
+          "share_of_census_population_percent": 2.709753
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "miyazaki",
+      "prefecture_name": "宮崎県",
+      "census_prefecture_code": "45000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1047871,
+      "census_age_3_17": 146388,
+      "share_of_census_population_percent": 13.97004,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 26529,
+          "share_of_census_population_percent": 2.531705
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 58999,
+          "share_of_census_population_percent": 5.630369
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 30252,
+          "share_of_census_population_percent": 2.886997
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 30608,
+          "share_of_census_population_percent": 2.92097
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "kagoshima",
+      "prefecture_name": "鹿児島県",
+      "census_prefecture_code": "46000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1545763,
+      "census_age_3_17": 214489,
+      "share_of_census_population_percent": 13.875931,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 39560,
+          "share_of_census_population_percent": 2.559254
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 86422,
+          "share_of_census_population_percent": 5.590896
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 44007,
+          "share_of_census_population_percent": 2.846944
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 44500,
+          "share_of_census_population_percent": 2.878837
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    },
+    {
+      "prefecture_code": "okinawa",
+      "prefecture_name": "沖縄県",
+      "census_prefecture_code": "47000",
+      "region_code": "kyushu",
+      "population_scope": "census_japanese_population",
+      "reference_date": "2020-10-01",
+      "census_population": 1424749,
+      "census_age_3_17": 244899,
+      "share_of_census_population_percent": 17.188922,
+      "age_groups": [
+        {
+          "key": "census_preschool_3_5",
+          "label": "幼児期",
+          "school_type": "幼稚園",
+          "age_range": [
+            3,
+            5
+          ],
+          "age_range_label": "3～5歳",
+          "population": 48515,
+          "share_of_census_population_percent": 3.405161
+        },
+        {
+          "key": "census_elementary_6_11",
+          "label": "小学校期",
+          "school_type": "小学校",
+          "age_range": [
+            6,
+            11
+          ],
+          "age_range_label": "6～11歳",
+          "population": 99610,
+          "share_of_census_population_percent": 6.991407
+        },
+        {
+          "key": "census_junior_high_12_14",
+          "label": "中学校期",
+          "school_type": "中学校",
+          "age_range": [
+            12,
+            14
+          ],
+          "age_range_label": "12～14歳",
+          "population": 48776,
+          "share_of_census_population_percent": 3.42348
+        },
+        {
+          "key": "census_high_school_15_17",
+          "label": "高校期",
+          "school_type": "高等学校",
+          "age_range": [
+            15,
+            17
+          ],
+          "age_range_label": "15～17歳",
+          "population": 47998,
+          "share_of_census_population_percent": 3.368874
+        }
+      ],
+      "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+      "source_short_label": "令和2年国勢調査",
+      "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+      "source_table_id": "000032142404",
+      "reference_date_label": "統計基準日",
+      "reference_date_display": "2020年10月1日現在",
+      "accessed_at": "2026-08-01",
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+    }
+  ]
+}

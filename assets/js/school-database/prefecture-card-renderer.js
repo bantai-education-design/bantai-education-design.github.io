@@ -54,38 +54,48 @@
 
     const populationRow = createElement("div", "population-summary-row");
     populationRow.append(createElement("span", "population-summary-label", population.population_scope_label));
-    const populationValue = createElement("strong", "", formatNumber(population.japanese_population));
+    const populationValue = createElement("strong", "", formatNumber(population.census_population));
     populationValue.append(createElement("span", "", "人"));
     populationRow.append(populationValue);
     summary.append(populationRow);
 
     const ageRow = createElement("div", "population-summary-row");
     ageRow.append(createElement("span", "population-summary-label", "3～17歳人口"));
-    const ageValue = createElement("strong", "", formatNumber(population.japanese_age_3_17));
+    const ageValue = createElement("strong", "", formatNumber(population.census_age_3_17));
     ageValue.append(createElement("span", "", "人"));
-    ageValue.append(createElement("span", "population-inline-share", `（${population.share_of_japanese_population_percent.toFixed(1)}%）`));
+    ageValue.append(createElement("span", "population-inline-share", `（${population.share_of_census_population_percent.toFixed(1)}%）`));
     ageRow.append(ageValue);
     summary.append(ageRow);
+
+    const sourceLine = createElement(
+      "p",
+      "population-source-line",
+      `出典：${population.source_short_label}　${population.reference_date_label}：${population.reference_date_display}`,
+    );
+    summary.append(sourceLine);
+
+    if (population.footer_note) {
+      summary.append(createElement("p", "population-footer-note", population.footer_note));
+    }
 
     card.append(summary);
 
     const details = createElement("details", "population-age-details");
-    details.append(createElement("summary", "", "年齢別人口"));
+    details.append(createElement("summary", "", population.age_groups_label || "校種相当年齢人口"));
     const list = createElement("dl", "");
     population.age_groups.forEach((group) => {
       const item = createElement("div", "");
-      item.append(createElement("dt", "", `${group.label} ${group.age_range_label}`));
+      item.append(createElement("dt", "", `${group.label}（${group.age_range_label}）`));
       item.append(
         createElement(
           "dd",
           "",
-          `${formatNumber(group.population)}人・${group.share_of_japanese_population_percent.toFixed(1)}%`,
+          `${formatNumber(group.population)}人・${group.share_of_census_population_percent.toFixed(1)}%`,
         ),
       );
       list.append(item);
     });
     details.append(list);
-    details.append(createElement("p", "population-note", `基準日：${population.reference_date}`));
     if (population.summary_note) {
       details.append(createElement("p", "population-note", population.summary_note));
     }

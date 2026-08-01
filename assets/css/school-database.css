@@ -1042,6 +1042,20 @@ h3.region-header {
   color: #5d6675;
 }
 
+.population-source-line {
+  margin: 3px 0 0;
+  font-size: 0.62rem;
+  color: #5d6675;
+  line-height: 1.3;
+}
+
+.population-footer-note {
+  margin: 1px 0 0;
+  font-size: 0.62rem;
+  color: #8a8f99;
+  line-height: 1.3;
+}
+
 .population-age-details {
   border-top: 1px dashed rgba(7, 27, 54, 0.12);
   padding-top: 6px;

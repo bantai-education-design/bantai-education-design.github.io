@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Validate the prefecture card metadata renderer."""
+"""Validate the 47-prefecture population metadata and its integration into
+the prefecture card metadata / renderer (Phase B, decision C: 2020 Census
+Table 2-1, Japanese population, same definition for all 47 prefectures)."""
 
 from __future__ import annotations
 
@@ -11,19 +13,18 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-POPULATION_JSON = ROOT / "data" / "school-database" / "prefecture-population-pilot.json"
+POPULATION_JSON = ROOT / "data" / "school-database" / "prefecture-population.json"
+PILOT_JSON = ROOT / "data" / "school-database" / "prefecture-population-pilot.json"
 CARD_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-card-metadata.json"
 INDEX_HTML = ROOT / "tools" / "school-database" / "index.html"
 
-EXPECTED_GROUPS = {
-    "japanese_preschool_3_5": (3, 5),
-    "japanese_elementary_6_11": (6, 11),
-    "japanese_junior_high_12_14": (12, 14),
-    "japanese_high_school_15_17": (15, 17),
-    "japanese_age_3_17": (3, 17),
-}
+EXPECTED_GROUP_KEYS = [
+    "census_preschool_3_5",
+    "census_elementary_6_11",
+    "census_junior_high_12_14",
+    "census_high_school_15_17",
+]
 
-PROHIBITED_CARD_LABELS = ("総人口", "東京都の人口", "学齢人口", "教育年齢人口")
 PROHIBITED_PLACEHOLDER_TEXT = (
     "全国他都道府県",
     "準備中",
@@ -53,98 +54,115 @@ def assert_number(value: object, name: str) -> float:
     return float(value)
 
 
-def test_population_json() -> None:
+def test_prefecture_population_json() -> None:
     payload = json.loads(POPULATION_JSON.read_text(encoding="utf-8"))
-    assert payload["pilot_scope"] == "tokyo-only"
-    assert set(payload["prefectures"]) == {"tokyo"}
+    prefectures = payload["prefectures"]
 
-    tokyo = payload["prefectures"]["tokyo"]
-    assert tokyo["reference_date"] == "2026-01-01"
-    assert tokyo["population_definition"] == "住民基本台帳に記載された日本人人口"
-    assert tokyo["source"]["publisher"] == "東京都総務局統計部"
-    assert tokyo["source"]["csv_url"].startswith("https://www.toukei.metro.tokyo.lg.jp/")
+    assert len(prefectures) == 47, f"expected 47 prefectures, got {len(prefectures)}"
 
-    assert tokyo["population_scope"] == "Japanese residents"
-    assert tokyo["denominator"] == "japanese_population"
-    assert tokyo["foreign_residents_included"] is False
-    assert tokyo["all_residents_age_3_17"] is None
-    assert "total_population" not in tokyo
+    codes = [p["prefecture_code"] for p in prefectures]
+    assert len(set(codes)) == 47, "prefecture_code に重複があります"
+    names = [p["prefecture_name"] for p in prefectures]
+    assert len(set(names)) == 47, "prefecture_name に重複があります"
 
-    japanese_population = assert_number(tokyo["japanese_population"], "japanese_population")
-    assert japanese_population == 13293851
+    reference_dates = {p["reference_date"] for p in prefectures}
+    assert reference_dates == {"2020-10-01"}, f"基準日が47県で統一されていません: {reference_dates}"
 
-    groups = tokyo["age_groups"]
-    assert set(groups) == set(EXPECTED_GROUPS)
+    scopes = {p["population_scope"] for p in prefectures}
+    assert scopes == {"census_japanese_population"}, f"population_scope が統一されていません: {scopes}"
 
-    component_population = 0
-    for key, age_range in EXPECTED_GROUPS.items():
-        group = groups[key]
-        assert group["age_range"] == list(age_range)
-        assert group["denominator"] == "japanese_population"
-        population = assert_number(group["population"], f"{key}.population")
-        share = assert_number(
-            group["share_of_japanese_population_percent"],
-            f"{key}.share_of_japanese_population_percent",
+    table_ids = {p["source_table_id"] for p in prefectures}
+    assert len(table_ids) == 1, f"source_table_id が47県で統一されていません: {table_ids}"
+
+    for p in prefectures:
+        assert p["census_population"] > 0, f"{p['prefecture_name']}: census_population <= 0"
+        assert p["census_age_3_17"] > 0, f"{p['prefecture_name']}: census_age_3_17 <= 0"
+
+        group_keys = [g["key"] for g in p["age_groups"]]
+        assert group_keys == EXPECTED_GROUP_KEYS, f"{p['prefecture_name']}: age_groups keys mismatch"
+
+        group_sum = sum(g["population"] for g in p["age_groups"])
+        assert group_sum == p["census_age_3_17"], (
+            f"{p['prefecture_name']}: 4区分合計({group_sum}) != census_age_3_17({p['census_age_3_17']})"
         )
-        assert population > 0
-        assert 0 < share < 100
-        assert math.isclose(share, round(population / japanese_population * 100, 6), abs_tol=0.000001)
-        if key != "japanese_age_3_17":
-            component_population += int(population)
 
-    assert groups["japanese_age_3_17"]["population"] == 1507197
-    assert groups["japanese_age_3_17"]["population"] == component_population
+        recomputed_share = round((p["census_age_3_17"] / p["census_population"]) * 100, 6)
+        assert math.isclose(recomputed_share, p["share_of_census_population_percent"], abs_tol=1e-6), (
+            f"{p['prefecture_name']}: 割合の再計算が一致しません"
+        )
 
-    ratios = tokyo["additional_analysis"]["population_per_school_simple_ratio"]
-    for key in (
-        "japanese_preschool_3_5",
-        "japanese_elementary_6_11",
-        "japanese_junior_high_12_14",
-        "japanese_high_school_15_17",
-    ):
-        ratio = ratios[key]
-        assert ratio["school_count"] > 0
-        assert ratio["population"] == groups[key]["population"]
-        assert ratio["population_per_school"] > 0
+        for g in p["age_groups"]:
+            g_share = round((g["population"] / p["census_population"]) * 100, 6)
+            assert math.isclose(g_share, g["share_of_census_population_percent"], abs_tol=1e-6), (
+                f"{p['prefecture_name']}/{g['key']}: 区分割合の再計算が一致しません"
+            )
+
+        assert p["definition_note"], f"{p['prefecture_name']}: definition_note が空です"
+        assert p["source_url"].startswith("https://"), f"{p['prefecture_name']}: source_url が不正です"
 
 
-def test_card_metadata_json() -> None:
+def test_card_metadata_population_integration() -> None:
     payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
-    assert payload["population_policy"]["no_dummy_values"] is True
-    assert payload["population_policy"]["no_estimates"] is True
-
     prefectures = payload["prefectures"]
     assert len(prefectures) == 47
-    assert prefectures[0]["prefecture_name"] == "東京都"
-    assert prefectures[1]["prefecture_name"] == "神奈川県"
-    assert prefectures[2]["prefecture_name"] == "埼玉県"
-    assert prefectures[3]["prefecture_name"] == "千葉県"
-    assert prefectures[-1]["prefecture_name"] == "沖縄県"
 
-    urls = [prefecture["url"] for prefecture in prefectures]
-    assert len(set(urls)) == 47
-    assert all(url.startswith("/tools/school-database/") for url in urls)
+    population_payload = json.loads(POPULATION_JSON.read_text(encoding="utf-8"))
+    population_by_code = {p["prefecture_code"]: p for p in population_payload["prefectures"]}
 
-    available_population = [prefecture for prefecture in prefectures if prefecture["population"]["available"]]
-    assert [prefecture["prefecture_code"] for prefecture in available_population] == ["tokyo"]
-
-    tokyo = available_population[0]
-    assert tokyo["school_database"]["record_count"] == 3493
-    assert tokyo["population"]["japanese_population"] == 13293851
-    assert tokyo["population"]["japanese_age_3_17"] == 1507197
-    assert tokyo["population"]["share_of_japanese_population_percent"] == 11.3
-    assert tokyo["population"]["denominator"] == "japanese_population"
-    assert tokyo["population"]["all_residents_age_3_17"] is None
+    codes = [p["prefecture_code"] for p in prefectures]
+    assert len(set(codes)) == 47, "prefecture_code に重複があります（カードメタデータ）"
+    assert set(codes) == set(population_by_code), "47都道府県が一致しません（カードメタデータ vs 人口データ）"
 
     for prefecture in prefectures:
-        school_database = prefecture["school_database"]
-        assert school_database["record_count"] > 0
-        assert school_database["municipality_count"] >= 0
-        assert school_database["school_type_count"] > 0
-        assert set(school_database["establishment"]) == {"national", "public", "private", "other"}
-        if prefecture["prefecture_code"] != "tokyo":
-            assert prefecture["population"] == {"available": False}
-            assert "japanese_population" not in prefecture["population"]
+        pop = prefecture["population"]
+        assert pop["available"] is True, f"{prefecture['prefecture_name']}: population.available が true ではありません"
+        assert pop["population_scope"] == "census_japanese_population"
+        assert pop["reference_date"] == "2020-10-01"
+
+        source_ref = population_by_code[prefecture["prefecture_code"]]
+        assert pop["census_population"] == source_ref["census_population"]
+        assert pop["census_age_3_17"] == source_ref["census_age_3_17"]
+
+        group_keys = [g["key"] for g in pop["age_groups"]]
+        assert group_keys == EXPECTED_GROUP_KEYS
+        group_sum = sum(g["population"] for g in pop["age_groups"])
+        assert group_sum == pop["census_age_3_17"], (
+            f"{prefecture['prefecture_name']}: カードメタデータの4区分合計が3〜17歳人口と一致しません"
+        )
+
+        assert pop["source"]["table_id"] == source_ref["source_table_id"]
+        assert pop["notes"], f"{prefecture['prefecture_name']}: notes が空です"
+        assert pop["population_scope_label"] == "人口（日本国籍）"
+        assert pop["reference_date_label"] == "統計基準日"
+        assert pop["reference_date_display"] == "2020年10月1日現在"
+        assert pop["source_short_label"] == "令和2年国勢調査"
+        assert pop["age_groups_label"] == "校種相当年齢人口"
+        assert pop["footer_note"], f"{prefecture['prefecture_name']}: footer_note が空です"
+        assert "実際の在学者数ではありません" in pop["footer_note"]
+        for group in pop["age_groups"]:
+            assert group["label"] in ("幼児期", "小学校期", "中学校期", "高校期"), (
+                f"{prefecture['prefecture_name']}: 想定外の年齢区分ラベル {group['label']!r}"
+            )
+
+    # 東京都だけ別のキー・定義になっていないことを明示的に確認する。
+    tokyo = next(p for p in prefectures if p["prefecture_code"] == "tokyo")
+    other = next(p for p in prefectures if p["prefecture_code"] != "tokyo")
+    assert set(tokyo["population"].keys()) == set(other["population"].keys()), (
+        "東京都のpopulationキー構造が他都道府県と異なります"
+    )
+    assert "japanese_population" not in tokyo["population"], (
+        "東京都のpopulationに旧住基パイロットのキーが残っています"
+    )
+
+
+def test_pilot_json_preserved_as_research_data() -> None:
+    """2026年住基パイロット値は研究資料として保存するが、本番表示には使わない
+    （Phase A/Bの決定Cに基づく方針）。"""
+    payload = json.loads(PILOT_JSON.read_text(encoding="utf-8"))
+    assert payload["pilot_scope"] == "tokyo-only"
+    tokyo = payload["prefectures"]["tokyo"]
+    assert tokyo["reference_date"] == "2026-01-01"
+    assert tokyo["japanese_population"] == 13293851
 
 
 def test_portal_html() -> None:
@@ -157,14 +175,12 @@ def test_portal_html() -> None:
     for prohibited in PROHIBITED_PLACEHOLDER_TEXT:
         assert prohibited not in html
     assert "<button disabled" not in html
-    assert "東京都版を開く" not in html
-    assert "日本人人口" not in html
-    assert "日本人人口比" not in html
     assert "population-pilot-card" not in html
 
 
 if __name__ == "__main__":
-    test_population_json()
-    test_card_metadata_json()
+    test_prefecture_population_json()
+    test_card_metadata_population_integration()
+    test_pilot_json_preserved_as_research_data()
     test_portal_html()
-    print("prefecture card metadata validation passed")
+    print("47-prefecture population metadata validation passed")
