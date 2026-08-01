@@ -33,63 +33,56 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "Japanese residents",
-        "population_definition": "住民基本台帳に記載された日本人人口",
-        "japanese_population": 13293851,
-        "japanese_age_3_17": 1507197,
-        "share_of_japanese_population_percent": 11.3,
-        "denominator": "japanese_population",
-        "reference_date": "2026-01-01",
-        "foreign_residents_included": false,
-        "all_residents_age_3_17": null,
-        "summary_note": "※日本国籍の住民を対象。実際の在学者数ではありません。",
-        "notes": [
-          "人口は、2026年1月1日現在の住民基本台帳に記載された日本国籍の住民を対象としています。外国籍の住民は含みません。",
-          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。",
-          "割合は、人口（日本国籍）13,293,851人を分母として計算しています。"
-        ],
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 13233213,
+        "census_age_3_17": 1518414,
+        "share_of_census_population_percent": 11.5,
+        "reference_date": "2020-10-01",
         "age_groups": [
           {
-            "key": "japanese_preschool_3_5",
-            "label": "幼児期相当",
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
             "age_range_label": "3～5歳",
-            "population": 266188,
-            "share_of_japanese_population_percent": 2.0,
-            "denominator": "japanese_population"
+            "population": 314040,
+            "share_of_census_population_percent": 2.4
           },
           {
-            "key": "japanese_elementary_6_11",
-            "label": "小学校期相当",
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
             "age_range_label": "6～11歳",
-            "population": 610624,
-            "share_of_japanese_population_percent": 4.6,
-            "denominator": "japanese_population"
+            "population": 613198,
+            "share_of_census_population_percent": 4.6
           },
           {
-            "key": "japanese_junior_high_12_14",
-            "label": "中学校期相当",
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
             "age_range_label": "12～14歳",
-            "population": 313542,
-            "share_of_japanese_population_percent": 2.4,
-            "denominator": "japanese_population"
+            "population": 297590,
+            "share_of_census_population_percent": 2.2
           },
           {
-            "key": "japanese_high_school_15_17",
-            "label": "高校期相当",
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
             "age_range_label": "15～17歳",
-            "population": 316843,
-            "share_of_japanese_population_percent": 2.4,
-            "denominator": "japanese_population"
+            "population": 293586,
+            "share_of_census_population_percent": 2.2
           }
         ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
         "source": {
-          "publisher": "東京都総務局統計部",
-          "title": "住民基本台帳による東京都の世帯と人口 令和8年1月 第6表 区市町村、年齢（各歳）及び男女別日本人人口",
-          "page_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26q10601.htm",
-          "csv_url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0600.csv",
-          "format": "CSV",
-          "accessed_at": "2026-07-31"
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
         }
       }
     },
@@ -115,7 +108,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 8876834,
+        "census_age_3_17": 1107759,
+        "share_of_census_population_percent": 12.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 206779,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 440796,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 228780,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 231404,
+            "share_of_census_population_percent": 2.6
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -140,7 +184,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 7055679,
+        "census_age_3_17": 879968,
+        "share_of_census_population_percent": 12.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 162609,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 348531,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 183044,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 185784,
+            "share_of_census_population_percent": 2.6
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -165,7 +260,58 @@
         "school_type_count": 8
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 6040814,
+        "census_age_3_17": 755470,
+        "share_of_census_population_percent": 12.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 138833,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 298837,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 157362,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 160438,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -190,7 +336,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 2763432,
+        "census_age_3_17": 352352,
+        "share_of_census_population_percent": 12.8,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 62271,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 138142,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 74226,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 77713,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -215,7 +412,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1869256,
+        "census_age_3_17": 240037,
+        "share_of_census_population_percent": 12.8,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 43100,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 93529,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 50634,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 52774,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -240,7 +488,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1860213,
+        "census_age_3_17": 235174,
+        "share_of_census_population_percent": 12.6,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 40551,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 91322,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 50229,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 53072,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -265,7 +564,58 @@
         "school_type_count": 8
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 5151366,
+        "census_age_3_17": 591690,
+        "share_of_census_population_percent": 11.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 105208,
+            "share_of_census_population_percent": 2.0
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 232550,
+            "share_of_census_population_percent": 4.5
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 123496,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 130436,
+            "share_of_census_population_percent": 2.5
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -290,7 +640,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 2242701,
+        "census_age_3_17": 283495,
+        "share_of_census_population_percent": 12.6,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 51651,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 111855,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 58788,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 61201,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -315,7 +716,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1224334,
+        "census_age_3_17": 140171,
+        "share_of_census_population_percent": 11.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 24324,
+            "share_of_census_population_percent": 2.0
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 53796,
+            "share_of_census_population_percent": 4.4
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 29590,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 32461,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -340,7 +792,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1194745,
+        "census_age_3_17": 143840,
+        "share_of_census_population_percent": 12.0,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 24913,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 55899,
+            "share_of_census_population_percent": 4.7
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 30385,
+            "share_of_census_population_percent": 2.5
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 32643,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -365,7 +868,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 950192,
+        "census_age_3_17": 101826,
+        "share_of_census_population_percent": 10.7,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 16947,
+            "share_of_census_population_percent": 1.8
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 39275,
+            "share_of_census_population_percent": 4.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 22186,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 23418,
+            "share_of_census_population_percent": 2.5
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -390,7 +944,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1056617,
+        "census_age_3_17": 129377,
+        "share_of_census_population_percent": 12.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 22491,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 50289,
+            "share_of_census_population_percent": 4.8
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 27576,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 29021,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -415,7 +1020,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1797450,
+        "census_age_3_17": 221388,
+        "share_of_census_population_percent": 12.3,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 39835,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 84936,
+            "share_of_census_population_percent": 4.7
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 46390,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 50227,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -440,7 +1096,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 7164758,
+        "census_age_3_17": 978422,
+        "share_of_census_population_percent": 13.7,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 184415,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 391101,
+            "share_of_census_population_percent": 5.5
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 200935,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 201971,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -465,7 +1172,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 2168416,
+        "census_age_3_17": 264030,
+        "share_of_census_population_percent": 12.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 46525,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 104205,
+            "share_of_census_population_percent": 4.8
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 55535,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 57765,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -490,7 +1248,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1009388,
+        "census_age_3_17": 122313,
+        "share_of_census_population_percent": 12.1,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 21504,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 47124,
+            "share_of_census_population_percent": 4.7
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 25974,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 27711,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -515,7 +1324,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1102692,
+        "census_age_3_17": 144364,
+        "share_of_census_population_percent": 13.1,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 26373,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 56298,
+            "share_of_census_population_percent": 5.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 30205,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 31488,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -540,7 +1400,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 746068,
+        "census_age_3_17": 100865,
+        "share_of_census_population_percent": 13.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 17885,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 39493,
+            "share_of_census_population_percent": 5.3
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 21268,
+            "share_of_census_population_percent": 2.9
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 22219,
+            "share_of_census_population_percent": 3.0
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -565,7 +1476,58 @@
         "school_type_count": 5
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 786673,
+        "census_age_3_17": 97389,
+        "share_of_census_population_percent": 12.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 17082,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 37452,
+            "share_of_census_population_percent": 4.8
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 20376,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 22479,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -590,7 +1552,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1997083,
+        "census_age_3_17": 257833,
+        "share_of_census_population_percent": 12.9,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 45147,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 100471,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 54872,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 57343,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -615,7 +1628,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1900727,
+        "census_age_3_17": 252893,
+        "share_of_census_population_percent": 13.3,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 43919,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 99415,
+            "share_of_census_population_percent": 5.2
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 53461,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 56098,
+            "share_of_census_population_percent": 3.0
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -640,7 +1704,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 3523817,
+        "census_age_3_17": 456912,
+        "share_of_census_population_percent": 13.0,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 81088,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 180766,
+            "share_of_census_population_percent": 5.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 96174,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 98884,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -665,7 +1780,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 8411856,
+        "census_age_3_17": 1044061,
+        "share_of_census_population_percent": 12.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 193586,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 412214,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 216566,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 221695,
+            "share_of_census_population_percent": 2.6
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -690,7 +1856,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1698876,
+        "census_age_3_17": 219773,
+        "share_of_census_population_percent": 12.9,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 38675,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 86380,
+            "share_of_census_population_percent": 5.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 46384,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 48334,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -715,7 +1932,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1359501,
+        "census_age_3_17": 197341,
+        "share_of_census_population_percent": 14.5,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 36307,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 78891,
+            "share_of_census_population_percent": 5.8
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 40980,
+            "share_of_census_population_percent": 3.0
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 41163,
+            "share_of_census_population_percent": 3.0
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -740,7 +2008,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 2460764,
+        "census_age_3_17": 306243,
+        "share_of_census_population_percent": 12.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 55904,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 120303,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 63926,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 66110,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -765,7 +2084,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 5215927,
+        "census_age_3_17": 686120,
+        "share_of_census_population_percent": 13.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 125526,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 272215,
+            "share_of_census_population_percent": 5.2
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 142774,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 145605,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -790,7 +2160,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1302289,
+        "census_age_3_17": 165656,
+        "share_of_census_population_percent": 12.7,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 28953,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 64463,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 34987,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 37253,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -815,7 +2236,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 911408,
+        "census_age_3_17": 112537,
+        "share_of_census_population_percent": 12.3,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 20065,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 44105,
+            "share_of_census_population_percent": 4.8
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 23445,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 24922,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -840,7 +2312,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 2713163,
+        "census_age_3_17": 364592,
+        "share_of_census_population_percent": 13.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 67049,
+            "share_of_census_population_percent": 2.5
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 146913,
+            "share_of_census_population_percent": 5.4
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 74905,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 75725,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -865,7 +2388,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 543979,
+        "census_age_3_17": 72008,
+        "share_of_census_population_percent": 13.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 13272,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 28229,
+            "share_of_census_population_percent": 5.2
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 14821,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 15686,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -890,7 +2464,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 656197,
+        "census_age_3_17": 86250,
+        "share_of_census_population_percent": 13.1,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 15940,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 33769,
+            "share_of_census_population_percent": 5.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 17540,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 19001,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -915,7 +2540,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1810900,
+        "census_age_3_17": 238998,
+        "share_of_census_population_percent": 13.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 43828,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 94597,
+            "share_of_census_population_percent": 5.2
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 49235,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 51338,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -940,7 +2616,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1313593,
+        "census_age_3_17": 162735,
+        "share_of_census_population_percent": 12.4,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 28919,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 64671,
+            "share_of_census_population_percent": 4.9
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 33943,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 35202,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -965,7 +2692,58 @@
         "school_type_count": 5
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 920884,
+        "census_age_3_17": 120195,
+        "share_of_census_population_percent": 13.1,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 21641,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 47497,
+            "share_of_census_population_percent": 5.2
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 24724,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 26333,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -990,7 +2768,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 693084,
+        "census_age_3_17": 81795,
+        "share_of_census_population_percent": 11.8,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 14782,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 32093,
+            "share_of_census_population_percent": 4.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 16959,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 17961,
+            "share_of_census_population_percent": 2.6
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1015,7 +2844,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1296806,
+        "census_age_3_17": 163736,
+        "share_of_census_population_percent": 12.6,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 28724,
+            "share_of_census_population_percent": 2.2
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 64895,
+            "share_of_census_population_percent": 5.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 34284,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 35833,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1040,7 +2920,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 677762,
+        "census_age_3_17": 80080,
+        "share_of_census_population_percent": 11.8,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 14296,
+            "share_of_census_population_percent": 2.1
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 31102,
+            "share_of_census_population_percent": 4.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 16782,
+            "share_of_census_population_percent": 2.5
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 17900,
+            "share_of_census_population_percent": 2.6
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1065,7 +2996,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 4923076,
+        "census_age_3_17": 672327,
+        "share_of_census_population_percent": 13.7,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 129216,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 272922,
+            "share_of_census_population_percent": 5.5
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 136397,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 133792,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1090,7 +3072,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 796285,
+        "census_age_3_17": 113922,
+        "share_of_census_population_percent": 14.3,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 20614,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 44877,
+            "share_of_census_population_percent": 5.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 23907,
+            "share_of_census_population_percent": 3.0
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 24524,
+            "share_of_census_population_percent": 3.1
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1115,7 +3148,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1296014,
+        "census_age_3_17": 172618,
+        "share_of_census_population_percent": 13.3,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 31657,
+            "share_of_census_population_percent": 2.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 68512,
+            "share_of_census_population_percent": 5.3
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 35543,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 36906,
+            "share_of_census_population_percent": 2.8
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1140,7 +3224,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1705205,
+        "census_age_3_17": 237067,
+        "share_of_census_population_percent": 13.9,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 44395,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 95324,
+            "share_of_census_population_percent": 5.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 48251,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 49097,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1165,7 +3300,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1098735,
+        "census_age_3_17": 141706,
+        "share_of_census_population_percent": 12.9,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 25774,
+            "share_of_census_population_percent": 2.3
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 56565,
+            "share_of_census_population_percent": 5.1
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 29594,
+            "share_of_census_population_percent": 2.7
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 29773,
+            "share_of_census_population_percent": 2.7
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1190,7 +3376,58 @@
         "school_type_count": 7
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1047871,
+        "census_age_3_17": 146388,
+        "share_of_census_population_percent": 14.0,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 26529,
+            "share_of_census_population_percent": 2.5
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 58999,
+            "share_of_census_population_percent": 5.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 30252,
+            "share_of_census_population_percent": 2.9
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 30608,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1215,7 +3452,58 @@
         "school_type_count": 6
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1545763,
+        "census_age_3_17": 214489,
+        "share_of_census_population_percent": 13.9,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 39560,
+            "share_of_census_population_percent": 2.6
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 86422,
+            "share_of_census_population_percent": 5.6
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 44007,
+            "share_of_census_population_percent": 2.8
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 44500,
+            "share_of_census_population_percent": 2.9
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     },
     {
@@ -1240,9 +3528,59 @@
         "school_type_count": 5
       },
       "population": {
-        "available": false
+        "available": true,
+        "population_scope_label": "人口（2020年国勢調査・日本人）",
+        "population_scope": "census_japanese_population",
+        "population_definition": "令和2年国勢調査における日本人人口",
+        "census_population": 1424749,
+        "census_age_3_17": 244899,
+        "share_of_census_population_percent": 17.2,
+        "reference_date": "2020-10-01",
+        "age_groups": [
+          {
+            "key": "census_preschool_3_5",
+            "label": "幼稚園相当年齢",
+            "age_range_label": "3～5歳",
+            "population": 48515,
+            "share_of_census_population_percent": 3.4
+          },
+          {
+            "key": "census_elementary_6_11",
+            "label": "小学校相当年齢",
+            "age_range_label": "6～11歳",
+            "population": 99610,
+            "share_of_census_population_percent": 7.0
+          },
+          {
+            "key": "census_junior_high_12_14",
+            "label": "中学校相当年齢",
+            "age_range_label": "12～14歳",
+            "population": 48776,
+            "share_of_census_population_percent": 3.4
+          },
+          {
+            "key": "census_high_school_15_17",
+            "label": "高等学校相当年齢",
+            "age_range_label": "15～17歳",
+            "population": 47998,
+            "share_of_census_population_percent": 3.4
+          }
+        ],
+        "summary_note": "日本人人口が対象です。実際の在学者数ではありません。",
+        "notes": [
+          "人口は、2020年10月1日現在の令和2年国勢調査による都道府県別日本人人口です。現在の人口ではありません。",
+          "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
+          "割合は、日本人人口を分母として計算しています。年齢「不詳」の人は含みません。"
+        ],
+        "source": {
+          "publisher": "総務省統計局",
+          "title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
+          "page_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
+          "table_id": "000032142404",
+          "format": "Excel",
+          "accessed_at": "2026-08-01"
+        }
       }
     }
   ]
 }
-

@@ -54,16 +54,16 @@
 
     const populationRow = createElement("div", "population-summary-row");
     populationRow.append(createElement("span", "population-summary-label", population.population_scope_label));
-    const populationValue = createElement("strong", "", formatNumber(population.japanese_population));
+    const populationValue = createElement("strong", "", formatNumber(population.census_population));
     populationValue.append(createElement("span", "", "人"));
     populationRow.append(populationValue);
     summary.append(populationRow);
 
     const ageRow = createElement("div", "population-summary-row");
     ageRow.append(createElement("span", "population-summary-label", "3～17歳人口"));
-    const ageValue = createElement("strong", "", formatNumber(population.japanese_age_3_17));
+    const ageValue = createElement("strong", "", formatNumber(population.census_age_3_17));
     ageValue.append(createElement("span", "", "人"));
-    ageValue.append(createElement("span", "population-inline-share", `（${population.share_of_japanese_population_percent.toFixed(1)}%）`));
+    ageValue.append(createElement("span", "population-inline-share", `（${population.share_of_census_population_percent.toFixed(1)}%）`));
     ageRow.append(ageValue);
     summary.append(ageRow);
 
@@ -79,7 +79,7 @@
         createElement(
           "dd",
           "",
-          `${formatNumber(group.population)}人・${group.share_of_japanese_population_percent.toFixed(1)}%`,
+          `${formatNumber(group.population)}人・${group.share_of_census_population_percent.toFixed(1)}%`,
         ),
       );
       list.append(item);
