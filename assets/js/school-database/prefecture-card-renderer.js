@@ -105,6 +105,21 @@
     card.append(details);
   };
 
+  const appendEducationProfileLine = (card, prefecture) => {
+    const profile = prefecture.education_profile;
+    if (!profile || profile.available !== true) {
+      return;
+    }
+    card.append(createElement("p", "pref-profile-line", profile.headline_text));
+    card.append(
+      createElement(
+        "p",
+        "pref-profile-source",
+        `出典：${profile.source_short_label}　${profile.reference_date_display}`,
+      ),
+    );
+  };
+
   const createCard = (prefecture) => {
     const hasDetails = prefecture.population && prefecture.population.available === true;
     const card = createElement(hasDetails ? "article" : "a", `pref-card prefecture-card active-card region-${prefecture.region.code}`);
@@ -129,6 +144,8 @@
     card.append(header);
 
     card.append(createElement("h2", "", prefecture.prefecture_name));
+
+    appendEducationProfileLine(card, prefecture);
 
     const schoolDatabase = prefecture.school_database;
     const metaGrid = createElement("div", "pref-meta-grid");
