@@ -2,7 +2,7 @@
 
 .search-section {
   background: var(--ivory);
-  padding: 60px 0;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(7, 27, 54, 0.04);
 }
 
@@ -10,9 +10,9 @@
   background: #ffffff;
   border: 1px solid rgba(7, 27, 54, 0.08);
   border-radius: 20px;
-  padding: 20px;
+  padding: 16px;
   box-shadow: var(--shadow);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {
@@ -26,17 +26,17 @@
   font-size: 1.4rem;
   color: var(--navy);
   margin-top: 0;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border-bottom: 2px solid var(--gold);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 /* 検索フォーム */
 .search-form-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 16px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -84,22 +84,22 @@
 .filter-columns {
   display: grid;
   grid-template-columns: minmax(170px, 220px) 1fr;
-  column-gap: 24px;
-  row-gap: 14px;
-  margin-bottom: 14px;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 640px) {
   .filter-columns {
     grid-template-columns: 1fr;
-    row-gap: 12px;
+    row-gap: 10px;
   }
 }
 
 /* 学校種チェックボックス */
 .checkbox-group {
   display: flex;
-  gap: 8px;
+  gap: 7px;
   flex-wrap: wrap;
   padding: 0;
 }
@@ -124,11 +124,11 @@
 
 /* 敬称セレクター */
 .honorific-section {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   background: #fffdf8;
   border: 1px solid rgba(197, 160, 89, 0.25);
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 12px 14px;
 }
 
 .honorific-title {
@@ -188,7 +188,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .results-count {
@@ -575,4 +575,100 @@
     padding: 9px 14px;
     font-size: 0.78rem;
   }
+}
+
+/* ヒーロー領域のコンパクト化・都道府県地域マーク表示。
+   このページはassets/css/school-database.cssを読み込んでいない
+   （search-box等の既存クラス名が重複するため）ため、共通版と同じ
+   ルールをこのページ専用style.cssにも個別に反映する。 */
+.page-hero--compact {
+  min-height: 110px;
+  padding: 12px 0;
+}
+
+.page-hero--compact .kicker {
+  font-size: 0.72rem;
+  margin-bottom: 2px;
+}
+
+.page-hero--compact h1 {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.25;
+  margin: 0.1em 0;
+}
+
+.page-hero--compact .lead {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 3px 0 0;
+}
+
+.hero-back-link {
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .page-hero--compact {
+    min-height: 0;
+    padding: 16px 0;
+  }
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+}
+
+.pref-silhouette {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: var(--gold, #c5a059);
+  -webkit-mask-image: var(--silhouette-url);
+  mask-image: var(--silhouette-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.hero-silhouette {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 640px) {
+  .hero-silhouette {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.btn-back-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-back-portal:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-color: #ffffff;
 }
