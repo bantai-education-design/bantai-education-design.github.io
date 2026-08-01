@@ -694,7 +694,7 @@ h3.region-header {
 
 .pref-card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -712,6 +712,79 @@ h3.region-header {
   font-size: 1.4rem;
   color: var(--navy, #0c1b33);
   margin: 0 0 6px;
+}
+
+/* 都道府県地域マーク（シルエット）。都道府県章・公式シンボルマークでは
+   なく、国土数値情報（行政区域データ）を加工したBan.Tai独自のマーク。
+   47都道府県で同一の色・スタイルにするため、SVGの形状はmask-imageとして
+   使い、色そのものはCSSのbackground-colorで統一する（過度な円形背景・
+   影・金枠は付けない）。 */
+.pref-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+
+.pref-card-title-row h2 {
+  margin: 0;
+}
+
+.pref-silhouette {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: var(--gold, #c5a059);
+  -webkit-mask-image: var(--silhouette-url);
+  mask-image: var(--silhouette-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.pref-card:hover .pref-silhouette {
+  background-color: #d6b876;
+}
+
+@media (max-width: 900px) {
+  .pref-silhouette {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pref-silhouette {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 都道府県別ページのタイトル帯（<h1>）にも同じ地域マークを表示する。 */
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+}
+
+.hero-silhouette {
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: 640px) {
+  .hero-silhouette {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .pref-count {
