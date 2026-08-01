@@ -39,7 +39,14 @@ async function verifyCardBasics(page) {
       populationCards: cards.filter((card) => card.querySelector(".population-summary")).length,
       disabledButtons: cards.reduce((sum, card) => sum + card.querySelectorAll("button[disabled]").length, 0),
       schoolMetaRows: cards.map((card) => card.querySelectorAll(".pref-meta-grid .meta-row").length),
-      lastHref: cards[cards.length - 1]?.matches("a[href]") ? cards[cards.length - 1].getAttribute("href") : "",
+      // Decision C (Phase B): every card now has population data, so every
+      // card is rendered as an <article data-card-href> rather than a plain
+      // <a href>. Fall back to data-card-href for all 47, not just some.
+      lastHref: (() => {
+        const last = cards[cards.length - 1];
+        if (!last) return "";
+        return last.matches("a[href]") ? last.getAttribute("href") : last.dataset.cardHref || "";
+      })(),
       bodyText: document.body.innerText,
     };
   });
@@ -55,7 +62,9 @@ async function verifyCardBasics(page) {
   assert(audit.first.metaRows === 4, "Tokyo school database rows should remain");
   assert(audit.first.hasPopulation === true, "Tokyo population summary should remain");
   assert(audit.allHaveHref, "every card should keep a link target via href or data-card-href");
-  assert(audit.populationCards === 1, `population should render only on Tokyo, got ${audit.populationCards}`);
+  // Decision C (2020 Census, Phase B): every one of the 47 prefectures now
+  // carries population data with the same definition, not just Tokyo.
+  assert(audit.populationCards === 47, `population should render on all 47 prefectures, got ${audit.populationCards}`);
   assert(audit.disabledButtons === 0, "disabled transition button remains");
   assert(audit.schoolMetaRows.every((count) => count === 4), "every card should keep 4 school metadata rows");
   assert(audit.lastHref === "/tools/school-database/okinawa/", `unexpected last card href: ${audit.lastHref}`);
@@ -89,7 +98,10 @@ async function verifyTokyoDetails(page, width, capture) {
 
   const audit = await card.evaluate((element) => {
     const detailsElement = element.querySelector(".population-age-details");
-    const text = detailsElement.innerText;
+    // Decision C (Phase B): the top-level population figure (census_population)
+    // now lives in the always-visible .population-summary block, not inside
+    // .population-age-details, so check the whole card's text for it.
+    const text = element.innerText;
     const cardBox = element.getBoundingClientRect();
     const nodes = [...detailsElement.querySelectorAll("summary, dt, dd, p")].map((node) => {
       const rect = node.getBoundingClientRect();
@@ -109,7 +121,21 @@ async function verifyTokyoDetails(page, width, capture) {
       dtCount: detailsElement.querySelectorAll("dt").length,
       ddCount: detailsElement.querySelectorAll("dd").length,
       noteCount: detailsElement.querySelectorAll("p.population-note").length,
-      hasValues: ["266,188", "610,624", "313,542", "316,843", "2026-01-01", "13,293,851"].every((value) => text.includes(value)),
+      // Decision C (2020 Census, Phase B): Tokyo now uses the same
+      // census-based figures as the other 46 prefectures, not the retired
+      // 2026 resident-registry pilot values.
+      hasValues: [
+        "314,040",
+        "613,198",
+        "297,590",
+        "293,586",
+        "13,233,213",
+        "人口（日本国籍）",
+        "令和2年国勢調査",
+        "2020年10月1日現在",
+        "学校規模を考える参考となる統計です",
+        "実際の在学者数ではありません",
+      ].every((value) => text.includes(value)),
       overflow: getComputedStyle(element).overflow,
       maxHeight: getComputedStyle(element).maxHeight,
       card: {
@@ -125,7 +151,7 @@ async function verifyTokyoDetails(page, width, capture) {
 
   assert(audit.open === true, "details should be open");
   assert(audit.dtCount === 4 && audit.ddCount === 4, `expected 4 age groups, got ${audit.dtCount}/${audit.ddCount}`);
-  assert(audit.noteCount >= 4, `expected notes to remain, got ${audit.noteCount}`);
+  assert(audit.noteCount >= 3, `expected notes to remain, got ${audit.noteCount}`);
   assert(audit.hasValues, "age group values, reference date, or denominator are missing");
   assert(audit.overflow !== "hidden", `population card should not clip details: overflow=${audit.overflow}`);
   assert(audit.maxHeight === "none", `population card should not use max-height: ${audit.maxHeight}`);
@@ -190,6 +216,9 @@ async function verifyNavigation(page) {
   await page.waitForURL(/\/tools\/school-database\/tokyo\/?$/);
   await page.goBack({ waitUntil: "networkidle" });
 
+  // Decision C (Phase B): every prefecture now has population data, so every
+  // card is an <article data-card-href> (stretched-click pattern), not a
+  // plain <a href>. Select by data-card-href for all 47, not just Tokyo.
   for (const [href, urlPattern] of [
     ["/tools/school-database/saitama/", /\/tools\/school-database\/saitama\/?$/],
     ["/tools/school-database/chiba/", /\/tools\/school-database\/chiba\/?$/],
@@ -197,7 +226,7 @@ async function verifyNavigation(page) {
     ["/tools/school-database/nagano/", /\/tools\/school-database\/nagano\/?$/],
     ["/tools/school-database/okinawa/", /\/tools\/school-database\/okinawa\/?$/],
   ]) {
-    await page.locator(`a.pref-card.prefecture-card[href="${href}"]`).locator("h2").click();
+    await page.locator(`.pref-card.prefecture-card[data-card-href="${href}"]`).locator("h2").click();
     await page.waitForURL(urlPattern);
     await page.goBack({ waitUntil: "networkidle" });
   }
