@@ -714,6 +714,40 @@ h3.region-header {
   margin: 0 0 6px;
 }
 
+/* 都道府県章・公式シンボルマーク（公式に無条件で利用可と確認できた
+   都道府県のみ表示。未確認の都道府県はこの要素自体を生成しない）。 */
+.pref-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+
+.pref-card-title-row h2 {
+  margin: 0;
+}
+
+.pref-emblem {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .pref-emblem {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pref-emblem {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 .pref-count {
   font-size: 1rem;
   font-weight: 700;

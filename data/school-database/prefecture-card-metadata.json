@@ -89,6 +89,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -170,6 +173,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -251,6 +257,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -332,6 +341,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -413,6 +425,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -494,6 +509,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -575,6 +593,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -656,6 +677,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -737,6 +761,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -818,6 +845,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -899,6 +929,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -980,6 +1013,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1061,6 +1097,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1142,6 +1181,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1223,6 +1265,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1304,6 +1349,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1385,6 +1433,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": true,
+        "name": "富山県新観光シンボルマーク",
+        "src": "/assets/images/prefecture-emblems/16-toyama.png",
+        "official_source_url": "https://www.pref.toyama.jp/810111/miryokukankou/kankoutokusan/kankou/kj00005907.html",
+        "alt": ""
       }
     },
     {
@@ -1466,6 +1521,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1547,6 +1605,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1628,6 +1689,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1709,6 +1773,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1790,6 +1857,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1871,6 +1941,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -1952,6 +2025,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2033,6 +2109,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2114,6 +2193,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2195,6 +2277,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2276,6 +2361,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2357,6 +2445,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2438,6 +2529,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2519,6 +2613,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2600,6 +2697,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2681,6 +2781,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2762,6 +2865,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2843,6 +2949,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -2924,6 +3033,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3005,6 +3117,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3086,6 +3201,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3167,6 +3285,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3248,6 +3369,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3329,6 +3453,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3410,6 +3537,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3491,6 +3621,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3572,6 +3705,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3653,6 +3789,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3734,6 +3873,9 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     },
     {
@@ -3815,7 +3957,18 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "emblem": {
+        "available": false
       }
     }
-  ]
+  ],
+  "emblem_policy": {
+    "no_dummy_values": true,
+    "no_unofficial_sources": true,
+    "alt_policy": "decorative (alt=\"\") — prefecture name is already visible as adjacent text",
+    "unavailable_shape": {
+      "available": false
+    }
+  }
 }

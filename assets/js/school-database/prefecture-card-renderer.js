@@ -128,7 +128,27 @@
     header.append(edition);
     card.append(header);
 
-    card.append(createElement("h2", "", prefecture.prefecture_name));
+    const nameHeading = createElement("h2", "", prefecture.prefecture_name);
+    const emblem = prefecture.emblem;
+    if (emblem && emblem.available === true) {
+      const titleRow = createElement("div", "pref-card-title-row");
+      const emblemImage = createElement("img", "pref-emblem");
+      emblemImage.src = emblem.src;
+      emblemImage.alt = emblem.alt || "";
+      emblemImage.loading = "lazy";
+      emblemImage.decoding = "async";
+      emblemImage.width = 32;
+      emblemImage.height = 32;
+      emblemImage.addEventListener("error", () => {
+        emblemImage.remove();
+      });
+      titleRow.append(emblemImage, nameHeading);
+      card.append(titleRow);
+    } else {
+      // 公式マークが未確認の都道府県は、従来どおりh2単体のまま表示する
+      // （空白画像や代替アイコンは表示しない）。
+      card.append(nameHeading);
+    }
 
     const schoolDatabase = prefecture.school_database;
     const metaGrid = createElement("div", "pref-meta-grid");
