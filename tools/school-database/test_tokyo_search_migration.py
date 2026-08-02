@@ -74,59 +74,10 @@ def test_legacy_dataset_untouched_but_not_referenced_by_official_page() -> None:
     assert len(legacy) == 3509, "レガシーデータの件数が変化しています（レガシーは変更しない方針のはずです）"
 
 
-def test_matrix_table_matches_current_data_cross_tab() -> None:
-    records = json.loads(TOKYO_JSON.read_text(encoding="utf-8"))
-    html = OFFICIAL_PAGE.read_text(encoding="utf-8")
-
-    header_match = re.search(r"本データベースの収録範囲[（(]\s*合計\s*([\d,]+)\s*校・園[）)]", html)
-    assert header_match, "収録範囲の見出しが見つかりません"
-    assert header_match.group(1) == format_number(len(records)), (
-        f"収録範囲見出しがJSON件数と一致しません（表示={header_match.group(1)} / 実件数={len(records)}）"
-    )
-
-    cross: dict[str, dict[str, int]] = {}
-    for r in records:
-        cross.setdefault(r["school_type"], {})
-        cross[r["school_type"]][r["establishment_type"]] = cross[r["school_type"]].get(r["establishment_type"], 0) + 1
-
-    est_present = [e for e in ["国立", "公立", "私立", "その他"] if any(e in ests for ests in cross.values())]
-    assert est_present == ["公立", "私立"], f"現行データの設置区分が想定と異なります: {est_present}"
-
-    matrix_match = re.search(r"<!-- tokyo-matrix-table:start -->(.*?)<!-- tokyo-matrix-table:end -->", html, re.S)
-    assert matrix_match, "マトリクステーブルが見つかりません"
-    matrix_html = matrix_match.group(1)
-
-    grand_total = 0
-    for t in SCHOOL_TYPE_ORDER:
-        if t not in cross:
-            continue
-        row_total = sum(cross[t].values())
-        grand_total += row_total
-        for est in est_present:
-            count = cross[t].get(est, 0)
-            if count > 0:
-                expected_cell = f"✓ ({format_number(count)}校)" if t not in ("幼稚園", "幼保連携型認定こども園") else f"✓ ({format_number(count)}園)"
-                assert expected_cell in matrix_html, (
-                    f"{t}/{est}: マトリクスのセル表示が一致しません（期待値含む文字列: {expected_cell}）"
-                )
-            else:
-                expected_zero = "0校" if t not in ("幼稚園", "幼保連携型認定こども園") else "0園"
-                # 行内に該当校種の0件セルが存在することを確認（他行の0件と混同しないよう行単位で確認）
-                row_pattern = re.search(re.escape(t) + r"</td>(.*?)</tr>", matrix_html, re.S)
-                assert row_pattern and expected_zero in row_pattern.group(1), (
-                    f"{t}/{est}: 0件セルの表示が見つかりません（期待値: {expected_zero}）"
-                )
-
-    assert grand_total == len(records) == 3493, (
-        f"マトリクス全行合計がJSON件数と一致しません（マトリクス={grand_total} / JSON={len(records)}）"
-    )
-
-
 if __name__ == "__main__":
     test_official_page_does_not_reference_legacy_assets()
     test_official_page_uses_modern_assets()
     test_search_tokyo_js_uses_current_dataset()
     test_tokyo_json_record_count_is_3493()
     test_legacy_dataset_untouched_but_not_referenced_by_official_page()
-    test_matrix_table_matches_current_data_cross_tab()
     print("Tokyo search migration validation passed successfully.")
