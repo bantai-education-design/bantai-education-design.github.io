@@ -1055,6 +1055,111 @@ h3.region-header {
   }
 }
 
+/* 都道府県個別ページの統計サマリー（人口・教育統計・学校数・校種構成・
+   設置区分）。ポータルカードの population-summary / education-profile-
+   summary と同じ配色・出典表記の作法を踏襲しつつ、個別ページでは横並び
+   の4枚カードとして表示する。 */
+.pref-summary-section {
+  background: #ffffff;
+  padding: 20px 0 8px;
+}
+
+.pref-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.pref-summary-card {
+  padding: 14px 16px;
+  background: #f4f6fa;
+  border: 1px solid rgba(12, 27, 51, 0.14);
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.pref-summary-label {
+  font-size: 0.78rem;
+  color: #5d6675;
+  white-space: normal;
+  overflow-wrap: break-word;
+  margin-bottom: 2px;
+}
+
+.pref-summary-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy, #0c1b33);
+  white-space: nowrap;
+}
+
+.pref-summary-value span {
+  margin-left: 3px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.pref-summary-sub {
+  font-size: 0.74rem;
+  color: #8a8f98;
+  margin-top: 3px;
+  overflow-wrap: break-word;
+}
+
+.pref-summary-source {
+  margin: 6px 0 0;
+  font-size: 0.66rem;
+  color: #5d6675;
+  line-height: 1.35;
+}
+
+.pref-summary-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.pref-summary-chip {
+  font-size: 0.7rem;
+  color: var(--navy, #0c1b33);
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 99px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+.pref-summary-chips-large .pref-summary-chip {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+}
+
+.pref-summary-note {
+  margin: 12px 0 0;
+  font-size: 0.68rem;
+  color: #8a8f98;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pref-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pref-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .pref-summary-section {
+    padding: 16px 0 4px;
+  }
+}
+
 /* Pilot Metadata Grid */
 .pref-meta-grid {
   display: flex;
