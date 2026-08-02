@@ -1,4 +1,4 @@
-// 山形県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-shizuoka.js)
+// 静岡県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-shizuoka.js)
 // フィールド名は千葉県版・神奈川県版・山梨県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,19 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
 
-  // 山形県行政順（市部 -> 郡部）
+  // 静岡県行政順（市部 -> 郡部）
   const MUNICIPALITY_ORDER = [
-    '山形市', '米沢市', '鶴岡市', '酒田市', '新庄市', '寒河江市',
-    '上山市', '村山市', '長井市', '天童市', '東根市', '尾花沢市', '南陽市',
-    '東村山郡山辺町', '東村山郡中山町',
-    '西村山郡河北町', '西村山郡西川町', '西村山郡朝日町', '西村山郡大江町',
-    '北村山郡大石田町',
-    '最上郡金山町', '最上郡最上町', '最上郡舟形町', '最上郡真室川町',
-    '最上郡大蔵村', '最上郡鮭川村', '最上郡戸沢村',
-    '東置賜郡高畠町', '東置賜郡川西町',
-    '西置賜郡小国町', '西置賜郡白鷹町', '西置賜郡飯豊町',
-    '東田川郡三川町', '東田川郡庄内町',
-    '飽海郡遊佐町'
+    '静岡市葵区', '静岡市駿河区', '静岡市清水区', '浜松市中央区', '浜松市浜名区', '浜松市天竜区',
+    '沼津市', '熱海市', '三島市', '富士宮市', '伊東市', '島田市',
+    '富士市', '磐田市', '焼津市', '掛川市', '藤枝市', '御殿場市',
+    '袋井市', '下田市', '裾野市', '湖西市', '伊豆市', '御前崎市',
+    '菊川市', '伊豆の国市', '牧之原市', '賀茂郡東伊豆町', '賀茂郡河津町', '賀茂郡南伊豆町',
+    '賀茂郡松崎町', '賀茂郡西伊豆町', '田方郡函南町', '駿東郡清水町', '駿東郡長泉町', '駿東郡小山町',
+    '榛原郡吉田町', '榛原郡川根本町', '周智郡森町'
   ];
 
   const SCHOOL_TYPE_ORDER = [
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '国立', '公立', '私立'
   ];
 
-  // 1. 山形県データの読み込み
+  // 1. 静岡県データの読み込み
   fetch('/data/school-database/shizuoka.json')
     .then(response => {
       if (!response.ok) {
@@ -53,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
       performSearch();
     })
     .catch(error => {
-      console.error('Error fetching Yamagata school data:', error);
+      console.error('Error fetching Shizuoka school data:', error);
       resultsContainer.innerHTML = '<p style="color:red; text-align:center; padding: 20px;">データの読み込みに失敗しました。時間をおいて再度お試しください。</p>';
     });
 
   // 2. 市町村セレクトボックスの初期化
   function initCitySelect(data) {
     const availableCities = new Set(
-      data.map(item => item.municipality).filter(c => c && c !== '山形県')
+      data.map(item => item.municipality).filter(c => c && c !== '静岡県')
     );
     MUNICIPALITY_ORDER.forEach(city => {
       if (availableCities.has(city)) {
@@ -462,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     data.forEach(item => {
       const row = [
-        item.prefecture || '山形県',
+        item.prefecture || '静岡県',
         item.municipality || '',
         item.establishment || '',
         item.school_type || '',

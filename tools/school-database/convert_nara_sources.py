@@ -82,36 +82,24 @@ def slug(value: str) -> str:
 # 奈良県 市区町村一覧（行政表示順）
 # ---------------------------------------------------------------------------
 
-YAMAGATA_CITIES = [
-    "山形市", "米沢市", "鶴岡市", "酒田市", "新庄市", "寒河江市",
-    "上山市", "村山市", "長井市", "天童市", "東根市", "尾花沢市", "南陽市",
+NARA_CITIES = [
+    "奈良市", "大和高田市", "天理市", "橿原市", "桜井市", "五條市",
+    "御所市", "生駒市", "香芝市", "葛城市", "宇陀市"
 ]
 
-YAMAGATA_GUN_TOWNS = [
-    # 東村山郡
-    "東村山郡山辺町", "東村山郡中山町",
-    # 西村山郡
-    "西村山郡河北町", "西村山郡西川町", "西村山郡朝日町", "西村山郡大江町",
-    # 北村山郡
-    "北村山郡大石田町",
-    # 最上郡
-    "最上郡金山町", "最上郡最上町", "最上郡舟形町", "最上郡真室川町",
-    "最上郡大蔵村", "最上郡鮭川村", "最上郡戸沢村",
-    # 東置賜郡
-    "東置賜郡高畠町", "東置賜郡川西町",
-    # 西置賜郡
-    "西置賜郡小国町", "西置賜郡白鷹町", "西置賜郡飯豊町",
-    # 東田川郡
-    "東田川郡三川町", "東田川郡庄内町",
-    # 飽海郡
-    "飽海郡遊佐町",
+NARA_GUN_TOWNS = [
+    "大和郡山市", "山辺郡山添村", "生駒郡平群町", "生駒郡三郷町", "生駒郡斑鳩町", "生駒郡安堵町",
+    "磯城郡川西町", "磯城郡三宅町", "磯城郡田原本町", "宇陀郡曽爾村", "宇陀郡御杖村", "高市郡高取町",
+    "高市郡明日香村", "北葛城郡上牧町", "北葛城郡王寺町", "北葛城郡広陵町", "北葛城郡河合町", "吉野郡吉野町",
+    "吉野郡大淀町", "吉野郡下市町", "吉野郡黒滝村", "吉野郡天川村", "吉野郡野迫川村", "吉野郡十津川村",
+    "吉野郡下北山村", "吉野郡上北山村", "吉野郡川上村", "吉野郡東吉野村"
 ]
 
-MUNICIPALITY_ORDER = YAMAGATA_CITIES + YAMAGATA_GUN_TOWNS
+MUNICIPALITY_ORDER = NARA_CITIES + NARA_GUN_TOWNS
 
 # 郡名なし → 正式名称へのマッピング（分詞が重なる村名・町名の解決）
 _BARE_TO_CANONICAL: dict[str, str] = {}
-for full in YAMAGATA_GUN_TOWNS:
+for full in NARA_GUN_TOWNS:
     m = re.match(r"^.+郡(.+)$", full)
     if m:
         bare = m.group(1)
@@ -136,7 +124,7 @@ def infer_municipality(address: str) -> str:
         if text.startswith(bare):
             return _BARE_TO_CANONICAL[bare]
     # Third pass: for 市 names try direct match (already covered above, but just in case)
-    for cand in YAMAGATA_CITIES:
+    for cand in NARA_CITIES:
         if text.startswith(cand):
             return cand
     return ""
@@ -164,8 +152,8 @@ COMPLETE_NAME_SUFFIXES = (
     "中等部", "小学部", "こども園", "キンダーガーテン", "分校", "分教室",
 )
 
-_YAMAGATA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
-_YAMAGATA_MUNI_NAMES.update(YAMAGATA_CITIES)
+_NARA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
+_NARA_MUNI_NAMES.update(NARA_CITIES)
 
 
 def build_official_name(*, establishment: str, raw_name: str,
@@ -176,7 +164,7 @@ def build_official_name(*, establishment: str, raw_name: str,
     1. 既に校種サフィックスで終わる名称はそのまま（重複防止）
     2. MEXT名称が「○○市立△△高等学校」のように設置者を含む場合は
        「奈良県立」を重ねて付けない（市立商業高等学校等）
-    3. 分校名（「〜山形校」「〜金山校」等）は「立」を含む完全な固有名称
+    3. 分校名（「〜○○校」等）は「立」を含む完全な固有名称
        → 校種サフィックスを追加しない
     """
     raw_name = normalize_name(raw_name)
@@ -194,12 +182,12 @@ def build_official_name(*, establishment: str, raw_name: str,
 
     # 公立
     # ----- 既に設置者表現（○立）を含む場合はそのまま返す -----
-    # 例: 「山形市立商業高等学校」「奈良県立致道館中学校」
-    # 「奈良県立村山特別支援学校山形校」（分校も含む）
+    # 例: 「○○市立商業高等学校」「奈良県立○○中学校」
+    # 「奈良県立○○特別支援学校○○校」（分校も含む）
     if re.search(r'[都道府県市区町村]立', raw_name):
         # 分校名「〜○○校」で且つ校種サフィックスなし → 校種付けず分校名をそのまま
         if re.search(r'校$', raw_name) and not already_complete:
-            return raw_name  # 「〜山形校」「〜金山校」等、校種は不要
+            return raw_name  # 「〜○○校」等、校種は不要
         return raw_name if already_complete else raw_name + school_type
 
     # 公立: 県立か市町村立かを判定
@@ -213,7 +201,7 @@ def build_official_name(*, establishment: str, raw_name: str,
     bare_muni = re.sub(r"^.+郡", "", municipality)  # 郡名なし
 
     # raw_name がすでに自治体名を含む場合
-    for mname in _YAMAGATA_MUNI_NAMES:
+    for mname in _NARA_MUNI_NAMES:
         if raw_name.startswith(mname + "立") or raw_name.startswith(mname):
             return raw_name if already_complete else raw_name + school_type
 
@@ -302,7 +290,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
 
     print(f"Reading: {excel_path}")
     df = pd.read_excel(excel_path, header=1, dtype=str)
-            df.columns = [c.replace("\n", "").strip() for c in df.columns]
+    df.columns = [c.replace("\n", "").strip() for c in df.columns]
 
     yama = df[df["都道府県番号"].fillna("").str.startswith("29(")].copy()
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""山形県学校データベース変換スクリプト
+"""群馬県学校データベース変換スクリプト
 
 原本: 文部科学省「学校コード一覧（全国公立・国立・私立学校等）」
       sc_20260529-mxt_chousa01-000011635_1.xlsx（2026-05-29版）
@@ -67,8 +67,8 @@ def normalize_address(value: Any) -> str:
         return ""
     text = re.sub(r"[ \t　]+", "", text)
     text = re.sub(r"[−―ー]", "-", text)
-    if text and not text.startswith("山形県"):
-        text = "山形県" + text
+    if text and not text.startswith("群馬県"):
+        text = "群馬県" + text
     return text
 
 
@@ -79,43 +79,30 @@ def slug(value: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 山形県 市区町村一覧（行政表示順）
+# 群馬県 市区町村一覧（行政表示順）
 # ---------------------------------------------------------------------------
 
-YAMAGATA_CITIES = [
-    "山形市", "米沢市", "鶴岡市", "酒田市", "新庄市", "寒河江市",
-    "上山市", "村山市", "長井市", "天童市", "東根市", "尾花沢市", "南陽市",
+GUNMA_CITIES = [
+    "前橋市", "高崎市", "桐生市", "伊勢崎市", "太田市", "沼田市",
+    "館林市", "渋川市", "藤岡市", "富岡市", "安中市", "みどり市"
 ]
 
-YAMAGATA_GUN_TOWNS = [
-    # 東村山郡
-    "東村山郡山辺町", "東村山郡中山町",
-    # 西村山郡
-    "西村山郡河北町", "西村山郡西川町", "西村山郡朝日町", "西村山郡大江町",
-    # 北村山郡
-    "北村山郡大石田町",
-    # 最上郡
-    "最上郡金山町", "最上郡最上町", "最上郡舟形町", "最上郡真室川町",
-    "最上郡大蔵村", "最上郡鮭川村", "最上郡戸沢村",
-    # 東置賜郡
-    "東置賜郡高畠町", "東置賜郡川西町",
-    # 西置賜郡
-    "西置賜郡小国町", "西置賜郡白鷹町", "西置賜郡飯豊町",
-    # 東田川郡
-    "東田川郡三川町", "東田川郡庄内町",
-    # 飽海郡
-    "飽海郡遊佐町",
+GUNMA_GUN_TOWNS = [
+    "北群馬郡榛東村", "北群馬郡吉岡町", "多野郡上野村", "多野郡神流町", "甘楽郡下仁田町", "甘楽郡南牧村",
+    "甘楽郡甘楽町", "吾妻郡中之条町", "吾妻郡長野原町", "吾妻郡嬬恋村", "吾妻郡草津町", "吾妻郡高山村",
+    "吾妻郡東吾妻町", "利根郡片品村", "利根郡川場村", "利根郡昭和村", "利根郡みなかみ町", "佐波郡玉村町",
+    "邑楽郡板倉町", "邑楽郡明和町", "邑楽郡千代田町", "邑楽郡大泉町", "邑楽郡邑楽町"
 ]
 
-MUNICIPALITY_ORDER = YAMAGATA_CITIES + YAMAGATA_GUN_TOWNS
+MUNICIPALITY_ORDER = GUNMA_CITIES + GUNMA_GUN_TOWNS
 
 # 郡名なし → 正式名称へのマッピング（分詞が重なる村名・町名の解決）
 _BARE_TO_CANONICAL: dict[str, str] = {}
-for full in YAMAGATA_GUN_TOWNS:
+for full in GUNMA_GUN_TOWNS:
     m = re.match(r"^.+郡(.+)$", full)
     if m:
         bare = m.group(1)
-        # 同じ bare 名が複数の郡に存在しないことを前提（山形県は問題なし）
+        # 同じ bare 名が複数の郡に存在しないことを前提（群馬県は問題なし）
         _BARE_TO_CANONICAL[bare] = full
 
 _MUNI_CANDIDATES = sorted(MUNICIPALITY_ORDER, key=len, reverse=True)
@@ -124,8 +111,8 @@ _BARE_CANDIDATES = sorted(_BARE_TO_CANONICAL, key=len, reverse=True)
 
 def infer_municipality(address: str) -> str:
     text = address
-    if text.startswith("山形県"):
-        text = text[len("山形県"):]
+    if text.startswith("群馬県"):
+        text = text[len("群馬県"):]
     # First pass: try full canonical names (including 郡+町村) in descending length order
     for cand in _MUNI_CANDIDATES:
         if text.startswith(cand):
@@ -136,7 +123,7 @@ def infer_municipality(address: str) -> str:
         if text.startswith(bare):
             return _BARE_TO_CANONICAL[bare]
     # Third pass: for 市 names try direct match (already covered above, but just in case)
-    for cand in YAMAGATA_CITIES:
+    for cand in GUNMA_CITIES:
         if text.startswith(cand):
             return cand
     return ""
@@ -164,8 +151,8 @@ COMPLETE_NAME_SUFFIXES = (
     "中等部", "小学部", "こども園", "キンダーガーテン", "分校", "分教室",
 )
 
-_YAMAGATA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
-_YAMAGATA_MUNI_NAMES.update(YAMAGATA_CITIES)
+_GUNMA_MUNI_NAMES = {re.sub(r"^.+郡", "", m) for m in MUNICIPALITY_ORDER}
+_GUNMA_MUNI_NAMES.update(GUNMA_CITIES)
 
 
 def build_official_name(*, establishment: str, raw_name: str,
@@ -175,8 +162,8 @@ def build_official_name(*, establishment: str, raw_name: str,
     重要なケース:
     1. 既に校種サフィックスで終わる名称はそのまま（重複防止）
     2. MEXT名称が「○○市立△△高等学校」のように設置者を含む場合は
-       「山形県立」を重ねて付けない（市立商業高等学校等）
-    3. 分校名（「〜山形校」「〜金山校」等）は「立」を含む完全な固有名称
+       「群馬県立」を重ねて付けない（市立商業高等学校等）
+    3. 分校名（「〜○○校」等）は「立」を含む完全な固有名称
        → 校種サフィックスを追加しない
     """
     raw_name = normalize_name(raw_name)
@@ -194,26 +181,26 @@ def build_official_name(*, establishment: str, raw_name: str,
 
     # 公立
     # ----- 既に設置者表現（○立）を含む場合はそのまま返す -----
-    # 例: 「山形市立商業高等学校」「山形県立致道館中学校」
-    # 「山形県立村山特別支援学校山形校」（分校も含む）
+    # 例: 「○○市立商業高等学校」「群馬県立○○中学校」
+    # 「群馬県立○○特別支援学校○○校」（分校も含む）
     if re.search(r'[都道府県市区町村]立', raw_name):
         # 分校名「〜○○校」で且つ校種サフィックスなし → 校種付けず分校名をそのまま
         if re.search(r'校$', raw_name) and not already_complete:
-            return raw_name  # 「〜山形校」「〜金山校」等、校種は不要
+            return raw_name  # 「〜○○校」等、校種は不要
         return raw_name if already_complete else raw_name + school_type
 
     # 公立: 県立か市町村立かを判定
     is_pref_level = school_type in ("高等学校", "中等教育学校", "特別支援学校")
 
     if is_pref_level:
-        core = f"山形県立{raw_name}"
+        core = f"群馬県立{raw_name}"
         return core if already_complete else core + school_type
 
     # 市町村立（幼稚園・小・中・義務教育）
     bare_muni = re.sub(r"^.+郡", "", municipality)  # 郡名なし
 
     # raw_name がすでに自治体名を含む場合
-    for mname in _YAMAGATA_MUNI_NAMES:
+    for mname in _GUNMA_MUNI_NAMES:
         if raw_name.startswith(mname + "立") or raw_name.startswith(mname):
             return raw_name if already_complete else raw_name + school_type
 
@@ -261,7 +248,7 @@ def make_record(
     stable_key = "|".join((establishment, school_type, municipality, name, ",".join(course)))
     return {
         "id": f"gunma-{slug(stable_key)}",
-        "prefecture": "山形県",
+        "prefecture": "群馬県",
         "name": name,
         "name_kana": normalize_name(name_kana),
         "postal_code": normalize_postal_code(postal_code),
@@ -302,7 +289,7 @@ def load_mext_data(source_root: Path) -> list[dict[str, Any]]:
 
     print(f"Reading: {excel_path}")
     df = pd.read_excel(excel_path, header=1, dtype=str)
-            df.columns = [c.replace("\n", "").strip() for c in df.columns]
+    df.columns = [c.replace("\n", "").strip() for c in df.columns]
 
     yama = df[df["都道府県番号"].fillna("").str.startswith("10(")].copy()
 
