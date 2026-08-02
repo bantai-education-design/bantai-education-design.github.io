@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Merge data/school-database/prefecture-education-profile.json (47
-prefectures, v1 statistics-derived taglines) into
+prefectures, statistics-derived taglines) into
 data/school-database/prefecture-card-metadata.json.
 
 Adds an `education_profile` object to every one of the 47 prefecture

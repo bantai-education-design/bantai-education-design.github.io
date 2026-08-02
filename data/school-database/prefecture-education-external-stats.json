@@ -1,0 +1,1281 @@
+{
+  "generated_at": "2026-08-02",
+  "schema_version": 1,
+  "description": "都道府県教育プロフィールv2向けの外部統計（教員一人当たり児童生徒数・待機児童数・過疎関係市町村所在校比率・教員のICT活用指導力）。過疎関係市町村所在校比率のみ、本サイトの学校データベースと総務省の市町村指定リストを突合して算出した値であり、他3指標は公表資料の値をそのまま使用している。",
+  "sources_policy": {
+    "no_dummy_values": true,
+    "no_estimates": true,
+    "not_an_official_ranking": true
+  },
+  "prefectures": [
+    {
+      "prefecture_code": "tokyo",
+      "student_teacher_ratio": 16.45,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 37441,
+        "student_count": 616084
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 339,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 0.8,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kanagawa",
+      "student_teacher_ratio": 15.62,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 27170,
+        "student_count": 424397
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 138,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 0.0,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.2,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "saitama",
+      "student_teacher_ratio": 15.65,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 22072,
+        "student_count": 345524
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 208,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 2.5,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "chiba",
+      "student_teacher_ratio": 15.47,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 18817,
+        "student_count": 291112
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 91,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 8.2,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.3,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "ibaraki",
+      "student_teacher_ratio": 12.9,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 9664,
+        "student_count": 124693
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 1,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 10.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 96.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "tochigi",
+      "student_teacher_ratio": 13.02,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6657,
+        "student_count": 86684
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 3,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 13.7,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "gunma",
+      "student_teacher_ratio": 13.02,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6578,
+        "student_count": 85621
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "hokkaido",
+      "student_teacher_ratio": 11.3,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 18556,
+        "student_count": 209620
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 34,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 49.6,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.2,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "miyagi",
+      "student_teacher_ratio": 13.18,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 7835,
+        "student_count": 103294
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 17,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 26.1,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "aomori",
+      "student_teacher_ratio": 11.75,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4177,
+        "student_count": 49078
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 51.0,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.4,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "iwate",
+      "student_teacher_ratio": 11.67,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4253,
+        "student_count": 49641
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 5,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 63.3,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "akita",
+      "student_teacher_ratio": 12.06,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 2801,
+        "student_count": 33769
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 5,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 73.2,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "yamagata",
+      "student_teacher_ratio": 11.75,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3754,
+        "student_count": 44127
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 27.6,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "fukushima",
+      "student_teacher_ratio": 12.63,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6299,
+        "student_count": 79571
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 5,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 19.0,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "aichi",
+      "student_teacher_ratio": 14.72,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 25957,
+        "student_count": 382083
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 51,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 1.1,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 87.5,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "niigata",
+      "student_teacher_ratio": 11.72,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 7966,
+        "student_count": 93356
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 56.1,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.1,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "toyama",
+      "student_teacher_ratio": 12.31,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3596,
+        "student_count": 44256
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 14.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "ishikawa",
+      "student_teacher_ratio": 13.34,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3940,
+        "student_count": 52572
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 93.4,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "fukui",
+      "student_teacher_ratio": 11.6,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3089,
+        "student_count": 35841
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 11.7,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.4,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "yamanashi",
+      "student_teacher_ratio": 10.92,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3303,
+        "student_count": 36082
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 33.6,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.5,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "nagano",
+      "student_teacher_ratio": 13.22,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 7102,
+        "student_count": 93913
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 10,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 30.2,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.1,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "gifu",
+      "student_teacher_ratio": 13.01,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6976,
+        "student_count": 90731
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.9,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "shizuoka",
+      "student_teacher_ratio": 14.77,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 11196,
+        "student_count": 165377
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 90.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "osaka",
+      "student_teacher_ratio": 13.43,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 29510,
+        "student_count": 396445
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 194,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 0.7,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "mie",
+      "student_teacher_ratio": 12.22,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6672,
+        "student_count": 81529
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 84,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 92.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "shiga",
+      "student_teacher_ratio": 13.24,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 5655,
+        "student_count": 74872
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 335,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 23.3,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kyoto",
+      "student_teacher_ratio": 13.26,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 8337,
+        "student_count": 110526
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 15,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.3,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "hyogo",
+      "student_teacher_ratio": 13.86,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 18622,
+        "student_count": 258026
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 199,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 14.6,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.3,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "nara",
+      "student_teacher_ratio": 12.56,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4729,
+        "student_count": 59406
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 186,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.8,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "wakayama",
+      "student_teacher_ratio": 10.05,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3953,
+        "student_count": 39742
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 53,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 25.7,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 90.5,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "hiroshima",
+      "student_teacher_ratio": 13.32,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 10109,
+        "student_count": 134609
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 35.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.9,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "tottori",
+      "student_teacher_ratio": 11.43,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 2279,
+        "student_count": 26040
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.8,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "shimane",
+      "student_teacher_ratio": 10.48,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 2945,
+        "student_count": 30855
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": null,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "okayama",
+      "student_teacher_ratio": 12.12,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 7451,
+        "student_count": 90295
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 22,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 31.6,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 94.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "yamaguchi",
+      "student_teacher_ratio": 12.07,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4792,
+        "student_count": 57845
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 9,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 55.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.0,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kagawa",
+      "student_teacher_ratio": 12.98,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3480,
+        "student_count": 45173
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 1,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 22.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 88.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "tokushima",
+      "student_teacher_ratio": 10.78,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 2918,
+        "student_count": 31463
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 23.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 96.1,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "ehime",
+      "student_teacher_ratio": 12.99,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4596,
+        "student_count": 59718
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 13,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 32.8,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 99.2,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kochi",
+      "student_teacher_ratio": 10.58,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 2719,
+        "student_count": 28770
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 10,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 59.5,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 90.9,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "fukuoka",
+      "student_teacher_ratio": 14.44,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 18501,
+        "student_count": 267198
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 29,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 13.3,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.6,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "saga",
+      "student_teacher_ratio": 11.68,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 3524,
+        "student_count": 41146
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 8,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 62.9,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.4,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "nagasaki",
+      "student_teacher_ratio": 11.98,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 5301,
+        "student_count": 63517
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 85.8,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 90.3,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kumamoto",
+      "student_teacher_ratio": 13.32,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6859,
+        "student_count": 91334
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 4,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 35.8,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 93.8,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "oita",
+      "student_teacher_ratio": 12.36,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4206,
+        "student_count": 51969
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 57.9,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 91.4,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "miyazaki",
+      "student_teacher_ratio": 12.62,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 4335,
+        "student_count": 54691
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 0,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 51.9,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 90.2,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "kagoshima",
+      "student_teacher_ratio": 11.03,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 7396,
+        "student_count": 81578
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 14,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 53.5,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 89.7,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    },
+    {
+      "prefecture_code": "okinawa",
+      "student_teacher_ratio": 14.43,
+      "student_teacher_ratio_detail": {
+        "teacher_count": 6806,
+        "student_count": 98202
+      },
+      "student_teacher_ratio_source": {
+        "source_short_label": "文部科学省「学校基本調査」（小学校）",
+        "reference_date_display": "令和7年5月1日現在"
+      },
+      "waiting_children_count": 171,
+      "waiting_children_count_source": {
+        "source_short_label": "こども家庭庁「保育所等関連状況取りまとめ」",
+        "reference_date_display": "令和7年4月1日現在"
+      },
+      "depopulated_school_ratio": 9.4,
+      "depopulated_school_ratio_source": {
+        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "reference_date_display": "令和4年4月1日現在の指定に基づく"
+      },
+      "ict_teaching_capability": 92.2,
+      "ict_teaching_capability_source": {
+        "source_short_label": "文部科学省「学校における教育の情報化の実態等に関する調査結果」（教員のICT活用指導力）",
+        "reference_date_display": "令和7年3月1日現在"
+      }
+    }
+  ]
+}
