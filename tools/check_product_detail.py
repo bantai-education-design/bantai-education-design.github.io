@@ -518,21 +518,19 @@ def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
 def validate_education_planning(data: dict, html: str, parser: DetailPageParser) -> None:
     require_keys(data, {"sections"}, "education-planning root")
 
-    # 4 links: 1 Form, 3 Drive downloads
+    # Monitor registration stays on Google Forms; downloads are centralized on BOOTH.
     form_url = "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform"
-    drive1 = "https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk"
-    drive2 = "https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk"
-    drive3 = "https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk"
+    booth_url = "https://bantai3.booth.pm/items/8547376"
 
     require(form_url in html, "Form URL missing")
-    require(drive1 in html, "Drive URL 1 missing")
-    require(drive2 in html, "Drive URL 2 missing")
-    require(drive3 in html, "Drive URL 3 missing")
+    require(booth_url in html, "BOOTH download URL missing")
+    require("drive.google.com" not in html, "old Google Drive URL remains")
+    require("Google Drive ダウンロード時" not in html, "old Google Drive warning remains")
 
     # Check section order
     section_types = [section["type"] for section in data["sections"]]
     require(
-        section_types == ["hero", "educationWorkflow", "textCardGrid", "downloadCta", "flowBrief"],
+        section_types == ["hero", "videoFeature", "audienceCards", "educationWorkflow", "educationResourceLink", "textCardGrid", "monitorProgram", "downloadCta", "flowBrief", "faq", "finalCta"],
         "education-planning section order changed"
     )
 
