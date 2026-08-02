@@ -321,29 +321,18 @@
       "actions": [
         {
           "label": "",
-          "labelHtml": "<strong>① 統合版をダウンロード</strong><span>教務支援＋週案連携（約130MB）</span>",
-          "href": "https://drive.google.com/file/d/1dvO680x5s4MQ1YLPXmXle1Rn0VdoyZSY/view?usp=drivesdk",
-          "class": "dl-item"
-        },
-        {
-          "label": "",
-          "labelHtml": "<strong>② 教務支援システム単体版</strong><span>教育計画・時数・提出書類中心（約60MB）</span>",
-          "href": "https://drive.google.com/file/d/12VUsSOeWzdm3FA_zPe5yv1PwWV4GtaQ7/view?usp=drivesdk",
-          "class": "dl-item"
-        },
-        {
-          "label": "",
-          "labelHtml": "<strong>③ 週案システム単体版</strong><span>週案作成・印刷・集計中心（約70MB）</span>",
-          "href": "https://drive.google.com/file/d/12teRmei80Y77NdUu9QrWIA6HZjRJ1jYS/view?usp=drivesdk",
+          "labelHtml": "<strong>BOOTHから無料ダウンロード</strong><span>商品ページを開き、「無料ダウンロード」からZIPファイルを保存してください。</span>",
+          "href": "https://bantai3.booth.pm/items/8547376",
           "class": "dl-item"
         }
       ],
       "warningBox": {
         "class": "warning-box",
-        "heading": "⚠️ Google Drive ダウンロード時の重要なお願い",
+        "heading": "ダウンロード時のお願い",
         "bullets": [
-          "Google Driveで<strong>「ファイルをプレビューできません」</strong>と表示されても問題ありません。画面の<strong>「ダウンロード」</strong>ボタンを押してください。",
-          "ZIPエクストラクター、CloudConvertなどの<strong>外部アプリは使いません。</strong>",
+          "現在のモニター版は、BOOTHの商品ページから無料でダウンロードできます。",
+          "Google Driveに関する古い案内が表示されている場合は、現在は使用していません。今後はBOOTHからのダウンロードをご利用ください。",
+          "Vectorにも掲載していますが、URLが確定するまでこのページから直接リンクは作成していません。",
           "保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。",
           "展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。"
         ]
@@ -358,10 +347,10 @@
       "items": [
         "無料モニター登録フォームを送信",
         "案内メールとライセンスキーを確認",
-        "希望する版をダウンロードしてZIPを展開",
+        "BOOTHの商品ページからZIPをダウンロードして展開",
         "アプリを起動し、ライセンスキーを入力して利用開始"
       ],
-      "note": "モニター期間は募集案内または登録後の案内をご確認ください。Google Driveでプレビューできない表示が出ても、ダウンロードは可能です。ZIPはWindowsの「すべて展開」を使用し、exeだけをフォルダ外へ移動しないでください。",
+      "note": "モニター期間は募集案内または登録後の案内をご確認ください。現在のモニター版はBOOTHの商品ページから無料でダウンロードできます。ZIPはWindowsの「すべて展開」を使用し、exeだけをフォルダ外へ移動しないでください。",
       "actions": []
     },
     {
