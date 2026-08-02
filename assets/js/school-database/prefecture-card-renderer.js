@@ -105,6 +105,42 @@
     card.append(details);
   };
 
+  const appendEducationProfileLine = (card, prefecture) => {
+    const profile = prefecture.education_profile;
+    if (!profile || profile.available !== true) {
+      return;
+    }
+
+    const summary = createElement("div", "education-profile-summary");
+    summary.setAttribute("aria-label", profile.headline_text);
+
+    summary.append(createElement("div", "education-profile-metric-label", profile.metric_label));
+
+    const valueEl = createElement("strong", "education-profile-value", `${profile.value}`);
+    valueEl.append(createElement("span", "", profile.unit));
+    summary.append(valueEl);
+
+    if (profile.national_average !== null && profile.national_average !== undefined) {
+      summary.append(
+        createElement(
+          "span",
+          "education-profile-average-value",
+          `全国平均 ${profile.national_average}${profile.unit}`,
+        ),
+      );
+    }
+
+    summary.append(
+      createElement(
+        "p",
+        "pref-profile-source",
+        `出典：${profile.source_short_label}　${profile.reference_date_display}`,
+      ),
+    );
+
+    card.append(summary);
+  };
+
   const createCard = (prefecture) => {
     const hasDetails = prefecture.population && prefecture.population.available === true;
     const card = createElement(hasDetails ? "article" : "a", `pref-card prefecture-card active-card region-${prefecture.region.code}`);
@@ -139,6 +175,8 @@
       // 従来どおりh2単体のまま表示する。
       card.append(nameHeading);
     }
+
+    appendEducationProfileLine(card, prefecture);
 
     const schoolDatabase = prefecture.school_database;
     const metaGrid = createElement("div", "pref-meta-grid");
