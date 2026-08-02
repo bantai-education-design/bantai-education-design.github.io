@@ -249,14 +249,20 @@ def test_card_metadata_education_profile_integration() -> None:
 def test_renderer_and_css_wire_profile_line() -> None:
     js = RENDERER_JS.read_text(encoding="utf-8")
     assert "education_profile" in js
-    assert "pref-profile-line" in js
+    assert "education-profile-summary" in js
+    assert "education-profile-metric-label" in js
+    assert "education-profile-value" in js
+    assert "education-profile-average-value" in js
     assert "pref-profile-source" in js
     assert "pref-profile-disclaimer" in js
     assert "not_a_ranking_note" in js
     assert "profile.available !== true" in js
 
     css = CSS_PATH.read_text(encoding="utf-8")
-    assert ".pref-profile-line" in css
+    assert ".education-profile-summary" in css
+    assert ".education-profile-metric-label" in css
+    assert ".education-profile-value" in css
+    assert ".education-profile-average-value" in css
     assert ".pref-profile-source" in css
     assert ".pref-profile-disclaimer" in css
 

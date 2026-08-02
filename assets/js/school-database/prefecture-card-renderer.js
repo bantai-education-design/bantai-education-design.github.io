@@ -110,8 +110,28 @@
     if (!profile || profile.available !== true) {
       return;
     }
-    card.append(createElement("p", "pref-profile-line", profile.headline_text));
-    card.append(
+
+    const summary = createElement("div", "education-profile-summary");
+    summary.setAttribute("aria-label", profile.headline_text);
+
+    summary.append(createElement("div", "education-profile-metric-label", profile.metric_label));
+
+    const valueRow = createElement("div", "education-profile-value-row");
+    const valueEl = createElement("strong", "education-profile-value", `${profile.value}`);
+    valueEl.append(createElement("span", "", profile.unit));
+    valueRow.append(valueEl);
+    if (profile.national_average !== null && profile.national_average !== undefined) {
+      valueRow.append(
+        createElement(
+          "span",
+          "education-profile-average-value",
+          `全国平均 ${profile.national_average}${profile.unit}`,
+        ),
+      );
+    }
+    summary.append(valueRow);
+
+    summary.append(
       createElement(
         "p",
         "pref-profile-source",
@@ -119,8 +139,10 @@
       ),
     );
     if (profile.not_a_ranking_note) {
-      card.append(createElement("p", "pref-profile-disclaimer", profile.not_a_ranking_note));
+      summary.append(createElement("p", "pref-profile-disclaimer", profile.not_a_ranking_note));
     }
+
+    card.append(summary);
   };
 
   const createCard = (prefecture) => {
