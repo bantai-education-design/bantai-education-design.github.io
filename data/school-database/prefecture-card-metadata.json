@@ -89,6 +89,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/13-tokyo.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -170,6 +177,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/14-kanagawa.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -251,6 +265,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/11-saitama.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -332,6 +353,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/12-chiba.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -413,6 +441,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/08-ibaraki.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -494,6 +529,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/09-tochigi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -575,6 +617,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/10-gunma.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -656,6 +705,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/01-hokkaido.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -737,6 +793,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/04-miyagi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -818,6 +881,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/02-aomori.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -899,6 +969,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/03-iwate.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -980,6 +1057,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/05-akita.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1061,6 +1145,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/06-yamagata.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1142,6 +1233,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/07-fukushima.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1223,6 +1321,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/23-aichi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1304,6 +1409,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/15-niigata.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1385,6 +1497,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/16-toyama.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1466,6 +1585,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/17-ishikawa.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1547,6 +1673,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/18-fukui.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1628,6 +1761,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/19-yamanashi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1709,6 +1849,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/20-nagano.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1790,6 +1937,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/21-gifu.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1871,6 +2025,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/22-shizuoka.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -1952,6 +2113,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/27-osaka.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2033,6 +2201,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/24-mie.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2114,6 +2289,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/25-shiga.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2195,6 +2377,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/26-kyoto.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2276,6 +2465,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/28-hyogo.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2357,6 +2553,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/29-nara.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2438,6 +2641,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/30-wakayama.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2519,6 +2729,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/34-hiroshima.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2600,6 +2817,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/31-tottori.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2681,6 +2905,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/32-shimane.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2762,6 +2993,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/33-okayama.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2843,6 +3081,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/35-yamaguchi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -2924,6 +3169,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/37-kagawa.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3005,6 +3257,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/36-tokushima.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3086,6 +3345,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/38-ehime.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3167,6 +3433,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/39-kochi.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3248,6 +3521,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/40-fukuoka.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3329,6 +3609,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/41-saga.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3410,6 +3697,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/42-nagasaki.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3491,6 +3785,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/43-kumamoto.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3572,6 +3873,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/44-oita.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3653,6 +3961,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/45-miyazaki.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3734,6 +4049,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/46-kagoshima.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     },
     {
@@ -3815,6 +4137,13 @@
           "format": "Excel",
           "accessed_at": "2026-08-01"
         }
+      },
+      "silhouette": {
+        "available": true,
+        "src": "/assets/images/prefecture-silhouettes/47-okinawa.svg",
+        "alt": "",
+        "source": "国土数値情報 行政区域データ",
+        "reference_date": "2026-01-01"
       }
     }
   ]

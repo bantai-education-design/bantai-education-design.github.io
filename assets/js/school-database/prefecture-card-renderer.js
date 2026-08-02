@@ -119,16 +119,26 @@
     }
 
     const header = createElement("div", "pref-card-header");
-    const badge = createElement("span", "pref-badge", prefecture.status_label);
-    badge.style.background = "#27ae60";
-    header.append(badge);
     const edition = createElement("span", "", prefecture.edition);
     edition.style.fontSize = "0.8rem";
     edition.style.color = "#718096";
     header.append(edition);
     card.append(header);
 
-    card.append(createElement("h2", "", prefecture.prefecture_name));
+    const nameHeading = createElement("h2", "", prefecture.prefecture_name);
+    const silhouette = prefecture.silhouette;
+    if (silhouette && silhouette.available === true) {
+      const titleRow = createElement("div", "pref-card-title-row");
+      const silhouetteEl = createElement("span", "pref-silhouette");
+      silhouetteEl.setAttribute("aria-hidden", "true");
+      silhouetteEl.style.setProperty("--silhouette-url", `url("${silhouette.src}")`);
+      titleRow.append(silhouetteEl, nameHeading);
+      card.append(titleRow);
+    } else {
+      // 都道府県地域マークが未生成の場合（本来は47件すべて生成済み）は、
+      // 従来どおりh2単体のまま表示する。
+      card.append(nameHeading);
+    }
 
     const schoolDatabase = prefecture.school_database;
     const metaGrid = createElement("div", "pref-meta-grid");

@@ -46,34 +46,44 @@ h3.region-header {
    共有されているため、ここでは学校データベース系ページ限定の上書きクラスとして
    .page-hero--compact を用意する。他ページの .page-hero には影響しない。 */
 .page-hero--compact {
-  min-height: 180px;
+  min-height: 110px;
+  padding: 12px 0;
 }
 
 .page-hero--compact .kicker {
-  margin-bottom: 4px;
+  font-size: 0.72rem;
+  margin-bottom: 2px;
 }
 
 .page-hero--compact h1 {
-  margin: 0.14em 0;
+  /* サイト共通の.page-hero h1はclamp(1.8rem,3.5vw,3rem)と大きく、
+     47都道府県ページで繰り返し使う見出しとしては縦方向に大きすぎる
+     ため、コンパクト版専用に縮小する。 */
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.25;
+  margin: 0.1em 0;
 }
 
 .page-hero--compact .lead {
-  margin: 4px 0 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 3px 0 0;
 }
 
 .hero-back-link {
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 @media (max-width: 480px) {
   .page-hero--compact {
-    min-height: 160px;
+    min-height: 0;
+    padding: 16px 0;
   }
 }
 
 .search-section {
   background: var(--ivory, #fbfaf5);
-  padding: 34px 0;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(7, 27, 54, 0.04);
 }
 
@@ -81,26 +91,26 @@ h3.region-header {
   background: #ffffff;
   border: 1px solid rgba(7, 27, 54, 0.08);
   border-radius: 20px;
-  padding: 20px;
+  padding: 16px;
   box-shadow: 0 10px 30px rgba(7, 27, 54, 0.05);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .search-title {
   font-size: 1.4rem;
   color: var(--navy, #0c1b33);
   margin-top: 0;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border-bottom: 2px solid var(--gold, #c5a059);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 /* 検索フォーム */
 .search-form-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 16px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -144,9 +154,9 @@ h3.region-header {
 .filter-columns {
   display: grid;
   grid-template-columns: minmax(170px, 220px) 1fr;
-  column-gap: 24px;
-  row-gap: 14px;
-  margin-bottom: 14px;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 640px) {
@@ -159,7 +169,7 @@ h3.region-header {
 /* 学校種・設置区分チェックボックス */
 .checkbox-group {
   display: flex;
-  gap: 8px;
+  gap: 7px;
   flex-wrap: wrap;
   padding: 0;
 }
@@ -197,11 +207,11 @@ h3.region-header {
 
 /* 敬称セレクター */
 .honorific-section {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   background: #fffdf8;
   border: 1px solid rgba(197, 160, 89, 0.25);
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 12px 14px;
 }
 
 .honorific-title {
@@ -267,7 +277,7 @@ h3.region-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .results-count {
@@ -503,7 +513,7 @@ h3.region-header {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -694,9 +704,13 @@ h3.region-header {
 
 .pref-card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 10px;
+  /* 「NEW」バッジ削除により年度表示のみになったため、下マージンを
+     縮小する（.pref-card:has(.population-summary) のflex gapで
+     カード内の縦間隔は別途確保されるため、ここでの重複マージンを
+     抑える）。 */
+  margin-bottom: 2px;
 }
 
 .pref-badge {
@@ -712,6 +726,79 @@ h3.region-header {
   font-size: 1.4rem;
   color: var(--navy, #0c1b33);
   margin: 0 0 6px;
+}
+
+/* 都道府県地域マーク（シルエット）。都道府県章・公式シンボルマークでは
+   なく、国土数値情報（行政区域データ）を加工したBan.Tai独自のマーク。
+   47都道府県で同一の色・スタイルにするため、SVGの形状はmask-imageとして
+   使い、色そのものはCSSのbackground-colorで統一する（過度な円形背景・
+   影・金枠は付けない）。 */
+.pref-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px;
+}
+
+.pref-card-title-row h2 {
+  margin: 0;
+}
+
+.pref-silhouette {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: var(--gold, #c5a059);
+  -webkit-mask-image: var(--silhouette-url);
+  mask-image: var(--silhouette-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.pref-card:hover .pref-silhouette {
+  background-color: #d6b876;
+}
+
+@media (max-width: 900px) {
+  .pref-silhouette {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pref-silhouette {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 都道府県別ページのタイトル帯（<h1>）にも同じ地域マークを表示する。 */
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+}
+
+.hero-silhouette {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 640px) {
+  .hero-silhouette {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .pref-count {
@@ -834,19 +921,19 @@ h3.region-header {
 /* 教育情報ポータル（都道府県共通） */
 .edu-portal-section {
   background: #ffffff;
-  padding: 44px 0 52px;
+  padding: 24px 0 28px;
 }
 
 .edu-portal-heading {
   font-size: 1.3rem;
   color: var(--navy);
-  margin: 0 0 8px;
+  margin: 0 0 6px;
 }
 
 .edu-portal-lead {
   font-size: 0.86rem;
   color: var(--muted);
-  margin: 0 0 24px;
+  margin: 0 0 14px;
   line-height: 1.6;
 }
 
@@ -960,8 +1047,8 @@ h3.region-header {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 4px 12px;
-  margin-top: 6px;
-  padding-top: 8px;
+  margin-top: 4px;
+  padding-top: 6px;
 }
 
 .pref-card:has(.population-summary) .meta-row {
@@ -996,8 +1083,8 @@ h3.region-header {
 
 /* Prefecture card population metadata */
 .pref-card:has(.population-summary) {
-  gap: 5px;
-  padding: 16px 18px 30px;
+  gap: 4px;
+  padding: 12px 18px 26px;
   overflow: visible;
   max-height: none;
 }
