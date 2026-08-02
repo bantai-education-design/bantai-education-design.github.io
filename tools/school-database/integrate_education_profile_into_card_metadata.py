@@ -21,14 +21,16 @@ CARD_METADATA_PATH = ROOT / "data" / "school-database" / "prefecture-card-metada
 def build_education_profile_block(pref: dict) -> dict:
     return {
         "available": pref["available"],
-        "tier": pref["tier"],
         "metric_id": pref["metric_id"],
+        "metric_label": pref["metric_label"],
         "value": pref["value"],
         "unit": pref["unit"],
-        "rank": pref["rank"],
+        "national_average": pref["national_average"],
         "headline_text": pref["headline_text"],
         "source_short_label": pref["source_short_label"],
         "reference_date_display": pref["reference_date_display"],
+        "statistic_name": pref["statistic_name"],
+        "not_a_ranking_note": pref["not_a_ranking_note"],
         "not_an_official_ranking": True,
     }
 

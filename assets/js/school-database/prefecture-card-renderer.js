@@ -118,6 +118,9 @@
         `出典：${profile.source_short_label}　${profile.reference_date_display}`,
       ),
     );
+    if (profile.not_a_ranking_note) {
+      card.append(createElement("p", "pref-profile-disclaimer", profile.not_a_ranking_note));
+    }
   };
 
   const createCard = (prefecture) => {

@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""Compute the 都道府県教育プロフィール（1行タグライン） for all 47 prefectures.
+"""Compute the 都道府県教育プロフィール（客観統計の1行表示） for all 47
+prefectures.
 
-This is NOT an official government ranking. Every tagline is derived from
-statistics already present in this repository (v1: school-database record
-counts already aggregated in prefecture-metadata.json, and the census-based
-population share already computed in prefecture-card-metadata.json) plus,
-from v2, externally-researched official statistics consolidated into
-prefecture-education-external-stats.json (student-teacher ratio, waiting
-children, depopulated-area school ratio, ICT teaching capability). See
-docs/school-database/education-profile-source-manifest.md for the full
-ranking/selection methodology, sourcing, and the "no unsourced
-official-sounding claims" policy this project follows (see the abandoned
-prefecture-emblems approach).
+This is explicitly NOT a ranking of educational quality and does not display
+any ordinal rank ("全国◯位" etc.) or comparative adjectives ("高い/低い/多い
+/少ない"). For each prefecture, one statistic (chosen from the 9 metrics
+below by how far its value deviates from the 47-prefecture average — a
+selection mechanism, never displayed as a rank) is shown as a plain value,
+optionally paired with the national average for context, always with its
+source, reference date, and statistic name. See
+docs/school-database/education-profile-source-manifest.md for full
+methodology and the "not an educational ranking" policy.
 
 Run twice and diff the output to confirm deterministic generation.
 """
@@ -20,6 +19,7 @@ from __future__ import annotations
 
 import json
 import math
+import statistics
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -28,91 +28,58 @@ CARD_METADATA_PATH = ROOT / "data" / "school-database" / "prefecture-card-metada
 EXTERNAL_STATS_PATH = ROOT / "data" / "school-database" / "prefecture-education-external-stats.json"
 OUTPUT_PATH = ROOT / "data" / "school-database" / "prefecture-education-profile.json"
 
-TIER1_MAX_RANK = 15
-FALLBACK_A_MAX_RANK = 23
+CAP_PER_METRIC = math.ceil(47 / 9)
 SCHOOL_DB_SOURCE_LABEL = "全国学校データベース（本サイト収録データの集計）"
+NOT_A_RANKING_NOTE = "この数値は都道府県の教育水準を順位付けするものではありません。"
 
-# direction: "higher" = larger value is the notable one (used as-is in rank
-# formula), "lower" = smaller value is the notable one (e.g. fewer students
-# per teacher, fewer waiting children).
 METRICS = [
     {
         "id": "private_school_ratio",
         "label": "私立学校の比率",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は私立学校の比率が高く、全国{rank_display}です（{value}%）。",
     },
     {
         "id": "special_needs_school_ratio",
         "label": "特別支援学校の設置比率",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は特別支援学校の設置比率が高く、全国{rank_display}です（{value}%）。",
     },
     {
         "id": "kindergarten_ratio",
         "label": "幼稚園の比率",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は幼稚園の比率が高く、全国{rank_display}です（{value}%）。",
     },
     {
         "id": "child_population_share",
         "label": "学齢人口（3〜17歳）が総人口に占める割合",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は学齢人口（3〜17歳）が総人口に占める割合が高く、全国{rank_display}です（{value}%）。",
     },
     {
         "id": "school_density",
         "label": "1市区町村あたりの学校・園数",
         "unit": "校/市区町村",
-        "direction": "higher",
-        "template_tier1": "{name}は1市区町村あたりの学校・園数が多く、全国{rank_display}です（{value}校/市区町村）。",
     },
     {
         "id": "student_teacher_ratio",
-        "label": "教員一人当たりの児童生徒数",
+        "label": "教員一人当たりの児童生徒数（小学校）",
         "unit": "人",
-        "direction": "lower",
-        "template_tier1": "{name}は教員一人当たりの児童生徒数が少なく、全国{rank_display}です（{value}人）。",
     },
     {
         "id": "waiting_children_count",
         "label": "待機児童数",
         "unit": "人",
-        "direction": "lower",
-        "template_tier1": "{name}は待機児童数が少なく、全国{rank_display}です（{value}人）。",
     },
     {
         "id": "depopulated_school_ratio",
         "label": "過疎関係市町村に所在する学校の比率",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は過疎関係市町村に所在する学校の比率が高く、全国{rank_display}です（{value}%）。",
     },
     {
         "id": "ict_teaching_capability",
         "label": "教員のICT活用指導力（教材研究等）",
         "unit": "%",
-        "direction": "higher",
-        "template_tier1": "{name}は教員のICT活用指導力（教材研究等）が高く、全国{rank_display}です（{value}%）。",
     },
 ]
 METRICS_BY_ID = {m["id"]: m for m in METRICS}
-TIER1_CAP = math.ceil(47 / len(METRICS))
-
-FALLBACK_A_TEMPLATE_HIGHER = (
-    "{name}は{label}が全国平均を上回っています（{value}{unit}、全国平均{avg}{unit}）。"
-)
-FALLBACK_A_TEMPLATE_LOWER = (
-    "{name}は{label}が全国平均を下回っています（{value}{unit}、全国平均{avg}{unit}）。"
-)
-FALLBACK_B_TEMPLATE = (
-    "{name}には{record_count}件の学校・園情報を掲載しています"
-    "（{municipality_count}市区町村・{school_type_count}校種）。"
-)
 
 
 def round1(value: float) -> float:
@@ -206,159 +173,130 @@ def main() -> None:
             if value is not None:
                 values[metric["id"]][slug] = value
 
-    # 2. Rank each metric using competition ranking (1224 style): entries
-    #    with an identical value share the same rank, and the next distinct
-    #    value's rank skips ahead by the size of the tied group. This avoids
-    #    silently claiming e.g. "全国5位" for one of two prefectures that are
-    #    genuinely tied (they must both say "全国5位タイ"). Direction-aware:
-    #    for "lower" metrics, the smallest value gets rank 1.
-    ranks: dict[str, dict[str, int]] = {m["id"]: {} for m in METRICS}
-    tie_counts: dict[str, dict[str, int]] = {m["id"]: {} for m in METRICS}
-    averages: dict[str, float] = {}
-    for metric in METRICS:
-        metric_id = metric["id"]
-        slug_values = values[metric_id]
-        sign = 1 if metric["direction"] == "higher" else -1
+    # 2. Compute the average per metric (for neutral "vs. national average"
+    #    display only — never used to state "high"/"low"/a rank).
+    averages: dict[str, float] = {
+        metric_id: round1(sum(slug_values.values()) / len(slug_values))
+        for metric_id, slug_values in values.items() if slug_values
+    }
+
+    # 3. Selection (internal only, never displayed): for each prefecture,
+    #    choose ONE metric to feature by how far its value deviates from the
+    #    47-prefecture average, measured in standard deviations (a z-score).
+    #    This is purely a "which single statistic is most distinctive for
+    #    this prefecture" mechanism — no rank number or "high/low" judgement
+    #    is derived from it or shown anywhere in the output. A per-metric cap
+    #    keeps any one metric from being featured on too many cards.
+    deviation_scores: dict[str, dict[str, float]] = {m["id"]: {} for m in METRICS}
+    for metric_id, slug_values in values.items():
+        if len(slug_values) < 2:
+            continue
+        stdev = statistics.pstdev(slug_values.values())
+        if stdev == 0:
+            continue
+        mean = averages[metric_id]
         for slug, value in slug_values.items():
-            better_count = sum(
-                1 for other_value in slug_values.values()
-                if sign * other_value > sign * value
-            )
-            ranks[metric_id][slug] = better_count + 1
-        for slug, rank in ranks[metric_id].items():
-            tie_counts[metric_id][slug] = sum(
-                1 for r in ranks[metric_id].values() if r == rank
-            )
-        if slug_values:
-            averages[metric_id] = round1(sum(slug_values.values()) / len(slug_values))
+            deviation_scores[metric_id][slug] = abs(value - mean) / stdev
 
-    # 3. Greedy tier1 assignment: most extreme (prefecture, metric) pairs
-    #    first, capped per metric so no single metric dominates all 47 cards.
-    #    Sort order is for deterministic processing only; the displayed rank
-    #    for tied prefectures is identical regardless of processing order.
-    tier1_candidates = []
-    for metric_id, slug_ranks in ranks.items():
-        for slug, rank in slug_ranks.items():
-            if rank <= TIER1_MAX_RANK:
-                tier1_candidates.append((rank, canonical_order[slug], slug, metric_id))
-    tier1_candidates.sort()
+    candidates = []
+    for metric_id, slug_scores in deviation_scores.items():
+        for slug, score in slug_scores.items():
+            candidates.append((-score, canonical_order[slug], slug, metric_id))
+    candidates.sort()
 
-    assigned: dict[str, dict] = {}
+    assigned_metric: dict[str, str] = {}
     metric_assigned_count = {m["id"]: 0 for m in METRICS}
-    for rank, _order, slug, metric_id in tier1_candidates:
-        if slug in assigned:
+    for _neg_score, _order, slug, metric_id in candidates:
+        if slug in assigned_metric:
             continue
-        if metric_assigned_count[metric_id] >= TIER1_CAP:
+        if metric_assigned_count[metric_id] >= CAP_PER_METRIC:
             continue
-        assigned[slug] = {"tier": "tier1", "metric_id": metric_id, "rank": rank}
+        assigned_metric[slug] = metric_id
         metric_assigned_count[metric_id] += 1
 
-    # 4. Fallback A (above/below-average, no explicit rank digit) / Fallback B
-    #    (no comparison at all) for prefectures left unassigned.
+    # Any prefecture left unassigned (e.g. all its deviation scores were
+    # exhausted by other prefectures' caps) falls back to whichever metric
+    # has a value for it, preferring the one with the largest deviation
+    # score even past the cap — every prefecture must show a real statistic.
     for slug in meta_by_slug:
-        if slug in assigned:
+        if slug in assigned_metric:
             continue
         best = None
-        for metric_id, slug_ranks in ranks.items():
-            rank = slug_ranks.get(slug)
-            if rank is None:
+        for metric_id, slug_scores in deviation_scores.items():
+            score = slug_scores.get(slug)
+            if score is None:
                 continue
-            if best is None or rank < best[0]:
-                best = (rank, metric_id)
-        if best is not None and best[0] <= FALLBACK_A_MAX_RANK:
-            assigned[slug] = {"tier": "fallback_a", "metric_id": best[1], "rank": best[0]}
-        else:
-            assigned[slug] = {"tier": "fallback_b", "metric_id": None, "rank": None}
+            if best is None or score > best[0]:
+                best = (score, metric_id)
+        if best is None:
+            for metric_id, slug_values in values.items():
+                if slug in slug_values:
+                    best = (0.0, metric_id)
+                    break
+        assigned_metric[slug] = best[1]
 
-    # 5. Render templates.
+    # 4. Render output: plain value + optional national-average context,
+    #    always with source/date/statistic-name and the not-a-ranking note.
     prefectures_out = []
     for slug in sorted(meta_by_slug, key=lambda s: canonical_order[s]):
         meta = meta_by_slug[slug]
         card_pref = card_by_slug[slug]
         external = external_by_slug.get(slug)
         name = card_pref["prefecture_name"]
-        assignment = assigned[slug]
-        tier = assignment["tier"]
-        metric_id = assignment["metric_id"]
+        metric_id = assigned_metric[slug]
+        metric = METRICS_BY_ID[metric_id]
+        value = values[metric_id][slug]
+        average = averages.get(metric_id)
 
-        entry = {
+        source_short_label, source_date = metric_source(metric_id, card_pref, external)
+        if not source_date:
+            source_date = f"{most_recent_date(meta['source_dates'])}時点（区分ごとの整理日は各都道府県ページを参照）"
+
+        if average is not None:
+            headline_text = (
+                f"{name}の{metric['label']}は{value}{metric['unit']}です"
+                f"（全国平均：{average}{metric['unit']}）。"
+            )
+        else:
+            headline_text = f"{name}の{metric['label']}は{value}{metric['unit']}です。"
+
+        prefectures_out.append({
             "prefecture_code": slug,
             "prefecture_name": name,
-            "tier": tier,
             "metric_id": metric_id,
-        }
+            "metric_label": metric["label"],
+            "value": value,
+            "unit": metric["unit"],
+            "national_average": average,
+            "headline_text": headline_text,
+            "source_short_label": source_short_label,
+            "reference_date_display": source_date,
+            "statistic_name": source_short_label,
+            "not_a_ranking_note": NOT_A_RANKING_NOTE,
+            "available": True,
+        })
 
-        if tier in ("tier1", "fallback_a"):
-            metric = METRICS_BY_ID[metric_id]
-            value = values[metric_id][slug]
-            rank = assignment["rank"]
-            is_tied = tie_counts[metric_id][slug] > 1 if tier == "tier1" else False
-            source_short_label, source_date = metric_source(metric_id, card_pref, external)
-            if not source_date:
-                source_date = f"{most_recent_date(meta['source_dates'])}時点（区分ごとの整理日は各都道府県ページを参照）"
-            entry.update({
-                "value": value,
-                "unit": metric["unit"],
-                "rank": rank if tier == "tier1" else None,
-                "rank_tied": is_tied,
-                "source_short_label": source_short_label,
-                "reference_date_display": source_date,
-            })
-            if tier == "tier1":
-                rank_display = f"{rank}位タイ" if is_tied else f"{rank}位"
-                entry["headline_text"] = metric["template_tier1"].format(
-                    name=name, rank_display=rank_display, value=value,
-                )
-            else:
-                fallback_template = (
-                    FALLBACK_A_TEMPLATE_HIGHER if metric["direction"] == "higher"
-                    else FALLBACK_A_TEMPLATE_LOWER
-                )
-                entry["headline_text"] = fallback_template.format(
-                    name=name, label=metric["label"], value=value,
-                    avg=averages[metric_id], unit=metric["unit"],
-                )
-        else:
-            entry.update({
-                "value": None,
-                "unit": None,
-                "rank": None,
-                "rank_tied": False,
-                "source_short_label": SCHOOL_DB_SOURCE_LABEL,
-                "reference_date_display": f"{most_recent_date(meta['source_dates'])}時点",
-                "headline_text": FALLBACK_B_TEMPLATE.format(
-                    name=name,
-                    record_count=meta["total"],
-                    municipality_count=meta["municipality_count"],
-                    school_type_count=card_pref["school_database"]["school_type_count"],
-                ),
-            })
-
-        entry["available"] = True
-        prefectures_out.append(entry)
-
-    schema_version = 2 if external_by_slug else 1
     payload = {
         "generated_at": "2026-08-02",
-        "schema_version": schema_version,
-        "description": "都道府県カード表示用の教育プロフィール（1行タグライン）データ。"
-                       "本サイトの学校データベース集計・国勢調査人口比率に加え、"
-                       "文部科学省・こども家庭庁・総務省の公表統計から算出した、"
-                       "Ban.Tai Education Design独自の順位付けであり、政府等による公式"
-                       "ランキング・認定ではない。",
+        "schema_version": 3,
+        "description": "都道府県カード表示用の教育プロフィールデータ。本サイトの学校"
+                       "データベース集計・国勢調査人口比率に加え、文部科学省・"
+                       "こども家庭庁・総務省の公表統計から算出した、Ban.Tai "
+                       "Education Design独自の統計表示であり、政府等による公式"
+                       "ランキング・認定ではない。都道府県の教育水準を順位付ける"
+                       "ものでもない（順位表示は一切行わない）。",
         "education_profile_policy": {
             "no_dummy_values": True,
             "no_estimates": True,
             "not_an_official_ranking": True,
+            "not_an_educational_quality_ranking": True,
+            "no_rank_display": True,
         },
         "methodology": {
-            "tier1_max_rank": TIER1_MAX_RANK,
-            "fallback_a_max_rank": FALLBACK_A_MAX_RANK,
-            "tier1_cap_per_metric": TIER1_CAP,
-            "ranking_method": "competition_ranking_ties_share_rank",
+            "selection_method": "largest_zscore_deviation_from_average_capped_per_metric",
+            "cap_per_metric": CAP_PER_METRIC,
             "metrics": [
-                {"id": m["id"], "label": m["label"], "unit": m["unit"], "direction": m["direction"]}
-                for m in METRICS
+                {"id": m["id"], "label": m["label"], "unit": m["unit"]} for m in METRICS
             ],
         },
         "prefectures": prefectures_out,
@@ -372,15 +310,8 @@ def main() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Wrote {OUTPUT_PATH} for {len(covered)} prefectures (schema_version={schema_version})")
-
-    tier_counts_out: dict[str, int] = {}
-    for p in prefectures_out:
-        tier_counts_out[p["tier"]] = tier_counts_out.get(p["tier"], 0) + 1
-    print(f"Tier distribution: {tier_counts_out}")
-    print(f"Per-metric tier1 assignment counts: {metric_assigned_count}")
-    tied_count = sum(1 for p in prefectures_out if p.get("rank_tied"))
-    print(f"Tied tier1 headlines: {tied_count}")
+    print(f"Wrote {OUTPUT_PATH} for {len(covered)} prefectures (schema_version=3)")
+    print(f"Per-metric assignment counts: {metric_assigned_count}")
 
 
 if __name__ == "__main__":
