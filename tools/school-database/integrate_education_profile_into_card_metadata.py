@@ -30,7 +30,6 @@ def build_education_profile_block(pref: dict) -> dict:
         "source_short_label": pref["source_short_label"],
         "reference_date_display": pref["reference_date_display"],
         "statistic_name": pref["statistic_name"],
-        "not_a_ranking_note": pref["not_a_ranking_note"],
         "not_an_official_ranking": True,
     }
 

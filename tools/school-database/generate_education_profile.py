@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Compute the 都道府県教育プロフィール（客観統計の1行表示） for all 47
-prefectures.
+"""Compute the 都道府県教育統計（客観統計の1行表示） for all 47 prefectures.
 
 This is explicitly NOT a ranking of educational quality and does not display
 any ordinal rank ("全国◯位" etc.) or comparative adjectives ("高い/低い/多い
@@ -8,9 +7,11 @@ any ordinal rank ("全国◯位" etc.) or comparative adjectives ("高い/低い
 below by how far its value deviates from the 47-prefecture average — a
 selection mechanism, never displayed as a rank) is shown as a plain value,
 optionally paired with the national average for context, always with its
-source, reference date, and statistic name. See
+source, reference date, and statistic name. The "not an educational ranking"
+disclaimer is shown once, in a dedicated section on the portal page
+(tools/school-database/index.html) rather than repeated on all 47 cards. See
 docs/school-database/education-profile-source-manifest.md for full
-methodology and the "not an educational ranking" policy.
+methodology and policy.
 
 Run twice and diff the output to confirm deterministic generation.
 """
@@ -30,7 +31,6 @@ OUTPUT_PATH = ROOT / "data" / "school-database" / "prefecture-education-profile.
 
 CAP_PER_METRIC = math.ceil(47 / 9)
 SCHOOL_DB_SOURCE_LABEL = "全国学校データベース（本サイト収録データの集計）"
-NOT_A_RANKING_NOTE = "この数値は都道府県の教育水準を順位付けするものではありません。"
 
 METRICS = [
     {
@@ -272,14 +272,13 @@ def main() -> None:
             "source_short_label": source_short_label,
             "reference_date_display": source_date,
             "statistic_name": source_short_label,
-            "not_a_ranking_note": NOT_A_RANKING_NOTE,
             "available": True,
         })
 
     payload = {
         "generated_at": "2026-08-02",
         "schema_version": 3,
-        "description": "都道府県カード表示用の教育プロフィールデータ。本サイトの学校"
+        "description": "都道府県カード表示用の教育統計データ。本サイトの学校"
                        "データベース集計・国勢調査人口比率に加え、文部科学省・"
                        "こども家庭庁・総務省の公表統計から算出した、Ban.Tai "
                        "Education Design独自の統計表示であり、政府等による公式"

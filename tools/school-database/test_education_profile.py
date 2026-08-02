@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the 都道府県教育プロフィール data, its integration into
+"""Validate the 都道府県教育統計 data, its integration into
 prefecture-card-metadata.json, and its rendering wiring.
 
 This is explicitly NOT a ranking of educational quality: no ordinal rank
@@ -45,8 +45,6 @@ KNOWN_EMPTY_MUNICIPALITY_SLUGS = {
     "gifu", "gunma", "ishikawa", "kyoto", "mie", "nara", "shimane", "shizuoka", "tottori",
 }
 
-NOT_A_RANKING_NOTE = "この数値は都道府県の教育水準を順位付けするものではありません。"
-
 
 def round1(value: float) -> float:
     return round(value, 1)
@@ -87,8 +85,9 @@ def test_prefecture_education_profile_json() -> None:
             f"{p['prefecture_name']}: statistic_name が source_short_label と一致しません"
         )
         assert p["reference_date_display"], f"{p['prefecture_name']}: reference_date_display が空です"
-        assert p["not_a_ranking_note"] == NOT_A_RANKING_NOTE, (
-            f"{p['prefecture_name']}: not_a_ranking_note の文言が想定と異なります"
+        assert "not_a_ranking_note" not in p, (
+            f"{p['prefecture_name']}: not_a_ranking_noteが残っています"
+            "（注記はポータル1箇所に集約したためカード単位のデータからは削除済みのはず）"
         )
         assert p["value"] is not None, f"{p['prefecture_name']}: value が欠損しています"
 
@@ -224,7 +223,7 @@ def test_card_metadata_education_profile_integration() -> None:
     profile_by_code = {p["prefecture_code"]: p for p in profile_payload["prefectures"]}
 
     assert set(p["prefecture_code"] for p in prefectures) == set(profile_by_code), (
-        "47都道府県が一致しません（カードメタデータ vs 教育プロフィールデータ）"
+        "47都道府県が一致しません（カードメタデータ vs 教育統計データ）"
     )
 
     for prefecture in prefectures:
@@ -234,6 +233,9 @@ def test_card_metadata_education_profile_integration() -> None:
         assert ep["available"] is True
         assert "rank" not in ep, f"{prefecture['prefecture_name']}: カードメタデータにrankフィールドが残っています"
         assert "tier" not in ep, f"{prefecture['prefecture_name']}: カードメタデータにtierフィールドが残っています"
+        assert "not_a_ranking_note" not in ep, (
+            f"{prefecture['prefecture_name']}: カードメタデータにnot_a_ranking_noteが残っています"
+        )
         assert ep["metric_id"] == source_ref["metric_id"]
         assert ep["metric_label"] == source_ref["metric_label"]
         assert ep["value"] == source_ref["value"]
@@ -242,7 +244,6 @@ def test_card_metadata_education_profile_integration() -> None:
         assert ep["source_short_label"] == source_ref["source_short_label"]
         assert ep["reference_date_display"] == source_ref["reference_date_display"]
         assert ep["statistic_name"] == source_ref["statistic_name"]
-        assert ep["not_a_ranking_note"] == NOT_A_RANKING_NOTE
         assert ep["not_an_official_ranking"] is True
 
 
@@ -254,9 +255,17 @@ def test_renderer_and_css_wire_profile_line() -> None:
     assert "education-profile-value" in js
     assert "education-profile-average-value" in js
     assert "pref-profile-source" in js
-    assert "pref-profile-disclaimer" in js
-    assert "not_a_ranking_note" in js
     assert "profile.available !== true" in js
+
+    # カードごとの「順位付けではない」注記は2026-08-02にポータル1箇所への
+    # 集約へ変更したため、レンダラーが再度カード単位で描画しないことを
+    # 回帰防止として確認する。
+    assert "not_a_ranking_note" not in js, (
+        "カード単位の注記描画が復活しています（ポータル1箇所への集約方針に反します）"
+    )
+    assert "pref-profile-disclaimer" not in js, (
+        "カード単位の注記クラスが復活しています（ポータル1箇所への集約方針に反します）"
+    )
 
     css = CSS_PATH.read_text(encoding="utf-8")
     assert ".education-profile-summary" in css
@@ -264,16 +273,19 @@ def test_renderer_and_css_wire_profile_line() -> None:
     assert ".education-profile-value" in css
     assert ".education-profile-average-value" in css
     assert ".pref-profile-source" in css
-    assert ".pref-profile-disclaimer" in css
 
 
 def test_portal_html_shows_disclaimer() -> None:
     html = INDEX_HTML.read_text(encoding="utf-8")
-    assert "教育水準を順位付けするものではなく" in html, (
-        "教育プロフィールが教育水準の順位付けではない旨の注記がindex.htmlに見つかりません"
+    assert "教育統計について" in html, (
+        "「教育統計について」の見出しがindex.htmlに見つかりません"
     )
-    assert "公式のランキング・認定でもありません" in html, (
-        "教育プロフィールが公式ランキングではない旨の注記がindex.htmlに見つかりません"
+    assert "教育水準を順位付け・評価するものではありません" in html, (
+        "教育統計が教育水準の順位付け・評価ではない旨の注記がindex.htmlに見つかりません"
+    )
+    # ポータル1箇所にのみ注記があること（重複していないこと）を確認する。
+    assert html.count("教育水準を順位付け") == 1, (
+        "教育水準を順位付けしない旨の注記がポータル内に複数箇所あります"
     )
 
 

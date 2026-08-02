@@ -116,12 +116,12 @@
 
     summary.append(createElement("div", "education-profile-metric-label", profile.metric_label));
 
-    const valueRow = createElement("div", "education-profile-value-row");
     const valueEl = createElement("strong", "education-profile-value", `${profile.value}`);
     valueEl.append(createElement("span", "", profile.unit));
-    valueRow.append(valueEl);
+    summary.append(valueEl);
+
     if (profile.national_average !== null && profile.national_average !== undefined) {
-      valueRow.append(
+      summary.append(
         createElement(
           "span",
           "education-profile-average-value",
@@ -129,7 +129,6 @@
         ),
       );
     }
-    summary.append(valueRow);
 
     summary.append(
       createElement(
@@ -138,9 +137,6 @@
         `出典：${profile.source_short_label}　${profile.reference_date_display}`,
       ),
     );
-    if (profile.not_a_ranking_note) {
-      summary.append(createElement("p", "pref-profile-disclaimer", profile.not_a_ranking_note));
-    }
 
     card.append(summary);
   };
