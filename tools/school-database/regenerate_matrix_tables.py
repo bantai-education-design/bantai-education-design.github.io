@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
-"""Regenerate the 東京都 "収録範囲" 校種×設置区分 matrix table in
-tools/school-database/tokyo/index.html directly from
-data/school-database/tokyo.json (the current, authoritative 3,493-record
-dataset — not the legacy data/tokyo_public_schools_address_2025.json,
-3,509 records).
+"""Regenerate the 校種×設置区分 matrix-style "収録範囲" tables used by the
+prefectures whose individual page does NOT use the single-件数-column table
+handled by enrich_prefecture_pages.py (東京都・埼玉県, both instead show a
+column per establishment type).
 
-Unlike the other 46 prefectures (single 件数 column, handled by
-enrich_prefecture_pages.py), Tokyo's page has always used a 校種×設置区分
-matrix table (columns per establishment type). This script recomputes that
-matrix, and the header total, from source data so the two can never drift
-out of sync again.
+Supersedes regenerate_tokyo_matrix.py (東京都限定) — now also regenerates
+埼玉県, whose table previously grouped several school types together
+(「中学校・義務教育学校」「高等学校・中等教育学校」) using stale counts.
+Both prefectures are now broken out into the full 7 school-type rows,
+computed directly from their data/school-database/{slug}.json files.
 
 Establishment-type columns are included only if at least one record of
-that type exists anywhere in the data (currently 公立/私立; 国立 has zero
-records and is omitted rather than shown as a permanent "準備中" column).
-A cell for a school type / establishment combination that genuinely has
-zero records (e.g. 義務教育学校 has no 私立 schools) is rendered as "0校"
-in muted gray, distinct from the green "✓ (N校)" style used for a
-present-and-nonzero cell.
+that type exists anywhere in the prefecture's data (currently 公立/私立
+for both; 国立/その他 are omitted rather than shown as a permanent
+placeholder column). A cell for a school type / establishment combination
+that genuinely has zero records (e.g. 埼玉県の義務教育学校 has no 私立
+schools) is rendered as "0校"/"0園" in muted gray, distinct from the green
+"✓ (N校)" style used for a present-and-nonzero cell.
 
 Re-running this script is idempotent (replaces the previously-generated
 table via marker comments rather than duplicating it)."""
@@ -29,8 +28,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TOKYO_JSON = ROOT / "data" / "school-database" / "tokyo.json"
-PAGE_PATH = ROOT / "tools" / "school-database" / "tokyo" / "index.html"
+SCHOOL_DB_DIR = ROOT / "data" / "school-database"
+PAGE_DIR = ROOT / "tools" / "school-database"
 
 SCHOOL_TYPE_ORDER = [
     "幼稚園", "幼保連携型認定こども園", "小学校", "中学校",
@@ -39,15 +38,14 @@ SCHOOL_TYPE_ORDER = [
 UNIT = {"幼稚園": "園", "幼保連携型認定こども園": "園"}
 ESTABLISHMENT_ORDER = ["国立", "公立", "私立", "その他"]
 
-MATRIX_START = "<!-- tokyo-matrix-table:start -->"
-MATRIX_END = "<!-- tokyo-matrix-table:end -->"
+MATRIX_SLUGS = ["tokyo", "saitama"]
 
 
 def format_number(n: int) -> str:
     return f"{n:,}"
 
 
-def build_matrix_html(records: list[dict]) -> tuple[str, int]:
+def build_matrix_html(records: list[dict], marker_start: str, marker_end: str) -> tuple[str, int]:
     cross: dict[str, dict[str, int]] = {}
     for r in records:
         cross.setdefault(r["school_type"], {})
@@ -81,8 +79,8 @@ def build_matrix_html(records: list[dict]) -> tuple[str, int]:
         )
 
     total = len(records)
-    table_html = f"""{MATRIX_START}
-            <table style="width:100%; max-width:600px; border-collapse:collapse; margin-bottom:12px; font-size:0.8rem; background:#fff; border:1px solid #e6dbb8; text-align:left;">
+    table_html = f"""{marker_start}
+            <table style="width:100%; max-width:650px; border-collapse:collapse; margin-bottom:12px; font-size:0.8rem; background:#fff; border:1px solid #e6dbb8; text-align:left;">
               <thead>
                 <tr style="background:#fcf8e3; border-bottom:1px solid #e6dbb8; font-weight:700; color:#8c6b00;">
                   <th style="padding:4px 8px;">学校種別</th>
@@ -93,32 +91,42 @@ def build_matrix_html(records: list[dict]) -> tuple[str, int]:
                 {"".join(body_rows)}
               </tbody>
             </table>
-            {MATRIX_END}"""
+            {marker_end}"""
     return table_html, total
 
 
-def main() -> None:
-    records = json.loads(TOKYO_JSON.read_text(encoding="utf-8"))
-    table_html, total = build_matrix_html(records)
+def process_prefecture(slug: str) -> None:
+    json_path = SCHOOL_DB_DIR / f"{slug}.json"
+    page_path = PAGE_DIR / slug / "index.html"
+    marker_start = f"<!-- {slug}-matrix-table:start -->"
+    marker_end = f"<!-- {slug}-matrix-table:end -->"
 
-    html = PAGE_PATH.read_text(encoding="utf-8")
+    records = json.loads(json_path.read_text(encoding="utf-8"))
+    table_html, total = build_matrix_html(records, marker_start, marker_end)
+
+    html = page_path.read_text(encoding="utf-8")
 
     header_match = re.search(r"(本データベースの収録範囲[（(]\s*合計\s*)[\d,]+(\s*校・園[）)])", html)
     if not header_match:
-        raise ValueError("収録範囲の見出しが見つかりません")
+        raise ValueError(f"{slug}: 収録範囲の見出しが見つかりません")
     html = html[: header_match.start()] + header_match.group(1) + format_number(total) + header_match.group(2) + html[header_match.end() :]
 
-    if MATRIX_START in html:
-        pattern = re.compile(re.escape(MATRIX_START) + r".*?" + re.escape(MATRIX_END), re.S)
+    if marker_start in html:
+        pattern = re.compile(re.escape(marker_start) + r".*?" + re.escape(marker_end), re.S)
         html = pattern.sub(table_html, html)
     else:
         table_match = re.search(r"<table.*?</table>", html, re.S)
         if not table_match:
-            raise ValueError("既存の収録範囲テーブルが見つかりません")
+            raise ValueError(f"{slug}: 既存の収録範囲テーブルが見つかりません")
         html = html[: table_match.start()] + table_html + html[table_match.end() :]
 
-    PAGE_PATH.write_text(html, encoding="utf-8")
-    print(f"Regenerated Tokyo matrix table: total={total}")
+    page_path.write_text(html, encoding="utf-8")
+    print(f"Regenerated {slug} matrix table: total={total}")
+
+
+def main() -> None:
+    for slug in MATRIX_SLUGS:
+        process_prefecture(slug)
 
 
 if __name__ == "__main__":
