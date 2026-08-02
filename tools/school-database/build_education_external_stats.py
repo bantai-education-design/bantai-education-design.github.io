@@ -84,14 +84,11 @@ def build_depopulated_ratios(name_to_slug: dict[str, str]) -> dict[str, float | 
         schools = json.loads(school_path.read_text(encoding="utf-8"))
         if not schools:
             continue
-        # A handful of prefectures have an entirely-empty `municipality`
-        # field across every school record (a pre-existing data-pipeline
-        # issue, tracked separately — see the spawn_task filed against
-        # the same `municipality_count == 0` symptom in
-        # prefecture-metadata.json). Joining against an empty string would
-        # silently produce a false "0% depopulated" for these, which is a
-        # data artifact, not a real measurement — exclude them (None)
-        # rather than report a fabricated-looking zero.
+        # Defensive guard: if a prefecture's `municipality` field is ever
+        # entirely empty across every school record (a data-pipeline bug,
+        # not a real 0%), joining against an empty string would silently
+        # produce a false "0% depopulated" — exclude it (None) rather than
+        # report a fabricated-looking zero.
         if not any(school["municipality"] for school in schools):
             ratios[slug] = None
             continue

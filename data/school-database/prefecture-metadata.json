@@ -303,7 +303,7 @@
     "prefecture": "岐阜県",
     "slug": "gifu",
     "total": 735,
-    "municipality_count": 0,
+    "municipality_count": 42,
     "establishment_counts": {
       "national": 1,
       "public": 619,
@@ -333,14 +333,14 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 735,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
     "prefecture": "群馬県",
     "slug": "gunma",
     "total": 651,
-    "municipality_count": 0,
+    "municipality_count": 35,
     "establishment_counts": {
       "national": 4,
       "public": 576,
@@ -371,7 +371,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 651,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -530,7 +530,7 @@
     "prefecture": "石川県",
     "slug": "ishikawa",
     "total": 386,
-    "municipality_count": 0,
+    "municipality_count": 19,
     "establishment_counts": {
       "national": 5,
       "public": 327,
@@ -560,7 +560,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 386,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -789,7 +789,7 @@
     "prefecture": "京都府",
     "slug": "kyoto",
     "total": 859,
-    "municipality_count": 0,
+    "municipality_count": 36,
     "establishment_counts": {
       "national": 6,
       "public": 631,
@@ -819,14 +819,14 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 859,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
     "prefecture": "三重県",
     "slug": "mie",
     "total": 736,
-    "municipality_count": 0,
+    "municipality_count": 29,
     "establishment_counts": {
       "national": 4,
       "public": 654,
@@ -857,7 +857,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 736,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1015,7 +1015,7 @@
     "prefecture": "奈良県",
     "slug": "nara",
     "total": 473,
-    "municipality_count": 0,
+    "municipality_count": 39,
     "establishment_counts": {
       "national": 5,
       "public": 395,
@@ -1046,7 +1046,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 473,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1345,7 +1345,7 @@
     "prefecture": "島根県",
     "slug": "shimane",
     "total": 402,
-    "municipality_count": 0,
+    "municipality_count": 19,
     "establishment_counts": {
       "national": 2,
       "public": 379,
@@ -1375,14 +1375,14 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 402,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
     "prefecture": "静岡県",
     "slug": "shizuoka",
     "total": 1241,
-    "municipality_count": 0,
+    "municipality_count": 39,
     "establishment_counts": {
       "national": 7,
       "public": 1005,
@@ -1412,7 +1412,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 1241,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {
@@ -1528,7 +1528,7 @@
     "prefecture": "鳥取県",
     "slug": "tottori",
     "total": 232,
-    "municipality_count": 0,
+    "municipality_count": 19,
     "establishment_counts": {
       "national": 4,
       "public": 205,
@@ -1558,7 +1558,7 @@
         "date": "2026-05-29"
       }
     ],
-    "warnings_count": 232,
+    "warnings_count": 0,
     "missing_count": 0
   },
   {

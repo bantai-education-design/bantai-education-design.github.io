@@ -1,4 +1,4 @@
-// 山形県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-nara.js)
+// 奈良県学校データベース - 検索・並び替え制御JS (assets/js/school-database/search-nara.js)
 // フィールド名は千葉県版・神奈川県版・山梨県版と同じ（name, establishment, course は配列）。
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,19 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
 
-  // 山形県行政順（市部 -> 郡部）
+  // 奈良県行政順（市部 -> 郡部）
   const MUNICIPALITY_ORDER = [
-    '山形市', '米沢市', '鶴岡市', '酒田市', '新庄市', '寒河江市',
-    '上山市', '村山市', '長井市', '天童市', '東根市', '尾花沢市', '南陽市',
-    '東村山郡山辺町', '東村山郡中山町',
-    '西村山郡河北町', '西村山郡西川町', '西村山郡朝日町', '西村山郡大江町',
-    '北村山郡大石田町',
-    '最上郡金山町', '最上郡最上町', '最上郡舟形町', '最上郡真室川町',
-    '最上郡大蔵村', '最上郡鮭川村', '最上郡戸沢村',
-    '東置賜郡高畠町', '東置賜郡川西町',
-    '西置賜郡小国町', '西置賜郡白鷹町', '西置賜郡飯豊町',
-    '東田川郡三川町', '東田川郡庄内町',
-    '飽海郡遊佐町'
+    '奈良市', '大和高田市', '大和郡山市', '天理市', '橿原市', '桜井市',
+    '五條市', '御所市', '生駒市', '香芝市', '葛城市', '宇陀市',
+    '山辺郡山添村', '生駒郡平群町', '生駒郡三郷町', '生駒郡斑鳩町', '生駒郡安堵町', '磯城郡川西町',
+    '磯城郡三宅町', '磯城郡田原本町', '宇陀郡曽爾村', '宇陀郡御杖村', '高市郡高取町', '高市郡明日香村',
+    '北葛城郡上牧町', '北葛城郡王寺町', '北葛城郡広陵町', '北葛城郡河合町', '吉野郡吉野町', '吉野郡大淀町',
+    '吉野郡下市町', '吉野郡黒滝村', '吉野郡天川村', '吉野郡野迫川村', '吉野郡十津川村', '吉野郡下北山村',
+    '吉野郡上北山村', '吉野郡川上村', '吉野郡東吉野村'
   ];
 
   const SCHOOL_TYPE_ORDER = [
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '国立', '公立', '私立'
   ];
 
-  // 1. 山形県データの読み込み
+  // 1. 奈良県データの読み込み
   fetch('/data/school-database/nara.json')
     .then(response => {
       if (!response.ok) {
@@ -53,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
       performSearch();
     })
     .catch(error => {
-      console.error('Error fetching Yamagata school data:', error);
+      console.error('Error fetching Nara school data:', error);
       resultsContainer.innerHTML = '<p style="color:red; text-align:center; padding: 20px;">データの読み込みに失敗しました。時間をおいて再度お試しください。</p>';
     });
 
   // 2. 市町村セレクトボックスの初期化
   function initCitySelect(data) {
     const availableCities = new Set(
-      data.map(item => item.municipality).filter(c => c && c !== '山形県')
+      data.map(item => item.municipality).filter(c => c && c !== '奈良県')
     );
     MUNICIPALITY_ORDER.forEach(city => {
       if (availableCities.has(city)) {
@@ -462,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     data.forEach(item => {
       const row = [
-        item.prefecture || '山形県',
+        item.prefecture || '奈良県',
         item.municipality || '',
         item.establishment || '',
         item.school_type || '',

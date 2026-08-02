@@ -34,16 +34,12 @@ PROHIBITED_TERMS = (
 )
 RANK_PATTERN = re.compile(r"全国\d+位")
 
-# The 9 prefectures whose per-school `municipality` field is entirely empty
-# in data/school-database/{slug}.json (a pre-existing, separately-tracked
-# data-pipeline issue — see the spawn_task filed against the identical
-# `municipality_count == 0` symptom in prefecture-metadata.json). The
-# depopulated_school_ratio join can never produce a real value for these,
-# so build_education_external_stats.py stores None rather than a
-# fabricated-looking 0%.
-KNOWN_EMPTY_MUNICIPALITY_SLUGS = {
-    "gifu", "gunma", "ishikawa", "kyoto", "mie", "nara", "shimane", "shizuoka", "tottori",
-}
+# Previously, 9 prefectures had a per-school `municipality` field that was
+# entirely empty in data/school-database/{slug}.json (a data-pipeline bug in
+# their convert_*_sources.py scripts, since fixed). That data-quality issue
+# is now resolved for all 47 prefectures, so no slug is expected to be
+# excluded from the depopulated_school_ratio join anymore.
+KNOWN_EMPTY_MUNICIPALITY_SLUGS: set[str] = set()
 
 
 def round1(value: float) -> float:
@@ -173,12 +169,6 @@ def test_metric_values_and_averages_recomputable_from_source() -> None:
         slug = p["prefecture_code"]
         metric_id = p["metric_id"]
 
-        if metric_id == "depopulated_school_ratio":
-            assert slug not in KNOWN_EMPTY_MUNICIPALITY_SLUGS, (
-                f"{p['prefecture_name']}: municipalityデータが空の県が"
-                "depopulated_school_ratioで選出されるべきではありません"
-            )
-
         expected_value = all_values[metric_id][slug]
         assert math.isclose(expected_value, p["value"], abs_tol=1e-6), (
             f"{p['prefecture_name']}/{metric_id}: 再計算値({expected_value}) != 保存値({p['value']})"
@@ -210,7 +200,8 @@ def test_external_stats_file_integrity() -> None:
         p["prefecture_code"] for p in prefectures if p["depopulated_school_ratio"] is None
     }
     assert none_depopulated == KNOWN_EMPTY_MUNICIPALITY_SLUGS, (
-        f"depopulated_school_ratioがNoneの県が想定と異なります: {none_depopulated}"
+        f"depopulated_school_ratioがNoneの県が想定と異なります"
+        f"（municipalityデータ空の県は現在ないはずです）: {none_depopulated}"
     )
 
 
