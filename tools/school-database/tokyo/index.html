@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="/tools/tokyo-school-address/style.css">
+  <link rel="stylesheet" href="/assets/css/school-database.css">
+  <link rel="canonical" href="https://bantai-education-design.github.io/tools/school-database/tokyo/">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -25,7 +26,7 @@
   <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
   <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
   <script src="/assets/js/analytics-events.js" defer></script>
-  <script src="/tools/tokyo-school-address/search.js" defer></script>
+  <script src="/assets/js/school-database/search-tokyo.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -124,42 +125,19 @@
               <span>💡 本データベースの収録範囲（合計 3,493 校・園）</span>
             </div>
             
+            <!-- tokyo-matrix-table:start -->
             <table style="width:100%; max-width:600px; border-collapse:collapse; margin-bottom:12px; font-size:0.8rem; background:#fff; border:1px solid #e6dbb8; text-align:left;">
               <thead>
                 <tr style="background:#fcf8e3; border-bottom:1px solid #e6dbb8; font-weight:700; color:#8c6b00;">
                   <th style="padding:4px 8px;">学校種別</th>
-                  <th style="padding:4px 8px; text-align:center;">公立</th>
-                  <th style="padding:4px 8px; text-align:center;">私立</th>
-                  <th style="padding:4px 8px; text-align:center;">国立</th>
+                  <th style="padding:4px 8px; text-align:center;">公立</th><th style="padding:4px 8px; text-align:center;">私立</th><th style="padding:4px 8px; text-align:center;">計</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-bottom:1px solid #f2e9cc;">
-                  <td style="padding:4px 8px; font-weight:600;">幼稚園</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (148園)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (733園)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#95a5a6;">準備中</td>
-                </tr>
-                <tr style="border-bottom:1px solid #f2e9cc;">
-                  <td style="padding:4px 8px; font-weight:600;">小学校・中学校・義務教育</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (1,869校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (238校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#95a5a6;">準備中</td>
-                </tr>
-                <tr style="border-bottom:1px solid #f2e9cc;">
-                  <td style="padding:4px 8px; font-weight:600;">高等学校・中等教育</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (193校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (244校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#95a5a6;">準備中</td>
-                </tr>
-                <tr style="border-bottom:1px solid #f2e9cc;">
-                  <td style="padding:4px 8px; font-weight:600;">特別支援学校</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (80校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (4校)</td>
-                  <td style="padding:4px 8px; text-align:center; color:#95a5a6;">準備中</td>
-                </tr>
+                <tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">幼稚園</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (148園)</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (733園)</td><td style="padding:4px 8px; text-align:center; font-weight:700;">881園</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">小学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (1,254校)</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (55校)</td><td style="padding:4px 8px; text-align:center; font-weight:700;">1,309校</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">中学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (604校)</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (183校)</td><td style="padding:4px 8px; text-align:center; font-weight:700;">787校</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">義務教育学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (11校)</td><td style="padding:4px 8px; text-align:center; color:#95a5a6;">0校</td><td style="padding:4px 8px; text-align:center; font-weight:700;">11校</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">高等学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (187校)</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (244校)</td><td style="padding:4px 8px; text-align:center; font-weight:700;">431校</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">中等教育学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (6校)</td><td style="padding:4px 8px; text-align:center; color:#95a5a6;">0校</td><td style="padding:4px 8px; text-align:center; font-weight:700;">6校</td></tr><tr style="border-bottom:1px solid #f2e9cc;"><td style="padding:4px 8px; font-weight:600;">特別支援学校</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (64校)</td><td style="padding:4px 8px; text-align:center; color:#27ae60; font-weight:700;">✓ (4校)</td><td style="padding:4px 8px; text-align:center; font-weight:700;">68校</td></tr>
               </tbody>
             </table>
+            <!-- tokyo-matrix-table:end -->
             
             <p style="margin:0; font-size:0.78rem; color:#8c6b00;">
               ※公立校・園は令和7年度版、私立校・園は令和8年度版の公開データを使用しています。
@@ -168,7 +146,7 @@
           <h2 class="search-title">検索条件を指定</h2>
           <form id="search-form" onsubmit="return false;">
             
-            <div class="search-form-grid">
+            <div class="search-form-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
               <div class="form-group">
                 <label for="keyword">キーワードで検索</label>
                 <input type="text" id="keyword" class="form-control" placeholder="学校名・よみがな・住所（例：麹町、こうじまち）">
@@ -179,6 +157,16 @@
                   <option value="">すべての区市町村</option>
                 </select>
               </div>
+              <div class="form-group">
+                <label for="sort-order">並び順</label>
+                <select id="sort-order" class="form-control">
+                  <option value="admin" selected>行政順（初期値）</option>
+                  <option value="name">学校名順（五十音順）</option>
+                  <option value="zip">郵便番号順</option>
+                  <option value="est">公立・私立順</option>
+                  <option value="type">校種順</option>
+                </select>
+              </div>
             </div>
 
             <div class="filter-columns">
@@ -186,6 +174,10 @@
             <div class="form-group">
               <label>設置区分</label>
               <div class="checkbox-group">
+                <label class="filter-chip" style="opacity: 0.5; cursor: not-allowed;" title="現行データに国立学校のレコードがないため、対象校が確認され次第の追加を予定しています">
+                  <input type="checkbox" name="establishment-type" class="est-checkbox" value="国立" disabled>
+                  <span>国立（準備中）</span>
+                </label>
                 <label class="filter-chip">
                   <input type="checkbox" name="establishment-type" class="est-checkbox" value="公立" checked>
                   <span>公立</span>
@@ -193,10 +185,6 @@
                 <label class="filter-chip">
                   <input type="checkbox" name="establishment-type" class="est-checkbox" value="私立" checked>
                   <span>私立</span>
-                </label>
-                <label class="filter-chip" style="opacity: 0.5; cursor: not-allowed;" title="将来の拡張で国立学校のデータを追加予定です">
-                  <input type="checkbox" name="establishment-type" class="est-checkbox" value="国立" disabled>
-                  <span>国立（準備中）</span>
                 </label>
               </div>
             </div>
@@ -251,6 +239,9 @@
 
             <input type="radio" id="hon-2" name="honorific" class="honorific-radio" value="校長先生">
             <label for="hon-2" class="honorific-label">校長先生宛て</label>
+
+            <input type="radio" id="hon-6" name="honorific" class="honorific-radio" value="園長先生">
+            <label for="hon-6" class="honorific-label">園長先生宛て</label>
 
             <input type="radio" id="hon-3" name="honorific" class="honorific-radio" value="副校長先生">
             <label for="hon-3" class="honorific-label">副校長先生宛て</label>
