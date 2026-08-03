@@ -1,6 +1,7 @@
-main {
-  padding-top: 74px;
-}
+/* main への padding-top は付けない。.site-header は position: sticky で
+   通常のレイアウトフローに残るため、ヘッダー分の余白は既に自然に確保
+   されている。以前 padding-top: 74px を追加していたが、これは二重の
+   余白（ヘッダー下に不要な空白）を生む原因だったため削除した。 */
 
 h3.region-header {
   scroll-margin-top: 80px;
