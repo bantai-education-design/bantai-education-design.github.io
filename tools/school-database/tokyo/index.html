@@ -27,6 +27,48 @@
   <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
   <script src="/assets/js/analytics-events.js" defer></script>
   <script src="/assets/js/school-database/search-tokyo.js" defer></script>
+  <!-- json-ld:start -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://bantai-education-design.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "全国学校データベース",
+        "item": "https://bantai-education-design.github.io/tools/school-database/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "東京都学校データベース",
+        "item": "https://bantai-education-design.github.io/tools/school-database/tokyo/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "東京都学校データベース | Ban.Tai Education Design",
+    "description": "学校封筒印刷・宛名作成に使える、東京都学校データベースの検索ページです。公立・私立の幼稚園・小学校・中学校・義務教育学校・高等学校・中等教育学校・特別支援学校を収録。学校名、区市町村、学校種等で検索し、封筒宛名用の住所表記をコピーできます。",
+    "url": "https://bantai-education-design.github.io/tools/school-database/tokyo/",
+    "inLanguage": "ja",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://bantai-education-design.github.io/tools/school-database/"
+    }
+  }
+]
+  </script>
+  <!-- json-ld:end -->
 </head>
 <body>
   <header class="site-header">
@@ -60,6 +102,17 @@
   </header>
 
   <main>
+    <!-- pref-breadcrumb:start -->
+    <nav class="pref-breadcrumb" aria-label="パンくずリスト">
+      <div class="container">
+        <a href="/">ホーム</a>
+        <span aria-hidden="true"> &gt; </span>
+        <a href="/tools/school-database/">全国学校データベース</a>
+        <span aria-hidden="true"> &gt; </span>
+        <span aria-current="page">東京都学校データベース</span>
+      </div>
+    </nav>
+    <!-- pref-breadcrumb:end -->
     <section class="page-hero page-hero--compact">
       <div class="container">
         <div class="kicker">Free Web Tool</div>
@@ -272,6 +325,25 @@
 
       </div>
     </section>
+    <!-- pref-related-links:start -->
+    <section class="related-prefectures-section">
+      <div class="container">
+        <h3 class="related-prefectures-heading">隣接都道府県のデータベース</h3>
+        <div class="related-pref-chips">
+          <a class="related-pref-chip" href="/tools/school-database/saitama/">埼玉県</a>
+          <a class="related-pref-chip" href="/tools/school-database/chiba/">千葉県</a>
+          <a class="related-pref-chip" href="/tools/school-database/kanagawa/">神奈川県</a>
+          <a class="related-pref-chip" href="/tools/school-database/yamanashi/">山梨県</a>
+          </div>
+        <h3 class="related-prefectures-heading">関東地方の他の都道府県</h3>
+        <div class="related-pref-chips">
+          <a class="related-pref-chip" href="/tools/school-database/ibaraki/">茨城県</a>
+          <a class="related-pref-chip" href="/tools/school-database/tochigi/">栃木県</a>
+          <a class="related-pref-chip" href="/tools/school-database/gunma/">群馬県</a>
+          </div>
+      </div>
+    </section>
+    <!-- pref-related-links:end -->
   </main>
 
   <button id="back-to-top" class="back-to-top" type="button" aria-label="一覧の先頭に戻る">
