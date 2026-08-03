@@ -52,7 +52,7 @@ def test_all_47_have_seo_content_section() -> None:
         assert pref_name in block, f"{slug}: 紹介文に県名が含まれていません"
         assert f'{meta["total"]:,}校・園' in block, f"{slug}: 学校数が本文に含まれていません"
         assert "<h3" in block and "よくある質問" in block, f"{slug}: FAQ見出しが見つかりません"
-        assert block.count('<details class="pref-faq-item">') == 5, f"{slug}: FAQ件数が5件ではありません"
+        assert block.count('<details class="pref-faq-item">') == 11, f"{slug}: FAQ件数が11件ではありません"
 
 
 def test_seo_content_values_match_source_data() -> None:
@@ -111,7 +111,7 @@ def test_faq_visible_content_matches_json_ld_exactly() -> None:
         visible_faq = re.findall(
             r'<summary>([^<]*)</summary>\s*<p>([^<]*)</p>', html
         )
-        assert len(visible_faq) == 5, f"{slug}: 可視FAQが5件見つかりません（{len(visible_faq)}件）"
+        assert len(visible_faq) == 11, f"{slug}: 可視FAQが11件見つかりません（{len(visible_faq)}件）"
 
         # JSON-LDのFAQPage抽出
         ld_match = re.search(r'<script type="application/ld\+json">\n(.*?)\n  </script>', html, re.S)
@@ -120,7 +120,7 @@ def test_faq_visible_content_matches_json_ld_exactly() -> None:
         ld_objects = ld_data if isinstance(ld_data, list) else [ld_data]
         faq_page = next((o for o in ld_objects if o["@type"] == "FAQPage"), None)
         assert faq_page is not None, f"{slug}: FAQPageのJSON-LDが見つかりません"
-        assert len(faq_page["mainEntity"]) == 5, f"{slug}: JSON-LDのFAQ件数が5件ではありません"
+        assert len(faq_page["mainEntity"]) == 11, f"{slug}: JSON-LDのFAQ件数が11件ではありません"
 
         for i, (q, a) in enumerate(visible_faq):
             ld_q = faq_page["mainEntity"][i]["name"]

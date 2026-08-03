@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>山梨県学校データベース | Ban.Tai Education Design</title>
-  <meta name="description" content="学校封筒印刷・宛名作成に使える、山梨県学校データベースの検索ページです。国・公立・私立の幼稚園、小学校、中学校、高等学校、特別支援学校（合計351校・園）を収録。学校名、市町村、郵便番号、住所等で検索し、宛名コピー、Google Maps連携、CSVダウンロードが可能です。">
+  <title>山梨県の学校一覧・住所・電話番号 | Ban.Tai Education Design</title>
+  <meta name="description" content="山梨県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立5種類、合計351校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,8 +57,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "山梨県学校データベース | Ban.Tai Education Design",
-    "description": "学校封筒印刷・宛名作成に使える、山梨県学校データベースの検索ページです。国・公立・私立の幼稚園、小学校、中学校、高等学校、特別支援学校（合計351校・園）を収録。学校名、市町村、郵便番号、住所等で検索し、宛名コピー、Google Maps連携、CSVダウンロードが可能です。",
+    "name": "山梨県の学校一覧・住所・電話番号 | Ban.Tai Education Design",
+    "description": "山梨県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立5種類、合計351校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。",
     "url": "https://bantai-education-design.github.io/tools/school-database/yamanashi/",
     "inLanguage": "ja",
     "isPartOf": {
@@ -76,6 +76,54 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "351校・園（5種類の学校種、27市区町村分）を収録しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "小学校や中学校だけの一覧を表示できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、学校種（幼稚園・小学校・中学校・高等学校など）で絞り込んで、小学校だけ、中学校だけの一覧を表示できます。市区町村での絞り込みと組み合わせることも可能です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "市区町村ごとに学校を探せますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、山梨県内の市区町村を選択して、その地域の学校だけを一覧表示できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "転校先の学校を調べたり、学校名簿として使えますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、転校先の学校の住所・電話番号を調べたり、学校名簿としての住所一覧確認、封筒印刷用の宛名コピーにもご利用いただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校の電話番号を一覧で確認できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校住所をCSVで保存できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校へ郵送する宛名を作成できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果から「校長先生宛て」「御中」など敬称を選んで宛名をコピーでき、封筒印刷にそのままお使いいただけます。"
         }
       },
       {
@@ -166,7 +214,7 @@
           <span class="pref-silhouette hero-silhouette" aria-hidden="true" style="--silhouette-url: url('/assets/images/prefecture-silhouettes/19-yamanashi.svg');"></span>
           <h1>山梨県学校データベース</h1>
         </div>
-        <p class="lead">学校封筒印刷・宛名作成に使える、山梨県の学校・園の住所検索データベースです。</p>
+        <p class="lead">山梨県の学校一覧・住所検索データベースです。学校名簿の作成や転校先の確認、封筒印刷用の宛名作成にも使えます。</p>
         <div style="margin-top:16px;">
           <a class="btn-back-portal" href="/tools/school-database/" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.15); color:#ffffff; border:1px solid rgba(255,255,255,0.3); border-radius:6px; font-size:0.84rem; font-weight:700; text-decoration:none; transition:all 0.2s ease;">
             ← 全国学校データベースへ戻る
@@ -405,22 +453,22 @@
     <!-- pref-seo-content:start -->
     <section class="pref-seo-content">
       <div class="container">
-        <h2 class="pref-seo-content-heading">山梨県学校データベースについて</h2>
-        <p class="pref-seo-content-text">山梨県学校データベースは、山梨県内27市区町村にある幼稚園、小学校、中学校、高等学校、特別支援学校（5種類の学校種）、合計351校・園の住所・電話番号情報を検索できるデータベースです。設置区分別では国立4校、公立285校、私立62校となっています。</p>
+        <h2 class="pref-seo-content-heading">山梨県の学校一覧・住所検索データベースについて</h2>
+        <p class="pref-seo-content-text">山梨県の学校一覧・住所検索データベースは、山梨県内27市区町村にある幼稚園、小学校、中学校、高等学校、特別支援学校（5種類の学校種）、合計351校・園の住所・電話番号情報を検索できるデータベースです。設置区分別では国立4校、公立285校、私立62校となっています。</p>
         <p class="pref-seo-content-text">山梨県の人口（日本国籍）は786,673人、このうち3〜17歳の学齢人口は97,389人（12.4%）です（出典：令和2年国勢調査、2020年10月1日現在）。山梨県の教員一人当たりの児童生徒数（小学校）は10.92人です（全国平均：12.8人）。</p>
         <h3 class="pref-seo-content-subheading">このデータベースでできること</h3>
         <ul class="pref-feature-list">
           <li>学校名・かな・住所・郵便番号・電話番号によるキーワード検索</li>
           <li>山梨県内27市区町村での絞り込み</li>
-          <li>設置区分（国立・公立・私立）や学校種による絞り込み</li>
+          <li>設置区分（国立・公立・私立）や、小学校・中学校・高等学校などの学校種で絞り込んだ一覧表示</li>
           <li>宛名データのコピー（校長先生宛て・園長先生宛てなど敬称を選択可能）</li>
           <li>Google Mapsでの所在地確認</li>
           <li>検索結果の宛先データをCSV形式でダウンロード</li>
         </ul>
         <h3 class="pref-seo-content-subheading">こんな時に便利です</h3>
         <ul class="pref-usecase-list">
-          <li>山梨県内で転校・進学先の学校情報を調べたいとき</li>
-          <li>学校・園への文書送付用の宛名を作成したいとき</li>
+          <li>山梨県内で転校先の学校を調べたいとき</li>
+          <li>学校・園への文書送付用の宛名を作成したいとき、学校名簿として使いたいとき</li>
           <li>山梨県の教育環境（学校数・校種構成）を把握したいとき</li>
         </ul>
         <h3 class="pref-seo-content-subheading">よくある質問</h3>
@@ -428,6 +476,30 @@
         <details class="pref-faq-item">
           <summary>山梨県の学校は何件収録されていますか？</summary>
           <p>351校・園（5種類の学校種、27市区町村分）を収録しています。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>小学校や中学校だけの一覧を表示できますか？</summary>
+          <p>はい、学校種（幼稚園・小学校・中学校・高等学校など）で絞り込んで、小学校だけ、中学校だけの一覧を表示できます。市区町村での絞り込みと組み合わせることも可能です。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>市区町村ごとに学校を探せますか？</summary>
+          <p>はい、山梨県内の市区町村を選択して、その地域の学校だけを一覧表示できます。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>転校先の学校を調べたり、学校名簿として使えますか？</summary>
+          <p>はい、転校先の学校の住所・電話番号を調べたり、学校名簿としての住所一覧確認、封筒印刷用の宛名コピーにもご利用いただけます。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校の電話番号を一覧で確認できますか？</summary>
+          <p>はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校住所をCSVで保存できますか？</summary>
+          <p>はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校へ郵送する宛名を作成できますか？</summary>
+          <p>はい、検索結果から「校長先生宛て」「御中」など敬称を選んで宛名をコピーでき、封筒印刷にそのままお使いいただけます。</p>
         </details>
         <details class="pref-faq-item">
           <summary>どのようなデータをもとに作成されていますか？</summary>

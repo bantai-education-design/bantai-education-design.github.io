@@ -96,7 +96,7 @@ def test_json_ld_valid_and_correct_for_prefectures() -> None:
         assert collection["isPartOf"]["@type"] == "WebSite"
 
         faq_page = data[2]
-        assert len(faq_page["mainEntity"]) == 5, f"{slug}: FAQPageのQ&A件数が5件ではありません"
+        assert len(faq_page["mainEntity"]) == 11, f"{slug}: FAQPageのQ&A件数が11件ではありません"
         for question in faq_page["mainEntity"]:
             assert question["name"], f"{slug}: FAQPageに空の質問があります"
             assert question["acceptedAnswer"]["text"], f"{slug}: FAQPageに空の回答があります"
