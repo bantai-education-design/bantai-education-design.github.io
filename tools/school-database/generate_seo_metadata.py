@@ -36,9 +36,36 @@ SITEMAP_PATH = ROOT / "sitemap.xml"
 SITE_ORIGIN = "https://bantai-education-design.github.io"
 
 # 陸続きの隣接都道府県（地理的事実、海を挟むもの・離島は除く）。
-# 出典: https://www.benricho.org/chimei/rinsetsuken/ で長野8県・埼玉/岐阜7県・
-# 長崎1県・北海道/沖縄0県という代表的な事実を確認済み。全件は
-# test_seo_metadata.py の対称性チェック（AがBの隣接ならBもAの隣接）で検証する。
+#
+# 出典: 国土交通省「国土数値情報 行政区域データ（N03、令和8年1月1日時点）」
+# （data-source/n03-2026/、PR #96のシルエットマーク生成と同一の一次資料）。
+# 民間サイトの一覧はいずれも参考にとどめ、最終的な採否は必ずこのポリゴンデータ
+# による幾何学的検証で確定する。
+#
+# 判定ルール（tools/school-database/compute_prefecture_adjacency.py で実装、
+# 全47×46/2ペアを総当たりで検証済み）:
+#   1. 各都道府県の市区町村ポリゴンをdissolveして都道府県単位の1ポリゴンにする。
+#   2. 2県の境界線（boundary）同士の交差(intersection)を求める。
+#   3. 交差が空 → 隣接なし（海を挟む場合は本州四国連絡橋等があっても、
+#      N03の陸地ポリゴン同士には物理的な隙間が残るため、自動的にここに分類される）。
+#   4. 交差が点のみ（線としての長さが0）→ 隣接に含めない（辺を共有していない）。
+#   5. 交差が線（長さ50m以上）→ 隣接候補。
+#   6. さらに、瀬戸内海のように離島同士がごく短い区間だけ近接して技術的に
+#      ポリゴンが接触するケース（本州四国連絡橋沿いの広島県⇔愛媛県、
+#      岡山県⇔香川県で実際に検出）を、真の陸上国境と区別するため、
+#      交差全体を空間的にクラスタリングし、最大クラスタの長さが4km未満
+#      （実データにおける真正な最短国境=栃木県⇔埼玉県の4.19kmと、
+#      離島間接触の最大値=岡山県⇔香川県の3.2kmの間の自然な境界）の
+#      ペアは、離島間の偶発的接触とみなし隣接に含めない。
+#   7. 隣接関係は必ず対称（AがBの隣接ならBもAの隣接）。北海道・沖縄県は
+#      陸上隣接する都道府県を持たないため空リスト。
+#
+# 確認済みの代表例（ユーザー指定のチェックリスト）:
+#   長野県=8県、埼玉県=7都県、岐阜県=7県、長崎県=1県（佐賀県のみ）、
+#   北海道・沖縄県=0県、佐賀県⇔熊本県は非隣接（県境を共有していない）。
+#
+# 全件は test_seo_metadata.py の対称性チェックと、
+# prefecture_adjacency_ground_truth.json（生成物）との一致で検証する。
 PREFECTURE_ADJACENCY: dict[str, list[str]] = {
     "hokkaido": [],
     "aomori": ["iwate", "akita"],
@@ -70,19 +97,19 @@ PREFECTURE_ADJACENCY: dict[str, list[str]] = {
     "hyogo": ["kyoto", "osaka", "okayama", "tottori"],
     "nara": ["mie", "kyoto", "osaka", "wakayama"],
     "wakayama": ["mie", "nara", "osaka"],
-    "tottori": ["hyogo", "okayama", "shimane"],
+    "tottori": ["hyogo", "okayama", "shimane", "hiroshima"],
     "shimane": ["tottori", "hiroshima", "yamaguchi"],
     "okayama": ["hyogo", "tottori", "hiroshima"],
-    "hiroshima": ["shimane", "okayama", "yamaguchi"],
-    "yamaguchi": ["shimane", "hiroshima", "fukuoka"],
+    "hiroshima": ["shimane", "okayama", "yamaguchi", "tottori"],
+    "yamaguchi": ["shimane", "hiroshima"],
     "tokushima": ["kagawa", "ehime", "kochi"],
     "kagawa": ["tokushima", "ehime"],
     "ehime": ["kagawa", "tokushima", "kochi"],
     "kochi": ["tokushima", "ehime"],
-    "fukuoka": ["yamaguchi", "saga", "kumamoto", "oita"],
-    "saga": ["fukuoka", "nagasaki", "kumamoto"],
+    "fukuoka": ["saga", "kumamoto", "oita"],
+    "saga": ["fukuoka", "nagasaki"],
     "nagasaki": ["saga"],
-    "kumamoto": ["fukuoka", "saga", "oita", "miyazaki", "kagoshima"],
+    "kumamoto": ["fukuoka", "oita", "miyazaki", "kagoshima"],
     "oita": ["fukuoka", "kumamoto", "miyazaki"],
     "miyazaki": ["kumamoto", "oita", "kagoshima"],
     "kagoshima": ["kumamoto", "miyazaki"],

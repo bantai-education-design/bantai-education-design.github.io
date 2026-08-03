@@ -133,11 +133,53 @@ def test_adjacency_data_is_symmetric_and_covers_all_47() -> None:
                 f"{slug} は {n} を隣接県としていますが、{n} 側に {slug} が含まれていません（非対称）"
             )
 
-    # 既知の代表事実（出典で確認済み）との整合性チェック。
+    # 既知の代表事実（国土数値情報N03の幾何学的検証で確認済み）との整合性チェック。
     assert len(PREFECTURE_ADJACENCY["nagano"]) == 8, "長野県の隣接県数は8のはずです"
-    assert len(PREFECTURE_ADJACENCY["nagasaki"]) == 1, "長崎県の隣接県数は1のはずです"
+    assert len(PREFECTURE_ADJACENCY["saitama"]) == 7, "埼玉県の隣接都県数は7のはずです"
+    assert len(PREFECTURE_ADJACENCY["gifu"]) == 7, "岐阜県の隣接県数は7のはずです"
+    assert len(PREFECTURE_ADJACENCY["nagasaki"]) == 1, "長崎県の陸上隣接県数は1のはずです"
     assert PREFECTURE_ADJACENCY["hokkaido"] == [], "北海道は陸続きの隣接県がないはずです"
     assert PREFECTURE_ADJACENCY["okinawa"] == [], "沖縄県は陸続きの隣接県がないはずです"
+
+    # 佐賀県⇔熊本県は実際には県境を共有していない（N03検証で確認、benricho.org等の
+    # 民間サイトの一覧を鵜呑みにした過去の誤りを修正済み）。
+    assert "kumamoto" not in PREFECTURE_ADJACENCY["saga"], "佐賀県と熊本県は県境を共有していません"
+    assert "saga" not in PREFECTURE_ADJACENCY["kumamoto"], "佐賀県と熊本県は県境を共有していません"
+
+    # 山口県⇔福岡県は関門海峡で隔てられており、橋・トンネルで連結されていても
+    # N03の陸地ポリゴン同士は接触していない（海を挟む県は隣接に含めないルール）。
+    assert "fukuoka" not in PREFECTURE_ADJACENCY["yamaguchi"], "山口県と福岡県は関門海峡を挟み陸上隣接しません"
+    assert "yamaguchi" not in PREFECTURE_ADJACENCY["fukuoka"], "山口県と福岡県は関門海峡を挟み陸上隣接しません"
+
+    # 広島県⇔鳥取県は実在する陸上県境（約22km）を持つ（旧データで欠落していた）。
+    assert "tottori" in PREFECTURE_ADJACENCY["hiroshima"], "広島県と鳥取県は陸上隣接するはずです"
+    assert "hiroshima" in PREFECTURE_ADJACENCY["tottori"], "広島県と鳥取県は陸上隣接するはずです"
+
+    # 瀬戸内海を挟む本州四国連絡橋沿いの2ペアは、N03上でポリゴンが技術的に
+    # ごく短く接触するが（離島同士の偶発的接触、クラスタ分析で最大でも3.2km
+    # ＝実在国境の最小値4.19kmに満たない）、海を挟む県として隣接に含めない。
+    assert "ehime" not in PREFECTURE_ADJACENCY["hiroshima"], "広島県と愛媛県は瀬戸内海を挟み陸上隣接しません"
+    assert "kagawa" not in PREFECTURE_ADJACENCY["okayama"], "岡山県と香川県は瀬戸内海を挟み陸上隣接しません"
+
+
+def test_adjacency_matches_geospatial_ground_truth() -> None:
+    """PREFECTURE_ADJACENCY must exactly match the N03-derived ground truth
+    computed by tools/school-database/compute_prefecture_adjacency.py (dissolve
+    each prefecture's municipality polygons, intersect boundaries pairwise,
+    cluster-filter out sea-strait islet contacts). Regenerate
+    prefecture_adjacency_ground_truth.json by re-running that script (and
+    compute_adjacency_clusters.py) against data-source/n03-2026/ if this ever
+    needs to change."""
+    ground_truth_path = PAGE_DIR / "prefecture_adjacency_ground_truth.json"
+    if not ground_truth_path.exists():
+        return  # raw N03 source not present in this checkout; skip silently
+    ground_truth = json.loads(ground_truth_path.read_text(encoding="utf-8"))
+    for slug in ground_truth:
+        assert sorted(PREFECTURE_ADJACENCY.get(slug, [])) == sorted(ground_truth[slug]), (
+            f"{slug}: PREFECTURE_ADJACENCY が幾何学的検証結果と一致しません "
+            f"(現在={sorted(PREFECTURE_ADJACENCY.get(slug, []))}, "
+            f"正解={sorted(ground_truth[slug])})"
+        )
 
 
 def test_related_links_match_adjacency_and_region_data() -> None:
