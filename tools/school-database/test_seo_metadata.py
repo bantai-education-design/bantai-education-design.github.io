@@ -76,7 +76,13 @@ def test_json_ld_valid_and_correct_for_prefectures() -> None:
         assert m, f"{slug}: JSON-LDが見つかりません"
         data = json.loads(m.group(1))
         types = [d["@type"] for d in data]
-        assert types == ["BreadcrumbList", "CollectionPage"], f"{slug}: JSON-LDの@type構成が想定と異なります: {types}"
+        # FAQPageは feature/prefecture-page-seo-content で追加された3件目の
+        # 要素（tools/school-database/prefecture_seo_content.pyのFAQ Q&Aと
+        # 完全に対応、generate_seo_metadata.pyのadd_prefecture_json_ld()が
+        # prefecture_metadataを渡された場合に常に付与する）。
+        assert types == ["BreadcrumbList", "CollectionPage", "FAQPage"], (
+            f"{slug}: JSON-LDの@type構成が想定と異なります: {types}"
+        )
 
         breadcrumb = data[0]
         names = [item["name"] for item in breadcrumb["itemListElement"]]
@@ -88,6 +94,12 @@ def test_json_ld_valid_and_correct_for_prefectures() -> None:
         collection = data[1]
         assert collection["url"] == f"{SITE_ORIGIN}{pref['url']}"
         assert collection["isPartOf"]["@type"] == "WebSite"
+
+        faq_page = data[2]
+        assert len(faq_page["mainEntity"]) == 5, f"{slug}: FAQPageのQ&A件数が5件ではありません"
+        for question in faq_page["mainEntity"]:
+            assert question["name"], f"{slug}: FAQPageに空の質問があります"
+            assert question["acceptedAnswer"]["text"], f"{slug}: FAQPageに空の回答があります"
 
 
 def test_json_ld_valid_for_portal() -> None:
