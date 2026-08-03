@@ -52,7 +52,7 @@ def _render_html(pref_name: str, content: dict) -> str:
         f"{SEO_CONTENT_START}"
         '    <section class="pref-seo-content">\n'
         '      <div class="container">\n'
-        f'        <h2 class="pref-seo-content-heading">{pref_name}学校データベースについて</h2>\n'
+        f'        <h2 class="pref-seo-content-heading">{pref_name}の学校一覧・住所検索データベースについて</h2>\n'
         f'        <p class="pref-seo-content-text">{content["intro"]}</p>\n'
         f'        <p class="pref-seo-content-text">{content["stats"]}</p>\n'
         '        <h3 class="pref-seo-content-subheading">このデータベースでできること</h3>\n'

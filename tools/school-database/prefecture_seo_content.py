@@ -49,9 +49,10 @@ def build_intro_paragraph(pref_name: str, meta: dict) -> str:
     est_text = "、".join(est_parts)
 
     return (
-        f"{pref_name}学校データベースは、{pref_name}内{format_number(municipality_count)}"
-        f"市区町村にある{types_text}（{school_type_count}種類の学校種）、合計"
-        f"{format_number(total)}校・園の住所・電話番号情報を検索できるデータベースです。"
+        f"{pref_name}の学校一覧・住所検索データベースは、{pref_name}内"
+        f"{format_number(municipality_count)}市区町村にある{types_text}"
+        f"（{school_type_count}種類の学校種）、合計{format_number(total)}校・園の"
+        f"住所・電話番号情報を検索できるデータベースです。"
         f"設置区分別では{est_text}となっています。"
     )
 
@@ -85,7 +86,7 @@ def build_features(pref_name: str, meta: dict) -> list[str]:
     return [
         "学校名・かな・住所・郵便番号・電話番号によるキーワード検索",
         f"{pref_name}内{format_number(municipality_count)}市区町村での絞り込み",
-        "設置区分（国立・公立・私立）や学校種による絞り込み",
+        "設置区分（国立・公立・私立）や、小学校・中学校・高等学校などの学校種で絞り込んだ一覧表示",
         "宛名データのコピー（校長先生宛て・園長先生宛てなど敬称を選択可能）",
         "Google Mapsでの所在地確認",
         "検索結果の宛先データをCSV形式でダウンロード",
@@ -94,8 +95,8 @@ def build_features(pref_name: str, meta: dict) -> list[str]:
 
 def build_use_cases(pref_name: str) -> list[str]:
     return [
-        f"{pref_name}内で転校・進学先の学校情報を調べたいとき",
-        "学校・園への文書送付用の宛名を作成したいとき",
+        f"{pref_name}内で転校先の学校を調べたいとき",
+        "学校・園への文書送付用の宛名を作成したいとき、学校名簿として使いたいとき",
         f"{pref_name}の教育環境（学校数・校種構成）を把握したいとき",
     ]
 
@@ -110,6 +111,20 @@ def build_faq_items(pref_name: str, total: int, municipality_count: int, school_
             "answer": (
                 f"{format_number(total)}校・園（{school_type_count}種類の学校種、"
                 f"{format_number(municipality_count)}市区町村分）を収録しています。"
+            ),
+        },
+        {
+            "question": "小学校や中学校だけの一覧を表示できますか？",
+            "answer": (
+                "はい、学校種（幼稚園・小学校・中学校・高等学校など）で絞り込んで、"
+                "小学校だけ、中学校だけの一覧を表示できます。市区町村での絞り込みと組み合わせることも可能です。"
+            ),
+        },
+        {
+            "question": "転校先の学校を調べたり、学校名簿として使えますか？",
+            "answer": (
+                "はい、転校先の学校の住所・電話番号を調べたり、学校名簿としての住所一覧確認、"
+                "封筒印刷用の宛名コピーにもご利用いただけます。"
             ),
         },
         {
