@@ -34,6 +34,19 @@ def _lead(html: str) -> str:
     return m.group(1) if m else ""
 
 
+TITLE_MAX_LENGTH = 60
+
+
+def test_title_length_stays_within_serp_friendly_bound() -> None:
+    """タイトルが長すぎるとSERPで途中省略されるため、60字前後に収める。"""
+    prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding="utf-8"))
+    for meta in prefecture_metadata:
+        slug = meta["slug"]
+        html = (PAGE_DIR / slug / "index.html").read_text(encoding="utf-8")
+        title = _title(html)
+        assert len(title) <= TITLE_MAX_LENGTH, f"{slug}: titleが{TITLE_MAX_LENGTH}字を超えています（{len(title)}字）: {title}"
+
+
 def test_title_and_description_include_school_list_phrase() -> None:
     prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding="utf-8"))
     for meta in prefecture_metadata:
@@ -114,6 +127,7 @@ def test_titles_are_unique_across_47_prefectures() -> None:
 
 
 if __name__ == "__main__":
+    test_title_length_stays_within_serp_friendly_bound()
     test_title_and_description_include_school_list_phrase()
     test_all_required_phrases_covered_somewhere_on_page()
     test_lead_paragraph_present_once_and_matches_title_intent()

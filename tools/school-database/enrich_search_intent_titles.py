@@ -31,7 +31,9 @@ def format_number(n: int) -> str:
 
 
 def build_title(pref_name: str) -> str:
-    return f"{pref_name}の学校一覧・住所検索データベース | Ban.Tai Education Design"
+    # 「電話番号」もタイトルに含める価値が大きい（先生の検索語「○○県 学校
+    # 電話番号」との一致度が上がる）が、60字前後に収まるよう簡潔にする。
+    return f"{pref_name}の学校一覧・住所・電話番号 | Ban.Tai Education Design"
 
 
 def build_description(pref_name: str, meta: dict) -> str:

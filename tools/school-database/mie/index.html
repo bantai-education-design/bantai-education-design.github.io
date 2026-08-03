@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>三重県の学校一覧・住所検索データベース | Ban.Tai Education Design</title>
+  <title>三重県の学校一覧・住所・電話番号 | Ban.Tai Education Design</title>
   <meta name="description" content="三重県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計736校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +57,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "三重県の学校一覧・住所検索データベース | Ban.Tai Education Design",
+    "name": "三重県の学校一覧・住所・電話番号 | Ban.Tai Education Design",
     "description": "三重県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計736校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。",
     "url": "https://bantai-education-design.github.io/tools/school-database/mie/",
     "inLanguage": "ja",
@@ -88,10 +88,42 @@
       },
       {
         "@type": "Question",
+        "name": "市区町村ごとに学校を探せますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、三重県内の市区町村を選択して、その地域の学校だけを一覧表示できます。"
+        }
+      },
+      {
+        "@type": "Question",
         "name": "転校先の学校を調べたり、学校名簿として使えますか？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "はい、転校先の学校の住所・電話番号を調べたり、学校名簿としての住所一覧確認、封筒印刷用の宛名コピーにもご利用いただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校の電話番号を一覧で確認できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校住所をCSVで保存できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "学校へ郵送する宛名を作成できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、検索結果から「校長先生宛て」「御中」など敬称を選んで宛名をコピーでき、封筒印刷にそのままお使いいただけます。"
         }
       },
       {
@@ -458,8 +490,24 @@
           <p>はい、学校種（幼稚園・小学校・中学校・高等学校など）で絞り込んで、小学校だけ、中学校だけの一覧を表示できます。市区町村での絞り込みと組み合わせることも可能です。</p>
         </details>
         <details class="pref-faq-item">
+          <summary>市区町村ごとに学校を探せますか？</summary>
+          <p>はい、三重県内の市区町村を選択して、その地域の学校だけを一覧表示できます。</p>
+        </details>
+        <details class="pref-faq-item">
           <summary>転校先の学校を調べたり、学校名簿として使えますか？</summary>
           <p>はい、転校先の学校の住所・電話番号を調べたり、学校名簿としての住所一覧確認、封筒印刷用の宛名コピーにもご利用いただけます。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校の電話番号を一覧で確認できますか？</summary>
+          <p>はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校住所をCSVで保存できますか？</summary>
+          <p>はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。</p>
+        </details>
+        <details class="pref-faq-item">
+          <summary>学校へ郵送する宛名を作成できますか？</summary>
+          <p>はい、検索結果から「校長先生宛て」「御中」など敬称を選んで宛名をコピーでき、封筒印刷にそのままお使いいただけます。</p>
         </details>
         <details class="pref-faq-item">
           <summary>どのようなデータをもとに作成されていますか？</summary>
