@@ -27,6 +27,8 @@ import json
 import re
 from pathlib import Path
 
+from prefecture_seo_content import build_faq_items
+
 ROOT = Path(__file__).resolve().parents[2]
 PREFECTURE_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-metadata.json"
 CARD_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-card-metadata.json"
@@ -219,10 +221,21 @@ def _insert_json_ld(html: str, ld_objects: list[dict]) -> str:
     return html[:head_close] + block + html[head_close:]
 
 
-def add_prefecture_json_ld(card_payload: dict) -> list[str]:
-    """各都道府県ページへ BreadcrumbList + CollectionPage のJSON-LDを追加する。
-    CollectionPageはWebPageのサブタイプであり、学校一覧という性質をより正確に
-    表す（別途WebPageを重ねて宣言しない）。WebSiteはポータルページのみに置く。"""
+def add_prefecture_json_ld(card_payload: dict, prefecture_metadata: list[dict] | None = None) -> list[str]:
+    """各都道府県ページへ BreadcrumbList + CollectionPage（+ prefecture_metadata
+    が渡された場合はFAQPageも）のJSON-LDを追加する。CollectionPageはWebPageの
+    サブタイプであり、学校一覧という性質をより正確に表す（別途WebPageを重ねて
+    宣言しない）。WebSiteはポータルページのみに置く。
+
+    FAQPageのQ&Aは prefecture_seo_content.build_faq_items() が唯一の情報源。
+    generate_prefecture_seo_content.py が生成する可視のFAQ（<details>）と
+    完全に同じ文言になるよう、常にこの関数から呼び出す（可視コンテンツ側で
+    別途JSON-LDを組み立てない）。FAQの件数（総数・市区町村数・学校種数）は
+    prefecture-card-metadata.json ではなく prefecture-metadata.json から取る
+    ——前者の school_database.municipality_count は一部県で同期漏れの既知の
+    不具合があるため。"""
+    meta_by_slug = {m["slug"]: m for m in prefecture_metadata} if prefecture_metadata else {}
+
     added = []
     for pref in card_payload["prefectures"]:
         slug = pref["prefecture_code"]
@@ -256,7 +269,24 @@ def add_prefecture_json_ld(card_payload: dict) -> list[str]:
             "isPartOf": {"@type": "WebSite", "@id": f"{SITE_ORIGIN}/tools/school-database/"},
         }
 
-        new_html = _insert_json_ld(html, [breadcrumb, collection_page])
+        ld_objects = [breadcrumb, collection_page]
+        meta = meta_by_slug.get(slug)
+        if meta is not None:
+            faq_items = build_faq_items(name, meta["total"], meta["municipality_count"], meta["school_type_count"])
+            ld_objects.append({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": item["question"],
+                        "acceptedAnswer": {"@type": "Answer", "text": item["answer"]},
+                    }
+                    for item in faq_items
+                ],
+            })
+
+        new_html = _insert_json_ld(html, ld_objects)
         if new_html != html:
             page_path.write_text(new_html, encoding="utf-8")
             added.append(slug)
@@ -435,7 +465,7 @@ def main() -> None:
     added = ensure_canonical_tags(card_payload)
     print(f"canonicalタグを追加: {len(added)}件 ({', '.join(added) if added else 'なし'})")
 
-    ld_added = add_prefecture_json_ld(card_payload)
+    ld_added = add_prefecture_json_ld(card_payload, prefecture_metadata)
     print(f"都道府県ページへJSON-LDを追加/更新: {len(ld_added)}件")
 
     portal_ld_added = add_portal_json_ld()

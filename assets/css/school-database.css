@@ -1398,3 +1398,99 @@ h3.region-header {
 .related-pref-chip:hover {
   background: #fffaf0;
 }
+
+/* 都道府県個別ページ: 「このデータベースについて」SEOコンテンツ
+   （紹介文・人口/教育統計解説・できること・利用例・FAQ） */
+.pref-seo-content {
+  background: #ffffff;
+  padding: 36px 0;
+  border-top: 1px solid rgba(7, 27, 54, 0.08);
+}
+
+.pref-seo-content-heading {
+  font-size: 1.3rem;
+  color: var(--navy, #0c1b33);
+  margin: 0 0 14px;
+}
+
+.pref-seo-content-subheading {
+  font-size: 1.05rem;
+  color: var(--navy, #0c1b33);
+  margin: 26px 0 10px;
+}
+
+.pref-seo-content-text {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #3a4457;
+  margin: 0 0 12px;
+}
+
+.pref-feature-list,
+.pref-usecase-list {
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: 0.86rem;
+  line-height: 1.9;
+  color: #3a4457;
+}
+
+.pref-feature-list li,
+.pref-usecase-list li {
+  margin-bottom: 4px;
+}
+
+.pref-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pref-faq-item {
+  background: #f4f6fa;
+  border: 1px solid rgba(12, 27, 51, 0.1);
+  border-radius: 10px;
+  padding: 4px 16px;
+}
+
+.pref-faq-item summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy, #0c1b33);
+  padding: 12px 0;
+  list-style: none;
+}
+
+.pref-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.pref-faq-item summary::before {
+  content: "Q. ";
+  color: var(--gold, #c5a059);
+}
+
+.pref-faq-item summary::after {
+  content: "+";
+  float: right;
+  font-weight: 400;
+  color: var(--gold, #c5a059);
+}
+
+.pref-faq-item[open] summary::after {
+  content: "－";
+}
+
+.pref-faq-item p {
+  margin: 0 0 14px;
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: #3a4457;
+}
+
+@media (max-width: 480px) {
+  .pref-seo-content {
+    padding: 28px 0;
+  }
+}
