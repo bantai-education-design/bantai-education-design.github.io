@@ -77,9 +77,10 @@
   const reset = document.getElementById("textbook-search-reset");
   const count = document.getElementById("textbook-result-count");
   const empty = document.getElementById("textbook-no-results");
+  const form = document.querySelector(".textbook-search-panel");
   const cards = Array.from(document.querySelectorAll(".textbook-publisher-card"));
 
-  if (!input || !subject || !type || !reset || !count || !empty || cards.length === 0) return;
+  if (!input || !subject || !type || !reset || !count || !empty || !form || cards.length === 0) return;
 
   const normalize = (value) => value.toLocaleLowerCase("ja-JP").normalize("NFKC");
 
@@ -107,6 +108,11 @@
   [input, subject, type].forEach((control) => {
     control.addEventListener("input", applyFilters);
     control.addEventListener("change", applyFilters);
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    applyFilters();
   });
 
   reset.addEventListener("click", () => {
