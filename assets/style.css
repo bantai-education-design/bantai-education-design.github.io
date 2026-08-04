@@ -1626,30 +1626,110 @@ button:focus-visible {
 }
 
 .textbook-resources-page .textbook-grade-guide-card {
-  background: #ffffff;
-  border: 1px solid rgba(181, 138, 59, 0.38);
+  --grade-accent: #b58a3b;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), #ffffff),
+    linear-gradient(135deg, color-mix(in srgb, var(--grade-accent) 22%, transparent), transparent 58%);
+  border: 1px solid color-mix(in srgb, var(--grade-accent) 72%, #ffffff);
   border-radius: 8px;
+  box-shadow: 0 16px 34px rgba(17, 17, 17, 0.08);
   color: #3f4a5f;
   display: grid;
-  gap: 8px;
-  min-height: 112px;
+  gap: 12px;
+  min-height: 188px;
   padding: 18px;
+  position: relative;
   text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.textbook-resources-page .textbook-grade-guide-card::before {
+  background: var(--grade-accent);
+  border-radius: 8px 8px 0 0;
+  content: "";
+  height: 5px;
+  inset: -1px -1px auto;
+  position: absolute;
+}
+
+.textbook-resources-page .textbook-grade-guide-card:hover,
+.textbook-resources-page .textbook-grade-guide-card:focus-visible {
+  border-color: var(--grade-accent);
+  box-shadow: 0 20px 42px rgba(17, 17, 17, 0.12);
+  transform: translateY(-2px);
 }
 
 .textbook-resources-page .textbook-grade-guide-card.is-live {
-  border-color: #b58a3b;
+  border-color: color-mix(in srgb, var(--grade-accent) 78%, #ffffff);
   color: #111111;
 }
 
-.textbook-resources-page .textbook-grade-guide-card span {
-  color: #8a6422;
+.textbook-resources-page .textbook-grade-guide-card.grade-1 {
+  --grade-accent: #3c8d7c;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.grade-2 {
+  --grade-accent: #4f7fb9;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.grade-3 {
+  --grade-accent: #b27a2d;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.grade-4 {
+  --grade-accent: #c66b3d;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.grade-5 {
+  --grade-accent: #7d6bb3;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.grade-6 {
+  --grade-accent: #9a4d6a;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-band {
+  color: var(--grade-accent);
   font-size: 0.78rem;
   font-weight: 900;
 }
 
 .textbook-resources-page .textbook-grade-guide-card strong {
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
   line-height: 1.55;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-summary {
+  color: #3f4a5f;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-footer {
+  align-items: center;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-footer span {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-footer span:first-child {
+  background: color-mix(in srgb, var(--grade-accent) 12%, #ffffff);
+  color: color-mix(in srgb, var(--grade-accent) 72%, #111111);
+  padding: 7px 10px;
+}
+
+.textbook-resources-page .textbook-grade-guide-card .grade-card-footer span:last-child {
+  color: var(--grade-accent);
 }
 
 .grade-guide-page .grade-guide-hero {
