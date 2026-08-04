@@ -1668,15 +1668,34 @@ button:focus-visible {
 
 .grade-guide-page .grade-guide-hero h1 {
   color: #ffffff;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.16;
   margin: 0 0 18px;
+}
+
+.grade-guide-page .grade-guide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.grade-guide-page .grade-guide-meta span {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(226, 201, 138, 0.42);
+  border-radius: 999px;
+  color: #f4dfaa;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 11px;
 }
 
 .grade-guide-page .grade-guide-summary {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(226, 201, 138, 0.5);
   border-radius: 8px;
+  display: grid;
+  gap: 18px;
   padding: 24px;
 }
 
@@ -1692,8 +1711,32 @@ button:focus-visible {
 }
 
 .grade-guide-page .grade-guide-overview,
-.grade-guide-page .grade-guide-home-support {
+.grade-guide-page .grade-guide-home-support,
+.grade-guide-page .grade-guide-reassurance {
   background: #ffffff;
+}
+
+.grade-guide-page .grade-guide-one-point {
+  background: #fffdf5;
+}
+
+.grade-guide-page .grade-one-point-card {
+  background: #ffffff;
+  border: 2px solid #b58a3b;
+  border-radius: 8px;
+  padding: clamp(22px, 3.4vw, 34px);
+}
+
+.grade-guide-page .grade-one-point-card h2 {
+  color: #111111;
+  margin: 0 0 10px;
+}
+
+.grade-guide-page .grade-one-point-card p:last-child {
+  color: #3f4a5f;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin: 0;
 }
 
 .grade-guide-page .grade-guide-subjects,
@@ -1762,7 +1805,7 @@ button:focus-visible {
   background: #ffffff;
   border: 1px solid rgba(181, 138, 59, 0.32);
   border-radius: 8px;
-  padding: 22px;
+  padding: 18px;
 }
 
 .grade-guide-page .grade-subject-card h3 {
@@ -1772,8 +1815,22 @@ button:focus-visible {
 
 .grade-guide-page .grade-subject-card p {
   color: #3f4a5f;
-  line-height: 1.8;
+  line-height: 1.68;
   margin: 0;
+}
+
+.grade-guide-page .grade-subject-card p + p {
+  border-top: 1px solid rgba(181, 138, 59, 0.18);
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.grade-guide-page .grade-subject-card p strong {
+  color: #8a6422;
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .grade-guide-page .grade-support-list {
@@ -1793,6 +1850,17 @@ button:focus-visible {
   justify-content: center;
   margin-top: 0;
   text-align: center;
+}
+
+.grade-guide-page .grade-guide-reassurance h2 {
+  color: #111111;
+  margin-top: 0;
+}
+
+.grade-guide-page .grade-guide-reassurance p {
+  color: #3f4a5f;
+  line-height: 1.9;
+  margin-bottom: 0;
 }
 
 .textbook-resources-page .textbook-resource-list {
