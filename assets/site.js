@@ -66,3 +66,56 @@
     });
   });
 })();
+
+(function () {
+  const page = document.querySelector(".textbook-resources-page");
+  if (!page) return;
+
+  const input = document.getElementById("textbook-search-input");
+  const subject = document.getElementById("textbook-subject-filter");
+  const type = document.getElementById("textbook-type-filter");
+  const reset = document.getElementById("textbook-search-reset");
+  const count = document.getElementById("textbook-result-count");
+  const empty = document.getElementById("textbook-no-results");
+  const cards = Array.from(document.querySelectorAll(".textbook-publisher-card"));
+
+  if (!input || !subject || !type || !reset || !count || !empty || cards.length === 0) return;
+
+  const normalize = (value) => value.toLocaleLowerCase("ja-JP").normalize("NFKC");
+
+  const applyFilters = () => {
+    const keyword = normalize(input.value.trim());
+    const subjectValue = normalize(subject.value);
+    const typeValue = normalize(type.value);
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const text = normalize(card.textContent || "");
+      const matchesKeyword = !keyword || text.includes(keyword);
+      const matchesSubject = !subjectValue || text.includes(subjectValue);
+      const matchesType = !typeValue || text.includes(typeValue);
+      const isVisible = matchesKeyword && matchesSubject && matchesType;
+
+      card.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    count.textContent = String(visibleCount);
+    empty.hidden = visibleCount !== 0;
+  };
+
+  [input, subject, type].forEach((control) => {
+    control.addEventListener("input", applyFilters);
+    control.addEventListener("change", applyFilters);
+  });
+
+  reset.addEventListener("click", () => {
+    input.value = "";
+    subject.value = "";
+    type.value = "";
+    applyFilters();
+    input.focus();
+  });
+
+  applyFilters();
+})();
