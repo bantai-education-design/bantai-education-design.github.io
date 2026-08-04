@@ -1531,8 +1531,121 @@ button:focus-visible {
   background: #ffffff;
 }
 
+.textbook-resources-page .textbook-audience-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.textbook-resources-page .textbook-audience-card {
+  background: #fffdf5;
+  border: 2px solid rgba(181, 138, 59, 0.42);
+  border-radius: 8px;
+  color: #111111;
+  display: grid;
+  gap: 10px;
+  min-height: 150px;
+  padding: 24px;
+  text-decoration: none;
+}
+
+.textbook-resources-page .textbook-audience-card span {
+  color: #8a6422;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.textbook-resources-page .textbook-audience-card strong {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.textbook-resources-page .textbook-parent-guide {
+  background: #f7f4ec;
+}
+
+.textbook-resources-page .textbook-teacher-guide {
+  background: #ffffff;
+}
+
+.textbook-resources-page .textbook-guide-layout {
+  align-items: start;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+}
+
+.textbook-resources-page .textbook-guide-layout h2 {
+  color: #111111;
+  margin-top: 0;
+}
+
+.textbook-resources-page .textbook-guide-layout p,
+.textbook-resources-page .textbook-guide-layout li {
+  color: #3f4a5f;
+  line-height: 1.9;
+}
+
+.textbook-resources-page .textbook-guide-layout ul {
+  background: #fffdf5;
+  border: 1px solid rgba(181, 138, 59, 0.35);
+  border-radius: 8px;
+  margin: 0;
+  padding: 24px 24px 24px 44px;
+}
+
 .textbook-resources-page .textbook-resource-list {
   background: #f7f4ec;
+}
+
+.textbook-resources-page .textbook-search-panel {
+  align-items: end;
+  background: #ffffff;
+  border: 2px solid rgba(181, 138, 59, 0.44);
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(220px, 1.4fr) minmax(150px, 0.7fr) minmax(150px, 0.7fr) auto auto;
+  margin: 0 0 28px;
+  padding: 18px;
+}
+
+.textbook-resources-page .textbook-search-panel label {
+  display: grid;
+  gap: 7px;
+}
+
+.textbook-resources-page .textbook-search-panel label span {
+  color: #111111;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.textbook-resources-page .textbook-search-panel input,
+.textbook-resources-page .textbook-search-panel select {
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  border-radius: 6px;
+  font: inherit;
+  min-height: 44px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.textbook-resources-page .textbook-search-count {
+  color: #3f4a5f;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.textbook-resources-page .textbook-no-results {
+  background: #ffffff;
+  border: 1px dashed rgba(181, 138, 59, 0.55);
+  border-radius: 8px;
+  color: #3f4a5f;
+  font-weight: 700;
+  margin: 0 0 28px;
+  padding: 18px;
 }
 
 .textbook-resources-page .textbook-resource-grid {
@@ -1697,7 +1810,13 @@ button:focus-visible {
 
 @media (max-width: 860px) {
   .textbook-resources-page .textbook-resource-hero-inner,
+  .textbook-resources-page .textbook-audience-grid,
+  .textbook-resources-page .textbook-guide-layout,
   .product-detail-education .education-resource-card {
+    grid-template-columns: 1fr;
+  }
+
+  .textbook-resources-page .textbook-search-panel {
     grid-template-columns: 1fr;
   }
 
@@ -3631,6 +3750,43 @@ button:focus-visible {
   margin: 0 auto 40px;
   box-sizing: border-box;
 }
+
+.textbook-home-entry {
+  background: #111111;
+  border-bottom: 3px solid var(--gold);
+  padding: 42px 0;
+}
+
+.textbook-home-entry-inner {
+  align-items: center;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+}
+
+.textbook-home-entry h2 {
+  color: #ffffff;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  margin: 12px 0 10px;
+}
+
+.textbook-home-entry p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.textbook-home-entry-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.textbook-home-entry-actions .btn {
+  justify-content: center;
+  margin-top: 0;
+  text-align: center;
+}
+
 .purpose-card {
   display: flex;
   flex-direction: column;
@@ -3689,6 +3845,10 @@ button:focus-visible {
 }
 
 @media (max-width: 860px) {
+  .textbook-home-entry-inner {
+    grid-template-columns: 1fr;
+  }
+
   .purpose-nav-grid {
     grid-template-columns: repeat(2, 1fr);
   }
