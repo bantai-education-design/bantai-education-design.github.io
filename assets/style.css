@@ -1207,6 +1207,7 @@ button:focus-visible {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 8px;
+    box-sizing: border-box;
     box-shadow: 0 22px 50px rgba(17, 17, 17, 0.16);
     opacity: 0;
     visibility: hidden;
@@ -1274,6 +1275,13 @@ button:focus-visible {
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
     z-index: 100;
+  }
+
+  .nav:has(.menu-toggle) .menu {
+    left: 5vw;
+    right: 5vw;
+    width: auto;
+    max-width: none;
   }
 
   .menu-open .menu {
@@ -1594,6 +1602,199 @@ button:focus-visible {
   padding: 24px 24px 24px 44px;
 }
 
+.textbook-resources-page .textbook-grade-guide-panel {
+  display: grid;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.textbook-resources-page .textbook-grade-guide-panel h3 {
+  color: #111111;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  margin: 0 0 8px;
+}
+
+.textbook-resources-page .textbook-grade-guide-panel p {
+  color: #3f4a5f;
+  margin: 0;
+}
+
+.textbook-resources-page .textbook-grade-guide-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.textbook-resources-page .textbook-grade-guide-card {
+  background: #ffffff;
+  border: 1px solid rgba(181, 138, 59, 0.38);
+  border-radius: 8px;
+  color: #3f4a5f;
+  display: grid;
+  gap: 8px;
+  min-height: 112px;
+  padding: 18px;
+  text-decoration: none;
+}
+
+.textbook-resources-page .textbook-grade-guide-card.is-live {
+  border-color: #b58a3b;
+  color: #111111;
+}
+
+.textbook-resources-page .textbook-grade-guide-card span {
+  color: #8a6422;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.textbook-resources-page .textbook-grade-guide-card strong {
+  line-height: 1.55;
+}
+
+.grade-guide-page .grade-guide-hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(198, 161, 91, 0.18), transparent 35%),
+    linear-gradient(135deg, #111111 0%, #171a21 52%, #06172d 100%);
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+
+.grade-guide-page .grade-guide-hero-inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(28px, 5vw, 60px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+}
+
+.grade-guide-page .grade-guide-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.16;
+  margin: 0 0 18px;
+}
+
+.grade-guide-page .grade-guide-summary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 201, 138, 0.5);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.grade-guide-page .grade-guide-summary strong {
+  color: #f4dfaa;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.grade-guide-page .grade-guide-summary p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.grade-guide-page .grade-guide-overview,
+.grade-guide-page .grade-guide-home-support {
+  background: #ffffff;
+}
+
+.grade-guide-page .grade-guide-subjects,
+.grade-guide-page .grade-guide-links {
+  background: #f7f4ec;
+}
+
+.grade-guide-page .grade-guide-two-column {
+  align-items: start;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+}
+
+.grade-guide-page .grade-guide-two-column h2 {
+  color: #111111;
+  margin-top: 0;
+}
+
+.grade-guide-page .grade-guide-two-column p,
+.grade-guide-page .grade-guide-two-column li {
+  color: #3f4a5f;
+  line-height: 1.9;
+}
+
+.grade-guide-page .grade-guide-hour-list {
+  background: #fffdf5;
+  border: 1px solid rgba(181, 138, 59, 0.35);
+  border-radius: 8px;
+  display: grid;
+  gap: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.grade-guide-page .grade-guide-hour-list div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 18px;
+}
+
+.grade-guide-page .grade-guide-hour-list div + div {
+  border-top: 1px solid rgba(181, 138, 59, 0.22);
+}
+
+.grade-guide-page .grade-guide-hour-list dt {
+  color: #111111;
+  font-weight: 800;
+}
+
+.grade-guide-page .grade-guide-hour-list dd {
+  color: #8a6422;
+  font-weight: 900;
+  margin: 0;
+}
+
+.grade-guide-page .grade-subject-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grade-guide-page .grade-subject-card {
+  background: #ffffff;
+  border: 1px solid rgba(181, 138, 59, 0.32);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.grade-guide-page .grade-subject-card h3 {
+  color: #111111;
+  margin: 0 0 10px;
+}
+
+.grade-guide-page .grade-subject-card p {
+  color: #3f4a5f;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.grade-guide-page .grade-support-list {
+  background: #fffdf5;
+  border: 1px solid rgba(181, 138, 59, 0.35);
+  border-radius: 8px;
+  margin: 0;
+  padding: 24px 24px 24px 44px;
+}
+
+.grade-guide-page .grade-link-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.grade-guide-page .grade-link-actions .btn {
+  justify-content: center;
+  margin-top: 0;
+  text-align: center;
+}
+
 .textbook-resources-page .textbook-resource-list {
   background: #f7f4ec;
 }
@@ -1812,11 +2013,18 @@ button:focus-visible {
   .textbook-resources-page .textbook-resource-hero-inner,
   .textbook-resources-page .textbook-audience-grid,
   .textbook-resources-page .textbook-guide-layout,
+  .textbook-resources-page .textbook-grade-guide-grid,
+  .grade-guide-page .grade-guide-hero-inner,
+  .grade-guide-page .grade-guide-two-column,
   .product-detail-education .education-resource-card {
     grid-template-columns: 1fr;
   }
 
   .textbook-resources-page .textbook-search-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-guide-page .grade-subject-grid {
     grid-template-columns: 1fr;
   }
 
