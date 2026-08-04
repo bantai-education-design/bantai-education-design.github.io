@@ -1546,26 +1546,56 @@ button:focus-visible {
 }
 
 .textbook-resources-page .textbook-audience-card {
-  background: #fffdf5;
-  border: 2px solid rgba(181, 138, 59, 0.42);
+  background-image:
+    linear-gradient(135deg, rgba(4, 17, 34, 0.9), rgba(4, 17, 34, 0.58) 58%, rgba(0, 0, 0, 0.7)),
+    var(--audience-image);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgba(221, 185, 112, 0.48);
   border-radius: 8px;
-  color: #111111;
+  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.16);
+  color: #ffffff;
   display: grid;
   gap: 10px;
-  min-height: 150px;
+  min-height: 190px;
   padding: 24px;
+  position: relative;
   text-decoration: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.textbook-resources-page .textbook-audience-card:hover,
+.textbook-resources-page .textbook-audience-card:focus-visible {
+  border-color: rgba(236, 203, 136, 0.92);
+  box-shadow: 0 24px 52px rgba(17, 17, 17, 0.22);
+  outline: 3px solid rgba(236, 203, 136, 0.5);
+  outline-offset: 3px;
+  transform: translateY(-2px);
+}
+
+.textbook-resources-page .textbook-audience-card.audience-teacher {
+  --audience-image: url("/assets/images/textbook-guides/audience-teacher-desk.jpg");
+}
+
+.textbook-resources-page .textbook-audience-card.audience-parent {
+  --audience-image: url("/assets/images/textbook-guides/audience-parent-desk.jpg");
+}
+
+.textbook-resources-page .textbook-audience-card.audience-publisher {
+  --audience-image: url("/assets/images/textbook-guides/audience-publisher-bookshelf.jpg");
 }
 
 .textbook-resources-page .textbook-audience-card span {
-  color: #8a6422;
+  color: #e4bd68;
   font-size: 0.82rem;
   font-weight: 900;
+  letter-spacing: 0.04em;
 }
 
 .textbook-resources-page .textbook-audience-card strong {
   font-size: 1.05rem;
   line-height: 1.7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .textbook-resources-page .textbook-parent-guide {
@@ -1627,16 +1657,18 @@ button:focus-visible {
 
 .textbook-resources-page .textbook-grade-guide-card {
   --grade-accent: #b58a3b;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), #ffffff),
-    linear-gradient(135deg, color-mix(in srgb, var(--grade-accent) 22%, transparent), transparent 58%);
+  background-image:
+    linear-gradient(135deg, rgba(4, 17, 34, 0.92), rgba(4, 17, 34, 0.62) 56%, rgba(0, 0, 0, 0.74)),
+    var(--grade-image);
+  background-position: center;
+  background-size: cover;
   border: 1px solid color-mix(in srgb, var(--grade-accent) 72%, #ffffff);
   border-radius: 8px;
-  box-shadow: 0 16px 34px rgba(17, 17, 17, 0.08);
-  color: #3f4a5f;
+  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.16);
+  color: #ffffff;
   display: grid;
   gap: 12px;
-  min-height: 188px;
+  min-height: 230px;
   padding: 18px;
   position: relative;
   text-decoration: none;
@@ -1655,54 +1687,66 @@ button:focus-visible {
 .textbook-resources-page .textbook-grade-guide-card:hover,
 .textbook-resources-page .textbook-grade-guide-card:focus-visible {
   border-color: var(--grade-accent);
-  box-shadow: 0 20px 42px rgba(17, 17, 17, 0.12);
+  box-shadow: 0 24px 54px rgba(17, 17, 17, 0.24);
+  outline: 3px solid color-mix(in srgb, var(--grade-accent) 58%, transparent);
+  outline-offset: 3px;
   transform: translateY(-2px);
 }
 
 .textbook-resources-page .textbook-grade-guide-card.is-live {
   border-color: color-mix(in srgb, var(--grade-accent) 78%, #ffffff);
-  color: #111111;
+  color: #ffffff;
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-1 {
   --grade-accent: #3c8d7c;
+  --grade-image: url("/assets/images/textbook-guides/grade-1-classroom-desk.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-2 {
   --grade-accent: #4f7fb9;
+  --grade-image: url("/assets/images/textbook-guides/grade-2-textbook-notebook.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-3 {
   --grade-accent: #b27a2d;
+  --grade-image: url("/assets/images/textbook-guides/grade-3-classroom-board.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-4 {
   --grade-accent: #c66b3d;
+  --grade-image: url("/assets/images/textbook-guides/grade-4-map-study.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-5 {
   --grade-accent: #7d6bb3;
+  --grade-image: url("/assets/images/textbook-guides/grade-5-tablet-study.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-6 {
   --grade-accent: #9a4d6a;
+  --grade-image: url("/assets/images/textbook-guides/grade-6-globe-window.jpg");
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-band {
-  color: var(--grade-accent);
+  color: #e4bd68;
   font-size: 0.78rem;
   font-weight: 900;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .textbook-resources-page .textbook-grade-guide-card strong {
   font-size: clamp(1.05rem, 1.8vw, 1.28rem);
   line-height: 1.55;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-summary {
-  color: #3f4a5f;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9rem;
   line-height: 1.75;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-footer {
@@ -1723,13 +1767,15 @@ button:focus-visible {
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-footer span:first-child {
-  background: color-mix(in srgb, var(--grade-accent) 12%, #ffffff);
-  color: color-mix(in srgb, var(--grade-accent) 72%, #111111);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
   padding: 7px 10px;
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-footer span:last-child {
-  color: var(--grade-accent);
+  color: #e4bd68;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.46);
 }
 
 .grade-guide-page .grade-guide-hero {
