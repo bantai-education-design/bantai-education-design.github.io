@@ -1547,7 +1547,7 @@ button:focus-visible {
 
 .textbook-resources-page .textbook-audience-card {
   background-image:
-    linear-gradient(135deg, rgba(4, 17, 34, 0.9), rgba(4, 17, 34, 0.58) 58%, rgba(0, 0, 0, 0.7)),
+    linear-gradient(135deg, rgba(4, 17, 34, 0.84), rgba(4, 17, 34, 0.58) 58%, rgba(0, 0, 0, 0.68)),
     var(--audience-image);
   background-position: center;
   background-size: cover;
@@ -1658,7 +1658,7 @@ button:focus-visible {
 .textbook-resources-page .textbook-grade-guide-card {
   --grade-accent: #b58a3b;
   background-image:
-    linear-gradient(135deg, rgba(4, 17, 34, 0.92), rgba(4, 17, 34, 0.62) 56%, rgba(0, 0, 0, 0.74)),
+    linear-gradient(135deg, rgba(4, 17, 34, 0.84), rgba(4, 17, 34, 0.58) 56%, rgba(0, 0, 0, 0.68)),
     var(--grade-image);
   background-position: center;
   background-size: cover;
@@ -2234,6 +2234,13 @@ button:focus-visible {
   .textbook-resources-page .textbook-card-actions button,
   .product-detail-education .education-resource-card .btn {
     width: 100%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  .textbook-resources-page .textbook-audience-grid,
+  .textbook-resources-page .textbook-grade-guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
