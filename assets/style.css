@@ -3023,11 +3023,12 @@ button:focus-visible {
 }
 
 .product-detail-education .education-detail-visual img {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   display: block;
-  object-fit: cover;
-  object-position: right center;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
 }
 
