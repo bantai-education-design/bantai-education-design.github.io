@@ -8,6 +8,7 @@
   "navLinks": [
     { "href": "/", "label": "ホーム" },
     { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
     { "href": "#download", "label": "無料ダウンロード" },
     { "href": "#howto", "label": "使い方" },
     { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
