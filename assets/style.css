@@ -1574,15 +1574,15 @@ button:focus-visible {
 }
 
 .textbook-resources-page .textbook-audience-card.audience-teacher {
-  --audience-image: url("/assets/images/textbook-guides/audience-teacher-desk.jpg");
+  --audience-image: url("/assets/images/textbook-guides/audience-teacher-desk.webp");
 }
 
 .textbook-resources-page .textbook-audience-card.audience-parent {
-  --audience-image: url("/assets/images/textbook-guides/audience-parent-desk.jpg");
+  --audience-image: url("/assets/images/textbook-guides/audience-parent-desk.webp");
 }
 
 .textbook-resources-page .textbook-audience-card.audience-publisher {
-  --audience-image: url("/assets/images/textbook-guides/audience-publisher-bookshelf.jpg");
+  --audience-image: url("/assets/images/textbook-guides/audience-publisher-bookshelf.webp");
 }
 
 .textbook-resources-page .textbook-audience-card span {
@@ -1700,32 +1700,32 @@ button:focus-visible {
 
 .textbook-resources-page .textbook-grade-guide-card.grade-1 {
   --grade-accent: #3c8d7c;
-  --grade-image: url("/assets/images/textbook-guides/grade-1-classroom-desk.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-1-classroom-desk.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-2 {
   --grade-accent: #4f7fb9;
-  --grade-image: url("/assets/images/textbook-guides/grade-2-textbook-notebook.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-2-textbook-notebook.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-3 {
   --grade-accent: #b27a2d;
-  --grade-image: url("/assets/images/textbook-guides/grade-3-classroom-board.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-3-classroom-board.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-4 {
   --grade-accent: #c66b3d;
-  --grade-image: url("/assets/images/textbook-guides/grade-4-map-study.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-4-map-study.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-5 {
   --grade-accent: #7d6bb3;
-  --grade-image: url("/assets/images/textbook-guides/grade-5-tablet-study.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-5-tablet-study.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card.grade-6 {
   --grade-accent: #9a4d6a;
-  --grade-image: url("/assets/images/textbook-guides/grade-6-globe-window.jpg");
+  --grade-image: url("/assets/images/textbook-guides/grade-6-globe-window.webp");
 }
 
 .textbook-resources-page .textbook-grade-guide-card .grade-card-band {
