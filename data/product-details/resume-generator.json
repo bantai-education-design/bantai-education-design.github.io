@@ -7,6 +7,7 @@
   "navLinks": [
     { "href": "/", "label": "ホーム" },
     { "href": "/#products", "label": "製品一覧", "class": "active" },
+    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
     { "href": "#features", "label": "主な機能" },
     { "href": "#screenshots", "label": "画面イメージ" },
     { "href": "#distribution", "label": "配布・購入" },
