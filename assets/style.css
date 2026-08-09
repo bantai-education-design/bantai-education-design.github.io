@@ -2041,6 +2041,27 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
+.textbook-resources-page .container.narrow {
+  max-width: 860px;
+}
+
+.textbook-resources-page .notice-card {
+  background: #fffdf5;
+  border: 1px solid rgba(181, 138, 59, 0.42);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(7, 27, 54, 0.08);
+  padding: clamp(20px, 4vw, 30px);
+}
+
+.textbook-resources-page .notice-card h2 {
+  color: #111111;
+  margin-top: 0;
+}
+
+.textbook-resources-page .notice-card p:last-child {
+  margin-bottom: 0;
+}
+
 .product-detail-education .education-resource-section {
   background: #ffffff;
   padding: 34px 0;
