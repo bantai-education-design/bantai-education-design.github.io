@@ -1,0 +1,179 @@
+/*
+  audience-hubs.css
+  新トップ(index-new.html)・教師向けハブ(/for-teachers/)・保護者向けハブ(/for-parents/) 専用の追加スタイル。
+  既存の assets/style.css は変更せず、この3ページでのみ追加読み込みする。
+  共通クラス（.container / .btn / .section / .grid.grid-3 / .card / .status-badge 等）は
+  既存スタイルをそのまま利用し、ここでは対象者別ナビとハブ独自のレイアウトのみを定義する。
+*/
+/* ---------- 二層ヘッダー：上段の対象者切替バー ---------- */
+.audience-tier {
+  background: var(--navy);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+}
+.audience-tier-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  padding: 9px 0;
+}
+.audience-tier-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.audience-switch {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.audience-switch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 160, 89, 0.55);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.audience-switch-link:hover {
+  background: var(--gold);
+  color: #0c1b33;
+  border-color: var(--gold);
+}
+.audience-switch-link.current {
+  background: var(--gold);
+  color: #0c1b33;
+  border-color: var(--gold);
+}
+/* ---------- 新トップ：ヒーロー直下の対象者選択カード ---------- */
+.audience-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 44px;
+  position: relative;
+  z-index: 2;
+}
+.audience-entry-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 18px;
+  padding: 30px 26px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.audience-entry-card:hover,
+.audience-entry-card:focus-visible {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: var(--gold);
+}
+.audience-entry-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.audience-entry-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
+}
+.audience-entry-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+.audience-entry-cta {
+  margin-top: auto;
+  padding-top: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold2);
+}
+.audience-entry-card.is-common {
+  background: rgba(255, 255, 255, 0.03);
+  border-style: dashed;
+}
+/* ---------- ハブページ：カテゴリ見出し ---------- */
+.hub-group {
+  margin-bottom: 56px;
+}
+.hub-group:last-child {
+  margin-bottom: 0;
+}
+.hub-group-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.hub-group-heading h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.hub-group-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+/* ---------- ハブページ：リンクカード ---------- */
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.hub-card .status-badge {
+  margin-bottom: 10px;
+}
+.hub-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: "Noto Serif JP", serif;
+}
+.hub-card p {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+.hub-card .btn {
+  align-self: flex-start;
+}
+.hub-card-shared-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: #fffaf0;
+  border: 1px solid var(--gold);
+  border-radius: 99px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .audience-entry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .audience-tier-inner {
+    justify-content: flex-start;
+  }
+}
