@@ -125,3 +125,18 @@
 
   applyFilters();
 })();
+
+(function () {
+  const schoolDbLink = document.querySelector('#global-menu a[href="/tools/school-database/"]');
+  if (schoolDbLink && schoolDbLink.textContent.trim() === "学校宛先DB") {
+    schoolDbLink.textContent = "全国学校DB";
+  }
+
+  const teacherEntry = document.querySelector('.textbook-home-entry-actions a[href="/resources/textbook-plans/#for-teachers"]');
+  if (teacherEntry) {
+    teacherEntry.style.background = "#17345a";
+    teacherEntry.style.border = "1px solid var(--gold)";
+    teacherEntry.style.color = "#fff";
+    teacherEntry.style.boxShadow = "0 4px 12px rgba(0,0,0,.22)";
+  }
+})();
