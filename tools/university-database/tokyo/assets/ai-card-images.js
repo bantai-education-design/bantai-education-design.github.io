@@ -3,105 +3,15 @@ const eligibleImage=row=>{const item=state.images.get(row.id);if(!item||!item.im
 verifiedImage=eligibleImage;
 cardVisual=function(row){const image=eligibleImage(row);const label=esc(typeLabel[row.establishment_type]||'');if(image){const alt=esc(image.alt||`${row.name}の大学紹介イメージ`);const isAI=image.rights_status==='ai_original';const credit=isAI?`<span class="image-ai-label">${esc(image.label||'イメージ画像（AI生成）')}</span>`:`<a class="image-source-link" href="${esc(image.source_url)}" target="_blank" rel="noopener">画像出典 ↗</a>`;return `<div class="card-visual has-image ${isAI?'ai-original-image':''}"><img class="university-card-image" src="${esc(image.image_url)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.closest('.card-visual').classList.remove('has-image');this.remove()"><span class="visual-label">${label}</span>${credit}</div>`;}return `<div class="card-visual image-pending"><div class="image-placeholder" aria-hidden="true"><span>🎓</span><small>大学イメージ準備中</small></div><span class="visual-label">${label}</span></div>`;};
 const mergeById=(base=[],extra=[])=>{const map=new Map(base.map(x=>[x.id,x]));for(const item of extra||[])map.set(item.id,{...(map.get(item.id)||{}),...item});return [...map.values()];};
-const themeRules=[
-  ['health',/医学|医療|看護|薬学|保健|歯学|鍼灸|柔道整復|生命/],
-  ['arts',/芸術|美術|音楽|デザイン|映像|演劇|舞踊|表現/],
-  ['tech',/情報|AI|工学|理工|通信|電気|電子|データ|DX|数理/],
-  ['science',/理学|農学|環境|海洋|獣医|化学|生物|科学/],
-  ['global',/国際|語学|外国語|地域研究|日本研究|グローバル/],
-  ['education',/教育|保育|幼児|子ども|児童/],
-  ['sports',/スポーツ|体育|健康スポーツ|武道|ダンス/],
-  ['social',/法学|政治|経済|経営|商学|社会|福祉|政策|観光|心理|文学|人文|宗教/]
-];
-function themeForRow(row){
-  const facultyTags=(state.faculties.get(row.id)||[]).flatMap(f=>f.academic_field_tags||[]);
-  const graduateTags=(state.graduateSchools.get(row.id)||[]).flatMap(g=>g.academic_field_tags||[]);
-  const haystack=[...(row.academic_field_tags||[]),...facultyTags,...graduateTags,row.name||''].join(' ');
-  for(const [theme,re] of themeRules)if(re.test(haystack))return theme;
-  return 'classic';
-}
-function applyCardThemes(){
-  for(const card of document.querySelectorAll('.tokyo-card[data-id]')){
-    const row=state.rows.find(r=>r.id===card.dataset.id);
-    if(!row)continue;
-    for(const name of ['health','arts','tech','science','global','education','sports','social','classic'])card.classList.remove(`theme-${name}`);
-    card.classList.add(`theme-${themeForRow(row)}`);
-  }
-}
-const baseRender=render;
-render=function(){baseRender();applyCardThemes();};
-function updateGuiCoverage(){
-  if(!state.rows.length)return;
-  const total=state.rows.length;
-  const academicCount=state.rows.filter(row=>(row.academic_field_tags||[]).length||(state.faculties.get(row.id)||[]).length||(state.graduateSchools.get(row.id)||[]).length).length;
-  const studentCount=state.rows.filter(row=>Number(row.student_counts?.total)>0).length;
-  const metrics=document.querySelectorAll('.overview-grid .overview-metric');
-  if(metrics[1]){
-    const label=metrics[1].querySelector('span');
-    const value=metrics[1].querySelector('strong');
-    if(label)label.textContent='学部・分野情報';
-    if(value)value.textContent=`${academicCount}/${total}`;
-  }
-  let note=document.querySelector('.overview-coverage-note');
-  if(!note){
-    note=document.createElement('div');
-    note.className='overview-coverage-note';
-    document.querySelector('.overview-card')?.appendChild(note);
-  }
-  if(note){
-    const pct=Math.round((academicCount/total)*100);
-    note.innerHTML=`<div class="overview-coverage-head"><span>詳細データ同期</span><strong>${pct}%</strong></div><div class="overview-coverage-track"><i style="width:${pct}%"></i></div><small>学部・分野 ${academicCount}校 ／ 在籍者数 ${studentCount}校を確認済み。一次情報を確認しながら順次更新しています。</small>`;
-  }
-}
-async function applyVerifiedDetailBatches(){
-  try{
-    const response=await fetch('data/university-detail-batches.json');
-    if(!response.ok)return;
-    const registry=await response.json();
-    const apply=()=>{
-      if(!state.rows.length){setTimeout(apply,60);return;}
-      const records=registry.records||{};
-      state.rows=state.rows.map(row=>records[row.id]?{...row,...records[row.id]}:row);
-      updateSnapshot();
-      updateGuiCoverage();
-      updateCompare();
-      render();
-    };
-    apply();
-  }catch{}
-}
-function mergeAcademicRegistry(registry){
-  for(const [universityId,entry] of Object.entries(registry.universities||{})){
-    const faculties=entry.faculties||[];
-    if(faculties.length){
-      state.faculties.set(universityId,mergeById(state.faculties.get(universityId)||[],faculties.map(({departments,...faculty})=>({...faculty,university_id:universityId}))));
-      const departments=faculties.flatMap(f=>(f.departments||[]).map(d=>({...d,university_id:universityId,faculty_id:f.id})));
-      if(departments.length)state.departments.set(universityId,mergeById(state.departments.get(universityId)||[],departments));
-    }
-    const graduateSchools=(entry.graduate_schools||[]).map(g=>({...g,university_id:universityId}));
-    if(graduateSchools.length)state.graduateSchools.set(universityId,mergeById(state.graduateSchools.get(universityId)||[],graduateSchools));
-    const row=state.rows.find(r=>r.id===universityId);
-    if(row&&!row.academic_field_tags?.length){
-      row.academic_field_tags=[...new Set([...faculties.flatMap(f=>f.academic_field_tags||[]),...graduateSchools.flatMap(g=>g.academic_field_tags||[])])];
-    }
-  }
-}
-async function applyVerifiedAcademicStructure(){
-  try{
-    const urls=['data/academic-structure-batches-09-12.json','data/academic-structure-batches-13-14.json'];
-    const registries=(await Promise.all(urls.map(async url=>{const response=await fetch(url);return response.ok?response.json():null;}))).filter(Boolean);
-    const apply=()=>{
-      if(!state.rows.length){setTimeout(apply,80);return;}
-      registries.forEach(mergeAcademicRegistry);
-      updateSnapshot();
-      updateGuiCoverage();
-      updateCompare();
-      render();
-    };
-    apply();
-  }catch{}
-}
+const themeRules=[['health',/医学|医療|看護|薬学|保健|歯学|鍼灸|柔道整復|生命/],['arts',/芸術|美術|音楽|デザイン|映像|演劇|舞踊|表現/],['tech',/情報|AI|工学|理工|通信|電気|電子|データ|DX|数理/],['science',/理学|農学|環境|海洋|獣医|化学|生物|科学/],['global',/国際|語学|外国語|地域研究|日本研究|グローバル/],['education',/教育|保育|幼児|子ども|児童/],['sports',/スポーツ|体育|健康スポーツ|武道|ダンス/],['social',/法学|政治|経済|経営|商学|社会|福祉|政策|観光|心理|文学|人文|宗教/]];
+function themeForRow(row){const facultyTags=(state.faculties.get(row.id)||[]).flatMap(f=>f.academic_field_tags||[]);const graduateTags=(state.graduateSchools.get(row.id)||[]).flatMap(g=>g.academic_field_tags||[]);const haystack=[...(row.academic_field_tags||[]),...facultyTags,...graduateTags,row.name||''].join(' ');for(const [theme,re] of themeRules)if(re.test(haystack))return theme;return'classic';}
+function applyCardThemes(){for(const card of document.querySelectorAll('.tokyo-card[data-id]')){const row=state.rows.find(r=>r.id===card.dataset.id);if(!row)continue;for(const name of ['health','arts','tech','science','global','education','sports','social','classic'])card.classList.remove(`theme-${name}`);card.classList.add(`theme-${themeForRow(row)}`);}}
+const baseRender=render;render=function(){baseRender();applyCardThemes();};
+function updateGuiCoverage(){if(!state.rows.length)return;const total=state.rows.length;const academicCount=state.rows.filter(row=>(row.academic_field_tags||[]).length||(state.faculties.get(row.id)||[]).length||(state.graduateSchools.get(row.id)||[]).length).length;const studentCount=state.rows.filter(row=>Number(row.student_counts?.total)>0).length;const metrics=document.querySelectorAll('.overview-grid .overview-metric');if(metrics[1]){const label=metrics[1].querySelector('span');const value=metrics[1].querySelector('strong');if(label)label.textContent='学部・分野情報';if(value)value.textContent=`${academicCount}/${total}`;}let note=document.querySelector('.overview-coverage-note');if(!note){note=document.createElement('div');note.className='overview-coverage-note';document.querySelector('.overview-card')?.appendChild(note);}if(note){const pct=Math.round((academicCount/total)*100);note.innerHTML=`<div class="overview-coverage-head"><span>詳細データ同期</span><strong>${pct}%</strong></div><div class="overview-coverage-track"><i style="width:${pct}%"></i></div><small>学部・分野 ${academicCount}校 ／ 在籍者数 ${studentCount}校を確認済み。一次情報を確認しながら順次更新しています。</small>`;}}
+async function applyVerifiedDetailBatches(){try{const response=await fetch('data/university-detail-batches.json');if(!response.ok)return;const registry=await response.json();const apply=()=>{if(!state.rows.length){setTimeout(apply,60);return;}const records=registry.records||{};state.rows=state.rows.map(row=>records[row.id]?{...row,...records[row.id]}:row);updateSnapshot();updateGuiCoverage();updateCompare();render();};apply();}catch{}}
+function mergeAcademicRegistry(registry){for(const [universityId,entry] of Object.entries(registry.universities||{})){const faculties=entry.faculties||[];if(faculties.length){state.faculties.set(universityId,mergeById(state.faculties.get(universityId)||[],faculties.map(({departments,...faculty})=>({...faculty,university_id:universityId}))));const departments=faculties.flatMap(f=>(f.departments||[]).map(d=>({...d,university_id:universityId,faculty_id:f.id})));if(departments.length)state.departments.set(universityId,mergeById(state.departments.get(universityId)||[],departments));}const graduateSchools=(entry.graduate_schools||[]).map(g=>({...g,university_id:universityId}));if(graduateSchools.length)state.graduateSchools.set(universityId,mergeById(state.graduateSchools.get(universityId)||[],graduateSchools));const row=state.rows.find(r=>r.id===universityId);if(row&&!row.academic_field_tags?.length){row.academic_field_tags=[...new Set([...faculties.flatMap(f=>f.academic_field_tags||[]),...graduateSchools.flatMap(g=>g.academic_field_tags||[])])];}}}
+async function applyVerifiedAcademicStructure(){try{const urls=['data/academic-structure-batches-09-12.json','data/academic-structure-batches-13-14.json'];const registries=(await Promise.all(urls.map(async url=>{const response=await fetch(url);return response.ok?response.json():null;}))).filter(Boolean);const apply=()=>{if(!state.rows.length){setTimeout(apply,80);return;}registries.forEach(mergeAcademicRegistry);updateSnapshot();updateGuiCoverage();updateCompare();render();};apply();}catch{}}
 const coverageTimer=setInterval(()=>{if(state.rows.length){updateGuiCoverage();applyCardThemes();clearInterval(coverageTimer);}},120);
-applyVerifiedDetailBatches();
-applyVerifiedAcademicStructure();
+applyVerifiedDetailBatches();applyVerifiedAcademicStructure();
+const detailCss=document.createElement('link');detailCss.rel='stylesheet';detailCss.href='assets/detail-layer.css';document.head.appendChild(detailCss);const detailScript=document.createElement('script');detailScript.src='assets/detail-layer.js';detailScript.defer=true;document.head.appendChild(detailScript);
 })();
