@@ -1,12 +1,16 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "policy": {
     "purpose": "東京都大学DBのカード画像を権利・出典確認付きで管理する。",
     "default_status": "unverified",
-    "allowed_status": ["verified", "unverified", "restricted", "permission_required", "not_available"],
-    "publish_rule": "rights_status が verified の画像だけを公開カードへ表示する。",
+    "allowed_status": ["verified", "unverified", "restricted", "permission_required", "not_available", "ai_original"],
+    "publish_rule": "権利確認済み実画像（verified）または本DB向けに独立生成したオリジナルAI画像（ai_original）のみ公開カードへ表示する。",
     "required_fields_when_verified": ["university_id", "image_url", "source_url", "rights_note", "alt"],
-    "review_rule": "大学公式サイト掲載画像であっても転載可とはみなさず、利用条件を確認する。人物を特定できる写真は原則採用しない。"
+    "required_fields_when_ai_original": ["university_id", "image_url", "generation_note", "alt", "label"],
+    "review_rule": "大学公式サイト掲載画像であっても転載可とはみなさず、利用条件を確認する。人物を特定できる実写真は原則採用しない。",
+    "ai_original_rule": "大学公式写真・第三者写真を入力素材や構図参照として使用せず、実在人物に似せない架空人物・架空キャンパスを独立生成する。大学ロゴ・校章・商標・固有建築の忠実再現は行わない。公開時は『イメージ画像（AI生成）』と明示し、実際の学生・キャンパス写真ではないことが分かるようにする。",
+    "ai_review_rule": "生成物は公開前に既存写真・大学ロゴ・校章・著名建築との過度な類似がないか目視確認する。生成プロンプト・生成日・確認日を記録し、生成過程を追跡できるようにする。",
+    "visual_strategy": "大学ごとの学問分野・立地・設置区分など事実情報から色調やモチーフを変える。ただし特定大学の実景を再現せず、カード画像は大学の雰囲気を伝える補助的イメージとして扱う。"
   },
   "images": {
     "tokyo-university": {
