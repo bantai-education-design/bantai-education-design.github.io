@@ -19,27 +19,29 @@ async function applyVerifiedDetailBatches(){
     apply();
   }catch{}
 }
+function mergeAcademicRegistry(registry){
+  for(const [universityId,entry] of Object.entries(registry.universities||{})){
+    const faculties=entry.faculties||[];
+    if(faculties.length){
+      state.faculties.set(universityId,mergeById(state.faculties.get(universityId)||[],faculties.map(({departments,...faculty})=>({...faculty,university_id:universityId}))));
+      const departments=faculties.flatMap(f=>(f.departments||[]).map(d=>({...d,university_id:universityId,faculty_id:f.id})));
+      if(departments.length)state.departments.set(universityId,mergeById(state.departments.get(universityId)||[],departments));
+    }
+    const graduateSchools=(entry.graduate_schools||[]).map(g=>({...g,university_id:universityId}));
+    if(graduateSchools.length)state.graduateSchools.set(universityId,mergeById(state.graduateSchools.get(universityId)||[],graduateSchools));
+    const row=state.rows.find(r=>r.id===universityId);
+    if(row&&!row.academic_field_tags?.length){
+      row.academic_field_tags=[...new Set([...faculties.flatMap(f=>f.academic_field_tags||[]),...graduateSchools.flatMap(g=>g.academic_field_tags||[])])];
+    }
+  }
+}
 async function applyVerifiedAcademicStructure(){
   try{
-    const response=await fetch('data/academic-structure-batches-09-12.json');
-    if(!response.ok)return;
-    const registry=await response.json();
+    const urls=['data/academic-structure-batches-09-12.json','data/academic-structure-batches-13-14.json'];
+    const registries=(await Promise.all(urls.map(async url=>{const response=await fetch(url);return response.ok?response.json():null;}))).filter(Boolean);
     const apply=()=>{
       if(!state.rows.length){setTimeout(apply,80);return;}
-      for(const [universityId,entry] of Object.entries(registry.universities||{})){
-        const faculties=entry.faculties||[];
-        if(faculties.length){
-          state.faculties.set(universityId,mergeById(state.faculties.get(universityId)||[],faculties.map(({departments,...faculty})=>({...faculty,university_id:universityId}))));
-          const departments=faculties.flatMap(f=>(f.departments||[]).map(d=>({...d,university_id:universityId,faculty_id:f.id})));
-          if(departments.length)state.departments.set(universityId,mergeById(state.departments.get(universityId)||[],departments));
-        }
-        const graduateSchools=(entry.graduate_schools||[]).map(g=>({...g,university_id:universityId}));
-        if(graduateSchools.length)state.graduateSchools.set(universityId,mergeById(state.graduateSchools.get(universityId)||[],graduateSchools));
-        const row=state.rows.find(r=>r.id===universityId);
-        if(row&&!row.academic_field_tags?.length){
-          row.academic_field_tags=[...new Set([...faculties.flatMap(f=>f.academic_field_tags||[]),...graduateSchools.flatMap(g=>g.academic_field_tags||[])])];
-        }
-      }
+      registries.forEach(mergeAcademicRegistry);
       updateSnapshot();
       updateCompare();
       render();
