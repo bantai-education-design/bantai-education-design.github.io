@@ -3,6 +3,29 @@ const eligibleImage=row=>{const item=state.images.get(row.id);if(!item||!item.im
 verifiedImage=eligibleImage;
 cardVisual=function(row){const image=eligibleImage(row);const label=esc(typeLabel[row.establishment_type]||'');if(image){const alt=esc(image.alt||`${row.name}の大学紹介イメージ`);const isAI=image.rights_status==='ai_original';const credit=isAI?`<span class="image-ai-label">${esc(image.label||'イメージ画像（AI生成）')}</span>`:`<a class="image-source-link" href="${esc(image.source_url)}" target="_blank" rel="noopener">画像出典 ↗</a>`;return `<div class="card-visual has-image ${isAI?'ai-original-image':''}"><img class="university-card-image" src="${esc(image.image_url)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.closest('.card-visual').classList.remove('has-image');this.remove()"><span class="visual-label">${label}</span>${credit}</div>`;}return `<div class="card-visual image-pending"><div class="image-placeholder" aria-hidden="true"><span>🎓</span><small>大学イメージ準備中</small></div><span class="visual-label">${label}</span></div>`;};
 const mergeById=(base=[],extra=[])=>{const map=new Map(base.map(x=>[x.id,x]));for(const item of extra||[])map.set(item.id,{...(map.get(item.id)||{}),...item});return [...map.values()];};
+function updateGuiCoverage(){
+  if(!state.rows.length)return;
+  const total=state.rows.length;
+  const academicCount=state.rows.filter(row=>(row.academic_field_tags||[]).length||(state.faculties.get(row.id)||[]).length||(state.graduateSchools.get(row.id)||[]).length).length;
+  const studentCount=state.rows.filter(row=>Number(row.student_counts?.total)>0).length;
+  const metrics=document.querySelectorAll('.overview-grid .overview-metric');
+  if(metrics[1]){
+    const label=metrics[1].querySelector('span');
+    const value=metrics[1].querySelector('strong');
+    if(label)label.textContent='学部・分野情報';
+    if(value)value.textContent=`${academicCount}/${total}`;
+  }
+  let note=document.querySelector('.overview-coverage-note');
+  if(!note){
+    note=document.createElement('div');
+    note.className='overview-coverage-note';
+    document.querySelector('.overview-card')?.appendChild(note);
+  }
+  if(note){
+    const pct=Math.round((academicCount/total)*100);
+    note.innerHTML=`<div class="overview-coverage-head"><span>詳細データ同期</span><strong>${pct}%</strong></div><div class="overview-coverage-track"><i style="width:${pct}%"></i></div><small>学部・分野 ${academicCount}校 ／ 在籍者数 ${studentCount}校を確認済み。一次情報を確認しながら順次更新しています。</small>`;
+  }
+}
 async function applyVerifiedDetailBatches(){
   try{
     const response=await fetch('data/university-detail-batches.json');
@@ -13,6 +36,7 @@ async function applyVerifiedDetailBatches(){
       const records=registry.records||{};
       state.rows=state.rows.map(row=>records[row.id]?{...row,...records[row.id]}:row);
       updateSnapshot();
+      updateGuiCoverage();
       updateCompare();
       render();
     };
@@ -43,12 +67,14 @@ async function applyVerifiedAcademicStructure(){
       if(!state.rows.length){setTimeout(apply,80);return;}
       registries.forEach(mergeAcademicRegistry);
       updateSnapshot();
+      updateGuiCoverage();
       updateCompare();
       render();
     };
     apply();
   }catch{}
 }
+const coverageTimer=setInterval(()=>{if(state.rows.length){updateGuiCoverage();clearInterval(coverageTimer);}},120);
 applyVerifiedDetailBatches();
 applyVerifiedAcademicStructure();
 })();
