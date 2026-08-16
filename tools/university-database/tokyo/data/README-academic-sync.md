@@ -1,0 +1,1 @@
+Verified academic structures are loaded from the public snapshot files in this directory. Priority batches 03–22 are covered. The UI merges them by university ID and keeps unverified fields blank rather than guessing.
