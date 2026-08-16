@@ -1,0 +1,14 @@
+{
+  "source_repository": "bantai-education-design/daigaku_DB",
+  "source_ref": "main",
+  "source_files": {
+    "universities_tokyo_all.generated.json": "0697a15787566e6de0d971e2456415cebea360f0",
+    "faculties_tokyo_all.generated.json": "abdb2e66cf5f97edaaddb242619afc95558df89e",
+    "departments_tokyo_all.generated.json": "dfd04b0de04460055579a70310de0901a8ea6bfe",
+    "graduate_schools_tokyo_all.generated.json": "b2687bef9fb9cbd93b6d399c001a31690884be32",
+    "tokyo_dataset_summary.generated.json": "2184a2aa216a0d9ccf14bd0ec13533705ef66dee"
+  },
+  "expected_university_count": 144,
+  "sync_policy": "daigaku_DB is the source of truth. Public files must be exported from these verified generated files; browser-side reads from the private repository are prohibited.",
+  "recorded_at": "2026-08-16"
+}
