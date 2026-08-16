@@ -1,0 +1,48 @@
+/* Academic visual themes for cards without licensed/AI imagery */
+.tokyo-card .image-placeholder{position:relative;isolation:isolate;overflow:hidden}
+.tokyo-card .image-placeholder:before,.tokyo-card .image-placeholder:after{content:"";position:absolute;border-radius:50%;pointer-events:none;z-index:-1}
+.tokyo-card .image-placeholder:before{width:145px;height:145px;right:-38px;top:-52px;background:rgba(255,255,255,.28)}
+.tokyo-card .image-placeholder:after{width:90px;height:90px;left:-30px;bottom:-40px;background:rgba(255,255,255,.22)}
+.tokyo-card .image-placeholder span{font-size:0;line-height:1}
+.tokyo-card .image-placeholder span:before{font-size:2.15rem;font-weight:900;filter:drop-shadow(0 7px 12px rgba(20,38,60,.14))}
+.tokyo-card .image-placeholder small{position:relative;z-index:2;background:rgba(255,255,255,.78);color:#34485e;box-shadow:0 5px 14px rgba(27,51,82,.08)}
+
+.tokyo-card.theme-tech .card-visual{background:linear-gradient(135deg,#cfe8ff 0,#8cc8ff 46%,#718fe7 100%)}
+.tokyo-card.theme-tech .image-placeholder span:before{content:"⌘";color:#174a86}
+.tokyo-card.theme-tech .card-body{background:linear-gradient(180deg,#fff 0,#f8fbff 100%)}
+
+.tokyo-card.theme-health .card-visual{background:linear-gradient(135deg,#dff6ed 0,#a8e0cf 48%,#69bca8 100%)}
+.tokyo-card.theme-health .image-placeholder span:before{content:"＋";color:#176e5b}
+.tokyo-card.theme-health .card-body{background:linear-gradient(180deg,#fff 0,#f8fcfa 100%)}
+
+.tokyo-card.theme-arts .card-visual{background:linear-gradient(135deg,#f8dfef 0,#eab0d6 45%,#9f88d9 100%)}
+.tokyo-card.theme-arts .image-placeholder span:before{content:"✦";color:#7c3e85}
+.tokyo-card.theme-arts .card-body{background:linear-gradient(180deg,#fff 0,#fff9fd 100%)}
+
+.tokyo-card.theme-global .card-visual{background:linear-gradient(135deg,#e8e0ff 0,#b7baf0 48%,#6f91d7 100%)}
+.tokyo-card.theme-global .image-placeholder span:before{content:"◎";color:#3e5595}
+.tokyo-card.theme-global .card-body{background:linear-gradient(180deg,#fff 0,#faf9ff 100%)}
+
+.tokyo-card.theme-education .card-visual{background:linear-gradient(135deg,#fff0c9 0,#f0d783 50%,#d5ad53 100%)}
+.tokyo-card.theme-education .image-placeholder span:before{content:"▤";color:#765816}
+.tokyo-card.theme-education .card-body{background:linear-gradient(180deg,#fff 0,#fffdf7 100%)}
+
+.tokyo-card.theme-science .card-visual{background:linear-gradient(135deg,#e0f3e9 0,#9ed5bd 47%,#69a99b 100%)}
+.tokyo-card.theme-science .image-placeholder span:before{content:"◌";color:#2d6b5e}
+.tokyo-card.theme-science .card-body{background:linear-gradient(180deg,#fff 0,#f8fcfa 100%)}
+
+.tokyo-card.theme-sports .card-visual{background:linear-gradient(135deg,#ffe7d5 0,#f3b887 48%,#db775d 100%)}
+.tokyo-card.theme-sports .image-placeholder span:before{content:"●";color:#a64b36}
+.tokyo-card.theme-sports .card-body{background:linear-gradient(180deg,#fff 0,#fffaf7 100%)}
+
+.tokyo-card.theme-social .card-visual{background:linear-gradient(135deg,#edf1f7 0,#c4cedc 48%,#8ca0b9 100%)}
+.tokyo-card.theme-social .image-placeholder span:before{content:"◇";color:#536a85}
+.tokyo-card.theme-social .card-body{background:linear-gradient(180deg,#fff 0,#fafbfc 100%)}
+
+.tokyo-card.theme-classic .card-visual{background:linear-gradient(135deg,#e7edf4 0,#bcc9d7 50%,#8ca2ba 100%)}
+.tokyo-card.theme-classic .image-placeholder span:before{content:"🎓";font-size:1.95rem}
+
+.tokyo-card[class*="theme-"] .card-visual.image-pending:after{background:linear-gradient(180deg,transparent,rgba(16,35,55,.18))}
+.tokyo-card[class*="theme-"] .visual-label{background:rgba(255,255,255,.9);backdrop-filter:blur(5px)}
+
+@media(max-width:560px){.tokyo-card .image-placeholder span:before{font-size:2.5rem}.tokyo-card.theme-classic .image-placeholder span:before{font-size:2.2rem}}
