@@ -1,0 +1,7 @@
+(()=>{
+const eligibleImage=row=>{const item=state.images.get(row.id);if(!item||!item.image_url)return null;if(item.rights_status==='verified'&&item.source_url&&item.rights_note)return item;if(item.rights_status==='ai_original'&&item.generation_note&&item.label)return item;return null;};
+verifiedImage=eligibleImage;
+cardVisual=function(row){const image=eligibleImage(row);const label=esc(typeLabel[row.establishment_type]||'');if(image){const alt=esc(image.alt||`${row.name}の大学紹介イメージ`);const isAI=image.rights_status==='ai_original';const credit=isAI?`<span class="image-ai-label">${esc(image.label||'イメージ画像（AI生成）')}</span>`:`<a class="image-source-link" href="${esc(image.source_url)}" target="_blank" rel="noopener">画像出典 ↗</a>`;return `<div class="card-visual has-image ${isAI?'ai-original-image':''}"><img class="university-card-image" src="${esc(image.image_url)}" alt="${alt}" loading="lazy" decoding="async" onerror="this.closest('.card-visual').classList.remove('has-image');this.remove()"><span class="visual-label">${label}</span>${credit}</div>`;}return `<div class="card-visual image-pending"><div class="image-placeholder" aria-hidden="true"><span>🎓</span><small>大学イメージ準備中</small></div><span class="visual-label">${label}</span></div>`;};
+const repaint=()=>{if(state.rows?.length)render();};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',repaint,{once:true});else queueMicrotask(repaint);
+})();
