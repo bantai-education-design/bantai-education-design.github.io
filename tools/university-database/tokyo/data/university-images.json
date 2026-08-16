@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "purpose": "東京都大学DBのカード画像を権利・出典確認付きで管理する。",
+    "default_status": "unverified",
+    "allowed_status": ["verified", "unverified", "not_available"],
+    "publish_rule": "rights_status が verified の画像だけを公開カードへ表示する。",
+    "required_fields_when_verified": ["university_id", "image_url", "source_url", "rights_note", "alt"]
+  },
+  "images": {}
+}
