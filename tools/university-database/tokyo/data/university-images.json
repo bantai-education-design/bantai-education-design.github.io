@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "policy": {
+    "purpose": "東京都大学DBのカード画像を権利・出典確認付きで管理する。",
+    "default_status": "unverified",
+    "allowed_status": ["verified", "unverified", "restricted", "permission_required", "not_available", "ai_original"],
+    "publish_rule": "権利確認済み実画像（verified）または本DB向けに独立生成したオリジナルAI画像（ai_original）のみ公開カードへ表示する。",
+    "required_fields_when_verified": ["university_id", "image_url", "source_url", "rights_note", "alt"],
+    "required_fields_when_ai_original": ["university_id", "image_url", "generation_note", "alt", "label"],
+    "review_rule": "大学公式サイト掲載画像であっても転載可とはみなさず、利用条件を確認する。人物を特定できる実写真は原則採用しない。",
+    "ai_original_rule": "大学公式写真・第三者写真を入力素材や構図参照として使用せず、実在人物に似せない架空人物・架空キャンパスを独立生成する。大学ロゴ・校章・商標・固有建築の忠実再現は行わない。公開時は『イメージ画像（AI生成）』と明示し、実際の学生・キャンパス写真ではないことが分かるようにする。",
+    "ai_review_rule": "生成物は公開前に既存写真・大学ロゴ・校章・著名建築との過度な類似がないか目視確認する。生成プロンプト・生成日・確認日を記録し、生成過程を追跡できるようにする。",
+    "visual_strategy": "大学ごとの学問分野・立地・設置区分など事実情報から色調やモチーフを変える。ただし特定大学の実景を再現せず、カード画像は大学の雰囲気を伝える補助的イメージとして扱う。"
+  },
+  "images": {
+    "tokyo-university": {
+      "university_id": "tokyo-university",
+      "university_name": "東京大学",
+      "rights_status": "ai_original",
+      "official_image_status": "permission_required",
+      "image_url": "assets/card-images/tokyo-university-ai.svg",
+      "label": "イメージ画像（AI生成）",
+      "alt": "研究型大学をイメージした架空キャンパスと架空の学生",
+      "generation_note": "実在の東京大学の公式写真・校章・ロゴ・固有建築を入力素材や構図参照に使わず、研究型大学という一般的なテーマから独立生成したBan.TaiオリジナルSVG。",
+      "official_image_source_url": "https://www.u-tokyo.ac.jp/ja/about/public-relations/media.html",
+      "official_image_rights_note": "大学での取材・撮影は事前申請と許可が必要。公式写真は転載せず、独立生成イメージを使用する。",
+      "generated_at": "2026-08-16",
+      "reviewed_at": "2026-08-16"
+    },
+    "tokyo-university-of-foreign-studies": {
+      "university_id": "tokyo-university-of-foreign-studies",
+      "university_name": "東京外国語大学",
+      "rights_status": "ai_original",
+      "official_image_status": "permission_required",
+      "image_url": "assets/card-images/tufs-ai.svg",
+      "label": "イメージ画像（AI生成）",
+      "alt": "国際・語学系大学をイメージした架空キャンパスと架空の学生",
+      "generation_note": "実在の東京外国語大学の公式写真・VI素材・校舎を参照せず、国際交流と言語学習という一般的テーマから独立生成したBan.TaiオリジナルSVG。",
+      "official_image_source_url": "https://www.tufs.ac.jp/abouttufs/pr/proposa/film.html",
+      "official_image_rights_note": "撮影やVI素材には利用条件があるため公式画像は転載せず、独立生成イメージを使用する。",
+      "generated_at": "2026-08-16",
+      "reviewed_at": "2026-08-16"
+    },
+    "tokyo-gakugei-university": {
+      "university_id": "tokyo-gakugei-university",
+      "university_name": "東京学芸大学",
+      "rights_status": "ai_original",
+      "official_image_status": "restricted",
+      "image_url": "assets/card-images/gakugei-ai.svg",
+      "label": "イメージ画像（AI生成）",
+      "alt": "教育系大学をイメージした架空キャンパスと架空の学生",
+      "generation_note": "実在の東京学芸大学の公式写真・校章・校舎を参照せず、教育・教員養成という一般的テーマから独立生成したBan.TaiオリジナルSVG。",
+      "official_image_source_url": "https://www.u-gakugei.ac.jp/",
+      "official_image_rights_note": "公式サイト掲載写真の自由転載根拠を確認できないため転載せず、独立生成イメージを使用する。",
+      "generated_at": "2026-08-16",
+      "reviewed_at": "2026-08-16"
+    },
+    "tokyo-keizai-university": {
+      "university_name": "東京経済大学",
+      "rights_status": "restricted",
+      "source_url": "https://www.tku.ac.jp/contact/media/",
+      "rights_note": "大学は公式サイトや受験生向けサイト等に掲載される画像等の転用を認めていないと明記しているため未掲載。",
+      "reviewed_at": "2026-08-16"
+    },
+    "keio-university": {
+      "university_name": "慶應義塾大学",
+      "rights_status": "permission_required",
+      "source_url": "https://www.keio.ac.jp/ja/contact-us/media-relations/",
+      "rights_note": "各種媒体への掲載目的の画像利用は広報室への相談・提供依頼が案内されているため、許可・提供前は未掲載。",
+      "reviewed_at": "2026-08-16"
+    },
+    "chuo-university": {
+      "university_name": "中央大学",
+      "rights_status": "permission_required",
+      "source_url": "https://www.chuo-u.ac.jp/aboutus/communication/hphoto/",
+      "rights_note": "白門フォトには利用条件と利用後の連絡要件があり、人物を特定できる写真は利用不可。条件を満たす画像を個別確認するまで未掲載。",
+      "reviewed_at": "2026-08-16"
+    }
+  }
+}
