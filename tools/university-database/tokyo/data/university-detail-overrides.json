@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "note": "本番復旧後の詳細データ段階同期用。元 daigaku_DB の検証済みデータから公開表示に必要な項目を順次同期する。",
+  "universities": {
+    "u000001": {
+      "university_type": "university",
+      "municipality": "文京区",
+      "headquarters": {"postal_code":"113-8654","prefecture":"東京都","municipality":"文京区","address":"東京都文京区本郷7-3-1"},
+      "official_url": "https://www.u-tokyo.ac.jp/",
+      "admissions_url": "https://www.u-tokyo.ac.jp/ja/admissions/",
+      "application_guidelines_url": "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/e01_06_01.html",
+      "brochure_request_url": "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/e01_02_03.html",
+      "open_campus_url": "https://www.u-tokyo.ac.jp/ja/admissions/undergraduate/d04_02.html",
+      "academic_field_tags": ["文学・人文","教育","法学","経済・経営・商学","理学","工学","農学","医学","薬学"],
+      "feature_summary": "幅広い学問分野を持ち、前期課程の教養教育と進学選択を通して専門分野へ進む教育体系が特徴です。",
+      "founded_year": 1877,
+      "opened_year": 1877,
+      "operator": "国立大学法人東京大学",
+      "philosophy": "東京大学憲章に基づき、自治と自律、学問の自由、世界最高水準の教育研究、国際性、研究成果の社会還元を重視します。",
+      "student_counts": {"total":28918,"undergraduate":14074,"graduate":14844,"as_of":"2025-05-01"}
+    },
+    "u000002": {
+      "university_type": "university",
+      "municipality": "府中市",
+      "headquarters": {"postal_code":"183-8534","prefecture":"東京都","municipality":"府中市","address":"東京都府中市朝日町3-11-1"},
+      "official_url": "https://www.tufs.ac.jp/",
+      "admissions_url": "https://www.tufs.ac.jp/admission/exam/",
+      "application_guidelines_url": "https://www.tufs.ac.jp/admission/exam/guideline/",
+      "brochure_request_url": "https://www.tufs.ac.jp/admission/application/",
+      "academic_field_tags": ["国際・語学","文学・人文","社会","国際関係","地域研究","日本研究"],
+      "feature_summary": "80言語を学べる教育体制と世界各地域の言語・文化・社会研究を特色とし、言語文化・国際社会・国際日本の3学部で多文化共生と地球的課題に向き合う人材を育成します。",
+      "founded_year": 1873,
+      "opened_year": 1949,
+      "operator": "国立大学法人東京外国語大学",
+      "philosophy": "世界の言語とそれを基底とする文化・社会を深く理解し、多言語多文化化する日本と世界で人々の共生に貢献することを使命とします。",
+      "student_counts": {"total":4268,"undergraduate":3766,"graduate":502,"as_of":"2026-05-01"}
+    },
+    "u000003": {
+      "university_type": "university",
+      "municipality": "小金井市",
+      "headquarters": {"postal_code":"184-8501","prefecture":"東京都","municipality":"小金井市","address":"東京都小金井市貫井北町4-1-1"},
+      "official_url": "https://www.u-gakugei.ac.jp/",
+      "admissions_url": "https://www.u-gakugei.ac.jp/nyushi/gakubu/index.html",
+      "application_guidelines_url": "https://www.u-gakugei.ac.jp/nyushi/gakubu/guidebook.html",
+      "brochure_request_url": "https://www.u-gakugei.ac.jp/02nyushi/",
+      "open_campus_url": "https://www.u-gakugei.ac.jp/03gakubu/open_campus/",
+      "academic_field_tags": ["教育"],
+      "feature_summary": "文部科学大臣指定の教員養成フラッグシップ大学として、先導的な教員養成プログラムや全国的な教員養成ネットワークづくりを進めています。",
+      "founded_year": 1873,
+      "opened_year": 1949,
+      "operator": "国立大学法人東京学芸大学"
+    }
+  }
+}
