@@ -47,7 +47,61 @@ jobs:
             await browser.close();
           })();
           EOF
-      - name: Basic DOM regression gate
+      - name: Responsive visual quality gate
+        run: |
+          node <<'EOF'
+          const { chromium } = require('playwright');
+          const url='http://127.0.0.1:4173/tools/university-database/tokyo/';
+          const approx=(a,b,t=3)=>Math.abs(a-b)<=t;
+          (async()=>{
+            const b=await chromium.launch({headless:true});
+            const cases=[
+              {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:300,heroMax:390},
+              {w:1024,h:1100,journeyCols:2,fieldCols:3,heroMin:330,heroMax:410},
+              {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:360,heroMax:620,mobile:true}
+            ];
+            for(const c of cases){
+              const p=await b.newPage({viewport:{width:c.w,height:c.h}});
+              await p.goto(url,{waitUntil:'networkidle'});
+              const data=await p.evaluate(()=>{
+                const rect=s=>document.querySelector(s)?.getBoundingClientRect();
+                const rects=s=>[...document.querySelectorAll(s)].map(el=>el.getBoundingClientRect());
+                const uniqueXs=rs=>[...new Set(rs.map(r=>Math.round(r.x)))].length;
+                const journey=rects('.ref-step');
+                const fields=rects('.discovery-card');
+                const hero=rect('.hero-main-v2');
+                const title=rect('.hero-copy h1');
+                const photoH=parseFloat(getComputedStyle(document.querySelector('.hero-main-v2'),'::before').height)||0;
+                return {
+                  scrollWidth:document.documentElement.scrollWidth,
+                  clientWidth:document.documentElement.clientWidth,
+                  journey:journey.length,
+                  fields:fields.length,
+                  journeyCols:uniqueXs(journey),
+                  fieldCols:uniqueXs(fields),
+                  heroH:hero?.height||0,
+                  titleH:title?.height||0,
+                  photoH
+                };
+              });
+              const problems=[];
+              if(data.scrollWidth>data.clientWidth+2) problems.push(`horizontal overflow ${data.scrollWidth}>${data.clientWidth}`);
+              if(data.journey!==4) problems.push(`journey count ${data.journey}`);
+              if(data.fields!==6) problems.push(`field count ${data.fields}`);
+              if(data.journeyCols!==c.journeyCols) problems.push(`journey cols ${data.journeyCols} expected ${c.journeyCols}`);
+              if(data.fieldCols!==c.fieldCols) problems.push(`field cols ${data.fieldCols} expected ${c.fieldCols}`);
+              if(data.heroH<c.heroMin||data.heroH>c.heroMax) problems.push(`hero height ${data.heroH} outside ${c.heroMin}-${c.heroMax}`);
+              if(c.mobile){
+                if(data.photoH<115) problems.push(`mobile hero photo too short ${data.photoH}`);
+                if(data.titleH>92) problems.push(`mobile title too tall ${data.titleH}`);
+              }
+              if(problems.length) throw new Error(`${c.w}px: ${problems.join('; ')} | ${JSON.stringify(data)}`);
+              await p.close();
+            }
+            await b.close();
+          })();
+          EOF
+      - name: Core DOM regression gate
         run: |
           node <<'EOF'
           const { chromium } = require('playwright');
