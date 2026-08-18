@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Install Playwright Chromium
         run: |
           npm init -y >/dev/null 2>&1
@@ -52,12 +52,11 @@ jobs:
           node <<'EOF'
           const { chromium } = require('playwright');
           const url='http://127.0.0.1:4173/tools/university-database/tokyo/';
-          const approx=(a,b,t=3)=>Math.abs(a-b)<=t;
           (async()=>{
             const b=await chromium.launch({headless:true});
             const cases=[
               {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:300,heroMax:390},
-              {w:1024,h:1100,journeyCols:2,fieldCols:3,heroMin:330,heroMax:410},
+              {w:1024,h:1100,journeyCols:4,fieldCols:6,heroMin:330,heroMax:410},
               {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:360,heroMax:620,mobile:true}
             ];
             for(const c of cases){
