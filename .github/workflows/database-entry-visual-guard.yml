@@ -53,20 +53,20 @@ jobs:
             }
             const hub = await browser.newPage({viewport:{width:1366,height:900}});
             await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            const expected = {
-              '学校DB':'/tools/school-database/',
-              '教科書会社':'/resources/textbook-plans/',
-              '大学DB・東京144':'/tools/university-database/tokyo/'
-            };
-            for (const [label,href] of Object.entries(expected)) {
-              const link = hub.getByRole('link',{name:new RegExp(label)}).first();
+            const expected = [
+              ['全国学校データベースを開く','/tools/school-database/'],
+              ['教科書会社・年間指導計画を開く','/resources/textbook-plans/'],
+              ['東京都144大学データベースを開く','/tools/university-database/tokyo/']
+            ];
+            for (const [name,href] of expected) {
+              const link = hub.getByRole('link',{name,exact:true});
               await link.waitFor();
-              assert.equal(await link.getAttribute('href'), href, `${label}: wrong href`);
+              assert.equal(await link.getAttribute('href'), href, `${name}: wrong href`);
             }
             await hub.close();
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
             await tokyo.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
-            const back = tokyo.getByRole('link',{name:/DB・情報検索.*戻る/});
+            const back = tokyo.getByRole('link',{name:'データベース・情報検索トップへ戻る',exact:true});
             await back.waitFor();
             assert.equal(await back.getAttribute('href'), '/databases/');
             const text = await tokyo.locator('body').innerText();
