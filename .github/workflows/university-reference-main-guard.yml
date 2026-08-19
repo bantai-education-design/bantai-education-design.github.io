@@ -1,0 +1,75 @@
+name: University reference main guard
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-reference-main-guard.yml'
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-reference-main-guard.yml'
+jobs:
+  visual-main-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Playwright Chromium
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Serve site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/university-main-guard.log 2>&1 &
+          sleep 2
+      - name: Verify three reference viewports
+        run: |
+          mkdir -p visual-preview
+          node <<'EOF'
+          const { chromium } = require('playwright');
+          const cases=[
+            {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:300,heroMax:390,name:'tokyo-1535x1024.png'},
+            {w:1024,h:1100,journeyCols:4,fieldCols:6,heroMin:330,heroMax:410,name:'tokyo-1024x1100.png'},
+            {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:360,heroMax:620,name:'tokyo-375x1200.png',mobile:true}
+          ];
+          (async()=>{
+            const b=await chromium.launch({headless:true});
+            for(const c of cases){
+              const p=await b.newPage({viewport:{width:c.w,height:c.h}});
+              const errors=[];
+              p.on('pageerror',e=>errors.push(String(e)));
+              await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+              const data=await p.evaluate(()=>{
+                const rs=s=>[...document.querySelectorAll(s)].map(el=>el.getBoundingClientRect());
+                const r=s=>document.querySelector(s)?.getBoundingClientRect();
+                const cols=a=>[...new Set(a.map(x=>Math.round(x.x)))].length;
+                const journey=rs('.ref-step'); const fields=rs('.discovery-card'); const hero=r('.hero-main-v2');
+                const photoH=parseFloat(getComputedStyle(document.querySelector('.hero-main-v2'),'::before').height)||0;
+                return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,journey:journey.length,fields:fields.length,journeyCols:cols(journey),fieldCols:cols(fields),heroH:hero?.height||0,photoH,grid:!!document.querySelector('#tokyo-grid'),compare:!!document.querySelector('#compare')};
+              });
+              const problems=[];
+              if(errors.length) problems.push(`page errors: ${errors.join(' | ')}`);
+              if(data.scrollWidth>data.clientWidth+2) problems.push(`horizontal overflow ${data.scrollWidth}>${data.clientWidth}`);
+              if(data.journey!==4) problems.push(`journey count ${data.journey}`);
+              if(data.fields!==6) problems.push(`field count ${data.fields}`);
+              if(data.journeyCols!==c.journeyCols) problems.push(`journey cols ${data.journeyCols}`);
+              if(data.fieldCols!==c.fieldCols) problems.push(`field cols ${data.fieldCols}`);
+              if(data.heroH<c.heroMin||data.heroH>c.heroMax) problems.push(`hero height ${data.heroH}`);
+              if(c.mobile&&data.photoH<115) problems.push(`mobile hero photo too short ${data.photoH}`);
+              if(!data.grid||!data.compare) problems.push('core DOM missing');
+              await p.screenshot({path:`visual-preview/${c.name}`,fullPage:false});
+              if(problems.length) throw new Error(`${c.w}px: ${problems.join('; ')} | ${JSON.stringify(data)}`);
+              await p.close();
+            }
+            await b.close();
+          })();
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: university-reference-main-guard
+          path: visual-preview/*.png
+          if-no-files-found: error
