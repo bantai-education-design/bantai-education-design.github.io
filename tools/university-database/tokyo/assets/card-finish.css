@@ -1,5 +1,6 @@
 .finished-university-card{overflow:hidden;border:1px solid #d9e2ea;border-radius:18px;background:#fff;box-shadow:0 10px 30px rgba(21,49,72,.08);transition:transform .18s ease,box-shadow .18s ease}
 .finished-university-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(21,49,72,.14)}
+.finished-university-card:focus-within{box-shadow:0 0 0 3px rgba(11,53,87,.16),0 16px 34px rgba(21,49,72,.14)}
 .finished-university-card .card-visual{min-height:170px}
 .finished-campus-visual{position:relative;overflow:hidden}
 .finished-campus-visual .campus-scene{position:absolute;inset:0}
@@ -17,9 +18,10 @@
 .finished-campus-visual .visual-theme{position:absolute;left:12px;bottom:10px;padding:5px 9px;border-radius:999px;background:rgba(8,32,51,.8);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.04em;backdrop-filter:blur(4px)}
 .finished-university-card .card-body{display:flex;flex-direction:column;gap:10px;padding:16px}
 .finished-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.status-pill,.place-pill{display:inline-flex;align-items:center;min-height:24px;padding:3px 8px;border-radius:999px;font-size:.62rem;font-weight:800}.status-pill.active{background:#e6f5ed;color:#1e6e49}.status-pill.stopped{background:#f7e8e8;color:#99413e}.place-pill{background:#f0f3f6;color:#526779;max-width:58%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.finished-university-card h3{margin:0;font-size:1.12rem;line-height:1.38;color:#102c43}.finished-summary{margin:0;color:#536879;font-size:.78rem;line-height:1.7;min-height:4em}
+.finished-university-card h3{margin:0;min-height:3.1em;font-size:1.12rem;line-height:1.38;color:#102c43;overflow-wrap:anywhere}.finished-summary{margin:0;color:#536879;font-size:.78rem;line-height:1.7;min-height:4em}
 .finished-facts{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:8px}.finished-facts>div{padding:9px 8px;border-radius:10px;background:#f5f8fa}.finished-facts small{display:block;color:#728596;font-size:.58rem;font-weight:700}.finished-facts strong{display:block;margin-top:2px;color:#17364f;font-size:.82rem}
-.finished-fields{display:flex;flex-wrap:wrap;gap:5px}.finished-fields span{padding:4px 7px;border-radius:999px;background:#edf3f8;color:#37546b;font-size:.61rem;font-weight:800}
+.finished-fields{display:flex;flex-wrap:wrap;gap:5px;min-height:25px}.finished-fields span{padding:4px 7px;border-radius:999px;background:#edf3f8;color:#37546b;font-size:.61rem;font-weight:800}
 .finished-academic-line{display:flex;gap:8px;flex-wrap:wrap;color:#697d8c;font-size:.62rem}.finished-academic-line span{padding-left:9px;position:relative}.finished-academic-line span:before{content:"";position:absolute;left:0;top:.5em;width:4px;height:4px;border-radius:50%;background:#d4a947}
 .finished-university-card .compare-toggle{margin-top:2px}.finished-university-card .card-actions{display:grid;grid-template-columns:1.2fr 1fr;gap:7px}.finished-university-card .card-actions .card-detail-open{grid-column:1/-1;order:-1;background:#0b3557;color:#fff;border-color:#0b3557;font-weight:900}.finished-university-card .card-actions .btn{justify-content:center;text-align:center}
-@media(max-width:560px){.finished-university-card .card-visual{min-height:190px}.finished-university-card .card-body{padding:15px}.finished-university-card h3{font-size:1.08rem}.finished-summary{min-height:0}.finished-facts{grid-template-columns:1fr 1fr 1fr}.finished-campus-visual .visual-theme{font-size:.64rem}}
+.finished-university-card a:focus-visible,.finished-university-card button:focus-visible{outline:3px solid #d4a947;outline-offset:2px}
+@media(max-width:560px){.finished-university-card .card-visual{min-height:190px}.finished-university-card .card-body{padding:15px}.finished-university-card h3{min-height:0;font-size:1.08rem}.finished-summary{min-height:0}.finished-facts{grid-template-columns:1fr 1fr 1fr}.finished-campus-visual .visual-theme{font-size:.64rem}.finished-fields{min-height:0}}
