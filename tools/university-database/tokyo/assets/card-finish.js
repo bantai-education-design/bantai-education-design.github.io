@@ -1,6 +1,7 @@
 (()=>{
 const themeNames={tech:'情報・AI・工学',health:'医療・保健・生命',arts:'芸術・デザイン',global:'国際・語学',education:'教育・子ども',science:'理学・環境',sports:'スポーツ',social:'人文・社会',classic:'総合'};
-function finishedTheme(row){return typeof themeForRow==='function'?themeForRow(row):'classic';}
+const themeRules=[['health',/医学|医療|看護|薬学|保健|歯学|鍼灸|柔道整復|生命/],['arts',/芸術|美術|音楽|デザイン|映像|演劇|舞踊|表現/],['tech',/情報|AI|工学|理工|通信|電気|電子|データ|DX|数理/],['science',/理学|農学|環境|海洋|獣医|化学|生物|科学/],['global',/国際|語学|外国語|地域研究|日本研究|グローバル/],['education',/教育|保育|幼児|子ども|児童/],['sports',/スポーツ|体育|健康スポーツ|武道|ダンス/],['social',/法学|政治|経済|経営|商学|社会|福祉|政策|観光|心理|文学|人文|宗教/]];
+function finishedTheme(row){const f=state.faculties.get(row.id)||[],g=state.graduateSchools.get(row.id)||[];const text=[...(row.academic_field_tags||[]),...f.flatMap(x=>[x.name,...(x.academic_field_tags||[])]),...g.flatMap(x=>[x.name,...(x.academic_field_tags||[])]),row.name||''].join(' ');for(const [theme,re] of themeRules)if(re.test(text))return theme;return'classic';}
 function finishedVisual(row){
   const image=typeof verifiedImage==='function'?verifiedImage(row):null;
   const label=esc(typeLabel[row.establishment_type]||'');
