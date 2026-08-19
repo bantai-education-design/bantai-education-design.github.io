@@ -1,0 +1,125 @@
+name: University reference visual preview
+on:
+  push:
+    branches: [feature/university-reference-rebuild]
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-reference-preview.yml'
+jobs:
+  visual-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Playwright Chromium
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Serve site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/university-preview-server.log 2>&1 &
+          sleep 2
+      - name: Capture reference viewports
+        run: |
+          mkdir -p visual-preview
+          node <<'EOF'
+          const { chromium } = require('playwright');
+          (async()=>{
+            const browser = await chromium.launch({headless:true});
+            const cases = [
+              [1535,1024,'tokyo-1535x1024.png'],
+              [1024,1100,'tokyo-1024x1100.png'],
+              [375,1200,'tokyo-375x1200.png']
+            ];
+            for (const [width,height,name] of cases) {
+              const page = await browser.newPage({viewport:{width,height}});
+              const errors=[];
+              page.on('pageerror', e=>errors.push(String(e)));
+              await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/', {waitUntil:'networkidle'});
+              await page.screenshot({path:`visual-preview/${name}`, fullPage:false});
+              if (errors.length) throw new Error(`${name}: ${errors.join('\n')}`);
+              await page.close();
+            }
+            await browser.close();
+          })();
+          EOF
+      - name: Responsive visual quality gate
+        run: |
+          node <<'EOF'
+          const { chromium } = require('playwright');
+          const url='http://127.0.0.1:4173/tools/university-database/tokyo/';
+          (async()=>{
+            const b=await chromium.launch({headless:true});
+            const cases=[
+              {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:300,heroMax:390},
+              {w:1024,h:1100,journeyCols:4,fieldCols:6,heroMin:330,heroMax:410},
+              {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:360,heroMax:620,mobile:true}
+            ];
+            for(const c of cases){
+              const p=await b.newPage({viewport:{width:c.w,height:c.h}});
+              await p.goto(url,{waitUntil:'networkidle'});
+              const data=await p.evaluate(()=>{
+                const rect=s=>document.querySelector(s)?.getBoundingClientRect();
+                const rects=s=>[...document.querySelectorAll(s)].map(el=>el.getBoundingClientRect());
+                const uniqueXs=rs=>[...new Set(rs.map(r=>Math.round(r.x)))].length;
+                const journey=rects('.ref-step');
+                const fields=rects('.discovery-card');
+                const hero=rect('.hero-main-v2');
+                const title=rect('.hero-copy h1');
+                const photoH=parseFloat(getComputedStyle(document.querySelector('.hero-main-v2'),'::before').height)||0;
+                return {
+                  scrollWidth:document.documentElement.scrollWidth,
+                  clientWidth:document.documentElement.clientWidth,
+                  journey:journey.length,
+                  fields:fields.length,
+                  journeyCols:uniqueXs(journey),
+                  fieldCols:uniqueXs(fields),
+                  heroH:hero?.height||0,
+                  titleH:title?.height||0,
+                  photoH
+                };
+              });
+              const problems=[];
+              if(data.scrollWidth>data.clientWidth+2) problems.push(`horizontal overflow ${data.scrollWidth}>${data.clientWidth}`);
+              if(data.journey!==4) problems.push(`journey count ${data.journey}`);
+              if(data.fields!==6) problems.push(`field count ${data.fields}`);
+              if(data.journeyCols!==c.journeyCols) problems.push(`journey cols ${data.journeyCols} expected ${c.journeyCols}`);
+              if(data.fieldCols!==c.fieldCols) problems.push(`field cols ${data.fieldCols} expected ${c.fieldCols}`);
+              if(data.heroH<c.heroMin||data.heroH>c.heroMax) problems.push(`hero height ${data.heroH} outside ${c.heroMin}-${c.heroMax}`);
+              if(c.mobile){
+                if(data.photoH<115) problems.push(`mobile hero photo too short ${data.photoH}`);
+                if(data.titleH>92) problems.push(`mobile title too tall ${data.titleH}`);
+              }
+              if(problems.length) throw new Error(`${c.w}px: ${problems.join('; ')} | ${JSON.stringify(data)}`);
+              await p.close();
+            }
+            await b.close();
+          })();
+          EOF
+      - name: Core DOM regression gate
+        run: |
+          node <<'EOF'
+          const { chromium } = require('playwright');
+          (async()=>{
+            const b=await chromium.launch({headless:true});
+            const p=await b.newPage({viewport:{width:1535,height:1024}});
+            await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            const checks={
+              journey: await p.locator('.ref-step').count(),
+              fields: await p.locator('.discovery-card').count(),
+              grid: await p.locator('#tokyo-grid').count(),
+              compare: await p.locator('#compare').count()
+            };
+            if(checks.journey!==4 || checks.fields!==6 || checks.grid!==1 || checks.compare!==1) throw new Error(JSON.stringify(checks));
+            await b.close();
+          })();
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: university-reference-preview
+          path: visual-preview/*.png
+          if-no-files-found: error
