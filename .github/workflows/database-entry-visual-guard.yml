@@ -1,0 +1,83 @@
+name: Database entry visual guard
+on:
+  pull_request:
+    paths:
+      - 'databases/**'
+      - 'tools/university-database/**'
+      - '.github/workflows/database-entry-visual-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'databases/**'
+      - 'tools/university-database/**'
+      - '.github/workflows/database-entry-visual-guard.yml'
+
+jobs:
+  visual-entry-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
+          sleep 2
+      - name: Verify navigation and capture screenshots
+        run: |
+          mkdir -p visual-preview
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert/strict');
+          (async()=>{
+            const browser = await chromium.launch({headless:true});
+            const pages = [
+              ['databases','/databases/'],
+              ['university-portal','/tools/university-database/'],
+              ['tokyo','/tools/university-database/tokyo/']
+            ];
+            for (const [name,path] of pages) {
+              for (const [suffix,width,height] of [['pc',1366,900],['mobile',375,900]]) {
+                const page = await browser.newPage({viewport:{width,height}});
+                await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
+                assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= window.innerWidth + 1), true, `${name}-${suffix}: horizontal overflow`);
+                await page.screenshot({path:`visual-preview/${name}-${suffix}.png`,fullPage:false});
+                await page.close();
+              }
+            }
+            const hub = await browser.newPage({viewport:{width:1366,height:900}});
+            await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
+            const expected = {
+              '学校DB':'/tools/school-database/',
+              '教科書会社':'/resources/textbook-plans/',
+              '大学DB・東京144':'/tools/university-database/tokyo/'
+            };
+            for (const [label,href] of Object.entries(expected)) {
+              const link = hub.getByRole('link',{name:new RegExp(label)}).first();
+              await link.waitFor();
+              assert.equal(await link.getAttribute('href'), href, `${label}: wrong href`);
+            }
+            await hub.close();
+            const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
+            await tokyo.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            const back = tokyo.getByRole('link',{name:/DB・情報検索.*戻る/});
+            await back.waitFor();
+            assert.equal(await back.getAttribute('href'), '/databases/');
+            const text = await tokyo.locator('body').innerText();
+            assert.equal(text.includes('公開準備中'), false, 'Tokyo page still contains pre-release wording');
+            assert.equal(text.includes('144'), true, 'Tokyo page should show 144 universities');
+            await tokyo.close();
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: database-entry-visual-preview
+          path: visual-preview/*.png
