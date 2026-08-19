@@ -54,7 +54,10 @@ jobs:
                 const unfinished=cards.filter(card=>/準備中|確認中/.test(card.innerText)).length;
                 const visualCount=cards.filter(card=>card.querySelector('.card-visual')).length;
                 const actionCount=cards.filter(card=>card.querySelector('.compare-toggle')&&card.querySelector('.map-card-link')).length;
-                return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,journey:journey.length,fields:fields.length,journeyCols:cols(journey),fieldCols:cols(fields),heroH:hero?.height||0,photoH,grid:!!document.querySelector('#tokyo-grid'),compare:!!document.querySelector('#compare'),cards:cards.length,unfinished,visualCount,actionCount};
+                const detailCount=cards.filter(card=>card.querySelector('.card-detail-open[href^="detail.html?id="]')&&card.dataset.detailUrl?.startsWith('detail.html?id=')).length;
+                const officialCount=cards.filter(card=>card.querySelector('.official-card-link[href]')).length;
+                const admissionsCount=cards.filter(card=>card.querySelector('.admissions-card-link[href]')).length;
+                return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,journey:journey.length,fields:fields.length,journeyCols:cols(journey),fieldCols:cols(fields),heroH:hero?.height||0,photoH,grid:!!document.querySelector('#tokyo-grid'),compare:!!document.querySelector('#compare'),cards:cards.length,unfinished,visualCount,actionCount,detailCount,officialCount,admissionsCount};
               });
               const problems=[];
               if(errors.length) problems.push(`page errors: ${errors.join(' | ')}`);
@@ -69,11 +72,28 @@ jobs:
               if(data.cards!==144) problems.push(`finished card count ${data.cards}`);
               if(data.visualCount!==144) problems.push(`card visual count ${data.visualCount}`);
               if(data.actionCount!==144) problems.push(`card action count ${data.actionCount}`);
+              if(data.detailCount!==144) problems.push(`detail link count ${data.detailCount}`);
+              if(data.officialCount!==144) problems.push(`official link count ${data.officialCount}`);
+              if(data.admissionsCount!==144) problems.push(`admissions link count ${data.admissionsCount}`);
               if(data.unfinished!==0) problems.push(`unfinished wording on ${data.unfinished} cards`);
               await p.screenshot({path:`visual-preview/${c.name}`,fullPage:false});
               if(problems.length) throw new Error(`${c.w}px: ${problems.join('; ')} | ${JSON.stringify(data)}`);
               await p.close();
             }
+            const detail=await b.newPage({viewport:{width:1024,height:1000}});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await detail.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            const href=await detail.locator('.card-detail-open').first().getAttribute('href');
+            if(!href) throw new Error('first detail href missing');
+            await detail.goto(`http://127.0.0.1:4173/tools/university-database/tokyo/${href}`,{waitUntil:'networkidle'});
+            await detail.waitForFunction(()=>document.querySelector('.detail-hero h1')?.textContent?.trim().length>0,{timeout:15000});
+            const detailData=await detail.evaluate(()=>({
+              title:document.querySelector('.detail-hero h1')?.textContent?.trim()||'',
+              back:document.querySelector('.detail-back')?.getAttribute('href')||'',
+              official:!!document.querySelector('.detail-actions a[href][target="_blank"]')
+            }));
+            if(!detailData.title||detailData.back!=='index.html'||!detailData.official) throw new Error(`detail page incomplete ${JSON.stringify(detailData)}`);
+            await detail.close();
             await b.close();
           })();
           EOF
