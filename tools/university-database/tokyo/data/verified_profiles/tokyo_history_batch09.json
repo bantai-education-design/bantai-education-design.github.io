@@ -1,0 +1,83 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 09",
+  "records": {
+    "u000050": {
+      "founded_year": 1942,
+      "opened_year": 1950,
+      "founder": "松前重義",
+      "operator": "学校法人東海大学",
+      "university_goal": "幅広い視野と柔軟な創造性を備え、自ら考え、多様な人々と協働しながら、明日の歴史を担う強い使命感と豊かな人間性を持つ人材を育成することを目指します。",
+      "philosophy": "創立者松前重義の教育思想を基盤に、思想・体躯・智能・希望を育み、人類の幸福と平和に資する『調和のとれた文明社会』の建設を目指します。",
+      "sources": [
+        {"source_name":"東海大学 沿革","source_url":"https://www.u-tokai.ac.jp/about/philosophy-history/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東海大学 建学の精神","source_url":"https://www.u-tokai.ac.jp/about/philosophy-history/spirit/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東海大学 理念・憲章","source_url":"https://www.u-tokai.ac.jp/about/philosophy-history/concept/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000051": {
+      "founded_year": 1916,
+      "opened_year": 1946,
+      "founder": "高橋琢也ほか有志・学生（東京医学講習所設立）",
+      "operator": "学校法人東京医科大学",
+      "university_goal": "高い倫理観と医学・医療の専門性を備え、人間性豊かで人類の福祉と健康に貢献できる医療人を育成することを目指します。",
+      "philosophy": "校是『正義・友愛・奉仕』と自主自学の精神を重んじ、患者中心の医療と医療人としての不断の自己研鑽を教育の基盤とします。",
+      "sources": [
+        {"source_name":"東京医科大学病院 沿革","source_url":"https://hospinfo.tokyo-med.ac.jp/info/enkaku.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京医科大学病院 理念・基本方針","source_url":"https://hospinfo.tokyo-med.ac.jp/info/rinen.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000053": {
+      "founded_year": 1923,
+      "opened_year": 1963,
+      "founder": "大江スミ",
+      "operator": "学校法人東京家政学院",
+      "university_goal": "知・徳・技のバランスを基礎に、生活者の視点から家庭・地域・社会の課題を捉え、人々の生活の質と社会の発展に貢献できる人材を育成することを目指します。",
+      "philosophy": "Knowledge・Virtue・Artを柱とするKVA精神と、大江スミが掲げた『人々のしあわせにつながる家政学』を教育の基盤としています。",
+      "sources": [
+        {"source_name":"学校法人東京家政学院 沿革","source_url":"https://www.kasei-gakuin.ac.jp/schoolcorporation/enkaku/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京家政学院大学 教育理念","source_url":"https://www.kasei-gakuin.ac.jp/aboutus/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京家政学院大学 教育目標","source_url":"https://www.kasei-gakuin.ac.jp/aboutus/indicator/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000058": {
+      "founded_year": 1907,
+      "opened_year": 1949,
+      "founder": "扇本真吉・廣田精一",
+      "operator": "学校法人東京電機大学",
+      "university_goal": "科学技術を実社会で活用し、人と社会の未来に貢献できる技術者を育成するとともに、研究成果を社会へ還元することを目指します。",
+      "philosophy": "建学の精神『実学尊重』と、初代学長丹羽保次郎の教育・研究理念『技術は人なり』を基盤に、人格と実践力を備えた技術者教育を重視します。",
+      "sources": [
+        {"source_name":"東京電機大学 電機学校創立者紹介","source_url":"https://www.dendai.ac.jp/about/tdu/history/founder.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京電機大学 建学の精神と教育・研究理念","source_url":"https://www.dendai.ac.jp/about/tdu/mission/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京電機大学 大学の沿革","source_url":"https://www.dendai.ac.jp/about/tdu/history/chronology.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000059": {
+      "founded_year": 1891,
+      "opened_year": 1925,
+      "founder": "榎本武揚",
+      "operator": "学校法人東京農業大学",
+      "university_goal": "農学を基盤に、食料・環境・健康・資源などの課題へ実践的に取り組み、国内外の地域と産業の発展に貢献できる人材を育成することを目指します。",
+      "philosophy": "建学の精神『人物を畑に還す』と教育研究理念『実学主義』を掲げ、現場で課題を発見し科学的に実証する実践的な農学教育を重視します。",
+      "sources": [
+        {"source_name":"学校法人東京農業大学 沿革","source_url":"https://www.nodai.ac.jp/hojin/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京農業大学 地域連携・建学の精神","source_url":"https://www.nodai.ac.jp/about/activities/cooperation/concept/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000061": {
+      "founded_year": 1881,
+      "opened_year": 1949,
+      "founder": "東京物理学講習所を創設した21名の理学士",
+      "operator": "学校法人東京理科大学",
+      "university_goal": "理学・薬学・工学などの教育研究を通して、人格と応用力を備えた有為な人材を育成し、科学技術の発展と文化・社会の進展に寄与することを目指します。",
+      "philosophy": "建学の精神『理学の普及を以て国運発展の基礎とする』と、教育研究理念『自然・人間・社会とこれらの調和的発展のための科学と技術の創造』を掲げています。",
+      "sources": [
+        {"source_name":"東京理科大学 建学の精神・教育研究理念","source_url":"https://www.tus.ac.jp/about/university/vision/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京理科大学 沿革","source_url":"https://www.tus.ac.jp/about/university/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京理科大学 理念・目的・目標・方針","source_url":"https://www.tus.ac.jp/about/university/vision/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
