@@ -71,7 +71,7 @@ jobs:
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
             await tokyo.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await tokyo.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            const topButton=tokyo.getByRole('button',{name:'ページ上部へ戻る',exact:true});
+            const topButton=tokyo.locator('button[aria-label="ページ上部へ戻る"]').first();
             await topButton.waitFor({state:'attached'});
             assert.equal(await topButton.evaluate(el=>getComputedStyle(el).visibility),'hidden','top button should start hidden');
             await tokyo.evaluate(()=>window.scrollTo(0,Math.max(900,document.documentElement.scrollHeight*0.45)));
