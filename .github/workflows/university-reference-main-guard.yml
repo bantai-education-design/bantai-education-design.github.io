@@ -92,7 +92,7 @@ jobs:
               back:document.querySelector('.detail-back')?.getAttribute('href')||'',
               official:!!document.querySelector('.detail-actions a[href][target="_blank"]')
             }));
-            if(!detailData.title||detailData.back!=='index.html'||!detailData.official) throw new Error(`detail page incomplete ${JSON.stringify(detailData)}`);
+            if(!detailData.title||!['./','index.html'].includes(detailData.back)||!detailData.official) throw new Error(`detail page incomplete ${JSON.stringify(detailData)}`);
             await detail.close();
             await b.close();
           })();

@@ -56,21 +56,22 @@ jobs:
             const hub = await browser.newPage({viewport:{width:1366,height:900}});
             await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
             const expected = [
-              ['全国学校データベースを開く','/tools/school-database/'],
-              ['教科書会社・年間指導計画を開く','/resources/textbook-plans/'],
-              ['東京都144大学データベースを開く','/tools/university-database/tokyo/']
+              ['学校を探す','/tools/school-database/'],
+              ['学びの流れを見る','/resources/textbook-plans/'],
+              ['未来の学びを探す','/tools/university-database/tokyo/']
             ];
-            for (const [name,href] of expected) {
-              const links = hub.getByRole('link',{name,exact:true});
-              assert.ok(await links.count() >= 1, `${name}: missing`);
-              assert.equal(await links.first().getAttribute('href'), href, `${name}: wrong href`);
+            for (const [heading,href] of expected) {
+              const card = hub.locator('.db-card').filter({hasText:heading}).first();
+              assert.ok(await card.count() >= 1, `${heading}: missing`);
+              assert.equal(await card.getAttribute('href'), href, `${heading}: wrong href`);
             }
-            assert.equal(await hub.locator('.database-scene-card').count(),3,'visual scene cards should be 3');
+            assert.equal(await hub.locator('.db-card').count(),3,'visual scene cards should be 3');
             await hub.close();
 
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
             await tokyo.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
-            const topButton=tokyo.getByRole('button',{name:'ページ上部へ戻る',exact:true});
+            await tokyo.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            const topButton=tokyo.locator('button[aria-label="ページ上部へ戻る"]').first();
             await topButton.waitFor({state:'attached'});
             assert.equal(await topButton.evaluate(el=>getComputedStyle(el).visibility),'hidden','top button should start hidden');
             await tokyo.evaluate(()=>window.scrollTo(0,Math.max(900,document.documentElement.scrollHeight*0.45)));
