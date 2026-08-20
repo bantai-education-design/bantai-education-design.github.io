@@ -1,0 +1,70 @@
+{
+  "verified_at":"2026-08-15",
+  "prefecture":"東京都",
+  "scope":"Tokyo completion-priority history and philosophy batch 25",
+  "records":{
+    "u000121":{
+      "founded_year":1903,
+      "opened_year":2001,
+      "founder":"嘉悦孝",
+      "operator":"学校法人嘉悦学園",
+      "university_goal":"実学・実務・実践を総合した創造的実学教育を通じて、豊かな公共精神と高度なマネジメント能力を備え、より良い社会の実現に貢献できる人材を育成します。",
+      "philosophy":"校訓『怒るな働け』を建学の精神の核とし、人間の和と平和、社会に必要な価値を生み出す実学を重視します。",
+      "sources":[
+        {"source_name":"嘉悦大学 嘉悦の歴史","source_url":"https://www.kaetsu.ac.jp/about/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"嘉悦学園 建学の精神","source_url":"https://gakuen.kaetsu.ac.jp/kengaku/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"嘉悦大学 教育研究上の目的","source_url":"https://www.kaetsu.ac.jp/about/disclosure_purpose.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000122":{
+      "founded_year":1943,
+      "opened_year":2002,
+      "founder":"高田勇道",
+      "operator":"学校法人東京富士大学",
+      "university_goal":"経営学を中心とする実践的教育を通じて、新しい時代を切り拓き、社会と組織の課題に主体的に取り組む人材を育成します。",
+      "philosophy":"『人道による世界平和』を目指し、大愛の涵養、正義の顕揚、文化の向上を建学の趣旨として、人間性と実践力を備えた人材育成を重視します。",
+      "sources":[
+        {"source_name":"東京富士大学 沿革","source_url":"https://www.fuji.ac.jp/guidance/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京富士大学 大学概要・建学の趣旨","source_url":"https://www.fuji.ac.jp/guidance/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000124":{
+      "founded_year":1994,
+      "opened_year":2005,
+      "founder":"杉山知之",
+      "operator":"デジタルハリウッド株式会社",
+      "university_goal":"クリエイティビティ、ICT、英語を教育の基軸に、判断力・創造力・コミュニケーション力を備え、国際社会と新しい文化・産業の創造に貢献できる人材を育成します。",
+      "philosophy":"知の創造と伝授を通じて人類の文化と社会の発展に寄与することを建学の精神とし、デジタル技術と創造的表現を融合した教育研究を重視します。",
+      "sources":[
+        {"source_name":"デジタルハリウッド大学 建学の精神","source_url":"https://www.dhw.ac.jp/feature/about/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"デジタルハリウッド大学 創立者メッセージ","source_url":"https://www.dhw.ac.jp/feature/founder/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"デジタルハリウッド大学 大学概要と組織図","source_url":"https://www.dhw.ac.jp/feature/system/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000125":{
+      "founded_year":1942,
+      "opened_year":2005,
+      "founder":"小松謙助",
+      "operator":"学校法人白梅学園",
+      "university_goal":"ヒューマニズムの精神に基づき、子どもの成長・発達と生活、教育・保育・福祉・心理を幅広く理解し、子どもとともに新しい社会を築く専門的人材を育成します。",
+      "philosophy":"ヒューマニズムを建学の理念とし、人間を尊重し、子どもの権利と発達、地域共生を支える教育・保育・福祉の実践を重視します。",
+      "sources":[
+        {"source_name":"白梅学園 成り立ちと歩み","source_url":"https://www.shiraume.ac.jp/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"白梅学園大学 沿革","source_url":"https://daigaku.shiraume.ac.jp/guide/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"白梅学園大学 子ども学部の教育目標とポリシー","source_url":"https://daigaku.shiraume.ac.jp/university/child-studies/c-about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000127":{
+      "founded_year":1954,
+      "opened_year":2005,
+      "founder":"渡邉正助",
+      "operator":"学校法人東京聖栄大学",
+      "university_goal":"食と栄養に関する高度な専門知識と実践技術を身につけ、健康の維持増進、食品産業、地域社会に貢献できる自立した職業人を育成します。",
+      "philosophy":"『自立できる知識と技術を育み、強い向上心と真摯な行動力をそなえた人材の育成』を建学の精神・基本理念とし、食と栄養の実践教育を重視します。",
+      "sources":[
+        {"source_name":"東京聖栄大学 本学の概要・建学の精神","source_url":"https://www.tsc-05.ac.jp/about_us/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京聖栄大学 健康栄養学部","source_url":"https://www.tsc-05.ac.jp/faculty/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
