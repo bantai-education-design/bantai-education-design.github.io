@@ -61,11 +61,21 @@ jobs:
             await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
             const art = hub.locator('#database-gateway-art');
             await art.waitFor({state:'attached'});
+            assert.equal(await art.getAttribute('src'), '/assets/images/databases-gateway-hero.jpg', 'gateway artwork should use the official hero asset path');
             const imageState = await art.evaluate(img=>({complete:img.complete,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
             assert.equal(imageState.complete,true,'gateway artwork did not finish loading');
-            assert.ok(imageState.naturalWidth >= 1500,`gateway artwork width invalid: ${imageState.naturalWidth}`);
-            assert.ok(imageState.naturalHeight >= 850,`gateway artwork height invalid: ${imageState.naturalHeight}`);
+            assert.equal(imageState.naturalWidth,1536,`gateway artwork width invalid: ${imageState.naturalWidth}`);
+            assert.equal(imageState.naturalHeight,503,`gateway artwork height invalid: ${imageState.naturalHeight}`);
             assert.equal(await hub.locator('.db-hotspot').count(),6,'gateway artwork should have six interactive hotspots');
+            const artBox = await art.boundingBox();
+            assert.ok(artBox && artBox.width > 1000 && artBox.height > 300, 'gateway artwork render box is too small');
+            for (const hotspot of await hub.locator('.db-hotspot').all()) {
+              const box = await hotspot.boundingBox();
+              assert.ok(box && box.width > 8 && box.height > 8, 'gateway hotspot has no usable area');
+              assert.ok(box.x >= artBox.x - 1 && box.y >= artBox.y - 1, 'gateway hotspot starts outside artwork');
+              assert.ok(box.x + box.width <= artBox.x + artBox.width + 1, 'gateway hotspot extends beyond artwork width');
+              assert.ok(box.y + box.height <= artBox.y + artBox.height + 1, 'gateway hotspot extends beyond artwork height');
+            }
             const expected = [
               ['学校を探す','/tools/school-database/'],
               ['学びの流れを見る','/resources/textbook-plans/'],
