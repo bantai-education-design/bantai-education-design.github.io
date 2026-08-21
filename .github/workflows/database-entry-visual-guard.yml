@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'databases/**'
+      - 'assets/images/databases-gateway-*.jpg'
+      - 'assets/images/databases-gateway-*.png'
       - 'assets/css/database-hub-v2.css'
       - 'tools/university-database/**'
       - '.github/workflows/database-entry-visual-guard.yml'
@@ -10,6 +12,8 @@ on:
     branches: [main]
     paths:
       - 'databases/**'
+      - 'assets/images/databases-gateway-*.jpg'
+      - 'assets/images/databases-gateway-*.png'
       - 'assets/css/database-hub-v2.css'
       - 'tools/university-database/**'
       - '.github/workflows/database-entry-visual-guard.yml'
@@ -55,6 +59,13 @@ jobs:
             }
             const hub = await browser.newPage({viewport:{width:1366,height:900}});
             await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
+            const art = hub.locator('#database-gateway-art');
+            await art.waitFor({state:'attached'});
+            const imageState = await art.evaluate(img=>({complete:img.complete,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
+            assert.equal(imageState.complete,true,'gateway artwork did not finish loading');
+            assert.ok(imageState.naturalWidth >= 1500,`gateway artwork width invalid: ${imageState.naturalWidth}`);
+            assert.ok(imageState.naturalHeight >= 850,`gateway artwork height invalid: ${imageState.naturalHeight}`);
+            assert.equal(await hub.locator('.db-hotspot').count(),6,'gateway artwork should have six interactive hotspots');
             const expected = [
               ['学校を探す','/tools/school-database/'],
               ['学びの流れを見る','/resources/textbook-plans/'],
@@ -65,7 +76,7 @@ jobs:
               assert.ok(await card.count() >= 1, `${heading}: missing`);
               assert.equal(await card.getAttribute('href'), href, `${heading}: wrong href`);
             }
-            assert.equal(await hub.locator('.db-card').count(),3,'visual scene cards should be 3');
+            assert.equal(await hub.locator('.db-card').count(),3,'fallback database cards should be 3');
             await hub.close();
 
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
