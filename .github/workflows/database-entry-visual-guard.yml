@@ -75,6 +75,12 @@ jobs:
               assert.ok(box.x >= artBox.x - 1 && box.y >= artBox.y - 1, 'gateway hotspot starts outside artwork');
               assert.ok(box.x + box.width <= artBox.x + artBox.width + 1, 'gateway hotspot extends beyond artwork width');
               assert.ok(box.y + box.height <= artBox.y + artBox.height + 1, 'gateway hotspot extends beyond artwork height');
+              const center = {x:box.x + box.width/2, y:box.y + box.height/2};
+              const hit = await hub.evaluate(({x,y})=>{
+                const el=document.elementFromPoint(x,y);
+                return !!el?.classList?.contains('db-hotspot');
+              }, center);
+              assert.equal(hit,true,'gateway hotspot center is not clickable');
             }
             const expected = [
               ['学校を探す','/tools/school-database/'],
@@ -87,6 +93,8 @@ jobs:
               assert.equal(await card.getAttribute('href'), href, `${heading}: wrong href`);
             }
             assert.equal(await hub.locator('.db-card').count(),3,'fallback database cards should be 3');
+            await hub.addStyleTag({content:'.db-hotspot{outline:3px solid #ff2d55!important;background:rgba(255,45,85,.08)!important;box-shadow:none!important}'});
+            await hub.locator('.db-artboard').screenshot({path:'visual-preview/databases-hotspots-pc.png'});
             await hub.close();
 
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
