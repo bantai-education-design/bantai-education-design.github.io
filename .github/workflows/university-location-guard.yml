@@ -27,17 +27,20 @@ jobs:
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
-          const path='tools/university-database/tokyo/data/tokyo_locations.json';
-          const rows=JSON.parse(fs.readFileSync(path,'utf8'));
-          assert.equal(rows.length,144,'Tokyo location overlay must contain 144 universities');
+          const shardPaths=Array.from({length:6},(_,i)=>`tools/university-database/tokyo/data/tokyo_locations_${String(i+1).padStart(2,'0')}.json`);
+          const shards=shardPaths.map(path=>JSON.parse(fs.readFileSync(path,'utf8')));
+          shards.forEach((rows,i)=>assert.equal(rows.length,24,`${shardPaths[i]} must contain 24 universities`));
+          const rows=shards.flat();
+          assert.equal(rows.length,144,'Tokyo location shards must contain 144 universities');
           assert.equal(new Set(rows.map(x=>x.id)).size,144,'Tokyo location ids must be unique');
-          const incomplete=rows.filter(x=>!x.id||!x.name||!x.municipality||!x.headquarters?.address);
-          assert.deepEqual(incomplete,[],'Every university needs municipality and headquarters address');
+          const incomplete=rows.filter(x=>!x.id||!x.name||!x.municipality||!x.headquarters?.address||!x.headquarters?.postal_code);
+          assert.deepEqual(incomplete,[],'Every university needs municipality, headquarters address, and postal code');
           const wrongPref=rows.filter(x=>x.headquarters?.prefecture!=='東京都');
           assert.deepEqual(wrongPref,[],'Every headquarters must be in Tokyo');
           const postal=rows.filter(x=>x.headquarters?.postal_code);
+          assert.equal(postal.length,144,'Every Tokyo university must have a source-backed postal code');
           for(const row of postal)assert.match(row.headquarters.postal_code,/^\d{3}-\d{4}$/,`${row.id}: postal format`);
-          console.log(`locations ${rows.length}/144; source-backed postal codes ${postal.length}/144`);
+          console.log(`locations ${rows.length}/144; verified postal codes ${postal.length}/144; shards ${shards.length}/6`);
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -81,12 +84,23 @@ jobs:
             await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000020',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
             const detailText=await detail.locator('body').innerText();
-            assert.ok(detailText.includes('東京都渋谷区渋谷4－4－25'),detailText);
+            assert.ok(detailText.includes('〒150-8366 東京都渋谷区渋谷4－4－25'),detailText);
             assert.ok(!detailText.includes('所在地確認中'),detailText);
             const detailMap=decodeURIComponent(await detail.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
             assert.ok(detailMap.includes('青山学院大学'),detailMap);
             assert.ok(detailMap.includes('東京都渋谷区渋谷4－4－25'),detailMap);
+            assert.ok(!detailMap.includes('150-8366'),'Google Maps query must use university name + verified headquarters address only');
             await detail.close();
+
+            const last=await browser.newPage({viewport:{width:1366,height:900}});
+            await last.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000144',{waitUntil:'networkidle'});
+            await last.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
+            const lastText=await last.locator('body').innerText();
+            assert.ok(lastText.includes('〒132-0034 東京都江戸川区小松川2-7-1'),lastText);
+            const lastMap=decodeURIComponent(await last.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
+            assert.ok(lastMap.includes('東京情報デザイン専門職大学'),lastMap);
+            assert.ok(lastMap.includes('東京都江戸川区小松川2-7-1'),lastMap);
+            await last.close();
             await browser.close();
           })().catch(err=>{console.error(err);process.exit(1)});
           NODE
