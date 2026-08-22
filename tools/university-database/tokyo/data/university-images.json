@@ -81,6 +81,20 @@
       "alt": "上智大学四谷キャンパスの正門",
       "reviewed_at": "2026-08-22"
     },
+    "u000048": {
+      "university_id": "u000048",
+      "university_name": "多摩美術大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Tama_Art_University_Tokyo_Hachioji_Campus_2012.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tama_Art_University_Tokyo_Hachioji_Campus_2012.JPG",
+      "source_label": "写真・ライセンス",
+      "creator": "Lauffenamneckar",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Lauffenamneckar、投稿者自身の作品、CC BY-SA 3.0を確認。八王子キャンパス正門の実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "多摩美術大学八王子キャンパス正門",
+      "reviewed_at": "2026-08-22"
+    },
     "u000049": {
       "university_id": "u000049",
       "university_name": "中央大学",
@@ -96,6 +110,34 @@
       "alt": "中央大学多摩キャンパス東門を中央大学・明星大学駅側から見た景観",
       "official_image_source_url": "https://www.chuo-u.ac.jp/aboutus/communication/hphoto/",
       "official_image_rights_note": "大学公式写真は利用条件と連絡要件があるため使用しない。",
+      "reviewed_at": "2026-08-22"
+    },
+    "u000056": {
+      "university_id": "u000056",
+      "university_name": "東京女子大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tokyo_Woman%27s_Christian_University_01.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tokyo_Woman%27s_Christian_University_01.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 4.0を確認。善福寺キャンパスの実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "東京女子大学善福寺キャンパス",
+      "reviewed_at": "2026-08-22"
+    },
+    "u000061": {
+      "university_id": "u000061",
+      "university_name": "東京理科大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Tokyo_University_of_Science%2C_Kagurazaka_campus_Kudan.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tokyo_University_of_Science,_Kagurazaka_campus_Kudan.JPG",
+      "source_label": "写真・ライセンス",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 3.0を確認。神楽坂キャンパス九段校舎の実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "東京理科大学神楽坂キャンパス九段校舎",
       "reviewed_at": "2026-08-22"
     },
     "u000075": {
