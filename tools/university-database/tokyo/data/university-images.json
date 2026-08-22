@@ -3,10 +3,29 @@
   "policy": {
     "purpose": "東京都大学DBのカード画像を権利・出典確認付きで管理する。",
     "default_status": "unverified",
-    "allowed_status": ["verified", "unverified", "restricted", "permission_required", "not_available", "ai_original"],
+    "allowed_status": [
+      "verified",
+      "unverified",
+      "restricted",
+      "permission_required",
+      "not_available",
+      "ai_original"
+    ],
     "publish_rule": "権利確認済み実画像（verified）または本DB向けに独立生成したオリジナルAI画像（ai_original）のみ公開カードへ表示する。",
-    "required_fields_when_verified": ["university_id", "image_url", "source_url", "rights_note", "alt"],
-    "required_fields_when_ai_original": ["university_id", "image_url", "generation_note", "alt", "label"],
+    "required_fields_when_verified": [
+      "university_id",
+      "image_url",
+      "source_url",
+      "rights_note",
+      "alt"
+    ],
+    "required_fields_when_ai_original": [
+      "university_id",
+      "image_url",
+      "generation_note",
+      "alt",
+      "label"
+    ],
     "review_rule": "大学公式サイト掲載画像であっても転載可とはみなさず、利用条件を確認する。人物を特定できる実写真は原則採用しない。Wikimedia Commons等の第三者写真は、個別ファイルページで作者・ライセンス・再利用条件を確認してから採用する。",
     "ai_original_rule": "大学公式写真・第三者写真を入力素材や構図参照として使用せず、実在人物に似せない架空人物・架空キャンパスを独立生成する。大学ロゴ・校章・商標・固有建築の忠実再現は行わない。公開時は『イメージ画像（AI生成）』と明示し、実際の学生・キャンパス写真ではないことが分かるようにする。",
     "ai_review_rule": "生成物は公開前に既存写真・大学ロゴ・校章・著名建築との過度な類似がないか目視確認する。生成プロンプト・生成日・確認日を記録し、生成過程を追跡できるようにする。",
@@ -86,6 +105,20 @@
       "alt": "青山学院大学青山キャンパス",
       "reviewed_at": "2026-08-22"
     },
+    "u000022": {
+      "university_id": "u000022",
+      "university_name": "学習院大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Gakushuin_University_Hyakunen_Kaikan_and_ground.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gakushuin_University_Hyakunen_Kaikan_and_ground.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Gotanda",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Gotanda、投稿者自身の作品、CC BY-SA 4.0を確認。学習院大学キャンパスの百周年記念会館とグラウンドの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "学習院大学キャンパスの百周年記念会館とグラウンド",
+      "reviewed_at": "2026-08-23"
+    },
     "u000025": {
       "university_id": "u000025",
       "university_name": "慶應義塾大学",
@@ -103,6 +136,20 @@
       "official_image_rights_note": "大学公式画像は広報室への相談・提供依頼が案内されているため転載しない。",
       "reviewed_at": "2026-08-22"
     },
+    "u000029": {
+      "university_id": "u000029",
+      "university_name": "駒澤大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Komazawa_University.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Komazawa_University.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Sevent+heaven",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで駒澤大学正門写真がCC0 1.0で公開されていることを確認。作者表記と原画像、再利用条件を追跡できる状態で掲載する。",
+      "alt": "駒澤大学正門",
+      "reviewed_at": "2026-08-23"
+    },
     "u000033": {
       "university_id": "u000033",
       "university_name": "上智大学",
@@ -116,6 +163,20 @@
       "rights_note": "Wikimedia Commonsのファイルページで作者John Paul Antes、CC BY-SA 3.0、投稿者自身の作品であることを確認。上智大学正門の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
       "alt": "上智大学四谷キャンパスの正門",
       "reviewed_at": "2026-08-22"
+    },
+    "u000043": {
+      "university_id": "u000043",
+      "university_name": "専修大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Senshu_University_Kanda_Campus.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Senshu_University_Kanda_Campus.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Sinet",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Sinet、CC BY-SA 3.0を確認。東京都千代田区の専修大学神田キャンパス実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "専修大学神田キャンパス",
+      "reviewed_at": "2026-08-23"
     },
     "u000048": {
       "university_id": "u000048",
@@ -190,6 +251,20 @@
       "alt": "東京理科大学神楽坂キャンパス九段校舎",
       "reviewed_at": "2026-08-22"
     },
+    "u000063": {
+      "university_id": "u000063",
+      "university_name": "東洋大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Toyo_University_Hakusan_Campus.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toyo_University_Hakusan_Campus.png",
+      "source_label": "写真・ライセンス",
+      "creator": "36 Komaken",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者36 Komaken、投稿者自身の作品、CC BY-SA 4.0を確認。東洋大学白山キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "東洋大学白山キャンパス",
+      "reviewed_at": "2026-08-23"
+    },
     "u000075": {
       "university_id": "u000075",
       "university_name": "法政大学",
@@ -245,6 +320,34 @@
       "rights_note": "Wikimedia Commonsのファイルページで作者Syohei Arai、CC BY-SA 4.0を確認。大隈講堂の実景写真として、作者・ライセンス・出典を追跡できる状態で掲載する。",
       "alt": "早稲田大学の大隈講堂",
       "reviewed_at": "2026-08-22"
+    },
+    "u000097": {
+      "university_id": "u000097",
+      "university_name": "国際基督教大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/International_Christian_University%2C_Mitaka%2C_Tokyo%2C_Japan.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:International_Christian_University,_Mitaka,_Tokyo,_Japan.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "John Paul Antes",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者John Paul Antes、投稿者自身の作品、CC BY-SA 3.0を確認。国際基督教大学三鷹キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "国際基督教大学三鷹キャンパスの校舎",
+      "reviewed_at": "2026-08-23"
+    },
+    "u000101": {
+      "university_id": "u000101",
+      "university_name": "津田塾大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Tsudajukuuniv.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tsudajukuuniv.JPG",
+      "source_label": "写真・ライセンス",
+      "creator": "Hykw-a4",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページと原投稿ログで、原投稿者Hykw-a4による撮影、CC BY-SA 3.0を確認。津田塾大学の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "津田塾大学小平キャンパス",
+      "reviewed_at": "2026-08-23"
     },
     "u000103": {
       "university_id": "u000103",
