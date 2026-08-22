@@ -2,17 +2,30 @@
 const id=new URLSearchParams(location.search).get('id');
 const root=document.querySelector('#detail-root');
 if(!id||!root)return;
+const LOCATION_SHARDS=Array.from({length:6},(_,i)=>`data/tokyo_locations_${String(i+1).padStart(2,'0')}.json`);
 const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const summary=(items,label,max=8)=>{const names=(items||[]).map(x=>x.name).filter(Boolean);return names.length?`${label} ${names.length}：${names.slice(0,max).join('、')}${names.length>max?`、ほか${names.length-max}`:''}`:`${label}：該当なし`};
 const listHtml=(items,empty)=>items.length?`<ul class="detail-list">${items.map(x=>`<li>${esc(x.name)}</li>`).join('')}</ul>`:`<p class="detail-empty">${esc(empty)}</p>`;
 function setStat(label,value){for(const box of root.querySelectorAll('.detail-stat')){if(box.querySelector('small')?.textContent?.trim()===label){const strong=box.querySelector('strong');if(strong)strong.textContent=value;}}}
 function setFact(label,value){for(const box of root.querySelectorAll('.detail-fact')){if(box.querySelector('dt')?.textContent?.trim()===label){const dd=box.querySelector('dd');if(dd)dd.textContent=value;return true;}}return false}
 function setAcademicColumn(label,items,empty){for(const h3 of root.querySelectorAll('.detail-academic h3')){if(h3.textContent?.trim()!==label)continue;const wrap=h3.parentElement;if(!wrap)continue;[...wrap.children].filter(x=>x!==h3).forEach(x=>x.remove());wrap.insertAdjacentHTML('beforeend',listHtml(items,empty));return true;}return false}
+async function loadLocations(){
+  const shards=await Promise.all(LOCATION_SHARDS.map(async file=>{
+    const response=await fetch(file);
+    if(!response.ok)throw new Error(`location shard missing: ${file}`);
+    const rows=await response.json();
+    if(!Array.isArray(rows)||rows.length!==24)throw new Error(`location shard count invalid: ${file}`);
+    return rows;
+  }));
+  const locations=shards.flat();
+  if(locations.length!==144||new Set(locations.map(x=>x.id)).size!==144)throw new Error('location overlay count invalid');
+  return locations;
+}
 function applyLocation(loc){
-  if(!loc?.municipality||!loc?.headquarters?.address||!root.querySelector('.detail-hero'))return false;
+  if(!loc?.municipality||!loc?.headquarters?.address||!/^\d{3}-\d{4}$/.test(loc?.headquarters?.postal_code||'')||!root.querySelector('.detail-hero'))return false;
   const address=loc.headquarters.address;
   const postal=loc.headquarters.postal_code;
-  const display=postal?`〒${postal} ${address}`:address;
+  const display=`〒${postal} ${address}`;
   if(!setFact('所在地',display)){
     const facts=root.querySelector('.detail-core .detail-facts');
     if(facts)facts.insertAdjacentHTML('afterbegin',`<div class="detail-fact"><dt>所在地</dt><dd>${esc(display)}</dd></div>`);
@@ -48,10 +61,7 @@ function apply(u){
 }
 (async()=>{
   try{
-    const response=await fetch('data/tokyo_locations.json');
-    if(!response.ok)throw new Error('location overlay missing');
-    const locations=await response.json();
-    if(!Array.isArray(locations)||locations.length!==144)throw new Error('location overlay count invalid');
+    const locations=await loadLocations();
     const target=locations.find(x=>x.id===id);
     if(!target)throw new Error(`location missing for ${id}`);
     if(applyLocation(target))return;
