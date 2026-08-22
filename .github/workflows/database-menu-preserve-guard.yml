@@ -1,0 +1,102 @@
+name: Database menu preserve guard
+
+on:
+  pull_request:
+    paths:
+      - 'databases/**'
+      - 'assets/site.js'
+      - 'assets/style.css'
+      - 'assets/images/databases-gateway-hero.jpg'
+      - 'tools/university-database/**'
+      - '.github/workflows/database-menu-preserve-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'databases/**'
+      - 'assets/site.js'
+      - 'assets/style.css'
+      - 'assets/images/databases-gateway-hero.jpg'
+      - 'tools/university-database/**'
+      - '.github/workflows/database-menu-preserve-guard.yml'
+
+jobs:
+  database-menu-preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/database-menu-site.log 2>&1 &
+          sleep 2
+      - name: Preserve database gateway and university route
+        run: |
+          mkdir -p visual-preview
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+
+            for(const viewport of [
+              {name:'mid',width:904,height:633},
+              {name:'compact',width:820,height:633}
+            ]){
+              const page=await browser.newPage({viewport:{width:viewport.width,height:viewport.height}});
+              await page.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
+              assert.ok((await page.evaluate(()=>window.scrollY)) < 2, `${viewport.name}: direct load must start at page top`);
+              assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${viewport.name}: horizontal overflow`);
+
+              const art=page.locator('#database-gateway-art');
+              const imageState=await art.evaluate(img=>({complete:img.complete,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
+              assert.equal(imageState.complete,true,`${viewport.name}: gateway artwork did not load`);
+              assert.equal(imageState.naturalWidth,1536,`${viewport.name}: gateway width`);
+              assert.equal(imageState.naturalHeight,503,`${viewport.name}: gateway height`);
+              const box=await art.boundingBox();
+              assert.ok(box && box.width>760,`${viewport.name}: gateway width too small`);
+              const expectedRatio=1536/503;
+              assert.ok(Math.abs((box.width/box.height)-expectedRatio)<0.04,`${viewport.name}: gateway aspect ratio changed`);
+
+              const uniHotspot=page.locator('.hot-university-card');
+              assert.equal(await uniHotspot.getAttribute('href'),'/tools/university-database/tokyo/',`${viewport.name}: university card route changed`);
+              const uniButton=page.locator('.hot-university-btn');
+              assert.equal(await uniButton.getAttribute('href'),'/tools/university-database/tokyo/',`${viewport.name}: Tokyo 144 button route changed`);
+              assert.equal(await page.locator('.db-hotspot').count(),6,`${viewport.name}: hotspot count changed`);
+
+              if(viewport.width<=860){
+                const toggle=page.locator('.menu-toggle');
+                assert.equal(await toggle.count(),1,'compact: menu toggle missing');
+                await toggle.click();
+                assert.equal(await toggle.getAttribute('aria-expanded'),'true','compact: menu did not open');
+                assert.equal(await page.evaluate(()=>document.body.classList.contains('menu-open')),true,'compact: menu-open state missing');
+                await page.keyboard.press('Escape');
+                assert.equal(await toggle.getAttribute('aria-expanded'),'false','compact: menu did not close with Escape');
+              }
+
+              await page.screenshot({path:`visual-preview/databases-${viewport.name}.png`,fullPage:false});
+              await page.close();
+            }
+
+            const route=await browser.newPage({viewport:{width:904,height:633}});
+            await route.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
+            await route.locator('.hot-university-btn').click();
+            await route.waitForURL('**/tools/university-database/tokyo/');
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            assert.equal(await route.locator('.tokyo-card[data-card-ready="true"]').count(),144,'Tokyo university database must remain reachable with 144 cards');
+            await route.close();
+
+            await browser.close();
+          })().catch(err=>{console.error(err);process.exit(1)});
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: database-menu-preserve-preview
+          path: visual-preview/*.png
