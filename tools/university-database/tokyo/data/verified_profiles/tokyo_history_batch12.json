@@ -1,0 +1,54 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 12",
+  "records": {
+    "u000113": {
+      "founded_year": 1966,
+      "opened_year": 1970,
+      "founder": "松田進勇",
+      "operator": "学校法人杏林学園",
+      "university_goal": "建学の精神『真・善・美の探究』を通じ、優れた人格を備え、人のために尽くすことのできる国際的な人材を育成することを目指します。",
+      "philosophy": "真理を究める『真』、倫理観と人間性を磨く『善』、自然と他者を尊重し風格ある人間を目指す『美』を建学の精神としています。",
+      "sources": [
+        {"source_name":"杏林大学 建学・教育理念・沿革","source_url":"https://www.kyorin-u.ac.jp/univ/outline/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"杏林学園 創立50周年記念","source_url":"https://www.kyorin-u.ac.jp/cn/html/kyorin/00003/201706291/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000115": {
+      "founded_year": 1978,
+      "opened_year": 1978,
+      "founder": "蜷川親繼",
+      "operator": "学校法人柏樹書院",
+      "university_goal": "法的知識と論理的思考力、日本の文化と伝統への理解を備え、品位と教養を持って社会に貢献できる人材を育成することを目指します。",
+      "philosophy": "日本の美しい伝統と優れた叡智に基づき次代を担う人材を育てるという創学者の志を継承し、少人数による人格教育を重視します。",
+      "sources": [
+        {"source_name":"日本文化大學 大学の紹介・建学精神・沿革","source_url":"https://nihonbunka-u.ac.jp/about/profile/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000116": {
+      "founded_year": 1947,
+      "opened_year": 1986,
+      "founder": "片柳鴻",
+      "operator": "学校法人片柳学園",
+      "university_goal": "豊かな教養と高度な学術、実践的な知識・技術を身につけ、社会の変化に柔軟に対応し、社会の繁栄に貢献できる人材を育成することを目指します。",
+      "philosophy": "実学主義教育を基軸に、豊かな人間性と創造的知性を備えた実践的・指導的な人材を育成することを理念としています。",
+      "sources": [
+        {"source_name":"東京工科大学 沿革","source_url":"https://www.teu.ac.jp/gaiyou/006489.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京工科大学 憲章・大学の理念","source_url":"https://www.teu.ac.jp/gaiyou/006364.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000119": {
+      "founded_year": 1937,
+      "opened_year": 1989,
+      "founder": "田村邦彦・野田一夫",
+      "operator": "学校法人田村学園",
+      "university_goal": "国際感覚と広い視野、高い倫理観を備え、社会の進展に貢献できる自立した人材を育成することを目指します。",
+      "philosophy": "学園の『質実清楚・明朗進取・感謝奉仕』を礎とし、大学では『国際性・学際性・実際性』を基本理念に掲げ、『現代の志塾』として実社会に通用する教育を重視します。",
+      "sources": [
+        {"source_name":"多摩大学 建学の精神・基本理念","source_url":"https://www.tama.ac.jp/guide/idea.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"多摩大学 田村学園概要","source_url":"https://www.tama.ac.jp/guide/history/summary/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

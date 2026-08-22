@@ -1,0 +1,56 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 15",
+  "records": {
+    "u000024": {
+      "founded_year": 1886,
+      "opened_year": 1949,
+      "founder": "宮川保全、鳩山春子ら34名の発起人",
+      "operator": "学校法人共立女子学園",
+      "university_goal": "建学の精神『女性の自立と自活』のもと、自立した人材を育成し、社会に広く貢献できる力を身につける教育を行うことを目指します。",
+      "philosophy": "女性の社会的地位向上のため、『自活の能力』と『自立した女性として必要な教養』を身につける『女性の自立と自活』を建学の精神としています。",
+      "sources": [
+        {"source_name":"共立女子学園 学園の組織と沿革","source_url":"https://www.kyoritsu-wu.ac.jp/univ/greetings/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"共立女子学園 建学の精神・校訓・学園ビジョン","source_url":"https://www.kyoritsu-wu.ac.jp/univ/greetings/vision.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000025": {
+      "founded_year": 1858,
+      "opened_year": 1890,
+      "founder": "福澤諭吉",
+      "operator": "学校法人慶應義塾",
+      "university_goal": "学問を通じて智徳と気品を備え、躬行実践によって全社会の先導者となる人材を育成することを目指します。",
+      "philosophy": "自他の尊厳を守り自らの判断と責任で行動する『独立自尊』と、実証的に真理を解明し問題を解決する『実学』を基本精神として継承しています。",
+      "sources": [
+        {"source_name":"慶應義塾 理念と歴史","source_url":"https://www.keio.ac.jp/ja/about/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"慶應義塾 経済学部の歴史","source_url":"https://www.keio.ac.jp/ja/econ/about/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000028": {
+      "founded_year": 1917,
+      "opened_year": 1958,
+      "founder": "柴田德次郎ら青年有志",
+      "operator": "学校法人国士舘",
+      "university_goal": "知識と実践の水準を高め、世界の平和と進歩を目指し、国家社会の改革向上に貢献できる有為な人材を育成することを目指します。",
+      "philosophy": "国家社会に貢献する『国士』の養成を建学の精神とし、『誠意・勤労・見識・気魄』の四徳目を涵養しながら『読書・体験・反省』を実践する教育を重視します。",
+      "sources": [
+        {"source_name":"学校法人国士舘 建学の精神と理念","source_url":"https://www.kokushikan.ac.jp/houjin/about/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人国士舘 学園のあゆみ","source_url":"https://www.kokushikan.ac.jp/houjin/about/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000023": {
+      "founded_year": 1914,
+      "opened_year": 1962,
+      "founder": "北里柴三郎",
+      "operator": "学校法人北里研究所",
+      "university_goal": "北里精神に徹して学業に励み、技能を磨き、徳性を養い、将来有為な科学人となる人材を育成することを目指します。",
+      "philosophy": "北里柴三郎の学統を継承し、『開拓』『報恩』『叡智と実践』『不撓不屈』を建学の精神として、生命科学と関連分野の教育・研究を社会に還元する実学を重視します。",
+      "sources": [
+        {"source_name":"北里大学 建学の精神","source_url":"https://www.kitasato-u.ac.jp/jp/about/overview/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"北里大学 沿革","source_url":"https://www.kitasato-u.ac.jp/jp/about/overview/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人北里研究所 憲章","source_url":"https://www.kitasato.ac.jp/jp/about/overview/mission.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
