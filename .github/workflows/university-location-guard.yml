@@ -1,0 +1,88 @@
+name: University location guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-location-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-location-guard.yml'
+
+jobs:
+  location-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate location data and scripts
+        run: |
+          node --check tools/university-database/tokyo/assets/ai-card-images.js
+          node --check tools/university-database/tokyo/assets/detail-academic-baseline.js
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const path='tools/university-database/tokyo/data/tokyo_locations.json';
+          const rows=JSON.parse(fs.readFileSync(path,'utf8'));
+          assert.equal(rows.length,144,'Tokyo location overlay must contain 144 universities');
+          assert.equal(new Set(rows.map(x=>x.id)).size,144,'Tokyo location ids must be unique');
+          const incomplete=rows.filter(x=>!x.id||!x.name||!x.municipality||!x.headquarters?.address);
+          assert.deepEqual(incomplete,[],'Every university needs municipality and headquarters address');
+          const wrongPref=rows.filter(x=>x.headquarters?.prefecture!=='東京都');
+          assert.deepEqual(wrongPref,[],'Every headquarters must be in Tokyo');
+          const postal=rows.filter(x=>x.headquarters?.postal_code);
+          for(const row of postal)assert.match(row.headquarters.postal_code,/^\d{3}-\d{4}$/,`${row.id}: postal format`);
+          console.log(`locations ${rows.length}/144; source-backed postal codes ${postal.length}/144`);
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-location-site.log 2>&1 &
+          sleep 2
+      - name: Verify list, search, maps, and detail location UI
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const top=await browser.newPage({viewport:{width:1366,height:950}});
+            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await top.waitForFunction(()=>document.documentElement.dataset.locationOverlay==='ready',{timeout:15000});
+            await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            const body=await top.locator('body').innerText();
+            assert.ok(!body.includes('所在地確認中'),'Top page must not show location pending');
+            const aoyama=top.locator('.tokyo-card[data-id="u000020"]');
+            assert.ok((await aoyama.innerText()).includes('渋谷区'));
+            const map=decodeURIComponent(await aoyama.locator('.map-card-link').getAttribute('href'));
+            assert.ok(map.includes('青山学院大学'),map);
+            assert.ok(map.includes('東京都渋谷区渋谷4－4－25'),map);
+            await top.locator('#tokyo-search-input').fill('東京都渋谷区渋谷4－4－25');
+            await top.locator('#tokyo-search').evaluate(form=>form.requestSubmit());
+            await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===1);
+            assert.equal(await top.locator('.tokyo-card h3').innerText(),'青山学院大学');
+            await top.setViewportSize({width:375,height:900});
+            assert.equal(await top.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true);
+            await top.close();
+
+            const detail=await browser.newPage({viewport:{width:1366,height:900}});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000020',{waitUntil:'networkidle'});
+            await detail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
+            const detailText=await detail.locator('body').innerText();
+            assert.ok(detailText.includes('東京都渋谷区渋谷4－4－25'),detailText);
+            assert.ok(!detailText.includes('所在地確認中'),detailText);
+            const detailMap=decodeURIComponent(await detail.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
+            assert.ok(detailMap.includes('青山学院大学'),detailMap);
+            assert.ok(detailMap.includes('東京都渋谷区渋谷4－4－25'),detailMap);
+            await detail.close();
+            await browser.close();
+          })().catch(err=>{console.error(err);process.exit(1)});
+          NODE
