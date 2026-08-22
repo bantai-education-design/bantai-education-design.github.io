@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-08-15",
+  "source_repository": "bantai-education-design/daigaku_DB",
+  "scope": "Tokyo verified official admissions links batch 01",
+  "records": {
+    "u000033": {
+      "admissions_url": "https://adm.sophia.ac.jp/jpn/",
+      "application_guidelines_url": "https://adm.sophia.ac.jp/jpn/gakubu_ippan_ad/",
+      "sources": [{"source_name":"上智大学 入試情報","source_url":"https://adm.sophia.ac.jp/jpn/","verified_at":"2026-08-15","role":"primary"}]
+    },
+    "u000034": {
+      "admissions_url": "https://adm.showa-u.ac.jp/admission/",
+      "application_guidelines_url": "https://adm.showa-u.ac.jp/admission/info/web-apply.html",
+      "sources": [{"source_name":"昭和医科大学 受験生特設サイト 入試情報","source_url":"https://adm.showa-u.ac.jp/admission/","verified_at":"2026-08-15","role":"primary"}]
+    },
+    "u000057": {
+      "admissions_url": "https://www.twmu.ac.jp/univ/exam/exam_oc.php",
+      "sources": [{"source_name":"東京女子医科大学 受験生サイト","source_url":"https://www.twmu.ac.jp/univ/exam/exam_oc.php","verified_at":"2026-08-15","role":"primary"}]
+    },
+    "u000016": {
+      "admissions_url": "https://www.mejiro.ac.jp/univ/jyukensei/admission/",
+      "application_guidelines_url": "https://www.mejiro.ac.jp/univ/jyukensei/admission/admission_documents/",
+      "sources": [{"source_name":"目白大学 2027年度入学者選抜情報","source_url":"https://www.mejiro.ac.jp/univ/jyukensei/admission/","verified_at":"2026-08-15","role":"primary"}]
+    },
+    "u000023": {
+      "admissions_url": "https://www.kitasato-u.ac.jp/jp/goukaku/undergraduate_ad/",
+      "application_guidelines_url": "https://www.kitasato-u.ac.jp/jp/goukaku/undergraduate_ad/application/application.html",
+      "sources": [{"source_name":"北里大学 学部入試情報","source_url":"https://www.kitasato-u.ac.jp/jp/goukaku/undergraduate_ad/","verified_at":"2026-08-15","role":"primary"}]
+    },
+    "u000054": {
+      "admissions_url": "https://www.tdc.ac.jp/applicants/admission/",
+      "application_guidelines_url": "https://www.tdc.ac.jp/applicants/admission/",
+      "sources": [{"source_name":"東京歯科大学 入試案内","source_url":"https://www.tdc.ac.jp/applicants/admission/","verified_at":"2026-08-15","role":"primary"}]
+    }
+  }
+}
