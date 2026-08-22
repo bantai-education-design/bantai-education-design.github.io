@@ -81,13 +81,10 @@ function flattenAcademicDocument(doc,faculties,departments,graduateSchools){
   if(target)for(const row of doc.records||[])putById(target,row);
 }
 async function loadAcademicBundle(){
-  const [generatedF,generatedD,generatedG]=await Promise.all([
+  const [generatedF,generatedD,generatedG,baseF,baseD,...snapshots]=await Promise.all([
     optionalJson('data/faculties_tokyo_all.generated.json'),
     optionalJson('data/departments_tokyo_all.generated.json'),
-    optionalJson('data/graduate_schools_tokyo_all.generated.json')
-  ]);
-  if(generatedF.length||generatedD.length||generatedG.length)return {faculties:generatedF,departments:generatedD,graduateSchools:generatedG,source:'generated'};
-  const [baseF,baseD,...snapshots]=await Promise.all([
+    optionalJson('data/graduate_schools_tokyo_all.generated.json'),
     optionalJson('data/faculties.json'),
     optionalJson('data/departments.json'),
     ...ACADEMIC_SNAPSHOTS.map(name=>optionalObject(`data/${name}`))
@@ -95,8 +92,12 @@ async function loadAcademicBundle(){
   const fm=new Map(),dm=new Map(),gm=new Map();
   for(const row of baseF)putById(fm,row);
   for(const row of baseD)putById(dm,row);
+  for(const row of generatedF)putById(fm,row);
+  for(const row of generatedD)putById(dm,row);
+  for(const row of generatedG)putById(gm,row);
   for(const doc of snapshots)flattenAcademicDocument(doc,fm,dm,gm);
-  return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:'verified snapshots'};
+  const hasGenerated=generatedF.length||generatedD.length||generatedG.length;
+  return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:hasGenerated?'merged':'verified snapshots'};
 }
 function selectedRows(){return state.rows.filter(r=>state.compare.has(r.id));}
 function updateCompare(){const rows=selectedRows();const slots=document.querySelector('#compare-items');const label=document.querySelector('#compare-count');const open=document.querySelector('#open-compare');if(label)label.textContent=rows.length;if(open)open.disabled=rows.length<2;const html=rows.map(r=>`<div class="compare-slot-v2"><strong>${esc(r.name)}</strong><small>${esc(typeLabel[r.establishment_type]||'')} · ${esc(municipality(r))}</small><button type="button" data-remove-compare="${esc(r.id)}">外す</button></div>`);while(html.length<4)html.push('<div class="compare-slot-v2">＋ 大学を追加</div>');slots.innerHTML=html.join('');}
@@ -135,7 +136,8 @@ function installDevelopmentStatus(){
 function updateAcademicStatus(source){
   const covered=state.rows.filter(r=>(state.faculties.get(r.id)||[]).length||(state.graduateSchools.get(r.id)||[]).length).length;
   const status=document.querySelector('#academic-sync-status');
-  if(status)status.textContent=`教育組織データ ${covered}/${state.rows.length||144}校を読込（${source==='generated'?'集約データ':'検証済みスナップショット'}）・内容は継続更新中`;
+  const sourceLabel=source==='merged'?'集約データ＋検証済みスナップショット':'検証済みスナップショット';
+  if(status)status.textContent=`教育組織データ ${covered}/${state.rows.length||144}校を読込（${sourceLabel}）・内容は継続更新中`;
 }
 
 installDevelopmentStatus();
