@@ -1,0 +1,92 @@
+name: Apply Tokyo photo batch 7 once
+
+on:
+  push:
+    branches: [feature/tokyo-real-photos-batch7-20260823]
+    paths:
+      - '.github/workflows/apply-photo-batch7-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/tokyo-real-photos-batch7-20260823
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Add six verified university photo records
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const path='tools/university-database/tokyo/data/university-images.json';
+          const data=JSON.parse(fs.readFileSync(path,'utf8'));
+          const records={
+            u000026:{
+              university_id:'u000026',university_name:'工学院大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/6/6c/Kogakuin-University-Shinjuku-02.jpg',
+              source_url:'https://commons.wikimedia.org/wiki/File:Kogakuin-University-Shinjuku-02.jpg',
+              source_label:'写真・ライセンス',creator:'Rs1421',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページで作者Rs1421、投稿者自身の作品、CC BY-SA 3.0を確認。工学院大学新宿キャンパスの実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。',
+              alt:'工学院大学新宿キャンパス',reviewed_at:'2026-08-23'
+            },
+            u000031:{
+              university_id:'u000031',university_name:'芝浦工業大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/f/f0/Shibaura_Institute_of_Technology.JPG',
+              source_url:'https://commons.wikimedia.org/wiki/File:Shibaura_Institute_of_Technology.JPG',
+              source_label:'写真・ライセンス',creator:'Waka77',license:'CC0 1.0',license_url:'https://creativecommons.org/publicdomain/zero/1.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページで作者Waka77、投稿者自身の作品、CC0 1.0を確認。芝浦工業大学豊洲キャンパスの実景写真として原画像と再利用条件を追跡できる状態で掲載する。',
+              alt:'芝浦工業大学豊洲キャンパス',reviewed_at:'2026-08-23'
+            },
+            u000039:{
+              university_id:'u000039',university_name:'成城大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/0/03/Seijo_university.jpg',
+              source_url:'https://commons.wikimedia.org/wiki/File:Seijo_university.jpg',
+              source_label:'写真・ライセンス',creator:'Hykw-a4',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページと原投稿ログで、原投稿者Hykw-a4による撮影、CC BY-SA 3.0を確認。成城大学の実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。',
+              alt:'成城大学キャンパス',reviewed_at:'2026-08-23'
+            },
+            u000058:{
+              university_id:'u000058',university_name:'東京電機大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/3/32/TDU-Tokyo-Senju-2012060301.jpg',
+              source_url:'https://commons.wikimedia.org/wiki/File:TDU-Tokyo-Senju-2012060301.jpg',
+              source_label:'写真・ライセンス',creator:'Hasec',license:'CC0 1.0',license_url:'https://creativecommons.org/publicdomain/zero/1.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページで作者Hasec、投稿者自身の作品、CC0 1.0を確認。東京電機大学東京千住キャンパス入口の実景写真として原画像と再利用条件を追跡できる状態で掲載する。',
+              alt:'東京電機大学東京千住キャンパス入口',reviewed_at:'2026-08-23'
+            },
+            u000066:{
+              university_id:'u000066',university_name:'日本大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/c/c0/Nihon_University_Sangenjaya_Campus-2.JPG',
+              source_url:'https://commons.wikimedia.org/wiki/File:Nihon_University_Sangenjaya_Campus-2.JPG',
+              source_label:'写真・ライセンス',creator:'Nyao148',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページで作者Nyao148、投稿者自身の作品、CC BY-SA 3.0を確認。日本大学三軒茶屋キャンパスの実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。',
+              alt:'日本大学三軒茶屋キャンパス',reviewed_at:'2026-08-23'
+            },
+            u000070:{
+              university_id:'u000070',university_name:'日本女子大学',rights_status:'verified',
+              image_url:'https://upload.wikimedia.org/wikipedia/commons/0/07/Japan_Women%27s_University.jpg',
+              source_url:'https://commons.wikimedia.org/wiki/File:Japan_Women%27s_University.jpg',
+              source_label:'写真・ライセンス',creator:'Kakidai',license:'CC BY-SA 4.0',license_url:'https://creativecommons.org/licenses/by-sa/4.0/',
+              rights_note:'Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 4.0を確認。日本女子大学正門の実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。',
+              alt:'日本女子大学正門',reviewed_at:'2026-08-23'
+            }
+          };
+          data.images={...(data.images||{}),...records};
+          data.images=Object.fromEntries(Object.entries(data.images).sort(([a],[b])=>a.localeCompare(b)));
+          fs.writeFileSync(path,JSON.stringify(data,null,2)+'\n');
+          const verified=Object.values(data.images).filter(x=>x.rights_status==='verified');
+          if(verified.length!==27)throw new Error(`verified photo count ${verified.length}, expected 27`);
+          for(const id of Object.keys(records))if(!data.images[id])throw new Error(`missing ${id}`);
+          console.log('verified university photos after batch 7:',verified.length);
+          NODE
+      - name: Commit generated registry update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/university-database/tokyo/data/university-images.json
+          git commit -m "data: add verified Tokyo university photos batch 7"
+          git push origin HEAD:feature/tokyo-real-photos-batch7-20260823
