@@ -3,6 +3,12 @@
   const id=new URLSearchParams(location.search).get('id');
   const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
   const typeLabel={national:'国立',public:'公立',private:'私立'};
+  const ACADEMIC_SNAPSHOTS=[
+    'academic-structure-batches-03-08.json','academic-structure-batches-09-12.json','academic-structure-batches-13-14.json','academic-structure-batches-15-17.json','academic-structure-batches-18-22.json',
+    'academic-structure-major-01.json','academic-structure-medical-01-02.json',
+    'academic-structure-private-02.json','academic-structure-private-03.json','academic-structure-private-04.json','academic-structure-private-05.json','academic-structure-private-06.json','academic-structure-private-07.json','academic-structure-private-08.json',
+    'academic-structure-tid-professional.json','departments-mejiro-verified.json'
+  ];
   const group=(rows=[])=>{const m=new Map();for(const r of rows){if(!m.has(r.university_id))m.set(r.university_id,[]);m.get(r.university_id).push(r);}return m;};
   const json=async(url,fallback)=>{try{const r=await fetch(url);if(r.ok)return await r.json();}catch{}if(fallback){try{const r=await fetch(fallback);if(r.ok)return await r.json();}catch{}}return [];};
   const obj=async url=>{try{const r=await fetch(url);if(r.ok)return await r.json();}catch{}return {};};
@@ -18,6 +24,38 @@
     const rest=names.length>max?`、ほか${names.length-max}`:'';
     return `${label} ${items.length}：${shown}${rest}`;
   };
+  const putById=(map,row)=>{if(row?.id)map.set(row.id,row);};
+  const flattenAcademicDocument=(doc,faculties,departments,graduateSchools)=>{
+    if(!doc)return;
+    if(doc.kind==='academic_structure'){
+      for(const u of doc.universities||[]){
+        for(const f of u.faculties||[]){
+          putById(faculties,{...f,university_id:u.university_id});
+          for(const d of f.departments||[])putById(departments,{...d,university_id:u.university_id,faculty_id:f.id});
+        }
+        for(const g of u.graduate_schools||[])putById(graduateSchools,{...g,university_id:u.university_id});
+      }
+      return;
+    }
+    const target=doc.kind==='faculties'?faculties:doc.kind==='departments'?departments:doc.kind==='graduate_schools'?graduateSchools:null;
+    if(target)for(const row of doc.records||[])putById(target,row);
+  };
+  const loadAcademicBundle=async()=>{
+    const [generatedF,generatedD,generatedG]=await Promise.all([
+      json('data/faculties_tokyo_all.generated.json'),
+      json('data/departments_tokyo_all.generated.json'),
+      json('data/graduate_schools_tokyo_all.generated.json')
+    ]);
+    if(generatedF.length||generatedD.length||generatedG.length)return {faculties:generatedF,departments:generatedD,graduateSchools:generatedG,source:'generated'};
+    const [baseF,baseD,...snapshots]=await Promise.all([
+      json('data/faculties.json'),json('data/departments.json'),...ACADEMIC_SNAPSHOTS.map(name=>obj(`data/${name}`))
+    ]);
+    const fm=new Map(),dm=new Map(),gm=new Map();
+    for(const row of baseF)putById(fm,row);
+    for(const row of baseD)putById(dm,row);
+    for(const doc of snapshots)flattenAcademicDocument(doc,fm,dm,gm);
+    return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:'verified snapshots'};
+  };
 
   if(!id){
     root.innerHTML='<div class="detail-error"><strong>大学が指定されていません。</strong><p><a href="./">大学一覧へ戻る</a></p></div>';
@@ -26,20 +64,18 @@
 
   Promise.all([
     json('data/universities_tokyo_all.generated.json'),
-    json('data/faculties_tokyo_all.generated.json','data/faculties.json'),
-    json('data/departments_tokyo_all.generated.json','data/departments.json'),
-    json('data/graduate_schools_tokyo_all.generated.json'),
+    loadAcademicBundle(),
     obj('data/university-detail-national-public-batch1.json'),
     obj('data/university-detail-overrides.json'),
     obj('data/private-detail-2026-updates.json')
-  ]).then(([rows,faculties,departments,graduateSchools,coreRegistry,detailRegistry,private2026])=>{
+  ]).then(([rows,academic,coreRegistry,detailRegistry,private2026])=>{
     let row=rows.find(x=>x.id===id);
     if(!row)throw new Error('not found');
     for(const extra of [coreRegistry?.universities?.[id],detailRegistry?.universities?.[id],private2026?.universities?.[id]]){
       if(extra)row={...row,...extra,headquarters:{...(row.headquarters||{}),...(extra.headquarters||{})},student_counts:{...(row.student_counts||{}),...(extra.student_counts||{})}};
     }
 
-    const fm=group(faculties),dm=group(departments),gm=group(graduateSchools);
+    const fm=group(academic.faculties),dm=group(academic.departments),gm=group(academic.graduateSchools);
     const f=fm.get(id)||[],d=dm.get(id)||[],g=gm.get(id)||[];
     const municipality=val(row.municipality,row.headquarters?.municipality,'所在地確認中');
     const address=val(row.headquarters?.address,`東京都 ${municipality}`);
@@ -68,6 +104,7 @@
             <span class="detail-pill">${esc(typeLabel[row.establishment_type]||'')}</span>
             <span class="detail-pill">東京都 ${esc(municipality)}</span>
             <span class="detail-pill">${row.admissions_status==='stopped'?'募集停止':'募集継続'}</span>
+            <span class="detail-pill">基本情報 更新中</span>
           </div>
           <p class="detail-summary">${esc(feature||philosophy||purpose||'大学公式・公的資料をもとに整理した大学情報です。')}</p>
           <div class="detail-actions">
@@ -118,7 +155,7 @@
           <div><h3>受験・大学を知る</h3><div class="detail-link-stack">${link(official,'大学公式情報','primary')}${link(admissions,'入試情報')}${link(row.application_guidelines_url,'募集要項')}${link(row.brochure_request_url,'資料請求')}${link(row.open_campus_url,'オープンキャンパス')}<a class="secondary" href="${maps}" target="_blank" rel="noopener">Google Maps ↗</a></div></div>
         </div>
       </section>
-      <div class="detail-note">現在、東京都144大学の基本情報を優先更新中です。学部・学科・所在地・地図リンクを再確認し、未同期の項目は推測で埋めず「情報更新中」と表示します。</div>`;
+      <div class="detail-note">現在、東京都144大学の基本情報を優先更新中です。学部・学科・所在地・地図リンクを再確認し、未同期の項目は推測で埋めず「情報更新中」と表示します。教育組織は${academic.source==='generated'?'集約済みデータ':'公開済み検証スナップショット'}から読み込んでいます。</div>`;
   }).catch(()=>{
     root.innerHTML='<div class="detail-error"><strong>大学情報を読み込めませんでした。</strong><p><a href="./">大学一覧へ戻る</a></p></div>';
   });
