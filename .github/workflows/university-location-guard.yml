@@ -45,6 +45,7 @@ jobs:
           const aiCard=fs.readFileSync('tools/university-database/tokyo/assets/ai-card-images.js','utf8');
           assert.ok(!aiCard.includes("fetch('data/tokyo_locations.json')"),'Card overlay must not depend on legacy tokyo_locations.json');
           for(let i=1;i<=6;i++)assert.ok(aiCard.includes(`tokyo_locations_${String(i).padStart(2,'0')}`)||aiCard.includes('LOCATION_SHARDS'),'Card overlay must use verified location shards');
+          assert.ok(aiCard.includes("querySelector('#quality-admissions')"),'Public admissions quality metric must be driven by loaded public data');
 
           const admissions=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/tokyo_admissions_batch01.json','utf8'));
           const admissionRows=Object.entries(admissions.records||{});
@@ -100,6 +101,10 @@ jobs:
             const sophia=top.locator('.tokyo-card[data-id="u000033"]');
             assert.ok((await sophia.locator('.card-actions a.primary').innerText()).includes('入試情報'));
             assert.ok((await sophia.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://adm.sophia.ac.jp/'));
+            const admissionCardCount=await top.locator('.tokyo-card .card-actions a.primary',{hasText:'入試情報'}).count();
+            const qualityAdmissions=(await top.locator('#quality-admissions').innerText()).trim();
+            assert.equal(qualityAdmissions,`${admissionCardCount}/144`,'Public admissions coverage must match visible verified admissions links');
+            assert.ok(admissionCardCount<144,'Pilot public sync must not falsely claim 144/144 before full core sync');
 
             for(const id of ['u000001','u000025','u000085']){
               const visual=top.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
