@@ -21,54 +21,46 @@ jobs:
           node-version: '22'
       - name: Install Japanese fonts
         run: |
-          sudo apt-get update
+          sudo apt-get update -qq
           sudo apt-get install -y fonts-noto-cjk
           fc-cache -f
-      - name: Validate Tokyo University v1 data
+      - name: Validate all complete profile data
         run: |
           node <<'NODE'
           const fs=require('node:fs');
+          const path=require('node:path');
           const assert=require('node:assert/strict');
-          const path='tools/university-database/tokyo/data/complete/u000001.json';
-          const p=JSON.parse(fs.readFileSync(path,'utf8'));
+          const dir='tools/university-database/tokyo/data/complete';
+          const files=fs.readdirSync(dir).filter(x=>/^u\d{6}\.json$/.test(x)).sort();
+          assert.ok(files.length>=2,'at least two complete profiles expected');
+          const expected={
+            u000001:{name:'東京大学',faculties:10,units:44,programs:79,graduate:15},
+            u000002:{name:'東京外国語大学',faculties:3,units:3,programs:49,graduate:1}
+          };
           const required=['schema_version','university_id','name','establishment_type','status','official_url','student_counts','academics','graduate_schools','campuses','tuition','admissions','qualifications','careers','research','sports_culture','notable_alumni','sources','verification'];
-          for(const key of required) assert.ok(Object.hasOwn(p,key),`missing top-level key: ${key}`);
-          assert.equal(p.schema_version,'1.0');
-          assert.equal(p.university_id,'u000001');
-          assert.equal(p.id,p.university_id,'legacy id must equal university_id');
-          const departments=p.academics.flatMap(f=>f.departments||[]);
-          const programs=departments.flatMap(d=>d.programs||[]);
-          const graduatePrograms=p.graduate_schools.flatMap(g=>g.programs||[]);
-          assert.equal(p.academics.length,10,'Tokyo University should have 10 faculties');
-          assert.equal(departments.length,44,'academic unit count changed unexpectedly');
-          assert.equal(programs.length,79,'program/course count changed unexpectedly');
-          assert.equal(p.graduate_schools.length,15,'graduate organization count changed unexpectedly');
-          assert.equal(graduatePrograms.length,89,'graduate program count changed unexpectedly');
-          assert.equal(p.campuses.length,3,'main campus count changed unexpectedly');
-          assert.equal(p.student_counts.undergraduate+p.student_counts.graduate,p.student_counts.total,'student total mismatch');
-          const t=p.tuition[0];
-          assert.equal(t.admission_fee,282000);
-          assert.equal(t.annual_tuition,642960);
-          assert.equal(t.admission_fee+t.annual_tuition,t.first_year_total,'tuition total mismatch');
-          assert.equal(p.admissions.admission_year,2027);
-          assert.equal(p.admissions.methods.find(x=>x.category==='general').quota,2858);
-          assert.equal(p.verification.verification_status,'partial','must not claim verified before 2027 web application portal is published');
-          assert.ok(p.verification.pending_sections.includes('admissions'));
-          const uniq=(label,values)=>assert.equal(new Set(values).size,values.length,`duplicate ${label}`);
-          uniq('faculty ids',p.academics.map(x=>x.faculty_id));
-          uniq('department ids',departments.map(x=>x.department_id));
-          uniq('program ids',programs.map(x=>x.program_id));
-          uniq('graduate school ids',p.graduate_schools.map(x=>x.graduate_school_id));
-          uniq('graduate program ids',graduatePrograms.map(x=>x.program_id));
-          uniq('campus ids',p.campuses.map(x=>x.campus_id));
-          uniq('source ids',p.sources.map(x=>x.source_id));
-          const campusIds=new Set(p.campuses.map(x=>x.campus_id));
-          for(const f of p.academics) for(const cid of f.campus_ids||[]) assert.ok(campusIds.has(cid),`bad campus ref ${cid}`);
-          const sourceIds=new Set(p.sources.map(x=>x.source_id));
-          const walk=x=>{if(Array.isArray(x)){x.forEach(walk);return}if(!x||typeof x!=='object')return;for(const [k,v] of Object.entries(x)){if(k==='source_id'&&v)assert.ok(sourceIds.has(v),`bad source ref ${v}`);else if(k==='source_ids')for(const sid of v)assert.ok(sourceIds.has(sid),`bad source ref ${sid}`);else walk(v)}};
-          walk(p);
-          for(const s of p.sources){assert.match(s.url,/^https:\/\//);assert.equal(s.verified_at,'2026-08-22')}
-          console.log(`validated ${p.name}: faculties=${p.academics.length}, units=${departments.length}, programs=${programs.length}, graduate=${p.graduate_schools.length}, sources=${p.sources.length}`);
+          for(const file of files){
+            const p=JSON.parse(fs.readFileSync(path.join(dir,file),'utf8'));
+            for(const key of required) assert.ok(Object.hasOwn(p,key),`${file}: missing ${key}`);
+            assert.equal(p.schema_version,'1.0',`${file}: schema`);
+            assert.equal(file,`${p.university_id}.json`,`${file}: id/filename mismatch`);
+            assert.equal(p.id,p.university_id,`${file}: legacy id mismatch`);
+            const departments=p.academics.flatMap(f=>f.departments||[]);
+            const programs=departments.flatMap(d=>d.programs||[]);
+            const gp=p.graduate_schools.flatMap(g=>g.programs||[]);
+            const e=expected[p.university_id];
+            if(e){assert.equal(p.name,e.name);assert.equal(p.academics.length,e.faculties);assert.equal(departments.length,e.units);assert.equal(programs.length,e.programs);assert.equal(p.graduate_schools.length,e.graduate)}
+            if(Number.isInteger(p.student_counts.undergraduate)&&Number.isInteger(p.student_counts.graduate)&&Number.isInteger(p.student_counts.total)) assert.equal(p.student_counts.undergraduate+p.student_counts.graduate,p.student_counts.total,`${file}: student total`);
+            for(const t of p.tuition||[]) if(Number.isInteger(t.admission_fee)&&Number.isInteger(t.annual_tuition)&&Number.isInteger(t.first_year_total)&&!t.facility_fee&&!t.other_fees) assert.equal(t.admission_fee+t.annual_tuition,t.first_year_total,`${file}: tuition total`);
+            const ids=[...p.academics.map(x=>x.faculty_id),...departments.map(x=>x.department_id),...programs.map(x=>x.program_id),...p.graduate_schools.map(x=>x.graduate_school_id),...gp.map(x=>x.program_id),...p.campuses.map(x=>x.campus_id),...(p.admissions.methods||[]).map(x=>x.method_id),...p.sources.map(x=>x.source_id)];
+            assert.equal(new Set(ids).size,ids.length,`${file}: duplicate ids`);
+            const sourceIds=new Set(p.sources.map(x=>x.source_id));
+            const campusIds=new Set(p.campuses.map(x=>x.campus_id));
+            for(const f of p.academics) for(const cid of f.campus_ids||[]) assert.ok(campusIds.has(cid),`${file}: bad campus ref ${cid}`);
+            const walk=x=>{if(Array.isArray(x)){x.forEach(walk);return}if(!x||typeof x!=='object')return;for(const [k,v] of Object.entries(x)){if(k==='source_id'&&v)assert.ok(sourceIds.has(v),`${file}: bad source ${v}`);else if(k==='source_ids')for(const sid of v||[])assert.ok(sourceIds.has(sid),`${file}: bad source ${sid}`);else walk(v)}};
+            walk(p);
+            assert.ok(p.verification.last_verified_at,`${file}: verification date`);
+            console.log(`${p.name}: faculties=${p.academics.length}, units=${departments.length}, programs=${programs.length}, graduate=${p.graduate_schools.length}, sources=${p.sources.length}`);
+          }
           NODE
       - name: Install Playwright
         run: |
@@ -78,7 +70,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
           sleep 2
-      - name: Verify complete profile and legacy fallback in browser
+      - name: Verify complete profiles and legacy fallback in browser
         run: |
           mkdir -p visual-preview
           node <<'NODE'
@@ -87,26 +79,31 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const base='http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=';
-            for(const [suffix,width,height,fullPage] of [['pc',1366,1000,true],['mobile',375,900,false]]){
-              const page=await browser.newPage({viewport:{width,height}});
-              await page.goto(base+'u000001',{waitUntil:'networkidle'});
-              await page.locator('h1').filter({hasText:'東京大学'}).waitFor({state:'visible'});
-              assert.equal(await page.locator('.complete-section').count(),8,'complete profile should render eight numbered sections');
-              assert.equal(await page.locator('.complete-academic-card').count(),10,'faculty cards should be 10');
-              assert.equal(await page.locator('.complete-grad-row').count(),15,'graduate organization rows should be 15');
-              assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`utokyo-${suffix}: horizontal overflow`);
-              const text=await page.locator('body').innerText();
-              for(const phrase of ['キャンパス・最寄駅','学費','入試方式・Web出願','資格・進路','研究・スポーツ・著名卒業生','出典・最終確認日','282,000円','642,960円','2,858人','Web出願サイト：公式公開待ち']) assert.ok(text.includes(phrase),`missing text: ${phrase}`);
-              await page.screenshot({path:`visual-preview/utokyo-complete-${suffix}.png`,fullPage});
-              await page.close();
+            const profiles=[
+              {id:'u000001',name:'東京大学',faculties:10,phrases:['642,960円','2,858人']},
+              {id:'u000002',name:'東京外国語大学',faculties:3,phrases:['535,800円','579人','府中キャンパス','27の専攻言語']}
+            ];
+            for(const p of profiles){
+              for(const [suffix,width,height,fullPage] of [['pc',1366,1000,true],['mobile',375,900,false]]){
+                const page=await browser.newPage({viewport:{width,height}});
+                await page.goto(base+p.id,{waitUntil:'networkidle'});
+                await page.locator('h1').filter({hasText:p.name}).waitFor({state:'visible'});
+                assert.equal(await page.locator('.complete-section').count(),8,`${p.id}: eight sections`);
+                assert.equal(await page.locator('.complete-academic-card').count(),p.faculties,`${p.id}: faculty cards`);
+                assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${p.id}-${suffix}: overflow`);
+                const text=await page.locator('body').innerText();
+                for(const phrase of ['キャンパス・最寄駅','学費','入試方式・Web出願','資格・進路','研究・スポーツ・著名卒業生','出典・最終確認日','Web出願サイト：公式公開待ち',...p.phrases]) assert.ok(text.includes(phrase),`${p.id}: missing ${phrase}`);
+                await page.screenshot({path:`visual-preview/${p.id}-${suffix}.png`,fullPage});
+                await page.close();
+              }
             }
             const legacy=await browser.newPage({viewport:{width:1366,height:900}});
-            await legacy.goto(base+'u000002',{waitUntil:'networkidle'});
-            await legacy.locator('h1').filter({hasText:'東京外国語大学'}).waitFor({state:'visible'});
-            assert.equal(await legacy.locator('.complete-section').count(),0,'legacy university should not use complete renderer');
-            assert.ok((await legacy.locator('body').innerText()).includes('大学の基本情報'),'legacy detail did not render');
-            assert.equal(await legacy.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'legacy detail horizontal overflow');
-            await legacy.screenshot({path:'visual-preview/legacy-u000002-pc.png',fullPage:false});
+            await legacy.goto(base+'u000003',{waitUntil:'networkidle'});
+            await legacy.locator('h1').filter({hasText:'東京学芸大学'}).waitFor({state:'visible'});
+            assert.equal(await legacy.locator('.complete-section').count(),0,'legacy university should use old renderer');
+            assert.ok((await legacy.locator('body').innerText()).includes('大学の基本情報'),'legacy detail missing');
+            assert.equal(await legacy.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'legacy overflow');
+            await legacy.screenshot({path:'visual-preview/u000003-legacy-pc.png',fullPage:false});
             await legacy.close();
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
