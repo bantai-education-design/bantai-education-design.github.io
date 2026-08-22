@@ -84,11 +84,11 @@ jobs:
             await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000020',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
             const detailText=await detail.locator('body').innerText();
-            assert.ok(detailText.includes('〒150-8366 東京都渋谷区渋谷4－4－25'),detailText);
+            assert.ok(detailText.includes('〒150-8366 東京都渋谷区渋谷4-4-25'),detailText);
             assert.ok(!detailText.includes('所在地確認中'),detailText);
             const detailMap=decodeURIComponent(await detail.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
             assert.ok(detailMap.includes('青山学院大学'),detailMap);
-            assert.ok(detailMap.includes('東京都渋谷区渋谷4－4－25'),detailMap);
+            assert.ok(detailMap.includes('東京都渋谷区渋谷4-4-25'),detailMap);
             assert.ok(!detailMap.includes('150-8366'),'Google Maps query must use university name + verified headquarters address only');
             await detail.close();
 
