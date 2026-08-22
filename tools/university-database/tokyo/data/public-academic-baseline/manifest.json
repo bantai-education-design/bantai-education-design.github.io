@@ -1,0 +1,9 @@
+{
+  "schema": "tokyo-academic-public-baseline-v2",
+  "source_repository": "bantai-education-design/daigaku_DB",
+  "source_commit": "e15b44cfe283aed7269f607b720efe0027614aac",
+  "generated_at": "2026-08-22T03:30:47.749696+00:00",
+  "total_universities": 66,
+  "graduate_only_ids": ["u000011","u000013","u000086","u000090","u000123","u000129","u000130","u000131","u000133","u000134","u000141","u000142"],
+  "shards": ["academic_01.json","academic_02.json","academic_03.json","academic_04.json","academic_05.json","academic_06.json","academic_07.json","academic_08.json","academic_09.json","academic_10.json","academic_11.json","academic_12.json","academic_13.json","academic_14.json"]
+}
