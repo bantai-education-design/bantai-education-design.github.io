@@ -36,6 +36,20 @@
     "u000003": {
       "university_id": "u000003", "university_name": "東京学芸大学", "rights_status": "ai_original", "official_image_status": "restricted", "image_url": "assets/card-images/gakugei-ai.svg", "label": "イメージ画像（AI生成）", "alt": "教育系大学をイメージした架空キャンパスと架空の学生", "generation_note": "実在の東京学芸大学の公式写真・校章・校舎を参照せず、教育・教員養成という一般的テーマから独立生成したBan.TaiオリジナルSVG。", "official_image_source_url": "https://www.u-gakugei.ac.jp/", "official_image_rights_note": "公式サイト掲載写真の自由転載根拠を確認できないため転載せず、独立生成イメージを使用する。", "generated_at": "2026-08-16", "reviewed_at": "2026-08-16"
     },
+    "u000020": {
+      "university_id": "u000020",
+      "university_name": "青山学院大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Aoyama_Gakuin_University_Aoyama_Campus.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aoyama_Gakuin_University_Aoyama_Campus.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "ペン太",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者『ペン太』、投稿者自身の作品、CC BY-SA 3.0を確認。青山キャンパスの実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "青山学院大学青山キャンパス",
+      "reviewed_at": "2026-08-22"
+    },
     "u000025": {
       "university_id": "u000025",
       "university_name": "慶應義塾大学",
@@ -67,7 +81,37 @@
       "alt": "上智大学四谷キャンパスの正門",
       "reviewed_at": "2026-08-22"
     },
-    "u000049": {"university_id":"u000049","university_name":"中央大学","rights_status":"permission_required","source_url":"https://www.chuo-u.ac.jp/aboutus/communication/hphoto/","rights_note":"白門フォトには利用条件と利用後の連絡要件があり、人物を特定できる写真は利用不可。条件を満たす画像を個別確認するまで未掲載。","reviewed_at":"2026-08-16"},
+    "u000049": {
+      "university_id": "u000049",
+      "university_name": "中央大学",
+      "rights_status": "verified",
+      "official_image_status": "permission_required",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Chuo_univ_from_Chudaieki.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chuo_univ_from_Chudaieki.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "vil",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "中央大学公式『白門フォト』は利用条件があるため転載せず、Wikimedia Commonsの第三者写真を採用。個別ファイルページで作者vil、投稿者自身による撮影、CC BY-SA 3.0を確認した多摩キャンパス東門の実景写真。",
+      "alt": "中央大学多摩キャンパス東門を中央大学・明星大学駅側から見た景観",
+      "official_image_source_url": "https://www.chuo-u.ac.jp/aboutus/communication/hphoto/",
+      "official_image_rights_note": "大学公式写真は利用条件と連絡要件があるため使用しない。",
+      "reviewed_at": "2026-08-22"
+    },
+    "u000075": {
+      "university_id": "u000075",
+      "university_name": "法政大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hosei_University_%28Boissonade_Tower%29.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hosei_University_(Boissonade_Tower).jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 4.0を確認。市ヶ谷キャンパスのボアソナード・タワー実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "法政大学市ヶ谷キャンパスのボアソナード・タワー",
+      "reviewed_at": "2026-08-22"
+    },
     "u000080": {
       "university_id": "u000080",
       "university_name": "明治大学",
