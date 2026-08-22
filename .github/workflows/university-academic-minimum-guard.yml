@@ -1,0 +1,105 @@
+name: University academic minimum guard
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-academic-minimum-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/**'
+      - '.github/workflows/university-academic-minimum-guard.yml'
+
+jobs:
+  academic-minimum:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify undergraduate and graduate-only academic structure
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const path=require('node:path');
+          const assert=require('node:assert/strict');
+          const base='tools/university-database/tokyo/data';
+          const snapshotNames=[
+            'academic-structure-batches-03-08.json','academic-structure-batches-09-12.json','academic-structure-batches-13-14.json','academic-structure-batches-15-17.json','academic-structure-batches-18-22.json',
+            'academic-structure-major-01.json','academic-structure-medical-01-02.json',
+            'academic-structure-private-02.json','academic-structure-private-03.json','academic-structure-private-04.json','academic-structure-private-05.json','academic-structure-private-06.json','academic-structure-private-07.json','academic-structure-private-08.json',
+            'academic-structure-tid-professional.json','departments-mejiro-verified.json'
+          ];
+          const graduateOnly=new Set(['u000011','u000013','u000086','u000090','u000123','u000129','u000130','u000131','u000133','u000134','u000141','u000142']);
+          const load=name=>{const p=path.join(base,name);return fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):[]};
+          const asList=v=>Array.isArray(v)?v:(v&&typeof v==='object'?Object.values(v):[]);
+          const faculties=new Map(),departments=new Map(),graduates=new Map();
+          const put=(map,row)=>{if(row?.id)map.set(row.id,row)};
+          const clearUniversity=(map,uid)=>{for(const [id,row] of map)if(row?.university_id===uid)map.delete(id)};
+          for(const row of asList(load('faculties.json')))put(faculties,row);
+          for(const row of asList(load('departments.json')))put(departments,row);
+          if(fs.existsSync(path.join(base,'faculties_tokyo_all.generated.json')))for(const row of asList(load('faculties_tokyo_all.generated.json')))put(faculties,row);
+          if(fs.existsSync(path.join(base,'departments_tokyo_all.generated.json')))for(const row of asList(load('departments_tokyo_all.generated.json')))put(departments,row);
+          for(const row of asList(load('graduate_schools_tokyo_all.generated.json')))put(graduates,row);
+          for(const name of snapshotNames){
+            const doc=load(name);
+            if(!doc||Array.isArray(doc))continue;
+            if(doc.kind==='academic_structure'){
+              for(const u of asList(doc.universities)){
+                for(const f of asList(u.faculties)){
+                  put(faculties,{...f,university_id:u.university_id});
+                  for(const d of asList(f.departments))put(departments,{...d,university_id:u.university_id,faculty_id:f.id});
+                }
+                for(const g of asList(u.graduate_schools))put(graduates,{...g,university_id:u.university_id});
+              }
+            } else {
+              const target=doc.kind==='faculties'?faculties:doc.kind==='departments'?departments:doc.kind==='graduate_schools'?graduates:null;
+              if(target)for(const row of asList(doc.records))put(target,row);
+            }
+          }
+          const manifest=load('public-academic-baseline/manifest.json');
+          assert.equal(manifest.schema,'tokyo-academic-public-baseline-v2');
+          assert.equal(manifest.total_universities,66);
+          for(const file of manifest.shards){
+            const doc=load(`public-academic-baseline/${file}`);
+            assert.equal(doc.kind,'academic_summary');
+            for(const u of asList(doc.universities)){
+              const uid=u.university_id;
+              clearUniversity(faculties,uid);clearUniversity(departments,uid);clearUniversity(graduates,uid);
+              for(const [fi,f] of asList(u.faculties).entries()){
+                const fid=`summary-${uid}-f${fi}`;
+                put(faculties,{id:fid,university_id:uid,name:f.name});
+                for(const [di,d] of asList(f.units).entries())put(departments,{id:`summary-${uid}-d${fi}-${di}`,university_id:uid,faculty_id:fid,name:d.name,department_type:d.type||'department'});
+              }
+              for(const [gi,g] of asList(u.graduate_schools).entries())put(graduates,{id:`summary-${uid}-g${gi}`,university_id:uid,name:g.name});
+            }
+          }
+          const universities=asList(load('universities_tokyo_all.generated.json'));
+          assert.equal(universities.length,144,'Tokyo university count must stay 144');
+          assert.equal(graduateOnly.size,12,'Graduate-only institution count changed unexpectedly');
+          const fBy=new Map(),dBy=new Map(),gBy=new Map();
+          for(const f of faculties.values()){if(!f.university_id)continue;if(!fBy.has(f.university_id))fBy.set(f.university_id,[]);fBy.get(f.university_id).push(f)}
+          for(const d of departments.values()){if(!d.university_id)continue;if(!dBy.has(d.university_id))dBy.set(d.university_id,[]);dBy.get(d.university_id).push(d)}
+          for(const g of graduates.values()){if(!g.university_id)continue;if(!gBy.has(g.university_id))gBy.set(g.university_id,[]);gBy.get(g.university_id).push(g)}
+          const noFaculty=[],noUnits=[],noGraduateSchool=[];
+          for(const u of universities){
+            const f=fBy.get(u.id)||[],d=dBy.get(u.id)||[],g=gBy.get(u.id)||[];
+            if(graduateOnly.has(u.id)){
+              if(!g.length)noGraduateSchool.push(`${u.id}:${u.name}`);
+            }else{
+              if(!f.length)noFaculty.push(`${u.id}:${u.name}`);
+              if(!d.length)noUnits.push(`${u.id}:${u.name}`);
+            }
+          }
+          const undergraduateCount=universities.length-graduateOnly.size;
+          console.log(`undergraduate faculty coverage ${undergraduateCount-noFaculty.length}/${undergraduateCount}`);
+          console.log(`undergraduate department/unit coverage ${undergraduateCount-noUnits.length}/${undergraduateCount}`);
+          console.log(`graduate-only research-school coverage ${graduateOnly.size-noGraduateSchool.length}/${graduateOnly.size}`);
+          if(noFaculty.length)console.log('no faculty:',noFaculty.join(', '));
+          if(noUnits.length)console.log('no department/unit:',noUnits.join(', '));
+          if(noGraduateSchool.length)console.log('no graduate school:',noGraduateSchool.join(', '));
+          assert.deepEqual(noFaculty,[],'Every undergraduate university needs faculty/faculty-equivalent structure');
+          assert.deepEqual(noUnits,[],'Every undergraduate university needs department/course/unit structure');
+          assert.deepEqual(noGraduateSchool,[],'Every graduate-only institution needs graduate-school structure');
+          NODE
