@@ -7,7 +7,7 @@ const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const asList=v=>Array.isArray(v)?v:(v&&typeof v==='object'?Object.entries(v).map(([key,row])=>row&&typeof row==='object'&&!Array.isArray(row)&&!row.university_id&&/^u\d{6}$/.test(key)?{university_id:key,...row}:row):[]);
 const group=rows=>{const m=new Map();for(const r of asList(rows)){if(!r?.university_id)continue;if(!m.has(r.university_id))m.set(r.university_id,[]);m.get(r.university_id).push(r)}return m};
 const json=async url=>{try{const r=await fetch(url);return r.ok?await r.json():[]}catch{return []}};
-const obj=async url=>{try{const r=await fetch(url);return r.ok?await r.json():{}}catch{return {}}};
+const obj=async url=>{try{const r=await fetch(url);return r.ok?await r.json():{}}catch{return {}};
 const val=(...xs)=>xs.find(x=>x!==undefined&&x!==null&&String(x).trim()!=='');
 const link=(url,label,cls='secondary')=>url?`<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';
 const fact=(label,value)=>value?`<div class="detail-fact"><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`:'';
@@ -18,9 +18,9 @@ function flatten(doc,fm,dm,gm){if(!doc)return;if(doc.kind==='academic_structure'
 async function loadAcademic(){const [gf,gd,gg,bf,bd,...docs]=await Promise.all([json('data/faculties_tokyo_all.generated.json'),json('data/departments_tokyo_all.generated.json'),json('data/graduate_schools_tokyo_all.generated.json'),json('data/faculties.json'),json('data/departments.json'),...SNAPSHOTS.map(n=>obj(`data/${n}`))]);const fm=new Map(),dm=new Map(),gm=new Map();for(const r of asList(bf))put(fm,r);for(const r of asList(bd))put(dm,r);for(const r of asList(gf))put(fm,r);for(const r of asList(gd))put(dm,r);for(const r of asList(gg))put(gm,r);for(const d of docs)flatten(d,fm,dm,gm);return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()]}}
 function summary(items,label,max=8){if(!items.length)return `${label}：情報更新中（該当なしを含め公式確認中）`;const names=items.map(x=>x.name).filter(Boolean);return `${label} ${items.length}：${names.slice(0,max).join('、')}${names.length>max?`、ほか${names.length-max}`:''}`}
 if(!id){root.innerHTML='<div class="detail-error"><strong>大学が指定されていません。</strong><p><a href="./">大学一覧へ戻る</a></p></div>';return}
-Promise.all([json('data/universities_tokyo_all.generated.json'),loadAcademic(),obj('data/university-detail-national-public-batch1.json'),obj('data/university-detail-overrides.json'),obj('data/private-detail-2026-updates.json')]).then(([rows,a,core,overrides,private2026])=>{
+Promise.all([json('data/universities_tokyo_all.generated.json'),loadAcademic(),obj('data/university-detail-national-public-batch1.json'),obj('data/university-detail-overrides.json'),obj('data/private-detail-2026-updates.json'),obj('data/tokyo_admissions_batch01.json')]).then(([rows,a,core,overrides,private2026,admissionsBatch])=>{
 let row=asList(rows).find(x=>x.id===id);if(!row)throw new Error('not found');
-for(const extra of [core?.universities?.[id],overrides?.universities?.[id],private2026?.universities?.[id]])if(extra)row={...row,...extra,headquarters:{...(row.headquarters||{}),...(extra.headquarters||{})},student_counts:{...(row.student_counts||{}),...(extra.student_counts||{})}};
+for(const extra of [core?.universities?.[id],overrides?.universities?.[id],private2026?.universities?.[id],admissionsBatch?.records?.[id]])if(extra)row={...row,...extra,headquarters:{...(row.headquarters||{}),...(extra.headquarters||{})},student_counts:{...(row.student_counts||{}),...(extra.student_counts||{})}};
 const f=group(a.faculties).get(id)||[],d=group(a.departments).get(id)||[],g=group(a.graduateSchools).get(id)||[];
 const municipality=val(row.municipality,row.headquarters?.municipality,'所在地確認中');
 const address=val(row.headquarters?.address,`東京都 ${municipality}`);
