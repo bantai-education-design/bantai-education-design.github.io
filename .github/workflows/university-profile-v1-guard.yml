@@ -70,7 +70,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
           sleep 2
-      - name: Verify complete profiles and legacy fallback in browser
+      - name: Verify database top, maps, academic basics and profile fallback
         run: |
           mkdir -p visual-preview
           node <<'NODE'
@@ -78,6 +78,27 @@ jobs:
           const assert=require('node:assert/strict');
           (async()=>{
             const browser=await chromium.launch({headless:true});
+            const topUrl='http://127.0.0.1:4173/tools/university-database/tokyo/';
+            const page=await browser.newPage({viewport:{width:1366,height:1000}});
+            await page.goto(topUrl,{waitUntil:'networkidle'});
+            await page.locator('#university-db-development-status').waitFor({state:'visible'});
+            const topText=await page.locator('body').innerText();
+            assert.ok(topText.includes('現在 開発・更新中'),'development status missing');
+            const status=await page.locator('#academic-sync-status').innerText();
+            console.log('academic status:',status);
+            assert.ok(status.includes('144/144'),`academic coverage not restored: ${status}`);
+            const teikyo=page.locator('.tokyo-card[data-id="u000102"]');
+            await teikyo.waitFor({state:'visible'});
+            assert.ok((await teikyo.innerText()).includes('学部 10'),'Teikyo faculty snapshot not rendered');
+            const mapHref=await teikyo.locator('.map-card-link').getAttribute('href');
+            assert.ok(decodeURIComponent(mapHref).includes('帝京大学'),'map query must contain university name');
+            assert.ok(!/^https:\/\/www\.google\.com\/maps\/search\/\?api=1&query=(?:%E6%9D%B1%E4%BA%AC%E9%83%BD|東京都)$/.test(mapHref),'map query must not be Tokyo only');
+            await page.screenshot({path:'visual-preview/tokyo-db-top-pc.png',fullPage:false});
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'top mobile overflow');
+            await page.screenshot({path:'visual-preview/tokyo-db-top-mobile.png',fullPage:false});
+            await page.close();
+
             const base='http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=';
             const profiles=[
               {id:'u000001',name:'東京大学',faculties:10,phrases:['642,960円','2,858人']},
@@ -85,23 +106,29 @@ jobs:
             ];
             for(const p of profiles){
               for(const [suffix,width,height,fullPage] of [['pc',1366,1000,true],['mobile',375,900,false]]){
-                const page=await browser.newPage({viewport:{width,height}});
-                await page.goto(base+p.id,{waitUntil:'networkidle'});
-                await page.locator('h1').filter({hasText:p.name}).waitFor({state:'visible'});
-                assert.equal(await page.locator('.complete-section').count(),8,`${p.id}: eight sections`);
-                assert.equal(await page.locator('.complete-academic-card').count(),p.faculties,`${p.id}: faculty cards`);
-                assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${p.id}-${suffix}: overflow`);
-                const text=await page.locator('body').innerText();
-                for(const phrase of ['キャンパス・最寄駅','学費','入試方式・Web出願','資格・進路','研究・スポーツ・著名卒業生','出典・最終確認日','Web出願サイト：公式公開待ち',...p.phrases]) assert.ok(text.includes(phrase),`${p.id}: missing ${phrase}`);
-                await page.screenshot({path:`visual-preview/${p.id}-${suffix}.png`,fullPage});
-                await page.close();
+                const profile=await browser.newPage({viewport:{width,height}});
+                await profile.goto(base+p.id,{waitUntil:'networkidle'});
+                await profile.locator('h1').filter({hasText:p.name}).waitFor({state:'visible'});
+                assert.equal(await profile.locator('.complete-section').count(),8,`${p.id}: eight sections`);
+                assert.equal(await profile.locator('.complete-academic-card').count(),p.faculties,`${p.id}: faculty cards`);
+                assert.equal(await profile.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${p.id}-${suffix}: overflow`);
+                const text=await profile.locator('body').innerText();
+                for(const phrase of ['大学の基本情報','学部','学科・課程・類','Google Maps','キャンパス・最寄駅','学費','入試方式・Web出願','資格・進路','研究・スポーツ・著名卒業生','出典・最終確認日','Web出願サイト：公式公開待ち',...p.phrases]) assert.ok(text.includes(phrase),`${p.id}: missing ${phrase}`);
+                const completeMap=await profile.locator('a',{hasText:'Google Maps'}).first().getAttribute('href');
+                assert.ok(decodeURIComponent(completeMap).includes(p.name),`${p.id}: map query missing university name`);
+                await profile.screenshot({path:`visual-preview/${p.id}-${suffix}.png`,fullPage});
+                await profile.close();
               }
             }
+
             const legacy=await browser.newPage({viewport:{width:1366,height:900}});
             await legacy.goto(base+'u000003',{waitUntil:'networkidle'});
             await legacy.locator('h1').filter({hasText:'東京学芸大学'}).waitFor({state:'visible'});
             assert.equal(await legacy.locator('.complete-section').count(),0,'legacy university should use old renderer');
-            assert.ok((await legacy.locator('body').innerText()).includes('大学の基本情報'),'legacy detail missing');
+            const legacyText=await legacy.locator('body').innerText();
+            for(const phrase of ['大学の基本情報','学部','学科・課程等','基本情報 更新中','Google Maps']) assert.ok(legacyText.includes(phrase),`legacy missing ${phrase}`);
+            const legacyMap=await legacy.locator('a',{hasText:'Google Maps'}).first().getAttribute('href');
+            assert.ok(decodeURIComponent(legacyMap).includes('東京学芸大学'),'legacy map query missing university name');
             assert.equal(await legacy.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'legacy overflow');
             await legacy.screenshot({path:'visual-preview/u000003-legacy-pc.png',fullPage:false});
             await legacy.close();
