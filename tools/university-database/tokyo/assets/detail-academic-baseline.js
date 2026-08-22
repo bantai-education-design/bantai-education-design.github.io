@@ -3,6 +3,7 @@ const id=new URLSearchParams(location.search).get('id');
 const root=document.querySelector('#detail-root');
 if(!id||!root)return;
 const LOCATION_SHARDS=Array.from({length:6},(_,i)=>`data/tokyo_locations_${String(i+1).padStart(2,'0')}.json`);
+const ADMISSION_SHARDS=Array.from({length:6},(_,i)=>`data/tokyo_admissions_${String(i+1).padStart(2,'0')}.json`);
 const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const summary=(items,label,max=8)=>{const names=(items||[]).map(x=>x.name).filter(Boolean);return names.length?`${label} ${names.length}：${names.slice(0,max).join('、')}${names.length>max?`、ほか${names.length-max}`:''}`:`${label}：該当なし`};
 const listHtml=(items,empty)=>items.length?`<ul class="detail-list">${items.map(x=>`<li>${esc(x.name)}</li>`).join('')}</ul>`:`<p class="detail-empty">${esc(empty)}</p>`;
@@ -20,6 +21,22 @@ async function loadLocations(){
   const locations=shards.flat();
   if(locations.length!==144||new Set(locations.map(x=>x.id)).size!==144)throw new Error('location overlay count invalid');
   return locations;
+}
+async function loadAdmissions(){
+  const shards=await Promise.all(ADMISSION_SHARDS.map(async file=>{
+    const response=await fetch(file);
+    if(!response.ok)throw new Error(`admissions shard missing: ${file}`);
+    const rows=await response.json();
+    if(!Array.isArray(rows)||rows.length!==24)throw new Error(`admissions shard count invalid: ${file}`);
+    return rows;
+  }));
+  const admissions=shards.flat();
+  if(admissions.length!==144||new Set(admissions.map(x=>x.id)).size!==144)throw new Error('admissions overlay count invalid');
+  for(const row of admissions){
+    if(!row?.id||!row?.name||row.verification_status!=='verified')throw new Error(`admissions record invalid: ${row?.id||'unknown'}`);
+    if(row.admissions_status!=='stopped'&&!/^https:\/\//.test(row.admissions_url||''))throw new Error(`admissions URL missing: ${row.id}`);
+  }
+  return admissions;
 }
 function applyLocation(loc){
   if(!loc?.municipality||!loc?.headquarters?.address||!/^\d{3}-\d{4}$/.test(loc?.headquarters?.postal_code||'')||!root.querySelector('.detail-hero'))return false;
@@ -39,6 +56,28 @@ function applyLocation(loc){
     link.href=map;
   }
   root.dataset.locationOverlay='ready';
+  return true;
+}
+function upsertLink(container,matchLabels,url,label,cls='secondary'){
+  if(!container||!url)return;
+  const existing=[...container.querySelectorAll('a')].find(a=>matchLabels.some(text=>(a.textContent||'').includes(text)));
+  if(existing){existing.href=url;existing.target='_blank';existing.rel='noopener';return;}
+  const a=document.createElement('a');a.className=cls;a.href=url;a.target='_blank';a.rel='noopener';a.textContent=`${label} ↗`;container.appendChild(a);
+}
+function applyAdmissions(adm){
+  if(!root.querySelector('.detail-hero'))return false;
+  const stopped=adm.admissions_status==='stopped';
+  for(const pill of root.querySelectorAll('.detail-meta .detail-pill')){
+    const text=pill.textContent?.trim()||'';
+    if(text==='募集継続'||text==='募集停止'){pill.textContent=stopped?'募集停止':'募集継続';break;}
+  }
+  for(const container of root.querySelectorAll('.detail-actions,.detail-link-stack')){
+    if(adm.admissions_url)upsertLink(container,['入試情報','入試・願書情報','入試公式'],adm.admissions_url,'入試情報');
+    if(adm.application_guidelines_url)upsertLink(container,['募集要項','選抜要項'],adm.application_guidelines_url,'募集要項');
+    if(adm.brochure_request_url)upsertLink(container,['資料請求'],adm.brochure_request_url,'資料請求');
+    if(adm.open_campus_url)upsertLink(container,['オープンキャンパス'],adm.open_campus_url,'オープンキャンパス');
+  }
+  root.dataset.admissionsOverlay='ready';
   return true;
 }
 function apply(u){
@@ -69,6 +108,21 @@ function apply(u){
     observer.observe(root,{childList:true,subtree:true});
     setTimeout(()=>observer.disconnect(),8000);
   }catch(err){console.error('Detail location overlay failed',err);root.dataset.locationOverlay='error';}
+})();
+(async()=>{
+  try{
+    const admissions=await loadAdmissions();
+    const target=admissions.find(x=>x.id===id);
+    if(!target)throw new Error(`admissions missing for ${id}`);
+    const attempt=()=>applyAdmissions(target);
+    if(attempt()){
+      setTimeout(()=>attempt(),500);
+      return;
+    }
+    const observer=new MutationObserver(()=>{if(attempt()){observer.disconnect();setTimeout(()=>attempt(),500);}});
+    observer.observe(root,{childList:true,subtree:true});
+    setTimeout(()=>observer.disconnect(),8000);
+  }catch(err){console.error('Detail admissions overlay failed',err);root.dataset.admissionsOverlay='error';}
 })();
 (async()=>{
   try{

@@ -20,10 +20,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate location data and scripts
+      - name: Validate location, admissions, images, and scripts
         run: |
           node --check tools/university-database/tokyo/assets/ai-card-images.js
+          node --check tools/university-database/tokyo/assets/detail-layer.js
           node --check tools/university-database/tokyo/assets/detail-academic-baseline.js
+          node --check tools/university-database/tokyo/assets/detail.js
+          node --check tools/university-database/tokyo/assets/tokyo.js
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
@@ -40,7 +43,39 @@ jobs:
           const postal=rows.filter(x=>x.headquarters?.postal_code);
           assert.equal(postal.length,144,'Every Tokyo university must have a source-backed postal code');
           for(const row of postal)assert.match(row.headquarters.postal_code,/^\d{3}-\d{4}$/,`${row.id}: postal format`);
-          console.log(`locations ${rows.length}/144; verified postal codes ${postal.length}/144; shards ${shards.length}/6`);
+
+          const aiCard=fs.readFileSync('tools/university-database/tokyo/assets/ai-card-images.js','utf8');
+          assert.ok(!aiCard.includes("fetch('data/tokyo_locations.json')"),'Card overlay must not depend on legacy tokyo_locations.json');
+          for(let i=1;i<=6;i++)assert.ok(aiCard.includes(`tokyo_locations_${String(i).padStart(2,'0')}`)||aiCard.includes('LOCATION_SHARDS'),'Card overlay must use verified location shards');
+          assert.ok(aiCard.includes("querySelector('#quality-admissions')"),'Public admissions quality metric must be driven by loaded public data');
+
+          const admissionShardPaths=Array.from({length:6},(_,i)=>`tools/university-database/tokyo/data/tokyo_admissions_${String(i+1).padStart(2,'0')}.json`);
+          const admissionShards=admissionShardPaths.map(path=>JSON.parse(fs.readFileSync(path,'utf8')));
+          admissionShards.forEach((items,i)=>assert.equal(items.length,24,`${admissionShardPaths[i]} must contain 24 universities`));
+          const admissionRows=admissionShards.flat();
+          assert.equal(admissionRows.length,144,'Tokyo admissions shards must contain 144 universities');
+          assert.equal(new Set(admissionRows.map(x=>x.id)).size,144,'Tokyo admissions ids must be unique');
+          admissionRows.forEach((row,i)=>{
+            assert.equal(row.id,`u${String(i+1).padStart(6,'0')}`,`admissions row ${i+1} id order`);
+            assert.ok(row.name,`${row.id}: university name required`);
+            assert.equal(row.verification_status,'verified',`${row.id}: canonical verification required`);
+            if(row.admissions_status!=='stopped')assert.match(row.admissions_url||'',/^https:\/\//,`${row.id}: verified admissions URL must be HTTPS`);
+          });
+          const admissionsCovered=admissionRows.filter(row=>row.admissions_url||row.admissions_status==='stopped');
+          assert.equal(admissionsCovered.length,144,'Every Tokyo university needs a verified admissions route or stopped status');
+          assert.equal(admissionRows.filter(row=>row.admissions_url).length,143,'143 universities should expose a direct admissions URL; one stopped university has no active route');
+
+          const images=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
+          for(const id of ['u000001','u000025','u000085']){
+            const image=images.images?.[id];
+            assert.equal(image?.rights_status,'verified',`${id}: real photo must be rights-verified`);
+            assert.match(image?.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${id}: Commons file page required`);
+            assert.match(image?.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${id}: stable Wikimedia media URL required`);
+            assert.match(image?.license||'',/^CC BY-SA /,`${id}: reuse license required`);
+            assert.match(image?.license_url||'',/^https:\/\/creativecommons\.org\/licenses\/by-sa\//,`${id}: license URL required`);
+            assert.ok(image?.creator,`${id}: creator credit required`);
+          }
+          console.log(`locations ${rows.length}/144; verified postal codes ${postal.length}/144; location shards ${shards.length}/6; admissions coverage ${admissionsCovered.length}/144; admissions shards ${admissionShards.length}/6; verified real photos 3`);
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -50,7 +85,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-location-site.log 2>&1 &
           sleep 2
-      - name: Verify list, search, maps, and detail location UI
+      - name: Verify list, admissions, photos, maps, and detail UI
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -60,17 +95,42 @@ jobs:
             const top=await browser.newPage({viewport:{width:1366,height:950}});
             await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await top.waitForFunction(()=>document.documentElement.dataset.locationOverlay==='ready',{timeout:15000});
+            await top.waitForFunction(()=>document.documentElement.dataset.admissionsOverlay==='ready',{timeout:15000});
             await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             const body=await top.locator('body').innerText();
             assert.ok(!body.includes('所在地確認中'),'Top page must not show location pending');
+
             const aoyama=top.locator('.tokyo-card[data-id="u000020"]');
             assert.ok((await aoyama.innerText()).includes('渋谷区'));
             const map=decodeURIComponent(await aoyama.locator('.map-card-link').getAttribute('href'));
             assert.ok(map.includes('青山学院大学'),map);
-            assert.ok(map.includes('東京都渋谷区渋谷4－4－25'),map);
+            assert.ok(map.includes('東京都渋谷区渋谷4-4-25'),map);
+            assert.ok(!map.includes('150-8366'),'Card Maps query must not include postal code');
+
+            const sophia=top.locator('.tokyo-card[data-id="u000033"]');
+            assert.ok((await sophia.locator('.card-actions a.primary').innerText()).includes('入試情報'));
+            assert.ok((await sophia.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://adm.sophia.ac.jp/'));
+            const lastCard=top.locator('.tokyo-card[data-id="u000144"]');
+            assert.ok((await lastCard.locator('.card-actions a.primary').getAttribute('href')).includes('tid.ac.jp/assets/docs/admission/admission.pdf'));
+            const coveredCardCount=await top.locator('.tokyo-card').evaluateAll(cards=>cards.filter(card=>{
+              const primary=card.querySelector('.card-actions a.primary');
+              const stopped=[...card.querySelectorAll('.tag')].some(tag=>tag.textContent.trim()==='募集停止');
+              return Boolean(primary&&primary.textContent.includes('入試情報'))||stopped;
+            }).length);
+            assert.equal(coveredCardCount,144,'All Tokyo cards need a verified admissions route or stopped status');
+            const qualityAdmissions=(await top.locator('#quality-admissions').innerText()).trim();
+            assert.equal(qualityAdmissions,'144/144','Public admissions coverage must report 144/144 after canonical sync');
+
+            for(const id of ['u000001','u000025','u000085']){
+              const visual=top.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
+              assert.equal(await visual.count(),1,`${id}: verified real photo visual`);
+              assert.ok((await visual.locator('img').getAttribute('src')).includes('upload.wikimedia.org'));
+              assert.equal(await visual.locator('.image-source-link').count(),1,`${id}: image source link`);
+            }
+
             await top.evaluate(()=>{
               const input=document.querySelector('#tokyo-search-input');
-              input.value='東京都渋谷区渋谷4－4－25';
+              input.value='東京都渋谷区渋谷4-4-25';
               input.dispatchEvent(new Event('input',{bubbles:true}));
               document.querySelector('#tokyo-search').requestSubmit();
             });
@@ -83,23 +143,35 @@ jobs:
             const detail=await browser.newPage({viewport:{width:1366,height:900}});
             await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000020',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
+            await detail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.admissionsOverlay==='ready',{timeout:15000});
             const detailText=await detail.locator('body').innerText();
             assert.ok(detailText.includes('〒150-8366 東京都渋谷区渋谷4-4-25'),detailText);
             assert.ok(!detailText.includes('所在地確認中'),detailText);
+            assert.ok([...await detail.locator('#detail-root a').allTextContents()].some(text=>text.includes('入試情報')),'Aoyama detail needs admissions action');
             const detailMap=decodeURIComponent(await detail.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
             assert.ok(detailMap.includes('青山学院大学'),detailMap);
             assert.ok(detailMap.includes('東京都渋谷区渋谷4-4-25'),detailMap);
             assert.ok(!detailMap.includes('150-8366'),'Google Maps query must use university name + verified headquarters address only');
             await detail.close();
 
+            const admissionsDetail=await browser.newPage({viewport:{width:1366,height:900}});
+            await admissionsDetail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000033',{waitUntil:'networkidle'});
+            await admissionsDetail.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.admissionsOverlay==='ready',{timeout:15000});
+            await admissionsDetail.waitForFunction(()=>[...document.querySelectorAll('#detail-root a')].some(a=>a.textContent.includes('入試情報')&&a.href.includes('adm.sophia.ac.jp')),{timeout:15000});
+            await admissionsDetail.close();
+
             const last=await browser.newPage({viewport:{width:1366,height:900}});
             await last.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000144',{waitUntil:'networkidle'});
             await last.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.locationOverlay==='ready',{timeout:15000});
+            await last.waitForFunction(()=>document.querySelector('#detail-root')?.dataset.admissionsOverlay==='ready',{timeout:15000});
             const lastText=await last.locator('body').innerText();
             assert.ok(lastText.includes('〒132-0034 東京都江戸川区小松川2-7-1'),lastText);
+            const lastAdmission=await last.locator('#detail-root a',{hasText:'入試情報'}).first().getAttribute('href');
+            assert.ok(lastAdmission.includes('tid.ac.jp/assets/docs/admission/admission.pdf'),lastAdmission);
             const lastMap=decodeURIComponent(await last.locator('a',{hasText:'Google Maps'}).first().getAttribute('href'));
             assert.ok(lastMap.includes('東京情報デザイン専門職大学'),lastMap);
             assert.ok(lastMap.includes('東京都江戸川区小松川2-7-1'),lastMap);
+            assert.ok(!lastMap.includes('132-0034'),'Final-shard Maps query must not include postal code');
             await last.close();
             await browser.close();
           })().catch(err=>{console.error(err);process.exit(1)});
