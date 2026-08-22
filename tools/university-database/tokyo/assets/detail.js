@@ -41,20 +41,21 @@
     if(target)for(const row of doc.records||[])putById(target,row);
   };
   const loadAcademicBundle=async()=>{
-    const [generatedF,generatedD,generatedG]=await Promise.all([
+    const [generatedF,generatedD,generatedG,baseF,baseD,...snapshots]=await Promise.all([
       json('data/faculties_tokyo_all.generated.json'),
       json('data/departments_tokyo_all.generated.json'),
-      json('data/graduate_schools_tokyo_all.generated.json')
-    ]);
-    if(generatedF.length||generatedD.length||generatedG.length)return {faculties:generatedF,departments:generatedD,graduateSchools:generatedG,source:'generated'};
-    const [baseF,baseD,...snapshots]=await Promise.all([
+      json('data/graduate_schools_tokyo_all.generated.json'),
       json('data/faculties.json'),json('data/departments.json'),...ACADEMIC_SNAPSHOTS.map(name=>obj(`data/${name}`))
     ]);
     const fm=new Map(),dm=new Map(),gm=new Map();
     for(const row of baseF)putById(fm,row);
     for(const row of baseD)putById(dm,row);
+    for(const row of generatedF)putById(fm,row);
+    for(const row of generatedD)putById(dm,row);
+    for(const row of generatedG)putById(gm,row);
     for(const doc of snapshots)flattenAcademicDocument(doc,fm,dm,gm);
-    return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:'verified snapshots'};
+    const hasGenerated=generatedF.length||generatedD.length||generatedG.length;
+    return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:hasGenerated?'merged':'verified snapshots'};
   };
 
   if(!id){
@@ -155,7 +156,7 @@
           <div><h3>受験・大学を知る</h3><div class="detail-link-stack">${link(official,'大学公式情報','primary')}${link(admissions,'入試情報')}${link(row.application_guidelines_url,'募集要項')}${link(row.brochure_request_url,'資料請求')}${link(row.open_campus_url,'オープンキャンパス')}<a class="secondary" href="${maps}" target="_blank" rel="noopener">Google Maps ↗</a></div></div>
         </div>
       </section>
-      <div class="detail-note">現在、東京都144大学の基本情報を優先更新中です。学部・学科・所在地・地図リンクを再確認し、未同期の項目は推測で埋めず「情報更新中」と表示します。教育組織は${academic.source==='generated'?'集約済みデータ':'公開済み検証スナップショット'}から読み込んでいます。</div>`;
+      <div class="detail-note">現在、東京都144大学の基本情報を優先更新中です。学部・学科・所在地・地図リンクを再確認し、未同期の項目は推測で埋めず「情報更新中」と表示します。教育組織は${academic.source==='merged'?'集約データと公開済み検証スナップショット':'公開済み検証スナップショット'}から統合しています。</div>`;
   }).catch(()=>{
     root.innerHTML='<div class="detail-error"><strong>大学情報を読み込めませんでした。</strong><p><a href="./">大学一覧へ戻る</a></p></div>';
   });
