@@ -1,0 +1,88 @@
+name: University photo batch 2 guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/assets/**'
+      - '.github/workflows/university-photo-batch2-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/assets/**'
+      - '.github/workflows/university-photo-batch2-guard.yml'
+
+jobs:
+  photo-batch2-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate six rights-verified real photos
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
+          const expected={
+            u000001:'東京大学',
+            u000025:'慶應義塾大学',
+            u000033:'上智大学',
+            u000080:'明治大学',
+            u000083:'立教大学',
+            u000085:'早稲田大学'
+          };
+          for(const [id,name] of Object.entries(expected)){
+            const image=data.images?.[id];
+            assert.ok(image,`${id}: image record required`);
+            assert.equal(image.university_name,name,`${id}: university name`);
+            assert.equal(image.rights_status,'verified',`${id}: rights status`);
+            assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${id}: Commons file page`);
+            assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${id}: Wikimedia original media URL`);
+            assert.match(image.license||'',/^CC BY-SA (3\.0|4\.0)$/,`${id}: reusable CC BY-SA license`);
+            assert.match(image.license_url||'',/^https:\/\/creativecommons\.org\/licenses\/by-sa\/(3\.0|4\.0)\/$/,`${id}: license URL`);
+            assert.ok(image.creator,`${id}: creator required`);
+            assert.ok(image.rights_note,`${id}: rights note required`);
+            assert.ok(image.alt,`${id}: alt text required`);
+            assert.equal(image.reviewed_at,'2026-08-22',`${id}: review date`);
+          }
+          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,6,'Exactly six real photos should be verified in this batch');
+          console.log('verified real university photos 6/6');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-site.log 2>&1 &
+          sleep 2
+      - name: Verify new real-photo cards in browser
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:950}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            for(const id of ['u000033','u000080','u000083']){
+              const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
+              assert.equal(await visual.count(),1,`${id}: real photo visual`);
+              const src=await visual.locator('img').getAttribute('src');
+              assert.ok(src?.startsWith('https://upload.wikimedia.org/'),`${id}: Wikimedia image src`);
+              const source=visual.locator('.image-source-link');
+              assert.equal(await source.count(),1,`${id}: visible image source link`);
+              assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
+            }
+            assert.equal(await page.locator('.real-university-image').count(),6,'Six real university photo cards must render');
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
+            await browser.close();
+          })().catch(err=>{console.error(err);process.exit(1)});
+          NODE
