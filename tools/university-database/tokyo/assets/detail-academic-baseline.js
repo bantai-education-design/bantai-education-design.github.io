@@ -8,6 +8,26 @@ const listHtml=(items,empty)=>items.length?`<ul class="detail-list">${items.map(
 function setStat(label,value){for(const box of root.querySelectorAll('.detail-stat')){if(box.querySelector('small')?.textContent?.trim()===label){const strong=box.querySelector('strong');if(strong)strong.textContent=value;}}}
 function setFact(label,value){for(const box of root.querySelectorAll('.detail-fact')){if(box.querySelector('dt')?.textContent?.trim()===label){const dd=box.querySelector('dd');if(dd)dd.textContent=value;return true;}}return false}
 function setAcademicColumn(label,items,empty){for(const h3 of root.querySelectorAll('.detail-academic h3')){if(h3.textContent?.trim()!==label)continue;const wrap=h3.parentElement;if(!wrap)continue;[...wrap.children].filter(x=>x!==h3).forEach(x=>x.remove());wrap.insertAdjacentHTML('beforeend',listHtml(items,empty));return true;}return false}
+function applyLocation(loc){
+  if(!loc?.municipality||!loc?.headquarters?.address||!root.querySelector('.detail-hero'))return false;
+  const address=loc.headquarters.address;
+  const postal=loc.headquarters.postal_code;
+  const display=postal?`〒${postal} ${address}`:address;
+  if(!setFact('所在地',display)){
+    const facts=root.querySelector('.detail-core .detail-facts');
+    if(facts)facts.insertAdjacentHTML('afterbegin',`<div class="detail-fact"><dt>所在地</dt><dd>${esc(display)}</dd></div>`);
+  }
+  for(const pill of root.querySelectorAll('.detail-meta .detail-pill')){
+    if(/^東京都(?:\s|$)/.test(pill.textContent?.trim()||'')){pill.textContent=`東京都 ${loc.municipality}`;break;}
+  }
+  const map=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${loc.name} ${address}`)}`;
+  for(const link of root.querySelectorAll('a[href*="google.com/maps/search"]')){
+    if(link.closest('.complete-card'))continue;
+    link.href=map;
+  }
+  root.dataset.locationOverlay='ready';
+  return true;
+}
 function apply(u){
   const faculties=u.faculties||[];
   const units=faculties.flatMap(f=>(f.units||[]).map(x=>({...x,faculty_name:f.name})));
@@ -26,6 +46,20 @@ function apply(u){
   root.dataset.academicBaseline='ready';
   return true;
 }
+(async()=>{
+  try{
+    const response=await fetch('data/tokyo_locations.json');
+    if(!response.ok)throw new Error('location overlay missing');
+    const locations=await response.json();
+    if(!Array.isArray(locations)||locations.length!==144)throw new Error('location overlay count invalid');
+    const target=locations.find(x=>x.id===id);
+    if(!target)throw new Error(`location missing for ${id}`);
+    if(applyLocation(target))return;
+    const observer=new MutationObserver(()=>{if(applyLocation(target))observer.disconnect();});
+    observer.observe(root,{childList:true,subtree:true});
+    setTimeout(()=>observer.disconnect(),8000);
+  }catch(err){console.error('Detail location overlay failed',err);root.dataset.locationOverlay='error';}
+})();
 (async()=>{
   try{
     const complete=await fetch(`data/complete/${encodeURIComponent(id)}.json`);
