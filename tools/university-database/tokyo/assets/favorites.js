@@ -38,7 +38,7 @@ if(matchMedia('(max-width:620px)').matches){topButton.style.right='12px';topButt
 const heroLead=document.querySelector('.hero-copy p');
 if(heroLead)heroLead.innerHTML='東京都144大学を、学びたいこと・地域・設置区分・大学の特色から探せるデータベースです。<br>大学公式情報や公的資料を優先し、比較しやすい形に整理しています。';
 const notice=document.querySelector('.ref-notice');
-if(notice)notice.textContent='ⓘ 東京都144大学を公開中です。大学情報は更新される場合があります。出願・入試の最新情報は各大学の公式情報もご確認ください。';
+if(notice)notice.innerHTML='ⓘ <strong>現在開発・更新中です。</strong> 学部・学科・所在地・地図リンクを再確認しています。出願・入試の最新情報は各大学の公式情報もご確認ください。';
 
 // Finished card layer: one common quality standard for all 144 universities.
 const cardCss=document.createElement('link');cardCss.rel='stylesheet';cardCss.href='assets/card-finish.css';document.head.appendChild(cardCss);
