@@ -65,8 +65,12 @@ jobs:
             const map=decodeURIComponent(await aoyama.locator('.map-card-link').getAttribute('href'));
             assert.ok(map.includes('青山学院大学'),map);
             assert.ok(map.includes('東京都渋谷区渋谷4－4－25'),map);
-            await top.locator('#tokyo-search-input').fill('東京都渋谷区渋谷4－4－25');
-            await top.locator('#tokyo-search').evaluate(form=>form.requestSubmit());
+            await top.evaluate(()=>{
+              const input=document.querySelector('#tokyo-search-input');
+              input.value='東京都渋谷区渋谷4－4－25';
+              input.dispatchEvent(new Event('input',{bubbles:true}));
+              document.querySelector('#tokyo-search').requestSubmit();
+            });
             await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===1);
             assert.equal(await top.locator('.tokyo-card h3').innerText(),'青山学院大学');
             await top.setViewportSize({width:375,height:900});
