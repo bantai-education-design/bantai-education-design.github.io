@@ -1,4 +1,4 @@
-name: University photo batch 2 guard
+name: University photo coverage guard
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ on:
       - '.github/workflows/university-photo-batch2-guard.yml'
 
 jobs:
-  photo-batch2-guard:
+  photo-coverage-guard:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate six rights-verified real photos
+      - name: Validate nine rights-verified real photos
         run: |
           node <<'NODE'
           const fs=require('node:fs');
@@ -30,8 +30,11 @@ jobs:
           const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
           const expected={
             u000001:'東京大学',
+            u000020:'青山学院大学',
             u000025:'慶應義塾大学',
             u000033:'上智大学',
+            u000049:'中央大学',
+            u000075:'法政大学',
             u000080:'明治大学',
             u000083:'立教大学',
             u000085:'早稲田大学'
@@ -50,8 +53,8 @@ jobs:
             assert.ok(image.alt,`${id}: alt text required`);
             assert.equal(image.reviewed_at,'2026-08-22',`${id}: review date`);
           }
-          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,6,'Exactly six real photos should be verified in this batch');
-          console.log('verified real university photos 6/6');
+          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,9,'Exactly nine real photos should be rights-verified');
+          console.log('verified real university photos 9/9');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -61,7 +64,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-site.log 2>&1 &
           sleep 2
-      - name: Verify new real-photo cards in browser
+      - name: Verify real-photo cards in browser
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -71,7 +74,7 @@ jobs:
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            for(const id of ['u000033','u000080','u000083']){
+            for(const id of ['u000020','u000049','u000075']){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: real photo visual`);
               const src=await visual.locator('img').getAttribute('src');
@@ -80,7 +83,7 @@ jobs:
               assert.equal(await source.count(),1,`${id}: visible image source link`);
               assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
             }
-            assert.equal(await page.locator('.real-university-image').count(),6,'Six real university photo cards must render');
+            assert.equal(await page.locator('.real-university-image').count(),9,'Nine real university photo cards must render');
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
             await browser.close();
