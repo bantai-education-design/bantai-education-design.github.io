@@ -31,10 +31,46 @@
       "reviewed_at": "2026-08-22"
     },
     "u000002": {
-      "university_id": "u000002", "university_name": "東京外国語大学", "rights_status": "ai_original", "official_image_status": "permission_required", "image_url": "assets/card-images/tufs-ai.svg", "label": "イメージ画像（AI生成）", "alt": "国際・語学系大学をイメージした架空キャンパスと架空の学生", "generation_note": "実在の東京外国語大学の公式写真・VI素材・校舎を参照せず、国際交流と言語学習という一般的テーマから独立生成したBan.TaiオリジナルSVG。", "official_image_source_url": "https://www.tufs.ac.jp/abouttufs/pr/proposa/film.html", "official_image_rights_note": "撮影やVI素材には利用条件があるため公式画像は転載せず、独立生成イメージを使用する。", "generated_at": "2026-08-16", "reviewed_at": "2026-08-16"
+      "university_id": "u000002",
+      "university_name": "東京外国語大学",
+      "rights_status": "ai_original",
+      "official_image_status": "permission_required",
+      "image_url": "assets/card-images/tufs-ai.svg",
+      "label": "イメージ画像（AI生成）",
+      "alt": "国際・語学系大学をイメージした架空キャンパスと架空の学生",
+      "generation_note": "実在の東京外国語大学の公式写真・VI素材・校舎を参照せず、国際交流と言語学習という一般的テーマから独立生成したBan.TaiオリジナルSVG。",
+      "official_image_source_url": "https://www.tufs.ac.jp/abouttufs/pr/proposa/film.html",
+      "official_image_rights_note": "撮影やVI素材には利用条件があるため公式画像は転載せず、独立生成イメージを使用する。",
+      "generated_at": "2026-08-16",
+      "reviewed_at": "2026-08-16"
     },
     "u000003": {
-      "university_id": "u000003", "university_name": "東京学芸大学", "rights_status": "ai_original", "official_image_status": "restricted", "image_url": "assets/card-images/gakugei-ai.svg", "label": "イメージ画像（AI生成）", "alt": "教育系大学をイメージした架空キャンパスと架空の学生", "generation_note": "実在の東京学芸大学の公式写真・校章・校舎を参照せず、教育・教員養成という一般的テーマから独立生成したBan.TaiオリジナルSVG。", "official_image_source_url": "https://www.u-gakugei.ac.jp/", "official_image_rights_note": "公式サイト掲載写真の自由転載根拠を確認できないため転載せず、独立生成イメージを使用する。", "generated_at": "2026-08-16", "reviewed_at": "2026-08-16"
+      "university_id": "u000003",
+      "university_name": "東京学芸大学",
+      "rights_status": "ai_original",
+      "official_image_status": "restricted",
+      "image_url": "assets/card-images/gakugei-ai.svg",
+      "label": "イメージ画像（AI生成）",
+      "alt": "教育系大学をイメージした架空キャンパスと架空の学生",
+      "generation_note": "実在の東京学芸大学の公式写真・校章・校舎を参照せず、教育・教員養成という一般的テーマから独立生成したBan.TaiオリジナルSVG。",
+      "official_image_source_url": "https://www.u-gakugei.ac.jp/",
+      "official_image_rights_note": "公式サイト掲載写真の自由転載根拠を確認できないため転載せず、独立生成イメージを使用する。",
+      "generated_at": "2026-08-16",
+      "reviewed_at": "2026-08-16"
+    },
+    "u000008": {
+      "university_id": "u000008",
+      "university_name": "お茶の水女子大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/2025_Ochanomizu_University_-_Main_gate_1.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2025_Ochanomizu_University_-_Main_gate_1.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 4.0を確認。国の登録有形文化財である正門の実景写真として作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "お茶の水女子大学の正門",
+      "reviewed_at": "2026-08-22"
     },
     "u000020": {
       "university_id": "u000020",
@@ -126,6 +162,20 @@
       "alt": "東京女子大学善福寺キャンパス",
       "reviewed_at": "2026-08-22"
     },
+    "u000059": {
+      "university_id": "u000059",
+      "university_name": "東京農業大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/%E6%9D%B1%E4%BA%AC%E8%BE%B2%E6%A5%AD%E5%A4%A7%E5%AD%A6.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E4%BA%AC%E8%BE%B2%E6%A5%AD%E5%A4%A7%E5%AD%A6.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "かなえゆうじん",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者『かなえゆうじん』、投稿者自身の作品、CC0 1.0によるパブリックドメイン提供を確認。世田谷キャンパス大通りの高解像度実景写真として掲載する。",
+      "alt": "東京農業大学世田谷キャンパスの大通り",
+      "reviewed_at": "2026-08-22"
+    },
     "u000061": {
       "university_id": "u000061",
       "university_name": "東京理科大学",
@@ -196,6 +246,27 @@
       "alt": "早稲田大学の大隈講堂",
       "reviewed_at": "2026-08-22"
     },
-    "u000103": {"university_id":"u000103","university_name":"東京経済大学","rights_status":"restricted","source_url":"https://www.tku.ac.jp/contact/media/","rights_note":"大学は公式サイトや受験生向けサイト等に掲載される画像等の転用を認めていないと明記しているため未掲載。","reviewed_at":"2026-08-16"}
+    "u000103": {
+      "university_id": "u000103",
+      "university_name": "東京経済大学",
+      "rights_status": "restricted",
+      "source_url": "https://www.tku.ac.jp/contact/media/",
+      "rights_note": "大学は公式サイトや受験生向けサイト等に掲載される画像等の転用を認めていないと明記しているため未掲載。",
+      "reviewed_at": "2026-08-16"
+    },
+    "u000110": {
+      "university_id": "u000110",
+      "university_name": "武蔵野美術大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Musashino_Art_University.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Musashino_Art_University.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Hykw-a4",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで原投稿者Hykw-a4、CC BY-SA 3.0を確認。日本語版WikipediaからCommonsへ移管された武蔵野美術大学の実景写真として、出典・作者・ライセンスを追跡できる状態で掲載する。",
+      "alt": "武蔵野美術大学のキャンパス実景",
+      "reviewed_at": "2026-08-22"
+    }
   }
 }
