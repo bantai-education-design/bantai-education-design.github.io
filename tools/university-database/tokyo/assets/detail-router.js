@@ -1,0 +1,143 @@
+(()=>{
+const root=document.querySelector('#detail-root');
+const id=new URLSearchParams(location.search).get('id');
+if(id!=='u000001'){
+  const s=document.createElement('script');
+  s.src='assets/detail.js';
+  document.body.appendChild(s);
+  return;
+}
+const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const typeLabel={national:'国立',public:'公立',private:'私立'};
+const yen=v=>Number.isFinite(Number(v))?Number(v).toLocaleString('ja-JP')+'円':'—';
+const ext=(url,label,cls='secondary')=>url?`<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';
+const chips=(xs=[])=>xs.length?`<div class="complete-chips">${xs.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:'';
+const fact=(label,value)=>value!==undefined&&value!==null&&value!==''?`<div class="detail-fact"><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`:'';
+const list=(xs=[])=>xs.length?`<ul class="complete-list">${xs.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p class="detail-empty">掲載できる確認済み情報はありません。</p>';
+const sourceLink=(sid,sources)=>{const s=sources.get(sid);return s?`<a class="complete-source-inline" href="${esc(s.url)}" target="_blank" rel="noopener">出典 ↗</a>`:''};
+const section=(no,title,lead,body,extra='')=>`<section class="detail-section complete-section ${extra}"><div class="detail-section-head"><span>${no}</span><div><h2>${esc(title)}</h2>${lead?`<p>${esc(lead)}</p>`:''}</div></div>${body}</section>`;
+
+fetch(`data/complete/${encodeURIComponent(id)}.json`).then(r=>{if(!r.ok)throw new Error('profile');return r.json()}).then(p=>{
+  if(p.schema_version!=='1.0')throw new Error('schema');
+  const sources=new Map((p.sources||[]).map(s=>[s.source_id,s]));
+  const student=p.student_counts||{};
+  const verification=p.verification||{};
+  const verified=verification.verification_status==='verified';
+  document.title=`${p.name} | Ban.Tai 全国大学データベース`;
+
+  const hero=`<section class="detail-hero complete-hero">
+    <div class="detail-hero-main">
+      <span class="detail-kicker">BANTAI UNIVERSITY PROFILE · SCHEMA v${esc(p.schema_version)}</span>
+      <h1>${esc(p.name)}</h1>
+      <div class="detail-meta">
+        <span class="detail-pill">${esc(typeLabel[p.establishment_type]||p.establishment_type||'')}</span>
+        <span class="detail-pill">${esc(p.prefecture||'')} ${esc(p.municipality||'')}</span>
+        <span class="detail-pill complete-status ${verified?'is-verified':'is-partial'}">${verified?'全項目確認済み':'一次情報確認中'}</span>
+      </div>
+      <p class="detail-summary">${esc(p.feature_summary||'')}</p>
+      <div class="detail-actions">
+        ${ext(p.official_url,'大学公式情報','primary')}
+        ${ext(p.admissions_url,'入試情報')}
+        ${ext(p.application_guidelines_url,'募集要項')}
+        ${ext(p.brochure_request_url,'資料請求')}
+        ${ext(p.open_campus_url,'オープンキャンパス')}
+      </div>
+    </div>
+    <aside class="detail-hero-side">
+      <div class="detail-stat"><small>在籍者数</small><strong>${student.total?Number(student.total).toLocaleString('ja-JP')+'人':'—'}</strong><em>${esc(student.as_of||'')}</em></div>
+      <div class="detail-stat"><small>学部</small><strong>${(p.academics||[]).length}</strong></div>
+      <div class="detail-stat"><small>学科・課程・類</small><strong>${(p.academics||[]).reduce((n,f)=>n+(f.departments||[]).length,0)}</strong></div>
+      <div class="detail-stat"><small>専修・コース</small><strong>${(p.academics||[]).reduce((n,f)=>n+(f.departments||[]).reduce((m,d)=>m+(d.programs||[]).length,0),0)}</strong></div>
+    </aside>
+  </section>`;
+
+  const basic=section('01','大学の基本情報','大学そのものの基礎情報と、現在の在籍規模です。',
+    `<dl class="detail-facts">
+      ${fact('正式名称',p.name)}${fact('英文名称',p.name_en)}${fact('設置区分',typeLabel[p.establishment_type])}
+      ${fact('設置者',p.operator)}${fact('創立・開学',p.opened_year?`${p.opened_year}年`:'')}
+      ${fact('学部学生',student.undergraduate?`${Number(student.undergraduate).toLocaleString('ja-JP')}人`:'')}
+      ${fact('大学院学生',student.graduate?`${Number(student.graduate).toLocaleString('ja-JP')}人`:'')}
+      ${fact('学生数基準日',student.as_of)}
+    </dl>
+    <div class="complete-story-grid">
+      <article><h3>沿革</h3><p>${esc(p.history_summary||'—')}</p></article>
+      <article><h3>理念・使命</h3><p>${esc(p.philosophy||p.mission||'—')}</p></article>
+    </div>
+    <div class="complete-sub"><h3>主な学問分野</h3>${chips(p.academic_field_tags||[])}</div>`,'detail-core');
+
+  const facultyHtml=(p.academics||[]).map(f=>`<article class="complete-academic-card">
+    <div class="complete-card-head"><h3>${esc(f.name)}</h3>${chips(f.academic_field_tags||[])}</div>
+    <div class="complete-depts">${(f.departments||[]).map(d=>`<div class="complete-dept">
+      <strong>${esc(d.name)}</strong>
+      ${(d.programs||[]).length?`<ul>${d.programs.map(pr=>`<li>${esc(pr.name)}</li>`).join('')}</ul>`:'<span class="complete-none">下位区分なし／掲載単位なし</span>'}
+    </div>`).join('')}</div>
+  </article>`).join('');
+  const gradHtml=(p.graduate_schools||[]).map(g=>`<div class="complete-grad-row"><strong>${esc(g.name)}</strong><span>${(g.programs||[]).map(x=>esc(x.name)).join(' ／ ')||'—'}</span></div>`).join('');
+  const academics=section('02','学べる分野・教育組織','大学固有の「類・課程・専修」などの名称を、そのまま保持して表示します。',
+    `<div class="complete-academic-grid">${facultyHtml}</div>
+     <details class="complete-details"><summary>大学院組織・専攻等 ${(p.graduate_schools||[]).length}組織を表示</summary><div class="complete-grad-list">${gradHtml}</div></details>`);
+
+  const campusHtml=(p.campuses||[]).map(c=>`<article class="complete-card">
+    <div class="complete-card-head"><h3>${esc(c.name)}</h3>${ext(c.official_url,'公式アクセス')}</div>
+    <p class="complete-address">${esc(c.address)}</p>
+    <h4>最寄駅</h4>
+    <ul class="complete-stations">${(c.nearest_stations||[]).map(s=>`<li><strong>${esc(s.station)}</strong><span>${esc(s.line||'')} ${s.access?`・${esc(s.access)}`:''}</span></li>`).join('')}</ul>
+  </article>`).join('');
+  const campuses=section('03','キャンパス・最寄駅','主要キャンパスと公式アクセス情報を確認できます。',
+    `<div class="complete-three">${campusHtml}</div>`);
+
+  const t=(p.tuition||[])[0];
+  const tuition=section('04','学費','年度を固定して、確認済みの公式金額だけを表示します。',
+    t?`<div class="complete-money-grid">
+      <div><small>対象年度</small><strong>${esc(t.academic_year)}年度</strong></div>
+      <div><small>入学料</small><strong>${yen(t.admission_fee)}</strong></div>
+      <div><small>授業料（年額）</small><strong>${yen(t.annual_tuition)}</strong></div>
+      <div class="is-total"><small>初年度基本額</small><strong>${yen(t.first_year_total)}</strong></div>
+    </div><p class="complete-caption">初年度基本額は、掲載された入学料と年額授業料の合計です。施設費等は公式金額を確認できる場合のみ別途掲載します。 ${sourceLink(t.source_id,sources)}</p>`:'<p class="detail-empty">未収録</p>');
+
+  const adm=p.admissions||{};
+  const methodHtml=(adm.methods||[]).map(m=>`<article class="complete-card">
+    <div class="complete-card-head"><h3>${esc(m.name)}</h3>${ext(m.official_url,'公式')}</div>
+    <dl class="complete-mini-facts">
+      ${m.quota!==undefined?fact('募集人員',`${Number(m.quota).toLocaleString('ja-JP')}人`):''}
+      ${fact('出願期間',m.application_period)}${fact('試験日',m.exam_date)}${fact('合格発表',m.result_date)}
+    </dl>
+  </article>`).join('');
+  const admissionNotice=!adm.web_application_url?`<div class="complete-alert"><strong>Web出願サイト：公式公開待ち</strong><p>${esc(verification.notes||'')}</p></div>`:'';
+  const admissions=section('05','入試方式・Web出願',`${adm.admission_year||''}年度入試の公式情報です。`,
+    `${admissionNotice}<div class="complete-three">${methodHtml}</div><div class="detail-actions">${ext(adm.admissions_url,'一般選抜公式','primary')}${ext(adm.application_guidelines_url,'募集要項・選抜要項')}</div>`);
+
+  const quals=(p.qualifications||[]).map(q=>`<li><strong>${esc(q.name)}</strong><span>${esc(q.condition||'')}</span>${sourceLink(q.source_id,sources)}</li>`).join('');
+  const careers=section('06','資格・進路','取得条件のある資格は、条件を併記します。',
+    `<div class="complete-two">
+      <article class="complete-card"><h3>主な資格・免許</h3><ul class="complete-rich-list">${quals||'<li>確認済み情報なし</li>'}</ul></article>
+      <article class="complete-card"><h3>代表的な進路分野</h3>${list((p.careers||{}).main_career_fields||[])}<p class="complete-caption">学部ごとの公式進路情報をもとにした代表例で、大学全体の就職率を示すものではありません。</p></article>
+    </div>`);
+
+  const research=p.research||{};
+  const researchItems=(research.strengths||[]).map(x=>`<li><strong>${esc(x.title)}</strong><span>${esc(x.summary||'')}</span>${sourceLink(x.source_id,sources)}</li>`).join('');
+  const awardItems=(research.awards||[]).map(x=>`<li><strong>${esc(x.title)}</strong><span>${esc(x.summary||'')}</span>${sourceLink(x.source_id,sources)}</li>`).join('');
+  const sportItems=(p.sports_culture||[]).map(x=>`<li><strong>${esc(x.organization)}</strong><span>${esc(x.achievement)}${x.year?`（${esc(x.year)}年）`:''}</span>${sourceLink(x.source_id,sources)}</li>`).join('');
+  const alumni=(p.notable_alumni||[]).map(x=>`<li><strong>${esc(x.name)}</strong><span>${esc(x.field)} — ${esc(x.affiliation_note||'')}</span>${sourceLink(x.source_id,sources)}</li>`).join('');
+  const activity=section('07','研究・スポーツ・著名卒業生','ランキングではなく、大学公式一次情報で確認できる代表例を掲載します。',
+    `<div class="complete-two">
+      <article class="complete-card"><h3>研究・受賞</h3><ul class="complete-rich-list">${researchItems}${awardItems}</ul></article>
+      <article class="complete-card"><h3>スポーツ・文化</h3><ul class="complete-rich-list">${sportItems||'<li>確認済み情報なし</li>'}</ul></article>
+      <article class="complete-card complete-wide"><h3>著名な卒業生・出身者（代表例）</h3><ul class="complete-rich-list">${alumni||'<li>確認済み情報なし</li>'}</ul></article>
+    </div>`);
+
+  const sourceRows=(p.sources||[]).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener"><strong>${esc(s.title)}</strong><span>${esc(s.publisher)}・確認 ${esc(s.verified_at)}</span></a></li>`).join('');
+  const verificationHtml=`<div class="complete-verification ${verified?'is-verified':'is-partial'}">
+    <strong>${verified?'v1.0 全項目確認済み':'v1.0 部分確認'}</strong>
+    <span>最終確認日 ${esc(verification.last_verified_at||'—')}</span>
+    <p>${esc(verification.notes||'')}</p>
+  </div>`;
+  const sourcesSection=section('08','出典・最終確認日','どの情報を、いつ、どの公式ページで確認したかを残します。',
+    `${verificationHtml}<details class="complete-details"><summary>一次情報 ${(p.sources||[]).length}件を表示</summary><ul class="complete-source-list">${sourceRows}</ul></details>`);
+
+  root.innerHTML=hero+basic+academics+campuses+tuition+admissions+careers+activity+sourcesSection;
+}).catch(err=>{
+  console.error(err);
+  root.innerHTML='<div class="detail-error"><strong>完成形プロフィールを読み込めませんでした。</strong><p>既存の大学情報に戻って確認してください。</p><p><a href="./">大学一覧へ戻る</a></p></div>';
+});
+})();
