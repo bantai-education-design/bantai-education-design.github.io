@@ -6,6 +6,12 @@ const input=document.querySelector('#tokyo-search-input');
 const sortSelect=document.querySelector('#sort-select');
 const typeLabel={national:'国立',public:'公立',private:'私立'};
 const typeOrder={national:0,public:1,private:2};
+const ACADEMIC_SNAPSHOTS=[
+  'academic-structure-batches-03-08.json','academic-structure-batches-09-12.json','academic-structure-batches-13-14.json','academic-structure-batches-15-17.json','academic-structure-batches-18-22.json',
+  'academic-structure-major-01.json','academic-structure-medical-01-02.json',
+  'academic-structure-private-02.json','academic-structure-private-03.json','academic-structure-private-04.json','academic-structure-private-05.json','academic-structure-private-06.json','academic-structure-private-07.json','academic-structure-private-08.json',
+  'academic-structure-tid-professional.json','departments-mejiro-verified.json'
+];
 
 function esc(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
 function municipality(row){return row.municipality||row.headquarters?.municipality||'所在地確認中';}
@@ -22,7 +28,7 @@ function academicNames(row){
   return [
     ...(state.faculties.get(row.id)||[]).map(x=>x.name),
     ...(state.departments.get(row.id)||[]).map(x=>x.name),
-    ...graduate.flatMap(x=>[x.name,...(x.programs||[])])
+    ...graduate.flatMap(x=>[x.name,...(x.programs||[]).map(p=>typeof p==='string'?p:p.name)])
   ];
 }
 function searchable(row){return [row.name,municipality(row),row.headquarters?.address,row.prefecture,row.university_type,row.founder,row.operator,row.university_goal,row.philosophy,row.feature_summary,...(row.academic_field_tags||[]),...academicNames(row)].filter(Boolean).join(' ').toLowerCase();}
@@ -58,6 +64,40 @@ function updateSnapshot(){const students=document.querySelector('#snapshot-stude
 function bindQuality(summary){const total=summary.counts?.total||state.rows.length||144;const v=summary.verification||{};const official=document.querySelector('#quality-official');const locationEl=document.querySelector('#quality-location');const addressEl=document.querySelector('#quality-address');const admissionsEl=document.querySelector('#quality-admissions');if(official)official.textContent=`${total}/${total}`;if(locationEl)locationEl.textContent=`${v.municipalities_total??total}/${total}`;if(addressEl)addressEl.textContent=`本部所在地を確認 ${v.addresses_total??total}/${total}校。`;if(admissionsEl)admissionsEl.textContent=`${v.admissions_links_total??total}/${total}`;}
 async function optionalJson(url,fallback){try{const r=await fetch(url);if(r.ok)return await r.json();}catch{}if(fallback){try{const r=await fetch(fallback);if(r.ok)return await r.json();}catch{}}return [];}
 async function optionalObject(url){try{const r=await fetch(url);if(r.ok)return await r.json();}catch{}return {};}
+function putById(map,row){if(row?.id)map.set(row.id,row);}
+function flattenAcademicDocument(doc,faculties,departments,graduateSchools){
+  if(!doc)return;
+  if(doc.kind==='academic_structure'){
+    for(const u of doc.universities||[]){
+      for(const f of u.faculties||[]){
+        putById(faculties,{...f,university_id:u.university_id});
+        for(const d of f.departments||[])putById(departments,{...d,university_id:u.university_id,faculty_id:f.id});
+      }
+      for(const g of u.graduate_schools||[])putById(graduateSchools,{...g,university_id:u.university_id});
+    }
+    return;
+  }
+  const target=doc.kind==='faculties'?faculties:doc.kind==='departments'?departments:doc.kind==='graduate_schools'?graduateSchools:null;
+  if(target)for(const row of doc.records||[])putById(target,row);
+}
+async function loadAcademicBundle(){
+  const [generatedF,generatedD,generatedG]=await Promise.all([
+    optionalJson('data/faculties_tokyo_all.generated.json'),
+    optionalJson('data/departments_tokyo_all.generated.json'),
+    optionalJson('data/graduate_schools_tokyo_all.generated.json')
+  ]);
+  if(generatedF.length||generatedD.length||generatedG.length)return {faculties:generatedF,departments:generatedD,graduateSchools:generatedG,source:'generated'};
+  const [baseF,baseD,...snapshots]=await Promise.all([
+    optionalJson('data/faculties.json'),
+    optionalJson('data/departments.json'),
+    ...ACADEMIC_SNAPSHOTS.map(name=>optionalObject(`data/${name}`))
+  ]);
+  const fm=new Map(),dm=new Map(),gm=new Map();
+  for(const row of baseF)putById(fm,row);
+  for(const row of baseD)putById(dm,row);
+  for(const doc of snapshots)flattenAcademicDocument(doc,fm,dm,gm);
+  return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:'verified snapshots'};
+}
 function selectedRows(){return state.rows.filter(r=>state.compare.has(r.id));}
 function updateCompare(){const rows=selectedRows();const slots=document.querySelector('#compare-items');const label=document.querySelector('#compare-count');const open=document.querySelector('#open-compare');if(label)label.textContent=rows.length;if(open)open.disabled=rows.length<2;const html=rows.map(r=>`<div class="compare-slot-v2"><strong>${esc(r.name)}</strong><small>${esc(typeLabel[r.establishment_type]||'')} · ${esc(municipality(r))}</small><button type="button" data-remove-compare="${esc(r.id)}">外す</button></div>`);while(html.length<4)html.push('<div class="compare-slot-v2">＋ 大学を追加</div>');slots.innerHTML=html.join('');}
 function toggleCompare(id){if(state.compare.has(id))state.compare.delete(id);else if(state.compare.size<4)state.compare.add(id);else{document.querySelector('#compare').scrollIntoView({behavior:'smooth'});return;}updateCompare();render();}
@@ -92,10 +132,10 @@ function installDevelopmentStatus(){
   const trustItems=document.querySelectorAll('#quality .trust-item');
   if(trustItems[3])trustItems[3].innerHTML='<span>04</span><strong>基本情報 <b>更新中</b></strong><small>学部・学科・地図を優先点検。</small>';
 }
-function updateAcademicStatus(){
+function updateAcademicStatus(source){
   const covered=state.rows.filter(r=>(state.faculties.get(r.id)||[]).length||(state.graduateSchools.get(r.id)||[]).length).length;
   const status=document.querySelector('#academic-sync-status');
-  if(status)status.textContent=`教育組織データ ${covered}/${state.rows.length||144}校を読込・内容は継続更新中`;
+  if(status)status.textContent=`教育組織データ ${covered}/${state.rows.length||144}校を読込（${source==='generated'?'集約データ':'検証済みスナップショット'}）・内容は継続更新中`;
 }
 
 installDevelopmentStatus();
@@ -107,19 +147,17 @@ activateByValue(document.querySelector('#status-filters'),'status',state.status)
 
 Promise.all([
   fetch('data/universities_tokyo_all.generated.json').then(r=>{if(!r.ok)throw new Error('load failed');return r.json();}),
-  optionalJson('data/faculties_tokyo_all.generated.json','data/faculties.json'),
-  optionalJson('data/departments_tokyo_all.generated.json','data/departments.json'),
-  optionalJson('data/graduate_schools_tokyo_all.generated.json'),
+  loadAcademicBundle(),
   optionalObject('data/university-images.json'),
   optionalObject('data/university-detail-overrides.json')
-]).then(([rows,faculties,departments,graduateSchools,imageRegistry,detailRegistry])=>{
+]).then(([rows,academic,imageRegistry,detailRegistry])=>{
   state.rows=mergeUniversityDetails(rows,detailRegistry);
-  state.faculties=groupByUniversity(faculties);
-  state.departments=groupByUniversity(departments);
-  state.graduateSchools=groupByUniversity(graduateSchools);
+  state.faculties=groupByUniversity(academic.faculties);
+  state.departments=groupByUniversity(academic.departments);
+  state.graduateSchools=groupByUniversity(academic.graduateSchools);
   state.images=new Map(Object.entries(imageRegistry.images||{}));
   const statTotal=document.querySelector('#stat-total');if(statTotal)statTotal.textContent=state.rows.length;
-  updateSnapshot();updateAcademicStatus();updateCompare();render();
+  updateSnapshot();updateAcademicStatus(academic.source);updateCompare();render();
 }).catch(()=>{grid.innerHTML='<div class="empty">東京都大学データを読み込めませんでした。生成データを確認してください。</div>';count.textContent='読込エラー';grid.setAttribute('aria-busy','false');});
 fetch('data/tokyo_dataset_summary.generated.json').then(r=>r.ok?r.json():Promise.reject()).then(bindQuality).catch(()=>{});
 document.querySelector('#tokyo-search').addEventListener('submit',e=>{e.preventDefault();runQuery(input.value);});
