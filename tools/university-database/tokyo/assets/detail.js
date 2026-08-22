@@ -7,7 +7,7 @@ const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'
 const asList=v=>Array.isArray(v)?v:(v&&typeof v==='object'?Object.entries(v).map(([key,row])=>row&&typeof row==='object'&&!Array.isArray(row)&&!row.university_id&&/^u\d{6}$/.test(key)?{university_id:key,...row}:row):[]);
 const group=rows=>{const m=new Map();for(const r of asList(rows)){if(!r?.university_id)continue;if(!m.has(r.university_id))m.set(r.university_id,[]);m.get(r.university_id).push(r)}return m};
 const json=async url=>{try{const r=await fetch(url);return r.ok?await r.json():[]}catch{return []}};
-const obj=async url=>{try{const r=await fetch(url);return r.ok?await r.json():{}}catch{return {}};
+const obj=async url=>{try{const r=await fetch(url);return r.ok?await r.json():{}}catch{return {}}};
 const val=(...xs)=>xs.find(x=>x!==undefined&&x!==null&&String(x).trim()!=='');
 const link=(url,label,cls='secondary')=>url?`<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';
 const fact=(label,value)=>value?`<div class="detail-fact"><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`:'';
