@@ -24,8 +24,11 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y fonts-noto-cjk
           fc-cache -f
-      - name: Validate all complete profile data
+      - name: Validate scripts and complete profile data
         run: |
+          node --check tools/university-database/tokyo/assets/tokyo.js
+          node --check tools/university-database/tokyo/assets/detail.js
+          node --check tools/university-database/tokyo/assets/detail-router-v2.js
           node <<'NODE'
           const fs=require('node:fs');
           const path=require('node:path');
@@ -62,6 +65,50 @@ jobs:
             console.log(`${p.name}: faculties=${p.academics.length}, units=${departments.length}, programs=${programs.length}, graduate=${p.graduate_schools.length}, sources=${p.sources.length}`);
           }
           NODE
+      - name: Validate Tokyo academic snapshot coverage
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const path=require('node:path');
+          const assert=require('node:assert/strict');
+          const base='tools/university-database/tokyo/data';
+          const snapshots=[
+            'academic-structure-batches-03-08.json','academic-structure-batches-09-12.json','academic-structure-batches-13-14.json','academic-structure-batches-15-17.json','academic-structure-batches-18-22.json',
+            'academic-structure-major-01.json','academic-structure-medical-01-02.json',
+            'academic-structure-private-02.json','academic-structure-private-03.json','academic-structure-private-04.json','academic-structure-private-05.json','academic-structure-private-06.json','academic-structure-private-07.json','academic-structure-private-08.json',
+            'academic-structure-tid-professional.json','departments-mejiro-verified.json'
+          ];
+          const load=name=>{const p=path.join(base,name);return fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):[]};
+          const faculties=new Map(),departments=new Map(),graduates=new Map();
+          const put=(map,row)=>{if(row?.id)map.set(row.id,row)};
+          for(const row of load('faculties.json'))put(faculties,row);
+          for(const row of load('departments.json'))put(departments,row);
+          for(const row of load('faculties_tokyo_all.generated.json'))put(faculties,row);
+          for(const row of load('departments_tokyo_all.generated.json'))put(departments,row);
+          for(const row of load('graduate_schools_tokyo_all.generated.json'))put(graduates,row);
+          for(const name of snapshots){
+            const doc=load(name);
+            if(!doc||Array.isArray(doc))continue;
+            if(doc.kind==='academic_structure'){
+              for(const u of doc.universities||[]){
+                for(const f of u.faculties||[]){put(faculties,{...f,university_id:u.university_id});for(const d of f.departments||[])put(departments,{...d,university_id:u.university_id,faculty_id:f.id})}
+                for(const g of u.graduate_schools||[])put(graduates,{...g,university_id:u.university_id});
+              }
+            } else {
+              const target=doc.kind==='faculties'?faculties:doc.kind==='departments'?departments:doc.kind==='graduate_schools'?graduates:null;
+              if(target)for(const row of doc.records||[])put(target,row);
+            }
+          }
+          const universities=load('universities_tokyo_all.generated.json');
+          const covered=new Set([...faculties.values(),...graduates.values()].map(x=>x.university_id).filter(Boolean));
+          const missing=universities.filter(u=>!covered.has(u.id)).map(u=>`${u.id}:${u.name}`);
+          console.log(`academic coverage ${covered.size}/${universities.length}`);
+          if(missing.length)console.log('missing:',missing.join(', '));
+          const teikyo=[...faculties.values()].filter(x=>x.university_id==='u000102');
+          console.log(`Teikyo faculties=${teikyo.length}: ${teikyo.map(x=>x.name).join('、')}`);
+          assert.equal(covered.size,universities.length,'academic snapshot coverage must include all 144 universities');
+          assert.equal(teikyo.length,10,'Teikyo should have 10 verified faculties');
+          NODE
       - name: Install Playwright
         run: |
           npm install --no-save playwright@1.55.0
@@ -80,10 +127,16 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const topUrl='http://127.0.0.1:4173/tools/university-database/tokyo/';
             const page=await browser.newPage({viewport:{width:1366,height:1000}});
+            const pageErrors=[];
+            page.on('pageerror',e=>{pageErrors.push(String(e));console.error('PAGEERROR',e)});
+            page.on('console',m=>{if(m.type()==='error')console.error('BROWSER CONSOLE',m.text())});
             await page.goto(topUrl,{waitUntil:'networkidle'});
             await page.locator('#university-db-development-status').waitFor({state:'visible'});
             const topText=await page.locator('body').innerText();
             assert.ok(topText.includes('現在 開発・更新中'),'development status missing');
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,null,{timeout:15000});
+            await page.waitForFunction(()=>document.querySelector('#academic-sync-status')?.textContent?.includes('/144'),null,{timeout:15000});
+            assert.equal(pageErrors.length,0,`page errors: ${pageErrors.join(' | ')}`);
             const status=await page.locator('#academic-sync-status').innerText();
             console.log('academic status:',status);
             assert.ok(status.includes('144/144'),`academic coverage not restored: ${status}`);
@@ -99,7 +152,7 @@ jobs:
             await page.screenshot({path:'visual-preview/tokyo-db-top-mobile.png',fullPage:false});
             await page.close();
 
-            const base='http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=';
+            const baseUrl='http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=';
             const profiles=[
               {id:'u000001',name:'東京大学',faculties:10,phrases:['642,960円','2,858人']},
               {id:'u000002',name:'東京外国語大学',faculties:3,phrases:['535,800円','579人','府中キャンパス','27の専攻言語']}
@@ -107,7 +160,7 @@ jobs:
             for(const p of profiles){
               for(const [suffix,width,height,fullPage] of [['pc',1366,1000,true],['mobile',375,900,false]]){
                 const profile=await browser.newPage({viewport:{width,height}});
-                await profile.goto(base+p.id,{waitUntil:'networkidle'});
+                await profile.goto(baseUrl+p.id,{waitUntil:'networkidle'});
                 await profile.locator('h1').filter({hasText:p.name}).waitFor({state:'visible'});
                 assert.equal(await profile.locator('.complete-section').count(),8,`${p.id}: eight sections`);
                 assert.equal(await profile.locator('.complete-academic-card').count(),p.faculties,`${p.id}: faculty cards`);
@@ -122,7 +175,7 @@ jobs:
             }
 
             const legacy=await browser.newPage({viewport:{width:1366,height:900}});
-            await legacy.goto(base+'u000003',{waitUntil:'networkidle'});
+            await legacy.goto(baseUrl+'u000003',{waitUntil:'networkidle'});
             await legacy.locator('h1').filter({hasText:'東京学芸大学'}).waitFor({state:'visible'});
             assert.equal(await legacy.locator('.complete-section').count(),0,'legacy university should use old renderer');
             const legacyText=await legacy.locator('body').innerText();
