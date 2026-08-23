@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate thirty-three rights-verified real photos
+      - name: Validate thirty-six rights-verified real photos
         run: |
           node <<'NODE'
           const fs=require('node:fs');
@@ -30,7 +30,10 @@ jobs:
           const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
           const expected={
             u000001:'東京大学',
+            u000004:'東京農工大学',
+            u000005:'東京藝術大学',
             u000006:'東京科学大学',
+            u000007:'東京海洋大学',
             u000008:'お茶の水女子大学',
             u000010:'一橋大学',
             u000020:'青山学院大学',
@@ -63,7 +66,7 @@ jobs:
             u000101:'津田塾大学',
             u000110:'武蔵野美術大学'
           };
-          const reviewed20260823=new Set(['u000006','u000010','u000022','u000026','u000027','u000029','u000031','u000039','u000043','u000058','u000063','u000066','u000070','u000078','u000081','u000097','u000099','u000101']);
+          const reviewed20260823=new Set(['u000004','u000005','u000006','u000007','u000010','u000022','u000026','u000027','u000029','u000031','u000039','u000043','u000058','u000063','u000066','u000070','u000078','u000081','u000097','u000099','u000101']);
           for(const [id,name] of Object.entries(expected)){
             const image=data.images?.[id];
             assert.ok(image,`${id}: image record required`);
@@ -81,8 +84,8 @@ jobs:
             assert.ok(image.alt,`${id}: alt text required`);
             assert.equal(image.reviewed_at,reviewed20260823.has(id)?'2026-08-23':'2026-08-22',`${id}: review date`);
           }
-          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,33,'Exactly thirty-three real photos should be rights-verified');
-          console.log('verified real university photos 33/33');
+          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,36,'Exactly thirty-six real photos should be rights-verified');
+          console.log('verified real university photos 36/36');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -102,7 +105,7 @@ jobs:
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            for(const id of ['u000006','u000010','u000027','u000078','u000081','u000099']){
+            for(const id of ['u000004','u000005','u000007']){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: real photo visual`);
               const src=await visual.locator('img').getAttribute('src');
@@ -111,7 +114,7 @@ jobs:
               assert.equal(await source.count(),1,`${id}: visible image source link`);
               assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
             }
-            assert.equal(await page.locator('.real-university-image').count(),33,'Thirty-three real university photo cards must render');
+            assert.equal(await page.locator('.real-university-image').count(),36,'Thirty-six real university photo cards must render');
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
             await browser.close();
