@@ -28,19 +28,30 @@ jobs:
       - name: Rebuild exact card JPEG from staged base64
         run: |
           python3 -m pip install --quiet pillow
-          cat .tmp/rikkyo-photo/chunk00.b64 .tmp/rikkyo-photo/chunk01.b64 .tmp/rikkyo-photo/chunk02.b64 .tmp/rikkyo-photo/chunk03.b64 .tmp/rikkyo-photo/chunk04.b64 .tmp/rikkyo-photo/chunk05.b64 .tmp/rikkyo-photo/chunk06.b64 .tmp/rikkyo-photo/chunk07.b64 > /tmp/rikkyo.b64
-          base64 -d /tmp/rikkyo.b64 > tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg
           python3 <<'PY'
           from pathlib import Path
           from PIL import Image
-          import hashlib
-          p=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
-          raw=p.read_bytes()
+          import base64, hashlib, re
+
+          parts=[]
+          for i in range(8):
+              p=Path(f'.tmp/rikkyo-photo/chunk{i:02d}.b64')
+              text=p.read_text(encoding='utf-8')
+              cleaned=''.join(re.findall(r'[A-Za-z0-9+/=]', text))
+              print(p, 'raw_chars=', len(text), 'base64_chars=', len(cleaned))
+              parts.append(cleaned)
+
+          encoded=''.join(parts)
+          print('combined base64 chars=', len(encoded), 'mod4=', len(encoded)%4)
+          raw=base64.b64decode(encoded, validate=True)
+          out=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
+          out.write_bytes(raw)
+
           assert len(raw)==35673, len(raw)
           assert raw[:2]==b'\xff\xd8'
           assert raw[-2:]==b'\xff\xd9'
           assert hashlib.sha256(raw).hexdigest()=='5b23f9b26267e7b300f5a4a51bf7d6d404f5aceaf9445d36ee36d42656807b69'
-          with Image.open(p) as im:
+          with Image.open(out) as im:
               assert im.size==(400,225), im.size
               assert im.format=='JPEG'
               im.load()
