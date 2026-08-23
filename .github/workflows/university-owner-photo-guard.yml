@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate owner-provided photo registry
+      - name: Validate owner-provided photo registry and JPEG integrity
         run: |
           node <<'NODE'
           const fs=require('node:fs');
@@ -56,14 +56,13 @@ jobs:
             assert.ok(image.length>8000,`${id}: image size`);
             assert.equal(image[0],0xff,`${id}: JPEG SOI 1`);
             assert.equal(image[1],0xd8,`${id}: JPEG SOI 2`);
+            assert.equal(image.at(-2),0xff,`${id}: JPEG EOI 1`);
+            assert.equal(image.at(-1),0xd9,`${id}: JPEG EOI 2`);
           }
-          const asia=fs.readFileSync('tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg');
-          assert.equal(asia.at(-2),0xff,'Asia JPEG EOI 1');
-          assert.equal(asia.at(-1),0xd9,'Asia JPEG EOI 2');
-          console.log('owner-provided university photo registry validated');
+          console.log('owner-provided university photos and JPEG integrity validated');
           NODE
           test "$(git hash-object tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg)" = "b1ccf41052fca70e98fd17fcb0506c5d8b58bd16"
-          test "$(git hash-object tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg)" = "6d216fe928af0d578f1d73f1e255d77c3591ada5"
+          test "$(git hash-object tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg)" = "29c8746fbb101dc95a3bf0e756f919610f66ff21"
       - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.55.0
