@@ -50,3 +50,5 @@ jobs:
           fi
           git commit -m 'fix: install complete Rikkyo owner photo JPEG'
           git push origin HEAD:feature/rikkyo-owner-photo-20260823
+
+# retrigger 2026-08-23T14:56+09:00
