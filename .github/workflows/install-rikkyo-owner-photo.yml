@@ -11,7 +11,7 @@ on:
       - main
     paths:
       - '.github/workflows/install-rikkyo-owner-photo.yml'
-      - '.tmp/rikkyo-photo/**'
+      - '.tmp/rikkyo-exact/**'
 
 permissions:
   contents: write
@@ -31,31 +31,45 @@ jobs:
           python3 <<'PY'
           from pathlib import Path
           from PIL import Image
-          import base64, hashlib, re
+          import base64, hashlib
 
+          pieces = [
+              ('.tmp/rikkyo-exact/part00.b64', 4000),
+              ('.tmp/rikkyo-exact/part01.b64', 4000),
+              ('.tmp/rikkyo-exact/tail00.b64', 6000),
+              ('.tmp/rikkyo-exact/tail01.b64', 6000),
+              ('.tmp/rikkyo-exact/tail02a.b64', 2000),
+              ('.tmp/rikkyo-exact/tail02b.b64', 2000),
+              ('.tmp/rikkyo-exact/tail02c.b64', 2000),
+              ('.tmp/rikkyo-exact/tail03.b64', 6000),
+              ('.tmp/rikkyo-exact/tail04.b64', 6000),
+              ('.tmp/rikkyo-exact/tail05a.b64', 3000),
+              ('.tmp/rikkyo-exact/tail05b.b64', 3000),
+              ('.tmp/rikkyo-exact/tail06.b64', 3564),
+          ]
           parts=[]
-          for i in range(8):
-              p=Path(f'.tmp/rikkyo-photo/chunk{i:02d}.b64')
-              text=p.read_text(encoding='utf-8')
-              cleaned=''.join(re.findall(r'[A-Za-z0-9+/=]', text))
-              print(p, 'raw_chars=', len(text), 'base64_chars=', len(cleaned))
-              parts.append(cleaned)
+          for path, expected_len in pieces:
+              text=Path(path).read_text(encoding='utf-8').strip()
+              assert len(text)==expected_len, (path, len(text), expected_len)
+              assert all(c.isalnum() or c in '+/=' for c in text), path
+              parts.append(text)
+              print(path, len(text))
 
           encoded=''.join(parts)
-          print('combined base64 chars=', len(encoded), 'mod4=', len(encoded)%4)
+          assert len(encoded)==47564, len(encoded)
           raw=base64.b64decode(encoded, validate=True)
-          out=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
-          out.write_bytes(raw)
-
           assert len(raw)==35673, len(raw)
           assert raw[:2]==b'\xff\xd8'
           assert raw[-2:]==b'\xff\xd9'
-          assert hashlib.sha256(raw).hexdigest()=='5b23f9b26267e7b300f5a4a51bf7d6d404f5aceaf9445d36ee36d42656807b69'
+          digest=hashlib.sha256(raw).hexdigest()
+          assert digest=='5b23f9b26267e7b300f5a4a51bf7d6d404f5aceaf9445d36ee36d42656807b69', digest
+          out=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
+          out.write_bytes(raw)
           with Image.open(out) as im:
               assert im.size==(400,225), im.size
               assert im.format=='JPEG'
               im.load()
-          print('Rikkyo owner photo rebuilt exactly:',len(raw),'bytes, 400x225')
+          print('Rikkyo owner photo rebuilt exactly:',len(raw),'bytes, 400x225, sha256',digest)
           PY
       - name: Commit exact JPEG
         run: |
