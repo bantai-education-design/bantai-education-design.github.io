@@ -53,3 +53,5 @@ jobs:
           git diff --cached --quiet && exit 1
           git commit -m 'data: add verified Tokyo university photos batch 12'
           git push origin HEAD:feature/tokyo-real-photos-batch12-20260823
+
+# retrigger 2026-08-23
