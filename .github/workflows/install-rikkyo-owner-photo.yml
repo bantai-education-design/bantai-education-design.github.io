@@ -1,0 +1,87 @@
+name: Install Rikkyo owner photo
+
+on:
+  push:
+    branches:
+      - feature/rikkyo-owner-photo-20260823
+    paths:
+      - '.github/workflows/install-rikkyo-owner-photo.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/install-rikkyo-owner-photo.yml'
+      - '.tmp/rikkyo-exact/**'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.event_name == 'push' || github.head_ref == 'feature/rikkyo-owner-photo-20260823'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/rikkyo-owner-photo-20260823
+          fetch-depth: 0
+      - name: Rebuild exact card JPEG from staged base64
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import base64, hashlib
+
+          pieces = [
+              ('.tmp/rikkyo-exact/part00.b64', 4000),
+              ('.tmp/rikkyo-exact/part01.b64', 4000),
+              ('.tmp/rikkyo-exact/tail00.b64', 6000),
+              ('.tmp/rikkyo-exact/tail01.b64', 6000),
+              ('.tmp/rikkyo-exact/tail02a.b64', 2000),
+              ('.tmp/rikkyo-exact/tail02b.b64', 2000),
+              ('.tmp/rikkyo-exact/tail02c.b64', 2000),
+              ('.tmp/rikkyo-exact/tail03a.b64', 2000),
+              ('.tmp/rikkyo-exact/tail03b.b64', 2000),
+              ('.tmp/rikkyo-exact/tail03c1.b64', 1000),
+              ('.tmp/rikkyo-exact/tail03c2.b64', 1000),
+              ('.tmp/rikkyo-exact/tail04.b64', 6000),
+              ('.tmp/rikkyo-exact/tail05a.b64', 3000),
+              ('.tmp/rikkyo-exact/tail05b.b64', 3000),
+              ('.tmp/rikkyo-exact/tail06.b64', 3564),
+          ]
+          parts=[]
+          for path, expected_len in pieces:
+              text=Path(path).read_text(encoding='utf-8').strip()
+              assert len(text)==expected_len, (path, len(text), expected_len)
+              assert all(c.isalnum() or c in '+/=' for c in text), path
+              parts.append(text)
+              print(path, len(text))
+
+          encoded=''.join(parts)
+          assert len(encoded)==47564, len(encoded)
+          raw=base64.b64decode(encoded, validate=True)
+          assert len(raw)==35673, len(raw)
+          assert raw[:2]==b'\xff\xd8'
+          assert raw[-2:]==b'\xff\xd9'
+          digest=hashlib.sha256(raw).hexdigest()
+          assert digest=='5b23f9b26267e7b300f5a4a51bf7d6d404f5aceaf9445d36ee36d42656807b69', digest
+          out=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
+          out.write_bytes(raw)
+          with Image.open(out) as im:
+              assert im.size==(400,225), im.size
+              assert im.format=='JPEG'
+              im.load()
+          print('Rikkyo owner photo rebuilt exactly:',len(raw),'bytes, 400x225, sha256',digest)
+          PY
+      - name: Commit exact JPEG
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg
+          if git diff --cached --quiet; then
+            echo 'JPEG already exact.'
+            exit 0
+          fi
+          git commit -m 'fix: install complete Rikkyo owner photo JPEG'
+          git push origin HEAD:feature/rikkyo-owner-photo-20260823
