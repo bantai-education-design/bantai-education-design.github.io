@@ -538,6 +538,48 @@
       "rights_note": "Wikimedia Commonsの個別ファイルページで作者李維俊(alen2864)、CC BY-SA 4.0、Wikimedia VRTによる許諾確認済みであることを確認。成蹊大学キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
       "alt": "成蹊大学キャンパスの実景",
       "reviewed_at": "2026-08-23"
+    },
+    "u000004": {
+      "university_id": "u000004",
+      "university_name": "東京農工大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Tokyo_University_of_Agriculture_and_Technology.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tokyo_University_of_Agriculture_and_Technology.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Wiiii",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Wiiii、CC0 1.0による公開を確認。東京農工大学農学部本館の実景写真として、出典・作者・原画像を追跡できる状態で掲載する。",
+      "alt": "東京農工大学農学部本館",
+      "reviewed_at": "2026-08-23"
+    },
+    "u000005": {
+      "university_id": "u000005",
+      "university_name": "東京藝術大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/2025_Tokyo_University_of_the_Arts.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2025_Tokyo_University_of_the_Arts.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Kakidai、投稿者自身の作品、CC BY-SA 4.0を確認。東京藝術大学上野キャンパス正門の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。",
+      "alt": "東京藝術大学上野キャンパス正門",
+      "reviewed_at": "2026-08-23"
+    },
+    "u000007": {
+      "university_id": "u000007",
+      "university_name": "東京海洋大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Administration_Building_-_Tokyo_University_of_Marine_Science_and_Technology_-_DSC00940.JPG",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Administration_Building_-_Tokyo_University_of_Marine_Science_and_Technology_-_DSC00940.JPG",
+      "source_label": "写真・ライセンス",
+      "creator": "Daderot",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者Daderot、投稿者自身の作品、CC0 1.0による公開を確認。東京海洋大学品川キャンパス管理棟の実景写真として、出典・作者・原画像を追跡できる状態で掲載する。",
+      "alt": "東京海洋大学品川キャンパス管理棟",
+      "reviewed_at": "2026-08-23"
     }
   }
 }
