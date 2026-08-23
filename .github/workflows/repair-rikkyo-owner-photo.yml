@@ -1,0 +1,53 @@
+name: Repair Rikkyo owner photo JPEG
+
+on:
+  push:
+    branches:
+      - feature/rikkyo-owner-photo-20260823
+    paths:
+      - '.github/workflows/repair-rikkyo-owner-photo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/rikkyo-owner-photo-20260823
+          fetch-depth: 0
+      - name: Repair JPEG by decoding and resaving
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageFile
+          p=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
+          raw=p.read_bytes()
+          print('before', len(raw), raw[:2].hex(), raw[-2:].hex())
+          if raw[-2:] == b'\xff\xd9':
+              print('already repaired')
+              raise SystemExit(0)
+          ImageFile.LOAD_TRUNCATED_IMAGES=True
+          with Image.open(p) as im:
+              im=im.convert('RGB')
+              print('decoded', im.size)
+              im.save(p, 'JPEG', quality=84, optimize=True, progressive=False)
+          raw=p.read_bytes()
+          print('after', len(raw), raw[:2].hex(), raw[-2:].hex())
+          assert raw[:2] == b'\xff\xd8'
+          assert raw[-2:] == b'\xff\xd9'
+          PY
+      - name: Commit repaired JPEG
+        run: |
+          if git diff --quiet -- tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg; then
+            echo 'No repair commit needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg
+          git commit -m 'fix: repair Rikkyo owner photo JPEG'
+          git push origin HEAD:feature/rikkyo-owner-photo-20260823
