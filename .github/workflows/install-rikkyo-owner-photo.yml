@@ -1,0 +1,52 @@
+name: Install Rikkyo owner photo
+
+on:
+  push:
+    branches:
+      - feature/rikkyo-owner-photo-20260823
+    paths:
+      - '.github/workflows/install-rikkyo-owner-photo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/rikkyo-owner-photo-20260823
+          fetch-depth: 0
+      - name: Rebuild exact card JPEG from staged base64
+        run: |
+          python3 -m pip install --quiet pillow
+          cat .tmp/rikkyo-photo/chunk00.b64 .tmp/rikkyo-photo/chunk01.b64 .tmp/rikkyo-photo/chunk02.b64 .tmp/rikkyo-photo/chunk03.b64 .tmp/rikkyo-photo/chunk04.b64 .tmp/rikkyo-photo/chunk05.b64 .tmp/rikkyo-photo/chunk06.b64 .tmp/rikkyo-photo/chunk07.b64 > /tmp/rikkyo.b64
+          base64 -d /tmp/rikkyo.b64 > tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg
+          python3 <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import hashlib
+          p=Path('tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg')
+          raw=p.read_bytes()
+          assert len(raw)==35673, len(raw)
+          assert raw[:2]==b'\xff\xd8'
+          assert raw[-2:]==b'\xff\xd9'
+          assert hashlib.sha256(raw).hexdigest()=='5b23f9b26267e7b300f5a4a51bf7d6d404f5aceaf9445d36ee36d42656807b69'
+          with Image.open(p) as im:
+              assert im.size==(400,225), im.size
+              assert im.format=='JPEG'
+              im.load()
+          print('Rikkyo owner photo rebuilt exactly:',len(raw),'bytes, 400x225')
+          PY
+      - name: Commit exact JPEG
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/university-database/tokyo/assets/card-images/rikkyo-university-bantai.jpg
+          if git diff --cached --quiet; then
+            echo 'JPEG already exact.'
+            exit 0
+          fi
+          git commit -m 'fix: install complete Rikkyo owner photo JPEG'
+          git push origin HEAD:feature/rikkyo-owner-photo-20260823
