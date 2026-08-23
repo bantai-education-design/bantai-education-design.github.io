@@ -78,12 +78,13 @@ jobs:
             const visual=card.locator('.real-university-image');
             assert.equal(await visual.count(),1,'owner photo visual');
             const img=visual.locator('img.university-card-image');
-            assert.ok((await img.getAttribute('src'))?.endsWith('/tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'),'owner photo path');
+            assert.equal(await img.getAttribute('src'),'assets/card-images/asia-university-bantai.jpg','owner photo relative path');
+            assert.ok((await img.evaluate(el=>el.src)).endsWith('/tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'),'owner photo resolved URL');
             assert.equal(await img.getAttribute('alt'),'亜細亜大学の校名表示とキャンパス入口');
             const source=visual.locator('.image-source-link');
             assert.equal(await source.count(),1,'owner photo source link');
             assert.ok((await source.innerText()).includes('撮影者提供'),'owner source label');
-            assert.ok((await source.getAttribute('href'))?.endsWith('/tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'),'owner source href');
+            assert.equal(await source.getAttribute('href'),'assets/card-images/asia-university-bantai.jpg','owner source relative href');
             assert.equal(await page.locator('.real-university-image').count(),54,'Replacing one verified photo must keep total at 54');
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
