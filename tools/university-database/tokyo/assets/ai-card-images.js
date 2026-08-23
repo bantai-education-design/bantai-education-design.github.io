@@ -21,3 +21,24 @@ const coverageTimer=setInterval(()=>{if(state.rows.length){updateGuiCoverage();a
 applyVerifiedLocations();applyVerifiedProfileOverlays();applyVerifiedAcademicStructure();applyVerifiedDepartmentPatches();
 const detailCss=document.createElement('link');detailCss.rel='stylesheet';detailCss.href='assets/detail-layer.css';document.head.appendChild(detailCss);const detailScript=document.createElement('script');detailScript.src='assets/detail-layer.js';detailScript.defer=true;document.head.appendChild(detailScript);
 })();
+
+(async()=>{
+  try{
+    const response=await fetch('data/user-photo-overrides.json',{cache:'no-store'});
+    if(!response.ok)return;
+    const registry=await response.json();
+    const records=registry?.records||{};
+    const apply=()=>{
+      if(typeof state==='undefined'||!state.rows?.length||!state.images){setTimeout(apply,80);return;}
+      for(const [id,record] of Object.entries(records)){
+        if(record?.rights_status==='verified'&&record.image_url&&record.source_url&&record.rights_note){state.images.set(id,record);}
+      }
+      document.documentElement.dataset.userPhotoOverlay='ready';
+      if(typeof render==='function')render();
+    };
+    apply();
+  }catch(err){
+    console.error('Tokyo user photo overlay failed',err);
+    document.documentElement.dataset.userPhotoOverlay='error';
+  }
+})();

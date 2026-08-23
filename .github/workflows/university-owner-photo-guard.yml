@@ -1,0 +1,93 @@
+name: University owner photo guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/data/user-photo-overrides.json'
+      - 'tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'
+      - 'tools/university-database/tokyo/assets/ai-card-images.js'
+      - '.github/workflows/university-owner-photo-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/data/user-photo-overrides.json'
+      - 'tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'
+      - 'tools/university-database/tokyo/assets/ai-card-images.js'
+      - '.github/workflows/university-owner-photo-guard.yml'
+
+jobs:
+  owner-photo-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate owner-provided photo registry and binary
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const path='tools/university-database/tokyo/data/user-photo-overrides.json';
+          const imagePath='tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg';
+          const data=JSON.parse(fs.readFileSync(path,'utf8'));
+          assert.deepEqual(Object.keys(data.records||{}),['u000094'],'owner photo registry should currently contain only Asia University');
+          const photo=data.records.u000094;
+          assert.equal(photo.university_name,'亜細亜大学');
+          assert.equal(photo.rights_status,'verified');
+          assert.equal(photo.rights_basis,'photographer_permission');
+          assert.equal(photo.image_url,'assets/card-images/asia-university-bantai.jpg');
+          assert.equal(photo.source_url,'assets/card-images/asia-university-bantai.jpg');
+          assert.equal(photo.source_label,'撮影者提供');
+          assert.ok(photo.creator);
+          assert.ok(photo.license.includes('撮影者本人提供'));
+          assert.ok(photo.rights_note.includes('撮影者本人'));
+          assert.ok(photo.alt.includes('亜細亜大学'));
+          assert.equal(photo.reviewed_at,'2026-08-23');
+          const image=fs.readFileSync(imagePath);
+          assert.ok(image.length>8000,'card JPEG should not be unexpectedly tiny');
+          assert.equal(image[0],0xff,'JPEG SOI');
+          assert.equal(image[1],0xd8,'JPEG SOI');
+          assert.equal(image.at(-2),0xff,'JPEG EOI');
+          assert.equal(image.at(-1),0xd9,'JPEG EOI');
+          console.log('owner-provided Asia University photo registry and JPEG validated');
+          NODE
+          test "$(git hash-object tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg)" = "b1ccf41052fca70e98fd17fcb0506c5d8b58bd16"
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-owner-photo-site.log 2>&1 &
+          sleep 2
+      - name: Verify Asia University owner photo in browser
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:950}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:10000});
+            const card=page.locator('.tokyo-card[data-id="u000094"]');
+            assert.equal(await card.count(),1,'Asia University card');
+            const visual=card.locator('.real-university-image');
+            assert.equal(await visual.count(),1,'owner photo visual');
+            const img=visual.locator('img.university-card-image');
+            assert.equal(await img.getAttribute('src'),'assets/card-images/asia-university-bantai.jpg','owner photo relative path');
+            assert.ok((await img.evaluate(el=>el.src)).endsWith('/tools/university-database/tokyo/assets/card-images/asia-university-bantai.jpg'),'owner photo resolved URL');
+            assert.equal(await img.getAttribute('alt'),'亜細亜大学の校名表示とキャンパス入口');
+            const source=visual.locator('.image-source-link');
+            assert.equal(await source.count(),1,'owner photo source link');
+            assert.ok((await source.innerText()).includes('撮影者提供'),'owner source label');
+            assert.equal(await source.getAttribute('href'),'assets/card-images/asia-university-bantai.jpg','owner source relative href');
+            assert.equal(await page.locator('.real-university-image').count(),54,'Replacing one verified photo must keep total at 54');
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
+            await browser.close();
+          })().catch(err=>{console.error(err);process.exit(1)});
+          NODE

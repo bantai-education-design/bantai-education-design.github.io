@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "purpose": "撮影者本人から提供された大学実景写真を、既存の公開画像台帳へ安全に上書きする。",
+  "records": {
+    "u000094": {
+      "university_id": "u000094",
+      "university_name": "亜細亜大学",
+      "rights_status": "verified",
+      "rights_basis": "photographer_permission",
+      "image_url": "assets/card-images/asia-university-bantai.jpg",
+      "source_url": "assets/card-images/asia-university-bantai.jpg",
+      "source_label": "撮影者提供",
+      "creator": "Ban.Tai Education Design提供",
+      "license": "撮影者本人提供・本DB利用許諾",
+      "rights_note": "撮影者本人からBan.Tai東京都大学DBでの利用許諾を受けた写真。大学公式写真の転載ではない。",
+      "alt": "亜細亜大学の校名表示とキャンパス入口",
+      "reviewed_at": "2026-08-23"
+    }
+  }
+}
