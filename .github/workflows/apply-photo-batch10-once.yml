@@ -29,54 +29,12 @@ jobs:
           const before=Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length;
           if(before!==36) throw new Error(`expected 36 verified photos before batch 10, got ${before}`);
           const records={
-            u000012:{
-              university_id:'u000012',university_name:'東京都立大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/4/48/Tokyo_Metropolitan_University_Hino_Campus-202603.JPG',
-              source_url:'https://commons.wikimedia.org/wiki/File:Tokyo_Metropolitan_University_Hino_Campus-202603.JPG',
-              source_label:'写真・ライセンス',creator:'Nyao148',license:'CC BY-SA 4.0',license_url:'https://creativecommons.org/licenses/by-sa/4.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで作者Nyao148、投稿者自身の作品、CC BY-SA 4.0を確認。東京都立大学日野キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',
-              alt:'東京都立大学日野キャンパス',reviewed_at:'2026-08-23'
-            },
-            u000023:{
-              university_id:'u000023',university_name:'北里大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/8/89/Kitasato_university.jpg',
-              source_url:'https://commons.wikimedia.org/wiki/File:Kitasato_university.jpg',
-              source_label:'写真・ライセンス',creator:'Syced',license:'CC0 1.0',license_url:'https://creativecommons.org/publicdomain/zero/1.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで作者Syced、投稿者自身の作品、CC0 1.0による公開を確認。北里大学関連施設の実景写真として、作者・原画像を追跡できる状態で掲載する。',
-              alt:'北里大学の実景',reviewed_at:'2026-08-23'
-            },
-            u000028:{
-              university_id:'u000028',university_name:'国士舘大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/c/ce/Kokushikan_University_Tama_Minamino_Campus.JPG',
-              source_url:'https://commons.wikimedia.org/wiki/File:Kokushikan_University_Tama_Minamino_Campus.JPG',
-              source_label:'写真・ライセンス',creator:'Nyao148',license:'CC BY-SA 4.0',license_url:'https://creativecommons.org/licenses/by-sa/4.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで作者Nyao148、投稿者自身の作品、CC BY-SA 4.0を確認。国士舘大学多摩南野キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',
-              alt:'国士舘大学多摩南野キャンパス',reviewed_at:'2026-08-23'
-            },
-            u000032:{
-              university_id:'u000032',university_name:'順天堂大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/9/9f/Juntendouniv.jpg',
-              source_url:'https://commons.wikimedia.org/wiki/File:Juntendouniv.jpg',
-              source_label:'写真・ライセンス',creator:'Hykw-a4',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者Hykw-a4、CC BY-SA 3.0を確認。順天堂大学本郷・お茶の水キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',
-              alt:'順天堂大学本郷・お茶の水キャンパス',reviewed_at:'2026-08-23'
-            },
-            u000035:{
-              university_id:'u000035',university_name:'昭和女子大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/9/94/Showawemensuniv.jpg',
-              source_url:'https://commons.wikimedia.org/wiki/File:Showawemensuniv.jpg',
-              source_label:'写真・ライセンス',creator:'Hykw-a4',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者Hykw-a4、CC BY-SA 3.0を確認。昭和女子大学の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',
-              alt:'昭和女子大学のキャンパス実景',reviewed_at:'2026-08-23'
-            },
-            u000077:{
-              university_id:'u000077',university_name:'武蔵大学',rights_status:'verified',
-              image_url:'https://upload.wikimedia.org/wikipedia/commons/1/19/Musashi-university.jpg',
-              source_url:'https://commons.wikimedia.org/wiki/File:Musashi-university.jpg',
-              source_label:'写真・ライセンス',creator:'↑ＰＯＮ',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',
-              rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者↑ＰＯＮ、CC BY-SA 3.0を確認。武蔵大学正門と創立当時から残る校舎の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',
-              alt:'武蔵大学正門と歴史的校舎',reviewed_at:'2026-08-23'
-            }
+            u000012:{university_id:'u000012',university_name:'東京都立大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/4/48/Tokyo_Metropolitan_University_Hino_Campus-202603.JPG',source_url:'https://commons.wikimedia.org/wiki/File:Tokyo_Metropolitan_University_Hino_Campus-202603.JPG',source_label:'写真・ライセンス',creator:'Nyao148',license:'CC BY-SA 4.0',license_url:'https://creativecommons.org/licenses/by-sa/4.0/',rights_note:'Wikimedia Commonsの個別ファイルページで作者Nyao148、投稿者自身の作品、CC BY-SA 4.0を確認。東京都立大学日野キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',alt:'東京都立大学日野キャンパス',reviewed_at:'2026-08-23'},
+            u000023:{university_id:'u000023',university_name:'北里大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/8/89/Kitasato_university.jpg',source_url:'https://commons.wikimedia.org/wiki/File:Kitasato_university.jpg',source_label:'写真・ライセンス',creator:'Syced',license:'CC0 1.0',license_url:'https://creativecommons.org/publicdomain/zero/1.0/',rights_note:'Wikimedia Commonsの個別ファイルページで作者Syced、投稿者自身の作品、CC0 1.0による公開を確認。北里大学関連施設の実景写真として、作者・原画像を追跡できる状態で掲載する。',alt:'北里大学の実景',reviewed_at:'2026-08-23'},
+            u000028:{university_id:'u000028',university_name:'国士舘大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/c/ce/Kokushikan_University_Tama_Minamino_Campus.JPG',source_url:'https://commons.wikimedia.org/wiki/File:Kokushikan_University_Tama_Minamino_Campus.JPG',source_label:'写真・ライセンス',creator:'Nyao148',license:'CC BY-SA 4.0',license_url:'https://creativecommons.org/licenses/by-sa/4.0/',rights_note:'Wikimedia Commonsの個別ファイルページで作者Nyao148、投稿者自身の作品、CC BY-SA 4.0を確認。国士舘大学多摩南野キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',alt:'国士舘大学多摩南野キャンパス',reviewed_at:'2026-08-23'},
+            u000032:{university_id:'u000032',university_name:'順天堂大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/9/9f/Juntendouniv.jpg',source_url:'https://commons.wikimedia.org/wiki/File:Juntendouniv.jpg',source_label:'写真・ライセンス',creator:'Hykw-a4',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者Hykw-a4、CC BY-SA 3.0を確認。順天堂大学本郷・お茶の水キャンパスの実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',alt:'順天堂大学本郷・お茶の水キャンパス',reviewed_at:'2026-08-23'},
+            u000035:{university_id:'u000035',university_name:'昭和女子大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/9/94/Showawemensuniv.jpg',source_url:'https://commons.wikimedia.org/wiki/File:Showawemensuniv.jpg',source_label:'写真・ライセンス',creator:'Hykw-a4',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者Hykw-a4、CC BY-SA 3.0を確認。昭和女子大学の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',alt:'昭和女子大学のキャンパス実景',reviewed_at:'2026-08-23'},
+            u000077:{university_id:'u000077',university_name:'武蔵大学',rights_status:'verified',image_url:'https://upload.wikimedia.org/wikipedia/commons/1/19/Musashi-university.jpg',source_url:'https://commons.wikimedia.org/wiki/File:Musashi-university.jpg',source_label:'写真・ライセンス',creator:'↑ＰＯＮ',license:'CC BY-SA 3.0',license_url:'https://creativecommons.org/licenses/by-sa/3.0/',rights_note:'Wikimedia Commonsの個別ファイルページで原投稿者↑ＰＯＮ、CC BY-SA 3.0を確認。武蔵大学正門と創立当時から残る校舎の実景写真として、作者・ライセンス・原画像を追跡できる状態で掲載する。',alt:'武蔵大学正門と歴史的校舎',reviewed_at:'2026-08-23'}
           };
           for(const [id,row] of Object.entries(records)){
             if(data.images[id]?.rights_status==='verified') throw new Error(`${id} already verified`);
@@ -95,3 +53,5 @@ jobs:
           git diff --cached --quiet && exit 1
           git commit -m 'data: add verified Tokyo university photos batch 10'
           git push origin HEAD:feature/tokyo-real-photos-batch10-20260823
+
+# retrigger 2026-08-23
