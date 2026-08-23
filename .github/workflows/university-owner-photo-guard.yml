@@ -95,7 +95,7 @@ jobs:
               const img=visual.locator('img.university-card-image');
               assert.equal(await img.getAttribute('src'),e.path,`${id}: relative path`);
               assert.equal(await img.getAttribute('alt'),e.alt,`${id}: alt`);
-              await img.evaluate(async el=>{if(el.decode) await el.decode();});
+              await page.waitForFunction(id=>{const el=document.querySelector(`.tokyo-card[data-id="${id}"] img.university-card-image`);return !!el&&el.complete&&el.naturalWidth>0&&el.naturalHeight>0;},id,{timeout:10000});
               const dims=await img.evaluate(el=>({w:el.naturalWidth,h:el.naturalHeight,complete:el.complete}));
               assert.equal(dims.complete,true,`${id}: image complete`);
               assert.ok(dims.w>0&&dims.h>0,`${id}: image decoded`);
