@@ -1,6 +1,23 @@
 {
-  "schema_version": 1,
-  "purpose": "撮影者本人から提供された大学実景写真を、既存の公開画像台帳へ安全に上書きする。",
+  "schema_version": 2,
+  "purpose": "撮影者本人から提供された大学実景写真を、現実の光景を改変せず既存の公開画像台帳へ安全に上書きする。",
+  "editing_policy": {
+    "principle": "写真を整えることはしても、現実の光景を書き換えない。",
+    "allowed_adjustments": [
+      "明るさ・露出の微調整",
+      "コントラストの微調整",
+      "自然な色味の微調整",
+      "傾き補正",
+      "カード表示のための軽微なトリミング",
+      "解像度調整"
+    ],
+    "prohibited_adjustments": [
+      "生成AIによる再描画・生成補完",
+      "建物・樹木・人物・看板・道路・空・窓など実景要素の追加または削除",
+      "背景の置き換え",
+      "実際には存在しない景観への合成・改変"
+    ]
+  },
   "records": {
     "u000094": {
       "university_id": "u000094",
@@ -9,12 +26,14 @@
       "rights_basis": "photographer_permission",
       "image_url": "assets/card-images/asia-university-bantai.jpg",
       "source_url": "assets/card-images/asia-university-bantai.jpg",
-      "source_label": "撮影者提供",
+      "source_label": "撮影者提供・実景保持",
       "creator": "Ban.Tai Education Design提供",
       "license": "撮影者本人提供・本DB利用許諾",
-      "rights_note": "撮影者本人からBan.Tai東京都大学DBでの利用許諾を受けた写真。大学公式写真の転載ではない。",
+      "rights_note": "撮影者本人からBan.Tai東京都大学DBでの利用許諾を受けた実景写真。大学公式写真の転載ではない。生成AIによる再描画・景観要素の追加削除・背景置換は禁止し、現実の光景を保持する。",
+      "scene_integrity": "scene_unchanged",
+      "ai_redraw": false,
       "alt": "亜細亜大学の校名表示とキャンパス入口",
-      "reviewed_at": "2026-08-23"
+      "reviewed_at": "2026-08-24"
     }
   }
 }
