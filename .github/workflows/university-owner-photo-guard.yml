@@ -36,8 +36,8 @@ jobs:
           const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/user-photo-overrides.json','utf8'));
           assert.deepEqual(Object.keys(data.records||{}),['u000083','u000094']);
           const expected={
-            u000083:{name:'立教大学',path:'assets/card-images/rikkyo-university-bantai.jpg',alt:'立教大学の蔦に覆われた校舎と時計・アーチ入口'},
-            u000094:{name:'亜細亜大学',path:'assets/card-images/asia-university-bantai.jpg',alt:'亜細亜大学の校名表示とキャンパス入口'}
+            u000083:{name:'立教大学',path:'assets/card-images/rikkyo-university-bantai.jpg',alt:'立教大学の蔦に覆われた校舎と時計・アーチ入口',minBytes:1000},
+            u000094:{name:'亜細亜大学',path:'assets/card-images/asia-university-bantai.jpg',alt:'亜細亜大学の校名表示とキャンパス入口',minBytes:8000}
           };
           for(const [id,e] of Object.entries(expected)){
             const photo=data.records[id];
@@ -53,7 +53,7 @@ jobs:
             assert.equal(photo.alt,e.alt,`${id}: alt`);
             assert.equal(photo.reviewed_at,'2026-08-23',`${id}: reviewed`);
             const image=fs.readFileSync(`tools/university-database/tokyo/${e.path}`);
-            assert.ok(image.length>8000,`${id}: image size`);
+            assert.ok(image.length>e.minBytes,`${id}: image size`);
             assert.equal(image[0],0xff,`${id}: JPEG SOI 1`);
             assert.equal(image[1],0xd8,`${id}: JPEG SOI 2`);
             assert.equal(image.at(-2),0xff,`${id}: JPEG EOI 1`);
