@@ -11,8 +11,10 @@ const search=document.querySelector('#university-first-search');
 const selectLabel=document.querySelector('label:has(#university-first-select)');
 const select=document.querySelector('#university-first-select');
 const addButton=document.querySelector('#university-first-photo-button');
+const uploadZone=document.querySelector('#drop-zone');
+const mainFile=document.querySelector('#photo-input');
 const status=document.querySelector('#university-first-status');
-if(!batch||!university||!search||!select||!addButton)return;
+if(!batch||!university||!search||!select||!addButton||!uploadZone||!mainFile)return;
 
 if(head)head.textContent='大学を選んで写真を登録する';
 if(intro)intro.textContent='大学名を入力するか一覧から1校選ぶ → 既存写真を確認 → 写真を追加、の順です。';
@@ -34,9 +36,31 @@ if(!addStep){
   addStep=document.createElement('section');
   addStep.id='simple-add-photo-step';
   addStep.className='simple-add-photo-step';
-  addStep.innerHTML='<div class="simple-step-heading"><span>STEP 3</span><strong>写真を追加する</strong><small>必要なときだけ1〜5枚追加します</small></div>';
+  addStep.innerHTML='<div class="simple-step-heading"><span>STEP 3</span><strong>写真を追加する</strong><small>ドラッグ＆ドロップでもファイル選択でも追加できます</small></div>';
 }
+
+uploadZone.classList.add('simple-upload-zone');
+uploadZone.setAttribute('aria-label','写真をドラッグ＆ドロップ、またはクリックしてファイルを選択');
+const uploadTitle=uploadZone.querySelector('strong');
+const uploadDescription=uploadZone.querySelector(':scope > span:not(.simple-file-picker)');
+const uploadNote=uploadZone.querySelector('small');
+if(uploadTitle)uploadTitle.textContent='ここに写真をドロップ';
+if(uploadDescription)uploadDescription.textContent='または、同じ枠からファイルを選択できます';
+if(uploadNote)uploadNote.textContent='JPEG / PNG / WebP ・ 1〜5枚';
+let filePicker=uploadZone.querySelector('.simple-file-picker');
+if(!filePicker){
+  filePicker=document.createElement('span');
+  filePicker.className='simple-file-picker';
+  filePicker.textContent='ファイルを選択';
+  uploadNote?.insertAdjacentElement('beforebegin',filePicker);
+}
+if(uploadZone.parentElement!==addStep)addStep.appendChild(uploadZone);
+
+// Keep the legacy university-first file control available to the existing controller/tests,
+// but do not expose a second photo-add UI to the user.
 addButton.textContent='この大学に写真を追加';
+addButton.hidden=true;
+addButton.classList.add('simple-compat-photo-button');
 if(addButton.parentElement!==addStep)addStep.appendChild(addButton);
 
 function existingBox(){return document.querySelector('#existing-photo-choice');}
@@ -67,7 +91,9 @@ function update(){
   }
   university.classList.toggle('simple-university-selected',selected);
   addButton.disabled=!selected;
+  mainFile.disabled=!selected;
   addStep.classList.toggle('is-disabled',!selected);
+  uploadZone.setAttribute('aria-disabled',String(!selected));
   enforceOrder();
 }
 

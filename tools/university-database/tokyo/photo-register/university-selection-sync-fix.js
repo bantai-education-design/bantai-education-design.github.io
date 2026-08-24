@@ -64,13 +64,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-simple-register-flow]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260824-1920';
+    link.href='simple-register-flow.css?v=20260824-2002';
     link.dataset.simpleRegisterFlow='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-simple-register-flow]')){
     const simple=document.createElement('script');
-    simple.src='simple-register-flow.js?v=20260824-1858';
+    simple.src='simple-register-flow.js?v=20260824-2002';
     simple.defer=true;
     simple.dataset.simpleRegisterFlow='true';
     document.body.appendChild(simple);
