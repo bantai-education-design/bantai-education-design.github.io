@@ -27,6 +27,7 @@ jobs:
           const assert=require('node:assert/strict');
           const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
           const simple=fs.readFileSync('tools/university-database/tokyo/photo-register/simple-register-flow.js','utf8');
+          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/simple-register-flow.css','utf8');
           assert.ok(html.includes('id="university-first-search"'),'typed university search required');
           assert.ok(html.includes('id="university-first-select"'),'university dropdown required');
           assert.ok(html.includes('id="university-first-photo-button"'),'photo add button required');
@@ -34,7 +35,12 @@ jobs:
           assert.ok(simple.includes('文字入力または一覧のどちらか一方で選べます'),'single-choice guidance required');
           assert.ok(simple.includes('STEP 1　大学を選ぶ'),'step 1 label required');
           assert.ok(simple.includes('STEP 3'),'step 3 label required');
-          console.log('typed and dropdown university selection controls validated');
+          assert.ok(css.includes('#existing-photo-choice .main-photo-choice-grid'),'compact photo picker rules required');
+          assert.ok(css.includes('display:flex!important'),'photo picker must stay one horizontal row');
+          assert.ok(css.includes('overflow-x:auto!important'),'photo picker must be horizontally scrollable');
+          assert.ok(css.includes('flex:0 0 148px!important'),'desktop photo cards must remain compact');
+          assert.ok(css.includes('flex-basis:126px!important'),'mobile photo cards must remain compact');
+          console.log('typed/dropdown selection and compact photo picker validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -71,6 +77,20 @@ jobs:
             await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
             assert.ok((await search.inputValue()).includes('亜細亜大学'),'typed path must retain the chosen university name');
+
+            const compact=await page.evaluate(()=>{
+              const grid=document.querySelector('#existing-photo-choice .main-photo-choice-grid');
+              const wrap=document.querySelector('#existing-photo-choice .photo-choice-delete-wrap');
+              const style=grid?getComputedStyle(grid):null;
+              return {
+                display:style?.display||'',
+                overflowX:style?.overflowX||'',
+                width:wrap?.getBoundingClientRect().width||0
+              };
+            });
+            assert.equal(compact.display,'flex','photo picker must render as a horizontal strip');
+            assert.ok(['auto','scroll'].includes(compact.overflowX),'photo picker must allow horizontal scrolling');
+            assert.ok(compact.width>0&&compact.width<=160,'photo cards must stay compact');
 
             // Dropdown remains an equivalent alternative, not a second required step.
             await select.selectOption('u000001');
