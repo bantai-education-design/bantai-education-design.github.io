@@ -82,6 +82,7 @@ if(notice)notice.innerHTML='ⓘ <strong>現在開発・更新中です。</stron
 
 // Finished card layer: one common quality standard for all 144 universities.
 const cardCss=document.createElement('link');cardCss.rel='stylesheet';cardCss.href='assets/card-finish.css';document.head.appendChild(cardCss);
+const searchVisibilityCss=document.createElement('link');searchVisibilityCss.rel='stylesheet';searchVisibilityCss.href='assets/mobile-search-visibility.css?v=20260824-1749';document.head.appendChild(searchVisibilityCss);
 const cardScript=document.createElement('script');cardScript.src='assets/card-finish.js';cardScript.defer=true;document.head.appendChild(cardScript);
 
 // Owner photo registration entry: keep it directly on the Tokyo DB page.
