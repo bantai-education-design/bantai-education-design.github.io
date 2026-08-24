@@ -1,0 +1,52 @@
+name: University photo mode UI guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-mode-ui-guard.yml'
+
+jobs:
+  mode-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-mode-ui.log 2>&1 &
+          sleep 2
+      - name: Verify single and batch modes
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1280,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForSelector('#registration-mode-switch');
+            assert.equal(await page.locator('#mode-single').getAttribute('aria-pressed'),'true');
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.setInputFiles('#photo-input',[
+              {name:'photo-a.png',mimeType:'image/png',buffer:png},
+              {name:'photo-b.png',mimeType:'image/png',buffer:png}
+            ]);
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('.row-university')].every(x=>x.value==='u000083'),{timeout:10000});
+            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'single mode hides per-photo university fields');
+            assert.ok((await page.locator('#registration-mode-status').innerText()).includes('u000083'));
+            await page.locator('#mode-batch').click();
+            assert.equal(await page.locator('#mode-batch').getAttribute('aria-pressed'),'true');
+            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),true,'batch mode shows per-photo university fields');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
