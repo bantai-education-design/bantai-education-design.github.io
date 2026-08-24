@@ -64,7 +64,7 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-simple-register-flow]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260824-1858';
+    link.href='simple-register-flow.css?v=20260824-1920';
     link.dataset.simpleRegisterFlow='true';
     document.head.appendChild(link);
   }
