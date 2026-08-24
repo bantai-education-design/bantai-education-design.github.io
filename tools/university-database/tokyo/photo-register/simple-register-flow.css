@@ -49,17 +49,17 @@
 
 .batch-summary{display:block!important;margin-top:12px;padding:0!important;border:0!important;background:transparent!important}
 .batch-summary #batch-count{font-size:.8rem;color:#d7b45a}
-.batch-summary #batch-status{display:none!important}
+body:has(#mode-single[aria-pressed="true"]) .batch-summary #batch-status{display:none!important}
 #batch-list:not(:empty)::before{content:'追加した写真';display:block;margin:10px 0 8px;color:#d7b45a;font-size:.82rem;font-weight:900;letter-spacing:.04em}
-.batch-list .university-assign{display:none!important}
-.batch-list .batch-main>small{display:none!important}
+body:has(#mode-single[aria-pressed="true"]) .batch-list .university-assign{display:none!important}
+body:has(#mode-single[aria-pressed="true"]) .batch-list .batch-main>small{display:none!important}
 .batch-list .batch-row{min-height:74px!important;padding:9px 10px!important;gap:10px!important}
 .batch-list .thumb{width:72px!important;height:52px!important;min-width:72px!important}
 .batch-list .batch-main strong{font-size:.82rem!important;line-height:1.25;word-break:break-all}
 .batch-list .batch-actions{gap:6px!important}
 .batch-list .batch-actions button{min-height:34px!important;padding:5px 9px!important;font-size:.74rem!important}
 
-#photo-editor label:has(#editor-university-search),#photo-editor label:has(#university-select){display:none!important}
+body:has(#mode-single[aria-pressed="true"]) #photo-editor label:has(#editor-university-search),body:has(#mode-single[aria-pressed="true"]) #photo-editor label:has(#university-select){display:none!important}
 #photo-editor .file-info{margin-top:4px}
 #photo-editor .section-head .step::after,.export-panel .section-head .step::after{content:none!important}
 
@@ -88,7 +88,7 @@
   .simple-step-heading span,.simple-step-heading strong,.simple-step-heading small{display:block;margin-bottom:4px}
   #simple-add-photo-step .simple-upload-zone{min-height:108px;padding:12px 9px}
   #simple-add-photo-step .simple-file-picker{width:min(100%,220px);min-width:0}
-  #existing-photo-choice .photo-choice-delete-wrap{flex-basis:132px!important;width:132px!important;min-width:132px!important}
+  #existing-photo-choice .photo-choice-delete-wrap{flex-basis:126px!important;width:126px!important;min-width:126px!important}
   #existing-photo-choice .main-photo-choice-grid{gap:7px!important;padding-bottom:7px!important}
   .batch-list .batch-row{grid-template-columns:62px minmax(0,1fr)!important}
   .batch-list .thumb{width:62px!important;height:46px!important;min-width:62px!important}
