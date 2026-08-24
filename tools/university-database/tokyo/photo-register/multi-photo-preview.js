@@ -2,67 +2,192 @@
 'use strict';
 const list=document.querySelector('#batch-list');
 const firstSelect=document.querySelector('#university-first-select');
+const firstSearch=document.querySelector('#university-first-search');
+const firstButton=document.querySelector('#university-first-photo-button');
 const batch=document.querySelector('.batch');
-if(!list||!firstSelect||!batch)return;
+const editorControls=document.querySelector('#photo-editor .controls');
+if(!list||!firstSelect||!firstSearch||!firstButton||!batch)return;
 let mainKey='';
 let channel=null;
+let registrationMode='single';
 
-function rows(){return [...list.querySelectorAll('.batch-row')];}
-function ensurePreviewUi(){
-  if(document.querySelector('#real-page-preview'))return;
-  const box=document.createElement('section');
-  box.id='real-page-preview';
-  box.className='real-page-preview';
-  box.innerHTML=`<div><span class="step">配置確認</span><h2>実画面で写真配置を確認</h2><p>1〜5枚まで。★メイン1枚を背景、残り最大4枚を小型サムネイルで表示します。ここでは本番登録しません。</p></div><button id="open-real-preview" type="button" class="primary" disabled>大学ページで実画面プレビュー</button><small id="real-preview-status">大学と写真を選ぶとプレビューできます。</small>`;
-  batch.appendChild(box);
-  const style=document.createElement('style');
-  style.textContent=`.real-page-preview{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;margin-top:18px;padding:16px;border:1px solid #4b4025;border-radius:14px;background:linear-gradient(135deg,#12130f,#0c0e13)}.real-page-preview h2{margin:4px 0 6px}.real-page-preview p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.6}.real-page-preview small{grid-column:1/-1;color:#b9bdc8}.photo-main-button{border-color:#65562f!important;color:#ecd27c!important;background:#17140b!important;white-space:nowrap}.photo-main-button.active{background:linear-gradient(135deg,#b88a2b,#e0bd65)!important;color:#0b0b0c!important;border-color:#e8c976!important}.batch-row .batch-actions{flex-wrap:wrap}@media(max-width:800px){.real-page-preview{grid-template-columns:1fr}.real-page-preview button{width:100%}}`;
-  document.head.appendChild(style);
-  box.querySelector('#open-real-preview').addEventListener('click',openPreview);
+const rows=()=>[...list.querySelectorAll('.batch-row')];
+const selectedLabel=()=>{
+  const o=firstSelect.options[firstSelect.selectedIndex];
+  return firstSelect.value&&o?o.textContent.trim():'';
+};
+
+function ensureUi(){
+  if(!document.querySelector('#registration-mode-switch')){
+    const grid=document.querySelector('.start-choice-grid');
+    if(grid){
+      const wrap=document.createElement('section');
+      wrap.id='registration-mode-switch';
+      wrap.className='registration-mode-switch';
+      wrap.innerHTML=`<div class="mode-heading"><span class="step">登録モード</span><h2>まず、登録のしかたを選ぶ</h2></div><div class="mode-buttons"><button id="mode-single" type="button" class="mode-card active" aria-pressed="true"><strong>1大学を編集</strong><span>大学名は1回だけ指定</span><small>同じ大学の写真を1〜5枚扱うとき</small></button><button id="mode-batch" type="button" class="mode-card" aria-pressed="false"><strong>複数大学を一括登録</strong><span>写真ごとに大学を確認</span><small>複数大学の写真をまとめて扱うとき</small></button></div><div id="registration-mode-status" class="mode-status"></div>`;
+      grid.parentNode.insertBefore(wrap,grid);
+      wrap.querySelector('#mode-single').addEventListener('click',()=>{registrationMode='single';renderMode();});
+      wrap.querySelector('#mode-batch').addEventListener('click',()=>{registrationMode='batch';renderMode();});
+    }
+  }
+  if(editorControls&&!document.querySelector('#single-editor-summary')){
+    const summary=document.createElement('div');
+    summary.id='single-editor-summary';
+    summary.className='single-editor-summary';
+    const fileInfo=document.querySelector('#file-info');
+    editorControls.insertBefore(summary,fileInfo||editorControls.firstChild);
+  }
+  if(!document.querySelector('#real-page-preview')){
+    const box=document.createElement('section');
+    box.id='real-page-preview';
+    box.className='real-page-preview';
+    box.innerHTML=`<div><span class="step">配置確認</span><h2>実画面で写真配置を確認</h2><p>1〜5枚まで。★メイン1枚を背景、残り最大4枚を小型サムネイルで表示します。ここでは本番登録しません。</p></div><button id="open-real-preview" type="button" class="primary" disabled>大学ページで実画面プレビュー</button><small id="real-preview-status">大学と写真を選ぶとプレビューできます。</small>`;
+    batch.appendChild(box);
+    box.querySelector('#open-real-preview').addEventListener('click',openPreview);
+  }
+  if(!document.querySelector('#multi-photo-ui-style')){
+    const style=document.createElement('style');
+    style.id='multi-photo-ui-style';
+    style.textContent=`.registration-mode-switch{margin:0 0 18px;padding:16px;border:1px solid #3a3422;border-radius:15px;background:#0d0f14}.mode-heading{display:grid;gap:4px;margin-bottom:12px}.mode-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mode-card{display:grid;gap:5px;text-align:left;padding:15px;border:1px solid #343742;background:#11131a;color:var(--text)}.mode-card strong{font-size:1rem}.mode-card span{color:#e8d48f;font-size:.82rem}.mode-card small{color:var(--muted);font-weight:400}.mode-card.active{border-color:#d7b45a;box-shadow:0 0 0 2px rgba(215,180,90,.12);background:#18160e}.mode-status{margin-top:12px;padding:10px 12px;border-radius:10px;background:#090a0d;color:#cfd1d7;font-size:.82rem;line-height:1.6}.mode-status strong{color:#f0d98b}.single-university-badge,.auto-assigned-badge{display:inline-flex;align-items:center;width:max-content;max-width:100%;padding:6px 9px;border-radius:999px;font-size:.72rem}.single-university-badge{border:1px solid #594d2b;background:#17140b;color:#edd487}.auto-assigned-badge{border:1px solid #36533f;background:#0d1811;color:#b9e6c7}.single-editor-summary{display:none;margin:12px 0 16px;padding:11px 12px;border-radius:10px;border:1px solid #4f4428;background:#151209;color:#f0d98b}.single-editor-summary strong{color:#fff}body[data-registration-mode="single"] .batch-row .university-assign{display:none}body[data-registration-mode="single"] #photo-editor .controls>.field{display:none}body[data-registration-mode="single"] .single-editor-summary{display:block}body[data-registration-mode="batch"] .single-university-badge{display:none}.real-page-preview{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;margin-top:18px;padding:16px;border:1px solid #4b4025;border-radius:14px;background:linear-gradient(135deg,#12130f,#0c0e13)}.real-page-preview h2{margin:4px 0 6px}.real-page-preview p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.6}.real-page-preview small{grid-column:1/-1;color:#b9bdc8}.photo-main-button{border-color:#65562f!important;color:#ecd27c!important;background:#17140b!important;white-space:nowrap}.photo-main-button.active{background:linear-gradient(135deg,#b88a2b,#e0bd65)!important;color:#0b0b0c!important;border-color:#e8c976!important}.batch-row .batch-actions{flex-wrap:wrap}@media(max-width:800px){.mode-buttons,.real-page-preview{grid-template-columns:1fr}.registration-mode-switch{padding:13px}.real-page-preview button{width:100%}}`;
+    document.head.appendChild(style);
+  }
 }
+
+function applySingleUniversity(){
+  if(registrationMode!=='single'||!firstSelect.value)return;
+  const label=selectedLabel();
+  for(const row of rows()){
+    const select=row.querySelector('.row-university');
+    const search=row.querySelector('.row-university-search');
+    if(select&&select.value!==firstSelect.value&&[...select.options].some(o=>o.value===firstSelect.value)){
+      select.value=firstSelect.value;
+      select.dispatchEvent(new Event('change',{bubbles:true}));
+    }
+    if(search&&search.value!==label)search.value=label;
+  }
+}
+
 function enhanceRows(){
   const all=rows();
   if(all.length&&!mainKey)mainKey=all[0].dataset.key||'';
   if(mainKey&&!all.some(r=>r.dataset.key===mainKey))mainKey=all[0]?.dataset.key||'';
+  const common=selectedLabel();
   for(const row of all){
-    const actions=row.querySelector('.batch-actions');if(!actions)continue;
-    let btn=actions.querySelector('.photo-main-button');
-    if(!btn){btn=document.createElement('button');btn.type='button';btn.className='photo-main-button';btn.addEventListener('click',()=>{mainKey=row.dataset.key||'';enhanceRows();syncPreviewState();});actions.prepend(btn);}
-    const active=(row.dataset.key||'')===mainKey;btn.classList.toggle('active',active);btn.textContent=active?'★ メイン写真':'☆ メインにする';
+    const actions=row.querySelector('.batch-actions');
+    const main=row.querySelector('.batch-main');
+    const select=row.querySelector('.row-university');
+    if(actions){
+      let btn=actions.querySelector('.photo-main-button');
+      if(!btn){
+        btn=document.createElement('button');
+        btn.type='button';
+        btn.className='photo-main-button';
+        btn.addEventListener('click',()=>{mainKey=row.dataset.key||'';enhanceRows();});
+        actions.prepend(btn);
+      }
+      const active=(row.dataset.key||'')===mainKey;
+      btn.classList.toggle('active',active);
+      const text=active?'★ メイン写真':'☆ メインにする';
+      if(btn.textContent!==text)btn.textContent=text;
+    }
+    if(main&&select){
+      let singleBadge=main.querySelector('.single-university-badge');
+      if(!singleBadge){singleBadge=document.createElement('span');singleBadge.className='single-university-badge';main.appendChild(singleBadge);}
+      const singleText=common?`共通大学：${common}`:'共通大学を選択してください';
+      if(singleBadge.textContent!==singleText)singleBadge.textContent=singleText;
+      let autoBadge=main.querySelector('.auto-assigned-badge');
+      if(registrationMode==='batch'&&select.value){
+        if(!autoBadge){autoBadge=document.createElement('span');autoBadge.className='auto-assigned-badge';main.appendChild(autoBadge);}
+        if(autoBadge.textContent!=='大学候補を自動入力済み・要確認')autoBadge.textContent='大学候補を自動入力済み・要確認';
+      }else if(autoBadge){autoBadge.remove();}
+    }
   }
   syncPreviewState();
 }
+
+function updateEditorSummary(){
+  const summary=document.querySelector('#single-editor-summary');
+  if(!summary)return;
+  const text=selectedLabel()||'大学未選択';
+  const html=`対象大学： <strong>${text}</strong><br><small>1大学モードでは大学名を共通管理します。写真ごとに入力し直す必要はありません。</small>`;
+  if(summary.innerHTML!==html)summary.innerHTML=html;
+}
+
+function renderMode(){
+  ensureUi();
+  document.body.dataset.registrationMode=registrationMode;
+  const single=document.querySelector('#mode-single');
+  const batchBtn=document.querySelector('#mode-batch');
+  const status=document.querySelector('#registration-mode-status');
+  if(single&&batchBtn){
+    single.classList.toggle('active',registrationMode==='single');
+    batchBtn.classList.toggle('active',registrationMode==='batch');
+    single.setAttribute('aria-pressed',String(registrationMode==='single'));
+    batchBtn.setAttribute('aria-pressed',String(registrationMode==='batch'));
+  }
+  if(registrationMode==='single'){
+    const label=selectedLabel();
+    if(status)status.innerHTML=label?`<strong>${label}</strong> を編集中です。追加する写真にはこの大学名を共通適用します。`:'大学名は1回だけ指定します。大学を選んでから、同じ大学の写真を1〜5枚追加してください。';
+    firstButton.textContent=label?'この大学の写真を追加':'大学を選んで写真を追加';
+    applySingleUniversity();
+  }else{
+    if(status)status.textContent='複数大学を一括登録します。写真ごとに大学名を確認してください。ファイル名に大学名・大学IDがあれば自動入力します。';
+    firstButton.textContent='この大学の写真を選ぶ';
+  }
+  updateEditorSummary();
+  enhanceRows();
+}
+
 function syncPreviewState(){
-  ensurePreviewUi();
-  const button=document.querySelector('#open-real-preview'),status=document.querySelector('#real-preview-status');
-  const all=rows();const universityId=firstSelect.value;
+  const button=document.querySelector('#open-real-preview');
+  const status=document.querySelector('#real-preview-status');
+  if(!button||!status)return;
+  const all=rows();
   if(!all.length){button.disabled=true;status.textContent='写真を1〜5枚追加してください。';return;}
   if(all.length>5){button.disabled=true;status.textContent=`現在${all.length}枚です。実画面プレビューは1大学につき5枚までにしてください。`;return;}
-  if(!universityId){button.disabled=true;status.textContent='対象大学を選択してください。';return;}
-  button.disabled=false;status.textContent=`${all.length}枚をプレビューします。★メイン1枚＋サムネイル${Math.max(0,all.length-1)}枚。`;
+  if(!firstSelect.value){button.disabled=true;status.textContent='対象大学を選択してください。';return;}
+  button.disabled=false;
+  status.textContent=`${all.length}枚をプレビューします。★メイン1枚＋サムネイル${Math.max(0,all.length-1)}枚。`;
 }
+
 async function rowBlob(row){
-  const img=row.querySelector('.thumb img');if(!img?.src)throw new Error('写真を取得できません');
-  const res=await fetch(img.src);if(!res.ok)throw new Error('写真を取得できません');return res.blob();
+  const img=row.querySelector('.thumb img');
+  if(!img?.src)throw new Error('写真を取得できません');
+  const res=await fetch(img.src);
+  if(!res.ok)throw new Error('写真を取得できません');
+  return res.blob();
 }
+
 async function openPreview(){
-  const all=rows().slice(0,5),universityId=firstSelect.value;if(!all.length||!universityId)return;
-  const button=document.querySelector('#open-real-preview'),status=document.querySelector('#real-preview-status');button.disabled=true;status.textContent='実画面プレビューを準備しています…';
+  const all=rows().slice(0,5),universityId=firstSelect.value;
+  if(!all.length||!universityId)return;
+  const button=document.querySelector('#open-real-preview'),status=document.querySelector('#real-preview-status');
+  button.disabled=true;status.textContent='実画面プレビューを準備しています…';
   try{
-    const photos=[];for(const row of all)photos.push({blob:await rowBlob(row),main:(row.dataset.key||'')===mainKey});
+    const photos=[];
+    for(const row of all)photos.push({blob:await rowBlob(row),main:(row.dataset.key||'')===mainKey});
     if(!photos.some(x=>x.main))photos[0].main=true;
     const token=(crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random()}`).replace(/[^a-zA-Z0-9-]/g,'');
-    channel?.close();channel=new BroadcastChannel(`university-photo-preview-${token}`);
+    channel?.close();
+    channel=new BroadcastChannel(`university-photo-preview-${token}`);
     const target=`../?photo_preview_token=${encodeURIComponent(token)}&university=${encodeURIComponent(universityId)}`;
     const win=window.open(target,'_blank');
-    if(!win){throw new Error('プレビュー画面を開けませんでした。ポップアップを許可してください。');}
-    let sent=0;const send=()=>{if(sent++>10)return;channel.postMessage({universityId,photos});setTimeout(send,500);};
-    channel.onmessage=e=>{if(e.data?.type==='receiver-ready'||e.data?.type==='ready'){channel.postMessage({universityId,photos});if(e.data?.type==='ready'){status.textContent='実画面プレビューを開きました。本番登録はまだ行っていません。';button.disabled=false;}}};
+    if(!win)throw new Error('プレビュー画面を開けませんでした。ポップアップを許可してください。');
+    let sent=0;
+    const send=()=>{if(sent++>10)return;channel.postMessage({universityId,photos});setTimeout(send,500);};
+    channel.onmessage=e=>{
+      if(e.data?.type==='receiver-ready'||e.data?.type==='ready'){
+        channel.postMessage({universityId,photos});
+        if(e.data?.type==='ready'){status.textContent='実画面プレビューを開きました。本番登録はまだ行っていません。';button.disabled=false;}
+      }
+    };
     send();
   }catch(err){console.error(err);status.textContent=err.message||'プレビュー準備に失敗しました。';button.disabled=false;}
 }
-ensurePreviewUi();
-new MutationObserver(()=>queueMicrotask(enhanceRows)).observe(list,{childList:true,subtree:true});
-firstSelect.addEventListener('change',syncPreviewState);
-enhanceRows();
+
+ensureUi();
+firstSelect.addEventListener('change',()=>queueMicrotask(renderMode));
+firstSearch.addEventListener('change',()=>queueMicrotask(renderMode));
+new MutationObserver(()=>queueMicrotask(()=>{if(registrationMode==='single')applySingleUniversity();updateEditorSummary();enhanceRows();})).observe(list,{childList:true});
+renderMode();
 })();
