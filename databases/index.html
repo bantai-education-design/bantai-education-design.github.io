@@ -4,21 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>データベース・情報検索 | Ban.Tai Education Design</title>
-<meta name="description" content="全国学校データベース、教科書会社・年間指導計画、東京都144大学データベースへ進める教育情報の総合メニューです。">
+<meta name="description" content="全国学校データベース、教科書会社・年間指導計画、大学データベースへ進める教育情報の総合メニューです。">
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 <link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
 <link rel="stylesheet" href="/assets/css/audience-hubs.css?v=20260815-visual1">
 <style>
 *{box-sizing:border-box}
 .db-main{background:#fff;min-height:100vh}
-.db-quick-entry{display:flex;justify-content:center;padding:12px 16px;background:linear-gradient(90deg,#fff9e9,#fffdf7);border-bottom:1px solid #ead9a9}
-.db-quick-entry a{display:flex;align-items:center;justify-content:center;gap:.85rem;width:min(760px,100%);padding:.9rem 1.2rem;border:1px solid #b8943e;border-radius:16px;background:#fff;color:#15364f;text-decoration:none;box-shadow:0 7px 20px rgba(21,49,72,.09);transition:transform .16s,box-shadow .16s,background .16s}
-.db-quick-entry a:hover,.db-quick-entry a:focus-visible{background:#fff8df;transform:translateY(-1px);box-shadow:0 10px 24px rgba(21,49,72,.13);outline:2px solid #d8b65c;outline-offset:2px}
-.db-quick-entry-icon{font-size:1.55rem;line-height:1}
-.db-quick-entry-copy{display:flex;flex-direction:column;gap:.12rem;line-height:1.35}
-.db-quick-entry-copy strong{font-size:1rem;color:#6d5217}
-.db-quick-entry-copy small{font-size:.82rem;color:#667a8a;font-weight:700}
-.db-quick-entry-arrow{margin-left:auto;color:#8c6d25;font-weight:900;font-size:1.1rem}
 .db-visual-menu{background:#031b2f}
 .db-artboard{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0;background:#031b2f}
 .db-artboard>img{display:block;width:100%;height:auto}
@@ -42,10 +34,6 @@
   .db-artboard{overflow-x:hidden}
   .db-mobile-fallback{display:block}
   .db-hotspot{border-radius:8px}
-  .db-quick-entry{padding:10px 12px}
-  .db-quick-entry a{justify-content:flex-start;padding:.82rem 1rem;border-radius:14px}
-  .db-quick-entry-copy strong{font-size:.94rem}
-  .db-quick-entry-copy small{font-size:.76rem}
 }
 </style>
 </head>
@@ -68,22 +56,15 @@
   </div>
 </header>
 <main class="db-main">
-  <section class="db-quick-entry" aria-label="大学写真の登録">
-    <a href="/tools/university-database/tokyo/photo-register/?v=20260824-1128">
-      <span class="db-quick-entry-icon" aria-hidden="true">📷</span>
-      <span class="db-quick-entry-copy"><strong>大学写真クイック登録</strong><small>本人撮影写真を、ここからすぐ登録</small></span>
-      <span class="db-quick-entry-arrow" aria-hidden="true">→</span>
-    </a>
-  </section>
   <section class="db-visual-menu" aria-label="教育情報データベースの総合メニュー">
     <div class="db-artboard">
       <img id="database-gateway-art" src="/assets/images/databases-gateway-hero.jpg" width="1536" height="503" alt="教育情報を、探す・比べる・活かす。学校情報、教科書・年間指導計画、地域・統計データ、大学情報をひとつの教育データ基盤から探すメニュー">
       <a class="db-hotspot hot-school-card" href="/tools/school-database/" aria-label="全国学校データベースを開く"></a>
       <a class="db-hotspot hot-textbook-card" href="/resources/textbook-plans/" aria-label="教科書会社・年間指導計画を開く"></a>
-      <a class="db-hotspot hot-university-card" href="/tools/university-database/tokyo/" aria-label="東京都144大学データベースを開く"></a>
+      <a class="db-hotspot hot-university-card" href="/tools/university-database/" aria-label="大学データベースを開く"></a>
       <a class="db-hotspot hot-school-btn" href="/tools/school-database/" aria-label="学校を探す"></a>
       <a class="db-hotspot hot-textbook-btn" href="/resources/textbook-plans/" aria-label="教科書・年間指導計画を見る"></a>
-      <a class="db-hotspot hot-university-btn" href="/tools/university-database/tokyo/" aria-label="東京都144大学を見る"></a>
+      <a class="db-hotspot hot-university-btn" href="/tools/university-database/" aria-label="大学データベースを見る"></a>
     </div>
   </section>
   <section class="db-mobile-fallback" aria-label="データベース一覧">
@@ -91,7 +72,7 @@
     <div class="db-mobile-grid">
       <a class="db-card" href="/tools/school-database/"><small>全国学校データベース</small><h3>学校を探す</h3><p>都道府県・市区町村・校種などから学校を検索できます。</p><strong>全国学校データベースを開く →</strong></a>
       <a class="db-card" href="/resources/textbook-plans/"><small>教科書会社・年間指導計画</small><h3>学びの流れを見る</h3><p>教科書会社ごとの年間指導計画を確認できます。</p><strong>年間指導計画を開く →</strong></a>
-      <a class="db-card" href="/tools/university-database/tokyo/"><small>東京都144大学</small><h3>未来の学びを探す</h3><p>大学の特色・詳細・公式情報・入試情報へ進めます。</p><strong>東京都144大学を見る →</strong></a>
+      <a class="db-card" href="/tools/university-database/"><small>大学データベース</small><h3>未来の学びを探す</h3><p>大学検索・比較・詳細情報と、大学写真クイック登録へ進めます。</p><strong>大学DBを開く →</strong></a>
     </div>
   </section>
 </main>
