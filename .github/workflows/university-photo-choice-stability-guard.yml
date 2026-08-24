@@ -1,0 +1,50 @@
+name: University photo choice stability guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-choice-stability-guard.yml'
+
+jobs:
+  stable-choice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-choice-stability.log 2>&1 &
+          sleep 2
+      - name: Verify existing photo remains mounted when selected
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'),{timeout:10000});
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            const target=page.locator('.main-photo-choice-card').nth(1);
+            await target.evaluate(el=>{el.dataset.stabilityProbe='keep';});
+            const srcBefore=await target.locator('img').getAttribute('src');
+            await target.click();
+            const after=page.locator('.main-photo-choice-card').nth(1);
+            assert.equal(await after.getAttribute('data-stability-probe'),'keep','selected existing photo card must not be replaced');
+            assert.equal(await after.locator('img').getAttribute('src'),srcBefore,'selected existing photo image must remain mounted');
+            assert.ok((await after.innerText()).includes('★ メイン'),'selected photo must become main');
+            assert.equal(await page.locator('.main-photo-choice-card').count()>=2,true,'existing photo candidates must remain visible after selection');
+            assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo must remain selected');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

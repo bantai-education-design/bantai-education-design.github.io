@@ -85,16 +85,51 @@ function syncLegacyButtons(){
 
 function escapeAttr(value){return String(value||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
+function applyChoiceState(){
+  const box=document.querySelector('#existing-photo-choice');
+  if(!box)return;
+  for(const card of box.querySelectorAll('.main-photo-choice-card')){
+    const active=card.dataset.mainType===choice.type&&(card.dataset.mainKey||'')===choice.key;
+    card.classList.toggle('active',active);
+    card.setAttribute('aria-pressed',String(active));
+    const badge=card.querySelector('.main-photo-check');
+    if(badge){
+      badge.classList.toggle('main',active);
+      badge.classList.toggle('sub',!active);
+      badge.textContent=active?'★ メイン':'サブ';
+    }
+    const small=card.querySelector('small');
+    if(small){
+      const origin=card.dataset.mainOrigin||'';
+      small.textContent=`${origin}・${active?'一覧カード＋詳細背景':'詳細ページのサムネイル'}`;
+    }
+    const title=card.querySelector('strong')?.textContent?.trim()||'写真';
+    card.setAttribute('aria-label',`${title}を${active?'メイン写真':'メイン写真に選択'}`);
+  }
+  syncLegacyButtons();
+}
+
 function selectChoice(type,key=''){
   choice={type,key};
-  renderChoices();
-  syncLegacyButtons();
+  applyChoiceState();
 }
 
 function makeCard({type,key='',src,alt,title,active,origin}){
   const role=active?'★ メイン':'サブ';
   const usage=active?'一覧カード＋詳細背景':'詳細ページのサムネイル';
-  return `<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="${type}"${key?` data-main-key="${escapeAttr(key)}"`:''} aria-pressed="${active}" aria-label="${escapeAttr(title)}を${active?'メイン写真':'メイン写真に選択'}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"><span class="main-photo-check ${active?'main':'sub'}">${role}</span></span><strong>${escapeAttr(title)}</strong><small>${escapeAttr(origin)}・${usage}</small></button>`;
+  return `<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="${type}" data-main-origin="${escapeAttr(origin)}"${key?` data-main-key="${escapeAttr(key)}"`:''} aria-pressed="${active}" aria-label="${escapeAttr(title)}を${active?'メイン写真':'メイン写真に選択'}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"><span class="main-photo-check ${active?'main':'sub'}">${role}</span></span><strong>${escapeAttr(title)}</strong><small>${escapeAttr(origin)}・${usage}</small></button>`;
+}
+
+function bindChoiceCards(box){
+  for(const card of box.querySelectorAll('.main-photo-choice-card')){
+    if(card.dataset.choiceBound==='1')continue;
+    card.dataset.choiceBound='1';
+    card.addEventListener('click',event=>{
+      event.preventDefault();
+      event.stopPropagation();
+      selectChoice(card.dataset.mainType,card.dataset.mainKey||'');
+    });
+  }
 }
 
 function renderChoices(){
@@ -140,10 +175,8 @@ function renderChoices(){
   }
 
   box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>${escapeAttr(selectedName)}：これまでの写真＋今回写真</strong><small>写真を1枚クリックしてください。1枚だけが「★ メイン」、それ以外は「サブ」です。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
-  for(const card of box.querySelectorAll('.main-photo-choice-card')){
-    card.addEventListener('click',()=>selectChoice(card.dataset.mainType,card.dataset.mainKey||''));
-  }
-  syncLegacyButtons();
+  bindChoiceCards(box);
+  applyChoiceState();
 }
 
 async function refreshUniversity(){
