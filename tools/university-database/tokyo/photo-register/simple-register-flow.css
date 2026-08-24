@@ -27,9 +27,45 @@
 #batch-list:not(:empty)::before{content:'追加した写真';display:block;margin:18px 0 10px;color:#d7b45a;font-weight:900;letter-spacing:.05em}
 #photo-editor .section-head .step::after{content:' / STEP 4'}
 .export-panel .section-head .step::after{content:' / STEP 5'}
+
+/* Compact photo picker: presentation only. Selection/delete/save logic stays unchanged. */
+#existing-photo-choice{padding:12px!important}
+#existing-photo-choice .existing-photo-title{margin-bottom:8px!important}
+#existing-photo-choice .existing-photo-title small{font-size:.76rem;line-height:1.35}
+#existing-photo-choice .main-photo-choice-grid{
+  display:flex!important;
+  gap:8px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  padding:2px 2px 8px!important;
+  scroll-snap-type:x proximity;
+  overscroll-behavior-x:contain;
+  scrollbar-width:thin;
+  -webkit-overflow-scrolling:touch;
+}
+#existing-photo-choice .photo-choice-delete-wrap{
+  flex:0 0 148px!important;
+  width:148px!important;
+  min-width:148px!important;
+  scroll-snap-align:start;
+  gap:5px!important;
+}
+#existing-photo-choice .main-photo-choice-card{
+  padding:6px!important;
+  gap:4px!important;
+  border-radius:9px!important;
+}
+#existing-photo-choice .main-photo-choice-image{border-radius:7px!important}
+#existing-photo-choice .main-photo-check{left:5px!important;bottom:5px!important;padding:4px 7px!important;font-size:.62rem!important}
+#existing-photo-choice .main-photo-choice-card strong{font-size:.72rem!important}
+#existing-photo-choice .main-photo-choice-card small{font-size:.62rem!important}
+#existing-photo-choice .photo-list-delete{min-height:30px!important;font-size:.68rem!important;padding:4px 6px!important}
+
 @media(max-width:800px){
   .university-first,.simple-add-photo-step{padding:16px!important}
   #university-first-search,#university-first-select,#simple-add-photo-step #university-first-photo-button{width:100%!important}
   .simple-step-heading{display:block}
   .simple-step-heading span,.simple-step-heading strong,.simple-step-heading small{display:block;margin-bottom:4px}
+  #existing-photo-choice .photo-choice-delete-wrap{flex-basis:126px!important;width:126px!important;min-width:126px!important}
+  #existing-photo-choice .main-photo-choice-grid{gap:7px!important;padding-bottom:7px!important}
 }
