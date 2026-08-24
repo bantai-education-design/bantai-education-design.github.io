@@ -22,7 +22,15 @@
 .simple-step-heading span{color:#d7b45a;font-size:.78rem;font-weight:900;letter-spacing:.1em}
 .simple-step-heading strong{font-size:1rem;color:#fff}
 .simple-step-heading small{color:var(--muted)}
-#simple-add-photo-step #university-first-photo-button{width:100%;min-height:50px;margin:0;font-size:1rem;font-weight:900;background:#d7b45a!important;color:#0b0d12!important;border-color:#e6ca7d!important}
+#simple-add-photo-step .simple-upload-zone{min-height:132px;margin:0;border:1.5px dashed #8e7537;background:#0b0d12;padding:16px;gap:7px;transition:border-color .16s ease,background .16s ease,box-shadow .16s ease}
+#simple-add-photo-step .simple-upload-zone:hover,#simple-add-photo-step .simple-upload-zone:focus-within{border-color:#e0bd65;background:#121008;box-shadow:0 0 0 2px rgba(215,180,90,.08)}
+#simple-add-photo-step .simple-upload-zone.drag{border-color:#f0d98b;background:#1a170c;box-shadow:0 0 0 2px rgba(240,217,139,.14)}
+#simple-add-photo-step .simple-upload-zone>strong{font-size:1.05rem;color:#fff}
+#simple-add-photo-step .simple-upload-zone>span:not(.simple-file-picker){font-size:.82rem;color:var(--muted)}
+#simple-add-photo-step .simple-file-picker{display:inline-flex;align-items:center;justify-content:center;min-width:160px;min-height:42px;margin-top:2px;padding:8px 16px;border:1px solid #e6ca7d;border-radius:10px;background:linear-gradient(135deg,#b88a2b,#e0bd65);color:#0b0d12!important;font-weight:900;font-size:.9rem;box-shadow:0 5px 14px rgba(0,0,0,.18)}
+#simple-add-photo-step .simple-upload-zone>small{font-size:.72rem;color:#8f94a0}
+#simple-add-photo-step.is-disabled .simple-upload-zone{pointer-events:none;filter:saturate(.55)}
+#simple-add-photo-step #university-first-photo-button{display:none!important}
 .batch-summary{margin-top:18px}
 #batch-list:not(:empty)::before{content:'追加した写真';display:block;margin:18px 0 10px;color:#d7b45a;font-weight:900;letter-spacing:.05em}
 #photo-editor .section-head .step::after{content:' / STEP 4'}
@@ -63,9 +71,11 @@
 
 @media(max-width:800px){
   .university-first,.simple-add-photo-step{padding:16px!important}
-  #university-first-search,#university-first-select,#simple-add-photo-step #university-first-photo-button{width:100%!important}
+  #university-first-search,#university-first-select{width:100%!important}
   .simple-step-heading{display:block}
   .simple-step-heading span,.simple-step-heading strong,.simple-step-heading small{display:block;margin-bottom:4px}
+  #simple-add-photo-step .simple-upload-zone{min-height:124px;padding:14px 10px}
+  #simple-add-photo-step .simple-file-picker{width:min(100%,220px);min-width:0}
   #existing-photo-choice .photo-choice-delete-wrap{flex-basis:126px!important;width:126px!important;min-width:126px!important}
   #existing-photo-choice .main-photo-choice-grid{gap:7px!important;padding-bottom:7px!important}
 }
