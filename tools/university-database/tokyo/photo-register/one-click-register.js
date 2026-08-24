@@ -85,13 +85,13 @@ function waitForPackage(){
 }
 
 register.addEventListener('click',()=>{
-  if(register.disabled||pending)return;
+  if(pending)return;
   pending=true;
   startedAt=Date.now();
   panel.classList.add('is-registering');
   register.setAttribute('aria-busy','true');
   timer=setTimeout(waitForPackage,80);
-});
+},{capture:true});
 
 new MutationObserver(()=>{
   if(!pending&&register.textContent==='一括ZIPを生成')register.textContent='この内容で大学DBへ登録';
