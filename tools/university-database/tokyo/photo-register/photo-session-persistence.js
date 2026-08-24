@@ -4,12 +4,15 @@ const input=document.querySelector('#photo-input');
 const university=document.querySelector('#university-first-select');
 const list=document.querySelector('#batch-list');
 const pickerHost=document.querySelector('.university-first');
+const clearBatch=document.querySelector('#clear-batch');
+const legacyFile=document.querySelector('#university-first-photo');
 if(!input||!university||!list||!pickerHost||!('indexedDB'in window))return;
 
 const DB_NAME='bantai-university-photo-register';
 const STORE='session';
 const KEY='tokyo-photo-register-current';
 const TAB_FLAG='bantai-photo-register-restore-this-tab';
+const SESSION_VERSION=3;
 let restoring=false;
 let switching=false;
 let saveTimer=0;
@@ -19,31 +22,36 @@ function openDb(){return new Promise((resolve,reject)=>{const req=indexedDB.open
 async function put(value){const db=await openDb();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put(value,KEY);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});db.close();}
 async function get(){const db=await openDb();const value=await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readonly');const req=tx.objectStore(STORE).get(KEY);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error);});db.close();return value;}
 
+function emptySession(universityId=''){return{version:SESSION_VERSION,universityId:universityId||'',files:[],main:null,savedAt:Date.now()};}
 function currentMainDescriptor(){const card=document.querySelector('.main-photo-choice-card.active');if(!card)return null;const type=card.dataset.mainType||'';if(type==='existing')return{type,key:card.dataset.mainKey||''};const label=card.querySelector('strong')?.textContent?.trim()||'';return{type:'new',label};}
 async function filesFromInput(){return [...input.files].map(file=>({name:file.name,type:file.type,lastModified:file.lastModified,blob:file}));}
 async function snapshot(){
   if(restoring||switching)return;
   const files=await filesFromInput();
-  await put({version:2,universityId:university.value||'',files,main:currentMainDescriptor(),savedAt:Date.now()});
+  await put({version:SESSION_VERSION,universityId:university.value||'',files,main:currentMainDescriptor(),savedAt:Date.now()});
   sessionStorage.setItem(TAB_FLAG,'1');
   document.documentElement.dataset.photoSessionSaved='true';
 }
 function scheduleSave(){if(restoring||switching)return;clearTimeout(saveTimer);saveTimer=setTimeout(()=>snapshot().catch(console.error),180);}
 
 async function saveEmptySession(universityId){
-  await put({version:2,universityId:universityId||'',files:[],main:null,savedAt:Date.now()});
+  await put(emptySession(universityId));
   sessionStorage.setItem(TAB_FLAG,'1');
   document.documentElement.dataset.photoSessionSaved='true';
+}
+function clearVisibleAddedPhotos(){
+  if(clearBatch)clearBatch.click();
+  else for(const button of [...list.querySelectorAll('.batch-row .remove-item')])button.click();
+  try{input.value='';}catch(err){console.error(err);}
+  try{if(legacyFile)legacyFile.value='';}catch(err){console.error(err);}
 }
 function clearAddedPhotosForUniversitySwitch(nextUniversityId){
   switching=true;
   clearTimeout(saveTimer);
-  const removeButtons=[...list.querySelectorAll('.batch-row .remove-item')];
-  for(const button of removeButtons)button.click();
-  try{input.value='';}catch(err){console.error(err);}
+  clearVisibleAddedPhotos();
   currentUniversityId=nextUniversityId;
   document.documentElement.dataset.photoUniversitySwitched='clearing';
-  setTimeout(async()=>{
+  queueMicrotask(async()=>{
     try{
       await saveEmptySession(nextUniversityId);
       document.documentElement.dataset.photoUniversitySwitched='cleared';
@@ -53,7 +61,7 @@ function clearAddedPhotosForUniversitySwitch(nextUniversityId){
     }finally{
       switching=false;
     }
-  },0);
+  });
 }
 
 input.addEventListener('change',()=>setTimeout(scheduleSave,500));
@@ -65,7 +73,8 @@ university.addEventListener('change',()=>{
   }
   if(!next)return;
   const previous=currentUniversityId;
-  if(previous&&previous!==next){
+  const hasAddedPhotos=!!list.querySelector('.batch-row');
+  if((previous&&previous!==next)||(!previous&&hasAddedPhotos)){
     clearAddedPhotosForUniversitySwitch(next);
     return;
   }
@@ -86,8 +95,16 @@ function findSavedMain(main){
 }
 
 async function restore(){
-  if(sessionStorage.getItem(TAB_FLAG)!=='1')return;
   const saved=await get();
+  if(saved&&saved.version!==SESSION_VERSION){
+    await put(emptySession());
+    sessionStorage.removeItem(TAB_FLAG);
+    clearVisibleAddedPhotos();
+    document.documentElement.dataset.photoSessionRestored='legacy-cleared';
+    document.documentElement.dataset.photoLegacySessionCleared='true';
+    return;
+  }
+  if(sessionStorage.getItem(TAB_FLAG)!=='1')return;
   if(!saved||!Array.isArray(saved.files)||(!saved.files.length&&!saved.universityId))return;
   restoring=true;
   try{
