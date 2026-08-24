@@ -54,10 +54,25 @@ queueMicrotask(()=>{
 })();
 
 (()=>{
-  if(document.querySelector('script[data-university-ime-selection-fix]'))return;
-  const s=document.createElement('script');
-  s.src='university-ime-selection-fix.js?v=20260824-1817';
-  s.defer=true;
-  s.dataset.universityImeSelectionFix='true';
-  document.body.appendChild(s);
+  if(!document.querySelector('script[data-university-ime-selection-fix]')){
+    const s=document.createElement('script');
+    s.src='university-ime-selection-fix.js?v=20260824-1817';
+    s.defer=true;
+    s.dataset.universityImeSelectionFix='true';
+    document.body.appendChild(s);
+  }
+  if(!document.querySelector('link[data-simple-register-flow]')){
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='simple-register-flow.css?v=20260824-1822';
+    link.dataset.simpleRegisterFlow='true';
+    document.head.appendChild(link);
+  }
+  if(!document.querySelector('script[data-simple-register-flow]')){
+    const simple=document.createElement('script');
+    simple.src='simple-register-flow.js?v=20260824-1822';
+    simple.defer=true;
+    simple.dataset.simpleRegisterFlow='true';
+    document.body.appendChild(simple);
+  }
 })();
