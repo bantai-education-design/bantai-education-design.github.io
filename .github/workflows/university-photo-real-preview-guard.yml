@@ -26,7 +26,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-preview.log 2>&1 &
           sleep 2
-      - name: Verify main choice, fixed editor and real preview
+      - name: Verify main choice, independent editor scroll and real preview
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -41,26 +41,44 @@ jobs:
             await choicePage.waitForSelector('#registration-mode-switch');
             await choicePage.locator('#university-first-select').selectOption('u000094');
             await choicePage.waitForSelector('#existing-photo-choice:not([hidden])',{timeout:10000});
-            const existing=choicePage.locator('#existing-main-button');
-            assert.ok((await existing.innerText()).includes('現在の写真をメイン'));
+            const existing=choicePage.locator('.main-photo-choice-card').first();
             assert.equal(await existing.evaluate(el=>el.classList.contains('active')),true,'existing owner photo should start as main');
             await choicePage.setInputFiles('#photo-input',{name:'asia-new.png',mimeType:'image/png',buffer:png});
             await choicePage.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
-            const newMain=choicePage.locator('.photo-main-button').first();
-            await newMain.click();
-            assert.equal(await newMain.evaluate(el=>el.classList.contains('active')),true,'new photo can become main');
-            assert.equal(await existing.evaluate(el=>el.classList.contains('active')),false,'existing photo must no longer be main');
-            await existing.click();
-            assert.equal(await existing.evaluate(el=>el.classList.contains('active')),true,'existing photo can be selected again');
-            assert.equal(await newMain.evaluate(el=>el.classList.contains('active')),false,'only one main photo may be selected');
+            await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            const cards=choicePage.locator('.main-photo-choice-card');
+            await cards.nth(1).click();
+            assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),true,'new photo can become main by clicking photo');
+            assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),false,'existing photo must no longer be main');
+            await cards.nth(0).click();
+            assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),true,'existing photo can be selected again');
+            assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),false,'only one main photo may be selected');
+
+            await choicePage.locator('#photo-editor').scrollIntoViewIfNeeded();
             const editorLayout=await choicePage.evaluate(()=>({
               controlsOverflow:getComputedStyle(document.querySelector('.edit-grid>.controls')).overflowY,
+              controlsPosition:getComputedStyle(document.querySelector('.edit-grid>.controls')).position,
               previewPosition:getComputedStyle(document.querySelector('.preview-panel')).position,
               gridOverflow:getComputedStyle(document.querySelector('.edit-grid')).overflow
             }));
             assert.equal(editorLayout.controlsOverflow,'auto','editor controls must scroll independently');
-            assert.equal(editorLayout.previewPosition,'sticky','preview must stay fixed while controls scroll');
-            assert.equal(editorLayout.gridOverflow,'hidden','editor grid must not scroll both columns together');
+            assert.equal(editorLayout.controlsPosition,'sticky','controls panel itself must stay in place');
+            assert.equal(editorLayout.previewPosition,'sticky','preview panel must stay fixed in place');
+            assert.equal(editorLayout.gridOverflow,'visible','parent must not trap sticky positioning');
+            const before=await choicePage.evaluate(()=>({
+              previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,
+              controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top
+            }));
+            await choicePage.evaluate(()=>{const el=document.querySelector('.edit-grid>.controls');el.scrollTop=Math.min(220,el.scrollHeight-el.clientHeight);});
+            await choicePage.waitForTimeout(100);
+            const after=await choicePage.evaluate(()=>({
+              previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,
+              controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top,
+              controlsScroll:document.querySelector('.edit-grid>.controls').scrollTop
+            }));
+            assert.ok(Math.abs(after.previewTop-before.previewTop)<=1,'preview must not move when left controls scroll');
+            assert.ok(Math.abs(after.controlsTop-before.controlsTop)<=1,'controls panel frame must not move while its contents scroll');
+            assert.ok(after.controlsScroll>=0,'controls must accept independent scrolling');
             await choicePage.close();
 
             const page=await ctx.newPage();
@@ -73,10 +91,6 @@ jobs:
               {name:'rikkyo-c.png',mimeType:'image/png',buffer:png}
             ]);
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
-            await page.waitForSelector('.photo-main-button');
-            const mainButtons=page.locator('.photo-main-button');
-            await mainButtons.nth(1).click();
-            assert.ok((await mainButtons.nth(1).innerText()).includes('メイン写真'));
 
             const popupPromise=ctx.waitForEvent('page');
             await page.locator('#open-real-preview').click();
