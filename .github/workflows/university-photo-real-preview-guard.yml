@@ -41,15 +41,22 @@ jobs:
             await choicePage.waitForSelector('#registration-mode-switch');
             await choicePage.locator('#university-first-select').selectOption('u000094');
             await choicePage.waitForSelector('#existing-photo-choice:not([hidden])',{timeout:10000});
+            assert.equal(await choicePage.locator('.university-first > #existing-photo-choice').count(),1,'photo picker must appear directly in university selection panel');
+            assert.ok((await choicePage.locator('#existing-photo-choice').innerText()).includes('亜細亜大学'),'selected university name must be shown in photo picker');
             const existing=choicePage.locator('.main-photo-choice-card').first();
-            assert.equal(await existing.evaluate(el=>el.classList.contains('active')),true,'existing owner photo should start as main');
+            assert.equal(await existing.evaluate(el=>el.classList.contains('active')),true,'existing owner photo should start as main immediately after university selection');
+            assert.ok((await existing.innerText()).includes('★ メイン'),'existing main role must be visible before adding a new photo');
+
             await choicePage.setInputFiles('#photo-input',{name:'asia-new.png',mimeType:'image/png',buffer:png});
             await choicePage.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
             const cards=choicePage.locator('.main-photo-choice-card');
+            assert.ok((await cards.nth(1).innerText()).includes('サブ'),'new photo must initially show its sub role while existing photo remains main');
             await cards.nth(1).click();
             assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),true,'new photo can become main by clicking photo');
+            assert.ok((await cards.nth(1).innerText()).includes('★ メイン'),'clicked new photo must visibly become main');
             assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),false,'existing photo must no longer be main');
+            assert.ok((await cards.nth(0).innerText()).includes('サブ'),'previous main must visibly become sub');
             await cards.nth(0).click();
             assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),true,'existing photo can be selected again');
             assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),false,'only one main photo may be selected');

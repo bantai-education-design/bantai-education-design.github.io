@@ -23,7 +23,9 @@ button.addEventListener('click',async e=>{
   e.stopImmediatePropagation();
   const allRows=[...list.querySelectorAll('.batch-row')];
   const universityId=firstSelect.value;
-  if(!allRows.length||!universityId)return;
+  const helper=window.__universityPhotoMainChoice;
+  const existingPhotos=helper?.getExistingPhotos?.()||[];
+  if((!allRows.length&&!existingPhotos.length)||!universityId)return;
 
   const previewWindow=window.open('about:blank','_blank');
   if(!previewWindow){
@@ -36,15 +38,13 @@ button.addEventListener('click',async e=>{
   status.textContent='実画面プレビューを準備しています…';
 
   try{
-    const helper=window.__universityPhotoMainChoice;
     const mainChoice=helper?.getChoice?.()||{type:'new',key:''};
-    const existingRecord=helper?.getExistingRecord?.()||null;
     const photos=[];
 
-    if(existingRecord?.image_url){
+    for(const photo of existingPhotos.slice(0,5)){
       photos.push({
-        blob:await urlBlob(`../${existingRecord.image_url}`),
-        main:mainChoice.type==='existing',
+        blob:await urlBlob(`../${photo.image_url}`),
+        main:mainChoice.type==='existing'&&mainChoice.key===photo.image_url,
         source:'existing'
       });
     }
@@ -57,7 +57,7 @@ button.addEventListener('click',async e=>{
         source:'new'
       });
     }
-    if(!photos.some(x=>x.main))photos[0].main=true;
+    if(!photos.some(x=>x.main)&&photos.length)photos[0].main=true;
 
     const token=(crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random()}`).replace(/[^a-zA-Z0-9-]/g,'');
     channel?.close();
