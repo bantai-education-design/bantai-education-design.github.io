@@ -17,9 +17,9 @@ const resultHeading=result.querySelector('h3');
 const resultDetails=result.querySelector('dl');
 const resultNote=result.querySelector('p');
 
-if(step)step.textContent='STEP 5';
+if(step)step.textContent='STEP 4';
 if(heading)heading.textContent='この内容で大学DBへ登録';
-if(lead)lead.textContent='実画面プレビューを確認したら、このボタン1つで登録用データを準備します。公開反映はChatGPTで最終確認します。';
+if(lead)lead.textContent='写真とメインを確認したら、このボタン1つで登録用データを準備します。公開反映はChatGPTで最終確認します。';
 if(badge)badge.textContent='安全確認後に反映';
 register.textContent='この内容で大学DBへ登録';
 register.classList.add('one-click-register-button');
