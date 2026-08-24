@@ -11,7 +11,9 @@ const STORE='session';
 const KEY='tokyo-photo-register-current';
 const TAB_FLAG='bantai-photo-register-restore-this-tab';
 let restoring=false;
+let switching=false;
 let saveTimer=0;
+let currentUniversityId='';
 
 function openDb(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(STORE))req.result.createObjectStore(STORE);};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
 async function put(value){const db=await openDb();await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put(value,KEY);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});db.close();}
@@ -20,16 +22,56 @@ async function get(){const db=await openDb();const value=await new Promise((reso
 function currentMainDescriptor(){const card=document.querySelector('.main-photo-choice-card.active');if(!card)return null;const type=card.dataset.mainType||'';if(type==='existing')return{type,key:card.dataset.mainKey||''};const label=card.querySelector('strong')?.textContent?.trim()||'';return{type:'new',label};}
 async function filesFromInput(){return [...input.files].map(file=>({name:file.name,type:file.type,lastModified:file.lastModified,blob:file}));}
 async function snapshot(){
-  if(restoring)return;
+  if(restoring||switching)return;
   const files=await filesFromInput();
-  await put({version:1,universityId:university.value||'',files,main:currentMainDescriptor(),savedAt:Date.now()});
+  await put({version:2,universityId:university.value||'',files,main:currentMainDescriptor(),savedAt:Date.now()});
   sessionStorage.setItem(TAB_FLAG,'1');
   document.documentElement.dataset.photoSessionSaved='true';
 }
-function scheduleSave(){clearTimeout(saveTimer);saveTimer=setTimeout(()=>snapshot().catch(console.error),180);}
+function scheduleSave(){if(restoring||switching)return;clearTimeout(saveTimer);saveTimer=setTimeout(()=>snapshot().catch(console.error),180);}
+
+async function saveEmptySession(universityId){
+  await put({version:2,universityId:universityId||'',files:[],main:null,savedAt:Date.now()});
+  sessionStorage.setItem(TAB_FLAG,'1');
+  document.documentElement.dataset.photoSessionSaved='true';
+}
+function clearAddedPhotosForUniversitySwitch(nextUniversityId){
+  switching=true;
+  clearTimeout(saveTimer);
+  const removeButtons=[...list.querySelectorAll('.batch-row .remove-item')];
+  for(const button of removeButtons)button.click();
+  try{input.value='';}catch(err){console.error(err);}
+  currentUniversityId=nextUniversityId;
+  document.documentElement.dataset.photoUniversitySwitched='clearing';
+  setTimeout(async()=>{
+    try{
+      await saveEmptySession(nextUniversityId);
+      document.documentElement.dataset.photoUniversitySwitched='cleared';
+    }catch(err){
+      console.error('photo session switch reset failed',err);
+      document.documentElement.dataset.photoUniversitySwitched='error';
+    }finally{
+      switching=false;
+    }
+  },0);
+}
 
 input.addEventListener('change',()=>setTimeout(scheduleSave,500));
-university.addEventListener('change',scheduleSave);
+university.addEventListener('change',()=>{
+  const next=university.value||'';
+  if(restoring){
+    if(next)currentUniversityId=next;
+    return;
+  }
+  if(!next)return;
+  const previous=currentUniversityId;
+  if(previous&&previous!==next){
+    clearAddedPhotosForUniversitySwitch(next);
+    return;
+  }
+  currentUniversityId=next;
+  scheduleSave();
+});
 document.addEventListener('click',event=>{
   if(event.target.closest?.('.main-photo-choice-card')||event.target.closest?.('.photo-list-delete')||event.target.closest?.('.remove-item'))setTimeout(scheduleSave,250);
 },true);
@@ -53,6 +95,7 @@ async function restore(){
       await waitFor(()=>university.querySelector(`option[value="${CSS.escape(saved.universityId)}"]`));
       university.value=saved.universityId;
       university.dispatchEvent(new Event('change',{bubbles:true}));
+      currentUniversityId=saved.universityId;
     }
     if(saved.files.length){
       const dt=new DataTransfer();
@@ -64,9 +107,6 @@ async function restore(){
     if(saved.main){
       await waitFor(()=>findSavedMain(saved.main));
       findSavedMain(saved.main)?.click();
-      // University/photo synchronization can finish asynchronously after rows are restored.
-      // Re-apply the saved choice once that synchronization has settled so it cannot be
-      // overwritten by the registry refresh that chooses the previous existing main.
       await new Promise(resolve=>setTimeout(resolve,400));
       const settled=findSavedMain(saved.main);
       if(settled&&!settled.classList.contains('active'))settled.click();
