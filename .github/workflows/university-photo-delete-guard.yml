@@ -1,0 +1,65 @@
+name: University photo delete guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-delete-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-delete-guard.yml'
+
+jobs:
+  photo-delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate delete controls exist
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
+          const controller=fs.readFileSync('tools/university-database/tokyo/photo-register/university-entry-controller.js','utf8');
+          assert.ok(html.includes('id="delete-active-photo"'),'STEP 2 delete button required');
+          assert.ok(controller.includes(".batch-row.active .remove-item"),'active photo delete wiring required');
+          assert.ok(controller.includes("btn.textContent='写真を削除'"),'row delete label required');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-delete-site.log 2>&1 &
+          sleep 2
+      - name: Verify mistaken photo can be deleted and reselected
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1280,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.setInputFiles('#photo-input',{name:'wrong-photo.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            assert.equal(await page.locator('#delete-active-photo').isEnabled(),true,'active photo delete must enable');
+            assert.equal(await page.locator('.remove-item').innerText(),'写真を削除','row delete must be explicit');
+            await page.click('#delete-active-photo');
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===0,{timeout:5000});
+            assert.equal(await page.locator('#batch-count').innerText(),'0枚');
+            assert.equal(await page.locator('#delete-active-photo').isEnabled(),false);
+            await page.setInputFiles('#photo-input',{name:'correct-photo.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            assert.equal(await page.locator('.batch-main strong').innerText(),'correct-photo.png','replacement photo must be selectable after deletion');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
