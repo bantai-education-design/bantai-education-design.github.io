@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>大学写真クイック登録 | Ban.Tai</title>
   <meta name="robots" content="noindex,nofollow">
-  <link rel="stylesheet" href="photo-register.css?v=20260824-1150">
+  <link rel="stylesheet" href="photo-register.css?v=20260824-1308">
 </head>
 <body>
   <header class="topbar">
@@ -17,7 +17,7 @@
       <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
       <h1>大学写真クイック登録</h1>
       <p>写真からでも、大学からでも始められます。登録後は大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。</p>
-      <div class="rule-badges"><span>✓ 写真→大学</span><span>✓ 大学→写真</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
+      <div class="rule-badges"><span>✓ 写真→大学</span><span>✓ 大学→写真</span><span>✓ 1大学1〜5枚</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
     </section>
 
     <section class="batch panel">
@@ -25,7 +25,7 @@
         <div><span class="step">STEP 1</span><h2>写真または大学から始める</h2></div>
         <button id="clear-batch" type="button" class="secondary">すべてクリア</button>
       </div>
-      <p class="muted">どちらの順番でも登録できます。写真を先に入れて後から大学を探す方法と、大学を先に選んで写真を付ける方法の両方に対応します。</p>
+      <p class="muted">1大学だけ編集する場合は大学名を1回だけ指定します。複数大学を一括登録する場合は写真ごとに大学名を確認します。</p>
 
       <div class="start-choice-grid">
         <section class="start-choice" aria-labelledby="photo-first-title">
@@ -33,7 +33,7 @@
           <label class="drop batch-drop" id="drop-zone" for="photo-input">
             <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
             <strong>写真をここへドロップ</strong>
-            <span>1枚でも複数枚でも可。入れた後、各写真の大学名を文字検索またはプルダウンから選べます。</span>
+            <span>1大学につき1〜5枚を推奨。1大学モードでは選択した大学を全写真へ共通適用します。</span>
             <small>JPEG / PNG / WebP</small>
           </label>
         </section>
@@ -41,7 +41,7 @@
         <section class="start-choice university-first" aria-labelledby="university-first-title">
           <div class="start-choice-head"><span class="start-number">B</span><div><strong id="university-first-title">大学から始める</strong><small>大学検索・選択 → 写真</small></div></div>
           <label class="field university-first-field">大学名・大学IDを入力して検索
-            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：亜細亜大学 / u000094" aria-label="先に大学名または大学IDを検索">
+            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：立教大学 / u000083" aria-label="先に大学名または大学IDを検索">
           </label>
           <label class="field university-first-field">144大学から選択
             <select id="university-first-select" aria-label="144大学から先に選択"><option value="">大学一覧を読み込み中…</option></select>
@@ -59,7 +59,7 @@
     <section id="photo-editor" class="grid edit-grid" tabindex="-1">
       <div class="panel controls">
         <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
-        <p class="muted">写真一覧の「編集」を押すと、この補正画面へ移動します。大学名はここでも変更できます。写真を間違えた場合は「この写真を削除」で取り消せます。</p>
+        <p class="muted">写真一覧の「編集」を押すと、この補正画面へ移動します。写真を間違えた場合は「この写真を削除」で取り消せます。</p>
         <label class="field">大学名を入力して検索
           <input id="editor-university-search" type="text" autocomplete="off" placeholder="写真一覧で「編集」を押してください" aria-label="編集対象の大学名または大学IDを入力">
         </label>
@@ -88,18 +88,18 @@
         <button id="reset-adjustments" class="secondary" type="button">調整をリセット</button>
       </div>
       <div class="panel preview-panel">
-        <h2>プレビュー</h2>
+        <h2>写真補正プレビュー</h2>
         <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">編集する写真を選択してください</div></div>
-        <p class="note">出力 720×405px（16:9）。回転・傾き補正、軽微なトリミング、明るさ・コントラスト調整のみ。画像生成、背景置換、要素追加・削除は行いません。</p>
+        <p class="note">出力 720×405px（16:9）。回転・傾き補正、軽微なトリミング、明るさ・コントラスト調整のみ。配置確認はSTEP 1下部の「大学ページで実画面プレビュー」を使います。</p>
       </div>
     </section>
 
     <section class="panel export-panel">
       <div class="section-head">
-        <div><span class="step">STEP 3</span><h2>一括登録パッケージを作る</h2></div>
+        <div><span class="step">STEP 3</span><h2>確認後に登録パッケージを作る</h2></div>
         <span class="surface-badge">一覧カード + 詳細画面</span>
       </div>
-      <p>大学が割り当て済みの写真をすべて処理し、JPEGと統合済み台帳をZIP 1個にまとめます。</p>
+      <p>まず実画面プレビューで配置を確認してください。現在の登録出力は既存方式を維持し、複数写真の本番登録は配置確認後に有効化します。</p>
       <div class="actions">
         <button id="generate-batch" class="primary" type="button" disabled>一括ZIPを生成</button>
         <button id="download-zip" type="button" disabled>ZIPを保存</button>
@@ -123,10 +123,11 @@
       <h2>実景写真の固定ルール</h2>
       <p><strong>許可:</strong> 90°単位の回転、±5°以内の傾き補正、明るさ・露出相当の微調整、コントラスト、軽微なトリミング、縮小。</p>
       <p><strong>禁止:</strong> 生成AIによる再描画、建物・樹木・人物・看板・道路・空・窓などの追加削除、背景置換、実在しない景観への合成。</p>
-      <p><strong>構造:</strong> 1大学につき1つの共通写真レコードを登録し、一覧カードと詳細画面が同じ写真を参照します。</p>
+      <p><strong>写真配置:</strong> 1大学1〜5枚。メイン1枚を一覧カードと詳細上部背景に使用し、残り最大4枚を詳細画面の小型サムネイルとして表示する方針です。</p>
     </section>
   </main>
-  <script src="photo-register.js?v=20260824-1150"></script>
-  <script src="university-entry-controller.js?v=20260824-1150"></script>
+  <script src="photo-register.js?v=20260824-1308"></script>
+  <script src="university-entry-controller.js?v=20260824-1308"></script>
+  <script src="multi-photo-preview.js?v=20260824-1308"></script>
 </body>
 </html>
