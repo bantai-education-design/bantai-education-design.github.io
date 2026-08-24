@@ -1,0 +1,53 @@
+@media (min-width:801px){
+  .edit-grid{
+    align-items:start;
+    height:auto;
+    max-height:none;
+    min-height:0;
+    overflow:visible;
+  }
+  .edit-grid>.controls{
+    position:sticky;
+    top:68px;
+    align-self:start;
+    height:calc(100vh - 88px);
+    max-height:calc(100vh - 88px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior:contain;
+    scrollbar-gutter:stable;
+  }
+  .preview-panel{
+    position:sticky;
+    top:68px;
+    align-self:start;
+    z-index:3;
+    height:max-content;
+    max-height:calc(100vh - 88px);
+    overflow:hidden;
+  }
+  .preview-shell{max-height:calc(100vh - 190px)}
+}
+
+.existing-photo-choice{margin:16px 0 4px;padding:14px;border:1px solid #4c4329;border-radius:13px;background:#11120e}
+.existing-photo-title{display:grid;gap:4px;margin-bottom:12px}
+.existing-photo-title strong{font-size:.96rem}
+.existing-photo-title small{color:var(--muted);line-height:1.5}
+.main-photo-choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.main-photo-choice-card{display:grid;gap:7px;text-align:left;padding:9px;border:1px solid #343742;background:#0b0d12;color:var(--text);border-radius:12px;min-width:0}
+.main-photo-choice-card:hover{border-color:#796431}
+.main-photo-choice-card.active{border-color:#e0bd65;box-shadow:0 0 0 2px rgba(224,189,101,.18);background:#17140b}
+.main-photo-choice-image{position:relative;display:block;aspect-ratio:16/9;border-radius:9px;overflow:hidden;background:#050608}
+.main-photo-choice-image img{width:100%;height:100%;object-fit:cover;display:block}
+.main-photo-check{position:absolute;left:7px;bottom:7px;padding:5px 7px;border-radius:999px;background:rgba(8,9,12,.86);border:1px solid rgba(255,255,255,.18);font-size:.68rem;color:#fff}
+.main-photo-choice-card.active .main-photo-check{background:#d7b45a;color:#0a0b0f;border-color:#f0d98b;font-weight:800}
+.main-photo-choice-card strong{font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.main-photo-choice-card small{font-size:.7rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.finish-edit-register-wrap{display:grid;gap:7px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.finish-edit-register{width:100%;min-height:48px;font-size:1rem}
+.finish-edit-register-wrap small{color:var(--muted);line-height:1.5}
+.export-panel.register-target{outline:2px solid var(--gold);outline-offset:3px}
+
+@media(max-width:800px){
+  .main-photo-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
