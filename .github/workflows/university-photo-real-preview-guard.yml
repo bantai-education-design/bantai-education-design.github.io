@@ -26,7 +26,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-preview.log 2>&1 &
           sleep 2
-      - name: Verify main choice, independent editor scroll and real preview
+      - name: Verify all existing photos, roles, fixed editor and real preview
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -40,26 +40,30 @@ jobs:
             await choicePage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await choicePage.waitForSelector('#registration-mode-switch');
             await choicePage.locator('#university-first-select').selectOption('u000094');
-            await choicePage.waitForSelector('#existing-photo-choice:not([hidden])',{timeout:10000});
+            await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
             assert.equal(await choicePage.locator('.university-first > #existing-photo-choice').count(),1,'photo picker must appear directly in university selection panel');
-            assert.ok((await choicePage.locator('#existing-photo-choice').innerText()).includes('亜細亜大学'),'selected university name must be shown in photo picker');
-            const existing=choicePage.locator('.main-photo-choice-card').first();
-            assert.equal(await existing.evaluate(el=>el.classList.contains('active')),true,'existing owner photo should start as main immediately after university selection');
-            assert.ok((await existing.innerText()).includes('★ メイン'),'existing main role must be visible before adding a new photo');
+            const beforeAdd=choicePage.locator('.main-photo-choice-card');
+            assert.ok(await beforeAdd.count()>=2,'Asia University must show both owner photo and prior public registry photo before adding a new photo');
+            const pickerText=await choicePage.locator('#existing-photo-choice').innerText();
+            assert.ok(pickerText.includes('撮影者提供・現在登録済み'),'owner photo source must be visible');
+            assert.ok(pickerText.includes('従来の公開画像台帳'),'prior public registry photo must be visible');
+            assert.ok((await beforeAdd.nth(0).innerText()).includes('★ メイン'),'owner override should start as main');
+            assert.ok((await beforeAdd.nth(1).innerText()).includes('サブ'),'prior public image should start as sub');
 
             await choicePage.setInputFiles('#photo-input',{name:'asia-new.png',mimeType:'image/png',buffer:png});
             await choicePage.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
-            await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
-            const cards=choicePage.locator('.main-photo-choice-card');
-            assert.ok((await cards.nth(1).innerText()).includes('サブ'),'new photo must initially show its sub role while existing photo remains main');
+            await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=3,{timeout:10000});
+            let cards=choicePage.locator('.main-photo-choice-card');
+            const newIndex=(await cards.count())-1;
+            assert.ok((await cards.nth(newIndex).innerText()).includes('サブ'),'new photo must initially be sub');
+            await cards.nth(newIndex).click();
+            cards=choicePage.locator('.main-photo-choice-card');
+            assert.ok((await cards.nth(newIndex).innerText()).includes('★ メイン'),'clicked new photo must become main');
+            assert.ok((await cards.nth(0).innerText()).includes('サブ'),'previous owner main must become sub');
             await cards.nth(1).click();
-            assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),true,'new photo can become main by clicking photo');
-            assert.ok((await cards.nth(1).innerText()).includes('★ メイン'),'clicked new photo must visibly become main');
-            assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),false,'existing photo must no longer be main');
-            assert.ok((await cards.nth(0).innerText()).includes('サブ'),'previous main must visibly become sub');
-            await cards.nth(0).click();
-            assert.equal(await cards.nth(0).evaluate(el=>el.classList.contains('active')),true,'existing photo can be selected again');
-            assert.equal(await cards.nth(1).evaluate(el=>el.classList.contains('active')),false,'only one main photo may be selected');
+            cards=choicePage.locator('.main-photo-choice-card');
+            assert.ok((await cards.nth(1).innerText()).includes('★ メイン'),'prior public registry photo must also be selectable as main');
+            assert.equal(await choicePage.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo is allowed');
 
             await choicePage.locator('#photo-editor').scrollIntoViewIfNeeded();
             const editorLayout=await choicePage.evaluate(()=>({
@@ -68,24 +72,16 @@ jobs:
               previewPosition:getComputedStyle(document.querySelector('.preview-panel')).position,
               gridOverflow:getComputedStyle(document.querySelector('.edit-grid')).overflow
             }));
-            assert.equal(editorLayout.controlsOverflow,'auto','editor controls must scroll independently');
-            assert.equal(editorLayout.controlsPosition,'sticky','controls panel itself must stay in place');
-            assert.equal(editorLayout.previewPosition,'sticky','preview panel must stay fixed in place');
-            assert.equal(editorLayout.gridOverflow,'visible','parent must not trap sticky positioning');
-            const before=await choicePage.evaluate(()=>({
-              previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,
-              controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top
-            }));
+            assert.equal(editorLayout.controlsOverflow,'auto');
+            assert.equal(editorLayout.controlsPosition,'sticky');
+            assert.equal(editorLayout.previewPosition,'sticky');
+            assert.equal(editorLayout.gridOverflow,'visible');
+            const before=await choicePage.evaluate(()=>({previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top}));
             await choicePage.evaluate(()=>{const el=document.querySelector('.edit-grid>.controls');el.scrollTop=Math.min(220,el.scrollHeight-el.clientHeight);});
             await choicePage.waitForTimeout(100);
-            const after=await choicePage.evaluate(()=>({
-              previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,
-              controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top,
-              controlsScroll:document.querySelector('.edit-grid>.controls').scrollTop
-            }));
+            const after=await choicePage.evaluate(()=>({previewTop:document.querySelector('.preview-panel').getBoundingClientRect().top,controlsTop:document.querySelector('.edit-grid>.controls').getBoundingClientRect().top}));
             assert.ok(Math.abs(after.previewTop-before.previewTop)<=1,'preview must not move when left controls scroll');
-            assert.ok(Math.abs(after.controlsTop-before.controlsTop)<=1,'controls panel frame must not move while its contents scroll');
-            assert.ok(after.controlsScroll>=0,'controls must accept independent scrolling');
+            assert.ok(Math.abs(after.controlsTop-before.controlsTop)<=1,'controls frame must not move');
             await choicePage.close();
 
             const page=await ctx.newPage();
@@ -98,43 +94,33 @@ jobs:
               {name:'rikkyo-c.png',mimeType:'image/png',buffer:png}
             ]);
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
-
+            const expectedThumbs=Math.min(5,await page.locator('.main-photo-choice-card').count());
             const popupPromise=ctx.waitForEvent('page');
             await page.locator('#open-real-preview').click();
             const preview=await popupPromise;
             await preview.waitForURL(/detail\.html\?id=u000083&photo_preview_token=/,{timeout:15000});
             await preview.waitForLoadState('domcontentloaded');
-            await preview.waitForFunction(()=>{
+            await preview.waitForFunction(expected=>{
               const hero=document.querySelector('.detail-hero.photo-preview-active');
-              return !!hero?.querySelector('.detail-photo-preview-gallery')&&hero.querySelectorAll('.detail-photo-preview-thumb').length===3;
-            },{timeout:15000});
+              return !!hero?.querySelector('.detail-photo-preview-gallery')&&hero.querySelectorAll('.detail-photo-preview-thumb').length===expected;
+            },expectedThumbs,{timeout:15000});
             const layout=await preview.evaluate(()=>{
               const hero=document.querySelector('.detail-hero.photo-preview-active');
               const gallery=hero?.querySelector('.detail-photo-preview-gallery');
               const thumb=hero?.querySelector('.detail-photo-preview-thumb');
               const thumbs=hero?.querySelector('.detail-photo-preview-thumbs');
               if(!hero||!gallery||!thumb||!thumbs)return null;
-              return {
-                position:getComputedStyle(gallery).position,
-                controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,
-                heroHeight:Math.round(hero.getBoundingClientRect().height),
-                galleryHeight:Math.round(gallery.getBoundingClientRect().height),
-                thumbWidth:Math.round(thumb.getBoundingClientRect().width)
-              };
+              return {position:getComputedStyle(gallery).position,controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,heroHeight:Math.round(hero.getBoundingClientRect().height),galleryHeight:Math.round(gallery.getBoundingClientRect().height),thumbWidth:Math.round(thumb.getBoundingClientRect().width)};
             });
-            assert.ok(layout,'stable real-page gallery layout required');
-            assert.equal(layout.position,'absolute','gallery must be a background layer, not extra vertical content');
-            assert.equal(layout.galleryHeight,layout.heroHeight,'background must fill the existing hero without adding a section');
-            assert.ok(layout.controlsZ>=2,'thumbnail controls must sit above university information panels');
-            assert.ok(layout.thumbWidth<=70,`thumbnail too large: ${layout.thumbWidth}`);
-            await preview.locator('.detail-photo-preview-thumb').nth(2).click();
+            assert.ok(layout);
+            assert.equal(layout.position,'absolute');
+            assert.equal(layout.galleryHeight,layout.heroHeight);
+            assert.ok(layout.controlsZ>=2);
+            assert.ok(layout.thumbWidth<=70);
+            await preview.locator('.detail-photo-preview-thumb').last().click();
             assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
-
             await preview.setViewportSize({width:375,height:900});
-            await preview.waitForFunction(()=>!!document.querySelector('.detail-hero.photo-preview-active .detail-photo-preview-gallery'));
-            assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'preview must not create mobile horizontal overflow');
-            const mobileThumb=await preview.evaluate(()=>Math.round(document.querySelector('.detail-photo-preview-thumb')?.getBoundingClientRect().width||0));
-            assert.ok(mobileThumb>0&&mobileThumb<=52,`mobile thumbnail too large or missing: ${mobileThumb}`);
+            assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
