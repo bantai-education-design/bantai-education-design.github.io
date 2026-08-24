@@ -57,16 +57,17 @@ jobs:
             assert.match(preview.url(),/detail\.html\?id=u000083&photo_preview_token=/,'preview must use the real detail page');
             await preview.waitForFunction(()=>{
               const hero=document.querySelector('.detail-hero.photo-preview-active');
-              const gallery=hero?.querySelector('.detail-photo-preview-gallery');
-              return !!gallery&&gallery.querySelectorAll('.detail-photo-preview-thumb').length===3;
+              return !!hero?.querySelector('.detail-photo-preview-gallery')&&hero.querySelectorAll('.detail-photo-preview-thumb').length===3;
             },{timeout:15000});
             const layout=await preview.evaluate(()=>{
               const hero=document.querySelector('.detail-hero.photo-preview-active');
               const gallery=hero?.querySelector('.detail-photo-preview-gallery');
-              const thumb=gallery?.querySelector('.detail-photo-preview-thumb');
-              if(!hero||!gallery||!thumb)return null;
+              const thumb=hero?.querySelector('.detail-photo-preview-thumb');
+              const thumbs=hero?.querySelector('.detail-photo-preview-thumbs');
+              if(!hero||!gallery||!thumb||!thumbs)return null;
               return {
                 position:getComputedStyle(gallery).position,
+                controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,
                 heroHeight:Math.round(hero.getBoundingClientRect().height),
                 galleryHeight:Math.round(gallery.getBoundingClientRect().height),
                 thumbWidth:Math.round(thumb.getBoundingClientRect().width)
@@ -75,6 +76,7 @@ jobs:
             assert.ok(layout,'stable real-page gallery layout required');
             assert.equal(layout.position,'absolute','gallery must be a background layer, not extra vertical content');
             assert.equal(layout.galleryHeight,layout.heroHeight,'background must fill the existing hero without adding a section');
+            assert.ok(layout.controlsZ>=2,'thumbnail controls must sit above university information panels');
             assert.ok(layout.thumbWidth<=70,`thumbnail too large: ${layout.thumbWidth}`);
             await preview.locator('.detail-photo-preview-thumb').nth(2).click();
             assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
