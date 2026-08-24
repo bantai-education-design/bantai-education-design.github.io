@@ -6,16 +6,20 @@ const exportPanel=document.querySelector('.export-panel');
 const firstSelect=document.querySelector('#university-first-select');
 const list=document.querySelector('#batch-list');
 const batch=document.querySelector('.batch');
-if(!controls||!generate||!exportPanel||!firstSelect||!list||!batch)return;
+const universityFirst=document.querySelector('.university-first');
+const universityStatus=document.querySelector('#university-first-status');
+if(!controls||!generate||!exportPanel||!firstSelect||!list||!batch||!universityFirst)return;
 
 let registry=null;
 let currentUniversityId='';
 let currentRecord=null;
+let existingPhotos=[];
 let choice={type:'new',key:''};
 
 window.__universityPhotoMainChoice={
   getChoice:()=>({...choice}),
-  getExistingRecord:()=>currentRecord
+  getExistingRecord:()=>currentRecord,
+  getExistingPhotos:()=>existingPhotos.map(x=>({...x}))
 };
 
 async function loadRegistry(){
@@ -27,14 +31,33 @@ async function loadRegistry(){
   return registry;
 }
 
+function existingPhotosFromRecord(record){
+  if(!record)return [];
+  const candidates=[];
+  if(record.image_url)candidates.push({...record,role:record.role||'main'});
+  if(Array.isArray(record.gallery))candidates.push(...record.gallery);
+  if(Array.isArray(record.images))candidates.push(...record.images);
+  const seen=new Set();
+  return candidates.filter(item=>{
+    const url=item?.image_url||item?.source_url||'';
+    if(!url||seen.has(url))return false;
+    seen.add(url);
+    return true;
+  }).map((item,index)=>({
+    image_url:item.image_url||item.source_url,
+    alt:item.alt||record.alt||record.university_name||`登録済み写真${index+1}`,
+    label:item.label||item.caption||`登録済み写真${index+1}`,
+    role:item.role||(index===0?'main':'sub')
+  }));
+}
+
 function ensureChoiceBox(){
   let box=document.querySelector('#existing-photo-choice');
   if(box)return box;
   box=document.createElement('section');
   box.id='existing-photo-choice';
-  box.className='existing-photo-choice';
-  const previewBox=document.querySelector('#real-page-preview');
-  if(previewBox){batch.insertBefore(box,previewBox);}else{list.insertAdjacentElement('afterend',box);}
+  box.className='existing-photo-choice university-photo-picker';
+  if(universityStatus){universityStatus.insertAdjacentElement('afterend',box);}else{universityFirst.appendChild(box);}
   return box;
 }
 
@@ -57,32 +80,37 @@ function selectChoice(type,key=''){
   syncLegacyButtons();
 }
 
-function makeCard({type,key='',src,alt,title,active}){
+function makeCard({type,key='',src,alt,title,active,origin}){
   const role=active?'★ メイン':'サブ';
   const usage=active?'一覧カード＋詳細背景':'詳細ページのサムネイル';
-  return `<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="${type}"${key?` data-main-key="${escapeAttr(key)}"`:''} aria-pressed="${active}" aria-label="${escapeAttr(title)}を${active?'メイン写真':'メイン写真に選択'}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"><span class="main-photo-check ${active?'main':'sub'}">${role}</span></span><strong>${escapeAttr(title)}</strong><small>${usage}</small></button>`;
+  return `<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="${type}"${key?` data-main-key="${escapeAttr(key)}"`:''} aria-pressed="${active}" aria-label="${escapeAttr(title)}を${active?'メイン写真':'メイン写真に選択'}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"><span class="main-photo-check ${active?'main':'sub'}">${role}</span></span><strong>${escapeAttr(title)}</strong><small>${escapeAttr(origin)}・${usage}</small></button>`;
 }
 
 function renderChoices(){
   const box=ensureChoiceBox();
   const rows=[...list.querySelectorAll('.batch-row')];
   box.hidden=false;
+  const universitySelected=!!firstSelect.value;
 
-  if(!currentRecord&&!rows.length){
-    box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真・サブ写真を選ぶ</strong><small>大学と写真を選ぶと候補が並びます。1枚だけが「★ メイン」、残りはすべて「サブ」です。</small></div><div class="main-photo-choice-empty">まだ候補写真がありません</div>`;
+  if(!universitySelected){
+    box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>大学を選ぶと、ここに登録済み写真が表示されます</strong><small>表示された写真をクリックして「★ メイン」を1枚選びます。ほかは自動で「サブ」になります。</small></div><div class="main-photo-choice-empty">まず上の大学名を選択してください</div>`;
     return;
   }
 
   const cards=[];
-  if(currentRecord){
+  for(const photo of existingPhotos){
+    const key=photo.image_url;
     cards.push(makeCard({
       type:'existing',
-      src:`../${currentRecord.image_url}`,
-      alt:currentRecord.alt||currentRecord.university_name||'現在の登録写真',
-      title:'現在の登録写真',
-      active:choice.type==='existing'
+      key,
+      src:`../${photo.image_url}`,
+      alt:photo.alt,
+      title:photo.label,
+      origin:'現在登録済み',
+      active:choice.type==='existing'&&choice.key===key
     }));
   }
+
   for(const row of rows){
     const key=row.dataset.key||'';
     const img=row.querySelector('.thumb img');
@@ -94,15 +122,22 @@ function renderChoices(){
       src:img.src,
       alt:filename,
       title:filename,
+      origin:'今回追加',
       active:choice.type==='new'&&choice.key===key
     }));
   }
 
-  box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真・サブ写真を選ぶ</strong><small>写真を1枚クリックすると、その写真が「★ メイン」になります。ほかの写真は自動で「サブ」になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
+  const selectedName=firstSelect.options[firstSelect.selectedIndex]?.textContent?.trim()||'';
+  if(!cards.length){
+    box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>${escapeAttr(selectedName)}：登録済み写真はありません</strong><small>新しい写真を追加すると、ここで「★ メイン」と「サブ」を選べます。</small></div><div class="main-photo-choice-empty">「この大学の写真を追加」から写真を入れてください</div>`;
+    return;
+  }
+
+  box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>${escapeAttr(selectedName)}：メイン写真をここで選びます</strong><small>写真そのものをクリックしてください。1枚だけが「★ メイン」、それ以外は「サブ」です。新しい写真を追加すると同じ一覧に加わります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
   for(const card of box.querySelectorAll('.main-photo-choice-card')){
     card.addEventListener('click',()=>{
       const type=card.dataset.mainType;
-      selectChoice(type,type==='new'?(card.dataset.mainKey||''):'');
+      selectChoice(type,card.dataset.mainKey||'');
     });
   }
   syncLegacyButtons();
@@ -114,8 +149,10 @@ async function refreshUniversity(){
   currentUniversityId=id;
   const data=await loadRegistry();
   currentRecord=id?(data.records?.[id]||null):null;
-  if(currentRecord){
-    choice={type:'existing',key:''};
+  existingPhotos=existingPhotosFromRecord(currentRecord);
+  if(existingPhotos.length){
+    const preferred=existingPhotos.find(x=>x.role==='main')||existingPhotos[0];
+    choice={type:'existing',key:preferred.image_url};
   }else{
     const first=list.querySelector('.batch-row');
     choice={type:'new',key:first?.dataset.key||''};
@@ -140,7 +177,7 @@ new MutationObserver(()=>{
   const rows=[...list.querySelectorAll('.batch-row')];
   if(choice.type==='new'){
     if(choice.key&&!rows.some(r=>(r.dataset.key||'')===choice.key))choice={type:'new',key:rows[0]?.dataset.key||''};
-    if(!choice.key&&rows.length&&!currentRecord)choice={type:'new',key:rows[0].dataset.key||''};
+    if(!choice.key&&rows.length&&!existingPhotos.length)choice={type:'new',key:rows[0].dataset.key||''};
   }
   renderChoices();
 }).observe(list,{childList:true});
@@ -155,11 +192,7 @@ if(!document.querySelector('#finish-edit-register')){
     exportPanel.scrollIntoView({behavior:'smooth',block:'start'});
     exportPanel.classList.add('register-target');
     setTimeout(()=>exportPanel.classList.remove('register-target'),1600);
-    if(!generate.disabled){
-      setTimeout(()=>generate.click(),250);
-    }else{
-      wrap.querySelector('small').textContent='大学・写真の割り当てを確認してください。登録可能になるとSTEP 3の生成を開始します。';
-    }
+    if(!generate.disabled){setTimeout(()=>generate.click(),250);}else{wrap.querySelector('small').textContent='大学・写真の割り当てを確認してください。登録可能になるとSTEP 3の生成を開始します。';}
   });
 }
 
