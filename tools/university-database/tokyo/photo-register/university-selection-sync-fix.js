@@ -52,3 +52,12 @@ queueMicrotask(()=>{
   syncFirstUniversityFromRows();
 });
 })();
+
+(()=>{
+  if(document.querySelector('script[data-university-ime-selection-fix]'))return;
+  const s=document.createElement('script');
+  s.src='university-ime-selection-fix.js?v=20260824-1817';
+  s.defer=true;
+  s.dataset.universityImeSelectionFix='true';
+  document.body.appendChild(s);
+})();
