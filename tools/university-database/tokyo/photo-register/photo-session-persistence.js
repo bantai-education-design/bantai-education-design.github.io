@@ -9,6 +9,7 @@ if(!input||!university||!list||!pickerHost||!('indexedDB'in window))return;
 const DB_NAME='bantai-university-photo-register';
 const STORE='session';
 const KEY='tokyo-photo-register-current';
+const TAB_FLAG='bantai-photo-register-restore-this-tab';
 let restoring=false;
 let saveTimer=0;
 
@@ -17,13 +18,12 @@ async function put(value){const db=await openDb();await new Promise((resolve,rej
 async function get(){const db=await openDb();const value=await new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readonly');const req=tx.objectStore(STORE).get(KEY);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error);});db.close();return value;}
 
 function currentMainDescriptor(){const card=document.querySelector('.main-photo-choice-card.active');if(!card)return null;const type=card.dataset.mainType||'';if(type==='existing')return{type,key:card.dataset.mainKey||''};const label=card.querySelector('strong')?.textContent?.trim()||'';return{type:'new',label};}
-function excludedDescriptors(){return [...document.querySelectorAll('.photo-choice-delete-wrap')].filter(w=>w.hidden).map(()=>null).filter(Boolean);}
-
 async function filesFromInput(){return [...input.files].map(file=>({name:file.name,type:file.type,lastModified:file.lastModified,blob:file}));}
 async function snapshot(){
   if(restoring)return;
   const files=await filesFromInput();
   await put({version:1,universityId:university.value||'',files,main:currentMainDescriptor(),savedAt:Date.now()});
+  sessionStorage.setItem(TAB_FLAG,'1');
   document.documentElement.dataset.photoSessionSaved='true';
 }
 function scheduleSave(){clearTimeout(saveTimer);saveTimer=setTimeout(()=>snapshot().catch(console.error),180);}
@@ -38,6 +38,7 @@ new MutationObserver(()=>scheduleSave()).observe(list,{childList:true});
 function waitFor(fn,timeout=10000){return new Promise((resolve,reject)=>{const started=Date.now();const tick=()=>{const value=fn();if(value)return resolve(value);if(Date.now()-started>timeout)return reject(new Error('restore timeout'));setTimeout(tick,80);};tick();});}
 
 async function restore(){
+  if(sessionStorage.getItem(TAB_FLAG)!=='1')return;
   const saved=await get();
   if(!saved||!Array.isArray(saved.files)||(!saved.files.length&&!saved.universityId))return;
   restoring=true;
