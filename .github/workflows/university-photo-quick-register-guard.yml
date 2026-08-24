@@ -49,6 +49,8 @@ jobs:
           assert.ok(html.includes('id="rotate-right"'),'right rotation control required');
           assert.ok(html.includes('id="photo-editor"'),'editor target required');
           assert.doesNotMatch(html,/university-text-input\.js/,'obsolete assignment overlay must not be loaded');
+          assert.match(html,/photo-register\.css\?v=\d{8}-\d{4}/,'versioned CSS required to avoid stale UI');
+          assert.match(html,/photo-register\.js\?v=\d{8}-\d{4}/,'versioned JS required to avoid stale UI');
           assert.match(html,/id="brightness"[^>]+min="90"[^>]+max="110"/,'brightness limited to +/-10%');
           assert.match(html,/id="contrast"[^>]+min="90"[^>]+max="110"/,'contrast limited to +/-10%');
           assert.match(html,/width="720" height="405"/,'fixed 16:9 output canvas');
@@ -67,9 +69,9 @@ jobs:
           assert.ok(overlay.includes('window.__universityOwnerPhotos.set(id,record)'),'owner photo must persist independently of async image reloads');
           assert.ok(detail.includes('window.__universityOwnerPhotos?.get(row.id)'),'detail must prioritize persistent owner photo');
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
-          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/"/,'gateway must expose quick register entrance');
+          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/\?v=\d{8}-\d{4}"/,'gateway must expose versioned quick register entrance');
           assert.ok(gateway.includes('大学写真クイック登録'),'gateway entrance label required');
-          console.log('batch quick register architecture, assignment and corrections validated');
+          console.log('batch quick register architecture, assignment, corrections and cache busting validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -89,12 +91,13 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const gateway=await browser.newPage({viewport:{width:1366,height:800}});
             await gateway.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            const entrance=gateway.locator('a[href="/tools/university-database/tokyo/photo-register/"]');
+            const entrance=gateway.locator('a[href^="/tools/university-database/tokyo/photo-register/"]');
             assert.equal(await entrance.count(),1,'quick register entrance on database gateway');
             assert.ok((await entrance.innerText()).includes('大学写真クイック登録'));
+            assert.match(await entrance.getAttribute('href'),/\?v=\d{8}-\d{4}$/,'gateway entrance must force fresh page');
 
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?v=20260824-1128',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('#university-select option').length===145,{timeout:10000});
             await page.setInputFiles('#photo-input',[
               {name:'u000094-亜細亜大学.png',mimeType:'image/png',buffer:png},
