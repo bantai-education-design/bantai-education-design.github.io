@@ -1,0 +1,79 @@
+name: University photo order guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-order-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-order-guard.yml'
+
+jobs:
+  dual-order-flow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate dual-order controls
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
+          const reverse=fs.readFileSync('tools/university-database/tokyo/photo-register/university-first-entry.js','utf8');
+          assert.ok(html.includes('id="photo-input"'),'photo-first input required');
+          assert.ok(html.includes('id="university-first-search"'),'university-first search required');
+          assert.ok(html.includes('id="university-first-select"'),'university-first dropdown required');
+          assert.ok(html.includes('id="university-first-photo-button"'),'university-first photo button required');
+          assert.ok(reverse.includes('DataTransfer'),'reverse flow must hand photo to the main importer');
+          assert.ok(reverse.includes("rowSelect.dispatchEvent(new Event('change'"),'reverse flow must assign selected university');
+          console.log('dual-order controls validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-order.log 2>&1 &
+          sleep 2
+      - name: Verify photo-first and university-first
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1280,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?v=20260824-1141',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university-first dropdown enabled before photo');
+
+            // University first -> photo
+            await page.locator('#university-first-search').fill('亜細亜大学');
+            await page.locator('#university-first-search').press('Enter');
+            assert.equal(await page.locator('#university-first-select').inputValue(),'u000094');
+            assert.equal(await page.locator('#university-first-photo-button').isEnabled(),true);
+            await page.setInputFiles('#university-first-photo',{name:'campus.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
+
+            // Photo first -> university
+            await page.setInputFiles('#photo-input',{name:'second-campus.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
+            const second=page.locator('.batch-row').nth(1);
+            assert.equal(await second.locator('.row-university').isVisible(),true,'photo-first dropdown visible');
+            await second.locator('.row-university-search').fill('東京大学');
+            await second.locator('.row-university-search').press('Enter');
+            assert.equal(await second.locator('.row-university').inputValue(),'u000001');
+
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
