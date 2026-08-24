@@ -1,0 +1,91 @@
+name: University photo real preview guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/detail.html'
+      - 'tools/university-database/tokyo/assets/detail.css'
+      - 'tools/university-database/tokyo/assets/detail-photo-preview.js'
+      - '.github/workflows/university-photo-real-preview-guard.yml'
+
+jobs:
+  real-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-preview.log 2>&1 &
+          sleep 2
+      - name: Verify real detail page background plus thumbnails preview
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const ctx=await browser.newContext({viewport:{width:1366,height:900}});
+            const page=await ctx.newPage();
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForSelector('#registration-mode-switch');
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.setInputFiles('#photo-input',[
+              {name:'rikkyo-a.png',mimeType:'image/png',buffer:png},
+              {name:'rikkyo-b.png',mimeType:'image/png',buffer:png},
+              {name:'rikkyo-c.png',mimeType:'image/png',buffer:png}
+            ]);
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
+            await page.waitForSelector('.photo-main-button');
+            const mainButtons=page.locator('.photo-main-button');
+            await mainButtons.nth(1).click();
+            assert.ok((await mainButtons.nth(1).innerText()).includes('メイン写真'));
+
+            const popupPromise=ctx.waitForEvent('page');
+            await page.locator('#open-real-preview').click();
+            const preview=await popupPromise;
+            await preview.waitForLoadState('domcontentloaded');
+            assert.match(preview.url(),/detail\.html\?id=u000083&photo_preview_token=/,'preview must use the real detail page');
+            await preview.waitForFunction(()=>{
+              const hero=document.querySelector('.detail-hero.photo-preview-active');
+              return !!hero?.querySelector('.detail-photo-preview-gallery')&&hero.querySelectorAll('.detail-photo-preview-thumb').length===3;
+            },{timeout:15000});
+            const layout=await preview.evaluate(()=>{
+              const hero=document.querySelector('.detail-hero.photo-preview-active');
+              const gallery=hero?.querySelector('.detail-photo-preview-gallery');
+              const thumb=hero?.querySelector('.detail-photo-preview-thumb');
+              const thumbs=hero?.querySelector('.detail-photo-preview-thumbs');
+              if(!hero||!gallery||!thumb||!thumbs)return null;
+              return {
+                position:getComputedStyle(gallery).position,
+                controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,
+                heroHeight:Math.round(hero.getBoundingClientRect().height),
+                galleryHeight:Math.round(gallery.getBoundingClientRect().height),
+                thumbWidth:Math.round(thumb.getBoundingClientRect().width)
+              };
+            });
+            assert.ok(layout,'stable real-page gallery layout required');
+            assert.equal(layout.position,'absolute','gallery must be a background layer, not extra vertical content');
+            assert.equal(layout.galleryHeight,layout.heroHeight,'background must fill the existing hero without adding a section');
+            assert.ok(layout.controlsZ>=2,'thumbnail controls must sit above university information panels');
+            assert.ok(layout.thumbWidth<=70,`thumbnail too large: ${layout.thumbWidth}`);
+            await preview.locator('.detail-photo-preview-thumb').nth(2).click();
+            assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
+
+            await preview.setViewportSize({width:375,height:900});
+            await preview.waitForFunction(()=>!!document.querySelector('.detail-hero.photo-preview-active .detail-photo-preview-gallery'));
+            assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'preview must not create mobile horizontal overflow');
+            const mobileThumb=await preview.evaluate(()=>Math.round(document.querySelector('.detail-photo-preview-thumb')?.getBoundingClientRect().width||0));
+            assert.ok(mobileThumb>0&&mobileThumb<=52,`mobile thumbnail too large or missing: ${mobileThumb}`);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
