@@ -1,0 +1,64 @@
+name: University photo real preview guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/assets/detail-layer.js'
+      - 'tools/university-database/tokyo/assets/detail-layer.css'
+      - '.github/workflows/university-photo-real-preview-guard.yml'
+
+jobs:
+  real-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-preview.log 2>&1 &
+          sleep 2
+      - name: Verify real page background plus thumbnails preview
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const ctx=await browser.newContext({viewport:{width:1366,height:900}});
+            const page=await ctx.newPage();
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForSelector('#registration-mode-switch');
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.setInputFiles('#photo-input',[
+              {name:'rikkyo-a.png',mimeType:'image/png',buffer:png},
+              {name:'rikkyo-b.png',mimeType:'image/png',buffer:png},
+              {name:'rikkyo-c.png',mimeType:'image/png',buffer:png}
+            ]);
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
+            await page.waitForSelector('.photo-main-button');
+            const mainButtons=page.locator('.photo-main-button');
+            await mainButtons.nth(1).click();
+            assert.ok((await mainButtons.nth(1).innerText()).includes('メイン写真'));
+            const popupPromise=ctx.waitForEvent('page');
+            await page.locator('#open-real-preview').click();
+            const preview=await popupPromise;
+            await preview.waitForLoadState('domcontentloaded');
+            await preview.waitForSelector('#university-detail-dialog[open]',{timeout:15000});
+            await preview.waitForSelector('.detail-photo-gallery');
+            assert.equal(await preview.locator('.detail-photo-thumb').count(),3);
+            const h=await preview.locator('.detail-photo-gallery').evaluate(el=>Math.round(el.getBoundingClientRect().height));
+            assert.ok(h<=230,`gallery too tall: ${h}`);
+            await preview.locator('.detail-photo-thumb').nth(2).click();
+            assert.equal(await preview.locator('.detail-photo-thumb.active').count(),1);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
