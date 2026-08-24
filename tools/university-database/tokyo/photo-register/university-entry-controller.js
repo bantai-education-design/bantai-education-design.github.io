@@ -20,7 +20,14 @@ const matches=q=>{const n=norm(q);if(!n)return universities;return universities.
 const exact=q=>{const n=norm(q);if(!n)return null;return universities.find(u=>norm(u.id)===n||norm(u.name)===n||norm(label(u))===n)||null;};
 function selectedUniversity(select){return universities.find(u=>u.id===select.value)||null;}
 function setFirstStatus(){const u=selectedUniversity(firstSelect);firstButton.disabled=!u;firstStatus.textContent=u?`${u.name} を選択中。写真を選べます。`:'大学名を入力するか、下の144大学一覧から選択してください。';}
-function renderFirst(rows,selected=''){firstSelect.innerHTML=optionMarkup(rows,selected);if(selected&&rows.some(u=>u.id===selected))firstSelect.value=selected;setFirstStatus();}
+function renderFirst(rows,selected=''){
+  const before=firstSelect.value;
+  firstSelect.innerHTML=optionMarkup(rows,selected);
+  if(selected&&rows.some(u=>u.id===selected))firstSelect.value=selected;
+  const after=firstSelect.value;
+  setFirstStatus();
+  if(after!==before)queueMicrotask(()=>firstSelect.dispatchEvent(new Event('change',{bubbles:true})));
+}
 function commitFirstSearch(){const u=exact(firstSearch.value)||((m=>m.length===1?m[0]:null)(matches(firstSearch.value)));if(!u)return;renderFirst(universities,u.id);firstSearch.value=label(u);}
 firstSearch.addEventListener('input',()=>{const rows=matches(firstSearch.value);const u=exact(firstSearch.value);renderFirst(rows,u?.id||'');});
 firstSearch.addEventListener('change',commitFirstSearch);
