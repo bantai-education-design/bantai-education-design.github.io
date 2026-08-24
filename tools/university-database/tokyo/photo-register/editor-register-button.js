@@ -34,11 +34,7 @@ function ensureChoiceBox(){
   box.id='existing-photo-choice';
   box.className='existing-photo-choice';
   const previewBox=document.querySelector('#real-page-preview');
-  if(previewBox){
-    batch.insertBefore(box,previewBox);
-  }else{
-    list.insertAdjacentElement('afterend',box);
-  }
+  if(previewBox){batch.insertBefore(box,previewBox);}else{list.insertAdjacentElement('afterend',box);}
   return box;
 }
 
@@ -49,18 +45,22 @@ function syncLegacyButtons(){
     if(!btn)continue;
     const active=choice.type==='new'&&choice.key===(row.dataset.key||'');
     btn.classList.toggle('active',active);
-    btn.textContent=active?'★ メイン写真':'☆ メインにする';
+    btn.textContent=active?'★ メイン':'サブ → メインにする';
   }
 }
 
-function escapeAttr(value){
-  return String(value||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
+function escapeAttr(value){return String(value||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 function selectChoice(type,key=''){
   choice={type,key};
   renderChoices();
   syncLegacyButtons();
+}
+
+function makeCard({type,key='',src,alt,title,active}){
+  const role=active?'★ メイン':'サブ';
+  const usage=active?'一覧カード＋詳細背景':'詳細ページのサムネイル';
+  return `<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="${type}"${key?` data-main-key="${escapeAttr(key)}"`:''} aria-pressed="${active}" aria-label="${escapeAttr(title)}を${active?'メイン写真':'メイン写真に選択'}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"><span class="main-photo-check ${active?'main':'sub'}">${role}</span></span><strong>${escapeAttr(title)}</strong><small>${usage}</small></button>`;
 }
 
 function renderChoices(){
@@ -69,26 +69,36 @@ function renderChoices(){
   box.hidden=false;
 
   if(!currentRecord&&!rows.length){
-    box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真を選ぶ</strong><small>大学と写真を選ぶと、ここに候補写真が並びます。使いたい写真を1枚クリックすると ★ メイン になります。</small></div><div class="main-photo-choice-empty">まだ候補写真がありません</div>`;
+    box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真・サブ写真を選ぶ</strong><small>大学と写真を選ぶと候補が並びます。1枚だけが「★ メイン」、残りはすべて「サブ」です。</small></div><div class="main-photo-choice-empty">まだ候補写真がありません</div>`;
     return;
   }
 
   const cards=[];
   if(currentRecord){
-    const src=`../${currentRecord.image_url}`;
-    const active=choice.type==='existing';
-    cards.push(`<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="existing" aria-pressed="${active}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(currentRecord.alt||currentRecord.university_name||'現在の登録写真')}"><span class="main-photo-check">${active?'★ メイン':'クリックして選択'}</span></span><strong>現在の登録写真</strong><small>${escapeAttr(currentRecord.university_name||'')}</small></button>`);
+    cards.push(makeCard({
+      type:'existing',
+      src:`../${currentRecord.image_url}`,
+      alt:currentRecord.alt||currentRecord.university_name||'現在の登録写真',
+      title:'現在の登録写真',
+      active:choice.type==='existing'
+    }));
   }
   for(const row of rows){
     const key=row.dataset.key||'';
     const img=row.querySelector('.thumb img');
     if(!img?.src)continue;
-    const active=choice.type==='new'&&choice.key===key;
     const filename=row.querySelector('.batch-main strong')?.textContent?.trim()||'今回追加した写真';
-    cards.push(`<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="new" data-main-key="${escapeAttr(key)}" aria-pressed="${active}"><span class="main-photo-choice-image"><img src="${escapeAttr(img.src)}" alt="${escapeAttr(filename)}"><span class="main-photo-check">${active?'★ メイン':'クリックして選択'}</span></span><strong>今回追加</strong><small>${escapeAttr(filename)}</small></button>`);
+    cards.push(makeCard({
+      type:'new',
+      key,
+      src:img.src,
+      alt:filename,
+      title:filename,
+      active:choice.type==='new'&&choice.key===key
+    }));
   }
 
-  box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真を選ぶ</strong><small>下の写真を1枚クリックしてください。★が付いた1枚が一覧カードと詳細ページの背景になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
+  box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真・サブ写真を選ぶ</strong><small>写真を1枚クリックすると、その写真が「★ メイン」になります。ほかの写真は自動で「サブ」になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
   for(const card of box.querySelectorAll('.main-photo-choice-card')){
     card.addEventListener('click',()=>{
       const type=card.dataset.mainType;
