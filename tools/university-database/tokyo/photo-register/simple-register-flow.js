@@ -11,30 +11,58 @@ const select=document.querySelector('#university-first-select');
 const addButton=document.querySelector('#university-first-photo-button');
 const status=document.querySelector('#university-first-status');
 const searchLabel=document.querySelector('label:has(#university-first-search)');
+if(!batch||!university||!select||!addButton)return;
+
 if(head)head.textContent='大学を選んで写真を登録する';
-if(intro)intro.textContent='大学を1校選ぶだけで、登録済み写真を確認し、新しい写真を追加できます。';
+if(intro)intro.textContent='上から順に、大学を選ぶ → 既存写真を確認 → 写真を追加、の3ステップです。';
 if(title)title.textContent='STEP 1　大学を選ぶ';
-if(titleSmall)titleSmall.textContent='大学を選択すると、これまでの写真が下に表示されます';
+if(titleSmall)titleSmall.textContent='ここで登録する大学を1校だけ選びます';
 if(selectLabel){
   const text=[...selectLabel.childNodes].find(n=>n.nodeType===Node.TEXT_NODE);
-  if(text)text.nodeValue='登録する大学を選択\n';
+  if(text)text.nodeValue='登録する大学\n';
 }
-if(addButton)addButton.textContent='STEP 3　この大学に写真を追加';
-if(searchLabel){
-  const text=[...searchLabel.childNodes].find(n=>n.nodeType===Node.TEXT_NODE);
-  if(text)text.nodeValue='大学名で絞り込み（任意）\n';
+if(searchLabel)searchLabel.hidden=true;
+
+let addStep=document.querySelector('#simple-add-photo-step');
+if(!addStep){
+  addStep=document.createElement('section');
+  addStep.id='simple-add-photo-step';
+  addStep.className='simple-add-photo-step';
+  addStep.innerHTML='<div class="simple-step-heading"><span>STEP 3</span><strong>写真を追加する</strong><small>必要なときだけ1〜5枚追加します</small></div>';
 }
+addButton.textContent='この大学に写真を追加';
+addStep.appendChild(addButton);
+
+function existingBox(){return document.querySelector('#existing-photo-choice');}
+function enforceOrder(){
+  if(intro)intro.insertAdjacentElement('afterend',university);
+  const existing=existingBox();
+  if(existing){
+    university.insertAdjacentElement('afterend',existing);
+    existing.insertAdjacentElement('afterend',addStep);
+  }else{
+    university.insertAdjacentElement('afterend',addStep);
+  }
+}
+
 function update(){
-  const option=select?.selectedOptions?.[0];
-  const selected=!!select?.value;
+  const option=select.selectedOptions?.[0];
+  const selected=!!select.value;
   if(status){
     status.textContent=selected
-      ? `${option?.textContent||'大学'}を選択中。既存写真を確認して、必要なら写真を追加してください。`
-      : 'まず上の一覧から大学を1校選んでください。';
+      ? `${option?.textContent||'大学'}を選択しました。次にSTEP 2で既存写真を確認してください。`
+      : 'この一覧から大学を1校選んでください。';
   }
-  university?.classList.toggle('simple-university-selected',selected);
+  university.classList.toggle('simple-university-selected',selected);
+  addButton.disabled=!selected;
+  addStep.classList.toggle('is-disabled',!selected);
+  enforceOrder();
 }
-select?.addEventListener('change',()=>queueMicrotask(update));
-new MutationObserver(update).observe(select,{childList:true,subtree:true});
+
+select.addEventListener('change',()=>queueMicrotask(update));
+new MutationObserver(()=>queueMicrotask(update)).observe(select,{childList:true,subtree:true});
+new MutationObserver(()=>queueMicrotask(enforceOrder)).observe(batch,{childList:true,subtree:true});
+
+enforceOrder();
 update();
 })();
