@@ -1,0 +1,20 @@
+(()=>{
+'use strict';
+if(document.querySelector('#tokyo-photo-register-entry'))return;
+const heroCopy=document.querySelector('.hero-copy');
+if(!heroCopy)return;
+const wrap=document.createElement('div');
+wrap.id='tokyo-photo-register-entry';
+wrap.style.cssText='margin:16px 0 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center';
+const link=document.createElement('a');
+link.href='/tools/university-database/tokyo/photo-register/?v=20260824-1726';
+link.textContent='📷 大学写真クイック登録';
+link.setAttribute('aria-label','大学写真クイック登録を開く');
+link.style.cssText='display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;background:#d7b45a;color:#071d30;text-decoration:none;font-weight:900;box-shadow:0 8px 20px rgba(7,29,48,.18);border:1px solid #b58c2d';
+const note=document.createElement('small');
+note.textContent='大学写真の追加・メイン／サブ選択はこちら';
+note.style.cssText='font-size:.78rem;font-weight:700;color:#536879';
+wrap.append(link,note);
+const search=heroCopy.querySelector('#tokyo-search');
+if(search)heroCopy.insertBefore(wrap,search);else heroCopy.appendChild(wrap);
+})();
