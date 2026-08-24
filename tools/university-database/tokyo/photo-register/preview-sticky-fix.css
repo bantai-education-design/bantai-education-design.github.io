@@ -8,3 +8,23 @@
   }
   .preview-shell{max-height:calc(100vh - 170px)}
 }
+.finish-edit-register-wrap{
+  display:grid;
+  gap:7px;
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+.finish-edit-register{
+  width:100%;
+  min-height:48px;
+  font-size:1rem;
+}
+.finish-edit-register-wrap small{
+  color:var(--muted);
+  line-height:1.5;
+}
+.export-panel.register-target{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+}
