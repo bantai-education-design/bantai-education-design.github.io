@@ -41,21 +41,21 @@ jobs:
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('.photo-choice-delete-wrap').length>=3,{timeout:10000});
 
-            const initialRows=await page.locator('.batch-row').count();
-            assert.equal(initialRows,1,'newly added photo row must exist before deleting an existing photo');
+            assert.equal(await page.locator('.batch-row').count(),1,'newly added photo row must exist before deleting an existing photo');
             const newCard=page.locator('.main-photo-choice-card[data-main-type="new"]').first();
-            assert.equal(await newCard.count(),1,'new photo must be visible in role list');
             const newKey=await newCard.getAttribute('data-main-key');
             assert.ok(newKey,'new photo key required');
 
             const existingWrap=page.locator('.photo-choice-delete-wrap').filter({has:page.locator('.main-photo-choice-card[data-main-type="existing"]')}).last();
             const existingCard=existingWrap.locator('.main-photo-choice-card');
+            const deletedExistingKey=await existingCard.getAttribute('data-main-key');
+            assert.ok(deletedExistingKey,'existing photo key required');
             const wasExistingMain=await existingCard.evaluate(el=>el.classList.contains('active'));
             await existingWrap.locator('.photo-list-delete').click();
 
             assert.equal(await page.locator('.batch-row').count(),1,'deleting an existing candidate must not delete the newly added photo row');
             assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="new"][data-main-key="${newKey}"]`).count(),1,'newly added photo must remain visible');
-            assert.equal(await existingCard.count(),0,'chosen existing candidate must be removed from the list');
+            assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="existing"][data-main-key="${deletedExistingKey}"]`).count(),0,'the exact existing photo chosen for deletion must be removed');
             assert.ok(await page.locator('.main-photo-choice-card').count()>=2,'other photo candidates must remain');
             assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'one main photo must remain selected after deletion');
             if(!wasExistingMain){
@@ -66,7 +66,9 @@ jobs:
             const mainKeyBefore=await currentMain.getAttribute('data-main-key');
             const subExistingWrap=page.locator('.photo-choice-delete-wrap').filter({has:page.locator('.main-photo-choice-card[data-main-type="existing"]:not(.active)')}).first();
             if(await subExistingWrap.count()){
+              const secondDeletedKey=await subExistingWrap.locator('.main-photo-choice-card').getAttribute('data-main-key');
               await subExistingWrap.locator('.photo-list-delete').click();
+              assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="existing"][data-main-key="${secondDeletedKey}"]`).count(),0,'second selected existing photo must also be removed');
               assert.equal(await page.locator('.main-photo-choice-card.active').first().getAttribute('data-main-key'),mainKeyBefore,'deleting a sub photo must not change main selection');
               assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="new"][data-main-key="${newKey}"]`).count(),1,'new photo must still remain after a second existing delete');
             }
