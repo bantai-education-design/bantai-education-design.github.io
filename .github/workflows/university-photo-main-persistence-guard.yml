@@ -24,7 +24,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-main-persistence.log 2>&1 &
           sleep 2
-      - name: Verify selected main preview and reload persistence
+      - name: Verify selected main persistence and university switch isolation
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -37,6 +37,7 @@ jobs:
             const page=await ctx.newPage();
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'));
+            await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000083"]'));
             await page.locator('#university-first-select').selectOption('u000094');
             await page.setInputFiles('#photo-input',[
               {name:'asia-new-main.png',mimeType:'image/png',buffer:pngA},
@@ -61,9 +62,24 @@ jobs:
             await page.waitForFunction(()=>document.documentElement.dataset.photoSessionRestored==='true',{timeout:15000});
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,{timeout:10000});
             const restored=page.locator('.main-photo-choice-card[data-main-type="new"]');
-            assert.equal(await restored.count(),2,'both newly added photos must survive reload');
+            assert.equal(await restored.count(),2,'both newly added photos must survive reload for the same university');
             assert.ok((await restored.nth(1).innerText()).includes('★ メイン'),'selected main must survive reload');
             assert.ok((await restored.nth(0).innerText()).includes('サブ'),'sub photo must survive reload');
+
+            // Switching universities must start a clean registration session.
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.waitForFunction(()=>document.documentElement.dataset.photoUniversitySwitched==='cleared',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===0,{timeout:10000});
+            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'Asia newly-added photos must disappear when switching to Rikkyo');
+            assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','Rikkyo must remain selected after cleanup');
+
+            // The cleared Asia photos must not return after reload.
+            await page.reload({waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionRestored==='true',{timeout:15000});
+            assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','Rikkyo selection must survive reload');
+            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'previous university photos must not return after reload');
+            assert.equal(await page.locator('.batch-row').count(),0,'previous university batch rows must not return after reload');
+
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
