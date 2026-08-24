@@ -75,4 +75,18 @@ queueMicrotask(()=>{
     simple.dataset.simpleRegisterFlow='true';
     document.body.appendChild(simple);
   }
+  if(!document.querySelector('link[data-one-click-register]')){
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='one-click-register.css?v=20260824-2254';
+    link.dataset.oneClickRegister='true';
+    document.head.appendChild(link);
+  }
+  if(!document.querySelector('script[data-one-click-register]')){
+    const one=document.createElement('script');
+    one.src='one-click-register.js?v=20260824-2254';
+    one.defer=true;
+    one.dataset.oneClickRegister='true';
+    document.body.appendChild(one);
+  }
 })();
