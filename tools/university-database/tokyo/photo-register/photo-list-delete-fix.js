@@ -96,7 +96,7 @@ applyDeleteControls();
 (()=>{
   if(document.querySelector('script[data-photo-session-persistence]'))return;
   const s=document.createElement('script');
-  s.src='photo-session-persistence.js?v=20260824-2318';
+  s.src='photo-session-persistence.js?v=20260824-2336';
   s.defer=true;
   s.dataset.photoSessionPersistence='true';
   document.body.appendChild(s);

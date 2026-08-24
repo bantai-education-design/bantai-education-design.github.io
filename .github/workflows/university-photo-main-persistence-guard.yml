@@ -24,7 +24,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-main-persistence.log 2>&1 &
           sleep 2
-      - name: Verify selected main persistence and university switch isolation
+      - name: Verify selected main persistence, switch isolation, and legacy cleanup
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -79,6 +79,20 @@ jobs:
             assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','Rikkyo selection must survive reload');
             assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'previous university photos must not return after reload');
             assert.equal(await page.locator('.batch-row').count(),0,'previous university batch rows must not return after reload');
+
+            // Reproduce the real failure: a legacy v2 session already mislabels old photos as Rikkyo.
+            await page.evaluate(async()=>{
+              const db=await new Promise((resolve,reject)=>{const req=indexedDB.open('bantai-university-photo-register',1);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});
+              const staleBlob=new Blob([new Uint8Array([1,2,3,4])],{type:'image/png'});
+              await new Promise((resolve,reject)=>{const tx=db.transaction('session','readwrite');tx.objectStore('session').put({version:2,universityId:'u000083',files:[{name:'asia-stale-labelled-rikkyo.png',type:'image/png',lastModified:Date.now(),blob:staleBlob}],main:{type:'new',label:'asia-stale-labelled-rikkyo.png'},savedAt:Date.now()},'tokyo-photo-register-current');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
+              db.close();
+              sessionStorage.setItem('bantai-photo-register-restore-this-tab','1');
+            });
+            await page.reload({waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.documentElement.dataset.photoLegacySessionCleared==='true',{timeout:15000});
+            assert.equal(await page.locator('.batch-row').count(),0,'legacy corrupted session photos must be purged instead of restored');
+            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'legacy stale photos must not appear as current university photos');
+            assert.equal(await page.locator('#university-first-select').inputValue(),'','legacy corrupted university selection must also be reset once');
 
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
