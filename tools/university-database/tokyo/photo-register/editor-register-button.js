@@ -10,7 +10,8 @@ const universityFirst=document.querySelector('.university-first');
 const universityStatus=document.querySelector('#university-first-status');
 if(!controls||!generate||!exportPanel||!firstSelect||!list||!batch||!universityFirst)return;
 
-let registry=null;
+let ownerRegistry=null;
+let baseRegistry=null;
 let currentUniversityId='';
 let currentRecord=null;
 let existingPhotos=[];
@@ -22,34 +23,44 @@ window.__universityPhotoMainChoice={
   getExistingPhotos:()=>existingPhotos.map(x=>({...x}))
 };
 
-async function loadRegistry(){
-  if(registry)return registry;
-  try{
-    const res=await fetch('../data/user-photo-overrides.json',{cache:'no-store'});
-    registry=res.ok?await res.json():{records:{}};
-  }catch(_e){registry={records:{}};}
-  return registry;
+async function loadRegistries(){
+  if(ownerRegistry&&baseRegistry)return {ownerRegistry,baseRegistry};
+  const [ownerRes,baseRes]=await Promise.all([
+    fetch('../data/user-photo-overrides.json',{cache:'no-store'}).catch(()=>null),
+    fetch('../data/university-images.json',{cache:'no-store'}).catch(()=>null)
+  ]);
+  try{ownerRegistry=ownerRes?.ok?await ownerRes.json():{records:{}};}catch(_e){ownerRegistry={records:{}};}
+  try{baseRegistry=baseRes?.ok?await baseRes.json():{images:{}};}catch(_e){baseRegistry={images:{}};}
+  return {ownerRegistry,baseRegistry};
 }
 
-function existingPhotosFromRecord(record){
+function entriesFromRecord(record,origin,defaultRole='sub'){
   if(!record)return [];
   const candidates=[];
-  if(record.image_url)candidates.push({...record,role:record.role||'main'});
+  if(record.image_url)candidates.push({...record,role:record.role||defaultRole});
   if(Array.isArray(record.gallery))candidates.push(...record.gallery);
   if(Array.isArray(record.images))candidates.push(...record.images);
-  const seen=new Set();
-  return candidates.filter(item=>{
-    const url=item?.image_url||item?.source_url||'';
-    if(!url||seen.has(url))return false;
-    seen.add(url);
-    return true;
-  }).map((item,index)=>({
-    image_url:item.image_url||item.source_url,
-    alt:item.alt||record.alt||record.university_name||`登録済み写真${index+1}`,
-    label:item.label||item.caption||`登録済み写真${index+1}`,
-    role:item.role||(index===0?'main':'sub')
-  }));
+  return candidates.map((item,index)=>({
+    image_url:item?.image_url||item?.source_url||'',
+    alt:item?.alt||record.alt||record.university_name||`登録済み写真${index+1}`,
+    label:item?.label||item?.caption||(origin==='owner'?(index===0?'現在の登録写真':`登録済み写真${index+1}`):(index===0?'これまでの公開写真':`公開写真${index+1}`)),
+    role:item?.role||(index===0?defaultRole:'sub'),
+    origin
+  })).filter(x=>x.image_url);
 }
+
+function collectExistingPhotos(ownerRecord,baseRecord){
+  const owner=entriesFromRecord(ownerRecord,'owner','main');
+  const base=entriesFromRecord(baseRecord,'base',owner.length?'sub':'main');
+  const seen=new Set();
+  return [...owner,...base].filter(item=>{
+    if(seen.has(item.image_url))return false;
+    seen.add(item.image_url);
+    return true;
+  });
+}
+
+function displayUrl(url){return /^(?:https?:|data:|blob:)/i.test(url)?url:`../${url}`;}
 
 function ensureChoiceBox(){
   let box=document.querySelector('#existing-photo-choice');
@@ -93,7 +104,7 @@ function renderChoices(){
   const universitySelected=!!firstSelect.value;
 
   if(!universitySelected){
-    box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>大学を選ぶと、ここに登録済み写真が表示されます</strong><small>表示された写真をクリックして「★ メイン」を1枚選びます。ほかは自動で「サブ」になります。</small></div><div class="main-photo-choice-empty">まず上の大学名を選択してください</div>`;
+    box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>大学を選ぶと、ここにこれまでの写真が表示されます</strong><small>表示された写真をクリックして「★ メイン」を1枚選びます。ほかは自動で「サブ」になります。</small></div><div class="main-photo-choice-empty">まず上の大学名を選択してください</div>`;
     return;
   }
 
@@ -103,10 +114,10 @@ function renderChoices(){
     cards.push(makeCard({
       type:'existing',
       key,
-      src:`../${photo.image_url}`,
+      src:displayUrl(photo.image_url),
       alt:photo.alt,
       title:photo.label,
-      origin:'現在登録済み',
+      origin:photo.origin==='owner'?'撮影者提供・現在登録済み':'従来の公開画像台帳',
       active:choice.type==='existing'&&choice.key===key
     }));
   }
@@ -117,12 +128,7 @@ function renderChoices(){
     if(!img?.src)continue;
     const filename=row.querySelector('.batch-main strong')?.textContent?.trim()||'今回追加した写真';
     cards.push(makeCard({
-      type:'new',
-      key,
-      src:img.src,
-      alt:filename,
-      title:filename,
-      origin:'今回追加',
+      type:'new',key,src:img.src,alt:filename,title:filename,origin:'今回追加',
       active:choice.type==='new'&&choice.key===key
     }));
   }
@@ -133,12 +139,9 @@ function renderChoices(){
     return;
   }
 
-  box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>${escapeAttr(selectedName)}：メイン写真をここで選びます</strong><small>写真そのものをクリックしてください。1枚だけが「★ メイン」、それ以外は「サブ」です。新しい写真を追加すると同じ一覧に加わります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
+  box.innerHTML=`<div class="existing-photo-title"><span class="step">写真の役割</span><strong>${escapeAttr(selectedName)}：これまでの写真＋今回写真</strong><small>写真を1枚クリックしてください。1枚だけが「★ メイン」、それ以外は「サブ」です。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
   for(const card of box.querySelectorAll('.main-photo-choice-card')){
-    card.addEventListener('click',()=>{
-      const type=card.dataset.mainType;
-      selectChoice(type,card.dataset.mainKey||'');
-    });
+    card.addEventListener('click',()=>selectChoice(card.dataset.mainType,card.dataset.mainKey||''));
   }
   syncLegacyButtons();
 }
@@ -147,9 +150,11 @@ async function refreshUniversity(){
   const id=firstSelect.value;
   if(id===currentUniversityId)return;
   currentUniversityId=id;
-  const data=await loadRegistry();
-  currentRecord=id?(data.records?.[id]||null):null;
-  existingPhotos=existingPhotosFromRecord(currentRecord);
+  const {ownerRegistry:owners,baseRegistry:bases}=await loadRegistries();
+  const ownerRecord=id?(owners.records?.[id]||null):null;
+  const baseRecord=id?(bases.images?.[id]||null):null;
+  currentRecord=ownerRecord||baseRecord||null;
+  existingPhotos=collectExistingPhotos(ownerRecord,baseRecord);
   if(existingPhotos.length){
     const preferred=existingPhotos.find(x=>x.role==='main')||existingPhotos[0];
     choice={type:'existing',key:preferred.image_url};
@@ -160,10 +165,7 @@ async function refreshUniversity(){
   renderChoices();
 }
 
-firstSelect.addEventListener('change',()=>{
-  currentUniversityId='';
-  refreshUniversity();
-});
+firstSelect.addEventListener('change',()=>{currentUniversityId='';refreshUniversity();});
 
 document.addEventListener('click',event=>{
   const btn=event.target.closest?.('.photo-main-button');
@@ -187,8 +189,7 @@ if(!document.querySelector('#finish-edit-register')){
   wrap.className='finish-edit-register-wrap';
   wrap.innerHTML=`<button id="finish-edit-register" class="primary finish-edit-register" type="button">編集を終えて登録</button><small>現在の補正内容でSTEP 3へ進み、登録パッケージを作ります。</small>`;
   controls.appendChild(wrap);
-  const button=wrap.querySelector('#finish-edit-register');
-  button.addEventListener('click',()=>{
+  wrap.querySelector('#finish-edit-register').addEventListener('click',()=>{
     exportPanel.scrollIntoView({behavior:'smooth',block:'start'});
     exportPanel.classList.add('register-target');
     setTimeout(()=>exportPanel.classList.remove('register-target'),1600);
