@@ -1,0 +1,88 @@
+/* Improve quick-search visibility, especially on narrow screens. */
+.ref-panel:first-child{
+  position:relative;
+  border:2px solid #d5ad3b!important;
+  background:linear-gradient(145deg,#fff8dd 0%,#fffdf6 58%,#f7fbff 100%)!important;
+  box-shadow:0 8px 22px rgba(8,40,68,.12)!important;
+}
+.ref-panel:first-child h3{
+  color:#082844!important;
+  font-weight:900!important;
+}
+.ref-quick-form input{
+  min-height:42px;
+  border:2px solid #9eb3c5!important;
+  background:#f8fbff!important;
+  color:#10283f!important;
+  box-shadow:inset 0 1px 2px rgba(8,40,68,.05)!important;
+}
+.ref-quick-form input::placeholder{color:#657789!important;opacity:1!important}
+.ref-quick-form input:focus{
+  outline:3px solid rgba(212,165,31,.28)!important;
+  outline-offset:1px!important;
+  border-color:#9a7200!important;
+  background:#fff!important;
+}
+.ref-quick-form button{
+  min-height:42px;
+  background:#082844!important;
+  color:#fff!important;
+  border:2px solid #082844!important;
+  box-shadow:0 3px 8px rgba(8,40,68,.16)!important;
+}
+.ref-keywords button{
+  border:1px solid #9fb0bf!important;
+  background:#fff!important;
+  color:#16334c!important;
+  font-weight:700!important;
+}
+
+@media(max-width:620px){
+  .ref-panel:first-child{
+    padding:18px 16px 17px!important;
+    border-width:2px!important;
+    border-radius:14px!important;
+    background:linear-gradient(160deg,#fff1b9 0%,#fff9e8 42%,#f5faff 100%)!important;
+    box-shadow:0 10px 26px rgba(8,40,68,.16)!important;
+  }
+  .ref-panel:first-child:before{
+    content:'大学名・学部・キーワードから検索';
+    display:block;
+    margin:-4px 0 7px;
+    color:#705000;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.02em;
+  }
+  .ref-panel:first-child h3{
+    margin-bottom:11px!important;
+    font-size:1.08rem!important;
+  }
+  .ref-quick-form{
+    grid-template-columns:minmax(0,1fr) 76px!important;
+    gap:8px!important;
+  }
+  .ref-quick-form input,
+  .ref-quick-form button{
+    min-height:46px!important;
+    font-size:.9rem!important;
+  }
+  .ref-quick-form input{
+    border-color:#718ca3!important;
+    border-radius:9px!important;
+    padding:10px 12px!important;
+  }
+  .ref-quick-form button{
+    border-radius:9px!important;
+    font-size:.86rem!important;
+  }
+  .ref-keywords{
+    margin-top:11px!important;
+    gap:7px!important;
+  }
+  .ref-keywords button{
+    padding:6px 11px!important;
+    border-color:#8da2b4!important;
+    box-shadow:0 1px 3px rgba(8,40,68,.06)!important;
+  }
+}
