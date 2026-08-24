@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>大学写真クイック登録 | Ban.Tai</title>
   <meta name="robots" content="noindex,nofollow">
-  <link rel="stylesheet" href="photo-register.css?v=20260824-1134">
+  <link rel="stylesheet" href="photo-register.css?v=20260824-1141">
 </head>
 <body>
   <header class="topbar">
@@ -16,21 +16,42 @@
     <section class="hero">
       <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
       <h1>大学写真クイック登録</h1>
-      <p>写真を1回登録すると、大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。複数写真もまとめて処理できます。</p>
-      <div class="rule-badges"><span>✓ 一覧＋詳細を同時反映</span><span>✓ 複数写真を一括登録</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
+      <p>写真からでも、大学からでも始められます。登録後は大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。</p>
+      <div class="rule-badges"><span>✓ 写真→大学</span><span>✓ 大学→写真</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
     </section>
 
     <section class="batch panel">
       <div class="section-head">
-        <div><span class="step">STEP 1</span><h2>写真をまとめて入れる</h2></div>
+        <div><span class="step">STEP 1</span><h2>写真または大学から始める</h2></div>
         <button id="clear-batch" type="button" class="secondary">すべてクリア</button>
       </div>
-      <label class="drop batch-drop" id="drop-zone" for="photo-input">
-        <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
-        <strong>写真をまとめてここへドロップ</strong>
-        <span>1枚でも複数枚でも可。ファイル名に「u000094」や「亜細亜大学」があれば自動で大学を割り当てます。</span>
-        <small>JPEG / PNG / WebP</small>
-      </label>
+      <p class="muted">どちらの順番でも登録できます。写真を先に入れて後から大学を探す方法と、大学を先に選んで写真を付ける方法の両方に対応します。</p>
+
+      <div class="start-choice-grid">
+        <section class="start-choice" aria-labelledby="photo-first-title">
+          <div class="start-choice-head"><span class="start-number">A</span><div><strong id="photo-first-title">写真から始める</strong><small>写真 → 大学検索・選択</small></div></div>
+          <label class="drop batch-drop" id="drop-zone" for="photo-input">
+            <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+            <strong>写真をここへドロップ</strong>
+            <span>1枚でも複数枚でも可。入れた後、各写真の大学名を文字検索またはプルダウンから選べます。</span>
+            <small>JPEG / PNG / WebP</small>
+          </label>
+        </section>
+
+        <section class="start-choice university-first" aria-labelledby="university-first-title">
+          <div class="start-choice-head"><span class="start-number">B</span><div><strong id="university-first-title">大学から始める</strong><small>大学検索・選択 → 写真</small></div></div>
+          <label class="field university-first-field">大学名・大学IDを入力して検索
+            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：亜細亜大学 / u000094" aria-label="先に大学名または大学IDを検索">
+          </label>
+          <label class="field university-first-field">144大学から選択
+            <select id="university-first-select" aria-label="144大学から先に選択"><option value="">大学一覧を読み込み中…</option></select>
+          </label>
+          <input id="university-first-photo" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+          <button id="university-first-photo-button" class="primary university-first-button" type="button" disabled>この大学の写真を選ぶ</button>
+          <p id="university-first-status" class="assign-help">大学を検索またはプルダウンから選択してください。</p>
+        </section>
+      </div>
+
       <div class="batch-summary"><strong id="batch-count">0枚</strong><span id="batch-status">写真未選択</span></div>
       <div id="batch-list" class="batch-list" aria-live="polite"></div>
     </section>
@@ -38,9 +59,9 @@
     <section id="photo-editor" class="grid edit-grid" tabindex="-1">
       <div class="panel controls">
         <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
-        <p class="muted">一覧の「編集」を押すと、この補正画面へ移動します。通常は無調整のまま一括生成できます。</p>
+        <p class="muted">写真一覧の「編集」を押すと、この補正画面へ移動します。大学名はここでも変更できます。</p>
         <label class="field">大学名を入力して検索
-          <input id="editor-university-search" type="text" autocomplete="off" placeholder="先に写真を入れてください" aria-label="編集対象の大学名または大学IDを入力">
+          <input id="editor-university-search" type="text" autocomplete="off" placeholder="大学名・大学IDを入力" aria-label="編集対象の大学名または大学IDを入力">
         </label>
         <label class="field">候補から選択<select id="university-select" disabled><option>写真を選択してください</option></select></label>
         <div id="file-info" class="file-info">編集対象なし</div>
@@ -104,7 +125,8 @@
       <p><strong>構造:</strong> 1大学につき1つの共通写真レコードを登録し、一覧カードと詳細画面が同じ写真を参照します。</p>
     </section>
   </main>
-  <script src="photo-register.js?v=20260824-1134"></script>
-  <script src="editor-university-search.js?v=20260824-1134"></script>
+  <script src="photo-register.js?v=20260824-1141"></script>
+  <script src="editor-university-search.js?v=20260824-1141"></script>
+  <script src="university-first-entry.js?v=20260824-1141"></script>
 </body>
 </html>
