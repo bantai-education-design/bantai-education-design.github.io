@@ -7,6 +7,8 @@ on:
       - 'tools/university-database/tokyo/detail.html'
       - 'tools/university-database/tokyo/assets/detail.css'
       - 'tools/university-database/tokyo/assets/detail-photo-preview.js'
+      - 'tools/university-database/tokyo/assets/detail-photo-emphasis.css'
+      - 'tools/university-database/tokyo/assets/detail-stat-readability.js'
       - '.github/workflows/university-photo-real-preview-guard.yml'
 
 jobs:
@@ -104,22 +106,42 @@ jobs:
               const hero=document.querySelector('.detail-hero.photo-preview-active');
               return !!hero?.querySelector('.detail-photo-preview-gallery')&&hero.querySelectorAll('.detail-photo-preview-thumb').length===expected;
             },expectedThumbs,{timeout:15000});
+            await preview.waitForFunction(()=>[...document.querySelectorAll('.detail-stat small')].some(x=>x.textContent.trim()==='学部数'),{timeout:15000});
             const layout=await preview.evaluate(()=>{
               const hero=document.querySelector('.detail-hero.photo-preview-active');
               const gallery=hero?.querySelector('.detail-photo-preview-gallery');
               const thumb=hero?.querySelector('.detail-photo-preview-thumb');
               const thumbs=hero?.querySelector('.detail-photo-preview-thumbs');
-              if(!hero||!gallery||!thumb||!thumbs)return null;
-              return {position:getComputedStyle(gallery).position,controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,heroHeight:Math.round(hero.getBoundingClientRect().height),galleryHeight:Math.round(gallery.getBoundingClientRect().height),thumbWidth:Math.round(thumb.getBoundingClientRect().width)};
+              const side=hero?.querySelector('.detail-hero-side');
+              const faculty=[...hero?.querySelectorAll('.detail-stat')||[]].find(x=>x.querySelector('small')?.textContent.trim()==='学部数');
+              const facultyLabel=faculty?.querySelector('small');
+              const facultyValue=faculty?.querySelector('strong');
+              if(!hero||!gallery||!thumb||!thumbs||!side||!facultyLabel||!facultyValue)return null;
+              return {
+                position:getComputedStyle(gallery).position,
+                controlsZ:Number(getComputedStyle(thumbs).zIndex)||0,
+                heroHeight:Math.round(hero.getBoundingClientRect().height),
+                sideHeight:Math.round(side.getBoundingClientRect().height),
+                galleryHeight:Math.round(gallery.getBoundingClientRect().height),
+                thumbWidth:Math.round(thumb.getBoundingClientRect().width),
+                facultyValue:facultyValue.textContent.trim(),
+                facultyLabelColor:getComputedStyle(facultyLabel).color
+              };
             });
             assert.ok(layout);
             assert.equal(layout.position,'absolute');
             assert.equal(layout.galleryHeight,layout.heroHeight);
             assert.ok(layout.controlsZ>=2);
-            assert.ok(layout.thumbWidth<=70);
+            assert.ok(layout.thumbWidth>=90&&layout.thumbWidth<=104,'desktop photo thumbnails must be large enough to inspect');
+            assert.ok(layout.sideHeight<layout.heroHeight-40,'stat panel must not occupy the full photo hero height');
+            assert.match(layout.facultyValue,/^(?:\d[\d,]*学部|更新中|該当なし)$/,'faculty count must explain its unit');
+            assert.notEqual(layout.facultyLabelColor,'rgb(232, 238, 244)','stat label must not be pale text on a light card');
             await preview.locator('.detail-photo-preview-thumb').last().click();
             assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
             await preview.setViewportSize({width:375,height:900});
+            await preview.waitForTimeout(100);
+            const mobileThumbWidth=await preview.locator('.detail-photo-preview-thumb').first().evaluate(el=>Math.round(el.getBoundingClientRect().width));
+            assert.ok(mobileThumbWidth>=68,'mobile thumbnails must remain visibly selectable');
             assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
