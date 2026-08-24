@@ -3,6 +3,7 @@ name: University photo quick register guard
 on:
   pull_request:
     paths:
+      - 'databases/index.html'
       - 'tools/university-database/tokyo/photo-register/**'
       - 'tools/university-database/tokyo/data/user-photo-overrides.json'
       - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
@@ -12,6 +13,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'databases/index.html'
       - 'tools/university-database/tokyo/photo-register/**'
       - 'tools/university-database/tokyo/data/user-photo-overrides.json'
       - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
@@ -37,6 +39,7 @@ jobs:
           const js=fs.readFileSync('tools/university-database/tokyo/photo-register/photo-register.js','utf8');
           const detail=fs.readFileSync('tools/university-database/tokyo/assets/detail-layer.js','utf8');
           const overlay=fs.readFileSync('tools/university-database/tokyo/assets/ai-card-images.js','utf8');
+          const gateway=fs.readFileSync('databases/index.html','utf8');
           const rows=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8'));
           assert.equal(rows.length,144,'Tokyo university list must stay 144');
           assert.match(html,/type="file"[^>]+multiple hidden/,'multiple photo input required');
@@ -55,7 +58,9 @@ jobs:
           assert.ok(overlay.includes('window.__universityOwnerPhotos.set(id,record)'),'owner photo must persist independently of async image reloads');
           assert.ok(detail.includes('window.__universityOwnerPhotos?.get(row.id)'),'detail must prioritize persistent owner photo');
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
-          console.log('batch quick register architecture validated');
+          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/"/,'gateway must expose quick register entrance');
+          assert.ok(gateway.includes('大学写真クイック登録'),'gateway entrance label required');
+          console.log('batch quick register architecture and entrance validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -65,7 +70,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-register-site.log 2>&1 &
           sleep 2
-      - name: Verify two-photo batch, ZIP readiness and shared detail image
+      - name: Verify entrance, two-photo batch, ZIP readiness and shared detail image
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -73,8 +78,15 @@ jobs:
           const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
           (async()=>{
             const browser=await chromium.launch({headless:true});
+            const gateway=await browser.newPage({viewport:{width:1366,height:800}});
+            await gateway.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
+            const entrance=gateway.locator('a[href="/tools/university-database/tokyo/photo-register/"]');
+            assert.equal(await entrance.count(),1,'quick register entrance on database gateway');
+            assert.ok((await entrance.innerText()).includes('大学写真クイック登録'));
+
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-select option').length===145,{timeout:10000});
             await page.setInputFiles('#photo-input',[
               {name:'u000094-亜細亜大学.png',mimeType:'image/png',buffer:png},
               {name:'u000001-東京大学.png',mimeType:'image/png',buffer:png}
