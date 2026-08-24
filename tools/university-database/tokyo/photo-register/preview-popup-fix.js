@@ -13,8 +13,9 @@ const rowBlob=async row=>{
   if(!res.ok)throw new Error('写真を取得できません');
   return res.blob();
 };
+const displayUrl=url=>/^(?:https?:|data:|blob:)/i.test(url)?url:`../${url}`;
 const urlBlob=async url=>{
-  const res=await fetch(url,{cache:'no-store'});
+  const res=await fetch(displayUrl(url),{cache:'no-store'});
   if(!res.ok)throw new Error('現在の登録写真を取得できません');
   return res.blob();
 };
@@ -40,15 +41,13 @@ button.addEventListener('click',async e=>{
   try{
     const mainChoice=helper?.getChoice?.()||{type:'new',key:''};
     const photos=[];
-
     for(const photo of existingPhotos.slice(0,5)){
       photos.push({
-        blob:await urlBlob(`../${photo.image_url}`),
+        blob:await urlBlob(photo.image_url),
         main:mainChoice.type==='existing'&&mainChoice.key===photo.image_url,
-        source:'existing'
+        source:photo.origin||'existing'
       });
     }
-
     const remaining=Math.max(0,5-photos.length);
     for(const row of allRows.slice(0,remaining)){
       photos.push({
@@ -64,11 +63,7 @@ button.addEventListener('click',async e=>{
     channel=new BroadcastChannel(`university-photo-preview-${token}`);
     const target=`../detail.html?id=${encodeURIComponent(universityId)}&photo_preview_token=${encodeURIComponent(token)}`;
     let sent=0;
-    const send=()=>{
-      if(sent++>15)return;
-      channel.postMessage({universityId,photos});
-      setTimeout(send,400);
-    };
+    const send=()=>{if(sent++>15)return;channel.postMessage({universityId,photos});setTimeout(send,400);};
     channel.onmessage=event=>{
       if(event.data?.type==='receiver-ready'||event.data?.type==='ready'){
         channel.postMessage({universityId,photos});
