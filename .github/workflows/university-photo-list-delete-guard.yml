@@ -1,0 +1,77 @@
+name: University photo list delete guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-list-delete-guard.yml'
+
+jobs:
+  list-delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-list-delete.log 2>&1 &
+          sleep 2
+      - name: Verify list delete is separate from main selection
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'));
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.waitForFunction(()=>document.querySelectorAll('.photo-choice-delete-wrap').length>=2,{timeout:10000});
+
+            await page.setInputFiles('#photo-input',{name:'asia-added.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.photo-choice-delete-wrap').length>=3,{timeout:10000});
+
+            assert.equal(await page.locator('.batch-row').count(),1,'newly added photo row must exist before deleting an existing photo');
+            const newCard=page.locator('.main-photo-choice-card[data-main-type="new"]').first();
+            const newKey=await newCard.getAttribute('data-main-key');
+            assert.ok(newKey,'new photo key required');
+
+            const existingWrap=page.locator('.photo-choice-delete-wrap').filter({has:page.locator('.main-photo-choice-card[data-main-type="existing"]')}).last();
+            const existingCard=existingWrap.locator('.main-photo-choice-card');
+            const deletedExistingKey=await existingCard.getAttribute('data-main-key');
+            assert.ok(deletedExistingKey,'existing photo key required');
+            const wasExistingMain=await existingCard.evaluate(el=>el.classList.contains('active'));
+            await existingWrap.locator('.photo-list-delete').click();
+
+            assert.equal(await page.locator('.batch-row').count(),1,'deleting an existing candidate must not delete the newly added photo row');
+            assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="new"][data-main-key="${newKey}"]`).count(),1,'newly added photo must remain visible');
+            assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="existing"][data-main-key="${deletedExistingKey}"]`).count(),0,'the exact existing photo chosen for deletion must be removed');
+            assert.ok(await page.locator('.main-photo-choice-card').count()>=2,'other photo candidates must remain');
+            assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'one main photo must remain selected after deletion');
+            if(!wasExistingMain){
+              assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"].active').count(),0,'deleting a sub existing photo must not promote the new photo automatically');
+            }
+
+            const currentMain=page.locator('.main-photo-choice-card.active').first();
+            const mainKeyBefore=await currentMain.getAttribute('data-main-key');
+            const subExistingWrap=page.locator('.photo-choice-delete-wrap').filter({has:page.locator('.main-photo-choice-card[data-main-type="existing"]:not(.active)')}).first();
+            if(await subExistingWrap.count()){
+              const secondDeletedKey=await subExistingWrap.locator('.main-photo-choice-card').getAttribute('data-main-key');
+              await subExistingWrap.locator('.photo-list-delete').click();
+              assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="existing"][data-main-key="${secondDeletedKey}"]`).count(),0,'second selected existing photo must also be removed');
+              assert.equal(await page.locator('.main-photo-choice-card.active').first().getAttribute('data-main-key'),mainKeyBefore,'deleting a sub photo must not change main selection');
+              assert.equal(await page.locator(`.main-photo-choice-card[data-main-type="new"][data-main-key="${newKey}"]`).count(),1,'new photo must still remain after a second existing delete');
+            }
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
