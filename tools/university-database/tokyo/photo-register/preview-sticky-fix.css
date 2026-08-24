@@ -25,23 +25,25 @@
   .preview-shell{max-height:calc(100vh - 190px)}
 }
 
-.existing-photo-choice{margin:16px 0 4px;padding:13px;border:1px solid #4c4329;border-radius:13px;background:#11120e}
-.existing-photo-title{display:grid;gap:4px;margin-bottom:10px}
-.existing-photo-title strong{font-size:.92rem}
-.existing-photo-card{display:grid;grid-template-columns:100px minmax(0,1fr) auto;gap:12px;align-items:center}
-.existing-photo-card img{width:100px;aspect-ratio:16/9;object-fit:cover;border-radius:9px;border:1px solid #3b3f48}
-.existing-photo-copy{display:grid;gap:4px;min-width:0}
-.existing-photo-copy strong{color:#fff}
-.existing-photo-copy small{color:var(--muted);line-height:1.5}
-.existing-main-button{white-space:nowrap}
-.existing-main-button.active{background:linear-gradient(135deg,#b88a2b,#e0bd65)!important;color:#0b0b0c!important;border-color:#e8c976!important}
+.existing-photo-choice{margin:16px 0 4px;padding:14px;border:1px solid #4c4329;border-radius:13px;background:#11120e}
+.existing-photo-title{display:grid;gap:4px;margin-bottom:12px}
+.existing-photo-title strong{font-size:.96rem}
+.existing-photo-title small{color:var(--muted);line-height:1.5}
+.main-photo-choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.main-photo-choice-card{display:grid;gap:7px;text-align:left;padding:9px;border:1px solid #343742;background:#0b0d12;color:var(--text);border-radius:12px;min-width:0}
+.main-photo-choice-card:hover{border-color:#796431}
+.main-photo-choice-card.active{border-color:#e0bd65;box-shadow:0 0 0 2px rgba(224,189,101,.18);background:#17140b}
+.main-photo-choice-image{position:relative;display:block;aspect-ratio:16/9;border-radius:9px;overflow:hidden;background:#050608}
+.main-photo-choice-image img{width:100%;height:100%;object-fit:cover;display:block}
+.main-photo-check{position:absolute;left:7px;bottom:7px;padding:5px 7px;border-radius:999px;background:rgba(8,9,12,.86);border:1px solid rgba(255,255,255,.18);font-size:.68rem;color:#fff}
+.main-photo-choice-card.active .main-photo-check{background:#d7b45a;color:#0a0b0f;border-color:#f0d98b;font-weight:800}
+.main-photo-choice-card strong{font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.main-photo-choice-card small{font-size:.7rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .finish-edit-register-wrap{display:grid;gap:7px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
 .finish-edit-register{width:100%;min-height:48px;font-size:1rem}
 .finish-edit-register-wrap small{color:var(--muted);line-height:1.5}
 .export-panel.register-target{outline:2px solid var(--gold);outline-offset:3px}
 
 @media(max-width:800px){
-  .existing-photo-card{grid-template-columns:82px 1fr}
-  .existing-photo-card img{width:82px}
-  .existing-main-button{grid-column:1/-1;width:100%}
+  .main-photo-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
