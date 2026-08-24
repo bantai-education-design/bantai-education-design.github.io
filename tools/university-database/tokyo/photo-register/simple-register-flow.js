@@ -14,12 +14,9 @@ const addButton=document.querySelector('#university-first-photo-button');
 const uploadZone=document.querySelector('#drop-zone');
 const mainFile=document.querySelector('#photo-input');
 const status=document.querySelector('#university-first-status');
-const batchCount=document.querySelector('#batch-count');
-const batchStatus=document.querySelector('#batch-status');
 const editor=document.querySelector('#photo-editor');
 const editorStep=editor?.querySelector('.section-head .step');
 const editorHeading=editor?.querySelector('.section-head h2');
-const exportPanel=document.querySelector('.export-panel');
 if(!batch||!university||!search||!select||!addButton||!uploadZone||!mainFile)return;
 
 if(head)head.textContent='大学写真を登録';
@@ -134,8 +131,6 @@ function update(){
     targetBanner.classList.toggle('is-selected',selected);
     targetBanner.querySelector('strong').textContent=selected?selectedName:'大学を選んでください';
   }
-  if(batchCount)batchCount.textContent=`追加写真 ${photoCount}枚`;
-  if(batchStatus)batchStatus.textContent='';
   university.classList.toggle('simple-university-selected',selected);
   addButton.disabled=!selected;
   mainFile.disabled=!selected;
