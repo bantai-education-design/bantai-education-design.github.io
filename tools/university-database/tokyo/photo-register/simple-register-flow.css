@@ -1,8 +1,8 @@
-/* Simplified owner workflow: one visible path, fixed DOM order. */
+/* Simplified owner workflow: one visible path, fixed DOM and visual order. */
 .start-choice-grid{display:block!important}
 .start-choice-grid>.start-choice:first-child{display:none!important}
 .university-first{max-width:none!important;border:1px solid rgba(215,180,90,.7)!important;background:linear-gradient(180deg,rgba(215,180,90,.08),rgba(10,12,18,.2))!important;display:flex!important;flex-direction:column!important}
-.university-first .start-choice-head{margin-bottom:14px}
+.university-first .start-choice-head{order:0;margin-bottom:14px}
 .university-first .start-choice-head .start-number{display:none}
 .university-first .start-choice-head strong{font-size:1.15rem}
 .university-first .start-choice-head small{display:block;margin-top:4px;color:var(--muted)}
@@ -10,6 +10,7 @@
 .university-first-field:nth-of-type(2){order:1;font-size:1rem;font-weight:800;color:#fff}
 #university-first-select{min-height:54px!important;font-size:1rem!important;border:2px solid #d7b45a!important;background:#090b10!important;color:#fff!important}
 #university-first-status{order:2;margin:10px 0 0;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.035);color:#d9deea}
+.university-first>#existing-photo-choice{order:3}
 .batch>.muted{font-size:.9rem}
 #existing-photo-choice{margin-top:18px!important;border:1px solid rgba(215,180,90,.6)!important;background:rgba(215,180,90,.04)!important}
 #existing-photo-choice .existing-photo-title strong::before{content:'STEP 2　';color:#d7b45a;letter-spacing:.08em}
