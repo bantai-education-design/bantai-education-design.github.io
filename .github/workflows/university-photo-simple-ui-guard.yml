@@ -1,0 +1,66 @@
+name: University photo simple UI guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-simple-ui-guard.yml'
+
+jobs:
+  simple-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-simple-ui.log 2>&1 &
+          sleep 2
+      - name: Verify one university, compact photos, and four visible steps
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900},acceptDownloads:true});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            await page.waitForSelector('#simple-register-progress');
+            assert.equal(await page.locator('#simple-register-progress li').count(),4,'four visible steps required');
+            assert.equal(await page.locator('.start-choice-grid>.start-choice:first-child').isVisible(),false,'obsolete photo-first choice must stay hidden');
+
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.waitForFunction(()=>document.querySelector('#simple-current-university')?.textContent.includes('立教大学'));
+            assert.ok((await page.locator('#simple-current-university').innerText()).includes('立教大学'),'selected university must be prominent');
+
+            await page.setInputFiles('#photo-input',{name:'rikkyo-test.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            assert.equal(await page.locator('#batch-count').innerText(),'1枚','core photo counter must stay compatible');
+            assert.equal(await page.locator('.batch-row .row-university').inputValue(),'u000083','selected university must still be assigned internally');
+            assert.equal(await page.locator('.batch-row .university-assign').isVisible(),false,'per-photo university reassignment must not clutter single-university UI');
+            assert.equal(await page.locator('.batch-row .batch-main>small').isVisible(),false,'technical SHA details must stay hidden in single-university UI');
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===1,{timeout:10000});
+            assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo must be visible');
+
+            assert.equal((await page.locator('#photo-editor .section-head .step').innerText()).trim(),'STEP 3');
+            await page.waitForFunction(()=>document.querySelector('.export-panel .section-head .step')?.textContent.trim()==='STEP 4',{timeout:10000});
+            assert.equal(await page.locator('#photo-editor label:has(#editor-university-search)').isVisible(),false,'single-university editor must not ask for university a second time');
+            assert.equal(await page.locator('#photo-editor label:has(#university-select)').isVisible(),false,'single-university editor dropdown must stay hidden');
+
+            await page.locator('#mode-batch').click();
+            assert.equal(await page.locator('.batch-row .university-assign').isVisible(),true,'batch mode compatibility must remain available');
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

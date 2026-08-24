@@ -64,13 +64,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-simple-register-flow]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260824-2002';
+    link.href='simple-register-flow.css?v=20260824-2350';
     link.dataset.simpleRegisterFlow='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-simple-register-flow]')){
     const simple=document.createElement('script');
-    simple.src='simple-register-flow.js?v=20260824-2002';
+    simple.src='simple-register-flow.js?v=20260824-2350';
     simple.defer=true;
     simple.dataset.simpleRegisterFlow='true';
     document.body.appendChild(simple);
@@ -84,7 +84,7 @@ queueMicrotask(()=>{
   }
   if(!document.querySelector('script[data-one-click-register]')){
     const one=document.createElement('script');
-    one.src='one-click-register.js?v=20260824-2254';
+    one.src='one-click-register.js?v=20260824-2350';
     one.defer=true;
     one.dataset.oneClickRegister='true';
     document.body.appendChild(one);
