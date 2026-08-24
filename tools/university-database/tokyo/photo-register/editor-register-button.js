@@ -27,7 +27,7 @@ async function loadRegistry(){
   return registry;
 }
 
-function ensureExistingBox(){
+function ensureChoiceBox(){
   let box=document.querySelector('#existing-photo-choice');
   if(box)return box;
   box=document.createElement('section');
@@ -39,7 +39,7 @@ function ensureExistingBox(){
   return box;
 }
 
-function syncNewButtons(){
+function syncLegacyButtons(){
   const rows=[...list.querySelectorAll('.batch-row')];
   for(const row of rows){
     const btn=row.querySelector('.photo-main-button');
@@ -50,25 +50,49 @@ function syncNewButtons(){
   }
 }
 
-function renderExisting(){
-  const box=ensureExistingBox();
-  if(!currentRecord){
+function escapeAttr(value){
+  return String(value||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function selectChoice(type,key=''){
+  choice={type,key};
+  renderChoices();
+  syncLegacyButtons();
+}
+
+function renderChoices(){
+  const box=ensureChoiceBox();
+  const rows=[...list.querySelectorAll('.batch-row')];
+  if(!currentRecord&&!rows.length){
     box.hidden=true;
     box.innerHTML='';
-    syncNewButtons();
     return;
   }
-  const active=choice.type==='existing';
-  const src=`../${currentRecord.image_url}`;
-  const alt=String(currentRecord.alt||currentRecord.university_name||'現在の登録写真').replace(/"/g,'&quot;');
+
   box.hidden=false;
-  box.innerHTML=`<div class="existing-photo-title"><span class="step">メイン写真を選択</span><strong>既存写真または今回追加した写真から1枚選べます</strong></div><div class="existing-photo-card"><img src="${src}" alt="${alt}"><div class="existing-photo-copy"><strong>現在の登録写真</strong><small>${currentRecord.university_name||''}<br>この写真をメインのまま残すこともできます。</small></div><button id="existing-main-button" class="secondary existing-main-button${active?' active':''}" type="button">${active?'★ 現在の写真をメイン':'☆ 現在の写真をメインにする'}</button></div>`;
-  box.querySelector('#existing-main-button').addEventListener('click',()=>{
-    choice={type:'existing',key:''};
-    renderExisting();
-    syncNewButtons();
-  });
-  syncNewButtons();
+  const cards=[];
+  if(currentRecord){
+    const src=`../${currentRecord.image_url}`;
+    const active=choice.type==='existing';
+    cards.push(`<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="existing" aria-pressed="${active}"><span class="main-photo-choice-image"><img src="${escapeAttr(src)}" alt="${escapeAttr(currentRecord.alt||currentRecord.university_name||'現在の登録写真')}"><span class="main-photo-check">${active?'★ メイン':'クリックして選択'}</span></span><strong>現在の登録写真</strong><small>${escapeAttr(currentRecord.university_name||'')}</small></button>`);
+  }
+  for(const row of rows){
+    const key=row.dataset.key||'';
+    const img=row.querySelector('.thumb img');
+    if(!img?.src)continue;
+    const active=choice.type==='new'&&choice.key===key;
+    const filename=row.querySelector('.batch-main strong')?.textContent?.trim()||'今回追加した写真';
+    cards.push(`<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="new" data-main-key="${escapeAttr(key)}" aria-pressed="${active}"><span class="main-photo-choice-image"><img src="${escapeAttr(img.src)}" alt="${escapeAttr(filename)}"><span class="main-photo-check">${active?'★ メイン':'クリックして選択'}</span></span><strong>今回追加</strong><small>${escapeAttr(filename)}</small></button>`);
+  }
+
+  box.innerHTML=`<div class="existing-photo-title"><span class="step">メイン写真を選択</span><strong>写真を1枚クリックしてください</strong><small>現在の写真でも、今回追加した写真でも選べます。★が付いた1枚が一覧カードと詳細ページの背景になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
+  for(const card of box.querySelectorAll('.main-photo-choice-card')){
+    card.addEventListener('click',()=>{
+      const type=card.dataset.mainType;
+      selectChoice(type,type==='new'?(card.dataset.mainKey||''):'');
+    });
+  }
+  syncLegacyButtons();
 }
 
 async function refreshUniversity(){
@@ -83,7 +107,7 @@ async function refreshUniversity(){
     const first=list.querySelector('.batch-row');
     choice={type:'new',key:first?.dataset.key||''};
   }
-  renderExisting();
+  renderChoices();
 }
 
 firstSelect.addEventListener('change',()=>{
@@ -96,11 +120,7 @@ document.addEventListener('click',event=>{
   if(!btn)return;
   const row=btn.closest('.batch-row');
   if(!row)return;
-  queueMicrotask(()=>{
-    choice={type:'new',key:row.dataset.key||''};
-    renderExisting();
-    syncNewButtons();
-  });
+  queueMicrotask(()=>selectChoice('new',row.dataset.key||''));
 },true);
 
 new MutationObserver(()=>{
@@ -109,7 +129,7 @@ new MutationObserver(()=>{
     if(choice.key&&!rows.some(r=>(r.dataset.key||'')===choice.key))choice={type:'new',key:rows[0]?.dataset.key||''};
     if(!choice.key&&rows.length&&!currentRecord)choice={type:'new',key:rows[0].dataset.key||''};
   }
-  renderExisting();
+  renderChoices();
 }).observe(list,{childList:true});
 
 if(!document.querySelector('#finish-edit-register')){
