@@ -99,6 +99,8 @@ jobs:
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?v=20260824-1128',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('#university-select option').length===145,{timeout:10000});
+            await page.waitForSelector('#mode-batch');
+            await page.locator('#mode-batch').click();
             await page.setInputFiles('#photo-input',[
               {name:'u000094-亜細亜大学.png',mimeType:'image/png',buffer:png},
               {name:'u000001-東京大学.png',mimeType:'image/png',buffer:png}
@@ -118,12 +120,7 @@ jobs:
             assert.equal(await page.locator('#generate-batch').isEnabled(),true,'select assignment must remain usable');
 
             await first.locator('.edit-item').click();
-            await page.waitForFunction(()=>{
-              const el=document.querySelector('#photo-editor');
-              if(!el)return false;
-              const r=el.getBoundingClientRect();
-              return r.top<innerHeight&&r.bottom>0;
-            },{timeout:5000});
+            await page.waitForFunction(()=>{const el=document.querySelector('#photo-editor');if(!el)return false;const r=el.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0;},{timeout:5000});
             assert.equal(await page.locator('#rotate-right').isEnabled(),true,'rotation controls must enable for active photo');
             await page.click('#rotate-right');
             await page.locator('#tilt').fill('1.5');
