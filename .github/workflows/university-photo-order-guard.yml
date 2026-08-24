@@ -30,17 +30,24 @@ jobs:
           const css=fs.readFileSync('tools/university-database/tokyo/photo-register/simple-register-flow.css','utf8');
           assert.ok(html.includes('id="university-first-search"'),'typed university search required');
           assert.ok(html.includes('id="university-first-select"'),'university dropdown required');
-          assert.ok(html.includes('id="university-first-photo-button"'),'photo add button required');
+          assert.ok(html.includes('id="university-first-photo-button"'),'legacy photo add control required for compatibility');
+          assert.ok(html.includes('id="drop-zone"'),'shared drop zone required');
+          assert.ok(html.includes('id="photo-input"'),'shared file input required');
           assert.ok(simple.includes('searchLabel.hidden=false'),'typed search must be visible in STEP 1');
           assert.ok(simple.includes('文字入力または一覧のどちらか一方で選べます'),'single-choice guidance required');
           assert.ok(simple.includes('STEP 1　大学を選ぶ'),'step 1 label required');
           assert.ok(simple.includes('STEP 3'),'step 3 label required');
+          assert.ok(simple.includes('uploadZone.parentElement!==addStep'),'existing drop zone must move into STEP 3');
+          assert.ok(simple.includes("filePicker.textContent='ファイルを選択'"),'same upload zone must expose file selection');
+          assert.ok(simple.includes('mainFile.disabled=!selected'),'upload must follow selected university state');
+          assert.ok(css.includes('#simple-add-photo-step .simple-upload-zone'),'unified upload zone styling required');
+          assert.ok(css.includes('.simple-file-picker'),'file picker call-to-action required');
           assert.ok(css.includes('#existing-photo-choice .main-photo-choice-grid'),'compact photo picker rules required');
           assert.ok(css.includes('display:flex!important'),'photo picker must stay one horizontal row');
           assert.ok(css.includes('overflow-x:auto!important'),'photo picker must be horizontally scrollable');
           assert.ok(css.includes('flex:0 0 148px!important'),'desktop photo cards must remain compact');
           assert.ok(css.includes('flex-basis:126px!important'),'mobile photo cards must remain compact');
-          console.log('typed/dropdown selection and compact photo picker validated');
+          console.log('typed/dropdown selection, unified uploader and compact photo picker validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -50,7 +57,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-order.log 2>&1 &
           sleep 2
-      - name: Verify typed and dropdown STEP 1 flow
+      - name: Verify typed, dropdown, file and drop STEP flow
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -70,7 +77,6 @@ jobs:
             assert.equal(await select.isVisible(),true,'STEP 1 dropdown must be visible');
             assert.equal(await select.isEnabled(),true,'STEP 1 dropdown must be enabled');
 
-            // Japanese IME-style input: do not rewrite while composing; confirm after composition ends.
             await search.dispatchEvent('compositionstart');
             await search.fill('亜細亜大学');
             await search.dispatchEvent('compositionend');
@@ -82,32 +88,34 @@ jobs:
               const grid=document.querySelector('#existing-photo-choice .main-photo-choice-grid');
               const wrap=document.querySelector('#existing-photo-choice .photo-choice-delete-wrap');
               const style=grid?getComputedStyle(grid):null;
-              return {
-                display:style?.display||'',
-                overflowX:style?.overflowX||'',
-                width:wrap?.getBoundingClientRect().width||0
-              };
+              return {display:style?.display||'',overflowX:style?.overflowX||'',width:wrap?.getBoundingClientRect().width||0};
             });
             assert.equal(compact.display,'flex','photo picker must render as a horizontal strip');
             assert.ok(['auto','scroll'].includes(compact.overflowX),'photo picker must allow horizontal scrolling');
             assert.ok(compact.width>0&&compact.width<=160,'photo cards must stay compact');
 
-            // Dropdown remains an equivalent alternative, not a second required step.
             await select.selectOption('u000001');
             await page.waitForFunction(()=>document.querySelector('#university-first-search')?.value.includes('東京大学'),{timeout:5000});
             assert.equal(await select.inputValue(),'u000001','dropdown selection must work independently');
             await select.selectOption('u000094');
             await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:5000});
-            assert.equal(await page.locator('#university-first-photo-button').isEnabled(),true);
+
+            const upload=page.locator('#drop-zone');
+            assert.equal(await upload.isVisible(),true,'STEP 3 unified upload zone must be visible');
+            assert.equal(await page.locator('#photo-input').isEnabled(),true,'file input must be enabled after university selection');
+            assert.ok((await upload.innerText()).includes('ここに写真をドロップ'),'drop instruction must be visible');
+            assert.ok((await upload.innerText()).includes('ファイルを選択'),'file selection must be visible in the same zone');
 
             const order=await page.evaluate(()=>{
               const search=document.querySelector('#university-first-search');
               const select=document.querySelector('#university-first-select');
               const existing=document.querySelector('#existing-photo-choice');
               const add=document.querySelector('#simple-add-photo-step');
+              const upload=document.querySelector('#drop-zone');
               const panel=document.querySelector('.university-first');
               return {
                 existingInsidePanel:!!existing&&existing.parentElement===panel,
+                uploadInsideAdd:!!upload&&upload.parentElement===add,
                 searchTop:search?.getBoundingClientRect().top||0,
                 selectTop:select?.getBoundingClientRect().top||0,
                 existingTop:existing?.getBoundingClientRect().top||0,
@@ -115,13 +123,33 @@ jobs:
               };
             });
             assert.equal(order.existingInsidePanel,true,'STEP 2 must stay inside the university panel');
+            assert.equal(order.uploadInsideAdd,true,'drop/file chooser must be in STEP 3');
             assert.ok(order.searchTop<order.selectTop,'typed search must appear before the alternative dropdown');
             assert.ok(order.selectTop<order.existingTop,'STEP 1 controls must appear before STEP 2');
             assert.ok(order.existingTop<order.addTop,'STEP 2 must appear before STEP 3');
 
-            await page.setInputFiles('#university-first-photo',{name:'campus.png',mimeType:'image/png',buffer:png});
+            await page.setInputFiles('#photo-input',{name:'file-picker-campus.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
+
+            await page.evaluate(base64=>{
+              const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));
+              const dt=new DataTransfer();
+              dt.items.add(new File([bytes],'drop-campus.png',{type:'image/png'}));
+              const zone=document.querySelector('#drop-zone');
+              zone.dispatchEvent(new DragEvent('dragenter',{bubbles:true,cancelable:true,dataTransfer:dt}));
+              zone.dispatchEvent(new DragEvent('drop',{bubbles:true,cancelable:true,dataTransfer:dt}));
+            },png.toString('base64'));
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),{timeout:10000});
+
+            await page.setInputFiles('#university-first-photo',{name:'legacy-campus.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),{timeout:10000});
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'mobile uploader must not cause horizontal overflow');
+            assert.equal(await upload.isVisible(),true,'unified uploader must stay visible on mobile');
 
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
