@@ -40,7 +40,7 @@ function syncFirstUniversityFromRows(){
 
 firstSelect.addEventListener('change',()=>queueMicrotask(assignFirstUniversityToUnassigned));
 batchList.addEventListener('change',event=>{
-  if(event.target.matches?.('.row-university'))queueMicrotask(syncFirstUniversityFromRows());
+  if(event.target.matches?.('.row-university'))queueMicrotask(syncFirstUniversityFromRows);
 });
 new MutationObserver(()=>queueMicrotask(()=>{
   assignFirstUniversityToUnassigned();
