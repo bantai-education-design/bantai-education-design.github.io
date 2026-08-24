@@ -13,15 +13,18 @@ const rowBlob=async row=>{
   if(!res.ok)throw new Error('写真を取得できません');
   return res.blob();
 };
+const urlBlob=async url=>{
+  const res=await fetch(url,{cache:'no-store'});
+  if(!res.ok)throw new Error('現在の登録写真を取得できません');
+  return res.blob();
+};
 button.addEventListener('click',async e=>{
   e.preventDefault();
   e.stopImmediatePropagation();
-  const rows=[...list.querySelectorAll('.batch-row')].slice(0,5);
+  const allRows=[...list.querySelectorAll('.batch-row')];
   const universityId=firstSelect.value;
-  if(!rows.length||!universityId)return;
+  if(!allRows.length||!universityId)return;
 
-  // Open the tab synchronously while the click is still a trusted user gesture.
-  // This avoids popup blockers rejecting a window opened after async image preparation.
   const previewWindow=window.open('about:blank','_blank');
   if(!previewWindow){
     status.textContent='プレビュー画面を開けませんでした。ブラウザのポップアップ許可をご確認ください。';
@@ -33,14 +36,29 @@ button.addEventListener('click',async e=>{
   status.textContent='実画面プレビューを準備しています…';
 
   try{
+    const helper=window.__universityPhotoMainChoice;
+    const mainChoice=helper?.getChoice?.()||{type:'new',key:''};
+    const existingRecord=helper?.getExistingRecord?.()||null;
     const photos=[];
-    for(const row of rows){
+
+    if(existingRecord?.image_url){
+      photos.push({
+        blob:await urlBlob(`../${existingRecord.image_url}`),
+        main:mainChoice.type==='existing',
+        source:'existing'
+      });
+    }
+
+    const remaining=Math.max(0,5-photos.length);
+    for(const row of allRows.slice(0,remaining)){
       photos.push({
         blob:await rowBlob(row),
-        main:row.querySelector('.photo-main-button')?.classList.contains('active')||false
+        main:mainChoice.type==='new'&&mainChoice.key===(row.dataset.key||''),
+        source:'new'
       });
     }
     if(!photos.some(x=>x.main))photos[0].main=true;
+
     const token=(crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random()}`).replace(/[^a-zA-Z0-9-]/g,'');
     channel?.close();
     channel=new BroadcastChannel(`university-photo-preview-${token}`);
@@ -60,7 +78,7 @@ button.addEventListener('click',async e=>{
         }
       }
     };
-    previewWindow.location.replace(target);
+    previewWindow.location.href=target;
     send();
   }catch(err){
     console.error(err);
