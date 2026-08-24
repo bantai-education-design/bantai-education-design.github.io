@@ -44,11 +44,10 @@ function enforceOrder(){
   if(intro&&intro.nextElementSibling!==university){intro.insertAdjacentElement('afterend',university);moved=true;}
   const existing=existingBox();
   if(existing){
-    moved=placeAfter(university,existing)||moved;
-    moved=placeAfter(existing,addStep)||moved;
-  }else{
-    moved=placeAfter(university,addStep)||moved;
+    if(existing.parentElement!==university){university.appendChild(existing);moved=true;}
+    if(status&&status.nextElementSibling!==existing){status.insertAdjacentElement('afterend',existing);moved=true;}
   }
+  moved=placeAfter(university,addStep)||moved;
   return moved;
 }
 
