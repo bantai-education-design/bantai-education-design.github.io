@@ -27,7 +27,7 @@ jobs:
           assert.ok(js.includes('downloadZip.click()'),'one click action must reuse the existing safe package download');
           assert.ok(js.includes("{capture:true}"),'one click monitor must start before legacy generator disables the button');
           assert.ok(css.includes('#download-zip')&&css.includes('display:none!important'),'legacy download controls must be hidden');
-          assert.ok(loader.includes('one-click-register.js?v=20260824-2254'));
+          assert.match(loader,/one-click-register\.js\?v=\d{8}-\d{4}/,'one-click register loader must stay cache-busted');
           console.log('one-button registration source validated');
           NODE
       - name: Install Playwright Chromium
