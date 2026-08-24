@@ -27,13 +27,14 @@ jobs:
           const assert=require('node:assert/strict');
           const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
           const simple=fs.readFileSync('tools/university-database/tokyo/photo-register/simple-register-flow.js','utf8');
-          assert.ok(html.includes('id="university-first-select"'),'single university dropdown required');
+          assert.ok(html.includes('id="university-first-search"'),'typed university search required');
+          assert.ok(html.includes('id="university-first-select"'),'university dropdown required');
           assert.ok(html.includes('id="university-first-photo-button"'),'photo add button required');
-          assert.ok(html.includes('id="university-first-search"'),'legacy search element remains for compatibility');
-          assert.ok(simple.includes("searchLabel.hidden=true"),'legacy search must be hidden from normal flow');
+          assert.ok(simple.includes('searchLabel.hidden=false'),'typed search must be visible in STEP 1');
+          assert.ok(simple.includes('文字入力または一覧のどちらか一方で選べます'),'single-choice guidance required');
           assert.ok(simple.includes('STEP 1　大学を選ぶ'),'step 1 label required');
           assert.ok(simple.includes('STEP 3'),'step 3 label required');
-          console.log('simplified photo registration controls validated');
+          console.log('typed and dropdown university selection controls validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -43,7 +44,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-order.log 2>&1 &
           sleep 2
-      - name: Verify step 1 to step 3 order
+      - name: Verify typed and dropdown STEP 1 flow
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -54,31 +55,48 @@ jobs:
             const page=await browser.newPage({viewport:{width:1280,height:900}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.universityImeFix==='ready',{timeout:10000});
 
+            const search=page.locator('#university-first-search');
             const select=page.locator('#university-first-select');
+            assert.equal(await search.isVisible(),true,'STEP 1 typed search must be visible');
+            assert.equal(await search.isEnabled(),true,'STEP 1 typed search must be enabled');
             assert.equal(await select.isVisible(),true,'STEP 1 dropdown must be visible');
             assert.equal(await select.isEnabled(),true,'STEP 1 dropdown must be enabled');
-            assert.equal(await page.locator('#university-first-search').isVisible(),false,'optional search must not compete with STEP 1');
 
-            await select.selectOption('u000094');
+            // Japanese IME-style input: do not rewrite while composing; confirm after composition ends.
+            await search.dispatchEvent('compositionstart');
+            await search.fill('亜細亜大学');
+            await search.dispatchEvent('compositionend');
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
-            assert.equal(await select.inputValue(),'u000094');
+            assert.ok((await search.inputValue()).includes('亜細亜大学'),'typed path must retain the chosen university name');
+
+            // Dropdown remains an equivalent alternative, not a second required step.
+            await select.selectOption('u000001');
+            await page.waitForFunction(()=>document.querySelector('#university-first-search')?.value.includes('東京大学'),{timeout:5000});
+            assert.equal(await select.inputValue(),'u000001','dropdown selection must work independently');
+            await select.selectOption('u000094');
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:5000});
             assert.equal(await page.locator('#university-first-photo-button').isEnabled(),true);
 
             const order=await page.evaluate(()=>{
+              const search=document.querySelector('#university-first-search');
               const select=document.querySelector('#university-first-select');
               const existing=document.querySelector('#existing-photo-choice');
               const add=document.querySelector('#simple-add-photo-step');
               const panel=document.querySelector('.university-first');
               return {
                 existingInsidePanel:!!existing&&existing.parentElement===panel,
+                searchTop:search?.getBoundingClientRect().top||0,
                 selectTop:select?.getBoundingClientRect().top||0,
                 existingTop:existing?.getBoundingClientRect().top||0,
                 addTop:add?.getBoundingClientRect().top||0
               };
             });
             assert.equal(order.existingInsidePanel,true,'STEP 2 must stay inside the university panel');
-            assert.ok(order.selectTop<order.existingTop,'STEP 1 must appear before STEP 2');
+            assert.ok(order.searchTop<order.selectTop,'typed search must appear before the alternative dropdown');
+            assert.ok(order.selectTop<order.existingTop,'STEP 1 controls must appear before STEP 2');
             assert.ok(order.existingTop<order.addTop,'STEP 2 must appear before STEP 3');
 
             await page.setInputFiles('#university-first-photo',{name:'campus.png',mimeType:'image/png',buffer:png});

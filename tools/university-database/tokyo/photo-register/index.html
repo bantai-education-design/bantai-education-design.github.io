@@ -17,16 +17,16 @@
     <section class="hero">
       <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
       <h1>大学写真クイック登録</h1>
-      <p>写真からでも、大学からでも始められます。登録後は大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。</p>
-      <div class="rule-badges"><span>✓ 写真→大学</span><span>✓ 大学→写真</span><span>✓ 1大学1〜5枚</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
+      <p>大学を選んで、既存写真を確認し、必要な写真を追加します。登録後は大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。</p>
+      <div class="rule-badges"><span>✓ 大学名入力</span><span>✓ 一覧選択</span><span>✓ 1大学1〜5枚</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
     </section>
 
     <section class="batch panel">
       <div class="section-head">
-        <div><span class="step">STEP 1</span><h2>写真または大学から始める</h2></div>
+        <div><span class="step">STEP 1</span><h2>大学を選んで写真を登録する</h2></div>
         <button id="clear-batch" type="button" class="secondary">すべてクリア</button>
       </div>
-      <p class="muted">1大学だけ編集する場合は大学名を1回だけ指定します。複数大学を一括登録する場合は写真ごとに大学名を確認します。</p>
+      <p class="muted">大学名を入力するか一覧から1校選び、既存写真を確認してから必要な写真を追加します。</p>
 
       <div class="start-choice-grid">
         <section class="start-choice" aria-labelledby="photo-first-title">
@@ -40,16 +40,16 @@
         </section>
 
         <section class="start-choice university-first" aria-labelledby="university-first-title">
-          <div class="start-choice-head"><span class="start-number">B</span><div><strong id="university-first-title">大学から始める</strong><small>大学検索・選択 → 写真</small></div></div>
-          <label class="field university-first-field">大学名・大学IDを入力して検索
-            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：立教大学 / u000083" aria-label="先に大学名または大学IDを検索">
+          <div class="start-choice-head"><span class="start-number">B</span><div><strong id="university-first-title">STEP 1　大学を選ぶ</strong><small>文字入力または一覧のどちらか一方で選べます</small></div></div>
+          <label class="field university-first-field">大学名を入力して検索
+            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：亜細亜大学" aria-label="大学名または大学IDを入力して検索">
           </label>
-          <label class="field university-first-field">144大学から選択
-            <select id="university-first-select" aria-label="144大学から先に選択"><option value="">大学一覧を読み込み中…</option></select>
+          <label class="field university-first-field">または一覧から選択
+            <select id="university-first-select" aria-label="144大学から選択"><option value="">大学一覧を読み込み中…</option></select>
           </label>
           <input id="university-first-photo" type="file" accept="image/jpeg,image/png,image/webp" hidden>
           <button id="university-first-photo-button" class="primary university-first-button" type="button" disabled>この大学の写真を選ぶ</button>
-          <p id="university-first-status" class="assign-help">大学を検索またはプルダウンから選択してください。</p>
+          <p id="university-first-status" class="assign-help">大学名を入力するか、一覧から1校選んでください。</p>
         </section>
       </div>
 
@@ -129,7 +129,7 @@
   </main>
   <script src="photo-register.js?v=20260824-1549"></script>
   <script src="university-entry-controller.js?v=20260824-1549"></script>
-  <script src="university-selection-sync-fix.js?v=20260824-1808"></script>
+  <script src="university-selection-sync-fix.js?v=20260824-1858"></script>
   <script src="multi-photo-preview.js?v=20260824-1549"></script>
   <script src="preview-popup-fix.js?v=20260824-1549"></script>
   <script src="editor-register-button.js?v=20260824-1549"></script>
