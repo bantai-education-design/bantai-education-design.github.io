@@ -4,8 +4,9 @@ on:
   pull_request:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
-      - 'tools/university-database/tokyo/assets/detail-layer.js'
-      - 'tools/university-database/tokyo/assets/detail-layer.css'
+      - 'tools/university-database/tokyo/detail.html'
+      - 'tools/university-database/tokyo/assets/detail.css'
+      - 'tools/university-database/tokyo/assets/detail-photo-preview.js'
       - '.github/workflows/university-photo-real-preview-guard.yml'
 
 jobs:
@@ -25,7 +26,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-preview.log 2>&1 &
           sleep 2
-      - name: Verify real page background plus thumbnails preview
+      - name: Verify real detail page background plus thumbnails preview
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -48,17 +49,31 @@ jobs:
             const mainButtons=page.locator('.photo-main-button');
             await mainButtons.nth(1).click();
             assert.ok((await mainButtons.nth(1).innerText()).includes('メイン写真'));
+
             const popupPromise=ctx.waitForEvent('page');
             await page.locator('#open-real-preview').click();
             const preview=await popupPromise;
             await preview.waitForLoadState('domcontentloaded');
-            await preview.waitForSelector('#university-detail-dialog[open]',{timeout:15000});
-            await preview.waitForSelector('.detail-photo-gallery');
-            assert.equal(await preview.locator('.detail-photo-thumb').count(),3);
-            const h=await preview.locator('.detail-photo-gallery').evaluate(el=>Math.round(el.getBoundingClientRect().height));
-            assert.ok(h<=230,`gallery too tall: ${h}`);
-            await preview.locator('.detail-photo-thumb').nth(2).click();
-            assert.equal(await preview.locator('.detail-photo-thumb.active').count(),1);
+            assert.match(preview.url(),/detail\.html\?id=u000083&photo_preview_token=/,'preview must use the real detail page');
+            await preview.waitForSelector('.detail-hero.photo-preview-active',{timeout:15000});
+            await preview.waitForSelector('.detail-photo-preview-gallery');
+            assert.equal(await preview.locator('.detail-photo-preview-thumb').count(),3);
+            const layout=await preview.locator('.detail-photo-preview-gallery').evaluate(el=>({
+              position:getComputedStyle(el).position,
+              heroHeight:Math.round(el.parentElement.getBoundingClientRect().height),
+              galleryHeight:Math.round(el.getBoundingClientRect().height),
+              thumbWidth:Math.round(el.querySelector('.detail-photo-preview-thumb').getBoundingClientRect().width)
+            }));
+            assert.equal(layout.position,'absolute','gallery must be a background layer, not extra vertical content');
+            assert.equal(layout.galleryHeight,layout.heroHeight,'background must fill the existing hero without adding a section');
+            assert.ok(layout.thumbWidth<=70,`thumbnail too large: ${layout.thumbWidth}`);
+            await preview.locator('.detail-photo-preview-thumb').nth(2).click();
+            assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
+
+            await preview.setViewportSize({width:375,height:900});
+            assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'preview must not create mobile horizontal overflow');
+            const mobileThumb=await preview.locator('.detail-photo-preview-thumb').first().evaluate(el=>Math.round(el.getBoundingClientRect().width));
+            assert.ok(mobileThumb<=52,`mobile thumbnail too large: ${mobileThumb}`);
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
