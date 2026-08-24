@@ -1,0 +1,69 @@
+name: University photo main persistence guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/assets/detail-photo-preview.js'
+      - '.github/workflows/university-photo-main-persistence-guard.yml'
+
+jobs:
+  main-persistence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-main-persistence.log 2>&1 &
+          sleep 2
+      - name: Verify selected main preview and reload persistence
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const pngA=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          const pngB=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mP8z8Dwn4GBgYGJAQYAAB0AAf8mG5sAAAAASUVORK5CYII=','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const ctx=await browser.newContext({viewport:{width:1366,height:900}});
+            const page=await ctx.newPage();
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'));
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.setInputFiles('#photo-input',[
+              {name:'asia-new-main.png',mimeType:'image/png',buffer:pngA},
+              {name:'asia-new-sub.png',mimeType:'image/png',buffer:pngB}
+            ]);
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,{timeout:10000});
+            const newCards=page.locator('.main-photo-choice-card[data-main-type="new"]');
+            await newCards.nth(1).click();
+            assert.ok((await newCards.nth(1).innerText()).includes('★ メイン'),'selected new photo must become main');
+            assert.ok((await newCards.nth(0).innerText()).includes('サブ'),'other new photo must remain sub');
+
+            const popupPromise=ctx.waitForEvent('page');
+            await page.locator('#open-real-preview').click();
+            const preview=await popupPromise;
+            await preview.waitForURL(/detail\.html\?id=u000094&photo_preview_token=/,{timeout:15000});
+            await preview.waitForFunction(()=>document.querySelector('.detail-photo-preview-gallery')&&document.querySelectorAll('.detail-photo-preview-thumb').length>=2,{timeout:15000});
+            assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1,'preview must have exactly one main thumbnail');
+            await preview.close();
+
+            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionSaved==='true',{timeout:10000});
+            await page.reload({waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionRestored==='true',{timeout:15000});
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,{timeout:10000});
+            const restored=page.locator('.main-photo-choice-card[data-main-type="new"]');
+            assert.equal(await restored.count(),2,'both newly added photos must survive reload');
+            assert.ok((await restored.nth(1).innerText()).includes('★ メイン'),'selected main must survive reload');
+            assert.ok((await restored.nth(0).innerText()).includes('サブ'),'sub photo must survive reload');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
