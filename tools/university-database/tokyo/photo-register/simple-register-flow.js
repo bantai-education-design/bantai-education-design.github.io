@@ -31,18 +31,25 @@ if(!addStep){
   addStep.innerHTML='<div class="simple-step-heading"><span>STEP 3</span><strong>写真を追加する</strong><small>必要なときだけ1〜5枚追加します</small></div>';
 }
 addButton.textContent='この大学に写真を追加';
-addStep.appendChild(addButton);
+if(addButton.parentElement!==addStep)addStep.appendChild(addButton);
 
 function existingBox(){return document.querySelector('#existing-photo-choice');}
+function placeAfter(anchor,node){
+  if(!anchor||!node||anchor.nextElementSibling===node)return false;
+  anchor.insertAdjacentElement('afterend',node);
+  return true;
+}
 function enforceOrder(){
-  if(intro)intro.insertAdjacentElement('afterend',university);
+  let moved=false;
+  if(intro&&intro.nextElementSibling!==university){intro.insertAdjacentElement('afterend',university);moved=true;}
   const existing=existingBox();
   if(existing){
-    university.insertAdjacentElement('afterend',existing);
-    existing.insertAdjacentElement('afterend',addStep);
+    moved=placeAfter(university,existing)||moved;
+    moved=placeAfter(existing,addStep)||moved;
   }else{
-    university.insertAdjacentElement('afterend',addStep);
+    moved=placeAfter(university,addStep)||moved;
   }
+  return moved;
 }
 
 function update(){
@@ -61,7 +68,12 @@ function update(){
 
 select.addEventListener('change',()=>queueMicrotask(update));
 new MutationObserver(()=>queueMicrotask(update)).observe(select,{childList:true,subtree:true});
-new MutationObserver(()=>queueMicrotask(enforceOrder)).observe(batch,{childList:true,subtree:true});
+const orderObserver=new MutationObserver(()=>{
+  queueMicrotask(()=>{
+    if(!enforceOrder()&&existingBox())orderObserver.disconnect();
+  });
+});
+orderObserver.observe(batch,{childList:true,subtree:true});
 
 enforceOrder();
 update();
