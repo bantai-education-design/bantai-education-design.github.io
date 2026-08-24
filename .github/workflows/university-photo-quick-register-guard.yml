@@ -1,0 +1,83 @@
+name: University photo quick register guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
+      - '.github/workflows/university-photo-quick-register-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
+      - '.github/workflows/university-photo-quick-register-guard.yml'
+
+jobs:
+  quick-register-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static integrity checks
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
+          const js=fs.readFileSync('tools/university-database/tokyo/photo-register/photo-register.js','utf8');
+          const rows=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8'));
+          assert.equal(rows.length,144,'Tokyo university list must stay 144');
+          assert.match(html,/id="zoom"[^>]+min="100"[^>]+max="125"/,'crop zoom limited to 100-125%');
+          assert.match(html,/id="brightness"[^>]+min="90"[^>]+max="110"/,'brightness limited to +/-10%');
+          assert.match(html,/id="contrast"[^>]+min="90"[^>]+max="110"/,'contrast limited to +/-10%');
+          assert.match(html,/width="720" height="405"/,'fixed 16:9 output canvas');
+          assert.match(js,/scene_integrity:'scene_unchanged'/,'scene integrity flag required');
+          assert.match(js,/ai_redraw:false/,'AI redraw must be disabled');
+          assert.match(js,/forbidden_adjustments:\['generative_redraw','object_addition','object_removal','background_replacement','scene_composite'\]/,'forbidden scene changes required');
+          assert.doesNotMatch(js,/fillText\(|strokeText\(|globalCompositeOperation|removeBackground|inpaint|outpaint/i,'no scene-generating canvas operations');
+          console.log('quick register static integrity checks passed');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-register-site.log 2>&1 &
+          sleep 2
+      - name: Browser workflow check
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1280,height:900}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelector('#university-select')?.options.length===145,{timeout:10000});
+            assert.equal(await page.locator('#university-select option').count(),145,'placeholder + 144 universities');
+            const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+            await page.locator('#photo-input').setInputFiles({name:'test-campus.png',mimeType:'image/png',buffer:png});
+            await page.selectOption('#university-select','u000001');
+            await page.waitForFunction(()=>!document.querySelector('#generate').disabled,{timeout:5000});
+            await page.click('#generate');
+            await page.waitForFunction(()=>!document.querySelector('#result').hidden,{timeout:5000});
+            const data=JSON.parse(await page.locator('#json-output').inputValue());
+            assert.equal(data.record.university_id,'u000001');
+            assert.equal(data.record.university_name,'東京大学');
+            assert.equal(data.record.scene_integrity,'scene_unchanged');
+            assert.equal(data.record.ai_redraw,false);
+            assert.deepEqual(data.record.allowed_adjustments,['brightness','contrast','crop','resize']);
+            assert.equal(data.record.card_file.width,720);
+            assert.equal(data.record.card_file.height,405);
+            assert.match(data.record.source_file.sha256,/^[0-9a-f]{64}$/);
+            assert.match(data.record.card_file.sha256,/^[0-9a-f]{64}$/);
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

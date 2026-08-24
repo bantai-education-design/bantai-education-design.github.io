@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大学写真クイック登録 | Ban.Tai</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="photo-register.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>Ban.Tai Education Design</strong><span>東京都大学DB 管理ツール</span></div>
+    <a href="../">大学DBへ戻る</a>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
+      <h1>大学写真クイック登録</h1>
+      <p>実景写真を数秒でカード用に整え、登録用JSONまで生成します。生成AIによる描き直し・背景置換・要素追加削除は行いません。</p>
+      <div class="rule-badges"><span>✓ 実景保持</span><span>✓ AI再描画なし</span><span>✓ 軽微な補正のみ</span><span>✓ 元写真は別保管</span></div>
+    </section>
+    <section class="grid">
+      <div class="panel controls">
+        <h2>1. 大学と写真</h2>
+        <label class="field">大学<select id="university-select" disabled><option>大学一覧を読み込み中…</option></select></label>
+        <label class="drop" id="drop-zone" for="photo-input">
+          <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+          <strong>写真をここへドロップ</strong><span>またはタップして選択</span><small>JPEG / PNG / WebP</small>
+        </label>
+        <div id="file-info" class="file-info">写真未選択</div>
+        <h2>2. 軽微な調整</h2>
+        <div class="slider-row"><label for="zoom">トリミング</label><input id="zoom" type="range" min="100" max="125" value="100"><output id="zoom-out">100%</output></div>
+        <div class="slider-row"><label for="pos-x">左右位置</label><input id="pos-x" type="range" min="0" max="100" value="50"><output id="pos-x-out">50</output></div>
+        <div class="slider-row"><label for="pos-y">上下位置</label><input id="pos-y" type="range" min="0" max="100" value="50"><output id="pos-y-out">50</output></div>
+        <div class="slider-row"><label for="brightness">明るさ</label><input id="brightness" type="range" min="90" max="110" value="100"><output id="brightness-out">100%</output></div>
+        <div class="slider-row"><label for="contrast">コントラスト</label><input id="contrast" type="range" min="90" max="110" value="100"><output id="contrast-out">100%</output></div>
+        <button id="reset-adjustments" class="secondary" type="button">調整をリセット</button>
+      </div>
+      <div class="panel preview-panel">
+        <h2>3. カードプレビュー</h2>
+        <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">写真を選択するとここに表示されます</div></div>
+        <p class="note">出力サイズ 720×405px（16:9）。画像内容を生成・追加・削除する処理はありません。</p>
+        <div class="actions">
+          <button id="generate" class="primary" type="button" disabled>登録パッケージを生成</button>
+          <button id="download-jpeg" type="button" disabled>JPEGを保存</button>
+          <button id="download-json" type="button" disabled>登録JSONを保存</button>
+          <button id="copy-json" type="button" disabled>JSONをコピー</button>
+        </div>
+        <div id="result" class="result" hidden>
+          <h3>登録準備完了</h3>
+          <dl><div><dt>大学</dt><dd id="result-university"></dd></div><div><dt>JPEG配置先</dt><dd><code id="result-image-path"></code></dd></div><div><dt>登録先</dt><dd><code>data/user-photo-overrides.json</code></dd></div></dl>
+          <textarea id="json-output" readonly></textarea>
+          <p>JPEGとJSONをChatGPTへ渡せば、GitHub登録・CI・PR作成まで続けられます。</p>
+        </div>
+      </div>
+    </section>
+    <section class="policy panel">
+      <h2>実景写真の固定ルール</h2>
+      <p><strong>許可:</strong> 明るさ・露出相当の微調整、コントラスト、自然な色味、傾き補正、軽微なトリミング、縮小。</p>
+      <p><strong>禁止:</strong> 生成AIによる再描画、建物・樹木・人物・看板・道路・空・窓などの追加削除、背景置換、実在しない景観への合成。</p>
+    </section>
+  </main>
+  <script src="photo-register.js"></script>
+</body>
+</html>
