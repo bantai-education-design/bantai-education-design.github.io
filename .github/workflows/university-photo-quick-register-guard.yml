@@ -51,7 +51,8 @@ jobs:
           assert.ok(js.includes("forbidden_adjustments:['generative_redraw','object_addition','object_removal','background_replacement','scene_composite']"),'forbidden scene changes required');
           assert.ok(js.includes('makeZip(entries)'),'single ZIP batch export required');
           assert.doesNotMatch(js,/fillText\(|strokeText\(|globalCompositeOperation|removeBackground|inpaint|outpaint/i,'no scene-generating canvas operations');
-          assert.ok(detail.includes('const image=verifiedImage(row)'),'detail must use shared verified image state');
+          assert.ok(detail.includes('function detailVerifiedImage(row)'),'detail shared-photo helper required');
+          assert.ok(detail.includes('state.images?.get(row.id)'),'detail must read shared image state directly');
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must feed shared state');
           console.log('batch quick register architecture validated');
           NODE
@@ -104,6 +105,7 @@ jobs:
             const card=db.locator('.tokyo-card[data-id="u000094"]');
             const cardSrc=await card.locator('.real-university-image img').getAttribute('src');
             await card.locator('.card-detail-open').click();
+            await db.waitForSelector('#university-detail-dialog[open] .detail-visual img',{timeout:10000});
             const detailSrc=await db.locator('#university-detail-dialog .detail-visual img').getAttribute('src');
             assert.equal(detailSrc,cardSrc,'card and detail must use the same owner photo');
             await browser.close();
