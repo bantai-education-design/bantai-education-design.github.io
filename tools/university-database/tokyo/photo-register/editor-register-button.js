@@ -33,9 +33,12 @@ function ensureChoiceBox(){
   box=document.createElement('section');
   box.id='existing-photo-choice';
   box.className='existing-photo-choice';
-  box.hidden=true;
-  const summary=document.querySelector('.batch-summary');
-  batch.insertBefore(box,summary||list);
+  const previewBox=document.querySelector('#real-page-preview');
+  if(previewBox){
+    batch.insertBefore(box,previewBox);
+  }else{
+    list.insertAdjacentElement('afterend',box);
+  }
   return box;
 }
 
@@ -63,13 +66,13 @@ function selectChoice(type,key=''){
 function renderChoices(){
   const box=ensureChoiceBox();
   const rows=[...list.querySelectorAll('.batch-row')];
+  box.hidden=false;
+
   if(!currentRecord&&!rows.length){
-    box.hidden=true;
-    box.innerHTML='';
+    box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真を選ぶ</strong><small>大学と写真を選ぶと、ここに候補写真が並びます。使いたい写真を1枚クリックすると ★ メイン になります。</small></div><div class="main-photo-choice-empty">まだ候補写真がありません</div>`;
     return;
   }
 
-  box.hidden=false;
   const cards=[];
   if(currentRecord){
     const src=`../${currentRecord.image_url}`;
@@ -85,7 +88,7 @@ function renderChoices(){
     cards.push(`<button type="button" class="main-photo-choice-card${active?' active':''}" data-main-type="new" data-main-key="${escapeAttr(key)}" aria-pressed="${active}"><span class="main-photo-choice-image"><img src="${escapeAttr(img.src)}" alt="${escapeAttr(filename)}"><span class="main-photo-check">${active?'★ メイン':'クリックして選択'}</span></span><strong>今回追加</strong><small>${escapeAttr(filename)}</small></button>`);
   }
 
-  box.innerHTML=`<div class="existing-photo-title"><span class="step">メイン写真を選択</span><strong>写真を1枚クリックしてください</strong><small>現在の写真でも、今回追加した写真でも選べます。★が付いた1枚が一覧カードと詳細ページの背景になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
+  box.innerHTML=`<div class="existing-photo-title"><span class="step">STEP 1.5</span><strong>メイン写真を選ぶ</strong><small>下の写真を1枚クリックしてください。★が付いた1枚が一覧カードと詳細ページの背景になります。</small></div><div class="main-photo-choice-grid">${cards.join('')}</div>`;
   for(const card of box.querySelectorAll('.main-photo-choice-card')){
     card.addEventListener('click',()=>{
       const type=card.dataset.mainType;
@@ -150,5 +153,6 @@ if(!document.querySelector('#finish-edit-register')){
   });
 }
 
+renderChoices();
 refreshUniversity();
 })();
