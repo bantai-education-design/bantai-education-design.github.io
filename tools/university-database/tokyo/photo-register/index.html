@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>大学写真クイック登録 | Ban.Tai</title>
   <meta name="robots" content="noindex,nofollow">
-  <link rel="stylesheet" href="photo-register.css?v=20260824-1128">
+  <link rel="stylesheet" href="photo-register.css?v=20260824-1134">
 </head>
 <body>
   <header class="topbar">
@@ -39,7 +39,10 @@
       <div class="panel controls">
         <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
         <p class="muted">一覧の「編集」を押すと、この補正画面へ移動します。通常は無調整のまま一括生成できます。</p>
-        <label class="field">大学<select id="university-select" disabled><option>写真を選択してください</option></select></label>
+        <label class="field">大学名を入力して検索
+          <input id="editor-university-search" type="text" autocomplete="off" placeholder="先に写真を入れてください" aria-label="編集対象の大学名または大学IDを入力">
+        </label>
+        <label class="field">候補から選択<select id="university-select" disabled><option>写真を選択してください</option></select></label>
         <div id="file-info" class="file-info">編集対象なし</div>
 
         <div class="correction-group" aria-label="回転と傾き補正">
@@ -101,6 +104,7 @@
       <p><strong>構造:</strong> 1大学につき1つの共通写真レコードを登録し、一覧カードと詳細画面が同じ写真を参照します。</p>
     </section>
   </main>
-  <script src="photo-register.js?v=20260824-1128"></script>
+  <script src="photo-register.js?v=20260824-1134"></script>
+  <script src="editor-university-search.js?v=20260824-1134"></script>
 </body>
 </html>
