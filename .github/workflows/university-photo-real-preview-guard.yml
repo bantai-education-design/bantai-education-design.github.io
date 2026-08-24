@@ -55,15 +55,24 @@ jobs:
             const preview=await popupPromise;
             await preview.waitForLoadState('domcontentloaded');
             assert.match(preview.url(),/detail\.html\?id=u000083&photo_preview_token=/,'preview must use the real detail page');
-            await preview.waitForSelector('.detail-hero.photo-preview-active',{timeout:15000});
-            await preview.waitForSelector('.detail-photo-preview-gallery');
-            assert.equal(await preview.locator('.detail-photo-preview-thumb').count(),3);
-            const layout=await preview.locator('.detail-photo-preview-gallery').evaluate(el=>({
-              position:getComputedStyle(el).position,
-              heroHeight:Math.round(el.parentElement.getBoundingClientRect().height),
-              galleryHeight:Math.round(el.getBoundingClientRect().height),
-              thumbWidth:Math.round(el.querySelector('.detail-photo-preview-thumb').getBoundingClientRect().width)
-            }));
+            await preview.waitForFunction(()=>{
+              const hero=document.querySelector('.detail-hero.photo-preview-active');
+              const gallery=hero?.querySelector('.detail-photo-preview-gallery');
+              return !!gallery&&gallery.querySelectorAll('.detail-photo-preview-thumb').length===3;
+            },{timeout:15000});
+            const layout=await preview.evaluate(()=>{
+              const hero=document.querySelector('.detail-hero.photo-preview-active');
+              const gallery=hero?.querySelector('.detail-photo-preview-gallery');
+              const thumb=gallery?.querySelector('.detail-photo-preview-thumb');
+              if(!hero||!gallery||!thumb)return null;
+              return {
+                position:getComputedStyle(gallery).position,
+                heroHeight:Math.round(hero.getBoundingClientRect().height),
+                galleryHeight:Math.round(gallery.getBoundingClientRect().height),
+                thumbWidth:Math.round(thumb.getBoundingClientRect().width)
+              };
+            });
+            assert.ok(layout,'stable real-page gallery layout required');
             assert.equal(layout.position,'absolute','gallery must be a background layer, not extra vertical content');
             assert.equal(layout.galleryHeight,layout.heroHeight,'background must fill the existing hero without adding a section');
             assert.ok(layout.thumbWidth<=70,`thumbnail too large: ${layout.thumbWidth}`);
@@ -71,9 +80,10 @@ jobs:
             assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1);
 
             await preview.setViewportSize({width:375,height:900});
+            await preview.waitForFunction(()=>!!document.querySelector('.detail-hero.photo-preview-active .detail-photo-preview-gallery'));
             assert.equal(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'preview must not create mobile horizontal overflow');
-            const mobileThumb=await preview.locator('.detail-photo-preview-thumb').first().evaluate(el=>Math.round(el.getBoundingClientRect().width));
-            assert.ok(mobileThumb<=52,`mobile thumbnail too large: ${mobileThumb}`);
+            const mobileThumb=await preview.evaluate(()=>Math.round(document.querySelector('.detail-photo-preview-thumb')?.getBoundingClientRect().width||0));
+            assert.ok(mobileThumb>0&&mobileThumb<=52,`mobile thumbnail too large or missing: ${mobileThumb}`);
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
