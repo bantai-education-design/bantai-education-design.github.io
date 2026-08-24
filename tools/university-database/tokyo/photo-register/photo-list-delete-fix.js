@@ -28,9 +28,7 @@ if(helper&&typeof helper.getExistingPhotos==='function'&&!helper.__deleteFilterP
 function chooseFallback(deletedWasMain){
   if(!deletedWasMain)return;
   const next=[...box.querySelectorAll('.main-photo-choice-card')].find(card=>!isExcluded(card)&&card.isConnected);
-  if(next){
-    next.click();
-  }
+  if(next)next.click();
 }
 
 function deleteCard(card){
@@ -93,4 +91,13 @@ const observer=new MutationObserver(()=>queueMicrotask(applyDeleteControls));
 observer.observe(box,{childList:true,subtree:true});
 universitySelect.addEventListener('change',()=>queueMicrotask(applyDeleteControls));
 applyDeleteControls();
+})();
+
+(()=>{
+  if(document.querySelector('script[data-photo-session-persistence]'))return;
+  const s=document.createElement('script');
+  s.src='photo-session-persistence.js?v=20260824-1601';
+  s.defer=true;
+  s.dataset.photoSessionPersistence='true';
+  document.body.appendChild(s);
 })();
