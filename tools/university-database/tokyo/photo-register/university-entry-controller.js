@@ -38,7 +38,10 @@ editorSearch.addEventListener('change',commitEditorSearch);
 editorSearch.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commitEditorSearch();}});
 editorSelect.addEventListener('change',()=>queueMicrotask(syncEditorSearch));
 function enhanceDeleteControls(){
-  batchList.querySelectorAll('.remove-item').forEach(btn=>{btn.textContent='写真を削除';btn.setAttribute('aria-label','この写真を一覧から削除');});
+  batchList.querySelectorAll('.remove-item').forEach(btn=>{
+    if(btn.textContent!=='写真を削除')btn.textContent='写真を削除';
+    if(btn.getAttribute('aria-label')!=='この写真を一覧から削除')btn.setAttribute('aria-label','この写真を一覧から削除');
+  });
   const activeRemove=batchList.querySelector('.batch-row.active .remove-item');
   deleteActive.disabled=!activeRemove;
 }
