@@ -1,0 +1,81 @@
+name: University photo one click register guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-one-click-register-guard.yml'
+
+jobs:
+  one-click-register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate one-button source
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const js=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.js','utf8');
+          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.css','utf8');
+          const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
+          assert.ok(js.includes('この内容で大学DBへ登録'));
+          assert.ok(js.includes('downloadZip.click()'),'one click action must reuse the existing safe package download');
+          assert.ok(js.includes("{capture:true}"),'one click monitor must start before legacy generator disables the button');
+          assert.ok(css.includes('#download-zip')&&css.includes('display:none!important'),'legacy download controls must be hidden');
+          assert.ok(loader.includes('one-click-register.js?v=20260824-2254'));
+          console.log('one-button registration source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-one-click.log 2>&1 &
+          sleep 2
+      - name: Verify one visible register button and automatic handoff download
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.documentElement.dataset.oneClickRegister==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.setInputFiles('#photo-input',{name:'asia-register.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
+            await page.waitForFunction(()=>!document.querySelector('#generate-batch')?.disabled,{timeout:10000});
+
+            const panel=page.locator('.export-panel');
+            assert.ok((await panel.locator('h2').innerText()).includes('この内容で大学DBへ登録'));
+            assert.equal((await page.locator('#generate-batch').innerText()).trim(),'この内容で大学DBへ登録');
+            assert.equal(await page.locator('#download-zip').isVisible(),false);
+            assert.equal(await page.locator('#download-json').isVisible(),false);
+            assert.equal(await page.locator('#copy-json').isVisible(),false);
+            assert.equal(await panel.locator('.actions button:visible').count(),1,'only one registration action may be visible');
+
+            const downloadPromise=page.waitForEvent('download',{timeout:25000});
+            await page.locator('#generate-batch').click();
+            const download=await downloadPromise;
+            assert.ok(download.suggestedFilename().endsWith('.zip'),'legacy package may remain internal but must download automatically');
+            await page.waitForFunction(()=>document.documentElement.dataset.oneClickRegisterLast==='success',{timeout:10000});
+            assert.equal(await page.locator('#result').isVisible(),true);
+            assert.ok((await page.locator('#result h3').innerText()).includes('登録データを準備しました'));
+            assert.equal(await page.locator('#json-output').isVisible(),false,'technical JSON must stay hidden');
+            assert.ok((await page.locator('#result p').innerText()).includes('このチャットに添付'));
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
