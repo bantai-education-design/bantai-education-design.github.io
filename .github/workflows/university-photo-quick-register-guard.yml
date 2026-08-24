@@ -44,10 +44,19 @@ jobs:
           assert.equal(rows.length,144,'Tokyo university list must stay 144');
           assert.match(html,/type="file"[^>]+multiple hidden/,'multiple photo input required');
           assert.match(html,/id="zoom"[^>]+min="100"[^>]+max="125"/,'crop zoom limited to 100-125%');
+          assert.match(html,/id="tilt"[^>]+min="-5"[^>]+max="5"/,'tilt correction limited to +/-5 degrees');
+          assert.ok(html.includes('id="rotate-left"'),'left rotation control required');
+          assert.ok(html.includes('id="rotate-right"'),'right rotation control required');
+          assert.ok(html.includes('id="photo-editor"'),'editor target required');
+          assert.doesNotMatch(html,/university-text-input\.js/,'obsolete assignment overlay must not be loaded');
           assert.match(html,/id="brightness"[^>]+min="90"[^>]+max="110"/,'brightness limited to +/-10%');
           assert.match(html,/id="contrast"[^>]+min="90"[^>]+max="110"/,'contrast limited to +/-10%');
           assert.match(html,/width="720" height="405"/,'fixed 16:9 output canvas');
           assert.ok(html.includes('一覧カード + 詳細画面'),'shared surfaces must be visible');
+          assert.ok(js.includes('row-university-search'),'typed university assignment required');
+          assert.ok(js.includes('scrollIntoView'),'edit action must reveal correction editor');
+          assert.ok(js.includes('rotation_degrees'),'rotation value must be recorded');
+          assert.ok(js.includes('tilt_degrees'),'tilt value must be recorded');
           assert.ok(js.includes("surfaces:['card','detail']"),'batch records must target card and detail');
           assert.ok(js.includes("scene_integrity:'scene_unchanged'"),'scene integrity flag required');
           assert.ok(js.includes('ai_redraw:false'),'AI redraw must be disabled');
@@ -60,7 +69,7 @@ jobs:
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
           assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/"/,'gateway must expose quick register entrance');
           assert.ok(gateway.includes('大学写真クイック登録'),'gateway entrance label required');
-          console.log('batch quick register architecture and entrance validated');
+          console.log('batch quick register architecture, assignment and corrections validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -70,7 +79,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-register-site.log 2>&1 &
           sleep 2
-      - name: Verify entrance, two-photo batch, ZIP readiness and shared detail image
+      - name: Verify assignment, corrections, ZIP readiness and shared detail image
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -94,7 +103,30 @@ jobs:
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
             const vals=await page.locator('.row-university').evaluateAll(xs=>xs.map(x=>x.value).sort());
             assert.deepEqual(vals,['u000001','u000094'],'filename auto matching');
-            assert.equal(await page.locator('#generate-batch').isEnabled(),true,'batch generation enabled');
+
+            const first=page.locator('.batch-row').nth(0);
+            const search=first.locator('.row-university-search');
+            const choice=first.locator('.row-university');
+            await search.fill('東京大学');
+            await search.press('Enter');
+            assert.equal(await choice.inputValue(),'u000001','typed assignment must select Tokyo University');
+            assert.equal(await page.locator('#generate-batch').isEnabled(),false,'duplicate assignment must be blocked');
+            await choice.selectOption('u000094');
+            assert.equal(await page.locator('#generate-batch').isEnabled(),true,'select assignment must remain usable');
+
+            await first.locator('.edit-item').click();
+            await page.waitForFunction(()=>{
+              const el=document.querySelector('#photo-editor');
+              if(!el)return false;
+              const r=el.getBoundingClientRect();
+              return r.top<innerHeight&&r.bottom>0;
+            },{timeout:5000});
+            assert.equal(await page.locator('#rotate-right').isEnabled(),true,'rotation controls must enable for active photo');
+            await page.click('#rotate-right');
+            await page.locator('#tilt').fill('1.5');
+            assert.equal(await page.locator('#rotation-out').textContent(),'90°','rotation preview value');
+            assert.equal(await page.locator('#tilt-out').textContent(),'1.5°','tilt preview value');
+
             await page.click('#generate-batch');
             await page.waitForFunction(()=>!document.querySelector('#result').hidden,{timeout:10000});
             assert.equal(await page.locator('#download-zip').isEnabled(),true,'ZIP download enabled');
@@ -108,6 +140,9 @@ jobs:
               assert.match(registry.records[id].source_file.sha256,/^[0-9a-f]{64}$/);
               assert.match(registry.records[id].card_file.sha256,/^[0-9a-f]{64}$/);
             }
+            assert.equal(registry.records.u000094.adjustment_values.rotation_degrees,90,'rotation must be recorded');
+            assert.equal(registry.records.u000094.adjustment_values.tilt_degrees,1.5,'tilt must be recorded');
+
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
 
