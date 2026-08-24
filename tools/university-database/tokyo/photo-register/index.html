@@ -35,12 +35,26 @@
       <div id="batch-list" class="batch-list" aria-live="polite"></div>
     </section>
 
-    <section class="grid edit-grid">
+    <section id="photo-editor" class="grid edit-grid" tabindex="-1">
       <div class="panel controls">
         <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
-        <p class="muted">一覧の「編集」を押した写真だけ調整します。通常は無調整のまま一括生成できます。</p>
+        <p class="muted">一覧の「編集」を押すと、この補正画面へ移動します。通常は無調整のまま一括生成できます。</p>
         <label class="field">大学<select id="university-select" disabled><option>写真を選択してください</option></select></label>
         <div id="file-info" class="file-info">編集対象なし</div>
+
+        <div class="correction-group" aria-label="回転と傾き補正">
+          <div class="correction-title">向き・傾き</div>
+          <div class="rotation-row">
+            <span>回転</span>
+            <div class="rotation-buttons">
+              <button id="rotate-left" class="secondary" type="button" disabled>↺ 左へ90°</button>
+              <button id="rotate-right" class="secondary" type="button" disabled>↻ 右へ90°</button>
+            </div>
+            <output id="rotation-out">0°</output>
+          </div>
+          <div class="slider-row"><label for="tilt">傾き補正</label><input id="tilt" type="range" min="-5" max="5" step="0.1" value="0"><output id="tilt-out">0.0°</output></div>
+        </div>
+
         <div class="slider-row"><label for="zoom">トリミング</label><input id="zoom" type="range" min="100" max="125" value="100"><output id="zoom-out">100%</output></div>
         <div class="slider-row"><label for="pos-x">左右位置</label><input id="pos-x" type="range" min="0" max="100" value="50"><output id="pos-x-out">50</output></div>
         <div class="slider-row"><label for="pos-y">上下位置</label><input id="pos-y" type="range" min="0" max="100" value="50"><output id="pos-y-out">50</output></div>
@@ -51,7 +65,7 @@
       <div class="panel preview-panel">
         <h2>プレビュー</h2>
         <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">編集する写真を選択してください</div></div>
-        <p class="note">出力 720×405px（16:9）。画像生成、背景置換、要素追加・削除は行いません。</p>
+        <p class="note">出力 720×405px（16:9）。回転・傾き補正、軽微なトリミング、明るさ・コントラスト調整のみ。画像生成、背景置換、要素追加・削除は行いません。</p>
       </div>
     </section>
 
@@ -82,12 +96,11 @@
 
     <section class="policy panel">
       <h2>実景写真の固定ルール</h2>
-      <p><strong>許可:</strong> 明るさ・露出相当の微調整、コントラスト、自然な色味、傾き補正、軽微なトリミング、縮小。</p>
+      <p><strong>許可:</strong> 90°単位の回転、±5°以内の傾き補正、明るさ・露出相当の微調整、コントラスト、軽微なトリミング、縮小。</p>
       <p><strong>禁止:</strong> 生成AIによる再描画、建物・樹木・人物・看板・道路・空・窓などの追加削除、背景置換、実在しない景観への合成。</p>
       <p><strong>構造:</strong> 1大学につき1つの共通写真レコードを登録し、一覧カードと詳細画面が同じ写真を参照します。</p>
     </section>
   </main>
   <script src="photo-register.js"></script>
-  <script src="university-text-input.js"></script>
 </body>
 </html>
