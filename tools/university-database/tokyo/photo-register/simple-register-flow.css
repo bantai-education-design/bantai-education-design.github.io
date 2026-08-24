@@ -6,11 +6,13 @@
 .university-first .start-choice-head .start-number{display:none}
 .university-first .start-choice-head strong{font-size:1.15rem}
 .university-first .start-choice-head small{display:block;margin-top:4px;color:var(--muted)}
-.university-first-field:first-of-type{display:none!important}
-.university-first-field:nth-of-type(2){order:1;font-size:1rem;font-weight:800;color:#fff}
+.university-first-field:first-of-type{order:1;display:block!important;font-size:1rem;font-weight:800;color:#fff}
+.university-first-field:nth-of-type(2){order:2;font-size:1rem;font-weight:800;color:#fff;margin-top:10px}
+#university-first-search{min-height:50px!important;font-size:1rem!important;border:2px solid #596276!important;background:#090b10!important;color:#fff!important}
+#university-first-search:focus{border-color:#d7b45a!important;outline:2px solid rgba(215,180,90,.18)!important;outline-offset:1px}
 #university-first-select{min-height:54px!important;font-size:1rem!important;border:2px solid #d7b45a!important;background:#090b10!important;color:#fff!important}
-#university-first-status{order:2;margin:10px 0 0;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.035);color:#d9deea}
-.university-first>#existing-photo-choice{order:3}
+#university-first-status{order:3;margin:10px 0 0;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.035);color:#d9deea}
+.university-first>#existing-photo-choice{order:4}
 .batch>.muted{font-size:.9rem}
 #existing-photo-choice{margin-top:18px!important;border:1px solid rgba(215,180,90,.6)!important;background:rgba(215,180,90,.04)!important}
 #existing-photo-choice .existing-photo-title strong::before{content:'STEP 2　';color:#d7b45a;letter-spacing:.08em}
@@ -27,7 +29,7 @@
 .export-panel .section-head .step::after{content:' / STEP 5'}
 @media(max-width:800px){
   .university-first,.simple-add-photo-step{padding:16px!important}
-  #university-first-select,#simple-add-photo-step #university-first-photo-button{width:100%!important}
+  #university-first-search,#university-first-select,#simple-add-photo-step #university-first-photo-button{width:100%!important}
   .simple-step-heading{display:block}
   .simple-step-heading span,.simple-step-heading strong,.simple-step-heading small{display:block;margin-bottom:4px}
 }
