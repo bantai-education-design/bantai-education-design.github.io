@@ -1,0 +1,10 @@
+@media (min-width:801px){
+  .edit-grid{align-items:start}
+  .preview-panel{
+    position:sticky;
+    top:68px;
+    align-self:start;
+    z-index:3;
+  }
+  .preview-shell{max-height:calc(100vh - 170px)}
+}
