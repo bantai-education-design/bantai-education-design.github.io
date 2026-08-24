@@ -16,19 +16,31 @@
     <section class="hero">
       <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
       <h1>大学写真クイック登録</h1>
-      <p>実景写真を数秒でカード用に整え、登録用JSONまで生成します。生成AIによる描き直し・背景置換・要素追加削除は行いません。</p>
-      <div class="rule-badges"><span>✓ 実景保持</span><span>✓ AI再描画なし</span><span>✓ 軽微な補正のみ</span><span>✓ 元写真は別保管</span></div>
+      <p>写真を1回登録すると、大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。複数写真もまとめて処理できます。</p>
+      <div class="rule-badges"><span>✓ 一覧＋詳細を同時反映</span><span>✓ 複数写真を一括登録</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
     </section>
-    <section class="grid">
+
+    <section class="batch panel">
+      <div class="section-head">
+        <div><span class="step">STEP 1</span><h2>写真をまとめて入れる</h2></div>
+        <button id="clear-batch" type="button" class="secondary">すべてクリア</button>
+      </div>
+      <label class="drop batch-drop" id="drop-zone" for="photo-input">
+        <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+        <strong>写真をまとめてここへドロップ</strong>
+        <span>1枚でも複数枚でも可。ファイル名に「u000094」や「亜細亜大学」があれば自動で大学を割り当てます。</span>
+        <small>JPEG / PNG / WebP</small>
+      </label>
+      <div class="batch-summary"><strong id="batch-count">0枚</strong><span id="batch-status">写真未選択</span></div>
+      <div id="batch-list" class="batch-list" aria-live="polite"></div>
+    </section>
+
+    <section class="grid edit-grid">
       <div class="panel controls">
-        <h2>1. 大学と写真</h2>
-        <label class="field">大学<select id="university-select" disabled><option>大学一覧を読み込み中…</option></select></label>
-        <label class="drop" id="drop-zone" for="photo-input">
-          <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden>
-          <strong>写真をここへドロップ</strong><span>またはタップして選択</span><small>JPEG / PNG / WebP</small>
-        </label>
-        <div id="file-info" class="file-info">写真未選択</div>
-        <h2>2. 軽微な調整</h2>
+        <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
+        <p class="muted">一覧の「編集」を押した写真だけ調整します。通常は無調整のまま一括生成できます。</p>
+        <label class="field">大学<select id="university-select" disabled><option>写真を選択してください</option></select></label>
+        <div id="file-info" class="file-info">編集対象なし</div>
         <div class="slider-row"><label for="zoom">トリミング</label><input id="zoom" type="range" min="100" max="125" value="100"><output id="zoom-out">100%</output></div>
         <div class="slider-row"><label for="pos-x">左右位置</label><input id="pos-x" type="range" min="0" max="100" value="50"><output id="pos-x-out">50</output></div>
         <div class="slider-row"><label for="pos-y">上下位置</label><input id="pos-y" type="range" min="0" max="100" value="50"><output id="pos-y-out">50</output></div>
@@ -37,27 +49,42 @@
         <button id="reset-adjustments" class="secondary" type="button">調整をリセット</button>
       </div>
       <div class="panel preview-panel">
-        <h2>3. カードプレビュー</h2>
-        <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">写真を選択するとここに表示されます</div></div>
-        <p class="note">出力サイズ 720×405px（16:9）。画像内容を生成・追加・削除する処理はありません。</p>
-        <div class="actions">
-          <button id="generate" class="primary" type="button" disabled>登録パッケージを生成</button>
-          <button id="download-jpeg" type="button" disabled>JPEGを保存</button>
-          <button id="download-json" type="button" disabled>登録JSONを保存</button>
-          <button id="copy-json" type="button" disabled>JSONをコピー</button>
-        </div>
-        <div id="result" class="result" hidden>
-          <h3>登録準備完了</h3>
-          <dl><div><dt>大学</dt><dd id="result-university"></dd></div><div><dt>JPEG配置先</dt><dd><code id="result-image-path"></code></dd></div><div><dt>登録先</dt><dd><code>data/user-photo-overrides.json</code></dd></div></dl>
-          <textarea id="json-output" readonly></textarea>
-          <p>JPEGとJSONをChatGPTへ渡せば、GitHub登録・CI・PR作成まで続けられます。</p>
-        </div>
+        <h2>プレビュー</h2>
+        <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">編集する写真を選択してください</div></div>
+        <p class="note">出力 720×405px（16:9）。画像生成、背景置換、要素追加・削除は行いません。</p>
       </div>
     </section>
+
+    <section class="panel export-panel">
+      <div class="section-head">
+        <div><span class="step">STEP 3</span><h2>一括登録パッケージを作る</h2></div>
+        <span class="surface-badge">一覧カード + 詳細画面</span>
+      </div>
+      <p>大学が割り当て済みの写真をすべて処理し、JPEGと統合済み台帳をZIP 1個にまとめます。</p>
+      <div class="actions">
+        <button id="generate-batch" class="primary" type="button" disabled>一括ZIPを生成</button>
+        <button id="download-zip" type="button" disabled>ZIPを保存</button>
+        <button id="download-json" type="button" disabled>統合JSONだけ保存</button>
+        <button id="copy-json" type="button" disabled>統合JSONをコピー</button>
+      </div>
+      <div id="result" class="result" hidden>
+        <h3>登録準備完了</h3>
+        <dl>
+          <div><dt>対象</dt><dd id="result-university"></dd></div>
+          <div><dt>反映先</dt><dd>大学一覧カード + 詳細画面</dd></div>
+          <div><dt>画像配置先</dt><dd><code>tools/university-database/tokyo/assets/card-images/</code></dd></div>
+          <div><dt>共通台帳</dt><dd><code>tools/university-database/tokyo/data/user-photo-overrides.json</code></dd></div>
+        </dl>
+        <textarea id="json-output" readonly></textarea>
+        <p>このZIPをChatGPTへ渡せば、画像配置・台帳更新・CI・PR作成までまとめて処理できます。</p>
+      </div>
+    </section>
+
     <section class="policy panel">
       <h2>実景写真の固定ルール</h2>
       <p><strong>許可:</strong> 明るさ・露出相当の微調整、コントラスト、自然な色味、傾き補正、軽微なトリミング、縮小。</p>
       <p><strong>禁止:</strong> 生成AIによる再描画、建物・樹木・人物・看板・道路・空・窓などの追加削除、背景置換、実在しない景観への合成。</p>
+      <p><strong>構造:</strong> 1大学につき1つの共通写真レコードを登録し、一覧カードと詳細画面が同じ写真を参照します。</p>
     </section>
   </main>
   <script src="photo-register.js"></script>
