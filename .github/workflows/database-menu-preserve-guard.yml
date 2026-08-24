@@ -65,9 +65,9 @@ jobs:
               assert.ok(Math.abs((box.width/box.height)-expectedRatio)<0.04,`${viewport.name}: gateway aspect ratio changed`);
 
               const uniHotspot=page.locator('.hot-university-card');
-              assert.equal(await uniHotspot.getAttribute('href'),'/tools/university-database/tokyo/',`${viewport.name}: university card route changed`);
+              assert.equal(await uniHotspot.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university card must open university hub`);
               const uniButton=page.locator('.hot-university-btn');
-              assert.equal(await uniButton.getAttribute('href'),'/tools/university-database/tokyo/',`${viewport.name}: Tokyo 144 button route changed`);
+              assert.equal(await uniButton.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university button must open university hub`);
               assert.equal(await page.locator('.db-hotspot').count(),6,`${viewport.name}: hotspot count changed`);
 
               if(viewport.width<=860){
@@ -87,6 +87,12 @@ jobs:
             const route=await browser.newPage({viewport:{width:904,height:633}});
             await route.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
             await route.locator('.hot-university-btn').click();
+            await route.waitForURL('**/tools/university-database/');
+            const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-register/"]').first();
+            await photoEntry.waitFor({state:'visible'});
+            assert.ok((await photoEntry.innerText()).includes('大学写真クイック登録'),'university hub must expose photo register menu');
+            const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
+            await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
             await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             assert.equal(await route.locator('.tokyo-card[data-card-ready="true"]').count(),144,'Tokyo university database must remain reachable with 144 cards');

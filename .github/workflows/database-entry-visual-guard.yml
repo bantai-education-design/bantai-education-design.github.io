@@ -85,7 +85,7 @@ jobs:
             const expected = [
               ['学校を探す','/tools/school-database/'],
               ['学びの流れを見る','/resources/textbook-plans/'],
-              ['未来の学びを探す','/tools/university-database/tokyo/']
+              ['未来の学びを探す','/tools/university-database/']
             ];
             for (const [heading,href] of expected) {
               const card = hub.locator('.db-card').filter({hasText:heading}).first();
