@@ -12,7 +12,7 @@ on:
       - '.github/workflows/university-photo-order-guard.yml'
 
 jobs:
-  dual-order-flow:
+  simple-order-flow:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -20,20 +20,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate dual-order controls
+      - name: Validate simplified controls
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
           const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
-          const reverse=fs.readFileSync('tools/university-database/tokyo/photo-register/university-first-entry.js','utf8');
-          assert.ok(html.includes('id="photo-input"'),'photo-first input required');
-          assert.ok(html.includes('id="university-first-search"'),'university-first search required');
-          assert.ok(html.includes('id="university-first-select"'),'university-first dropdown required');
-          assert.ok(html.includes('id="university-first-photo-button"'),'university-first photo button required');
-          assert.ok(reverse.includes('DataTransfer'),'reverse flow must hand photo to the main importer');
-          assert.ok(reverse.includes("rowSelect.dispatchEvent(new Event('change'"),'reverse flow must assign selected university');
-          console.log('dual-order controls validated');
+          const simple=fs.readFileSync('tools/university-database/tokyo/photo-register/simple-register-flow.js','utf8');
+          assert.ok(html.includes('id="university-first-select"'),'single university dropdown required');
+          assert.ok(html.includes('id="university-first-photo-button"'),'photo add button required');
+          assert.ok(html.includes('id="university-first-search"'),'legacy search element remains for compatibility');
+          assert.ok(simple.includes("searchLabel.hidden=true"),'legacy search must be hidden from normal flow');
+          assert.ok(simple.includes('STEP 1　大学を選ぶ'),'step 1 label required');
+          assert.ok(simple.includes('STEP 3'),'step 3 label required');
+          console.log('simplified photo registration controls validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -43,7 +43,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-order.log 2>&1 &
           sleep 2
-      - name: Verify photo-first and university-first
+      - name: Verify step 1 to step 3 order
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -52,30 +52,38 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1280,height:900}});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?v=20260824-1141',{waitUntil:'networkidle'});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
-            assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university-first dropdown enabled before photo');
 
-            // University first -> photo in single-university mode.
-            await page.locator('#university-first-search').fill('亜細亜大学');
-            await page.locator('#university-first-search').press('Enter');
-            assert.equal(await page.locator('#university-first-select').inputValue(),'u000094');
+            const select=page.locator('#university-first-select');
+            assert.equal(await select.isVisible(),true,'STEP 1 dropdown must be visible');
+            assert.equal(await select.isEnabled(),true,'STEP 1 dropdown must be enabled');
+            assert.equal(await page.locator('#university-first-search').isVisible(),false,'optional search must not compete with STEP 1');
+
+            await select.selectOption('u000094');
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            assert.equal(await select.inputValue(),'u000094');
             assert.equal(await page.locator('#university-first-photo-button').isEnabled(),true);
+
+            const order=await page.evaluate(()=>{
+              const select=document.querySelector('#university-first-select');
+              const existing=document.querySelector('#existing-photo-choice');
+              const add=document.querySelector('#simple-add-photo-step');
+              const panel=document.querySelector('.university-first');
+              return {
+                existingInsidePanel:!!existing&&existing.parentElement===panel,
+                selectTop:select?.getBoundingClientRect().top||0,
+                existingTop:existing?.getBoundingClientRect().top||0,
+                addTop:add?.getBoundingClientRect().top||0
+              };
+            });
+            assert.equal(order.existingInsidePanel,true,'STEP 2 must stay inside the university panel');
+            assert.ok(order.selectTop<order.existingTop,'STEP 1 must appear before STEP 2');
+            assert.ok(order.existingTop<order.addTop,'STEP 2 must appear before STEP 3');
+
             await page.setInputFiles('#university-first-photo',{name:'campus.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
-            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'single-university mode hides repeated university fields');
-
-            // Switch to batch mode, then photo first -> university remains available.
-            await page.locator('#mode-batch').click();
-            assert.equal(await page.locator('#mode-batch').getAttribute('aria-pressed'),'true');
-            await page.setInputFiles('#photo-input',{name:'second-campus.png',mimeType:'image/png',buffer:png});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
-            const second=page.locator('.batch-row').nth(1);
-            assert.equal(await second.locator('.row-university').isVisible(),true,'batch mode keeps photo-first dropdown visible');
-            await second.locator('.row-university-search').fill('東京大学');
-            await second.locator('.row-university-search').press('Enter');
-            assert.equal(await second.locator('.row-university').inputValue(),'u000001');
 
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
