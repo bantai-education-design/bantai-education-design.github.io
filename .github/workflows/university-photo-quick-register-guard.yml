@@ -51,9 +51,10 @@ jobs:
           assert.ok(js.includes("forbidden_adjustments:['generative_redraw','object_addition','object_removal','background_replacement','scene_composite']"),'forbidden scene changes required');
           assert.ok(js.includes('makeZip(entries)'),'single ZIP batch export required');
           assert.doesNotMatch(js,/fillText\(|strokeText\(|globalCompositeOperation|removeBackground|inpaint|outpaint/i,'no scene-generating canvas operations');
-          assert.ok(detail.includes('function detailVerifiedImage(row)'),'detail shared-photo helper required');
-          assert.ok(detail.includes('state.images?.get(row.id)'),'detail must read shared image state directly');
-          assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must feed shared state');
+          assert.ok(overlay.includes('window.__universityOwnerPhotos'),'persistent owner-photo map required');
+          assert.ok(overlay.includes('window.__universityOwnerPhotos.set(id,record)'),'owner photo must persist independently of async image reloads');
+          assert.ok(detail.includes('window.__universityOwnerPhotos?.get(row.id)'),'detail must prioritize persistent owner photo');
+          assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
           console.log('batch quick register architecture validated');
           NODE
       - name: Install Playwright Chromium
@@ -101,12 +102,16 @@ jobs:
             const db=await browser.newPage({viewport:{width:1366,height:950}});
             await db.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await db.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            await db.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:10000});
+            await db.waitForFunction(()=>window.__universityOwnerPhotos?.get('u000094')?.image_url==='assets/card-images/asia-university-bantai.jpg',{timeout:10000});
+            await db.waitForFunction(()=>document.querySelector('.tokyo-card[data-id="u000094"] .real-university-image img')?.getAttribute('src')==='assets/card-images/asia-university-bantai.jpg',{timeout:10000});
             const card=db.locator('.tokyo-card[data-id="u000094"]');
             const cardSrc=await card.locator('.real-university-image img').getAttribute('src');
             await card.locator('.card-detail-open').click();
-            await db.waitForSelector('#university-detail-dialog[open] .detail-visual img',{timeout:10000});
-            const detailSrc=await db.locator('#university-detail-dialog .detail-visual img').getAttribute('src');
+            await db.waitForSelector('#university-detail-dialog[open]',{timeout:10000});
+            const detailVisual=db.locator('#university-detail-dialog .detail-visual');
+            await detailVisual.waitFor({state:'visible',timeout:10000});
+            assert.equal(await detailVisual.locator('img').count(),1,'detail must render owner photo image');
+            const detailSrc=await detailVisual.locator('img').getAttribute('src');
             assert.equal(detailSrc,cardSrc,'card and detail must use the same owner photo');
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
