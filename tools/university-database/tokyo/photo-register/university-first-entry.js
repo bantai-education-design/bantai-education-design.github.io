@@ -1,5 +1,6 @@
 (()=>{
 'use strict';
+const style=document.createElement('link');style.rel='stylesheet';style.href='order-flow.css?v=20260824-1141';document.head.appendChild(style);
 const search=document.querySelector('#university-first-search');
 const select=document.querySelector('#university-first-select');
 const button=document.querySelector('#university-first-photo-button');
