@@ -6,22 +6,28 @@ const intro=batch?.querySelector(':scope > .muted');
 const university=document.querySelector('.university-first');
 const title=document.querySelector('#university-first-title');
 const titleSmall=title?.parentElement?.querySelector('small');
+const searchLabel=document.querySelector('label:has(#university-first-search)');
+const search=document.querySelector('#university-first-search');
 const selectLabel=document.querySelector('label:has(#university-first-select)');
 const select=document.querySelector('#university-first-select');
 const addButton=document.querySelector('#university-first-photo-button');
 const status=document.querySelector('#university-first-status');
-const searchLabel=document.querySelector('label:has(#university-first-search)');
-if(!batch||!university||!select||!addButton)return;
+if(!batch||!university||!search||!select||!addButton)return;
 
 if(head)head.textContent='大学を選んで写真を登録する';
-if(intro)intro.textContent='上から順に、大学を選ぶ → 既存写真を確認 → 写真を追加、の3ステップです。';
+if(intro)intro.textContent='大学名を入力するか一覧から1校選ぶ → 既存写真を確認 → 写真を追加、の順です。';
 if(title)title.textContent='STEP 1　大学を選ぶ';
-if(titleSmall)titleSmall.textContent='ここで登録する大学を1校だけ選びます';
+if(titleSmall)titleSmall.textContent='文字入力または一覧のどちらか一方で選べます';
+if(searchLabel){
+  searchLabel.hidden=false;
+  const text=[...searchLabel.childNodes].find(n=>n.nodeType===Node.TEXT_NODE);
+  if(text)text.nodeValue='大学名を入力して検索\n';
+}
+search.placeholder='例：亜細亜大学';
 if(selectLabel){
   const text=[...selectLabel.childNodes].find(n=>n.nodeType===Node.TEXT_NODE);
-  if(text)text.nodeValue='登録する大学\n';
+  if(text)text.nodeValue='または一覧から選択\n';
 }
-if(searchLabel)searchLabel.hidden=true;
 
 let addStep=document.querySelector('#simple-add-photo-step');
 if(!addStep){
@@ -57,7 +63,7 @@ function update(){
   if(status){
     status.textContent=selected
       ? `${option?.textContent||'大学'}を選択しました。次にSTEP 2で既存写真を確認してください。`
-      : 'この一覧から大学を1校選んでください。';
+      : '大学名を入力するか、一覧から1校選んでください。';
   }
   university.classList.toggle('simple-university-selected',selected);
   addButton.disabled=!selected;
