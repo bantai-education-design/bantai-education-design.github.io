@@ -10,7 +10,8 @@ const batchList=$('#batch-list');
 const firstStatus=$('#university-first-status');
 const editorSearch=$('#editor-university-search');
 const editorSelect=$('#university-select');
-if(!firstSearch||!firstSelect||!firstButton||!firstFile||!mainFile||!batchList||!firstStatus||!editorSearch||!editorSelect)return;
+const deleteActive=$('#delete-active-photo');
+if(!firstSearch||!firstSelect||!firstButton||!firstFile||!mainFile||!batchList||!firstStatus||!editorSearch||!editorSelect||!deleteActive)return;
 let universities=[];
 const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[\s　_\-()（）.・]/g,'');
 const label=u=>`${u.name}（${u.id}）`;
@@ -26,7 +27,7 @@ firstSearch.addEventListener('change',commitFirstSearch);
 firstSearch.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commitFirstSearch();}});
 firstSelect.addEventListener('change',()=>{const u=selectedUniversity(firstSelect);if(u)firstSearch.value=label(u);setFirstStatus();});
 firstButton.addEventListener('click',()=>{if(!firstButton.disabled)firstFile.click();});
-firstFile.addEventListener('change',()=>{const file=firstFile.files?.[0],universityId=firstSelect.value;if(!file||!universityId)return;const before=batchList.querySelectorAll('.batch-row').length;firstStatus.textContent='写真を読み込み、大学へ割り当てています…';const dt=new DataTransfer();dt.items.add(file);mainFile.files=dt.files;mainFile.dispatchEvent(new Event('change',{bubbles:true}));let tries=0;const finish=()=>{const rows=[...batchList.querySelectorAll('.batch-row')];if(rows.length>before){const row=rows[rows.length-1],rowSelect=row.querySelector('.row-university');if(rowSelect&&[...rowSelect.options].some(o=>o.value===universityId)){rowSelect.value=universityId;rowSelect.dispatchEvent(new Event('change',{bubbles:true}));row.querySelector('.edit-item')?.click();const u=universities.find(x=>x.id===universityId);firstStatus.textContent=`${u?.name||universityId} に写真を割り当てました。`;firstFile.value='';return;}}if(++tries<160)setTimeout(finish,50);else firstStatus.textContent='写真は追加されました。大学の割り当てを写真一覧で確認してください。';};setTimeout(finish,50);});
+firstFile.addEventListener('change',()=>{const file=firstFile.files?.[0],universityId=firstSelect.value;if(!file||!universityId)return;const before=batchList.querySelectorAll('.batch-row').length;firstStatus.textContent='写真を読み込み、大学へ割り当てています…';const dt=new DataTransfer();dt.items.add(file);mainFile.files=dt.files;mainFile.dispatchEvent(new Event('change',{bubbles:true}));let tries=0;const finish=()=>{const rows=[...batchList.querySelectorAll('.batch-row')];if(rows.length>before){const row=rows[rows.length-1],rowSelect=row.querySelector('.row-university');if(rowSelect&&[...rowSelect.options].some(o=>o.value===universityId)){rowSelect.value=universityId;rowSelect.dispatchEvent(new Event('change',{bubbles:true}));row.querySelector('.edit-item')?.click();const u=universities.find(x=>x.id===universityId);firstStatus.textContent=`${u?.name||universityId} に写真を割り当てました。間違えた場合は「写真を削除」で取り消せます。`;firstFile.value='';return;}}if(++tries<160)setTimeout(finish,50);else firstStatus.textContent='写真は追加されました。大学の割り当てを写真一覧で確認してください。';};setTimeout(finish,50);});
 function syncEditorSearch(){const u=selectedUniversity(editorSelect);if(document.activeElement!==editorSearch)editorSearch.value=u?label(u):'';editorSearch.placeholder=editorSelect.disabled?'写真一覧で「編集」を押してください':'大学名・大学IDを入力';}
 function renderEditor(rows,selected=''){if(editorSelect.disabled)return;editorSelect.innerHTML=optionMarkup(rows,selected);if(selected&&rows.some(u=>u.id===selected))editorSelect.value=selected;}
 function ensureEditorActive(){if(!editorSelect.disabled)return true;const edit=batchList.querySelector('.batch-row .edit-item');if(!edit)return false;edit.click();return !editorSelect.disabled;}
@@ -36,7 +37,21 @@ editorSearch.addEventListener('input',()=>{if(!ensureEditorActive())return;const
 editorSearch.addEventListener('change',commitEditorSearch);
 editorSearch.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commitEditorSearch();}});
 editorSelect.addEventListener('change',()=>queueMicrotask(syncEditorSearch));
-new MutationObserver(()=>queueMicrotask(syncEditorSearch)).observe(editorSelect,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled']});
-new MutationObserver(()=>queueMicrotask(syncEditorSearch)).observe(batchList,{childList:true,subtree:true});
-fetch('../data/universities_tokyo_all.generated.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('大学一覧を取得できません');return r.json();}).then(rows=>{universities=rows;renderFirst(universities);syncEditorSearch();}).catch(e=>{console.error(e);firstSelect.innerHTML='<option value="">大学一覧の読み込みに失敗</option>';firstStatus.textContent='大学一覧の読み込みに失敗しました。ページを再読み込みしてください。';firstButton.disabled=true;});
+function enhanceDeleteControls(){
+  batchList.querySelectorAll('.remove-item').forEach(btn=>{btn.textContent='写真を削除';btn.setAttribute('aria-label','この写真を一覧から削除');});
+  const activeRemove=batchList.querySelector('.batch-row.active .remove-item');
+  deleteActive.disabled=!activeRemove;
+}
+deleteActive.addEventListener('click',()=>{
+  const activeRemove=batchList.querySelector('.batch-row.active .remove-item');
+  if(!activeRemove)return;
+  activeRemove.click();
+  firstFile.value='';
+  mainFile.value='';
+  firstStatus.textContent='写真を削除しました。必要なら写真を選び直してください。';
+  queueMicrotask(()=>{syncEditorSearch();enhanceDeleteControls();});
+});
+new MutationObserver(()=>queueMicrotask(()=>{syncEditorSearch();enhanceDeleteControls();})).observe(editorSelect,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled']});
+new MutationObserver(()=>queueMicrotask(()=>{syncEditorSearch();enhanceDeleteControls();})).observe(batchList,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+fetch('../data/universities_tokyo_all.generated.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('大学一覧を取得できません');return r.json();}).then(rows=>{universities=rows;renderFirst(universities);syncEditorSearch();enhanceDeleteControls();}).catch(e=>{console.error(e);firstSelect.innerHTML='<option value="">大学一覧の読み込みに失敗</option>';firstStatus.textContent='大学一覧の読み込みに失敗しました。ページを再読み込みしてください。';firstButton.disabled=true;});
 })();
