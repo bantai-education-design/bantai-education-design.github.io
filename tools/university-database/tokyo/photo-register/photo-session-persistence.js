@@ -73,8 +73,7 @@ university.addEventListener('change',()=>{
   }
   if(!next)return;
   const previous=currentUniversityId;
-  const hasAddedPhotos=!!list.querySelector('.batch-row');
-  if((previous&&previous!==next)||(!previous&&hasAddedPhotos)){
+  if(previous&&previous!==next){
     clearAddedPhotosForUniversitySwitch(next);
     return;
   }
