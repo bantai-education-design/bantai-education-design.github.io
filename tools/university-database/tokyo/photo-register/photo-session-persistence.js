@@ -36,6 +36,12 @@ document.addEventListener('click',event=>{
 new MutationObserver(()=>scheduleSave()).observe(list,{childList:true});
 
 function waitFor(fn,timeout=10000){return new Promise((resolve,reject)=>{const started=Date.now();const tick=()=>{const value=fn();if(value)return resolve(value);if(Date.now()-started>timeout)return reject(new Error('restore timeout'));setTimeout(tick,80);};tick();});}
+function findSavedMain(main){
+  if(!main)return null;
+  if(main.type==='existing'&&main.key)return [...document.querySelectorAll('.main-photo-choice-card[data-main-type="existing"]')].find(card=>(card.dataset.mainKey||'')===main.key)||null;
+  if(main.type==='new'&&main.label)return [...document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]')].find(card=>card.querySelector('strong')?.textContent?.trim()===main.label)||null;
+  return null;
+}
 
 async function restore(){
   if(sessionStorage.getItem(TAB_FLAG)!=='1')return;
@@ -56,11 +62,15 @@ async function restore(){
       await waitFor(()=>document.querySelectorAll('.batch-row').length>=saved.files.length);
     }
     if(saved.main){
-      await waitFor(()=>document.querySelector('.main-photo-choice-card'));
-      let target=null;
-      if(saved.main.type==='existing'&&saved.main.key){target=[...document.querySelectorAll('.main-photo-choice-card[data-main-type="existing"]')].find(card=>(card.dataset.mainKey||'')===saved.main.key);}
-      if(saved.main.type==='new'&&saved.main.label){target=[...document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]')].find(card=>card.querySelector('strong')?.textContent?.trim()===saved.main.label);}
-      target?.click();
+      await waitFor(()=>findSavedMain(saved.main));
+      findSavedMain(saved.main)?.click();
+      // University/photo synchronization can finish asynchronously after rows are restored.
+      // Re-apply the saved choice once that synchronization has settled so it cannot be
+      // overwritten by the registry refresh that chooses the previous existing main.
+      await new Promise(resolve=>setTimeout(resolve,400));
+      const settled=findSavedMain(saved.main);
+      if(settled&&!settled.classList.contains('active'))settled.click();
+      await waitFor(()=>findSavedMain(saved.main)?.classList.contains('active'),5000);
     }
     document.documentElement.dataset.photoSessionRestored='true';
   }catch(err){console.error('photo session restore failed',err);document.documentElement.dataset.photoSessionRestored='error';}
