@@ -56,7 +56,7 @@ jobs:
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
             assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university-first dropdown enabled before photo');
 
-            // University first -> photo
+            // University first -> photo in single-university mode.
             await page.locator('#university-first-search').fill('亜細亜大学');
             await page.locator('#university-first-search').press('Enter');
             assert.equal(await page.locator('#university-first-select').inputValue(),'u000094');
@@ -64,12 +64,15 @@ jobs:
             await page.setInputFiles('#university-first-photo',{name:'campus.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
+            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'single-university mode hides repeated university fields');
 
-            // Photo first -> university
+            // Switch to batch mode, then photo first -> university remains available.
+            await page.locator('#mode-batch').click();
+            assert.equal(await page.locator('#mode-batch').getAttribute('aria-pressed'),'true');
             await page.setInputFiles('#photo-input',{name:'second-campus.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
             const second=page.locator('.batch-row').nth(1);
-            assert.equal(await second.locator('.row-university').isVisible(),true,'photo-first dropdown visible');
+            assert.equal(await second.locator('.row-university').isVisible(),true,'batch mode keeps photo-first dropdown visible');
             await second.locator('.row-university-search').fill('東京大学');
             await second.locator('.row-university-search').press('Enter');
             assert.equal(await second.locator('.row-university').inputValue(),'u000001');
