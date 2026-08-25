@@ -1,0 +1,123 @@
+name: University photo community submission guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - 'tools/university-database/tokyo/assets/detail-owner-photo-gallery.js'
+      - 'tools/university-database/tokyo/assets/detail-photo-preview.js'
+      - 'tools/university-database/tokyo/detail.html'
+      - '.github/workflows/university-photo-community-submission-guard.yml'
+
+jobs:
+  community-submission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate community submission source
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const rules=fs.readFileSync('tools/university-database/tokyo/photo-register/PHOTO_SUBMISSION_RULES.md','utf8');
+          const ui=fs.readFileSync('tools/university-database/tokyo/photo-register/community-submission-ui.js','utf8');
+          const popup=fs.readFileSync('tools/university-database/tokyo/photo-register/preview-popup-fix.js','utf8');
+          const detail=fs.readFileSync('tools/university-database/tokyo/assets/detail-photo-preview.js','utf8');
+          const gallery=fs.readFileSync('tools/university-database/tokyo/assets/detail-owner-photo-gallery.js','utf8');
+          assert.ok(rules.includes('最大9枚')&&rules.includes('メイン1枚')&&rules.includes('サブ写真'));
+          assert.ok(rules.includes('生成AI')&&rules.includes('公開は自動ではありません'));
+          assert.ok(ui.includes('const MAX_PHOTOS=9'));
+          assert.ok(ui.includes('community-rule-rights')&&ui.includes('community-rule-no-ai')&&ui.includes('community-rule-license'));
+          assert.ok(ui.includes("kind:'bantai_university_photo_submission'")&&ui.includes("review_status:'pending'"));
+          assert.ok(popup.includes('.slice(0,9)'),'formal popup preview must allow nine photos');
+          assert.ok(detail.includes('.slice(0,9)'),'detail preview receiver must allow nine photos');
+          assert.ok(gallery.includes('const MAX_PHOTOS=9')&&gallery.includes('record.gallery'),'published detail gallery must support main plus gallery');
+          console.log('community submission rules, package, preview and gallery source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Serve site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/community-photo.log 2>&1 &
+          sleep 2
+      - name: Verify nine-photo submission, moderation gate and published gallery
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const ctx=await browser.newContext({viewport:{width:1366,height:900},acceptDownloads:true});
+            const page=await ctx.newPage();
+            const register='http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/';
+            await page.goto(register,{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            assert.equal(await page.locator('#registration-mode-switch').isVisible(),false,'batch mode must be hidden from normal community submitters');
+            assert.equal(await page.locator('#community-photo-rules').isVisible(),true,'submission rules must be visible');
+            assert.equal(await page.locator('#community-submit-package').isVisible(),true,'moderated submission action must be visible');
+            assert.equal(await page.locator('#community-submit-package').isDisabled(),true,'submission must be gated before consent');
+
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length>=1,{timeout:10000});
+            const existing=await page.locator('#existing-photo-choice .main-photo-choice-card').count();
+            assert.ok(existing>=1&&existing<=9,'fixture university must expose at least one existing candidate');
+            const addCount=9-existing;
+            if(addCount>0){
+              const files=Array.from({length:addCount},(_,i)=>({name:`community-${i+1}.png`,mimeType:'image/png',buffer:png}));
+              await page.setInputFiles('#photo-input',files);
+              await page.waitForFunction(expected=>document.querySelectorAll('.batch-row').length===expected,addCount,{timeout:10000});
+            }
+            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length===9,{timeout:10000});
+            assert.equal((await page.locator('#community-photo-counter').innerText()).includes('9 / 9枚'),true,'counter must show nine of nine');
+            assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo must be active');
+            assert.equal(await page.locator('#open-real-preview').isDisabled(),false,'nine photos must still be previewable');
+
+            const popupPromise=ctx.waitForEvent('page');
+            await page.locator('#open-real-preview').click();
+            const preview=await popupPromise;
+            await preview.waitForURL(/detail\.html\?id=u000094&photo_preview_token=/,{timeout:15000});
+            await preview.waitForFunction(()=>document.querySelectorAll('.detail-photo-preview-thumb').length===9,{timeout:15000});
+            assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1,'nine-photo preview must still have one active main');
+            await preview.close();
+
+            await page.check('#community-rule-rights');
+            await page.check('#community-rule-no-ai');
+            await page.check('#community-rule-license');
+            await page.waitForFunction(()=>!document.querySelector('#community-submit-package')?.disabled,{timeout:10000});
+            const downloadPromise=page.waitForEvent('download');
+            await page.locator('#community-submit-package').click();
+            const download=await downloadPromise;
+            assert.match(download.suggestedFilename(),/^BanTai-University-Photo-Submission-.*\.zip$/);
+            await page.waitForFunction(()=>document.documentElement.dataset.communitySubmissionLast==='success',{timeout:10000});
+
+            await page.setInputFiles('#photo-input',{name:'tenth.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length===10,{timeout:10000});
+            assert.equal(await page.locator('#community-submit-package').isDisabled(),true,'tenth photo must block package creation');
+            assert.equal(await page.locator('#open-real-preview').isDisabled(),true,'tenth photo must block preview until removed');
+            assert.ok((await page.locator('#community-submit-status').innerText()).includes('最大9枚'));
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'community page must not overflow horizontally on mobile');
+
+            const galleryPage=await ctx.newPage();
+            const data='data:image/png;base64,'+png.toString('base64');
+            await galleryPage.route('**/data/user-photo-overrides.json',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({schema_version:2,records:{u000094:{university_id:'u000094',university_name:'亜細亜大学',rights_status:'verified',image_url:data+'#0',source_url:data+'#0',rights_note:'test',alt:'main',gallery:Array.from({length:8},(_,i)=>({image_url:data+`#${i+1}`,alt:`sub${i+1}`,role:'sub'}))}}})}));
+            await galleryPage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000094',{waitUntil:'networkidle'});
+            await galleryPage.waitForFunction(()=>document.querySelectorAll('.detail-owner-photo-thumb').length===9,{timeout:15000});
+            assert.equal(await galleryPage.locator('.detail-owner-photo-thumb.active').count(),1,'published gallery must start with one active main');
+            const before=await galleryPage.locator('.detail-owner-photo-main').getAttribute('src');
+            await galleryPage.locator('.detail-owner-photo-thumb').nth(8).click();
+            const after=await galleryPage.locator('.detail-owner-photo-main').getAttribute('src');
+            assert.notEqual(after,before,'clicking a sub photo must switch the large detail image');
+
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
