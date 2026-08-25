@@ -53,8 +53,16 @@ body.community-simple-submission .simple-register-progress li.done span{
   color:#f0d98b!important;
 }
 
-/* The public university fields live in one stable panel, outside the legacy shell
-   that older layout scripts are allowed to move for compatibility. */
+/* University selection is a form operation, not a scrolling tool palette.
+   Keeping this column static also prevents late sticky-position movement while
+   the native select menu is being opened. */
+body.community-simple-submission .simple-university-column{
+  position:static!important;
+  top:auto!important;
+  align-self:stretch!important;
+}
+
+/* Compatibility styling retained for older markup variants. */
 .community-university-chooser{
   display:grid;
   gap:9px;
