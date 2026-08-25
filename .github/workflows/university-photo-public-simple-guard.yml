@@ -1,0 +1,70 @@
+name: University photo public simple upload guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/public-simple.*'
+      - 'tools/university-database/tokyo/assets/photo-register-entry.js'
+      - '.github/workflows/university-photo-public-simple-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/public-simple.*'
+      - 'tools/university-database/tokyo/assets/photo-register-entry.js'
+      - '.github/workflows/university-photo-public-simple-guard.yml'
+
+jobs:
+  simple-public-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source contract
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const html=fs.readFileSync('tools/university-database/tokyo/photo-register/public-simple.html','utf8');
+          const js=fs.readFileSync('tools/university-database/tokyo/photo-register/public-simple.js','utf8');
+          const entry=fs.readFileSync('tools/university-database/tokyo/assets/photo-register-entry.js','utf8');
+          assert.ok(html.includes('大学名')&&html.includes('写真を追加'),'simple public inputs required');
+          assert.ok(!html.includes('傾き補正')&&!html.includes('コントラスト')&&!html.includes('メイン写真'),'public editor controls must not exist');
+          assert.ok(html.includes('写真をお寄せいただき、ありがとうございます。'),'thank-you message required');
+          assert.ok(html.includes('不定期に写真を追加・更新'),'future update notice required');
+          assert.ok(js.includes("fetch('submission-runtime-config.json'"),'runtime endpoint must remain config-driven');
+          assert.ok(js.includes("runtime.enabled&&runtime.mode==='remote'"),'remote connection gate required');
+          assert.ok(entry.includes('photo-register/public-simple.html'),'Tokyo DB must point to simple uploader');
+          console.log('simple public photo submission source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/simple-photo-upload.log 2>&1 &
+          sleep 2
+      - name: Verify simple page in browser
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:390,height:844}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/public-simple.html',{waitUntil:'networkidle'});
+            assert.equal(await page.locator('#simple-university').isVisible(),true);
+            assert.equal(await page.locator('#simple-dropzone').isVisible(),true);
+            assert.equal(await page.locator('#photo-editor').count(),0);
+            assert.equal(await page.getByText('傾き補正').count(),0);
+            assert.equal(await page.getByText('明るさ').count(),0);
+            assert.equal(await page.locator('#simple-submit').isDisabled(),true,'submission stays disabled until remote intake endpoint is configured');
+            const copy=await page.locator('main').innerText();
+            assert.ok(copy.includes('編集や掲載位置の調整はBan.Tai側で行います'));
+            assert.ok(copy.includes('不定期に写真を追加・更新'));
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
