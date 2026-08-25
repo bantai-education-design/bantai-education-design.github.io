@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>大学写真クイック登録 | Ban.Tai</title>
+  <title>大学写真を投稿 | Ban.Tai</title>
   <meta name="robots" content="noindex,nofollow">
   <link rel="stylesheet" href="photo-register.css?v=20260824-1549">
   <link rel="stylesheet" href="preview-sticky-fix.css?v=20260824-1549">
+  <link rel="stylesheet" href="community-submission-ui.css?v=20260825-1028">
 </head>
 <body>
   <header class="topbar">
-    <div><strong>Ban.Tai Education Design</strong><span>東京都大学DB 管理ツール</span></div>
+    <div><strong>Ban.Tai Education Design</strong><span>東京都大学DB 写真投稿</span></div>
     <a href="../">大学DBへ戻る</a>
   </header>
   <main class="wrap">
     <section class="hero">
-      <span class="eyebrow">OWNER PHOTO QUICK REGISTER</span>
-      <h1>大学写真クイック登録</h1>
-      <p>大学を選んで、既存写真を確認し、必要な写真を追加します。登録後は大学一覧カードと「詳しく見る」の詳細画面へ同じ実景写真を反映できます。</p>
-      <div class="rule-badges"><span>✓ 大学名入力</span><span>✓ 一覧選択</span><span>✓ 1大学1〜5枚</span><span>✓ 実景保持</span><span>✓ AI再描画なし</span></div>
+      <span class="eyebrow">COMMUNITY UNIVERSITY PHOTO SUBMISSION</span>
+      <h1>大学写真を投稿する</h1>
+      <p>大学を1校選び、実際のキャンパス写真を最大9枚まで追加してください。Ban.Tai側で確認し、承認した写真だけを大学DBへ掲載します。</p>
+      <div class="rule-badges"><span>✓ 1回1大学</span><span>✓ 最大9枚</span><span>✓ メイン1＋サブ8</span><span>✓ 実景保持</span><span>✓ 審査後に公開</span></div>
     </section>
 
     <section class="batch panel">
       <div class="section-head">
-        <div><span class="step">STEP 1</span><h2>大学を選んで写真を登録する</h2></div>
+        <div><span class="step">STEP 1</span><h2>大学を選んで写真を投稿する</h2></div>
         <button id="clear-batch" type="button" class="secondary">すべてクリア</button>
       </div>
       <p class="muted">大学名を入力するか一覧から1校選び、既存写真を確認してから必要な写真を追加します。</p>
@@ -34,7 +35,7 @@
           <label class="drop batch-drop" id="drop-zone" for="photo-input">
             <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
             <strong>写真をここへドロップ</strong>
-            <span>1大学につき1〜5枚を推奨。1大学モードでは選択した大学を全写真へ共通適用します。</span>
+            <span>1大学につき最大9枚。選択した大学を全写真へ共通適用します。</span>
             <small>JPEG / PNG / WebP</small>
           </label>
         </section>
@@ -42,7 +43,7 @@
         <section class="start-choice university-first" aria-labelledby="university-first-title">
           <div class="start-choice-head"><span class="start-number">B</span><div><strong id="university-first-title">STEP 1　大学を選ぶ</strong><small>文字入力または一覧のどちらか一方で選べます</small></div></div>
           <label class="field university-first-field">大学名を入力して検索
-            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：亜細亜大学" aria-label="大学名または大学IDを入力して検索">
+            <input id="university-first-search" type="text" autocomplete="off" placeholder="例：立教大学" aria-label="大学名または大学IDを入力して検索">
           </label>
           <label class="field university-first-field">または一覧から選択
             <select id="university-first-select" aria-label="144大学から選択"><option value="">大学一覧を読み込み中…</option></select>
@@ -59,7 +60,7 @@
 
     <section id="photo-editor" class="grid edit-grid" tabindex="-1">
       <div class="panel controls">
-        <div class="section-head"><div><span class="step">STEP 2</span><h2>必要な写真だけ微調整</h2></div></div>
+        <div class="section-head"><div><span class="step">任意</span><h2>必要なら写真を微調整</h2></div></div>
         <p class="muted">写真一覧の「編集」を押すと、この補正画面へ移動します。写真を間違えた場合は「この写真を削除」で取り消せます。</p>
         <label class="field">大学名を入力して検索
           <input id="editor-university-search" type="text" autocomplete="off" placeholder="写真一覧で「編集」を押してください" aria-label="編集対象の大学名または大学IDを入力">
@@ -91,16 +92,16 @@
       <div class="panel preview-panel">
         <h2>写真補正プレビュー</h2>
         <div class="preview-shell"><canvas id="preview" width="720" height="405"></canvas><div id="empty-preview" class="empty-preview">編集する写真を選択してください</div></div>
-        <p class="note">出力 720×405px（16:9）。回転・傾き補正、軽微なトリミング、明るさ・コントラスト調整のみ。配置確認はSTEP 1下部の「大学ページで実画面プレビュー」を使います。</p>
+        <p class="note">出力 720×405px（16:9）。回転・傾き補正、軽微なトリミング、明るさ・コントラスト調整のみ。配置確認は「大学ページで実画面プレビュー」を使います。</p>
       </div>
     </section>
 
     <section class="panel export-panel">
       <div class="section-head">
-        <div><span class="step">STEP 3</span><h2>確認後に登録パッケージを作る</h2></div>
-        <span class="surface-badge">一覧カード + 詳細画面</span>
+        <div><span class="step">STEP 5</span><h2>審査用データを作成</h2></div>
+        <span class="surface-badge">審査後に公開</span>
       </div>
-      <p>まず実画面プレビューで配置を確認してください。現在の登録出力は既存方式を維持し、複数写真の本番登録は配置確認後に有効化します。</p>
+      <p>写真・メイン指定・投稿ルールへの同意を審査用パッケージとして保存します。公開DBへ直接書き込むことはありません。</p>
       <div class="actions">
         <button id="generate-batch" class="primary" type="button" disabled>一括ZIPを生成</button>
         <button id="download-zip" type="button" disabled>ZIPを保存</button>
@@ -116,23 +117,25 @@
           <div><dt>共通台帳</dt><dd><code>tools/university-database/tokyo/data/user-photo-overrides.json</code></dd></div>
         </dl>
         <textarea id="json-output" readonly></textarea>
-        <p>このZIPをChatGPTへ渡せば、画像配置・台帳更新・CI・PR作成までまとめて処理できます。</p>
+        <p>審査用データをBan.Tai側で確認し、承認後に大学DBへ反映します。</p>
       </div>
     </section>
 
     <section class="policy panel">
-      <h2>実景写真の固定ルール</h2>
-      <p><strong>許可:</strong> 90°単位の回転、±5°以内の傾き補正、明るさ・露出相当の微調整、コントラスト、軽微なトリミング、縮小。</p>
-      <p><strong>禁止:</strong> 生成AIによる再描画、建物・樹木・人物・看板・道路・空・窓などの追加削除、背景置換、実在しない景観への合成。</p>
-      <p><strong>写真配置:</strong> 1大学1〜5枚。メイン1枚を一覧カードと詳細上部背景に使用し、残り最大4枚を詳細画面の小型サムネイルとして表示する方針です。</p>
+      <h2>大学写真 投稿・掲載ルール</h2>
+      <p><strong>許可:</strong> 投稿者本人が撮影した写真、または掲載許可を得た実景写真。90°単位の回転、±5°以内の傾き補正、明るさ・コントラスト、軽微なトリミング、縮小。</p>
+      <p><strong>禁止:</strong> 無断転載、生成AIによる作成・再描画、建物・樹木・人物・看板・道路・空などの追加削除、背景置換、実在しない景観への合成。</p>
+      <p><strong>写真配置:</strong> 1大学最大9枚。メイン1枚を一覧カードと詳細上部に使用し、残り最大8枚を詳細画面の横スクロールギャラリーとして表示します。</p>
+      <p><strong>公開:</strong> 投稿直後には公開しません。大学との一致、権利、個人情報、画質をBan.Tai側で確認し、承認したものだけ掲載します。</p>
     </section>
   </main>
   <script src="photo-register.js?v=20260824-1549"></script>
   <script src="university-entry-controller.js?v=20260824-1549"></script>
-  <script src="university-selection-sync-fix.js?v=20260825-0920"></script>
+  <script src="university-selection-sync-fix.js?v=20260825-1028"></script>
   <script src="multi-photo-preview.js?v=20260824-1549"></script>
-  <script src="preview-popup-fix.js?v=20260824-1549"></script>
+  <script src="preview-popup-fix.js?v=20260825-1028"></script>
   <script src="editor-register-button.js?v=20260824-1549"></script>
   <script src="photo-list-delete-fix.js?v=20260824-2350"></script>
+  <script src="community-submission-ui.js?v=20260825-1028"></script>
 </body>
 </html>
