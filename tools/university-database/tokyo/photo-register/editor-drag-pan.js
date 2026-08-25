@@ -2,10 +2,11 @@
 'use strict';
 const editor=document.querySelector('#photo-editor');
 const canvas=document.querySelector('#preview');
+const dragSurface=canvas?.closest('.preview-shell')||canvas;
 const posX=document.querySelector('#pos-x');
 const posY=document.querySelector('#pos-y');
 const fileInfo=document.querySelector('#file-info');
-if(!editor||!canvas||!posX||!posY)return;
+if(!editor||!canvas||!dragSurface||!posX||!posY)return;
 
 const clamp=(n,min=0,max=100)=>Math.min(max,Math.max(min,n));
 const refreshSubmission=()=>queueMicrotask(()=>window.__bantaiCommunityPhotoSubmission?.updateState?.());
@@ -16,10 +17,10 @@ if(!hint){
   hint.id='editor-drag-hint';
   hint.className='editor-drag-hint';
   hint.innerHTML='<strong>写真を直接動かせます</strong><span>プレビュー上の写真をマウスでつかみ、上下左右へドラッグしてください。左右位置・上下位置の数値にも同期します。</span>';
-  const shell=canvas.closest('.preview-shell');
-  shell?.insertAdjacentElement('beforebegin',hint);
+  dragSurface.insertAdjacentElement('beforebegin',hint);
 }
 canvas.classList.add('editor-pan-canvas');
+dragSurface.classList.add('editor-pan-surface');
 canvas.setAttribute('aria-label','写真補正プレビュー。写真をドラッグして上下左右の位置を調整できます');
 
 let drag=null;
@@ -37,7 +38,7 @@ function openEditorFromRow(){
   editor.classList.add('community-editor-opened-from-row');
 }
 function startDrag(event){
-  if(!hasEditablePhoto())return;
+  if(drag||!hasEditablePhoto())return;
   if(event.button!==undefined&&event.button!==0)return;
   const rect=canvas.getBoundingClientRect();
   if(!rect.width||!rect.height)return;
@@ -51,7 +52,8 @@ function startDrag(event){
     height:rect.height
   };
   canvas.classList.add('is-dragging');
-  canvas.setPointerCapture?.(event.pointerId);
+  dragSurface.classList.add('is-dragging');
+  try{dragSurface.setPointerCapture?.(event.pointerId);}catch(_e){}
   event.preventDefault();
 }
 function moveDrag(event){
@@ -61,24 +63,29 @@ function moveDrag(event){
   // Core renderer uses smaller position values to move the image right/down.
   emitRange(posX,drag.x-(dx/drag.width)*100);
   emitRange(posY,drag.y-(dy/drag.height)*100);
+  document.documentElement.dataset.editorDragMoved='true';
   refreshSubmission();
   event.preventDefault();
 }
 function endDrag(event){
   if(!drag||event.pointerId!==drag.pointerId)return;
-  try{canvas.releasePointerCapture?.(event.pointerId);}catch(_e){}
+  try{dragSurface.releasePointerCapture?.(event.pointerId);}catch(_e){}
   drag=null;
   canvas.classList.remove('is-dragging');
+  dragSurface.classList.remove('is-dragging');
   refreshSubmission();
 }
 
+// Keep the direct canvas listener for semantic clarity, and also listen on the
+// whole preview shell in capture phase so overlays cannot swallow the drag start.
 canvas.addEventListener('pointerdown',startDrag);
+dragSurface.addEventListener('pointerdown',startDrag,true);
 // Track movement at document level once dragging begins. This keeps the drag
 // stable even when the pointer leaves the canvas or layout/scroll position moves.
 document.addEventListener('pointermove',moveDrag,true);
 document.addEventListener('pointerup',endDrag,true);
 document.addEventListener('pointercancel',endDrag,true);
-canvas.addEventListener('lostpointercapture',()=>{drag=null;canvas.classList.remove('is-dragging');refreshSubmission();});
+dragSurface.addEventListener('lostpointercapture',()=>{drag=null;canvas.classList.remove('is-dragging');dragSurface.classList.remove('is-dragging');refreshSubmission();});
 
 // Editing is optional. Opening it or changing an adjustment must not invalidate
 // an otherwise valid community submission.
