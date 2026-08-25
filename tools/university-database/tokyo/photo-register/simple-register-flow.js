@@ -94,6 +94,7 @@ function placeAfter(anchor,node){
   return true;
 }
 function enforceOrder(){
+  if(document.querySelector('#simple-register-workspace'))return false;
   let moved=false;
   if(progress&&progress.nextElementSibling!==university){progress.insertAdjacentElement('afterend',university);moved=true;}
   const existing=existingBox();
