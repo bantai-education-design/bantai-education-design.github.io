@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大学写真 管理 | Ban.Tai</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="photo-admin.css?v=20260825-1649">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><strong>Ban.Tai Education Design</strong><span>東京都大学DB 写真管理</span></div>
+    <nav aria-label="管理導線">
+      <a href="../photo-register/?mode=owner">本人写真登録</a>
+      <a href="../photo-register/">公開投稿画面</a>
+      <a href="../">大学DBへ戻る</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">BANTAI UNIVERSITY PHOTO ADMIN</span>
+      <div class="hero-line">
+        <div>
+          <h1>大学写真 管理</h1>
+          <p>Ban.Tai本人撮影写真の登録と、訪問者から届いた写真の審査をここで行います。</p>
+        </div>
+        <span id="backend-status" class="status-chip offline">審査API 未接続</span>
+      </div>
+    </section>
+
+    <section class="entry-grid" aria-label="写真管理メニュー">
+      <article class="entry-card owner-entry">
+        <span class="entry-kicker">BAN.TAI OWNER</span>
+        <h2>本人撮影写真を登録</h2>
+        <p>大学を1校選び、最大9枚・メイン1枚を決めて登録用データを作成します。</p>
+        <a class="primary-link" href="../photo-register/?mode=owner">本人写真登録を開く</a>
+      </article>
+      <article class="entry-card review-entry">
+        <span class="entry-kicker">VISITOR REVIEW</span>
+        <h2>訪問者写真を審査</h2>
+        <p>未審査の投稿写真を一覧・拡大表示し、承認・却下・保留を決めます。</p>
+        <a class="secondary-link" href="#admin-login">管理コードで審査を開く</a>
+      </article>
+    </section>
+
+    <section id="admin-login" class="panel login-panel" aria-labelledby="login-title">
+      <div>
+        <span class="section-kicker">ADMIN ACCESS</span>
+        <h2 id="login-title">管理コード</h2>
+        <p>管理コードはGitHubには保存せず、審査API側の秘密環境変数で照合します。</p>
+      </div>
+      <form id="admin-login-form" class="login-form">
+        <label>管理コード
+          <input id="admin-code" type="password" autocomplete="current-password" inputmode="text" placeholder="管理コードを入力">
+        </label>
+        <label class="remember"><input id="remember-session" type="checkbox" checked> このタブを閉じるまで保持</label>
+        <button id="unlock-admin" type="submit" class="primary-button">訪問者写真の審査を開く</button>
+        <p id="login-status" class="form-status" aria-live="polite"></p>
+      </form>
+      <p class="security-note">管理コードは <code>localStorage</code> には保存しません。保持を選んだ場合も、このタブの <code>sessionStorage</code> のみです。</p>
+    </section>
+
+    <section id="admin-dashboard" class="dashboard" hidden>
+      <div class="dashboard-head">
+        <div>
+          <span class="section-kicker">REVIEW QUEUE</span>
+          <h2>訪問者写真 審査一覧</h2>
+          <p>写真そのものは非公開Storageから期限付きURLで表示します。承認しても自動公開はしません。</p>
+        </div>
+        <div class="dashboard-actions">
+          <button id="refresh-queue" type="button">再読み込み</button>
+          <button id="lock-admin" type="button">管理画面を閉じる</button>
+        </div>
+      </div>
+
+      <div class="summary-grid" aria-label="投稿件数">
+        <div><span>審査待ち</span><strong id="count-pending">0</strong></div>
+        <div><span>承認</span><strong id="count-approved">0</strong></div>
+        <div><span>却下</span><strong id="count-rejected">0</strong></div>
+        <div><span>掲載済み</span><strong id="count-published">0</strong></div>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="審査状態">
+        <button type="button" class="filter active" data-status="pending">審査待ち</button>
+        <button type="button" class="filter" data-status="approved">承認</button>
+        <button type="button" class="filter" data-status="rejected">却下</button>
+        <button type="button" class="filter" data-status="published">掲載済み</button>
+        <button type="button" class="filter" data-status="all">すべて</button>
+      </div>
+
+      <p id="queue-status" class="queue-status" aria-live="polite">読み込み前です。</p>
+      <div id="review-queue" class="review-queue"></div>
+      <div id="review-empty" class="empty-state" hidden>該当する投稿はありません。</div>
+    </section>
+  </main>
+
+  <dialog id="review-dialog" class="review-dialog">
+    <form method="dialog" class="dialog-shell">
+      <div class="dialog-head">
+        <div>
+          <span id="dialog-status-badge" class="status-badge">審査待ち</span>
+          <h2 id="dialog-university">大学名</h2>
+          <p id="dialog-meta"></p>
+        </div>
+        <button class="close-dialog" value="cancel" aria-label="閉じる">×</button>
+      </div>
+
+      <div id="dialog-gallery" class="dialog-gallery"></div>
+
+      <div class="review-meta-grid">
+        <div><span>受付番号</span><strong id="dialog-id"></strong></div>
+        <div><span>写真枚数</span><strong id="dialog-count"></strong></div>
+        <div><span>投稿日時</span><strong id="dialog-date"></strong></div>
+        <div><span>大学ID</span><strong id="dialog-university-id"></strong></div>
+      </div>
+
+      <div class="agreement-box">
+        <strong>投稿時確認</strong>
+        <ul id="dialog-agreements"></ul>
+      </div>
+
+      <label class="note-field">審査メモ
+        <textarea id="reviewer-note" rows="4" placeholder="却下理由、確認事項、掲載時の注意など"></textarea>
+      </label>
+
+      <div class="dialog-actions">
+        <a id="download-package" class="download-link" href="#" target="_blank" rel="noopener">審査用ZIPを開く</a>
+        <button id="mark-pending" type="button">保留に戻す</button>
+        <button id="reject-submission" type="button" class="danger-button">却下</button>
+        <button id="approve-submission" type="button" class="approve-button">承認</button>
+        <button id="publish-submission" type="button" class="publish-button">DB掲載済みにする</button>
+      </div>
+      <p id="dialog-action-status" class="form-status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <script src="photo-admin.js?v=20260825-1649"></script>
+</body>
+</html>
