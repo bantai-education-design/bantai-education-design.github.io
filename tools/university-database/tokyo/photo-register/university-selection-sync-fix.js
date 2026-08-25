@@ -64,13 +64,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-simple-register-flow]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260825-1008';
+    link.href='simple-register-flow.css?v=20260825-1028';
     link.dataset.simpleRegisterFlow='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-simple-register-flow]')){
     const simple=document.createElement('script');
-    simple.src='simple-register-flow.js?v=20260825-1008';
+    simple.src='simple-register-flow.js?v=20260825-1028';
     simple.defer=true;
     simple.dataset.simpleRegisterFlow='true';
     document.body.appendChild(simple);
@@ -78,13 +78,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-fresh-register-ui]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='fresh-register-ui.css?v=20260825-1008';
+    link.href='fresh-register-ui.css?v=20260825-1028';
     link.dataset.freshRegisterUi='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-fresh-register-ui]')){
     const fresh=document.createElement('script');
-    fresh.src='fresh-register-ui.js?v=20260825-1008';
+    fresh.src='fresh-register-ui.js?v=20260825-1028';
     fresh.defer=true;
     fresh.dataset.freshRegisterUi='true';
     document.body.appendChild(fresh);
@@ -92,13 +92,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-one-click-register]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='one-click-register.css?v=20260825-1008';
+    link.href='one-click-register.css?v=20260825-1028';
     link.dataset.oneClickRegister='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-one-click-register]')){
     const one=document.createElement('script');
-    one.src='one-click-register.js?v=20260825-1008';
+    one.src='one-click-register.js?v=20260825-1028';
     one.defer=true;
     one.dataset.oneClickRegister='true';
     document.body.appendChild(one);
