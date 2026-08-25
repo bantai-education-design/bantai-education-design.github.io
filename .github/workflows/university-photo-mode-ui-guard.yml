@@ -35,6 +35,7 @@ jobs:
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'domcontentloaded'});
             await page.waitForSelector('#registration-mode-switch',{state:'attached'});
             await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
             assert.equal(await page.locator('#registration-mode-switch').isVisible(),false,'community submitters must not see mode selection');
             assert.equal(await page.locator('#mode-single').getAttribute('aria-pressed'),'true');
             await page.locator('#university-first-select').selectOption('u000083');
