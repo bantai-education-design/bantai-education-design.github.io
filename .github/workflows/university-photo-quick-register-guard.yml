@@ -99,8 +99,10 @@ jobs:
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?v=20260824-1128',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('#university-select option').length===145,{timeout:10000});
-            await page.waitForSelector('#mode-batch');
-            await page.locator('#mode-batch').click();
+            // Public community submitters do not see the batch switch. Keep its
+            // internal compatibility testable without exposing the control.
+            await page.waitForSelector('#mode-batch',{state:'attached'});
+            await page.locator('#mode-batch').evaluate(el=>el.click());
             await page.setInputFiles('#photo-input',[
               {name:'u000094-亜細亜大学.png',mimeType:'image/png',buffer:png},
               {name:'u000001-東京大学.png',mimeType:'image/png',buffer:png}
