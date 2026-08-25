@@ -1,67 +1,45 @@
 (()=>{
 'use strict';
-const legacyChooser=document.querySelector('.university-first');
+const chooser=document.querySelector('.university-first');
 const select=document.querySelector('#university-first-select');
 const search=document.querySelector('#university-first-search');
 const selectLabel=select?.closest('label');
 const searchLabel=search?.closest('label');
-if(!legacyChooser||!select||!search||!selectLabel||!searchLabel)return;
+if(!chooser||!select||!search||!selectLabel||!searchLabel)return;
 
-// Do not allow interaction while old/new layout layers are still deciding where
-// the chooser belongs. It becomes enabled only after the stable public panel exists.
-select.disabled=true;
-search.disabled=true;
-document.documentElement.dataset.communityUniversityChooser='moving';
-
-let panel=document.querySelector('#community-university-chooser');
-if(!panel){
-  panel=document.createElement('section');
-  panel.id='community-university-chooser';
-  panel.className='community-university-chooser';
-  panel.innerHTML='<div class="community-university-heading"><span>STEP 1</span><div><h2>大学を選ぶ</h2><p>大学名を入力するか、一覧から1校選んでください。</p></div></div>';
-}
-
-function moveFields(){
+function stabilize(){
   const left=document.querySelector('#simple-register-workspace .simple-university-column');
-  const fallback=document.querySelector('#simple-register-workspace')||document.querySelector('#simple-register-progress')?.parentElement||legacyChooser.parentElement;
-  const host=left||fallback;
-  if(host&&panel.parentElement!==host){
-    if(left)left.prepend(panel);else host.insertBefore(panel,host.firstChild||null);
+  if(!left){
+    document.documentElement.dataset.communityUniversityChooser='waiting-workspace';
+    return false;
   }
-  if(searchLabel.parentElement!==panel)panel.appendChild(searchLabel);
-  if(selectLabel.parentElement!==panel)panel.appendChild(selectLabel);
-  searchLabel.hidden=false;
+
+  // Keep the original university panel intact. Moving only its form fields between
+  // containers caused actionability races while older layout observers were active.
+  if(chooser.parentElement!==left)left.prepend(chooser);
+  chooser.hidden=false;
+  chooser.removeAttribute('aria-hidden');
+  chooser.classList.remove('community-legacy-university-shell');
   selectLabel.hidden=false;
-  search.removeAttribute('aria-hidden');
+  searchLabel.hidden=false;
   select.removeAttribute('aria-hidden');
-
-  // The old shell still contains existing-photo choices and internal compatibility
-  // controls, but no longer owns the public university inputs that were being moved.
-  legacyChooser.classList.add('community-legacy-university-shell');
-  legacyChooser.querySelector('.start-choice-head')?.setAttribute('aria-hidden','true');
-
-  if(left){
-    search.disabled=false;
-    select.disabled=false;
-    document.documentElement.dataset.communityUniversityChooser='stable';
-    return true;
-  }
-  search.disabled=true;
-  select.disabled=true;
-  document.documentElement.dataset.communityUniversityChooser='waiting-workspace';
-  return false;
+  search.removeAttribute('aria-hidden');
+  select.disabled=select.options.length<=1;
+  search.disabled=false;
+  document.documentElement.dataset.communityUniversityChooser=select.disabled?'loading-options':'stable';
+  return !select.disabled;
 }
 
-moveFields();
+stabilize();
 const observer=new MutationObserver(()=>{
-  if(moveFields()){
+  if(stabilize()){
     requestAnimationFrame(()=>{
-      if(moveFields())observer.disconnect();
+      if(stabilize())observer.disconnect();
     });
   }
 });
 observer.observe(document.body,{childList:true,subtree:true});
-window.addEventListener('load',moveFields,{once:true});
-setTimeout(moveFields,120);
-setTimeout(moveFields,500);
+window.addEventListener('load',stabilize,{once:true});
+setTimeout(stabilize,120);
+setTimeout(stabilize,500);
 })();
