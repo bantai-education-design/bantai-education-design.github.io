@@ -1,0 +1,96 @@
+name: University photo fresh start layout guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-fresh-start-layout-guard.yml'
+
+jobs:
+  fresh-start-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate fresh-start source
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const fresh=fs.readFileSync('tools/university-database/tokyo/photo-register/fresh-register-ui.js','utf8');
+          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/fresh-register-ui.css','utf8');
+          const one=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.js','utf8');
+          const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
+          assert.ok(fresh.includes("dataset.photoFreshStart='load'"),'every page load must start clean');
+          assert.ok(fresh.includes('sessionStorage.removeItem(TAB_FLAG)'),'old restore flag must be removed on load');
+          assert.ok(fresh.includes('start-new-photo-registration'),'manual fresh-start button required');
+          assert.ok(fresh.includes('bantai-photo-register-complete'),'registration completion reset hook required');
+          assert.ok(one.includes("new CustomEvent('bantai-photo-register-complete')"),'successful registration must end current work');
+          assert.ok(css.includes('grid-template-columns:minmax(320px,.72fr) minmax(560px,1.45fr)'),'desktop must use wide two-column workspace');
+          assert.ok(loader.includes('fresh-register-ui.js')&&loader.includes('fresh-register-ui.css'),'fresh workspace assets must load');
+          console.log('clean-start and wide workspace source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-fresh-layout.log 2>&1 &
+          sleep 2
+      - name: Verify every load starts clean and wide preview placement
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          const register='http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/';
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900}});
+            await page.goto(register,{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
+            await page.waitForSelector('#simple-register-workspace');
+            await page.waitForSelector('#start-new-photo-registration');
+            assert.equal(await page.locator('#university-first-select').inputValue(),'','first load must start with no university');
+            assert.equal(await page.locator('.batch-row').count(),0,'first load must start with no added photos');
+
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card[data-main-type="existing"]').length>=1,null,{timeout:10000});
+            await page.waitForFunction(()=>!document.querySelector('#open-real-preview')?.disabled,null,{timeout:10000});
+            assert.equal(await page.locator('#open-real-preview').isVisible(),true,'real page preview must be visible beside photo work');
+
+            const left=await page.locator('.simple-university-column').boundingBox();
+            const right=await page.locator('.simple-photo-column').boundingBox();
+            const preview=await page.locator('#real-page-preview').boundingBox();
+            assert.ok(left&&right&&preview);
+            assert.ok(right.width>left.width,'photo column must use more desktop width than university column');
+            assert.ok(preview.y-right.y<120,'real page preview must stay near the top of photo column');
+
+            await page.setInputFiles('#photo-input',{name:'rikkyo-new.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
+
+            await page.reload({waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.photoFreshStart==='load',null,{timeout:10000});
+            assert.equal(await page.locator('#university-first-select').inputValue(),'','reload must start a new registration');
+            assert.equal(await page.locator('.batch-row').count(),0,'reload must not restore old photos');
+
+            await page.locator('#university-first-select').selectOption('u000083');
+            await page.setInputFiles('#photo-input',{name:'rikkyo-second.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
+            await page.locator('#start-new-photo-registration').click();
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value===''&&document.querySelectorAll('.batch-row').length===0,null,{timeout:10000});
+            assert.equal(await page.locator('#university-first-search').inputValue(),'','manual fresh start must clear typed university too');
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'mobile must not overflow horizontally');
+            const mobileLeft=await page.locator('.simple-university-column').boundingBox();
+            const mobileRight=await page.locator('.simple-photo-column').boundingBox();
+            assert.ok(mobileLeft&&mobileRight&&mobileRight.y>mobileLeft.y,'mobile workspace must stack vertically');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

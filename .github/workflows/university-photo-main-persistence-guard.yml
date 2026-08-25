@@ -24,7 +24,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-main-persistence.log 2>&1 &
           sleep 2
-      - name: Verify selected main persistence, switch isolation, and legacy cleanup
+      - name: Verify main selection during work and clean state after reload
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -35,9 +35,11 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const ctx=await browser.newContext({viewport:{width:1366,height:900}});
             const page=await ctx.newPage();
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            const url='http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/';
+            await page.goto(url,{waitUntil:'networkidle'});
             await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'));
             await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000083"]'));
+
             await page.locator('#university-first-select').selectOption('u000094');
             await page.setInputFiles('#photo-input',[
               {name:'asia-new-main.png',mimeType:'image/png',buffer:pngA},
@@ -46,8 +48,8 @@ jobs:
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,{timeout:10000});
             const newCards=page.locator('.main-photo-choice-card[data-main-type="new"]');
             await newCards.nth(1).click();
-            assert.ok((await newCards.nth(1).innerText()).includes('★ メイン'),'selected new photo must become main');
-            assert.ok((await newCards.nth(0).innerText()).includes('サブ'),'other new photo must remain sub');
+            assert.ok((await newCards.nth(1).innerText()).includes('★ メイン'),'selected new photo must become main while editing');
+            assert.ok((await newCards.nth(0).innerText()).includes('サブ'),'other new photo must remain sub while editing');
 
             const popupPromise=ctx.waitForEvent('page');
             await page.locator('#open-real-preview').click();
@@ -57,30 +59,22 @@ jobs:
             assert.equal(await preview.locator('.detail-photo-preview-thumb.active').count(),1,'preview must have exactly one main thumbnail');
             await preview.close();
 
-            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionSaved==='true',{timeout:10000});
-            await page.reload({waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionRestored==='true',{timeout:15000});
-            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,{timeout:10000});
-            const restored=page.locator('.main-photo-choice-card[data-main-type="new"]');
-            assert.equal(await restored.count(),2,'both newly added photos must survive reload for the same university');
-            assert.ok((await restored.nth(1).innerText()).includes('★ メイン'),'selected main must survive reload');
-            assert.ok((await restored.nth(0).innerText()).includes('サブ'),'sub photo must survive reload');
-
-            // Switching universities must start a clean registration session.
+            // Changing universities in the same page must clear newly-added photos before the new university is used.
             await page.locator('#university-first-select').selectOption('u000083');
             await page.waitForFunction(()=>document.documentElement.dataset.photoUniversitySwitched==='cleared',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===0,{timeout:10000});
             assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'Asia newly-added photos must disappear when switching to Rikkyo');
             assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','Rikkyo must remain selected after cleanup');
 
-            // The cleared Asia photos must not return after reload.
+            // Reliability rule: reloading starts a completely new registration, never restoring prior university/photos.
             await page.reload({waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionRestored==='true',{timeout:15000});
-            assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','Rikkyo selection must survive reload');
-            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'previous university photos must not return after reload');
-            assert.equal(await page.locator('.batch-row').count(),0,'previous university batch rows must not return after reload');
+            await page.waitForFunction(()=>document.documentElement.dataset.photoFreshStart==='load',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            assert.equal(await page.locator('#university-first-select').inputValue(),'','reload must start with no university');
+            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'reload must not restore prior photos');
+            assert.equal(await page.locator('.batch-row').count(),0,'reload must not restore prior batch rows');
 
-            // Reproduce the real failure: a legacy v2 session already mislabels old photos as Rikkyo.
+            // Even a deliberately seeded stale legacy session must be ignored on the next load.
             await page.evaluate(async()=>{
               const db=await new Promise((resolve,reject)=>{const req=indexedDB.open('bantai-university-photo-register',1);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});
               const staleBlob=new Blob([new Uint8Array([1,2,3,4])],{type:'image/png'});
@@ -89,10 +83,10 @@ jobs:
               sessionStorage.setItem('bantai-photo-register-restore-this-tab','1');
             });
             await page.reload({waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.documentElement.dataset.photoLegacySessionCleared==='true',{timeout:15000});
-            assert.equal(await page.locator('.batch-row').count(),0,'legacy corrupted session photos must be purged instead of restored');
-            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'legacy stale photos must not appear as current university photos');
-            assert.equal(await page.locator('#university-first-select').inputValue(),'','legacy corrupted university selection must also be reset once');
+            await page.waitForFunction(()=>document.documentElement.dataset.photoFreshStart==='load',{timeout:10000});
+            assert.equal(await page.locator('.batch-row').count(),0,'stale session photos must never return');
+            assert.equal(await page.locator('.main-photo-choice-card[data-main-type="new"]').count(),0,'stale photos must never appear as current photos');
+            assert.equal(await page.locator('#university-first-select').inputValue(),'','stale university selection must not return');
 
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});

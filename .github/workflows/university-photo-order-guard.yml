@@ -67,8 +67,8 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1280,height:900}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
-            await page.waitForFunction(()=>document.documentElement.dataset.universityImeFix==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.universityImeFix==='ready',null,{timeout:10000});
 
             const search=page.locator('#university-first-search');
             const select=page.locator('#university-first-select');
@@ -80,8 +80,8 @@ jobs:
             await search.dispatchEvent('compositionstart');
             await search.fill('亜細亜大学');
             await search.dispatchEvent('compositionend');
-            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:10000});
-            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',null,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,null,{timeout:10000});
             assert.ok((await search.inputValue()).includes('亜細亜大学'),'typed path must retain the chosen university name');
 
             const compact=await page.evaluate(()=>{
@@ -95,13 +95,13 @@ jobs:
             assert.ok(compact.width>0&&compact.width<=160,'photo cards must stay compact');
 
             await select.selectOption('u000001');
-            await page.waitForFunction(()=>document.querySelector('#university-first-search')?.value.includes('東京大学'),{timeout:5000});
+            await page.waitForFunction(()=>document.querySelector('#university-first-search')?.value.includes('東京大学'),null,{timeout:5000});
             assert.equal(await select.inputValue(),'u000001','dropdown selection must work independently');
             await select.selectOption('u000094');
-            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',{timeout:5000});
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000094',null,{timeout:5000});
 
             const upload=page.locator('#drop-zone');
-            assert.equal(await upload.isVisible(),true,'STEP 3 unified upload zone must be visible');
+            assert.equal(await upload.isVisible(),true,'unified upload zone must be visible');
             assert.equal(await page.locator('#photo-input').isEnabled(),true,'file input must be enabled after university selection');
             assert.ok((await upload.innerText()).includes('ここに写真をドロップ'),'drop instruction must be visible');
             assert.ok((await upload.innerText()).includes('ファイルを選択'),'file selection must be visible in the same zone');
@@ -113,24 +113,32 @@ jobs:
               const add=document.querySelector('#simple-add-photo-step');
               const upload=document.querySelector('#drop-zone');
               const panel=document.querySelector('.university-first');
+              const workspace=document.querySelector('#simple-register-workspace');
+              const photoColumn=document.querySelector('.simple-photo-column');
               return {
+                workspaceActive:!!workspace,
                 existingInsidePanel:!!existing&&existing.parentElement===panel,
                 uploadInsideAdd:!!upload&&upload.parentElement===add,
+                addInsidePhotoColumn:!!add&&add.parentElement===photoColumn,
                 searchTop:search?.getBoundingClientRect().top||0,
                 selectTop:select?.getBoundingClientRect().top||0,
                 existingTop:existing?.getBoundingClientRect().top||0,
                 addTop:add?.getBoundingClientRect().top||0
               };
             });
-            assert.equal(order.existingInsidePanel,true,'STEP 2 must stay inside the university panel');
-            assert.equal(order.uploadInsideAdd,true,'drop/file chooser must be in STEP 3');
+            assert.equal(order.existingInsidePanel,true,'existing/main photo chooser must stay inside the university panel');
+            assert.equal(order.uploadInsideAdd,true,'drop/file chooser must stay inside the photo-add section');
             assert.ok(order.searchTop<order.selectTop,'typed search must appear before the alternative dropdown');
-            assert.ok(order.selectTop<order.existingTop,'STEP 1 controls must appear before STEP 2');
-            assert.ok(order.existingTop<order.addTop,'STEP 2 must appear before STEP 3');
+            assert.ok(order.selectTop<order.existingTop,'university controls must appear before existing/main photo choices');
+            if(order.workspaceActive){
+              assert.equal(order.addInsidePhotoColumn,true,'wide desktop workspace must place photo addition in the photo column');
+            }else{
+              assert.ok(order.existingTop<order.addTop,'single-column fallback must keep photo choices before photo addition');
+            }
 
             await page.setInputFiles('#photo-input',{name:'file-picker-campus.png',mimeType:'image/png',buffer:png});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
-            await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',null,{timeout:10000});
 
             await page.evaluate(base64=>{
               const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));
@@ -140,12 +148,12 @@ jobs:
               zone.dispatchEvent(new DragEvent('dragenter',{bubbles:true,cancelable:true,dataTransfer:dt}));
               zone.dispatchEvent(new DragEvent('drop',{bubbles:true,cancelable:true,dataTransfer:dt}));
             },png.toString('base64'));
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
-            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,null,{timeout:10000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),null,{timeout:10000});
 
             await page.setInputFiles('#university-first-photo',{name:'legacy-campus.png',mimeType:'image/png',buffer:png});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,{timeout:10000});
-            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===3,null,{timeout:10000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('.batch-row .row-university')].every(x=>x.value==='u000094'),null,{timeout:10000});
 
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'mobile uploader must not cause horizontal overflow');

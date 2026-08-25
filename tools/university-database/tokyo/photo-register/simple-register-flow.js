@@ -94,6 +94,21 @@ function placeAfter(anchor,node){
   return true;
 }
 function enforceOrder(){
+  const workspace=document.querySelector('#simple-register-workspace');
+  if(workspace){
+    let moved=false;
+    const left=workspace.querySelector('.simple-university-column');
+    const right=workspace.querySelector('.simple-photo-column');
+    const rightHead=right?.querySelector('.simple-photo-column-head');
+    const existing=existingBox();
+    if(left&&university.parentElement!==left){left.appendChild(university);moved=true;}
+    if(existing&&existing.parentElement!==university){university.appendChild(existing);moved=true;}
+    if(right&&!addStep.isConnected){
+      if(rightHead)rightHead.insertAdjacentElement('afterend',addStep);else right.appendChild(addStep);
+      moved=true;
+    }
+    return moved;
+  }
   let moved=false;
   if(progress&&progress.nextElementSibling!==university){progress.insertAdjacentElement('afterend',university);moved=true;}
   const existing=existingBox();
@@ -148,7 +163,7 @@ new MutationObserver(()=>queueMicrotask(update)).observe(select,{childList:true,
 new MutationObserver(()=>queueMicrotask(update)).observe(document.querySelector('#batch-list'),{childList:true,subtree:true});
 const orderObserver=new MutationObserver(()=>{
   queueMicrotask(()=>{
-    if(!enforceOrder()&&existingBox())orderObserver.disconnect();
+    if(!enforceOrder()&&existingBox()&&addStep.isConnected)orderObserver.disconnect();
   });
 });
 orderObserver.observe(batch,{childList:true,subtree:true});
