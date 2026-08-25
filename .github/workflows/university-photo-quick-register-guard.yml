@@ -129,7 +129,9 @@ jobs:
             assert.equal(await page.locator('#rotation-out').textContent(),'90°','rotation preview value');
             assert.equal(await page.locator('#tilt-out').textContent(),'1.5°','tilt preview value');
 
-            await page.click('#generate-batch');
+            // The legacy batch generator remains internal and hidden in the public
+            // community flow; invoke it programmatically to verify compatibility.
+            await page.locator('#generate-batch').evaluate(el=>el.click());
             await page.waitForFunction(()=>!document.querySelector('#result').hidden,{timeout:10000});
             assert.equal(await page.locator('#download-zip').isEnabled(),true,'ZIP download enabled');
             const registry=JSON.parse(await page.locator('#json-output').inputValue());
