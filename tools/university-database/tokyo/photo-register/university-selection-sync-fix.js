@@ -46,68 +46,25 @@ new MutationObserver(()=>queueMicrotask(()=>{
   assignFirstUniversityToUnassigned();
   syncFirstUniversityFromRows();
 })).observe(batchList,{childList:true,subtree:true});
-
-queueMicrotask(()=>{
-  assignFirstUniversityToUnassigned();
-  syncFirstUniversityFromRows();
-});
+queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromRows();});
 })();
 
 (()=>{
-  if(!document.querySelector('script[data-university-ime-selection-fix]')){
-    const s=document.createElement('script');
-    s.src='university-ime-selection-fix.js?v=20260824-1817';
-    s.defer=true;
-    s.dataset.universityImeSelectionFix='true';
-    document.body.appendChild(s);
-  }
-  if(!document.querySelector('link[data-simple-register-flow]')){
-    const link=document.createElement('link');
-    link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260825-1028';
-    link.dataset.simpleRegisterFlow='true';
-    document.head.appendChild(link);
-  }
-  if(!document.querySelector('script[data-simple-register-flow]')){
-    const simple=document.createElement('script');
-    simple.src='simple-register-flow.js?v=20260825-1028';
-    simple.defer=true;
-    simple.dataset.simpleRegisterFlow='true';
-    document.body.appendChild(simple);
-  }
-  if(!document.querySelector('link[data-fresh-register-ui]')){
-    const link=document.createElement('link');
-    link.rel='stylesheet';
-    link.href='fresh-register-ui.css?v=20260825-1028';
-    link.dataset.freshRegisterUi='true';
-    document.head.appendChild(link);
-  }
-  if(!document.querySelector('script[data-fresh-register-ui]')){
-    const fresh=document.createElement('script');
-    fresh.src='fresh-register-ui.js?v=20260825-1028';
-    fresh.defer=true;
-    fresh.dataset.freshRegisterUi='true';
-    document.body.appendChild(fresh);
-  }
-  if(!document.querySelector('link[data-one-click-register]')){
-    const link=document.createElement('link');
-    link.rel='stylesheet';
-    link.href='one-click-register.css?v=20260825-1028';
-    link.dataset.oneClickRegister='true';
-    document.head.appendChild(link);
-  }
-  if(!document.querySelector('script[data-one-click-register]')){
-    const one=document.createElement('script');
-    one.src='one-click-register.js?v=20260825-1028';
-    one.defer=true;
-    one.dataset.oneClickRegister='true';
-    document.body.appendChild(one);
-  }
-  if(!document.querySelector('script[data-community-submission-compat]')){
-    const compat=document.createElement('script');
-    compat.src='community-submission-compat.js?v=20260825-1032';
-    compat.defer=true;
-    compat.dataset.communitySubmissionCompat='true';
-    document.body.appendChild(compat);
-  }
+  const addStyle=(key,href)=>{
+    if(document.querySelector(`link[data-${key}]`))return;
+    const link=document.createElement('link');link.rel='stylesheet';link.href=href;link.dataset[key.replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]='true';document.head.appendChild(link);
+  };
+  const addScript=(key,src)=>{
+    if(document.querySelector(`script[data-${key}]`))return;
+    const s=document.createElement('script');s.src=src;s.defer=true;s.dataset[key.replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]='true';document.body.appendChild(s);
+  };
+  addScript('university-ime-selection-fix','university-ime-selection-fix.js?v=20260824-1817');
+  addStyle('simple-register-flow','simple-register-flow.css?v=20260825-1056');
+  addScript('simple-register-flow','simple-register-flow.js?v=20260825-1056');
+  addStyle('fresh-register-ui','fresh-register-ui.css?v=20260825-1056');
+  addScript('fresh-register-ui','fresh-register-ui.js?v=20260825-1056');
+  addStyle('one-click-register','one-click-register.css?v=20260825-1056');
+  addScript('one-click-register','one-click-register.js?v=20260825-1056');
+  addScript('community-submission-compat','community-submission-compat.js?v=20260825-1056');
+  addScript('community-submission-transport','community-submission-transport.js?v=20260825-1056');
 })();
