@@ -48,7 +48,7 @@ jobs:
             assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'public single mode hides per-photo university fields');
 
             // Hidden internal batch compatibility remains testable without exposing it to public users.
-            await page.locator('#mode-batch').click({force:true});
+            await page.locator('#mode-batch').evaluate(el=>el.click());
             assert.equal(await page.locator('#mode-batch').getAttribute('aria-pressed'),'true');
             assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),true,'internal batch mode compatibility must remain available');
             await browser.close();
