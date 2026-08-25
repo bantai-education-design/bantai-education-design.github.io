@@ -1,5 +1,7 @@
 /* Community photo submission layer. Keep legacy/admin controls in the DOM, but simplify the public flow. */
 body.community-photo-submission #registration-mode-switch{display:none!important}
+body.community-photo-submission .start-choice-grid>.start-choice:not(.university-first){display:none!important}
+body.community-photo-submission .finish-edit-register-wrap{display:none!important}
 body.community-photo-submission .export-panel .actions>button{display:none!important}
 body.community-photo-submission #community-submit-package{display:inline-flex!important}
 body.community-photo-submission .policy{display:none!important}
