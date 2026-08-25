@@ -53,8 +53,9 @@ function finish(success,message){
     register.textContent='登録データを準備しました';
     result.hidden=false;
     if(resultHeading)resultHeading.textContent='登録データを準備しました';
-    if(resultNote)resultNote.textContent='登録用データを保存しました。このチャットに添付してください。こちらで大学DBへの反映・CI・PR・mainへのマージまで行います。';
+    if(resultNote)resultNote.textContent='登録用データを保存しました。次の大学はSTEP 1から新しく始められます。保存されたファイルをこのチャットに添付してください。';
     document.documentElement.dataset.oneClickRegisterLast='success';
+    window.dispatchEvent(new CustomEvent('bantai-photo-register-complete'));
     timer=setTimeout(restoreLabel,2600);
   }else{
     register.textContent='この内容で大学DBへ登録';
