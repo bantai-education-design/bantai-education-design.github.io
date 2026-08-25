@@ -67,6 +67,10 @@ jobs:
             assert.ok((await cards.nth(1).innerText()).includes('★ メイン'),'prior public registry photo must also be selectable as main');
             assert.equal(await choicePage.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo is allowed');
 
+            // Photo adjustment is optional in the public flow. Open it through the
+            // same visible Edit action a user would use before checking its layout.
+            await choicePage.locator('.edit-item').click();
+            await choicePage.waitForSelector('#photo-editor',{state:'visible',timeout:5000});
             await choicePage.locator('#photo-editor').scrollIntoViewIfNeeded();
             const editorLayout=await choicePage.evaluate(()=>({
               controlsOverflow:getComputedStyle(document.querySelector('.edit-grid>.controls')).overflowY,
