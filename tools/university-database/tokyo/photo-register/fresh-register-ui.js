@@ -147,6 +147,11 @@ document.addEventListener('click',event=>{
   if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(refreshPreviewButton,0);
 },true);
 new MutationObserver(()=>setTimeout(refreshPreviewButton,0)).observe(list,{childList:true});
+// Existing-photo cards arrive asynchronously after a university is selected.
+// Re-evaluate preview readiness when those cards are mounted; otherwise the
+// button can remain disabled depending on registry/network timing.
+const existingChoices=document.querySelector('#existing-photo-choice');
+if(existingChoices)new MutationObserver(()=>setTimeout(refreshPreviewButton,0)).observe(existingChoices,{childList:true,subtree:true});
 placeWorkspace();
 setTimeout(placeWorkspace,250);
 setTimeout(placeWorkspace,900);
