@@ -1,0 +1,56 @@
+name: Admin center guard
+
+on:
+  pull_request:
+    paths:
+      - 'admin/**'
+      - '.github/workflows/admin-center-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'admin/**'
+      - '.github/workflows/admin-center-guard.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-admin-center:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify admin center structure and safety
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html = Path('admin/index.html').read_text(encoding='utf-8')
+          css = Path('admin/admin.css').read_text(encoding='utf-8')
+
+          required = [
+              'Ban.Tai 管理センター',
+              '../tools/university-database/tokyo/photo-admin/',
+              '../tools/university-database/tokyo/photo-register/?mode=owner',
+              '../tools/university-database/tokyo/',
+              '01_審査待ち',
+              'メール通知',
+              'noindex,nofollow',
+          ]
+          missing = [item for item in required if item not in html]
+          if missing:
+              raise SystemExit(f'Missing admin center requirements: {missing}')
+
+          if re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', html + css):
+              raise SystemExit('Public admin assets must not contain a notification email address')
+
+          forbidden = ['SUPABASE_SERVICE_ROLE_KEY', 'REVIEW_ADMIN_CODE', 'localStorage.setItem']
+          found = [item for item in forbidden if item in html + css]
+          if found:
+              raise SystemExit(f'Forbidden secret/storage pattern found: {found}')
+
+          if '@media(max-width:560px)' not in css:
+              raise SystemExit('Mobile layout guard missing')
+
+          print('Admin center guard passed')
+          PY
