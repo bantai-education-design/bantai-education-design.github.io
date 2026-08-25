@@ -7,6 +7,12 @@ const selectLabel=select?.closest('label');
 const searchLabel=search?.closest('label');
 if(!legacyChooser||!select||!search||!selectLabel||!searchLabel)return;
 
+// Do not allow interaction while old/new layout layers are still deciding where
+// the chooser belongs. It becomes enabled only after the stable public panel exists.
+select.disabled=true;
+search.disabled=true;
+document.documentElement.dataset.communityUniversityChooser='moving';
+
 let panel=document.querySelector('#community-university-chooser');
 if(!panel){
   panel=document.createElement('section');
@@ -26,8 +32,6 @@ function moveFields(){
   if(selectLabel.parentElement!==panel)panel.appendChild(selectLabel);
   searchLabel.hidden=false;
   selectLabel.hidden=false;
-  search.disabled=false;
-  select.disabled=false;
   search.removeAttribute('aria-hidden');
   select.removeAttribute('aria-hidden');
 
@@ -35,8 +39,17 @@ function moveFields(){
   // controls, but no longer owns the public university inputs that were being moved.
   legacyChooser.classList.add('community-legacy-university-shell');
   legacyChooser.querySelector('.start-choice-head')?.setAttribute('aria-hidden','true');
-  document.documentElement.dataset.communityUniversityChooser=left?'stable':'waiting-workspace';
-  return !!left;
+
+  if(left){
+    search.disabled=false;
+    select.disabled=false;
+    document.documentElement.dataset.communityUniversityChooser='stable';
+    return true;
+  }
+  search.disabled=true;
+  select.disabled=true;
+  document.documentElement.dataset.communityUniversityChooser='waiting-workspace';
+  return false;
 }
 
 moveFields();
