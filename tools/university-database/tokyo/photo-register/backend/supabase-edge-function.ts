@@ -37,7 +37,7 @@ function readStoredZip(bytes:Uint8Array){
     const dataEnd=dataStart+compressed;
     if(dataEnd>bytes.length)throw new Error('Invalid ZIP entry');
     const name=decoder.decode(bytes.slice(nameStart,nameStart+nameLength));
-    if(name.includes('..')||name.startsWith('/')||name.includes('\\'))throw new Error('Unsafe ZIP path');
+    if(name.includes('..')||name.startsWith('/')||name.includes('\\')||name.includes('\0'))throw new Error('Unsafe ZIP path');
     entries.set(name,bytes.slice(dataStart,dataEnd));
     if(entries.size>12)throw new Error('Too many ZIP entries');
     offset=dataEnd;
@@ -77,35 +77,37 @@ Deno.serve(async req=>{
     if(!(agreements.rights&&agreements.no_ai&&agreements.license))return json({ok:false,message:'agreements required'},400,origin);
 
     const serverId=`BT-UP-${new Date().toISOString().replace(/\D/g,'').slice(0,14)}-${crypto.randomUUID().slice(0,6).toUpperCase()}`;
-    supabase=createClient(Deno.env.get('SUPABASE_URL')!,Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,{auth:{persistSession:false}});
     const zipBytes=new Uint8Array(await packagePart.arrayBuffer());
     const zipEntries=readStoredZip(zipBytes);
-    const normalizedPhotos:any[]=[];
+    const prepared:any[]=[];
 
+    // Validate the entire package before writing anything to Storage.
     for(const photo of metadata.photos){
       const role=photo?.role==='main'?'main':'sub';
       if(photo?.kind==='existing'){
         const imageUrl=String(photo?.image_url||'');
-        if(!imageUrl||imageUrl.length>1500)return json({ok:false,message:'invalid existing photo'},400,origin);
-        normalizedPhotos.push({kind:'existing',role,image_url:imageUrl,origin:String(photo?.origin||'existing').slice(0,80)});
+        if(!imageUrl||imageUrl.length>1500)throw new Error('invalid existing photo');
+        prepared.push({kind:'existing',role,image_url:imageUrl,origin:String(photo?.origin||'existing').slice(0,80)});
         continue;
       }
-      if(photo?.kind!=='new')return json({ok:false,message:'invalid photo kind'},400,origin);
+      if(photo?.kind!=='new')throw new Error('invalid photo kind');
       const filename=String(photo?.filename||'');
-      if(!/^photos\/[A-Za-z0-9._()\-ぁ-んァ-ヶ一-龠々ー]+\.(?:jpe?g|png|webp)$/i.test(filename))return json({ok:false,message:'invalid photo filename'},400,origin);
+      if(!filename.startsWith('photos/')||filename.includes('..')||filename.includes('\\')||filename.includes('\0')||!/\.(?:jpe?g|png|webp)$/i.test(filename))throw new Error('invalid photo filename');
       const bytes=zipEntries.get(filename);
-      if(!bytes||bytes.length<=0||bytes.length>20*1024*1024)return json({ok:false,message:'photo file missing or too large'},400,origin);
+      if(!bytes||bytes.length<=0||bytes.length>20*1024*1024)throw new Error('photo file missing or too large');
       const contentType=imageType(filename,bytes);
-      if(!contentType)return json({ok:false,message:'invalid photo format'},400,origin);
-      const path=`${serverId}/${filename}`;
-      const upload=await supabase.storage.from('university-photo-submissions').upload(path,bytes,{contentType,upsert:false});
+      if(!contentType)throw new Error('invalid photo format');
+      prepared.push({kind:'new',role,path:`${serverId}/${filename}`,original_name:String(photo?.original_name||'').slice(0,240),source_filename:filename,bytes,contentType});
+    }
+
+    supabase=createClient(Deno.env.get('SUPABASE_URL')!,Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,{auth:{persistSession:false}});
+    const normalizedPhotos:any[]=[];
+    for(const item of prepared){
+      if(item.kind==='existing'){normalizedPhotos.push(item);continue;}
+      const upload=await supabase.storage.from('university-photo-submissions').upload(item.path,item.bytes,{contentType:item.contentType,upsert:false});
       if(upload.error)throw upload.error;
-      uploadedPaths.push(path);
-      normalizedPhotos.push({
-        kind:'new',role,path,
-        original_name:String(photo?.original_name||'').slice(0,240),
-        source_filename:filename
-      });
+      uploadedPaths.push(item.path);
+      normalizedPhotos.push({kind:'new',role:item.role,path:item.path,original_name:item.original_name,source_filename:item.source_filename});
     }
 
     const packagePath=`${serverId}/submission.zip`;
@@ -114,19 +116,7 @@ Deno.serve(async req=>{
     uploadedPaths.push(packagePath);
 
     const mainPhoto=normalizedPhotos.find((p:any)=>p.role==='main')||null;
-    const row={
-      submission_id:serverId,
-      university_id:metadata.university_id,
-      university_name:String(metadata.university_name||'').slice(0,200),
-      submitted_at:new Date().toISOString(),
-      photo_count:metadata.photo_count,
-      main_photo:mainPhoto,
-      photos:normalizedPhotos,
-      agreements,
-      status:'pending',
-      package_path:packagePath,
-      client_submission_id:metadata.submission_id||null
-    };
+    const row={submission_id:serverId,university_id:metadata.university_id,university_name:String(metadata.university_name||'').slice(0,200),submitted_at:new Date().toISOString(),photo_count:metadata.photo_count,main_photo:mainPhoto,photos:normalizedPhotos,agreements,status:'pending',package_path:packagePath,client_submission_id:metadata.submission_id||null};
     const inserted=await supabase.from('photo_submissions').insert(row);
     if(inserted.error)throw inserted.error;
 
@@ -137,32 +127,14 @@ Deno.serve(async req=>{
     if(apiKey&&to&&from){
       const reviewBase=Deno.env.get('REVIEW_DASHBOARD_URL')||'';
       const reviewUrl=reviewBase?`${reviewBase}${reviewBase.includes('?')?'&':'?'}submission=${encodeURIComponent(serverId)}`:'';
-      const mail=await fetch('https://api.resend.com/emails',{
-        method:'POST',
-        headers:{authorization:`Bearer ${apiKey}`,'content-type':'application/json'},
-        body:JSON.stringify({
-          from,
-          to:[to],
-          subject:`[大学写真投稿] ${row.university_name} / ${row.photo_count}枚 / ${serverId}`,
-          text:[
-            '大学写真の新しい投稿があります。',
-            `大学: ${row.university_name}`,
-            `写真: ${row.photo_count}枚`,
-            `受付番号: ${serverId}`,
-            `投稿日時: ${row.submitted_at}`,
-            reviewUrl?`審査: ${reviewUrl}`:''
-          ].filter(Boolean).join('\n')
-        })
-      });
+      const mail=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:`Bearer ${apiKey}`,'content-type':'application/json'},body:JSON.stringify({from,to:[to],subject:`[大学写真投稿] ${row.university_name} / ${row.photo_count}枚 / ${serverId}`,text:['大学写真の新しい投稿があります。',`大学: ${row.university_name}`,`写真: ${row.photo_count}枚`,`受付番号: ${serverId}`,`投稿日時: ${row.submitted_at}`,reviewUrl?`審査: ${reviewUrl}`:''].filter(Boolean).join('\n')})});
       notified=mail.ok;
     }
 
     return json({ok:true,submission_id:serverId,notified,review_status:'pending'},200,origin);
   }catch(err){
     console.error(err);
-    if(supabase&&uploadedPaths.length){
-      try{await supabase.storage.from('university-photo-submissions').remove(uploadedPaths);}catch(cleanupError){console.error('cleanup failed',cleanupError);}
-    }
+    if(supabase&&uploadedPaths.length){try{await supabase.storage.from('university-photo-submissions').remove(uploadedPaths)}catch(cleanupError){console.error('cleanup failed',cleanupError)}}
     return json({ok:false,message:'投稿を受け付けられませんでした。'},500,origin);
   }
 });
