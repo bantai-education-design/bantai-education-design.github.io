@@ -89,10 +89,10 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
     await loadScript('one-click-register','one-click-register.js?v=20260825-1056');
     await loadScript('community-submission-compat','community-submission-compat.js?v=20260825-1056');
     await loadScript('community-submission-transport','community-submission-transport.js?v=20260825-1056');
-    addStyle('community-submission-fixes','community-submission-fixes.css?v=20260825-1218');
-    await loadScript('community-ui-stability','community-ui-stability.js?v=20260825-1218');
-    await loadScript('community-submission-ui','community-submission-ui.js?v=20260825-1218');
-    await loadScript('editor-drag-pan','editor-drag-pan.js?v=20260825-1218');
+    addStyle('community-submission-fixes','community-submission-fixes.css?v=20260825-1230');
+    await loadScript('community-ui-stability','community-ui-stability.js?v=20260825-1230');
+    await loadScript('community-submission-ui','community-submission-ui.js?v=20260825-1230');
+    await loadScript('editor-drag-pan','editor-drag-pan.js?v=20260825-1230');
     document.documentElement.dataset.communityUiSequence='ready';
   })().catch(error=>console.error('大学写真投稿UIの初期化に失敗しました',error));
 })();
