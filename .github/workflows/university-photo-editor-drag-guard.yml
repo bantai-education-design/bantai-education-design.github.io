@@ -69,7 +69,31 @@ jobs:
             assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university select must be enabled');
             assert.equal(await page.locator('#university-first-select').evaluate(el=>el.closest('#community-university-chooser')!==null),true,'public select must live in the stable chooser panel');
 
-            await page.locator('#university-first-select').selectOption('u000094');
+            await page.evaluate(()=>{
+              const s=document.querySelector('#university-first-select');
+              const snap=()=>{
+                const r=s.getBoundingClientRect();
+                const cs=getComputedStyle(s);
+                const label=s.closest('label');
+                const panel=s.closest('#community-university-chooser');
+                return {t:Math.round(performance.now()),connected:s.isConnected,disabled:s.disabled,optionCount:s.options.length,hasTarget:!!s.querySelector('option[value="u000094"]'),value:s.value,display:cs.display,visibility:cs.visibility,opacity:cs.opacity,width:Math.round(r.width),height:Math.round(r.height),labelHidden:!!label?.hidden,panelConnected:!!panel?.isConnected,parent:s.parentElement?.className||s.parentElement?.id||''};
+              };
+              window.__chooserTrace=[snap()];
+              let last=JSON.stringify(window.__chooserTrace[0]);
+              const record=()=>{const next=snap(),json=JSON.stringify(next);if(json!==last){window.__chooserTrace.push(next);last=json;}};
+              new MutationObserver(record).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','disabled','style','class']});
+              window.__chooserTimer=setInterval(record,100);
+            });
+            try{
+              await page.locator('#university-first-select').selectOption('u000094',{timeout:7000});
+            }catch(error){
+              const diagnostics=await page.evaluate(()=>({trace:window.__chooserTrace,current:{html:document.querySelector('#university-first-select')?.outerHTML,parent:document.querySelector('#university-first-select')?.parentElement?.outerHTML?.slice(0,800),panel:document.querySelector('#community-university-chooser')?.outerHTML?.slice(0,1600)}}));
+              console.error('CHOOSER_DIAGNOSTICS',JSON.stringify(diagnostics,null,2));
+              throw error;
+            }finally{
+              await page.evaluate(()=>clearInterval(window.__chooserTimer));
+            }
+
             await page.setInputFiles('#photo-input',{name:'drag-edit-test.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelector('.main-photo-choice-card[data-main-type="new"]'),{timeout:10000});
