@@ -59,7 +59,7 @@ if(!newButton){
   newButton.id='start-new-photo-registration';
   newButton.type='button';
   newButton.className='secondary simple-new-registration';
-  newButton.textContent='＋ 新しい登録を始める';
+  newButton.textContent='＋ 新しい投稿を始める';
   newButton.addEventListener('click',()=>resetVisibleWork('manual'));
   head?.appendChild(newButton);
 }
@@ -69,7 +69,7 @@ if(!workspace){
   workspace=document.createElement('div');
   workspace.id='simple-register-workspace';
   workspace.className='simple-register-workspace';
-  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>今回の写真・実画面確認</h2><p>右側で写真追加と実画面プレビューを行います。既存写真は左側で選べます。</p></div></div></section>';
+  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>写真を確認・追加</h2><p>写真は最大9枚。実画面プレビューで掲載イメージを確認できます。</p></div></div></section>';
   (progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);
 }
 const left=workspace.querySelector('.simple-university-column');
@@ -94,7 +94,7 @@ function refreshPreviewButton(){
   const count=document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length;
   if(!select.value){button.disabled=true;setText(status,'大学を選ぶとプレビューできます。');return;}
   if(!count){button.disabled=true;setText(status,'写真を確認・追加するとプレビューできます。');return;}
-  if(count>5){button.disabled=true;setText(status,`写真は5枚までです（現在${count}枚）。`);return;}
+  if(count>9){button.disabled=true;setText(status,`写真は9枚までです（現在${count}枚）。`);return;}
   button.disabled=false;
   setText(status,`現在の${count}枚で大学ページを確認できます。`);
 }
