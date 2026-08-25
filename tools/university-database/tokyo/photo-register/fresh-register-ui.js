@@ -30,8 +30,6 @@ function deleteStoredSession(){
   });
 }
 
-// Reliability first: every page load starts a new registration.
-// Keeping old photos across reloads caused cross-university contamination, so do not restore previous work.
 sessionStorage.removeItem(TAB_FLAG);
 deleteStoredSession();
 document.documentElement.dataset.photoFreshStart='load';
@@ -100,7 +98,7 @@ function refreshPreviewButton(){
 }
 
 function placeWorkspace(){
-  if(!workspace.isConnected){(progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);}
+  if(!workspace.isConnected)(progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);
   const university=document.querySelector('.university-first');
   const mode=document.querySelector('#registration-mode-switch');
   const existing=document.querySelector('#existing-photo-choice');
@@ -121,12 +119,13 @@ function placeWorkspace(){
   refreshPreviewButton();
 }
 
+// Avoid observing the whole batch subtree. Multiple legacy layout observers used
+// to react to each other's DOM moves and could starve university-list initialization.
 select.addEventListener('change',()=>setTimeout(()=>{placeWorkspace();refreshPreviewButton();},0));
 document.addEventListener('click',event=>{
   if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(refreshPreviewButton,0);
 },true);
-const observer=new MutationObserver(()=>queueMicrotask(placeWorkspace));
-observer.observe(batch,{childList:true,subtree:true});
+new MutationObserver(()=>setTimeout(refreshPreviewButton,0)).observe(list,{childList:true});
 placeWorkspace();
 setTimeout(placeWorkspace,250);
 setTimeout(placeWorkspace,900);
