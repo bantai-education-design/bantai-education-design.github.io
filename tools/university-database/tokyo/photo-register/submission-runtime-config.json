@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "mode": "local_package",
+  "endpoint": "",
+  "notification": "operator_email",
+  "review_queue": true,
+  "notes": "公開リポジトリには通知先メールアドレスや秘密鍵を置かない。受信API接続時だけ enabled=true と endpoint を設定する。"
+}
