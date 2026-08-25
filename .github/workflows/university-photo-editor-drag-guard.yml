@@ -30,7 +30,8 @@ jobs:
           assert.ok(drag.includes('__bantaiCommunityPhotoSubmission?.updateState'));
           assert.ok(css.includes('.simple-register-progress li')&&css.includes('border:0!important'));
           assert.ok(css.includes('.editor-pan-canvas')&&css.includes('cursor:grab'));
-          assert.ok(stability.includes("dataset.communityUniversityChooser='stable'")&&stability.includes('select.disabled=false'));
+          assert.ok(stability.includes('communityUniversityChooser')&&stability.includes("left?'stable':'waiting-workspace'")&&stability.includes('select.disabled=false'));
+          assert.ok(stability.includes('panel.appendChild(searchLabel)')&&stability.includes('panel.appendChild(selectLabel)'));
           assert.ok(loader.includes('community-submission-fixes.css?v=20260825-1142'));
           assert.ok(loader.includes('community-ui-stability.js?v=20260825-1142'));
           assert.ok(loader.includes('editor-drag-pan.js?v=20260825-1142'));
@@ -66,6 +67,7 @@ jobs:
             assert.equal(await current.evaluate(el=>getComputedStyle(el).borderTopWidth),'0px','progress step must not look like an input field');
             assert.equal(await page.locator('#university-first-select').isVisible(),true,'university select must be visibly operable');
             assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university select must be enabled');
+            assert.equal(await page.locator('#university-first-select').evaluate(el=>el.closest('#community-university-chooser')!==null),true,'public select must live in the stable chooser panel');
 
             await page.locator('#university-first-select').selectOption('u000094');
             await page.setInputFiles('#photo-input',{name:'drag-edit-test.png',mimeType:'image/png',buffer:png});
