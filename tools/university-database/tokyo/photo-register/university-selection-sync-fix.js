@@ -67,4 +67,6 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
   addScript('one-click-register','one-click-register.js?v=20260825-1056');
   addScript('community-submission-compat','community-submission-compat.js?v=20260825-1056');
   addScript('community-submission-transport','community-submission-transport.js?v=20260825-1056');
+  addStyle('community-submission-fixes','community-submission-fixes.css?v=20260825-1130');
+  addScript('editor-drag-pan','editor-drag-pan.js?v=20260825-1130');
 })();
