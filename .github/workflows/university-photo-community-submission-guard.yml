@@ -117,7 +117,7 @@ jobs:
             await remote.route('https://notify.example.test/submit',async route=>{
               notifiedRequest=true;
               assert.equal(route.request().method(),'POST');
-              await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({ok:true,submission_id:'BT-UP-TEST-001',notified:true,review_status:'pending'})});
+              await route.fulfill({status:200,contentType:'application/json',headers:{'access-control-allow-origin':'http://127.0.0.1:4173','access-control-allow-methods':'POST,OPTIONS'},body:JSON.stringify({ok:true,submission_id:'BT-UP-TEST-001',notified:true,review_status:'pending'})});
             });
             await remote.goto(register,{waitUntil:'domcontentloaded'});
             await remote.waitForFunction(()=>document.documentElement.dataset.submissionTransport==='remote',{timeout:10000});
