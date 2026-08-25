@@ -31,7 +31,22 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:900}});
+            page.on('pageerror',error=>console.log('[pageerror]',error.message));
+            page.on('console',msg=>{if(['error','warning'].includes(msg.type()))console.log(`[console:${msg.type()}]`,msg.text());});
+            page.on('response',response=>{
+              if(/universities_tokyo_all\.generated\.json|university-entry-controller\.js/.test(response.url()))console.log('[response]',response.status(),response.url());
+            });
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.waitForTimeout(1500);
+            const state=await page.evaluate(()=>({
+              optionCount:document.querySelectorAll('#university-first-select option').length,
+              optionText:document.querySelector('#university-first-select')?.innerText||'',
+              status:document.querySelector('#university-first-status')?.textContent||'',
+              controllerLoaded:[...document.scripts].some(s=>s.src.includes('university-entry-controller.js')),
+              imeReady:document.documentElement.dataset.universityImeFix||'',
+              uiSequence:document.documentElement.dataset.communityUiSequence||''
+            }));
+            console.log('[state]',JSON.stringify(state));
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
             assert.equal(await page.locator('#university-first-select').isVisible(),true,'university select must be visible');
             assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university select must be enabled');
@@ -50,3 +65,6 @@ jobs:
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
+      - name: Show local server requests
+        if: always()
+        run: cat /tmp/photo-choice-stability.log || true
