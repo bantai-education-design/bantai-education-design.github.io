@@ -1,0 +1,109 @@
+name: University photo admin review guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-admin/**'
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-admin-review-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-admin/**'
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-admin-review-guard.yml'
+
+jobs:
+  admin-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate admin security and storage source
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const base='tools/university-database/tokyo';
+          const html=fs.readFileSync(`${base}/photo-admin/index.html`,'utf8');
+          const js=fs.readFileSync(`${base}/photo-admin/photo-admin.js`,'utf8');
+          const config=JSON.parse(fs.readFileSync(`${base}/photo-admin/admin-runtime-config.json`,'utf8'));
+          const schema=fs.readFileSync(`${base}/photo-register/backend/schema.sql`,'utf8');
+          const submit=fs.readFileSync(`${base}/photo-register/backend/supabase-edge-function.ts`,'utf8');
+          const review=fs.readFileSync(`${base}/photo-register/backend/supabase-review-function.ts`,'utf8');
+          const owner=fs.readFileSync(`${base}/photo-register/owner-photo-register.js`,'utf8');
+
+          assert.ok(html.includes('noindex,nofollow'),'admin page must not be indexed');
+          assert.ok(html.includes('大学写真 管理')&&html.includes('訪問者写真を審査'),'admin hub labels required');
+          assert.ok(html.includes('../photo-register/?mode=owner'),'owner register entry required');
+          assert.equal(config.enabled,false,'review API must stay disabled until backend deployment');
+          assert.equal(config.endpoint,'','review endpoint must not be guessed');
+          assert.equal(Object.prototype.hasOwnProperty.call(config,'admin_code'),false,'config must not contain admin_code');
+          assert.equal(Object.prototype.hasOwnProperty.call(config,'review_admin_code'),false,'config must not contain review_admin_code');
+          assert.ok(js.includes('sessionStorage'),'admin code may be kept only for the current tab');
+          assert.ok(!js.includes('localStorage'),'admin code must never use localStorage');
+          assert.ok(js.includes("'x-bantai-admin-code'"),'admin code header required');
+          assert.ok(review.includes("Deno.env.get('REVIEW_ADMIN_CODE')"),'admin code must be verified server-side');
+          assert.ok(review.includes('createSignedUrls'),'review photos must use expiring signed URLs');
+          assert.ok(review.includes("status==='pending'")||review.includes("status==='pending'?"),'pending/approved/rejected/published updates required');
+          assert.ok(schema.includes("photos jsonb not null default '[]'::jsonb"),'photo preview metadata column required');
+          assert.ok(schema.includes("values ('university-photo-submissions','university-photo-submissions',false)"),'submission storage bucket must remain private');
+          assert.ok(submit.includes('readStoredZip'),'submission backend must validate and unpack review photos');
+          assert.ok(submit.includes("`${serverId}/${filename}`"),'individual review photo storage path required');
+          assert.ok(owner.includes("href='../photo-admin/'"),'owner mode must link to review hub');
+          for(const text of [html,js,review,submit])assert.ok(!/REVIEW_ADMIN_CODE\s*[:=]\s*['\"][^'\"]+/.test(text),'no admin code literal may be committed');
+          console.log('admin review security/source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-admin-review.log 2>&1 &
+          sleep 2
+      - name: Verify admin hub and review photo flow
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl4sAAAAASUVORK5CYII=','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900}});
+            await page.route('**/photo-admin/admin-runtime-config.json',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({schema_version:1,enabled:true,endpoint:'https://review.example.test/api',code_header:'x-bantai-admin-code',session_storage:true})}));
+            await page.route('https://review.example.test/**',async route=>{
+              const req=route.request();
+              if(req.method()==='GET')return route.fulfill({status:200,contentType:'image/png',body:png});
+              const body=JSON.parse(req.postData()||'{}');
+              const headers=req.headers();
+              assert.equal(headers['x-bantai-admin-code'],'TEST-ADMIN-CODE-123456');
+              if(body.action==='health')return route.fulfill({status:200,contentType:'application/json',headers:{'access-control-allow-origin':'*'},body:JSON.stringify({ok:true})});
+              if(body.action==='list')return route.fulfill({status:200,contentType:'application/json',headers:{'access-control-allow-origin':'*'},body:JSON.stringify({ok:true,submissions:[{submission_id:'BT-UP-20260825170000-ABC123',university_id:'u000001',university_name:'テスト大学',submitted_at:'2026-08-25T08:00:00Z',photo_count:1,main_photo:{original_name:'campus.jpg'},photos:[{kind:'new',role:'main',url:'https://review.example.test/photo.png'}],agreements:{rights:true,no_ai:true,license:true},status:'pending',package_url:'https://review.example.test/submission.zip',reviewer_note:''}]})});
+              return route.fulfill({status:200,contentType:'application/json',headers:{'access-control-allow-origin':'*'},body:JSON.stringify({ok:true,submission:{submission_id:body.submission_id,status:body.status,reviewer_note:body.reviewer_note}})});
+            });
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-admin/',{waitUntil:'networkidle'});
+            assert.equal(await page.locator('h1').innerText(),'大学写真 管理');
+            assert.equal(await page.locator('#backend-status').innerText(),'審査API 接続済み');
+            await page.locator('#admin-code').fill('TEST-ADMIN-CODE-123456');
+            await page.locator('#unlock-admin').click();
+            await page.waitForSelector('#admin-dashboard:not([hidden])');
+            assert.equal(await page.locator('#count-pending').innerText(),'1');
+            assert.ok((await page.locator('.review-card').innerText()).includes('テスト大学'));
+            await page.locator('.review-open').click();
+            await page.waitForSelector('#review-dialog[open]');
+            assert.equal(await page.locator('#dialog-university').innerText(),'テスト大学');
+            assert.equal(await page.locator('.dialog-photo img').count(),1,'visitor photo must be viewable in review dialog');
+            assert.equal(await page.locator('#approve-submission').isVisible(),true);
+
+            const owner=await browser.newPage({viewport:{width:1366,height:900}});
+            await owner.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await owner.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await owner.locator('.owner-review-link').innerText(),'訪問者写真を審査');
+            assert.ok((await owner.locator('.owner-review-link').getAttribute('href')).includes('photo-admin'));
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

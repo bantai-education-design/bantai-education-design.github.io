@@ -11,6 +11,14 @@ document.documentElement.dataset.ownerPhotoRegister='ready';
 document.title='Ban.Tai 本人撮影写真を登録 | Ban.Tai';
 
 setText(document.querySelector('.topbar span'),'東京都大学DB 本人撮影写真登録');
+const topbar=document.querySelector('.topbar');
+if(topbar&&!topbar.querySelector('.owner-review-link')){
+  const reviewLink=document.createElement('a');
+  reviewLink.className='owner-review-link';
+  reviewLink.href='../photo-admin/';
+  reviewLink.textContent='訪問者写真を審査';
+  topbar.querySelector('a')?.insertAdjacentElement('beforebegin',reviewLink);
+}
 const hero=document.querySelector('.hero');
 setText(hero?.querySelector('.eyebrow'),'BANTAI OWNER QUICK REGISTER');
 setText(hero?.querySelector('h1'),'Ban.Tai 本人撮影写真を登録');

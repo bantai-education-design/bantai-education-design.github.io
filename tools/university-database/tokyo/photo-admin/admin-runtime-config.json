@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "endpoint": "",
+  "code_header": "x-bantai-admin-code",
+  "session_storage": true,
+  "notes": "管理コードそのものは公開リポジトリに置かない。Supabase Edge Function の REVIEW_ADMIN_CODE シークレットで管理する。"
+}
