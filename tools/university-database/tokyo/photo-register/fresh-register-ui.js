@@ -13,6 +13,7 @@ const STORE='session';
 const KEY='tokyo-photo-register-current';
 const TAB_FLAG='bantai-photo-register-restore-this-tab';
 const navigation=performance.getEntriesByType?.('navigation')?.[0]?.type||'navigate';
+const setText=(node,text)=>{if(node&&node.textContent!==text)node.textContent=text;};
 
 function deleteStoredSession(){
   if(!('indexedDB' in window))return Promise.resolve();
@@ -80,27 +81,24 @@ function compactModeSwitch(mode){
   if(!mode)return;
   const step=mode.querySelector('.mode-heading .step');
   const title=mode.querySelector('.mode-heading h2');
-  if(step)step.textContent='登録方法';
-  if(title)title.textContent='通常は1大学ずつ登録';
+  setText(step,'登録方法');
+  setText(title,'通常は1大学ずつ登録');
   const single=mode.querySelector('#mode-single');
   const batchButton=mode.querySelector('#mode-batch');
-  const singleSmall=single?.querySelector('small');
-  const batchSmall=batchButton?.querySelector('small');
-  if(singleSmall)singleSmall.textContent='1校の写真を登録';
-  if(batchSmall)batchSmall.textContent='必要なときだけ';
+  setText(single?.querySelector('small'),'1校の写真を登録');
+  setText(batchButton?.querySelector('small'),'必要なときだけ');
 }
 
 function refreshPreviewButton(){
   const button=document.querySelector('#open-real-preview');
   const status=document.querySelector('#real-preview-status');
   if(!button||!status)return;
-  const cards=[...document.querySelectorAll('#existing-photo-choice .main-photo-choice-card')];
-  const count=cards.length;
-  if(!select.value){button.disabled=true;status.textContent='大学を選ぶとプレビューできます。';return;}
-  if(!count){button.disabled=true;status.textContent='写真を確認・追加するとプレビューできます。';return;}
-  if(count>5){button.disabled=true;status.textContent=`写真は5枚までです（現在${count}枚）。`;return;}
+  const count=document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length;
+  if(!select.value){button.disabled=true;setText(status,'大学を選ぶとプレビューできます。');return;}
+  if(!count){button.disabled=true;setText(status,'写真を確認・追加するとプレビューできます。');return;}
+  if(count>5){button.disabled=true;setText(status,`写真は5枚までです（現在${count}枚）。`);return;}
   button.disabled=false;
-  status.textContent=`現在の${count}枚で大学ページを確認できます。`;
+  setText(status,`現在の${count}枚で大学ページを確認できます。`);
 }
 
 function placeWorkspace(){
