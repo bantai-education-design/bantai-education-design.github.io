@@ -1,0 +1,142 @@
+/* Follow-up clarity fixes: stepper should read as progress, not as form fields. */
+body.community-simple-submission .simple-register-progress{
+  align-items:center!important;
+  gap:12px!important;
+}
+body.community-simple-submission .simple-register-progress li{
+  position:relative;
+  min-height:32px!important;
+  padding:4px 2px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#9aa2ae!important;
+}
+body.community-simple-submission .simple-register-progress li:not(:last-child)::after{
+  content:'›';
+  position:absolute;
+  right:-9px;
+  top:50%;
+  transform:translateY(-52%);
+  color:#59616d;
+  font-size:1.05rem;
+  font-weight:800;
+  pointer-events:none;
+}
+body.community-simple-submission .simple-register-progress li span{
+  border:1px solid #59616d!important;
+  background:#141820!important;
+  color:#d0d5de!important;
+  box-shadow:none!important;
+}
+body.community-simple-submission .simple-register-progress li strong{
+  color:#aeb5c0!important;
+  font-weight:800!important;
+}
+body.community-simple-submission .simple-register-progress li.current{
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.community-simple-submission .simple-register-progress li.current span{
+  border-color:#e1bd61!important;
+  background:#e1bd61!important;
+  color:#111318!important;
+}
+body.community-simple-submission .simple-register-progress li.current strong{
+  color:#f2df9c!important;
+}
+body.community-simple-submission .simple-register-progress li.done span{
+  border-color:#8b7538!important;
+  background:#342a13!important;
+  color:#f0d98b!important;
+}
+
+/* University selection is a form operation, not a scrolling tool palette.
+   Keeping this column static also prevents late sticky-position movement while
+   the native select menu is being opened. */
+body.community-simple-submission .simple-university-column{
+  position:static!important;
+  top:auto!important;
+  align-self:stretch!important;
+}
+
+/* Compatibility styling retained for older markup variants. */
+.community-university-chooser{
+  display:grid;
+  gap:9px;
+  margin:0;
+  padding:12px;
+  border:1px solid rgba(215,180,90,.58);
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(215,180,90,.07),rgba(10,12,18,.32));
+  min-width:0;
+}
+.community-university-heading{display:flex;align-items:flex-start;gap:9px}
+.community-university-heading>span{flex:0 0 auto;color:#d7b45a;font-size:.66rem;font-weight:900;letter-spacing:.08em;margin-top:2px}
+.community-university-heading h2{margin:0 0 2px;font-size:.94rem}
+.community-university-heading p{margin:0;color:#969daa;font-size:.68rem;line-height:1.45}
+.community-university-chooser .university-first-field{
+  display:grid!important;
+  gap:5px;
+  margin:0!important;
+  color:#d6dbe4!important;
+  font-size:.73rem!important;
+  font-weight:800!important;
+}
+.community-university-chooser #university-first-search,
+.community-university-chooser #university-first-select{
+  display:block!important;
+  position:static!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  pointer-events:auto!important;
+}
+body.community-photo-submission .community-legacy-university-shell>.start-choice-head,
+body.community-photo-submission .community-legacy-university-shell>#university-first-status,
+body.community-photo-submission .community-legacy-university-shell>.simple-current-university{display:none!important}
+body.community-photo-submission .community-legacy-university-shell{
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  min-width:0!important;
+}
+
+/* Direct manipulation of the crop position. */
+.editor-drag-hint{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 8px;
+  padding:8px 10px;
+  border:1px solid #3b424e;
+  border-radius:9px;
+  background:#0b0e13;
+  color:#c6ccd6;
+  font-size:.72rem;
+  line-height:1.45;
+}
+.editor-drag-hint strong{
+  flex:0 0 auto;
+  color:#f0d98b;
+}
+.editor-pan-canvas{
+  cursor:grab;
+  touch-action:none;
+  user-select:none;
+  -webkit-user-select:none;
+}
+.editor-pan-canvas.is-dragging{cursor:grabbing}
+
+@media(max-width:800px){
+  body.community-simple-submission .simple-register-progress{gap:6px!important}
+  body.community-simple-submission .simple-register-progress li:not(:last-child)::after{right:-5px;font-size:.9rem}
+  .community-university-chooser{padding:10px}
+  .editor-drag-hint{display:block}
+  .editor-drag-hint strong,.editor-drag-hint span{display:block}
+  .editor-drag-hint span{margin-top:3px}
+}

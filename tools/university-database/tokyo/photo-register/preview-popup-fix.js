@@ -43,7 +43,7 @@ async function buildPreviewPhotos(allRows,existingPhotos,mainChoice){
   }
   if(!candidates.length)return [];
   const selected=candidates.find(x=>x.main)||candidates[0];
-  const ordered=[selected,...candidates.filter(x=>x!==selected)].slice(0,5);
+  const ordered=[selected,...candidates.filter(x=>x!==selected)].slice(0,9);
   const photos=[];
   for(const item of ordered){
     photos.push({blob:await item.getBlob(),main:item===selected,source:item.source,key:item.key,type:item.type});
@@ -59,6 +59,12 @@ button.addEventListener('click',async e=>{
   const helper=window.__universityPhotoMainChoice;
   const existingPhotos=helper?.getExistingPhotos?.()||[];
   if((!allRows.length&&!existingPhotos.length)||!universityId)return;
+
+  const total=allRows.length+existingPhotos.length;
+  if(total>9){
+    status.textContent=`写真は9枚までです（現在${total}枚）。不要な写真を一覧から削除してください。`;
+    return;
+  }
 
   const previewWindow=window.open('about:blank','_blank');
   if(!previewWindow){
@@ -85,7 +91,7 @@ button.addEventListener('click',async e=>{
       if(event.data?.type==='receiver-ready'||event.data?.type==='ready'){
         channel.postMessage({universityId,photos});
         if(event.data?.type==='ready'){
-          status.textContent='選択した★メイン＋サブ写真で実詳細ページをプレビューしています。本番登録はまだ行っていません。';
+          status.textContent=`${photos.length}枚（★メイン1枚＋サブ${Math.max(0,photos.length-1)}枚）で実詳細ページをプレビューしています。公開はまだ行っていません。`;
           button.disabled=false;
         }
       }

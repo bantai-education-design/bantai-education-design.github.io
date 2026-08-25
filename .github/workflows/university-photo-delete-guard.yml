@@ -51,8 +51,10 @@ jobs:
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await page.setInputFiles('#photo-input',{name:'wrong-photo.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
-            assert.equal(await page.locator('#delete-active-photo').isEnabled(),true,'active photo delete must enable');
             assert.equal(await page.locator('.remove-item').innerText(),'写真を削除','row delete must be explicit');
+            await page.locator('.edit-item').click();
+            await page.waitForSelector('#photo-editor',{state:'visible',timeout:5000});
+            assert.equal(await page.locator('#delete-active-photo').isEnabled(),true,'active photo delete must enable while editing');
             await page.click('#delete-active-photo');
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===0,{timeout:5000});
             assert.equal(await page.locator('#batch-count').innerText(),'0枚');

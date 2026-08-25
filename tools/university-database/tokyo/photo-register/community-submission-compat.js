@@ -1,0 +1,76 @@
+(()=>{
+'use strict';
+const MAX=9;
+let queued=false;
+const setText=(node,text)=>{if(node&&node.textContent!==text)node.textContent=text;};
+function helper(){return window.__universityPhotoMainChoice||null;}
+function total(){return (helper()?.getExistingPhotos?.()||[]).length+document.querySelectorAll('#batch-list .batch-row').length;}
+function ensurePrimaryUniversityControl(){
+  const select=document.querySelector('#university-first-select');
+  const search=document.querySelector('#university-first-search');
+  const section=select?.closest('.university-first');
+  const selectLabel=select?.closest('label');
+  const searchLabel=search?.closest('label');
+  if(section?.hidden)section.hidden=false;
+  if(selectLabel?.hidden)selectLabel.hidden=false;
+  if(searchLabel?.hidden)searchLabel.hidden=false;
+  if(select&&select.options.length>1&&select.disabled)select.disabled=false;
+  if(search?.disabled)search.disabled=false;
+  if(select)document.documentElement.dataset.communityUniversitySelector=select.disabled?'waiting':'ready';
+}
+function ensure(){
+  queued=false;
+  document.body.classList.add('community-photo-submission');
+  ensurePrimaryUniversityControl();
+  const count=total();
+  const counter=document.querySelector('#community-photo-counter strong');
+  setText(counter,`${count} / ${MAX}枚`);
+  document.querySelector('#community-photo-counter')?.classList.toggle('warn',count>MAX);
+
+  const drop=document.querySelector('#drop-zone');
+  if(drop){
+    setText(drop.querySelector('strong'),'ここに写真をドロップ');
+    setText(drop.querySelector(':scope > span:not(.simple-file-picker)'),'または、同じ枠からファイルを選択できます');
+    setText(drop.querySelector('small'),'JPEG / PNG / WebP ・ 1大学 最大9枚');
+  }
+
+  const real=document.querySelector('#real-page-preview');
+  setText(real?.querySelector('h2'),'大学ページで掲載イメージを確認');
+  setText(real?.querySelector('p'),'★メイン1枚を大きく表示し、サブ最大8枚を横スクロールで確認します。');
+  const button=document.querySelector('#open-real-preview');
+  const status=document.querySelector('#real-preview-status');
+  const university=document.querySelector('#university-first-select')?.value||'';
+  if(button&&status){
+    if(!university){button.disabled=true;setText(status,'大学を選ぶとプレビューできます。');}
+    else if(count===0){button.disabled=true;setText(status,'写真を1枚以上確認または追加してください。');}
+    else if(count>MAX){button.disabled=true;setText(status,`写真は最大${MAX}枚です（現在${count}枚）。`);}
+    else{button.disabled=false;setText(status,`${count}枚で掲載イメージを確認できます。`);}
+  }
+
+  const rows=document.querySelectorAll('#batch-list .batch-row').length;
+  const batchStatus=document.querySelector('#batch-status');
+  if(batchStatus){batchStatus.classList.remove('warn');setText(batchStatus,rows?`${rows}枚を今回追加`:'今回の追加写真なし');}
+}
+function schedule(){if(queued)return;queued=true;queueMicrotask(ensure);}
+
+// Scope compatibility refreshes to the controls whose state actually matters.
+// Observing every child mutation under body allowed unrelated layout helpers to
+// retrigger this code continuously during startup.
+const select=document.querySelector('#university-first-select');
+const list=document.querySelector('#batch-list');
+if(select){
+  select.addEventListener('change',schedule);
+  new MutationObserver(schedule).observe(select,{childList:true});
+}
+if(list)new MutationObserver(schedule).observe(list,{childList:true});
+document.addEventListener('change',event=>{
+  if(event.target.closest?.('#community-photo-rules,#batch-list,#university-first-select'))schedule();
+},true);
+document.addEventListener('click',event=>{
+  if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(schedule,0);
+},true);
+window.addEventListener('bantai-submission-transport-ready',schedule);
+ensure();
+setTimeout(ensure,300);
+setTimeout(ensure,900);
+})();

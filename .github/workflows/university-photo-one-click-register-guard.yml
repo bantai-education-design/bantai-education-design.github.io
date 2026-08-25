@@ -15,20 +15,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate one-button source
+      - name: Validate one-action source
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
-          const js=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.js','utf8');
-          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.css','utf8');
+          const legacy=fs.readFileSync('tools/university-database/tokyo/photo-register/one-click-register.js','utf8');
+          const ui=fs.readFileSync('tools/university-database/tokyo/photo-register/community-submission-ui.js','utf8');
+          const transport=fs.readFileSync('tools/university-database/tokyo/photo-register/community-submission-transport.js','utf8');
           const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
-          assert.ok(js.includes('この内容で大学DBへ登録'));
-          assert.ok(js.includes('downloadZip.click()'),'one click action must reuse the existing safe package download');
-          assert.ok(js.includes("{capture:true}"),'one click monitor must start before legacy generator disables the button');
-          assert.ok(css.includes('#download-zip')&&css.includes('display:none!important'),'legacy download controls must be hidden');
-          assert.match(loader,/one-click-register\.js\?v=\d{8}-\d{4}/,'one-click register loader must stay cache-busted');
-          console.log('one-button registration source validated');
+          assert.ok(legacy.includes('downloadZip.click()'),'legacy safe package path must remain available internally');
+          assert.ok(ui.includes("submit.id='community-submit-package'")&&ui.includes('審査に提出する'));
+          assert.ok(ui.includes("document.documentElement.dataset.communitySubmissionLast='saved'"));
+          assert.ok(transport.includes("mode:'remote'"),'remote notification handoff must be available');
+          assert.match(loader,/community-submission-transport\.js\?v=\d{8}-\d{4}/,'notification loader must stay cache-busted');
+          console.log('one public submission action source validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -38,7 +39,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-one-click.log 2>&1 &
           sleep 2
-      - name: Verify one visible register button and automatic handoff download
+      - name: Verify one visible submission button and safe local fallback
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -47,32 +48,32 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.documentElement.dataset.oneClickRegister==='ready',{timeout:10000});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
             await page.locator('#university-first-select').selectOption('u000094');
             await page.setInputFiles('#photo-input',{name:'asia-register.png',mimeType:'image/png',buffer:png});
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             await page.waitForFunction(()=>document.querySelector('.batch-row .row-university')?.value==='u000094',{timeout:10000});
-            await page.waitForFunction(()=>!document.querySelector('#generate-batch')?.disabled,{timeout:10000});
+            for(const id of ['#community-rule-rights','#community-rule-no-ai','#community-rule-license'])await page.check(id);
+            await page.waitForFunction(()=>!document.querySelector('#community-submit-package')?.disabled,{timeout:10000});
 
             const panel=page.locator('.export-panel');
-            assert.ok((await panel.locator('h2').innerText()).includes('この内容で大学DBへ登録'));
-            assert.equal((await page.locator('#generate-batch').innerText()).trim(),'この内容で大学DBへ登録');
+            assert.ok((await panel.locator('h2').innerText()).includes('審査に提出'));
+            assert.equal(await page.locator('#generate-batch').isVisible(),false,'legacy register button must be hidden from public submitters');
             assert.equal(await page.locator('#download-zip').isVisible(),false);
             assert.equal(await page.locator('#download-json').isVisible(),false);
             assert.equal(await page.locator('#copy-json').isVisible(),false);
-            assert.equal(await panel.locator('.actions button:visible').count(),1,'only one registration action may be visible');
+            assert.equal(await panel.locator('.actions button:visible').count(),1,'only one final submission action may be visible');
+            assert.equal((await page.locator('#community-submit-package').innerText()).trim(),'審査用データを保存');
 
             const downloadPromise=page.waitForEvent('download',{timeout:25000});
-            await page.locator('#generate-batch').click();
+            await page.locator('#community-submit-package').click();
             const download=await downloadPromise;
-            assert.ok(download.suggestedFilename().endsWith('.zip'),'legacy package may remain internal but must download automatically');
-            await page.waitForFunction(()=>document.documentElement.dataset.oneClickRegisterLast==='success',{timeout:10000});
-            assert.equal(await page.locator('#result').isVisible(),true);
-            assert.ok((await page.locator('#result h3').innerText()).includes('登録データを準備しました'));
+            assert.match(download.suggestedFilename(),/^BT-UP-.*\.zip$/,'safe local fallback must create the moderated package');
+            await page.waitForFunction(()=>document.documentElement.dataset.communitySubmissionLast==='saved',{timeout:10000});
+            assert.ok((await page.locator('#community-submit-status').innerText()).includes('保存しました'));
             assert.equal(await page.locator('#json-output').isVisible(),false,'technical JSON must stay hidden');
-            assert.ok((await page.locator('#result p').innerText()).includes('このチャットに添付'));
 
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);

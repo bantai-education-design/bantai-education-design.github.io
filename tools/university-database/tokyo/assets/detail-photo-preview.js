@@ -16,7 +16,7 @@ window.addEventListener('pagehide',cleanup,{once:true});
 
 function preparePhotos(photos){
   cleanup();
-  const ordered=[...photos].slice(0,5).sort((a,b)=>(b.main?1:0)-(a.main?1:0));
+  const ordered=[...photos].slice(0,9).sort((a,b)=>(b.main?1:0)-(a.main?1:0));
   preparedPhotos=ordered.map(photo=>{
     const url=URL.createObjectURL(photo.blob);
     objectUrls.push(url);

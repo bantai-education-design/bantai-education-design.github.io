@@ -30,11 +30,30 @@ function deleteStoredSession(){
   });
 }
 
-// Reliability first: every page load starts a new registration.
-// Keeping old photos across reloads caused cross-university contamination, so do not restore previous work.
 sessionStorage.removeItem(TAB_FLAG);
 deleteStoredSession();
 document.documentElement.dataset.photoFreshStart='load';
+
+// Browsers may restore a native <select> value across reloads even when the app
+// deliberately discarded its saved session. Reset the chooser exactly once,
+// immediately after the full university list is available, so every reload truly
+// starts a new registration without fighting later user interaction.
+let freshLoadSelectionReset=false;
+function resetRestoredSelectionOnce(){
+  if(freshLoadSelectionReset||select.options.length<=1)return false;
+  freshLoadSelectionReset=true;
+  const changed=select.value!==''||search.value!=='';
+  search.value='';
+  select.value='';
+  if(changed)select.dispatchEvent(new Event('change',{bubbles:true}));
+  document.documentElement.dataset.photoFreshSelection='cleared';
+  return true;
+}
+const freshSelectionObserver=new MutationObserver(()=>{
+  if(resetRestoredSelectionOnce())freshSelectionObserver.disconnect();
+});
+freshSelectionObserver.observe(select,{childList:true,subtree:true});
+if(resetRestoredSelectionOnce())freshSelectionObserver.disconnect();
 
 function resetVisibleWork(reason='manual'){
   try{clearBatch?.click();}catch(err){console.error(err);}
@@ -59,7 +78,7 @@ if(!newButton){
   newButton.id='start-new-photo-registration';
   newButton.type='button';
   newButton.className='secondary simple-new-registration';
-  newButton.textContent='＋ 新しい登録を始める';
+  newButton.textContent='＋ 新しい投稿を始める';
   newButton.addEventListener('click',()=>resetVisibleWork('manual'));
   head?.appendChild(newButton);
 }
@@ -69,7 +88,7 @@ if(!workspace){
   workspace=document.createElement('div');
   workspace.id='simple-register-workspace';
   workspace.className='simple-register-workspace';
-  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>今回の写真・実画面確認</h2><p>右側で写真追加と実画面プレビューを行います。既存写真は左側で選べます。</p></div></div></section>';
+  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>写真を確認・追加</h2><p>写真は最大9枚。実画面プレビューで掲載イメージを確認できます。</p></div></div></section>';
   (progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);
 }
 const left=workspace.querySelector('.simple-university-column');
@@ -94,13 +113,13 @@ function refreshPreviewButton(){
   const count=document.querySelectorAll('#existing-photo-choice .main-photo-choice-card').length;
   if(!select.value){button.disabled=true;setText(status,'大学を選ぶとプレビューできます。');return;}
   if(!count){button.disabled=true;setText(status,'写真を確認・追加するとプレビューできます。');return;}
-  if(count>5){button.disabled=true;setText(status,`写真は5枚までです（現在${count}枚）。`);return;}
+  if(count>9){button.disabled=true;setText(status,`写真は9枚までです（現在${count}枚）。`);return;}
   button.disabled=false;
   setText(status,`現在の${count}枚で大学ページを確認できます。`);
 }
 
 function placeWorkspace(){
-  if(!workspace.isConnected){(progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);}
+  if(!workspace.isConnected)(progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);
   const university=document.querySelector('.university-first');
   const mode=document.querySelector('#registration-mode-switch');
   const existing=document.querySelector('#existing-photo-choice');
@@ -121,12 +140,18 @@ function placeWorkspace(){
   refreshPreviewButton();
 }
 
+// Avoid observing the whole batch subtree. Multiple legacy layout observers used
+// to react to each other's DOM moves and could starve university-list initialization.
 select.addEventListener('change',()=>setTimeout(()=>{placeWorkspace();refreshPreviewButton();},0));
 document.addEventListener('click',event=>{
   if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(refreshPreviewButton,0);
 },true);
-const observer=new MutationObserver(()=>queueMicrotask(placeWorkspace));
-observer.observe(batch,{childList:true,subtree:true});
+new MutationObserver(()=>setTimeout(refreshPreviewButton,0)).observe(list,{childList:true});
+// Existing-photo cards arrive asynchronously after a university is selected.
+// Re-evaluate preview readiness when those cards are mounted; otherwise the
+// button can remain disabled depending on registry/network timing.
+const existingChoices=document.querySelector('#existing-photo-choice');
+if(existingChoices)new MutationObserver(()=>setTimeout(refreshPreviewButton,0)).observe(existingChoices,{childList:true,subtree:true});
 placeWorkspace();
 setTimeout(placeWorkspace,250);
 setTimeout(placeWorkspace,900);

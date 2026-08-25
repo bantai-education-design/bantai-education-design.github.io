@@ -40,7 +40,7 @@ jobs:
 
             const choicePage=await ctx.newPage();
             await choicePage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await choicePage.waitForSelector('#registration-mode-switch');
+            await choicePage.waitForSelector('#registration-mode-switch',{state:'attached'});
             await choicePage.locator('#university-first-select').selectOption('u000094');
             await choicePage.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
             assert.equal(await choicePage.locator('.university-first > #existing-photo-choice').count(),1,'photo picker must appear directly in university selection panel');
@@ -67,6 +67,10 @@ jobs:
             assert.ok((await cards.nth(1).innerText()).includes('★ メイン'),'prior public registry photo must also be selectable as main');
             assert.equal(await choicePage.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo is allowed');
 
+            // Photo adjustment is optional in the public flow. Open it through the
+            // same visible Edit action a user would use before checking its layout.
+            await choicePage.locator('.edit-item').click();
+            await choicePage.waitForSelector('#photo-editor',{state:'visible',timeout:5000});
             await choicePage.locator('#photo-editor').scrollIntoViewIfNeeded();
             const editorLayout=await choicePage.evaluate(()=>({
               controlsOverflow:getComputedStyle(document.querySelector('.edit-grid>.controls')).overflowY,
@@ -88,7 +92,7 @@ jobs:
 
             const page=await ctx.newPage();
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await page.waitForSelector('#registration-mode-switch');
+            await page.waitForSelector('#registration-mode-switch',{state:'attached'});
             await page.locator('#university-first-select').selectOption('u000083');
             await page.setInputFiles('#photo-input',[
               {name:'rikkyo-a.png',mimeType:'image/png',buffer:png},
