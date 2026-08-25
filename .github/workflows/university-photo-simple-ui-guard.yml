@@ -23,7 +23,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-simple-ui.log 2>&1 &
           sleep 2
-      - name: Verify one university, compact photos, and four visible steps
+      - name: Verify one university, compact photos, optional editor, and four visible steps
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -32,11 +32,12 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:900},acceptDownloads:true});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
-            await page.waitForSelector('#simple-register-progress');
             assert.equal(await page.locator('#simple-register-progress li').count(),4,'four visible steps required');
             assert.equal(await page.locator('.start-choice-grid>.start-choice:first-child').isVisible(),false,'obsolete photo-first choice must stay hidden');
+            assert.equal(await page.locator('#registration-mode-switch').isVisible(),false,'public submitters must not see batch mode');
 
             await page.locator('#university-first-select').selectOption('u000083');
             await page.waitForFunction(()=>document.querySelector('#simple-current-university')?.textContent.includes('立教大学'));
@@ -46,18 +47,23 @@ jobs:
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
             assert.equal(await page.locator('#batch-count').innerText(),'1枚','core photo counter must stay compatible');
             assert.equal(await page.locator('.batch-row .row-university').inputValue(),'u000083','selected university must still be assigned internally');
-            assert.equal(await page.locator('.batch-row .university-assign').isVisible(),false,'per-photo university reassignment must not clutter single-university UI');
-            assert.equal(await page.locator('.batch-row .batch-main>small').isVisible(),false,'technical SHA details must stay hidden in single-university UI');
+            assert.equal(await page.locator('.batch-row .university-assign').isVisible(),false,'per-photo university reassignment must not clutter public UI');
+            assert.equal(await page.locator('.batch-row .batch-main>small').isVisible(),false,'technical SHA details must stay hidden');
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===1,{timeout:10000});
             assert.equal(await page.locator('.main-photo-choice-card.active').count(),1,'exactly one main photo must be visible');
 
-            assert.equal((await page.locator('#photo-editor .section-head .step').innerText()).trim(),'STEP 3');
-            await page.waitForFunction(()=>document.querySelector('.export-panel .section-head .step')?.textContent.trim()==='STEP 4',{timeout:10000});
-            assert.equal(await page.locator('#photo-editor label:has(#editor-university-search)').isVisible(),false,'single-university editor must not ask for university a second time');
-            assert.equal(await page.locator('#photo-editor label:has(#university-select)').isVisible(),false,'single-university editor dropdown must stay hidden');
+            assert.equal(await page.locator('#photo-editor').isVisible(),false,'optional editor must be collapsed by default');
+            assert.equal((await page.locator('#photo-editor .section-head .step').innerText()).trim(),'任意');
+            await page.locator('#community-editor-toggle').click();
+            assert.equal(await page.locator('#photo-editor').isVisible(),true,'editor must open only when requested');
+            assert.equal(await page.locator('#photo-editor label:has(#editor-university-search)').isVisible(),false,'editor must not ask for university again');
+            assert.equal(await page.locator('#photo-editor label:has(#university-select)').isVisible(),false,'editor university dropdown must stay hidden');
+            await page.locator('#community-editor-toggle').click();
+            assert.equal(await page.locator('#photo-editor').isVisible(),false);
 
-            await page.locator('#mode-batch').click();
-            assert.equal(await page.locator('.batch-row .university-assign').isVisible(),true,'batch mode compatibility must remain available');
+            assert.equal((await page.locator('#community-photo-rules .step').innerText()).trim(),'STEP 3');
+            assert.equal((await page.locator('.export-panel .section-head .step').innerText()).trim(),'STEP 4');
+            assert.equal(await page.locator('#community-submit-package').isVisible(),true,'one final submit action required');
 
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
