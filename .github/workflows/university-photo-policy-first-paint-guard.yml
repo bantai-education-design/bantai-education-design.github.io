@@ -1,0 +1,80 @@
+name: University photo policy first paint guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-policy-first-paint-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-policy-first-paint-guard.yml'
+
+jobs:
+  policy-first-paint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate first-paint source guard
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const html=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
+          assert.ok(html.includes('photo-policy-first-paint-fix'),'first-paint style must be in HTML head');
+          assert.ok(html.includes('body.community-photo-submission .policy{display:block!important}'),'public policy must be forced visible from first paint');
+          assert.ok(html.includes('community-submission-ui.css?v=20260825-1633'),'community CSS cache bust required');
+          console.log('first-paint source guard validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-policy-first-paint.log 2>&1 &
+          sleep 2
+      - name: Verify rules never disappear during reload initialization
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900}});
+            await page.addInitScript(()=>{
+              window.__policyFrameDisplays=[];
+              addEventListener('DOMContentLoaded',()=>{
+                let frames=0;
+                const sample=()=>{
+                  const el=document.querySelector('.policy');
+                  if(el)window.__policyFrameDisplays.push(getComputedStyle(el).display);
+                  frames+=1;
+                  if(frames<120)requestAnimationFrame(sample);
+                };
+                requestAnimationFrame(sample);
+              },{once:true});
+            });
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
+            await page.waitForTimeout(2200);
+            const result=await page.evaluate(()=>({
+              samples:window.__policyFrameDisplays||[],
+              visible:!!document.querySelector('.policy')&&getComputedStyle(document.querySelector('.policy')).display!=='none',
+              heading:document.querySelector('.policy h2')?.textContent||''
+            }));
+            assert.ok(result.samples.length>30,'must sample policy visibility across initialization frames');
+            assert.equal(result.samples.includes('none'),false,'posting rules must never disappear on any sampled frame');
+            assert.equal(result.visible,true,'posting rules must remain visible after initialization');
+            assert.ok(result.heading.includes('大学写真 投稿・掲載ルール'));
+            await page.reload({waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
+            assert.equal(await page.locator('.policy').isVisible(),true,'posting rules must remain visible after reload');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
