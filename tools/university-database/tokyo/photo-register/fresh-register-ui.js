@@ -71,7 +71,7 @@ if(!workspace){
   workspace=document.createElement('div');
   workspace.id='simple-register-workspace';
   workspace.className='simple-register-workspace';
-  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>写真を確認・追加</h2><p>写真を見て★メインを1枚選びます。必要なら写真を追加してください。</p></div></div></section>';
+  workspace.innerHTML='<div class="simple-university-column"></div><section class="simple-photo-column"><div class="simple-photo-column-head"><span>STEP 2</span><div><h2>今回の写真・実画面確認</h2><p>右側で写真追加と実画面プレビューを行います。既存写真は左側で選べます。</p></div></div></section>';
   (progress||batch.querySelector(':scope > .muted'))?.insertAdjacentElement('afterend',workspace);
 }
 const left=workspace.querySelector('.simple-university-column');
@@ -111,10 +111,11 @@ function placeWorkspace(){
   const preview=document.querySelector('#real-page-preview');
   compactModeSwitch(mode);
   if(university&&university.parentElement!==left)left.appendChild(university);
+  if(existing&&university&&existing.parentElement!==university)university.appendChild(existing);
   if(mode&&mode.parentElement!==left)left.appendChild(mode);
   const headRight=right.querySelector('.simple-photo-column-head');
   let anchor=headRight;
-  for(const node of [preview,existing,add,summary,list]){
+  for(const node of [preview,add,summary,list]){
     if(!node)continue;
     if(node.parentElement!==right||anchor.nextElementSibling!==node)anchor.insertAdjacentElement('afterend',node);
     anchor=node;
