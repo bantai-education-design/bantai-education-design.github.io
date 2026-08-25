@@ -52,15 +52,15 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:900}});
             await page.goto(register,{waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
             await page.waitForSelector('#simple-register-workspace');
             await page.waitForSelector('#start-new-photo-registration');
             assert.equal(await page.locator('#university-first-select').inputValue(),'','new navigation must start with no university');
             assert.equal(await page.locator('.batch-row').count(),0,'new navigation must start with no added photos');
 
             await page.locator('#university-first-select').selectOption('u000083');
-            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card[data-main-type="existing"]').length>=1,{timeout:10000});
-            await page.waitForFunction(()=>!document.querySelector('#open-real-preview')?.disabled,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#existing-photo-choice .main-photo-choice-card[data-main-type="existing"]').length>=1,null,{timeout:10000});
+            await page.waitForFunction(()=>!document.querySelector('#open-real-preview')?.disabled,null,{timeout:10000});
             assert.equal(await page.locator('#open-real-preview').isVisible(),true,'real page preview must be visible beside photo work');
 
             const left=await page.locator('.simple-university-column').boundingBox();
@@ -71,26 +71,32 @@ jobs:
             assert.ok(preview.y-right.y<120,'real page preview must stay near the top of photo column');
 
             await page.setInputFiles('#photo-input',{name:'rikkyo-new.png',mimeType:'image/png',buffer:png});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
-            await page.waitForFunction(()=>document.documentElement.dataset.photoSessionSaved==='true',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
+            await page.waitForFunction(async()=>{
+              if(!('indexedDB'in window))return false;
+              const db=await new Promise((resolve,reject)=>{const req=indexedDB.open('bantai-university-photo-register',1);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});
+              const saved=await new Promise((resolve,reject)=>{const tx=db.transaction('session','readonly');const req=tx.objectStore('session').get('tokyo-photo-register-current');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});
+              db.close();
+              return saved?.universityId==='u000083'&&Array.isArray(saved.files)&&saved.files.length===1;
+            },null,{timeout:12000});
 
             await page.reload({waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000083',{timeout:10000});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value==='u000083',null,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
             assert.equal(await page.locator('#university-first-select').inputValue(),'u000083','reload should continue current work');
 
             await page.goto(university,{waitUntil:'domcontentloaded'});
             await page.goto(register,{waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
-            await page.waitForFunction(()=>document.documentElement.dataset.photoFreshStart==='navigation',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.photoFreshStart==='navigation',null,{timeout:10000});
             assert.equal(await page.locator('#university-first-select').inputValue(),'','returning from DB must start a new registration');
             assert.equal(await page.locator('.batch-row').count(),0,'returning from DB must not restore old photos');
 
             await page.locator('#university-first-select').selectOption('u000083');
             await page.setInputFiles('#photo-input',{name:'rikkyo-second.png',mimeType:'image/png',buffer:png});
-            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,null,{timeout:10000});
             await page.locator('#start-new-photo-registration').click();
-            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value===''&&document.querySelectorAll('.batch-row').length===0,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('#university-first-select')?.value===''&&document.querySelectorAll('.batch-row').length===0,null,{timeout:10000});
             assert.equal(await page.locator('#university-first-search').inputValue(),'','manual fresh start must clear typed university too');
 
             await page.setViewportSize({width:375,height:900});
