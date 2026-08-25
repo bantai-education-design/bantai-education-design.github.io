@@ -1,0 +1,100 @@
+name: University photo editor drag guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-editor-drag-guard.yml'
+
+jobs:
+  editor-drag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate clarity and drag source
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const root='tools/university-database/tokyo/photo-register/';
+          const drag=fs.readFileSync(root+'editor-drag-pan.js','utf8');
+          const css=fs.readFileSync(root+'community-submission-fixes.css','utf8');
+          const loader=fs.readFileSync(root+'university-selection-sync-fix.js','utf8');
+          assert.ok(drag.includes("canvas.addEventListener('pointerdown'")&&drag.includes('setPointerCapture'));
+          assert.ok(drag.includes("event.target.closest?.('.edit-item')")&&drag.includes('openEditorFromRow'));
+          assert.ok(drag.includes('__bantaiCommunityPhotoSubmission?.updateState'));
+          assert.ok(css.includes('.simple-register-progress li')&&css.includes('border:0!important'));
+          assert.ok(css.includes('.editor-pan-canvas')&&css.includes('cursor:grab'));
+          assert.ok(loader.includes('community-submission-fixes.css?v=20260825-1130'));
+          assert.ok(loader.includes('editor-drag-pan.js?v=20260825-1130'));
+          console.log('progress clarity, editor opening and drag-pan source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-editor-drag.log 2>&1 &
+          sleep 2
+      - name: Verify stepper, edit state and drag movement
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAANHQEDasKb6QAAAABJRU5ErkJggg==','base64');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:900},acceptDownloads:true});
+            const url='http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/';
+            await page.goto(url,{waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.editorDragPan==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+
+            const current=page.locator('#simple-register-progress li.current');
+            assert.equal(await current.count(),1,'one current progress step required');
+            assert.equal(await current.evaluate(el=>getComputedStyle(el).borderTopWidth),'0px','progress step must not look like an input field');
+            assert.equal(await page.locator('#university-first-select').isVisible(),true,'university select must be visibly operable');
+            assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university select must be enabled');
+
+            await page.locator('#university-first-select').selectOption('u000094');
+            await page.setInputFiles('#photo-input',{name:'drag-edit-test.png',mimeType:'image/png',buffer:png});
+            await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===1,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelector('.main-photo-choice-card[data-main-type="new"]'),{timeout:10000});
+            await page.locator('.main-photo-choice-card[data-main-type="new"]').click();
+            for(const id of ['#community-rule-rights','#community-rule-no-ai','#community-rule-license'])await page.check(id);
+            await page.waitForFunction(()=>!document.querySelector('#community-submit-package')?.disabled,{timeout:10000});
+
+            await page.locator('.batch-row .edit-item').click();
+            await page.waitForFunction(()=>!document.querySelector('#photo-editor')?.hidden,{timeout:10000});
+            assert.equal(await page.locator('#photo-editor').isVisible(),true,'edit button must open editor directly');
+            assert.equal(await page.locator('#community-submit-package').isDisabled(),false,'opening editor must not disable submission');
+            assert.ok((await page.locator('#editor-drag-hint').innerText()).includes('ドラッグ'));
+
+            await page.locator('#zoom').fill('110');
+            await page.locator('#zoom').dispatchEvent('input');
+            const beforeX=Number(await page.locator('#pos-x').inputValue());
+            const beforeY=Number(await page.locator('#pos-y').inputValue());
+            const box=await page.locator('#preview').boundingBox();
+            assert.ok(box,'preview canvas required');
+            const sx=box.x+box.width/2,sy=box.y+box.height/2;
+            await page.mouse.move(sx,sy);
+            await page.mouse.down();
+            await page.mouse.move(sx+45,sy+32,{steps:5});
+            await page.mouse.up();
+            const afterX=Number(await page.locator('#pos-x').inputValue());
+            const afterY=Number(await page.locator('#pos-y').inputValue());
+            assert.notEqual(afterX,beforeX,'horizontal drag must update horizontal position');
+            assert.notEqual(afterY,beforeY,'vertical drag must update vertical position');
+            assert.equal(await page.locator('#community-submit-package').isDisabled(),false,'editing and drag must keep valid submission enabled');
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'mobile must not overflow horizontally');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
