@@ -103,4 +103,11 @@ queueMicrotask(()=>{
     one.dataset.oneClickRegister='true';
     document.body.appendChild(one);
   }
+  if(!document.querySelector('script[data-community-submission-compat]')){
+    const compat=document.createElement('script');
+    compat.src='community-submission-compat.js?v=20260825-1032';
+    compat.defer=true;
+    compat.dataset.communitySubmissionCompat='true';
+    document.body.appendChild(compat);
+  }
 })();
