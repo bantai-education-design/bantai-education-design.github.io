@@ -24,7 +24,12 @@ function stabilize(){
     if(chooser.parentElement!==left)left.prepend(chooser);
     if(chooser.hidden)chooser.hidden=false;
     if(chooser.getAttribute('aria-hidden')==='true')chooser.removeAttribute('aria-hidden');
-    chooser.classList.remove('community-legacy-university-shell');
+    // Do not write the observed class attribute when nothing needs changing.
+    // An unconditional classList.remove() here re-triggered this observer forever,
+    // starving later dynamically loaded scripts and preventing networkidle.
+    if(chooser.classList.contains('community-legacy-university-shell')){
+      chooser.classList.remove('community-legacy-university-shell');
+    }
     if(selectLabel.hidden)selectLabel.hidden=false;
     if(searchLabel.hidden)searchLabel.hidden=false;
     if(select.getAttribute('aria-hidden')==='true')select.removeAttribute('aria-hidden');
