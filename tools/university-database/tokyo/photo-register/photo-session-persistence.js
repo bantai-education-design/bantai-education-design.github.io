@@ -114,6 +114,10 @@ async function restore(){
       currentUniversityId=saved.universityId;
     }
     if(saved.files.length){
+      // The simplified/wide UI can move the shared file input after university selection.
+      // Restore only after the same input is connected and enabled, so the core change handler
+      // cannot miss the synthetic file-selection event because of script/layout timing.
+      await waitFor(()=>document.querySelector('#photo-input')===input&&input.isConnected&&!input.disabled);
       const dt=new DataTransfer();
       for(const item of saved.files){dt.items.add(new File([item.blob],item.name,{type:item.type||item.blob?.type||'application/octet-stream',lastModified:item.lastModified||Date.now()}));}
       input.files=dt.files;
