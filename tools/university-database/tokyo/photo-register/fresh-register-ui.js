@@ -34,6 +34,27 @@ sessionStorage.removeItem(TAB_FLAG);
 deleteStoredSession();
 document.documentElement.dataset.photoFreshStart='load';
 
+// Browsers may restore a native <select> value across reloads even when the app
+// deliberately discarded its saved session. Reset the chooser exactly once,
+// immediately after the full university list is available, so every reload truly
+// starts a new registration without fighting later user interaction.
+let freshLoadSelectionReset=false;
+function resetRestoredSelectionOnce(){
+  if(freshLoadSelectionReset||select.options.length<=1)return false;
+  freshLoadSelectionReset=true;
+  const changed=select.value!==''||search.value!=='';
+  search.value='';
+  select.value='';
+  if(changed)select.dispatchEvent(new Event('change',{bubbles:true}));
+  document.documentElement.dataset.photoFreshSelection='cleared';
+  return true;
+}
+const freshSelectionObserver=new MutationObserver(()=>{
+  if(resetRestoredSelectionOnce())freshSelectionObserver.disconnect();
+});
+freshSelectionObserver.observe(select,{childList:true,subtree:true});
+if(resetRestoredSelectionOnce())freshSelectionObserver.disconnect();
+
 function resetVisibleWork(reason='manual'){
   try{clearBatch?.click();}catch(err){console.error(err);}
   search.value='';
