@@ -73,9 +73,11 @@ function endDrag(event){
 }
 
 canvas.addEventListener('pointerdown',startDrag);
-canvas.addEventListener('pointermove',moveDrag);
-canvas.addEventListener('pointerup',endDrag);
-canvas.addEventListener('pointercancel',endDrag);
+// Track movement at document level once dragging begins. This keeps the drag
+// stable even when the pointer leaves the canvas or layout/scroll position moves.
+document.addEventListener('pointermove',moveDrag,true);
+document.addEventListener('pointerup',endDrag,true);
+document.addEventListener('pointercancel',endDrag,true);
 canvas.addEventListener('lostpointercapture',()=>{drag=null;canvas.classList.remove('is-dragging');refreshSubmission();});
 
 // Editing is optional. Opening it or changing an adjustment must not invalidate
@@ -88,7 +90,9 @@ editor.addEventListener('click',event=>{
 document.addEventListener('click',event=>{
   if(event.target.closest?.('.edit-item')){
     openEditorFromRow();
-    setTimeout(()=>editor.scrollIntoView({behavior:'smooth',block:'start'}),0);
+    // Use an immediate scroll here. A smooth scroll can still be moving when the
+    // user starts dragging, making pointer coordinates refer to a moving canvas.
+    setTimeout(()=>editor.scrollIntoView({behavior:'auto',block:'start'}),0);
     setTimeout(refreshSubmission,0);
     setTimeout(refreshSubmission,250);
     return;
