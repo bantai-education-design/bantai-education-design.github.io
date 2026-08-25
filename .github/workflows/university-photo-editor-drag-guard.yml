@@ -32,14 +32,14 @@ jobs:
           assert.ok(css.includes('.editor-pan-canvas')&&css.includes('cursor:grab'));
           assert.ok(stability.includes('communityUniversityChooser')&&stability.includes("dataset.communityUniversityChooser=ready?'stable':'loading-options'"));
           assert.ok(stability.includes("chooser.parentElement!==left")&&stability.includes('if(ready&&select.disabled)select.disabled=false'));
-          assert.ok(stability.includes("attributeFilter:['hidden','disabled','aria-hidden','class','style']"));
-          assert.ok(!stability.includes('panel.appendChild(searchLabel)')&&!stability.includes('panel.appendChild(selectLabel)'));
+          assert.ok(stability.includes('controlObserver.observe(select')&&stability.includes("attributeFilter:['disabled','aria-hidden']"));
+          assert.ok(!stability.includes('observe(document.body')&&!stability.includes('panel.appendChild(searchLabel)')&&!stability.includes('panel.appendChild(selectLabel)'));
           assert.ok(loader.includes('community-submission-fixes.css?v=20260825-1230'));
           assert.ok(loader.includes('community-ui-stability.js?v=20260825-1230'));
           assert.ok(loader.includes('community-submission-ui.js?v=20260825-1230'));
           assert.ok(loader.includes('editor-drag-pan.js?v=20260825-1230'));
           assert.ok(loader.includes("dataset.communityUiSequence='ready'"));
-          console.log('progress clarity, persistent chooser actionability, ordered UI init and drag-pan source validated');
+          console.log('progress clarity, scoped chooser actionability, ordered UI init and drag-pan source validated');
           NODE
       - name: Install Playwright Chromium
         run: |
