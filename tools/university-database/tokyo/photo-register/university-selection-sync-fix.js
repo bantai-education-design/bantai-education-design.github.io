@@ -54,6 +54,7 @@ queueMicrotask(()=>{
 })();
 
 (()=>{
+  const version='20260825-1008';
   if(!document.querySelector('script[data-university-ime-selection-fix]')){
     const s=document.createElement('script');
     s.src='university-ime-selection-fix.js?v=20260824-1817';
@@ -64,13 +65,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-simple-register-flow]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='simple-register-flow.css?v=20260825-0920';
+    link.href=`simple-register-flow.css?v=${version}`;
     link.dataset.simpleRegisterFlow='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-simple-register-flow]')){
     const simple=document.createElement('script');
-    simple.src='simple-register-flow.js?v=20260825-0920';
+    simple.src=`simple-register-flow.js?v=${version}`;
     simple.defer=true;
     simple.dataset.simpleRegisterFlow='true';
     document.body.appendChild(simple);
@@ -78,13 +79,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-fresh-register-ui]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='fresh-register-ui.css?v=20260825-0920';
+    link.href=`fresh-register-ui.css?v=${version}`;
     link.dataset.freshRegisterUi='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-fresh-register-ui]')){
     const fresh=document.createElement('script');
-    fresh.src='fresh-register-ui.js?v=20260825-0920';
+    fresh.src=`fresh-register-ui.js?v=${version}`;
     fresh.defer=true;
     fresh.dataset.freshRegisterUi='true';
     document.body.appendChild(fresh);
@@ -92,13 +93,13 @@ queueMicrotask(()=>{
   if(!document.querySelector('link[data-one-click-register]')){
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='one-click-register.css?v=20260825-0920';
+    link.href=`one-click-register.css?v=${version}`;
     link.dataset.oneClickRegister='true';
     document.head.appendChild(link);
   }
   if(!document.querySelector('script[data-one-click-register]')){
     const one=document.createElement('script');
-    one.src='one-click-register.js?v=20260825-0920';
+    one.src=`one-click-register.js?v=${version}`;
     one.defer=true;
     one.dataset.oneClickRegister='true';
     document.body.appendChild(one);
