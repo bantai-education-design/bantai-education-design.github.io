@@ -12,7 +12,6 @@ const DB_NAME='bantai-university-photo-register';
 const STORE='session';
 const KEY='tokyo-photo-register-current';
 const TAB_FLAG='bantai-photo-register-restore-this-tab';
-const navigation=performance.getEntriesByType?.('navigation')?.[0]?.type||'navigate';
 const setText=(node,text)=>{if(node&&node.textContent!==text)node.textContent=text;};
 
 function deleteStoredSession(){
@@ -31,12 +30,11 @@ function deleteStoredSession(){
   });
 }
 
-// A reload means "continue this work". Entering the page again means "start a new registration".
-if(navigation!=='reload'){
-  sessionStorage.removeItem(TAB_FLAG);
-  deleteStoredSession();
-  document.documentElement.dataset.photoFreshStart='navigation';
-}
+// Reliability first: every page load starts a new registration.
+// Keeping old photos across reloads caused cross-university contamination, so do not restore previous work.
+sessionStorage.removeItem(TAB_FLAG);
+deleteStoredSession();
+document.documentElement.dataset.photoFreshStart='load';
 
 function resetVisibleWork(reason='manual'){
   try{clearBatch?.click();}catch(err){console.error(err);}
