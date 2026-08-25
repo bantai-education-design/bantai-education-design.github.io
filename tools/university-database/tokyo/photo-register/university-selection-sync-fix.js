@@ -80,6 +80,7 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
   });
 
   (async()=>{
+    const ownerMode=new URLSearchParams(location.search).get('mode')==='owner';
     await loadScript('university-ime-selection-fix','university-ime-selection-fix.js?v=20260824-1817');
     addStyle('simple-register-flow','simple-register-flow.css?v=20260825-1056');
     await loadScript('simple-register-flow','simple-register-flow.js?v=20260825-1056');
@@ -87,6 +88,15 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
     await loadScript('fresh-register-ui','fresh-register-ui.js?v=20260825-1056');
     addStyle('one-click-register','one-click-register.css?v=20260825-1056');
     await loadScript('one-click-register','one-click-register.js?v=20260825-1056');
+    addStyle('photo-register-mode-fix','photo-register-mode-fix.css?v=20260825-1435');
+
+    if(ownerMode){
+      await loadScript('owner-photo-register','owner-photo-register.js?v=20260825-1435');
+      await loadScript('editor-drag-pan','editor-drag-pan.js?v=20260825-1230');
+      document.documentElement.dataset.communityUiSequence='owner-ready';
+      return;
+    }
+
     await loadScript('community-submission-compat','community-submission-compat.js?v=20260825-1056');
     await loadScript('community-submission-transport','community-submission-transport.js?v=20260825-1056');
     addStyle('community-submission-fixes','community-submission-fixes.css?v=20260825-1230');

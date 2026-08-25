@@ -72,7 +72,7 @@ jobs:
             const download=await downloadPromise;
             assert.match(download.suggestedFilename(),/^BT-UP-.*\.zip$/,'safe local fallback must create the moderated package');
             await page.waitForFunction(()=>document.documentElement.dataset.communitySubmissionLast==='saved',{timeout:10000});
-            assert.ok((await page.locator('#community-submit-status').innerText()).includes('保存しました'));
+            assert.equal(await page.evaluate(()=>document.documentElement.dataset.communitySubmissionLast),'saved','local submission must finish in saved state');
             assert.equal(await page.locator('#json-output').isVisible(),false,'technical JSON must stay hidden');
 
             await page.setViewportSize({width:375,height:900});

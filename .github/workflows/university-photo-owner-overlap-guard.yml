@@ -1,0 +1,83 @@
+name: University photo owner and overlap guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-owner-overlap-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/photo-register/**'
+      - '.github/workflows/university-photo-owner-overlap-guard.yml'
+
+jobs:
+  owner-overlap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source separation
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
+          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/photo-register-mode-fix.css','utf8');
+          const owner=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-register.js','utf8');
+          assert.ok(loader.includes("get('mode')==='owner'"),'owner mode query required');
+          assert.ok(loader.includes("dataset.communityUiSequence='owner-ready'"),'owner mode must bypass community submission UI');
+          assert.match(css,/community-simple-submission \.export-panel\{[\s\S]*position:static!important/,'community submit panel must not stay sticky');
+          assert.ok(owner.includes('Ban.Tai 本人撮影写真を登録'),'owner title required');
+          assert.ok(owner.includes('この内容で大学DBへ登録'),'owner direct preparation label required');
+          console.log('owner/public separation source validated');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-owner-overlap.log 2>&1 &
+          sleep 2
+      - name: Verify public no-overlap and owner quick register
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const publicPage=await browser.newPage({viewport:{width:1366,height:900}});
+            await publicPage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
+            await publicPage.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
+            const toggle=publicPage.locator('#community-editor-toggle');
+            await toggle.click();
+            await publicPage.waitForFunction(()=>!document.querySelector('#photo-editor')?.hidden,null,{timeout:5000});
+            const layout=await publicPage.evaluate(()=>{
+              const editor=document.querySelector('#photo-editor');
+              const panel=document.querySelector('.export-panel');
+              return {
+                position:getComputedStyle(panel).position,
+                editorBottom:editor.getBoundingClientRect().bottom+scrollY,
+                panelTop:panel.getBoundingClientRect().top+scrollY
+              };
+            });
+            assert.notEqual(layout.position,'sticky','STEP 4 must not float over editor');
+            assert.ok(layout.panelTop>=layout.editorBottom-1,'STEP 4 must follow editor in document flow');
+
+            const owner=await browser.newPage({viewport:{width:1366,height:900}});
+            await owner.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await owner.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await owner.locator('body').evaluate(el=>el.classList.contains('owner-photo-registration')),true);
+            assert.equal(await owner.locator('#community-photo-rules').count(),0,'owner mode must not show community agreements');
+            assert.equal(await owner.locator('#community-submit-package').count(),0,'owner mode must not show review submit button');
+            assert.equal(await owner.locator('#generate-batch').isVisible(),true,'owner registration button must be visible');
+            assert.equal(await owner.locator('#generate-batch').innerText(),'この内容で大学DBへ登録');
+            assert.ok((await owner.locator('.hero h1').innerText()).includes('本人撮影写真'));
+            assert.equal(await owner.locator('#registration-mode-switch').isVisible(),false,'legacy mode switch stays hidden in owner quick flow');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE

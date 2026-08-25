@@ -1,0 +1,33 @@
+/* Final layout fixes shared by community and Ban.Tai owner registration. */
+@media(min-width:1180px){
+  body.community-simple-submission .export-panel{
+    position:static!important;
+    bottom:auto!important;
+    z-index:auto!important;
+    box-shadow:none!important;
+  }
+}
+
+body.owner-photo-registration #registration-mode-switch,
+body.owner-photo-registration .policy{display:none!important}
+body.owner-photo-registration .wrap{max-width:1480px!important}
+body.owner-photo-registration .hero{padding:14px 0 10px!important}
+body.owner-photo-registration .hero .eyebrow{font-size:.68rem!important;letter-spacing:.12em}
+body.owner-photo-registration .hero h1{margin:.2rem 0!important;font-size:clamp(1.7rem,2.7vw,2.45rem)!important}
+body.owner-photo-registration .hero p{max-width:920px;margin:.25rem 0!important;font-size:.92rem;line-height:1.55}
+body.owner-photo-registration .rule-badges{margin-top:7px!important;gap:6px!important}
+body.owner-photo-registration .rule-badges span{padding:4px 8px!important;font-size:.68rem!important}
+body.owner-photo-registration .owner-register-intro{display:flex;align-items:flex-start;gap:10px;margin:0 0 10px;padding:10px 12px;border:1px solid rgba(215,180,90,.52);border-radius:10px;background:rgba(215,180,90,.075);font-size:.76rem;line-height:1.5}
+body.owner-photo-registration .owner-register-intro strong{flex:0 0 auto;color:#f0d98b}
+body.owner-photo-registration .owner-register-intro span{color:#cbd0da}
+body.owner-photo-registration .one-click-register-panel{position:static!important;bottom:auto!important;z-index:auto!important;margin-top:14px!important;box-shadow:none!important}
+body.owner-photo-registration #simple-register-progress{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+body.owner-photo-registration #photo-editor{margin-top:14px!important}
+body.owner-photo-registration #generate-batch{display:flex!important}
+
+@media(max-width:800px){
+  body.owner-photo-registration .owner-register-intro{display:block}
+  body.owner-photo-registration .owner-register-intro strong,
+  body.owner-photo-registration .owner-register-intro span{display:block}
+  body.owner-photo-registration .owner-register-intro span{margin-top:4px}
+}
