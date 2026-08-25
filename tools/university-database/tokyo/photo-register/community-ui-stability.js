@@ -8,6 +8,7 @@ const searchLabel=search?.closest('label');
 if(!chooser||!select||!search||!selectLabel||!searchLabel)return;
 
 let repairing=false;
+let scheduled=false;
 function stabilize(){
   if(repairing)return false;
   repairing=true;
@@ -37,14 +38,22 @@ function stabilize(){
     repairing=false;
   }
 }
+function schedule(){
+  if(scheduled)return;
+  scheduled=true;
+  queueMicrotask(()=>{scheduled=false;stabilize();});
+}
 
-const observer=new MutationObserver(()=>queueMicrotask(stabilize));
-observer.observe(document.body,{
-  childList:true,
-  subtree:true,
-  attributes:true,
-  attributeFilter:['hidden','disabled','aria-hidden','class','style']
-});
+// Watch only the controls that can affect chooser actionability. Observing every
+// class/style mutation under document.body caused a feedback storm while legacy
+// layout helpers were rendering photo cards and moving compatibility panels.
+const controlObserver=new MutationObserver(schedule);
+controlObserver.observe(select,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled','aria-hidden']});
+controlObserver.observe(search,{attributes:true,attributeFilter:['disabled','aria-hidden']});
+controlObserver.observe(selectLabel,{attributes:true,attributeFilter:['hidden','aria-hidden']});
+controlObserver.observe(searchLabel,{attributes:true,attributeFilter:['hidden','aria-hidden']});
+controlObserver.observe(chooser,{attributes:true,attributeFilter:['hidden','aria-hidden','class']});
+
 select.addEventListener('focus',stabilize,true);
 select.addEventListener('pointerdown',stabilize,true);
 search.addEventListener('focus',stabilize,true);
