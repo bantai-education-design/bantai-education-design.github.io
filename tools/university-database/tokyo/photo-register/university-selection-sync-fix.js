@@ -88,7 +88,7 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
     await loadScript('fresh-register-ui','fresh-register-ui.js?v=20260825-1056');
     addStyle('one-click-register','one-click-register.css?v=20260825-1056');
     await loadScript('one-click-register','one-click-register.js?v=20260825-1056');
-    addStyle('photo-register-mode-fix','photo-register-mode-fix.css?v=20260825-1435');
+    addStyle('photo-register-mode-fix','photo-register-mode-fix.css?v=20260825-1624');
 
     if(ownerMode){
       await loadScript('owner-photo-register','owner-photo-register.js?v=20260825-1435');
