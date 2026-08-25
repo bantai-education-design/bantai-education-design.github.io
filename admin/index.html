@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111111">
+  <title>Ban.Tai 管理センター</title>
+  <link rel="stylesheet" href="admin.css?v=20260825-2255">
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="../" aria-label="Ban.Tai Education Design トップへ">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span><strong>Ban.Tai Education Design</strong><small>ADMIN CENTER</small></span>
+    </a>
+    <a class="public-link" href="../tools/university-database/tokyo/">公開ページを確認</a>
+  </header>
+
+  <main class="admin-main">
+    <section class="hero" aria-labelledby="admin-title">
+      <div class="hero-copy">
+        <span class="eyebrow">BAN.TAI ADMIN</span>
+        <h1 id="admin-title">管理センター</h1>
+        <p>大学写真の登録・審査・公開確認を、ここから1クリックで行います。</p>
+      </div>
+      <div class="hero-status" aria-label="システム状態">
+        <div class="status-item ok"><span class="dot" aria-hidden="true"></span><span>Drive受け皿</span><strong>準備済み</strong></div>
+        <div class="status-item ok"><span class="dot" aria-hidden="true"></span><span>メール通知</span><strong>ON</strong></div>
+        <div class="status-note">新規投稿は最大1時間以内に通知</div>
+      </div>
+    </section>
+
+    <section class="focus-card" aria-labelledby="review-title">
+      <div class="focus-icon" aria-hidden="true">✓</div>
+      <div class="focus-copy">
+        <span class="card-kicker">まずここ</span>
+        <h2 id="review-title">訪問者写真を審査</h2>
+        <p>届いた大学写真を確認し、承認・却下・保留を判断します。</p>
+      </div>
+      <a class="primary-button" href="../tools/university-database/tokyo/photo-admin/">審査画面を開く <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="quick-grid" aria-label="管理メニュー">
+      <article class="quick-card">
+        <div class="card-icon" aria-hidden="true">＋</div>
+        <div>
+          <span class="card-kicker">BAN.TAI PHOTO</span>
+          <h2>本人撮影写真を登録</h2>
+          <p>自分で撮影した大学写真を最大9枚まで登録します。</p>
+        </div>
+        <a class="card-link" href="../tools/university-database/tokyo/photo-register/?mode=owner">写真登録を開く <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="quick-card">
+        <div class="card-icon" aria-hidden="true">▣</div>
+        <div>
+          <span class="card-kicker">GOOGLE DRIVE</span>
+          <h2>審査待ち受信箱</h2>
+          <p>投稿写真の一時保管場所をGoogle Driveで確認します。</p>
+        </div>
+        <a class="card-link" href="https://drive.google.com/drive/folders/1rq6h1HsipFXhkYrMs3t6ouvd6Wd5aDvT" target="_blank" rel="noopener">Driveを開く <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <article class="quick-card">
+        <div class="card-icon" aria-hidden="true">◎</div>
+        <div>
+          <span class="card-kicker">PUBLIC CHECK</span>
+          <h2>公開大学DBを確認</h2>
+          <p>正式公開後の東京都大学データベースを確認します。</p>
+        </div>
+        <a class="card-link" href="../tools/university-database/tokyo/">公開ページへ <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <section class="notice-panel" aria-labelledby="notice-title">
+      <div class="notice-head">
+        <span class="notice-icon" aria-hidden="true">✉</span>
+        <div>
+          <span class="card-kicker">NOTIFICATION</span>
+          <h2 id="notice-title">投稿通知</h2>
+        </div>
+        <span class="pill">有効</span>
+      </div>
+      <p>「01_審査待ち」に新しい投稿が入った場合、管理者へメール通知します。通知メールには管理センターと審査画面へのリンクを入れます。</p>
+      <p class="small-note">通知先メールアドレスは公開ページには表示していません。</p>
+    </section>
+
+    <section class="safety-panel" aria-labelledby="safety-title">
+      <h2 id="safety-title">安全な運用</h2>
+      <div class="safety-grid">
+        <div><strong>1</strong><span>投稿はまず審査待ちへ</span></div>
+        <div><strong>2</strong><span>確認するまで公開DBへ書き込まない</span></div>
+        <div><strong>3</strong><span>正式掲載時は既存CIを通してから公開</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="admin-footer">
+    <span>Ban.Tai Education Design</span>
+    <a href="../">公式サイトへ戻る</a>
+  </footer>
+</body>
+</html>
