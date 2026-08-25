@@ -5,9 +5,23 @@ let queued=false;
 const setText=(node,text)=>{if(node&&node.textContent!==text)node.textContent=text;};
 function helper(){return window.__universityPhotoMainChoice||null;}
 function total(){return (helper()?.getExistingPhotos?.()||[]).length+document.querySelectorAll('#batch-list .batch-row').length;}
+function ensurePrimaryUniversityControl(){
+  const select=document.querySelector('#university-first-select');
+  const search=document.querySelector('#university-first-search');
+  const section=select?.closest('.university-first');
+  const selectLabel=select?.closest('label');
+  const searchLabel=search?.closest('label');
+  if(section)section.hidden=false;
+  if(selectLabel)selectLabel.hidden=false;
+  if(searchLabel)searchLabel.hidden=false;
+  if(select&&select.options.length>1)select.disabled=false;
+  if(search)search.disabled=false;
+  if(select)document.documentElement.dataset.communityUniversitySelector=select.disabled?'waiting':'ready';
+}
 function ensure(){
   queued=false;
   document.body.classList.add('community-photo-submission');
+  ensurePrimaryUniversityControl();
   const count=total();
   const counter=document.querySelector('#community-photo-counter strong');
   setText(counter,`${count} / ${MAX}枚`);
@@ -43,4 +57,5 @@ document.addEventListener('change',schedule,true);
 document.addEventListener('click',event=>{if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(schedule,0);},true);
 ensure();
 setTimeout(ensure,300);
+setTimeout(ensure,900);
 })();
