@@ -30,6 +30,12 @@ function emitRange(input,value){
   input.value=String(Math.round(clamp(value)));
   input.dispatchEvent(new Event('input',{bubbles:true}));
 }
+function openEditorFromRow(){
+  if(editor.hidden)editor.hidden=false;
+  const toggle=document.querySelector('#community-editor-toggle');
+  if(toggle)toggle.textContent='写真調整を閉じる';
+  editor.classList.add('community-editor-opened-from-row');
+}
 function startDrag(event){
   if(!hasEditablePhoto())return;
   if(event.button!==undefined&&event.button!==0)return;
@@ -80,7 +86,14 @@ editor.addEventListener('click',event=>{
   if(event.target.closest?.('#rotate-left,#rotate-right,#reset-adjustments,#delete-active-photo'))setTimeout(refreshSubmission,0);
 },true);
 document.addEventListener('click',event=>{
-  if(event.target.closest?.('.edit-item,#community-editor-toggle')){
+  if(event.target.closest?.('.edit-item')){
+    openEditorFromRow();
+    setTimeout(()=>editor.scrollIntoView({behavior:'smooth',block:'start'}),0);
+    setTimeout(refreshSubmission,0);
+    setTimeout(refreshSubmission,250);
+    return;
+  }
+  if(event.target.closest?.('#community-editor-toggle')){
     setTimeout(refreshSubmission,0);
     setTimeout(refreshSubmission,250);
   }
