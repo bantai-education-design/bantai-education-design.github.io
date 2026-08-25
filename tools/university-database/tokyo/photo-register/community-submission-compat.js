@@ -11,11 +11,11 @@ function ensurePrimaryUniversityControl(){
   const section=select?.closest('.university-first');
   const selectLabel=select?.closest('label');
   const searchLabel=search?.closest('label');
-  if(section)section.hidden=false;
-  if(selectLabel)selectLabel.hidden=false;
-  if(searchLabel)searchLabel.hidden=false;
-  if(select&&select.options.length>1)select.disabled=false;
-  if(search)search.disabled=false;
+  if(section?.hidden)section.hidden=false;
+  if(selectLabel?.hidden)selectLabel.hidden=false;
+  if(searchLabel?.hidden)searchLabel.hidden=false;
+  if(select&&select.options.length>1&&select.disabled)select.disabled=false;
+  if(search?.disabled)search.disabled=false;
   if(select)document.documentElement.dataset.communityUniversitySelector=select.disabled?'waiting':'ready';
 }
 function ensure(){
@@ -52,9 +52,24 @@ function ensure(){
   if(batchStatus){batchStatus.classList.remove('warn');setText(batchStatus,rows?`${rows}枚を今回追加`:'今回の追加写真なし');}
 }
 function schedule(){if(queued)return;queued=true;queueMicrotask(ensure);}
-new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true});
-document.addEventListener('change',schedule,true);
-document.addEventListener('click',event=>{if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(schedule,0);},true);
+
+// Scope compatibility refreshes to the controls whose state actually matters.
+// Observing every child mutation under body allowed unrelated layout helpers to
+// retrigger this code continuously during startup.
+const select=document.querySelector('#university-first-select');
+const list=document.querySelector('#batch-list');
+if(select){
+  select.addEventListener('change',schedule);
+  new MutationObserver(schedule).observe(select,{childList:true});
+}
+if(list)new MutationObserver(schedule).observe(list,{childList:true});
+document.addEventListener('change',event=>{
+  if(event.target.closest?.('#community-photo-rules,#batch-list,#university-first-select'))schedule();
+},true);
+document.addEventListener('click',event=>{
+  if(event.target.closest?.('.main-photo-choice-card,.photo-list-delete,.remove-item,.photo-main-button'))setTimeout(schedule,0);
+},true);
+window.addEventListener('bantai-submission-transport-ready',schedule);
 ensure();
 setTimeout(ensure,300);
 setTimeout(ensure,900);
