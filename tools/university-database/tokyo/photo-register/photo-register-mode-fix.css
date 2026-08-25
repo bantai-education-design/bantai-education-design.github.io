@@ -8,6 +8,9 @@
   }
 }
 
+/* The posting/publication rules must stay visible after the community JS adds its body class. */
+body.community-photo-submission .policy{display:block!important}
+
 body.owner-photo-registration #registration-mode-switch{display:none!important}
 body.owner-photo-registration .wrap{max-width:1480px!important}
 body.owner-photo-registration .hero{padding:14px 0 10px!important}
