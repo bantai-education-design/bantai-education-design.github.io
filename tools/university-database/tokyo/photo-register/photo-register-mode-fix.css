@@ -8,8 +8,7 @@
   }
 }
 
-body.owner-photo-registration #registration-mode-switch,
-body.owner-photo-registration .policy{display:none!important}
+body.owner-photo-registration #registration-mode-switch{display:none!important}
 body.owner-photo-registration .wrap{max-width:1480px!important}
 body.owner-photo-registration .hero{padding:14px 0 10px!important}
 body.owner-photo-registration .hero .eyebrow{font-size:.68rem!important;letter-spacing:.12em}
@@ -24,6 +23,7 @@ body.owner-photo-registration .one-click-register-panel{position:static!importan
 body.owner-photo-registration #simple-register-progress{grid-template-columns:repeat(4,minmax(0,1fr))!important}
 body.owner-photo-registration #photo-editor{margin-top:14px!important}
 body.owner-photo-registration #generate-batch{display:flex!important}
+body.owner-photo-registration .policy{display:block!important;margin-top:16px!important}
 
 @media(max-width:800px){
   body.owner-photo-registration .owner-register-intro{display:block}
