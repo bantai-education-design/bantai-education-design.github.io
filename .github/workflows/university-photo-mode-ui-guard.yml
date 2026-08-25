@@ -23,7 +23,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-mode-ui.log 2>&1 &
           sleep 2
-      - name: Verify single and batch modes
+      - name: Verify public single mode and hidden batch compatibility
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -32,8 +32,10 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1280,height:900}});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await page.waitForSelector('#registration-mode-switch');
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('#registration-mode-switch',{state:'attached'});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
+            assert.equal(await page.locator('#registration-mode-switch').isVisible(),false,'community submitters must not see mode selection');
             assert.equal(await page.locator('#mode-single').getAttribute('aria-pressed'),'true');
             await page.locator('#university-first-select').selectOption('u000083');
             await page.setInputFiles('#photo-input',[
@@ -42,11 +44,12 @@ jobs:
             ]);
             await page.waitForFunction(()=>document.querySelectorAll('.batch-row').length===2,{timeout:10000});
             await page.waitForFunction(()=>[...document.querySelectorAll('.row-university')].every(x=>x.value==='u000083'),{timeout:10000});
-            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'single mode hides per-photo university fields');
-            assert.ok((await page.locator('#registration-mode-status').innerText()).includes('u000083'));
-            await page.locator('#mode-batch').click();
+            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),false,'public single mode hides per-photo university fields');
+
+            // Hidden internal batch compatibility remains testable without exposing it to public users.
+            await page.locator('#mode-batch').click({force:true});
             assert.equal(await page.locator('#mode-batch').getAttribute('aria-pressed'),'true');
-            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),true,'batch mode shows per-photo university fields');
+            assert.equal(await page.locator('.batch-row .university-assign').first().isVisible(),true,'internal batch mode compatibility must remain available');
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
