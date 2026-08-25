@@ -41,7 +41,8 @@ jobs:
           assert.ok(html.includes('../photo-register/?mode=owner'),'owner register entry required');
           assert.equal(config.enabled,false,'review API must stay disabled until backend deployment');
           assert.equal(config.endpoint,'','review endpoint must not be guessed');
-          assert.ok(!JSON.stringify(config).includes('REVIEW_ADMIN_CODE'),'config must not contain the admin secret');
+          assert.equal(Object.prototype.hasOwnProperty.call(config,'admin_code'),false,'config must not contain admin_code');
+          assert.equal(Object.prototype.hasOwnProperty.call(config,'review_admin_code'),false,'config must not contain review_admin_code');
           assert.ok(js.includes('sessionStorage'),'admin code may be kept only for the current tab');
           assert.ok(!js.includes('localStorage'),'admin code must never use localStorage');
           assert.ok(js.includes("'x-bantai-admin-code'"),'admin code header required');
