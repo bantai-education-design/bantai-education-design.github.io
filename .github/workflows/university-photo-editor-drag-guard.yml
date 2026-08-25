@@ -23,15 +23,18 @@ jobs:
           const root='tools/university-database/tokyo/photo-register/';
           const drag=fs.readFileSync(root+'editor-drag-pan.js','utf8');
           const css=fs.readFileSync(root+'community-submission-fixes.css','utf8');
+          const stability=fs.readFileSync(root+'community-ui-stability.js','utf8');
           const loader=fs.readFileSync(root+'university-selection-sync-fix.js','utf8');
           assert.ok(drag.includes("canvas.addEventListener('pointerdown'")&&drag.includes('setPointerCapture'));
           assert.ok(drag.includes("event.target.closest?.('.edit-item')")&&drag.includes('openEditorFromRow'));
           assert.ok(drag.includes('__bantaiCommunityPhotoSubmission?.updateState'));
           assert.ok(css.includes('.simple-register-progress li')&&css.includes('border:0!important'));
           assert.ok(css.includes('.editor-pan-canvas')&&css.includes('cursor:grab'));
-          assert.ok(loader.includes('community-submission-fixes.css?v=20260825-1130'));
-          assert.ok(loader.includes('editor-drag-pan.js?v=20260825-1130'));
-          console.log('progress clarity, editor opening and drag-pan source validated');
+          assert.ok(stability.includes("dataset.communityUniversityChooser='stable'")&&stability.includes('select.disabled=false'));
+          assert.ok(loader.includes('community-submission-fixes.css?v=20260825-1142'));
+          assert.ok(loader.includes('community-ui-stability.js?v=20260825-1142'));
+          assert.ok(loader.includes('editor-drag-pan.js?v=20260825-1142'));
+          console.log('progress clarity, chooser stability, editor opening and drag-pan source validated');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -54,7 +57,9 @@ jobs:
             await page.goto(url,{waitUntil:'domcontentloaded'});
             await page.waitForFunction(()=>document.documentElement.dataset.communityPhotoSubmission==='ready',{timeout:10000});
             await page.waitForFunction(()=>document.documentElement.dataset.editorDragPan==='ready',{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.dataset.communityUniversityChooser==='stable',{timeout:10000});
             await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,{timeout:10000});
+            await page.waitForTimeout(700);
 
             const current=page.locator('#simple-register-progress li.current');
             assert.equal(await current.count(),1,'one current progress step required');
