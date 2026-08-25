@@ -25,6 +25,7 @@ jobs:
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
+          const index=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
           const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
           const css=fs.readFileSync('tools/university-database/tokyo/photo-register/photo-register-mode-fix.css','utf8');
           const owner=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-register.js','utf8');
@@ -32,6 +33,9 @@ jobs:
           assert.ok(loader.includes("dataset.communityUiSequence='owner-ready'"),'owner mode must bypass community submission UI');
           assert.match(css,/community-simple-submission \.export-panel\{[\s\S]*position:static!important/,'community submit panel must not stay sticky');
           assert.ok(!css.includes('body.owner-photo-registration .policy{display:none'),'owner mode must keep posting rules visible');
+          assert.ok(index.indexOf('class="policy panel"')>index.indexOf('class="hero"'),'rules must follow hero');
+          assert.ok(index.indexOf('class="policy panel"')<index.indexOf('class="batch panel"'),'rules must appear before registration controls');
+          assert.ok(index.includes('登録前にご確認ください　大学写真 投稿・掲載ルール'),'top rules heading required');
           assert.ok(owner.includes('Ban.Tai 本人撮影写真を登録'),'owner title required');
           assert.ok(owner.includes('この内容で大学DBへ登録'),'owner direct preparation label required');
           console.log('owner/public separation source validated');
@@ -54,6 +58,16 @@ jobs:
             const publicPage=await browser.newPage({viewport:{width:1366,height:900}});
             await publicPage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await publicPage.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
+            const publicOrder=await publicPage.evaluate(()=>{
+              const main=document.querySelector('main.wrap');
+              const children=[...main.children];
+              return {
+                hero:children.indexOf(document.querySelector('.hero')),
+                policy:children.indexOf(document.querySelector('.policy')),
+                batch:children.indexOf(document.querySelector('.batch'))
+              };
+            });
+            assert.ok(publicOrder.hero>=0&&publicOrder.policy===publicOrder.hero+1&&publicOrder.batch===publicOrder.policy+1,'public rules must be immediately below hero and before registration');
             const toggle=publicPage.locator('#community-editor-toggle');
             await toggle.click();
             await publicPage.waitForFunction(()=>!document.querySelector('#photo-editor')?.hidden,null,{timeout:5000});
@@ -80,7 +94,18 @@ jobs:
             assert.ok((await owner.locator('.hero h1').innerText()).includes('本人撮影写真'));
             assert.equal(await owner.locator('#registration-mode-switch').isVisible(),false,'legacy mode switch stays hidden in owner quick flow');
             assert.equal(await owner.locator('.policy').isVisible(),true,'owner mode must keep posting/publication rules visible');
+            const ownerOrder=await owner.evaluate(()=>{
+              const main=document.querySelector('main.wrap');
+              const children=[...main.children];
+              return {
+                hero:children.indexOf(document.querySelector('.hero')),
+                policy:children.indexOf(document.querySelector('.policy')),
+                batch:children.indexOf(document.querySelector('.batch'))
+              };
+            });
+            assert.ok(ownerOrder.hero>=0&&ownerOrder.policy===ownerOrder.hero+1&&ownerOrder.batch===ownerOrder.policy+1,'owner rules must be immediately below hero and before registration');
             const ruleText=await owner.locator('.policy').innerText();
+            assert.ok(ruleText.includes('登録前にご確認ください'));
             assert.ok(ruleText.includes('大学写真 投稿・掲載ルール'));
             assert.ok(ruleText.includes('生成AI')&&ruleText.includes('最大9枚')&&ruleText.includes('公開'));
             await browser.close();
