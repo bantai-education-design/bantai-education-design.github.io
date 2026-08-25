@@ -31,10 +31,28 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:900}});
+            page.on('pageerror',error=>console.log('[pageerror]',error.message));
+            page.on('console',msg=>{if(msg.type()==='error'||msg.type()==='warning')console.log(`[console:${msg.type()}]`,msg.text());});
+            page.on('response',response=>{if(/user-photo-overrides|university-images/.test(response.url()))console.log('[registry-response]',response.status(),response.url());});
+            const snapshot=()=>page.evaluate(()=>({
+              selected:document.querySelector('#university-first-select')?.value||'',
+              cards:document.querySelectorAll('.main-photo-choice-card').length,
+              existing:window.__universityPhotoMainChoice?.getExistingPhotos?.()||[],
+              record:window.__universityPhotoMainChoice?.getExistingRecord?.()||null,
+              chooser:document.documentElement.dataset.communityUniversityChooser||'',
+              sequence:document.documentElement.dataset.communityUiSequence||''
+            }));
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'),{timeout:10000});
             await page.locator('#university-first-select').selectOption('u000094');
-            await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            await page.waitForTimeout(1200);
+            console.log('[after-select]',JSON.stringify(await snapshot()));
+            try{
+              await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,{timeout:10000});
+            }catch(error){
+              console.log('[choice-timeout]',JSON.stringify(await snapshot()));
+              throw error;
+            }
             const target=page.locator('.main-photo-choice-card').nth(1);
             await target.evaluate(el=>{el.dataset.stabilityProbe='keep';});
             const srcBefore=await target.locator('img').getAttribute('src');
