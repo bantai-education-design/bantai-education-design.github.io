@@ -9,7 +9,7 @@ on:
 jobs:
   stable-choice:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,7 +23,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-choice-stability.log 2>&1 &
           sleep 2
-      - name: Verify existing photo remains mounted when selected
+      - name: Verify university list and existing photo choice stay stable
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -31,23 +31,10 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:900}});
-            const relevant=url=>/universities_tokyo_all|user-photo-overrides|university-images/.test(url);
-            page.on('pageerror',error=>console.log('[pageerror]',error.message));
-            page.on('console',msg=>{if(msg.type()==='error'||msg.type()==='warning')console.log(`[console:${msg.type()}]`,msg.text());});
-            page.on('request',request=>{if(relevant(request.url()))console.log('[request]',request.url());});
-            page.on('requestfailed',request=>{if(relevant(request.url()))console.log('[requestfailed]',request.url(),request.failure()?.errorText||'');});
-            page.on('response',response=>{if(relevant(response.url()))console.log('[response]',response.status(),response.url());});
-            const snapshot=()=>page.evaluate(()=>({
-              optionCount:document.querySelectorAll('#university-first-select option').length,
-              firstOption:document.querySelector('#university-first-select option')?.textContent||'',
-              selected:document.querySelector('#university-first-select')?.value||'',
-              cards:document.querySelectorAll('.main-photo-choice-card').length,
-              chooser:document.documentElement.dataset.communityUniversityChooser||'',
-              sequence:document.documentElement.dataset.communityUiSequence||''
-            }));
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            console.log('[after-goto]',JSON.stringify(await snapshot()));
-            await page.waitForFunction(()=>!!document.querySelector('#university-first-select option[value="u000094"]'),null,{timeout:10000});
+            await page.waitForFunction(()=>document.querySelectorAll('#university-first-select option').length===145,null,{timeout:10000});
+            assert.equal(await page.locator('#university-first-select').isVisible(),true,'university select must be visible');
+            assert.equal(await page.locator('#university-first-select').isEnabled(),true,'university select must be enabled');
             await page.locator('#university-first-select').selectOption('u000094');
             await page.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card').length>=2,null,{timeout:10000});
             const target=page.locator('.main-photo-choice-card').nth(1);
@@ -63,6 +50,3 @@ jobs:
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
-      - name: Show local server requests
-        if: always()
-        run: cat /tmp/photo-choice-stability.log || true
