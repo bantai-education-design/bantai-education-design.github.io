@@ -1,0 +1,50 @@
+/* Community photo submission layer. Keep legacy/admin controls in the DOM, but simplify the public flow. */
+body.community-photo-submission #registration-mode-switch{display:none!important}
+body.community-photo-submission .export-panel .actions>button{display:none!important}
+body.community-photo-submission #community-submit-package{display:inline-flex!important}
+body.community-photo-submission .policy{display:none!important}
+
+.community-submission-intro{margin:0 0 14px;padding:12px 14px;border:1px solid rgba(215,180,90,.5);border-radius:12px;background:linear-gradient(135deg,rgba(215,180,90,.10),rgba(8,12,18,.7));font-size:.82rem;line-height:1.65}
+.community-submission-intro strong{color:#f5df9b}
+.community-submission-intro span{display:block;color:var(--muted)}
+
+.community-photo-counter{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;border:1px solid #4f4529;background:#101218;color:#d9dde6;font-size:.75rem;white-space:nowrap}
+.community-photo-counter strong{color:#f0d98b;font-size:.9rem}
+.community-photo-counter.warn{border-color:#9d4e42;background:#24100d;color:#ffd4cd}
+.community-photo-counter.warn strong{color:#ff9e8e}
+
+.community-rules-panel{margin:18px 0 0;padding:16px;border:1px solid rgba(215,180,90,.55);border-radius:14px;background:#0d1016}
+.community-rules-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.community-rules-head .step{flex:0 0 auto;color:#d7b45a;font-size:.72rem;font-weight:900;letter-spacing:.08em}
+.community-rules-head h2{margin:0 0 4px;font-size:1.05rem}
+.community-rules-head p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.55}
+.community-rule-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.community-rule-summary div{padding:10px;border:1px solid #303540;border-radius:10px;background:#11141b}
+.community-rule-summary strong{display:block;margin-bottom:3px;color:#f0d98b;font-size:.78rem}
+.community-rule-summary small{display:block;color:#bcc1cd;font-size:.67rem;line-height:1.45}
+.community-rule-checks{display:grid;gap:8px;margin-top:12px}
+.community-rule-check{display:flex;align-items:flex-start;gap:9px;padding:10px 11px;border:1px solid #303641;border-radius:10px;background:#090b10;cursor:pointer}
+.community-rule-check input{margin-top:3px;flex:0 0 auto;width:18px;height:18px;accent-color:#d7b45a}
+.community-rule-check span{font-size:.78rem;line-height:1.55}
+.community-rules-details{margin-top:11px;border-top:1px solid #292d36;padding-top:10px}
+.community-rules-details summary{cursor:pointer;color:#e8cf7d;font-weight:800;font-size:.78rem}
+.community-rules-details .rule-full{margin-top:8px;color:#c8ccd5;font-size:.71rem;line-height:1.65}
+.community-rules-details .rule-full p{margin:.35rem 0}
+
+#community-submit-package{display:none;align-items:center;justify-content:center;width:100%;min-height:52px;padding:12px 18px;border:1px solid #e1bd61;border-radius:11px;background:linear-gradient(135deg,#b98a2c,#e1bd61);color:#090b0f;font-weight:900;font-size:1rem;cursor:pointer}
+#community-submit-package:disabled{opacity:.45;cursor:not-allowed;filter:saturate(.55)}
+.community-submit-status{margin:9px 0 0;padding:9px 11px;border-radius:9px;background:#0b0d12;color:#c7cbd4;font-size:.74rem;line-height:1.55}
+.community-submit-status.ok{border:1px solid #35633f;color:#c8f1d2;background:#0c1710}
+.community-submit-status.warn{border:1px solid #75453b;color:#ffd4cd;background:#1b0f0d}
+
+body.community-photo-submission .export-panel{margin-top:18px}
+body.community-photo-submission .export-panel .section-head .step{color:#d7b45a}
+body.community-photo-submission .export-panel #result{display:none!important}
+
+@media(max-width:800px){
+  .community-rule-summary{grid-template-columns:1fr}
+  .community-rules-panel{padding:13px}
+  .community-rules-head{display:block}
+  .community-rules-head .step{display:block;margin-bottom:4px}
+  .community-photo-counter{margin-left:0}
+}
