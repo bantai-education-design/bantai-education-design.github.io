@@ -32,6 +32,7 @@ jobs:
           assert.ok(loader.includes("get('mode')==='owner'"),'owner mode query required');
           assert.ok(loader.includes("dataset.communityUiSequence='owner-ready'"),'owner mode must bypass community submission UI');
           assert.match(css,/community-simple-submission \.export-panel\{[\s\S]*position:static!important/,'community submit panel must not stay sticky');
+          assert.ok(css.includes('body.community-photo-submission .policy{display:block!important}'),'public mode must keep top posting rules visible after JS init');
           assert.ok(!css.includes('body.owner-photo-registration .policy{display:none'),'owner mode must keep posting rules visible');
           assert.ok(index.indexOf('class="policy panel"')>index.indexOf('class="hero"'),'rules must follow hero');
           assert.ok(index.indexOf('class="policy panel"')<index.indexOf('class="batch panel"'),'rules must appear before registration controls');
@@ -58,6 +59,8 @@ jobs:
             const publicPage=await browser.newPage({viewport:{width:1366,height:900}});
             await publicPage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
             await publicPage.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
+            await publicPage.waitForTimeout(300);
+            assert.equal(await publicPage.locator('.policy').isVisible(),true,'public rules must remain visible after community JS initialization');
             const publicOrder=await publicPage.evaluate(()=>{
               const main=document.querySelector('main.wrap');
               const children=[...main.children];
