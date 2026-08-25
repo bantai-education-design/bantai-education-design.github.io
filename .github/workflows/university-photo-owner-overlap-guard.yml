@@ -31,6 +31,7 @@ jobs:
           assert.ok(loader.includes("get('mode')==='owner'"),'owner mode query required');
           assert.ok(loader.includes("dataset.communityUiSequence='owner-ready'"),'owner mode must bypass community submission UI');
           assert.match(css,/community-simple-submission \.export-panel\{[\s\S]*position:static!important/,'community submit panel must not stay sticky');
+          assert.ok(!css.includes('body.owner-photo-registration .policy{display:none'),'owner mode must keep posting rules visible');
           assert.ok(owner.includes('Ban.Tai 本人撮影写真を登録'),'owner title required');
           assert.ok(owner.includes('この内容で大学DBへ登録'),'owner direct preparation label required');
           console.log('owner/public separation source validated');
@@ -72,12 +73,16 @@ jobs:
             await owner.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
             await owner.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
             assert.equal(await owner.locator('body').evaluate(el=>el.classList.contains('owner-photo-registration')),true);
-            assert.equal(await owner.locator('#community-photo-rules').count(),0,'owner mode must not show community agreements');
+            assert.equal(await owner.locator('#community-photo-rules').count(),0,'owner mode must not show community agreement checkboxes');
             assert.equal(await owner.locator('#community-submit-package').count(),0,'owner mode must not show review submit button');
             assert.equal(await owner.locator('#generate-batch').isVisible(),true,'owner registration button must be visible');
             assert.equal(await owner.locator('#generate-batch').innerText(),'この内容で大学DBへ登録');
             assert.ok((await owner.locator('.hero h1').innerText()).includes('本人撮影写真'));
             assert.equal(await owner.locator('#registration-mode-switch').isVisible(),false,'legacy mode switch stays hidden in owner quick flow');
+            assert.equal(await owner.locator('.policy').isVisible(),true,'owner mode must keep posting/publication rules visible');
+            const ruleText=await owner.locator('.policy').innerText();
+            assert.ok(ruleText.includes('大学写真 投稿・掲載ルール'));
+            assert.ok(ruleText.includes('生成AI')&&ruleText.includes('最大9枚')&&ruleText.includes('公開'));
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
