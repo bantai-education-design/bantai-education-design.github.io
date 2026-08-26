@@ -29,17 +29,22 @@ jobs:
           css = Path('admin/admin.css').read_text(encoding='utf-8')
 
           required = [
-              'Ban.Tai 管理センター',
-              '../tools/university-database/tokyo/photo-admin/',
+              '大学写真 審査・掲載',
+              '訪問者アップロード',
+              '未接続',
+              'メール通知',
+              '停止中',
               '../tools/university-database/tokyo/photo-register/?mode=owner',
               '../tools/university-database/tokyo/',
-              '01_審査待ち',
-              'メール通知',
+              'https://drive.google.com/drive/folders/1rq6h1HsipFXhkYrMs3t6ouvd6Wd5aDvT',
               'noindex,nofollow',
           ]
           missing = [item for item in required if item not in html]
           if missing:
               raise SystemExit(f'Missing admin center requirements: {missing}')
+
+          if '../tools/university-database/tokyo/photo-admin/' in html:
+              raise SystemExit('Admin center must not route through the legacy photo-admin page')
 
           if re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', html + css):
               raise SystemExit('Public admin assets must not contain a notification email address')
