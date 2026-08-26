@@ -1,0 +1,52 @@
+name: University photo simple submit guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-submit/**'
+      - 'tools/university-database/tokyo/assets/photo-register-entry.js'
+      - '.github/workflows/university-photo-simple-submit-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate simple submit architecture
+        shell: python
+        run: |
+          from pathlib import Path
+          import json, re
+
+          root = Path('tools/university-database/tokyo/photo-submit')
+          html = (root / 'index.html').read_text(encoding='utf-8')
+          js = (root / 'photo-submit.js').read_text(encoding='utf-8')
+          cfg = json.loads((root / 'receiver-config.json').read_text(encoding='utf-8'))
+          spec = (root / 'JOTFORM_RECEIVER_SPEC.md').read_text(encoding='utf-8')
+          bundle = '\n'.join([html, js, json.dumps(cfg, ensure_ascii=False), spec])
+
+          # 投稿者側に編集・メイン写真選択を戻さない
+          forbidden_ui = ['photo-editor', 'メイン写真を選', '明るさを調整', '傾き補正', 'トリミング']
+          for token in forbidden_ui:
+              assert token not in html, f'visitor submit UI must not contain: {token}'
+
+          # 公開コードに通知先や秘密値を置かない
+          assert 'ban.tai3educationdesign@gmail.com' not in bundle, 'notification email must remain provider-side only'
+          for token in ['api_key', 'API_KEY', 'secret_key', 'service_role']:
+              assert token not in bundle, f'public receiver files must not contain secret field: {token}'
+
+          assert cfg.get('provider') == 'jotform'
+          if cfg.get('enabled'):
+              url = cfg.get('embed_url', '')
+              assert re.match(r'^https://(form\.)?jotform\.com/', url), 'enabled receiver must use an HTTPS Jotform form URL'
+          else:
+              assert not cfg.get('embed_url'), 'disabled receiver should not expose a stale form URL'
+
+          assert 'receiver-config.json' in js
+          assert 'config.enabled===true' in js
+          assert '大学DBの各大学ページから' in js
+          print('simple university photo submission guard: OK')
