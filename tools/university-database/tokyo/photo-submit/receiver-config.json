@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "provider": "jotform",
+  "embed_url": "",
+  "university_param": "university",
+  "university_id_param": "university_id",
+  "notes": "受信フォーム接続後に enabled=true と embed_url を設定する。秘密鍵や通知先メールは公開リポジトリに置かない。"
+}
