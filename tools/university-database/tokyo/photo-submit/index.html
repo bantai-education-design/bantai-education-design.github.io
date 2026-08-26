@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111111">
+  <title>大学写真を送る | Ban.Tai Education Design</title>
+  <link rel="stylesheet" href="photo-submit.css?v=20260826-1200">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../">Ban.Tai Education Design</a>
+    <a class="back-link" href="../">大学DBへ戻る</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">UNIVERSITY PHOTO CONTRIBUTION</span>
+      <h1 id="page-title">大学写真を送る</h1>
+      <p>大学名を確認して、写真を選び「写真を送る」を押すだけです。編集はBan.Tai側で行います。</p>
+    </section>
+
+    <section class="upload-card" aria-labelledby="upload-title">
+      <div class="university-block">
+        <span class="label">投稿先の大学</span>
+        <strong id="selected-university">大学名を確認中…</strong>
+        <button id="change-university" type="button" class="text-button">大学名を変更する</button>
+      </div>
+
+      <div id="university-picker" class="picker" hidden>
+        <label for="university-name">大学名</label>
+        <input id="university-name" type="text" autocomplete="off" placeholder="大学名を入力">
+      </div>
+
+      <div class="file-block">
+        <label class="file-drop" for="photo-files">
+          <span class="file-icon" aria-hidden="true">＋</span>
+          <strong>写真を選ぶ</strong>
+          <span>JPEG / PNG / WebP・最大9枚</span>
+        </label>
+        <input id="photo-files" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+        <div id="photo-list" class="photo-list" aria-live="polite"></div>
+      </div>
+
+      <label class="consent-row">
+        <input id="consent" type="checkbox">
+        <span>自分で撮影した写真、または掲載許可を得た写真で、Ban.Tai大学DBへの掲載に同意します。</span>
+      </label>
+
+      <button id="submit-photo" class="submit-button" type="button" disabled>写真を送る</button>
+      <p id="submit-status" class="status" aria-live="polite"></p>
+      <p class="privacy-note">投稿写真は確認後に掲載します。人物・個人情報・撮影禁止場所などが確認された写真は掲載しません。</p>
+    </section>
+
+    <section id="thank-you" class="thank-you" hidden tabindex="-1">
+      <div class="check" aria-hidden="true">✓</div>
+      <h2>写真をお送りいただき、ありがとうございます。</h2>
+      <p>お送りいただいた写真はBan.Tai Education Designで確認し、掲載可能と判断したものを大学データベースへ掲載します。</p>
+      <p>大学の現在の様子を伝えるため、掲載写真は今後も新しい写真が届いた際などに、不定期に追加・更新・入れ替えを行います。</p>
+      <a href="../" class="return-button">大学DBへ戻る</a>
+    </section>
+  </main>
+
+  <script src="photo-submit.js?v=20260826-1200"></script>
+</body>
+</html>
