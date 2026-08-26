@@ -27,13 +27,15 @@
 本文には大学名、投稿日時、写真枚数、Jotform審査画面へのリンクを含める。
 通知先はJotform側の非公開設定に保存し、GitHubへ記録しない。
 
+## 管理画面
+日常の入口は `/admin/` のみ。
+`/admin/` からJotform Inboxへ1クリックで入り、投稿写真・大学名・投稿日時を確認する。
+本人撮影登録は補助機能扱い。
+
 ## Google Drive
-JotformのGoogle Drive連携を使用し、アップロード写真を管理者Driveの大学写真投稿用フォルダへ同期する。GitHub PagesからDriveへ直接秘密鍵付き書き込みは行わない。
+初回開通の必須条件にはしない。Jotformだけで受信・即時通知・審査を成立させる。
+必要になった段階でJotformのGoogle Drive連携を追加し、写真のバックアップ／同期先として利用する。
 
 ## 公開側接続
 `receiver-config.json` の `enabled=true` と `embed_url` を設定した場合だけ本番投稿ページを有効化する。
 受信URL未設定では大学DB側のリンクを切り替えない。
-
-## 管理側
-日常の入口は `/admin/` のみ。
-本人撮影登録は補助機能扱い。
