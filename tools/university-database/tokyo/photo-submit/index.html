@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111111">
+  <title>大学写真を送る | Ban.Tai Education Design</title>
+  <link rel="stylesheet" href="photo-submit.css?v=20260826-1245">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../">Ban.Tai Education Design</a>
+    <a class="back-link" href="../">大学DBへ戻る</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">UNIVERSITY PHOTO CONTRIBUTION</span>
+      <h1 id="page-title">大学写真を送る</h1>
+      <p>大学名を確認して写真を選び、「写真を送る」を押すだけです。編集・掲載写真の選択はBan.Tai側で行います。</p>
+    </section>
+
+    <section class="upload-card" aria-labelledby="page-title">
+      <div class="university-block">
+        <span class="label">投稿先の大学</span>
+        <strong id="selected-university">大学名を確認中…</strong>
+      </div>
+
+      <div id="receiver-loading" class="receiver-state" role="status">
+        <span class="spinner" aria-hidden="true"></span>
+        <strong>写真受付を読み込んでいます</strong>
+      </div>
+
+      <div id="receiver-unavailable" class="receiver-state warning" hidden>
+        <strong>現在、写真受付の準備中です</strong>
+        <p>受信先の接続が完了するまで、この画面から写真は送信できません。</p>
+      </div>
+
+      <div id="receiver-host" class="receiver-host" hidden></div>
+
+      <p class="privacy-note">投稿写真は確認後に掲載します。人物・個人情報・撮影禁止場所などが確認された写真は掲載しません。</p>
+    </section>
+  </main>
+
+  <script src="photo-submit.js?v=20260826-1245"></script>
+</body>
+</html>
