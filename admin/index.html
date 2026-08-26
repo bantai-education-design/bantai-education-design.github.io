@@ -5,61 +5,69 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#111111">
-  <title>Ban.Tai 管理センター</title>
-  <link rel="stylesheet" href="admin.css?v=20260825-2255">
+  <title>大学写真 審査・掲載 | Ban.Tai</title>
+  <link rel="stylesheet" href="admin.css?v=20260826-1155">
 </head>
 <body>
   <header class="admin-header">
     <a class="brand" href="../" aria-label="Ban.Tai Education Design トップへ">
       <span class="brand-mark" aria-hidden="true">B</span>
-      <span><strong>Ban.Tai Education Design</strong><small>ADMIN CENTER</small></span>
+      <span><strong>Ban.Tai Education Design</strong><small>UNIVERSITY PHOTO ADMIN</small></span>
     </a>
-    <a class="public-link" href="../tools/university-database/tokyo/">公開ページを確認</a>
+    <a class="public-link" href="../tools/university-database/tokyo/">公開大学DBを確認</a>
   </header>
 
   <main class="admin-main">
     <section class="hero" aria-labelledby="admin-title">
       <div class="hero-copy">
-        <span class="eyebrow">BAN.TAI ADMIN</span>
-        <h1 id="admin-title">管理センター</h1>
-        <p>大学写真の登録・審査・公開確認を、ここから1クリックで行います。</p>
+        <span class="eyebrow">BAN.TAI UNIVERSITY PHOTO</span>
+        <h1 id="admin-title">大学写真 審査・掲載</h1>
+        <p>このページを、訪問者写真の確認と正式掲載の入口に一本化します。別の「大学写真 管理」ページを経由しません。</p>
       </div>
       <div class="hero-status" aria-label="システム状態">
-        <div class="status-item ok"><span class="dot" aria-hidden="true"></span><span>Drive受け皿</span><strong>準備済み</strong></div>
-        <div class="status-item ok"><span class="dot" aria-hidden="true"></span><span>メール通知</span><strong>ON</strong></div>
-        <div class="status-note">新規投稿は最大1時間以内に通知</div>
+        <div class="status-item ok"><span class="dot" aria-hidden="true"></span><span>Google Drive受け皿</span><strong>準備済み</strong></div>
+        <div class="status-item waiting"><span class="dot" aria-hidden="true"></span><span>訪問者アップロード</span><strong>未接続</strong></div>
+        <div class="status-item waiting"><span class="dot" aria-hidden="true"></span><span>メール通知</span><strong>停止中</strong></div>
+        <div class="status-note warning">受信接続が完了するまでは、投稿写真はここに表示されず、メール通知も届きません。</div>
       </div>
     </section>
 
-    <section class="focus-card" aria-labelledby="review-title">
-      <div class="focus-icon" aria-hidden="true">✓</div>
-      <div class="focus-copy">
-        <span class="card-kicker">まずここ</span>
-        <h2 id="review-title">訪問者写真を審査</h2>
-        <p>届いた大学写真を確認し、承認・却下・保留を判断します。</p>
+    <section class="review-home" aria-labelledby="review-title">
+      <div class="review-home-head">
+        <div>
+          <span class="card-kicker">REVIEW QUEUE</span>
+          <h2 id="review-title">審査待ち写真</h2>
+          <p>今後は、この場所に訪問者が送った写真を大学名ごとに並べます。</p>
+        </div>
+        <span class="queue-count" aria-label="現在の審査待ち件数">0</span>
       </div>
-      <a class="primary-button" href="../tools/university-database/tokyo/photo-admin/">審査画面を開く <span aria-hidden="true">→</span></a>
+      <div class="connection-warning" role="status">
+        <strong>現在は受信機能を接続中です</strong>
+        <p>大学DBの投稿画面からGoogle Driveへ写真を送る接続がまだないため、現在ここに訪問者写真は表示されません。接続後は「大学名・投稿写真・投稿日」をここで直接確認できるようにします。</p>
+      </div>
+      <div class="future-flow" aria-label="完成後の操作">
+        <div><strong>1</strong><span>投稿写真を見る</span></div>
+        <div><strong>2</strong><span>管理者側で補正・選択</span></div>
+        <div><strong>3</strong><span>正式掲載をクリック</span></div>
+      </div>
+      <a class="primary-button" href="https://drive.google.com/drive/folders/1rq6h1HsipFXhkYrMs3t6ouvd6Wd5aDvT" target="_blank" rel="noopener">Google Driveの審査待ち受信箱を確認 <span aria-hidden="true">↗</span></a>
     </section>
 
-    <section class="quick-grid" aria-label="管理メニュー">
+    <section class="secondary-title" aria-labelledby="other-title">
+      <span class="card-kicker">OTHER TOOLS</span>
+      <h2 id="other-title">補助機能</h2>
+      <p>本人撮影写真の登録は、訪問者審査とは別の補助機能として下に置きます。</p>
+    </section>
+
+    <section class="quick-grid two" aria-label="補助メニュー">
       <article class="quick-card">
         <div class="card-icon" aria-hidden="true">＋</div>
         <div>
-          <span class="card-kicker">BAN.TAI PHOTO</span>
+          <span class="card-kicker">BAN.TAI OWNER</span>
           <h2>本人撮影写真を登録</h2>
-          <p>自分で撮影した大学写真を最大9枚まで登録します。</p>
+          <p>Ban.Tai本人が撮影した写真を登録するときだけ使用します。</p>
         </div>
-        <a class="card-link" href="../tools/university-database/tokyo/photo-register/?mode=owner">写真登録を開く <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="quick-card">
-        <div class="card-icon" aria-hidden="true">▣</div>
-        <div>
-          <span class="card-kicker">GOOGLE DRIVE</span>
-          <h2>審査待ち受信箱</h2>
-          <p>投稿写真の一時保管場所をGoogle Driveで確認します。</p>
-        </div>
-        <a class="card-link" href="https://drive.google.com/drive/folders/1rq6h1HsipFXhkYrMs3t6ouvd6Wd5aDvT" target="_blank" rel="noopener">Driveを開く <span aria-hidden="true">↗</span></a>
+        <a class="card-link" href="../tools/university-database/tokyo/photo-register/?mode=owner">本人写真登録を開く <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="quick-card">
@@ -67,31 +75,18 @@
         <div>
           <span class="card-kicker">PUBLIC CHECK</span>
           <h2>公開大学DBを確認</h2>
-          <p>正式公開後の東京都大学データベースを確認します。</p>
+          <p>正式掲載後の東京都大学データベースを確認します。</p>
         </div>
         <a class="card-link" href="../tools/university-database/tokyo/">公開ページへ <span aria-hidden="true">→</span></a>
       </article>
     </section>
 
-    <section class="notice-panel" aria-labelledby="notice-title">
-      <div class="notice-head">
-        <span class="notice-icon" aria-hidden="true">✉</span>
-        <div>
-          <span class="card-kicker">NOTIFICATION</span>
-          <h2 id="notice-title">投稿通知</h2>
-        </div>
-        <span class="pill">有効</span>
-      </div>
-      <p>「01_審査待ち」に新しい投稿が入った場合、管理者へメール通知します。通知メールには管理センターと審査画面へのリンクを入れます。</p>
-      <p class="small-note">通知先メールアドレスは公開ページには表示していません。</p>
-    </section>
-
     <section class="safety-panel" aria-labelledby="safety-title">
-      <h2 id="safety-title">安全な運用</h2>
+      <h2 id="safety-title">今後の固定導線</h2>
       <div class="safety-grid">
-        <div><strong>1</strong><span>投稿はまず審査待ちへ</span></div>
-        <div><strong>2</strong><span>確認するまで公開DBへ書き込まない</span></div>
-        <div><strong>3</strong><span>正式掲載時は既存CIを通してから公開</span></div>
+        <div><strong>1</strong><span>訪問者：大学DBから写真を送るだけ</span></div>
+        <div><strong>2</strong><span>管理者：この /admin/ を開くだけ</span></div>
+        <div><strong>3</strong><span>確認後「正式掲載」を1回クリック</span></div>
       </div>
     </section>
   </main>
