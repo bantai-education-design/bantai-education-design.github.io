@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "provider": "jotform",
+  "form_id": "262380787667069",
+  "notes": "Jotform受信フォーム接続済み。通知先メールやAPIキーは公開リポジトリに置かない。"
+}

@@ -1,9 +1,8 @@
 {
   "schema_version": 1,
-  "enabled": false,
+  "enabled": true,
   "provider": "jotform",
-  "embed_url": "",
+  "embed_url": "https://form.jotform.com/262380787667069",
   "university_param": "university",
-  "university_id_param": "university_id",
-  "notes": "受信フォーム接続後に enabled=true と embed_url を設定する。秘密鍵や通知先メールは公開リポジトリに置かない。"
+  "notes": "Jotform受信フォーム接続済み。大学名だけを引き継ぐ。秘密鍵や通知先メールは公開リポジトリに置かない。"
 }

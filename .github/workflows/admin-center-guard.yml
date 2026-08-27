@@ -23,20 +23,25 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import re
+          import json, re
 
           html = Path('admin/index.html').read_text(encoding='utf-8')
           css = Path('admin/admin.css').read_text(encoding='utf-8')
+          js = Path('admin/photo-review-runtime.js').read_text(encoding='utf-8')
+          cfg = json.loads(Path('admin/photo-review-config.json').read_text(encoding='utf-8'))
+          cfg_text = json.dumps(cfg, ensure_ascii=False)
+          bundle = '\n'.join([html, css, js, cfg_text])
 
           required = [
               '大学写真 審査・掲載',
               '訪問者アップロード',
-              '未接続',
               'メール通知',
-              '停止中',
+              'id="status-upload"',
+              'id="status-notification"',
+              'id="review-button"',
               '../tools/university-database/tokyo/photo-register/?mode=owner',
               '../tools/university-database/tokyo/',
-              'https://drive.google.com/drive/folders/1rq6h1HsipFXhkYrMs3t6ouvd6Wd5aDvT',
+              'photo-review-runtime.js',
               'noindex,nofollow',
           ]
           missing = [item for item in required if item not in html]
@@ -46,11 +51,22 @@ jobs:
           if '../tools/university-database/tokyo/photo-admin/' in html:
               raise SystemExit('Admin center must not route through the legacy photo-admin page')
 
-          if re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', html + css):
+          if cfg.get('provider') != 'jotform':
+              raise SystemExit('Admin review provider must remain Jotform')
+          if cfg.get('enabled'):
+              if not re.fullmatch(r'\d+', str(cfg.get('form_id', ''))):
+                  raise SystemExit('Enabled Jotform admin review requires numeric form_id')
+          elif cfg.get('form_id'):
+              raise SystemExit('Disabled admin review must not expose a stale form id')
+
+          if 'https://www.jotform.com/inbox/' not in js:
+              raise SystemExit('One-click Jotform Inbox route missing')
+
+          if re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', bundle):
               raise SystemExit('Public admin assets must not contain a notification email address')
 
-          forbidden = ['SUPABASE_SERVICE_ROLE_KEY', 'REVIEW_ADMIN_CODE', 'localStorage.setItem']
-          found = [item for item in forbidden if item in html + css]
+          forbidden = ['SUPABASE_SERVICE_ROLE_KEY', 'REVIEW_ADMIN_CODE', 'localStorage.setItem', 'api_key', 'API_KEY']
+          found = [item for item in forbidden if item in bundle]
           if found:
               raise SystemExit(f'Forbidden secret/storage pattern found: {found}')
 
