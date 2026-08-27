@@ -1,0 +1,62 @@
+name: University photo Jotform prefill guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/photo-submit/**'
+      - 'tools/university-database/tokyo/assets/detail-photo-submit-entry.js'
+      - '.github/workflows/university-photo-jotform-prefill-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate Jotform prefill configuration
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const cfg=JSON.parse(fs.readFileSync('tools/university-database/tokyo/photo-submit/receiver-config.json','utf8'));
+          const js=fs.readFileSync('tools/university-database/tokyo/photo-submit/photo-submit.js','utf8');
+          const detail=fs.readFileSync('tools/university-database/tokyo/assets/detail-photo-submit-entry.js','utf8');
+          assert.equal(cfg.provider,'jotform');
+          assert.equal(cfg.university_param,'university');
+          assert.ok(Array.isArray(cfg.university_param_aliases));
+          assert.ok(cfg.university_param_aliases.includes('textbox2'));
+          assert.ok(js.includes('university_param_aliases'));
+          assert.ok(js.includes('new Set'));
+          assert.ok(detail.includes('photo-submit/?university='));
+          assert.equal(js.includes('university_id'),false);
+          console.log('Jotform university prefill config: OK');
+          NODE
+      - name: Verify both university query parameters
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/jotform-prefill.log 2>&1 &
+          sleep 2
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:390,height:844}});
+            await page.route('https://form.jotform.com/**',route=>route.abort());
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-submit/?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('#receiver-host iframe',{timeout:10000});
+            const src=await page.locator('#receiver-host iframe').getAttribute('src');
+            const url=new URL(src);
+            assert.equal(url.searchParams.get('university'),'亜細亜大学');
+            assert.equal(url.searchParams.get('textbox2'),'亜細亜大学');
+            assert.equal(url.searchParams.has('university_id'),false);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
