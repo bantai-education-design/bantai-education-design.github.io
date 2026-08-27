@@ -23,7 +23,10 @@ function setUniversity(){
 
 function buildEmbedUrl(config){
   const url=new URL(config.embed_url);
-  if(university)url.searchParams.set(config.university_param||'university',university);
+  if(university){
+    const keys=[config.university_param||'university',...(Array.isArray(config.university_param_aliases)?config.university_param_aliases:[])];
+    [...new Set(keys.map(key=>String(key||'').trim()).filter(Boolean))].forEach(key=>url.searchParams.set(key,university));
+  }
   return url.toString();
 }
 
