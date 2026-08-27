@@ -5,6 +5,8 @@ on:
     paths:
       - 'tools/university-database/tokyo/photo-submit/**'
       - 'tools/university-database/tokyo/assets/photo-register-entry.js'
+      - 'tools/university-database/tokyo/assets/detail-photo-submit-entry.js'
+      - 'tools/university-database/tokyo/detail.html'
       - 'admin/index.html'
       - 'admin/photo-review-config.json'
       - 'admin/photo-review-runtime.js'
@@ -30,11 +32,15 @@ jobs:
           js = (root / 'photo-submit.js').read_text(encoding='utf-8')
           cfg = json.loads((root / 'receiver-config.json').read_text(encoding='utf-8'))
           spec = (root / 'JOTFORM_RECEIVER_SPEC.md').read_text(encoding='utf-8')
+          top_entry = Path('tools/university-database/tokyo/assets/photo-register-entry.js').read_text(encoding='utf-8')
+          detail_entry = Path('tools/university-database/tokyo/assets/detail-photo-submit-entry.js').read_text(encoding='utf-8')
+          detail_html = Path('tools/university-database/tokyo/detail.html').read_text(encoding='utf-8')
           admin_html = Path('admin/index.html').read_text(encoding='utf-8')
           admin_js = Path('admin/photo-review-runtime.js').read_text(encoding='utf-8')
           admin_cfg = json.loads(Path('admin/photo-review-config.json').read_text(encoding='utf-8'))
           bundle = '\n'.join([
               html, js, json.dumps(cfg, ensure_ascii=False), spec,
+              top_entry, detail_entry, detail_html,
               admin_html, admin_js, json.dumps(admin_cfg, ensure_ascii=False)
           ])
 
@@ -61,7 +67,13 @@ jobs:
 
           assert 'receiver-config.json' in js
           assert 'config.enabled===true' in js
-          assert '大学DBの各大学ページから' in js
+          assert 'manual-university' in html, 'generic Tokyo DB entry must allow one university-name input'
+          assert 'この大学へ写真を送る' in html
+          assert '/tools/university-database/tokyo/photo-submit/' in top_entry
+          assert '大学写真を投稿' in top_entry
+          assert 'detail-photo-submit-entry.js' in detail_html
+          assert 'photo-submit/?university=' in detail_entry
+          assert 'university_id=' in detail_entry
           assert 'https://www.jotform.com/inbox/' in admin_js
           assert 'photo-review-config.json' in admin_js
           print('simple university photo submission guard: OK')
