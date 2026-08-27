@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#111111">
   <title>大学写真 審査・掲載 | Ban.Tai</title>
   <link rel="stylesheet" href="admin.css?v=20260826-1155">
+  <link rel="stylesheet" href="review-tools.css?v=20260827-1930">
 </head>
 <body>
   <header class="admin-header">
@@ -22,7 +23,7 @@
       <div class="hero-copy">
         <span class="eyebrow">BAN.TAI UNIVERSITY PHOTO</span>
         <h1 id="admin-title">大学写真 審査・掲載</h1>
-        <p>訪問者写真の確認は、このページだけを入口にします。別の管理ページを経由しません。</p>
+        <p>訪問者写真の確認・補正・掲載準備は、このページだけを入口にします。</p>
       </div>
       <div class="hero-status" aria-label="システム状態">
         <div id="status-upload" class="status-item waiting"><span class="dot" aria-hidden="true"></span><span>訪問者アップロード</span><strong>確認中</strong></div>
@@ -35,7 +36,7 @@
       <div class="review-home-head">
         <div>
           <span class="card-kicker">REVIEW QUEUE</span>
-          <h2 id="review-title">審査待ち写真を見る</h2>
+          <h2 id="review-title">訪問者写真を審査・編集</h2>
           <p id="review-description">受信設定を確認しています。</p>
         </div>
       </div>
@@ -44,11 +45,15 @@
         <p>確認が終わると、審査待ち写真への入口が表示されます。</p>
       </div>
       <div class="future-flow" aria-label="管理者の操作">
-        <div><strong>1</strong><span>投稿写真を見る</span></div>
-        <div><strong>2</strong><span>管理者側で補正・選択</span></div>
-        <div><strong>3</strong><span>確認後に正式掲載</span></div>
+        <div><strong>1</strong><span>Jotformで投稿写真を見る</span></div>
+        <div><strong>2</strong><span>補正・メイン写真を選ぶ</span></div>
+        <div><strong>3</strong><span>ZIPをChatGPTで正式掲載</span></div>
       </div>
-      <a id="review-button" class="primary-button" aria-disabled="true">状態を確認中</a>
+      <div class="review-actions">
+        <a id="review-button" class="primary-button" aria-disabled="true">状態を確認中</a>
+        <a class="review-editor-link" href="review-editor.html">写真を編集・掲載準備 <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="review-complete-note">大学名・写真・掲載同意の3点は、本番の大学詳細ページからの実投稿で受信確認済みです。</p>
     </section>
 
     <section class="secondary-title" aria-labelledby="other-title">
@@ -84,7 +89,7 @@
       <div class="safety-grid">
         <div><strong>1</strong><span>訪問者：大学DBから写真を送るだけ</span></div>
         <div><strong>2</strong><span>管理者：この /admin/ を開くだけ</span></div>
-        <div><strong>3</strong><span>確認後に正式掲載</span></div>
+        <div><strong>3</strong><span>公開反映はCI・PR確認後だけ</span></div>
       </div>
     </section>
   </main>
