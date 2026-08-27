@@ -77,3 +77,52 @@ jobs:
           assert 'https://www.jotform.com/inbox/' in admin_js
           assert 'photo-review-config.json' in admin_js
           print('simple university photo submission guard: OK')
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/simple-photo-submit.log 2>&1 &
+          sleep 2
+      - name: Verify university handoff and simple UI
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:390,height:844}});
+            await page.route('https://form.jotform.com/**',route=>route.abort());
+
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-submit/?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6&university_id=u000094',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('#receiver-host iframe',{timeout:10000});
+            assert.equal(await page.locator('#selected-university').innerText(),'亜細亜大学');
+            let src=await page.locator('#receiver-host iframe').getAttribute('src');
+            let url=new URL(src);
+            assert.equal(url.searchParams.get('university'),'亜細亜大学');
+            assert.equal(url.searchParams.get('university_id'),'u000094');
+            assert.equal((await page.locator('body').innerText()).includes('トリミング'),false);
+
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-submit/',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('#manual-university:not([hidden])',{timeout:10000});
+            await page.fill('#university-name-input','亜細亜大学');
+            await page.click('#university-continue');
+            await page.waitForSelector('#receiver-host iframe',{timeout:10000});
+            src=await page.locator('#receiver-host iframe').getAttribute('src');
+            url=new URL(src);
+            assert.equal(url.searchParams.get('university'),'亜細亜大学');
+
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000094',{waitUntil:'domcontentloaded'});
+            await page.waitForSelector('.university-photo-submit-link',{timeout:15000});
+            const href=await page.locator('.university-photo-submit-link').getAttribute('href');
+            assert.ok(href.includes('photo-submit/?university='));
+            assert.ok(href.includes('university_id=u000094'));
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
