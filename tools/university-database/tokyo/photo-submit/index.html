@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#111111">
   <title>大学写真を送る | Ban.Tai Education Design</title>
-  <link rel="stylesheet" href="photo-submit.css?v=20260826-1245">
+  <link rel="stylesheet" href="photo-submit.css?v=20260827-1435">
 </head>
 <body>
   <header class="topbar">
@@ -18,13 +18,22 @@
     <section class="hero">
       <span class="eyebrow">UNIVERSITY PHOTO CONTRIBUTION</span>
       <h1 id="page-title">大学写真を送る</h1>
-      <p>大学名を確認して写真を選び、「写真を送る」を押すだけです。編集・掲載写真の選択はBan.Tai側で行います。</p>
+      <p>大学名を確認し、写真を選んで送信するだけです。写真の編集・掲載写真の選択はBan.Tai側で行います。</p>
     </section>
 
     <section class="upload-card" aria-labelledby="page-title">
       <div class="university-block">
         <span class="label">投稿先の大学</span>
         <strong id="selected-university">大学名を確認中…</strong>
+      </div>
+
+      <div id="manual-university" class="manual-university" hidden>
+        <label for="university-name-input">大学名を入力してください</label>
+        <div class="manual-row">
+          <input id="university-name-input" type="text" autocomplete="organization" placeholder="例：亜細亜大学">
+          <button id="university-continue" type="button">この大学へ写真を送る</button>
+        </div>
+        <p id="manual-status" class="manual-status" aria-live="polite"></p>
       </div>
 
       <div id="receiver-loading" class="receiver-state" role="status">
@@ -43,6 +52,6 @@
     </section>
   </main>
 
-  <script src="photo-submit.js?v=20260826-1245"></script>
+  <script src="photo-submit.js?v=20260827-1435"></script>
 </body>
 </html>
