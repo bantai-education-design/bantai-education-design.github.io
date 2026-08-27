@@ -12,7 +12,6 @@ const manualStatus=document.querySelector('#manual-status');
 
 const params=new URLSearchParams(location.search);
 let university=(params.get('university')||'').trim();
-let universityId=(params.get('university_id')||'').trim();
 let receiverConfig=null;
 
 function setUniversity(){
@@ -25,7 +24,6 @@ function setUniversity(){
 function buildEmbedUrl(config){
   const url=new URL(config.embed_url);
   if(university)url.searchParams.set(config.university_param||'university',university);
-  if(universityId)url.searchParams.set(config.university_id_param||'university_id',universityId);
   return url.toString();
 }
 
@@ -69,7 +67,6 @@ function submitUniversity(){
     return;
   }
   university=value;
-  universityId='';
   if(manualStatus)manualStatus.textContent='';
   setUniversity();
   if(receiverConfig)mountReceiver(receiverConfig);
