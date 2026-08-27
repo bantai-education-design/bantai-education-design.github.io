@@ -1,0 +1,89 @@
+name: University photo review editor guard
+
+on:
+  pull_request:
+    paths:
+      - 'admin/review-editor.html'
+      - 'admin/review-editor.css'
+      - 'admin/review-editor.js'
+      - 'admin/review-tools.css'
+      - 'admin/index.html'
+      - '.github/workflows/university-photo-review-editor-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate review editor safety
+        shell: python
+        run: |
+          from pathlib import Path
+          html = Path('admin/review-editor.html').read_text(encoding='utf-8')
+          js = Path('admin/review-editor.js').read_text(encoding='utf-8')
+          admin = Path('admin/index.html').read_text(encoding='utf-8')
+          bundle = '\n'.join([html, js, admin])
+          assert 'noindex,nofollow' in html
+          assert 'review-editor.html' in admin
+          assert 'image/jpeg,image/png,image/webp' in html
+          assert 'max="5"' in html and 'min="-5"' in html
+          assert 'max="125"' in html and 'min="100"' in html
+          assert 'source_type:\'jotform_community_submission\'' in js
+          assert 'rights_basis:\'submission_agreement\'' in js
+          assert 'ai_redraw:false' in js
+          assert '9-items.length' in js
+          assert 'api.github.com' not in bundle
+          assert 'github_token' not in bundle.lower()
+          assert 'jotform api' not in bundle.lower()
+          assert 'ban.tai3educationdesign@gmail.com' not in bundle
+          for forbidden in ['generative_redraw','object_add_remove','background_replace','scene_fabrication']:
+              assert forbidden in js
+          print('review editor static safety: OK')
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/review-editor.log 2>&1 &
+          sleep 2
+      - name: Verify editor workflow
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          const fs=require('node:fs');
+          (async()=>{
+            const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mP8z8AARMAgYKSAAAMAAgAB9HFkzgAAAABJRU5ErkJggg==','base64');
+            fs.writeFileSync('/tmp/review-test.png',png);
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:390,height:844}});
+            await page.goto('http://127.0.0.1:4173/admin/review-editor.html?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6',{waitUntil:'domcontentloaded'});
+            assert.equal(await page.inputValue('#review-university'),'亜細亜大学');
+            await page.setInputFiles('#review-photo-input','/tmp/review-test.png');
+            await page.waitForSelector('.review-photo-row');
+            assert.equal(await page.locator('.review-photo-row').count(),1);
+            assert.equal(await page.locator('input[name="review-main"]').isChecked(),true);
+            assert.equal(await page.locator('#review-editor-workspace').isVisible(),true);
+            assert.equal(await page.locator('#review-generate').isDisabled(),true);
+            await page.check('#review-rights-confirm');
+            assert.equal(await page.locator('#review-generate').isDisabled(),false);
+            await page.click('#review-rotate-right');
+            assert.equal(await page.locator('#review-rotation-out').innerText(),'90°');
+            await page.fill('#review-tilt','2.5');
+            await page.locator('#review-tilt').dispatchEvent('input');
+            assert.equal(await page.locator('#review-tilt-out').innerText(),'2.5°');
+            await page.click('#review-generate');
+            await page.waitForFunction(()=>document.querySelector('#review-download')&&!document.querySelector('#review-download').disabled,{timeout:10000});
+            assert.ok((await page.locator('#review-export-status').innerText()).includes('掲載用ZIPを生成しました'));
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
