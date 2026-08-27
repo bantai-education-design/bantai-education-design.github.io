@@ -1,8 +1,7 @@
 (()=>{
 'use strict';
 const root=document.querySelector('#detail-root');
-const universityId=(new URLSearchParams(location.search).get('id')||'').trim();
-if(!root||!universityId)return;
+if(!root)return;
 
 function install(){
   const hero=root.querySelector('.detail-hero');
@@ -13,7 +12,7 @@ function install(){
   if(!universityName)return;
   const link=document.createElement('a');
   link.className='secondary university-photo-submit-link';
-  link.href=`photo-submit/?university=${encodeURIComponent(universityName)}&university_id=${encodeURIComponent(universityId)}`;
+  link.href=`photo-submit/?university=${encodeURIComponent(universityName)}`;
   link.textContent='📷 写真を投稿';
   link.setAttribute('aria-label',`${universityName}へ写真を投稿`);
   actions.appendChild(link);
