@@ -31,11 +31,34 @@ function applyDisconnected(){
 function applyConnected(config){
   const formId=String(config.form_id||'').trim();
   if(!/^\d+$/.test(formId)){applyDisconnected();return;}
-  setStatus(upload,'接続済み',true);
-  setStatus(notify,'即時通知',true);
-  if(note)note.textContent='新しい投稿はJotformで受信し、投稿ごとに管理者へ即時通知します。';
+
+  const receptionVerified=config.reception_verified===true;
+  const notificationConfigured=config.notification_configured===true;
+  const notificationVerified=config.notification_verified===true;
+
+  setStatus(upload,receptionVerified?'受信確認済み':'接続済み',true);
+  if(notificationVerified){
+    setStatus(notify,'配信確認済み',true);
+  }else if(notificationConfigured){
+    setStatus(notify,'設定済み・確認待ち',false);
+  }else{
+    setStatus(notify,'未設定',false);
+  }
+
+  if(note){
+    if(receptionVerified&&notificationConfigured&&!notificationVerified){
+      note.textContent='実ファイルの受信を確認済みです。メール通知は設定済みですが、通知先メールでの配信確認はまだ完了していません。';
+    }else if(receptionVerified){
+      note.textContent='実ファイルの受信を確認済みです。';
+    }else{
+      note.textContent='Jotform受信フォームへ接続済みです。実ファイルの受信確認を行ってください。';
+    }
+  }
+
   if(warning)warning.hidden=true;
-  if(reviewText)reviewText.textContent='投稿写真・大学名・投稿日時をJotform Inboxで確認します。';
+  if(reviewText)reviewText.textContent=receptionVerified
+    ?'投稿写真をJotform Inboxで確認します。実ファイル受信は確認済みです。'
+    :'投稿写真・大学名・投稿日時をJotform Inboxで確認します。';
   if(reviewButton){
     reviewButton.href=`https://www.jotform.com/inbox/${formId}`;
     reviewButton.target='_blank';
