@@ -3,5 +3,8 @@
   "enabled": true,
   "provider": "jotform",
   "form_id": "262380787667069",
-  "notes": "Jotform受信フォーム接続済み。通知先メールやAPIキーは公開リポジトリに置かない。"
+  "reception_verified": true,
+  "notification_configured": true,
+  "notification_verified": false,
+  "notes": "Jotform受信フォーム接続済み。2026-08-27に実ファイル1件の受信を確認。通知先メールやAPIキーは公開リポジトリに置かない。"
 }
