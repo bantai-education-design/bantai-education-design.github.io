@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "enabled": false,
+  "enabled": true,
   "provider": "jotform",
-  "form_id": "",
-  "notes": "Jotformフォーム作成・実投稿確認後だけenabled=trueにする。通知先メールやAPIキーはここへ置かない。"
+  "form_id": "262380787667069",
+  "notes": "Jotform受信フォーム接続済み。通知先メールやAPIキーは公開リポジトリに置かない。"
 }
