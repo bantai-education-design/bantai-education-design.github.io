@@ -4,7 +4,9 @@
   "provider": "jotform",
   "form_id": "262380787667069",
   "reception_verified": true,
+  "university_handoff_verified": true,
   "notification_configured": true,
   "notification_verified": false,
-  "notes": "Jotform受信フォーム接続済み。2026-08-27に実ファイル1件の受信を確認。通知先メールやAPIキーは公開リポジトリに置かない。"
+  "verified_submission_count": 2,
+  "notes": "Jotform受信フォーム接続済み。2026-08-27に実ファイル受信を確認し、2件目では大学詳細ページから亜細亜大学名・写真・掲載同意の3点が揃って受信できることを確認。通知先メールやAPIキーは公開リポジトリに置かない。"
 }
