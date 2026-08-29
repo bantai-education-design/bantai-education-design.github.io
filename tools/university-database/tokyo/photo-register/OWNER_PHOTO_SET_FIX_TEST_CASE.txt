@@ -1,0 +1,7 @@
+Regression case: u000094 亜細亜大学
+1. Existing owner image asia-university-bantai.jpg is removed from the picker.
+2. Two new images are added to the same university.
+3. The second new image is selected as main.
+4. Registration package generation must succeed.
+5. Output record must contain main owner-02.jpg + gallery owner-01.jpg.
+6. asia-university-bantai.jpg must not appear anywhere in the resulting owner record.
