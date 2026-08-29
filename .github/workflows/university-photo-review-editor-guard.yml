@@ -43,6 +43,8 @@ jobs:
           assert 'ai_redraw:false' in js
           assert '9-items.length' in js
           assert "params.get('submission')" in prefill
+          assert 'https://www.jotform.com/inbox/' in prefill
+          assert 'review-source-link' in prefill
           assert config.get('reception_verified') is True
           assert config.get('university_handoff_verified') is True
           assert int(config.get('verified_submission_count', 0)) >= 2
@@ -78,6 +80,8 @@ jobs:
             await page.goto('http://127.0.0.1:4173/admin/review-editor.html?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6&submission=6636375913021621385',{waitUntil:'domcontentloaded'});
             assert.equal(await page.inputValue('#review-university'),'亜細亜大学');
             assert.equal(await page.inputValue('#review-submission-id'),'6636375913021621385');
+            assert.equal(await page.locator('#review-source-link').isVisible(),true);
+            assert.equal(await page.locator('#review-source-link').getAttribute('href'),'https://www.jotform.com/inbox/262380787667069/6636375913021621385');
             await page.setInputFiles('#review-photo-input','/tmp/review-test.png');
             await page.waitForSelector('.review-photo-row');
             assert.equal(await page.locator('.review-photo-row').count(),1);
