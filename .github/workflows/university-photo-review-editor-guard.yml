@@ -6,8 +6,10 @@ on:
       - 'admin/review-editor.html'
       - 'admin/review-editor.css'
       - 'admin/review-editor.js'
+      - 'admin/review-editor-prefill.js'
       - 'admin/review-tools.css'
       - 'admin/index.html'
+      - 'admin/photo-review-config.json'
       - '.github/workflows/university-photo-review-editor-guard.yml'
   workflow_dispatch:
 
@@ -23,12 +25,16 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
+          import json
           html = Path('admin/review-editor.html').read_text(encoding='utf-8')
           js = Path('admin/review-editor.js').read_text(encoding='utf-8')
+          prefill = Path('admin/review-editor-prefill.js').read_text(encoding='utf-8')
           admin = Path('admin/index.html').read_text(encoding='utf-8')
-          bundle = '\n'.join([html, js, admin])
+          config = json.loads(Path('admin/photo-review-config.json').read_text(encoding='utf-8'))
+          bundle = '\n'.join([html, js, prefill, admin])
           assert 'noindex,nofollow' in html
           assert 'review-editor.html' in admin
+          assert 'review-editor-prefill.js' in html
           assert 'image/jpeg,image/png,image/webp' in html
           assert 'max="5"' in html and 'min="-5"' in html
           assert 'max="125"' in html and 'min="100"' in html
@@ -36,6 +42,10 @@ jobs:
           assert 'rights_basis:\'submission_agreement\'' in js
           assert 'ai_redraw:false' in js
           assert '9-items.length' in js
+          assert "params.get('submission')" in prefill
+          assert config.get('reception_verified') is True
+          assert config.get('university_handoff_verified') is True
+          assert int(config.get('verified_submission_count', 0)) >= 2
           assert 'api.github.com' not in bundle
           assert 'github_token' not in bundle.lower()
           assert 'jotform api' not in bundle.lower()
@@ -65,8 +75,9 @@ jobs:
             fs.writeFileSync('/tmp/review-test.png',png);
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:390,height:844}});
-            await page.goto('http://127.0.0.1:4173/admin/review-editor.html?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6',{waitUntil:'domcontentloaded'});
+            await page.goto('http://127.0.0.1:4173/admin/review-editor.html?university=%E4%BA%9C%E7%B4%B0%E4%BA%9C%E5%A4%A7%E5%AD%A6&submission=6636375913021621385',{waitUntil:'domcontentloaded'});
             assert.equal(await page.inputValue('#review-university'),'亜細亜大学');
+            assert.equal(await page.inputValue('#review-submission-id'),'6636375913021621385');
             await page.setInputFiles('#review-photo-input','/tmp/review-test.png');
             await page.waitForSelector('.review-photo-row');
             assert.equal(await page.locator('.review-photo-row').count(),1);
