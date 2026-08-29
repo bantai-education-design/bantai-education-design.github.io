@@ -22,16 +22,16 @@ if(topbar&&!topbar.querySelector('.owner-review-link')){
 const hero=document.querySelector('.hero');
 setText(hero?.querySelector('.eyebrow'),'BANTAI OWNER QUICK REGISTER');
 setText(hero?.querySelector('h1'),'Ban.Tai 本人撮影写真を登録');
-setText(hero?.querySelector('p'),'自分で撮影した大学写真を1大学ずつ登録します。大学を選び、写真とメインを決め、必要なら傾きなどを調整して登録用データを保存します。');
+setText(hero?.querySelector('p'),'自分で撮影した大学写真を1大学ずつ掲載準備します。大学を選び、写真とメインを決め、必要なら傾きなどを調整して掲載用ZIPを作成します。');
 const badges=hero?.querySelector('.rule-badges');
 if(badges)badges.innerHTML='<span>1回1大学</span><span>最大9枚</span><span>メイン1＋サブ8</span><span>AI再描画なし</span><span>GitHub反映前に確認</span>';
 
 setText(batch.querySelector(':scope > .section-head h2'),'本人撮影写真のクイック登録');
-setText(batch.querySelector(':scope > .muted'),'①大学を選ぶ → ②写真を追加・メインを選ぶ → ③必要なら写真を調整 → ④登録用データを保存');
+setText(batch.querySelector(':scope > .muted'),'①大学を選ぶ → ②写真を追加・メインを選ぶ → ③必要なら写真を調整 → ④掲載用ZIPを作成');
 
 const progress=document.querySelector('#simple-register-progress');
 if(progress){
-  progress.innerHTML='<li data-step="1"><span>1</span><strong>大学</strong></li><li data-step="2"><span>2</span><strong>写真・メイン</strong></li><li data-step="3"><span>3</span><strong>調整（任意）</strong></li><li data-step="4"><span>4</span><strong>登録</strong></li>';
+  progress.innerHTML='<li data-step="1"><span>1</span><strong>大学</strong></li><li data-step="2"><span>2</span><strong>写真・メイン</strong></li><li data-step="3"><span>3</span><strong>調整（任意）</strong></li><li data-step="4"><span>4</span><strong>掲載準備</strong></li>';
 }
 
 setText(document.querySelector('#university-first-title'),'大学を選ぶ');
@@ -45,7 +45,7 @@ if(!intro){
   intro=document.createElement('div');
   intro.id='owner-register-intro';
   intro.className='owner-register-intro';
-  intro.innerHTML='<strong>Ban.Tai本人撮影の登録</strong><span>黄色の「この内容で大学DBへ登録」を押すと登録用ZIPを保存します。そのZIPをこのチャットに添付してください。大学DB反映・CI・PR・mainへのマージはChatGPT側で確認して行います。</span>';
+  intro.innerHTML='<strong>Ban.Tai本人撮影の掲載準備</strong><span>黄色の「掲載用ZIPを作成（まだ公開されません）」を押すと掲載用ZIPを保存します。そのZIPをこのチャットに添付してください。大学DB反映・CI・PR・mainへのマージはChatGPT側で確認して行います。</span>';
   (document.querySelector('#simple-register-workspace')||progress)?.insertAdjacentElement('beforebegin',intro);
 }
 
@@ -59,13 +59,13 @@ const lead=exportPanel.querySelector(':scope > p');
 const badge=exportPanel.querySelector('.surface-badge');
 const register=document.querySelector('#generate-batch');
 setText(step,'STEP 4');
-setText(heading,'この内容で大学DBへ登録');
-setText(lead,'大学・写真・メインを確認し、登録用データを保存します。公開DBへの反映はChatGPT側で最終確認します。');
+setText(heading,'掲載用ZIPを作成');
+setText(lead,'大学・写真・メインを確認して掲載用ZIPを作成します。この時点では公開DBは変更されません。ZIPをこのチャットへ添付後、ChatGPT側でGitHub反映・CI・PR・mainマージを行います。');
 setText(badge,'GitHub反映前に確認');
 if(register){
   register.hidden=false;
   register.removeAttribute('aria-hidden');
-  setText(register,'この内容で大学DBへ登録');
+  setText(register,'掲載用ZIPを作成（まだ公開されません）');
 }
 
 const newButton=document.querySelector('#start-new-photo-registration');

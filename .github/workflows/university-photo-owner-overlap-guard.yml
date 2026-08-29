@@ -40,7 +40,8 @@ jobs:
           assert.ok(index.indexOf('class="policy panel"')<index.indexOf('class="batch panel"'),'rules must appear before registration controls');
           assert.ok(index.includes('登録前にご確認ください　大学写真 投稿・掲載ルール'),'top rules heading required');
           assert.ok(owner.includes('Ban.Tai 本人撮影写真を登録'),'owner title required');
-          assert.ok(owner.includes('この内容で大学DBへ登録'),'owner direct preparation label required');
+          assert.ok(owner.includes('掲載用ZIPを作成（まだ公開されません）'),'owner action must clearly state that package creation is not publication');
+          assert.ok(owner.includes('この時点では公開DBは変更されません'),'owner explanation must distinguish package creation from publication');
           assert.ok(ownerSet.includes("kind:'university_owner_photo_set'"),'owner exporter must create photo-set manifest');
           assert.ok(ownerSet.includes("replacement_mode:'authoritative_photo_set'"),'owner photo set must replace the old set authoritatively');
           assert.ok(ownerSet.includes('gallery'),'owner photo set must write gallery');
@@ -98,7 +99,8 @@ jobs:
             assert.equal(await owner.locator('#community-photo-rules').count(),0,'owner mode must not show community agreement checkboxes');
             assert.equal(await owner.locator('#community-submit-package').count(),0,'owner mode must not show review submit button');
             assert.equal(await owner.locator('#generate-batch').isVisible(),true,'owner registration button must be visible');
-            assert.equal(await owner.locator('#generate-batch').innerText(),'この内容で大学DBへ登録');
+            assert.equal(await owner.locator('#generate-batch').innerText(),'掲載用ZIPを作成（まだ公開されません）');
+            assert.ok((await owner.locator('.export-panel > p').innerText()).includes('この時点では公開DBは変更されません'));
             assert.ok((await owner.locator('.hero h1').innerText()).includes('本人撮影写真'));
             assert.equal(await owner.locator('#registration-mode-switch').isVisible(),false,'legacy mode switch stays hidden in owner quick flow');
             assert.equal(await owner.locator('.policy').isVisible(),true,'owner mode must keep posting rules visible');
