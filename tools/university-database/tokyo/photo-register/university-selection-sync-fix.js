@@ -91,7 +91,7 @@ queueMicrotask(()=>{assignFirstUniversityToUnassigned();syncFirstUniversityFromR
     addStyle('photo-register-mode-fix','photo-register-mode-fix.css?v=20260825-1624');
 
     if(ownerMode){
-      await loadScript('owner-photo-register','owner-photo-register.js?v=20260825-1435');
+      await loadScript('owner-photo-register','owner-photo-register.js?v=20260829-2230');
       await loadScript('editor-drag-pan','editor-drag-pan.js?v=20260825-1230');
       await loadScript('owner-photo-set-export','owner-photo-set-export.js?v=20260829-2204');
       document.documentElement.dataset.communityUiSequence='owner-ready';
