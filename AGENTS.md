@@ -1,6 +1,6 @@
 # Ban.Tai Education Design — Standard AGENTS.md
 
-Version: 1.0
+Version: 1.1
 
 This is the canonical common policy for AI coding agents working in this repository. Directory-level `AGENTS.md` files may add stricter, more specific rules. For other Ban.Tai repositories, copy/adapt this common core into the repository-local `AGENTS.md` so the agent can read it without depending on external context.
 
@@ -15,6 +15,94 @@ This is the canonical common policy for AI coding agents working in this reposit
 7. Speed
 
 Never trade correctness, verification, or existing behavior for speed.
+
+## Ban.Tai AI development operating rules
+
+These seven rules govern how an AI agent moves work from an idea to a verified result. The agent is not only an implementer; it also helps maintain direction, quality, and completion discipline.
+
+### Rule 1 — Confirm the current position before acting
+
+When the user says `進めて`, `続けて`, or gives another short continuation instruction, do not make the user restate known context. First determine from the repository, applicable docs, and current work:
+
+1. the final objective,
+2. the current state,
+3. the highest-priority next action, and
+4. work that should not be done yet.
+
+Choose the next action by progress toward the objective, not by how much work can be generated. Ask only when a genuinely unresolved decision blocks safe progress.
+
+### Rule 2 — Separate ideas from implementation
+
+Do not automatically expand the current scope whenever a new feature or improvement idea appears.
+
+Use this flow:
+
+`Idea -> record -> evaluate necessity -> prioritize -> implement now or backlog`
+
+Preserve worthwhile ideas so they are not forgotten, but defer them when they would delay the current Definition of Done, increase risk, or distract from higher-priority work.
+
+### Rule 3 — Make the AI challenge its own implementation
+
+After implementation, do not treat the existence of code as success. Perform a critical self-review appropriate to the change. Ask:
+
+- Is this change actually necessary?
+- Is there a simpler sound solution?
+- Could it break existing behavior?
+- Is it understandable to a first-time user?
+- Does it work on desktop and mobile where applicable?
+- Does it contain guessed or unsupported facts?
+- Did it introduce unnecessary complexity?
+
+The agent must act as both builder and critic, then test and improve the result where needed.
+
+### Rule 4 — Separate implementation completion from merging to main
+
+Use the following flow for substantial changes unless the project has a stricter process:
+
+`branch -> implementation -> automated checks -> AI review -> visual/functional verification -> pull request -> required human approval -> merge -> production verification`
+
+Do not use `main` as an experiment area. Important UI changes require rendered visual verification before merge when the environment permits. Never merge when user review, visual approval, or explicit merge authorization is still required.
+
+### Rule 5 — Define Done before long-running work expands
+
+For substantial or multi-step work, establish a concise Definition of Done early. Include only conditions relevant to the task, such as:
+
+- required data/content is present,
+- factual sources are verified,
+- focused and regression checks pass,
+- desktop/mobile rendering is verified,
+- key interactions work,
+- existing behavior has not regressed,
+- documentation is updated when necessary,
+- production is verified when deployment is part of the task.
+
+Once the agreed Done conditions are satisfied, treat the work as complete. Do not confuse `could be improved further` with `not finished`.
+
+### Rule 6 — Keep final value judgments with the human
+
+The AI should actively handle investigation, coding, data organization, testing, consistency checks, documentation, PR preparation, and improvement proposals.
+
+Do not silently take over final human judgments about:
+
+- whether a product or feature is worth building,
+- whether it truly fits the education/work context,
+- whether visual or interaction quality is acceptable,
+- whether a product should be published or sold,
+- whether a major product/design direction should change.
+
+Provide evidence and a recommendation, then preserve required human approval for consequential value decisions.
+
+### Rule 7 — End substantial work with the next action clear
+
+Do not end a substantial work report with only `completed`. State concisely:
+
+1. what was done,
+2. what was verified,
+3. remaining problems or risks,
+4. the current completion state, and
+5. the recommended next action.
+
+If the next action is safe, clear, and already authorized by the user's instruction to continue, proceed without unnecessary stopping. Stop when a required human approval or genuinely unresolved decision is reached.
 
 ## Before editing
 
@@ -87,7 +175,7 @@ Repository or directory-level `AGENTS.md` files should add concrete setup, build
 
 ## Final report
 
-For substantial work, report what changed, why, main files, tests/checks and results, UI verification when relevant, Git/commit/PR state, deployment state when relevant, and unresolved or unverified items.
+For substantial work, report what changed, why, main files, tests/checks and results, UI verification when relevant, Git/commit/PR state, deployment state when relevant, unresolved or unverified items, and the recommended next action.
 
 ## Core rule
 
