@@ -37,19 +37,29 @@ async function waitForPages(payload){
   }
   return false;
 }
+function ownerKey(){
+  let key=sessionStorage.getItem('bantai_owner_publish_key')||'';
+  if(!key)key=window.prompt('初回のみ：本人写真の掲載キーを入力してください。')||'';
+  key=key.trim();
+  if(!key)throw new Error('掲載キーが入力されていません');
+  sessionStorage.setItem('bantai_owner_publish_key',key);
+  return key;
+}
 async function publish(payload){
   const cfg=await config();
   if(!cfg?.enabled||!cfg.endpoint)throw new Error('掲載APIは準備中です。公開DBは変更していません。');
+  const key=ownerKey();
   button.disabled=true;
   button.textContent='掲載中…';
   setStatus('編集済み写真を大学DBへ掲載しています…','publishing');
   const response=await fetch(cfg.endpoint,{
     method:'POST',
     mode:'cors',
-    headers:{'Content-Type':'application/json'},
+    headers:{'Content-Type':'application/json','X-Owner-Publish-Key':key},
     body:JSON.stringify(payload)
   });
   const result=await response.json().catch(()=>({}));
+  if(response.status===401)sessionStorage.removeItem('bantai_owner_publish_key');
   if(!response.ok||result.ok!==true)throw new Error(result.message||`掲載APIエラー（${response.status}）`);
   setStatus('GitHubへの反映が完了しました。公開ページを更新しています…','deploying');
   const live=await waitForPages(payload);
