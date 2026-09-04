@@ -102,7 +102,7 @@ jobs:
             assert.match(row.headquarters?.postal_code || '', /^\d{3}-\d{4}$/, `${row.id}: postal code`);
             assert.match(row.official_url || '', /^https:\/\//, `${row.id}: official URL`);
             assert.ok(Number.isInteger(row.student_counts?.total), `${row.id}: total student count`);
-            assert.ok(/^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$/.test(row.student_counts?.as_of || ''), `${row.id}: student count period`);
+            assert.ok(/^\d{4}(?:-\d{2}(?:-\d{2})?)?$/.test(row.student_counts?.as_of || ''), `${row.id}: student count period`);
             assert.ok(
               row.sources?.some(source => source.role === 'primary' && /^https:\/\//.test(source.source_url || '')),
               `${row.id}: primary source`
