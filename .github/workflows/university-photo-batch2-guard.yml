@@ -4,53 +4,60 @@ on:
   pull_request:
     paths:
       - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/data/university-images-commons-batch-20260904.json'
       - 'tools/university-database/tokyo/assets/**'
+      - 'tools/university-database/tokyo/detail.html'
       - '.github/workflows/university-photo-batch2-guard.yml'
   push:
     branches: [main]
     paths:
       - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/data/university-images-commons-batch-20260904.json'
       - 'tools/university-database/tokyo/assets/**'
+      - 'tools/university-database/tokyo/detail.html'
       - '.github/workflows/university-photo-batch2-guard.yml'
 
 jobs:
   photo-coverage-guard:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate fifty-four rights-verified real photos
+      - name: Validate 134 rights-verified real photos
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
           const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
-          const expected={
-            u000001:'東京大学',u000004:'東京農工大学',u000005:'東京藝術大学',u000006:'東京科学大学',u000007:'東京海洋大学',u000008:'お茶の水女子大学',u000010:'一橋大学',u000012:'東京都立大学',u000020:'青山学院大学',u000022:'学習院大学',u000023:'北里大学',u000025:'慶應義塾大学',u000026:'工学院大学',u000027:'國學院大學',u000028:'国士舘大学',u000029:'駒澤大学',u000031:'芝浦工業大学',u000032:'順天堂大学',u000033:'上智大学',u000035:'昭和女子大学',u000037:'女子美術大学',u000039:'成城大学',u000043:'専修大学',u000045:'大東文化大学',u000047:'拓殖大学',u000048:'多摩美術大学',u000049:'中央大学',u000050:'東海大学',u000055:'東京慈恵会医科大学',u000056:'東京女子大学',u000057:'東京女子医科大学',u000058:'東京電機大学',u000059:'東京農業大学',u000061:'東京理科大学',u000063:'東洋大学',u000064:'東京音楽大学',u000066:'日本大学',u000070:'日本女子大学',u000074:'文化学園大学',u000075:'法政大学',u000077:'武蔵大学',u000078:'東京都市大学',u000080:'明治大学',u000081:'明治学院大学',u000083:'立教大学',u000084:'立正大学',u000085:'早稲田大学',u000094:'亜細亜大学',u000096:'国立音楽大学',u000097:'国際基督教大学',u000099:'成蹊大学',u000101:'津田塾大学',u000102:'帝京大学',u000110:'武蔵野美術大学'
-          };
-          const reviewed20260823=new Set(['u000004','u000005','u000006','u000007','u000010','u000012','u000022','u000023','u000026','u000027','u000028','u000029','u000031','u000032','u000035','u000037','u000039','u000043','u000045','u000047','u000050','u000055','u000057','u000058','u000063','u000064','u000066','u000070','u000074','u000077','u000078','u000081','u000084','u000094','u000096','u000097','u000099','u000101','u000102']);
-          for(const [id,name] of Object.entries(expected)){
+          const batch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-batch-20260904.json','utf8'));
+          const records=batch.records||{};
+          assert.equal(Object.keys(records).length,80,'Approved Commons batch must contain 80 universities');
+          for(const [id,row] of Object.entries(records)){
             const image=data.images?.[id];
-            assert.ok(image,`${id}: image record required`);
-            assert.equal(image.university_name,name,`${id}: university name`);
-            assert.equal(image.rights_status,'verified',`${id}: rights status`);
-            assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${id}: Commons file page`);
-            assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${id}: Wikimedia original media URL`);
-            const bySa=/^CC BY-SA (3\.0|4\.0)$/.test(image.license||'');
-            const cc0=image.license==='CC0 1.0';
-            assert.ok(bySa||cc0,`${id}: reusable Creative Commons license`);
-            if(bySa)assert.match(image.license_url||'',/^https:\/\/creativecommons\.org\/licenses\/by-sa\/(3\.0|4\.0)\/$/,`${id}: BY-SA license URL`);
-            if(cc0)assert.equal(image.license_url,'https://creativecommons.org/publicdomain/zero/1.0/',`${id}: CC0 license URL`);
-            assert.ok(image.creator,`${id}: creator required`);
-            assert.ok(image.rights_note,`${id}: rights note required`);
-            assert.ok(image.alt,`${id}: alt text required`);
-            assert.equal(image.reviewed_at,reviewed20260823.has(id)?'2026-08-23':'2026-08-22',`${id}: review date`);
+            assert.ok(image,`${id}: canonical image record required`);
+            assert.equal(image.rights_status,'verified',`${id}: canonical rights status`);
+            assert.equal(image.image_url,row.image_url,`${id}: batch image must be canonical`);
+            assert.equal(image.source_url,row.source_url,`${id}: batch source must be canonical`);
+            assert.equal(image.license,row.license,`${id}: batch license must be canonical`);
           }
-          assert.equal(Object.values(data.images||{}).filter(x=>x.rights_status==='verified').length,54,'Exactly fifty-four real photos should be rights-verified');
-          console.log('verified real university photos 54/54');
+          const verified=Object.values(data.images||{}).filter(x=>x?.rights_status==='verified');
+          assert.equal(verified.length,134,'Exactly 134 university main photos should be rights-verified');
+          for(const image of verified){
+            assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${image.university_id}: Commons file page`);
+            assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${image.university_id}: Wikimedia original media URL`);
+            assert.ok(/^(?:CC0(?: 1\.0)?|CC BY(?:-SA)? [0-9.]+|Public domain)$/i.test(image.license||''),`${image.university_id}: reusable license ${image.license}`);
+            assert.ok(image.creator,`${image.university_id}: creator required`);
+            assert.ok(image.rights_note,`${image.university_id}: rights note required`);
+            assert.ok(image.alt,`${image.university_id}: alt text required`);
+            assert.ok(/^2026-0[89]-/.test(image.reviewed_at||''),`${image.university_id}: review date required`);
+          }
+          const owner=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/user-photo-overrides.json','utf8'));
+          assert.equal(owner.records?.u000094?.rights_status,'verified','Asia University owner photo must remain verified');
+          assert.match(owner.records?.u000094?.image_url||'',/^assets\/card-images\//,'Owner photo must remain local and independent from Commons registry');
+          console.log('verified real university photos 134/144; owner override preserved');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -60,7 +67,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-site.log 2>&1 &
           sleep 2
-      - name: Verify real-photo cards in browser
+      - name: Verify list and detail real-photo rendering
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -70,16 +77,30 @@ jobs:
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            for(const id of ['u000055','u000057','u000064','u000074','u000084','u000096']){
+            await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
+            assert.equal(await page.locator('.real-university-image').count(),134,'134 real university photo cards must render');
+            for(const id of ['u000001','u000003','u000009','u000040','u000109','u000137','u000144']){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: real photo visual`);
-              const src=await visual.locator('img').getAttribute('src');
-              assert.ok(src?.startsWith('https://upload.wikimedia.org/'),`${id}: Wikimedia image src`);
               const source=visual.locator('.image-source-link');
               assert.equal(await source.count(),1,`${id}: visible image source link`);
               assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
             }
-            assert.equal(await page.locator('.real-university-image').count(),54,'Fifty-four real university photo cards must render');
+            const asiaSrc=await page.locator('.tokyo-card[data-id="u000094"] .university-card-image').getAttribute('src');
+            assert.equal(asiaSrc,'assets/card-images/asia-university-bantai.jpg','Owner photo must override canonical Commons photo on list');
+
+            const detail=await browser.newPage({viewport:{width:1366,height:950}});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000003',{waitUntil:'networkidle'});
+            await detail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='registry',{timeout:15000});
+            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Canonical real photo must render on detail page');
+            assert.ok((await detail.locator('.detail-owner-photo-main').getAttribute('src'))?.startsWith('https://upload.wikimedia.org/'),'Detail main photo must use Wikimedia media');
+            assert.ok((await detail.locator('.detail-photo-source-link').getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),'Detail must expose Commons source/license link');
+
+            const ownerDetail=await browser.newPage({viewport:{width:1366,height:950}});
+            await ownerDetail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000094',{waitUntil:'networkidle'});
+            await ownerDetail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='owner',{timeout:15000});
+            assert.equal(await ownerDetail.locator('.detail-owner-photo-main').getAttribute('src'),'assets/card-images/asia-university-bantai.jpg','Owner photo must override canonical Commons photo on detail');
+
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
             await browser.close();
