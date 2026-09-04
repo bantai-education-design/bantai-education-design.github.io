@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DB・情報検索 原画像実装プレビュー | Ban.Tai Education Design</title>
+<link rel="icon" href="/assets/images/favicon.png">
+<link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
+<link rel="stylesheet" href="/assets/css/audience-hubs.css?v=20260815-visual1">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff}.master-stage{background:#031b2f}.master-art{position:relative;width:min(1536px,100%);margin:auto;aspect-ratio:3/2;background:#031b2f;overflow:hidden}.master-art img{display:block;width:100%;height:100%;object-fit:contain}.master-hotspot{position:absolute;display:block;z-index:2;border-radius:18px;outline:2px solid transparent}.master-hotspot:hover,.master-hotspot:focus-visible{outline-color:#ffd878;box-shadow:0 0 0 4px rgba(255,216,120,.2)}.school-card{left:45.7%;top:18.4%;width:15.3%;height:19.8%}.textbook-card{left:77.7%;top:18.9%;width:17.8%;height:18.8%}.university-card{left:77.8%;top:41.1%;width:18%;height:19.7%}.school-button{left:4.2%;top:54.3%;width:11.5%;height:6.3%;border-radius:999px}.textbook-button{left:15.8%;top:54.3%;width:16.3%;height:6.3%;border-radius:999px}.university-button{left:32.7%;top:54.3%;width:11.8%;height:6.3%;border-radius:999px}.loading{position:absolute;inset:0;display:grid;place-items:center;color:#f2c45c;font-weight:700;letter-spacing:.08em}.master-art.ready .loading{display:none}@media(max-width:680px){.master-art{overflow-x:auto;aspect-ratio:auto}.master-art img{width:100%;height:auto;min-width:760px}.master-hotspot{display:none}}
+</style>
+</head>
+<body>
+<header class="site-header audience-header"><div class="audience-tier"><div class="audience-inner"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="" width="42" height="42"><span>Ban.Tai Education Design</span></a><nav class="audience-primary" aria-label="主要ナビ"><a href="/categories/">商品カテゴリー</a><a href="/products/">全商品</a><a href="/databases/" aria-current="page">DB・情報検索</a></nav></div></div><div class="audience-subtier"><div class="audience-inner"><span class="audience-label">対象者を選ぶ</span><nav class="audience-pills"><a href="/for-teachers/">先生</a><a href="/for-families/">保護者・ご家庭</a><a class="is-active" href="/databases/">DB・情報検索</a><a href="/categories/">商品カテゴリー</a></nav><div class="audience-breadcrumb"><a href="/">ホーム</a> › <strong>DB・情報検索</strong></div></div></div></header>
+<main class="master-stage"><div class="master-art" id="masterArt"><div class="loading">原画像を読み込み中…</div><img id="masterImage" alt="教育情報を、探す・比べる・活かす。学校情報、教科書・年間指導計画、地域・統計データ、大学情報を中央の教育データ基盤から探すメニュー"><a class="master-hotspot school-card" href="/tools/school-database/" aria-label="学校データベース"></a><a class="master-hotspot textbook-card" href="/resources/textbook-plans/" aria-label="教科書・年間指導計画"></a><a class="master-hotspot university-card" href="/databases/universities/tokyo/" aria-label="東京都144大学"></a><a class="master-hotspot school-button" href="/tools/school-database/" aria-label="学校を探す"></a><a class="master-hotspot textbook-button" href="/resources/textbook-plans/" aria-label="教科書・年間指導計画を見る"></a><a class="master-hotspot university-button" href="/databases/universities/tokyo/" aria-label="東京都144大学を見る"></a></div></main>
+<script>
+(async()=>{try{const base='/assets/images/databases-gateway/';const parts=await Promise.all(['master.b64.00.txt','master.b64.01.txt'].map(n=>fetch(base+n,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(n);return r.text()})));const img=document.getElementById('masterImage');img.onload=()=>document.getElementById('masterArt').classList.add('ready');img.src='data:image/jpeg;base64,'+parts.join('').replace(/\s+/g,'')}catch(e){document.querySelector('.loading').textContent='原画像の読み込みに失敗しました';console.error(e)}})();
+</script>
+</body></html>
