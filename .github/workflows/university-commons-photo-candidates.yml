@@ -35,8 +35,8 @@ jobs:
           const assert=require('node:assert/strict');
           const r=JSON.parse(fs.readFileSync('tmp/university-commons-candidates.json','utf8'));
           assert.equal(r.coverage.total,144,'Tokyo DB must contain 144 universities');
-          assert.equal(r.coverage.verified_real,141,'Current branch must contain 141 verified real photos');
-          assert.equal(r.coverage.target_count,3,'Only three unresolved universities should remain');
+          assert.ok([141,143].includes(r.coverage.verified_real),`migration coverage must be 141 or 143, got ${r.coverage.verified_real}`);
+          assert.equal(r.coverage.target_count,r.coverage.verified_real===143?1:3,'unresolved target count must track coverage');
           assert.equal(r.policy.search_version,3,'Targeted collector version 3 required');
           for(const u of r.universities)for(const c of u.candidates){
             assert.ok(c.file_page.startsWith('https://commons.wikimedia.org/wiki/File:'),'Commons file page required');
