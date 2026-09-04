@@ -29,15 +29,30 @@ function scoreCandidate(university,page,meta){
   return score;
 }
 
+async function fetchCommons(url){
+  for(let attempt=0;attempt<5;attempt++){
+    const response=await fetch(url,{headers:{
+      'User-Agent':'BanTaiUniversityPhotoCollector/1.1 (education database; rights metadata audit)',
+      'Accept':'application/json'
+    }});
+    if(response.ok)return response;
+    if(response.status!==429&&response.status<500)throw new Error(`Commons ${response.status}`);
+    const retryHeader=Number(response.headers.get('retry-after'));
+    const waitMs=Number.isFinite(retryHeader)&&retryHeader>0?retryHeader*1000:Math.min(30000,2500*(attempt+1));
+    console.log(`Commons ${response.status}; retrying in ${waitMs}ms`);
+    await sleep(waitMs);
+  }
+  throw new Error('Commons rate limit retry exhausted');
+}
+
 async function searchCommons(university){
   const params=new URLSearchParams({
     action:'query',format:'json',origin:'*',generator:'search',
-    gsrsearch:`\"${university.name}\"`,gsrnamespace:'6',gsrlimit:'8',
+    gsrsearch:`\"${university.name}\"`,gsrnamespace:'6',gsrlimit:'6',
     prop:'imageinfo',iiprop:'url|mime|size|extmetadata',iiurlwidth:'640'
   });
   const url=`https://commons.wikimedia.org/w/api.php?${params}`;
-  const response=await fetch(url,{headers:{'User-Agent':'BanTaiUniversityPhotoCollector/1.0 (education database; rights metadata audit)'}});
-  if(!response.ok)throw new Error(`Commons ${response.status}`);
+  const response=await fetchCommons(url);
   const data=await response.json();
   const pages=Object.values(data.query?.pages||{});
   return pages.map(page=>{
@@ -73,7 +88,7 @@ for(const [index,u] of targets.entries()){
   try{candidates=await searchCommons(u);}catch(e){error=String(e?.message||e);}
   result.universities.push({university_id:u.id,university_name:u.name,municipality:u.municipality,current_status:current[u.id]?.rights_status||'missing',candidates,error});
   console.log(`[${index+1}/${targets.length}] ${u.id} ${u.name}: ${candidates.length} candidates${error?` (${error})`:''}`);
-  await sleep(120);
+  await sleep(1000);
 }
 await fs.mkdir(outPath.split('/').slice(0,-1).join('/')||'.',{recursive:true});
 await fs.writeFile(outPath,JSON.stringify(result,null,2)+'\n');
