@@ -7,7 +7,7 @@ const locations=JSON.parse(await fs.readFile(locationsPath,'utf8'));
 const registry=JSON.parse(await fs.readFile(imagesPath,'utf8'));
 const current=registry.images||{};
 
-const acceptedLicense=/^(CC0|CC BY(?:-SA)?(?: |$)|Public domain|PD)/i;
+const acceptedLicense=/^(CC0|CC BY(?:-SA)?(?: |$)|Public domain|PD|Copyrighted free use)/i;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const text=v=>String(v?.value||v||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[\s・･,，.。()（）\-_]/g,'').replace(/大学院大学|専門職大学|大学/g,'');
@@ -114,7 +114,7 @@ async function searchCommons(university){
 const targets=locations.filter(u=>current[u.id]?.rights_status!=='verified');
 const result={
   generated_at:new Date().toISOString(),
-  policy:{auto_publish:false,accepted_license_pattern:String(acceptedLicense),search_version:3,note:'候補抽出のみ。大学一致・人物・画質・ライセンスを目視確認してから university-images.json に採用する。未充足校では英語名や現行入居建物名も補助検索する。'},
+  policy:{auto_publish:false,accepted_license_pattern:String(acceptedLicense),search_version:3,note:'候補抽出のみ。大学一致・人物・画質・ライセンスを目視確認してから university-images.json に採用する。未充足校では英語名や現行入居建物名も補助検索する。Commons上で目的を問わない再利用・再配布・商用利用・改変が明示された Copyrighted free use も候補として許可する。'},
   coverage:{total:locations.length,verified_real:Object.values(current).filter(x=>x.rights_status==='verified').length,ai_original:Object.values(current).filter(x=>x.rights_status==='ai_original').length,other_records:Object.values(current).filter(x=>!['verified','ai_original'].includes(x.rights_status)).length,target_count:targets.length},
   universities:[]
 };
