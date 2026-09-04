@@ -6,6 +6,7 @@ const imagesPath='tools/university-database/tokyo/data/university-images.json';
 const outPath=process.argv[2]||'tmp/university-commons-candidates.json';
 const locations=JSON.parse(await fs.readFile(locationsPath,'utf8'));
 const registry=JSON.parse(await fs.readFile(imagesPath,'utf8'));
+const current=registry.images||{};
 
 const acceptedLicense=/^(CC0|CC BY(?:-SA)?(?: |$)|Public domain|PD)/i;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
