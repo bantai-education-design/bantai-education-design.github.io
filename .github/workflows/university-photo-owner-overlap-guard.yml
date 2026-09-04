@@ -4,11 +4,19 @@ on:
   pull_request:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
+      - 'api/owner-photo-publish.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vercel.json'
       - '.github/workflows/university-photo-owner-overlap-guard.yml'
   push:
     branches: [main]
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
+      - 'api/owner-photo-publish.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vercel.json'
       - '.github/workflows/university-photo-owner-overlap-guard.yml'
 
 jobs:
@@ -20,6 +28,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Install owner publish API dependencies
+        run: npm ci
       - name: Validate owner publish source
         run: |
           node <<'NODE'
@@ -29,6 +39,7 @@ jobs:
           const owner=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-register.js','utf8');
           const engine=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-set-export.js','utf8');
           const client=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-client.js','utf8');
+          const api=fs.readFileSync('api/owner-photo-publish.js','utf8');
           const cfg=JSON.parse(fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-config.json','utf8'));
           assert.ok(loader.includes('owner-publish-client.js'),'owner publish client must load in owner mode');
           assert.ok(owner.includes('この内容で掲載する'),'final owner action must be publish');
@@ -40,6 +51,13 @@ jobs:
           assert.ok(engine.includes('delete records[id]'),'removing all owner photos must remove the override record');
           assert.ok(engine.includes('blobToBase64'),'edited JPEGs must be transferable to the publish API');
           assert.ok(client.includes('waitForPages'),'client must verify GitHub Pages reflection');
+          assert.ok(api.includes('OWNER_PUBLISH_GITHUB_TOKEN'),'GitHub credential must be read only on the server');
+          assert.ok(api.includes('universities_tokyo_all.generated.json'),'server must use a university ID allowlist');
+          assert.ok(api.includes('validateImages'),'server must validate image files');
+          assert.ok(api.includes('sharp('),'server must decode uploaded images');
+          assert.ok(api.includes('720×405 JPEG'),'server must require the published card dimensions');
+          assert.ok(api.includes("base: 'main', draft: true"),'server must create a Draft PR instead of writing main');
+          assert.ok(api.includes('base_owner_record'),'server must reject stale owner edits');
           assert.equal(cfg.enabled,false,'publish API must stay disabled until server secrets and E2E are verified');
           const publicSource=[JSON.stringify(cfg),client,engine].join('\n').toLowerCase();
           assert.equal(/github[_-]?(token|pat)|ghp_[a-z0-9]+/.test(publicSource),false,'no GitHub secret may be stored in public files');
@@ -105,7 +123,8 @@ jobs:
             assert.equal(JSON.stringify(record).includes('asia-university-bantai.jpg'),false,'deleted old photo must not survive in main/gallery');
             const jpgFiles=payload.files.filter(file=>file.path.endsWith('.jpg'));
             assert.equal(jpgFiles.length,2,'both edited JPEGs must be ready for server publish');
-            assert.ok(jpgFiles.every(file=>file.encoding==='base64'&&file.content.length>0));
+            assert.ok(jpgFiles.every(file=>file.encoding==='base64'&&file.content_type==='image/jpeg'&&file.content.length>0));
+            assert.ok(payload.request_id,'the request must have an idempotency key');
 
             const cfg=await owner.evaluate(()=>window.__ownerPublishClient.config());
             assert.equal(cfg.enabled,false);
@@ -115,6 +134,11 @@ jobs:
             },payload);
             assert.ok(disabledMessage.includes('掲載APIは準備中'),'disabled server must fail safely without changing public DB');
             assert.equal(await owner.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+            const mobile=await browser.newPage({viewport:{width:375,height:812}});
+            await mobile.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await mobile.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await mobile.locator('#generate-batch').innerText(),'この内容で掲載する');
+            assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'375px owner screen must not horizontally overflow');
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE

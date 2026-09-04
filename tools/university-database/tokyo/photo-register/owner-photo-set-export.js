@@ -95,7 +95,7 @@ async function renderNewPhoto(key,index,id,name){
   const outputHash=await sha256(jpeg);
   const cardName=`${id}-${safeName(name)}-owner-${String(index+1).padStart(2,'0')}.jpg`;
   const relative=`assets/card-images/${cardName}`;
-  return {key,filename,source,jpeg,sourceHash,outputHash,relative,entry:{image_url:relative,source_url:relative,alt:`${name}のキャンパス実景`,source_label:'撮影者提供・実景保持',role:'sub',source_file:{name:filename,sha256:sourceHash},card_file:{name:cardName,width:720,height:405,quality:0.9,sha256:outputHash}}};
+  return {key,filename,source,jpeg,sourceHash,outputHash,relative,entry:{image_url:relative,source_url:relative,alt:`${name}のキャンパス実景`,source_label:'撮影者提供・実景保持',role:'sub',source_file:{name:filename,size_bytes:source.size,sha256:sourceHash},card_file:{name:cardName,width:720,height:405,quality:0.9,sha256:outputHash}}};
 }
 function rightsBase(id,name){return {
   university_id:id,university_name:name,rights_status:'verified',rights_basis:'photographer_permission',source_label:'撮影者提供・実景保持',creator:'Ban.Tai Education Design提供',license:'撮影者本人提供・本DB利用許諾',rights_note:'撮影者本人からBan.Tai東京都大学DBでの利用許諾を受けた実景写真。大学公式写真の転載ではない。生成AIによる再描画・生成補完・景観要素の追加削除・背景置換は行わず、90度単位の回転、±5度以内の傾き補正、軽微なトリミング、明るさ・コントラスト調整だけを許可する。',reviewed_at:new Date().toISOString().slice(0,10),scene_integrity:'scene_unchanged',ai_redraw:false,surfaces:['card','detail'],allowed_adjustments:['rotation','straighten','brightness','contrast','crop','resize'],forbidden_adjustments:['generative_redraw','object_addition','object_removal','background_replacement','scene_composite']
@@ -137,11 +137,11 @@ async function buildPublishPayload(){
       records[id]={...rightsBase(id,name),image_url:mainUrl,source_url:main.source_url||mainUrl,alt:main.alt||`${name}のキャンパス実景`,...(main.source_file?{source_file:main.source_file}:{}),...(main.card_file?{card_file:main.card_file}:{}),gallery};
     }
     mergedRegistry={...registry,schema_version:Math.max(2,Number(registry.schema_version)||2),records};
-    const manifest={schema_version:3,kind:'university_owner_direct_publish',generated_at:new Date().toISOString(),university_id:id,university_name:name,replacement_mode:'authoritative_photo_set',max_photos:MAX,main_image_url:records[id]?.image_url||null,gallery_image_urls:records[id]?.gallery?.map(x=>x.image_url)||[],deleted_image_urls:state.deleted,owner_record_removed:!records[id],scene_policy:'scene_unchanged',ai_redraw:false,target_registry:'tools/university-database/tokyo/data/user-photo-overrides.json',new_files:newPhotos.map(item=>({image_url:item.relative,source_file:item.filename,source_sha256:item.sourceHash,output_sha256:item.outputHash}))};
+    const manifest={schema_version:3,kind:'university_owner_direct_publish',generated_at:new Date().toISOString(),university_id:id,university_name:name,replacement_mode:'authoritative_photo_set',max_photos:MAX,main_image_url:records[id]?.image_url||null,gallery_image_urls:records[id]?.gallery?.map(x=>x.image_url)||[],deleted_image_urls:state.deleted,owner_record_removed:!records[id],scene_policy:'scene_unchanged',ai_redraw:false,target_registry:'tools/university-database/tokyo/data/user-photo-overrides.json',base_owner_record:registry.records?.[id]||null,new_files:newPhotos.map(item=>({image_url:item.relative,source_file:item.filename,source_sha256:item.sourceHash,output_sha256:item.outputHash}))};
     const files=[];
-    for(const item of newPhotos){files.push({path:`tools/university-database/tokyo/${item.relative}`,encoding:'base64',content:await blobToBase64(item.jpeg)});}
+    for(const item of newPhotos){files.push({path:`tools/university-database/tokyo/${item.relative}`,encoding:'base64',content_type:'image/jpeg',content:await blobToBase64(item.jpeg)});}
     files.push({path:'tools/university-database/tokyo/data/user-photo-overrides.json',encoding:'utf-8',content:JSON.stringify(mergedRegistry,null,2)+'\n'});
-    const payload={schema_version:1,kind:'bantai_university_owner_publish',university_id:id,university_name:name,manifest,files};
+    const payload={schema_version:1,kind:'bantai_university_owner_publish',request_id:crypto.randomUUID(),university_id:id,university_name:name,manifest,files};
     jsonOutput.value=JSON.stringify(mergedRegistry,null,2);
     window.__ownerPhotoSetLastManifest=manifest;
     window.__ownerPhotoSetLastPayload=payload;

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/owner-photo-publish.js": {
+      "maxDuration": 60
+    }
+  }
+}
