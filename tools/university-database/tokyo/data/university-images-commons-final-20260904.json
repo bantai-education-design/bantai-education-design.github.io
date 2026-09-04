@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "reviewed_at": "2026-09-04",
+  "validation_note": "141/144 real-photo coverage guard updated; seven reviewed records are canonical and three unresolved universities remain documented.",
   "records": {
     "u000087": {
       "university_id": "u000087",
