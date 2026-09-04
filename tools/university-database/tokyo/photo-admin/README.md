@@ -4,9 +4,9 @@
 
 - 管理ハブ: `/tools/university-database/tokyo/photo-admin/`
 - Ban.Tai本人撮影登録: `/tools/university-database/tokyo/photo-register/?mode=owner`
-- 一般投稿: `/tools/university-database/tokyo/photo-register/`
+- 一般投稿: `/tools/university-database/tokyo/photo-submit/`
 
-管理ハブには「本人撮影写真を登録」と「訪問者写真を審査」の2入口を置く。
+一般ユーザーは `photo-submit/` で写真送信だけを行う。大学DBへの登録、補正、メイン・サブ写真の選択は管理者が行う。管理ハブには「本人撮影写真を登録」と「訪問者写真を審査」の2入口を置く。
 
 ## 管理コード
 
