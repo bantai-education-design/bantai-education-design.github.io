@@ -5,6 +5,7 @@ on:
     paths:
       - 'tools/university-database/tokyo/data/university-images.json'
       - 'tools/university-database/tokyo/data/university-images-commons-batch-20260904.json'
+      - 'tools/university-database/tokyo/data/university-images-commons-final-20260904.json'
       - 'tools/university-database/tokyo/assets/**'
       - 'tools/university-database/tokyo/detail.html'
       - '.github/workflows/university-photo-batch2-guard.yml'
@@ -13,6 +14,7 @@ on:
     paths:
       - 'tools/university-database/tokyo/data/university-images.json'
       - 'tools/university-database/tokyo/data/university-images-commons-batch-20260904.json'
+      - 'tools/university-database/tokyo/data/university-images-commons-final-20260904.json'
       - 'tools/university-database/tokyo/assets/**'
       - 'tools/university-database/tokyo/detail.html'
       - '.github/workflows/university-photo-batch2-guard.yml'
@@ -26,16 +28,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate 134 rights-verified real photos
+      - name: Validate 141 rights-verified real photos
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
           const data=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images.json','utf8'));
           const batch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-batch-20260904.json','utf8'));
+          const finalBatch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-final-20260904.json','utf8'));
           const records=batch.records||{};
+          const finalRecords=finalBatch.records||{};
           assert.equal(Object.keys(records).length,80,'Approved Commons batch must contain 80 universities');
-          for(const [id,row] of Object.entries(records)){
+          assert.equal(Object.keys(finalRecords).length,7,'Final reviewed Commons batch must contain 7 universities');
+          assert.equal(Object.keys(finalBatch.unresolved||{}).length,3,'Final batch must document the 3 unresolved universities');
+          for(const [id,row] of Object.entries({...records,...finalRecords})){
             const image=data.images?.[id];
             assert.ok(image,`${id}: canonical image record required`);
             assert.equal(image.rights_status,'verified',`${id}: canonical rights status`);
@@ -44,7 +50,7 @@ jobs:
             assert.equal(image.license,row.license,`${id}: batch license must be canonical`);
           }
           const verified=Object.values(data.images||{}).filter(x=>x?.rights_status==='verified');
-          assert.equal(verified.length,134,'Exactly 134 university main photos should be rights-verified');
+          assert.equal(verified.length,141,'Exactly 141 university main photos should be rights-verified');
           for(const image of verified){
             assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${image.university_id}: Commons file page`);
             assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${image.university_id}: Wikimedia original media URL`);
@@ -57,7 +63,7 @@ jobs:
           const owner=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/user-photo-overrides.json','utf8'));
           assert.equal(owner.records?.u000094?.rights_status,'verified','Asia University owner photo must remain verified');
           assert.match(owner.records?.u000094?.image_url||'',/^assets\/card-images\//,'Owner photo must remain local and independent from Commons registry');
-          console.log('verified real university photos 134/144; owner override preserved');
+          console.log('verified real university photos 141/144; owner override preserved; unresolved 3');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -78,8 +84,8 @@ jobs:
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
-            assert.equal(await page.locator('.real-university-image').count(),134,'134 real university photo cards must render');
-            for(const id of ['u000001','u000003','u000009','u000040','u000109','u000137','u000144']){
+            assert.equal(await page.locator('.real-university-image').count(),141,'141 real university photo cards must render');
+            for(const id of ['u000001','u000003','u000009','u000040','u000087','u000091','u000092','u000105','u000109','u000124','u000131','u000134','u000137','u000144']){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: real photo visual`);
               const source=visual.locator('.image-source-link');
@@ -90,7 +96,7 @@ jobs:
             assert.equal(asiaSrc,'assets/card-images/asia-university-bantai.jpg','Owner photo must override canonical Commons photo on list');
 
             const detail=await browser.newPage({viewport:{width:1366,height:950}});
-            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000003',{waitUntil:'networkidle'});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000124',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='registry',{timeout:15000});
             assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Canonical real photo must render on detail page');
             assert.ok((await detail.locator('.detail-owner-photo-main').getAttribute('src'))?.startsWith('https://upload.wikimedia.org/'),'Detail main photo must use Wikimedia media');
