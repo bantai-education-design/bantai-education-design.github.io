@@ -28,8 +28,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install owner publish API dependencies
-        run: npm ci
       - name: Validate owner publish source
         run: |
           node <<'NODE'
