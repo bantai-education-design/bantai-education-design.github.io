@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 04",
+  "records": {
+    "u000035": {
+      "founded_year": 1920,
+      "opened_year": 1949,
+      "founder": "人見圓吉",
+      "operator": "学校法人昭和女子大学",
+      "university_goal": "新しい日本文化の創造と人類福祉の増進に主体的に貢献し、清き気品・篤き至誠・高き識見を備えた、社会に貢献できる女性を育成することを目指しています。",
+      "philosophy": "建学の精神は『世の光となろう』。創立者・人見圓吉が掲げた愛と理解と調和を基盤に、善き個人であると同時に善き社会人となることを重視しています。",
+      "sources": [
+        {"source_name":"昭和女子大学 学園の沿革","source_url":"https://office.swu.ac.jp/history/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"昭和女子大学の沿革","source_url":"https://www.swu.ac.jp/examinee/student/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000036": {
+      "founded_year": 1930,
+      "opened_year": 1949,
+      "founder": "昭和女子薬学専門学校創設に尽力した学生・教員・篤志家",
+      "operator": "学校法人昭和薬科大学",
+      "university_goal": "薬と医療に関わる幅広い分野を学び、豊かな人間性と高い専門性を備え、創薬から臨床まで薬の専門家として人類の健康に貢献できる薬剤師を育成することを目指しています。",
+      "philosophy": "大学の理念は『薬を通して人類に貢献』、建学の精神は『独立と融和』。自ら考え行動する力と、学生・教職員・卒業生が支え合う協調の精神を重視しています。",
+      "sources": [
+        {"source_name":"昭和薬科大学 沿革","source_url":"https://www.shoyaku.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"昭和薬科大学 理念・建学の精神","source_url":"https://www.shoyaku.ac.jp/about/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"昭和薬科大学 理事長挨拶","source_url":"https://www.shoyaku.ac.jp/about/chairman/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000037": {
+      "founded_year": 1900,
+      "opened_year": 1949,
+      "founder": "横井玉子・藤田文蔵ら",
+      "operator": "学校法人女子美術大学",
+      "university_goal": "高い教育力を通じ、社会や世界への広い見識と芸術的創造力・専門技能を身につけ、精神的・経済的に自立し、多様な人々が活躍する社会を担う人材を育成することを目指しています。",
+      "philosophy": "建学の精神は『芸術による女性の自立』『女性の社会的地位の向上』『専門の技術家・美術教師の養成』。美術教育を通じて女性の自立と社会への貢献を実現することを重視しています。",
+      "sources": [
+        {"source_name":"女子美のあゆみ","source_url":"https://www.joshibi.ac.jp/about/development","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"女子美術大学 教育理念","source_url":"https://www.joshibi.ac.jp/about/philosophy","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000038": {
+      "founded_year": 1926,
+      "opened_year": 1964,
+      "founder": "杉野芳子",
+      "operator": "学校法人杉野学園",
+      "university_goal": "服飾を芸術・技術・文化・産業の総合分野として学び、未来のファッション産業を切り拓く挑戦精神、創造力、専門職業人として自立する能力を持つ人材を育成することを目指しています。",
+      "philosophy": "創設者・杉野芳子のパイオニア精神を継承し、教育の基本理念として『挑戦する精神』『創造する力』『自立する能力』の育成を掲げています。",
+      "sources": [
+        {"source_name":"杉野服飾大学 大学の歩み","source_url":"https://www.sugino-fc.ac.jp/about/ayumi/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"杉野服飾大学 教育のポリシー","source_url":"https://www.sugino-fc.ac.jp/about/policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000039": {
+      "founded_year": 1917,
+      "opened_year": 1950,
+      "founder": "澤柳政太郎",
+      "operator": "学校法人成城学園",
+      "university_goal": "個性の暢達を主眼に専門の学芸を研究教授し、広い視野と高度な教養、豊かな個性を備えた社会の先導者を育成するとともに、文化の発展に貢献することを使命としています。",
+      "philosophy": "創立者・澤柳政太郎の『所求第一義』と個性尊重の教育を基盤に、真・善・美を理想とする学校、自治自律・自学自習を重んじる教育を目指しています。",
+      "sources": [
+        {"source_name":"成城大学 建学の精神とミッション・ビジョン","source_url":"https://www.seijo.ac.jp/about/mission-vision/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"成城大学 沿革","source_url":"https://www.seijo.ac.jp/about/outline/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"成城大学 人材育成の目的と3つの方針","source_url":"https://www.seijo.ac.jp/about/edu-policies/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

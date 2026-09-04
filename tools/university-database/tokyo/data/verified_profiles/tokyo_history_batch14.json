@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 14",
+  "records": {
+    "u000074": {
+      "founded_year": 1923,
+      "opened_year": 1964,
+      "founder": "並木伊三郎・遠藤政次郎",
+      "operator": "学校法人文化学園",
+      "university_goal": "服飾・造形・建築・国際文化などの専門教育を通して、豊かな知性と感性、創造力を備え、新しい美と文化を社会に提案できる人材を育成することを目指します。",
+      "philosophy": "建学の精神『新しい美と文化の創造』を基盤に、ファッションとデザインを核とした創造的な教育研究を重視します。",
+      "sources": [
+        {"source_name":"文化学園 創立100周年・沿革","source_url":"https://www.bunka.ac.jp/bunka-100th/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"文化学園 沿革","source_url":"https://www.bunka.ac.jp/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"文化学園大学 建学の精神","source_url":"https://bwu.bunka.ac.jp/outline/spirit.php","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000079": {
+      "founded_year": 1929,
+      "opened_year": 1949,
+      "founder": "福井直秋",
+      "operator": "学校法人武蔵野音楽学園",
+      "university_goal": "高度な音楽芸術の研鑽と豊かな人格形成を両立し、演奏・創作・教育・音楽文化の発展に貢献できる音楽人を育成することを目指します。",
+      "philosophy": "建学の精神『〈和〉のこころ』を基盤に、『音楽芸術の研鑽』と『人間形成』を教育の柱として重視します。",
+      "sources": [
+        {"source_name":"武蔵野音楽大学 沿革","source_url":"https://www.musashino-music.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"武蔵野音楽大学 建学の精神・教育方針","source_url":"https://www.musashino-music.ac.jp/about/policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000087": {
+      "founded_year": 2020,
+      "opened_year": 2020,
+      "founder": "学校法人日本教育財団（設置母体）",
+      "operator": "学校法人日本教育財団",
+      "university_goal": "国際性を理解し、社会の発展との調和を図りながら、情報技術を活用したイノベーションによって持続可能な人間社会に貢献できる高度専門職人材を育成することを目指します。",
+      "philosophy": "AI・IoT・ロボット・ゲーム・CGなどの先端デジタル分野と実務教育を結びつけ、産業界と連携して社会課題を解決する実践力と創造力を育てます。",
+      "sources": [
+        {"source_name":"東京国際工科専門職大学 情報公開","source_url":"https://www.iput.ac.jp/tokyo/about/public_publication/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京国際工科専門職大学 ポリシー","source_url":"https://www.iput.ac.jp/policy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京国際工科専門職大学 2027年度統合予定のお知らせ","source_url":"https://www.iput.ac.jp/news/10866/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000088": {
+      "founded_year": 1974,
+      "opened_year": 2020,
+      "founder": "小林光俊",
+      "operator": "学校法人敬心学園",
+      "university_goal": "高い専門職倫理と実践力、創造力を備え、多様な人々が共生できる社会の実現と発展に医療専門職として貢献できる人材を育成することを目指します。",
+      "philosophy": "建学の精神『共生できる社会の実現と発展』を基盤に、理学療法・作業療法の高度な実践力と創造性を備えたリハビリテーション専門職の育成を重視します。",
+      "sources": [
+        {"source_name":"東京保健医療専門職大学 沿革","source_url":"https://www.tpu.ac.jp/overview/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京保健医療専門職大学 建学の精神・理念","source_url":"https://www.tpu.ac.jp/overview/philosophy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

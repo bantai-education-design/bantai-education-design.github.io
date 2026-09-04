@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 20",
+  "records": {
+    "u000065": {
+      "founded_year": 1877,
+      "opened_year": 1949,
+      "founder": "三島中洲（三島毅）",
+      "operator": "学校法人二松学舎",
+      "university_goal": "東洋の精神文化を基盤に人格を陶冶し、日本・中国を中心とする文学・文化・歴史と国際政治経済・経営を学び、社会に有用な人物を育成することを目指します。",
+      "philosophy": "『東洋の精神による人格の陶冶』と『己ヲ修メ人ヲ治メ一世ニ有用ナル人物ヲ養成ス』の精神を建学の根幹とします。",
+      "sources": [
+        {"source_name":"二松学舎大学 沿革","source_url":"https://www.nishogakusha-u.ac.jp/admission/about/history/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"二松学舎大学 建学の精神・教育理念","source_url":"https://www.nishogakusha-u.ac.jp/about/f3.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000069": {
+      "founded_year": 1946,
+      "opened_year": 1958,
+      "founder": "中央社会事業協会（厚生省の委託を受けた設立母体）",
+      "operator": "学校法人日本社会事業大学",
+      "university_goal": "社会福祉に関する総合的な教育研究を通して高潔な人格と豊かな思想感情を培い、社会福祉の理論と技術を体得した専門家を養成し、社会福祉の増進に直接寄与することを目指します。",
+      "philosophy": "『忘我友愛』『窮理窮行』『平和共生』を建学の精神とし、博愛に基づく社会貢献、理論と実践の統合、多文化共生を重視します。",
+      "sources": [
+        {"source_name":"日本社会事業大学 沿革・歴史","source_url":"https://www.jcsw.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本社会事業大学 教育目標・3つの方針","source_url":"https://www.jcsw.ac.jp/faculty/social_welfare/3policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000072": {
+      "founded_year": 1891,
+      "opened_year": 1949,
+      "founder": "日高藤吉郎",
+      "operator": "学校法人日本体育大学",
+      "university_goal": "体育・スポーツ・健康・教育・保健医療に関する専門的教育研究を通して、豊かな人間性と実践力を備え、スポーツと健康を通じて社会に貢献できる人材を育成します。",
+      "philosophy": "『體育富強之基』の精神を継承し、心身の健全な発達とスポーツ文化の発展を通して社会に貢献することを重視します。",
+      "sources": [
+        {"source_name":"日本体育大学 大学概要","source_url":"https://www.nittai.ac.jp/about/profile/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本体育大学 沿革","source_url":"https://www.nittai.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000077": {
+      "founded_year": 1922,
+      "opened_year": 1949,
+      "founder": "根津嘉一郎",
+      "operator": "学校法人根津育英会武蔵学園",
+      "university_goal": "リベラルアーツ＆サイエンスの理念に基づき、広範な総合知と専門知、他者と協働する力・実践力を備え、自ら調べ自ら考え、世界で活躍できる人材を育成します。",
+      "philosophy": "『東西文化融合のわが民族理想を遂行し得べき人物』『世界に雄飛するにたえる人物』『自ら調べ自ら考える力ある人物』という建学の三理想を教育の原点とします。",
+      "sources": [
+        {"source_name":"武蔵大学 建学の理念と教育の基本目標","source_url":"https://www.musashi.ac.jp/about/philosophy.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000078": {
+      "founded_year": 1929,
+      "opened_year": 1949,
+      "founder": "武蔵高等工科学校の創設に参加した学生・支援者（設立母体）",
+      "operator": "学校法人五島育英会",
+      "university_goal": "幅広い視野と専門的学識を備え、教育研究を通じて持続可能な社会発展に寄与できる人材を育成し、そのための学術研究を推進することを目指します。",
+      "philosophy": "学生たちが工業教育の理想を求めて掲げた『公正』『自由』『自治』を建学の精神とし、独立自主と実践的な学びを重視します。",
+      "sources": [
+        {"source_name":"東京都市大学 創立90周年 HISTORY","source_url":"https://90th.tcu.ac.jp/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京都市大学 建学の精神・理念・目的","source_url":"https://www.se.tcu.ac.jp/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

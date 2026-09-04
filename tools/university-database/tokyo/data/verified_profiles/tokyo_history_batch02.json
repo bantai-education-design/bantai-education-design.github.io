@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 02",
+  "records": {
+    "u000018": {
+      "founded_year": 1926,
+      "opened_year": 1992,
+      "founder": "宇田尚",
+      "operator": "学校法人東洋学園",
+      "university_goal": "建学の精神「自彊不息」を現代の教育に生かし、自ら学び成長を続けながら、自他を尊重し、社会と世界の課題に向き合う人材の育成を目指しています。",
+      "philosophy": "建学の精神は「自彊不息（じきょうやまず）」。自ら努力を続け、学びと成長を止めず、社会をより良く変えていく人間になってほしいという願いを受け継いでいます。",
+      "sources": [
+        {"source_name":"東洋学園大学 創立100周年 建学の精神・教育理念","source_url":"https://www.tyg.jp/100th/philosophy/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東洋学園大学 創立100周年 東洋学園の100年","source_url":"https://www.tyg.jp/100th/history/chronology.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東洋学園大学 通史 第1章 創立者宇田尚","source_url":"https://www.tyg.jp/100th/history/general_history_01.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000019": {
+      "founded_year": 1987,
+      "opened_year": 1987,
+      "founder": "冲永荘一",
+      "operator": "学校法人帝京平成大学",
+      "university_goal": "建学の精神に基づき、幅広い教養と専門分野の実践能力、学際的な問題解決能力と創造性を備え、人類の幸福と社会の発展に貢献できる人材を育成することを目指しています。",
+      "philosophy": "実学の精神を基盤に、幅広い知識と専門分野の実践能力を身につけ、創造力と逞しさ、人間愛を備えた人材を養成することを建学の精神としています。",
+      "sources": [
+        {"source_name":"帝京平成大学 建学の精神・基本理念","source_url":"https://www.thu.ac.jp/aboutus/idea","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"帝京平成大学 沿革","source_url":"https://www.thu.ac.jp/aboutus/history","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"帝京平成大学 冲永記念ホール 創立者紹介","source_url":"https://hall.thu.ac.jp/hall.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"帝京平成大学ポリシー","source_url":"https://www.thu.ac.jp/aboutus/disclosure/policy","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000020": {
+      "founded_year": 1874,
+      "opened_year": 1949,
+      "founder": "ドーラ・E・スクーンメーカー、ジュリアス・ソーパー、ロバート・S・マクレイ",
+      "operator": "学校法人青山学院",
+      "university_goal": "キリスト教精神に基づいて人格を陶冶し、高度な教養と学術の理論・応用を教授研究し、社会への奉仕と文化の進展に寄与する人物を養成することを目的としています。",
+      "philosophy": "キリスト教信仰に基づき、神の前に真実に生き、真理を謙虚に追求し、愛と奉仕の精神をもって人と社会への責任を果たす人間の形成を教育の根幹としています。",
+      "sources": [
+        {"source_name":"青山学院大学 沿革","source_url":"https://www.aoyama.ac.jp/outline/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"青山学院大学 教育研究上の目的・3つのポリシー","source_url":"https://www.aoyama.ac.jp/outline/information/education/purpose.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"青山学院 創立150周年","source_url":"https://www.aoyamagakuin.jp/news/2024/1116_01","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000021": {
+      "founded_year": 1908,
+      "opened_year": 1949,
+      "founder": "大妻コタカ",
+      "operator": "学校法人大妻学院",
+      "university_goal": "高い知性と豊かな情操を備えた女性を育成し、総合的な人間教育と専門教育を通じて、自立し社会で指導的役割を果たせる人材を育てることを目標としています。",
+      "philosophy": "創立者・大妻コタカの女子教育への志を受け継ぎ、女性が自ら学び、社会に貢献できる力を身につけ自立することを重視しています。校訓「恥を知れ」は他人ではなく自分自身を律する教えとして位置づけられています。",
+      "sources": [
+        {"source_name":"大妻女子大学 創立者・沿革","source_url":"https://www.otsuma.ac.jp/about/basic/founder/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大妻女子大学 教育目標・目的等","source_url":"https://www.otsuma.ac.jp/about/basic/goals/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大妻女子大学 校訓・校章・校歌","source_url":"https://www.otsuma.ac.jp/about/basic/precepts/tradition/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

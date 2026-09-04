@@ -1,0 +1,70 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 07",
+  "records": {
+    "u000066": {
+      "founded_year": 1889,
+      "opened_year": 1949,
+      "founder": "山田顕義（日本大学が学祖と位置付け）",
+      "operator": "学校法人日本大学",
+      "university_goal": "教育理念『自主創造』のもと、自ら学び、自ら考え、自ら道をひらき、幅広い学問領域を生かして社会に貢献できる人材を育成することを目指します。",
+      "philosophy": "前身の日本法律学校以来、日本の法と社会に根ざした実学を重視し、現在は『自主創造』を教育理念として主体性・創造性・社会性を備えた人材育成を進めています。",
+      "sources": [
+        {"source_name":"日本大学 学祖 山田顕義","source_url":"https://www.nihon-u.ac.jp/history/founder/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本大学の歴史","source_url":"https://www.nihon-u.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本大学 目的および使命・教育理念","source_url":"https://www.nihon-u.ac.jp/history/historia/19.php","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000063": {
+      "founded_year": 1887,
+      "opened_year": 1949,
+      "founder": "井上円了",
+      "operator": "学校法人東洋大学",
+      "university_goal": "哲学を基礎に物事の本質を深く考え、科学する力と実践する力を養い、地球社会の多様な課題に主体的に取り組める人材を育成することを目指します。",
+      "philosophy": "建学の精神は『諸学の基礎は哲学にあり』『独立自活』『知徳兼全』。創立者井上円了の哲学教育の志を受け継ぎ、深く考え実践する力を重視します。",
+      "sources": [
+        {"source_name":"東洋大学 大学紹介","source_url":"https://www.toyo.ac.jp/about/introducing/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東洋大学 歴史・略年表","source_url":"https://www.toyo.ac.jp/about/introducing/chronology/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000075": {
+      "founded_year": 1880,
+      "opened_year": 1949,
+      "founder": "金丸鉄・伊藤修・薩埵正邦ら",
+      "operator": "学校法人法政大学",
+      "university_goal": "自由と進歩の精神を基盤に、民主主義と公共性を尊重し、自立して考え行動し、持続可能で公正な社会の形成に貢献できる人材を育成することを目指します。",
+      "philosophy": "東京法学社以来の実務教育とフランス法の自由の精神を受け継ぎ、『自由と進歩』を校風として、進取の気象と公共への貢献を重視します。",
+      "sources": [
+        {"source_name":"法政大学 建学の精神に見る歴史","source_url":"https://www.hosei.ac.jp/hosei/daigakugaiyo/daigaku_shi/rekishi/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"法政大学 略年表","source_url":"https://www.hosei.ac.jp/hosei/daigakugaiyo/daigaku_shi/nenpyo/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000080": {
+      "founded_year": 1881,
+      "opened_year": 1949,
+      "founder": "岸本辰雄・宮城浩蔵・矢代操",
+      "operator": "学校法人明治大学",
+      "university_goal": "『個』を確立し、自由と自治の精神を備え、多様な他者と協同しながら時代を切り拓き社会を変革できる人材を育成することを目指します。",
+      "philosophy": "建学の精神は『権利自由、独立自治』。自由な学問と自律した個人を尊重し、『前へ』の精神で社会の発展に寄与することを重視します。",
+      "sources": [
+        {"source_name":"明治大学 建学の精神・理念・使命","source_url":"https://www.meiji.ac.jp/koho/information/mission/mission.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明治大学の成り立ちと創立者たち","source_url":"https://www.meiji.ac.jp/koho/information/history/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明治大学史","source_url":"https://www.meiji.ac.jp/140th/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000049": {
+      "founded_year": 1885,
+      "opened_year": 1949,
+      "founder": "増島六一郎ら英吉利法律学校創立者18名",
+      "operator": "学校法人中央大学",
+      "university_goal": "実地応用を重視する伝統を、多様な学問研究と実践的教育を通して『行動する知性。Knowledge into Action』へつなげ、社会と未来を拓く人材を育成することを目指します。",
+      "philosophy": "建学の精神は『實地應用ノ素ヲ養フ』。具体的・実証的な知を実社会で生かす姿勢を重視し、自由を尊ぶ実学教育の伝統を継承しています。",
+      "sources": [
+        {"source_name":"中央大学 建学の精神","source_url":"https://www.chuo-u.ac.jp/aboutus/principle/key_message/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"中央大学 18人の創立者","source_url":"https://www.chuo-u.ac.jp/aboutus/history/history_03/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"中央大学のあゆみ","source_url":"https://www.chuo-u.ac.jp/aboutus/history/history_01/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 06",
+  "records": {
+    "u000056": {
+      "founded_year": 1918,
+      "opened_year": 1948,
+      "founder": "新渡戸稲造・安井てつら創立委員による設立",
+      "operator": "学校法人東京女子大学",
+      "university_goal": "キリスト教精神に基づくリベラル・アーツ教育を通して、専門性と幅広い教養を備え、自ら考え、他者と協働して社会に貢献できる女性を育成することを目指します。",
+      "philosophy": "キリスト教を建学の精神とし、人格教育とリベラル・アーツ教育を重視しながら、女性が主体的に生き社会へ貢献する力を育てます。",
+      "sources": [
+        {"source_name":"東京女子大学 大学の歴史・建学の精神","source_url":"https://www.twcu.ac.jp/main/about/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京女子大学 大学概要","source_url":"https://www.twcu.ac.jp/main/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000070": {
+      "founded_year": 1901,
+      "opened_year": 1948,
+      "founder": "成瀬仁蔵",
+      "operator": "学校法人日本女子大学",
+      "university_goal": "創立者成瀬仁蔵の女子教育理念を継承し、自ら学び考え、社会の課題に向き合い、新しい価値を創造して社会へ貢献する女性を育成することを目指します。",
+      "philosophy": "建学の精神として『信念徹底』『自発創生』『共同奉仕』を掲げ、人格教育と実践的な学びを通して女性の自立と社会貢献を重視します。",
+      "sources": [
+        {"source_name":"日本女子大学 建学の精神・沿革","source_url":"https://www.jwu.ac.jp/unv/about/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本女子大学 大学案内","source_url":"https://www.jwu.ac.jp/unv/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000101": {
+      "founded_year": 1900,
+      "opened_year": 1948,
+      "founder": "津田梅子",
+      "operator": "学校法人津田塾大学",
+      "university_goal": "高度な専門性と幅広い教養、国際性を備え、主体的に社会を切り拓き、よりよい社会の形成に貢献できる女性を育成することを目指します。",
+      "philosophy": "創立者津田梅子の女子高等教育への志を継承し、少人数教育と実践的な学びを通して、自立して社会へ貢献する女性の育成を重視します。",
+      "sources": [
+        {"source_name":"津田塾大学 歴史・津田梅子","source_url":"https://www.tsuda.ac.jp/aboutus/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"津田塾大学 大学概要","source_url":"https://www.tsuda.ac.jp/aboutus/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000052": {
+      "founded_year": 1881,
+      "opened_year": 1949,
+      "founder": "渡邉辰五郎",
+      "operator": "学校法人渡辺学園",
+      "university_goal": "生活に根ざした専門教育と実践を通して、主体的に学び、人々の生活と社会の向上に貢献できる人材を育成することを目指します。",
+      "philosophy": "創立者渡邉辰五郎の『自主自律』の精神と生活に密着した教育の伝統を受け継ぎ、専門性と実践力を備えた人材育成を重視します。",
+      "sources": [
+        {"source_name":"東京家政大学 沿革","source_url":"https://www.tokyo-kasei.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京家政大学 建学の精神・教育理念","source_url":"https://www.tokyo-kasei.ac.jp/about/idea/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000057": {
+      "founded_year": 1900,
+      "opened_year": 1950,
+      "founder": "吉岡彌生",
+      "operator": "学校法人東京女子医科大学",
+      "university_goal": "医学・医療の高度な知識と技術、豊かな人間性を備え、患者中心の医療と医学の発展に貢献する女性医療人を育成することを目指します。",
+      "philosophy": "創立者吉岡彌生の女性医師養成への志を継承し、『至誠と愛』の精神を基盤に、患者への誠実さと慈愛を備えた医療人教育を重視します。",
+      "sources": [
+        {"source_name":"東京女子医科大学 沿革","source_url":"https://www.twmu.ac.jp/univ/about/history.php","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京女子医科大学 建学の精神・理念","source_url":"https://www.twmu.ac.jp/univ/about/idea.php","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
