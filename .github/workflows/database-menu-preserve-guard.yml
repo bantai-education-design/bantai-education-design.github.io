@@ -88,9 +88,9 @@ jobs:
             await route.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
             await route.locator('.hot-university-btn').click();
             await route.waitForURL('**/tools/university-database/');
-            const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-register/"]').first();
+            const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-submit/"]').first();
             await photoEntry.waitFor({state:'visible'});
-            assert.ok((await photoEntry.innerText()).includes('大学写真クイック登録'),'university hub must expose photo register menu');
+            assert.ok((await photoEntry.innerText()).includes('大学写真を送る'),'university hub must expose simple visitor photo submission');
             const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
             await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
