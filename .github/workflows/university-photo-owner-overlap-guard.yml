@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
-      - 'api/owner-photo-publish.js'
+      - 'api/publish.js'
       - 'package.json'
       - 'package-lock.json'
       - 'vercel.json'
@@ -13,7 +13,7 @@ on:
     branches: [main]
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
-      - 'api/owner-photo-publish.js'
+      - 'api/publish.js'
       - 'package.json'
       - 'package-lock.json'
       - 'vercel.json'
@@ -37,7 +37,7 @@ jobs:
           const owner=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-register.js','utf8');
           const engine=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-set-export.js','utf8');
           const client=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-client.js','utf8');
-          const api=fs.readFileSync('api/owner-photo-publish.js','utf8');
+          const api=fs.readFileSync('api/publish.js','utf8');
           const cfg=JSON.parse(fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-config.json','utf8'));
           assert.ok(loader.includes('owner-publish-client.js'),'owner publish client must load in owner mode');
           assert.ok(owner.includes('この内容で掲載する'),'final owner action must be publish');

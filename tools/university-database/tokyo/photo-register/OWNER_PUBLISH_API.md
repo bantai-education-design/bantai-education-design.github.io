@@ -1,6 +1,6 @@
 # 本人写真掲載 API（Vercel）
 
-`api/owner-photo-publish.js` は GitHub Pages とは別の Vercel Project にデプロイする。ブラウザは公開鍵や GitHub token を持たず、API は main を直接変更しない。検証後に `owner-photo/<大学ID>-<request-id>` ブランチと Draft PR だけを作る。
+`api/publish.js` は GitHub Pages とは別の Vercel Project にデプロイする。ブラウザは公開鍵や GitHub token を持たず、API は main を直接変更しない。検証後に `owner-photo/<大学ID>-<request-id>` ブランチと Draft PR だけを作る。
 
 ## 必須環境変数
 
