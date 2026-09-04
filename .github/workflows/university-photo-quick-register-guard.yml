@@ -69,8 +69,8 @@ jobs:
           assert.ok(overlay.includes('window.__universityOwnerPhotos.set(id,record)'),'owner photo must persist independently of async image reloads');
           assert.ok(detail.includes('window.__universityOwnerPhotos?.get(row.id)'),'detail must prioritize persistent owner photo');
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
-          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/\?v=\d{8}-\d{4}"/,'gateway must expose versioned quick register entrance');
-          assert.ok(gateway.includes('大学写真クイック登録'),'gateway entrance label required');
+          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-submit\/\?v=\d{8}-\d{4}"/,'gateway must expose versioned simple submission entrance');
+          assert.ok(gateway.includes('大学写真を送る'),'gateway submission label required');
           console.log('batch quick register architecture, assignment, corrections and cache busting validated');
           NODE
       - name: Install Playwright Chromium
@@ -91,9 +91,9 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const gateway=await browser.newPage({viewport:{width:1366,height:800}});
             await gateway.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            const entrance=gateway.locator('a[href^="/tools/university-database/tokyo/photo-register/"]');
-            assert.equal(await entrance.count(),1,'quick register entrance on database gateway');
-            assert.ok((await entrance.innerText()).includes('大学写真クイック登録'));
+            const entrance=gateway.locator('a[href^="/tools/university-database/tokyo/photo-submit/"]');
+            assert.equal(await entrance.count(),1,'simple submission entrance on database gateway');
+            assert.ok((await entrance.innerText()).includes('大学写真を送る'));
             assert.match(await entrance.getAttribute('href'),/\?v=\d{8}-\d{4}$/,'gateway entrance must force fresh page');
 
             const page=await browser.newPage({viewport:{width:1280,height:900},acceptDownloads:true});

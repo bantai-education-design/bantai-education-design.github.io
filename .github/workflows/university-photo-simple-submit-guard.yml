@@ -3,7 +3,10 @@ name: University photo simple submit guard
 on:
   pull_request:
     paths:
+      - 'tools/university-database/index.html'
       - 'tools/university-database/tokyo/photo-submit/**'
+      - 'tools/university-database/tokyo/photo-admin/index.html'
+      - 'tools/university-database/tokyo/photo-admin/README.md'
       - 'tools/university-database/tokyo/assets/photo-register-entry.js'
       - 'tools/university-database/tokyo/assets/detail-photo-submit-entry.js'
       - 'tools/university-database/tokyo/detail.html'
@@ -32,6 +35,7 @@ jobs:
           js = (root / 'photo-submit.js').read_text(encoding='utf-8')
           cfg = json.loads((root / 'receiver-config.json').read_text(encoding='utf-8'))
           spec = (root / 'JOTFORM_RECEIVER_SPEC.md').read_text(encoding='utf-8')
+          hub_html = Path('tools/university-database/index.html').read_text(encoding='utf-8')
           top_entry = Path('tools/university-database/tokyo/assets/photo-register-entry.js').read_text(encoding='utf-8')
           detail_entry = Path('tools/university-database/tokyo/assets/detail-photo-submit-entry.js').read_text(encoding='utf-8')
           detail_html = Path('tools/university-database/tokyo/detail.html').read_text(encoding='utf-8')
@@ -40,7 +44,7 @@ jobs:
           admin_cfg = json.loads(Path('admin/photo-review-config.json').read_text(encoding='utf-8'))
           bundle = '\n'.join([
               html, js, json.dumps(cfg, ensure_ascii=False), spec,
-              top_entry, detail_entry, detail_html,
+              hub_html, top_entry, detail_entry, detail_html,
               admin_html, admin_js, json.dumps(admin_cfg, ensure_ascii=False)
           ])
 
@@ -69,6 +73,9 @@ jobs:
           assert 'config.enabled===true' in js
           assert 'manual-university' in html, 'generic Tokyo DB entry must allow one university-name input'
           assert 'この大学へ写真を送る' in html
+          assert '/tools/university-database/tokyo/photo-submit/' in hub_html
+          assert '/tools/university-database/tokyo/photo-register/' not in hub_html
+          assert '補正・掲載写真の選択・大学DBへの登録はBan.Tai管理者が行います' in hub_html
           assert '/tools/university-database/tokyo/photo-submit/' in top_entry
           assert '大学写真を投稿' in top_entry
           assert 'detail-photo-submit-entry.js' in detail_html
