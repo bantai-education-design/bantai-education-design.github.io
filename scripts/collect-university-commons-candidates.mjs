@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 
+// Re-run after PR #250 to isolate the remaining Tokyo universities without verified real photos.
 const locationsPath='tools/university-database/tokyo/data/tokyo_locations.json';
 const imagesPath='tools/university-database/tokyo/data/university-images.json';
 const outPath=process.argv[2]||'tmp/university-commons-candidates.json';
@@ -32,7 +33,7 @@ function scoreCandidate(university,page,meta){
 async function fetchCommons(url){
   for(let attempt=0;attempt<5;attempt++){
     const response=await fetch(url,{headers:{
-      'User-Agent':'BanTaiUniversityPhotoCollector/1.1 (education database; rights metadata audit)',
+      'User-Agent':'BanTaiUniversityPhotoCollector/1.2 (education database; rights metadata audit)',
       'Accept':'application/json'
     }});
     if(response.ok)return response;
