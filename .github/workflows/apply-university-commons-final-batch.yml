@@ -15,7 +15,7 @@ permissions:
 jobs:
   apply:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -52,8 +52,50 @@ jobs:
           base.schema_version=Math.max(Number(base.schema_version)||0,4);
           fs.writeFileSync(path,JSON.stringify(base,null,2)+'\n');
           const verified=Object.values(base.images).filter(x=>x?.rights_status==='verified').length;
-          assert.ok(verified>=141,`verified real-photo coverage must reach at least 141, got ${verified}`);
+          assert.equal(verified,141,`verified real-photo coverage must be exactly 141, got ${verified}`);
           console.log(`merged=${ids.length} verified_real=${verified} unresolved=${Object.keys(batch.unresolved||{}).length}`);
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-site.log 2>&1 &
+          sleep 2
+      - name: Verify 141 list photos, seven new records, detail and mobile
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:1366,height:950}});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
+            assert.equal(await page.locator('.real-university-image').count(),141,'141 real university photo cards must render');
+            for(const id of ['u000087','u000091','u000092','u000105','u000124','u000131','u000134']){
+              const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
+              assert.equal(await visual.count(),1,`${id}: new real photo must render`);
+              const source=visual.locator('.image-source-link');
+              assert.equal(await source.count(),1,`${id}: source link must render`);
+              assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
+            }
+            const asiaSrc=await page.locator('.tokyo-card[data-id="u000094"] .university-card-image').getAttribute('src');
+            assert.equal(asiaSrc,'assets/card-images/asia-university-bantai.jpg','Owner photo must remain highest priority on list');
+
+            const detail=await browser.newPage({viewport:{width:1366,height:950}});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000124',{waitUntil:'networkidle'});
+            await detail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='registry',{timeout:15000});
+            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Canonical real photo must render on detail page');
+            assert.ok((await detail.locator('.detail-owner-photo-main').getAttribute('src'))?.startsWith('https://upload.wikimedia.org/'),'Detail photo must use Wikimedia media');
+            assert.ok((await detail.locator('.detail-photo-source-link').getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),'Detail must expose Commons source link');
+
+            await page.setViewportSize({width:375,height:900});
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
+            await browser.close();
+          })().catch(err=>{console.error(err);process.exit(1)});
           NODE
       - name: Commit canonical registry
         run: |
