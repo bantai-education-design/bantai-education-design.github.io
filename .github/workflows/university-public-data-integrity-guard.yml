@@ -1,0 +1,117 @@
+name: University public data integrity guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
+      - 'tools/university-database/tokyo/data/tokyo_core_*.json'
+      - 'tools/university-database/tokyo/data/source-sync-manifest.json'
+      - '.github/workflows/university-public-data-integrity-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/tokyo/data/universities_tokyo_all.generated.json'
+      - 'tools/university-database/tokyo/data/tokyo_core_*.json'
+      - 'tools/university-database/tokyo/data/source-sync-manifest.json'
+      - '.github/workflows/university-public-data-integrity-guard.yml'
+
+jobs:
+  public-data-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source manifest and public core
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const crypto = require('node:crypto');
+          const assert = require('node:assert/strict');
+
+          const root = 'tools/university-database/tokyo';
+          const dataRoot = `${root}/data`;
+          const manifestPath = `${dataRoot}/source-sync-manifest.json`;
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+
+          assert.equal(manifest.schema, 'university-source-sync-v2');
+          assert.equal(manifest.source_repository, 'bantai-education-design/daigaku_DB');
+          assert.equal(manifest.source_ref, 'main');
+          assert.match(manifest.source_commit, /^[0-9a-f]{40}$/);
+          assert.equal(manifest.public_repository, 'bantai-education-design/bantai-education-design.github.io');
+          assert.equal(manifest.public_root, root);
+          assert.equal(manifest.authoritative_source, 'data/universities_tokyo_all.generated.json');
+          assert.equal(manifest.generated_export, 'data/public_export');
+          assert.equal(manifest.expected_university_count, 144);
+          assert.deepEqual(manifest.expected_establishment_counts, {
+            national: 11,
+            public: 2,
+            private: 131
+          });
+          assert.equal(manifest.consumer?.merge_key, 'id');
+          assert.equal(manifest.consumer?.runtime, 'assets/tokyo.js');
+
+          const expectedShardPaths = Array.from(
+            {length: 12},
+            (_, index) => `data/tokyo_core_${String(index + 1).padStart(2, '0')}.json`
+          );
+          assert.deepEqual(manifest.consumer?.core_shards, expectedShardPaths);
+          assert.equal(manifest.source_core_shards?.length, 12);
+
+          const gitBlobSha = bytes => crypto
+            .createHash('sha1')
+            .update(Buffer.from(`blob ${bytes.length}\0`))
+            .update(bytes)
+            .digest('hex');
+
+          const rows = [];
+          expectedShardPaths.forEach((relativePath, index) => {
+            const fullPath = `${root}/${relativePath}`;
+            const bytes = fs.readFileSync(fullPath);
+            const shard = JSON.parse(bytes.toString('utf8'));
+            const sourceEntry = manifest.source_core_shards[index];
+
+            assert.equal(sourceEntry.file, relativePath.split('/').at(-1));
+            assert.equal(sourceEntry.records, 12, `${relativePath}: manifest record count`);
+            assert.equal(shard.length, sourceEntry.records, `${relativePath}: actual record count`);
+            assert.equal(gitBlobSha(bytes), sourceEntry.git_blob_sha, `${relativePath}: blob SHA`);
+            rows.push(...shard);
+          });
+
+          assert.equal(rows.length, manifest.expected_university_count);
+          const ids = rows.map(row => row.id);
+          assert.equal(new Set(ids).size, ids.length, 'Core university IDs must be unique');
+
+          const basePath = `${root}/${manifest.consumer.base_index}`;
+          const baseRows = JSON.parse(fs.readFileSync(basePath, 'utf8'));
+          const baseIds = baseRows.map(row => row.id);
+          assert.equal(baseRows.length, manifest.expected_university_count);
+          assert.equal(new Set(baseIds).size, baseIds.length, 'Base university IDs must be unique');
+          assert.deepEqual([...ids].sort(), [...baseIds].sort(), 'Core IDs must equal base index IDs');
+
+          const actualCounts = {national: 0, public: 0, private: 0};
+          rows.forEach(row => {
+            assert.ok(row.id && row.name, 'Every core row needs an ID and name');
+            assert.ok(Object.hasOwn(actualCounts, row.establishment_type), `${row.id}: establishment type`);
+            actualCounts[row.establishment_type] += 1;
+            assert.equal(row.prefecture, '東京都', `${row.id}: prefecture`);
+            assert.ok(row.municipality, `${row.id}: municipality`);
+            assert.ok(row.headquarters?.address, `${row.id}: headquarters address`);
+            assert.match(row.headquarters?.postal_code || '', /^\d{3}-\d{4}$/, `${row.id}: postal code`);
+            assert.match(row.official_url || '', /^https:\/\//, `${row.id}: official URL`);
+            assert.ok(Number.isInteger(row.student_counts?.total), `${row.id}: total student count`);
+            assert.match(row.student_counts?.as_of || '', /^\d{4}-\d{2}-\d{2}$/, `${row.id}: student count date`);
+            assert.ok(
+              row.sources?.some(source => source.role === 'primary' && /^https:\/\//.test(source.source_url || '')),
+              `${row.id}: primary source`
+            );
+          });
+          assert.deepEqual(actualCounts, manifest.expected_establishment_counts);
+
+          console.log(
+            `Validated ${rows.length} universities across 12 core shards: ` +
+            `national ${actualCounts.national}, public ${actualCounts.public}, private ${actualCounts.private}`
+          );
+          NODE
