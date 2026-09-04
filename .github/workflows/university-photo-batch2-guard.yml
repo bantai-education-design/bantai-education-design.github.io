@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate rights-verified real photos
+      - name: Validate 143 rights-verified real photos
         run: |
           node <<'NODE'
           const fs=require('node:fs');
@@ -38,10 +38,10 @@ jobs:
           const finalBatch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-final-20260904.json','utf8'));
           const records=batch.records||{};
           const finalRecords=finalBatch.records||{};
-          const finalCount=Object.keys(finalRecords).length;
           assert.equal(Object.keys(records).length,80,'Approved Commons batch must contain 80 universities');
-          assert.ok([7,9].includes(finalCount),`Final reviewed Commons batch must contain 7 or 9 universities during migration, got ${finalCount}`);
-          assert.equal(Object.keys(finalBatch.unresolved||{}).length,finalCount===9?1:3,'Final unresolved count must track reviewed expansion');
+          assert.equal(Object.keys(finalRecords).length,9,'Final reviewed Commons batch must contain exactly 9 universities');
+          assert.equal(Object.keys(finalBatch.unresolved||{}).length,1,'Final batch must document exactly one unresolved university');
+          assert.ok(finalBatch.unresolved?.u000123,'LEC graduate school must be the single unresolved university');
           for(const [id,row] of Object.entries({...records,...finalRecords})){
             const image=data.images?.[id];
             assert.ok(image,`${id}: canonical image record required`);
@@ -51,8 +51,7 @@ jobs:
             assert.equal(image.license,row.license,`${id}: batch license must be canonical`);
           }
           const verified=Object.values(data.images||{}).filter(x=>x?.rights_status==='verified');
-          const expectedVerified=finalCount===9?143:141;
-          assert.equal(verified.length,expectedVerified,`Exactly ${expectedVerified} university main photos should be rights-verified`);
+          assert.equal(verified.length,143,'Exactly 143 university main photos should be rights-verified');
           for(const image of verified){
             assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${image.university_id}: Commons file page`);
             assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${image.university_id}: Wikimedia original media URL`);
@@ -65,7 +64,7 @@ jobs:
           const owner=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/user-photo-overrides.json','utf8'));
           assert.equal(owner.records?.u000094?.rights_status,'verified','Asia University owner photo must remain verified');
           assert.match(owner.records?.u000094?.image_url||'',/^assets\/card-images\//,'Owner photo must remain local and independent from Commons registry');
-          console.log(`verified real university photos ${expectedVerified}/144; owner override preserved; unresolved ${Object.keys(finalBatch.unresolved||{}).length}`);
+          console.log('verified real university photos 143/144; owner override preserved; unresolved u000123 only');
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -84,13 +83,13 @@ jobs:
           (async()=>{
             const finalBatch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-final-20260904.json','utf8'));
             const finalIds=Object.keys(finalBatch.records||{});
-            const expectedCount=finalIds.length===9?143:141;
+            assert.equal(finalIds.length,9,'nine reviewed final IDs required');
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
-            assert.equal(await page.locator('.real-university-image').count(),expectedCount,`${expectedCount} real university photo cards must render`);
+            assert.equal(await page.locator('.real-university-image').count(),143,'143 real university photo cards must render');
             for(const id of ['u000001','u000003','u000009','u000040','u000109','u000137','u000144',...finalIds]){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: real photo visual`);
@@ -98,13 +97,14 @@ jobs:
               assert.equal(await source.count(),1,`${id}: visible image source link`);
               assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
             }
+            assert.equal(await page.locator('.tokyo-card[data-id="u000123"] .real-university-image').count(),0,'LEC must remain unresolved rather than show an unverified photo');
             const asiaSrc=await page.locator('.tokyo-card[data-id="u000094"] .university-card-image').getAttribute('src');
             assert.equal(asiaSrc,'assets/card-images/asia-university-bantai.jpg','Owner photo must override canonical Commons photo on list');
 
             const detail=await browser.newPage({viewport:{width:1366,height:950}});
-            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000124',{waitUntil:'networkidle'});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000090',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='registry',{timeout:15000});
-            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Canonical real photo must render on detail page');
+            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Shizenkan canonical real photo must render on detail page');
             assert.ok((await detail.locator('.detail-owner-photo-main').getAttribute('src'))?.startsWith('https://upload.wikimedia.org/'),'Detail main photo must use Wikimedia media');
             assert.ok((await detail.locator('.detail-photo-source-link').getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),'Detail must expose Commons source/license link');
 
