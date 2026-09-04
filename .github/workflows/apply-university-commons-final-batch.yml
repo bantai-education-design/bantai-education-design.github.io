@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Merge reviewed records into canonical registry
+      - name: Merge nine reviewed records into canonical registry
         run: |
           node <<'NODE'
           const fs=require('node:fs');
@@ -33,13 +33,11 @@ jobs:
           const base=JSON.parse(fs.readFileSync(path,'utf8'));
           const batch=JSON.parse(fs.readFileSync(batchPath,'utf8'));
           const records=batch.records||{};
-          const required=['u000087','u000091','u000092','u000105','u000124','u000131','u000134'];
-          const expansion=['u000069','u000090'];
+          const expected=['u000069','u000087','u000090','u000091','u000092','u000105','u000124','u000131','u000134'];
           const ids=Object.keys(records).sort();
-          assert.ok(ids.length===7||ids.length===9,`final batch must contain 7 or 9 reviewed records during migration, got ${ids.length}`);
-          for(const id of required)assert.ok(records[id],`${id}: required reviewed record missing`);
-          if(ids.length===9)for(const id of expansion)assert.ok(records[id],`${id}: expansion record missing`);
-          assert.equal(Object.keys(batch.unresolved||{}).length,ids.length===9?1:3,'unresolved count must track reviewed expansion');
+          assert.deepEqual(ids,[...expected].sort(),'final batch university IDs must match the reviewed nine');
+          assert.equal(Object.keys(batch.unresolved||{}).length,1,'exactly one unresolved university must remain');
+          assert.ok(batch.unresolved?.u000123,'LEC graduate school must be the single unresolved university');
           for(const [id,row] of Object.entries(records)){
             assert.equal(row.university_id,id,`${id}: university_id mismatch`);
             assert.equal(row.rights_status,'verified',`${id}: rights_status must be verified`);
@@ -55,9 +53,8 @@ jobs:
           base.schema_version=Math.max(Number(base.schema_version)||0,4);
           fs.writeFileSync(path,JSON.stringify(base,null,2)+'\n');
           const verified=Object.values(base.images).filter(x=>x?.rights_status==='verified').length;
-          const expectedVerified=ids.length===9?143:141;
-          assert.equal(verified,expectedVerified,`verified real-photo coverage must be ${expectedVerified}, got ${verified}`);
-          console.log(`merged=${ids.length} verified_real=${verified} unresolved=${Object.keys(batch.unresolved||{}).length}`);
+          assert.equal(verified,143,`verified real-photo coverage must be exactly 143, got ${verified}`);
+          console.log(`merged=${ids.length} verified_real=${verified} unresolved=1`);
           NODE
       - name: Install Playwright Chromium
         run: |
@@ -67,7 +64,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/university-photo-site.log 2>&1 &
           sleep 2
-      - name: Verify reviewed list photos, detail and mobile
+      - name: Verify 143 list photos, reviewed records, detail and mobile
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -76,13 +73,13 @@ jobs:
           (async()=>{
             const batch=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/university-images-commons-final-20260904.json','utf8'));
             const ids=Object.keys(batch.records||{});
-            const expectedCount=ids.length===9?143:141;
+            assert.equal(ids.length,9,'nine reviewed final records required');
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
-            assert.equal(await page.locator('.real-university-image').count(),expectedCount,`${expectedCount} real university photo cards must render`);
+            assert.equal(await page.locator('.real-university-image').count(),143,'143 real university photo cards must render');
             for(const id of ids){
               const visual=page.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: reviewed real photo must render`);
@@ -90,13 +87,14 @@ jobs:
               assert.equal(await source.count(),1,`${id}: source link must render`);
               assert.ok((await source.getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),`${id}: Commons source href`);
             }
+            assert.equal(await page.locator('.tokyo-card[data-id="u000123"] .real-university-image').count(),0,'LEC must remain without a verified real photo');
             const asiaSrc=await page.locator('.tokyo-card[data-id="u000094"] .university-card-image').getAttribute('src');
             assert.equal(asiaSrc,'assets/card-images/asia-university-bantai.jpg','Owner photo must remain highest priority on list');
 
             const detail=await browser.newPage({viewport:{width:1366,height:950}});
-            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000124',{waitUntil:'networkidle'});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000090',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.documentElement.dataset.detailPhotoSource==='registry',{timeout:15000});
-            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Canonical real photo must render on detail page');
+            assert.equal(await detail.locator('.detail-owner-photo-gallery').count(),1,'Shizenkan canonical real photo must render on detail page');
             assert.ok((await detail.locator('.detail-owner-photo-main').getAttribute('src'))?.startsWith('https://upload.wikimedia.org/'),'Detail photo must use Wikimedia media');
             assert.ok((await detail.locator('.detail-photo-source-link').getAttribute('href'))?.startsWith('https://commons.wikimedia.org/wiki/File:'),'Detail must expose Commons source link');
 
@@ -108,7 +106,7 @@ jobs:
       - name: Commit canonical registry
         run: |
           if git diff --quiet -- tools/university-database/tokyo/data/university-images.json; then
-            echo 'Canonical registry already contains the reviewed final batch.'
+            echo 'Canonical registry already contains all nine reviewed records.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
