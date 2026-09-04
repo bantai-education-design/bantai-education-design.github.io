@@ -26,25 +26,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Collect Wikimedia Commons candidates
+      - name: Collect Wikimedia Commons candidates for the last unresolved university
         run: node scripts/collect-university-commons-candidates.mjs tmp/university-commons-candidates.json
-      - name: Validate report
+      - name: Validate final candidate report
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
           const r=JSON.parse(fs.readFileSync('tmp/university-commons-candidates.json','utf8'));
           assert.equal(r.coverage.total,144,'Tokyo DB must contain 144 universities');
-          assert.ok([141,143].includes(r.coverage.verified_real),`migration coverage must be 141 or 143, got ${r.coverage.verified_real}`);
-          assert.equal(r.coverage.target_count,r.coverage.verified_real===143?1:3,'unresolved target count must track coverage');
+          assert.equal(r.coverage.verified_real,143,'Final branch must contain exactly 143 verified real photos');
+          assert.equal(r.coverage.target_count,1,'Only one unresolved university should remain');
           assert.equal(r.policy.search_version,3,'Targeted collector version 3 required');
+          assert.equal(r.universities.length,1,'Report must contain only the final unresolved university');
+          assert.equal(r.universities[0].university_id,'u000123','LEC graduate school must be the final unresolved university');
           for(const u of r.universities)for(const c of u.candidates){
             assert.ok(c.file_page.startsWith('https://commons.wikimedia.org/wiki/File:'),'Commons file page required');
             assert.ok(c.image_url.startsWith('https://upload.wikimedia.org/'),'Wikimedia original URL required');
             assert.equal(c.license_ok,true,'only reusable-license candidates are allowed');
           }
           console.log(JSON.stringify(r.coverage));
-          console.log('universities_with_candidates='+r.universities.filter(x=>x.candidates.length).length);
+          console.log(`final_unresolved=${r.universities[0].university_id} candidates=${r.universities[0].candidates.length}`);
           NODE
       - uses: actions/upload-artifact@v4
         with:
