@@ -7,6 +7,14 @@ on:
       - 'tools/university-database/tokyo/data/university-images.json'
       - 'tools/university-database/tokyo/data/tokyo_locations.json'
       - '.github/workflows/university-commons-photo-candidates.yml'
+  push:
+    branches:
+      - feature/fill-remaining-university-photos-20260904
+    paths:
+      - 'scripts/collect-university-commons-candidates.mjs'
+      - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/data/tokyo_locations.json'
+      - '.github/workflows/university-commons-photo-candidates.yml'
   workflow_dispatch:
 
 jobs:
@@ -27,8 +35,9 @@ jobs:
           const assert=require('node:assert/strict');
           const r=JSON.parse(fs.readFileSync('tmp/university-commons-candidates.json','utf8'));
           assert.equal(r.coverage.total,144,'Tokyo DB must contain 144 universities');
-          assert.ok(r.coverage.verified_real>=1,'existing verified real photos required');
-          assert.ok(r.coverage.target_count>0,'collector must have unresolved targets');
+          assert.equal(r.coverage.verified_real,141,'Current branch must contain 141 verified real photos');
+          assert.equal(r.coverage.target_count,3,'Only three unresolved universities should remain');
+          assert.equal(r.policy.search_version,3,'Targeted collector version 3 required');
           for(const u of r.universities)for(const c of u.candidates){
             assert.ok(c.file_page.startsWith('https://commons.wikimedia.org/wiki/File:'),'Commons file page required');
             assert.ok(c.image_url.startsWith('https://upload.wikimedia.org/'),'Wikimedia original URL required');
