@@ -69,8 +69,8 @@ jobs:
           assert.ok(overlay.includes('window.__universityOwnerPhotos.set(id,record)'),'owner photo must persist independently of async image reloads');
           assert.ok(detail.includes('window.__universityOwnerPhotos?.get(row.id)'),'detail must prioritize persistent owner photo');
           assert.ok(overlay.includes('state.images.set(id,record)'),'owner override must also feed shared state');
-          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-register\/\?v=\d{8}-\d{4}"/,'gateway must expose versioned quick register entrance');
-          assert.ok(gateway.includes('大学写真クイック登録'),'gateway entrance label required');
+          assert.match(gateway,/href="\/tools\/university-database\/tokyo\/photo-submit\/\?v=\d{8}-\d{4}"/,'gateway must expose versioned simple submission entrance');
+          assert.ok(gateway.includes('大学写真を送る'),'gateway submission label required');
           console.log('batch quick register architecture, assignment, corrections and cache busting validated');
           NODE
       - name: Install Playwright Chromium
