@@ -1,8 +1,23 @@
 {
   "schema_version": 1,
   "reviewed_at": "2026-09-04",
-  "validation_note": "141/144 real-photo coverage guard updated; seven reviewed records are canonical and three unresolved universities remain documented.",
+  "validation_note": "143/144 real-photo coverage prepared; nine reviewed records are canonical candidates and one unresolved university remains documented.",
   "records": {
+    "u000069": {
+      "university_id": "u000069",
+      "university_name": "日本社会事業大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Japan_College_of_Social_Work.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Japan_College_of_Social_Work.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "IZUMI SAKAI",
+      "license": "Copyrighted free use",
+      "license_url": "https://commons.wikimedia.org/wiki/Template:Copyrighted_free_use",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者IZUMI SAKAI、2009年10月18日の本人撮影、Copyrighted free use（目的を問わない利用・再配布・商用利用・改変を許可）を確認。大学公式沿革では1989年に清瀬市へ移転済みで、Commons側の説明も『日本社会事業大学』と明記されているため、大学固有の校舎実景として掲載する。",
+      "alt": "日本社会事業大学の校舎実景",
+      "reviewed_at": "2026-09-04",
+      "commons_title": "File:Japan College of Social Work.jpg"
+    },
     "u000087": {
       "university_id": "u000087",
       "university_name": "東京国際工科専門職大学",
@@ -17,6 +32,21 @@
       "alt": "東京国際工科専門職大学の東京キャンパスが入る総合校舎コクーンタワー",
       "reviewed_at": "2026-09-04",
       "commons_title": "File:Coccoon-Tower.jpg"
+    },
+    "u000090": {
+      "university_id": "u000090",
+      "university_name": "大学院大学至善館",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Nihonbashi_Takashimaya_Mitsui_Building.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nihonbashi_Takashimaya_Mitsui_Building.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "Beryllium Transistor",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで日本橋髙島屋三井ビルディングの実景、作者Beryllium Transistor、CC BY-SA 4.0を確認。大学公式情報で大学院大学至善館のキャンパスが東京都中央区日本橋2-5-1 日本橋髙島屋三井ビルディング17階に所在することを確認し、現キャンパス入居建物の実景写真として掲載する。",
+      "alt": "大学院大学至善館が入る日本橋髙島屋三井ビルディング",
+      "reviewed_at": "2026-09-04",
+      "commons_title": "File:Nihonbashi Takashimaya Mitsui Building.jpg"
     },
     "u000091": {
       "university_id": "u000091",
@@ -110,17 +140,9 @@
     }
   },
   "unresolved": {
-    "u000069": {
-      "university_name": "日本社会事業大学",
-      "reason": "再利用可能な候補は文京サテライトキャンパスのみ。大学本部・清瀬キャンパスのメイン写真としては適切でないため保留。"
-    },
-    "u000090": {
-      "university_name": "大学院大学至善館",
-      "reason": "第2段階のWikimedia Commons検索でも再利用条件を満たす大学・現キャンパス写真候補を取得できなかったため保留。"
-    },
     "u000123": {
       "university_name": "LEC東京リーガルマインド大学院大学",
-      "reason": "候補はLEC水道橋本校の総合受付写真で、現行の大学院キャンパス（Daiwa三崎町ビル7階）との一致を確認できないため不採用。"
+      "reason": "再探索でも再利用可能候補はLEC水道橋本校の総合受付写真のみ。現行の大学院キャンパス（東京都千代田区神田三崎町2-2-15 Daiwa三崎町ビル7階）との一致を確認できないため、誤掲載防止のため不採用。"
     }
   }
 }
