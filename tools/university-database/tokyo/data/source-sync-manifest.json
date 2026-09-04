@@ -1,14 +1,113 @@
 {
+  "schema": "university-source-sync-v2",
   "source_repository": "bantai-education-design/daigaku_DB",
   "source_ref": "main",
-  "source_files": {
-    "universities_tokyo_all.generated.json": "0697a15787566e6de0d971e2456415cebea360f0",
-    "faculties_tokyo_all.generated.json": "abdb2e66cf5f97edaaddb242619afc95558df89e",
-    "departments_tokyo_all.generated.json": "dfd04b0de04460055579a70310de0901a8ea6bfe",
-    "graduate_schools_tokyo_all.generated.json": "b2687bef9fb9cbd93b6d399c001a31690884be32",
-    "tokyo_dataset_summary.generated.json": "2184a2aa216a0d9ccf14bd0ec13533705ef66dee"
-  },
+  "source_commit": "1b9f7d69a7adc22dc4d31248d4bcef7448609292",
+  "generated_at": "2026-08-22T19:31:25+09:00",
+  "public_repository": "bantai-education-design/bantai-education-design.github.io",
+  "public_root": "tools/university-database/tokyo",
+  "authoritative_source": "data/universities_tokyo_all.generated.json",
+  "generated_export": "data/public_export",
   "expected_university_count": 144,
-  "sync_policy": "daigaku_DB is the source of truth. Public files must be exported from these verified generated files; browser-side reads from the private repository are prohibited.",
-  "recorded_at": "2026-08-16"
+  "expected_establishment_counts": {
+    "national": 11,
+    "public": 2,
+    "private": 131
+  },
+  "consumer": {
+    "base_index": "data/universities_tokyo_all.generated.json",
+    "core_shards": [
+      "data/tokyo_core_01.json",
+      "data/tokyo_core_02.json",
+      "data/tokyo_core_03.json",
+      "data/tokyo_core_04.json",
+      "data/tokyo_core_05.json",
+      "data/tokyo_core_06.json",
+      "data/tokyo_core_07.json",
+      "data/tokyo_core_08.json",
+      "data/tokyo_core_09.json",
+      "data/tokyo_core_10.json",
+      "data/tokyo_core_11.json",
+      "data/tokyo_core_12.json"
+    ],
+    "merge_key": "id",
+    "runtime": "assets/tokyo.js"
+  },
+  "source_core_shards": [
+    {
+      "file": "tokyo_core_01.json",
+      "git_blob_sha": "d827fb237815cd509bb5df33c1b6cd7ae939ce83",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_02.json",
+      "git_blob_sha": "ce52d0f744ea0742f34815da3c53af724f2156cf",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_03.json",
+      "git_blob_sha": "21572719c74a47bcf57be3527d059db3a1b49e5d",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_04.json",
+      "git_blob_sha": "d3d6eb2753b5968b95d4fa1fb889ccd8278e0d0e",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_05.json",
+      "git_blob_sha": "9dc7ec2144f17f8d9cdb6b0fb614070d04bf3bba",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_06.json",
+      "git_blob_sha": "fb263082c201a7d89ca3a069e3cd6bbc3d51b369",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_07.json",
+      "git_blob_sha": "ba277252e6ad9b0e1b690892dca8915e58f093c6",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_08.json",
+      "git_blob_sha": "a0db90bd814cd9894e46faa0b27c0a1d39bfda44",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_09.json",
+      "git_blob_sha": "064961516bca6f43f1e5c7d5db9887d1477fc89d",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_10.json",
+      "git_blob_sha": "7d17be3c54c72dd1e2b2d8984c585de0f2d21218",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_11.json",
+      "git_blob_sha": "05397d0ed5c4783bfe8da418a851e59803aaeaf6",
+      "records": 12
+    },
+    {
+      "file": "tokyo_core_12.json",
+      "git_blob_sha": "8a5ff1a7b152782e7e0b07c05ff7b51c39a57789",
+      "records": 12
+    }
+  ],
+  "invariants": [
+    "144 unique university ids",
+    "core shard ids equal base index ids",
+    "student_counts and as_of present for 144 universities",
+    "headquarters address present for 144 universities",
+    "official_url present for 144 universities",
+    "at least one primary source present for 144 universities"
+  ],
+  "excluded_from_production": [
+    "data/universities.json",
+    "data/prototype_universities.json",
+    "root index.html prototype"
+  ],
+  "sync_policy": "daigaku_DB is the source of truth. Generated public exports must not be hand-edited. Copy exports and update this manifest in the same pull request; browser-side reads from the private repository are prohibited.",
+  "recorded_at": "2026-09-04"
 }
