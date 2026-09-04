@@ -1,12 +1,11 @@
 import fs from 'node:fs/promises';
 
-// Re-run after PR #250 to isolate the remaining Tokyo universities without verified real photos.
+// PR #252: re-run only for universities that still lack a rights-verified real photo.
 const locationsPath='tools/university-database/tokyo/data/tokyo_locations.json';
 const imagesPath='tools/university-database/tokyo/data/university-images.json';
 const outPath=process.argv[2]||'tmp/university-commons-candidates.json';
 const locations=JSON.parse(await fs.readFile(locationsPath,'utf8'));
 const registry=JSON.parse(await fs.readFile(imagesPath,'utf8'));
-const current=registry.images||{};
 
 const acceptedLicense=/^(CC0|CC BY(?:-SA)?(?: |$)|Public domain|PD)/i;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
