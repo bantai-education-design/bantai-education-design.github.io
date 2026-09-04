@@ -1,0 +1,44 @@
+name: University Commons photo candidates
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/collect-university-commons-candidates.mjs'
+      - 'tools/university-database/tokyo/data/university-images.json'
+      - 'tools/university-database/tokyo/data/tokyo_locations.json'
+      - '.github/workflows/university-commons-photo-candidates.yml'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Collect Wikimedia Commons candidates
+        run: node scripts/collect-university-commons-candidates.mjs tmp/university-commons-candidates.json
+      - name: Validate report
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const r=JSON.parse(fs.readFileSync('tmp/university-commons-candidates.json','utf8'));
+          assert.equal(r.coverage.total,144,'Tokyo DB must contain 144 universities');
+          assert.ok(r.coverage.verified_real>=1,'existing verified real photos required');
+          assert.ok(r.coverage.target_count>0,'collector must have unresolved targets');
+          for(const u of r.universities)for(const c of u.candidates){
+            assert.ok(c.file_page.startsWith('https://commons.wikimedia.org/wiki/File:'),'Commons file page required');
+            assert.ok(c.image_url.startsWith('https://upload.wikimedia.org/'),'Wikimedia original URL required');
+            assert.equal(c.license_ok,true,'only reusable-license candidates are allowed');
+          }
+          console.log(JSON.stringify(r.coverage));
+          console.log('universities_with_candidates='+r.universities.filter(x=>x.candidates.length).length);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: university-commons-candidates
+          path: tmp/university-commons-candidates.json
+          retention-days: 7
