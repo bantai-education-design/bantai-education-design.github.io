@@ -22,7 +22,7 @@ function cors(req, res) {
   res.setHeader('Access-Control-Allow-Origin', origin);
   res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Owner-Publish-Key');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   return true;
 }
 
@@ -124,25 +124,76 @@ async function branchExists(branch) {
 }
 
 async function existingPull(branch) {
-  const pulls = await github(`/pulls?state=open&head=${encodeURIComponent(`${REPOSITORY.split('/')[0]}:${branch}`)}`);
+  const pulls = await github(`/pulls?state=all&head=${encodeURIComponent(`${REPOSITORY.split('/')[0]}:${branch}`)}`);
   return pulls[0] || null;
+}
+
+async function mergeSafety() {
+  try {
+    const protection = await github('/branches/main/protection');
+    const checks = protection.required_status_checks;
+    const names = [...(checks?.contexts || []), ...(checks?.checks || []).map(item => item.context)].filter(Boolean);
+    if (names.length) return { protected: true, requiredChecks: names };
+  } catch (error) {
+    if (error.status !== 404) throw error;
+  }
+  try {
+    const rules = await github('/rules/branches/main');
+    const rule = rules.find(item => item?.type === 'required_status_checks');
+    const checks = rule?.parameters?.required_status_checks || [];
+    const names = checks.map(item => item.context || item).filter(Boolean);
+    if (names.length) return { protected: true, requiredChecks: names };
+  } catch (error) {
+    if (error.status !== 404) throw error;
+  }
+  return { protected: false, requiredChecks: [] };
+}
+
+async function enableAutoMerge(pullId) {
+  const token = process.env.OWNER_PUBLISH_GITHUB_TOKEN;
+  const response = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: 'mutation($id:ID!){enablePullRequestAutoMerge(input:{pullRequestId:$id,mergeMethod:SQUASH}){pullRequest{autoMergeRequest{enabledAt}}}}', variables: { id: pullId } })
+  });
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok || body.errors?.length || !body.data?.enablePullRequestAutoMerge?.pullRequest?.autoMergeRequest) throw new Error(body.errors?.[0]?.message || 'GitHub auto-merge could not be enabled');
+}
+
+async function publicationStatus(branch, safety) {
+  const pull = await existingPull(branch);
+  if (!pull) return { publication_state: 'not_found', message: '掲載申請が見つかりません' };
+  if (pull.merged_at) return { publication_state: 'merged', pull_request_url: pull.html_url, pull_request_number: pull.number };
+  if (!safety.protected || !pull.auto_merge) return { publication_state: 'review_required', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '掲載申請を受け付けました。管理者確認待ちです。' };
+  const checks = await github(`/commits/${pull.head.sha}/check-runs?per_page=100`);
+  const relevant = (checks.check_runs || []).filter(item => safety.requiredChecks.includes(item.name));
+  if (relevant.some(item => ['FAILURE', 'CANCELLED', 'TIMED_OUT', 'ACTION_REQUIRED'].includes(item.conclusion))) return { publication_state: 'ci_failed', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIが失敗しました。公開DBは変更されていません。' };
+  return { publication_state: 'awaiting_merge', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIと安全なマージを待っています。' };
 }
 
 async function ownerPhotoPublish(req, res) {
   if (!cors(req, res)) return reply(res, 403, { ok: false, message: 'Origin is not permitted' });
   if (req.method === 'OPTIONS') return res.status(204).end();
-  if (req.method !== 'POST') return reply(res, 405, { ok: false, message: 'POST is required' });
+  if (!['POST', 'GET'].includes(req.method)) return reply(res, 405, { ok: false, message: 'POST or GET is required' });
   if (!sameSecret(req.headers['x-owner-publish-key'], process.env.OWNER_PUBLISH_KEY)) return reply(res, 401, { ok: false, message: 'Authorization failed' });
 
   try {
+    if (req.method === 'GET') {
+      const universityId = String(req.query?.university_id || '');
+      if (!/^u\d{6}$/.test(universityId)) throw new Error('University ID format is invalid');
+      const id = requestId(req.query?.request_id);
+      const safety = await mergeSafety();
+      return reply(res, 200, { ok: true, branch: `owner-photo/${universityId}-${id}`, ...(await publicationStatus(`owner-photo/${universityId}-${id}`, safety)) });
+    }
     const payload = req.body;
     if (!payload || payload.kind !== 'bantai_university_owner_publish' || payload.schema_version !== 1) throw new Error('Invalid publish payload');
     const universityId = String(payload.university_id || '');
     if (!/^u\d{6}$/.test(universityId)) throw new Error('University ID format is invalid');
     const id = requestId(payload.request_id);
     const branch = `owner-photo/${universityId}-${id}`;
+    const safety = await mergeSafety();
     const oldPr = await existingPull(branch);
-    if (oldPr) return reply(res, 200, { ok: true, duplicate: true, pull_request_url: oldPr.html_url, branch });
+    if (oldPr) return reply(res, 200, { ok: true, duplicate: true, branch, ...(await publicationStatus(branch, safety)) });
 
     const [universityFile, registryFile] = await Promise.all([mainFile(UNIVERSITY_PATH), mainFile(REGISTRY_PATH)]);
     const universities = parseJson(universityFile.text, 'University allowlist');
@@ -172,8 +223,14 @@ async function ownerPhotoPublish(req, res) {
     const commit = await github('/git/commits', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: `feat(owner-photo): update ${university.name} photo set`, tree: tree.sha, parents: [mainRef.object.sha] }) });
     if (await branchExists(branch)) throw new Error('A publish request with this ID is already being created');
     await github('/git/refs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: commit.sha }) });
-    const pull = await github('/pulls', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title: `Owner photo publish: ${university.name}`, head: branch, base: 'main', draft: true, body: `Automated owner-photo publication request.\n\n- University: ${university.name} (${universityId})\n- Photos: ${submittedRecord ? 1 + submittedRecord.gallery.length : 0}\n- Request ID: ${id}\n- No AI-generated image content.\n\nThis draft must remain unmerged until all required CI checks pass and a human reviews it.` }) });
-    return reply(res, 201, { ok: true, branch, pull_request_url: pull.html_url, pull_request_number: pull.number });
+    const pull = await github('/pulls', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title: `Owner photo publish: ${university.name}`, head: branch, base: 'main', draft: !safety.protected, body: `Automated owner-photo publication request.\n\n- University: ${university.name} (${universityId})\n- Photos: ${submittedRecord ? 1 + submittedRecord.gallery.length : 0}\n- Request ID: ${id}\n- No AI-generated image content.\n\nThe API enables auto-merge only when GitHub requires CI for main. Without that protection this remains a manager-review request.` }) });
+    if (!safety.protected) return reply(res, 201, { ok: true, branch, publication_state: 'review_required', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '掲載申請を受け付けました。管理者確認待ちです。' });
+    try {
+      await enableAutoMerge(pull.node_id);
+      return reply(res, 201, { ok: true, branch, publication_state: 'awaiting_merge', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIと安全なマージを待っています。' });
+    } catch (autoMergeError) {
+      return reply(res, 201, { ok: true, branch, publication_state: 'review_required', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '掲載申請を受け付けました。auto-mergeを有効にできないため、管理者確認待ちです。' });
+    }
   } catch (error) {
     console.error('owner photo publish failed', error);
     return reply(res, 400, { ok: false, message: error.message || 'Publish failed. The public database was not changed.' });

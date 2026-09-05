@@ -37,6 +37,23 @@ async function waitForPages(payload){
   }
   return false;
 }
+async function publicationStatus(cfg,payload,key){
+  const url=new URL(cfg.endpoint);
+  url.searchParams.set('university_id',payload.university_id);
+  url.searchParams.set('request_id',payload.request_id);
+  const response=await fetch(url,{headers:{'X-Owner-Publish-Key':key}});
+  const result=await response.json().catch(()=>({}));
+  if(!response.ok||result.ok!==true)throw new Error(result.message||`掲載状況を確認できません（${response.status}）`);
+  return result;
+}
+async function waitForMerge(cfg,payload,key){
+  for(let attempt=0;attempt<60;attempt++){
+    const result=await publicationStatus(cfg,payload,key);
+    if(result.publication_state==='merged'||result.publication_state==='review_required'||result.publication_state==='ci_failed')return result;
+    await sleep(2000);
+  }
+  return {publication_state:'awaiting_merge',message:'必須CIと安全なマージを待っています。'};
+}
 function ownerKey(){
   let key=sessionStorage.getItem('bantai_owner_publish_key')||'';
   if(!key)key=window.prompt('初回のみ：本人写真の掲載キーを入力してください。')||'';
@@ -61,7 +78,33 @@ async function publish(payload){
   const result=await response.json().catch(()=>({}));
   if(response.status===401)sessionStorage.removeItem('bantai_owner_publish_key');
   if(!response.ok||result.ok!==true)throw new Error(result.message||`掲載APIエラー（${response.status}）`);
-  setStatus('GitHubへの反映が完了しました。公開ページを更新しています…','deploying');
+  if(result.publication_state==='review_required'){
+    button.textContent='掲載申請済み';
+    setStatus(result.message||'掲載申請を受け付けました。管理者確認待ちです。','review-required');
+    document.documentElement.dataset.ownerPhotoSetExport='review-required';
+    return result;
+  }
+  setStatus('必須CIと安全なマージを確認しています…','awaiting-merge');
+  const merged=await waitForMerge(cfg,payload,key);
+  if(merged.publication_state==='ci_failed'){
+    button.textContent='掲載申請を再確認';
+    setStatus(merged.message,'ci-failed');
+    document.documentElement.dataset.ownerPhotoSetExport='ci-failed';
+    return merged;
+  }
+  if(merged.publication_state==='review_required'){
+    button.textContent='掲載申請済み';
+    setStatus(merged.message,'review-required');
+    document.documentElement.dataset.ownerPhotoSetExport='review-required';
+    return merged;
+  }
+  if(merged.publication_state!=='merged'){
+    button.textContent='掲載申請済み・CI待ち';
+    setStatus(merged.message,'awaiting-merge');
+    document.documentElement.dataset.ownerPhotoSetExport='awaiting-merge';
+    return merged;
+  }
+  setStatus('mainへのマージを確認しました。公開ページを更新しています…','deploying');
   const live=await waitForPages(payload);
   if(live){
     button.textContent='掲載完了';

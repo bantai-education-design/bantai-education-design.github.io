@@ -49,12 +49,17 @@ jobs:
           assert.ok(engine.includes('delete records[id]'),'removing all owner photos must remove the override record');
           assert.ok(engine.includes('blobToBase64'),'edited JPEGs must be transferable to the publish API');
           assert.ok(client.includes('waitForPages'),'client must verify GitHub Pages reflection');
+          assert.ok(client.includes('waitForMerge'),'client must wait for a merged PR before checking Pages');
+          assert.ok(client.includes("publication_state==='review_required'"),'client must report review-required requests accurately');
           assert.ok(api.includes('OWNER_PUBLISH_GITHUB_TOKEN'),'GitHub credential must be read only on the server');
           assert.ok(api.includes('universities_tokyo_all.generated.json'),'server must use a university ID allowlist');
           assert.ok(api.includes('validateImages'),'server must validate image files');
           assert.ok(api.includes('sharp('),'server must decode uploaded images');
           assert.ok(api.includes('720×405 JPEG'),'server must require the published card dimensions');
-          assert.ok(api.includes("base: 'main', draft: true"),'server must create a Draft PR instead of writing main');
+          assert.ok(api.includes('mergeSafety'),'server must check branch protection or rulesets before auto-merge');
+          assert.ok(api.includes('enableAutoMerge'),'server must use GitHub auto-merge only after protection is verified');
+          assert.ok(api.includes("publication_state: 'review_required'"),'unprotected main must produce a review-required request');
+          assert.ok(api.includes("publication_state: 'ci_failed'"),'failed CI must never be reported as published');
           assert.ok(api.includes('base_owner_record'),'server must reject stale owner edits');
           assert.equal(cfg.enabled,false,'publish API must stay disabled until server secrets and E2E are verified');
           const publicSource=[JSON.stringify(cfg),client,engine].join('\n').toLowerCase();
@@ -137,6 +142,10 @@ jobs:
             await mobile.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
             assert.equal(await mobile.locator('#generate-batch').innerText(),'この内容で掲載する');
             assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'375px owner screen must not horizontally overflow');
+            const compact=await browser.newPage({viewport:{width:320,height:700}});
+            await compact.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await compact.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await compact.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'320px owner screen must not horizontally overflow');
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
