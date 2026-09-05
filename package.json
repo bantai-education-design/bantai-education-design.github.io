@@ -1,0 +1,12 @@
+{
+  "name": "bantai-university-owner-publish-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Server-side publisher for owner-provided university photographs.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "sharp": "^0.34.1"
+  }
+}

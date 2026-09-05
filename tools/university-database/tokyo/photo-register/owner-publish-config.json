@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "endpoint": "https://bantai-university-owner-publish-aza200404-3007.vercel.app/api/publish",
+  "notes": "本人編集画面の直接掲載API。GitHub書込用秘密情報は公開リポジトリに置かない。Vercel側の環境変数設定と疎通確認後に enabled=true へ切り替える。"
+}
