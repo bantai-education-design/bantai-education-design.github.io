@@ -5,11 +5,20 @@
 ## 必須環境変数
 
 - `OWNER_PUBLISH_KEY`: 本人・Ban.Tai管理者にだけ安全な経路で配布する掲載キー
-- `OWNER_PUBLISH_GITHUB_TOKEN`: 当該リポジトリの Contents と Pull requests への書込み権限を持つ GitHub fine-grained token
+- `OWNER_PUBLISH_GITHUB_TOKEN`: 次の最小権限を持つ当該リポジトリ限定の GitHub fine-grained token
 - `OWNER_PUBLISH_REPOSITORY`: `bantai-education-design/bantai-education-design.github.io`
 - `OWNER_PUBLISH_ALLOWED_ORIGIN`: `https://bantai-education-design.github.io`
 
 これらは Vercel の Environment Variables にのみ置く。公開リポジトリ、JavaScript、JSON、GitHub Pages へ入れてはいけない。
+
+GitHub fine-grained token の推奨権限は次のとおり。
+
+- Actions: Read-only
+- Administration: Read-only
+- Contents: Read and write
+- Pull requests: Read and write
+
+Checks 権限は不要。必要CIの状態は owner PR の `head_sha` に対する Actions workflow runs と jobs から取得する。
 
 ## API の安全条件
 

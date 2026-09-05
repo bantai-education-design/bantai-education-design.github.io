@@ -5,6 +5,7 @@ on:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
       - 'api/publish.js'
+      - 'api/publish-actions.test.cjs'
       - 'package.json'
       - 'package-lock.json'
       - 'vercel.json'
@@ -14,6 +15,7 @@ on:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
       - 'api/publish.js'
+      - 'api/publish-actions.test.cjs'
       - 'package.json'
       - 'package-lock.json'
       - 'vercel.json'
@@ -56,6 +58,9 @@ jobs:
           assert.ok(api.includes('validateImages'),'server must validate image files');
           assert.ok(api.includes('sharp('),'server must decode uploaded images');
           assert.ok(api.includes('720×405 JPEG'),'server must require the published card dimensions');
+          assert.ok(api.includes('/actions/runs?head_sha='),'server must read CI state through the Actions API');
+          assert.ok(api.includes('/jobs?filter=latest'),'server must read Actions jobs for required checks');
+          assert.equal(api.includes('/check-runs'),false,'server must not require GitHub Checks permission');
           assert.ok(api.includes('mergeSafety'),'server must check branch protection or rulesets before auto-merge');
           assert.ok(api.includes('enableAutoMerge'),'server must use GitHub auto-merge only after protection is verified');
           assert.ok(api.includes("publication_state: 'review_required'"),'unprotected main must produce a review-required request');
@@ -66,6 +71,8 @@ jobs:
           assert.equal(/github[_-]?(token|pat)|ghp_[a-z0-9]+/.test(publicSource),false,'no GitHub secret may be stored in public files');
           console.log('owner edit/direct-publish source validated');
           NODE
+      - name: Verify Actions API publish states
+        run: node api/publish-actions.test.cjs
       - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.55.0

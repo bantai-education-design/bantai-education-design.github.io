@@ -1,5 +1,4 @@
 const crypto = require('node:crypto');
-const sharp = require('sharp');
 
 const REPOSITORY = process.env.OWNER_PUBLISH_REPOSITORY || 'bantai-education-design/bantai-education-design.github.io';
 const REGISTRY_PATH = 'tools/university-database/tokyo/data/user-photo-overrides.json';
@@ -87,6 +86,7 @@ function imageFile(file, universityId) {
 }
 
 async function validateImages(files, universityId) {
+  const sharp = require('sharp');
   if (files.length > MAX_PHOTOS) throw new Error(`A maximum of ${MAX_PHOTOS} photos is allowed`);
   let total = 0;
   const seen = new Set();
@@ -160,14 +160,34 @@ async function enableAutoMerge(pullId) {
   if (!response.ok || body.errors?.length || !body.data?.enablePullRequestAutoMerge?.pullRequest?.autoMergeRequest) throw new Error(body.errors?.[0]?.message || 'GitHub auto-merge could not be enabled');
 }
 
+const failedConclusion = value => ['failure', 'cancelled', 'timed_out', 'action_required'].includes(String(value || '').toLowerCase());
+const passingConclusion = value => ['success', 'neutral', 'skipped'].includes(String(value || '').toLowerCase());
+
+async function requiredActionsState(headSha, requiredChecks) {
+  const response = await github(`/actions/runs?head_sha=${encodeURIComponent(headSha)}&per_page=100`);
+  const runs = response.workflow_runs || [];
+  const runJobs = await Promise.all(runs.map(async run => ({
+    run,
+    jobs: (await github(`/actions/runs/${run.id}/jobs?filter=latest&per_page=100`)).jobs || []
+  })));
+  const results = new Map(requiredChecks.map(name => [name, []]));
+  for (const { run, jobs } of runJobs) {
+    if (results.has(run.name)) results.get(run.name).push(run);
+    for (const job of jobs) if (results.has(job.name)) results.get(job.name).push(job);
+  }
+  const matched = [...results.values()].flat();
+  if (matched.some(item => failedConclusion(item.conclusion))) return 'failed';
+  if ([...results.values()].some(items => !items.length || !items.some(item => passingConclusion(item.conclusion)))) return 'pending';
+  return 'passed';
+}
+
 async function publicationStatus(branch, safety) {
   const pull = await existingPull(branch);
   if (!pull) return { publication_state: 'not_found', message: '掲載申請が見つかりません' };
   if (pull.merged_at) return { publication_state: 'merged', pull_request_url: pull.html_url, pull_request_number: pull.number };
   if (!safety.protected || !pull.auto_merge) return { publication_state: 'review_required', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '掲載申請を受け付けました。管理者確認待ちです。' };
-  const checks = await github(`/commits/${pull.head.sha}/check-runs?per_page=100`);
-  const relevant = (checks.check_runs || []).filter(item => safety.requiredChecks.includes(item.name));
-  if (relevant.some(item => ['FAILURE', 'CANCELLED', 'TIMED_OUT', 'ACTION_REQUIRED'].includes(item.conclusion))) return { publication_state: 'ci_failed', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIが失敗しました。公開DBは変更されていません。' };
+  const actionsState = await requiredActionsState(pull.head.sha, safety.requiredChecks);
+  if (actionsState === 'failed') return { publication_state: 'ci_failed', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIが失敗しました。公開DBは変更されていません。' };
   return { publication_state: 'awaiting_merge', pull_request_url: pull.html_url, pull_request_number: pull.number, message: '必須CIと安全なマージを待っています。' };
 }
 
