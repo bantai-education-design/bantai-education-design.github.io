@@ -17,12 +17,35 @@ function cors(req, res) {
   const allowed = (process.env.OWNER_PUBLISH_ALLOWED_ORIGIN || 'https://bantai-education-design.github.io')
     .split(',').map(value => value.trim()).filter(Boolean);
   const origin = req.headers.origin;
-  if (!origin || !allowed.includes(origin)) return false;
-  res.setHeader('Access-Control-Allow-Origin', origin);
-  res.setHeader('Vary', 'Origin');
+  const requestOrigin = origin || sameOriginFromForwardedHeaders(req);
+  if (!requestOrigin || !allowed.includes(requestOrigin)) return false;
+  res.setHeader('Access-Control-Allow-Origin', requestOrigin);
+  res.setHeader('Vary', 'Origin, Host, X-Forwarded-Host, X-Forwarded-Proto');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Owner-Publish-Key');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   return true;
+}
+
+function headerValue(value) {
+  return Array.isArray(value) ? value[0] : String(value || '').split(',')[0].trim();
+}
+
+function safeForwardedHost(value) {
+  const host = headerValue(value);
+  if (!host || /[\\/\s\x00-\x1f\x7f]/.test(host)) return '';
+  return host;
+}
+
+function sameOriginFromForwardedHeaders(req) {
+  const proto = headerValue(req.headers['x-forwarded-proto'] || req.headers['x-forwarded-protocol']).toLowerCase();
+  if (proto !== 'https' && proto !== 'http') return '';
+  const host = safeForwardedHost(req.headers['x-forwarded-host']) || safeForwardedHost(req.headers.host);
+  if (!host) return '';
+  try {
+    return new URL(`${proto}://${host}`).origin;
+  } catch {
+    return '';
+  }
 }
 
 function sameSecret(value, expected) {

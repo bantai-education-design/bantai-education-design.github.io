@@ -8,7 +8,17 @@ process.env.OWNER_PUBLISH_ALLOWED_ORIGIN = 'https://bantai-education-design.gith
 const json = (status, body) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 const requestId = '12345678-1234-1234-1234-123456789abc';
 
-async function statusFor(mode) {
+function mockResponse() {
+  return {
+    headers: {},
+    setHeader(name, value) { this.headers[name.toLowerCase()] = value; },
+    status(code) { this.code = code; return this; },
+    json(body) { this.body = body; return this; },
+    end() { this.ended = true; return this; }
+  };
+}
+
+async function statusFor(mode, headers = {}) {
   global.fetch = async url => {
     const value = String(url);
     if (value.includes('/branches/main/protection')) {
@@ -26,13 +36,42 @@ async function statusFor(mode) {
     if (value.includes('/actions/runs/88/jobs')) return json(200, { jobs: [{ name: 'owner-overlap', status: mode === 'running' ? 'in_progress' : 'completed', conclusion: mode === 'failed' ? 'failure' : mode === 'success' ? 'success' : null }] });
     throw new Error(`Unexpected GitHub API call: ${value}`);
   };
-  const response = { setHeader() {}, status(code) { this.code = code; return this; }, json(body) { this.body = body; return this; }, end() {} };
-  await publish({ method: 'GET', query: { university_id: 'u000094', request_id: requestId }, headers: { origin: 'https://bantai-education-design.github.io', 'x-owner-publish-key': 'test-owner-key' } }, response);
+  const response = mockResponse();
+  await publish({ method: 'GET', query: { university_id: 'u000094', request_id: requestId }, headers: { origin: 'https://bantai-education-design.github.io', 'x-owner-publish-key': 'test-owner-key', ...headers } }, response);
   assert.equal(response.code, 200);
   return response.body.publication_state;
 }
 
+async function request(method, headers = {}, query = {}) {
+  const response = mockResponse();
+  await publish({ method, query, headers }, response);
+  return response;
+}
+
 (async () => {
+  let response = await request('POST', { origin: 'https://bantai-education-design.github.io' });
+  assert.equal(response.code, 401);
+  assert.equal(response.headers['access-control-allow-origin'], 'https://bantai-education-design.github.io');
+
+  response = await request('POST', { origin: 'https://evil.example' });
+  assert.equal(response.code, 403);
+
+  response = await request('POST', { host: 'bantai-education-design.github.io', 'x-forwarded-proto': 'https' });
+  assert.equal(response.code, 401);
+  assert.equal(response.headers['access-control-allow-origin'], 'https://bantai-education-design.github.io');
+
+  response = await request('POST', { 'x-forwarded-host': 'bantai-education-design.github.io', 'x-forwarded-proto': 'https' });
+  assert.equal(response.code, 401);
+  assert.equal(response.headers['access-control-allow-origin'], 'https://bantai-education-design.github.io');
+
+  response = await request('POST', { host: 'evil.example', 'x-forwarded-proto': 'https' });
+  assert.equal(response.code, 403);
+
+  assert.equal(await statusFor('review', { origin: undefined, host: 'bantai-education-design.github.io', 'x-forwarded-proto': 'https' }), 'review_required');
+
+  response = await request('GET', { origin: 'https://bantai-education-design.github.io' }, { university_id: 'u000094', request_id: requestId });
+  assert.equal(response.code, 401);
+
   assert.equal(await statusFor('review'), 'review_required');
   assert.equal(await statusFor('failed'), 'ci_failed');
   assert.equal(await statusFor('running'), 'awaiting_merge');
