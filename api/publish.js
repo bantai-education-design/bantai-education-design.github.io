@@ -55,6 +55,20 @@ function sameSecret(value, expected) {
   return left.length === right.length && crypto.timingSafeEqual(left, right);
 }
 
+function logPreviewAuthFailure(req) {
+  if (process.env.VERCEL_ENV !== 'preview') return;
+  const received = req.headers['x-owner-publish-key'];
+  const expected = process.env.OWNER_PUBLISH_KEY;
+  const receivedText = typeof received === 'string' ? received : '';
+  console.log('owner publish auth diagnostics', {
+    has_received_key: Boolean(receivedText),
+    received_key_length: receivedText.length,
+    has_expected_key: Boolean(expected),
+    expected_key_length: expected ? String(expected).length : 0,
+    keys_match: sameSecret(receivedText, expected)
+  });
+}
+
 function github(path, options = {}) {
   const token = process.env.OWNER_PUBLISH_GITHUB_TOKEN;
   if (!token) throw new Error('GitHub publish credential is not configured');
@@ -218,7 +232,10 @@ async function ownerPhotoPublish(req, res) {
   if (!cors(req, res)) return reply(res, 403, { ok: false, message: 'Origin is not permitted' });
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (!['POST', 'GET'].includes(req.method)) return reply(res, 405, { ok: false, message: 'POST or GET is required' });
-  if (!sameSecret(req.headers['x-owner-publish-key'], process.env.OWNER_PUBLISH_KEY)) return reply(res, 401, { ok: false, message: 'Authorization failed' });
+  if (!sameSecret(req.headers['x-owner-publish-key'], process.env.OWNER_PUBLISH_KEY)) {
+    logPreviewAuthFailure(req);
+    return reply(res, 401, { ok: false, message: 'Authorization failed' });
+  }
 
   try {
     if (req.method === 'GET') {
