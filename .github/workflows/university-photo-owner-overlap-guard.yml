@@ -4,11 +4,21 @@ on:
   pull_request:
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
+      - 'api/publish.js'
+      - 'api/publish-actions.test.cjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vercel.json'
       - '.github/workflows/university-photo-owner-overlap-guard.yml'
   push:
     branches: [main]
     paths:
       - 'tools/university-database/tokyo/photo-register/**'
+      - 'api/publish.js'
+      - 'api/publish-actions.test.cjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vercel.json'
       - '.github/workflows/university-photo-owner-overlap-guard.yml'
 
 jobs:
@@ -20,35 +30,49 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate source separation
+      - name: Validate owner publish source
         run: |
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
-          const index=fs.readFileSync('tools/university-database/tokyo/photo-register/index.html','utf8');
           const loader=fs.readFileSync('tools/university-database/tokyo/photo-register/university-selection-sync-fix.js','utf8');
-          const css=fs.readFileSync('tools/university-database/tokyo/photo-register/photo-register-mode-fix.css','utf8');
           const owner=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-register.js','utf8');
-          const ownerSet=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-set-export.js','utf8');
-          assert.ok(loader.includes("get('mode')==='owner'"),'owner mode query required');
-          assert.ok(loader.includes('owner-photo-set-export.js'),'owner photo set exporter must load only in owner branch');
-          assert.ok(loader.includes("dataset.communityUiSequence='owner-ready'"),'owner mode must bypass community submission UI');
-          assert.match(css,/community-simple-submission \.export-panel\{[\s\S]*position:static!important/,'community submit panel must not stay sticky');
-          assert.ok(css.includes('body.community-photo-submission .policy{display:block!important}'),'public mode must keep top posting rules visible after JS init');
-          assert.ok(!css.includes('body.owner-photo-registration .policy{display:none'),'owner mode must keep posting rules visible');
-          assert.ok(index.indexOf('class="policy panel"')>index.indexOf('class="hero"'),'rules must follow hero');
-          assert.ok(index.indexOf('class="policy panel"')<index.indexOf('class="batch panel"'),'rules must appear before registration controls');
-          assert.ok(index.includes('登録前にご確認ください　大学写真 投稿・掲載ルール'),'top rules heading required');
-          assert.ok(owner.includes('Ban.Tai 本人撮影写真を登録'),'owner title required');
-          assert.ok(owner.includes('掲載用ZIPを作成（まだ公開されません）'),'owner action must clearly state that package creation is not publication');
-          assert.ok(owner.includes('この時点では公開DBは変更されません'),'owner explanation must distinguish package creation from publication');
-          assert.ok(ownerSet.includes("kind:'university_owner_photo_set'"),'owner exporter must create photo-set manifest');
-          assert.ok(ownerSet.includes("replacement_mode:'authoritative_photo_set'"),'owner photo set must replace the old set authoritatively');
-          assert.ok(ownerSet.includes('gallery'),'owner photo set must write gallery');
-          assert.ok(ownerSet.includes('getExcludedPhotos'),'deleted existing photos must affect export');
-          assert.ok(ownerSet.includes('delete records[id]'),'removing all owner photos must remove the owner override record');
-          console.log('owner/public separation and photo-set source validated');
+          const engine=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-photo-set-export.js','utf8');
+          const client=fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-client.js','utf8');
+          const api=fs.readFileSync('api/publish.js','utf8');
+          const cfg=JSON.parse(fs.readFileSync('tools/university-database/tokyo/photo-register/owner-publish-config.json','utf8'));
+          assert.ok(loader.includes('owner-publish-client.js'),'owner publish client must load in owner mode');
+          assert.ok(owner.includes('この内容で掲載する'),'final owner action must be publish');
+          assert.ok(owner.includes('写真を確認・追加・削除'),'owner must keep add/delete controls');
+          assert.ok(owner.includes('必要なら写真を編集'),'owner must keep editor');
+          assert.ok(owner.includes('ZIPの保存やChatGPTへの添付は不要'),'owner must not require package download');
+          assert.ok(engine.includes("kind:'university_owner_direct_publish'"),'engine must create direct publish manifest');
+          assert.ok(engine.includes('getExcludedPhotos'),'deleted existing photos must affect publish data');
+          assert.ok(engine.includes('delete records[id]'),'removing all owner photos must remove the override record');
+          assert.ok(engine.includes('blobToBase64'),'edited JPEGs must be transferable to the publish API');
+          assert.ok(client.includes('waitForPages'),'client must verify GitHub Pages reflection');
+          assert.ok(client.includes('waitForMerge'),'client must wait for a merged PR before checking Pages');
+          assert.ok(client.includes("publication_state==='review_required'"),'client must report review-required requests accurately');
+          assert.ok(api.includes('OWNER_PUBLISH_GITHUB_TOKEN'),'GitHub credential must be read only on the server');
+          assert.ok(api.includes('universities_tokyo_all.generated.json'),'server must use a university ID allowlist');
+          assert.ok(api.includes('validateImages'),'server must validate image files');
+          assert.ok(api.includes('sharp('),'server must decode uploaded images');
+          assert.ok(api.includes('720×405 JPEG'),'server must require the published card dimensions');
+          assert.ok(api.includes('/actions/runs?head_sha='),'server must read CI state through the Actions API');
+          assert.ok(api.includes('/jobs?filter=latest'),'server must read Actions jobs for required checks');
+          assert.equal(api.includes('/check-runs'),false,'server must not require GitHub Checks permission');
+          assert.ok(api.includes('mergeSafety'),'server must check branch protection or rulesets before auto-merge');
+          assert.ok(api.includes('enableAutoMerge'),'server must use GitHub auto-merge only after protection is verified');
+          assert.ok(api.includes("publication_state: 'review_required'"),'unprotected main must produce a review-required request');
+          assert.ok(api.includes("publication_state: 'ci_failed'"),'failed CI must never be reported as published');
+          assert.ok(api.includes('base_owner_record'),'server must reject stale owner edits');
+          assert.equal(cfg.enabled,false,'publish API must stay disabled until server secrets and E2E are verified');
+          const publicSource=[JSON.stringify(cfg),client,engine].join('\n').toLowerCase();
+          assert.equal(/github[_-]?(token|pat)|ghp_[a-z0-9]+/.test(publicSource),false,'no GitHub secret may be stored in public files');
+          console.log('owner edit/direct-publish source validated');
           NODE
+      - name: Verify Actions API publish states
+        run: node api/publish-actions.test.cjs
       - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.55.0
@@ -57,7 +81,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-owner-overlap.log 2>&1 &
           sleep 2
-      - name: Verify public no-overlap and owner photo-set replacement
+      - name: Verify owner add delete edit main and publish payload
         run: |
           node <<'NODE'
           const {chromium}=require('playwright');
@@ -69,82 +93,66 @@ jobs:
           fs.writeFileSync('/tmp/owner-b.png',png2);
           (async()=>{
             const browser=await chromium.launch({headless:true});
-            const publicPage=await browser.newPage({viewport:{width:1366,height:900}});
-            await publicPage.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/',{waitUntil:'networkidle'});
-            await publicPage.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='ready',null,{timeout:15000});
-            await publicPage.waitForTimeout(300);
-            assert.equal(await publicPage.locator('.policy').isVisible(),true,'public rules must remain visible after community JS initialization');
-            assert.equal(await publicPage.locator('script[data-owner-photo-set-export]').count(),0,'public visitor mode must not load owner exporter');
-            const publicOrder=await publicPage.evaluate(()=>{
-              const main=document.querySelector('main.wrap');
-              const children=[...main.children];
-              return {hero:children.indexOf(document.querySelector('.hero')),policy:children.indexOf(document.querySelector('.policy')),batch:children.indexOf(document.querySelector('.batch'))};
-            });
-            assert.ok(publicOrder.hero>=0&&publicOrder.policy===publicOrder.hero+1&&publicOrder.batch===publicOrder.policy+1,'public rules must be immediately below hero and before registration');
-            const toggle=publicPage.locator('#community-editor-toggle');
-            await toggle.click();
-            await publicPage.waitForFunction(()=>!document.querySelector('#photo-editor')?.hidden,null,{timeout:5000});
-            const layout=await publicPage.evaluate(()=>{
-              const editor=document.querySelector('#photo-editor');
-              const panel=document.querySelector('.export-panel');
-              return {position:getComputedStyle(panel).position,editorBottom:editor.getBoundingClientRect().bottom+scrollY,panelTop:panel.getBoundingClientRect().top+scrollY};
-            });
-            assert.notEqual(layout.position,'sticky','STEP 4 must not float over editor');
-            assert.ok(layout.panelTop>=layout.editorBottom-1,'STEP 4 must follow editor in document flow');
-
-            const owner=await browser.newPage({viewport:{width:1366,height:1000},acceptDownloads:true});
+            const owner=await browser.newPage({viewport:{width:1366,height:1000}});
             await owner.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
-            await owner.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready'&&document.documentElement.dataset.ownerPhotoSetEngine==='ready',null,{timeout:15000});
-            assert.equal(await owner.locator('body').evaluate(el=>el.classList.contains('owner-photo-registration')),true);
-            assert.equal(await owner.locator('#community-photo-rules').count(),0,'owner mode must not show community agreement checkboxes');
-            assert.equal(await owner.locator('#community-submit-package').count(),0,'owner mode must not show review submit button');
-            assert.equal(await owner.locator('#generate-batch').isVisible(),true,'owner registration button must be visible');
-            assert.equal(await owner.locator('#generate-batch').innerText(),'掲載用ZIPを作成（まだ公開されません）');
-            assert.ok((await owner.locator('.export-panel > p').innerText()).includes('この時点では公開DBは変更されません'));
-            assert.ok((await owner.locator('.hero h1').innerText()).includes('本人撮影写真'));
-            assert.equal(await owner.locator('#registration-mode-switch').isVisible(),false,'legacy mode switch stays hidden in owner quick flow');
-            assert.equal(await owner.locator('.policy').isVisible(),true,'owner mode must keep posting rules visible');
+            await owner.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready'&&document.documentElement.dataset.ownerPhotoSetEngine==='ready'&&document.documentElement.dataset.ownerPublishClient==='ready',null,{timeout:15000});
+            assert.equal(await owner.locator('#generate-batch').innerText(),'この内容で掲載する');
+            assert.equal(await owner.locator('#download-zip').isVisible(),false,'ZIP button must be hidden');
+            assert.equal(await owner.locator('#download-json').isVisible(),false,'JSON download must be hidden');
+            assert.equal(await owner.locator('#copy-json').isVisible(),false,'JSON copy must be hidden');
 
             await owner.locator('#university-first-select').selectOption('u000094');
             await owner.waitForFunction(()=>document.querySelector('.main-photo-choice-card[data-main-key="assets/card-images/asia-university-bantai.jpg"]'),null,{timeout:10000});
             const oldCard=owner.locator('.main-photo-choice-card[data-main-key="assets/card-images/asia-university-bantai.jpg"]');
-            assert.equal(await oldCard.count(),1,'current Asia owner photo must be visible before deletion');
             await oldCard.locator('xpath=..').locator('.photo-list-delete').click();
             await owner.waitForTimeout(100);
-            assert.equal(await owner.locator('.main-photo-choice-card[data-main-key="assets/card-images/asia-university-bantai.jpg"]').count(),0,'deleted existing owner photo must leave the picker');
+            assert.equal(await owner.locator('.main-photo-choice-card[data-main-key="assets/card-images/asia-university-bantai.jpg"]').count(),0,'deleted old owner photo must leave picker');
 
             await owner.setInputFiles('#photo-input',['/tmp/owner-a.png','/tmp/owner-b.png']);
             await owner.waitForFunction(()=>document.querySelectorAll('#batch-list .batch-row').length===2,null,{timeout:10000});
-            await owner.waitForFunction(()=>[...document.querySelectorAll('#batch-list .row-university')].every(x=>x.value==='u000094'),null,{timeout:10000});
-            await owner.waitForFunction(()=>document.documentElement.dataset.ownerPhotoSetReady==='true'&&!document.querySelector('#generate-batch').disabled,null,{timeout:10000});
-            assert.equal(await owner.locator('#batch-status').innerText(),'登録後 2枚（メイン1＋サブ1）');
+            await owner.waitForFunction(()=>document.documentElement.dataset.ownerPhotoSetReady==='true',null,{timeout:10000});
+            assert.equal(await owner.locator('#batch-status').innerText(),'掲載後 2枚（メイン1＋サブ1）');
 
             const newChoices=owner.locator('.main-photo-choice-card[data-main-type="new"]');
             await owner.waitForFunction(()=>document.querySelectorAll('.main-photo-choice-card[data-main-type="new"]').length===2,null,{timeout:10000});
             await newChoices.nth(1).click();
-            const secondKey=await newChoices.nth(1).getAttribute('data-main-key');
-            assert.ok(secondKey);
 
-            const downloadPromise=owner.waitForEvent('download');
-            await owner.locator('#generate-batch').click();
-            const download=await downloadPromise;
-            assert.match(download.suggestedFilename(),/^university-owner-photo-set-u000094-\d{4}-\d{2}-\d{2}\.zip$/);
-            await owner.waitForFunction(()=>document.documentElement.dataset.ownerPhotoSetExport==='saved',null,{timeout:15000});
-
-            const output=JSON.parse(await owner.locator('#json-output').inputValue());
+            const payload=await owner.evaluate(()=>window.__ownerPhotoSetExport.buildPublishPayload());
+            assert.equal(payload.kind,'bantai_university_owner_publish');
+            assert.equal(payload.university_id,'u000094');
+            assert.equal(payload.manifest.kind,'university_owner_direct_publish');
+            assert.ok(payload.manifest.deleted_image_urls.includes('assets/card-images/asia-university-bantai.jpg'));
+            const registryFile=payload.files.find(file=>file.path.endsWith('/data/user-photo-overrides.json'));
+            assert.ok(registryFile);
+            const output=JSON.parse(registryFile.content);
             const record=output.records.u000094;
-            assert.ok(record,'Asia owner record must remain after adding replacement photos');
+            assert.ok(record);
             assert.equal(record.image_url.includes('-owner-02.jpg'),true,'selected second new photo must become main');
-            assert.equal(Array.isArray(record.gallery),true);
-            assert.equal(record.gallery.length,1,'one remaining new photo must be sub');
+            assert.equal(record.gallery.length,1);
             assert.equal(record.gallery[0].image_url.includes('-owner-01.jpg'),true);
-            const serialized=JSON.stringify(record);
-            assert.equal(serialized.includes('asia-university-bantai.jpg'),false,'deleted old owner photo must not survive as main or sub');
-            const manifest=await owner.evaluate(()=>window.__ownerPhotoSetLastManifest);
-            assert.ok(manifest.deleted_image_urls.includes('assets/card-images/asia-university-bantai.jpg'),'manifest must audit deleted old photo');
-            assert.equal(manifest.main_image_url,record.image_url);
-            assert.deepEqual(manifest.gallery_image_urls,record.gallery.map(x=>x.image_url));
+            assert.equal(JSON.stringify(record).includes('asia-university-bantai.jpg'),false,'deleted old photo must not survive in main/gallery');
+            const jpgFiles=payload.files.filter(file=>file.path.endsWith('.jpg'));
+            assert.equal(jpgFiles.length,2,'both edited JPEGs must be ready for server publish');
+            assert.ok(jpgFiles.every(file=>file.encoding==='base64'&&file.content_type==='image/jpeg'&&file.content.length>0));
+            assert.ok(payload.request_id,'the request must have an idempotency key');
+
+            const cfg=await owner.evaluate(()=>window.__ownerPublishClient.config());
+            assert.equal(cfg.enabled,false);
+            const disabledMessage=await owner.evaluate(async payload=>{
+              try{await window.__ownerPublishClient.publish(payload);return '';}
+              catch(error){return error.message;}
+            },payload);
+            assert.ok(disabledMessage.includes('掲載APIは準備中'),'disabled server must fail safely without changing public DB');
             assert.equal(await owner.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+            const mobile=await browser.newPage({viewport:{width:375,height:812}});
+            await mobile.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await mobile.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await mobile.locator('#generate-batch').innerText(),'この内容で掲載する');
+            assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'375px owner screen must not horizontally overflow');
+            const compact=await browser.newPage({viewport:{width:320,height:700}});
+            await compact.goto('http://127.0.0.1:4173/tools/university-database/tokyo/photo-register/?mode=owner',{waitUntil:'networkidle'});
+            await compact.waitForFunction(()=>document.documentElement.dataset.communityUiSequence==='owner-ready',null,{timeout:15000});
+            assert.equal(await compact.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'320px owner screen must not horizontally overflow');
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE

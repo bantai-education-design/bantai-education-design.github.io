@@ -8,6 +8,7 @@ const rotateLeft=$('#rotate-left'),rotateRight=$('#rotate-right'),rotationOut=$(
 const controls={tilt:$('#tilt'),zoom:$('#zoom'),x:$('#pos-x'),y:$('#pos-y'),brightness:$('#brightness'),contrast:$('#contrast')};
 const outputs={tilt:$('#tilt-out'),zoom:$('#zoom-out'),x:$('#pos-x-out'),y:$('#pos-y-out'),brightness:$('#brightness-out'),contrast:$('#contrast-out')};
 const defaults={rotation:0,tilt:0,zoom:100,x:50,y:50,brightness:100,contrast:100};
+const MAX_SOURCE_FILE_BYTES=2*1024*1024;
 let universities=[],baseRegistry={schema_version:1,purpose:'撮影者本人から提供された大学実景写真を、既存の公開画像台帳へ安全に上書きする。',records:{}},items=[],activeId=null,zipBlob=null,mergedRegistry=null;
 
 const enc=new TextEncoder();
@@ -90,7 +91,7 @@ function drawItem(item,target,targetCtx){
   if(target===canvas){empty.hidden=true;setOutputs();}
 }
 function canvasBlob(c){return new Promise((resolve,reject)=>c.toBlob(b=>b?resolve(b):reject(new Error('JPEG生成失敗')),'image/jpeg',0.9));}
-async function acceptFiles(fileList){const files=[...fileList].filter(f=>/^image\/(jpeg|png|webp)$/.test(f.type));if(!files.length)return;status.textContent='読み込み中…';const loaded=await Promise.all(files.map(async file=>{try{const [image,sourceHash]=await Promise.all([loadImage(file),sha256(file)]);const match=autoUniversity(file);return {key:uid(),file,image,sourceHash,previewUrl:URL.createObjectURL(file),universityId:match?.id||'',adjustments:{...defaults}};}catch(e){console.error(e);return null;}}));items.push(...loaded.filter(Boolean));if(!activeId&&items.length)activeId=items[0].key;invalidateOutput();syncEditor();renderList();}
+async function acceptFiles(fileList){const selected=[...fileList],files=selected.filter(f=>/^image\/(jpeg|png|webp)$/.test(f.type)&&f.size>0&&f.size<=MAX_SOURCE_FILE_BYTES);if(!files.length){status.textContent='JPEG・PNG・WebP形式で、1枚2MB以下の写真を選択してください。';status.classList.add('warn');return;}if(files.length!==selected.length){status.textContent='JPEG・PNG・WebP形式、1枚2MB以下の写真だけを追加しました。';status.classList.add('warn');}else{status.textContent='読み込み中…';status.classList.remove('warn');}const loaded=await Promise.all(files.map(async file=>{try{const [image,sourceHash]=await Promise.all([loadImage(file),sha256(file)]);const match=autoUniversity(file);return {key:uid(),file,image,sourceHash,previewUrl:URL.createObjectURL(file),universityId:match?.id||'',adjustments:{...defaults}};}catch(e){console.error(e);return null;}}));items.push(...loaded.filter(Boolean));if(!activeId&&items.length)activeId=items[0].key;invalidateOutput();syncEditor();renderList();}
 
 function crcTable(){const t=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;t[n]=c>>>0;}return t;}const CRC=crcTable();
 function crc32(bytes){let c=0xffffffff;for(const b of bytes)c=CRC[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
