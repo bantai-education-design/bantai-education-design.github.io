@@ -572,14 +572,26 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 [data-href],
 [data-detail-url],
 .product-card-v2,
-.scene-card {
+.scene-card,
+.catalog-card,
+.persona-product-card,
+.product-showcase-card,
+.column-card,
+.tokyo-card,
+.university-card,
+.card-image-box,
+.card-visual,
+.scene-media-frame,
+.catalog-card-media,
+.column-card-media {
   cursor: pointer;
 }
 
 [data-href]:hover,
 [data-detail-url]:hover,
 .product-card-v2:hover,
-.scene-card:hover {
+.scene-card:hover,
+.catalog-card:hover {
   border-color: #7b5412;
   box-shadow: 0 16px 36px rgba(17, 17, 17, 0.17);
 }
@@ -587,7 +599,8 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
 [data-href]:focus-visible,
 [data-detail-url]:focus-visible,
 .product-card-v2:focus-visible,
-.scene-card:focus-visible {
+.scene-card:focus-visible,
+.catalog-card:focus-visible {
   outline: 4px solid #c6a15b;
   outline-offset: 5px;
 }

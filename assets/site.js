@@ -41,31 +41,57 @@
 })();
 
 (function () {
-  const interactiveSelector = "a, button, input, select, textarea, label, summary, [role='button']";
+  const excludeSelector = "button, input, select, textarea, label, summary, [role='button'], a.image-source-link, a[download], a[target='_blank']";
 
-  const getTargetHref = (card) => {
-    if (card.dataset.href) return card.dataset.href;
-    if (card.dataset.detailUrl) return card.dataset.detailUrl;
-    const primaryLink = card.querySelector("a.btn-secondary, a.scene-link, a.card-detail-open, a");
-    return primaryLink ? primaryLink.getAttribute("href") : null;
+  const getTargetHref = (container) => {
+    if (!container) return null;
+    if (container.dataset && container.dataset.href) return container.dataset.href;
+    if (container.dataset && container.dataset.detailUrl) return container.dataset.detailUrl;
+
+    const primaryLink = container.querySelector(
+      "a.catalog-card-hit-area, a.btn-secondary, a.scene-link, a.card-detail-open, a.persona-product-card, a.product-showcase-card, a.column-read-more, a"
+    );
+    if (primaryLink) {
+      const href = primaryLink.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("javascript:")) {
+        return href;
+      }
+    }
+    return null;
+  };
+
+  const findCardContainer = (target) => {
+    return target.closest(
+      "[data-href], [data-detail-url], .product-card-v2, .scene-card, .catalog-card, .persona-product-card, .product-showcase-card, .column-card, .tokyo-card, .university-card, .school-card, .textbook-publisher-card, .textbook-grade-guide-card, .textbook-audience-card, article, .card"
+    );
   };
 
   document.addEventListener("click", (event) => {
-    if (event.target.closest(interactiveSelector)) return;
-    const card = event.target.closest("[data-href], [data-detail-url], .product-card-v2, .scene-card");
+    if (event.target.closest(excludeSelector)) return;
+
+    const card = findCardContainer(event.target);
     if (!card) return;
 
     const href = getTargetHref(card);
-    if (href && !href.startsWith("#") && !href.startsWith("javascript:")) {
-      window.location.href = href;
+    if (!href || href.startsWith("#") || href.startsWith("javascript:")) return;
+
+    const enclosingAnchor = event.target.closest("a");
+    if (enclosingAnchor) {
+      const anchorHref = enclosingAnchor.getAttribute("href");
+      if (anchorHref === href || (anchorHref && !anchorHref.startsWith("#") && !anchorHref.startsWith("javascript:"))) {
+        return;
+      }
     }
+
+    event.preventDefault();
+    window.location.href = href;
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
-    if (event.target.closest(interactiveSelector)) return;
+    if (event.target.closest(excludeSelector)) return;
 
-    const card = event.target.closest("[data-href], [data-detail-url], .product-card-v2, .scene-card");
+    const card = findCardContainer(event.target);
     if (!card) return;
 
     if (document.activeElement === card || card.contains(document.activeElement)) {
