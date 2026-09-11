@@ -7,7 +7,7 @@
     "categorySlug": "history",
     "date": "2026.09.11",
     "excerpt": "80年代のマイコン導入からPC-98、Windows 95革命、そしてGIGAスクール1人1台端末へ。学校現場でコンピュータと向き合い続けてきた40年の歩みと技術の変遷。",
-    "thumbnail": "/assets/images/textbook-plans-hero.jpg",
+    "thumbnail": "/assets/images/columns/column-pc-history.webp",
     "readTime": "約6分",
     "content": "教職生活と並行して目撃してきたコンピュータの進化は、まさに激動の連続でした。1980年代の8ビットマイコン時代、学校現場に初めて導入されたPC-98シリーズ、5.25インチフロッピーディスクで自作プログラムを読み込ませていた時代から、Windows 95の登場による校内IT革命、インターネット黎明期の校内LAN構築、そして現代のGIGAスクール構想における1人1台クラウド端末へ。技術の進化とともに『いかにコンピュータを先生方と子どもの力にするか』を模索し続けた半生と、Ban.Tai ツール開発に込めたテクノロジーと思想の歴史を振り返ります。",
     "tags": [
@@ -26,7 +26,7 @@
     "categorySlug": "history",
     "date": "2026.09.09",
     "excerpt": "手書き印刷や手計算に追われていた時代、BASICやPascalで教務自動化プログラムを組んだ原体験。時代を超えて受け継がれる『現場の道具づくり』の思想。",
-    "thumbnail": "/assets/images/education-hero.webp",
+    "thumbnail": "/assets/images/columns/column-code-history.webp",
     "readTime": "約5分",
     "content": "昭和から平成初期の学校現場では、集計や年間計画、名簿や座席決めはすべて手書きと手計算の世界でした。連日遅くまで職員室に残る同僚の姿を見て、『プログラムの力でこの単純作業を自動化できないか』とBASIC言語で最初の教務支援プログラムを書き始めたのが開発の原点です。時代がMS-DOSからWindows、そしてブラウザ完結のWeb技術へ変わっても、『現場の先生の日常負担を減らす』という根底の動機は変わりません。PCの歴史とともに歩んできたソフト開発の歴史と取り組みをお伝えします。",
     "tags": [
@@ -44,7 +44,7 @@
     "categorySlug": "thoughts",
     "date": "2026.09.08",
     "excerpt": "学校現場で日常的に聞こえてくる『こんな作業、もっと短時間で終わらないか』というつぶやき。小さなアイデアをアイデアのまま終わらせず教材ソフトへ反映する日常の思考プロセス。",
-    "thumbnail": "/assets/images/textbook-guides/audience-parent-desk.webp",
+    "thumbnail": "/assets/images/columns/column-daily-thoughts.webp",
     "readTime": "約4分",
     "content": "学校の職員室や研修の場で、ふと発せられる『席替えの名簿を打つのにまた1時間かかった』『バナーの画像を縮小するだけで手間がかかる』といった先生方の素直な声。それこそが新しいツール開発の最も貴重な種です。完璧なシステムを目指すのではなく、その場でダウンロードしてすぐ使えるシンプルなブラウザ完結型・デスクトップ完結型にこだわる理由と、日々の観察からアイデアを形にする考え方をお伝えします。",
     "tags": [
@@ -80,7 +80,7 @@
     "categorySlug": "ai",
     "date": "2026.09.05",
     "excerpt": "年間指導計画や評価規準の作成サポートから、校内研修での資料作成まで。生成AIを安全かつ効果的に業務へ取り入れるポイントを紹介します。",
-    "thumbnail": "/assets/images/banner-studio-screenshot.jpg",
+    "thumbnail": "/assets/images/columns/column-ai-classroom.webp",
     "readTime": "約5分",
     "content": "生成AIの登場により、学校現場での文書作成や指導案の補助資料づくりが大きく変わりつつあります。生徒の個人情報に配慮しつつ、アイデア出しや下案作成で時間を節約する具体的なプロンプト例とルールをまとめました。また、AIを活用して作成した素案を教員自身が吟味・微調整するワークフローにより、質の高い教材作成が短時間で可能になります。",
     "tags": [
@@ -98,7 +98,7 @@
     "categorySlug": "trends",
     "date": "2026.08.28",
     "excerpt": "教科書会社の公式指導計画資料を活用し、校内の年間指導計画や週案へスムーズに落とし込むための実務プロセス。",
-    "thumbnail": "/assets/images/textbook-plans-hero.jpg",
+    "thumbnail": "/assets/images/columns/column-annual-plan.webp",
     "readTime": "約4分",
     "content": "年間指導計画の作成作業は、新学期前の教員の大きな負担の一つです。各教科書会社の公式Webサポート資料を活用し、学校独自の行事予定や時数管理とシームレスに連携させるコツを伝授します。公式データをそのまま再配布するのではなく、各社が公開する最新の年度版を確認しつつ、教務システムで扱いやすい形式へ整理することがポイントです。",
     "tags": [
@@ -152,7 +152,7 @@
     "categorySlug": "trends",
     "date": "2026.07.25",
     "excerpt": "学校で『いつ・何を学ぶか』を知ることで、保護者が家庭で温かく学びを見守るためのガイドライン。",
-    "thumbnail": "/assets/images/textbook-guides/audience-parent-desk.webp",
+    "thumbnail": "/assets/images/columns/column-parents-guide.webp",
     "readTime": "約3分",
     "content": "年間指導計画は、単なる指導要領の確認用ではなく、ご家庭とお子さんの学びをつなぐ架け橋でもあります。保護者が学年の見通しを理解し、家庭で肯定的な声かけを行うための工夫を整理しました。テストの点数だけでなく、どのような単元でどんな学びが行われているかを知ることが家庭学習の意欲向上につながります。",
     "tags": [
