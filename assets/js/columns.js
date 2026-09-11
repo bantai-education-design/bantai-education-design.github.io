@@ -118,6 +118,47 @@
     });
   }
 
+  function formatColumnBody(content) {
+    if (!content) return '';
+    
+    // Remove ** asterisks
+    let cleaned = content.replace(/\*\*/g, '');
+    
+    // Split by newlines
+    const rawBlocks = cleaned.split(/\n+/);
+    
+    const htmlBlocks = rawBlocks.map(block => {
+      const trimmed = block.trim();
+      if (!trimmed) return '';
+      
+      // Horizontal Rule
+      if (trimmed === '---') {
+        return '<hr class="column-content-hr">';
+      }
+      
+      // Headings (### Title or ## Title)
+      if (trimmed.startsWith('#')) {
+        const headingText = trimmed.replace(/^#+\s*/, '');
+        return `<h3 class="column-content-heading">${escapeHtml(headingText)}</h3>`;
+      }
+      
+      // Image HTML tags
+      if (trimmed.startsWith('<img') || trimmed.startsWith('<figure')) {
+        return `<div class="column-content-image">${trimmed}</div>`;
+      }
+      
+      // Regular Paragraph: Ensure leading full-width space 　
+      let text = trimmed;
+      if (!text.startsWith('　')) {
+        text = '　' + text;
+      }
+      
+      return `<p class="column-paragraph">${escapeHtml(text)}</p>`;
+    });
+    
+    return htmlBlocks.filter(b => b.length > 0).join('\n');
+  }
+
   // Modal logic
   window.openColumnModal = function(id) {
     const item = allColumns.find(c => c.id === id);
@@ -153,7 +194,7 @@
           <div class="column-modal-body">
             <p class="column-modal-lead">${escapeHtml(item.excerpt)}</p>
             <hr class="column-modal-divider">
-            <div class="column-modal-text">${escapeHtml(item.content)}</div>
+            <div class="column-modal-text">${formatColumnBody(item.content)}</div>
           </div>
           <div class="column-modal-footer">
             <button class="btn btn-secondary" onclick="window.closeColumnModal()">閉じる</button>
