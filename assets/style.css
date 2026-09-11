@@ -4484,8 +4484,749 @@ button:focus-visible {
   max-width: 100%;
 }
 
+/* ==========================================================================
+   Ban.Tai Official Website Redesign 2026 - Modern Educational SaaS Theme
+   ========================================================================== */
 
+/* Modern Design Tokens */
+:root {
+  --noble-navy-900: #071326;
+  --noble-navy-800: #0f172a;
+  --noble-navy-700: #1e293b;
+  --noble-navy-600: #334155;
+  
+  --warm-gold-500: #d97706;
+  --warm-gold-400: #f59e0b;
+  --warm-gold-300: #fbbf24;
+  --warm-gold-100: #fef3c7;
+  
+  --noble-blue-500: #2563eb;
+  --noble-blue-600: #1d4ed8;
+  
+  --bg-slate-light: #f8fafc;
+  --bg-card: #ffffff;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-light: #f8fafc;
+  
+  --radius-card: 16px;
+  --radius-btn: 8px;
+  --shadow-subtle: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 20px 40px -15px rgba(15, 23, 42, 0.15), 0 10px 15px -8px rgba(15, 23, 42, 0.08);
+  --shadow-hero-card: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
 
+/* 1. Global Image & Clipping Fixes */
+.card-img,
+.product img,
+.showcase-panel img,
+.scene-card-media img,
+.category-card-media img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #ffffff;
+}
 
+/* Aspect Ratio Frames for Cards */
+.card-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.card-image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+  border-radius: 8px;
+}
 
+/* 2. Hero FV Redesign & 3D Device Showcase */
+.hero-v2 {
+  position: relative;
+  background: linear-gradient(135deg, #071326 0%, #0f172a 50%, #1e293b 100%);
+  color: var(--text-light);
+  padding: clamp(60px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.hero-v2 .hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fde68a;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.hero-v2 h1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.hero-v2 h1 .text-gold-gradient {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-v2 .lead-v2 {
+  font-size: clamp(0.98rem, 1.4vw, 1.12rem);
+  color: rgba(248, 250, 252, 0.88);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.hero-actions-v2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.btn-hero-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #071326;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -5px rgba(217, 119, 6, 0.6);
+  color: #071326;
+}
+
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 14px 24px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.btn-hero-light {
+  background: transparent;
+  border: 1px dashed rgba(253, 230, 138, 0.5);
+  color: #fde68a;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-hero-light:hover {
+  background: rgba(253, 230, 138, 0.1);
+  border-color: #fde68a;
+  color: #ffffff;
+}
+
+/* Trust Stats Bar */
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.trust-item strong {
+  color: #fde68a;
+  font-size: 1rem;
+}
+
+/* 3D Showcase Mockup Layout */
+.hero-showcase-3d {
+  position: relative;
+  width: 100%;
+  perspective: 1200px;
+}
+
+.showcase-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MacBook Frame */
+.mockup-macbook {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88%;
+  background: #1e293b;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.macbook-header {
+  height: 28px;
+  background: #0f172a;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.macbook-dots span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.macbook-dots .dot-red { background: #ff5f56; }
+.macbook-dots .dot-yellow { background: #ffbd2e; }
+.macbook-dots .dot-green { background: #27c93f; }
+
+.macbook-title {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 8px;
+  font-family: monospace;
+}
+
+.macbook-screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.macbook-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* iPad Frame */
+.mockup-ipad {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 62%;
+  background: #0f172a;
+  border-radius: 18px;
+  border: 3px solid #334155;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(245, 158, 11, 0.3);
+  overflow: hidden;
+  z-index: 2;
+  transform: translateY(15px) rotate(-3deg);
+  transition: transform 0.4s ease;
+}
+
+.ipad-screen {
+  aspect-ratio: 4 / 3;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ipad-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating HTML Badges */
+.floating-badge {
+  position: absolute;
+  z-index: 3;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-top-left {
+  top: 15px;
+  left: -10px;
+}
+
+.badge-bottom-right {
+  bottom: 25px;
+  right: -10px;
+}
+
+.hero-showcase-3d:hover .mockup-macbook {
+  transform: scale(1.02);
+}
+
+.hero-showcase-3d:hover .mockup-ipad {
+  transform: translateY(8px) rotate(-1deg) scale(1.03);
+}
+
+/* 3. Ecosystem Infographic Section */
+.ecosystem-section {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 80px 0;
+  position: relative;
+}
+
+.ecosystem-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 56px;
+}
+
+.ecosystem-header h2 {
+  color: #ffffff;
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  margin-bottom: 14px;
+}
+
+.ecosystem-header p {
+  color: rgba(248, 250, 252, 0.8);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.ecosystem-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px 22px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecosystem-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.ecosystem-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.ecosystem-card:hover::before {
+  opacity: 1;
+}
+
+.ecosystem-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.3));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.ecosystem-card h3 {
+  color: #ffffff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.ecosystem-card p {
+  color: rgba(248, 250, 252, 0.75);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.ecosystem-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.ecosystem-tag {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* Central Ecosystem Connector Banner */
+.ecosystem-center-bar {
+  margin-top: 36px;
+  background: linear-gradient(90deg, rgba(217, 119, 6, 0.15) 0%, rgba(37, 99, 235, 0.15) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 999px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ecosystem-center-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.ecosystem-center-title .dot-pulse {
+  width: 10px;
+  height: 10px;
+  background: #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f59e0b;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+/* 4. SCENES Section Refactoring */
+.scenes-section {
+  background: #f8fafc;
+  padding: 80px 0;
+}
+
+.scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.scene-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.scene-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12);
+}
+
+.scene-media-frame {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene-media-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+  transition: transform 0.3s ease;
+}
+
+.scene-card:hover .scene-media-frame img {
+  transform: scale(1.03);
+}
+
+.scene-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.scene-tag-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.scene-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.scene-body p {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.scene-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  transition: color 0.2s ease;
+}
+
+.scene-link:hover {
+  color: #1d4ed8;
+}
+
+.scene-link .arrow {
+  transition: transform 0.2s ease;
+}
+
+.scene-card:hover .scene-link .arrow {
+  transform: translateX(4px);
+}
+
+/* 5. Products Section Grid & Card UI Refactoring */
+.products-section-v2 {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.products-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card-v2 {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-v2:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12);
+}
+
+.product-card-v2 .card-image-box {
+  background: #ffffff;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 14px;
+}
+
+.product-card-v2 .card-image-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.product-card-body-v2 {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.badge-recommend {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.badge-status {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.product-card-body-v2 h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px;
+  line-height: 1.4;
+  font-family: "Noto Serif JP", serif;
+}
+
+.product-card-body-v2 p {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scenes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-v2 .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-actions-v2,
+  .hero-kicker-pill,
+  .hero-trust-bar {
+    justify-content: center;
+  }
+  .hero-showcase-3d {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .ecosystem-grid,
+  .scenes-grid,
+  .products-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+  .btn-hero-primary,
+  .btn-hero-secondary,
+  .btn-hero-light {
+    width: 100%;
+    justify-content: center;
+  }
+  .mockup-ipad {
+    width: 75%;
+  }
+}
