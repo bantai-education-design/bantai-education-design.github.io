@@ -5726,9 +5726,41 @@ button:focus-visible {
   margin: 24px 0;
 }
 .column-modal-text {
-  font-size: 0.96rem;
-  line-height: 1.85;
+  font-size: 1.02rem;
+  line-height: 1.95;
   color: #1e293b;
+  letter-spacing: 0.02em;
+}
+.column-paragraph {
+  margin: 0 0 1.4rem 0;
+  line-height: 1.95;
+  font-size: 1.02rem;
+  color: #1e293b;
+}
+.column-content-heading {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2.2rem 0 1rem 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--gold);
+}
+.column-content-hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 2.5rem 0;
+}
+.column-content-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+.column-content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 .column-modal-footer {
   margin-top: 30px;
