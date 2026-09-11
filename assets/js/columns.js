@@ -13,6 +13,8 @@
       case 'ai': return 'badge-ai';
       case 'trends': return 'badge-trends';
       case 'practice': return 'badge-practice';
+      case 'history': return 'badge-history';
+      case 'thoughts': return 'badge-thoughts';
       default: return 'badge-default';
     }
   }

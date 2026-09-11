@@ -155,7 +155,7 @@
   const style = document.createElement("style");
   style.id = "global-context-nav-style";
   style.textContent = `
-    .global-context-bar{position:sticky;top:80px;z-index:44;background:rgba(9,25,47,.97);color:#fff;border-bottom:1px solid rgba(197,160,89,.5);box-shadow:0 5px 18px rgba(5,18,35,.12);backdrop-filter:blur(10px)}
+    .global-context-bar{position:relative;width:100%;z-index:44;background:#071b36;color:#fff;border-bottom:1px solid rgba(197,160,89,.5);box-shadow:0 5px 18px rgba(5,18,35,.12);}
     .global-context-inner{width:min(1140px,90vw);margin:auto;display:flex;align-items:center;gap:18px;min-height:58px}
     .global-context-label{flex:0 0 auto;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#edd996;white-space:nowrap}
     .global-audience-nav{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
@@ -164,7 +164,7 @@
     .global-audience-nav a.is-current{background:linear-gradient(135deg,#c5a059,#edd996);border-color:#edd996;color:#071b36;box-shadow:0 3px 10px rgba(197,160,89,.22)}
     .global-breadcrumb{margin-left:auto;display:flex;align-items:center;gap:6px;min-width:0;color:rgba(255,255,255,.64);font-size:.72rem;white-space:nowrap;overflow:hidden}
     .global-breadcrumb a{color:rgba(255,255,255,.76);text-decoration:none}.global-breadcrumb a:hover{color:#edd996}.global-breadcrumb .crumb-current{color:#fff;font-weight:700;overflow:hidden;text-overflow:ellipsis}.global-breadcrumb .crumb-sep{color:#c5a059}
-    @media(max-width:860px){.global-context-bar{top:64px}.global-context-inner{width:100%;padding:8px 14px;display:grid;grid-template-columns:auto 1fr;gap:6px 10px;min-height:auto}.global-context-label{grid-column:1}.global-audience-nav{grid-column:2;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}.global-audience-nav::-webkit-scrollbar{display:none}.global-audience-nav a{white-space:nowrap;font-size:.76rem;padding:6px 10px}.global-breadcrumb{grid-column:1/-1;margin-left:0;border-top:1px solid rgba(255,255,255,.1);padding-top:6px;font-size:.68rem}}
+    @media(max-width:860px){.global-context-bar{position:relative;top:0}.global-context-inner{width:100%;padding:8px 14px;display:grid;grid-template-columns:auto 1fr;gap:6px 10px;min-height:auto}.global-context-label{grid-column:1}.global-audience-nav{grid-column:2;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}.global-audience-nav::-webkit-scrollbar{display:none}.global-audience-nav a{white-space:nowrap;font-size:.76rem;padding:6px 10px}.global-breadcrumb{grid-column:1/-1;margin-left:0;border-top:1px solid rgba(255,255,255,.1);padding-top:6px;font-size:.68rem}}
     @media(max-width:520px){.global-context-label{display:none}.global-audience-nav{grid-column:1/-1}.global-context-inner{grid-template-columns:1fr}.global-breadcrumb{grid-column:1}}
   `;
   document.head.appendChild(style);
@@ -261,5 +261,5 @@
 
   inner.appendChild(breadcrumb);
   bar.appendChild(inner);
-  header.insertAdjacentElement("afterend", bar);
+  header.appendChild(bar);
 })();
