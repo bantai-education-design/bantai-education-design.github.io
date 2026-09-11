@@ -1,4 +1,4 @@
-# Trigger CI check: Restore card frame click navigation across products and databases
+# Trigger CI check: Enable photo and image click navigation to detail pages
 name: University photo owner and overlap guard
 
 on:
