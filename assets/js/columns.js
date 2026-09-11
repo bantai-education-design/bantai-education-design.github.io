@@ -124,39 +124,88 @@
     // Remove ** asterisks
     let cleaned = content.replace(/\*\*/g, '');
     
-    // Split by newlines
-    const rawBlocks = cleaned.split(/\n+/);
+    // Split into lines
+    const lines = cleaned.split('\n');
+    const resultHtml = [];
+    let i = 0;
     
-    const htmlBlocks = rawBlocks.map(block => {
-      const trimmed = block.trim();
-      if (!trimmed) return '';
+    while (i < lines.length) {
+      let line = lines[i].trim();
+      
+      if (!line) {
+        i++;
+        continue;
+      }
       
       // Horizontal Rule
-      if (trimmed === '---') {
-        return '<hr class="column-content-hr">';
+      if (line === '---') {
+        resultHtml.push('<hr class="column-content-hr">');
+        i++;
+        continue;
       }
       
-      // Headings (### Title or ## Title)
-      if (trimmed.startsWith('#')) {
-        const headingText = trimmed.replace(/^#+\s*/, '');
-        return `<h3 class="column-content-heading">${escapeHtml(headingText)}</h3>`;
+      // Headings
+      if (line.startsWith('#')) {
+        const headingText = line.replace(/^#+\s*/, '');
+        const match = line.match(/^#+/);
+        const level = match ? match[0].length : 1;
+        if (level <= 2) {
+          resultHtml.push(`<h2 class="column-content-h2">${escapeHtml(headingText)}</h2>`);
+        } else {
+          resultHtml.push(`<h3 class="column-content-heading">${escapeHtml(headingText)}</h3>`);
+        }
+        i++;
+        continue;
       }
       
-      // Image HTML tags
-      if (trimmed.startsWith('<img') || trimmed.startsWith('<figure')) {
-        return `<div class="column-content-image">${trimmed}</div>`;
+      // Markdown Table Start
+      if (line.startsWith('|')) {
+        const tableLines = [];
+        while (i < lines.length && lines[i].trim().startsWith('|')) {
+          tableLines.push(lines[i].trim());
+          i++;
+        }
+        
+        if (tableLines.length > 0) {
+          let tableHtml = '<div class="column-table-responsive"><table class="column-table">';
+          let isHeader = true;
+          
+          tableLines.forEach(tline => {
+            if (tline.includes('---')) return;
+            
+            const rawCells = tline.split('|');
+            const cells = rawCells.slice(1, rawCells.length - 1).map(c => c.trim());
+            if (isHeader) {
+              tableHtml += '<thead><tr>' + cells.map(c => `<th>${escapeHtml(c)}</th>`).join('') + '</tr></thead><tbody>';
+              isHeader = false;
+            } else {
+              tableHtml += '<tr>' + cells.map(c => `<td>${escapeHtml(c)}</td>`).join('') + '</tr>';
+            }
+          });
+          
+          tableHtml += '</tbody></table></div>';
+          resultHtml.push(tableHtml);
+        }
+        continue;
+      }
+      
+      // Image HTML
+      if (line.startsWith('<img') || line.startsWith('<figure')) {
+        resultHtml.push(`<div class="column-content-image">${line}</div>`);
+        i++;
+        continue;
       }
       
       // Regular Paragraph: Ensure leading full-width space 　
-      let text = trimmed;
+      let text = line;
       if (!text.startsWith('　')) {
         text = '　' + text;
       }
-      
-      return `<p class="column-paragraph">${escapeHtml(text)}</p>`;
-    });
+      resultHtml.push(`<p class="column-paragraph">${escapeHtml(text)}</p>`);
+      i++;
+    }
     
-    return htmlBlocks.filter(b => b.length > 0).join('\n');
+    return resultHtml.join('\n');
   }
 
   // Modal logic
