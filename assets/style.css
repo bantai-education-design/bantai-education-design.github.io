@@ -4557,7 +4557,8 @@ button:focus-visible {
   position: relative;
   background: linear-gradient(135deg, #071326 0%, #0f172a 50%, #1e293b 100%);
   color: var(--text-light);
-  padding: clamp(60px, 8vw, 100px) 0;
+  padding-top: clamp(120px, 12vw, 165px);
+  padding-bottom: clamp(60px, 8vw, 100px);
   overflow: hidden;
 }
 
@@ -4582,7 +4583,8 @@ button:focus-visible {
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin-bottom: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .hero-v2 h1 {
@@ -5228,5 +5230,121 @@ button:focus-visible {
   }
   .mockup-ipad {
     width: 75%;
+  }
+}
+
+/* School Database Card V2 & Illustration Layout */
+.school-db-card-v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 36px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 44px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.school-db-visual-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.school-db-image-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  background: #0f172a;
+}
+
+.school-db-image-frame img.school-db-img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover !important;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.school-db-image-frame:hover img.school-db-img {
+  transform: scale(1.03);
+}
+
+.school-db-glass-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(7, 19, 38, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fde68a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.school-db-glass-badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+.school-db-preview-box {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.school-db-preview-box .preview-header {
+  font-family: 'Noto Serif JP', serif;
+  color: #fde68a;
+  font-weight: 700;
+  font-size: 0.84rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.school-db-preview-box .preview-code {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  border-left: 3px solid #f59e0b;
+  color: #fde68a;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.school-db-preview-box .preview-footer {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero-v2 {
+    padding-top: 115px;
+  }
+  .school-db-card-v2 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 24px 18px;
   }
 }

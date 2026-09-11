@@ -158,11 +158,11 @@
     <!-- ==================================================
       全国学校宛先データベース — 独立導線
     =================================================== -->
-    <section id="school-address-db" style="background:linear-gradient(135deg,#071326 0%,#0f172a 60%,#1e293b 100%); padding:64px 0; border-bottom:3px solid var(--warm-gold-500);">
+    <section id="school-address-db" style="background:linear-gradient(135deg,#071326 0%,#0f172a 60%,#1e293b 100%); padding:72px 0; border-bottom:3px solid var(--warm-gold-500);">
       <div class="container">
-        <div class="school-db-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(245,158,11,0.35); border-radius:20px; padding:40px 44px; backdrop-filter:blur(10px);">
-          <!-- テキストエリア -->
-          <div style="flex:1; min-width:0;">
+        <div class="school-db-card-v2">
+          <!-- 左側：テキスト＆テーブル情報 -->
+          <div>
             <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
               <span style="background:linear-gradient(135deg,#f59e0b,#d97706); color:#071326; font-size:0.72rem; font-weight:900; padding:4px 14px; border-radius:99px; letter-spacing:0.06em;">全国学校データベース（東京都・埼玉県対応）</span>
               <span style="background:rgba(255,255,255,0.08); color:#fde68a; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(245,158,11,0.3);">CSV対応</span>
@@ -219,11 +219,24 @@
             </div>
           </div>
 
-          <!-- プレビューカード -->
-          <div class="school-db-preview" style="background:rgba(0,0,0,0.4); border-radius:14px; padding:22px; border:1px solid rgba(245,158,11,0.3);">
-            <div style="font-family:'Noto Serif JP',serif; color:#fde68a; font-weight:700; font-size:0.82rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:8px; margin-bottom:14px;">宛先検索プレビュー</div>
-            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:14px; font-family:monospace; font-size:0.78rem; border-left:3px solid #f59e0b; color:#fde68a; line-height:1.6; margin-bottom:14px;">〒102-0083<br>東京都千代田区麹町２丁目４<br>千代田区立麹町小学校 御中</div>
-            <div style="font-size:0.74rem; color:rgba(255,255,255,0.5); text-align:center; line-height:1.5;">インストール不要<br>ブラウザで即利用可</div>
+          <!-- 右側：新規3Dデータベースイラスト＆機能プレビュー -->
+          <div class="school-db-visual-block">
+            <div class="school-db-image-frame">
+              <img src="/assets/images/school-db-illustration.jpg" alt="Ban.Tai 全国学校データベース 3Dイラスト" class="school-db-img">
+              <div class="school-db-glass-badge">
+                <span class="pulse-dot"></span>
+                <span>東京都 3,509校 / 埼玉県 1,929校 収録中</span>
+              </div>
+            </div>
+            <div class="school-db-preview-box">
+              <div class="preview-header">宛名コピー・Google Maps 連携機能</div>
+              <div class="preview-code">
+                〒102-0083<br>
+                東京都千代田区麹町２丁目４<br>
+                千代田区立麹町小学校 御中
+              </div>
+              <div class="preview-footer">✨ インストール不要・ブラウザで即日ご利用可能</div>
+            </div>
           </div>
         </div>
       </div>
