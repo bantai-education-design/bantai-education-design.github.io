@@ -84,6 +84,41 @@
       }
     },
     {
+      "type": "videoFeature",
+      "id": "official-pv",
+      "class": "education-pv-section",
+      "eyebrow": "OFFICIAL PROMOTION VIDEO",
+      "heading": "約90秒で分かる「Ban.Tai はじめての五線紙メーカー」",
+      "description": "ト音記号・ヘ音記号となぞり書き練習プリントの作成から、自由な段数の五線紙設定、高画質ベクター保存まで。アプリの使いやすさと主な機能を動画でご紹介します。",
+      "video": {
+        "src": "/assets/videos/first-staff-paper-pv.mp4",
+        "poster": "/assets/images/first-staff-paper-pv-poster.png",
+        "type": "video/mp4",
+        "fallback": "動画を再生できない場合は、ページ下部の機能説明をご覧ください。"
+      },
+      "meta": [
+        "再生時間：約90秒",
+        "音声・ナレーションがあります"
+      ],
+      "assurance": [
+        "無料体験版で10日間全機能をお試し",
+        "Windows 10・11（64bit）対応",
+        "高画質SVG保存・PDF出力対応"
+      ],
+      "actionsClass": "education-pv-actions",
+      "actions": [
+        {
+          "label": "無料体験版をBOOTHでダウンロード（0円）",
+          "href": "https://bantai3.booth.pm/items/8587307",
+          "class": "btn btn-primary education-pv-monitor-button",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener"
+          }
+        }
+      ]
+    },
+    {
       "type": "textCardGrid",
       "background": "#fff",
       "eyebrow": "Features",

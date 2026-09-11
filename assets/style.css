@@ -3537,6 +3537,7 @@ button:focus-visible {
 }
 
 .product-detail-education .education-pv-section,
+.education-pv-section,
 .product-detail-education .education-audience-section,
 .product-detail-education .education-monitor-section,
 .product-detail-education .education-faq-section,
@@ -3544,19 +3545,22 @@ button:focus-visible {
   overflow-x: clip;
 }
 
-.product-detail-education .education-pv-section {
+.product-detail-education .education-pv-section,
+.education-pv-section {
   background: linear-gradient(180deg, #15120d 0%, #080808 100%);
   color: #fff;
   padding: 72px 0 76px;
 }
 
 @media (min-width: 861px) {
-  .product-detail-education .education-pv-section {
+  .product-detail-education .education-pv-section,
+  .education-pv-section {
     padding-top: 52px;
   }
 }
 
 .product-detail-education .education-pv-header,
+.education-pv-header,
 .product-detail-education .education-section-heading {
   margin: 0 auto 30px;
   max-width: 860px;
@@ -3564,6 +3568,7 @@ button:focus-visible {
 }
 
 .product-detail-education .education-pv-kicker,
+.education-pv-kicker,
 .product-detail-education .education-section-heading p,
 .product-detail-education .education-monitor-kicker,
 .product-detail-education .education-final-kicker {
@@ -3576,6 +3581,7 @@ button:focus-visible {
 }
 
 .product-detail-education .education-pv-header h2,
+.education-pv-header h2,
 .product-detail-education .education-section-heading h2,
 .product-detail-education .education-monitor-card h2,
 .product-detail-education .education-final-cta h2 {
@@ -3585,14 +3591,16 @@ button:focus-visible {
   margin: 0 0 14px;
 }
 
-.product-detail-education .education-pv-header > p:last-child {
+.product-detail-education .education-pv-header > p:last-child,
+.education-pv-header > p:last-child {
   color: rgba(255, 255, 255, 0.84);
   font-size: 1.02rem;
   line-height: 1.85;
   margin: 0;
 }
 
-.product-detail-education .education-pv-frame {
+.product-detail-education .education-pv-frame,
+.education-pv-frame {
   background: linear-gradient(180deg, #241d12 0%, #050505 100%);
   border: 1px solid rgba(216, 182, 108, 0.58);
   border-radius: 16px;
@@ -3603,7 +3611,8 @@ button:focus-visible {
   padding: 10px;
 }
 
-.product-detail-education .education-pv-frame video {
+.product-detail-education .education-pv-frame video,
+.education-pv-frame video {
   aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 10px;
@@ -3612,25 +3621,30 @@ button:focus-visible {
 }
 
 @media (min-width: 861px) and (max-height: 800px) {
-  .product-detail-education .education-pv-section {
+  .product-detail-education .education-pv-section,
+  .education-pv-section {
     padding-top: 48px;
   }
 
-  .product-detail-education .education-pv-header {
+  .product-detail-education .education-pv-header,
+  .education-pv-header {
     margin-bottom: 24px;
   }
 
-  .product-detail-education .education-pv-frame {
+  .product-detail-education .education-pv-frame,
+  .education-pv-frame {
     max-width: 760px;
     padding: 8px;
   }
 
-  .product-detail-education .education-pv-meta {
+  .product-detail-education .education-pv-meta,
+  .education-pv-meta {
     margin-top: 12px;
   }
 }
 
-.product-detail-education .education-pv-meta {
+.product-detail-education .education-pv-meta,
+.education-pv-meta {
   color: rgba(255, 255, 255, 0.74);
   display: flex;
   flex-wrap: wrap;
@@ -3639,14 +3653,16 @@ button:focus-visible {
   margin: 18px 0 0;
 }
 
-.product-detail-education .education-pv-meta span {
+.product-detail-education .education-pv-meta span,
+.education-pv-meta span {
   border: 1px solid rgba(216, 182, 108, 0.32);
   border-radius: 999px;
   font-size: 0.88rem;
   padding: 7px 12px;
 }
 
-.product-detail-education .education-pv-assurance {
+.product-detail-education .education-pv-assurance,
+.education-pv-assurance {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -3655,7 +3671,8 @@ button:focus-visible {
   max-width: 860px;
 }
 
-.product-detail-education .education-pv-assurance-item {
+.product-detail-education .education-pv-assurance-item,
+.education-pv-assurance-item {
   align-items: center;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(216, 182, 108, 0.36);
@@ -3669,13 +3686,15 @@ button:focus-visible {
   padding: 7px 12px;
 }
 
-.product-detail-education .education-pv-assurance-item::before {
+.product-detail-education .education-pv-assurance-item::before,
+.education-pv-assurance-item::before {
   color: #e9c983;
   content: "✓";
   font-weight: 900;
 }
 
-.product-detail-education .education-pv-quick-flow {
+.product-detail-education .education-pv-quick-flow,
+.education-pv-quick-flow {
   align-items: center;
   color: rgba(255, 255, 255, 0.78);
   display: flex;
@@ -3689,18 +3708,21 @@ button:focus-visible {
   max-width: 760px;
 }
 
-.product-detail-education .education-pv-quick-flow-step {
+.product-detail-education .education-pv-quick-flow-step,
+.education-pv-quick-flow-step {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 999px;
   padding: 6px 10px;
 }
 
-.product-detail-education .education-pv-quick-flow-arrow {
+.product-detail-education .education-pv-quick-flow-arrow,
+.education-pv-quick-flow-arrow {
   color: rgba(216, 182, 108, 0.76);
   font-weight: 900;
 }
 
 .product-detail-education .education-pv-actions,
+.education-pv-actions,
 .product-detail-education .education-monitor-actions,
 .product-detail-education .education-final-actions {
   display: flex;
@@ -3711,6 +3733,7 @@ button:focus-visible {
 }
 
 .product-detail-education .education-pv-monitor-button,
+.education-pv-monitor-button,
 .product-detail-education .education-monitor-button,
 .product-detail-education .education-final-monitor-button {
   background: linear-gradient(135deg, #c6a15b 0%, #f0d892 100%);
@@ -3718,17 +3741,19 @@ button:focus-visible {
 }
 
 .product-detail-education .education-pv-monitor-button:hover,
+.education-pv-monitor-button:hover,
 .product-detail-education .education-monitor-button:hover,
 .product-detail-education .education-final-monitor-button:hover {
   filter: brightness(1.05);
 }
 
 .product-detail-education .education-pv-action-note,
+.education-pv-action-note,
 .product-detail-education .education-final-action-note {
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.92rem;
   line-height: 1.7;
-  margin: 12px auto 0;
+}  margin: 12px auto 0;
   max-width: 720px;
   text-align: center;
 }
