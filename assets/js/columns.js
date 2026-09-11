@@ -149,12 +149,45 @@
         const headingText = line.replace(/^#+\s*/, '');
         const match = line.match(/^#+/);
         const level = match ? match[0].length : 1;
+        
         if (level <= 2) {
-          resultHtml.push(`<h2 class="column-content-h2">${escapeHtml(headingText)}</h2>`);
+          resultHtml.push(`<h2 class="column-content-h2"><span class="h2-era-pill">時代</span>${escapeHtml(headingText)}</h2>`);
         } else {
-          resultHtml.push(`<h3 class="column-content-heading">${escapeHtml(headingText)}</h3>`);
+          let headingClass = 'column-content-heading';
+          let icon = '📌';
+          if (headingText.includes('ポイント') || headingText.includes('主な進化') || headingText.includes('改良')) {
+            headingClass = 'column-content-heading-point';
+            icon = '✨';
+          } else if (headingText.includes('歴史的意味') || headingText.includes('この年の意味')) {
+            headingClass = 'column-content-heading-meaning';
+            icon = '🏛️';
+          } else if (headingText.includes('問題') || headingText.includes('決戦')) {
+            headingClass = 'column-content-heading-warning';
+            icon = '⚠️';
+          }
+          resultHtml.push(`<h3 class="${headingClass}"><span class="heading-icon">${icon}</span> ${escapeHtml(headingText)}</h3>`);
         }
         i++;
+        continue;
+      }
+      
+      // Bullet List Block (* or -)
+      if (line.startsWith('* ') || line.startsWith('- ')) {
+        const listItems = [];
+        while (i < lines.length && (lines[i].trim().startsWith('* ') || lines[i].trim().startsWith('- '))) {
+          const itemText = lines[i].trim().replace(/^[*-\s]+/, '');
+          listItems.push(itemText);
+          i++;
+        }
+        
+        if (listItems.length > 0) {
+          let listHtml = '<ul class="column-feature-list">';
+          listItems.forEach(item => {
+            listHtml += `<li class="column-feature-item">${escapeHtml(item)}</li>`;
+          });
+          listHtml += '</ul>';
+          resultHtml.push(listHtml);
+        }
         continue;
       }
       
