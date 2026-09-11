@@ -41,29 +41,40 @@
 })();
 
 (function () {
-  const cards = document.querySelectorAll(
-    "#products .product[data-href]"
-  );
+  const interactiveSelector = "a, button, input, select, textarea, label, summary, [role='button']";
 
-  cards.forEach((card) => {
-    const navigate = () => {
-      const href = card.dataset.href;
-      if (href) window.location.href = href;
-    };
+  const getTargetHref = (card) => {
+    if (card.dataset.href) return card.dataset.href;
+    if (card.dataset.detailUrl) return card.dataset.detailUrl;
+    const primaryLink = card.querySelector("a.btn-secondary, a.scene-link, a.card-detail-open, a");
+    return primaryLink ? primaryLink.getAttribute("href") : null;
+  };
 
-    card.addEventListener("click", (event) => {
-      if (event.target.closest("a, button")) return;
-      navigate();
-    });
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(interactiveSelector)) return;
+    const card = event.target.closest("[data-href], [data-detail-url], .product-card-v2, .scene-card");
+    if (!card) return;
 
-    card.addEventListener("keydown", (event) => {
-      if (event.target.closest("a, button")) return;
+    const href = getTargetHref(card);
+    if (href && !href.startsWith("#") && !href.startsWith("javascript:")) {
+      window.location.href = href;
+    }
+  });
 
-      if (event.key === "Enter" || event.key === " ") {
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    if (event.target.closest(interactiveSelector)) return;
+
+    const card = event.target.closest("[data-href], [data-detail-url], .product-card-v2, .scene-card");
+    if (!card) return;
+
+    if (document.activeElement === card || card.contains(document.activeElement)) {
+      const href = getTargetHref(card);
+      if (href && !href.startsWith("#") && !href.startsWith("javascript:")) {
         event.preventDefault();
-        navigate();
+        window.location.href = href;
       }
-    });
+    }
   });
 })();
 
