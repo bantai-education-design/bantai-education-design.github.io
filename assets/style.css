@@ -4553,12 +4553,13 @@ button:focus-visible {
 }
 
 /* 2. Hero FV Redesign & 3D Device Showcase */
+/* 2. Hero FV Redesign & 3D Device Showcase */
 .hero-v2 {
   position: relative;
   background: linear-gradient(135deg, #071326 0%, #0f172a 50%, #1e293b 100%);
   color: var(--text-light);
-  padding-top: clamp(120px, 12vw, 165px);
-  padding-bottom: clamp(60px, 8vw, 100px);
+  padding-top: clamp(64px, 5vw, 85px);
+  padding-bottom: clamp(48px, 5vw, 70px);
   overflow: hidden;
 }
 
@@ -4583,8 +4584,8 @@ button:focus-visible {
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 .hero-v2 h1 {
@@ -4760,12 +4761,15 @@ button:focus-visible {
   aspect-ratio: 16 / 10;
   background: #ffffff;
   overflow: hidden;
+  padding: 2px;
 }
 
 .macbook-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #ffffff;
 }
 
 /* iPad Frame */
@@ -4786,14 +4790,17 @@ button:focus-visible {
 
 .ipad-screen {
   aspect-ratio: 4 / 3;
-  background: #ffffff;
+  background: #0f172a;
   overflow: hidden;
+  padding: 2px;
 }
 
 .ipad-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #0f172a;
 }
 
 /* Floating HTML Badges */
