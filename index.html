@@ -58,7 +58,7 @@
       </button>
       <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
         <a class="active" href="/">ホーム</a>
-        <a href="/columns/">コラム</a>
+        <a href="/columns/">コラム<span class="nav-new-badge">新着</span></a>
         <a href="/#free-tools">実践事例・教材</a>
         <a href="/#about">団体について</a>
         <a href="/#faq">よくある質問</a>
@@ -150,6 +150,26 @@
               <span>五線紙・教材自由設計</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+      新着お知らせ・最新コラム バナー (Top Notification Bar)
+    =================================================== -->
+    <section class="top-news-bar-section">
+      <div class="container">
+        <div class="top-news-card">
+          <div class="top-news-badge">
+            <span class="pulse-dot-red"></span>
+            <span>【新着コラム】</span>
+          </div>
+          <a class="top-news-title-link" href="/columns/?article=column-yomigaeru-ichitaro-40years" onclick="if(window.openColumnModal){event.preventDefault();window.openColumnModal('column-yomigaeru-ichitaro-40years');}">
+            <span class="top-news-date">2026.09.12</span>
+            <span class="top-news-title">よみがえる、あの一太郎――「日本語を書く」ことに挑み続けた国産ワープロの40年</span>
+            <span class="top-news-arrow">読む &rarr;</span>
+          </a>
+          <a class="top-news-all-link" href="/columns/">コラム一覧を見る &rarr;</a>
         </div>
       </div>
     </section>
@@ -580,14 +600,17 @@
     <section id="latest-columns" class="column-section">
       <div class="container">
         <div class="section-header-column">
-          <span class="section-kicker-gold">COLUMN & INSIGHTS</span>
-          <h2 class="section-title-column">教育・ICT・AIのいまを読み解く</h2>
+          <span class="section-kicker-gold">✨【新着】NEWS & COLUMNS</span>
+          <h2 class="section-title-column">新着コラム・教育インサイト</h2>
+          <p style="text-align: center; color: var(--muted); margin-top: 8px; font-size: 0.95rem;">
+            公式コラムの最新記事をお届けしています。カードをクリックして全文をお読みいただけます。
+          </p>
         </div>
         <div id="home-columns-grid" class="column-grid">
           <!-- Dynamic rendering by assets/js/columns.js -->
         </div>
         <div style="text-align: center; margin-top: 40px;">
-          <a class="btn btn-secondary" href="/columns/" style="padding: 12px 32px; font-weight: 700;">コラム一覧を見る &rarr;</a>
+          <a class="btn btn-secondary" href="/columns/" style="padding: 12px 32px; font-weight: 700; background: var(--navy); color: #fff;">【新着】すべてのコラム記事を見る &rarr;</a>
         </div>
       </div>
     </section>

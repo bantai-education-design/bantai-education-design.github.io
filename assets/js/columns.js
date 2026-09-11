@@ -49,7 +49,7 @@
     if (!container) return;
 
     const topColumns = allColumns.slice(0, 3);
-    container.innerHTML = topColumns.map(column => renderColumnCard(column)).join('');
+    container.innerHTML = topColumns.map((column, idx) => renderColumnCard(column, idx)).join('');
   }
 
   // Render Column List Page
@@ -74,17 +74,20 @@
       return;
     }
 
-    container.innerHTML = filtered.map(column => renderColumnCard(column)).join('');
+    container.innerHTML = filtered.map((column, idx) => renderColumnCard(column, currentCategory === 'all' ? idx : -1)).join('');
   }
 
-  function renderColumnCard(item) {
+  function renderColumnCard(item, index) {
     const tagClass = getCategoryTagClass(item.categorySlug || '');
+    const isNew = (index === 0);
+    const newBadgeHtml = isNew ? '<span class="column-badge-new">NEW 新着</span>' : '';
     
     return `
-      <article class="column-card" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
+      <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
         <div class="column-card-media">
           <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
           <span class="column-badge ${tagClass}">${escapeHtml(item.category)}</span>
+          ${newBadgeHtml}
         </div>
         <div class="column-card-body">
           <div class="column-meta">
