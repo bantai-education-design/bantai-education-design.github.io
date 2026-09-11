@@ -569,17 +569,25 @@ h2{color:var(--navy);font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.45;marg
     transform 0.2s ease;
 }
 
-#products .product[data-href] {
+[data-href],
+[data-detail-url],
+.product-card-v2,
+.scene-card {
   cursor: pointer;
 }
 
-#products .product[data-href]:hover {
+[data-href]:hover,
+[data-detail-url]:hover,
+.product-card-v2:hover,
+.scene-card:hover {
   border-color: #7b5412;
   box-shadow: 0 16px 36px rgba(17, 17, 17, 0.17);
-  transform: translateY(-3px);
 }
 
-#products .product[data-href]:focus-visible {
+[data-href]:focus-visible,
+[data-detail-url]:focus-visible,
+.product-card-v2:focus-visible,
+.scene-card:focus-visible {
   outline: 4px solid #c6a15b;
   outline-offset: 5px;
 }
