@@ -151,7 +151,9 @@
         const level = match ? match[0].length : 1;
         
         if (level <= 2) {
-          resultHtml.push(`<h2 class="column-content-h2"><span class="h2-era-pill">時代</span>${escapeHtml(headingText)}</h2>`);
+          const isYearHeading = /^(19\d{2}|20\d{2}|前史)/.test(headingText.trim());
+          const eraPill = isYearHeading ? '<span class="h2-era-pill">時代</span>' : '';
+          resultHtml.push(`<h2 class="column-content-h2">${eraPill}${escapeHtml(headingText)}</h2>`);
         } else {
           let headingClass = 'column-content-heading';
           let icon = '📌';
