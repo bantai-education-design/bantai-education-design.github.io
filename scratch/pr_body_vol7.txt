@@ -1,0 +1,9 @@
+## Summary
+Adds Vol. 7 Weekly AI News Digest Column article ("【週刊AI動向】次世代マルチモーダルAIの進化と教育への活用――今週のAIニュースと未来の学び") and sets up recurring AI news automation task.
+
+## Details
+- Compiled weekly AI news summary table (Real-time multimodal LLMs, Autonomous AI Agents, AI Ethics/Copyright guidelines, Educational AI tutors, On-device local LLMs).
+- Deep dive commentary on featured items from an educational perspective.
+- Added 1 main thumbnail image (`column-weekly-ai-news-20260918.webp`) and 1 inline illustration (`column-weekly-ai-multimodal-learning.webp`).
+- Added helper script `scripts/weekly_ai_news_column.py` and schedule documentation `docs/weekly_ai_news_automation.md`.
+- Verified layout and modal display using Playwright.

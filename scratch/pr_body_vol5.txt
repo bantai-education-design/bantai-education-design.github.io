@@ -1,0 +1,7 @@
+## Summary
+Adds Column Vol. 5 ("青く光る電卓を買った夜から、パソコンの隣の一台へ ――電卓の歴史と、新しい技術を使ってみる勇気") to the official website's column section.
+
+## Details
+- Prepend new column entry to `data/columns.json` with metadata, full text, and tags.
+- Generated and included 1 main thumbnail image (`column-blue-calculator-history.webp`) and 2 inline illustration images (`column-vintage-calculator-evolution.webp` and `column-modern-numpad-calculator-ai.webp`).
+- Verified display on top page, column list page, and modal dialog with Playwright.
