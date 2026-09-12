@@ -155,9 +155,7 @@
     }
 
     const header = createElement("div", "pref-card-header");
-    const edition = createElement("span", "", prefecture.edition);
-    edition.style.fontSize = "0.8rem";
-    edition.style.color = "#718096";
+    const edition = createElement("span", "pref-edition-badge", prefecture.edition);
     header.append(edition);
     card.append(header);
 
@@ -165,10 +163,12 @@
     const silhouette = prefecture.silhouette;
     if (silhouette && silhouette.available === true) {
       const titleRow = createElement("div", "pref-card-title-row");
+      const silhouetteFrame = createElement("span", "pref-silhouette-frame");
       const silhouetteEl = createElement("span", "pref-silhouette");
       silhouetteEl.setAttribute("aria-hidden", "true");
       silhouetteEl.style.setProperty("--silhouette-url", `url("${silhouette.src}")`);
-      titleRow.append(silhouetteEl, nameHeading);
+      silhouetteFrame.append(silhouetteEl);
+      titleRow.append(silhouetteFrame, nameHeading);
       card.append(titleRow);
     } else {
       // 都道府県地域マークが未生成の場合（本来は47件すべて生成済み）は、
