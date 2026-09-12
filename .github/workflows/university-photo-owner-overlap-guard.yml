@@ -1,4 +1,4 @@
-# Trigger CI check: Add weekly education news column automation script and schedule documentation
+# Trigger CI check: Add Vol. 6 weekly education news column digest article
 name: University photo owner and overlap guard
 
 on:
