@@ -448,6 +448,7 @@ def validate_first_staff_paper(data: dict, html: str, parser: DetailPageParser) 
         section_types == [
             "pageHero",
             "textCardGrid",
+            "videoFeature",
             "textCardGrid",
             "workflowSteps",
             "groupedNotice",
@@ -457,12 +458,12 @@ def validate_first_staff_paper(data: dict, html: str, parser: DetailPageParser) 
     )
     overview = data["sections"][1]
     require(len(overview["items"]) == 3, "overview quote cards must have 3 items")
-    features = data["sections"][2]
+    features = data["sections"][3]
     require(len(features["items"]) == 3, "feature cards must have 3 items")
     require(len(features["tableCards"]) == 1 and len(features["tableCards"][0]["rows"]) == 4, "spec table must have 4 rows")
-    workflow = data["sections"][3]
+    workflow = data["sections"][4]
     require(len(workflow["steps"]) == 7, "workflow must have 7 steps")
-    notices = data["sections"][4]
+    notices = data["sections"][5]
     require(len(notices["groups"]) == 2, "license notice must have 2 groups")
     require(len(notices["groups"][0]["items"]) == 4, "trial notice must have 4 items")
     require(len(notices["groups"][1]["items"]) == 3, "product license notice must have 3 items")

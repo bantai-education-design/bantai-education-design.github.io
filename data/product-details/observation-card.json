@@ -3,15 +3,46 @@
   "metaDescription": "小学校低学年の絵日記、生活科、理科、自由研究に使える印刷用カード作成ツールです。",
   "bodyClass": "",
   "styleVersion": "586a1d0_v2",
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#features", "label": "主な機能" },
-    { "href": "#video", "label": "動画で見る使い方" },
-    { "href": "#distribution", "label": "配布ページ" },
-    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#features",
+      "label": "主な機能"
+    },
+    {
+      "href": "#video",
+      "label": "動画で見る使い方"
+    },
+    {
+      "href": "#distribution",
+      "label": "配布ページ"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "絵日記・観察カード作成メーカー",
   "englishName": "Picture Diary & Observation Card Maker",
@@ -25,7 +56,9 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "kicker": "Picture Diary & Observation Card Maker",
-      "headingLines": ["絵日記・観察カード作成メーカー"],
+      "headingLines": [
+        "絵日記・観察カード作成メーカー"
+      ],
       "lead": "小学生の「見たこと」「気づいたこと」「考えたこと」を、紙に残しやすくする印刷用紙作成ツールです。",
       "note": "Windows EXE版 v1.2.0 をBOOTHで公開中です。10日間無料で試用できます。",
       "actions": [
@@ -33,10 +66,21 @@
           "class": "btn btn-primary",
           "href": "https://bantai3.booth.pm/items/8579732",
           "label": "BOOTHで購入・ダウンロードする",
-          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
         },
-        { "class": "btn btn-secondary", "href": "#distribution", "label": "配布ページを見る" },
-        { "class": "btn btn-secondary", "href": "#notes", "label": "注意事項" }
+        {
+          "class": "btn btn-secondary",
+          "href": "#distribution",
+          "label": "配布ページを見る"
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "#notes",
+          "label": "注意事項"
+        }
       ],
       "placeholderVisual": "paper"
     },
@@ -62,9 +106,18 @@
       "eyebrow": "For Whom",
       "heading": "対象",
       "items": [
-        { "heading": "小学校低学年", "text": "大きめのマス目や絵の欄で、初めての記録活動を支えます。" },
-        { "heading": "生活科・理科", "text": "植物、生きもの、天気、実験などの観察を絵と文章で残せます。" },
-        { "heading": "自由研究・家庭学習", "text": "夏休みの自由研究や家庭での絵日記用紙づくりに使えます。" }
+        {
+          "heading": "小学校低学年",
+          "text": "大きめのマス目や絵の欄で、初めての記録活動を支えます。"
+        },
+        {
+          "heading": "生活科・理科",
+          "text": "植物、生きもの、天気、実験などの観察を絵と文章で残せます。"
+        },
+        {
+          "heading": "自由研究・家庭学習",
+          "text": "夏休みの自由研究や家庭での絵日記用紙づくりに使えます。"
+        }
       ]
     },
     {
@@ -73,9 +126,21 @@
       "eyebrow": "Features",
       "heading": "主な機能",
       "items": [
-        { "mark": "紙", "heading": "用紙サイズ設定", "text": "A4、B4、八つ切、四つ切の用紙設定に対応しています。" },
-        { "mark": "絵", "heading": "絵と文章の欄", "text": "絵を描く欄と、文章を書く欄を組み合わせたカードを作れます。" },
-        { "mark": "線", "heading": "マス目・罫線", "text": "マス目、横罫線、縦罫線を切り替え、サイズや行数も調整できます。" }
+        {
+          "mark": "紙",
+          "heading": "用紙サイズ設定",
+          "text": "A4、B4、八つ切、四つ切の用紙設定に対応しています。"
+        },
+        {
+          "mark": "絵",
+          "heading": "絵と文章の欄",
+          "text": "絵を描く欄と、文章を書く欄を組み合わせたカードを作れます。"
+        },
+        {
+          "mark": "線",
+          "heading": "マス目・罫線",
+          "text": "マス目、横罫線、縦罫線を切り替え、サイズや行数も調整できます。"
+        }
       ]
     },
     {
@@ -93,10 +158,26 @@
         "class": "info-box",
         "heading": "動作環境・配布形式",
         "rows": [
-          { "label": "動作環境", "text": "Windows 10 / 11、Google Chrome、Microsoft Edgeなど", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);", "labelWidth": "34%" },
-          { "label": "形式", "text": "Windows EXE版 v1.2.0（HTML単体版を同梱）", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);" },
-          { "label": "試用・ライセンス", "text": "10日間無料試用（透かしあり）／ライセンスキー480円で解除", "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);" },
-          { "label": "配布", "text": "BOOTH（公開中）、Vector用ZIP（準備中）" }
+          {
+            "label": "動作環境",
+            "text": "Windows 10 / 11、Google Chrome、Microsoft Edgeなど",
+            "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);",
+            "labelWidth": "34%"
+          },
+          {
+            "label": "形式",
+            "text": "Windows EXE版 v1.2.0（HTML単体版を同梱）",
+            "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);"
+          },
+          {
+            "label": "試用・ライセンス",
+            "text": "10日間無料試用（透かしあり）／ライセンスキー480円で解除",
+            "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);"
+          },
+          {
+            "label": "配布",
+            "text": "BOOTH（公開中）、Vector用ZIP（準備中）"
+          }
         ]
       }
     },

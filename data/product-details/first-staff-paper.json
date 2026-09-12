@@ -3,20 +3,24 @@
   "metaDescription": "子ども・初心者向けのなぞり書き練習用紙や五線紙を簡単作成できるWindows用アプリ。",
   "styleHref": "/assets/style.css",
   "includeFonts": false,
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
     {
       "href": "/",
       "label": "ホーム"
     },
     {
-      "href": "/#products",
-      "label": "製品一覧",
+      "href": "/products/",
+      "label": "製品・教材",
       "class": "active"
     },
     {
-      "href": "/resources/textbook-plans/",
-      "label": "学習ガイド"
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
     },
     {
       "href": "#download",
@@ -27,8 +31,12 @@
       "label": "使い方"
     },
     {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
       "href": "/contact/",
-      "label": "お問い合わせ",
+      "label": "サポート",
       "class": "mini"
     }
   ],
