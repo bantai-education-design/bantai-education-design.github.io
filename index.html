@@ -37,7 +37,7 @@
         <nav class="audience-switch" aria-label="入口切替">
           <a class="audience-switch-link" href="/for-teachers/">先生</a>
           <a class="audience-switch-link" href="/for-parents/">保護者・ご家庭</a>
-          <a class="audience-switch-link" href="/databases/">DB・情報検索</a>
+          <a class="audience-switch-link" href="/databases/">DB・情報検索（教科書・大学・学校）</a>
         </nav>
       </div>
     </div>
@@ -59,7 +59,7 @@
       <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
         <a class="active" href="/">ホーム</a>
         <a href="/products/">製品・教材</a>
-        <a href="/tools/school-database/">全国学校DB</a>
+        <a href="/databases/">教育DB・情報検索</a>
         <a href="/columns/">コラム</a>
         <a href="/about/">Ban.Taiについて</a>
         <a href="/contact/">サポート</a>
@@ -93,7 +93,7 @@
               <span>商品を見つける</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a class="btn-hero-secondary" href="#school-address-db">教育情報を調べる</a>
+            <a class="btn-hero-secondary" href="#school-address-db">3大教育DB（学校・教科書・大学）</a>
             <a class="btn-hero-light" href="/products/">すべての製品を見る</a>
           </div>
           <div class="hero-trust-bar">
@@ -176,89 +176,118 @@
     </section>
 
     <!-- ==================================================
-      全国学校宛先データベース — 独立導線
+      教育データベース・情報検索 (教科書会社DB・大学DB・学校DB 3大データ基盤)
     =================================================== -->
-    <section id="school-address-db" style="background:linear-gradient(135deg,#071326 0%,#0f172a 60%,#1e293b 100%); padding:72px 0; border-bottom:3px solid var(--warm-gold-500);">
+    <section id="school-address-db" style="background:linear-gradient(135deg,#051326 0%,#0a192f 50%,#112240 100%); padding:72px 0; border-bottom:3px solid var(--warm-gold-500);">
       <div class="container">
-        <div class="school-db-card-v2">
-          <!-- 左側：テキスト＆テーブル情報 -->
-          <div>
-            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-              <span style="background:linear-gradient(135deg,#f59e0b,#d97706); color:#071326; font-size:0.72rem; font-weight:900; padding:4px 14px; border-radius:99px; letter-spacing:0.06em;">全国学校データベース（東京都をはじめ全国対応）</span>
-              <span style="background:rgba(255,255,255,0.08); color:#fde68a; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(245,158,11,0.3);">CSV対応</span>
-              <span style="background:rgba(255,255,255,0.08); color:#fde68a; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(245,158,11,0.3);">宛名コピー</span>
-              <span style="background:rgba(255,255,255,0.08); color:#fde68a; font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:99px; border:1px solid rgba(245,158,11,0.3);">Google Maps連携</span>
-            </div>
-
-            <h2 style="color:#fff; font-size:clamp(1.4rem,2.6vw,1.85rem); font-weight:700; margin:0 0 10px; line-height:1.35; font-family:'Noto Serif JP',serif;">Ban.Tai 全国学校データベース</h2>
-            <p style="color:#fde68a; font-size:0.9rem; font-weight:600; margin:0 0 14px;">学校封筒印刷・宛名作成に使える、Ban.Tai公式HPの無料学校データベース</p>
-            <p style="color:rgba(248,250,252,0.82); font-size:0.88rem; line-height:1.75; margin:0 0 20px;">各都道府県教育委員会等の公式公開データをもとに、全国の学校・園の住所や電話番号を検索できます。東京都（3,509校・園）をはじめ全国の小学校・中学校・高校・特別支援学校等の公立・私立データを収録。都道府県・自治体・学校種・設置区分で絞り込み、封筒宛名コピーやCSVダウンロード、Google Maps連携が可能です。</p>
-
-            <div class="table-responsive" style="margin-bottom:24px;">
-              <table style="width:100%; max-width:440px; border-collapse:collapse; margin:0; font-size:0.78rem; color:rgba(255,255,255,0.88); background:rgba(0,0,0,0.3); border-radius:10px; overflow:hidden; border:1px solid rgba(245,158,11,0.3); text-align:left;">
-                <thead>
-                  <tr style="background:rgba(245,158,11,0.18); border-bottom:1px solid rgba(245,158,11,0.3); font-weight:bold; color:#fde68a;">
-                    <th style="padding:8px 12px;">学校種別</th>
-                    <th style="padding:8px 12px; text-align:center;">公立</th>
-                    <th style="padding:8px 12px; text-align:center;">私立</th>
-                    <th style="padding:8px 12px; text-align:center;">国立</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-                    <td style="padding:8px 12px; font-weight:bold;">幼稚園</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (148園)</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (733園)</td>
-                    <td style="padding:8px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-                  </tr>
-                  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-                    <td style="padding:8px 12px; font-weight:bold;">小学校・中学校・義務教育</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (1,869校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (238校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-                  </tr>
-                  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-                    <td style="padding:8px 12px; font-weight:bold;">高等学校・中等教育</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (193校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (244校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:8px 12px; font-weight:bold;">特別支援学校</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (80校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:#34d399;">✓ (4校)</td>
-                    <td style="padding:8px 12px; text-align:center; color:rgba(255,255,255,0.4);">準備中</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div style="display:flex; gap:12px; flex-wrap:wrap;">
-              <a class="btn-hero-primary" href="/tools/school-database/" style="font-size:0.9rem; padding:12px 24px;">全国データベース（都道府県選択）を開く</a>
-              <a class="btn-hero-secondary" href="/tools/school-database/tokyo/" style="font-size:0.9rem; padding:12px 22px;">東京都版を開く</a>
-            </div>
+        
+        <!-- Header -->
+        <div style="text-align:center; max-width:820px; margin:0 auto 44px;">
+          <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.4); color:#fde68a; padding:6px 18px; border-radius:99px; font-size:0.82rem; font-weight:800; letter-spacing:0.06em; margin-bottom:14px;">
+            <span>🔍</span>
+            <span>Ban.Tai 教育データベース・情報検索 Hub</span>
           </div>
-
-          <!-- 右側：新規3Dデータベースイラスト＆機能プレビュー -->
-          <div class="school-db-visual-block">
-            <div class="school-db-image-frame">
-              <img src="/assets/images/school-db-illustration.jpg" alt="Ban.Tai 全国学校データベース 3Dイラスト" class="school-db-img">
-              <div class="school-db-glass-badge">
-                <span class="pulse-dot"></span>
-                <span>全国・東京都 3,509校 収録中</span>
-              </div>
-            </div>
-            <div class="school-db-preview-box">
-              <div class="preview-header">宛名コピー・Google Maps 連携機能</div>
-              <div class="preview-code">
-                〒102-0083<br>
-                東京都千代田区麹町２丁目４<br>
-                千代田区立麹町小学校 御中
-              </div>
-              <div class="preview-footer">✨ インストール不要・ブラウザで即日ご利用可能</div>
-            </div>
-          </div>
+          <h2 style="color:#fff; font-size:clamp(1.6rem,3.2vw,2.3rem); font-weight:700; margin:0 0 14px; font-family:'Noto Serif JP',serif; line-height:1.35;">
+            目的から選ぶ 3大教育データベース
+          </h2>
+          <p style="color:rgba(248,250,252,0.85); font-size:0.95rem; line-height:1.8; margin:0;">
+            教科書会社の年間指導計画、全国の大学・キャンパス情報、小中高校・特別支援学校の宛名コピー＆マップ検索へ、TOPページから一発アクセスできます。
+          </p>
         </div>
+
+        <!-- 3 Cards Grid -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(310px, 1fr)); gap:24px; margin-bottom:36px;">
+          
+          <!-- Card 1: 教科書会社DB -->
+          <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(245,158,11,0.35); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, border-color 0.25s; box-shadow:0 12px 32px rgba(0,0,0,0.3);" onmouseover="this.style.borderColor='#f59e0b';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(245,158,11,0.35)';this.style.transform='none'">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                <span style="background:linear-gradient(135deg,#d97706,#b45309); color:#fff; font-size:0.75rem; font-weight:800; padding:5px 14px; border-radius:99px; letter-spacing:0.04em;">📚 教科書会社DB</span>
+                <span style="color:#fde68a; font-size:0.75rem; font-weight:700; background:rgba(255,255,255,0.08); padding:4px 10px; border-radius:99px;">主要20+社 網羅</span>
+              </div>
+              <h3 style="color:#fff; font-size:1.25rem; font-weight:700; margin:0 0 10px; font-family:'Noto Serif JP',serif;">教科書会社・年間指導計画 DB</h3>
+              <p style="color:rgba(248,250,252,0.8); font-size:0.86rem; line-height:1.7; margin:0 0 18px;">
+                東京書籍、光村図書、教育出版、啓林館、日本文教出版、帝国書院などの公式年間指導計画・評価計画・指導資料へのダイレクトリンク集。
+              </p>
+              <div style="background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-bottom:20px; border:1px solid rgba(255,255,255,0.06);">
+                <div style="color:#fde68a; font-size:0.78rem; font-weight:700; margin-bottom:8px;">主な活用ポイント:</div>
+                <ul style="margin:0; padding-left:18px; color:rgba(255,255,255,0.85); font-size:0.78rem; line-height:1.7;">
+                  <li>令和6年度最新版の年間指導計画・単元配列</li>
+                  <li>国語・算数/数学・理科・社会・英語・道徳等の資料</li>
+                  <li>Ban.Tai週案・教育計画システムとの連携に最適</li>
+                </ul>
+              </div>
+            </div>
+            <a href="/resources/textbook-plans/" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#f59e0b,#d97706); color:#071326; font-weight:800; font-size:0.92rem; padding:13px; border-radius:12px; text-decoration:none; transition:opacity 0.2s;">
+              <span>教科書会社DBを開く</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 2: 全国大学DB -->
+          <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(59,130,246,0.4); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, border-color 0.25s; box-shadow:0 12px 32px rgba(0,0,0,0.3);" onmouseover="this.style.borderColor='#60a5fa';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='none'">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                <span style="background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; font-size:0.75rem; font-weight:800; padding:5px 14px; border-radius:99px; letter-spacing:0.04em;">🎓 全国大学DB</span>
+                <span style="color:#93c5fd; font-size:0.75rem; font-weight:700; background:rgba(255,255,255,0.08); padding:4px 10px; border-radius:99px;">国公立・私立 700+校</span>
+              </div>
+              <h3 style="color:#fff; font-size:1.25rem; font-weight:700; margin:0 0 10px; font-family:'Noto Serif JP',serif;">全国大学データベース</h3>
+              <p style="color:rgba(248,250,252,0.8); font-size:0.86rem; line-height:1.7; margin:0 0 18px;">
+                全国の国公立大学・私立大学のキャンパス検索、学部・学科情報、キャンパス写真ギャラリー、所在地マップ連携を網羅。
+              </p>
+              <div style="background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-bottom:20px; border:1px solid rgba(255,255,255,0.06);">
+                <div style="color:#93c5fd; font-size:0.78rem; font-weight:700; margin-bottom:8px;">主な活用ポイント:</div>
+                <ul style="margin:0; padding-left:18px; color:rgba(255,255,255,0.85); font-size:0.78rem; line-height:1.7;">
+                  <li>東京都をはじめ全国の大学・短大・大学院情報</li>
+                  <li>キャンパス写真ギャラリー＆ストリートビューマップ</li>
+                  <li>進路指導・キャリア教育・写真クイック登録対応</li>
+                </ul>
+              </div>
+            </div>
+            <a href="/tools/university-database/" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-weight:800; font-size:0.92rem; padding:13px; border-radius:12px; text-decoration:none; transition:opacity 0.2s;">
+              <span>全国大学DBを開く</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 3: 全国学校DB -->
+          <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(16,185,129,0.4); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, border-color 0.25s; box-shadow:0 12px 32px rgba(0,0,0,0.3);" onmouseover="this.style.borderColor='#34d399';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(16,185,129,0.4)';this.style.transform='none'">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                <span style="background:linear-gradient(135deg,#059669,#047857); color:#fff; font-size:0.75rem; font-weight:800; padding:5px 14px; border-radius:99px; letter-spacing:0.04em;">🏫 全国学校DB</span>
+                <span style="color:#6ee7b7; font-size:0.75rem; font-weight:700; background:rgba(255,255,255,0.08); padding:4px 10px; border-radius:99px;">全国・東京都 41,000+校</span>
+              </div>
+              <h3 style="color:#fff; font-size:1.25rem; font-weight:700; margin:0 0 10px; font-family:'Noto Serif JP',serif;">全国学校データベース（小・中・高・特支）</h3>
+              <p style="color:rgba(248,250,252,0.8); font-size:0.86rem; line-height:1.7; margin:0 0 18px;">
+                全国47都道府県の小・中・高校・特別支援学校の住所・電話・宛名コピー・CSVダウンロード・Google Maps連携。
+              </p>
+              <div style="background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-bottom:20px; border:1px solid rgba(255,255,255,0.06);">
+                <div style="color:#6ee7b7; font-size:0.78rem; font-weight:700; margin-bottom:8px;">主な活用ポイント:</div>
+                <ul style="margin:0; padding-left:18px; color:rgba(255,255,255,0.85); font-size:0.78rem; line-height:1.7;">
+                  <li>東京都（3,509校）をはじめ全国47都道府県データ</li>
+                  <li>封筒印刷用宛名一括コピー＆CSVファイル出力</li>
+                  <li>Google Maps地図連携＆自治体・学校種絞り込み</li>
+                </ul>
+              </div>
+            </div>
+            <a href="/tools/school-database/" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#10b981,#059669); color:#fff; font-weight:800; font-size:0.92rem; padding:13px; border-radius:12px; text-decoration:none; transition:opacity 0.2s;">
+              <span>全国学校DBを開く</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Bottom Gateway Bar -->
+        <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.25); border-radius:14px; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div style="color:#fde68a; font-size:0.88rem; font-weight:700; display:flex; align-items:center; gap:8px;">
+            <span>💡 データベース総合メニュー（Gateway）からも全DBを選択できます</span>
+          </div>
+          <a href="/databases/" style="color:#fff; background:rgba(255,255,255,0.12); padding:8px 20px; border-radius:99px; text-decoration:none; font-size:0.82rem; font-weight:700; border:1px solid rgba(255,255,255,0.25); transition:background 0.2s;">
+            DB・情報検索 総合メニューを見る &rarr;
+          </a>
+        </div>
+
       </div>
     </section>
 
