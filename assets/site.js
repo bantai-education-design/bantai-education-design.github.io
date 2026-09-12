@@ -178,99 +178,43 @@
   }
 })();
 
-/* Global audience/context navigation: keeps visitors oriented after leaving the homepage. */
+/* Global navigation: breadcrumbs on subpages */
 (function () {
-  if (document.querySelector(".global-context-bar")) return;
-
-  const header = document.querySelector(".site-header");
-  const main = document.querySelector("main");
-  if (!header || !main) return;
-
-  const oldAudienceTier = header.querySelector(".audience-tier");
-  if (oldAudienceTier) oldAudienceTier.hidden = true;
-
-  const style = document.createElement("style");
-  style.id = "global-context-nav-style";
-  style.textContent = `
-    .global-context-bar{position:relative;width:100%;z-index:44;background:#071b36;color:#fff;border-bottom:1px solid rgba(197,160,89,.5);box-shadow:0 5px 18px rgba(5,18,35,.12);}
-    .global-context-inner{width:min(1140px,90vw);margin:auto;display:flex;align-items:center;gap:18px;min-height:58px}
-    .global-context-label{flex:0 0 auto;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#edd996;white-space:nowrap}
-    .global-audience-nav{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
-    .global-audience-nav a{display:inline-flex;align-items:center;min-height:34px;padding:6px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:rgba(255,255,255,.88);text-decoration:none;font-size:.8rem;font-weight:700;line-height:1.2;background:rgba(255,255,255,.05);transition:.2s}
-    .global-audience-nav a:hover{background:rgba(255,255,255,.12);border-color:#c5a059;color:#fff}
-    .global-audience-nav a.is-current{background:linear-gradient(135deg,#c5a059,#edd996);border-color:#edd996;color:#071b36;box-shadow:0 3px 10px rgba(197,160,89,.22)}
-    .global-breadcrumb{margin-left:auto;display:flex;align-items:center;gap:6px;min-width:0;color:rgba(255,255,255,.64);font-size:.72rem;white-space:nowrap;overflow:hidden}
-    .global-breadcrumb a{color:rgba(255,255,255,.76);text-decoration:none}.global-breadcrumb a:hover{color:#edd996}.global-breadcrumb .crumb-current{color:#fff;font-weight:700;overflow:hidden;text-overflow:ellipsis}.global-breadcrumb .crumb-sep{color:#c5a059}
-    @media(max-width:860px){.global-context-bar{position:relative;top:0}.global-context-inner{width:100%;padding:8px 14px;display:grid;grid-template-columns:auto 1fr;gap:6px 10px;min-height:auto}.global-context-label{grid-column:1}.global-audience-nav{grid-column:2;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}.global-audience-nav::-webkit-scrollbar{display:none}.global-audience-nav a{white-space:nowrap;font-size:.76rem;padding:6px 10px}.global-breadcrumb{grid-column:1/-1;margin-left:0;border-top:1px solid rgba(255,255,255,.1);padding-top:6px;font-size:.68rem}}
-    @media(max-width:520px){.global-context-label{display:none}.global-audience-nav{grid-column:1/-1}.global-context-inner{grid-template-columns:1fr}.global-breadcrumb{grid-column:1}}
-  `;
-  document.head.appendChild(style);
-
   const path = window.location.pathname.replace(/\/+/g, "/");
-  const isTeacher = path.startsWith("/for-teachers/") || path.startsWith("/products/school-work/");
-  const isParent = path.startsWith("/for-parents/") || path.startsWith("/products/family-learning/");
-  const isData = path.startsWith("/databases/") || path.startsWith("/tools/school-database/") || path.startsWith("/resources/textbook-plans/");
-  const isProducts = path.startsWith("/products/") && !isTeacher && !isParent;
+  if (path === "/" || path === "/index.html" || path === "/index-new.html") return;
 
-  const bar = document.createElement("div");
-  bar.className = "global-context-bar";
-  bar.setAttribute("aria-label", "対象者と現在地");
+  const main = document.querySelector("main");
+  if (!main || document.querySelector(".inline-breadcrumb")) return;
 
-  const inner = document.createElement("div");
-  inner.className = "global-context-inner";
-
-  const label = document.createElement("span");
-  label.className = "global-context-label";
-  label.textContent = "対象者を選ぶ";
-  inner.appendChild(label);
-
-  const nav = document.createElement("nav");
-  nav.className = "global-audience-nav";
-  nav.setAttribute("aria-label", "対象者・目的別ナビゲーション");
-  const navItems = [
-    ["先生", "/for-teachers/", isTeacher],
-    ["保護者・ご家庭", "/for-parents/", isParent],
-    ["DB・情報検索", "/databases/", isData],
-    ["商品カテゴリー", "/products/categories/", isProducts]
-  ];
-  navItems.forEach(([text, href, current]) => {
-    const a = document.createElement("a");
-    a.href = href;
-    a.textContent = text;
-    if (current) {
-      a.classList.add("is-current");
-      a.setAttribute("aria-current", "page");
-    }
-    nav.appendChild(a);
-  });
-  inner.appendChild(nav);
+  const h1 = document.querySelector("main h1");
+  const pageTitle = (h1 ? h1.textContent : document.title.split("|")[0]).replace(/\s+/g, " ").trim();
 
   const breadcrumb = document.createElement("nav");
-  breadcrumb.className = "global-breadcrumb";
+  breadcrumb.className = "inline-breadcrumb";
   breadcrumb.setAttribute("aria-label", "現在地");
+  breadcrumb.style.cssText = "width:min(1140px,90vw); margin:12px auto 0; padding:8px 0; font-size:0.8rem; color:#64748b; display:flex; align-items:center; gap:6px; flex-wrap:wrap;";
 
   const addCrumb = (text, href) => {
     if (breadcrumb.children.length) {
       const sep = document.createElement("span");
-      sep.className = "crumb-sep";
       sep.textContent = "›";
+      sep.style.color = "#94a3b8";
       breadcrumb.appendChild(sep);
     }
     if (href) {
       const a = document.createElement("a");
       a.href = href;
       a.textContent = text;
+      a.style.cssText = "color:#1e3a8a; text-decoration:none; font-weight:600;";
       breadcrumb.appendChild(a);
     } else {
       const span = document.createElement("span");
-      span.className = "crumb-current";
       span.textContent = text;
+      span.style.cssText = "color:#475569; font-weight:700;";
       breadcrumb.appendChild(span);
     }
   };
 
-  const h1 = document.querySelector("main h1");
-  const pageTitle = (h1 ? h1.textContent : document.title.split("|")[0]).replace(/\s+/g, " ").trim();
   addCrumb("ホーム", "/");
 
   if (path.startsWith("/for-teachers/")) {
@@ -282,9 +226,12 @@
   } else if (path.startsWith("/tools/school-database/")) {
     addCrumb("DB・情報検索", "/databases/");
     addCrumb(path === "/tools/school-database/" ? "全国学校DB" : pageTitle || "全国学校DB", null);
+  } else if (path.startsWith("/tools/university-database/")) {
+    addCrumb("DB・情報検索", "/databases/");
+    addCrumb(path === "/tools/university-database/" ? "全国大学DB" : pageTitle || "全国大学DB", null);
   } else if (path.startsWith("/resources/textbook-plans/")) {
     addCrumb("DB・情報検索", "/databases/");
-    addCrumb(pageTitle || "教科書・年間学習計画", null);
+    addCrumb(pageTitle || "教科書会社DB", null);
   } else if (path === "/products/" || path === "/products") {
     addCrumb("全商品", null);
   } else if (path.startsWith("/products/categories/")) {
@@ -292,11 +239,9 @@
   } else if (path.startsWith("/products/")) {
     addCrumb("商品カテゴリー", "/products/categories/");
     addCrumb(pageTitle || "商品詳細", null);
-  } else if (path !== "/" && path !== "/index.html" && path !== "/index-new.html") {
+  } else {
     addCrumb(pageTitle || "現在のページ", null);
   }
 
-  inner.appendChild(breadcrumb);
-  bar.appendChild(inner);
-  header.appendChild(bar);
+  main.insertBefore(breadcrumb, main.firstChild);
 })();
