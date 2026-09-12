@@ -1,0 +1,8 @@
+## Summary
+Adds Vol. 6 Weekly Education News Digest Column article ("【週刊教育動向】学校での生成AI活用ガイドラインとGIGA第2期端末更新――今週の教育ニュースと現場の展望").
+
+## Details
+- Compiled weekly education news summary table (MEXT AI guidelines, GIGA School Phase 2, Digital Textbooks, Teacher Workload Reform, Inquiry-based learning).
+- Deep dive commentary on featured items from a former teacher's perspective (40 years experience).
+- Added 1 main thumbnail image (`column-weekly-education-news-20260917.webp`) and 1 inline illustration (`column-weekly-education-ai-guidelines.webp`).
+- Verified layout and modal display using Playwright.

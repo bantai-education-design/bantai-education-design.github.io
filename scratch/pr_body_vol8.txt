@@ -1,0 +1,8 @@
+## Summary
+Adds Vol. 8 Weekly AI News Digest Column article ("【週刊AI動向】思考型AIモデルの進化とエージェント連携――今週のAIニュースと教育DXの最前線").
+
+## Details
+- Compiled weekly AI news summary table (Reasoning Models CoT, School/Administrative AI Agents, AI Content Watermarking Standards, On-device Local SLMs, MEXT School AI Guidelines).
+- Deep dive commentary on featured items from an educational perspective (step-by-step reasoning CoT, human-centered teacher role).
+- Added 1 main thumbnail image (`column-weekly-ai-news-20260919.webp`) and 1 inline illustration (`column-weekly-ai-reasoning-models.webp`).
+- Verified layout and modal display using Playwright.
