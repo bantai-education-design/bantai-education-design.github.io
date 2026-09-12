@@ -3,28 +3,36 @@
   "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
   "styleHref": "/assets/style.css",
   "includeFonts": false,
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
     {
       "href": "/",
       "label": "ホーム"
     },
     {
-      "href": "/#products",
-      "label": "製品一覧",
+      "href": "/products/",
+      "label": "製品・教材",
       "class": "active"
     },
     {
-      "href": "/resources/textbook-plans/",
-      "label": "学習ガイド"
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
     },
     {
       "href": "#download",
       "label": "ライセンス申請"
     },
     {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
       "href": "/contact/",
-      "label": "お問い合わせ",
+      "label": "サポート",
       "class": "mini"
     }
   ],

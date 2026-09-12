@@ -4,14 +4,42 @@
   "bodyClass": "",
   "styleHref": "/assets/style.css",
   "includeFonts": false,
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#download", "label": "無料ダウンロード" },
-    { "href": "#howto", "label": "使い方" },
-    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#download",
+      "label": "無料ダウンロード"
+    },
+    {
+      "href": "#howto",
+      "label": "使い方"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "画像文字入れくん",
   "englishName": "Image Text Overlay",
@@ -102,7 +130,10 @@
           "class": "btn-download-large",
           "href": "https://www.vector.co.jp/soft/winnt/art/se528755.html",
           "label": "Vectorからダウンロード・購入",
-          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
         }
       ],
       "note": "※ 試用期間（10日間）終了後も継続してご利用いただく場合は、Vectorの案内に従ってライセンスをご購入ください。",

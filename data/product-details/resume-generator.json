@@ -3,15 +3,46 @@
   "metaDescription": "スマート履歴書ジェネレーター（Smart Resume Generator）は、履歴書の入力・写真配置・志望動機/自己PR作成に対応し、表面・裏面を正しい向きの2ページPDFとして作成できるWindows用の履歴書作成ツールです。",
   "bodyClass": "product-detail-resume",
   "styleVersion": "staff-resume-final-20260614-2",
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#features", "label": "主な機能" },
-    { "href": "#screenshots", "label": "画面イメージ" },
-    { "href": "#distribution", "label": "配布・購入" },
-    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#features",
+      "label": "主な機能"
+    },
+    {
+      "href": "#screenshots",
+      "label": "画面イメージ"
+    },
+    {
+      "href": "#distribution",
+      "label": "配布・購入"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "スマート履歴書ジェネレーター",
   "englishName": "Smart Resume Generator",
@@ -30,12 +61,26 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "kicker": "Smart Resume Generator",
-      "headingLines": ["スマート履歴書ジェネレーター"],
+      "headingLines": [
+        "スマート履歴書ジェネレーター"
+      ],
       "lead": "写真付き履歴書を、入力から表裏2ページPDF作成まで支援するWindows用ツールです。基本情報、学歴、職歴、免許・資格、志望動機、自己PR、本人希望欄を順番に入力できます。",
       "note": "対応OS：Windows 10 / 11。10日間試用でき、未認証時はPDF・印刷物に SAMPLE 表示が入ります。ライセンスキー認証で SAMPLE 表示を解除できます。",
       "actions": [
-        { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } },
-        { "class": "btn btn-secondary", "href": "#screenshots", "label": "画面イメージを見る" }
+        {
+          "class": "btn btn-primary",
+          "href": "https://booth.pm/ja/items/8551539",
+          "label": "BOOTHでダウンロードする",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "#screenshots",
+          "label": "画面イメージを見る"
+        }
       ],
       "image": {
         "src": "/assets/images/resume-generator/booth-1-main.png",
@@ -228,7 +273,15 @@
           "heading": "BOOTHでダウンロードできます",
           "text": "10日間試用できるアプリ本体をBOOTHで公開しています。未認証時はPDF・印刷物に SAMPLE 表示が入り、ライセンスキー認証で解除できます。",
           "actions": [
-            { "class": "btn btn-primary", "href": "https://booth.pm/ja/items/8551539", "label": "BOOTHでダウンロードする", "attrs": { "target": "_blank", "rel": "noopener noreferrer" } }
+            {
+              "class": "btn btn-primary",
+              "href": "https://booth.pm/ja/items/8551539",
+              "label": "BOOTHでダウンロードする",
+              "attrs": {
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              }
+            }
           ]
         },
         {

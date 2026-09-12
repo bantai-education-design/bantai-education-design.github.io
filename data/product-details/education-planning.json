@@ -7,17 +7,21 @@
   "menuToggle": true,
   "navLinks": [
     {
-      "label": "ホーム",
-      "href": "/"
+      "href": "/",
+      "label": "ホーム"
     },
     {
-      "label": "製品一覧",
-      "href": "/#products",
+      "href": "/products/",
+      "label": "製品・教材",
       "class": "active"
     },
     {
-      "href": "/resources/textbook-plans/",
-      "label": "学習ガイド"
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
     },
     {
       "label": "無料ダウンロード",
@@ -28,8 +32,12 @@
       "href": "#howto"
     },
     {
-      "label": "お問い合わせ",
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
       "href": "/contact/",
+      "label": "サポート",
       "class": "mini"
     }
   ],

@@ -3,14 +3,42 @@
   "metaDescription": "証明写真メーカー Ver.3.8.2 AI は、自宅で証明写真を整え、背景調整・サイズ選択・印刷用レイアウト作成まで行えるWindowsアプリです。",
   "styleHref": "/assets/style.css",
   "includeFonts": false,
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#vector", "label": "購入・ダウンロード" },
-    { "href": "#howto", "label": "使い方" },
-    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#vector",
+      "label": "購入・ダウンロード"
+    },
+    {
+      "href": "#howto",
+      "label": "使い方"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "証明写真メーカー",
   "englishName": "ID Photo Maker",

@@ -5,14 +5,42 @@
   "styleHref": "/assets/style.css",
   "includeFonts": false,
   "homeFloating": false,
-  "menuToggle": false,
+  "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#download", "label": "無料ダウンロード" },
-    { "href": "#howto", "label": "詳細を見る" },
-    { "href": "/monitor/", "label": "モニター募集" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#download",
+      "label": "無料ダウンロード"
+    },
+    {
+      "href": "#howto",
+      "label": "詳細を見る"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "Ban.Tai バナースタジオ",
   "englishName": "Free Windows App",
@@ -29,11 +57,13 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "kicker": "Free Windows App",
-      "headingLines": ["Ban.Tai バナースタジオ v3.0.0"],
+      "headingLines": [
+        "Ban.Tai バナースタジオ v3.0.0"
+      ],
       "lead": "note・ホームページ・ブログ・SNS向けのバナー画像を、サイズ確認しながら作成できるWindowsアプリです。",
       "leadStyle": "font-weight:700; margin-bottom:10px;",
       "noteClass": "lead",
-        "noteLines": [
+      "noteLines": [
         "横幅・縦幅のpx指定、縦横比固定、画像トリミング、PNG/JPEG保存、容量指定保存に対応しています。",
         "旧「Ban.Tai Noteバナースタジオ」をもとに、汎用バナー作成アプリとして再設計しました。"
       ],
@@ -42,11 +72,17 @@
           "class": "btn btn-primary",
           "href": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
           "label": "無料ダウンロード",
-          "attrs": { "download": "" }
+          "attrs": {
+            "download": ""
+          }
         },
-        { "class": "btn btn-secondary", "href": "#howto", "label": "詳細を見る" }
+        {
+          "class": "btn btn-secondary",
+          "href": "#howto",
+          "label": "詳細を見る"
+        }
       ],
-        "image": {
+      "image": {
         "src": "/assets/images/note-banner-studio/note-banner-studio-hero-v2.png",
         "alt": "Ban.Tai バナースタジオ v3.0.0 - バナー作成画面のスクリーンショット"
       }
@@ -60,7 +96,7 @@
       "containerClass": "container grid grid-2",
       "eyebrow": "Why I made it",
       "heading": "noteのヘッダー画像、うまくいかなくて困っていないかい？",
-        "paragraphs": [
+      "paragraphs": [
         "noteやSNS、ホームページのバナーは表示サイズやトリミングが異なり、見切れや文字の切れが発生しがちです。",
         "Ban.Tai バナースタジオは用途に合わせたサイズ指定と安全領域ガイドで、作業を簡単にします。",
         "旧「Ban.Tai Noteバナースタジオ」をもとに、より汎用的に使えるように改良しました。"
@@ -137,13 +173,31 @@
         "class": "card",
         "heading": "主な特徴",
         "separator": "：",
-          "bullets": [
-          { "label": "用途", "text": "note・ホームページ・ブログ・SNS・販売ページ向けのバナー画像作成" },
-          { "label": "対応", "text": "Windows用アプリ" },
-          { "label": "機能", "text": "横幅/縦幅指定、縦横比固定、トリミング、拡大縮小、中央配置の文字、PNG/JPEG保存" },
-          { "label": "保存", "text": "完成したバナー画像をダウンロード" },
-          { "label": "価格", "text": "無料配布" },
-          { "label": "バージョン", "text": "v3.0.0" }
+        "bullets": [
+          {
+            "label": "用途",
+            "text": "note・ホームページ・ブログ・SNS・販売ページ向けのバナー画像作成"
+          },
+          {
+            "label": "対応",
+            "text": "Windows用アプリ"
+          },
+          {
+            "label": "機能",
+            "text": "横幅/縦幅指定、縦横比固定、トリミング、拡大縮小、中央配置の文字、PNG/JPEG保存"
+          },
+          {
+            "label": "保存",
+            "text": "完成したバナー画像をダウンロード"
+          },
+          {
+            "label": "価格",
+            "text": "無料配布"
+          },
+          {
+            "label": "バージョン",
+            "text": "v3.0.0"
+          }
         ]
       }
     },
@@ -164,9 +218,15 @@
           "class": "btn-download-large",
           "href": "/downloads/BanTai_BannerStudio_v3.0.0.zip",
           "label": "Ban.Tai バナースタジオ v3.0.0 をダウンロード",
-          "attrs": { "download": "" }
+          "attrs": {
+            "download": ""
+          }
         },
-        { "class": "btn btn-secondary", "href": "/contact/", "label": "不具合・感想を送る" }
+        {
+          "class": "btn btn-secondary",
+          "href": "/contact/",
+          "label": "不具合・感想を送る"
+        }
       ],
       "note": "学校や職場のPCで使用する場合は、管理者または情報担当者に確認してください。Windowsの警告が出る場合があります。"
     },
@@ -176,7 +236,11 @@
       "heading": "note記事から来てくださった方へ",
       "paragraphs": [
         "記事で紹介したアプリのダウンロードページです。使ってみて分かりにくいところや改善してほしい点があれば、お知らせください。",
-        { "strong": "Ban.Tai Education Design", "text": "https://bantai-education-design.github.io/", "href": "/" }
+        {
+          "strong": "Ban.Tai Education Design",
+          "text": "https://bantai-education-design.github.io/",
+          "href": "/"
+        }
       ]
     },
     {

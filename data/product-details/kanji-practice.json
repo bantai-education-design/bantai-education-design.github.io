@@ -5,12 +5,40 @@
   "styleVersion": "586a1d0_v2",
   "menuToggle": true,
   "navLinks": [
-    { "href": "/", "label": "ホーム" },
-    { "href": "/#products", "label": "製品一覧", "class": "active" },
-    { "href": "/resources/textbook-plans/", "label": "学習ガイド" },
-    { "href": "#trial", "label": "無料体験版" },
-    { "href": "#faq", "label": "よくある質問" },
-    { "href": "/contact/", "label": "お問い合わせ", "class": "mini" }
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "#trial",
+      "label": "無料体験版"
+    },
+    {
+      "href": "#faq",
+      "label": "よくある質問"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
   ],
   "productName": "漢字練習帳",
   "englishName": "Kanji Practice",
@@ -30,7 +58,10 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "kicker": "Kanji Practice",
-      "headingLines": ["子どもに合わせた", "漢字練習ノートを自由に作成。"],
+      "headingLines": [
+        "子どもに合わせた",
+        "漢字練習ノートを自由に作成。"
+      ],
       "lead": "マス目、余白、罫線の色や濃さまで、すべてを調整できるWindows用印刷用紙作成アプリ。",
       "note": "※ Windows PC専用。インストール版とポータブル版を同梱しています。",
       "actions": [
@@ -38,9 +69,16 @@
           "class": "btn btn-primary",
           "href": "https://bantai3.booth.pm/items/8305799",
           "label": "BOOTHで購入・ダウンロードする",
-          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
         },
-        { "class": "btn btn-secondary", "href": "#trial", "label": "10日間無料体験版" }
+        {
+          "class": "btn btn-secondary",
+          "href": "#trial",
+          "label": "10日間無料体験版"
+        }
       ],
       "image": {
         "src": "/assets/images/kanji-practice/booth-1-main.png",
@@ -53,7 +91,10 @@
       "background": "#fdfbf7",
       "cardClass": "card",
       "badge": "作る漢字ノート",
-      "headingLines": ["市販の漢字ノートにない、", "圧倒的な自由度。"],
+      "headingLines": [
+        "市販の漢字ノートにない、",
+        "圧倒的な自由度。"
+      ],
       "paragraphs": [
         "「マスのサイズが細かすぎる」「余白が狭くて書きづらい」「罫線の色が鉛筆と混ざって見にくい」といった、子どもたちの学習時の小さなストレスをすべて解消します。",
         "マスの数、余白サイズ、罫線の色や濃さを自由にカスタマイズして、今その子に必要な最適なノートをいつでも何枚でも印刷できます。"
@@ -69,7 +110,10 @@
       "background": "#fff",
       "cardClass": "card gold",
       "badge": "成長に合わせたマス目設定",
-      "headingLines": ["幼児用の大きなマスから、", "高学年用の細かなマスまで。"],
+      "headingLines": [
+        "幼児用の大きなマスから、",
+        "高学年用の細かなマスまで。"
+      ],
       "paragraphs": [
         "マス目は 5×5、10×7、15×12、20×20 など、縦マスの数・横マスの数を自由自在に設定可能。",
         "マスのサイズは、自動的に正方形（漢字の練習に最適な比率）になるようにシステムが自動調整します。幼児期の発達段階から、中学年・高学年・大人の練習用まで幅広く活用できます。"
@@ -85,7 +129,10 @@
       "background": "#f9f9f9",
       "cardClass": "card",
       "badge": "書きやすさを追求する",
-      "headingLines": ["鉛筆の文字を邪魔しない、", "最適な罫線の色と太さ。"],
+      "headingLines": [
+        "鉛筆の文字を邪魔しない、",
+        "最適な罫線の色と太さ。"
+      ],
       "paragraphs": [
         "罫線の色は「黒」「青」「緑」「グレー」の4色から選択できます。鉛筆で書いた漢字がはっきり見分けられるように、青や緑などの線を選ぶと非常に見やすく学習がはかどります。",
         "また、外枠線や十字点線の太さ・濃さもスライダーで微調整が可能。極薄グレーに設定して「なぞり書き」用のガイド用紙を作ることもできます。"
@@ -102,7 +149,10 @@
       "background": "#fff",
       "cardClass": "card gold",
       "badge": "安心の無料体験",
-      "headingLines": ["まずはすべての機能を、", "10日間の無料体験でお試し。"],
+      "headingLines": [
+        "まずはすべての機能を、",
+        "10日間の無料体験でお試し。"
+      ],
       "paragraphs": [
         "「漢字練習帳」は、すべての機能を制限なくお使いいただける10日間の無料体験版を提供しています。",
         "面倒な会員登録やクレジットカードの登録は一切不要。体験期間終了後に自動で課金されるような心配もありません。まずは使いやすさや実際の印刷の仕上がりを無料でお試しください。"
@@ -113,7 +163,10 @@
           "class": "btn btn-primary",
           "href": "https://bantai3.booth.pm/items/8305799",
           "label": "BOOTHで購入・ダウンロードする",
-          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
         }
       ],
       "image": {
@@ -130,7 +183,10 @@
           "class": "btn-download-large",
           "href": "https://bantai3.booth.pm/items/8305799",
           "label": "BOOTHで購入・ダウンロードする",
-          "attrs": { "target": "_blank", "rel": "noopener noreferrer" }
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
         }
       ],
       "note": "シリアルキーをアプリに入力するだけで即座に制限が解除され、永続的にご利用いただけます。"
@@ -140,9 +196,18 @@
       "background": "#f9f9f9",
       "heading": "動作環境",
       "items": [
-        { "label": "OS", "text": "Windows 10 / 11" },
-        { "label": "形式", "text": "インストール版、ポータブル版（USB起動可能）を同梱" },
-        { "label": "必要環境", "text": "プリンター（A4またはB5印刷対応）、またはPDFファイルを外部デバイスへ出力可能な環境" }
+        {
+          "label": "OS",
+          "text": "Windows 10 / 11"
+        },
+        {
+          "label": "形式",
+          "text": "インストール版、ポータブル版（USB起動可能）を同梱"
+        },
+        {
+          "label": "必要環境",
+          "text": "プリンター（A4またはB5印刷対応）、またはPDFファイルを外部デバイスへ出力可能な環境"
+        }
       ]
     },
     {
