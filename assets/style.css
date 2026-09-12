@@ -6326,3 +6326,51 @@ button:focus-visible {
     padding: 4px 6px;
   }
 }
+
+
+/* === High-Impact Column Card Typography & Thumbnail Styling === */
+.column-card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.column-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.column-card:hover .column-card-media img {
+  transform: scale(1.04);
+}
+
+.column-title {
+  font-family: "BIZ UDGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  color: #0f172a !important;
+  line-height: 1.45 !important;
+  margin: 10px 0 8px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  letter-spacing: -0.01em;
+}
+
+.column-card-body {
+  padding: 18px 20px 20px 20px !important;
+}
+
+.column-excerpt {
+  font-size: 0.92rem !important;
+  color: #475569 !important;
+  line-height: 1.65 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
