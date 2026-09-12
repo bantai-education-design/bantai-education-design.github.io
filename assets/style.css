@@ -6258,3 +6258,71 @@ button:focus-visible {
     white-space: normal;
   }
 }
+
+
+/* === Column Modal Responsive & No Horizontal Scroll Fix === */
+.column-modal-dialog {
+  overflow-x: hidden !important;
+  max-width: 860px;
+}
+
+.column-modal-text {
+  overflow-x: hidden !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-modal-text pre,
+.column-modal-text code {
+  max-width: 100%;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-x: hidden !important;
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+}
+
+.column-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.column-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  table-layout: fixed;
+  word-break: break-word;
+}
+
+.column-table th,
+.column-table td {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  vertical-align: top;
+  word-break: break-word;
+  white-space: normal;
+}
+
+@media (max-width: 640px) {
+  .column-table {
+    display: block;
+    width: 100%;
+  }
+  .column-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  .column-table td, .column-table th {
+    display: block;
+    border: none;
+    padding: 4px 6px;
+  }
+}
