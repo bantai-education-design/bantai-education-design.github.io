@@ -63,6 +63,15 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert okinawa['aging_rate'] == 22.5, f"沖縄県高齢化率（期待値: 22.5%, 実際: {okinawa['aging_rate']}%）"
     assert okinawa['ranks']['aging_rate'] == 47, f"沖縄県高齢化率順位（期待値: 47位, 実際: {okinawa['ranks']['aging_rate']}位）"
 
+    # 8. 7 New Phase-1 Indicators Validation
+    assert len(dataset['indicators_definition']) == 20, f"指標数が20件であること（実際: {len(dataset['indicators_definition'])}）"
+    assert nat['child_under_15_ratio'] == 11.9, f"全国15歳未満人口割合（期待値: 11.9%, 実際: {nat['child_under_15_ratio']}%）"
+    assert nat['pop_change_rate'] == -0.7, f"全国5年人口増減率（期待値: -0.7%, 実際: {nat['pop_change_rate']}%）"
+    assert okinawa['child_under_15_ratio'] == 16.9, f"沖縄県15歳未満人口割合（期待値: 16.9%, 実際: {okinawa['child_under_15_ratio']}%）"
+    assert okinawa['ranks']['child_under_15_ratio'] == 1, f"沖縄県15歳未満人口割合順位（期待値: 1位, 実際: {okinawa['ranks']['child_under_15_ratio']}位）"
+    assert akita['child_under_15_ratio'] == 9.4, f"秋田県15歳未満人口割合（期待値: 9.4%, 実際: {akita['child_under_15_ratio']}%）"
+    assert akita['ranks']['child_under_15_ratio'] == 47, f"秋田県15歳未満人口割合順位（期待値: 47位, 実際: {akita['ranks']['child_under_15_ratio']}位）"
+
 def test_summary_values_recomputable_from_source() -> None:
     dataset = json.loads(ANALYTICS_DATASET_JSON.read_text(encoding='utf-8'))
     pref_by_code = {p['code']: p for p in dataset['prefectures']}

@@ -109,12 +109,12 @@
     if (metricTitle) metricTitle.textContent = meta.label;
     if (metricDesc) metricDesc.textContent = meta.description || meta.desc || "";
     if (metricBadge) {
-      const isCustom = ["elem_pop_per_school", "jhs_pop_per_school", "student_teacher_ratio"].includes(currentMetric);
+      const isCustom = ["elem_pop_per_school", "jhs_pop_per_school", "student_teacher_ratio", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio"].includes(currentMetric);
       metricBadge.textContent = isCustom ? "独自算出指標" : "公的統計指標";
       metricBadge.style.background = isCustom ? "#3182ce" : "#059669";
     }
 
-    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school"].includes(currentMetric);
+    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate"].includes(currentMetric);
 
     if (metricNationalAvgLabel) {
       metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
