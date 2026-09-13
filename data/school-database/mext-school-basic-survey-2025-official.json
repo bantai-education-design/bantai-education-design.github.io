@@ -46,16 +46,16 @@
     {
       "prefecture_code": "saitama",
       "prefecture_name": "埼玉県",
-      "elem_schools": 790,
-      "private_elem_schools": 16,
+      "elem_schools": 787,
+      "private_elem_schools": 6,
       "elem_students": 345524,
       "elem_teachers": 22072,
-      "elem_classes": 12850,
-      "jhs_schools": 439,
-      "jhs_students": 178200,
-      "jhs_teachers": 12950,
-      "jhs_classes": 6320,
-      "special_needs_schools": 39
+      "elem_classes": 14162,
+      "jhs_schools": 441,
+      "jhs_students": 180252,
+      "jhs_teachers": 12614,
+      "jhs_classes": 6112,
+      "special_needs_schools": 20
     },
     {
       "prefecture_code": "chiba",

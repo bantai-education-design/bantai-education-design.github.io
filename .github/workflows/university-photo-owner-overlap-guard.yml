@@ -1,4 +1,4 @@
-# Trigger CI check: Integrate MEXT 2025 master dataset and add 47-prefecture ground truth CI tests
+# Trigger CI check: MEXT 2025 47-prefecture official dataset fix and ground truth CI expansion
 name: University photo owner and overlap guard
 
 on:

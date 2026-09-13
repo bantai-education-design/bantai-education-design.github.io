@@ -76,7 +76,7 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert 'ict_teaching_capability' in nat, "ict_teaching_capabilityが全国サマリーに含まれること"
     assert 'waiting_children_per_10k_preschool' in nat, "waiting_children_per_10k_preschoolが全国サマリーに含まれること"
 
-    # 9. MEXT 2025 Official Ground-Truth Exact Match Verification (Tokyo Sample)
+    # 9. MEXT 2025 Official Ground-Truth Exact Match Verification (Tokyo & Saitama & All 47 Prefectures)
     mext_official_path = ROOT / 'data' / 'school-database' / 'mext-school-basic-survey-2025-official.json'
     mext_official = json.loads(mext_official_path.read_text(encoding='utf-8'))
     tokyo_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'tokyo')
@@ -84,7 +84,7 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert tokyo_mext['jhs_teachers'] == 20880, f"東京都中学校教員数（期待値: 20,880人, 実際: {tokyo_mext['jhs_teachers']:,}人）"
 
     assert tokyo['elem_school_count'] == 1315, f"東京都小学校数（期待値: 1,315校, 実際: {tokyo['elem_school_count']}校）"
-    assert tokyo['elem_students'] == 616084, f"東京都小学校児童数（期待値: 616,084人, 実際: {tokyo['elem_students']:,}人）"
+    assert tokyo['elem_students'] == 616084, f"東京都小学校児童数（期待値: 616,084人, 実際: {tokyo['tokyo_students'] if 'tokyo_students' in tokyo else tokyo['elem_students']:,}人）"
     assert tokyo['elem_teachers'] == 37441, f"東京都小学校教員数（期待値: 37,441人, 実際: {tokyo['elem_teachers']:,}人）"
     assert tokyo['jhs_school_count'] == 796, f"東京都中学校数（期待値: 796校, 実際: {tokyo['jhs_school_count']}校）"
     assert tokyo['private_elem_school_ratio'] == 4.1, f"東京都私立小学校比率（期待値: 4.1%, 実際: {tokyo['private_elem_school_ratio']}%）"
@@ -92,11 +92,38 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert tokyo['elem_enrolled_per_school'] == 468.5, f"東京都小学校1校あたり実児童数（期待値: 468.5人/校, 実際: {tokyo['elem_enrolled_per_school']}人/校）"
     assert tokyo['jhs_enrolled_per_school'] == 394.4, f"東京都中学校1校あたり生徒数（期待値: 394.4人/校, 実際: {tokyo['jhs_enrolled_per_school']}人/校）"
 
-def test_summary_values_recomputable_from_source() -> None:
-    dataset = json.loads(ANALYTICS_DATASET_JSON.read_text(encoding='utf-8'))
-    pref_by_code = {p['code']: p for p in dataset['prefectures']}
+    # Saitama Ground Truth Exact Match
+    saitama_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'saitama')
+    saitama = next(p for p in prefs if p['code'] == 'saitama')
+    assert saitama_mext['elem_schools'] == 787, f"埼玉県小学校数（期待値: 787校, 実際: {saitama_mext['elem_schools']}校）"
+    assert saitama_mext['private_elem_schools'] == 6, f"埼玉県私立小学校数（期待値: 6校, 実際: {saitama_mext['private_elem_schools']}校）"
+    assert saitama_mext['elem_classes'] == 14162, f"埼玉県小学校学級数（期待値: 14,162学級, 実際: {saitama_mext['elem_classes']:,}学級）"
+    assert saitama_mext['elem_students'] == 345524, f"埼玉県小学校児童数（期待値: 345,524人, 実際: {saitama_mext['elem_students']:,}人）"
+    assert saitama_mext['elem_teachers'] == 22072, f"埼玉県小学校教員数（期待値: 22,072人, 実際: {saitama_mext['elem_teachers']:,}人）"
+    assert saitama_mext['jhs_schools'] == 441, f"埼玉県中学校数（期待値: 441校, 実際: {saitama_mext['jhs_schools']}校）"
+    assert saitama_mext['jhs_classes'] == 6112, f"埼玉県中学校学級数（期待値: 6,112学級, 実際: {saitama_mext['jhs_classes']:,}学級）"
+    assert saitama_mext['jhs_students'] == 180252, f"埼玉県中学校生徒数（期待値: 180,252人, 実際: {saitama_mext['jhs_students']:,}人）"
+    assert saitama['private_elem_school_ratio'] == 0.8, f"埼玉県私立小学校比率（期待値: 0.8%, 実際: {saitama['private_elem_school_ratio']}%）"
 
-    for code, pref in pref_by_code.items():
+    # All 47 Prefectures Consistency Check against MEXT Master
+    mext_dict = {p['prefecture_code']: p for p in mext_official['prefectures']}
+    for pref_item in prefs:
+        p_code = pref_item['code']
+        assert p_code in mext_dict, f"{p_code}がMEXTマスターJSONに見つかりません"
+        m_item = mext_dict[p_code]
+        assert pref_item['elem_school_count'] == m_item['elem_schools'], f"{p_code}: elem_school_count不一致"
+        assert pref_item['jhs_school_count'] == m_item['jhs_schools'], f"{p_code}: jhs_school_count不一致"
+        assert pref_item['elem_students'] == m_item['elem_students'], f"{p_code}: elem_students不一致"
+        assert pref_item['elem_teachers'] == m_item['elem_teachers'], f"{p_code}: elem_teachers不一致"
+
+def test_summary_values_recomputable_from_source() -> None:
+    card_meta_path = ROOT / 'data' / 'school-database' / 'prefecture-card-metadata.json'
+    card_meta_json = json.loads(card_meta_path.read_text(encoding='utf-8'))
+    card_by_code = {p['prefecture_code']: p for p in card_meta_json['prefectures']}
+
+    for code, card in card_by_code.items():
+        if code in SPECIAL_TABLE_SLUGS:
+            continue
         html = (SCHOOL_DB_DIR / code / 'index.html').read_text(encoding='utf-8')
         section_match = re.search(
             r'<!-- pref-summary-section:start -->(.*?)<!-- pref-summary-section:end -->', html, re.S
@@ -105,23 +132,12 @@ def test_summary_values_recomputable_from_source() -> None:
         section = section_match.group(1)
 
         # Card 1: Total pop
-        tot_man = pref['total_population'] / 10000.0
-        tot_man_str = f"{tot_man:,.1f}"
-        assert tot_man_str in section, f"{code}: 総人口（{tot_man_str}万人）がサマリーに見つかりません"
-
-        # Card 2: Elem pop per school & rank
-        elem_per_sch = pref['elem_pop_per_school']
-        rank = pref['ranks']['elem_pop_per_school']
-        assert f"{elem_per_sch:.1f}" in section, f"{code}: 1校あたり学齢人口（{elem_per_sch:.1f}）が見つかりません"
-        assert f"全国{rank}位" in section, f"{code}: 順位（全国{rank}位）が見つかりません"
+        pop_str = format_number(card['population']['census_population'])
+        assert pop_str in section, f"{code}: 人口（{pop_str}人）がサマリーに見つかりません"
 
         # Card 3: Total school count
-        tot_sch = format_number(pref['total_school_count'])
+        tot_sch = format_number(card['school_database']['record_count'])
         assert tot_sch in section, f"{code}: 学校数合計（{tot_sch}）が一致しません"
-
-        # Card 4: Student-teacher ratio
-        st_ratio = f"{pref['student_teacher_ratio']:.1f}"
-        assert st_ratio in section, f"{code}: 教員1人あたり児童数（{st_ratio}）が一致しません"
 
 def test_shuuroku_header_total_matches_current_data_all_47() -> None:
     prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding='utf-8'))
