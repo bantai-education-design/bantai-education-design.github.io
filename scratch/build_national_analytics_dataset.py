@@ -207,8 +207,8 @@ def build_dataset():
         
         # Raw float precision for sorting
         aging_rate_raw = (elderly_pop / total_pop * 100) if total_pop > 0 else 0.0
-        elem_pop_per_school_raw = (elem_pop / elem_count_db) if elem_count_db > 0 else 0.0
-        jhs_pop_per_school_raw = (jhs_pop / jhs_count_db) if jhs_count_db > 0 else 0.0
+        elem_pop_per_school_raw = (elem_pop / mext_elem_schools) if mext_elem_schools > 0 else 0.0
+        jhs_pop_per_school_raw = (jhs_pop / mext_jhs_schools) if mext_jhs_schools > 0 else 0.0
         student_teacher_ratio_raw = (elem_students / elem_teachers) if elem_teachers > 0 else 0.0
         
         # Strict MEXT 2025 aligned school counts
@@ -370,7 +370,7 @@ def build_dataset():
     
     output_obj = {
         'generated_at': '2026-09-13',
-        'schema_version': '1.5',
+        'schema_version': '1.6',
         'description': '全国47都道府県の人口・学齢人口・実在籍生徒数・学級数・教員数・校種構造・独自換算指標（e-Stat・文部科学省「学校基本調査 令和7年度確定値」統合正本）',
         'national_summary': national_summary,
         'indicators_definition': {
