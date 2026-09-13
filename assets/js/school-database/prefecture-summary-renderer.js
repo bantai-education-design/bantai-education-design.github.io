@@ -11,7 +11,7 @@
 
   fetch(DATASET_URL)
     .then((res) => {
-      if (!res.ok) throw new Error(HTTP error! status: );
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return res.json();
     })
     .then((data) => {
@@ -21,7 +21,7 @@
 
       const rankBadge = container.querySelector('.pref-summary-card:nth-child(2) .pref-summary-value span:last-child');
       if (rankBadge && prefData.ranks && prefData.ranks.elem_pop_per_school) {
-        rankBadge.textContent = 全国位;
+        rankBadge.textContent = `全国${prefData.ranks.elem_pop_per_school}位`;
       }
     })
     .catch((err) => {

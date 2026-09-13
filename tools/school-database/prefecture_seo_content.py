@@ -64,11 +64,13 @@ def build_stats_paragraph(pref_name: str, card_pref: dict, dataset_pref: dict | 
     if dataset_pref and "total_population" in dataset_pref:
         total_pop = dataset_pref["total_population"]
         tot_man = total_pop / 10000.0
+        jp_pop = population["census_population"]
         census_age_3_17 = population["census_age_3_17"]
         share = population["share_of_census_population_percent"]
         intro = (
             f"{pref_name}の総人口は{tot_man:,.1f}万人（{format_number(total_pop)}人、"
-            f"令和2年国勢調査確定値）、このうち3〜17歳の学齢人口は{format_number(census_age_3_17)}人（{share}%）です。"
+            f"令和2年国勢調査確定値）です。"
+            f"参考として、日本国籍住民（{format_number(jp_pop)}人）を対象とした3〜17歳の学齢人口は{format_number(census_age_3_17)}人（日本国籍住民に占める割合は{share}%）です。"
         )
     else:
         census_population = population["census_population"]

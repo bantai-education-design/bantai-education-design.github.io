@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-ROOT = Path(r'C:\Users\User\.gemini\antigravity\scratch\bantai-education-design.github.io')
+ROOT = Path(__file__).resolve().parents[1]
 CARD_META_PATH = ROOT / 'data' / 'school-database' / 'prefecture-card-metadata.json'
 EXT_STATS_PATH = ROOT / 'data' / 'school-database' / 'prefecture-education-external-stats.json'
 OUTPUT_PATH = ROOT / 'data' / 'school-database' / 'national-analytics-dataset.json'
@@ -120,9 +120,10 @@ def build_dataset():
         elem_students = ratio_detail.get('student_count', 0)
         student_teacher_ratio = ext.get('student_teacher_ratio', 0)
         
-        aging_rate = round(elderly_pop / total_pop * 100, 1) if total_pop > 0 else 0
-        elem_pop_per_school = round(elem_pop / elem_count, 1) if elem_count > 0 else 0
-        jhs_pop_per_school = round(jhs_pop / jhs_count, 1) if jhs_count > 0 else 0
+        aging_rate_raw = (elderly_pop / total_pop * 100) if total_pop > 0 else 0.0
+        elem_pop_per_school_raw = (elem_pop / elem_count) if elem_count > 0 else 0.0
+        jhs_pop_per_school_raw = (jhs_pop / jhs_count) if jhs_count > 0 else 0.0
+        student_teacher_ratio_raw = float(student_teacher_ratio)
         
         entry = {
             'code': code,
@@ -134,7 +135,7 @@ def build_dataset():
             'jhs_age_12_14': jhs_pop,
             'hs_age_15_17': hs_pop,
             'elderly_65_plus': elderly_pop,
-            'aging_rate': aging_rate,
+            'aging_rate': round(aging_rate_raw, 1),
             'total_school_count': total_schools,
             'elem_school_count': elem_count,
             'jhs_school_count': jhs_count,
@@ -142,8 +143,23 @@ def build_dataset():
             'elem_students': elem_students,
             'elem_teachers': elem_teachers,
             'student_teacher_ratio': student_teacher_ratio,
-            'elem_pop_per_school': elem_pop_per_school,
-            'jhs_pop_per_school': jhs_pop_per_school
+            'elem_pop_per_school': round(elem_pop_per_school_raw, 1),
+            'jhs_pop_per_school': round(jhs_pop_per_school_raw, 1),
+            '_raw': {
+                'total_population': total_pop,
+                'elem_age_6_11': elem_pop,
+                'jhs_age_12_14': jhs_pop,
+                'elderly_65_plus': elderly_pop,
+                'aging_rate': aging_rate_raw,
+                'total_school_count': total_schools,
+                'elem_school_count': elem_count,
+                'jhs_school_count': jhs_count,
+                'elem_students': elem_students,
+                'elem_teachers': elem_teachers,
+                'student_teacher_ratio': student_teacher_ratio_raw,
+                'elem_pop_per_school': elem_pop_per_school_raw,
+                'jhs_pop_per_school': jhs_pop_per_school_raw
+            }
         }
         dataset.append(entry)
         
@@ -156,12 +172,13 @@ def build_dataset():
     
     ranks = {ind: {} for ind in indicators}
     for ind in indicators:
-        sorted_list = sorted(dataset, key=lambda x: x[ind], reverse=True)
+        sorted_list = sorted(dataset, key=lambda x: x['_raw'][ind], reverse=True)
         for r_idx, item in enumerate(sorted_list):
             ranks[ind][item['code']] = r_idx + 1
             
     for item in dataset:
         item['ranks'] = {ind: ranks[ind][item['code']] for ind in indicators}
+        del item['_raw']
         
     nat_total_pop = sum(d['total_population'] for d in dataset)
     nat_elem_pop = sum(d['elem_age_6_11'] for d in dataset)
