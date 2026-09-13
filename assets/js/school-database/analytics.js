@@ -117,7 +117,11 @@
     const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool"].includes(currentMetric);
 
     if (metricNationalAvgLabel) {
-      metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
+      if (currentMetric === "ict_teaching_capability") {
+        metricNationalAvgLabel.textContent = "全国平均（47都道府県単純平均）";
+      } else {
+        metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
+      }
     }
 
     if (metricNationalAvg) {

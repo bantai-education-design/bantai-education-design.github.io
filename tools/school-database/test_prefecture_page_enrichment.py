@@ -63,7 +63,7 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert okinawa['aging_rate'] == 22.5, f"沖縄県高齢化率（期待値: 22.5%, 実際: {okinawa['aging_rate']}%）"
     assert okinawa['ranks']['aging_rate'] == 47, f"沖縄県高齢化率順位（期待値: 47位, 実際: {okinawa['ranks']['aging_rate']}位）"
 
-    # 8. 24 Refined Indicators Dataset Validation
+    # 8. 24 Refined Indicators Dataset & MEXT 2025 Ground Truth Validation
     assert len(dataset['indicators_definition']) == 24, f"指標数が24件であること（実際: {len(dataset['indicators_definition'])}）"
     assert nat['child_under_15_ratio'] == 11.9, f"全国15歳未満人口割合（期待値: 11.9%, 実際: {nat['child_under_15_ratio']}%）"
     assert nat['pop_change_rate'] == -0.7, f"全国5年人口増減率（期待値: -0.7%, 実際: {nat['pop_change_rate']}%）"
@@ -75,6 +75,22 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert 'special_needs_schools_per_100k_age_6_17' in nat, "special_needs_schools_per_100k_age_6_17が全国サマリーに含まれること"
     assert 'ict_teaching_capability' in nat, "ict_teaching_capabilityが全国サマリーに含まれること"
     assert 'waiting_children_per_10k_preschool' in nat, "waiting_children_per_10k_preschoolが全国サマリーに含まれること"
+
+    # 9. MEXT 2025 Official Ground-Truth Exact Match Verification (Tokyo Sample)
+    mext_official_path = ROOT / 'data' / 'school-database' / 'mext-school-basic-survey-2025-official.json'
+    mext_official = json.loads(mext_official_path.read_text(encoding='utf-8'))
+    tokyo_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'tokyo')
+    assert tokyo_mext['jhs_students'] == 313930, f"東京都中学校生徒数（期待値: 313,930人, 実際: {tokyo_mext['jhs_students']:,}人）"
+    assert tokyo_mext['jhs_teachers'] == 20880, f"東京都中学校教員数（期待値: 20,880人, 実際: {tokyo_mext['jhs_teachers']:,}人）"
+
+    assert tokyo['elem_school_count'] == 1315, f"東京都小学校数（期待値: 1,315校, 実際: {tokyo['elem_school_count']}校）"
+    assert tokyo['elem_students'] == 616084, f"東京都小学校児童数（期待値: 616,084人, 実際: {tokyo['elem_students']:,}人）"
+    assert tokyo['elem_teachers'] == 37441, f"東京都小学校教員数（期待値: 37,441人, 実際: {tokyo['elem_teachers']:,}人）"
+    assert tokyo['jhs_school_count'] == 796, f"東京都中学校数（期待値: 796校, 実際: {tokyo['jhs_school_count']}校）"
+    assert tokyo['private_elem_school_ratio'] == 4.1, f"東京都私立小学校比率（期待値: 4.1%, 実際: {tokyo['private_elem_school_ratio']}%）"
+    assert tokyo['jhs_student_teacher_ratio'] == 15.0, f"東京都中学校教員1人あたり生徒数（期待値: 15.0人/教員, 実際: {tokyo['jhs_student_teacher_ratio']}人/教員）"
+    assert tokyo['elem_enrolled_per_school'] == 468.5, f"東京都小学校1校あたり実児童数（期待値: 468.5人/校, 実際: {tokyo['elem_enrolled_per_school']}人/校）"
+    assert tokyo['jhs_enrolled_per_school'] == 394.4, f"東京都中学校1校あたり生徒数（期待値: 394.4人/校, 実際: {tokyo['jhs_enrolled_per_school']}人/校）"
 
 def test_summary_values_recomputable_from_source() -> None:
     dataset = json.loads(ANALYTICS_DATASET_JSON.read_text(encoding='utf-8'))
