@@ -109,12 +109,12 @@
     if (metricTitle) metricTitle.textContent = meta.label;
     if (metricDesc) metricDesc.textContent = meta.description || meta.desc || "";
     if (metricBadge) {
-      const isCustom = ["elem_pop_per_school", "jhs_pop_per_school", "student_teacher_ratio", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "area_per_school", "private_school_ratio", "special_needs_school_ratio", "waiting_children_per_10k_preschool"].includes(currentMetric);
+      const isCustom = ["elem_pop_per_school", "jhs_pop_per_school", "student_teacher_ratio", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "area_per_school", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool"].includes(currentMetric);
       metricBadge.textContent = isCustom ? "独自算出指標" : "公的統計指標";
       metricBadge.style.background = isCustom ? "#3182ce" : "#059669";
     }
 
-    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_school_ratio", "special_needs_school_ratio", "depopulated_school_ratio", "waiting_children_per_10k_preschool"].includes(currentMetric);
+    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool"].includes(currentMetric);
 
     if (metricNationalAvgLabel) {
       metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
