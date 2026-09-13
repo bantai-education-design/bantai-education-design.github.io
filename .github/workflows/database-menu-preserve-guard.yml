@@ -66,9 +66,11 @@ jobs:
 
               const uniHotspot=page.locator('.hot-university-card');
               assert.equal(await uniHotspot.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university card must open university hub`);
+              const statsHotspot=page.locator('.hot-stats-card');
+              assert.equal(await statsHotspot.getAttribute('href'),'/tools/school-database/analytics/',`${viewport.name}: stats card must open analytics hub`);
               const uniButton=page.locator('.hot-university-btn');
               assert.equal(await uniButton.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university button must open university hub`);
-              assert.equal(await page.locator('.db-hotspot').count(),6,`${viewport.name}: hotspot count changed`);
+              assert.equal(await page.locator('.db-hotspot').count(),7,`${viewport.name}: hotspot count changed`);
 
               if(viewport.width<=860){
                 const toggle=page.locator('.menu-toggle');
