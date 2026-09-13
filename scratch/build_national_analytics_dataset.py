@@ -10,7 +10,7 @@ OUTPUT_PATH = ROOT / 'data' / 'school-database' / 'national-analytics-dataset.js
 CENSUS_2020_OFFICIAL = {
     '01': {'name': '北海道', 'total_pop': 5224614, 'elderly_65_plus': 1664570},
     '02': {'name': '青森県', 'total_pop': 1237984, 'elderly_65_plus': 410233},
-    '03': {'name': '岩手県', 'total_pop': 1210575, 'elderly_65_plus': 412019},
+    '03': {'name': '岩手県', 'total_pop': 1210534, 'elderly_65_plus': 412019},
     '04': {'name': '宮城県', 'total_pop': 2301996, 'elderly_65_plus': 641353},
     '05': {'name': '秋田県', 'total_pop': 959502, 'elderly_65_plus': 359687},
     '06': {'name': '山形県', 'total_pop': 1068027, 'elderly_65_plus': 354846},
@@ -26,7 +26,7 @@ CENSUS_2020_OFFICIAL = {
     '16': {'name': '富山県', 'total_pop': 1034814, 'elderly_65_plus': 338409},
     '17': {'name': '石川県', 'total_pop': 1132526, 'elderly_65_plus': 339237},
     '18': {'name': '福井県', 'total_pop': 766863, 'elderly_65_plus': 237211},
-    '19': {'name': '山梨県', 'total_pop': 809924, 'elderly_65_plus': 251807},
+    '19': {'name': '山梨県', 'total_pop': 809974, 'elderly_65_plus': 251807},
     '20': {'name': '長野県', 'total_pop': 2048011, 'elderly_65_plus': 649850},
     '21': {'name': '岐阜県', 'total_pop': 1978742, 'elderly_65_plus': 612476},
     '22': {'name': '静岡県', 'total_pop': 3633202, 'elderly_65_plus': 1093892},
@@ -52,7 +52,7 @@ CENSUS_2020_OFFICIAL = {
     '42': {'name': '長崎県', 'total_pop': 1312317, 'elderly_65_plus': 437341},
     '43': {'name': '熊本県', 'total_pop': 1738301, 'elderly_65_plus': 548228},
     '44': {'name': '大分県', 'total_pop': 1123852, 'elderly_65_plus': 375348},
-    '45': {'name': '宮崎県', 'total_pop': 1069574, 'elderly_65_plus': 349634},
+    '45': {'name': '宮崎県', 'total_pop': 1069576, 'elderly_65_plus': 349634},
     '46': {'name': '鹿児島県', 'total_pop': 1588256, 'elderly_65_plus': 514642},
     '47': {'name': '沖縄県', 'total_pop': 1467480, 'elderly_65_plus': 330683}
 }

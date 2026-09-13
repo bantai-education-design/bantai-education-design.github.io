@@ -82,8 +82,16 @@
   };
 
   const getMetricMeta = (key) => {
-    if (!dataset || !dataset.indicators_definition) return { label: key, unit: "", desc: "", source: "", base_date: "" };
-    return dataset.indicators_definition[key] || { label: key, unit: "", desc: "", source: "", base_date: "" };
+    if (!dataset || !dataset.indicators_definition) return { label: key, unit: "", desc: "", description: "", source: "", base_date: "" };
+    const def = dataset.indicators_definition[key] || {};
+    return {
+      label: def.label || key,
+      unit: def.unit || "",
+      desc: def.description || def.desc || "",
+      description: def.description || def.desc || "",
+      source: def.source || "",
+      base_date: def.base_date || ""
+    };
   };
 
   const render = () => {
@@ -99,7 +107,7 @@
     });
 
     if (metricTitle) metricTitle.textContent = meta.label;
-    if (metricDesc) metricDesc.textContent = meta.desc;
+    if (metricDesc) metricDesc.textContent = meta.description || meta.desc || "";
     if (metricBadge) {
       const isCustom = ["elem_pop_per_school", "jhs_pop_per_school", "student_teacher_ratio"].includes(currentMetric);
       metricBadge.textContent = isCustom ? "独自算出指標" : "公的統計指標";

@@ -56,17 +56,20 @@ def test_all_47_have_seo_content_section() -> None:
 
 
 def test_seo_content_values_match_source_data() -> None:
-    """本文中の数値がprefecture-metadata.json/ prefecture-card-metadata.jsonと
+    """本文中の数値がprefecture-metadata.json/ prefecture-card-metadata.json/ national-analytics-dataset.jsonと
     独立に再計算した値と一致することを確認する（ハードコードではないか検証）。"""
     prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding="utf-8"))
     card_payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
+    dataset_payload = json.loads((ROOT / "data" / "school-database" / "national-analytics-dataset.json").read_text(encoding="utf-8"))
     card_by_slug = {p["prefecture_code"]: p for p in card_payload["prefectures"]}
+    dataset_by_code = {p["code"]: p for p in dataset_payload["prefectures"]}
 
     for meta in prefecture_metadata:
         slug = meta["slug"]
         card_pref = card_by_slug[slug]
+        dataset_pref = dataset_by_code.get(slug)
         pref_name = meta["prefecture"]
-        expected = build_content(pref_name, meta, card_pref)
+        expected = build_content(pref_name, meta, card_pref, dataset_pref)
 
         html = (PAGE_DIR / slug / "index.html").read_text(encoding="utf-8")
         block_match = re.search(
@@ -159,12 +162,13 @@ def test_generation_is_idempotent() -> None:
 
     prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding="utf-8"))
     card_payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
+    dataset_payload = json.loads((ROOT / "data" / "school-database" / "national-analytics-dataset.json").read_text(encoding="utf-8"))
 
     before = {
         m["slug"]: (PAGE_DIR / m["slug"] / "index.html").read_text(encoding="utf-8")
         for m in prefecture_metadata
     }
-    added = gen.insert_seo_content(prefecture_metadata, card_payload)
+    added = gen.insert_seo_content(prefecture_metadata, card_payload, dataset_payload)
     assert added == [], f"再実行で差分が発生しました（冪等ではありません）: {added}"
     after = {
         m["slug"]: (PAGE_DIR / m["slug"] / "index.html").read_text(encoding="utf-8")

@@ -30,6 +30,7 @@ from prefecture_seo_content import build_content
 ROOT = Path(__file__).resolve().parents[2]
 PREFECTURE_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-metadata.json"
 CARD_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-card-metadata.json"
+DATASET_JSON = ROOT / "data" / "school-database" / "national-analytics-dataset.json"
 PAGE_DIR = ROOT / "tools" / "school-database"
 
 SEO_CONTENT_START = "    <!-- pref-seo-content:start -->\n"
@@ -74,10 +75,11 @@ def _render_html(pref_name: str, content: dict) -> str:
 
 
 def insert_seo_content(
-    prefecture_metadata: list[dict], card_payload: dict, only_slugs: set[str] | None = None
+    prefecture_metadata: list[dict], card_payload: dict, dataset_payload: dict | None = None, only_slugs: set[str] | None = None
 ) -> list[str]:
     meta_by_slug = {m["slug"]: m for m in prefecture_metadata}
     card_by_slug = {p["prefecture_code"]: p for p in card_payload["prefectures"]}
+    dataset_by_code = {p["code"]: p for p in dataset_payload["prefectures"]} if dataset_payload else {}
 
     added = []
     for slug, meta in meta_by_slug.items():
@@ -91,7 +93,8 @@ def insert_seo_content(
             continue
 
         pref_name = meta["prefecture"]
-        content = build_content(pref_name, meta, card_pref)
+        dataset_pref = dataset_by_code.get(slug) if dataset_payload else None
+        content = build_content(pref_name, meta, card_pref, dataset_pref)
         block = _render_html(pref_name, content)
 
         html = page_path.read_text(encoding="utf-8")
@@ -121,9 +124,11 @@ def main() -> None:
 
     prefecture_metadata = json.loads(PREFECTURE_METADATA_JSON.read_text(encoding="utf-8"))
     card_payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
+    dataset_payload = json.loads(DATASET_JSON.read_text(encoding="utf-8"))
+    dataset_by_code = {p["code"]: p for p in dataset_payload["prefectures"]}
     assert len(prefecture_metadata) == 47, "47都道府県データが揃っていません"
 
-    added = insert_seo_content(prefecture_metadata, card_payload, only_slugs)
+    added = insert_seo_content(prefecture_metadata, card_payload, dataset_payload, only_slugs)
     print(f"SEOコンテンツセクションを追加/更新: {len(added)}件")
     for slug in added:
         print(f"  {slug}")
