@@ -1,4 +1,4 @@
-# Trigger CI check: MEXT 2025 47-prefecture official dataset fix and ground truth CI expansion
+# Trigger CI check: MEXT 2025 Tokyo JHS 313932 and citation table numbers fix
 name: University photo owner and overlap guard
 
 on:

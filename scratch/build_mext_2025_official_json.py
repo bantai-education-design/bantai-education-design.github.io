@@ -19,9 +19,9 @@ with open(CARD_META_PATH, 'r', encoding='utf-8') as f:
     card_meta = json.load(f)
 
 # Official MEXT 2025 Confirmed Figures (令和7年度 学校基本調査 確定値 2025年12月26日公表)
-# Tables: 表41 (小学校学校数・設置者別・児童数・教員数), 表48 (小学校学級数), 表67 (中学校学校数・生徒数・教員数・学級数), 表199 (特別支援学校数)
+# Tables: 表41 (小学校学校数), 表46 (小学校学級数), 表48 (小学校児童数), 表54 (小学校教員数), 表67 (中学校学校数), 表73 (中学校学級数), 表75 (中学校生徒数), 表82 (中学校教員数), 表199 (特別支援学校数)
 MEXT_2025_OFFICIAL_TABLES = {
-    'tokyo': {'elem_schools': 1315, 'private_elem_schools': 54, 'elem_students': 616085, 'elem_teachers': 37441, 'elem_classes': 21570, 'jhs_schools': 796, 'jhs_students': 313930, 'jhs_teachers': 20880, 'jhs_classes': 10751, 'special_needs_schools': 73},
+    'tokyo': {'elem_schools': 1315, 'private_elem_schools': 54, 'elem_students': 616084, 'elem_teachers': 37441, 'elem_classes': 21570, 'jhs_schools': 796, 'jhs_students': 313932, 'jhs_teachers': 20880, 'jhs_classes': 10751, 'special_needs_schools': 73},
     'kanagawa': {'elem_schools': 859, 'private_elem_schools': 31, 'elem_students': 424397, 'elem_teachers': 27170, 'elem_classes': 15310, 'jhs_schools': 461, 'jhs_students': 214580, 'jhs_teachers': 15210, 'jhs_classes': 7480, 'special_needs_schools': 42},
     'saitama': {'elem_schools': 787, 'private_elem_schools': 6, 'elem_students': 345524, 'elem_teachers': 22072, 'elem_classes': 14162, 'jhs_schools': 441, 'jhs_students': 180252, 'jhs_teachers': 12614, 'jhs_classes': 6112, 'special_needs_schools': 20},
     'chiba': {'elem_schools': 752, 'private_elem_schools': 11, 'elem_students': 291112, 'elem_teachers': 18817, 'elem_classes': 11120, 'jhs_schools': 388, 'jhs_students': 148500, 'jhs_teachers': 10920, 'jhs_classes': 5180, 'special_needs_schools': 38},
@@ -108,9 +108,14 @@ master_obj = {
         'reference_date': '2025-05-01',
         'publication_date': '2025-12-26',
         'tables': [
-            '表41: 小学校 都道府県別学校数・設置者別学校数・児童数・本務教員数',
-            '表48: 小学校 都道府県別学級数（全学級）',
-            '表67: 中学校 都道府県別学校数・生徒数・本務教員数・学級数',
+            '表41: 小学校 都道府県別学校数・設置者別学校数',
+            '表46: 小学校 都道府県別編制方式別学級数',
+            '表48: 小学校 都道府県別学年別児童数',
+            '表54: 小学校 都道府県別職名別教員数（本務者）',
+            '表67: 中学校 都道府県別学校数・設置者別学校数',
+            '表73: 中学校 都道府県別編制方式別学級数',
+            '表75: 中学校 都道府県別学年別生徒数',
+            '表82: 中学校 都道府県別職名別教員数（本務者）',
             '表199: 特別支援学校 都道府県別学校数'
         ]
     },
