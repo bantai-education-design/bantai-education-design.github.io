@@ -66,7 +66,7 @@ jobs:
             assert.equal(imageState.complete,true,'gateway artwork did not finish loading');
             assert.equal(imageState.naturalWidth,1536,`gateway artwork width invalid: ${imageState.naturalWidth}`);
             assert.equal(imageState.naturalHeight,503,`gateway artwork height invalid: ${imageState.naturalHeight}`);
-            assert.equal(await hub.locator('.db-hotspot').count(),6,'gateway artwork should have six interactive hotspots');
+            assert.equal(await hub.locator('.db-hotspot').count(),7,'gateway artwork should have seven interactive hotspots');
             const artBox = await art.boundingBox();
             assert.ok(artBox && artBox.width > 1000 && artBox.height > 300, 'gateway artwork render box is too small');
             for (const hotspot of await hub.locator('.db-hotspot').all()) {
@@ -84,6 +84,7 @@ jobs:
             }
             const expected = [
               ['学校を探す','/tools/school-database/'],
+              ['教育・地域統計比較','/tools/school-database/analytics/'],
               ['学びの流れを見る','/resources/textbook-plans/'],
               ['未来の学びを探す','/tools/university-database/']
             ];
@@ -92,7 +93,7 @@ jobs:
               assert.ok(await card.count() >= 1, `${heading}: missing`);
               assert.equal(await card.getAttribute('href'), href, `${heading}: wrong href`);
             }
-            assert.equal(await hub.locator('.db-card').count(),3,'fallback database cards should be 3');
+            assert.equal(await hub.locator('.db-card').count(),4,'fallback database cards should be 4');
             await hub.addStyleTag({content:'.db-hotspot{outline:3px solid #ff2d55!important;background:rgba(255,45,85,.08)!important;box-shadow:none!important}'});
             await hub.locator('.db-artboard').screenshot({path:'visual-preview/databases-hotspots-pc.png'});
             await hub.close();
