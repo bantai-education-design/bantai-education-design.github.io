@@ -101,9 +101,9 @@
     const prefs = [...dataset.prefectures];
 
     prefs.sort((a, b) => {
-      const valA = a[currentMetric] ?? 0;
-      const valB = b[currentMetric] ?? 0;
-      return currentSortOrder === "desc" ? valB - valA : valA - valB;
+      const rankA = a.ranks ? (a.ranks[currentMetric] ?? 999) : 999;
+      const rankB = b.ranks ? (b.ranks[currentMetric] ?? 999) : 999;
+      return currentSortOrder === "desc" ? rankA - rankB : rankB - rankA;
     });
 
     if (metricTitle) metricTitle.textContent = meta.label;
@@ -265,14 +265,18 @@
     const meta = getMetricMeta(currentMetric);
     const prefs = [...dataset.prefectures];
 
-    prefs.sort((a, b) => (b[currentMetric] || 0) - (a[currentMetric] || 0));
+    prefs.sort((a, b) => {
+      const rankA = a.ranks ? (a.ranks[currentMetric] ?? 999) : 999;
+      const rankB = b.ranks ? (b.ranks[currentMetric] ?? 999) : 999;
+      return rankA - rankB;
+    });
 
     let csvContent = `順位,都道府県名,地方区分,${meta.label}(${meta.unit}),出典,基準日
 `;
 
-    prefs.forEach((p, idx) => {
+    prefs.forEach((p) => {
       const val = p[currentMetric] || 0;
-      const rank = idx + 1;
+      const rank = p.ranks ? (p.ranks[currentMetric] ?? "") : "";
       const srcEscaped = (meta.source || "").replace(/,/g, " ");
       const dateEscaped = (meta.base_date || "").replace(/,/g, " ");
       csvContent += `${rank},${p.name},${p.region},${val},"${srcEscaped}","${dateEscaped}"
