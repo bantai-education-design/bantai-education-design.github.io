@@ -80,7 +80,7 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     mext_official_path = ROOT / 'data' / 'school-database' / 'mext-school-basic-survey-2025-official.json'
     mext_official = json.loads(mext_official_path.read_text(encoding='utf-8'))
     tokyo_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'tokyo')
-    assert tokyo_mext['jhs_students'] == 313930, f"東京都中学校生徒数（期待値: 313,930人, 実際: {tokyo_mext['jhs_students']:,}人）"
+    assert tokyo_mext['jhs_students'] == 313932, f"東京都中学校生徒数（期待値: 313,932人, 実際: {tokyo_mext['jhs_students']:,}人）"
     assert tokyo_mext['jhs_teachers'] == 20880, f"東京都中学校教員数（期待値: 20,880人, 実際: {tokyo_mext['jhs_teachers']:,}人）"
 
     assert tokyo['elem_school_count'] == 1315, f"東京都小学校数（期待値: 1,315校, 実際: {tokyo['elem_school_count']}校）"
