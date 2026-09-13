@@ -29,6 +29,40 @@ def test_summary_section_present_exactly_once_all_47() -> None:
         assert count == 1, f"{slug}: pref-summary-sectionが{count}回出現しています"
         assert html.count('<!-- pref-summary-section:end -->') == 1, f"{slug}: 終了マーカーの出現回数が不正です"
 
+def test_official_2020_census_national_totals_and_aging_rates() -> None:
+    dataset = json.loads(ANALYTICS_DATASET_JSON.read_text(encoding='utf-8'))
+    nat = dataset['national_summary']
+    prefs = dataset['prefectures']
+
+    # 1. National Total Population (Official 2020 Census Confirmed Figure)
+    assert nat['total_population'] == 126146099, f"全国総人口（期待値: 126,146,099人, 実際: {nat['total_population']:,}人）"
+    
+    # 2. National 65+ Population (Official 2020 Census Confirmed Figure with Age Imputed)
+    assert nat['elderly_65_plus'] == 36026632, f"全国65歳以上人口（期待値: 36,026,632人, 実際: {nat['elderly_65_plus']:,}人）"
+    
+    # 3. National Aging Rate (Official 2020 Census Confirmed Figure)
+    assert nat['aging_rate'] == 28.6, f"全国高齢化率（期待値: 28.6%, 実際: {nat['aging_rate']}%）"
+
+    # 4. Prefecture Sum Total Population Match (within 50 of 126,146,099)
+    sum_pref_pop = sum(p['total_population'] for p in prefs)
+    assert abs(sum_pref_pop - 126146099) <= 50, f"47都道府県総人口合計と全国値の差（合計: {sum_pref_pop:,}人）"
+
+    # 5. Akita Prefecture (Highest Aging Rate in Japan: 37.5%, 65+ Pop: 359,687)
+    akita = next(p for p in prefs if p['code'] == 'akita')
+    assert akita['elderly_65_plus'] == 359687, f"秋田県65歳以上人口（期待値: 359,687人, 実際: {akita['elderly_65_plus']:,}人）"
+    assert akita['aging_rate'] == 37.5, f"秋田県高齢化率（期待値: 37.5%, 実際: {akita['aging_rate']}%）"
+    assert akita['ranks']['aging_rate'] == 1, f"秋田県高齢化率順位（期待値: 1位, 実際: {akita['ranks']['aging_rate']}位）"
+
+    # 6. Tokyo (Tokyo Aging Rate: 22.6%, 65+ Pop: 3,178,054)
+    tokyo = next(p for p in prefs if p['code'] == 'tokyo')
+    assert tokyo['elderly_65_plus'] == 3178054, f"東京都65歳以上人口（期待値: 3,178,054人, 実際: {tokyo['elderly_65_plus']:,}人）"
+    assert tokyo['aging_rate'] == 22.6, f"東京都高齢化率（期待値: 22.6%, 実際: {tokyo['aging_rate']}%）"
+
+    # 7. Okinawa Prefecture (Lowest Aging Rate in Japan: 22.5%, Rank 47)
+    okinawa = next(p for p in prefs if p['code'] == 'okinawa')
+    assert okinawa['aging_rate'] == 22.5, f"沖縄県高齢化率（期待値: 22.5%, 実際: {okinawa['aging_rate']}%）"
+    assert okinawa['ranks']['aging_rate'] == 47, f"沖縄県高齢化率順位（期待値: 47位, 実際: {okinawa['ranks']['aging_rate']}位）"
+
 def test_summary_values_recomputable_from_source() -> None:
     dataset = json.loads(ANALYTICS_DATASET_JSON.read_text(encoding='utf-8'))
     pref_by_code = {p['code']: p for p in dataset['prefectures']}
@@ -99,8 +133,9 @@ def test_css_classes_defined() -> None:
 
 if __name__ == '__main__':
     test_summary_section_present_exactly_once_all_47()
+    test_official_2020_census_national_totals_and_aging_rates()
     test_summary_values_recomputable_from_source()
     test_shuuroku_header_total_matches_current_data_all_47()
     test_shuuroku_table_rows_refreshed_for_simple_table_pages()
     test_css_classes_defined()
-    print('Prefecture page enrichment validation passed successfully.')
+    print('Prefecture page enrichment & 2020 Census official statistics validation passed successfully.')
