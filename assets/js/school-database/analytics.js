@@ -152,13 +152,13 @@
         : `<span style="color:#64748b; font-weight:700; font-size:0.85rem;">${rank}位</span>`;
 
       row.innerHTML = `
-        <div style="min-width:40px;">${rankBadge}</div>
-        <div style="font-weight:700; font-size:0.92rem; color:#0c1b33; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.name}</div>
-        <div style="background:#e2e8f0; height:22px; border-radius:4px; overflow:hidden; position:relative;">
-          <div style="background:linear-gradient(90deg, #1e3a8a, #3182ce); height:100%; width:${pct}%; transition:width 0.4s ease-out; border-radius:4px;"></div>
+        <div class="bar-rank">${rankBadge}</div>
+        <div class="bar-pref">${p.name}</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:${pct}%;"></div>
         </div>
-        <div style="text-align:right; font-weight:800; font-size:0.92rem; color:#1e293b; white-space:nowrap;">
-          ${formatNumber(val)} <span style="font-size:0.75rem; font-weight:600; color:#64748b;">${meta.unit}</span>
+        <div class="bar-value">
+          ${formatNumber(val)} <span class="bar-unit">${meta.unit}</span>
         </div>
       `;
 
