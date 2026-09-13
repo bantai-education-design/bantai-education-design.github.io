@@ -145,23 +145,28 @@ def build_dataset():
         school_db = pref.get('school_database', {})
         total_schools = school_db.get('record_count', pmeta.get('total', 0))
         
-        # Establishment & School Type breakdown from prefecture-metadata.json
-        est_counts = pmeta.get('establishment_counts', {})
+        # MEXT 2025 Official school counts per prefecture (from prefecture-metadata.json)
         stype_counts = pmeta.get('school_type_counts', {})
-        private_school_count = est_counts.get('private', 0)
+        mext_elem_schools = stype_counts.get('小学校', 0)
+        mext_jhs_schools = stype_counts.get('中学校', 0)
         special_needs_school_count = stype_counts.get('特別支援学校', 0)
         
+        # DB school count for pop ratio & fallback
         pref_school_json = ROOT / 'data' / 'school-database' / f'{code}.json'
         elem_count = 0
         jhs_count = 0
         hs_count = 0
+        private_elem_count = 0
         if pref_school_json.exists():
             with open(pref_school_json, 'r', encoding='utf-8') as sf:
                 schools = json.load(sf)
                 for s in schools:
                     stype = s.get('school_type', '')
+                    est = s.get('establishment', '')
                     if '小学校' in stype and '特別支援' not in stype:
                         elem_count += 1
+                        if est == '私立':
+                            private_elem_count += 1
                     elif '中学校' in stype and '特別支援' not in stype:
                         jhs_count += 1
                     elif '高等学校' in stype or '高校' in stype:
@@ -189,7 +194,6 @@ def build_dataset():
         elem_students = ratio_detail.get('student_count', 0)
         student_teacher_ratio = ext.get('student_teacher_ratio', 0)
         ict_capability = ext.get('ict_teaching_capability', 0.0)
-        depopulated_ratio = ext.get('depopulated_school_ratio', 0.0)
         waiting_children = ext.get('waiting_children_count', 0)
         
         elem_classes = demo_data.get('elem_classes', 0)
@@ -197,24 +201,28 @@ def build_dataset():
         jhs_teachers = demo_data.get('jhs_teachers', 0)
         jhs_classes = demo_data.get('jhs_classes', 0)
         
+        # 6-17 School age population for special needs school ratio per 100k
+        school_age_pop_6_17 = elem_pop + jhs_pop + hs_pop
+        
         # Raw float precision for sorting
         aging_rate_raw = (elderly_pop / total_pop * 100) if total_pop > 0 else 0.0
         elem_pop_per_school_raw = (elem_pop / elem_count) if elem_count > 0 else 0.0
         jhs_pop_per_school_raw = (jhs_pop / jhs_count) if jhs_count > 0 else 0.0
         student_teacher_ratio_raw = (elem_students / elem_teachers) if elem_teachers > 0 else 0.0
         
-        elem_enrolled_per_school_raw = (elem_students / elem_count) if elem_count > 0 else 0.0
+        # Strict MEXT 2025 aligned school counts (numerator: MEXT 2025, denominator: MEXT 2025)
+        elem_enrolled_per_school_raw = (elem_students / mext_elem_schools) if mext_elem_schools > 0 else 0.0
         elem_enrolled_per_class_raw = (elem_students / elem_classes) if elem_classes > 0 else 0.0
-        jhs_enrolled_per_school_raw = (jhs_students / jhs_count) if jhs_count > 0 else 0.0
+        jhs_enrolled_per_school_raw = (jhs_students / mext_jhs_schools) if mext_jhs_schools > 0 else 0.0
         jhs_enrolled_per_class_raw = (jhs_students / jhs_classes) if jhs_classes > 0 else 0.0
         jhs_student_teacher_ratio_raw = (jhs_students / jhs_teachers) if jhs_teachers > 0 else 0.0
+        
         child_under_15_ratio_raw = (pop_under_15 / total_pop * 100) if total_pop > 0 else 0.0
         pop_change_rate_raw = ((total_pop - pop_2015) / pop_2015 * 100) if pop_2015 > 0 else 0.0
         
-        private_school_ratio_raw = (private_school_count / total_schools * 100) if total_schools > 0 else 0.0
-        special_needs_school_ratio_raw = (special_needs_school_count / total_schools * 100) if total_schools > 0 else 0.0
+        private_elem_school_ratio_raw = (private_elem_count / mext_elem_schools * 100) if mext_elem_schools > 0 else 0.0
+        special_needs_schools_per_100k_age_6_17_raw = (special_needs_school_count / school_age_pop_6_17 * 100000) if school_age_pop_6_17 > 0 else 0.0
         ict_teaching_capability_raw = float(ict_capability)
-        depopulated_school_ratio_raw = float(depopulated_ratio)
         waiting_children_per_10k_preschool_raw = (waiting_children / preschool_pop * 10000) if preschool_pop > 0 else 0.0
         
         entry = {
@@ -229,8 +237,8 @@ def build_dataset():
             'elderly_65_plus': elderly_pop,
             'aging_rate': round(aging_rate_raw, 1),
             'total_school_count': total_schools,
-            'elem_school_count': elem_count,
-            'jhs_school_count': jhs_count,
+            'elem_school_count': mext_elem_schools,
+            'jhs_school_count': mext_jhs_schools,
             'hs_school_count': hs_count,
             'elem_students': elem_students,
             'elem_teachers': elem_teachers,
@@ -238,7 +246,7 @@ def build_dataset():
             'elem_pop_per_school': round(elem_pop_per_school_raw, 1),
             'jhs_pop_per_school': round(jhs_pop_per_school_raw, 1),
             
-            # Expanded Indicators
+            # Refined 24 Indicators
             'elem_enrolled_per_school': round(elem_enrolled_per_school_raw, 1),
             'elem_enrolled_per_class': round(elem_enrolled_per_class_raw, 1),
             'jhs_enrolled_per_school': round(jhs_enrolled_per_school_raw, 1),
@@ -246,10 +254,9 @@ def build_dataset():
             'jhs_student_teacher_ratio': round(jhs_student_teacher_ratio_raw, 1),
             'child_under_15_ratio': round(child_under_15_ratio_raw, 1),
             'pop_change_rate': round(pop_change_rate_raw, 1),
-            'private_school_ratio': round(private_school_ratio_raw, 1),
-            'special_needs_school_ratio': round(special_needs_school_ratio_raw, 1),
+            'private_elem_school_ratio': round(private_elem_school_ratio_raw, 1),
+            'special_needs_schools_per_100k_age_6_17': round(special_needs_schools_per_100k_age_6_17_raw, 1),
             'ict_teaching_capability': round(ict_teaching_capability_raw, 1),
-            'depopulated_school_ratio': round(depopulated_school_ratio_raw, 1),
             'waiting_children_per_10k_preschool': round(waiting_children_per_10k_preschool_raw, 1),
             
             '_raw': {
@@ -259,8 +266,8 @@ def build_dataset():
                 'elderly_65_plus': elderly_pop,
                 'aging_rate': aging_rate_raw,
                 'total_school_count': total_schools,
-                'elem_school_count': elem_count,
-                'jhs_school_count': jhs_count,
+                'elem_school_count': mext_elem_schools,
+                'jhs_school_count': mext_jhs_schools,
                 'elem_students': elem_students,
                 'elem_teachers': elem_teachers,
                 'student_teacher_ratio': student_teacher_ratio_raw,
@@ -273,10 +280,9 @@ def build_dataset():
                 'jhs_student_teacher_ratio': jhs_student_teacher_ratio_raw,
                 'child_under_15_ratio': child_under_15_ratio_raw,
                 'pop_change_rate': pop_change_rate_raw,
-                'private_school_ratio': private_school_ratio_raw,
-                'special_needs_school_ratio': special_needs_school_ratio_raw,
+                'private_elem_school_ratio': private_elem_school_ratio_raw,
+                'special_needs_schools_per_100k_age_6_17': special_needs_schools_per_100k_age_6_17_raw,
                 'ict_teaching_capability': ict_teaching_capability_raw,
-                'depopulated_school_ratio': depopulated_school_ratio_raw,
                 'waiting_children_per_10k_preschool': waiting_children_per_10k_preschool_raw
             }
         }
@@ -290,9 +296,8 @@ def build_dataset():
         'elem_enrolled_per_school', 'elem_enrolled_per_class',
         'jhs_enrolled_per_school', 'jhs_enrolled_per_class',
         'jhs_student_teacher_ratio', 'child_under_15_ratio', 'pop_change_rate',
-        'private_school_ratio', 'special_needs_school_ratio',
-        'ict_teaching_capability', 'depopulated_school_ratio',
-        'waiting_children_per_10k_preschool'
+        'private_elem_school_ratio', 'special_needs_schools_per_100k_age_6_17',
+        'ict_teaching_capability', 'waiting_children_per_10k_preschool'
     ]
     
     ranks = {ind: {} for ind in indicators}
@@ -323,8 +328,9 @@ def build_dataset():
     nat_jhs_teachers = sum(v['jhs_teachers'] for v in OFFICIAL_DEMOGRAPHICS.values())
     nat_jhs_classes = sum(v['jhs_classes'] for v in OFFICIAL_DEMOGRAPHICS.values())
     
-    nat_private_schools = sum(p['establishment_counts']['private'] for p in pref_meta)
-    nat_special_needs = sum(p['school_type_counts'].get('特別支援学校', 0) for p in pref_meta)
+    nat_private_elem_schools = sum(sum(1 for s in json.load(open(ROOT / 'data' / 'school-database' / f"{p['prefecture_code']}.json", 'r', encoding='utf-8')) if '小学校' in s.get('school_type', '') and '特別支援' not in s.get('school_type', '') and s.get('establishment') == '私立') for p in card_meta['prefectures'])
+    nat_special_needs_schools = sum(p['school_type_counts'].get('特別支援学校', 0) for p in pref_meta)
+    nat_school_age_6_17_pop = sum(d['elem_age_6_11'] + d['jhs_age_12_14'] + d['hs_age_15_17'] for d in dataset)
     nat_waiting_children = sum(ext_dict[p['prefecture_code']].get('waiting_children_count', 0) for p in card_meta['prefectures'])
     nat_preschool_pop = sum(next(ag['population'] for ag in p['population']['age_groups'] if ag['key'] == 'census_preschool_3_5') for p in card_meta['prefectures'])
     
@@ -353,16 +359,15 @@ def build_dataset():
         'child_under_15_ratio': round(nat_under_15_pop / official_national_pop * 100, 1),
         'pop_change_rate': round((official_national_pop - nat_pop_2015) / nat_pop_2015 * 100, 1),
         
-        'private_school_ratio': round(nat_private_schools / nat_total_schools * 100, 1) if nat_total_schools > 0 else 0,
-        'special_needs_school_ratio': round(nat_special_needs / nat_total_schools * 100, 1) if nat_total_schools > 0 else 0,
+        'private_elem_school_ratio': round(nat_private_elem_schools / nat_elem_schools * 100, 1) if nat_elem_schools > 0 else 0,
+        'special_needs_schools_per_100k_age_6_17': round(nat_special_needs_schools / nat_school_age_6_17_pop * 100000, 1) if nat_school_age_6_17_pop > 0 else 0,
         'ict_teaching_capability': round(sum(d['ict_teaching_capability'] for d in dataset) / len(dataset), 1),
-        'depopulated_school_ratio': round(sum(d['depopulated_school_ratio'] for d in dataset) / len(dataset), 1),
         'waiting_children_per_10k_preschool': round(nat_waiting_children / nat_preschool_pop * 10000, 1) if nat_preschool_pop > 0 else 0
     }
     
     output_obj = {
         'generated_at': '2026-09-13',
-        'schema_version': '1.3',
+        'schema_version': '1.4',
         'description': '全国47都道府県の人口・学齢人口・実在籍生徒数・学級数・教員数・校種構造・独自換算指標（e-Stat・文部科学省「学校基本調査」統合正本）',
         'national_summary': national_summary,
         'indicators_definition': {
@@ -411,16 +416,16 @@ def build_dataset():
             'elem_school_count': {
                 'label': '小学校数',
                 'unit': '校',
-                'description': '本データベースに収録されている小学校（本校・分校含む）の総数。',
-                'source': 'Ban.Tai 全国学校データベース',
-                'base_date': '2026年9月時点'
+                'description': '都道府県内の小学校数。（文部科学省「学校基本調査」2025年5月1日時点 確定値）',
+                'source': '文部科学省「学校基本調査」【確報値】',
+                'base_date': '2025年5月1日時点'
             },
             'jhs_school_count': {
                 'label': '中学校数',
                 'unit': '校',
-                'description': '本データベースに収録されている中学校（本校・分校含む）の総数。',
-                'source': 'Ban.Tai 全国学校データベース',
-                'base_date': '2026年9月時点'
+                'description': '都道府県内の中学校数。（文部科学省「学校基本調査」2025年5月1日時点 確定値）',
+                'source': '文部科学省「学校基本調査」【確報値】',
+                'base_date': '2025年5月1日時点'
             },
             'elem_students': {
                 'label': '小学校児童数',
@@ -446,22 +451,22 @@ def build_dataset():
             'elem_pop_per_school': {
                 'label': '小学校1校あたり6～11歳人口',
                 'unit': '人/校',
-                'description': '6～11歳学齢人口を本DBの小学校数で除した潜在規模指標。',
-                'source': 'e-Stat国勢調査 6～11歳人口 ÷ Ban.Tai小学校数',
-                'base_date': '2020年/2026年'
+                'description': '6～11歳学齢人口を小学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
+                'source': 'e-Stat国勢調査 6～11歳人口 ÷ 学校基本調査 小学校数',
+                'base_date': '2020年/2025年'
             },
             'jhs_pop_per_school': {
                 'label': '中学校1校あたり12～14歳人口',
                 'unit': '人/校',
-                'description': '12～14歳学齢人口を本DBの中学校数で除した潜在規模指標。',
-                'source': 'e-Stat国勢調査 12～14歳人口 ÷ Ban.Tai中学校数',
-                'base_date': '2020年/2026年'
+                'description': '12～14歳学齢人口を中学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
+                'source': 'e-Stat国勢調査 12～14歳人口 ÷ 学校基本調査 中学校数',
+                'base_date': '2020年/2025年'
             },
             'elem_enrolled_per_school': {
-                'label': '小学校1校あたり児童数',
+                'label': '小学校1校あたり実児童数',
                 'unit': '人/校',
-                'description': '小学校1校あたりの実際の在籍児童数（実規模）。文部科学省「学校基本調査」と学校DB集計の対比。',
-                'source': '文部科学省「学校基本調査」/ Ban.Tai DB【確報値】',
+                'description': '小学校児童数を小学校数で除した1校あたり平均在籍児童数。文部科学省「学校基本調査」の同一調査・同一基準日データにより算出。（2025年5月1日時点 確定値）',
+                'source': '文部科学省「学校基本調査」【確報値】',
                 'base_date': '2025年5月1日時点'
             },
             'elem_enrolled_per_class': {
@@ -474,8 +479,8 @@ def build_dataset():
             'jhs_enrolled_per_school': {
                 'label': '中学校1校あたり生徒数',
                 'unit': '人/校',
-                'description': '中学校1校あたりの実際の在籍生徒数（実規模）。文部科学省「学校基本調査」と学校DB集計の対比。',
-                'source': '文部科学省「学校基本調査」/ Ban.Tai DB【確報値】',
+                'description': '中学校生徒数を中学校数で除した1校あたり平均在籍生徒数。文部科学省「学校基本調査」の同一調査・同一基準日データにより算出。（2025年5月1日時点 確定値）',
+                'source': '文部科学省「学校基本調査」【確報値】',
                 'base_date': '2025年5月1日時点'
             },
             'jhs_enrolled_per_class': {
@@ -493,9 +498,9 @@ def build_dataset():
                 'base_date': '2025年5月1日時点'
             },
             'child_under_15_ratio': {
-                'label': '15歳未満人口割合（年少人口割合）',
+                'label': '15歳未満人口割合',
                 'unit': '%',
-                'description': '総人口に占める15歳未満人口の割合。地域の子どもの多さを示す世代指標。',
+                'description': '総人口に占める15歳未満（年少人口）の割合。（総務省「国勢調査」2020年10月1日時点 確定値）',
                 'source': '総務省統計局「令和2年国勢調査 確定値」',
                 'base_date': '2020年10月1日時点'
             },
@@ -506,41 +511,32 @@ def build_dataset():
                 'source': '総務省統計局「平成27年・令和2年国勢調査 確定値」',
                 'base_date': '2015年〜2020年比較'
             },
-            
-            # Structural & Normalized Metrics
-            'private_school_ratio': {
-                'label': '私立学校比率',
+            'private_elem_school_ratio': {
+                'label': '私立小学校比率',
                 'unit': '%',
-                'description': '全学校・園数に占める私立校の割合。地域の私立教育依存度・選択肢を示します。',
-                'source': 'Ban.Tai 全国学校データベース集計',
-                'base_date': '2026年9月時点'
+                'description': '小学校全体に占める私立小学校の割合。（文部科学省「学校基本調査」2025年5月1日時点 確定値）',
+                'source': '文部科学省「学校基本調査」【確報値】',
+                'base_date': '2025年5月1日時点'
             },
-            'special_needs_school_ratio': {
-                'label': '特別支援学校比率',
-                'unit': '%',
-                'description': '全学校・園数に占める特別支援学校の割合。インクルーシブ教育・特別支援教育インフラの密度。',
-                'source': 'Ban.Tai 全国学校データベース集計',
-                'base_date': '2026年9月時点'
+            'special_needs_schools_per_100k_age_6_17': {
+                'label': '特別支援学校数（6～17歳人口10万人あたり）',
+                'unit': '校',
+                'description': '学齢期人口（6～17歳）10万人あたりの特別支援学校数。※対象障害種・在籍規模・分校等の違いがあるため、学校数が多い＝支援が充実と単純比較しないようご注意ください。（学校基本調査2025年 / 国勢調査2020年）',
+                'source': '学校基本調査 / 国勢調査',
+                'base_date': '2025年5月1日 / 2020年10月1日時点'
             },
             'ict_teaching_capability': {
-                'label': '教員のICT活用指導力割合',
+                'label': '教員のICT活用指導力・自己評価割合',
                 'unit': '%',
-                'description': '教材研究・指導においてICTを活用できる教員の割合。',
-                'source': '文部科学省「学校における教育の情報化の実態等に関する調査」',
+                'description': '指導にICTを活用する能力に関する教員の自己評価（「できる」「ややできる」と回答した教員の割合）。（文部科学省「学校における教育の情報化の実態等に関する調査」2025年3月1日時点 確定値）',
+                'source': '文部科学省「教育情報化実態調査」',
                 'base_date': '2025年3月1日時点'
             },
-            'depopulated_school_ratio': {
-                'label': '過疎地域所在校比率',
-                'unit': '%',
-                'description': '全学校・園数のうち過疎地域市町村に所在する学校の割合。',
-                'source': '総務省「過疎地域市町村一覧」× Ban.Tai DB突合',
-                'base_date': '2022年4月1日時点指定'
-            },
             'waiting_children_per_10k_preschool': {
-                'label': '就学前人口1万人あたり待機児童数',
-                'unit': '人/1万人',
-                'description': '3～5歳就学前人口1万人あたりの待機児童数（人口規模により正規化された待機児童指標）。',
-                'source': 'こども家庭庁「保育所等関連状況取りまとめ」÷ 国勢調査3〜5歳人口',
+                'label': '待機児童数（未就学児1万人あたり）',
+                'unit': '人',
+                'description': '未就学児（3～5歳）人口1万人あたりの待機児童数。（こども家庭庁「保育所等関連状況取りまとめ」2025年4月1日時点 確定値）',
+                'source': 'こども家庭庁 / 国勢調査',
                 'base_date': '2025年4月1日時点'
             }
         },
@@ -551,7 +547,7 @@ def build_dataset():
         json.dump(output_obj, f, ensure_ascii=False, indent=2)
         
     print(f"Dataset successfully built at {OUTPUT_PATH}")
-    print(f"Total 25 indicators built cleanly!")
+    print(f"Total 24 indicators built cleanly!")
 
 if __name__ == '__main__':
     build_dataset()

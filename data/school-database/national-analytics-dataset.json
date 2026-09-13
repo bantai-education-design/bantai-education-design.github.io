@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-13",
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "description": "全国47都道府県の人口・学齢人口・実在籍生徒数・学級数・教員数・校種構造・独自換算指標（e-Stat・文部科学省「学校基本調査」統合正本）",
   "national_summary": {
     "total_population": 126146099,
@@ -23,10 +23,9 @@
     "jhs_student_teacher_ratio": 12.28,
     "child_under_15_ratio": 11.9,
     "pop_change_rate": -0.7,
-    "private_school_ratio": 19.5,
-    "special_needs_school_ratio": 2.9,
+    "private_elem_school_ratio": 1.0,
+    "special_needs_schools_per_100k_age_6_17": 9.6,
     "ict_teaching_capability": 91.0,
-    "depopulated_school_ratio": 30.6,
     "waiting_children_per_10k_preschool": 7.9
   },
   "indicators_definition": {
@@ -75,16 +74,16 @@
     "elem_school_count": {
       "label": "小学校数",
       "unit": "校",
-      "description": "本データベースに収録されている小学校（本校・分校含む）の総数。",
-      "source": "Ban.Tai 全国学校データベース",
-      "base_date": "2026年9月時点"
+      "description": "都道府県内の小学校数。（文部科学省「学校基本調査」2025年5月1日時点 確定値）",
+      "source": "文部科学省「学校基本調査」【確報値】",
+      "base_date": "2025年5月1日時点"
     },
     "jhs_school_count": {
       "label": "中学校数",
       "unit": "校",
-      "description": "本データベースに収録されている中学校（本校・分校含む）の総数。",
-      "source": "Ban.Tai 全国学校データベース",
-      "base_date": "2026年9月時点"
+      "description": "都道府県内の中学校数。（文部科学省「学校基本調査」2025年5月1日時点 確定値）",
+      "source": "文部科学省「学校基本調査」【確報値】",
+      "base_date": "2025年5月1日時点"
     },
     "elem_students": {
       "label": "小学校児童数",
@@ -110,22 +109,22 @@
     "elem_pop_per_school": {
       "label": "小学校1校あたり6～11歳人口",
       "unit": "人/校",
-      "description": "6～11歳学齢人口を本DBの小学校数で除した潜在規模指標。",
-      "source": "e-Stat国勢調査 6～11歳人口 ÷ Ban.Tai小学校数",
-      "base_date": "2020年/2026年"
+      "description": "6～11歳学齢人口を小学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）",
+      "source": "e-Stat国勢調査 6～11歳人口 ÷ 学校基本調査 小学校数",
+      "base_date": "2020年/2025年"
     },
     "jhs_pop_per_school": {
       "label": "中学校1校あたり12～14歳人口",
       "unit": "人/校",
-      "description": "12～14歳学齢人口を本DBの中学校数で除した潜在規模指標。",
-      "source": "e-Stat国勢調査 12～14歳人口 ÷ Ban.Tai中学校数",
-      "base_date": "2020年/2026年"
+      "description": "12～14歳学齢人口を中学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）",
+      "source": "e-Stat国勢調査 12～14歳人口 ÷ 学校基本調査 中学校数",
+      "base_date": "2020年/2025年"
     },
     "elem_enrolled_per_school": {
-      "label": "小学校1校あたり児童数",
+      "label": "小学校1校あたり実児童数",
       "unit": "人/校",
-      "description": "小学校1校あたりの実際の在籍児童数（実規模）。文部科学省「学校基本調査」と学校DB集計の対比。",
-      "source": "文部科学省「学校基本調査」/ Ban.Tai DB【確報値】",
+      "description": "小学校児童数を小学校数で除した1校あたり平均在籍児童数。文部科学省「学校基本調査」の同一調査・同一基準日データにより算出。（2025年5月1日時点 確定値）",
+      "source": "文部科学省「学校基本調査」【確報値】",
       "base_date": "2025年5月1日時点"
     },
     "elem_enrolled_per_class": {
@@ -138,8 +137,8 @@
     "jhs_enrolled_per_school": {
       "label": "中学校1校あたり生徒数",
       "unit": "人/校",
-      "description": "中学校1校あたりの実際の在籍生徒数（実規模）。文部科学省「学校基本調査」と学校DB集計の対比。",
-      "source": "文部科学省「学校基本調査」/ Ban.Tai DB【確報値】",
+      "description": "中学校生徒数を中学校数で除した1校あたり平均在籍生徒数。文部科学省「学校基本調査」の同一調査・同一基準日データにより算出。（2025年5月1日時点 確定値）",
+      "source": "文部科学省「学校基本調査」【確報値】",
       "base_date": "2025年5月1日時点"
     },
     "jhs_enrolled_per_class": {
@@ -157,9 +156,9 @@
       "base_date": "2025年5月1日時点"
     },
     "child_under_15_ratio": {
-      "label": "15歳未満人口割合（年少人口割合）",
+      "label": "15歳未満人口割合",
       "unit": "%",
-      "description": "総人口に占める15歳未満人口の割合。地域の子どもの多さを示す世代指標。",
+      "description": "総人口に占める15歳未満（年少人口）の割合。（総務省「国勢調査」2020年10月1日時点 確定値）",
       "source": "総務省統計局「令和2年国勢調査 確定値」",
       "base_date": "2020年10月1日時点"
     },
@@ -170,39 +169,32 @@
       "source": "総務省統計局「平成27年・令和2年国勢調査 確定値」",
       "base_date": "2015年〜2020年比較"
     },
-    "private_school_ratio": {
-      "label": "私立学校比率",
+    "private_elem_school_ratio": {
+      "label": "私立小学校比率",
       "unit": "%",
-      "description": "全学校・園数に占める私立校の割合。地域の私立教育依存度・選択肢を示します。",
-      "source": "Ban.Tai 全国学校データベース集計",
-      "base_date": "2026年9月時点"
+      "description": "小学校全体に占める私立小学校の割合。（文部科学省「学校基本調査」2025年5月1日時点 確定値）",
+      "source": "文部科学省「学校基本調査」【確報値】",
+      "base_date": "2025年5月1日時点"
     },
-    "special_needs_school_ratio": {
-      "label": "特別支援学校比率",
-      "unit": "%",
-      "description": "全学校・園数に占める特別支援学校の割合。インクルーシブ教育・特別支援教育インフラの密度。",
-      "source": "Ban.Tai 全国学校データベース集計",
-      "base_date": "2026年9月時点"
+    "special_needs_schools_per_100k_age_6_17": {
+      "label": "特別支援学校数（6～17歳人口10万人あたり）",
+      "unit": "校",
+      "description": "学齢期人口（6～17歳）10万人あたりの特別支援学校数。※対象障害種・在籍規模・分校等の違いがあるため、学校数が多い＝支援が充実と単純比較しないようご注意ください。（学校基本調査2025年 / 国勢調査2020年）",
+      "source": "学校基本調査 / 国勢調査",
+      "base_date": "2025年5月1日 / 2020年10月1日時点"
     },
     "ict_teaching_capability": {
-      "label": "教員のICT活用指導力割合",
+      "label": "教員のICT活用指導力・自己評価割合",
       "unit": "%",
-      "description": "教材研究・指導においてICTを活用できる教員の割合。",
-      "source": "文部科学省「学校における教育の情報化の実態等に関する調査」",
+      "description": "指導にICTを活用する能力に関する教員の自己評価（「できる」「ややできる」と回答した教員の割合）。（文部科学省「学校における教育の情報化の実態等に関する調査」2025年3月1日時点 確定値）",
+      "source": "文部科学省「教育情報化実態調査」",
       "base_date": "2025年3月1日時点"
     },
-    "depopulated_school_ratio": {
-      "label": "過疎地域所在校比率",
-      "unit": "%",
-      "description": "全学校・園数のうち過疎地域市町村に所在する学校の割合。",
-      "source": "総務省「過疎地域市町村一覧」× Ban.Tai DB突合",
-      "base_date": "2022年4月1日時点指定"
-    },
     "waiting_children_per_10k_preschool": {
-      "label": "就学前人口1万人あたり待機児童数",
-      "unit": "人/1万人",
-      "description": "3～5歳就学前人口1万人あたりの待機児童数（人口規模により正規化された待機児童指標）。",
-      "source": "こども家庭庁「保育所等関連状況取りまとめ」÷ 国勢調査3〜5歳人口",
+      "label": "待機児童数（未就学児1万人あたり）",
+      "unit": "人",
+      "description": "未就学児（3～5歳）人口1万人あたりの待機児童数。（こども家庭庁「保育所等関連状況取りまとめ」2025年4月1日時点 確定値）",
+      "source": "こども家庭庁 / 国勢調査",
       "base_date": "2025年4月1日時点"
     }
   },
@@ -234,10 +226,9 @@
       "jhs_student_teacher_ratio": 13.4,
       "child_under_15_ratio": 11.4,
       "pop_change_rate": 3.9,
-      "private_school_ratio": 34.9,
-      "special_needs_school_ratio": 1.9,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 5.6,
       "ict_teaching_capability": 91.6,
-      "depopulated_school_ratio": 0.8,
       "waiting_children_per_10k_preschool": 10.8,
       "ranks": {
         "total_population": 1,
@@ -260,10 +251,9 @@
         "jhs_student_teacher_ratio": 3,
         "child_under_15_ratio": 36,
         "pop_change_rate": 1,
-        "private_school_ratio": 1,
-        "special_needs_school_ratio": 44,
+        "private_elem_school_ratio": 34,
+        "special_needs_schools_per_100k_age_6_17": 45,
         "ict_teaching_capability": 12,
-        "depopulated_school_ratio": 45,
         "waiting_children_per_10k_preschool": 8
       }
     },
@@ -294,10 +284,9 @@
       "jhs_student_teacher_ratio": 13.6,
       "child_under_15_ratio": 12.1,
       "pop_change_rate": 1.2,
-      "private_school_ratio": 32.3,
-      "special_needs_school_ratio": 3.5,
+      "private_elem_school_ratio": 3.3,
+      "special_needs_schools_per_100k_age_6_17": 8.8,
       "ict_teaching_capability": 89.2,
-      "depopulated_school_ratio": 0.0,
       "waiting_children_per_10k_preschool": 6.7,
       "ranks": {
         "total_population": 2,
@@ -320,10 +309,9 @@
         "jhs_student_teacher_ratio": 1,
         "child_under_15_ratio": 18,
         "pop_change_rate": 3,
-        "private_school_ratio": 2,
-        "special_needs_school_ratio": 12,
+        "private_elem_school_ratio": 1,
+        "special_needs_schools_per_100k_age_6_17": 34,
         "ict_teaching_capability": 38,
-        "depopulated_school_ratio": 47,
         "waiting_children_per_10k_preschool": 11
       }
     },
@@ -354,10 +342,9 @@
       "jhs_student_teacher_ratio": 13.5,
       "child_under_15_ratio": 12.0,
       "pop_change_rate": 1.1,
-      "private_school_ratio": 26.2,
-      "special_needs_school_ratio": 3.0,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 8.1,
       "ict_teaching_capability": 91.0,
-      "depopulated_school_ratio": 2.5,
       "waiting_children_per_10k_preschool": 12.8,
       "ranks": {
         "total_population": 5,
@@ -380,10 +367,9 @@
         "jhs_student_teacher_ratio": 2,
         "child_under_15_ratio": 23,
         "pop_change_rate": 4,
-        "private_school_ratio": 4,
-        "special_needs_school_ratio": 26,
+        "private_elem_school_ratio": 35,
+        "special_needs_schools_per_100k_age_6_17": 40,
         "ict_teaching_capability": 23,
-        "depopulated_school_ratio": 42,
         "waiting_children_per_10k_preschool": 7
       }
     },
@@ -414,10 +400,9 @@
       "jhs_student_teacher_ratio": 13.3,
       "child_under_15_ratio": 11.8,
       "pop_change_rate": 1.0,
-      "private_school_ratio": 24.8,
-      "special_needs_school_ratio": 2.5,
+      "private_elem_school_ratio": 1.3,
+      "special_needs_schools_per_100k_age_6_17": 7.5,
       "ict_teaching_capability": 88.3,
-      "depopulated_school_ratio": 8.2,
       "waiting_children_per_10k_preschool": 6.6,
       "ranks": {
         "total_population": 6,
@@ -440,10 +425,9 @@
         "jhs_student_teacher_ratio": 4,
         "child_under_15_ratio": 27,
         "pop_change_rate": 5,
-        "private_school_ratio": 7,
-        "special_needs_school_ratio": 36,
+        "private_elem_school_ratio": 15,
+        "special_needs_schools_per_100k_age_6_17": 42,
         "ict_teaching_capability": 45,
-        "depopulated_school_ratio": 41,
         "waiting_children_per_10k_preschool": 12
       }
     },
@@ -474,10 +458,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 11.6,
       "pop_change_rate": -1.7,
-      "private_school_ratio": 11.8,
-      "special_needs_school_ratio": 2.8,
+      "private_elem_school_ratio": 1.6,
+      "special_needs_schools_per_100k_age_6_17": 8.3,
       "ict_teaching_capability": 96.6,
-      "depopulated_school_ratio": 10.4,
       "waiting_children_per_10k_preschool": 0.2,
       "ranks": {
         "total_population": 11,
@@ -500,10 +483,9 @@
         "jhs_student_teacher_ratio": 9,
         "child_under_15_ratio": 33,
         "pop_change_rate": 14,
-        "private_school_ratio": 31,
-        "special_needs_school_ratio": 32,
+        "private_elem_school_ratio": 11,
+        "special_needs_schools_per_100k_age_6_17": 37,
         "ict_teaching_capability": 2,
-        "depopulated_school_ratio": 38,
         "waiting_children_per_10k_preschool": 30
       }
     },
@@ -534,10 +516,9 @@
       "jhs_student_teacher_ratio": 11.9,
       "child_under_15_ratio": 11.8,
       "pop_change_rate": -2.1,
-      "private_school_ratio": 14.2,
-      "special_needs_school_ratio": 2.5,
+      "private_elem_school_ratio": 0.3,
+      "special_needs_schools_per_100k_age_6_17": 8.6,
       "ict_teaching_capability": 91.0,
-      "depopulated_school_ratio": 13.7,
       "waiting_children_per_10k_preschool": 0.7,
       "ranks": {
         "total_population": 19,
@@ -560,10 +541,9 @@
         "jhs_student_teacher_ratio": 18,
         "child_under_15_ratio": 26,
         "pop_change_rate": 19,
-        "private_school_ratio": 25,
-        "special_needs_school_ratio": 37,
+        "private_elem_school_ratio": 33,
+        "special_needs_schools_per_100k_age_6_17": 36,
         "ict_teaching_capability": 24,
-        "depopulated_school_ratio": 35,
         "waiting_children_per_10k_preschool": 28
       }
     },
@@ -594,10 +574,9 @@
       "jhs_student_teacher_ratio": 11.9,
       "child_under_15_ratio": 12.0,
       "pop_change_rate": -1.7,
-      "private_school_ratio": 10.9,
-      "special_needs_school_ratio": 4.3,
+      "private_elem_school_ratio": 1.4,
+      "special_needs_schools_per_100k_age_6_17": 14.4,
       "ict_teaching_capability": 88.7,
-      "depopulated_school_ratio": 17.7,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 18,
@@ -620,10 +599,9 @@
         "jhs_student_teacher_ratio": 17,
         "child_under_15_ratio": 22,
         "pop_change_rate": 16,
-        "private_school_ratio": 33,
-        "special_needs_school_ratio": 4,
+        "private_elem_school_ratio": 14,
+        "special_needs_schools_per_100k_age_6_17": 15,
         "ict_teaching_capability": 40,
-        "depopulated_school_ratio": 31,
         "waiting_children_per_10k_preschool": 31
       }
     },
@@ -654,10 +632,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 10.4,
       "pop_change_rate": -2.9,
-      "private_school_ratio": 17.5,
-      "special_needs_school_ratio": 3.7,
+      "private_elem_school_ratio": 0.6,
+      "special_needs_schools_per_100k_age_6_17": 15.2,
       "ict_teaching_capability": 91.2,
-      "depopulated_school_ratio": 49.6,
       "waiting_children_per_10k_preschool": 3.2,
       "ranks": {
         "total_population": 8,
@@ -680,10 +657,9 @@
         "jhs_student_teacher_ratio": 11,
         "child_under_15_ratio": 46,
         "pop_change_rate": 27,
-        "private_school_ratio": 16,
-        "special_needs_school_ratio": 11,
+        "private_elem_school_ratio": 25,
+        "special_needs_schools_per_100k_age_6_17": 11,
         "ict_teaching_capability": 20,
-        "depopulated_school_ratio": 13,
         "waiting_children_per_10k_preschool": 18
       }
     },
@@ -714,10 +690,9 @@
       "jhs_student_teacher_ratio": 11.8,
       "child_under_15_ratio": 11.7,
       "pop_change_rate": -1.4,
-      "private_school_ratio": 20.4,
-      "special_needs_school_ratio": 3.8,
+      "private_elem_school_ratio": 1.7,
+      "special_needs_schools_per_100k_age_6_17": 13.4,
       "ict_teaching_capability": 88.7,
-      "depopulated_school_ratio": 26.1,
       "waiting_children_per_10k_preschool": 3.3,
       "ranks": {
         "total_population": 14,
@@ -740,10 +715,9 @@
         "jhs_student_teacher_ratio": 20,
         "child_under_15_ratio": 30,
         "pop_change_rate": 12,
-        "private_school_ratio": 10,
-        "special_needs_school_ratio": 8,
+        "private_elem_school_ratio": 9,
+        "special_needs_schools_per_100k_age_6_17": 18,
         "ict_teaching_capability": 41,
-        "depopulated_school_ratio": 23,
         "waiting_children_per_10k_preschool": 17
       }
     },
@@ -774,10 +748,9 @@
       "jhs_student_teacher_ratio": 10.8,
       "child_under_15_ratio": 10.6,
       "pop_change_rate": -5.4,
-      "private_school_ratio": 17.8,
-      "special_needs_school_ratio": 3.8,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 18.1,
       "ict_teaching_capability": 88.4,
-      "depopulated_school_ratio": 51.0,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 31,
@@ -800,10 +773,9 @@
         "jhs_student_teacher_ratio": 39,
         "child_under_15_ratio": 45,
         "pop_change_rate": 45,
-        "private_school_ratio": 14,
-        "special_needs_school_ratio": 9,
+        "private_elem_school_ratio": 36,
+        "special_needs_schools_per_100k_age_6_17": 2,
         "ict_teaching_capability": 44,
-        "depopulated_school_ratio": 12,
         "waiting_children_per_10k_preschool": 32
       }
     },
@@ -834,10 +806,9 @@
       "jhs_student_teacher_ratio": 10.8,
       "child_under_15_ratio": 11.0,
       "pop_change_rate": -5.4,
-      "private_school_ratio": 10.4,
-      "special_needs_school_ratio": 3.2,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 13.5,
       "ict_teaching_capability": 88.6,
-      "depopulated_school_ratio": 63.3,
       "waiting_children_per_10k_preschool": 2.0,
       "ranks": {
         "total_population": 32,
@@ -860,10 +831,9 @@
         "jhs_student_teacher_ratio": 41,
         "child_under_15_ratio": 41,
         "pop_change_rate": 46,
-        "private_school_ratio": 35,
-        "special_needs_school_ratio": 22,
+        "private_elem_school_ratio": 37,
+        "special_needs_schools_per_100k_age_6_17": 17,
         "ict_teaching_capability": 42,
-        "depopulated_school_ratio": 4,
         "waiting_children_per_10k_preschool": 25
       }
     },
@@ -894,10 +864,9 @@
       "jhs_student_teacher_ratio": 10.3,
       "child_under_15_ratio": 9.4,
       "pop_change_rate": -6.2,
-      "private_school_ratio": 9.7,
-      "special_needs_school_ratio": 4.1,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 17.7,
       "ict_teaching_capability": 88.0,
-      "depopulated_school_ratio": 73.2,
       "waiting_children_per_10k_preschool": 3.0,
       "ranks": {
         "total_population": 38,
@@ -920,10 +889,9 @@
         "jhs_student_teacher_ratio": 44,
         "child_under_15_ratio": 47,
         "pop_change_rate": 47,
-        "private_school_ratio": 39,
-        "special_needs_school_ratio": 6,
+        "private_elem_school_ratio": 38,
+        "special_needs_schools_per_100k_age_6_17": 5,
         "ict_teaching_capability": 46,
-        "depopulated_school_ratio": 3,
         "waiting_children_per_10k_preschool": 20
       }
     },
@@ -954,10 +922,9 @@
       "jhs_student_teacher_ratio": 10.8,
       "child_under_15_ratio": 11.4,
       "pop_change_rate": -5.0,
-      "private_school_ratio": 12.9,
-      "special_needs_school_ratio": 4.3,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 17.8,
       "ict_teaching_capability": 89.7,
-      "depopulated_school_ratio": 27.6,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 36,
@@ -980,10 +947,9 @@
         "jhs_student_teacher_ratio": 40,
         "child_under_15_ratio": 37,
         "pop_change_rate": 43,
-        "private_school_ratio": 29,
-        "special_needs_school_ratio": 5,
+        "private_elem_school_ratio": 39,
+        "special_needs_schools_per_100k_age_6_17": 4,
         "ict_teaching_capability": 33,
-        "depopulated_school_ratio": 22,
         "waiting_children_per_10k_preschool": 33
       }
     },
@@ -1014,10 +980,9 @@
       "jhs_student_teacher_ratio": 11.3,
       "child_under_15_ratio": 11.5,
       "pop_change_rate": -4.2,
-      "private_school_ratio": 14.6,
-      "special_needs_school_ratio": 3.8,
+      "private_elem_school_ratio": 1.1,
+      "special_needs_schools_per_100k_age_6_17": 16.5,
       "ict_teaching_capability": 89.6,
-      "depopulated_school_ratio": 19.0,
       "waiting_children_per_10k_preschool": 1.3,
       "ranks": {
         "total_population": 21,
@@ -1040,10 +1005,9 @@
         "jhs_student_teacher_ratio": 28,
         "child_under_15_ratio": 35,
         "pop_change_rate": 37,
-        "private_school_ratio": 24,
-        "special_needs_school_ratio": 10,
+        "private_elem_school_ratio": 19,
+        "special_needs_schools_per_100k_age_6_17": 9,
         "ict_teaching_capability": 36,
-        "depopulated_school_ratio": 30,
         "waiting_children_per_10k_preschool": 26
       }
     },
@@ -1074,10 +1038,9 @@
       "jhs_student_teacher_ratio": 13.2,
       "child_under_15_ratio": 13.1,
       "pop_change_rate": 0.8,
-      "private_school_ratio": 19.5,
-      "special_needs_school_ratio": 2.1,
+      "private_elem_school_ratio": 0.4,
+      "special_needs_schools_per_100k_age_6_17": 5.4,
       "ict_teaching_capability": 87.5,
-      "depopulated_school_ratio": 1.1,
       "waiting_children_per_10k_preschool": 2.8,
       "ranks": {
         "total_population": 4,
@@ -1100,10 +1063,9 @@
         "jhs_student_teacher_ratio": 5,
         "child_under_15_ratio": 5,
         "pop_change_rate": 6,
-        "private_school_ratio": 12,
-        "special_needs_school_ratio": 39,
+        "private_elem_school_ratio": 30,
+        "special_needs_schools_per_100k_age_6_17": 46,
         "ict_teaching_capability": 47,
-        "depopulated_school_ratio": 44,
         "waiting_children_per_10k_preschool": 21
       }
     },
@@ -1134,10 +1096,9 @@
       "jhs_student_teacher_ratio": 11.4,
       "child_under_15_ratio": 10.9,
       "pop_change_rate": -4.5,
-      "private_school_ratio": 7.1,
-      "special_needs_school_ratio": 4.6,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 17.5,
       "ict_teaching_capability": 91.1,
-      "depopulated_school_ratio": 56.1,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 15,
@@ -1160,10 +1121,9 @@
         "jhs_student_teacher_ratio": 25,
         "child_under_15_ratio": 43,
         "pop_change_rate": 40,
-        "private_school_ratio": 44,
-        "special_needs_school_ratio": 1,
+        "private_elem_school_ratio": 40,
+        "special_needs_schools_per_100k_age_6_17": 6,
         "ict_teaching_capability": 21,
-        "depopulated_school_ratio": 8,
         "waiting_children_per_10k_preschool": 34
       }
     },
@@ -1194,10 +1154,9 @@
       "jhs_student_teacher_ratio": 11.0,
       "child_under_15_ratio": 11.6,
       "pop_change_rate": -3.0,
-      "private_school_ratio": 8.7,
-      "special_needs_school_ratio": 4.5,
+      "private_elem_school_ratio": 0.6,
+      "special_needs_schools_per_100k_age_6_17": 14.9,
       "ict_teaching_capability": 91.6,
-      "depopulated_school_ratio": 14.4,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 37,
@@ -1220,10 +1179,9 @@
         "jhs_student_teacher_ratio": 32,
         "child_under_15_ratio": 31,
         "pop_change_rate": 29,
-        "private_school_ratio": 41,
-        "special_needs_school_ratio": 2,
+        "private_elem_school_ratio": 24,
+        "special_needs_schools_per_100k_age_6_17": 13,
         "ict_teaching_capability": 13,
-        "depopulated_school_ratio": 34,
         "waiting_children_per_10k_preschool": 35
       }
     },
@@ -1254,10 +1212,9 @@
       "jhs_student_teacher_ratio": 11.1,
       "child_under_15_ratio": 12.4,
       "pop_change_rate": -1.9,
-      "private_school_ratio": 14.0,
-      "special_needs_school_ratio": 3.4,
+      "private_elem_school_ratio": 0.5,
+      "special_needs_schools_per_100k_age_6_17": 11.0,
       "ict_teaching_capability": 93.4,
-      "depopulated_school_ratio": 20.5,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 33,
@@ -1280,10 +1237,9 @@
         "jhs_student_teacher_ratio": 29,
         "child_under_15_ratio": 12,
         "pop_change_rate": 18,
-        "private_school_ratio": 26,
-        "special_needs_school_ratio": 19,
+        "private_elem_school_ratio": 28,
+        "special_needs_schools_per_100k_age_6_17": 26,
         "ict_teaching_capability": 6,
-        "depopulated_school_ratio": 29,
         "waiting_children_per_10k_preschool": 36
       }
     },
@@ -1314,10 +1270,9 @@
       "jhs_student_teacher_ratio": 10.8,
       "child_under_15_ratio": 12.5,
       "pop_change_rate": -2.5,
-      "private_school_ratio": 7.3,
-      "special_needs_school_ratio": 3.4,
+      "private_elem_school_ratio": 0.5,
+      "special_needs_schools_per_100k_age_6_17": 14.5,
       "ict_teaching_capability": 91.4,
-      "depopulated_school_ratio": 11.7,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 43,
@@ -1340,10 +1295,9 @@
         "jhs_student_teacher_ratio": 38,
         "child_under_15_ratio": 10,
         "pop_change_rate": 22,
-        "private_school_ratio": 43,
-        "special_needs_school_ratio": 20,
+        "private_elem_school_ratio": 27,
+        "special_needs_schools_per_100k_age_6_17": 14,
         "ict_teaching_capability": 15,
-        "depopulated_school_ratio": 37,
         "waiting_children_per_10k_preschool": 37
       }
     },
@@ -1374,10 +1328,9 @@
       "jhs_student_teacher_ratio": 11.0,
       "child_under_15_ratio": 11.7,
       "pop_change_rate": -3.0,
-      "private_school_ratio": 17.7,
-      "special_needs_school_ratio": 3.4,
+      "private_elem_school_ratio": 2.4,
+      "special_needs_schools_per_100k_age_6_17": 14.9,
       "ict_teaching_capability": 91.5,
-      "depopulated_school_ratio": 33.6,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 42,
@@ -1400,10 +1353,9 @@
         "jhs_student_teacher_ratio": 34,
         "child_under_15_ratio": 28,
         "pop_change_rate": 30,
-        "private_school_ratio": 15,
-        "special_needs_school_ratio": 16,
+        "private_elem_school_ratio": 5,
+        "special_needs_schools_per_100k_age_6_17": 12,
         "ict_teaching_capability": 14,
-        "depopulated_school_ratio": 17,
         "waiting_children_per_10k_preschool": 38
       }
     },
@@ -1434,10 +1386,9 @@
       "jhs_student_teacher_ratio": 11.3,
       "child_under_15_ratio": 12.0,
       "pop_change_rate": -2.4,
-      "private_school_ratio": 16.7,
-      "special_needs_school_ratio": 2.7,
+      "private_elem_school_ratio": 2.5,
+      "special_needs_schools_per_100k_age_6_17": 9.9,
       "ict_teaching_capability": 91.1,
-      "depopulated_school_ratio": 30.2,
       "waiting_children_per_10k_preschool": 2.2,
       "ranks": {
         "total_population": 16,
@@ -1460,10 +1411,9 @@
         "jhs_student_teacher_ratio": 27,
         "child_under_15_ratio": 20,
         "pop_change_rate": 20,
-        "private_school_ratio": 18,
-        "special_needs_school_ratio": 33,
+        "private_elem_school_ratio": 4,
+        "special_needs_schools_per_100k_age_6_17": 32,
         "ict_teaching_capability": 22,
-        "depopulated_school_ratio": 21,
         "waiting_children_per_10k_preschool": 24
       }
     },
@@ -1494,10 +1444,9 @@
       "jhs_student_teacher_ratio": 11.5,
       "child_under_15_ratio": 12.1,
       "pop_change_rate": -2.6,
-      "private_school_ratio": 15.6,
-      "special_needs_school_ratio": 3.1,
+      "private_elem_school_ratio": 0.6,
+      "special_needs_schools_per_100k_age_6_17": 11.0,
       "ict_teaching_capability": 91.9,
-      "depopulated_school_ratio": 32.0,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 17,
@@ -1520,10 +1469,9 @@
         "jhs_student_teacher_ratio": 24,
         "child_under_15_ratio": 16,
         "pop_change_rate": 24,
-        "private_school_ratio": 20,
-        "special_needs_school_ratio": 24,
+        "private_elem_school_ratio": 23,
+        "special_needs_schools_per_100k_age_6_17": 27,
         "ict_teaching_capability": 9,
-        "depopulated_school_ratio": 19,
         "waiting_children_per_10k_preschool": 39
       }
     },
@@ -1554,10 +1502,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 11.7,
       "pop_change_rate": -1.8,
-      "private_school_ratio": 18.5,
-      "special_needs_school_ratio": 3.5,
+      "private_elem_school_ratio": 1.1,
+      "special_needs_schools_per_100k_age_6_17": 11.4,
       "ict_teaching_capability": 90.6,
-      "depopulated_school_ratio": 1.6,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 10,
@@ -1580,10 +1527,9 @@
         "jhs_student_teacher_ratio": 15,
         "child_under_15_ratio": 29,
         "pop_change_rate": 17,
-        "private_school_ratio": 13,
-        "special_needs_school_ratio": 15,
+        "private_elem_school_ratio": 20,
+        "special_needs_schools_per_100k_age_6_17": 24,
         "ict_teaching_capability": 27,
-        "depopulated_school_ratio": 43,
         "waiting_children_per_10k_preschool": 40
       }
     },
@@ -1614,10 +1560,9 @@
       "jhs_student_teacher_ratio": 12.7,
       "child_under_15_ratio": 12.0,
       "pop_change_rate": -0.0,
-      "private_school_ratio": 23.3,
-      "special_needs_school_ratio": 1.9,
+      "private_elem_school_ratio": 1.8,
+      "special_needs_schools_per_100k_age_6_17": 4.7,
       "ict_teaching_capability": 89.7,
-      "depopulated_school_ratio": 0.7,
       "waiting_children_per_10k_preschool": 10.0,
       "ranks": {
         "total_population": 3,
@@ -1640,10 +1585,9 @@
         "jhs_student_teacher_ratio": 7,
         "child_under_15_ratio": 21,
         "pop_change_rate": 9,
-        "private_school_ratio": 8,
-        "special_needs_school_ratio": 45,
+        "private_elem_school_ratio": 8,
+        "special_needs_schools_per_100k_age_6_17": 47,
         "ict_teaching_capability": 34,
-        "depopulated_school_ratio": 46,
         "waiting_children_per_10k_preschool": 9
       }
     },
@@ -1674,10 +1618,9 @@
       "jhs_student_teacher_ratio": 11.7,
       "child_under_15_ratio": 12.2,
       "pop_change_rate": -2.5,
-      "private_school_ratio": 10.6,
-      "special_needs_school_ratio": 2.9,
+      "private_elem_school_ratio": 0.6,
+      "special_needs_schools_per_100k_age_6_17": 11.6,
       "ict_teaching_capability": 92.7,
-      "depopulated_school_ratio": 25.3,
       "waiting_children_per_10k_preschool": 21.7,
       "ranks": {
         "total_population": 22,
@@ -1700,10 +1643,9 @@
         "jhs_student_teacher_ratio": 21,
         "child_under_15_ratio": 14,
         "pop_change_rate": 21,
-        "private_school_ratio": 34,
-        "special_needs_school_ratio": 29,
+        "private_elem_school_ratio": 26,
+        "special_needs_schools_per_100k_age_6_17": 23,
         "ict_teaching_capability": 7,
-        "depopulated_school_ratio": 25,
         "waiting_children_per_10k_preschool": 5
       }
     },
@@ -1734,10 +1676,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 13.6,
       "pop_change_rate": 0.0,
-      "private_school_ratio": 6.8,
-      "special_needs_school_ratio": 3.4,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 10.6,
       "ict_teaching_capability": 91.7,
-      "depopulated_school_ratio": 23.3,
       "waiting_children_per_10k_preschool": 92.3,
       "ranks": {
         "total_population": 26,
@@ -1760,10 +1701,9 @@
         "jhs_student_teacher_ratio": 12,
         "child_under_15_ratio": 2,
         "pop_change_rate": 8,
-        "private_school_ratio": 45,
-        "special_needs_school_ratio": 17,
+        "private_elem_school_ratio": 41,
+        "special_needs_schools_per_100k_age_6_17": 28,
         "ict_teaching_capability": 11,
-        "depopulated_school_ratio": 27,
         "waiting_children_per_10k_preschool": 1
       }
     },
@@ -1794,10 +1734,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 11.6,
       "pop_change_rate": -1.2,
-      "private_school_ratio": 25.8,
-      "special_needs_school_ratio": 3.0,
+      "private_elem_school_ratio": 3.1,
+      "special_needs_schools_per_100k_age_6_17": 10.4,
       "ict_teaching_capability": 91.3,
-      "depopulated_school_ratio": 16.2,
       "waiting_children_per_10k_preschool": 2.7,
       "ranks": {
         "total_population": 13,
@@ -1820,10 +1759,9 @@
         "jhs_student_teacher_ratio": 13,
         "child_under_15_ratio": 32,
         "pop_change_rate": 10,
-        "private_school_ratio": 5,
-        "special_needs_school_ratio": 25,
+        "private_elem_school_ratio": 3,
+        "special_needs_schools_per_100k_age_6_17": 30,
         "ict_teaching_capability": 18,
-        "depopulated_school_ratio": 32,
         "waiting_children_per_10k_preschool": 22
       }
     },
@@ -1854,10 +1792,9 @@
       "jhs_student_teacher_ratio": 12.6,
       "child_under_15_ratio": 12.1,
       "pop_change_rate": -1.3,
-      "private_school_ratio": 16.2,
-      "special_needs_school_ratio": 2.8,
+      "private_elem_school_ratio": 1.7,
+      "special_needs_schools_per_100k_age_6_17": 8.7,
       "ict_teaching_capability": 91.3,
-      "depopulated_school_ratio": 14.6,
       "waiting_children_per_10k_preschool": 15.9,
       "ranks": {
         "total_population": 7,
@@ -1880,10 +1817,9 @@
         "jhs_student_teacher_ratio": 8,
         "child_under_15_ratio": 17,
         "pop_change_rate": 11,
-        "private_school_ratio": 19,
-        "special_needs_school_ratio": 31,
+        "private_elem_school_ratio": 10,
+        "special_needs_schools_per_100k_age_6_17": 35,
         "ict_teaching_capability": 19,
-        "depopulated_school_ratio": 33,
         "waiting_children_per_10k_preschool": 6
       }
     },
@@ -1914,10 +1850,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 11.2,
       "pop_change_rate": -2.9,
-      "private_school_ratio": 15.4,
-      "special_needs_school_ratio": 2.1,
+      "private_elem_school_ratio": 3.2,
+      "special_needs_schools_per_100k_age_6_17": 7.3,
       "ict_teaching_capability": 89.8,
-      "depopulated_school_ratio": 8.7,
       "waiting_children_per_10k_preschool": 64.2,
       "ranks": {
         "total_population": 29,
@@ -1940,10 +1875,9 @@
         "jhs_student_teacher_ratio": 14,
         "child_under_15_ratio": 39,
         "pop_change_rate": 28,
-        "private_school_ratio": 21,
-        "special_needs_school_ratio": 40,
+        "private_elem_school_ratio": 2,
+        "special_needs_schools_per_100k_age_6_17": 43,
         "ict_teaching_capability": 32,
-        "depopulated_school_ratio": 40,
         "waiting_children_per_10k_preschool": 2
       }
     },
@@ -1974,10 +1908,9 @@
       "jhs_student_teacher_ratio": 10.6,
       "child_under_15_ratio": 11.1,
       "pop_change_rate": -4.3,
-      "private_school_ratio": 9.9,
-      "special_needs_school_ratio": 2.4,
+      "private_elem_school_ratio": 1.3,
+      "special_needs_schools_per_100k_age_6_17": 11.9,
       "ict_teaching_capability": 90.5,
-      "depopulated_school_ratio": 25.7,
       "waiting_children_per_10k_preschool": 26.4,
       "ranks": {
         "total_population": 40,
@@ -2000,10 +1933,9 @@
         "jhs_student_teacher_ratio": 42,
         "child_under_15_ratio": 40,
         "pop_change_rate": 38,
-        "private_school_ratio": 38,
-        "special_needs_school_ratio": 38,
+        "private_elem_school_ratio": 16,
+        "special_needs_schools_per_100k_age_6_17": 21,
         "ict_teaching_capability": 28,
-        "depopulated_school_ratio": 24,
         "waiting_children_per_10k_preschool": 4
       }
     },
@@ -2034,10 +1966,9 @@
       "jhs_student_teacher_ratio": 12.1,
       "child_under_15_ratio": 12.5,
       "pop_change_rate": -1.6,
-      "private_school_ratio": 25.8,
-      "special_needs_school_ratio": 2.0,
+      "private_elem_school_ratio": 2.0,
+      "special_needs_schools_per_100k_age_6_17": 7.1,
       "ict_teaching_capability": 89.9,
-      "depopulated_school_ratio": 35.4,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 12,
@@ -2060,10 +1991,9 @@
         "jhs_student_teacher_ratio": 16,
         "child_under_15_ratio": 11,
         "pop_change_rate": 13,
-        "private_school_ratio": 6,
-        "special_needs_school_ratio": 43,
+        "private_elem_school_ratio": 6,
+        "special_needs_schools_per_100k_age_6_17": 44,
         "ict_teaching_capability": 31,
-        "depopulated_school_ratio": 16,
         "waiting_children_per_10k_preschool": 41
       }
     },
@@ -2094,10 +2024,9 @@
       "jhs_student_teacher_ratio": 10.3,
       "child_under_15_ratio": 12.1,
       "pop_change_rate": -3.5,
-      "private_school_ratio": 9.9,
-      "special_needs_school_ratio": 4.3,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 17.0,
       "ict_teaching_capability": 91.8,
-      "depopulated_school_ratio": 44.8,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 47,
@@ -2120,10 +2049,9 @@
         "jhs_student_teacher_ratio": 43,
         "child_under_15_ratio": 19,
         "pop_change_rate": 33,
-        "private_school_ratio": 37,
-        "special_needs_school_ratio": 3,
+        "private_elem_school_ratio": 42,
+        "special_needs_schools_per_100k_age_6_17": 8,
         "ict_teaching_capability": 10,
-        "depopulated_school_ratio": 14,
         "waiting_children_per_10k_preschool": 42
       }
     },
@@ -2154,10 +2082,9 @@
       "jhs_student_teacher_ratio": 10.2,
       "child_under_15_ratio": 11.9,
       "pop_change_rate": -3.3,
-      "private_school_ratio": 5.2,
-      "special_needs_school_ratio": 3.0,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 17.1,
       "ict_teaching_capability": 89.0,
-      "depopulated_school_ratio": 82.6,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 46,
@@ -2180,10 +2107,9 @@
         "jhs_student_teacher_ratio": 46,
         "child_under_15_ratio": 25,
         "pop_change_rate": 32,
-        "private_school_ratio": 46,
-        "special_needs_school_ratio": 28,
+        "private_elem_school_ratio": 43,
+        "special_needs_schools_per_100k_age_6_17": 7,
         "ict_teaching_capability": 39,
-        "depopulated_school_ratio": 2,
         "waiting_children_per_10k_preschool": 43
       }
     },
@@ -2214,10 +2140,9 @@
       "jhs_student_teacher_ratio": 11.9,
       "child_under_15_ratio": 12.5,
       "pop_change_rate": -1.7,
-      "private_school_ratio": 9.3,
-      "special_needs_school_ratio": 2.1,
+      "private_elem_school_ratio": 1.1,
+      "special_needs_schools_per_100k_age_6_17": 8.2,
       "ict_teaching_capability": 94.0,
-      "depopulated_school_ratio": 31.6,
       "waiting_children_per_10k_preschool": 5.0,
       "ranks": {
         "total_population": 20,
@@ -2240,10 +2165,9 @@
         "jhs_student_teacher_ratio": 19,
         "child_under_15_ratio": 9,
         "pop_change_rate": 15,
-        "private_school_ratio": 40,
-        "special_needs_school_ratio": 41,
+        "private_elem_school_ratio": 17,
+        "special_needs_schools_per_100k_age_6_17": 38,
         "ict_teaching_capability": 4,
-        "depopulated_school_ratio": 20,
         "waiting_children_per_10k_preschool": 13
       }
     },
@@ -2274,10 +2198,9 @@
       "jhs_student_teacher_ratio": 11.0,
       "child_under_15_ratio": 11.3,
       "pop_change_rate": -4.5,
-      "private_school_ratio": 22.8,
-      "special_needs_school_ratio": 2.1,
+      "private_elem_school_ratio": 0.4,
+      "special_needs_schools_per_100k_age_6_17": 10.5,
       "ict_teaching_capability": 91.0,
-      "depopulated_school_ratio": 55.4,
       "waiting_children_per_10k_preschool": 3.1,
       "ranks": {
         "total_population": 27,
@@ -2300,10 +2223,9 @@
         "jhs_student_teacher_ratio": 30,
         "child_under_15_ratio": 38,
         "pop_change_rate": 39,
-        "private_school_ratio": 9,
-        "special_needs_school_ratio": 42,
+        "private_elem_school_ratio": 32,
+        "special_needs_schools_per_100k_age_6_17": 29,
         "ict_teaching_capability": 25,
-        "depopulated_school_ratio": 9,
         "waiting_children_per_10k_preschool": 19
       }
     },
@@ -2334,10 +2256,9 @@
       "jhs_student_teacher_ratio": 11.0,
       "child_under_15_ratio": 12.2,
       "pop_change_rate": -2.7,
-      "private_school_ratio": 13.5,
-      "special_needs_school_ratio": 2.6,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 10.1,
       "ict_teaching_capability": 88.6,
-      "depopulated_school_ratio": 22.4,
       "waiting_children_per_10k_preschool": 0.5,
       "ranks": {
         "total_population": 39,
@@ -2360,10 +2281,9 @@
         "jhs_student_teacher_ratio": 33,
         "child_under_15_ratio": 15,
         "pop_change_rate": 25,
-        "private_school_ratio": 28,
-        "special_needs_school_ratio": 34,
+        "private_elem_school_ratio": 44,
+        "special_needs_schools_per_100k_age_6_17": 31,
         "ict_teaching_capability": 43,
-        "depopulated_school_ratio": 28,
         "waiting_children_per_10k_preschool": 29
       }
     },
@@ -2394,10 +2314,9 @@
       "jhs_student_teacher_ratio": 10.2,
       "child_under_15_ratio": 11.0,
       "pop_change_rate": -4.8,
-      "private_school_ratio": 4.5,
-      "special_needs_school_ratio": 3.0,
+      "private_elem_school_ratio": 1.1,
+      "special_needs_schools_per_100k_age_6_17": 17.9,
       "ict_teaching_capability": 96.1,
-      "depopulated_school_ratio": 23.4,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 44,
@@ -2420,10 +2339,9 @@
         "jhs_student_teacher_ratio": 45,
         "child_under_15_ratio": 42,
         "pop_change_rate": 42,
-        "private_school_ratio": 47,
-        "special_needs_school_ratio": 27,
+        "private_elem_school_ratio": 18,
+        "special_needs_schools_per_100k_age_6_17": 3,
         "ict_teaching_capability": 3,
-        "depopulated_school_ratio": 26,
         "waiting_children_per_10k_preschool": 44
       }
     },
@@ -2454,10 +2372,9 @@
       "jhs_student_teacher_ratio": 10.9,
       "child_under_15_ratio": 11.6,
       "pop_change_rate": -3.6,
-      "private_school_ratio": 14.8,
-      "special_needs_school_ratio": 1.9,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 8.1,
       "ict_teaching_capability": 99.2,
-      "depopulated_school_ratio": 32.8,
       "waiting_children_per_10k_preschool": 4.5,
       "ranks": {
         "total_population": 28,
@@ -2480,10 +2397,9 @@
         "jhs_student_teacher_ratio": 37,
         "child_under_15_ratio": 34,
         "pop_change_rate": 35,
-        "private_school_ratio": 23,
-        "special_needs_school_ratio": 46,
+        "private_elem_school_ratio": 45,
+        "special_needs_schools_per_100k_age_6_17": 39,
         "ict_teaching_capability": 1,
-        "depopulated_school_ratio": 18,
         "waiting_children_per_10k_preschool": 14
       }
     },
@@ -2514,10 +2430,9 @@
       "jhs_student_teacher_ratio": 10.1,
       "child_under_15_ratio": 10.9,
       "pop_change_rate": -5.0,
-      "private_school_ratio": 10.0,
-      "special_needs_school_ratio": 4.0,
+      "private_elem_school_ratio": 0.9,
+      "special_needs_schools_per_100k_age_6_17": 25.8,
       "ict_teaching_capability": 90.9,
-      "depopulated_school_ratio": 59.5,
       "waiting_children_per_10k_preschool": 7.0,
       "ranks": {
         "total_population": 45,
@@ -2540,10 +2455,9 @@
         "jhs_student_teacher_ratio": 47,
         "child_under_15_ratio": 44,
         "pop_change_rate": 44,
-        "private_school_ratio": 36,
-        "special_needs_school_ratio": 7,
+        "private_elem_school_ratio": 21,
+        "special_needs_schools_per_100k_age_6_17": 1,
         "ict_teaching_capability": 26,
-        "depopulated_school_ratio": 6,
         "waiting_children_per_10k_preschool": 10
       }
     },
@@ -2574,10 +2488,9 @@
       "jhs_student_teacher_ratio": 12.8,
       "child_under_15_ratio": 13.0,
       "pop_change_rate": 0.7,
-      "private_school_ratio": 28.4,
-      "special_needs_school_ratio": 2.6,
+      "private_elem_school_ratio": 1.4,
+      "special_needs_schools_per_100k_age_6_17": 7.9,
       "ict_teaching_capability": 89.6,
-      "depopulated_school_ratio": 13.3,
       "waiting_children_per_10k_preschool": 2.2,
       "ranks": {
         "total_population": 9,
@@ -2600,10 +2513,9 @@
         "jhs_student_teacher_ratio": 6,
         "child_under_15_ratio": 7,
         "pop_change_rate": 7,
-        "private_school_ratio": 3,
-        "special_needs_school_ratio": 35,
+        "private_elem_school_ratio": 13,
+        "special_needs_schools_per_100k_age_6_17": 41,
         "ict_teaching_capability": 37,
-        "depopulated_school_ratio": 36,
         "waiting_children_per_10k_preschool": 23
       }
     },
@@ -2634,10 +2546,9 @@
       "jhs_student_teacher_ratio": 11.4,
       "child_under_15_ratio": 13.3,
       "pop_change_rate": -2.6,
-      "private_school_ratio": 13.8,
-      "special_needs_school_ratio": 3.2,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 11.8,
       "ict_teaching_capability": 91.4,
-      "depopulated_school_ratio": 62.9,
       "waiting_children_per_10k_preschool": 3.9,
       "ranks": {
         "total_population": 41,
@@ -2660,10 +2571,9 @@
         "jhs_student_teacher_ratio": 26,
         "child_under_15_ratio": 3,
         "pop_change_rate": 23,
-        "private_school_ratio": 27,
-        "special_needs_school_ratio": 21,
+        "private_elem_school_ratio": 46,
+        "special_needs_schools_per_100k_age_6_17": 22,
         "ict_teaching_capability": 16,
-        "depopulated_school_ratio": 5,
         "waiting_children_per_10k_preschool": 15
       }
     },
@@ -2694,10 +2604,9 @@
       "jhs_student_teacher_ratio": 10.9,
       "child_under_15_ratio": 12.3,
       "pop_change_rate": -4.7,
-      "private_school_ratio": 17.1,
-      "special_needs_school_ratio": 2.8,
+      "private_elem_school_ratio": 2.0,
+      "special_needs_schools_per_100k_age_6_17": 13.5,
       "ict_teaching_capability": 90.3,
-      "depopulated_school_ratio": 85.8,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 30,
@@ -2720,10 +2629,9 @@
         "jhs_student_teacher_ratio": 36,
         "child_under_15_ratio": 13,
         "pop_change_rate": 41,
-        "private_school_ratio": 17,
-        "special_needs_school_ratio": 30,
+        "private_elem_school_ratio": 7,
+        "special_needs_schools_per_100k_age_6_17": 16,
         "ict_teaching_capability": 29,
-        "depopulated_school_ratio": 1,
         "waiting_children_per_10k_preschool": 45
       }
     },
@@ -2754,10 +2662,9 @@
       "jhs_student_teacher_ratio": 11.6,
       "child_under_15_ratio": 13.2,
       "pop_change_rate": -2.7,
-      "private_school_ratio": 15.4,
-      "special_needs_school_ratio": 3.5,
+      "private_elem_school_ratio": 0.0,
+      "special_needs_schools_per_100k_age_6_17": 12.5,
       "ict_teaching_capability": 93.8,
-      "depopulated_school_ratio": 35.8,
       "waiting_children_per_10k_preschool": 0.9,
       "ranks": {
         "total_population": 23,
@@ -2780,10 +2687,9 @@
         "jhs_student_teacher_ratio": 22,
         "child_under_15_ratio": 4,
         "pop_change_rate": 26,
-        "private_school_ratio": 22,
-        "special_needs_school_ratio": 14,
+        "private_elem_school_ratio": 47,
+        "special_needs_schools_per_100k_age_6_17": 20,
         "ict_teaching_capability": 5,
-        "depopulated_school_ratio": 15,
         "waiting_children_per_10k_preschool": 27
       }
     },
@@ -2814,10 +2720,9 @@
       "jhs_student_teacher_ratio": 10.9,
       "child_under_15_ratio": 12.0,
       "pop_change_rate": -3.6,
-      "private_school_ratio": 12.7,
-      "special_needs_school_ratio": 3.4,
+      "private_elem_school_ratio": 0.4,
+      "special_needs_schools_per_100k_age_6_17": 16.4,
       "ict_teaching_capability": 91.4,
-      "depopulated_school_ratio": 57.9,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 34,
@@ -2840,10 +2745,9 @@
         "jhs_student_teacher_ratio": 35,
         "child_under_15_ratio": 24,
         "pop_change_rate": 36,
-        "private_school_ratio": 30,
-        "special_needs_school_ratio": 18,
+        "private_elem_school_ratio": 31,
+        "special_needs_schools_per_100k_age_6_17": 10,
         "ict_teaching_capability": 17,
-        "depopulated_school_ratio": 7,
         "waiting_children_per_10k_preschool": 46
       }
     },
@@ -2874,10 +2778,9 @@
       "jhs_student_teacher_ratio": 11.0,
       "child_under_15_ratio": 12.9,
       "pop_change_rate": -3.1,
-      "private_school_ratio": 19.6,
-      "special_needs_school_ratio": 3.2,
+      "private_elem_school_ratio": 0.4,
+      "special_needs_schools_per_100k_age_6_17": 13.3,
       "ict_teaching_capability": 90.2,
-      "depopulated_school_ratio": 51.9,
       "waiting_children_per_10k_preschool": 0.0,
       "ranks": {
         "total_population": 35,
@@ -2900,10 +2803,9 @@
         "jhs_student_teacher_ratio": 31,
         "child_under_15_ratio": 8,
         "pop_change_rate": 31,
-        "private_school_ratio": 11,
-        "special_needs_school_ratio": 23,
+        "private_elem_school_ratio": 29,
+        "special_needs_schools_per_100k_age_6_17": 19,
         "ict_teaching_capability": 30,
-        "depopulated_school_ratio": 11,
         "waiting_children_per_10k_preschool": 47
       }
     },
@@ -2934,10 +2836,9 @@
       "jhs_student_teacher_ratio": 11.5,
       "child_under_15_ratio": 13.0,
       "pop_change_rate": -3.6,
-      "private_school_ratio": 11.0,
-      "special_needs_school_ratio": 1.8,
+      "private_elem_school_ratio": 0.7,
+      "special_needs_schools_per_100k_age_6_17": 9.1,
       "ict_teaching_capability": 89.7,
-      "depopulated_school_ratio": 53.5,
       "waiting_children_per_10k_preschool": 3.5,
       "ranks": {
         "total_population": 24,
@@ -2960,10 +2861,9 @@
         "jhs_student_teacher_ratio": 23,
         "child_under_15_ratio": 6,
         "pop_change_rate": 34,
-        "private_school_ratio": 32,
-        "special_needs_school_ratio": 47,
+        "private_elem_school_ratio": 22,
+        "special_needs_schools_per_100k_age_6_17": 33,
         "ict_teaching_capability": 35,
-        "depopulated_school_ratio": 10,
         "waiting_children_per_10k_preschool": 16
       }
     },
@@ -2994,10 +2894,9 @@
       "jhs_student_teacher_ratio": 12.2,
       "child_under_15_ratio": 16.9,
       "pop_change_rate": 2.4,
-      "private_school_ratio": 8.3,
-      "special_needs_school_ratio": 3.5,
+      "private_elem_school_ratio": 1.5,
+      "special_needs_schools_per_100k_age_6_17": 11.2,
       "ict_teaching_capability": 92.2,
-      "depopulated_school_ratio": 9.4,
       "waiting_children_per_10k_preschool": 35.2,
       "ranks": {
         "total_population": 25,
@@ -3020,10 +2919,9 @@
         "jhs_student_teacher_ratio": 10,
         "child_under_15_ratio": 1,
         "pop_change_rate": 2,
-        "private_school_ratio": 42,
-        "special_needs_school_ratio": 13,
+        "private_elem_school_ratio": 12,
+        "special_needs_schools_per_100k_age_6_17": 25,
         "ict_teaching_capability": 8,
-        "depopulated_school_ratio": 39,
         "waiting_children_per_10k_preschool": 3
       }
     }
