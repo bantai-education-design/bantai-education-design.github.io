@@ -43,9 +43,9 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     # 3. National Aging Rate (Official 2020 Census Confirmed Figure)
     assert nat['aging_rate'] == 28.6, f"全国高齢化率（期待値: 28.6%, 実際: {nat['aging_rate']}%）"
 
-    # 4. Prefecture Sum Total Population Match (within 50 of 126,146,099)
+    # 4. Prefecture Sum Total Population Match (Exact equality 126,146,099)
     sum_pref_pop = sum(p['total_population'] for p in prefs)
-    assert abs(sum_pref_pop - 126146099) <= 50, f"47都道府県総人口合計と全国値の差（合計: {sum_pref_pop:,}人）"
+    assert sum_pref_pop == 126146099, f"47都道府県総人口合計が全国確定値126,146,099人と不一致（合計: {sum_pref_pop:,}人）"
 
     # 5. Akita Prefecture (Highest Aging Rate in Japan: 37.5%, 65+ Pop: 359,687)
     akita = next(p for p in prefs if p['code'] == 'akita')
