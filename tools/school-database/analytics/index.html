@@ -113,16 +113,24 @@
               </label>
               <select id="metric-select" style="width:100%; padding:10px 12px; border:2px solid #0c1b33; border-radius:8px; font-size:0.95rem; font-weight:600; color:#0c1b33; background:#fff;">
                 <optgroup label="🏫 実在籍・学校規模（確報/速報）">
-                  <option value="elem_enrolled_per_school">⭐ 小学校1校あたり児童数（人/校）</option>
+                  <option value="elem_enrolled_per_school">⭐ 小学校1校あたり実児童数（人/校）</option>
                   <option value="jhs_enrolled_per_school">⭐ 中学校1校あたり生徒数（人/校）</option>
                   <option value="elem_pop_per_school" selected>💡 小学校1校あたり6～11歳人口（人/校）</option>
                   <option value="jhs_pop_per_school">💡 中学校1校あたり12～14歳人口（人/校）</option>
+                  <option value="area_per_school">📐 1校あたり地域面積（k㎡/校）</option>
                 </optgroup>
-                <optgroup label="👩‍🏫 学級規模・教員配置（指導環境）">
+                <optgroup label="👩‍🏫 学級規模・教員配置・指導力（教育環境）">
                   <option value="elem_enrolled_per_class">⭐ 小学校1学級あたり児童数（人/学級）</option>
                   <option value="jhs_enrolled_per_class">⭐ 中学校1学級あたり生徒数（人/学級）</option>
                   <option value="student_teacher_ratio">👩‍🏫 小学校 教員1人あたり児童数（人/教員）</option>
-                  <option value="jhs_student_teacher_ratio">👩‍🏫 中学校 教員1人あたり生徒数（人/教員）</option>
+                  <option value="jhs_student_teacher_ratio">⭐ 中学校 教員1人あたり生徒数（人/教員）</option>
+                  <option value="ict_teaching_capability">💻 教員のICT活用指導力（割合 %）</option>
+                </optgroup>
+                <optgroup label="🏫 学校種別・地域環境特性（公私立・過疎・待機児童）">
+                  <option value="private_school_ratio">⭐ 私立学校比率（%）</option>
+                  <option value="special_needs_school_ratio">⭐ 特別支援学校比率（%）</option>
+                  <option value="depopulated_school_ratio">🏞️ 過疎地域所在校比率（%）</option>
+                  <option value="waiting_children_per_10k_preschool">👶 待機児童数（未就学児1万人あたり 人）</option>
                 </optgroup>
                 <optgroup label="👥 人口・世代構造（国勢調査確定値）">
                   <option value="child_under_15_ratio">⭐ 15歳未満人口割合（%）</option>
