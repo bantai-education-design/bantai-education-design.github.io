@@ -57,21 +57,31 @@ def build_intro_paragraph(pref_name: str, meta: dict) -> str:
     )
 
 
-def build_stats_paragraph(pref_name: str, card_pref: dict) -> str:
+def build_stats_paragraph(pref_name: str, card_pref: dict, dataset_pref: dict | None = None) -> str:
     population = card_pref["population"]
     education = card_pref["education_profile"]
 
-    census_population = population["census_population"]
-    census_age_3_17 = population["census_age_3_17"]
-    share = population["share_of_census_population_percent"]
-    reference_date_display = population["reference_date_display"]
-    source_short_label = population["source_short_label"]
+    if dataset_pref and "total_population" in dataset_pref:
+        total_pop = dataset_pref["total_population"]
+        tot_man = total_pop / 10000.0
+        census_age_3_17 = population["census_age_3_17"]
+        share = population["share_of_census_population_percent"]
+        intro = (
+            f"{pref_name}の総人口は{tot_man:,.1f}万人（{format_number(total_pop)}人、"
+            f"令和2年国勢調査確定値）、このうち3〜17歳の学齢人口は{format_number(census_age_3_17)}人（{share}%）です。"
+        )
+    else:
+        census_population = population["census_population"]
+        census_age_3_17 = population["census_age_3_17"]
+        share = population["share_of_census_population_percent"]
+        reference_date_display = population["reference_date_display"]
+        source_short_label = population["source_short_label"]
 
-    intro = (
-        f"{pref_name}の人口（日本国籍）は{format_number(census_population)}人、"
-        f"このうち3〜17歳の学齢人口は{format_number(census_age_3_17)}人（{share}%）です"
-        f"（出典：{source_short_label}、{reference_date_display}）。"
-    )
+        intro = (
+            f"{pref_name}の人口（日本国籍）は{format_number(census_population)}人、"
+            f"このうち3〜17歳の学齢人口は{format_number(census_age_3_17)}人（{share}%）です"
+            f"（出典：{source_short_label}、{reference_date_display}）。"
+        )
 
     # child_population_shareが見出し指標の場合、直前の文と同じ割合の言い直しに
     # なるため、全国平均との比較のみを追記する（全く同じ文を重複させない）。
@@ -168,13 +178,13 @@ def build_faq_items(pref_name: str, total: int, municipality_count: int, school_
     ]
 
 
-def build_content(pref_name: str, meta: dict, card_pref: dict) -> dict:
+def build_content(pref_name: str, meta: dict, card_pref: dict, dataset_pref: dict | None = None) -> dict:
     total = meta["total"]
     municipality_count = meta["municipality_count"]
     school_type_count = meta["school_type_count"]
     return {
         "intro": build_intro_paragraph(pref_name, meta),
-        "stats": build_stats_paragraph(pref_name, card_pref),
+        "stats": build_stats_paragraph(pref_name, card_pref, dataset_pref),
         "features": build_features(pref_name, meta),
         "use_cases": build_use_cases(pref_name),
         "faq": build_faq_items(pref_name, total, municipality_count, school_type_count),
