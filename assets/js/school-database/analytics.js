@@ -11,21 +11,30 @@
   const metricDesc = document.getElementById("metric-info-desc");
   const metricBadge = document.getElementById("metric-info-badge");
   const metricNationalAvg = document.getElementById("metric-national-avg");
+  const metricNationalAvgLabel = document.getElementById("metric-national-avg-label");
 
   const chartContainer = document.getElementById("bar-chart-container");
   const mapContainer = document.getElementById("japan-map-grid");
   const tableBody = document.getElementById("analytics-table-body");
   const tableThVal = document.getElementById("table-th-val");
   const btnCsv = document.getElementById("btn-export-csv");
+  const errorNotice = document.getElementById("analytics-error-notice");
 
   const init = async () => {
     try {
       const res = await fetch("/data/school-database/national-analytics-dataset.json");
+      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
       dataset = await res.json();
       bindEvents();
       render();
     } catch (err) {
       console.error("Failed to load analytics dataset:", err);
+      if (errorNotice) {
+        errorNotice.style.display = "block";
+        errorNotice.textContent = "統計データを読み込めませんでした。ページを再読み込みしてください。";
+      } else if (chartContainer) {
+        chartContainer.innerHTML = `<div style="background:#fef2f2; border:1px solid #fca5a5; color:#991b1b; padding:16px; border-radius:8px; margin:20px 0;">統計データを読み込めませんでした。ページを再読み込みしてください。</div>`;
+      }
     }
   };
 
@@ -68,13 +77,13 @@
   };
 
   const formatNumber = (num) => {
-    if (typeof num !== "number") return num;
+    if (typeof num !== "number" || isNaN(num)) return num;
     return num.toLocaleString("ja-JP");
   };
 
   const getMetricMeta = (key) => {
-    if (!dataset || !dataset.indicators_definition) return { label: key, unit: "", desc: "" };
-    return dataset.indicators_definition[key] || { label: key, unit: "", desc: "" };
+    if (!dataset || !dataset.indicators_definition) return { label: key, unit: "", desc: "", source: "", base_date: "" };
+    return dataset.indicators_definition[key] || { label: key, unit: "", desc: "", source: "", base_date: "" };
   };
 
   const render = () => {
@@ -83,14 +92,12 @@
     const meta = getMetricMeta(currentMetric);
     const prefs = [...dataset.prefectures];
 
-    // Sort prefectures
     prefs.sort((a, b) => {
-      const valA = a[currentMetric] || 0;
-      const valB = b[currentMetric] || 0;
+      const valA = a[currentMetric] ?? 0;
+      const valB = b[currentMetric] ?? 0;
       return currentSortOrder === "desc" ? valB - valA : valA - valB;
     });
 
-    // Update Info Card
     if (metricTitle) metricTitle.textContent = meta.label;
     if (metricDesc) metricDesc.textContent = meta.desc;
     if (metricBadge) {
@@ -99,17 +106,27 @@
       metricBadge.style.background = isCustom ? "#3182ce" : "#059669";
     }
 
-    // Calculate Average
-    const sum = dataset.prefectures.reduce((acc, p) => acc + (p[currentMetric] || 0), 0);
-    const avg = dataset.prefectures.length > 0 ? (sum / dataset.prefectures.length) : 0;
-    if (metricNationalAvg) {
-      const displayAvg = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school"].includes(currentMetric)
-        ? avg.toFixed(1)
-        : Math.round(avg).toLocaleString("ja-JP");
-      metricNationalAvg.innerHTML = `${displayAvg} <span style="font-size:0.85rem; font-weight:600;">${meta.unit}</span>`;
+    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school"].includes(currentMetric);
+
+    if (metricNationalAvgLabel) {
+      metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
     }
 
-    // Render Views
+    if (metricNationalAvg) {
+      let natVal = null;
+      if (dataset.national_summary && dataset.national_summary[currentMetric] !== undefined) {
+        natVal = dataset.national_summary[currentMetric];
+      } else {
+        const sum = dataset.prefectures.reduce((acc, p) => acc + (p[currentMetric] || 0), 0);
+        natVal = isRatioMetric ? (sum / dataset.prefectures.length) : sum;
+      }
+
+      const displayVal = isRatioMetric
+        ? natVal.toFixed(1)
+        : Math.round(natVal).toLocaleString("ja-JP");
+      metricNationalAvg.innerHTML = `${displayVal} <span style="font-size:0.85rem; font-weight:600;">${meta.unit}</span>`;
+    }
+
     renderChart(prefs, meta);
     renderMap(prefs, meta);
     renderTable(prefs, meta);
@@ -124,27 +141,23 @@
     prefs.forEach((p, idx) => {
       const val = p[currentMetric] || 0;
       const rank = p.ranks ? p.ranks[currentMetric] : idx + 1;
-      const pct = Math.max(5, (val / maxVal) * 100);
+      const pct = Math.max(4, (val / maxVal) * 100);
 
       const row = document.createElement("a");
       row.href = `/tools/school-database/${p.code}/`;
-      row.style.cssText = "display:grid; grid-template-columns:50px 100px 1fr 100px; align-items:center; gap:12px; padding:8px 12px; border-radius:6px; text-decoration:none; color:inherit; transition:background 0.15s;";
       row.className = "bar-row";
-
-      row.addEventListener("mouseenter", () => (row.style.background = "#f1f5f9"));
-      row.addEventListener("mouseleave", () => (row.style.background = "transparent"));
 
       const rankBadge = rank <= 3
         ? `<span style="background:#c5a059; color:#0c1b33; font-weight:800; padding:2px 8px; border-radius:99px; font-size:0.78rem;">${rank}位</span>`
         : `<span style="color:#64748b; font-weight:700; font-size:0.85rem;">${rank}位</span>`;
 
       row.innerHTML = `
-        <div>${rankBadge}</div>
-        <div style="font-weight:700; font-size:0.92rem; color:#0c1b33;">${p.name}</div>
+        <div style="min-width:40px;">${rankBadge}</div>
+        <div style="font-weight:700; font-size:0.92rem; color:#0c1b33; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.name}</div>
         <div style="background:#e2e8f0; height:22px; border-radius:4px; overflow:hidden; position:relative;">
           <div style="background:linear-gradient(90deg, #1e3a8a, #3182ce); height:100%; width:${pct}%; transition:width 0.4s ease-out; border-radius:4px;"></div>
         </div>
-        <div style="text-align:right; font-weight:800; font-size:0.92rem; color:#1e293b;">
+        <div style="text-align:right; font-weight:800; font-size:0.92rem; color:#1e293b; white-space:nowrap;">
           ${formatNumber(val)} <span style="font-size:0.75rem; font-weight:600; color:#64748b;">${meta.unit}</span>
         </div>
       `;
@@ -166,8 +179,10 @@
       { name: "九州・沖縄", codes: ["fukuoka", "saga", "nagasaki", "kumamoto", "oita", "miyazaki", "kagoshima", "okinawa"] }
     ];
 
-    const maxVal = Math.max(...prefs.map((p) => p[currentMetric] || 0), 1);
-    const minVal = Math.min(...prefs.map((p) => p[currentMetric] || 0), 0);
+    const vals = prefs.map((p) => p[currentMetric] || 0);
+    const maxVal = Math.max(...vals, 1);
+    const minVal = Math.min(...vals);
+    const range = Math.max(0.0001, maxVal - minVal);
 
     const prefMap = {};
     prefs.forEach((p) => (prefMap[p.code] = p));
@@ -177,21 +192,20 @@
       box.style.cssText = "background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:14px;";
 
       let html = `<h4 style="margin:0 0 10px; font-size:0.9rem; color:#0c1b33; border-bottom:2px solid #cbd5e1; padding-bottom:4px;">${reg.name}地方</h4>`;
-      html += `<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:8px;">`;
+      html += `<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(105px, 1fr)); gap:8px;">`;
 
       reg.codes.forEach((code) => {
         const p = prefMap[code];
         if (!p) return;
         const val = p[currentMetric] || 0;
-        const ratio = (val - minVal) / Math.max(1, maxVal - minVal);
-        
-        // Color scale from light blue (#ebf8ff) to dark navy (#1e3a8a)
+        const ratio = (val - minVal) / range;
+
         const bgAlpha = 0.15 + ratio * 0.85;
         const bgColor = `rgba(30, 58, 138, ${bgAlpha.toFixed(2)})`;
         const textColor = ratio > 0.5 ? "#ffffff" : "#0c1b33";
 
         html += `
-          <a href="/tools/school-database/${p.code}/" style="display:block; background:${bgColor}; color:${textColor}; text-decoration:none; padding:8px 10px; border-radius:6px; font-size:0.8rem; text-align:center; transition:transform 0.15s; border:1px solid rgba(0,0,0,0.1);">
+          <a href="/tools/school-database/${p.code}/" style="display:block; background:${bgColor}; color:${textColor}; text-decoration:none; padding:8px 6px; border-radius:6px; font-size:0.8rem; text-align:center; transition:transform 0.15s; border:1px solid rgba(0,0,0,0.1);">
             <div style="font-weight:700;">${p.name}</div>
             <div style="font-size:0.75rem; margin-top:2px; opacity:0.9;">${formatNumber(val)} ${meta.unit}</div>
           </a>
@@ -221,12 +235,14 @@
       tr.addEventListener("mouseenter", () => (tr.style.background = "#f8fafc"));
       tr.addEventListener("mouseleave", () => (tr.style.background = "transparent"));
 
+      const sourceText = meta.source ? `${meta.source}<br><span style="font-size:0.72rem; color:#94a3b8;">${meta.base_date || ''}</span>` : "e-Stat/学校DB統合";
+
       tr.innerHTML = `
         <td style="padding:10px 12px; font-weight:800; color:#0c1b33;">${rank}位</td>
         <td style="padding:10px 12px; font-weight:700;"><a href="/tools/school-database/${p.code}/" style="color:#1e3a8a; text-decoration:none;">${p.name}</a></td>
         <td style="padding:10px 12px; color:#64748b;">${p.region}</td>
         <td style="padding:10px 12px; text-align:right; font-weight:800; color:#0c1b33;">${formatNumber(val)} ${meta.unit}</td>
-        <td style="padding:10px 12px; text-align:center; font-size:0.75rem; color:#64748b;">e-Stat/学校DB統合</td>
+        <td style="padding:10px 12px; text-align:center; font-size:0.78rem; color:#475569;">${sourceText}</td>
         <td style="padding:10px 12px; text-align:center;">
           <a href="/tools/school-database/${p.code}/" style="background:#0c1b33; color:#fff; padding:3px 8px; border-radius:4px; font-size:0.74rem; text-decoration:none; font-weight:600;">詳細 →</a>
         </td>
@@ -243,15 +259,19 @@
 
     prefs.sort((a, b) => (b[currentMetric] || 0) - (a[currentMetric] || 0));
 
-    let csvContent = `順位,都道府県名,地方区分,${meta.label}(${meta.unit}),基準年・出典\n`;
+    let csvContent = `順位,都道府県名,地方区分,${meta.label}(${meta.unit}),出典,基準日
+`;
 
     prefs.forEach((p, idx) => {
       const val = p[currentMetric] || 0;
       const rank = idx + 1;
-      csvContent += `${rank},${p.name},${p.region},${val},"e-Stat / Ban.Tai統合データ"\n`;
+      const srcEscaped = (meta.source || "").replace(/,/g, " ");
+      const dateEscaped = (meta.base_date || "").replace(/,/g, " ");
+      csvContent += `${rank},${p.name},${p.region},${val},"${srcEscaped}","${dateEscaped}"
+`;
     });
 
-    const bom = "\uFEFF";
+    const bom = "﻿";
     const blob = new Blob([bom + csvContent], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
