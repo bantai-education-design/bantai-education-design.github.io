@@ -466,7 +466,7 @@
         "jhs_school_count": 28,
         "elem_students": 35,
         "elem_teachers": 34,
-        "student_teacher_ratio": 34,
+        "student_teacher_ratio": 35,
         "elem_pop_per_school": 38,
         "jhs_pop_per_school": 43
       }
@@ -574,7 +574,7 @@
         "jhs_school_count": 38,
         "elem_students": 38,
         "elem_teachers": 37,
-        "student_teacher_ratio": 35,
+        "student_teacher_ratio": 34,
         "elem_pop_per_school": 35,
         "jhs_pop_per_school": 24
       }
@@ -1222,7 +1222,7 @@
         "jhs_school_count": 11,
         "elem_students": 11,
         "elem_teachers": 11,
-        "student_teacher_ratio": 12,
+        "student_teacher_ratio": 13,
         "elem_pop_per_school": 14,
         "jhs_pop_per_school": 22
       }
@@ -1654,7 +1654,7 @@
         "jhs_school_count": 21,
         "elem_students": 18,
         "elem_teachers": 20,
-        "student_teacher_ratio": 13,
+        "student_teacher_ratio": 12,
         "elem_pop_per_school": 21,
         "jhs_pop_per_school": 26
       }

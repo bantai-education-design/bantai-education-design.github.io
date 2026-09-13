@@ -1,0 +1,31 @@
+name: Statistical Audit and Prefecture Page Tests
+
+on:
+  pull_request:
+    paths:
+      - 'data/school-database/**'
+      - 'tools/school-database/**'
+      - 'scratch/build_national_analytics_dataset.py'
+      - '.github/workflows/statistical-audit-ci.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/school-database/**'
+      - 'tools/school-database/**'
+      - 'scratch/build_national_analytics_dataset.py'
+      - '.github/workflows/statistical-audit-ci.yml'
+
+jobs:
+  statistical-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run statistical audit tests
+        run: |
+          python tools/school-database/test_prefecture_page_enrichment.py
+          python tools/school-database/test_prefecture_seo_content.py
+          python tools/school-database/test_education_profile.py
+          python tools/school-database/test_population_metadata.py

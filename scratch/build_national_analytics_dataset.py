@@ -123,7 +123,7 @@ def build_dataset():
         aging_rate_raw = (elderly_pop / total_pop * 100) if total_pop > 0 else 0.0
         elem_pop_per_school_raw = (elem_pop / elem_count) if elem_count > 0 else 0.0
         jhs_pop_per_school_raw = (jhs_pop / jhs_count) if jhs_count > 0 else 0.0
-        student_teacher_ratio_raw = float(student_teacher_ratio)
+        student_teacher_ratio_raw = (elem_students / elem_teachers) if elem_teachers > 0 else 0.0
         
         entry = {
             'code': code,
