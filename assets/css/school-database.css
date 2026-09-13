@@ -1647,3 +1647,148 @@ h3.region-header {
     padding: 28px 0;
   }
 }
+
+
+/* ==========================================================================
+   Analytics Dashboard - Ranking Bar Chart (.bar-row) Styles & Responsive Grid
+   ========================================================================== */
+#bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 48px 90px 1fr 110px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.bar-row:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.bar-row .bar-rank {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.bar-row .bar-pref {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #0c1b33;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-row .bar-track {
+  background: #e2e8f0;
+  height: 22px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.bar-row .bar-fill {
+  background: linear-gradient(90deg, #1e3a8a, #3182ce);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+.bar-row .bar-value {
+  text-align: right;
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+.bar-row .bar-unit {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+  .bar-row {
+    grid-template-columns: 42px 75px 1fr 95px;
+    gap: 8px;
+    padding: 6px 10px;
+  }
+  .bar-row .bar-pref {
+    font-size: 0.88rem;
+  }
+  .bar-row .bar-value {
+    font-size: 0.88rem;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .bar-row {
+    grid-template-columns: 36px 62px 1fr 85px;
+    gap: 6px;
+    padding: 6px 8px;
+  }
+  .bar-row .bar-pref {
+    font-size: 0.82rem;
+  }
+  .bar-row .bar-value {
+    font-size: 0.82rem;
+  }
+  .bar-row .bar-track {
+    height: 18px;
+  }
+}
+
+/* Small Mobile (<= 375px) */
+@media (max-width: 375px) {
+  .bar-row {
+    grid-template-columns: 34px 56px 1fr 80px;
+    gap: 5px;
+    padding: 5px 6px;
+  }
+  .bar-row .bar-pref {
+    font-size: 0.78rem;
+  }
+  .bar-row .bar-value {
+    font-size: 0.78rem;
+  }
+}
+
+/* Micro Mobile (<= 320px) */
+@media (max-width: 320px) {
+  .bar-row {
+    grid-template-columns: 30px 50px 1fr 72px;
+    gap: 4px;
+    padding: 4px 4px;
+  }
+  .bar-row .bar-pref {
+    font-size: 0.74rem;
+  }
+  .bar-row .bar-value {
+    font-size: 0.74rem;
+  }
+  .bar-row .bar-track {
+    height: 16px;
+  }
+}
