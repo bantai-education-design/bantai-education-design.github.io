@@ -370,13 +370,13 @@ def build_dataset():
         
         'private_elem_school_ratio': round(nat_private_elem_schools / nat_elem_schools * 100, 1) if nat_elem_schools > 0 else 0,
         'special_needs_schools_per_100k_age_6_17': round(nat_special_needs_schools / nat_school_age_6_17_pop * 100000, 1) if nat_school_age_6_17_pop > 0 else 0,
-        'ict_teaching_capability': round(sum(d['ict_teaching_capability'] for d in dataset) / len(dataset), 1),
+        'ict_teaching_capability': 90.7, # Official MEXT national figure for Major Category A
         'waiting_children_per_10k_preschool': round(nat_waiting_children / nat_preschool_pop * 10000, 1) if nat_preschool_pop > 0 else 0
     }
     
     output_obj = {
-        'generated_at': '2026-09-13',
-        'schema_version': '1.6',
+        'generated_at': '2026-09-14',
+        'schema_version': '1.7',
         'description': '全国47都道府県の人口・学齢人口・実在籍生徒数・学級数・教員数・校種構造・独自換算指標（e-Stat・文部科学省「学校基本調査 令和7年度確定値」統合正本）',
         'national_summary': national_summary,
         'indicators_definition': {
@@ -390,15 +390,15 @@ def build_dataset():
             'elem_age_6_11': {
                 'label': '6～11歳人口（小学生期）',
                 'unit': '人',
-                'description': '小学校期相当の潜在学齢人口（6歳～11歳）。',
-                'source': '総務省統計局 e-Stat「社会・人口統計体系」',
+                'description': '小学校期相当の潜在学齢人口（6歳～11歳、国籍総数）。',
+                'source': '総務省統計局 e-Stat「令和2年国勢調査 表2-1」',
                 'base_date': '2020年10月1日時点'
             },
             'jhs_age_12_14': {
                 'label': '12～14歳人口（中学校期）',
                 'unit': '人',
-                'description': '中学校期相当の潜在学齢人口（12歳～14歳）。',
-                'source': '総務省統計局 e-Stat「社会・人口統計体系」',
+                'description': '中学校期相当の潜在学齢人口（12歳～14歳、国籍総数）。',
+                'source': '総務省統計局 e-Stat「令和2年国勢調査 表2-1」',
                 'base_date': '2020年10月1日時点'
             },
             'elderly_65_plus': {
@@ -460,15 +460,15 @@ def build_dataset():
             'elem_pop_per_school': {
                 'label': '小学校1校あたり6～11歳人口',
                 'unit': '人/校',
-                'description': '6～11歳学齢人口を小学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
-                'source': 'e-Stat国勢調査 6～11歳人口 ÷ 学校基本調査 小学校数',
+                'description': '6～11歳学齢人口（国籍総数）を小学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
+                'source': 'e-Stat国勢調査 6～11歳人口（総数） ÷ 学校基本調査 小学校数',
                 'base_date': '2020年/2025年'
             },
             'jhs_pop_per_school': {
                 'label': '中学校1校あたり12～14歳人口',
                 'unit': '人/校',
-                'description': '12～14歳学齢人口を中学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
-                'source': 'e-Stat国勢調査 12～14歳人口 ÷ 学校基本調査 中学校数',
+                'description': '12～14歳学齢人口（国籍総数）を中学校数で除した潜在規模指標。（国勢調査2020年 / 学校基本調査2025年）',
+                'source': 'e-Stat国勢調査 12～14歳人口（総数） ÷ 学校基本調査 中学校数',
                 'base_date': '2020年/2025年'
             },
             'elem_enrolled_per_school': {
@@ -530,23 +530,23 @@ def build_dataset():
             'special_needs_schools_per_100k_age_6_17': {
                 'label': '特別支援学校数（6～17歳人口10万人あたり）',
                 'unit': '校/10万人',
-                'description': '学齢期人口（6～17歳）10万人あたりの特別支援学校数。※対象障害種・在籍規模・分校等の違いがあるため、学校数が多い＝支援が充実と単純比較しないようご注意ください。（学校基本調査 表199 / 国勢調査）',
+                'description': '学齢期人口（6～17歳、国籍総数）10万人あたりの特別支援学校数。※対象障害種・在籍規模・分校等の違いがあるため、学校数が多い＝支援が充実と単純比較しないようご注意ください。（学校基本調査 表199 / 国勢調査）',
                 'source': '学校基本調査 / 国勢調査',
                 'base_date': '2025年5月1日 / 2020年10月1日時点'
             },
             'ict_teaching_capability': {
-                'label': '教員のICT活用指導力・自己評価割合',
+                'label': '教員のICT活用指導力（大項目A：教材研究・指導準備・評価・校務等の活用能力）',
                 'unit': '%',
-                'description': '指導にICTを活用する能力に関する教員の自己評価（「できる」「ややできる」と回答した教員の割合）。（文部科学省「学校における教育の情報化の実態等に関する調査」2025年3月1日時点 確定値）',
+                'description': '指導の準備、教材研究、児童生徒の評価、校務などにICTを活用する能力に関する教員の自己評価割合（大項目A）。（文部科学省「学校における教育の情報化の実態等に関する調査」2025年3月1日時点 確定値）',
                 'source': '文部科学省「教育情報化実態調査」',
                 'base_date': '2025年3月1日時点'
             },
             'waiting_children_per_10k_preschool': {
                 'label': '待機児童数（未就学児 3～5歳人口1万人あたり）',
-                'unit': '人',
-                'description': '未就学児（3～5歳）人口1万人あたりの待機児童数。（こども家庭庁「保育所等関連状況取りまとめ」2025年4月1日時点 確定値）',
+                'unit': '人/1万人',
+                'description': '未就学児（3～5歳人口、国籍総数）1万人あたりの待機児童数。（こども家庭庁「保育所等関連状況取りまとめ」2025年4月1日時点 確定値 / 総務省「令和2年国勢調査」2020年10月1日時点 確定値）',
                 'source': 'こども家庭庁 / 国勢調査',
-                'base_date': '2025年4月1日時点'
+                'base_date': '2025年4月1日／2020年10月1日時点'
             }
         },
         'prefectures': dataset

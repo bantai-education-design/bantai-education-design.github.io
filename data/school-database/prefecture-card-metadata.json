@@ -33,11 +33,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 13233213,
-        "census_age_3_17": 1518414,
+        "census_population": 14047594,
+        "census_age_3_17": 1560515,
         "share_of_census_population_percent": 11.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -49,28 +49,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 314040,
+            "population": 324701,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 613198,
+            "population": 631349,
             "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 297590,
+            "population": 304688,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 293586,
+            "population": 299777,
             "share_of_census_population_percent": 2.2
           }
         ],
@@ -134,11 +134,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 8876834,
-        "census_age_3_17": 1107759,
+        "census_population": 9237337,
+        "census_age_3_17": 1128056,
         "share_of_census_population_percent": 12.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -150,28 +150,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 206779,
+            "population": 212085,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 440796,
+            "population": 449345,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 228780,
+            "population": 232179,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 231404,
+            "population": 234447,
             "share_of_census_population_percent": 2.6
           }
         ],
@@ -235,11 +235,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 7055679,
-        "census_age_3_17": 879968,
+        "census_population": 7344765,
+        "census_age_3_17": 897126,
         "share_of_census_population_percent": 12.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -251,28 +251,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 162609,
+            "population": 167305,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 348531,
+            "population": 355955,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 183044,
+            "population": 185755,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 185784,
+            "population": 188111,
             "share_of_census_population_percent": 2.6
           }
         ],
@@ -336,11 +336,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 6040814,
-        "census_age_3_17": 755470,
+        "census_population": 6284480,
+        "census_age_3_17": 769272,
         "share_of_census_population_percent": 12.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -352,28 +352,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 138833,
+            "population": 142504,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 298837,
+            "population": 304661,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 157362,
+            "population": 159634,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 160438,
+            "population": 162473,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -437,11 +437,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 2763432,
-        "census_age_3_17": 352352,
+        "census_population": 2867009,
+        "census_age_3_17": 357635,
         "share_of_census_population_percent": 12.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -453,28 +453,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 62271,
+            "population": 63473,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 138142,
+            "population": 140254,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 74226,
+            "population": 75246,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 77713,
+            "population": 78662,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -538,11 +538,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1869256,
-        "census_age_3_17": 240037,
+        "census_population": 1933146,
+        "census_age_3_17": 243450,
         "share_of_census_population_percent": 12.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -554,28 +554,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 43100,
+            "population": 43877,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 93529,
+            "population": 94931,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 50634,
+            "population": 51260,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 52774,
+            "population": 53382,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -639,11 +639,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1860213,
-        "census_age_3_17": 235174,
+        "census_population": 1939110,
+        "census_age_3_17": 241388,
         "share_of_census_population_percent": 12.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -655,28 +655,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 40551,
+            "population": 41933,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 91322,
+            "population": 93911,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 50229,
+            "population": 51378,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 53072,
+            "population": 54166,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -740,11 +740,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 5151366,
-        "census_age_3_17": 591690,
+        "census_population": 5224614,
+        "census_age_3_17": 593196,
         "share_of_census_population_percent": 11.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -756,28 +756,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 105208,
+            "population": 105596,
             "share_of_census_population_percent": 2.0
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 232550,
+            "population": 233172,
             "share_of_census_population_percent": 4.5
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 123496,
+            "population": 123763,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 130436,
+            "population": 130665,
             "share_of_census_population_percent": 2.5
           }
         ],
@@ -841,11 +841,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 2242701,
-        "census_age_3_17": 283495,
+        "census_population": 2301996,
+        "census_age_3_17": 284694,
         "share_of_census_population_percent": 12.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -857,28 +857,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 51651,
+            "population": 51945,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 111855,
+            "population": 112283,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 58788,
+            "population": 58958,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 61201,
+            "population": 61508,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -942,11 +942,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1224334,
-        "census_age_3_17": 140171,
+        "census_population": 1237984,
+        "census_age_3_17": 140489,
         "share_of_census_population_percent": 11.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -958,28 +958,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 24324,
+            "population": 24385,
             "share_of_census_population_percent": 2.0
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 53796,
+            "population": 53907,
             "share_of_census_population_percent": 4.4
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 29590,
+            "population": 29653,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 32461,
+            "population": 32544,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -1043,11 +1043,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1194745,
-        "census_age_3_17": 143840,
+        "census_population": 1210534,
+        "census_age_3_17": 144057,
         "share_of_census_population_percent": 12.0,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1059,28 +1059,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 24913,
+            "population": 24959,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 55899,
+            "population": 55985,
             "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 30385,
+            "population": 30431,
             "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 32643,
+            "population": 32682,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -1144,11 +1144,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 950192,
-        "census_age_3_17": 101826,
+        "census_population": 959502,
+        "census_age_3_17": 101961,
         "share_of_census_population_percent": 10.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1160,28 +1160,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 16947,
+            "population": 16985,
             "share_of_census_population_percent": 1.8
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 39275,
+            "population": 39330,
             "share_of_census_population_percent": 4.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 22186,
+            "population": 22205,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 23418,
+            "population": 23441,
             "share_of_census_population_percent": 2.5
           }
         ],
@@ -1245,11 +1245,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1056617,
-        "census_age_3_17": 129377,
+        "census_population": 1068027,
+        "census_age_3_17": 129618,
         "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1261,28 +1261,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 22491,
+            "population": 22541,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 50289,
+            "population": 50375,
             "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 27576,
+            "population": 27627,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 29021,
+            "population": 29075,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -1346,11 +1346,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1797450,
-        "census_age_3_17": 221388,
+        "census_population": 1833152,
+        "census_age_3_17": 222132,
         "share_of_census_population_percent": 12.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1362,28 +1362,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 39835,
+            "population": 39986,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 84936,
+            "population": 85238,
             "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 46390,
+            "population": 46539,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 50227,
+            "population": 50369,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -1447,11 +1447,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 7164758,
-        "census_age_3_17": 978422,
+        "census_population": 7542415,
+        "census_age_3_17": 1006183,
         "share_of_census_population_percent": 13.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1463,28 +1463,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 184415,
+            "population": 190657,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 391101,
+            "population": 402484,
             "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 200935,
+            "population": 206182,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 201971,
+            "population": 206860,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -1548,11 +1548,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 2168416,
-        "census_age_3_17": 264030,
+        "census_population": 2201272,
+        "census_age_3_17": 264940,
         "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1564,28 +1564,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 46525,
+            "population": 46715,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 104205,
+            "population": 104576,
             "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 55535,
+            "population": 55711,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 57765,
+            "population": 57938,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -1649,11 +1649,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1009388,
-        "census_age_3_17": 122313,
+        "census_population": 1034814,
+        "census_age_3_17": 123653,
         "share_of_census_population_percent": 12.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1665,28 +1665,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 21504,
+            "population": 21827,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 47124,
+            "population": 47680,
             "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 25974,
+            "population": 26194,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 27711,
+            "population": 27952,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -1750,11 +1750,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1102692,
-        "census_age_3_17": 144364,
+        "census_population": 1132526,
+        "census_age_3_17": 145235,
         "share_of_census_population_percent": 13.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1766,28 +1766,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 26373,
+            "population": 26567,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 56298,
+            "population": 56660,
             "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 30205,
+            "population": 30347,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 31488,
+            "population": 31661,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -1851,11 +1851,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 746068,
-        "census_age_3_17": 100865,
+        "census_population": 766863,
+        "census_age_3_17": 101676,
         "share_of_census_population_percent": 13.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1867,28 +1867,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 17885,
+            "population": 18054,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 39493,
+            "population": 39807,
             "share_of_census_population_percent": 5.3
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 21268,
+            "population": 21421,
             "share_of_census_population_percent": 2.9
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 22219,
+            "population": 22394,
             "share_of_census_population_percent": 3.0
           }
         ],
@@ -1952,11 +1952,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 786673,
-        "census_age_3_17": 97389,
+        "census_population": 809974,
+        "census_age_3_17": 98793,
         "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -1968,28 +1968,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 17082,
+            "population": 17374,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 37452,
+            "population": 38005,
             "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 20376,
+            "population": 20663,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 22479,
+            "population": 22751,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -2053,11 +2053,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1997083,
-        "census_age_3_17": 257833,
+        "census_population": 2048011,
+        "census_age_3_17": 260602,
         "share_of_census_population_percent": 12.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2069,28 +2069,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 45147,
+            "population": 45604,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 100471,
+            "population": 101556,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 54872,
+            "population": 55468,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 57343,
+            "population": 57974,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -2154,11 +2154,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1900727,
-        "census_age_3_17": 252893,
+        "census_population": 1978742,
+        "census_age_3_17": 258666,
         "share_of_census_population_percent": 13.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2170,28 +2170,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 43919,
+            "population": 45081,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 99415,
+            "population": 101804,
             "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 53461,
+            "population": 54607,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 56098,
+            "population": 57174,
             "share_of_census_population_percent": 3.0
           }
         ],
@@ -2255,11 +2255,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 3523817,
-        "census_age_3_17": 456912,
+        "census_population": 3633202,
+        "census_age_3_17": 467313,
         "share_of_census_population_percent": 13.0,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2271,28 +2271,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 81088,
+            "population": 83204,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 180766,
+            "population": 185058,
             "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 96174,
+            "population": 98213,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 98884,
+            "population": 100838,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -2356,11 +2356,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 8411856,
-        "census_age_3_17": 1044061,
+        "census_population": 8837685,
+        "census_age_3_17": 1069799,
         "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2372,28 +2372,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 193586,
+            "population": 199283,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 412214,
+            "population": 422687,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 216566,
+            "population": 221305,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 221695,
+            "population": 226524,
             "share_of_census_population_percent": 2.6
           }
         ],
@@ -2457,11 +2457,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1698876,
-        "census_age_3_17": 219773,
+        "census_population": 1770254,
+        "census_age_3_17": 225342,
         "share_of_census_population_percent": 12.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2473,28 +2473,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 38675,
+            "population": 39824,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 86380,
+            "population": 88617,
             "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 46384,
+            "population": 47479,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 48334,
+            "population": 49422,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -2558,11 +2558,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1359501,
-        "census_age_3_17": 197341,
+        "census_population": 1413610,
+        "census_age_3_17": 200456,
         "share_of_census_population_percent": 14.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2574,28 +2574,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 36307,
+            "population": 36908,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 78891,
+            "population": 80214,
             "share_of_census_population_percent": 5.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 40980,
+            "population": 41558,
             "share_of_census_population_percent": 3.0
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 41163,
+            "population": 41776,
             "share_of_census_population_percent": 3.0
           }
         ],
@@ -2659,11 +2659,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 2460764,
-        "census_age_3_17": 306243,
+        "census_population": 2578087,
+        "census_age_3_17": 309986,
         "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2675,28 +2675,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 55904,
+            "population": 56716,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 120303,
+            "population": 121809,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 63926,
+            "population": 64627,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 66110,
+            "population": 66834,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -2760,11 +2760,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 5215927,
-        "census_age_3_17": 686120,
+        "census_population": 5465002,
+        "census_age_3_17": 694758,
         "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2776,28 +2776,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 125526,
+            "population": 127604,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 272215,
+            "population": 275638,
             "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 142774,
+            "population": 144410,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 145605,
+            "population": 147106,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -2861,11 +2861,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1302289,
-        "census_age_3_17": 165656,
+        "census_population": 1324473,
+        "census_age_3_17": 166438,
         "share_of_census_population_percent": 12.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2877,28 +2877,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 28953,
+            "population": 29128,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 64463,
+            "population": 64789,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 34987,
+            "population": 35132,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 37253,
+            "population": 37389,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -2962,11 +2962,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 911408,
-        "census_age_3_17": 112537,
+        "census_population": 922584,
+        "census_age_3_17": 112905,
         "share_of_census_population_percent": 12.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -2978,28 +2978,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 20065,
+            "population": 20148,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 44105,
+            "population": 44265,
             "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 23445,
+            "population": 23514,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 24922,
+            "population": 24978,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -3063,11 +3063,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 2713163,
-        "census_age_3_17": 364592,
+        "census_population": 2799702,
+        "census_age_3_17": 368331,
         "share_of_census_population_percent": 13.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3079,28 +3079,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 67049,
+            "population": 67907,
             "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 146913,
+            "population": 148423,
             "share_of_census_population_percent": 5.4
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 74905,
+            "population": 75617,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 75725,
+            "population": 76384,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -3164,11 +3164,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 543979,
-        "census_age_3_17": 72008,
+        "census_population": 553407,
+        "census_age_3_17": 72228,
         "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3180,28 +3180,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 13272,
+            "population": 13323,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 28229,
+            "population": 28303,
             "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 14821,
+            "population": 14865,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 15686,
+            "population": 15737,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -3265,11 +3265,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 656197,
-        "census_age_3_17": 86250,
+        "census_population": 671126,
+        "census_age_3_17": 86827,
         "share_of_census_population_percent": 13.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3281,28 +3281,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 15940,
+            "population": 16061,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 33769,
+            "population": 33992,
             "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 17540,
+            "population": 17644,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 19001,
+            "population": 19130,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -3366,11 +3366,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1810900,
-        "census_age_3_17": 238998,
+        "census_population": 1888432,
+        "census_age_3_17": 241108,
         "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3382,28 +3382,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 43828,
+            "population": 44272,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 94597,
+            "population": 95422,
             "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 49235,
+            "population": 49607,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 51338,
+            "population": 51807,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -3467,11 +3467,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1313593,
-        "census_age_3_17": 162735,
+        "census_population": 1342059,
+        "census_age_3_17": 163444,
         "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3483,28 +3483,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 28919,
+            "population": 29067,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 64671,
+            "population": 64943,
             "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 33943,
+            "population": 34069,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 35202,
+            "population": 35365,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -3568,11 +3568,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 920884,
-        "census_age_3_17": 120195,
+        "census_population": 950244,
+        "census_age_3_17": 121178,
         "share_of_census_population_percent": 13.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3584,28 +3584,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 21641,
+            "population": 21843,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 47497,
+            "population": 47898,
             "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 24724,
+            "population": 24902,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 26333,
+            "population": 26535,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -3669,11 +3669,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 693084,
-        "census_age_3_17": 81795,
+        "census_population": 719559,
+        "census_age_3_17": 82170,
         "share_of_census_population_percent": 11.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3685,28 +3685,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 14782,
+            "population": 14868,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 32093,
+            "population": 32249,
             "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 16959,
+            "population": 17030,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 17961,
+            "population": 18023,
             "share_of_census_population_percent": 2.6
           }
         ],
@@ -3770,11 +3770,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1296806,
-        "census_age_3_17": 163736,
+        "census_population": 1334841,
+        "census_age_3_17": 164751,
         "share_of_census_population_percent": 12.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3786,28 +3786,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 28724,
+            "population": 28930,
             "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 64895,
+            "population": 65323,
             "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 34284,
+            "population": 34495,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 35833,
+            "population": 36003,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -3871,11 +3871,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 677762,
-        "census_age_3_17": 80080,
+        "census_population": 691527,
+        "census_age_3_17": 80374,
         "share_of_census_population_percent": 11.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3887,28 +3887,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 14296,
+            "population": 14331,
             "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 31102,
+            "population": 31183,
             "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 16782,
+            "population": 16819,
             "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 17900,
+            "population": 18041,
             "share_of_census_population_percent": 2.6
           }
         ],
@@ -3972,11 +3972,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 4923076,
-        "census_age_3_17": 672327,
+        "census_population": 5135214,
+        "census_age_3_17": 677951,
         "share_of_census_population_percent": 13.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -3988,28 +3988,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 129216,
+            "population": 130822,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 272922,
+            "population": 275214,
             "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 136397,
+            "population": 137263,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 133792,
+            "population": 134652,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -4073,11 +4073,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 796285,
-        "census_age_3_17": 113922,
+        "census_population": 811442,
+        "census_age_3_17": 114270,
         "share_of_census_population_percent": 14.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4089,28 +4089,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 20614,
+            "population": 20683,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 44877,
+            "population": 45005,
             "share_of_census_population_percent": 5.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 23907,
+            "population": 23971,
             "share_of_census_population_percent": 3.0
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 24524,
+            "population": 24611,
             "share_of_census_population_percent": 3.1
           }
         ],
@@ -4174,11 +4174,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1296014,
-        "census_age_3_17": 172618,
+        "census_population": 1312317,
+        "census_age_3_17": 173063,
         "share_of_census_population_percent": 13.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4190,28 +4190,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 31657,
+            "population": 31769,
             "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 68512,
+            "population": 68673,
             "share_of_census_population_percent": 5.3
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 35543,
+            "population": 35609,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 36906,
+            "population": 37012,
             "share_of_census_population_percent": 2.8
           }
         ],
@@ -4275,11 +4275,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1705205,
-        "census_age_3_17": 237067,
+        "census_population": 1738301,
+        "census_age_3_17": 237757,
         "share_of_census_population_percent": 13.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4291,28 +4291,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 44395,
+            "population": 44534,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 95324,
+            "population": 95616,
             "share_of_census_population_percent": 5.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 48251,
+            "population": 48388,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 49097,
+            "population": 49219,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -4376,11 +4376,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1098735,
-        "census_age_3_17": 141706,
+        "census_population": 1123852,
+        "census_age_3_17": 142298,
         "share_of_census_population_percent": 12.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4392,28 +4392,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 25774,
+            "population": 25906,
             "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 56565,
+            "population": 56816,
             "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 29594,
+            "population": 29698,
             "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 29773,
+            "population": 29878,
             "share_of_census_population_percent": 2.7
           }
         ],
@@ -4477,11 +4477,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1047871,
-        "census_age_3_17": 146388,
+        "census_population": 1069576,
+        "census_age_3_17": 146690,
         "share_of_census_population_percent": 14.0,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4493,28 +4493,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 26529,
+            "population": 26582,
             "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 58999,
+            "population": 59110,
             "share_of_census_population_percent": 5.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 30252,
+            "population": 30310,
             "share_of_census_population_percent": 2.9
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 30608,
+            "population": 30688,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -4578,11 +4578,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1545763,
-        "census_age_3_17": 214489,
+        "census_population": 1588256,
+        "census_age_3_17": 214945,
         "share_of_census_population_percent": 13.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4594,28 +4594,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 39560,
+            "population": 39659,
             "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 86422,
+            "population": 86613,
             "share_of_census_population_percent": 5.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 44007,
+            "population": 44083,
             "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 44500,
+            "population": 44590,
             "share_of_census_population_percent": 2.9
           }
         ],
@@ -4679,11 +4679,11 @@
       },
       "population": {
         "available": true,
-        "population_scope_label": "人口（日本国籍）",
-        "population_scope": "census_japanese_population",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
+        "population_scope": "census_total_population",
         "population_definition": "令和2年国勢調査における日本人人口",
-        "census_population": 1424749,
-        "census_age_3_17": 244899,
+        "census_population": 1467480,
+        "census_age_3_17": 246385,
         "share_of_census_population_percent": 17.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
@@ -4695,28 +4695,28 @@
             "key": "census_preschool_3_5",
             "label": "幼児期",
             "age_range_label": "3～5歳",
-            "population": 48515,
+            "population": 48866,
             "share_of_census_population_percent": 3.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
-            "population": 99610,
+            "population": 100222,
             "share_of_census_population_percent": 7.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
-            "population": 48776,
+            "population": 49079,
             "share_of_census_population_percent": 3.4
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
-            "population": 47998,
+            "population": 48218,
             "share_of_census_population_percent": 3.4
           }
         ],
