@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Live official Ground Truth audit for IPSS 0-14 population indices.
 
-Every CI run downloads the official IPSS Excel result table directly and compares
+Every CI run downloads the official IPSS Result Table 2-1 directly and compares
 2035/2050 indices (2020=100) for all 47 prefectures with the committed canonical
-projection JSON. There is no local-source fallback.
+projection JSON. Prefecture aggregate rows are identified by the official
+"市などの別" code `a`; municipality rows are excluded. There is no local-source fallback.
 """
 
 from __future__ import annotations
@@ -19,11 +20,7 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parents[2]
 MASTER_PATH = ROOT / "data" / "school-database" / "ipss-child-population-projection-2023.json"
-
-IPSS_XLSX_URL = (
-    "https://www.ipss.go.jp/pp-shicyoson/j/shicyoson23/"
-    "2gaiyo_hyo/kekkahyo2_1.xlsx"
-)
+IPSS_XLSX_URL = "https://www.ipss.go.jp/pp-shicyoson/j/shicyoson23/2gaiyo_hyo/kekkahyo2_1.xlsx"
 
 PREFECTURE_NAMES = [
     "北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県",
@@ -40,24 +37,8 @@ PREFECTURE_SET = set(PREFECTURE_NAMES)
 def _norm(value: object) -> str:
     if value is None:
         return ""
-    text = unicodedata.normalize("NFKC", str(value))
-    text = text.replace("\u3000", " ").replace("\n", " ").strip()
+    text = unicodedata.normalize("NFKC", str(value)).replace("\u3000", " ").replace("\n", " ").strip()
     return re.sub(r"\s+", "", text)
-
-
-def _prefecture_from_cell(value: object) -> str | None:
-    text = _norm(value)
-    if not text:
-        return None
-    if text in PREFECTURE_SET:
-        return text
-    for name in PREFECTURE_NAMES:
-        if not text.endswith(name):
-            continue
-        prefix = text[: -len(name)]
-        if re.fullmatch(r"[0-9_\-()（）./]*", prefix):
-            return name
-    return None
 
 
 def _number(value: object) -> float | None:
@@ -83,102 +64,73 @@ def _fetch_workbook() -> openpyxl.Workbook:
     return openpyxl.load_workbook(io.BytesIO(data), data_only=True)
 
 
-def _header_text(sheet, col: int, first_data_row: int) -> str:
-    start = max(1, first_data_row - 20)
-    end = first_data_row - 1
-    parts: list[str] = []
-    for row in range(start, end + 1):
-        value = sheet.cell(row, col).value
-        if value is not None:
-            parts.append(str(value))
-    for merged in sheet.merged_cells.ranges:
-        if merged.min_col <= col <= merged.max_col and merged.min_row <= end and merged.max_row >= start:
-            value = sheet.cell(merged.min_row, merged.min_col).value
-            if value is not None:
-                parts.append(str(value))
-    return _norm(" ".join(parts))
-
-
-def _find_prefecture_block(workbook) -> tuple[object, int, dict[str, int]]:
-    diagnostics: list[str] = []
-    for sheet in workbook.worksheets:
-        for col in range(1, sheet.max_column + 1):
-            rows: dict[str, int] = {}
-            duplicate = False
-            for row in range(1, sheet.max_row + 1):
-                name = _prefecture_from_cell(sheet.cell(row, col).value)
-                if name is None:
-                    continue
-                if name in rows:
-                    duplicate = True
-                    break
-                rows[name] = row
-            diagnostics.append(f"{sheet.title}!col{col}: prefectures={len(rows)} duplicate={duplicate}")
-            if not duplicate and set(rows) == PREFECTURE_SET:
-                row_numbers = sorted(rows.values())
-                if row_numbers[-1] - row_numbers[0] <= 60:
-                    return sheet, col, rows
-    raise AssertionError("Unable to identify the official 47-prefecture block: " + "; ".join(diagnostics[-18:]))
-
-
-def _find_index_column(sheet, first_data_row: int, year: int) -> int:
-    candidates: list[int] = []
-    year_tokens = {str(year), "令和17" if year == 2035 else "令和32"}
-    for col in range(1, sheet.max_column + 1):
-        header = _header_text(sheet, col, first_data_row)
-        if "指数" not in header:
-            continue
-        if not any(token in header for token in year_tokens):
-            continue
-        candidates.append(col)
-    assert candidates, f"IPSS index column for {year} was not found"
-    assert len(candidates) == 1, f"IPSS index column for {year} is ambiguous: {candidates}"
+def _find_year_column(sheet, start_col: int, end_col: int, year: int) -> int:
+    candidates = [
+        col for col in range(start_col, end_col + 1)
+        if _norm(sheet.cell(5, col).value) == f"{year}年"
+    ]
+    assert len(candidates) == 1, f"IPSS {year} column is ambiguous: {candidates}"
     return candidates[0]
-
-
-def _find_national_row(sheet, name_col: int) -> int:
-    rows = []
-    for row in range(1, sheet.max_row + 1):
-        text = _norm(sheet.cell(row, name_col).value)
-        if text in {"全国", "全国計"} or text.endswith("全国") or text.endswith("全国計"):
-            rows.append(row)
-    assert rows, "IPSS national row was not found"
-    return rows[0]
 
 
 def build_live_ipss_indices() -> tuple[dict[str, dict[str, float]], dict[str, float]]:
     wb = _fetch_workbook()
-    sheet, name_col, pref_rows = _find_prefecture_block(wb)
-    first_data_row = min(pref_rows.values())
-    col_2035 = _find_index_column(sheet, first_data_row, 2035)
-    col_2050 = _find_index_column(sheet, first_data_row, 2050)
-    national_row = _find_national_row(sheet, name_col)
+    assert wb.sheetnames == ["Sheet1"], f"Unexpected IPSS workbook sheets: {wb.sheetnames}"
+    sheet = wb["Sheet1"]
 
-    nat_2035 = _number(sheet.cell(national_row, col_2035).value)
-    nat_2050 = _number(sheet.cell(national_row, col_2050).value)
-    assert nat_2035 == 77.8, f"IPSS national 2035 index must be 77.8, got {nat_2035}"
-    assert nat_2050 == 69.2, f"IPSS national 2050 index must be 69.2, got {nat_2050}"
+    assert "0~14歳人口および指数" in _norm(sheet.cell(1, 1).value), f"Unexpected IPSS title: {sheet.cell(1, 1).value!r}"
+    assert _norm(sheet.cell(4, 2).value) == "市などの別"
+    assert _norm(sheet.cell(4, 3).value) == "都道府県"
+    assert "0~14歳人口(人)" in _norm(sheet.cell(4, 5).value)
+    assert "指数" in _norm(sheet.cell(4, 12).value)
+
+    pop_2020_col = _find_year_column(sheet, 5, 11, 2020)
+    pop_2035_col = _find_year_column(sheet, 5, 11, 2035)
+    pop_2050_col = _find_year_column(sheet, 5, 11, 2050)
+    idx_2035_col = _find_year_column(sheet, 12, 18, 2035)
+    idx_2050_col = _find_year_column(sheet, 12, 18, 2050)
 
     live: dict[str, dict[str, float]] = {}
-    for name, row in pref_rows.items():
-        idx_2035 = _number(sheet.cell(row, col_2035).value)
-        idx_2050 = _number(sheet.cell(row, col_2050).value)
-        assert idx_2035 is not None and 0 < idx_2035 <= 150, f"{name}: invalid 2035 index {idx_2035}"
-        assert idx_2050 is not None and 0 < idx_2050 <= 150, f"{name}: invalid 2050 index {idx_2050}"
-        live[name] = {
-            "child_population_index_2035": round(idx_2035, 1),
-            "child_population_index_2050": round(idx_2050, 1),
-        }
+    total_2020 = 0.0
+    total_2035 = 0.0
+    total_2050 = 0.0
 
-    assert len(live) == 47
-    print(
-        f"[IPSS Live Audit] sheet={sheet.title!r}, name_col={name_col}, prefectures=47, "
-        f"2035_col={col_2035}, 2050_col={col_2050}, national=77.8/69.2"
-    )
-    return live, {
-        "child_population_index_2035": nat_2035,
-        "child_population_index_2050": nat_2050,
+    for row in range(6, sheet.max_row + 1):
+        if _norm(sheet.cell(row, 2).value).lower() != "a":
+            continue
+        name = _norm(sheet.cell(row, 3).value)
+        assert name in PREFECTURE_SET, f"Unexpected prefecture aggregate label at row {row}: {name!r}"
+        assert name not in live, f"Duplicate prefecture aggregate row: {name}"
+
+        idx_2035 = _number(sheet.cell(row, idx_2035_col).value)
+        idx_2050 = _number(sheet.cell(row, idx_2050_col).value)
+        pop_2020 = _number(sheet.cell(row, pop_2020_col).value)
+        pop_2035 = _number(sheet.cell(row, pop_2035_col).value)
+        pop_2050 = _number(sheet.cell(row, pop_2050_col).value)
+        assert all(value is not None and value >= 0 for value in [idx_2035, idx_2050, pop_2020, pop_2035, pop_2050])
+
+        live[name] = {
+            "child_population_index_2035": round(float(idx_2035), 1),
+            "child_population_index_2050": round(float(idx_2050), 1),
+        }
+        total_2020 += float(pop_2020)
+        total_2035 += float(pop_2035)
+        total_2050 += float(pop_2050)
+
+    assert set(live) == PREFECTURE_SET, f"Expected 47 prefecture aggregate rows, found {len(live)}"
+
+    national = {
+        "child_population_index_2035": round(total_2035 / total_2020 * 100, 1),
+        "child_population_index_2050": round(total_2050 / total_2020 * 100, 1),
     }
+    assert national["child_population_index_2035"] == 77.8, national
+    assert national["child_population_index_2050"] == 69.2, national
+
+    print(
+        f"[IPSS Live Audit] prefecture aggregate rows=47, index_cols={idx_2035_col}/{idx_2050_col}, "
+        f"national={national['child_population_index_2035']}/{national['child_population_index_2050']}"
+    )
+    return live, national
 
 
 def test_ipss_future_child_population_ground_truth() -> None:
@@ -196,12 +148,10 @@ def test_ipss_future_child_population_ground_truth() -> None:
     for name in PREFECTURE_NAMES:
         committed = committed_by_name[name]
         assert live[name]["child_population_index_2035"] == committed["child_population_index_2035"], (
-            f"{name}: 2035 live={live[name]['child_population_index_2035']} "
-            f"committed={committed['child_population_index_2035']}"
+            f"{name}: 2035 live={live[name]['child_population_index_2035']} committed={committed['child_population_index_2035']}"
         )
         assert live[name]["child_population_index_2050"] == committed["child_population_index_2050"], (
-            f"{name}: 2050 live={live[name]['child_population_index_2050']} "
-            f"committed={committed['child_population_index_2050']}"
+            f"{name}: 2050 live={live[name]['child_population_index_2050']} committed={committed['child_population_index_2050']}"
         )
 
 
