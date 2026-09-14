@@ -3,6 +3,7 @@
   let currentMetric = "elem_pop_per_school";
   let currentSortOrder = "desc";
   let currentViewMode = "chart";
+  let projectionLoaded = false;
 
   const metricSelect = document.getElementById("metric-select");
   const sortOrderSelect = document.getElementById("sort-order");
@@ -20,11 +21,92 @@
   const btnCsv = document.getElementById("btn-export-csv");
   const errorNotice = document.getElementById("analytics-error-notice");
 
+  const mergeProjectionData = (projection) => {
+    if (!dataset || !projection || !Array.isArray(projection.prefectures)) return;
+
+    const projectionByCode = new Map(
+      projection.prefectures.map((item) => [item.prefecture_code, item])
+    );
+    if (projectionByCode.size !== 47) {
+      throw new Error(`IPSS projection prefecture count mismatch: ${projectionByCode.size}`);
+    }
+
+    const sourceLabel = "国立社会保障・人口問題研究所（IPSS）『日本の地域別将来推計人口（令和5（2023）年推計）』";
+    dataset.indicators_definition = dataset.indicators_definition || {};
+    dataset.national_summary = dataset.national_summary || {};
+
+    dataset.indicators_definition.child_population_index_2035 = {
+      label: "2035年 0～14歳人口指数（2020年=100）",
+      unit: "指数",
+      description: "2020年の0～14歳人口を100としたときの2035年推計人口指数。値が100を下回るほど、2020年より子ども人口が減少する見込みを示します。",
+      source: sourceLabel,
+      base_date: "2020年=100／2035年推計"
+    };
+    dataset.indicators_definition.child_population_index_2050 = {
+      label: "2050年 0～14歳人口指数（2020年=100）",
+      unit: "指数",
+      description: "2020年の0～14歳人口を100としたときの2050年推計人口指数。将来の学校規模・学校需要を考える際の地域人口動向の目安です。",
+      source: sourceLabel,
+      base_date: "2020年=100／2050年推計"
+    };
+
+    dataset.national_summary.child_population_index_2035 = projection.national.child_population_index_2035;
+    dataset.national_summary.child_population_index_2050 = projection.national.child_population_index_2050;
+
+    const projectionKeys = ["child_population_index_2035", "child_population_index_2050"];
+    dataset.prefectures.forEach((pref) => {
+      const source = projectionByCode.get(pref.code);
+      if (!source) throw new Error(`IPSS projection missing prefecture: ${pref.code}`);
+      projectionKeys.forEach((key) => {
+        pref[key] = source[key];
+      });
+      pref.ranks = pref.ranks || {};
+    });
+
+    projectionKeys.forEach((key) => {
+      const sorted = [...dataset.prefectures].sort((a, b) => b[key] - a[key]);
+      sorted.forEach((pref, index) => {
+        pref.ranks[key] = index + 1;
+      });
+    });
+  };
+
+  const appendProjectionMetricOptions = () => {
+    if (!metricSelect || !projectionLoaded) return;
+    if (metricSelect.querySelector('option[value="child_population_index_2035"]')) return;
+
+    const projectionGroup = document.createElement("optgroup");
+    projectionGroup.label = "🔮 将来の子ども人口（IPSS 2023年推計・2020年=100）";
+
+    const addOption = (value, label) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      projectionGroup.appendChild(option);
+    };
+
+    addOption("child_population_index_2035", "🔮 2035年 0～14歳人口指数（2020年=100）");
+    addOption("child_population_index_2050", "🔭 2050年 0～14歳人口指数（2020年=100）");
+    metricSelect.appendChild(projectionGroup);
+  };
+
   const init = async () => {
     try {
       const res = await fetch("/data/school-database/national-analytics-dataset.json");
       if (!res.ok) throw new Error(`HTTP error ${res.status}`);
       dataset = await res.json();
+
+      try {
+        const projectionRes = await fetch("/data/school-database/ipss-child-population-projection-2023.json");
+        if (!projectionRes.ok) throw new Error(`IPSS HTTP error ${projectionRes.status}`);
+        const projection = await projectionRes.json();
+        mergeProjectionData(projection);
+        projectionLoaded = true;
+      } catch (projectionError) {
+        console.warn("IPSS future child population projection could not be loaded:", projectionError);
+      }
+
+      appendProjectionMetricOptions();
       bindEvents();
       render();
     } catch (err) {
@@ -114,10 +196,12 @@
       metricBadge.style.background = isCustom ? "#3182ce" : "#059669";
     }
 
-    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool"].includes(currentMetric);
+    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool", "child_population_index_2035", "child_population_index_2050"].includes(currentMetric);
 
     if (metricNationalAvgLabel) {
-      if (currentMetric === "ict_teaching_capability") {
+      if (["child_population_index_2035", "child_population_index_2050"].includes(currentMetric)) {
+        metricNationalAvgLabel.textContent = "全国指数（2020年=100）";
+      } else if (currentMetric === "ict_teaching_capability") {
         metricNationalAvgLabel.textContent = "全国平均（47都道府県単純平均）";
       } else {
         metricNationalAvgLabel.textContent = isRatioMetric ? "全国平均（全国総計より算出）" : "全国合計";
