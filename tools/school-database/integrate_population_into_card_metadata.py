@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """Merge data/school-database/prefecture-population.json (47 prefectures,
-2020 Census Table 2-1, decision C) into
+2020 Census Table 2-1, Total Population) into
 data/school-database/prefecture-card-metadata.json.
 
 Replaces the `population` object on every one of the 47 prefecture entries
-(including Tokyo's prior 2026 resident-registry pilot figures) with the
-same census-based structure and labels, so no prefecture uses a different
-population definition or key set than the others.
+with the total population census-based structure and labels.
 """
 
 from __future__ import annotations
@@ -39,9 +37,9 @@ def build_population_block(pref: dict) -> dict:
 
     return {
         "available": True,
-        "population_scope_label": "人口（日本国籍）",
+        "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": pref["population_scope"],
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": pref["census_population"],
         "census_age_3_17": pref["census_age_3_17"],
         "share_of_census_population_percent": round1(pref["share_of_census_population_percent"]),
@@ -51,11 +49,11 @@ def build_population_block(pref: dict) -> dict:
         "source_short_label": pref["source_short_label"],
         "age_groups_label": "校種相当年齢人口",
         "age_groups": age_groups,
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
             "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-            "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。",
+            "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。",
         ],
         "source": {
             "publisher": SOURCE_PUBLISHER,

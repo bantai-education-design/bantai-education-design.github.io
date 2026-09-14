@@ -35,10 +35,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 14047594,
         "census_age_3_17": 1560515,
-        "share_of_census_population_percent": 11.5,
+        "share_of_census_population_percent": 11.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -50,14 +50,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 324701,
-            "share_of_census_population_percent": 2.4
+            "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 631349,
-            "share_of_census_population_percent": 4.6
+            "share_of_census_population_percent": 4.5
           },
           {
             "key": "census_junior_high_12_14",
@@ -71,14 +71,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 299777,
-            "share_of_census_population_percent": 2.2
+            "share_of_census_population_percent": 2.1
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -136,10 +136,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 9237337,
         "census_age_3_17": 1128056,
-        "share_of_census_population_percent": 12.5,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -158,28 +158,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 449345,
-            "share_of_census_population_percent": 5.0
+            "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 232179,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 234447,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -237,10 +237,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 7344765,
         "census_age_3_17": 897126,
-        "share_of_census_population_percent": 12.5,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -259,14 +259,14 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 355955,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 185755,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
@@ -276,11 +276,11 @@
             "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -338,10 +338,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 6284480,
         "census_age_3_17": 769272,
-        "share_of_census_population_percent": 12.5,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -360,28 +360,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 304661,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 159634,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 162473,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -439,10 +439,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2867009,
         "census_age_3_17": 357635,
-        "share_of_census_population_percent": 12.8,
+        "share_of_census_population_percent": 12.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -454,35 +454,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 63473,
-            "share_of_census_population_percent": 2.3
+            "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 140254,
-            "share_of_census_population_percent": 5.0
+            "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 75246,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 78662,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -540,10 +540,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1933146,
         "census_age_3_17": 243450,
-        "share_of_census_population_percent": 12.8,
+        "share_of_census_population_percent": 12.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -562,7 +562,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 94931,
-            "share_of_census_population_percent": 5.0
+            "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
@@ -579,11 +579,11 @@
             "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -641,10 +641,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1939110,
         "census_age_3_17": 241388,
-        "share_of_census_population_percent": 12.6,
+        "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -663,28 +663,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 93911,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 51378,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 54166,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -742,10 +742,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 5224614,
         "census_age_3_17": 593196,
-        "share_of_census_population_percent": 11.5,
+        "share_of_census_population_percent": 11.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -781,11 +781,11 @@
             "share_of_census_population_percent": 2.5
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -806,15 +806,15 @@
       },
       "education_profile": {
         "available": true,
-        "metric_id": "child_population_share",
-        "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
-        "value": 11.5,
-        "unit": "%",
-        "national_average": 12.9,
-        "headline_text": "北海道の学齢人口（3〜17歳）が総人口に占める割合は11.5%です（全国平均：12.9%）。",
-        "source_short_label": "令和2年国勢調査",
-        "reference_date_display": "2020年10月1日現在",
-        "statistic_name": "令和2年国勢調査",
+        "metric_id": "school_density",
+        "metric_label": "1市区町村あたりの学校・園数",
+        "value": 9.9,
+        "unit": "校/市区町村",
+        "national_average": 22.0,
+        "headline_text": "北海道の1市区町村あたりの学校・園数は9.9校/市区町村です（全国平均：22.0校/市区町村）。",
+        "source_short_label": "全国学校データベース（本サイト収録データの集計）",
+        "reference_date_display": "2026-05-01時点（区分ごとの整理日は各都道府県ページを参照）",
+        "statistic_name": "全国学校データベース（本サイト収録データの集計）",
         "not_an_official_ranking": true
       }
     },
@@ -843,10 +843,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2301996,
         "census_age_3_17": 284694,
-        "share_of_census_population_percent": 12.6,
+        "share_of_census_population_percent": 12.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -865,7 +865,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 112283,
-            "share_of_census_population_percent": 5.0
+            "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
@@ -882,11 +882,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -944,10 +944,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1237984,
         "census_age_3_17": 140489,
-        "share_of_census_population_percent": 11.4,
+        "share_of_census_population_percent": 11.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -980,14 +980,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 32544,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1010,10 +1010,10 @@
         "available": true,
         "metric_id": "child_population_share",
         "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
-        "value": 11.4,
+        "value": 11.3,
         "unit": "%",
-        "national_average": 12.9,
-        "headline_text": "青森県の学齢人口（3〜17歳）が総人口に占める割合は11.4%です（全国平均：12.9%）。",
+        "national_average": 12.6,
+        "headline_text": "青森県の学齢人口（3〜17歳）が総人口に占める割合は11.3%です（全国平均：12.6%）。",
         "source_short_label": "令和2年国勢調査",
         "reference_date_display": "2020年10月1日現在",
         "statistic_name": "令和2年国勢調査",
@@ -1045,10 +1045,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1210534,
         "census_age_3_17": 144057,
-        "share_of_census_population_percent": 12.0,
+        "share_of_census_population_percent": 11.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1067,7 +1067,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 55985,
-            "share_of_census_population_percent": 4.7
+            "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
@@ -1084,11 +1084,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1146,10 +1146,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 959502,
         "census_age_3_17": 101961,
-        "share_of_census_population_percent": 10.7,
+        "share_of_census_population_percent": 10.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1182,14 +1182,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 23441,
-            "share_of_census_population_percent": 2.5
+            "share_of_census_population_percent": 2.4
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1212,10 +1212,10 @@
         "available": true,
         "metric_id": "child_population_share",
         "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
-        "value": 10.7,
+        "value": 10.6,
         "unit": "%",
-        "national_average": 12.9,
-        "headline_text": "秋田県の学齢人口（3〜17歳）が総人口に占める割合は10.7%です（全国平均：12.9%）。",
+        "national_average": 12.6,
+        "headline_text": "秋田県の学齢人口（3〜17歳）が総人口に占める割合は10.6%です（全国平均：12.6%）。",
         "source_short_label": "令和2年国勢調査",
         "reference_date_display": "2020年10月1日現在",
         "statistic_name": "令和2年国勢調査",
@@ -1247,10 +1247,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1068027,
         "census_age_3_17": 129618,
-        "share_of_census_population_percent": 12.2,
+        "share_of_census_population_percent": 12.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1269,7 +1269,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 50375,
-            "share_of_census_population_percent": 4.8
+            "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
@@ -1286,11 +1286,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1348,10 +1348,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1833152,
         "census_age_3_17": 222132,
-        "share_of_census_population_percent": 12.3,
+        "share_of_census_population_percent": 12.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1370,28 +1370,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 85238,
-            "share_of_census_population_percent": 4.7
+            "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 46539,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 50369,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1449,10 +1449,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 7542415,
         "census_age_3_17": 1006183,
-        "share_of_census_population_percent": 13.7,
+        "share_of_census_population_percent": 13.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1464,35 +1464,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 190657,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 402484,
-            "share_of_census_population_percent": 5.5
+            "share_of_census_population_percent": 5.3
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 206182,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 206860,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1550,10 +1550,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2201272,
         "census_age_3_17": 264940,
-        "share_of_census_population_percent": 12.2,
+        "share_of_census_population_percent": 12.0,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1579,21 +1579,21 @@
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 55711,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 57938,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1651,10 +1651,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1034814,
         "census_age_3_17": 123653,
-        "share_of_census_population_percent": 12.1,
+        "share_of_census_population_percent": 11.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1673,14 +1673,14 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 47680,
-            "share_of_census_population_percent": 4.7
+            "share_of_census_population_percent": 4.6
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 26194,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
@@ -1690,11 +1690,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1752,10 +1752,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1132526,
         "census_age_3_17": 145235,
-        "share_of_census_population_percent": 13.1,
+        "share_of_census_population_percent": 12.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1767,14 +1767,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 26567,
-            "share_of_census_population_percent": 2.4
+            "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 56660,
-            "share_of_census_population_percent": 5.1
+            "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
@@ -1788,14 +1788,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 31661,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1853,10 +1853,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 766863,
         "census_age_3_17": 101676,
-        "share_of_census_population_percent": 13.5,
+        "share_of_census_population_percent": 13.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1875,28 +1875,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 39807,
-            "share_of_census_population_percent": 5.3
+            "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 21421,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 22394,
-            "share_of_census_population_percent": 3.0
+            "share_of_census_population_percent": 2.9
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -1954,10 +1954,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 809974,
         "census_age_3_17": 98793,
-        "share_of_census_population_percent": 12.4,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -1969,14 +1969,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 17374,
-            "share_of_census_population_percent": 2.2
+            "share_of_census_population_percent": 2.1
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 38005,
-            "share_of_census_population_percent": 4.8
+            "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
@@ -1990,14 +1990,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 22751,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2055,10 +2055,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2048011,
         "census_age_3_17": 260602,
-        "share_of_census_population_percent": 12.9,
+        "share_of_census_population_percent": 12.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2070,7 +2070,7 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 45604,
-            "share_of_census_population_percent": 2.3
+            "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
@@ -2091,14 +2091,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 57974,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2156,10 +2156,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1978742,
         "census_age_3_17": 258666,
-        "share_of_census_population_percent": 13.3,
+        "share_of_census_population_percent": 13.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2178,7 +2178,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 101804,
-            "share_of_census_population_percent": 5.2
+            "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
@@ -2192,14 +2192,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 57174,
-            "share_of_census_population_percent": 3.0
+            "share_of_census_population_percent": 2.9
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2257,10 +2257,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 3633202,
         "census_age_3_17": 467313,
-        "share_of_census_population_percent": 13.0,
+        "share_of_census_population_percent": 12.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2296,11 +2296,11 @@
             "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2358,10 +2358,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 8837685,
         "census_age_3_17": 1069799,
-        "share_of_census_population_percent": 12.4,
+        "share_of_census_population_percent": 12.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2380,14 +2380,14 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 422687,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 221305,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
@@ -2397,11 +2397,11 @@
             "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2459,10 +2459,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1770254,
         "census_age_3_17": 225342,
-        "share_of_census_population_percent": 12.9,
+        "share_of_census_population_percent": 12.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2474,14 +2474,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 39824,
-            "share_of_census_population_percent": 2.3
+            "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 88617,
-            "share_of_census_population_percent": 5.1
+            "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
@@ -2498,11 +2498,11 @@
             "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2560,10 +2560,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1413610,
         "census_age_3_17": 200456,
-        "share_of_census_population_percent": 14.5,
+        "share_of_census_population_percent": 14.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2575,21 +2575,21 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 36908,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 80214,
-            "share_of_census_population_percent": 5.8
+            "share_of_census_population_percent": 5.7
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 41558,
-            "share_of_census_population_percent": 3.0
+            "share_of_census_population_percent": 2.9
           },
           {
             "key": "census_high_school_15_17",
@@ -2599,11 +2599,11 @@
             "share_of_census_population_percent": 3.0
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2661,10 +2661,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2578087,
         "census_age_3_17": 309986,
-        "share_of_census_population_percent": 12.4,
+        "share_of_census_population_percent": 12.0,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2676,35 +2676,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 56716,
-            "share_of_census_population_percent": 2.3
+            "share_of_census_population_percent": 2.2
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 121809,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.7
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 64627,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 66834,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2762,10 +2762,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 5465002,
         "census_age_3_17": 694758,
-        "share_of_census_population_percent": 13.2,
+        "share_of_census_population_percent": 12.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2777,35 +2777,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 127604,
-            "share_of_census_population_percent": 2.4
+            "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 275638,
-            "share_of_census_population_percent": 5.2
+            "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 144410,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 147106,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2863,10 +2863,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1324473,
         "census_age_3_17": 166438,
-        "share_of_census_population_percent": 12.7,
+        "share_of_census_population_percent": 12.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2899,14 +2899,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 37389,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -2964,10 +2964,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 922584,
         "census_age_3_17": 112905,
-        "share_of_census_population_percent": 12.3,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -2993,7 +2993,7 @@
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 23514,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
@@ -3003,11 +3003,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3065,10 +3065,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 2799702,
         "census_age_3_17": 368331,
-        "share_of_census_population_percent": 13.4,
+        "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3080,35 +3080,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 67907,
-            "share_of_census_population_percent": 2.5
+            "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 148423,
-            "share_of_census_population_percent": 5.4
+            "share_of_census_population_percent": 5.3
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 75617,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 76384,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3166,10 +3166,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 553407,
         "census_age_3_17": 72228,
-        "share_of_census_population_percent": 13.2,
+        "share_of_census_population_percent": 13.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3188,7 +3188,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 28303,
-            "share_of_census_population_percent": 5.2
+            "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
@@ -3202,14 +3202,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 15737,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3267,10 +3267,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 671126,
         "census_age_3_17": 86827,
-        "share_of_census_population_percent": 13.1,
+        "share_of_census_population_percent": 12.9,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3296,7 +3296,7 @@
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 17644,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
@@ -3306,11 +3306,11 @@
             "share_of_census_population_percent": 2.9
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3368,10 +3368,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1888432,
         "census_age_3_17": 241108,
-        "share_of_census_population_percent": 13.2,
+        "share_of_census_population_percent": 12.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3383,35 +3383,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 44272,
-            "share_of_census_population_percent": 2.4
+            "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 95422,
-            "share_of_census_population_percent": 5.2
+            "share_of_census_population_percent": 5.1
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 49607,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 51807,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3469,10 +3469,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1342059,
         "census_age_3_17": 163444,
-        "share_of_census_population_percent": 12.4,
+        "share_of_census_population_percent": 12.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3491,28 +3491,28 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 64943,
-            "share_of_census_population_percent": 4.9
+            "share_of_census_population_percent": 4.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 34069,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 35365,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3570,10 +3570,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 950244,
         "census_age_3_17": 121178,
-        "share_of_census_population_percent": 13.1,
+        "share_of_census_population_percent": 12.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3585,35 +3585,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 21843,
-            "share_of_census_population_percent": 2.4
+            "share_of_census_population_percent": 2.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 47898,
-            "share_of_census_population_percent": 5.2
+            "share_of_census_population_percent": 5.0
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 24902,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 26535,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3671,10 +3671,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 719559,
         "census_age_3_17": 82170,
-        "share_of_census_population_percent": 11.8,
+        "share_of_census_population_percent": 11.4,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3693,7 +3693,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 32249,
-            "share_of_census_population_percent": 4.6
+            "share_of_census_population_percent": 4.5
           },
           {
             "key": "census_junior_high_12_14",
@@ -3707,14 +3707,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 18023,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3772,10 +3772,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1334841,
         "census_age_3_17": 164751,
-        "share_of_census_population_percent": 12.6,
+        "share_of_census_population_percent": 12.3,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3794,7 +3794,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 65323,
-            "share_of_census_population_percent": 5.0
+            "share_of_census_population_percent": 4.9
           },
           {
             "key": "census_junior_high_12_14",
@@ -3808,14 +3808,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 36003,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3873,10 +3873,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 691527,
         "census_age_3_17": 80374,
-        "share_of_census_population_percent": 11.8,
+        "share_of_census_population_percent": 11.6,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3895,14 +3895,14 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 31183,
-            "share_of_census_population_percent": 4.6
+            "share_of_census_population_percent": 4.5
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 16819,
-            "share_of_census_population_percent": 2.5
+            "share_of_census_population_percent": 2.4
           },
           {
             "key": "census_high_school_15_17",
@@ -3912,11 +3912,11 @@
             "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -3974,10 +3974,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 5135214,
         "census_age_3_17": 677951,
-        "share_of_census_population_percent": 13.7,
+        "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -3989,35 +3989,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 130822,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 275214,
-            "share_of_census_population_percent": 5.5
+            "share_of_census_population_percent": 5.4
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 137263,
-            "share_of_census_population_percent": 2.8
+            "share_of_census_population_percent": 2.7
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 134652,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4075,10 +4075,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 811442,
         "census_age_3_17": 114270,
-        "share_of_census_population_percent": 14.3,
+        "share_of_census_population_percent": 14.1,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4090,14 +4090,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 20683,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 45005,
-            "share_of_census_population_percent": 5.6
+            "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
@@ -4111,14 +4111,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 24611,
-            "share_of_census_population_percent": 3.1
+            "share_of_census_population_percent": 3.0
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4139,15 +4139,15 @@
       },
       "education_profile": {
         "available": true,
-        "metric_id": "depopulated_school_ratio",
-        "metric_label": "過疎関係市町村に所在する学校の比率",
-        "value": 62.9,
+        "metric_id": "child_population_share",
+        "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
+        "value": 14.1,
         "unit": "%",
-        "national_average": 30.6,
-        "headline_text": "佐賀県の過疎関係市町村に所在する学校の比率は62.9%です（全国平均：30.6%）。",
-        "source_short_label": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
-        "reference_date_display": "令和4年4月1日現在の指定に基づく",
-        "statistic_name": "総務省「過疎地域市町村等一覧」（学校データベース集計と突合）",
+        "national_average": 12.6,
+        "headline_text": "佐賀県の学齢人口（3〜17歳）が総人口に占める割合は14.1%です（全国平均：12.6%）。",
+        "source_short_label": "令和2年国勢調査",
+        "reference_date_display": "2020年10月1日現在",
+        "statistic_name": "令和2年国勢調査",
         "not_an_official_ranking": true
       }
     },
@@ -4176,10 +4176,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1312317,
         "census_age_3_17": 173063,
-        "share_of_census_population_percent": 13.3,
+        "share_of_census_population_percent": 13.2,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4198,7 +4198,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 68673,
-            "share_of_census_population_percent": 5.3
+            "share_of_census_population_percent": 5.2
           },
           {
             "key": "census_junior_high_12_14",
@@ -4215,11 +4215,11 @@
             "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4277,10 +4277,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1738301,
         "census_age_3_17": 237757,
-        "share_of_census_population_percent": 13.9,
+        "share_of_census_population_percent": 13.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4299,7 +4299,7 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 95616,
-            "share_of_census_population_percent": 5.6
+            "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
@@ -4313,14 +4313,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 49219,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4378,10 +4378,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1123852,
         "census_age_3_17": 142298,
-        "share_of_census_population_percent": 12.9,
+        "share_of_census_population_percent": 12.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4407,7 +4407,7 @@
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 29698,
-            "share_of_census_population_percent": 2.7
+            "share_of_census_population_percent": 2.6
           },
           {
             "key": "census_high_school_15_17",
@@ -4417,11 +4417,11 @@
             "share_of_census_population_percent": 2.7
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4479,10 +4479,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1069576,
         "census_age_3_17": 146690,
-        "share_of_census_population_percent": 14.0,
+        "share_of_census_population_percent": 13.7,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4501,14 +4501,14 @@
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 59110,
-            "share_of_census_population_percent": 5.6
+            "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 30310,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           },
           {
             "key": "census_high_school_15_17",
@@ -4518,11 +4518,11 @@
             "share_of_census_population_percent": 2.9
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4545,10 +4545,10 @@
         "available": true,
         "metric_id": "child_population_share",
         "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
-        "value": 14.0,
+        "value": 13.7,
         "unit": "%",
-        "national_average": 12.9,
-        "headline_text": "宮崎県の学齢人口（3〜17歳）が総人口に占める割合は14.0%です（全国平均：12.9%）。",
+        "national_average": 12.6,
+        "headline_text": "宮崎県の学齢人口（3〜17歳）が総人口に占める割合は13.7%です（全国平均：12.6%）。",
         "source_short_label": "令和2年国勢調査",
         "reference_date_display": "2020年10月1日現在",
         "statistic_name": "令和2年国勢調査",
@@ -4580,10 +4580,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1588256,
         "census_age_3_17": 214945,
-        "share_of_census_population_percent": 13.9,
+        "share_of_census_population_percent": 13.5,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4595,14 +4595,14 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 39659,
-            "share_of_census_population_percent": 2.6
+            "share_of_census_population_percent": 2.5
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 86613,
-            "share_of_census_population_percent": 5.6
+            "share_of_census_population_percent": 5.5
           },
           {
             "key": "census_junior_high_12_14",
@@ -4616,14 +4616,14 @@
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 44590,
-            "share_of_census_population_percent": 2.9
+            "share_of_census_population_percent": 2.8
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4681,10 +4681,10 @@
         "available": true,
         "population_scope_label": "人口（総数・国勢調査確定値）",
         "population_scope": "census_total_population",
-        "population_definition": "令和2年国勢調査における日本人人口",
+        "population_definition": "令和2年国勢調査における総人口（外国人を含む総人口確定値）",
         "census_population": 1467480,
         "census_age_3_17": 246385,
-        "share_of_census_population_percent": 17.2,
+        "share_of_census_population_percent": 16.8,
         "reference_date": "2020-10-01",
         "reference_date_label": "統計基準日",
         "reference_date_display": "2020年10月1日現在",
@@ -4696,35 +4696,35 @@
             "label": "幼児期",
             "age_range_label": "3～5歳",
             "population": 48866,
-            "share_of_census_population_percent": 3.4
+            "share_of_census_population_percent": 3.3
           },
           {
             "key": "census_elementary_6_11",
             "label": "小学校期",
             "age_range_label": "6～11歳",
             "population": 100222,
-            "share_of_census_population_percent": 7.0
+            "share_of_census_population_percent": 6.8
           },
           {
             "key": "census_junior_high_12_14",
             "label": "中学校期",
             "age_range_label": "12～14歳",
             "population": 49079,
-            "share_of_census_population_percent": 3.4
+            "share_of_census_population_percent": 3.3
           },
           {
             "key": "census_high_school_15_17",
             "label": "高校期",
             "age_range_label": "15～17歳",
             "population": 48218,
-            "share_of_census_population_percent": 3.4
+            "share_of_census_population_percent": 3.3
           }
         ],
-        "footer_note": "学校規模を考える参考となる統計です。実際の在学者数ではありません。",
-        "summary_note": "日本国籍の住民が対象です。外国籍の住民は含みません。",
+        "footer_note": "学校規模を考える参考となる統計です。※国勢調査の年齢別総人口に基づく集計であり、実際の在学者数ではありません。",
+        "summary_note": "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。",
         "notes": [
           "年齢別人口は、各校種に相当する年齢層の人口であり、実際の在学者数ではありません。就学猶予、留年、早生まれの学年境界、区域外通学、国私立校への進学、未就園、通信制などは反映していません。",
-          "割合は、人口（日本国籍）を分母として計算しています。年齢「不詳」の人は含みません。"
+          "割合は、国勢調査の総人口（外国人を含む総人口確定値）を分母として計算しています。年齢「不詳」の人は含みません。"
         ],
         "source": {
           "publisher": "総務省統計局",
@@ -4747,10 +4747,10 @@
         "available": true,
         "metric_id": "child_population_share",
         "metric_label": "学齢人口（3〜17歳）が総人口に占める割合",
-        "value": 17.2,
+        "value": 16.8,
         "unit": "%",
-        "national_average": 12.9,
-        "headline_text": "沖縄県の学齢人口（3〜17歳）が総人口に占める割合は17.2%です（全国平均：12.9%）。",
+        "national_average": 12.6,
+        "headline_text": "沖縄県の学齢人口（3〜17歳）が総人口に占める割合は16.8%です（全国平均：12.6%）。",
         "source_short_label": "令和2年国勢調査",
         "reference_date_display": "2020年10月1日現在",
         "statistic_name": "令和2年国勢調査",
