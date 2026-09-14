@@ -17,6 +17,7 @@ from __future__ import annotations
 import io
 import json
 import re
+import unicodedata
 import urllib.request
 from pathlib import Path
 from typing import Iterable
@@ -50,8 +51,23 @@ PREFECTURE_SET = set(PREFECTURE_NAMES)
 def _norm(value: object) -> str:
     if value is None:
         return ""
-    text = str(value).replace("\u3000", " ").strip()
+    text = unicodedata.normalize("NFKC", str(value)).replace("\u3000", " ").strip()
     return re.sub(r"\s+", "", text)
+
+
+def _prefecture_from_cell(value: object) -> str | None:
+    text = _norm(value)
+    if not text:
+        return None
+    if text in PREFECTURE_SET:
+        return text
+    # e-Stat workbooks may prefix area codes (e.g. "01_北海道" / "01000 北海道").
+    for name in PREFECTURE_NAMES:
+        if text.endswith(name):
+            prefix = text[: -len(name)]
+            if not prefix or re.fullmatch(r"[0-9_\-()（）./]*", prefix):
+                return name
+    return None
 
 
 def _number(value: object) -> float | None:
@@ -59,7 +75,7 @@ def _number(value: object) -> float | None:
         return None
     if isinstance(value, (int, float)):
         return float(value)
-    text = _norm(value).replace(",", "").replace("％", "%").replace("%", "")
+    text = _norm(value).replace(",", "").replace("%", "")
     text = text.replace("▲", "-").replace("△", "-")
     if not text or text in {"-", "－", "…", "―"}:
         return None
@@ -80,7 +96,7 @@ def _fetch(url: str, label: str) -> bytes:
 
 def _merged_header_text(sheet, col: int, first_data_row: int) -> str:
     parts: list[str] = []
-    start = max(1, first_data_row - 12)
+    start = max(1, first_data_row - 16)
     end = first_data_row - 1
     for row in range(start, end + 1):
         value = sheet.cell(row, col).value
@@ -96,12 +112,12 @@ def _merged_header_text(sheet, col: int, first_data_row: int) -> str:
 
 def _rows_by_prefecture(sheet) -> dict[str, list[int]]:
     rows: dict[str, list[int]] = {name: [] for name in PREFECTURE_NAMES}
-    max_scan_col = min(sheet.max_column, 20)
+    max_scan_col = min(sheet.max_column, 24)
     for r in range(1, sheet.max_row + 1):
         for c in range(1, max_scan_col + 1):
-            text = _norm(sheet.cell(r, c).value)
-            if text in PREFECTURE_SET:
-                rows[text].append(r)
+            name = _prefecture_from_cell(sheet.cell(r, c).value)
+            if name is not None:
+                rows[name].append(r)
                 break
     return rows
 
@@ -113,21 +129,17 @@ def _extract_prefecture_column(
     expected_national: float | None = None,
     expected_sum: float | None = None,
 ) -> tuple[dict[str, float], str, int]:
-    """Find one semantic metric column containing all 47 prefectures.
-
-    Candidate columns must have a nearby header containing every requested token.
-    If expected_national is supplied, a nearby 全国 row in the same column must match.
-    If expected_sum is supplied, the 47 extracted values must sum to that value.
-    """
+    """Find one semantic metric column containing all 47 prefectures."""
     tokens = tuple(_norm(t) for t in header_tokens)
     diagnostics: list[str] = []
 
     for sheet in workbook.worksheets:
         pref_rows = _rows_by_prefecture(sheet)
-        if any(not rows for rows in pref_rows.values()):
+        covered = sum(1 for rows in pref_rows.values() if rows)
+        diagnostics.append(f"{sheet.title}: prefectures={covered}/47 size={sheet.max_row}x{sheet.max_column}")
+        if covered < 47:
             continue
 
-        # Workbooks may repeat prefecture tables. Try each occurrence index as one table block.
         max_occurrences = max(len(rows) for rows in pref_rows.values())
         for occ in range(max_occurrences):
             selected_rows: dict[str, int] = {}
@@ -139,7 +151,7 @@ def _extract_prefecture_column(
 
             first_data_row = min(selected_rows.values())
             last_data_row = max(selected_rows.values())
-            if last_data_row - first_data_row > 80:
+            if last_data_row - first_data_row > 100:
                 continue
 
             for col in range(1, sheet.max_column + 1):
@@ -154,6 +166,7 @@ def _extract_prefecture_column(
                         break
                     values[name] = value
                 if len(values) != 47:
+                    diagnostics.append(f"{sheet.title}!col{col}: header matched but numeric prefectures={len(values)}")
                     continue
 
                 if expected_sum is not None and abs(sum(values.values()) - expected_sum) > 1e-9:
@@ -164,10 +177,10 @@ def _extract_prefecture_column(
 
                 if expected_national is not None:
                     national_match = False
-                    for r in range(max(1, first_data_row - 5), min(sheet.max_row, last_data_row + 5) + 1):
+                    for r in range(max(1, first_data_row - 8), min(sheet.max_row, last_data_row + 8) + 1):
                         row_has_national = any(
-                            _norm(sheet.cell(r, c).value) in {"全国", "全国計", "計全国"}
-                            for c in range(1, min(sheet.max_column, 20) + 1)
+                            _norm(sheet.cell(r, c).value) in {"全国", "全国計", "計全国", "全国平均"}
+                            for c in range(1, min(sheet.max_column, 24) + 1)
                         )
                         if not row_has_national:
                             continue
@@ -183,7 +196,7 @@ def _extract_prefecture_column(
 
                 return values, sheet.title, col
 
-    detail = "; ".join(diagnostics[-8:]) if diagnostics else "no semantic candidate column found"
+    detail = "; ".join(diagnostics[-12:]) if diagnostics else "no semantic candidate column found"
     raise AssertionError(f"Unable to identify official metric column: {detail}")
 
 
