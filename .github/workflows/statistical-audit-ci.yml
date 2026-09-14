@@ -46,3 +46,4 @@ jobs:
           python tools/school-database/test_ipss_projection_dashboard_integration.py
           python tools/school-database/test_mext_absenteeism_r6_live_ground_truth.py
           python tools/school-database/test_population_movement_2025_live_ground_truth.py
+          python tools/school-database/test_official_stats_dashboard_overlay.py
