@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/school-database/**'
       - 'tools/school-database/**'
+      - 'scratch/build_perfect_mext_2025_from_estat_tables.py'
       - 'scratch/build_national_analytics_dataset.py'
       - '.github/workflows/statistical-audit-ci.yml'
   push:
@@ -12,6 +13,7 @@ on:
     paths:
       - 'data/school-database/**'
       - 'tools/school-database/**'
+      - 'scratch/build_perfect_mext_2025_from_estat_tables.py'
       - 'scratch/build_national_analytics_dataset.py'
       - '.github/workflows/statistical-audit-ci.yml'
 
@@ -23,9 +25,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl requests pytest
       - name: Run statistical audit tests
         run: |
           python tools/school-database/test_prefecture_page_enrichment.py
           python tools/school-database/test_prefecture_seo_content.py
           python tools/school-database/test_education_profile.py
           python tools/school-database/test_population_metadata.py
+          python tools/school-database/test_47_prefecture_ground_truth.py
