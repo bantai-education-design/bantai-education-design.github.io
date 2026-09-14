@@ -69,12 +69,24 @@ OFFICIAL_DEMOGRAPHICS_CENSUS = {
 
 
 def test_census_demographics_estat_live_ground_truth() -> None:
-    """Verify live e-Stat 2020 & 2015 Census raw data matches OFFICIAL_DEMOGRAPHICS_CENSUS 100% across all 47 prefectures without fallback."""
+    """Verify live e-Stat 2020 & 2015 Census raw data matches OFFICIAL_DEMOGRAPHICS_CENSUS and analytics dataset 100% across all 47 prefectures without fallback."""
     live_demographics = build_census_demographics_from_estat(strict_live=True)
     assert len(live_demographics) == 47, f"Expected 47 prefectures, got {len(live_demographics)}"
 
+    analytics = json.loads(ANALYTICS_PATH.read_text(encoding="utf-8"))
+    analytics_by_num = {p["pref_number"]: p for p in analytics["prefectures"]}
+
+    # National Total 2020 Census Total Population sum check (126,146,099)
+    nat_live_total = sum(d["total_population"] for d in live_demographics.values())
+    assert nat_live_total == 126146099, f"National live 2020 total population sum mismatch: expected 126,146,099 (got {nat_live_total})"
+
     for pref_num, live_data in live_demographics.items():
         dict_data = OFFICIAL_DEMOGRAPHICS_CENSUS[pref_num]
+        analytics_pref = analytics_by_num[pref_num]
+
+        assert live_data["total_population"] == analytics_pref["total_population"], (
+            f"Prefecture {pref_num} live total_population mismatch: live={live_data['total_population']} vs analytics={analytics_pref['total_population']}"
+        )
         assert live_data["pop_under_15"] == dict_data["pop_under_15"], (
             f"Prefecture {pref_num} pop_under_15 mismatch: live={live_data['pop_under_15']} vs dict={dict_data['pop_under_15']}"
         )
