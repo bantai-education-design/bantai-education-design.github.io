@@ -1,4 +1,4 @@
-# Trigger CI check: Verify ICT Capability and Waiting Children 47-prefecture Ground Truth (PR #321 trigger)
+# Trigger CI check: Verify ICT capability and waiting children strict live Ground Truth (PR #322 trigger)
 name: University photo owner and overlap guard
 
 on:
