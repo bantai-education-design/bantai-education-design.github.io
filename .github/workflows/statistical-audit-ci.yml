@@ -6,6 +6,7 @@ on:
       - 'data/school-database/**'
       - 'tools/school-database/**'
       - 'assets/js/school-database/**'
+      - 'assets/js/analytics-events.js'
       - 'scratch/build_perfect_mext_2025_from_estat_tables.py'
       - 'scratch/build_national_analytics_dataset.py'
       - '.github/workflows/statistical-audit-ci.yml'
@@ -15,6 +16,7 @@ on:
       - 'data/school-database/**'
       - 'tools/school-database/**'
       - 'assets/js/school-database/**'
+      - 'assets/js/analytics-events.js'
       - 'scratch/build_perfect_mext_2025_from_estat_tables.py'
       - 'scratch/build_national_analytics_dataset.py'
       - '.github/workflows/statistical-audit-ci.yml'
@@ -30,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openpyxl requests pytest
+          pip install openpyxl requests pytest pypdf
       - name: Run statistical audit tests
         run: |
           python tools/school-database/test_prefecture_page_enrichment.py
@@ -42,3 +44,5 @@ jobs:
           python tools/school-database/test_external_stats_live_ground_truth.py
           python tools/school-database/test_ipss_future_child_population_ground_truth.py
           python tools/school-database/test_ipss_projection_dashboard_integration.py
+          python tools/school-database/test_mext_absenteeism_r6_live_ground_truth.py
+          python tools/school-database/test_population_movement_2025_live_ground_truth.py
