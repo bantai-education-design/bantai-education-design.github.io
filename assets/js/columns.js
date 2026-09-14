@@ -29,6 +29,14 @@
       .replace(/'/g, '&#039;');
   }
 
+  function renderInlineFormatting(text) {
+    if (!text) return '';
+    let escaped = escapeHtml(text);
+    // Parse markdown links [label](url) -> <a href="url" target="_blank" rel="noopener noreferrer" class="column-inline-link">label</a>
+    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="column-inline-link">$1</a>');
+    return escaped;
+  }
+
   // Load column data from /data/columns.json
   async function fetchColumns() {
     try {
@@ -185,7 +193,7 @@
         if (listItems.length > 0) {
           let listHtml = '<ul class="column-feature-list">';
           listItems.forEach(item => {
-            listHtml += `<li class="column-feature-item">${escapeHtml(item)}</li>`;
+            listHtml += `<li class="column-feature-item">${renderInlineFormatting(item)}</li>`;
           });
           listHtml += '</ul>';
           resultHtml.push(listHtml);
@@ -214,7 +222,7 @@
               tableHtml += '<thead><tr>' + cells.map(c => `<th>${escapeHtml(c)}</th>`).join('') + '</tr></thead><tbody>';
               isHeader = false;
             } else {
-              tableHtml += '<tr>' + cells.map(c => `<td>${escapeHtml(c)}</td>`).join('') + '</tr>';
+              tableHtml += '<tr>' + cells.map(c => `<td>${renderInlineFormatting(c)}</td>`).join('') + '</tr>';
             }
           });
           
@@ -236,7 +244,7 @@
       if (!text.startsWith('　')) {
         text = '　' + text;
       }
-      resultHtml.push(`<p class="column-paragraph">${escapeHtml(text)}</p>`);
+      resultHtml.push(`<p class="column-paragraph">${renderInlineFormatting(text)}</p>`);
       i++;
     }
     
