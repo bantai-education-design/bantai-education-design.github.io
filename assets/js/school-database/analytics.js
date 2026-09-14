@@ -71,34 +71,23 @@
     });
   };
 
-  const appendSupplementalMetricOptions = () => {
-    if (!metricSelect) return;
+  const appendProjectionMetricOptions = () => {
+    if (!metricSelect || !projectionLoaded) return;
+    if (metricSelect.querySelector('option[value="child_population_index_2035"]')) return;
 
-    const addOption = (group, value, label) => {
-      if (metricSelect.querySelector(`option[value="${value}"]`)) return;
+    const projectionGroup = document.createElement("optgroup");
+    projectionGroup.label = "🔮 将来の子ども人口（IPSS 2023年推計・2020年=100）";
+
+    const addOption = (value, label) => {
       const option = document.createElement("option");
       option.value = value;
       option.textContent = label;
-      group.appendChild(option);
+      projectionGroup.appendChild(option);
     };
 
-    if (!metricSelect.querySelector('option[value="absenteeism_combined_rate"]')) {
-      const absenteeismGroup = document.createElement("optgroup");
-      absenteeismGroup.label = "🚸 教育課題・不登校（文部科学省 2024年度）";
-      addOption(absenteeismGroup, "absenteeism_combined_rate", "🚸 小中学校 1,000人当たり不登校児童生徒数");
-      addOption(absenteeismGroup, "absenteeism_combined_count", "📊 小中学校 不登校児童生徒数（総数）");
-      addOption(absenteeismGroup, "elem_absenteeism_rate", "🎒 小学校 1,000人当たり不登校児童数");
-      addOption(absenteeismGroup, "jhs_absenteeism_rate", "🏫 中学校 1,000人当たり不登校生徒数");
-      metricSelect.appendChild(absenteeismGroup);
-    }
-
-    if (projectionLoaded && !metricSelect.querySelector('option[value="child_population_index_2035"]')) {
-      const projectionGroup = document.createElement("optgroup");
-      projectionGroup.label = "🔮 将来の子ども人口（IPSS 2023年推計・2020年=100）";
-      addOption(projectionGroup, "child_population_index_2035", "🔮 2035年 0～14歳人口指数（2020年=100）");
-      addOption(projectionGroup, "child_population_index_2050", "🔭 2050年 0～14歳人口指数（2020年=100）");
-      metricSelect.appendChild(projectionGroup);
-    }
+    addOption("child_population_index_2035", "🔮 2035年 0～14歳人口指数（2020年=100）");
+    addOption("child_population_index_2050", "🔭 2050年 0～14歳人口指数（2020年=100）");
+    metricSelect.appendChild(projectionGroup);
   };
 
   const init = async () => {
@@ -117,7 +106,7 @@
         console.warn("IPSS future child population projection could not be loaded:", projectionError);
       }
 
-      appendSupplementalMetricOptions();
+      appendProjectionMetricOptions();
       bindEvents();
       render();
     } catch (err) {
@@ -207,13 +196,11 @@
       metricBadge.style.background = isCustom ? "#3182ce" : "#059669";
     }
 
-    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool", "absenteeism_combined_rate", "elem_absenteeism_rate", "jhs_absenteeism_rate", "child_population_index_2035", "child_population_index_2050"].includes(currentMetric);
+    const isRatioMetric = ["aging_rate", "student_teacher_ratio", "elem_pop_per_school", "jhs_pop_per_school", "elem_enrolled_per_school", "elem_enrolled_per_class", "jhs_enrolled_per_school", "jhs_enrolled_per_class", "jhs_student_teacher_ratio", "child_under_15_ratio", "pop_change_rate", "area_per_school", "ict_teaching_capability", "private_elem_school_ratio", "special_needs_schools_per_100k_age_6_17", "waiting_children_per_10k_preschool", "child_population_index_2035", "child_population_index_2050"].includes(currentMetric);
 
     if (metricNationalAvgLabel) {
       if (["child_population_index_2035", "child_population_index_2050"].includes(currentMetric)) {
         metricNationalAvgLabel.textContent = "全国指数（2020年=100）";
-      } else if (["absenteeism_combined_rate", "elem_absenteeism_rate", "jhs_absenteeism_rate"].includes(currentMetric)) {
-        metricNationalAvgLabel.textContent = "全国値（児童生徒1,000人あたり）";
       } else if (currentMetric === "ict_teaching_capability") {
         metricNationalAvgLabel.textContent = "全国平均（47都道府県単純平均）";
       } else {
