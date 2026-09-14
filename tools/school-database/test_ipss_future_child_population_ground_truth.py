@@ -45,6 +45,21 @@ def _norm(value: object) -> str:
     return re.sub(r"\s+", "", text)
 
 
+def _prefecture_from_cell(value: object) -> str | None:
+    text = _norm(value)
+    if not text:
+        return None
+    if text in PREFECTURE_SET:
+        return text
+    for name in PREFECTURE_NAMES:
+        if not text.endswith(name):
+            continue
+        prefix = text[: -len(name)]
+        if re.fullmatch(r"[0-9_\-()（）./]*", prefix):
+            return name
+    return None
+
+
 def _number(value: object) -> float | None:
     if value is None or isinstance(value, bool):
         return None
@@ -91,8 +106,8 @@ def _find_prefecture_block(workbook) -> tuple[object, int, dict[str, int]]:
             rows: dict[str, int] = {}
             duplicate = False
             for row in range(1, sheet.max_row + 1):
-                name = _norm(sheet.cell(row, col).value)
-                if name not in PREFECTURE_SET:
+                name = _prefecture_from_cell(sheet.cell(row, col).value)
+                if name is None:
                     continue
                 if name in rows:
                     duplicate = True
@@ -101,10 +116,9 @@ def _find_prefecture_block(workbook) -> tuple[object, int, dict[str, int]]:
             diagnostics.append(f"{sheet.title}!col{col}: prefectures={len(rows)} duplicate={duplicate}")
             if not duplicate and set(rows) == PREFECTURE_SET:
                 row_numbers = sorted(rows.values())
-                # The 47 prefectures in the official result table form one compact block.
                 if row_numbers[-1] - row_numbers[0] <= 60:
                     return sheet, col, rows
-    raise AssertionError("Unable to identify the official 47-prefecture block: " + "; ".join(diagnostics[-12:]))
+    raise AssertionError("Unable to identify the official 47-prefecture block: " + "; ".join(diagnostics[-18:]))
 
 
 def _find_index_column(sheet, first_data_row: int, year: int) -> int:
@@ -118,7 +132,6 @@ def _find_index_column(sheet, first_data_row: int, year: int) -> int:
             continue
         candidates.append(col)
     assert candidates, f"IPSS index column for {year} was not found"
-    # A strict semantic match should identify exactly one index column per year.
     assert len(candidates) == 1, f"IPSS index column for {year} is ambiguous: {candidates}"
     return candidates[0]
 
@@ -126,7 +139,8 @@ def _find_index_column(sheet, first_data_row: int, year: int) -> int:
 def _find_national_row(sheet, name_col: int) -> int:
     rows = []
     for row in range(1, sheet.max_row + 1):
-        if _norm(sheet.cell(row, name_col).value) in {"全国", "全国計"}:
+        text = _norm(sheet.cell(row, name_col).value)
+        if text in {"全国", "全国計"} or text.endswith("全国") or text.endswith("全国計"):
             rows.append(row)
     assert rows, "IPSS national row was not found"
     return rows[0]
@@ -158,7 +172,7 @@ def build_live_ipss_indices() -> tuple[dict[str, dict[str, float]], dict[str, fl
 
     assert len(live) == 47
     print(
-        f"[IPSS Live Audit] sheet={sheet.title!r}, prefectures=47, "
+        f"[IPSS Live Audit] sheet={sheet.title!r}, name_col={name_col}, prefectures=47, "
         f"2035_col={col_2035}, 2050_col={col_2050}, national=77.8/69.2"
     )
     return live, {
