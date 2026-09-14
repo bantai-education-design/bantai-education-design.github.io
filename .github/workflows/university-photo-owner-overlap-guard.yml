@@ -1,4 +1,4 @@
-# Trigger CI check: Reconstruct 47-prefecture MEXT 2025 master JSON directly from e-Stat confirmed tables (PR #315 trigger)
+# Trigger CI check: Reconstruct 47-prefecture MEXT 2025 master JSON directly from e-Stat confirmed tables (PR #316 trigger)
 name: University photo owner and overlap guard
 
 on:
