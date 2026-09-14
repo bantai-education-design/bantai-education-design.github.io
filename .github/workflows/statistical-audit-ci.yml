@@ -37,4 +37,5 @@ jobs:
           python tools/school-database/test_population_metadata.py
           python tools/school-database/test_47_prefecture_ground_truth.py
           python tools/school-database/test_cross_source_indicators_integrity.py
+          python tools/school-database/diagnose_ict_live_layout.py
           python tools/school-database/test_external_stats_live_ground_truth.py
