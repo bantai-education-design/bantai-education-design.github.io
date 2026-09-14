@@ -69,8 +69,8 @@ OFFICIAL_DEMOGRAPHICS_CENSUS = {
 
 
 def test_census_demographics_estat_live_ground_truth() -> None:
-    """Verify live e-Stat 2020 Census Table 2-1 raw data matches OFFICIAL_DEMOGRAPHICS_CENSUS 100% across all 47 prefectures."""
-    live_demographics = build_census_demographics_from_estat()
+    """Verify live e-Stat 2020 & 2015 Census raw data matches OFFICIAL_DEMOGRAPHICS_CENSUS 100% across all 47 prefectures without fallback."""
+    live_demographics = build_census_demographics_from_estat(strict_live=True)
     assert len(live_demographics) == 47, f"Expected 47 prefectures, got {len(live_demographics)}"
 
     for pref_num, live_data in live_demographics.items():
