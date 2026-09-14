@@ -46,23 +46,43 @@ def find_table_page(reader: PdfReader, marker: str, secondary: str) -> str:
 def find_pref_line(text: str, name: str, minimum_numbers: int) -> list[float]:
     target = compact(name)
     lines = text.splitlines()
+    # Prefer a single extracted row. This prevents header years on a preceding line
+    # from being mistaken for row values (especially the 全国 row).
+    for line in lines:
+        if target not in compact(line):
+            continue
+        vals = numbers(line)
+        if len(vals) >= minimum_numbers:
+            return vals
+    # Only if the row itself was split, join forward from the line that already
+    # contains the target name. Never join from a preceding header line.
     for i, line in enumerate(lines):
+        if target not in compact(line):
+            continue
         joined = line
-        # Some PDF extractors split a prefecture name over adjacent text fragments.
-        for extra in range(0, 3):
-            if extra:
-                if i + extra >= len(lines):
-                    break
-                joined += " " + lines[i + extra]
-            if target not in compact(joined):
-                continue
+        for extra in range(1, 4):
+            if i + extra >= len(lines):
+                break
+            joined += " " + lines[i + extra]
             vals = numbers(joined)
             if len(vals) >= minimum_numbers:
                 return vals
-    # Fallback: search a short window in the continuous text after whitespace normalization.
-    raw = unicodedata.normalize("NFKC", text)
-    pos = compact(raw).find(target)
-    raise AssertionError(f"Could not parse row for {name}; normalized name present={pos >= 0}")
+    raise AssertionError(f"Could not parse row for {name}")
+
+
+def parse_count_row(vals: list[float], name: str) -> tuple[int, int, int]:
+    # Table 7 layout:
+    # incoming: 2025, 2024, YoY diff, YoY rate;
+    # outgoing: 2025, 2024, YoY diff, YoY rate;
+    # net:      2025, 2024, YoY diff.
+    assert len(vals) >= 11, f"{name}: expected at least 11 Table 7 values, got {vals}"
+    in_count = int(vals[0])
+    out_count = int(vals[4])
+    net_count = int(vals[8])
+    assert in_count - out_count == net_count, (
+        f"{name}: Table 7 identity failed: in={in_count}, out={out_count}, net={net_count}"
+    )
+    return in_count, out_count, net_count
 
 
 def fetch_live() -> tuple[dict[str, dict[str, float | int]], dict[str, float | int]]:
@@ -78,10 +98,8 @@ def fetch_live() -> tuple[dict[str, dict[str, float | int]], dict[str, float | i
     live: dict[str, dict[str, float | int]] = {}
     for p in master["prefectures"]:
         name = p["prefecture_name"]
-        cv = find_pref_line(count_text, name, 6)
-        # Table 7 order: 2025 in, out, net; 2024 in, out, net.
-        in_count, out_count, net_count = map(int, cv[:3])
-        assert in_count - out_count == net_count, f"{name}: count identity failed {cv[:3]}"
+        cv = find_pref_line(count_text, name, 11)
+        in_count, out_count, net_count = parse_count_row(cv, name)
 
         rv = find_pref_line(rate_text, name, 9)
         # Table 27: 2025/2024/diff for in-rate, out-rate, net-rate.
@@ -94,12 +112,13 @@ def fetch_live() -> tuple[dict[str, dict[str, float | int]], dict[str, float | i
         }
 
     assert len(live) == 47
-    national_counts = find_pref_line(count_text, "全国", 6)
+    national_counts = find_pref_line(count_text, "全国", 11)
+    in_count, out_count, net_count = parse_count_row(national_counts, "全国")
     national_rates = find_pref_line(rate_text, "全国", 9)
     national = {
-        "interpref_in_migrants": int(national_counts[0]),
-        "interpref_out_migrants": int(national_counts[1]),
-        "net_migration_2025": int(national_counts[2]),
+        "interpref_in_migrants": in_count,
+        "interpref_out_migrants": out_count,
+        "net_migration_2025": net_count,
         "net_migration_rate_2025": round(float(national_rates[6]), 2),
     }
     return live, national
