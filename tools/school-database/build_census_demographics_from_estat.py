@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build and verify 47-prefecture Census 2020 & 2015 demographics directly from
-official live e-Stat tables (PR #318 True Live Ground Truth).
+official live e-Stat tables (PR #319 Strict Live Ground Truth).
 
 Sources:
 - 2020 Census Table 2-1 (statInfId: 000032142404): Single-year ages, Total Population
@@ -35,10 +35,20 @@ def fetch_estat_table_bytes(stat_id: str) -> bytes:
 
 
 def build_census_2015_demographics_live() -> dict[str, int]:
-    """Parse 2015 Census Table 4 live from e-Stat (statInfId: 000031784239)."""
+    """Parse 2015 Census Table 4 live from e-Stat (statInfId: 000031784239) with strict column header validation."""
     data = fetch_estat_table_bytes(STAT_ID_2015_CENSUS)
+    print(f"[e-Stat Live Audit] 2015 Census Table 4 (statInfId: {STAT_ID_2015_CENSUS}) successfully downloaded live ({len(data):,} bytes)")
+
     wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True)
     sheet = wb.active
+
+    # Strict column header & national baseline validation
+    h_era = str(sheet.cell(5, 30).value or "")
+    h_yr = str(sheet.cell(6, 30).value or "")
+    assert "27" in h_era and "2015" in h_yr, f"Column 30 header mismatch: expected 2015/H27 (got era={h_era!r}, yr={h_yr!r})"
+
+    nat_2015_pop = int(sheet.cell(9, 30).value)
+    assert nat_2015_pop == 127094745, f"National 2015 total population mismatch: expected 127,094,745 (got {nat_2015_pop})"
 
     parsed_2015 = {}
     for r in range(10, 57):
@@ -50,25 +60,26 @@ def build_census_2015_demographics_live() -> dict[str, int]:
     return parsed_2015
 
 
-def build_census_demographics_from_estat(use_live: bool = True) -> dict[str, dict[str, int]]:
+def build_census_demographics_from_estat(strict_live: bool = True) -> dict[str, dict[str, int]]:
     """Parse 2020 & 2015 Census raw data for all 47 prefectures directly from e-Stat live endpoints."""
     # 1. Fetch 2015 Census confirmed total population live
     pop_2015_map = build_census_2015_demographics_live()
 
-    # 2. Fetch 2020 Census Table 2-1 live (fallback to local excel if network issue)
+    # 2. Fetch 2020 Census Table 2-1 live
     content = None
-    if use_live:
+    if strict_live:
+        content = fetch_estat_table_bytes(STAT_ID_2020_CENSUS)
+        print(f"[e-Stat Live Audit] 2020 Census Table 2-1 (statInfId: {STAT_ID_2020_CENSUS}) successfully downloaded live ({len(content):,} bytes)")
+    else:
         try:
             content = fetch_estat_table_bytes(STAT_ID_2020_CENSUS)
+            print(f"[e-Stat Live Audit] 2020 Census Table 2-1 (statInfId: {STAT_ID_2020_CENSUS}) successfully downloaded live ({len(content):,} bytes)")
         except Exception:
-            content = None
+            assert TABLE_2_1_LOCAL.exists(), f"Missing local census file {TABLE_2_1_LOCAL}"
+            content = TABLE_2_1_LOCAL.read_bytes()
+            print(f"[Fallback Local] Using local census file {TABLE_2_1_LOCAL}")
 
-    if content is not None:
-        wb = openpyxl.load_workbook(io.BytesIO(content), data_only=True)
-    else:
-        assert TABLE_2_1_LOCAL.exists(), f"Missing local census file {TABLE_2_1_LOCAL}"
-        wb = openpyxl.load_workbook(TABLE_2_1_LOCAL, data_only=True)
-
+    wb = openpyxl.load_workbook(io.BytesIO(content), data_only=True)
     sheet = wb["b02_01"]
 
     demographics = {}
@@ -96,8 +107,8 @@ def build_census_demographics_from_estat(use_live: bool = True) -> dict[str, dic
 
 
 if __name__ == "__main__":
-    data = build_census_demographics_from_estat(use_live=True)
-    print("Parsed 47 prefectures 2020 & 2015 demographics LIVE from e-Stat endpoints.")
+    data = build_census_demographics_from_estat(strict_live=True)
+    print("Parsed 47 prefectures 2020 & 2015 demographics STRICT LIVE from e-Stat endpoints.")
     print(f"Sample Tokyo (13): {data['13']}")
     print(f"Sample Hokkaido (01): {data['01']}")
     print(f"Sample Okinawa (47): {data['47']}")
