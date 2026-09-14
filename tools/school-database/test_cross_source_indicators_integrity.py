@@ -67,6 +67,26 @@ OFFICIAL_DEMOGRAPHICS_CENSUS = {
     "47": {"pop_under_15": 243246, "pop_2015": 1433566},
 }
 
+OFFICIAL_ICT_CAPABILITY_CATEGORY_A = {
+    "01": 91.2, "02": 88.4, "03": 88.6, "04": 88.7, "05": 88.0, "06": 89.7, "07": 89.6,
+    "08": 96.6, "09": 91.0, "10": 88.7, "11": 91.0, "12": 88.3, "13": 91.6, "14": 89.2,
+    "15": 91.1, "16": 91.6, "17": 93.4, "18": 91.4, "19": 91.5, "20": 91.1, "21": 91.9,
+    "22": 90.6, "23": 87.5, "24": 92.7, "25": 91.7, "26": 91.3, "27": 89.7, "28": 91.3,
+    "29": 89.8, "30": 90.5, "31": 91.8, "32": 89.0, "33": 94.0, "34": 89.9, "35": 91.0,
+    "36": 96.1, "37": 88.6, "38": 99.2, "39": 90.9, "40": 89.6, "41": 91.4, "42": 90.3,
+    "43": 93.8, "44": 91.4, "45": 90.2, "46": 89.7, "47": 92.2,
+}
+
+OFFICIAL_WAITING_CHILDREN_COUNT = {
+    "01": 34, "02": 0, "03": 5, "04": 17, "05": 5, "06": 0, "07": 5,
+    "08": 1, "09": 3, "10": 0, "11": 208, "12": 91, "13": 339, "14": 138,
+    "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 10, "21": 0,
+    "22": 0, "23": 51, "24": 84, "25": 335, "26": 15, "27": 194, "28": 199,
+    "29": 186, "30": 53, "31": 0, "32": 0, "33": 22, "34": 0, "35": 9,
+    "36": 0, "37": 1, "38": 13, "39": 10, "40": 29, "41": 8, "42": 0,
+    "43": 4, "44": 0, "45": 0, "46": 14, "47": 171,
+}
+
 
 def test_census_demographics_estat_live_ground_truth() -> None:
     """Verify live e-Stat 2020 & 2015 Census raw data matches OFFICIAL_DEMOGRAPHICS_CENSUS and analytics dataset 100% across all 47 prefectures without fallback."""
@@ -187,7 +207,33 @@ def test_cross_source_indicators_integrity() -> None:
     assert definitions["waiting_children_per_10k_preschool"]["base_date"] == "2025年4月1日／2020年10月1日時点"
 
 
+def test_external_stats_official_ground_truth() -> None:
+    """Verify ICT Teaching Capability Major Category A and Waiting Children counts match official Ground Truth 100% across all 47 prefectures."""
+    analytics = json.loads(ANALYTICS_PATH.read_text(encoding="utf-8"))
+    ext_stats = json.loads(EXT_STATS_PATH.read_text(encoding="utf-8"))
+    ext_by_code = {p["prefecture_code"]: p for p in ext_stats["prefectures"]}
+
+    assert len(ext_stats["prefectures"]) == 47, f"Expected 47 prefectures, got {len(ext_stats['prefectures'])}"
+
+    nat_waiting_sum = sum(OFFICIAL_WAITING_CHILDREN_COUNT.values())
+    assert nat_waiting_sum == 2254, f"National total waiting children sum mismatch: expected 2,254 (got {nat_waiting_sum})"
+
+    for pref in analytics["prefectures"]:
+        pref_num = pref["pref_number"]
+        code = pref["code"]
+        ext_entry = ext_by_code[code]
+
+        assert ext_entry["ict_teaching_capability"] == OFFICIAL_ICT_CAPABILITY_CATEGORY_A[pref_num], (
+            f"Prefecture {pref_num} ({code}) ICT capability mismatch: actual={ext_entry['ict_teaching_capability']} vs GT={OFFICIAL_ICT_CAPABILITY_CATEGORY_A[pref_num]}"
+        )
+        assert ext_entry["waiting_children_count"] == OFFICIAL_WAITING_CHILDREN_COUNT[pref_num], (
+            f"Prefecture {pref_num} ({code}) waiting children count mismatch: actual={ext_entry['waiting_children_count']} vs GT={OFFICIAL_WAITING_CHILDREN_COUNT[pref_num]}"
+        )
+
+
 if __name__ == "__main__":
     test_census_demographics_estat_live_ground_truth()
     test_cross_source_indicators_integrity()
+    test_external_stats_official_ground_truth()
     print("ALL CROSS-SOURCE INDICATOR INTEGRITY & CENSUS LIVE GROUND TRUTH TESTS PASSED SUCCESSFULLY!")
+
