@@ -63,8 +63,8 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert okinawa['aging_rate'] == 22.5, f"沖縄県高齢化率（期待値: 22.5%, 実際: {okinawa['aging_rate']}%）"
     assert okinawa['ranks']['aging_rate'] == 47, f"沖縄県高齢化率順位（期待値: 47位, 実際: {okinawa['ranks']['aging_rate']}位）"
 
-    # 8. 24 Refined Indicators Dataset & MEXT 2025 Ground Truth Validation
-    assert len(dataset['indicators_definition']) == 24, f"指標数が24件であること（実際: {len(dataset['indicators_definition'])}）"
+    # 8. 28 Refined Indicators Dataset & MEXT 2025 Ground Truth Validation
+    assert len(dataset['indicators_definition']) == 28, f"指標数が28件であること（実際: {len(dataset['indicators_definition'])}）"
     assert nat['child_under_15_ratio'] == 11.9, f"全国15歳未満人口割合（期待値: 11.9%, 実際: {nat['child_under_15_ratio']}%）"
     assert nat['pop_change_rate'] == -0.7, f"全国5年人口増減率（期待値: -0.7%, 実際: {nat['pop_change_rate']}%）"
     assert okinawa['child_under_15_ratio'] == 16.6, f"沖縄県15歳未満人口割合（期待値: 16.6%, 実際: {okinawa['child_under_15_ratio']}%）"
