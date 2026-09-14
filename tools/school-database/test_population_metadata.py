@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Validate the 47-prefecture population metadata and its integration into
-the prefecture card metadata / renderer (Phase B, decision C: 2020 Census
-Table 2-1, Japanese population, same definition for all 47 prefectures)."""
+the prefecture card metadata / renderer (Total Population 2020 Census)."""
 
 from __future__ import annotations
 
@@ -17,6 +16,7 @@ POPULATION_JSON = ROOT / "data" / "school-database" / "prefecture-population.jso
 PILOT_JSON = ROOT / "data" / "school-database" / "prefecture-population-pilot.json"
 CARD_METADATA_JSON = ROOT / "data" / "school-database" / "prefecture-card-metadata.json"
 INDEX_HTML = ROOT / "tools" / "school-database" / "index.html"
+SCHOOL_DB_DIR = ROOT / "tools" / "school-database"
 
 EXPECTED_GROUP_KEYS = [
     "census_preschool_3_5",
@@ -31,6 +31,14 @@ PROHIBITED_PLACEHOLDER_TEXT = (
     "順次拡張予定",
     "順次追加予定",
     "全国都道府県の学校データベースを順次追加予定です。",
+)
+
+PROHIBITED_OBSOLETE_POPULATION_TEXT = (
+    "人口（日本国籍）",
+    "日本国籍の住民が対象",
+    "外国籍の住民は含みません",
+    "日本人人口",
+    "日本国籍住民に占める割合",
 )
 
 
@@ -100,6 +108,11 @@ def test_prefecture_population_json() -> None:
         assert p["definition_note"], f"{p['prefecture_name']}: definition_note が空です"
         assert p["source_url"].startswith("https://"), f"{p['prefecture_name']}: source_url が不正です"
 
+    # Check absence of obsolete Japanese-only phrases
+    pop_raw_text = POPULATION_JSON.read_text(encoding="utf-8")
+    for prohibited in PROHIBITED_OBSOLETE_POPULATION_TEXT:
+        assert prohibited not in pop_raw_text, f"Obsolete phrase '{prohibited}' found in {POPULATION_JSON}"
+
 
 def test_card_metadata_population_integration() -> None:
     payload = json.loads(CARD_METADATA_JSON.read_text(encoding="utf-8"))
@@ -123,12 +136,24 @@ def test_card_metadata_population_integration() -> None:
         assert pop["census_population"] == source_ref["census_population"]
         assert pop["census_age_3_17"] == source_ref["census_age_3_17"]
 
+        # Card metadata percentage recalculation check (1 decimal place)
+        expected_card_share = round((pop["census_age_3_17"] / pop["census_population"]) * 100, 1)
+        assert pop["share_of_census_population_percent"] == expected_card_share, (
+            f"{prefecture['prefecture_name']}: カードメタデータの3〜17歳割合 {pop['share_of_census_population_percent']}% != 期待値 {expected_card_share}%"
+        )
+
         group_keys = [g["key"] for g in pop["age_groups"]]
         assert group_keys == EXPECTED_GROUP_KEYS
         group_sum = sum(g["population"] for g in pop["age_groups"])
         assert group_sum == pop["census_age_3_17"], (
             f"{prefecture['prefecture_name']}: カードメタデータの4区分合計が3〜17歳人口と一致しません"
         )
+
+        for group in pop["age_groups"]:
+            expected_group_share = round((group["population"] / pop["census_population"]) * 100, 1)
+            assert group["share_of_census_population_percent"] == expected_group_share, (
+                f"{prefecture['prefecture_name']}/{group['key']}: カードメタデータ区分割合 {group['share_of_census_population_percent']}% != 期待値 {expected_group_share}%"
+            )
 
         assert pop["source"]["table_id"] == source_ref["source_table_id"]
         assert pop["notes"], f"{prefecture['prefecture_name']}: notes が空です"
@@ -143,6 +168,11 @@ def test_card_metadata_population_integration() -> None:
             assert group["label"] in ("幼児期", "小学校期", "中学校期", "高校期"), (
                 f"{prefecture['prefecture_name']}: 想定外の年齢区分ラベル {group['label']!r}"
             )
+
+    # Check absence of obsolete Japanese-only phrases in card metadata
+    card_raw_text = CARD_METADATA_JSON.read_text(encoding="utf-8")
+    for prohibited in PROHIBITED_OBSOLETE_POPULATION_TEXT:
+        assert prohibited not in card_raw_text, f"Obsolete phrase '{prohibited}' found in {CARD_METADATA_JSON}"
 
     # 東京都だけ別のキー・定義になっていないことを明示的に確認する。
     tokyo = next(p for p in prefectures if p["prefecture_code"] == "tokyo")
@@ -176,6 +206,13 @@ def test_portal_html() -> None:
         assert prohibited not in html
     assert "<button disabled" not in html
     assert "population-pilot-card" not in html
+
+    # Assert absence of obsolete population phrases in generated 47 prefecture HTML pages
+    for pref_dir in SCHOOL_DB_DIR.iterdir():
+        if pref_dir.is_dir() and (pref_dir / "index.html").exists():
+            pref_html = (pref_dir / "index.html").read_text(encoding="utf-8")
+            for prohibited in PROHIBITED_OBSOLETE_POPULATION_TEXT:
+                assert prohibited not in pref_html, f"Obsolete phrase '{prohibited}' found in {pref_dir / 'index.html'}"
 
 
 if __name__ == "__main__":

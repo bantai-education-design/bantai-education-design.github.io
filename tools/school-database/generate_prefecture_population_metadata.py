@@ -91,9 +91,9 @@ SOURCE_TABLE_ID = "000032142404"
 REFERENCE_DATE = "2020-10-01"
 REFERENCE_DATE_LABEL = "統計基準日"
 REFERENCE_DATE_DISPLAY = "2020年10月1日現在"
-POPULATION_SCOPE = "census_japanese_population"
+POPULATION_SCOPE = "census_total_population"
 DEFINITION_NOTE = (
-    "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。"
+    "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。"
     "現在の人口ではない。年齢「不詳」の者は含まない。"
 )
 
@@ -126,7 +126,7 @@ def extract_prefecture_rows(ws) -> list[dict[str, object]]:
         region_code = ws.cell(row=r, column=3).value
         region_name_cell = ws.cell(row=r, column=4).value
 
-        if nationality != "1_うち日本人" or sex != "0_総数" or region_code != "a":
+        if nationality != "0_国籍総数" or sex != "0_総数" or region_code != "a":
             continue
 
         match = REGION_NAME_ROW.match(region_name_cell or "")

@@ -6,7 +6,7 @@
   "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
   "source_table_id": "000032142404",
   "accessed_at": "2026-08-01",
-  "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。",
+  "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。",
   "prefectures": [
     {
       "prefecture_code": "tokyo",
@@ -75,7 +75,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kanagawa",
@@ -144,7 +144,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "saitama",
@@ -213,7 +213,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "chiba",
@@ -282,7 +282,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "ibaraki",
@@ -351,7 +351,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "tochigi",
@@ -420,7 +420,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "gunma",
@@ -489,7 +489,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "hokkaido",
@@ -558,7 +558,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "miyagi",
@@ -627,7 +627,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "aomori",
@@ -696,7 +696,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "iwate",
@@ -765,7 +765,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "akita",
@@ -834,7 +834,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "yamagata",
@@ -903,7 +903,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "fukushima",
@@ -972,7 +972,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "aichi",
@@ -1041,7 +1041,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "niigata",
@@ -1110,7 +1110,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "toyama",
@@ -1179,7 +1179,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "ishikawa",
@@ -1248,7 +1248,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "fukui",
@@ -1317,7 +1317,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "yamanashi",
@@ -1386,7 +1386,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "nagano",
@@ -1455,7 +1455,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "gifu",
@@ -1524,7 +1524,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "shizuoka",
@@ -1593,7 +1593,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "osaka",
@@ -1662,7 +1662,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "mie",
@@ -1731,7 +1731,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "shiga",
@@ -1800,7 +1800,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kyoto",
@@ -1869,7 +1869,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "hyogo",
@@ -1938,7 +1938,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "nara",
@@ -2007,7 +2007,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "wakayama",
@@ -2076,7 +2076,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "hiroshima",
@@ -2145,7 +2145,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "tottori",
@@ -2214,7 +2214,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "shimane",
@@ -2283,7 +2283,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "okayama",
@@ -2352,7 +2352,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "yamaguchi",
@@ -2421,7 +2421,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kagawa",
@@ -2490,7 +2490,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "tokushima",
@@ -2559,7 +2559,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "ehime",
@@ -2628,7 +2628,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kochi",
@@ -2697,7 +2697,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "fukuoka",
@@ -2766,7 +2766,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "saga",
@@ -2835,7 +2835,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "nagasaki",
@@ -2904,7 +2904,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kumamoto",
@@ -2973,7 +2973,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "oita",
@@ -3042,7 +3042,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "miyazaki",
@@ -3111,7 +3111,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "kagoshima",
@@ -3180,7 +3180,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     },
     {
       "prefecture_code": "okinawa",
@@ -3249,9 +3249,7 @@
       "reference_date_label": "統計基準日",
       "reference_date_display": "2020年10月1日現在",
       "accessed_at": "2026-08-01",
-      "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
+      "definition_note": "2020年10月1日現在の令和2年国勢調査による総人口（年齢各歳、外国人を含む）。現在の人口ではない。年齢「不詳」の者は含まない。"
     }
-  ],
-  "population_scope_label": "人口（総数・国勢調査確定値）",
-  "description": "令和2年国勢調査 表2-1に基づく都道府県別年齢別人口（外国人を含む総人口確定値）。"
+  ]
 }
