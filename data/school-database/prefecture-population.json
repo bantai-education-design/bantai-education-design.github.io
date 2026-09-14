@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-08-01",
-  "population_scope": "census_japanese_population",
+  "population_scope": "census_total_population",
   "reference_date": "2020-10-01",
   "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
   "source_url": "https://www.e-stat.go.jp/stat-search/files?cycle=0&tclass=000001125102",
@@ -13,11 +13,11 @@
       "prefecture_name": "東京都",
       "census_prefecture_code": "13000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 13233213,
-      "census_age_3_17": 1518414,
-      "share_of_census_population_percent": 11.474266,
+      "census_population": 14047594,
+      "census_age_3_17": 1560515,
+      "share_of_census_population_percent": 11.108771,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -28,8 +28,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 314040,
-          "share_of_census_population_percent": 2.37312
+          "population": 324701,
+          "share_of_census_population_percent": 2.311435
         },
         {
           "key": "census_elementary_6_11",
@@ -40,8 +40,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 613198,
-          "share_of_census_population_percent": 4.63378
+          "population": 631349,
+          "share_of_census_population_percent": 4.494357
         },
         {
           "key": "census_junior_high_12_14",
@@ -52,8 +52,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 297590,
-          "share_of_census_population_percent": 2.248811
+          "population": 304688,
+          "share_of_census_population_percent": 2.168969
         },
         {
           "key": "census_high_school_15_17",
@@ -64,8 +64,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 293586,
-          "share_of_census_population_percent": 2.218554
+          "population": 299777,
+          "share_of_census_population_percent": 2.13401
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -82,11 +82,11 @@
       "prefecture_name": "神奈川県",
       "census_prefecture_code": "14000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 8876834,
-      "census_age_3_17": 1107759,
-      "share_of_census_population_percent": 12.479213,
+      "census_population": 9237337,
+      "census_age_3_17": 1128056,
+      "share_of_census_population_percent": 12.211918,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -97,8 +97,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 206779,
-          "share_of_census_population_percent": 2.329423
+          "population": 212085,
+          "share_of_census_population_percent": 2.295954
         },
         {
           "key": "census_elementary_6_11",
@@ -109,8 +109,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 440796,
-          "share_of_census_population_percent": 4.965689
+          "population": 449345,
+          "share_of_census_population_percent": 4.864443
         },
         {
           "key": "census_junior_high_12_14",
@@ -121,8 +121,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 228780,
-          "share_of_census_population_percent": 2.57727
+          "population": 232179,
+          "share_of_census_population_percent": 2.513484
         },
         {
           "key": "census_high_school_15_17",
@@ -133,8 +133,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 231404,
-          "share_of_census_population_percent": 2.60683
+          "population": 234447,
+          "share_of_census_population_percent": 2.538037
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -151,11 +151,11 @@
       "prefecture_name": "埼玉県",
       "census_prefecture_code": "11000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 7055679,
-      "census_age_3_17": 879968,
-      "share_of_census_population_percent": 12.471769,
+      "census_population": 7344765,
+      "census_age_3_17": 897126,
+      "share_of_census_population_percent": 12.214496,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -166,8 +166,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 162609,
-          "share_of_census_population_percent": 2.304654
+          "population": 167305,
+          "share_of_census_population_percent": 2.277881
         },
         {
           "key": "census_elementary_6_11",
@@ -178,8 +178,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 348531,
-          "share_of_census_population_percent": 4.939723
+          "population": 355955,
+          "share_of_census_population_percent": 4.846377
         },
         {
           "key": "census_junior_high_12_14",
@@ -190,8 +190,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 183044,
-          "share_of_census_population_percent": 2.594279
+          "population": 185755,
+          "share_of_census_population_percent": 2.52908
         },
         {
           "key": "census_high_school_15_17",
@@ -202,8 +202,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 185784,
-          "share_of_census_population_percent": 2.633113
+          "population": 188111,
+          "share_of_census_population_percent": 2.561158
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -220,11 +220,11 @@
       "prefecture_name": "千葉県",
       "census_prefecture_code": "12000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 6040814,
-      "census_age_3_17": 755470,
-      "share_of_census_population_percent": 12.506096,
+      "census_population": 6284480,
+      "census_age_3_17": 769272,
+      "share_of_census_population_percent": 12.240822,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -235,8 +235,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 138833,
-          "share_of_census_population_percent": 2.29825
+          "population": 142504,
+          "share_of_census_population_percent": 2.267554
         },
         {
           "key": "census_elementary_6_11",
@@ -247,8 +247,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 298837,
-          "share_of_census_population_percent": 4.946966
+          "population": 304661,
+          "share_of_census_population_percent": 4.847831
         },
         {
           "key": "census_junior_high_12_14",
@@ -259,8 +259,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 157362,
-          "share_of_census_population_percent": 2.60498
+          "population": 159634,
+          "share_of_census_population_percent": 2.540131
         },
         {
           "key": "census_high_school_15_17",
@@ -271,8 +271,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 160438,
-          "share_of_census_population_percent": 2.6559
+          "population": 162473,
+          "share_of_census_population_percent": 2.585305
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -289,11 +289,11 @@
       "prefecture_name": "茨城県",
       "census_prefecture_code": "08000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 2763432,
-      "census_age_3_17": 352352,
-      "share_of_census_population_percent": 12.750522,
+      "census_population": 2867009,
+      "census_age_3_17": 357635,
+      "share_of_census_population_percent": 12.47415,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -304,8 +304,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 62271,
-          "share_of_census_population_percent": 2.253394
+          "population": 63473,
+          "share_of_census_population_percent": 2.21391
         },
         {
           "key": "census_elementary_6_11",
@@ -316,8 +316,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 138142,
-          "share_of_census_population_percent": 4.998929
+          "population": 140254,
+          "share_of_census_population_percent": 4.891997
         },
         {
           "key": "census_junior_high_12_14",
@@ -328,8 +328,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 74226,
-          "share_of_census_population_percent": 2.686008
+          "population": 75246,
+          "share_of_census_population_percent": 2.624547
         },
         {
           "key": "census_high_school_15_17",
@@ -340,8 +340,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 77713,
-          "share_of_census_population_percent": 2.812192
+          "population": 78662,
+          "share_of_census_population_percent": 2.743696
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -358,11 +358,11 @@
       "prefecture_name": "栃木県",
       "census_prefecture_code": "09000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1869256,
-      "census_age_3_17": 240037,
-      "share_of_census_population_percent": 12.841312,
+      "census_population": 1933146,
+      "census_age_3_17": 243450,
+      "share_of_census_population_percent": 12.593462,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -373,8 +373,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 43100,
-          "share_of_census_population_percent": 2.30573
+          "population": 43877,
+          "share_of_census_population_percent": 2.26972
         },
         {
           "key": "census_elementary_6_11",
@@ -385,8 +385,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 93529,
-          "share_of_census_population_percent": 5.003542
+          "population": 94931,
+          "share_of_census_population_percent": 4.9107
         },
         {
           "key": "census_junior_high_12_14",
@@ -397,8 +397,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 50634,
-          "share_of_census_population_percent": 2.708778
+          "population": 51260,
+          "share_of_census_population_percent": 2.651636
         },
         {
           "key": "census_high_school_15_17",
@@ -409,8 +409,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 52774,
-          "share_of_census_population_percent": 2.823262
+          "population": 53382,
+          "share_of_census_population_percent": 2.761406
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -427,11 +427,11 @@
       "prefecture_name": "群馬県",
       "census_prefecture_code": "10000",
       "region_code": "kanto",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1860213,
-      "census_age_3_17": 235174,
-      "share_of_census_population_percent": 12.642316,
+      "census_population": 1939110,
+      "census_age_3_17": 241388,
+      "share_of_census_population_percent": 12.448391,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -442,8 +442,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 40551,
-          "share_of_census_population_percent": 2.179912
+          "population": 41933,
+          "share_of_census_population_percent": 2.162487
         },
         {
           "key": "census_elementary_6_11",
@@ -454,8 +454,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 91322,
-          "share_of_census_population_percent": 4.909223
+          "population": 93911,
+          "share_of_census_population_percent": 4.842995
         },
         {
           "key": "census_junior_high_12_14",
@@ -466,8 +466,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 50229,
-          "share_of_census_population_percent": 2.700175
+          "population": 51378,
+          "share_of_census_population_percent": 2.649566
         },
         {
           "key": "census_high_school_15_17",
@@ -478,8 +478,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 53072,
-          "share_of_census_population_percent": 2.853007
+          "population": 54166,
+          "share_of_census_population_percent": 2.793343
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -496,11 +496,11 @@
       "prefecture_name": "北海道",
       "census_prefecture_code": "01000",
       "region_code": "hokkaido",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 5151366,
-      "census_age_3_17": 591690,
-      "share_of_census_population_percent": 11.48608,
+      "census_population": 5224614,
+      "census_age_3_17": 593196,
+      "share_of_census_population_percent": 11.353872,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -511,8 +511,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 105208,
-          "share_of_census_population_percent": 2.042332
+          "population": 105596,
+          "share_of_census_population_percent": 2.021125
         },
         {
           "key": "census_elementary_6_11",
@@ -523,8 +523,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 232550,
-          "share_of_census_population_percent": 4.514337
+          "population": 233172,
+          "share_of_census_population_percent": 4.462952
         },
         {
           "key": "census_junior_high_12_14",
@@ -535,8 +535,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 123496,
-          "share_of_census_population_percent": 2.397345
+          "population": 123763,
+          "share_of_census_population_percent": 2.368845
         },
         {
           "key": "census_high_school_15_17",
@@ -547,8 +547,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 130436,
-          "share_of_census_population_percent": 2.532066
+          "population": 130665,
+          "share_of_census_population_percent": 2.50095
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -565,11 +565,11 @@
       "prefecture_name": "宮城県",
       "census_prefecture_code": "04000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 2242701,
-      "census_age_3_17": 283495,
-      "share_of_census_population_percent": 12.640784,
+      "census_population": 2301996,
+      "census_age_3_17": 284694,
+      "share_of_census_population_percent": 12.367267,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -580,8 +580,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 51651,
-          "share_of_census_population_percent": 2.303071
+          "population": 51945,
+          "share_of_census_population_percent": 2.25652
         },
         {
           "key": "census_elementary_6_11",
@@ -592,8 +592,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 111855,
-          "share_of_census_population_percent": 4.987513
+          "population": 112283,
+          "share_of_census_population_percent": 4.877637
         },
         {
           "key": "census_junior_high_12_14",
@@ -604,8 +604,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 58788,
-          "share_of_census_population_percent": 2.621304
+          "population": 58958,
+          "share_of_census_population_percent": 2.561169
         },
         {
           "key": "census_high_school_15_17",
@@ -616,8 +616,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 61201,
-          "share_of_census_population_percent": 2.728897
+          "population": 61508,
+          "share_of_census_population_percent": 2.671942
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -634,11 +634,11 @@
       "prefecture_name": "青森県",
       "census_prefecture_code": "02000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1224334,
-      "census_age_3_17": 140171,
-      "share_of_census_population_percent": 11.448755,
+      "census_population": 1237984,
+      "census_age_3_17": 140489,
+      "share_of_census_population_percent": 11.348208,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -649,8 +649,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 24324,
-          "share_of_census_population_percent": 1.986713
+          "population": 24385,
+          "share_of_census_population_percent": 1.969735
         },
         {
           "key": "census_elementary_6_11",
@@ -661,8 +661,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 53796,
-          "share_of_census_population_percent": 4.393899
+          "population": 53907,
+          "share_of_census_population_percent": 4.354418
         },
         {
           "key": "census_junior_high_12_14",
@@ -673,8 +673,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 29590,
-          "share_of_census_population_percent": 2.416824
+          "population": 29653,
+          "share_of_census_population_percent": 2.395265
         },
         {
           "key": "census_high_school_15_17",
@@ -685,8 +685,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 32461,
-          "share_of_census_population_percent": 2.651319
+          "population": 32544,
+          "share_of_census_population_percent": 2.62879
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -703,11 +703,11 @@
       "prefecture_name": "岩手県",
       "census_prefecture_code": "03000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1194745,
-      "census_age_3_17": 143840,
-      "share_of_census_population_percent": 12.039389,
+      "census_population": 1210534,
+      "census_age_3_17": 144057,
+      "share_of_census_population_percent": 11.900285,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -718,8 +718,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 24913,
-          "share_of_census_population_percent": 2.085215
+          "population": 24959,
+          "share_of_census_population_percent": 2.061817
         },
         {
           "key": "census_elementary_6_11",
@@ -730,8 +730,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 55899,
-          "share_of_census_population_percent": 4.678739
+          "population": 55985,
+          "share_of_census_population_percent": 4.624818
         },
         {
           "key": "census_junior_high_12_14",
@@ -742,8 +742,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 30385,
-          "share_of_census_population_percent": 2.543221
+          "population": 30431,
+          "share_of_census_population_percent": 2.513849
         },
         {
           "key": "census_high_school_15_17",
@@ -754,8 +754,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 32643,
-          "share_of_census_population_percent": 2.732215
+          "population": 32682,
+          "share_of_census_population_percent": 2.6998
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -772,11 +772,11 @@
       "prefecture_name": "秋田県",
       "census_prefecture_code": "05000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 950192,
-      "census_age_3_17": 101826,
-      "share_of_census_population_percent": 10.71636,
+      "census_population": 959502,
+      "census_age_3_17": 101961,
+      "share_of_census_population_percent": 10.62645,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -787,8 +787,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 16947,
-          "share_of_census_population_percent": 1.783534
+          "population": 16985,
+          "share_of_census_population_percent": 1.770189
         },
         {
           "key": "census_elementary_6_11",
@@ -799,8 +799,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 39275,
-          "share_of_census_population_percent": 4.133375
+          "population": 39330,
+          "share_of_census_population_percent": 4.099001
         },
         {
           "key": "census_junior_high_12_14",
@@ -811,8 +811,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 22186,
-          "share_of_census_population_percent": 2.334897
+          "population": 22205,
+          "share_of_census_population_percent": 2.314221
         },
         {
           "key": "census_high_school_15_17",
@@ -823,8 +823,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 23418,
-          "share_of_census_population_percent": 2.464555
+          "population": 23441,
+          "share_of_census_population_percent": 2.443038
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -841,11 +841,11 @@
       "prefecture_name": "山形県",
       "census_prefecture_code": "06000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1056617,
-      "census_age_3_17": 129377,
-      "share_of_census_population_percent": 12.244456,
+      "census_population": 1068027,
+      "census_age_3_17": 129618,
+      "share_of_census_population_percent": 12.13621,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -856,8 +856,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 22491,
-          "share_of_census_population_percent": 2.128586
+          "population": 22541,
+          "share_of_census_population_percent": 2.110527
         },
         {
           "key": "census_elementary_6_11",
@@ -868,8 +868,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 50289,
-          "share_of_census_population_percent": 4.759435
+          "population": 50375,
+          "share_of_census_population_percent": 4.716641
         },
         {
           "key": "census_junior_high_12_14",
@@ -880,8 +880,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 27576,
-          "share_of_census_population_percent": 2.609839
+          "population": 27627,
+          "share_of_census_population_percent": 2.586732
         },
         {
           "key": "census_high_school_15_17",
@@ -892,8 +892,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 29021,
-          "share_of_census_population_percent": 2.746596
+          "population": 29075,
+          "share_of_census_population_percent": 2.722309
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -910,11 +910,11 @@
       "prefecture_name": "福島県",
       "census_prefecture_code": "07000",
       "region_code": "tohoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1797450,
-      "census_age_3_17": 221388,
-      "share_of_census_population_percent": 12.316782,
+      "census_population": 1833152,
+      "census_age_3_17": 222132,
+      "share_of_census_population_percent": 12.117489,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -925,8 +925,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 39835,
-          "share_of_census_population_percent": 2.216195
+          "population": 39986,
+          "share_of_census_population_percent": 2.18127
         },
         {
           "key": "census_elementary_6_11",
@@ -937,8 +937,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 84936,
-          "share_of_census_population_percent": 4.725361
+          "population": 85238,
+          "share_of_census_population_percent": 4.649805
         },
         {
           "key": "census_junior_high_12_14",
@@ -949,8 +949,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 46390,
-          "share_of_census_population_percent": 2.580878
+          "population": 46539,
+          "share_of_census_population_percent": 2.538742
         },
         {
           "key": "census_high_school_15_17",
@@ -961,8 +961,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 50227,
-          "share_of_census_population_percent": 2.794348
+          "population": 50369,
+          "share_of_census_population_percent": 2.747672
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -979,11 +979,11 @@
       "prefecture_name": "愛知県",
       "census_prefecture_code": "23000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 7164758,
-      "census_age_3_17": 978422,
-      "share_of_census_population_percent": 13.656037,
+      "census_population": 7542415,
+      "census_age_3_17": 1006183,
+      "share_of_census_population_percent": 13.340329,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -994,8 +994,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 184415,
-          "share_of_census_population_percent": 2.573918
+          "population": 190657,
+          "share_of_census_population_percent": 2.527798
         },
         {
           "key": "census_elementary_6_11",
@@ -1006,8 +1006,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 391101,
-          "share_of_census_population_percent": 5.458677
+          "population": 402484,
+          "share_of_census_population_percent": 5.336275
         },
         {
           "key": "census_junior_high_12_14",
@@ -1018,8 +1018,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 200935,
-          "share_of_census_population_percent": 2.804491
+          "population": 206182,
+          "share_of_census_population_percent": 2.733634
         },
         {
           "key": "census_high_school_15_17",
@@ -1030,8 +1030,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 201971,
-          "share_of_census_population_percent": 2.818951
+          "population": 206860,
+          "share_of_census_population_percent": 2.742623
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1048,11 +1048,11 @@
       "prefecture_name": "新潟県",
       "census_prefecture_code": "15000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 2168416,
-      "census_age_3_17": 264030,
-      "share_of_census_population_percent": 12.176169,
+      "census_population": 2201272,
+      "census_age_3_17": 264940,
+      "share_of_census_population_percent": 12.035768,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1063,8 +1063,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 46525,
-          "share_of_census_population_percent": 2.145575
+          "population": 46715,
+          "share_of_census_population_percent": 2.122182
         },
         {
           "key": "census_elementary_6_11",
@@ -1075,8 +1075,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 104205,
-          "share_of_census_population_percent": 4.805582
+          "population": 104576,
+          "share_of_census_population_percent": 4.750708
         },
         {
           "key": "census_junior_high_12_14",
@@ -1087,8 +1087,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 55535,
-          "share_of_census_population_percent": 2.561086
+          "population": 55711,
+          "share_of_census_population_percent": 2.530855
         },
         {
           "key": "census_high_school_15_17",
@@ -1099,8 +1099,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 57765,
-          "share_of_census_population_percent": 2.663926
+          "population": 57938,
+          "share_of_census_population_percent": 2.632024
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1117,11 +1117,11 @@
       "prefecture_name": "富山県",
       "census_prefecture_code": "16000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1009388,
-      "census_age_3_17": 122313,
-      "share_of_census_population_percent": 12.117541,
+      "census_population": 1034814,
+      "census_age_3_17": 123653,
+      "share_of_census_population_percent": 11.949297,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1132,8 +1132,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 21504,
-          "share_of_census_population_percent": 2.1304
+          "population": 21827,
+          "share_of_census_population_percent": 2.109268
         },
         {
           "key": "census_elementary_6_11",
@@ -1144,8 +1144,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 47124,
-          "share_of_census_population_percent": 4.668571
+          "population": 47680,
+          "share_of_census_population_percent": 4.607591
         },
         {
           "key": "census_junior_high_12_14",
@@ -1156,8 +1156,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 25974,
-          "share_of_census_population_percent": 2.573242
+          "population": 26194,
+          "share_of_census_population_percent": 2.531276
         },
         {
           "key": "census_high_school_15_17",
@@ -1168,8 +1168,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 27711,
-          "share_of_census_population_percent": 2.745327
+          "population": 27952,
+          "share_of_census_population_percent": 2.701162
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1186,11 +1186,11 @@
       "prefecture_name": "石川県",
       "census_prefecture_code": "17000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1102692,
-      "census_age_3_17": 144364,
-      "share_of_census_population_percent": 13.09196,
+      "census_population": 1132526,
+      "census_age_3_17": 145235,
+      "share_of_census_population_percent": 12.823988,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1201,8 +1201,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 26373,
-          "share_of_census_population_percent": 2.391692
+          "population": 26567,
+          "share_of_census_population_percent": 2.345818
         },
         {
           "key": "census_elementary_6_11",
@@ -1213,8 +1213,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 56298,
-          "share_of_census_population_percent": 5.105505
+          "population": 56660,
+          "share_of_census_population_percent": 5.002976
         },
         {
           "key": "census_junior_high_12_14",
@@ -1225,8 +1225,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 30205,
-          "share_of_census_population_percent": 2.739206
+          "population": 30347,
+          "share_of_census_population_percent": 2.679585
         },
         {
           "key": "census_high_school_15_17",
@@ -1237,8 +1237,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 31488,
-          "share_of_census_population_percent": 2.855557
+          "population": 31661,
+          "share_of_census_population_percent": 2.795609
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1255,11 +1255,11 @@
       "prefecture_name": "福井県",
       "census_prefecture_code": "18000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 746068,
-      "census_age_3_17": 100865,
-      "share_of_census_population_percent": 13.519545,
+      "census_population": 766863,
+      "census_age_3_17": 101676,
+      "share_of_census_population_percent": 13.258692,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1270,8 +1270,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 17885,
-          "share_of_census_population_percent": 2.397235
+          "population": 18054,
+          "share_of_census_population_percent": 2.354267
         },
         {
           "key": "census_elementary_6_11",
@@ -1282,8 +1282,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 39493,
-          "share_of_census_population_percent": 5.293485
+          "population": 39807,
+          "share_of_census_population_percent": 5.190888
         },
         {
           "key": "census_junior_high_12_14",
@@ -1294,8 +1294,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 21268,
-          "share_of_census_population_percent": 2.850678
+          "population": 21421,
+          "share_of_census_population_percent": 2.793328
         },
         {
           "key": "census_high_school_15_17",
@@ -1306,8 +1306,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 22219,
-          "share_of_census_population_percent": 2.978147
+          "population": 22394,
+          "share_of_census_population_percent": 2.920209
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1324,11 +1324,11 @@
       "prefecture_name": "山梨県",
       "census_prefecture_code": "19000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 786673,
-      "census_age_3_17": 97389,
-      "share_of_census_population_percent": 12.379858,
+      "census_population": 809974,
+      "census_age_3_17": 98793,
+      "share_of_census_population_percent": 12.197058,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1339,8 +1339,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 17082,
-          "share_of_census_population_percent": 2.171423
+          "population": 17374,
+          "share_of_census_population_percent": 2.145007
         },
         {
           "key": "census_elementary_6_11",
@@ -1351,8 +1351,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 37452,
-          "share_of_census_population_percent": 4.760809
+          "population": 38005,
+          "share_of_census_population_percent": 4.692126
         },
         {
           "key": "census_junior_high_12_14",
@@ -1363,8 +1363,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 20376,
-          "share_of_census_population_percent": 2.590149
+          "population": 20663,
+          "share_of_census_population_percent": 2.55107
         },
         {
           "key": "census_high_school_15_17",
@@ -1375,8 +1375,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 22479,
-          "share_of_census_population_percent": 2.857477
+          "population": 22751,
+          "share_of_census_population_percent": 2.808856
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1393,11 +1393,11 @@
       "prefecture_name": "長野県",
       "census_prefecture_code": "20000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1997083,
-      "census_age_3_17": 257833,
-      "share_of_census_population_percent": 12.91048,
+      "census_population": 2048011,
+      "census_age_3_17": 260602,
+      "share_of_census_population_percent": 12.724639,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1408,8 +1408,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 45147,
-          "share_of_census_population_percent": 2.260647
+          "population": 45604,
+          "share_of_census_population_percent": 2.226746
         },
         {
           "key": "census_elementary_6_11",
@@ -1420,8 +1420,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 100471,
-          "share_of_census_population_percent": 5.030888
+          "population": 101556,
+          "share_of_census_population_percent": 4.958762
         },
         {
           "key": "census_junior_high_12_14",
@@ -1432,8 +1432,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 54872,
-          "share_of_census_population_percent": 2.747607
+          "population": 55468,
+          "share_of_census_population_percent": 2.708384
         },
         {
           "key": "census_high_school_15_17",
@@ -1444,8 +1444,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 57343,
-          "share_of_census_population_percent": 2.871338
+          "population": 57974,
+          "share_of_census_population_percent": 2.830747
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1462,11 +1462,11 @@
       "prefecture_name": "岐阜県",
       "census_prefecture_code": "21000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1900727,
-      "census_age_3_17": 252893,
-      "share_of_census_population_percent": 13.305067,
+      "census_population": 1978742,
+      "census_age_3_17": 258666,
+      "share_of_census_population_percent": 13.072245,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1477,8 +1477,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 43919,
-          "share_of_census_population_percent": 2.310642
+          "population": 45081,
+          "share_of_census_population_percent": 2.278266
         },
         {
           "key": "census_elementary_6_11",
@@ -1489,8 +1489,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 99415,
-          "share_of_census_population_percent": 5.230367
+          "population": 101804,
+          "share_of_census_population_percent": 5.144885
         },
         {
           "key": "census_junior_high_12_14",
@@ -1501,8 +1501,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 53461,
-          "share_of_census_population_percent": 2.812661
+          "population": 54607,
+          "share_of_census_population_percent": 2.759683
         },
         {
           "key": "census_high_school_15_17",
@@ -1513,8 +1513,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 56098,
-          "share_of_census_population_percent": 2.951397
+          "population": 57174,
+          "share_of_census_population_percent": 2.889412
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1531,11 +1531,11 @@
       "prefecture_name": "静岡県",
       "census_prefecture_code": "22000",
       "region_code": "chubu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 3523817,
-      "census_age_3_17": 456912,
-      "share_of_census_population_percent": 12.966394,
+      "census_population": 3633202,
+      "census_age_3_17": 467313,
+      "share_of_census_population_percent": 12.862291,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1546,8 +1546,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 81088,
-          "share_of_census_population_percent": 2.301141
+          "population": 83204,
+          "share_of_census_population_percent": 2.290101
         },
         {
           "key": "census_elementary_6_11",
@@ -1558,8 +1558,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 180766,
-          "share_of_census_population_percent": 5.129835
+          "population": 185058,
+          "share_of_census_population_percent": 5.093524
         },
         {
           "key": "census_junior_high_12_14",
@@ -1570,8 +1570,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 96174,
-          "share_of_census_population_percent": 2.729256
+          "population": 98213,
+          "share_of_census_population_percent": 2.703208
         },
         {
           "key": "census_high_school_15_17",
@@ -1582,8 +1582,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 98884,
-          "share_of_census_population_percent": 2.806162
+          "population": 100838,
+          "share_of_census_population_percent": 2.775458
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1600,11 +1600,11 @@
       "prefecture_name": "大阪府",
       "census_prefecture_code": "27000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 8411856,
-      "census_age_3_17": 1044061,
-      "share_of_census_population_percent": 12.411779,
+      "census_population": 8837685,
+      "census_age_3_17": 1069799,
+      "share_of_census_population_percent": 12.104969,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1615,8 +1615,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 193586,
-          "share_of_census_population_percent": 2.301347
+          "population": 199283,
+          "share_of_census_population_percent": 2.254923
         },
         {
           "key": "census_elementary_6_11",
@@ -1627,8 +1627,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 412214,
-          "share_of_census_population_percent": 4.900393
+          "population": 422687,
+          "share_of_census_population_percent": 4.78278
         },
         {
           "key": "census_junior_high_12_14",
@@ -1639,8 +1639,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 216566,
-          "share_of_census_population_percent": 2.574533
+          "population": 221305,
+          "share_of_census_population_percent": 2.504106
         },
         {
           "key": "census_high_school_15_17",
@@ -1651,8 +1651,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 221695,
-          "share_of_census_population_percent": 2.635506
+          "population": 226524,
+          "share_of_census_population_percent": 2.56316
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1669,11 +1669,11 @@
       "prefecture_name": "三重県",
       "census_prefecture_code": "24000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1698876,
-      "census_age_3_17": 219773,
-      "share_of_census_population_percent": 12.936377,
+      "census_population": 1770254,
+      "census_age_3_17": 225342,
+      "share_of_census_population_percent": 12.72936,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1684,8 +1684,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 38675,
-          "share_of_census_population_percent": 2.276505
+          "population": 39824,
+          "share_of_census_population_percent": 2.249621
         },
         {
           "key": "census_elementary_6_11",
@@ -1696,8 +1696,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 86380,
-          "share_of_census_population_percent": 5.084538
+          "population": 88617,
+          "share_of_census_population_percent": 5.005892
         },
         {
           "key": "census_junior_high_12_14",
@@ -1708,8 +1708,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 46384,
-          "share_of_census_population_percent": 2.730276
+          "population": 47479,
+          "share_of_census_population_percent": 2.682044
         },
         {
           "key": "census_high_school_15_17",
@@ -1720,8 +1720,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 48334,
-          "share_of_census_population_percent": 2.845058
+          "population": 49422,
+          "share_of_census_population_percent": 2.791803
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1738,11 +1738,11 @@
       "prefecture_name": "滋賀県",
       "census_prefecture_code": "25000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1359501,
-      "census_age_3_17": 197341,
-      "share_of_census_population_percent": 14.515694,
+      "census_population": 1413610,
+      "census_age_3_17": 200456,
+      "share_of_census_population_percent": 14.180432,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1753,8 +1753,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 36307,
-          "share_of_census_population_percent": 2.670612
+          "population": 36908,
+          "share_of_census_population_percent": 2.610904
         },
         {
           "key": "census_elementary_6_11",
@@ -1765,8 +1765,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 78891,
-          "share_of_census_population_percent": 5.802938
+          "population": 80214,
+          "share_of_census_population_percent": 5.674408
         },
         {
           "key": "census_junior_high_12_14",
@@ -1777,8 +1777,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 40980,
-          "share_of_census_population_percent": 3.014341
+          "population": 41558,
+          "share_of_census_population_percent": 2.939849
         },
         {
           "key": "census_high_school_15_17",
@@ -1789,8 +1789,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 41163,
-          "share_of_census_population_percent": 3.027802
+          "population": 41776,
+          "share_of_census_population_percent": 2.955271
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1807,11 +1807,11 @@
       "prefecture_name": "京都府",
       "census_prefecture_code": "26000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 2460764,
-      "census_age_3_17": 306243,
-      "share_of_census_population_percent": 12.445037,
+      "census_population": 2578087,
+      "census_age_3_17": 309986,
+      "share_of_census_population_percent": 12.023877,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1822,8 +1822,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 55904,
-          "share_of_census_population_percent": 2.271815
+          "population": 56716,
+          "share_of_census_population_percent": 2.199926
         },
         {
           "key": "census_elementary_6_11",
@@ -1834,8 +1834,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 120303,
-          "share_of_census_population_percent": 4.888848
+          "population": 121809,
+          "share_of_census_population_percent": 4.724782
         },
         {
           "key": "census_junior_high_12_14",
@@ -1846,8 +1846,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 63926,
-          "share_of_census_population_percent": 2.597811
+          "population": 64627,
+          "share_of_census_population_percent": 2.506781
         },
         {
           "key": "census_high_school_15_17",
@@ -1858,8 +1858,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 66110,
-          "share_of_census_population_percent": 2.686564
+          "population": 66834,
+          "share_of_census_population_percent": 2.592387
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1876,11 +1876,11 @@
       "prefecture_name": "兵庫県",
       "census_prefecture_code": "28000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 5215927,
-      "census_age_3_17": 686120,
-      "share_of_census_population_percent": 13.154325,
+      "census_population": 5465002,
+      "census_age_3_17": 694758,
+      "share_of_census_population_percent": 12.712859,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1891,8 +1891,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 125526,
-          "share_of_census_population_percent": 2.40659
+          "population": 127604,
+          "share_of_census_population_percent": 2.334931
         },
         {
           "key": "census_elementary_6_11",
@@ -1903,8 +1903,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 272215,
-          "share_of_census_population_percent": 5.218919
+          "population": 275638,
+          "share_of_census_population_percent": 5.043694
         },
         {
           "key": "census_junior_high_12_14",
@@ -1915,8 +1915,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 142774,
-          "share_of_census_population_percent": 2.73727
+          "population": 144410,
+          "share_of_census_population_percent": 2.642451
         },
         {
           "key": "census_high_school_15_17",
@@ -1927,8 +1927,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 145605,
-          "share_of_census_population_percent": 2.791546
+          "population": 147106,
+          "share_of_census_population_percent": 2.691783
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -1945,11 +1945,11 @@
       "prefecture_name": "奈良県",
       "census_prefecture_code": "29000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1302289,
-      "census_age_3_17": 165656,
-      "share_of_census_population_percent": 12.720372,
+      "census_population": 1324473,
+      "census_age_3_17": 166438,
+      "share_of_census_population_percent": 12.566357,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -1960,8 +1960,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 28953,
-          "share_of_census_population_percent": 2.223239
+          "population": 29128,
+          "share_of_census_population_percent": 2.199214
         },
         {
           "key": "census_elementary_6_11",
@@ -1972,8 +1972,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 64463,
-          "share_of_census_population_percent": 4.949977
+          "population": 64789,
+          "share_of_census_population_percent": 4.891681
         },
         {
           "key": "census_junior_high_12_14",
@@ -1984,8 +1984,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 34987,
-          "share_of_census_population_percent": 2.686577
+          "population": 35132,
+          "share_of_census_population_percent": 2.652527
         },
         {
           "key": "census_high_school_15_17",
@@ -1996,8 +1996,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 37253,
-          "share_of_census_population_percent": 2.860579
+          "population": 37389,
+          "share_of_census_population_percent": 2.822934
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2014,11 +2014,11 @@
       "prefecture_name": "和歌山県",
       "census_prefecture_code": "30000",
       "region_code": "kinki",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 911408,
-      "census_age_3_17": 112537,
-      "share_of_census_population_percent": 12.347598,
+      "census_population": 922584,
+      "census_age_3_17": 112905,
+      "share_of_census_population_percent": 12.23791,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2029,8 +2029,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 20065,
-          "share_of_census_population_percent": 2.201539
+          "population": 20148,
+          "share_of_census_population_percent": 2.183866
         },
         {
           "key": "census_elementary_6_11",
@@ -2041,8 +2041,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 44105,
-          "share_of_census_population_percent": 4.839216
+          "population": 44265,
+          "share_of_census_population_percent": 4.797937
         },
         {
           "key": "census_junior_high_12_14",
@@ -2053,8 +2053,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 23445,
-          "share_of_census_population_percent": 2.572393
+          "population": 23514,
+          "share_of_census_population_percent": 2.548711
         },
         {
           "key": "census_high_school_15_17",
@@ -2065,8 +2065,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 24922,
-          "share_of_census_population_percent": 2.73445
+          "population": 24978,
+          "share_of_census_population_percent": 2.707396
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2083,11 +2083,11 @@
       "prefecture_name": "広島県",
       "census_prefecture_code": "34000",
       "region_code": "chugoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 2713163,
-      "census_age_3_17": 364592,
-      "share_of_census_population_percent": 13.437895,
+      "census_population": 2799702,
+      "census_age_3_17": 368331,
+      "share_of_census_population_percent": 13.156079,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2098,8 +2098,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 67049,
-          "share_of_census_population_percent": 2.471249
+          "population": 67907,
+          "share_of_census_population_percent": 2.425508
         },
         {
           "key": "census_elementary_6_11",
@@ -2110,8 +2110,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 146913,
-          "share_of_census_population_percent": 5.414824
+          "population": 148423,
+          "share_of_census_population_percent": 5.301386
         },
         {
           "key": "census_junior_high_12_14",
@@ -2122,8 +2122,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 74905,
-          "share_of_census_population_percent": 2.7608
+          "population": 75617,
+          "share_of_census_population_percent": 2.700895
         },
         {
           "key": "census_high_school_15_17",
@@ -2134,8 +2134,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 75725,
-          "share_of_census_population_percent": 2.791023
+          "population": 76384,
+          "share_of_census_population_percent": 2.72829
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2152,11 +2152,11 @@
       "prefecture_name": "鳥取県",
       "census_prefecture_code": "31000",
       "region_code": "chugoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 543979,
-      "census_age_3_17": 72008,
-      "share_of_census_population_percent": 13.237276,
+      "census_population": 553407,
+      "census_age_3_17": 72228,
+      "share_of_census_population_percent": 13.051515,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2167,8 +2167,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 13272,
-          "share_of_census_population_percent": 2.4398
+          "population": 13323,
+          "share_of_census_population_percent": 2.407451
         },
         {
           "key": "census_elementary_6_11",
@@ -2179,8 +2179,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 28229,
-          "share_of_census_population_percent": 5.189355
+          "population": 28303,
+          "share_of_census_population_percent": 5.114319
         },
         {
           "key": "census_junior_high_12_14",
@@ -2191,8 +2191,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 14821,
-          "share_of_census_population_percent": 2.724554
+          "population": 14865,
+          "share_of_census_population_percent": 2.686088
         },
         {
           "key": "census_high_school_15_17",
@@ -2203,8 +2203,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 15686,
-          "share_of_census_population_percent": 2.883567
+          "population": 15737,
+          "share_of_census_population_percent": 2.843658
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2221,11 +2221,11 @@
       "prefecture_name": "島根県",
       "census_prefecture_code": "32000",
       "region_code": "chugoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 656197,
-      "census_age_3_17": 86250,
-      "share_of_census_population_percent": 13.143919,
+      "census_population": 671126,
+      "census_age_3_17": 86827,
+      "share_of_census_population_percent": 12.937511,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2236,8 +2236,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 15940,
-          "share_of_census_population_percent": 2.429149
+          "population": 16061,
+          "share_of_census_population_percent": 2.393142
         },
         {
           "key": "census_elementary_6_11",
@@ -2248,8 +2248,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 33769,
-          "share_of_census_population_percent": 5.146168
+          "population": 33992,
+          "share_of_census_population_percent": 5.064921
         },
         {
           "key": "census_junior_high_12_14",
@@ -2260,8 +2260,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 17540,
-          "share_of_census_population_percent": 2.672978
+          "population": 17644,
+          "share_of_census_population_percent": 2.629015
         },
         {
           "key": "census_high_school_15_17",
@@ -2272,8 +2272,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 19001,
-          "share_of_census_population_percent": 2.895624
+          "population": 19130,
+          "share_of_census_population_percent": 2.850433
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2290,11 +2290,11 @@
       "prefecture_name": "岡山県",
       "census_prefecture_code": "33000",
       "region_code": "chugoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1810900,
-      "census_age_3_17": 238998,
-      "share_of_census_population_percent": 13.197747,
+      "census_population": 1888432,
+      "census_age_3_17": 241108,
+      "share_of_census_population_percent": 12.767629,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2305,8 +2305,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 43828,
-          "share_of_census_population_percent": 2.420233
+          "population": 44272,
+          "share_of_census_population_percent": 2.344379
         },
         {
           "key": "census_elementary_6_11",
@@ -2317,8 +2317,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 94597,
-          "share_of_census_population_percent": 5.223756
+          "population": 95422,
+          "share_of_census_population_percent": 5.052975
         },
         {
           "key": "census_junior_high_12_14",
@@ -2329,8 +2329,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 49235,
-          "share_of_census_population_percent": 2.718814
+          "population": 49607,
+          "share_of_census_population_percent": 2.626888
         },
         {
           "key": "census_high_school_15_17",
@@ -2341,8 +2341,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 51338,
-          "share_of_census_population_percent": 2.834944
+          "population": 51807,
+          "share_of_census_population_percent": 2.743387
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2359,11 +2359,11 @@
       "prefecture_name": "山口県",
       "census_prefecture_code": "35000",
       "region_code": "chugoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1313593,
-      "census_age_3_17": 162735,
-      "share_of_census_population_percent": 12.38854,
+      "census_population": 1342059,
+      "census_age_3_17": 163444,
+      "share_of_census_population_percent": 12.1786,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2374,8 +2374,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 28919,
-          "share_of_census_population_percent": 2.201519
+          "population": 29067,
+          "share_of_census_population_percent": 2.165851
         },
         {
           "key": "census_elementary_6_11",
@@ -2386,8 +2386,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 64671,
-          "share_of_census_population_percent": 4.923214
+          "population": 64943,
+          "share_of_census_population_percent": 4.839057
         },
         {
           "key": "census_junior_high_12_14",
@@ -2398,8 +2398,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 33943,
-          "share_of_census_population_percent": 2.583981
+          "population": 34069,
+          "share_of_census_population_percent": 2.538562
         },
         {
           "key": "census_high_school_15_17",
@@ -2410,8 +2410,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 35202,
-          "share_of_census_population_percent": 2.679825
+          "population": 35365,
+          "share_of_census_population_percent": 2.63513
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2428,11 +2428,11 @@
       "prefecture_name": "香川県",
       "census_prefecture_code": "37000",
       "region_code": "shikoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 920884,
-      "census_age_3_17": 120195,
-      "share_of_census_population_percent": 13.052133,
+      "census_population": 950244,
+      "census_age_3_17": 121178,
+      "share_of_census_population_percent": 12.752304,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2443,8 +2443,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 21641,
-          "share_of_census_population_percent": 2.350025
+          "population": 21843,
+          "share_of_census_population_percent": 2.298673
         },
         {
           "key": "census_elementary_6_11",
@@ -2455,8 +2455,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 47497,
-          "share_of_census_population_percent": 5.157761
+          "population": 47898,
+          "share_of_census_population_percent": 5.0406
         },
         {
           "key": "census_junior_high_12_14",
@@ -2467,8 +2467,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 24724,
-          "share_of_census_population_percent": 2.684812
+          "population": 24902,
+          "share_of_census_population_percent": 2.62059
         },
         {
           "key": "census_high_school_15_17",
@@ -2479,8 +2479,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 26333,
-          "share_of_census_population_percent": 2.859535
+          "population": 26535,
+          "share_of_census_population_percent": 2.792441
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2497,11 +2497,11 @@
       "prefecture_name": "徳島県",
       "census_prefecture_code": "36000",
       "region_code": "shikoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 693084,
-      "census_age_3_17": 81795,
-      "share_of_census_population_percent": 11.8016,
+      "census_population": 719559,
+      "census_age_3_17": 82170,
+      "share_of_census_population_percent": 11.419494,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2512,8 +2512,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 14782,
-          "share_of_census_population_percent": 2.132786
+          "population": 14868,
+          "share_of_census_population_percent": 2.066266
         },
         {
           "key": "census_elementary_6_11",
@@ -2524,8 +2524,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 32093,
-          "share_of_census_population_percent": 4.630463
+          "population": 32249,
+          "share_of_census_population_percent": 4.481773
         },
         {
           "key": "census_junior_high_12_14",
@@ -2536,8 +2536,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 16959,
-          "share_of_census_population_percent": 2.44689
+          "population": 17030,
+          "share_of_census_population_percent": 2.366727
         },
         {
           "key": "census_high_school_15_17",
@@ -2548,8 +2548,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 17961,
-          "share_of_census_population_percent": 2.591461
+          "population": 18023,
+          "share_of_census_population_percent": 2.504729
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2566,11 +2566,11 @@
       "prefecture_name": "愛媛県",
       "census_prefecture_code": "38000",
       "region_code": "shikoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1296806,
-      "census_age_3_17": 163736,
-      "share_of_census_population_percent": 12.626098,
+      "census_population": 1334841,
+      "census_age_3_17": 164751,
+      "share_of_census_population_percent": 12.342369,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2581,8 +2581,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 28724,
-          "share_of_census_population_percent": 2.21498
+          "population": 28930,
+          "share_of_census_population_percent": 2.167299
         },
         {
           "key": "census_elementary_6_11",
@@ -2593,8 +2593,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 64895,
-          "share_of_census_population_percent": 5.004218
+          "population": 65323,
+          "share_of_census_population_percent": 4.893691
         },
         {
           "key": "census_junior_high_12_14",
@@ -2605,8 +2605,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 34284,
-          "share_of_census_population_percent": 2.643726
+          "population": 34495,
+          "share_of_census_population_percent": 2.584203
         },
         {
           "key": "census_high_school_15_17",
@@ -2617,8 +2617,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 35833,
-          "share_of_census_population_percent": 2.763174
+          "population": 36003,
+          "share_of_census_population_percent": 2.697175
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2635,11 +2635,11 @@
       "prefecture_name": "高知県",
       "census_prefecture_code": "39000",
       "region_code": "shikoku",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 677762,
-      "census_age_3_17": 80080,
-      "share_of_census_population_percent": 11.815357,
+      "census_population": 691527,
+      "census_age_3_17": 80374,
+      "share_of_census_population_percent": 11.622684,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2650,8 +2650,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 14296,
-          "share_of_census_population_percent": 2.109295
+          "population": 14331,
+          "share_of_census_population_percent": 2.07237
         },
         {
           "key": "census_elementary_6_11",
@@ -2662,8 +2662,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 31102,
-          "share_of_census_population_percent": 4.588926
+          "population": 31183,
+          "share_of_census_population_percent": 4.509296
         },
         {
           "key": "census_junior_high_12_14",
@@ -2674,8 +2674,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 16782,
-          "share_of_census_population_percent": 2.47609
+          "population": 16819,
+          "share_of_census_population_percent": 2.432154
         },
         {
           "key": "census_high_school_15_17",
@@ -2686,8 +2686,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 17900,
-          "share_of_census_population_percent": 2.641045
+          "population": 18041,
+          "share_of_census_population_percent": 2.608864
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2704,11 +2704,11 @@
       "prefecture_name": "福岡県",
       "census_prefecture_code": "40000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 4923076,
-      "census_age_3_17": 672327,
-      "share_of_census_population_percent": 13.656645,
+      "census_population": 5135214,
+      "census_age_3_17": 677951,
+      "share_of_census_population_percent": 13.202001,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2719,8 +2719,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 129216,
-          "share_of_census_population_percent": 2.6247
+          "population": 130822,
+          "share_of_census_population_percent": 2.547547
         },
         {
           "key": "census_elementary_6_11",
@@ -2731,8 +2731,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 272922,
-          "share_of_census_population_percent": 5.543729
+          "population": 275214,
+          "share_of_census_population_percent": 5.359348
         },
         {
           "key": "census_junior_high_12_14",
@@ -2743,8 +2743,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 136397,
-          "share_of_census_population_percent": 2.770565
+          "population": 137263,
+          "share_of_census_population_percent": 2.672975
         },
         {
           "key": "census_high_school_15_17",
@@ -2755,8 +2755,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 133792,
-          "share_of_census_population_percent": 2.717651
+          "population": 134652,
+          "share_of_census_population_percent": 2.62213
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2773,11 +2773,11 @@
       "prefecture_name": "佐賀県",
       "census_prefecture_code": "41000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 796285,
-      "census_age_3_17": 113922,
-      "share_of_census_population_percent": 14.306687,
+      "census_population": 811442,
+      "census_age_3_17": 114270,
+      "share_of_census_population_percent": 14.082337,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2788,8 +2788,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 20614,
-          "share_of_census_population_percent": 2.588772
+          "population": 20683,
+          "share_of_census_population_percent": 2.548919
         },
         {
           "key": "census_elementary_6_11",
@@ -2800,8 +2800,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 44877,
-          "share_of_census_population_percent": 5.635796
+          "population": 45005,
+          "share_of_census_population_percent": 5.546299
         },
         {
           "key": "census_junior_high_12_14",
@@ -2812,8 +2812,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 23907,
-          "share_of_census_population_percent": 3.002317
+          "population": 23971,
+          "share_of_census_population_percent": 2.954124
         },
         {
           "key": "census_high_school_15_17",
@@ -2824,8 +2824,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 24524,
-          "share_of_census_population_percent": 3.079802
+          "population": 24611,
+          "share_of_census_population_percent": 3.032996
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2842,11 +2842,11 @@
       "prefecture_name": "長崎県",
       "census_prefecture_code": "42000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1296014,
-      "census_age_3_17": 172618,
-      "share_of_census_population_percent": 13.319146,
+      "census_population": 1312317,
+      "census_age_3_17": 173063,
+      "share_of_census_population_percent": 13.187591,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2857,8 +2857,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 31657,
-          "share_of_census_population_percent": 2.442643
+          "population": 31769,
+          "share_of_census_population_percent": 2.420833
         },
         {
           "key": "census_elementary_6_11",
@@ -2869,8 +2869,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 68512,
-          "share_of_census_population_percent": 5.286363
+          "population": 68673,
+          "share_of_census_population_percent": 5.232958
         },
         {
           "key": "census_junior_high_12_14",
@@ -2881,8 +2881,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 35543,
-          "share_of_census_population_percent": 2.742486
+          "population": 35609,
+          "share_of_census_population_percent": 2.713445
         },
         {
           "key": "census_high_school_15_17",
@@ -2893,8 +2893,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 36906,
-          "share_of_census_population_percent": 2.847654
+          "population": 37012,
+          "share_of_census_population_percent": 2.820355
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2911,11 +2911,11 @@
       "prefecture_name": "熊本県",
       "census_prefecture_code": "43000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1705205,
-      "census_age_3_17": 237067,
-      "share_of_census_population_percent": 13.902551,
+      "census_population": 1738301,
+      "census_age_3_17": 237757,
+      "share_of_census_population_percent": 13.677551,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2926,8 +2926,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 44395,
-          "share_of_census_population_percent": 2.603499
+          "population": 44534,
+          "share_of_census_population_percent": 2.561927
         },
         {
           "key": "census_elementary_6_11",
@@ -2938,8 +2938,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 95324,
-          "share_of_census_population_percent": 5.590178
+          "population": 95616,
+          "share_of_census_population_percent": 5.500543
         },
         {
           "key": "census_junior_high_12_14",
@@ -2950,8 +2950,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 48251,
-          "share_of_census_population_percent": 2.82963
+          "population": 48388,
+          "share_of_census_population_percent": 2.783638
         },
         {
           "key": "census_high_school_15_17",
@@ -2962,8 +2962,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 49097,
-          "share_of_census_population_percent": 2.879243
+          "population": 49219,
+          "share_of_census_population_percent": 2.831443
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -2980,11 +2980,11 @@
       "prefecture_name": "大分県",
       "census_prefecture_code": "44000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1098735,
-      "census_age_3_17": 141706,
-      "share_of_census_population_percent": 12.897195,
+      "census_population": 1123852,
+      "census_age_3_17": 142298,
+      "share_of_census_population_percent": 12.661632,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -2995,8 +2995,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 25774,
-          "share_of_census_population_percent": 2.345789
+          "population": 25906,
+          "share_of_census_population_percent": 2.305108
         },
         {
           "key": "census_elementary_6_11",
@@ -3007,8 +3007,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 56565,
-          "share_of_census_population_percent": 5.148193
+          "population": 56816,
+          "share_of_census_population_percent": 5.05547
         },
         {
           "key": "census_junior_high_12_14",
@@ -3019,8 +3019,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 29594,
-          "share_of_census_population_percent": 2.693461
+          "population": 29698,
+          "share_of_census_population_percent": 2.642519
         },
         {
           "key": "census_high_school_15_17",
@@ -3031,8 +3031,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 29773,
-          "share_of_census_population_percent": 2.709753
+          "population": 29878,
+          "share_of_census_population_percent": 2.658535
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -3049,11 +3049,11 @@
       "prefecture_name": "宮崎県",
       "census_prefecture_code": "45000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1047871,
-      "census_age_3_17": 146388,
-      "share_of_census_population_percent": 13.97004,
+      "census_population": 1069576,
+      "census_age_3_17": 146690,
+      "share_of_census_population_percent": 13.71478,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -3064,8 +3064,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 26529,
-          "share_of_census_population_percent": 2.531705
+          "population": 26582,
+          "share_of_census_population_percent": 2.485284
         },
         {
           "key": "census_elementary_6_11",
@@ -3076,8 +3076,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 58999,
-          "share_of_census_population_percent": 5.630369
+          "population": 59110,
+          "share_of_census_population_percent": 5.526489
         },
         {
           "key": "census_junior_high_12_14",
@@ -3088,8 +3088,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 30252,
-          "share_of_census_population_percent": 2.886997
+          "population": 30310,
+          "share_of_census_population_percent": 2.833833
         },
         {
           "key": "census_high_school_15_17",
@@ -3100,8 +3100,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 30608,
-          "share_of_census_population_percent": 2.92097
+          "population": 30688,
+          "share_of_census_population_percent": 2.869174
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -3118,11 +3118,11 @@
       "prefecture_name": "鹿児島県",
       "census_prefecture_code": "46000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1545763,
-      "census_age_3_17": 214489,
-      "share_of_census_population_percent": 13.875931,
+      "census_population": 1588256,
+      "census_age_3_17": 214945,
+      "share_of_census_population_percent": 13.533398,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -3133,8 +3133,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 39560,
-          "share_of_census_population_percent": 2.559254
+          "population": 39659,
+          "share_of_census_population_percent": 2.497016
         },
         {
           "key": "census_elementary_6_11",
@@ -3145,8 +3145,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 86422,
-          "share_of_census_population_percent": 5.590896
+          "population": 86613,
+          "share_of_census_population_percent": 5.45334
         },
         {
           "key": "census_junior_high_12_14",
@@ -3157,8 +3157,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 44007,
-          "share_of_census_population_percent": 2.846944
+          "population": 44083,
+          "share_of_census_population_percent": 2.77556
         },
         {
           "key": "census_high_school_15_17",
@@ -3169,8 +3169,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 44500,
-          "share_of_census_population_percent": 2.878837
+          "population": 44590,
+          "share_of_census_population_percent": 2.807482
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -3187,11 +3187,11 @@
       "prefecture_name": "沖縄県",
       "census_prefecture_code": "47000",
       "region_code": "kyushu",
-      "population_scope": "census_japanese_population",
+      "population_scope": "census_total_population",
       "reference_date": "2020-10-01",
-      "census_population": 1424749,
-      "census_age_3_17": 244899,
-      "share_of_census_population_percent": 17.188922,
+      "census_population": 1467480,
+      "census_age_3_17": 246385,
+      "share_of_census_population_percent": 16.789667,
       "age_groups": [
         {
           "key": "census_preschool_3_5",
@@ -3202,8 +3202,8 @@
             5
           ],
           "age_range_label": "3～5歳",
-          "population": 48515,
-          "share_of_census_population_percent": 3.405161
+          "population": 48866,
+          "share_of_census_population_percent": 3.329926
         },
         {
           "key": "census_elementary_6_11",
@@ -3214,8 +3214,8 @@
             11
           ],
           "age_range_label": "6～11歳",
-          "population": 99610,
-          "share_of_census_population_percent": 6.991407
+          "population": 100222,
+          "share_of_census_population_percent": 6.829531
         },
         {
           "key": "census_junior_high_12_14",
@@ -3226,8 +3226,8 @@
             14
           ],
           "age_range_label": "12～14歳",
-          "population": 48776,
-          "share_of_census_population_percent": 3.42348
+          "population": 49079,
+          "share_of_census_population_percent": 3.344441
         },
         {
           "key": "census_high_school_15_17",
@@ -3238,8 +3238,8 @@
             17
           ],
           "age_range_label": "15～17歳",
-          "population": 47998,
-          "share_of_census_population_percent": 3.368874
+          "population": 48218,
+          "share_of_census_population_percent": 3.285769
         }
       ],
       "source_title": "令和2年国勢調査 人口等基本集計 第2-1表 男女，年齢（各歳），国籍総数か日本人別人口，平均年齢及び年齢中位数－全国，都道府県，21大都市，特別区，人口50万以上の市",
@@ -3251,5 +3251,7 @@
       "accessed_at": "2026-08-01",
       "definition_note": "2020年10月1日現在の令和2年国勢調査による日本人人口（年齢各歳）。現在の人口ではない。年齢「不詳」の者は含まない。"
     }
-  ]
+  ],
+  "population_scope_label": "人口（総数・国勢調査確定値）",
+  "description": "令和2年国勢調査 表2-1に基づく都道府県別年齢別人口（外国人を含む総人口確定値）。"
 }

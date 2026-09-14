@@ -69,7 +69,7 @@ def test_prefecture_population_json() -> None:
     assert reference_dates == {"2020-10-01"}, f"基準日が47県で統一されていません: {reference_dates}"
 
     scopes = {p["population_scope"] for p in prefectures}
-    assert scopes == {"census_japanese_population"}, f"population_scope が統一されていません: {scopes}"
+    assert scopes == {"census_total_population"}, f"population_scope が統一されていません: {scopes}"
 
     table_ids = {p["source_table_id"] for p in prefectures}
     assert len(table_ids) == 1, f"source_table_id が47県で統一されていません: {table_ids}"
@@ -116,7 +116,7 @@ def test_card_metadata_population_integration() -> None:
     for prefecture in prefectures:
         pop = prefecture["population"]
         assert pop["available"] is True, f"{prefecture['prefecture_name']}: population.available が true ではありません"
-        assert pop["population_scope"] == "census_japanese_population"
+        assert pop["population_scope"] == "census_total_population"
         assert pop["reference_date"] == "2020-10-01"
 
         source_ref = population_by_code[prefecture["prefecture_code"]]
@@ -132,7 +132,7 @@ def test_card_metadata_population_integration() -> None:
 
         assert pop["source"]["table_id"] == source_ref["source_table_id"]
         assert pop["notes"], f"{prefecture['prefecture_name']}: notes が空です"
-        assert pop["population_scope_label"] == "人口（日本国籍）"
+        assert pop["population_scope_label"] == "人口（総数・国勢調査確定値）"
         assert pop["reference_date_label"] == "統計基準日"
         assert pop["reference_date_display"] == "2020年10月1日現在"
         assert pop["source_short_label"] == "令和2年国勢調査"
