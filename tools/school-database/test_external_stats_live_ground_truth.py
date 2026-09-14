@@ -9,7 +9,7 @@ Official sources:
 - MEXT / e-Stat FY2024 School ICT survey, Table 2 (1) Total
   statInfId=000040365967
 - Children and Families Agency, daycare-related status summary as of 2025-04-01
-  official workbook "資料1～6", sheet "資料3"
+  official workbook "資料1～6", sheet "資料4" (prefecture totals)
 """
 
 from __future__ import annotations
@@ -109,7 +109,6 @@ def build_live_ict_category_a() -> dict[str, float]:
     assert "県教員（合計）" in wb.sheetnames, f"Unexpected ICT sheets: {wb.sheetnames}"
     sheet = wb["県教員（合計）"]
 
-    # The official table labels this metric explicitly as "大項目A 平均".
     metric_col = _find_header_column(sheet, "大項目A")
     assert _norm(sheet.cell(4, metric_col).value) == "大項目A平均", (
         f"ICT Category A header changed: {sheet.cell(4, metric_col).value!r}"
@@ -122,10 +121,9 @@ def build_live_ict_category_a() -> dict[str, float]:
         assert value is not None and 0 <= value <= 100, f"{name}: invalid ICT value {value}"
         values[name] = round(value, 1)
 
-    # Row after the 47 prefectures is the official aggregate row in this table.
     total_rows = [
-        r for r in range(1, sheet.max_row + 1)
-        if _norm(sheet.cell(r, 2).value) in {"合計", "計"}
+        row for row in range(1, sheet.max_row + 1)
+        if _norm(sheet.cell(row, 2).value) in {"合計", "計"}
     ]
     assert total_rows, "ICT official aggregate row not found"
     national = _number(sheet.cell(total_rows[-1], metric_col).value)
@@ -140,49 +138,42 @@ def build_live_ict_category_a() -> dict[str, float]:
 
 def build_live_waiting_children() -> dict[str, int]:
     wb = _fetch_xlsx(WAITING_CHILDREN_URL, "CFA waiting-children workbook (2025-04-01)")
-    assert "資料3" in wb.sheetnames, f"CFA official sheet '資料3' missing: {wb.sheetnames}"
-    sheet = wb["資料3"]
-    assert "待機児童数集約表" in _norm(sheet.cell(1, 1).value), (
-        f"Unexpected CFA 資料3 title: {sheet.cell(1, 1).value!r}"
+    assert "資料4" in wb.sheetnames, f"CFA official sheet '資料4' missing: {wb.sheetnames}"
+    sheet = wb["資料4"]
+
+    title = _norm(sheet.cell(1, 1).value)
+    assert "全国待機児童マップ" in title and "令和7年4月1日" in title, (
+        f"Unexpected CFA 資料4 title: {sheet.cell(1, 1).value!r}"
     )
-
-    rows = _find_prefecture_rows(sheet)
-
-    # There are two waiting-child columns in 資料3: prefectures and designated/
-    # core cities. Select the column whose 47 prefecture rows are all numeric and
-    # whose sum equals the official national prefecture total, 2,254.
-    candidate_cols = []
-    for col in range(1, sheet.max_column + 1):
-        header = _norm(sheet.cell(4, col).value)
-        if "待機児童数" not in header:
-            continue
-        values = [_number(sheet.cell(row, col).value) for row in rows.values()]
-        if all(value is not None for value in values):
-            candidate_cols.append((col, values))
-
-    matching = [
-        (col, values) for col, values in candidate_cols
-        if abs(sum(value for value in values if value is not None) - 2254.0) < 1e-9
-    ]
-    assert len(matching) == 1, (
-        f"Could not uniquely identify prefecture waiting-child column: "
-        f"candidates={[col for col, _ in candidate_cols]}, "
-        f"matching={[col for col, _ in matching]}"
+    assert _norm(sheet.cell(1, 16).value) == "都道府県", (
+        f"CFA prefecture header changed: {sheet.cell(1, 16).value!r}"
     )
-    metric_col = matching[0][0]
+    assert _norm(sheet.cell(1, 17).value) == "待機児童数", (
+        f"CFA waiting-child header changed: {sheet.cell(1, 17).value!r}"
+    )
 
     result: dict[str, int] = {}
-    for name, row in rows.items():
-        value = _number(sheet.cell(row, metric_col).value)
+    for row in range(1, sheet.max_row + 1):
+        name = _norm(sheet.cell(row, 16).value)
+        if name not in PREFECTURE_SET:
+            continue
+        assert name not in result, f"CFA 資料4 duplicate prefecture row: {name}"
+        value = _number(sheet.cell(row, 17).value)
         assert value is not None and value >= 0 and value.is_integer(), (
             f"{name}: invalid waiting-children count {value}"
         )
         result[name] = int(value)
 
-    assert sum(result.values()) == 2254
+    assert set(result) == PREFECTURE_SET, (
+        f"CFA 資料4 expected all 47 prefectures, found {len(result)}"
+    )
+    assert sum(result.values()) == 2254, (
+        f"CFA official prefecture total must be 2,254, got {sum(result.values())}"
+    )
+
     print(
-        f"[Official Live Audit] Waiting children: sheet={sheet.title!r}, "
-        f"column={metric_col}, prefectures=47, total=2,254"
+        "[Official Live Audit] Waiting children: sheet='資料4', "
+        "columns=16/17, prefectures=47, total=2,254"
     )
     return result
 
