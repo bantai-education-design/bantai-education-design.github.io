@@ -5758,6 +5758,19 @@ button:focus-visible {
   font-size: 1.02rem;
   color: #1e293b;
 }
+.column-inline-link,
+.column-modal-text a {
+  color: #0284c7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.column-inline-link:hover,
+.column-modal-text a:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
 .column-content-heading {
   font-family: "Noto Serif JP", serif;
   font-size: 1.25rem;
