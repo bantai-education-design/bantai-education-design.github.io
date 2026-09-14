@@ -1,4 +1,4 @@
-# Trigger CI check: Verify 2020 Census Live Total Population 47-prefecture Ground Truth (PR #320 trigger)
+# Trigger CI check: Verify ICT capability and waiting children strict live Ground Truth (PR #322 trigger)
 name: University photo owner and overlap guard
 
 on:
