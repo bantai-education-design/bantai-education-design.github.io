@@ -340,7 +340,8 @@ function getAppNameFromContext(url, text) {
 
     const patchPresentation = () => {
       const key = select.value;
-      if (key === 'net_migration_rate_2025' || key.endsWith('absenteeism_rate')) {
+      const isAbsenteeismRate = key.includes('absenteeism') && key.endsWith('_rate');
+      if (key === 'net_migration_rate_2025' || isAbsenteeismRate) {
         const label = document.getElementById('metric-national-avg-label');
         const value = document.getElementById('metric-national-avg');
         if (label) label.textContent = key === 'net_migration_rate_2025' ? '全国転入超過率' : '全国値（1,000人当たり）';
