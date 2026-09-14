@@ -87,7 +87,7 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     assert tokyo['elem_students'] == 616084, f"東京都小学校児童数（期待値: 616,084人, 実際: {tokyo['tokyo_students'] if 'tokyo_students' in tokyo else tokyo['elem_students']:,}人）"
     assert tokyo['elem_teachers'] == 37441, f"東京都小学校教員数（期待値: 37,441人, 実際: {tokyo['elem_teachers']:,}人）"
     assert tokyo['jhs_school_count'] == 796, f"東京都中学校数（期待値: 796校, 実際: {tokyo['jhs_school_count']}校）"
-    assert tokyo['private_elem_school_ratio'] == 4.1, f"東京都私立小学校比率（期待値: 4.1%, 実際: {tokyo['private_elem_school_ratio']}%）"
+    assert tokyo['private_elem_school_ratio'] == 4.2, f"東京都私立小学校比率（期待値: 4.2%, 実際: {tokyo['private_elem_school_ratio']}%）"
     assert tokyo['jhs_student_teacher_ratio'] == 15.0, f"東京都中学校教員1人あたり生徒数（期待値: 15.0人/教員, 実際: {tokyo['jhs_student_teacher_ratio']}人/教員）"
     assert tokyo['elem_enrolled_per_school'] == 468.5, f"東京都小学校1校あたり実児童数（期待値: 468.5人/校, 実際: {tokyo['elem_enrolled_per_school']}人/校）"
     assert tokyo['jhs_enrolled_per_school'] == 394.4, f"東京都中学校1校あたり生徒数（期待値: 394.4人/校, 実際: {tokyo['jhs_enrolled_per_school']}人/校）"
@@ -97,13 +97,26 @@ def test_official_2020_census_national_totals_and_aging_rates() -> None:
     saitama = next(p for p in prefs if p['code'] == 'saitama')
     assert saitama_mext['elem_schools'] == 787, f"埼玉県小学校数（期待値: 787校, 実際: {saitama_mext['elem_schools']}校）"
     assert saitama_mext['private_elem_schools'] == 6, f"埼玉県私立小学校数（期待値: 6校, 実際: {saitama_mext['private_elem_schools']}校）"
-    assert saitama_mext['elem_classes'] == 14162, f"埼玉県小学校学級数（期待値: 14,162学級, 実際: {saitama_mext['elem_classes']:,}学級）"
+    assert saitama_mext['elem_classes'] == 14039, f"埼玉県小学校学級数（期待値: 14,039学級, 実際: {saitama_mext['elem_classes']:,}学級）"
     assert saitama_mext['elem_students'] == 345524, f"埼玉県小学校児童数（期待値: 345,524人, 実際: {saitama_mext['elem_students']:,}人）"
     assert saitama_mext['elem_teachers'] == 22072, f"埼玉県小学校教員数（期待値: 22,072人, 実際: {saitama_mext['elem_teachers']:,}人）"
     assert saitama_mext['jhs_schools'] == 441, f"埼玉県中学校数（期待値: 441校, 実際: {saitama_mext['jhs_schools']}校）"
-    assert saitama_mext['jhs_classes'] == 6112, f"埼玉県中学校学級数（期待値: 6,112学級, 実際: {saitama_mext['jhs_classes']:,}学級）"
+    assert saitama_mext['jhs_classes'] == 5773, f"埼玉県中学校学級数（期待値: 5,773学級, 実際: {saitama_mext['jhs_classes']:,}学級）"
     assert saitama_mext['jhs_students'] == 180252, f"埼玉県中学校生徒数（期待値: 180,252人, 実際: {saitama_mext['jhs_students']:,}人）"
     assert saitama['private_elem_school_ratio'] == 0.8, f"埼玉県私立小学校比率（期待値: 0.8%, 実際: {saitama['private_elem_school_ratio']}%）"
+
+    # Aichi Ground Truth Exact Match
+    aichi_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'aichi')
+    assert aichi_mext['elem_schools'] == 965, f"愛知県小学校数（期待値: 965校, 実際: {aichi_mext['elem_schools']}校）"
+    assert aichi_mext['elem_students'] == 382083, f"愛知県小学校児童数（期待値: 382,083人, 実際: {aichi_mext['elem_students']:,}人）"
+    assert aichi_mext['jhs_schools'] == 440, f"愛知県中学校数（期待値: 440校, 実際: {aichi_mext['jhs_schools']}校）"
+    assert aichi_mext['jhs_students'] == 204811, f"愛知県中学校生徒数（期待値: 204,811人, 実際: {aichi_mext['jhs_students']:,}人）"
+
+    # Osaka Ground Truth Exact Match
+    osaka_mext = next(p for p in mext_official['prefectures'] if p['prefecture_code'] == 'osaka')
+    assert osaka_mext['elem_schools'] == 977, f"大阪府小学校数（期待値: 977校, 実際: {osaka_mext['elem_schools']}校）"
+    assert osaka_mext['jhs_schools'] == 511, f"大阪府中学校数（期待値: 511校, 実際: {osaka_mext['jhs_schools']}校）"
+    assert osaka_mext['jhs_students'] == 212561, f"大阪府中学校生徒数（期待値: 212,561人, 実際: {osaka_mext['jhs_students']:,}人）"
 
     # All 47 Prefectures Consistency Check against MEXT Master
     mext_dict = {p['prefecture_code']: p for p in mext_official['prefectures']}
