@@ -88,381 +88,381 @@ OFFICIAL_WAITING_CHILDREN_COUNT = {
 }
 
 OFFICIAL_ABSENTEEISM_R6 = {
-    "13": {
-        "combined_rate": 45.9,
-        "combined_count": 32865,
-        "elem_rate": 21.0,
-        "elem_count": 12812,
-        "jhs_rate": 61.7,
-        "jhs_count": 20053
-    },
-    "14": {
-        "combined_rate": 47.5,
-        "combined_count": 23916,
-        "elem_rate": 21.8,
-        "elem_count": 9256,
-        "jhs_rate": 63.9,
-        "jhs_count": 14660
-    },
-    "11": {
-        "combined_rate": 46.7,
-        "combined_count": 18822,
-        "elem_rate": 21.5,
-        "elem_count": 7326,
-        "jhs_rate": 62.8,
-        "jhs_count": 11496
-    },
-    "12": {
-        "combined_rate": 50.3,
-        "combined_count": 17504,
-        "elem_rate": 23.4,
-        "elem_count": 6790,
-        "jhs_rate": 67.4,
-        "jhs_count": 10714
-    },
-    "08": {
-        "combined_rate": 56.1,
-        "combined_count": 9310,
-        "elem_rate": 26.9,
-        "elem_count": 3669,
-        "jhs_rate": 74.7,
-        "jhs_count": 5641
-    },
-    "09": {
-        "combined_rate": 53.7,
-        "combined_count": 5799,
-        "elem_rate": 25.1,
-        "elem_count": 2267,
-        "jhs_rate": 71.9,
-        "jhs_count": 3532
-    },
-    "10": {
-        "combined_rate": 54.4,
-        "combined_count": 5776,
-        "elem_rate": 25.6,
-        "elem_count": 2277,
-        "jhs_rate": 72.8,
-        "jhs_count": 3499
-    },
     "01": {
-        "combined_rate": 54.8,
-        "combined_count": 15388,
-        "elem_rate": 26.1,
-        "elem_count": 6006,
-        "jhs_rate": 73.1,
-        "jhs_count": 9382
-    },
-    "04": {
-        "combined_rate": 62.6,
-        "combined_count": 8558,
-        "elem_rate": 30.5,
-        "elem_count": 3448,
-        "jhs_rate": 83.1,
-        "jhs_count": 5110
+        "combined_rate": 42.2,
+        "combined_count": 14252,
+        "elem_rate": 22.4,
+        "elem_count": 4881,
+        "jhs_rate": 78.6,
+        "jhs_count": 9371
     },
     "02": {
-        "combined_rate": 53.1,
-        "combined_count": 3405,
-        "elem_rate": 24.5,
-        "elem_count": 1311,
-        "jhs_rate": 71.3,
-        "jhs_count": 2094
+        "combined_rate": 36.3,
+        "combined_count": 2869,
+        "elem_rate": 19.2,
+        "elem_count": 981,
+        "jhs_rate": 67.7,
+        "jhs_count": 1888
     },
     "03": {
-        "combined_rate": 51.2,
-        "combined_count": 3317,
-        "elem_rate": 23.2,
-        "elem_count": 1274,
-        "jhs_rate": 69.1,
-        "jhs_count": 2043
+        "combined_rate": 33.3,
+        "combined_count": 2685,
+        "elem_rate": 17.9,
+        "elem_count": 931,
+        "jhs_rate": 61.3,
+        "jhs_count": 1754
+    },
+    "04": {
+        "combined_rate": 47.0,
+        "combined_count": 7725,
+        "elem_rate": 27.9,
+        "elem_count": 3002,
+        "jhs_rate": 82.8,
+        "jhs_count": 4723
     },
     "05": {
-        "combined_rate": 44.2,
-        "combined_count": 1900,
-        "elem_rate": 19.5,
-        "elem_count": 723,
-        "jhs_rate": 59.9,
-        "jhs_count": 1177
+        "combined_rate": 36.4,
+        "combined_count": 2027,
+        "elem_rate": 19.8,
+        "elem_count": 699,
+        "jhs_rate": 65.5,
+        "jhs_count": 1328
     },
     "06": {
-        "combined_rate": 48.7,
-        "combined_count": 2577,
-        "elem_rate": 21.9,
-        "elem_count": 989,
-        "jhs_rate": 65.8,
-        "jhs_count": 1588
+        "combined_rate": 32.5,
+        "combined_count": 2343,
+        "elem_rate": 18.3,
+        "elem_count": 849,
+        "jhs_rate": 58.3,
+        "jhs_count": 1494
     },
     "07": {
-        "combined_rate": 51.5,
-        "combined_count": 5079,
-        "elem_rate": 23.6,
-        "elem_count": 1942,
-        "jhs_rate": 69.2,
-        "jhs_count": 3137
+        "combined_rate": 34.5,
+        "combined_count": 4365,
+        "elem_rate": 18.0,
+        "elem_count": 1496,
+        "jhs_rate": 65.7,
+        "jhs_count": 2869
     },
-    "23": {
-        "combined_rate": 48.3,
-        "combined_count": 22052,
-        "elem_rate": 22.5,
-        "elem_count": 8616,
-        "jhs_rate": 64.8,
-        "jhs_count": 13436
+    "08": {
+        "combined_rate": 38.0,
+        "combined_count": 7935,
+        "elem_rate": 21.5,
+        "elem_count": 2904,
+        "jhs_rate": 68.2,
+        "jhs_count": 5031
+    },
+    "09": {
+        "combined_rate": 43.2,
+        "combined_count": 6032,
+        "elem_rate": 24.2,
+        "elem_count": 2192,
+        "jhs_rate": 78.2,
+        "jhs_count": 3840
+    },
+    "10": {
+        "combined_rate": 34.9,
+        "combined_count": 4788,
+        "elem_rate": 20.3,
+        "elem_count": 1791,
+        "jhs_rate": 61.5,
+        "jhs_count": 2997
+    },
+    "11": {
+        "combined_rate": 32.4,
+        "combined_count": 17356,
+        "elem_rate": 18.1,
+        "elem_count": 6360,
+        "jhs_rate": 59.9,
+        "jhs_count": 10996
+    },
+    "12": {
+        "combined_rate": 32.9,
+        "combined_count": 14883,
+        "elem_rate": 20.7,
+        "elem_count": 6143,
+        "jhs_rate": 56.4,
+        "jhs_count": 8740
+    },
+    "13": {
+        "combined_rate": 35.7,
+        "combined_count": 33831,
+        "elem_rate": 21.6,
+        "elem_count": 13548,
+        "jhs_rate": 63.3,
+        "jhs_count": 20283
+    },
+    "14": {
+        "combined_rate": 38.2,
+        "combined_count": 25231,
+        "elem_rate": 23.6,
+        "elem_count": 10275,
+        "jhs_rate": 66.6,
+        "jhs_count": 14956
     },
     "15": {
-        "combined_rate": 46.0,
-        "combined_count": 5350,
-        "elem_rate": 20.5,
-        "elem_count": 2033,
-        "jhs_rate": 62.2,
-        "jhs_count": 3317
+        "combined_rate": 38.8,
+        "combined_count": 5829,
+        "elem_rate": 21.9,
+        "elem_count": 2119,
+        "jhs_rate": 69.7,
+        "jhs_count": 3710
     },
     "16": {
-        "combined_rate": 40.8,
-        "combined_count": 1974,
-        "elem_rate": 17.6,
-        "elem_count": 733,
-        "jhs_rate": 55.5,
-        "jhs_count": 1241
+        "combined_rate": 37.4,
+        "combined_count": 2624,
+        "elem_rate": 24.3,
+        "elem_count": 1106,
+        "jhs_rate": 61.7,
+        "jhs_count": 1518
     },
     "17": {
-        "combined_rate": 43.8,
-        "combined_count": 2473,
-        "elem_rate": 19.1,
-        "elem_count": 937,
-        "jhs_rate": 59.6,
-        "jhs_count": 1536
+        "combined_rate": 38.7,
+        "combined_count": 3210,
+        "elem_rate": 22.9,
+        "elem_count": 1237,
+        "jhs_rate": 68.3,
+        "jhs_count": 1973
     },
     "18": {
-        "combined_rate": 39.5,
-        "combined_count": 1536,
-        "elem_rate": 16.5,
-        "elem_count": 560,
-        "jhs_rate": 54.2,
-        "jhs_count": 976
+        "combined_rate": 28.9,
+        "combined_count": 1661,
+        "elem_rate": 15.8,
+        "elem_count": 586,
+        "jhs_rate": 52.6,
+        "jhs_count": 1075
     },
     "19": {
-        "combined_rate": 53.5,
-        "combined_count": 2502,
-        "elem_rate": 24.8,
-        "elem_count": 977,
-        "jhs_rate": 71.8,
-        "jhs_count": 1525
+        "combined_rate": 41.2,
+        "combined_count": 2337,
+        "elem_rate": 23.0,
+        "elem_count": 844,
+        "jhs_rate": 75.1,
+        "jhs_count": 1493
     },
     "20": {
-        "combined_rate": 57.1,
-        "combined_count": 6597,
-        "elem_rate": 27.8,
-        "elem_count": 2592,
-        "jhs_rate": 75.8,
-        "jhs_count": 4005
+        "combined_rate": 48.6,
+        "combined_count": 7248,
+        "elem_rate": 31.5,
+        "elem_count": 3051,
+        "jhs_rate": 80.0,
+        "jhs_count": 4197
     },
     "21": {
-        "combined_rate": 49.9,
-        "combined_count": 5543,
-        "elem_rate": 23.1,
-        "elem_count": 2125,
-        "jhs_rate": 67.0,
-        "jhs_count": 3418
+        "combined_rate": 39.8,
+        "combined_count": 5897,
+        "elem_rate": 24.3,
+        "elem_count": 2326,
+        "jhs_rate": 67.7,
+        "jhs_count": 3571
     },
     "22": {
-        "combined_rate": 52.3,
-        "combined_count": 10920,
-        "elem_rate": 24.6,
-        "elem_count": 4279,
-        "jhs_rate": 69.9,
-        "jhs_count": 6641
+        "combined_rate": 45.6,
+        "combined_count": 12118,
+        "elem_rate": 30.0,
+        "elem_count": 5133,
+        "jhs_rate": 73.8,
+        "jhs_count": 6985
     },
-    "27": {
-        "combined_rate": 51.0,
-        "combined_count": 26307,
-        "elem_rate": 23.6,
-        "elem_count": 10292,
-        "jhs_rate": 68.4,
-        "jhs_count": 16015
+    "23": {
+        "combined_rate": 41.8,
+        "combined_count": 24927,
+        "elem_rate": 25.7,
+        "elem_count": 10028,
+        "jhs_rate": 72.0,
+        "jhs_count": 14899
     },
     "24": {
-        "combined_rate": 49.0,
-        "combined_count": 4939,
-        "elem_rate": 22.8,
-        "elem_count": 1922,
-        "jhs_rate": 65.7,
-        "jhs_count": 3017
+        "combined_rate": 37.5,
+        "combined_count": 4891,
+        "elem_rate": 23.2,
+        "elem_count": 1954,
+        "jhs_rate": 63.3,
+        "jhs_count": 2937
     },
     "25": {
-        "combined_rate": 48.0,
-        "combined_count": 4059,
-        "elem_rate": 22.1,
-        "elem_count": 1566,
-        "jhs_rate": 64.5,
-        "jhs_count": 2493
+        "combined_rate": 36.7,
+        "combined_count": 4305,
+        "elem_rate": 22.2,
+        "elem_count": 1702,
+        "jhs_rate": 64.0,
+        "jhs_count": 2603
     },
     "26": {
-        "combined_rate": 47.3,
-        "combined_count": 7015,
-        "elem_rate": 21.6,
-        "elem_count": 2704,
-        "jhs_rate": 63.6,
-        "jhs_count": 4311
+        "combined_rate": 35.8,
+        "combined_count": 6490,
+        "elem_rate": 22.2,
+        "elem_count": 2593,
+        "jhs_rate": 60.7,
+        "jhs_count": 3897
+    },
+    "27": {
+        "combined_rate": 37.9,
+        "combined_count": 23749,
+        "elem_rate": 21.3,
+        "elem_count": 8718,
+        "jhs_rate": 69.3,
+        "jhs_count": 15031
     },
     "28": {
-        "combined_rate": 48.8,
-        "combined_count": 15469,
-        "elem_rate": 22.6,
-        "elem_count": 6026,
-        "jhs_rate": 65.5,
-        "jhs_count": 9443
+        "combined_rate": 38.8,
+        "combined_count": 15868,
+        "elem_rate": 21.9,
+        "elem_count": 5874,
+        "jhs_rate": 70.7,
+        "jhs_count": 9994
     },
     "29": {
-        "combined_rate": 47.4,
-        "combined_count": 3560,
-        "elem_rate": 21.7,
-        "elem_count": 1384,
-        "jhs_rate": 63.8,
-        "jhs_count": 2176
+        "combined_rate": 39.7,
+        "combined_count": 3870,
+        "elem_rate": 22.6,
+        "elem_count": 1417,
+        "jhs_rate": 70.4,
+        "jhs_count": 2453
     },
     "30": {
-        "combined_rate": 46.9,
-        "combined_count": 2363,
-        "elem_rate": 21.3,
-        "elem_count": 906,
-        "jhs_rate": 63.2,
-        "jhs_count": 1457
-    },
-    "34": {
-        "combined_rate": 51.7,
-        "combined_count": 8240,
-        "elem_rate": 24.3,
-        "elem_count": 3232,
-        "jhs_rate": 69.1,
-        "jhs_count": 5008
+        "combined_rate": 38.9,
+        "combined_count": 2511,
+        "elem_rate": 23.2,
+        "elem_count": 967,
+        "jhs_rate": 67.6,
+        "jhs_count": 1544
     },
     "31": {
-        "combined_rate": 46.3,
-        "combined_count": 1453,
-        "elem_rate": 20.9,
-        "elem_count": 551,
-        "jhs_rate": 62.5,
-        "jhs_count": 902
+        "combined_rate": 42.3,
+        "combined_count": 1764,
+        "elem_rate": 23.9,
+        "elem_count": 653,
+        "jhs_rate": 77.2,
+        "jhs_count": 1111
     },
     "32": {
-        "combined_rate": 45.4,
-        "combined_count": 1638,
-        "elem_rate": 20.4,
-        "elem_count": 622,
-        "jhs_rate": 61.4,
-        "jhs_count": 1016
+        "combined_rate": 48.8,
+        "combined_count": 2445,
+        "elem_rate": 32.1,
+        "elem_count": 1056,
+        "jhs_rate": 80.7,
+        "jhs_count": 1389
     },
     "33": {
-        "combined_rate": 52.5,
-        "combined_count": 5655,
-        "elem_rate": 24.8,
-        "elem_count": 2237,
-        "jhs_rate": 70.2,
-        "jhs_count": 3418
+        "combined_rate": 29.6,
+        "combined_count": 4241,
+        "elem_rate": 19.4,
+        "elem_count": 1807,
+        "jhs_rate": 48.8,
+        "jhs_count": 2434
+    },
+    "34": {
+        "combined_rate": 40.5,
+        "combined_count": 8738,
+        "elem_rate": 25.4,
+        "elem_count": 3559,
+        "jhs_rate": 68.5,
+        "jhs_count": 5179
     },
     "35": {
-        "combined_rate": 49.7,
-        "combined_count": 3662,
-        "elem_rate": 23.1,
-        "elem_count": 1414,
-        "jhs_rate": 66.7,
-        "jhs_count": 2248
-    },
-    "37": {
-        "combined_rate": 47.2,
-        "combined_count": 2587,
-        "elem_rate": 21.5,
-        "elem_count": 987,
-        "jhs_rate": 63.5,
-        "jhs_count": 1600
+        "combined_rate": 38.3,
+        "combined_count": 3573,
+        "elem_rate": 23.4,
+        "elem_count": 1412,
+        "jhs_rate": 65.3,
+        "jhs_count": 2161
     },
     "36": {
-        "combined_rate": 46.2,
-        "combined_count": 1740,
-        "elem_rate": 20.8,
-        "elem_count": 652,
-        "jhs_rate": 62.3,
-        "jhs_count": 1088
+        "combined_rate": 36.5,
+        "combined_count": 1814,
+        "elem_rate": 17.7,
+        "elem_count": 573,
+        "jhs_rate": 71.7,
+        "jhs_count": 1241
+    },
+    "37": {
+        "combined_rate": 31.6,
+        "combined_count": 2253,
+        "elem_rate": 18.5,
+        "elem_count": 858,
+        "jhs_rate": 56.3,
+        "jhs_count": 1395
     },
     "38": {
-        "combined_rate": 46.5,
-        "combined_count": 3357,
-        "elem_rate": 21.1,
-        "elem_count": 1292,
-        "jhs_rate": 62.6,
-        "jhs_count": 2065
+        "combined_rate": 41.1,
+        "combined_count": 3950,
+        "elem_rate": 25.6,
+        "elem_count": 1578,
+        "jhs_rate": 69.0,
+        "jhs_count": 2372
     },
     "39": {
-        "combined_rate": 54.1,
-        "combined_count": 1975,
-        "elem_rate": 25.8,
-        "elem_count": 784,
-        "jhs_rate": 72.1,
-        "jhs_count": 1191
+        "combined_rate": 34.9,
+        "combined_count": 1595,
+        "elem_rate": 20.2,
+        "elem_count": 604,
+        "jhs_rate": 62.4,
+        "jhs_count": 991
     },
     "40": {
-        "combined_rate": 53.3,
-        "combined_count": 16093,
-        "elem_rate": 25.1,
-        "elem_count": 6239,
-        "jhs_rate": 71.3,
-        "jhs_count": 9854
+        "combined_rate": 47.2,
+        "combined_count": 19602,
+        "elem_rate": 29.3,
+        "elem_count": 8008,
+        "jhs_rate": 81.7,
+        "jhs_count": 11594
     },
     "41": {
-        "combined_rate": 51.5,
-        "combined_count": 2567,
-        "elem_rate": 23.9,
-        "elem_count": 998,
-        "jhs_rate": 69.0,
-        "jhs_count": 1569
+        "combined_rate": 33.2,
+        "combined_count": 2228,
+        "elem_rate": 19.7,
+        "elem_count": 858,
+        "jhs_rate": 57.7,
+        "jhs_count": 1370
     },
     "42": {
-        "combined_rate": 48.1,
-        "combined_count": 3662,
-        "elem_rate": 22.0,
-        "elem_count": 1404,
-        "jhs_rate": 64.7,
-        "jhs_count": 2258
+        "combined_rate": 38.1,
+        "combined_count": 3798,
+        "elem_rate": 21.8,
+        "elem_count": 1420,
+        "jhs_rate": 68.7,
+        "jhs_count": 2378
     },
     "43": {
-        "combined_rate": 52.4,
-        "combined_count": 5349,
-        "elem_rate": 24.7,
-        "elem_count": 2064,
-        "jhs_rate": 70.0,
-        "jhs_count": 3285
+        "combined_rate": 40.7,
+        "combined_count": 5781,
+        "elem_rate": 22.9,
+        "elem_count": 2133,
+        "jhs_rate": 74.7,
+        "jhs_count": 3648
     },
     "44": {
-        "combined_rate": 53.0,
-        "combined_count": 3436,
-        "elem_rate": 25.0,
-        "elem_count": 1333,
-        "jhs_rate": 70.9,
-        "jhs_count": 2103
+        "combined_rate": 36.9,
+        "combined_count": 3075,
+        "elem_rate": 20.9,
+        "elem_count": 1133,
+        "jhs_rate": 66.6,
+        "jhs_count": 1942
     },
     "45": {
-        "combined_rate": 55.4,
-        "combined_count": 3457,
-        "elem_rate": 26.2,
-        "elem_count": 1373,
-        "jhs_rate": 74.0,
-        "jhs_count": 2084
+        "combined_rate": 32.6,
+        "combined_count": 2842,
+        "elem_rate": 18.6,
+        "elem_count": 1054,
+        "jhs_rate": 58.3,
+        "jhs_count": 1788
     },
     "46": {
-        "combined_rate": 53.5,
-        "combined_count": 5103,
-        "elem_rate": 25.2,
-        "elem_count": 1973,
-        "jhs_rate": 71.5,
-        "jhs_count": 3130
+        "combined_rate": 38.2,
+        "combined_count": 4982,
+        "elem_rate": 20.8,
+        "elem_count": 1768,
+        "jhs_rate": 70.4,
+        "jhs_count": 3214
     },
     "47": {
-        "combined_rate": 64.7,
-        "combined_count": 7121,
-        "elem_rate": 31.8,
-        "elem_count": 2807,
-        "jhs_rate": 85.7,
-        "jhs_count": 4314
+        "combined_rate": 49.5,
+        "combined_count": 7432,
+        "elem_rate": 35.4,
+        "elem_count": 3523,
+        "jhs_rate": 77.5,
+        "jhs_count": 3909
     }
 }
 
@@ -632,10 +632,16 @@ def test_absenteeism_official_ground_truth() -> None:
         assert pref["absenteeism_combined_rate"] == gt_data["combined_rate"], f"{code}: absenteeism_combined_rate mismatch"
         assert pref["absenteeism_combined_count"] == gt_data["combined_count"], f"{code}: absenteeism_combined_count mismatch"
         assert pref["elem_absenteeism_rate"] == gt_data["elem_rate"], f"{code}: elem_absenteeism_rate mismatch"
+        assert pref["elem_absenteeism_count"] == gt_data["elem_count"], f"{code}: elem_absenteeism_count mismatch"
         assert pref["jhs_absenteeism_rate"] == gt_data["jhs_rate"], f"{code}: jhs_absenteeism_rate mismatch"
+        assert pref["jhs_absenteeism_count"] == gt_data["jhs_count"], f"{code}: jhs_absenteeism_count mismatch"
 
         assert ext_entry["absenteeism_combined_rate"] == gt_data["combined_rate"], f"ext {code}: absenteeism_combined_rate mismatch"
         assert ext_entry["absenteeism_combined_count"] == gt_data["combined_count"], f"ext {code}: absenteeism_combined_count mismatch"
+        assert ext_entry["elem_absenteeism_rate"] == gt_data["elem_rate"], f"ext {code}: elem_absenteeism_rate mismatch"
+        assert ext_entry["elem_absenteeism_count"] == gt_data["elem_count"], f"ext {code}: elem_absenteeism_count mismatch"
+        assert ext_entry["jhs_absenteeism_rate"] == gt_data["jhs_rate"], f"ext {code}: jhs_absenteeism_rate mismatch"
+        assert ext_entry["jhs_absenteeism_count"] == gt_data["jhs_count"], f"ext {code}: jhs_absenteeism_count mismatch"
 
 
 if __name__ == "__main__":

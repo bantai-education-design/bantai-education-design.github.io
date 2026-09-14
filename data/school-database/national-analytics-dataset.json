@@ -298,12 +298,12 @@
         "ict_teaching_capability": 12,
         "waiting_children_per_10k_preschool": 8
       },
-      "absenteeism_combined_rate": 45.9,
-      "absenteeism_combined_count": 32865,
-      "elem_absenteeism_rate": 21.0,
-      "elem_absenteeism_count": 12812,
-      "jhs_absenteeism_rate": 61.7,
-      "jhs_absenteeism_count": 20053
+      "absenteeism_combined_rate": 35.7,
+      "absenteeism_combined_count": 33831,
+      "elem_absenteeism_rate": 21.6,
+      "elem_absenteeism_count": 13548,
+      "jhs_absenteeism_rate": 63.3,
+      "jhs_absenteeism_count": 20283
     },
     {
       "code": "kanagawa",
@@ -368,12 +368,12 @@
         "ict_teaching_capability": 38,
         "waiting_children_per_10k_preschool": 11
       },
-      "absenteeism_combined_rate": 47.5,
-      "absenteeism_combined_count": 23916,
-      "elem_absenteeism_rate": 21.8,
-      "elem_absenteeism_count": 9256,
-      "jhs_absenteeism_rate": 63.9,
-      "jhs_absenteeism_count": 14660
+      "absenteeism_combined_rate": 38.2,
+      "absenteeism_combined_count": 25231,
+      "elem_absenteeism_rate": 23.6,
+      "elem_absenteeism_count": 10275,
+      "jhs_absenteeism_rate": 66.6,
+      "jhs_absenteeism_count": 14956
     },
     {
       "code": "saitama",
@@ -438,12 +438,12 @@
         "ict_teaching_capability": 23,
         "waiting_children_per_10k_preschool": 7
       },
-      "absenteeism_combined_rate": 46.7,
-      "absenteeism_combined_count": 18822,
-      "elem_absenteeism_rate": 21.5,
-      "elem_absenteeism_count": 7326,
-      "jhs_absenteeism_rate": 62.8,
-      "jhs_absenteeism_count": 11496
+      "absenteeism_combined_rate": 32.4,
+      "absenteeism_combined_count": 17356,
+      "elem_absenteeism_rate": 18.1,
+      "elem_absenteeism_count": 6360,
+      "jhs_absenteeism_rate": 59.9,
+      "jhs_absenteeism_count": 10996
     },
     {
       "code": "chiba",
@@ -508,12 +508,12 @@
         "ict_teaching_capability": 45,
         "waiting_children_per_10k_preschool": 12
       },
-      "absenteeism_combined_rate": 50.3,
-      "absenteeism_combined_count": 17504,
-      "elem_absenteeism_rate": 23.4,
-      "elem_absenteeism_count": 6790,
-      "jhs_absenteeism_rate": 67.4,
-      "jhs_absenteeism_count": 10714
+      "absenteeism_combined_rate": 32.9,
+      "absenteeism_combined_count": 14883,
+      "elem_absenteeism_rate": 20.7,
+      "elem_absenteeism_count": 6143,
+      "jhs_absenteeism_rate": 56.4,
+      "jhs_absenteeism_count": 8740
     },
     {
       "code": "ibaraki",
@@ -578,12 +578,12 @@
         "ict_teaching_capability": 2,
         "waiting_children_per_10k_preschool": 30
       },
-      "absenteeism_combined_rate": 56.1,
-      "absenteeism_combined_count": 9310,
-      "elem_absenteeism_rate": 26.9,
-      "elem_absenteeism_count": 3669,
-      "jhs_absenteeism_rate": 74.7,
-      "jhs_absenteeism_count": 5641
+      "absenteeism_combined_rate": 38.0,
+      "absenteeism_combined_count": 7935,
+      "elem_absenteeism_rate": 21.5,
+      "elem_absenteeism_count": 2904,
+      "jhs_absenteeism_rate": 68.2,
+      "jhs_absenteeism_count": 5031
     },
     {
       "code": "tochigi",
@@ -648,12 +648,12 @@
         "ict_teaching_capability": 24,
         "waiting_children_per_10k_preschool": 28
       },
-      "absenteeism_combined_rate": 53.7,
-      "absenteeism_combined_count": 5799,
-      "elem_absenteeism_rate": 25.1,
-      "elem_absenteeism_count": 2267,
-      "jhs_absenteeism_rate": 71.9,
-      "jhs_absenteeism_count": 3532
+      "absenteeism_combined_rate": 43.2,
+      "absenteeism_combined_count": 6032,
+      "elem_absenteeism_rate": 24.2,
+      "elem_absenteeism_count": 2192,
+      "jhs_absenteeism_rate": 78.2,
+      "jhs_absenteeism_count": 3840
     },
     {
       "code": "gunma",
@@ -718,12 +718,12 @@
         "ict_teaching_capability": 40,
         "waiting_children_per_10k_preschool": 31
       },
-      "absenteeism_combined_rate": 54.4,
-      "absenteeism_combined_count": 5776,
-      "elem_absenteeism_rate": 25.6,
-      "elem_absenteeism_count": 2277,
-      "jhs_absenteeism_rate": 72.8,
-      "jhs_absenteeism_count": 3499
+      "absenteeism_combined_rate": 34.9,
+      "absenteeism_combined_count": 4788,
+      "elem_absenteeism_rate": 20.3,
+      "elem_absenteeism_count": 1791,
+      "jhs_absenteeism_rate": 61.5,
+      "jhs_absenteeism_count": 2997
     },
     {
       "code": "hokkaido",
@@ -788,12 +788,12 @@
         "ict_teaching_capability": 20,
         "waiting_children_per_10k_preschool": 18
       },
-      "absenteeism_combined_rate": 54.8,
-      "absenteeism_combined_count": 15388,
-      "elem_absenteeism_rate": 26.1,
-      "elem_absenteeism_count": 6006,
-      "jhs_absenteeism_rate": 73.1,
-      "jhs_absenteeism_count": 9382
+      "absenteeism_combined_rate": 42.2,
+      "absenteeism_combined_count": 14252,
+      "elem_absenteeism_rate": 22.4,
+      "elem_absenteeism_count": 4881,
+      "jhs_absenteeism_rate": 78.6,
+      "jhs_absenteeism_count": 9371
     },
     {
       "code": "miyagi",
@@ -858,12 +858,12 @@
         "ict_teaching_capability": 41,
         "waiting_children_per_10k_preschool": 17
       },
-      "absenteeism_combined_rate": 62.6,
-      "absenteeism_combined_count": 8558,
-      "elem_absenteeism_rate": 30.5,
-      "elem_absenteeism_count": 3448,
-      "jhs_absenteeism_rate": 83.1,
-      "jhs_absenteeism_count": 5110
+      "absenteeism_combined_rate": 47.0,
+      "absenteeism_combined_count": 7725,
+      "elem_absenteeism_rate": 27.9,
+      "elem_absenteeism_count": 3002,
+      "jhs_absenteeism_rate": 82.8,
+      "jhs_absenteeism_count": 4723
     },
     {
       "code": "aomori",
@@ -928,12 +928,12 @@
         "ict_teaching_capability": 44,
         "waiting_children_per_10k_preschool": 32
       },
-      "absenteeism_combined_rate": 53.1,
-      "absenteeism_combined_count": 3405,
-      "elem_absenteeism_rate": 24.5,
-      "elem_absenteeism_count": 1311,
-      "jhs_absenteeism_rate": 71.3,
-      "jhs_absenteeism_count": 2094
+      "absenteeism_combined_rate": 36.3,
+      "absenteeism_combined_count": 2869,
+      "elem_absenteeism_rate": 19.2,
+      "elem_absenteeism_count": 981,
+      "jhs_absenteeism_rate": 67.7,
+      "jhs_absenteeism_count": 1888
     },
     {
       "code": "iwate",
@@ -998,12 +998,12 @@
         "ict_teaching_capability": 42,
         "waiting_children_per_10k_preschool": 25
       },
-      "absenteeism_combined_rate": 51.2,
-      "absenteeism_combined_count": 3317,
-      "elem_absenteeism_rate": 23.2,
-      "elem_absenteeism_count": 1274,
-      "jhs_absenteeism_rate": 69.1,
-      "jhs_absenteeism_count": 2043
+      "absenteeism_combined_rate": 33.3,
+      "absenteeism_combined_count": 2685,
+      "elem_absenteeism_rate": 17.9,
+      "elem_absenteeism_count": 931,
+      "jhs_absenteeism_rate": 61.3,
+      "jhs_absenteeism_count": 1754
     },
     {
       "code": "akita",
@@ -1068,12 +1068,12 @@
         "ict_teaching_capability": 46,
         "waiting_children_per_10k_preschool": 20
       },
-      "absenteeism_combined_rate": 44.2,
-      "absenteeism_combined_count": 1900,
-      "elem_absenteeism_rate": 19.5,
-      "elem_absenteeism_count": 723,
-      "jhs_absenteeism_rate": 59.9,
-      "jhs_absenteeism_count": 1177
+      "absenteeism_combined_rate": 36.4,
+      "absenteeism_combined_count": 2027,
+      "elem_absenteeism_rate": 19.8,
+      "elem_absenteeism_count": 699,
+      "jhs_absenteeism_rate": 65.5,
+      "jhs_absenteeism_count": 1328
     },
     {
       "code": "yamagata",
@@ -1138,12 +1138,12 @@
         "ict_teaching_capability": 33,
         "waiting_children_per_10k_preschool": 33
       },
-      "absenteeism_combined_rate": 48.7,
-      "absenteeism_combined_count": 2577,
-      "elem_absenteeism_rate": 21.9,
-      "elem_absenteeism_count": 989,
-      "jhs_absenteeism_rate": 65.8,
-      "jhs_absenteeism_count": 1588
+      "absenteeism_combined_rate": 32.5,
+      "absenteeism_combined_count": 2343,
+      "elem_absenteeism_rate": 18.3,
+      "elem_absenteeism_count": 849,
+      "jhs_absenteeism_rate": 58.3,
+      "jhs_absenteeism_count": 1494
     },
     {
       "code": "fukushima",
@@ -1208,12 +1208,12 @@
         "ict_teaching_capability": 36,
         "waiting_children_per_10k_preschool": 26
       },
-      "absenteeism_combined_rate": 51.5,
-      "absenteeism_combined_count": 5079,
-      "elem_absenteeism_rate": 23.6,
-      "elem_absenteeism_count": 1942,
-      "jhs_absenteeism_rate": 69.2,
-      "jhs_absenteeism_count": 3137
+      "absenteeism_combined_rate": 34.5,
+      "absenteeism_combined_count": 4365,
+      "elem_absenteeism_rate": 18.0,
+      "elem_absenteeism_count": 1496,
+      "jhs_absenteeism_rate": 65.7,
+      "jhs_absenteeism_count": 2869
     },
     {
       "code": "aichi",
@@ -1278,12 +1278,12 @@
         "ict_teaching_capability": 47,
         "waiting_children_per_10k_preschool": 21
       },
-      "absenteeism_combined_rate": 48.3,
-      "absenteeism_combined_count": 22052,
-      "elem_absenteeism_rate": 22.5,
-      "elem_absenteeism_count": 8616,
-      "jhs_absenteeism_rate": 64.8,
-      "jhs_absenteeism_count": 13436
+      "absenteeism_combined_rate": 41.8,
+      "absenteeism_combined_count": 24927,
+      "elem_absenteeism_rate": 25.7,
+      "elem_absenteeism_count": 10028,
+      "jhs_absenteeism_rate": 72.0,
+      "jhs_absenteeism_count": 14899
     },
     {
       "code": "niigata",
@@ -1348,12 +1348,12 @@
         "ict_teaching_capability": 21,
         "waiting_children_per_10k_preschool": 34
       },
-      "absenteeism_combined_rate": 46.0,
-      "absenteeism_combined_count": 5350,
-      "elem_absenteeism_rate": 20.5,
-      "elem_absenteeism_count": 2033,
-      "jhs_absenteeism_rate": 62.2,
-      "jhs_absenteeism_count": 3317
+      "absenteeism_combined_rate": 38.8,
+      "absenteeism_combined_count": 5829,
+      "elem_absenteeism_rate": 21.9,
+      "elem_absenteeism_count": 2119,
+      "jhs_absenteeism_rate": 69.7,
+      "jhs_absenteeism_count": 3710
     },
     {
       "code": "toyama",
@@ -1418,12 +1418,12 @@
         "ict_teaching_capability": 13,
         "waiting_children_per_10k_preschool": 35
       },
-      "absenteeism_combined_rate": 40.8,
-      "absenteeism_combined_count": 1974,
-      "elem_absenteeism_rate": 17.6,
-      "elem_absenteeism_count": 733,
-      "jhs_absenteeism_rate": 55.5,
-      "jhs_absenteeism_count": 1241
+      "absenteeism_combined_rate": 37.4,
+      "absenteeism_combined_count": 2624,
+      "elem_absenteeism_rate": 24.3,
+      "elem_absenteeism_count": 1106,
+      "jhs_absenteeism_rate": 61.7,
+      "jhs_absenteeism_count": 1518
     },
     {
       "code": "ishikawa",
@@ -1488,12 +1488,12 @@
         "ict_teaching_capability": 6,
         "waiting_children_per_10k_preschool": 36
       },
-      "absenteeism_combined_rate": 43.8,
-      "absenteeism_combined_count": 2473,
-      "elem_absenteeism_rate": 19.1,
-      "elem_absenteeism_count": 937,
-      "jhs_absenteeism_rate": 59.6,
-      "jhs_absenteeism_count": 1536
+      "absenteeism_combined_rate": 38.7,
+      "absenteeism_combined_count": 3210,
+      "elem_absenteeism_rate": 22.9,
+      "elem_absenteeism_count": 1237,
+      "jhs_absenteeism_rate": 68.3,
+      "jhs_absenteeism_count": 1973
     },
     {
       "code": "fukui",
@@ -1558,12 +1558,12 @@
         "ict_teaching_capability": 15,
         "waiting_children_per_10k_preschool": 37
       },
-      "absenteeism_combined_rate": 39.5,
-      "absenteeism_combined_count": 1536,
-      "elem_absenteeism_rate": 16.5,
-      "elem_absenteeism_count": 560,
-      "jhs_absenteeism_rate": 54.2,
-      "jhs_absenteeism_count": 976
+      "absenteeism_combined_rate": 28.9,
+      "absenteeism_combined_count": 1661,
+      "elem_absenteeism_rate": 15.8,
+      "elem_absenteeism_count": 586,
+      "jhs_absenteeism_rate": 52.6,
+      "jhs_absenteeism_count": 1075
     },
     {
       "code": "yamanashi",
@@ -1628,12 +1628,12 @@
         "ict_teaching_capability": 14,
         "waiting_children_per_10k_preschool": 38
       },
-      "absenteeism_combined_rate": 53.5,
-      "absenteeism_combined_count": 2502,
-      "elem_absenteeism_rate": 24.8,
-      "elem_absenteeism_count": 977,
-      "jhs_absenteeism_rate": 71.8,
-      "jhs_absenteeism_count": 1525
+      "absenteeism_combined_rate": 41.2,
+      "absenteeism_combined_count": 2337,
+      "elem_absenteeism_rate": 23.0,
+      "elem_absenteeism_count": 844,
+      "jhs_absenteeism_rate": 75.1,
+      "jhs_absenteeism_count": 1493
     },
     {
       "code": "nagano",
@@ -1698,12 +1698,12 @@
         "ict_teaching_capability": 22,
         "waiting_children_per_10k_preschool": 24
       },
-      "absenteeism_combined_rate": 57.1,
-      "absenteeism_combined_count": 6597,
-      "elem_absenteeism_rate": 27.8,
-      "elem_absenteeism_count": 2592,
-      "jhs_absenteeism_rate": 75.8,
-      "jhs_absenteeism_count": 4005
+      "absenteeism_combined_rate": 48.6,
+      "absenteeism_combined_count": 7248,
+      "elem_absenteeism_rate": 31.5,
+      "elem_absenteeism_count": 3051,
+      "jhs_absenteeism_rate": 80.0,
+      "jhs_absenteeism_count": 4197
     },
     {
       "code": "gifu",
@@ -1768,12 +1768,12 @@
         "ict_teaching_capability": 9,
         "waiting_children_per_10k_preschool": 39
       },
-      "absenteeism_combined_rate": 49.9,
-      "absenteeism_combined_count": 5543,
-      "elem_absenteeism_rate": 23.1,
-      "elem_absenteeism_count": 2125,
-      "jhs_absenteeism_rate": 67.0,
-      "jhs_absenteeism_count": 3418
+      "absenteeism_combined_rate": 39.8,
+      "absenteeism_combined_count": 5897,
+      "elem_absenteeism_rate": 24.3,
+      "elem_absenteeism_count": 2326,
+      "jhs_absenteeism_rate": 67.7,
+      "jhs_absenteeism_count": 3571
     },
     {
       "code": "shizuoka",
@@ -1838,12 +1838,12 @@
         "ict_teaching_capability": 27,
         "waiting_children_per_10k_preschool": 40
       },
-      "absenteeism_combined_rate": 52.3,
-      "absenteeism_combined_count": 10920,
-      "elem_absenteeism_rate": 24.6,
-      "elem_absenteeism_count": 4279,
-      "jhs_absenteeism_rate": 69.9,
-      "jhs_absenteeism_count": 6641
+      "absenteeism_combined_rate": 45.6,
+      "absenteeism_combined_count": 12118,
+      "elem_absenteeism_rate": 30.0,
+      "elem_absenteeism_count": 5133,
+      "jhs_absenteeism_rate": 73.8,
+      "jhs_absenteeism_count": 6985
     },
     {
       "code": "osaka",
@@ -1908,12 +1908,12 @@
         "ict_teaching_capability": 34,
         "waiting_children_per_10k_preschool": 9
       },
-      "absenteeism_combined_rate": 51.0,
-      "absenteeism_combined_count": 26307,
-      "elem_absenteeism_rate": 23.6,
-      "elem_absenteeism_count": 10292,
-      "jhs_absenteeism_rate": 68.4,
-      "jhs_absenteeism_count": 16015
+      "absenteeism_combined_rate": 37.9,
+      "absenteeism_combined_count": 23749,
+      "elem_absenteeism_rate": 21.3,
+      "elem_absenteeism_count": 8718,
+      "jhs_absenteeism_rate": 69.3,
+      "jhs_absenteeism_count": 15031
     },
     {
       "code": "mie",
@@ -1978,12 +1978,12 @@
         "ict_teaching_capability": 7,
         "waiting_children_per_10k_preschool": 5
       },
-      "absenteeism_combined_rate": 49.0,
-      "absenteeism_combined_count": 4939,
-      "elem_absenteeism_rate": 22.8,
-      "elem_absenteeism_count": 1922,
-      "jhs_absenteeism_rate": 65.7,
-      "jhs_absenteeism_count": 3017
+      "absenteeism_combined_rate": 37.5,
+      "absenteeism_combined_count": 4891,
+      "elem_absenteeism_rate": 23.2,
+      "elem_absenteeism_count": 1954,
+      "jhs_absenteeism_rate": 63.3,
+      "jhs_absenteeism_count": 2937
     },
     {
       "code": "shiga",
@@ -2048,12 +2048,12 @@
         "ict_teaching_capability": 11,
         "waiting_children_per_10k_preschool": 1
       },
-      "absenteeism_combined_rate": 48.0,
-      "absenteeism_combined_count": 4059,
-      "elem_absenteeism_rate": 22.1,
-      "elem_absenteeism_count": 1566,
-      "jhs_absenteeism_rate": 64.5,
-      "jhs_absenteeism_count": 2493
+      "absenteeism_combined_rate": 36.7,
+      "absenteeism_combined_count": 4305,
+      "elem_absenteeism_rate": 22.2,
+      "elem_absenteeism_count": 1702,
+      "jhs_absenteeism_rate": 64.0,
+      "jhs_absenteeism_count": 2603
     },
     {
       "code": "kyoto",
@@ -2118,12 +2118,12 @@
         "ict_teaching_capability": 18,
         "waiting_children_per_10k_preschool": 22
       },
-      "absenteeism_combined_rate": 47.3,
-      "absenteeism_combined_count": 7015,
-      "elem_absenteeism_rate": 21.6,
-      "elem_absenteeism_count": 2704,
-      "jhs_absenteeism_rate": 63.6,
-      "jhs_absenteeism_count": 4311
+      "absenteeism_combined_rate": 35.8,
+      "absenteeism_combined_count": 6490,
+      "elem_absenteeism_rate": 22.2,
+      "elem_absenteeism_count": 2593,
+      "jhs_absenteeism_rate": 60.7,
+      "jhs_absenteeism_count": 3897
     },
     {
       "code": "hyogo",
@@ -2188,12 +2188,12 @@
         "ict_teaching_capability": 19,
         "waiting_children_per_10k_preschool": 6
       },
-      "absenteeism_combined_rate": 48.8,
-      "absenteeism_combined_count": 15469,
-      "elem_absenteeism_rate": 22.6,
-      "elem_absenteeism_count": 6026,
-      "jhs_absenteeism_rate": 65.5,
-      "jhs_absenteeism_count": 9443
+      "absenteeism_combined_rate": 38.8,
+      "absenteeism_combined_count": 15868,
+      "elem_absenteeism_rate": 21.9,
+      "elem_absenteeism_count": 5874,
+      "jhs_absenteeism_rate": 70.7,
+      "jhs_absenteeism_count": 9994
     },
     {
       "code": "nara",
@@ -2258,12 +2258,12 @@
         "ict_teaching_capability": 32,
         "waiting_children_per_10k_preschool": 2
       },
-      "absenteeism_combined_rate": 47.4,
-      "absenteeism_combined_count": 3560,
-      "elem_absenteeism_rate": 21.7,
-      "elem_absenteeism_count": 1384,
-      "jhs_absenteeism_rate": 63.8,
-      "jhs_absenteeism_count": 2176
+      "absenteeism_combined_rate": 39.7,
+      "absenteeism_combined_count": 3870,
+      "elem_absenteeism_rate": 22.6,
+      "elem_absenteeism_count": 1417,
+      "jhs_absenteeism_rate": 70.4,
+      "jhs_absenteeism_count": 2453
     },
     {
       "code": "wakayama",
@@ -2328,12 +2328,12 @@
         "ict_teaching_capability": 28,
         "waiting_children_per_10k_preschool": 4
       },
-      "absenteeism_combined_rate": 46.9,
-      "absenteeism_combined_count": 2363,
-      "elem_absenteeism_rate": 21.3,
-      "elem_absenteeism_count": 906,
-      "jhs_absenteeism_rate": 63.2,
-      "jhs_absenteeism_count": 1457
+      "absenteeism_combined_rate": 38.9,
+      "absenteeism_combined_count": 2511,
+      "elem_absenteeism_rate": 23.2,
+      "elem_absenteeism_count": 967,
+      "jhs_absenteeism_rate": 67.6,
+      "jhs_absenteeism_count": 1544
     },
     {
       "code": "hiroshima",
@@ -2398,12 +2398,12 @@
         "ict_teaching_capability": 31,
         "waiting_children_per_10k_preschool": 41
       },
-      "absenteeism_combined_rate": 51.7,
-      "absenteeism_combined_count": 8240,
-      "elem_absenteeism_rate": 24.3,
-      "elem_absenteeism_count": 3232,
-      "jhs_absenteeism_rate": 69.1,
-      "jhs_absenteeism_count": 5008
+      "absenteeism_combined_rate": 40.5,
+      "absenteeism_combined_count": 8738,
+      "elem_absenteeism_rate": 25.4,
+      "elem_absenteeism_count": 3559,
+      "jhs_absenteeism_rate": 68.5,
+      "jhs_absenteeism_count": 5179
     },
     {
       "code": "tottori",
@@ -2468,12 +2468,12 @@
         "ict_teaching_capability": 10,
         "waiting_children_per_10k_preschool": 42
       },
-      "absenteeism_combined_rate": 46.3,
-      "absenteeism_combined_count": 1453,
-      "elem_absenteeism_rate": 20.9,
-      "elem_absenteeism_count": 551,
-      "jhs_absenteeism_rate": 62.5,
-      "jhs_absenteeism_count": 902
+      "absenteeism_combined_rate": 42.3,
+      "absenteeism_combined_count": 1764,
+      "elem_absenteeism_rate": 23.9,
+      "elem_absenteeism_count": 653,
+      "jhs_absenteeism_rate": 77.2,
+      "jhs_absenteeism_count": 1111
     },
     {
       "code": "shimane",
@@ -2538,12 +2538,12 @@
         "ict_teaching_capability": 39,
         "waiting_children_per_10k_preschool": 43
       },
-      "absenteeism_combined_rate": 45.4,
-      "absenteeism_combined_count": 1638,
-      "elem_absenteeism_rate": 20.4,
-      "elem_absenteeism_count": 622,
-      "jhs_absenteeism_rate": 61.4,
-      "jhs_absenteeism_count": 1016
+      "absenteeism_combined_rate": 48.8,
+      "absenteeism_combined_count": 2445,
+      "elem_absenteeism_rate": 32.1,
+      "elem_absenteeism_count": 1056,
+      "jhs_absenteeism_rate": 80.7,
+      "jhs_absenteeism_count": 1389
     },
     {
       "code": "okayama",
@@ -2608,12 +2608,12 @@
         "ict_teaching_capability": 4,
         "waiting_children_per_10k_preschool": 13
       },
-      "absenteeism_combined_rate": 52.5,
-      "absenteeism_combined_count": 5655,
-      "elem_absenteeism_rate": 24.8,
-      "elem_absenteeism_count": 2237,
-      "jhs_absenteeism_rate": 70.2,
-      "jhs_absenteeism_count": 3418
+      "absenteeism_combined_rate": 29.6,
+      "absenteeism_combined_count": 4241,
+      "elem_absenteeism_rate": 19.4,
+      "elem_absenteeism_count": 1807,
+      "jhs_absenteeism_rate": 48.8,
+      "jhs_absenteeism_count": 2434
     },
     {
       "code": "yamaguchi",
@@ -2678,12 +2678,12 @@
         "ict_teaching_capability": 25,
         "waiting_children_per_10k_preschool": 19
       },
-      "absenteeism_combined_rate": 49.7,
-      "absenteeism_combined_count": 3662,
-      "elem_absenteeism_rate": 23.1,
-      "elem_absenteeism_count": 1414,
-      "jhs_absenteeism_rate": 66.7,
-      "jhs_absenteeism_count": 2248
+      "absenteeism_combined_rate": 38.3,
+      "absenteeism_combined_count": 3573,
+      "elem_absenteeism_rate": 23.4,
+      "elem_absenteeism_count": 1412,
+      "jhs_absenteeism_rate": 65.3,
+      "jhs_absenteeism_count": 2161
     },
     {
       "code": "kagawa",
@@ -2748,12 +2748,12 @@
         "ict_teaching_capability": 43,
         "waiting_children_per_10k_preschool": 29
       },
-      "absenteeism_combined_rate": 47.2,
-      "absenteeism_combined_count": 2587,
-      "elem_absenteeism_rate": 21.5,
-      "elem_absenteeism_count": 987,
-      "jhs_absenteeism_rate": 63.5,
-      "jhs_absenteeism_count": 1600
+      "absenteeism_combined_rate": 31.6,
+      "absenteeism_combined_count": 2253,
+      "elem_absenteeism_rate": 18.5,
+      "elem_absenteeism_count": 858,
+      "jhs_absenteeism_rate": 56.3,
+      "jhs_absenteeism_count": 1395
     },
     {
       "code": "tokushima",
@@ -2818,12 +2818,12 @@
         "ict_teaching_capability": 3,
         "waiting_children_per_10k_preschool": 44
       },
-      "absenteeism_combined_rate": 46.2,
-      "absenteeism_combined_count": 1740,
-      "elem_absenteeism_rate": 20.8,
-      "elem_absenteeism_count": 652,
-      "jhs_absenteeism_rate": 62.3,
-      "jhs_absenteeism_count": 1088
+      "absenteeism_combined_rate": 36.5,
+      "absenteeism_combined_count": 1814,
+      "elem_absenteeism_rate": 17.7,
+      "elem_absenteeism_count": 573,
+      "jhs_absenteeism_rate": 71.7,
+      "jhs_absenteeism_count": 1241
     },
     {
       "code": "ehime",
@@ -2888,12 +2888,12 @@
         "ict_teaching_capability": 1,
         "waiting_children_per_10k_preschool": 14
       },
-      "absenteeism_combined_rate": 46.5,
-      "absenteeism_combined_count": 3357,
-      "elem_absenteeism_rate": 21.1,
-      "elem_absenteeism_count": 1292,
-      "jhs_absenteeism_rate": 62.6,
-      "jhs_absenteeism_count": 2065
+      "absenteeism_combined_rate": 41.1,
+      "absenteeism_combined_count": 3950,
+      "elem_absenteeism_rate": 25.6,
+      "elem_absenteeism_count": 1578,
+      "jhs_absenteeism_rate": 69.0,
+      "jhs_absenteeism_count": 2372
     },
     {
       "code": "kochi",
@@ -2958,12 +2958,12 @@
         "ict_teaching_capability": 26,
         "waiting_children_per_10k_preschool": 10
       },
-      "absenteeism_combined_rate": 54.1,
-      "absenteeism_combined_count": 1975,
-      "elem_absenteeism_rate": 25.8,
-      "elem_absenteeism_count": 784,
-      "jhs_absenteeism_rate": 72.1,
-      "jhs_absenteeism_count": 1191
+      "absenteeism_combined_rate": 34.9,
+      "absenteeism_combined_count": 1595,
+      "elem_absenteeism_rate": 20.2,
+      "elem_absenteeism_count": 604,
+      "jhs_absenteeism_rate": 62.4,
+      "jhs_absenteeism_count": 991
     },
     {
       "code": "fukuoka",
@@ -3028,12 +3028,12 @@
         "ict_teaching_capability": 37,
         "waiting_children_per_10k_preschool": 23
       },
-      "absenteeism_combined_rate": 53.3,
-      "absenteeism_combined_count": 16093,
-      "elem_absenteeism_rate": 25.1,
-      "elem_absenteeism_count": 6239,
-      "jhs_absenteeism_rate": 71.3,
-      "jhs_absenteeism_count": 9854
+      "absenteeism_combined_rate": 47.2,
+      "absenteeism_combined_count": 19602,
+      "elem_absenteeism_rate": 29.3,
+      "elem_absenteeism_count": 8008,
+      "jhs_absenteeism_rate": 81.7,
+      "jhs_absenteeism_count": 11594
     },
     {
       "code": "saga",
@@ -3098,12 +3098,12 @@
         "ict_teaching_capability": 16,
         "waiting_children_per_10k_preschool": 15
       },
-      "absenteeism_combined_rate": 51.5,
-      "absenteeism_combined_count": 2567,
-      "elem_absenteeism_rate": 23.9,
-      "elem_absenteeism_count": 998,
-      "jhs_absenteeism_rate": 69.0,
-      "jhs_absenteeism_count": 1569
+      "absenteeism_combined_rate": 33.2,
+      "absenteeism_combined_count": 2228,
+      "elem_absenteeism_rate": 19.7,
+      "elem_absenteeism_count": 858,
+      "jhs_absenteeism_rate": 57.7,
+      "jhs_absenteeism_count": 1370
     },
     {
       "code": "nagasaki",
@@ -3168,12 +3168,12 @@
         "ict_teaching_capability": 29,
         "waiting_children_per_10k_preschool": 45
       },
-      "absenteeism_combined_rate": 48.1,
-      "absenteeism_combined_count": 3662,
-      "elem_absenteeism_rate": 22.0,
-      "elem_absenteeism_count": 1404,
-      "jhs_absenteeism_rate": 64.7,
-      "jhs_absenteeism_count": 2258
+      "absenteeism_combined_rate": 38.1,
+      "absenteeism_combined_count": 3798,
+      "elem_absenteeism_rate": 21.8,
+      "elem_absenteeism_count": 1420,
+      "jhs_absenteeism_rate": 68.7,
+      "jhs_absenteeism_count": 2378
     },
     {
       "code": "kumamoto",
@@ -3238,12 +3238,12 @@
         "ict_teaching_capability": 5,
         "waiting_children_per_10k_preschool": 27
       },
-      "absenteeism_combined_rate": 52.4,
-      "absenteeism_combined_count": 5349,
-      "elem_absenteeism_rate": 24.7,
-      "elem_absenteeism_count": 2064,
-      "jhs_absenteeism_rate": 70.0,
-      "jhs_absenteeism_count": 3285
+      "absenteeism_combined_rate": 40.7,
+      "absenteeism_combined_count": 5781,
+      "elem_absenteeism_rate": 22.9,
+      "elem_absenteeism_count": 2133,
+      "jhs_absenteeism_rate": 74.7,
+      "jhs_absenteeism_count": 3648
     },
     {
       "code": "oita",
@@ -3308,12 +3308,12 @@
         "ict_teaching_capability": 17,
         "waiting_children_per_10k_preschool": 46
       },
-      "absenteeism_combined_rate": 53.0,
-      "absenteeism_combined_count": 3436,
-      "elem_absenteeism_rate": 25.0,
-      "elem_absenteeism_count": 1333,
-      "jhs_absenteeism_rate": 70.9,
-      "jhs_absenteeism_count": 2103
+      "absenteeism_combined_rate": 36.9,
+      "absenteeism_combined_count": 3075,
+      "elem_absenteeism_rate": 20.9,
+      "elem_absenteeism_count": 1133,
+      "jhs_absenteeism_rate": 66.6,
+      "jhs_absenteeism_count": 1942
     },
     {
       "code": "miyazaki",
@@ -3378,12 +3378,12 @@
         "ict_teaching_capability": 30,
         "waiting_children_per_10k_preschool": 47
       },
-      "absenteeism_combined_rate": 55.4,
-      "absenteeism_combined_count": 3457,
-      "elem_absenteeism_rate": 26.2,
-      "elem_absenteeism_count": 1373,
-      "jhs_absenteeism_rate": 74.0,
-      "jhs_absenteeism_count": 2084
+      "absenteeism_combined_rate": 32.6,
+      "absenteeism_combined_count": 2842,
+      "elem_absenteeism_rate": 18.6,
+      "elem_absenteeism_count": 1054,
+      "jhs_absenteeism_rate": 58.3,
+      "jhs_absenteeism_count": 1788
     },
     {
       "code": "kagoshima",
@@ -3448,12 +3448,12 @@
         "ict_teaching_capability": 35,
         "waiting_children_per_10k_preschool": 16
       },
-      "absenteeism_combined_rate": 53.5,
-      "absenteeism_combined_count": 5103,
-      "elem_absenteeism_rate": 25.2,
-      "elem_absenteeism_count": 1973,
-      "jhs_absenteeism_rate": 71.5,
-      "jhs_absenteeism_count": 3130
+      "absenteeism_combined_rate": 38.2,
+      "absenteeism_combined_count": 4982,
+      "elem_absenteeism_rate": 20.8,
+      "elem_absenteeism_count": 1768,
+      "jhs_absenteeism_rate": 70.4,
+      "jhs_absenteeism_count": 3214
     },
     {
       "code": "okinawa",
@@ -3518,12 +3518,12 @@
         "ict_teaching_capability": 8,
         "waiting_children_per_10k_preschool": 3
       },
-      "absenteeism_combined_rate": 64.7,
-      "absenteeism_combined_count": 7121,
-      "elem_absenteeism_rate": 31.8,
-      "elem_absenteeism_count": 2807,
-      "jhs_absenteeism_rate": 85.7,
-      "jhs_absenteeism_count": 4314
+      "absenteeism_combined_rate": 49.5,
+      "absenteeism_combined_count": 7432,
+      "elem_absenteeism_rate": 35.4,
+      "elem_absenteeism_count": 3523,
+      "jhs_absenteeism_rate": 77.5,
+      "jhs_absenteeism_count": 3909
     }
   ]
 }

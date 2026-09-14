@@ -223,3 +223,148 @@ function getAppNameFromContext(url, text) {
 
   return 'その他の製品';
 }
+
+// School DB analytics only: overlay canonical official statistics before analytics.js consumes the dataset.
+(() => {
+  if (!window.location.pathname.startsWith('/tools/school-database/analytics')) return;
+
+  const MAIN = '/data/school-database/national-analytics-dataset.json';
+  const ABS = '/data/school-database/mext-absenteeism-r6-ground-truth.json';
+  const MOV = '/data/school-database/population-movement-2025.json';
+  const originalFetch = window.fetch.bind(window);
+  const officialNational = {};
+
+  const rank = (data, keys) => {
+    keys.forEach((key) => {
+      [...data.prefectures]
+        .sort((a, b) => (b[key] ?? -Infinity) - (a[key] ?? -Infinity))
+        .forEach((pref, index) => {
+          pref.ranks = pref.ranks || {};
+          pref.ranks[key] = index + 1;
+        });
+    });
+  };
+
+  const mergeAbsenteeism = (data, official) => {
+    const byCode = new Map(official.prefectures.map((p) => [p.prefecture_code, p]));
+    if (byCode.size !== 47) throw new Error(`MEXT absenteeism prefecture count mismatch: ${byCode.size}`);
+    const keys = [
+      'absenteeism_combined_rate', 'absenteeism_combined_count',
+      'elem_absenteeism_rate', 'elem_absenteeism_count',
+      'jhs_absenteeism_rate', 'jhs_absenteeism_count'
+    ];
+    data.national_summary = data.national_summary || {};
+    Object.assign(data.national_summary, official.national);
+    Object.assign(officialNational, official.national);
+    data.prefectures.forEach((pref) => {
+      const source = byCode.get(pref.code);
+      if (!source) throw new Error(`MEXT absenteeism missing prefecture: ${pref.code}`);
+      keys.forEach((key) => { pref[key] = source[key]; });
+    });
+    data.indicators_definition = data.indicators_definition || {};
+    const source = '文部科学省「令和6年度 児童生徒の問題行動・不登校等生徒指導上の諸課題に関する調査」表4-15（都道府県別・国公私立）';
+    const base = '2024年度（令和6年度）実績';
+    Object.assign(data.indicators_definition, {
+      absenteeism_combined_rate: {label:'小中学校 1,000人当たり不登校児童生徒数',unit:'人/1,000人',description:'小学校・中学校の在籍児童生徒1,000人当たり不登校児童生徒数。都道府県別（国公私立）の公式公表値。',source,base_date:base},
+      absenteeism_combined_count: {label:'小中学校 不登校児童生徒数',unit:'人',description:'小学校・中学校の不登校児童生徒数の合計。都道府県別（国公私立）の公式公表値。',source,base_date:base},
+      elem_absenteeism_rate: {label:'小学校 1,000人当たり不登校児童数',unit:'人/1,000人',description:'小学校の在籍児童1,000人当たり不登校児童数。',source,base_date:base},
+      elem_absenteeism_count: {label:'小学校 不登校児童数',unit:'人',description:'小学校の不登校児童数。',source,base_date:base},
+      jhs_absenteeism_rate: {label:'中学校 1,000人当たり不登校生徒数',unit:'人/1,000人',description:'中学校の在籍生徒1,000人当たり不登校生徒数。',source,base_date:base},
+      jhs_absenteeism_count: {label:'中学校 不登校生徒数',unit:'人',description:'中学校の不登校生徒数。',source,base_date:base}
+    });
+    rank(data, keys);
+  };
+
+  const mergeMovement = (data, official) => {
+    const byCode = new Map(official.prefectures.map((p) => [p.prefecture_code, p]));
+    if (byCode.size !== 47) throw new Error(`Population movement prefecture count mismatch: ${byCode.size}`);
+    const allKeys = ['interpref_in_migrants','interpref_out_migrants','net_migration_2025','net_migration_rate_2025'];
+    data.national_summary = data.national_summary || {};
+    Object.assign(data.national_summary, official.national);
+    Object.assign(officialNational, official.national);
+    data.prefectures.forEach((pref) => {
+      const source = byCode.get(pref.code);
+      if (!source) throw new Error(`Population movement missing prefecture: ${pref.code}`);
+      allKeys.forEach((key) => { pref[key] = source[key]; });
+    });
+    data.indicators_definition = data.indicators_definition || {};
+    const source = '総務省統計局「住民基本台帳人口移動報告 2025年（令和7年）結果」表7・表27';
+    Object.assign(data.indicators_definition, {
+      net_migration_2025: {label:'2025年 転入超過数（－は転出超過）',unit:'人',description:'他都道府県からの転入者数から他都道府県への転出者数を差し引いた人数。プラスは転入超過、マイナスは転出超過を示します。',source,base_date:'2025年年間'},
+      net_migration_rate_2025: {label:'2025年 転入超過率（住民基本台帳人口比）',unit:'%',description:'2025年の転入超過数を2025年1月1日現在の住民基本台帳人口で除した比率。プラスは転入超過、マイナスは転出超過を示します。',source,base_date:'2025年／人口は2025年1月1日現在'}
+    });
+    rank(data, ['net_migration_2025','net_migration_rate_2025']);
+  };
+
+  window.fetch = async (input, init) => {
+    const url = typeof input === 'string' ? new URL(input, window.location.href) : new URL(input.url, window.location.href);
+    if (url.pathname !== MAIN) return originalFetch(input, init);
+
+    const [mainRes, absRes, movRes] = await Promise.all([
+      originalFetch(input, init), originalFetch(ABS), originalFetch(MOV)
+    ]);
+    if (!mainRes.ok) return mainRes;
+    const data = await mainRes.clone().json();
+    if (!absRes.ok) throw new Error(`Official absenteeism data load failed: HTTP ${absRes.status}`);
+    if (!movRes.ok) throw new Error(`Population movement data load failed: HTTP ${movRes.status}`);
+    mergeAbsenteeism(data, await absRes.json());
+    mergeMovement(data, await movRes.json());
+    return new Response(JSON.stringify(data), {
+      status: mainRes.status,
+      statusText: mainRes.statusText,
+      headers: {'Content-Type':'application/json; charset=utf-8'}
+    });
+  };
+
+  const select = document.getElementById('metric-select');
+  if (select) {
+    const add = (group, value, label) => {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      group.appendChild(option);
+    };
+    const absence = document.createElement('optgroup');
+    absence.label = '🚸 不登校（文部科学省 2024年度公式値）';
+    add(absence,'absenteeism_combined_rate','🚸 小中学校 1,000人当たり不登校児童生徒数');
+    add(absence,'elem_absenteeism_rate','🎒 小学校 1,000人当たり不登校児童数');
+    add(absence,'jhs_absenteeism_rate','🏫 中学校 1,000人当たり不登校生徒数');
+    add(absence,'absenteeism_combined_count','🚸 小中学校 不登校児童生徒数（人）');
+    select.appendChild(absence);
+
+    const movement = document.createElement('optgroup');
+    movement.label = '🚚 人口移動（総務省 2025年）';
+    add(movement,'net_migration_2025','🚚 転入超過数（－は転出超過）');
+    add(movement,'net_migration_rate_2025','📈 転入超過率（住民基本台帳人口比 %）');
+    select.appendChild(movement);
+
+    const patchPresentation = () => {
+      const key = select.value;
+      const isAbsenteeismRate = key.includes('absenteeism') && key.endsWith('_rate');
+      if (key === 'net_migration_rate_2025' || isAbsenteeismRate) {
+        const label = document.getElementById('metric-national-avg-label');
+        const value = document.getElementById('metric-national-avg');
+        if (label) label.textContent = key === 'net_migration_rate_2025' ? '全国転入超過率' : '全国値（1,000人当たり）';
+        if (value && officialNational[key] !== undefined) {
+          const digits = key === 'net_migration_rate_2025' ? 2 : 1;
+          const unit = key === 'net_migration_rate_2025' ? '%' : '人/1,000人';
+          value.innerHTML = `${Number(officialNational[key]).toFixed(digits)} <span style="font-size:0.85rem; font-weight:600;">${unit}</span>`;
+        }
+      }
+      if (key === 'net_migration_2025' || key === 'net_migration_rate_2025') {
+        const rows = [...document.querySelectorAll('#bar-chart-container .bar-row')];
+        const parsed = rows.map((row) => {
+          const text = row.querySelector('.bar-value')?.textContent || '';
+          const match = text.replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);
+          return match ? Number(match[0]) : 0;
+        });
+        const maxAbs = Math.max(...parsed.map(Math.abs), 1);
+        rows.forEach((row, i) => {
+          const fill = row.querySelector('.bar-fill');
+          if (fill) fill.style.width = `${Math.max(4, Math.abs(parsed[i]) / maxAbs * 100)}%`;
+        });
+      }
+    };
+    select.addEventListener('change', () => setTimeout(patchPresentation, 0));
+  }
+})();
