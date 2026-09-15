@@ -4,9 +4,8 @@
  * Tests:
  * 1. PII Sanitization (query params, hash, mailto, tel)
  * 2. Pre-config exclusion logic (bantai_admin=true / bantai_admin=clear, localhost)
- * 3. File download duplicate prevention (no manual file_download event)
- * 4. Core event dispatch (booth_click, monitor_form_click, license_form_click, product_detail_click, database_nav_click, contact_click)
- * 5. Column engagement timing & duplicate prevention (<5s ignore, 5-14s is_engaged=false, 15s+ is_engaged=true)
+ * 3. Pre-config URL cleanup via replaceState (removes bantai_admin before gtag config)
+ * 4. Column engagement timing, read_time_sec, and duplicate prevention
  */
 
 const assert = require('assert');
@@ -45,6 +44,25 @@ function isTrackingDisabled(hostname, protocol, localStorageObj) {
   const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || protocol === 'file:';
   const isExcluded = localStorageObj.getItem('bantai_admin') === 'true';
   return isLocal || isExcluded;
+}
+
+// Pre-config URL Cleanup Logic (exact logic from 88 HTML files)
+function cleanAdminUrl(currentHref) {
+  const url = new URL(currentHref);
+  const adminParam = url.searchParams.get('bantai_admin');
+  if (adminParam === 'true') {
+    mockLocalStorage.setItem('bantai_admin', 'true');
+  } else if (adminParam === 'clear') {
+    mockLocalStorage.removeItem('bantai_admin');
+  }
+
+  let cleanedUrl = currentHref;
+  if (adminParam !== null) {
+    url.searchParams.delete('bantai_admin');
+    const cleanSearch = url.searchParams.toString();
+    cleanedUrl = url.origin + url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+  }
+  return { cleanedUrl, adminParam };
 }
 
 console.log('--- Running GA4 Analytics Verification Tests ---');
@@ -87,8 +105,25 @@ mockLocalStorage.removeItem('bantai_admin');
 assert.strictEqual(isTrackingDisabled('bantai-education-design.github.io', 'https:', mockLocalStorage), false, 'bantai_admin=clear re-enabled');
 console.log('  PASS: Exclusion correctly toggled');
 
-// TEST 3: Column Engagement Timing and Duplicate Prevention
-console.log('Test 3: Column Engagement Timing & Duplicate Guard');
+// TEST 3: Pre-config URL Cleanup (before gtag config)
+console.log('Test 3: Pre-config URL Cleanup via replaceState');
+// Case 3a: ?bantai_admin=true without other params
+const resA = cleanAdminUrl('https://bantai-education-design.github.io/?bantai_admin=true');
+assert.strictEqual(resA.cleanedUrl, 'https://bantai-education-design.github.io/', 'bantai_admin removed');
+assert.strictEqual(mockLocalStorage.getItem('bantai_admin'), 'true', 'Flag set to true');
+
+// Case 3b: ?bantai_admin=clear with other query and hash preserved
+const resB = cleanAdminUrl('https://bantai-education-design.github.io/columns/?article=123&bantai_admin=clear#comments');
+assert.strictEqual(resB.cleanedUrl, 'https://bantai-education-design.github.io/columns/?article=123#comments', 'bantai_admin removed, article=123 and #comments preserved');
+assert.strictEqual(mockLocalStorage.getItem('bantai_admin'), null, 'Flag removed');
+
+// Case 3c: Normal URL without bantai_admin -> completely untouched
+const resC = cleanAdminUrl('https://bantai-education-design.github.io/products/?cat=all#top');
+assert.strictEqual(resC.cleanedUrl, 'https://bantai-education-design.github.io/products/?cat=all#top', 'Normal URL untouched');
+console.log('  PASS: Pre-config replaceState cleans URL while preserving query and hash');
+
+// TEST 4: Column Engagement Timing and Duplicate Guard
+console.log('Test 4: Column Engagement Timing, read_time_sec & Duplicate Guard');
 
 class ColumnTrackerMock {
   constructor() {
@@ -123,6 +158,7 @@ class ColumnTrackerMock {
       name: 'column_engagement',
       id: this.activeColumn.id,
       title: this.activeColumn.title,
+      read_time_sec: duration,
       duration_seconds: duration,
       is_engaged: isEngaged,
       engagement_type: isEngaged ? 'engaged_view' : 'short_view'
@@ -140,37 +176,39 @@ class ColumnTrackerMock {
   }
 }
 
-// Case 3a: Under 5s -> no engagement event
+// Case 4a: Under 5s -> no engagement event
 const trackerA = new ColumnTrackerMock();
 trackerA.open({ id: 'col-1', title: 'テスト記事1' });
 trackerA.close(3); // 3 seconds
 assert.strictEqual(trackerA.events.length, 1, 'Only column_view should be sent');
 assert.strictEqual(trackerA.events[0].name, 'column_view');
 
-// Case 3b: 5s to 14s -> is_engaged: false
+// Case 4b: 5s to 14s -> is_engaged: false
 const trackerB = new ColumnTrackerMock();
 trackerB.open({ id: 'col-2', title: 'テスト記事2' });
 trackerB.close(10); // 10 seconds
 assert.strictEqual(trackerB.events.length, 2);
 assert.strictEqual(trackerB.events[1].name, 'column_engagement');
+assert.strictEqual(trackerB.events[1].read_time_sec, 10, 'read_time_sec must be 10');
 assert.strictEqual(trackerB.events[1].is_engaged, false);
 assert.strictEqual(trackerB.events[1].engagement_type, 'short_view');
 
-// Case 3c: 15s+ -> is_engaged: true
+// Case 4c: 15s+ -> is_engaged: true
 const trackerC = new ColumnTrackerMock();
 trackerC.open({ id: 'col-3', title: 'テスト記事3' });
 trackerC.close(25); // 25 seconds
 assert.strictEqual(trackerC.events.length, 2);
 assert.strictEqual(trackerC.events[1].name, 'column_engagement');
+assert.strictEqual(trackerC.events[1].read_time_sec, 25, 'read_time_sec must be 25');
 assert.strictEqual(trackerC.events[1].is_engaged, true);
 assert.strictEqual(trackerC.events[1].engagement_type, 'engaged_view');
 
-// Case 3d: Duplicate prevention (close called multiple times + pagehide)
+// Case 4d: Duplicate prevention (close called multiple times + pagehide)
 trackerC.close(30);
 trackerC.close(35);
 assert.strictEqual(trackerC.events.length, 2, 'Engagement must not be sent twice for the same viewing');
 
-// Case 3e: Inline link click triggers next_action and engagement (only once)
+// Case 4e: Inline link click triggers next_action and engagement (only once)
 const trackerD = new ColumnTrackerMock();
 trackerD.open({ id: 'col-4', title: 'テスト記事4' });
 trackerD.startTime = Date.now() - 20000; // 20 seconds elapsed
@@ -178,8 +216,9 @@ trackerD.clickLink('https://example.com/detail?ref=col#top');
 trackerD.close(20); // subsequent close should do nothing
 assert.strictEqual(trackerD.events.length, 3, 'column_view, column_engagement, column_next_action');
 assert.strictEqual(trackerD.events[1].name, 'column_engagement');
+assert.strictEqual(trackerD.events[1].read_time_sec, 20, 'read_time_sec must be 20');
 assert.strictEqual(trackerD.events[2].name, 'column_next_action');
 assert.strictEqual(trackerD.events[2].link_url, 'https://example.com/detail', 'Sanitized URL in next_action');
-console.log('  PASS: Column engagement rules and duplicate prevention verified');
+console.log('  PASS: Column engagement rules, read_time_sec and duplicate prevention verified');
 
-console.log('\nALL 3 ANALYTICS VERIFICATION TESTS PASSED SUCCESSFULLY.');
+console.log('\nALL 4 ANALYTICS VERIFICATION TESTS PASSED SUCCESSFULLY.');

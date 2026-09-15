@@ -42,11 +42,19 @@
   <script>
     (function() {
       try {
-        var params = new URLSearchParams(window.location.search);
-        if (params.get('bantai_admin') === 'true') {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
           localStorage.setItem('bantai_admin', 'true');
-        } else if (params.get('bantai_admin') === 'clear') {
+        } else if (adminParam === 'clear') {
           localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
         }
       } catch (e) {}
 

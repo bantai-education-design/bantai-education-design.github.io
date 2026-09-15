@@ -70,6 +70,7 @@
       column_id: activeColumn.id,
       column_title: activeColumn.title,
       column_category: activeColumn.category || '',
+      read_time_sec: durationSeconds,
       duration_seconds: durationSeconds,
       is_engaged: isEngaged,
       engagement_type: isEngaged ? 'engaged_view' : 'short_view'

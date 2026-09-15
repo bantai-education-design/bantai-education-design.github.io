@@ -18,8 +18,8 @@
 ```text
 https://bantai-education-design.github.io/?bantai_admin=true
 ```
-- アクセスした瞬間にブラウザの `localStorage` にフラグが保存され、以降はトップページ以外のどのページを閲覧しても恒久的にGA4計測から除外されます。
-- クエリパラメータ `?bantai_admin=true` 自体はスクリプトで即座に処理され、GA4の送信URLからはサニタイズ（除去）されるため計測データにクエリが残ることはありません。
+- アクセスした瞬間にブラウザの `localStorage` にフラグが保存され、`history.replaceState` によりアドレスバーおよび閲覧履歴から即座にクエリが除去されます。これにより、ページ再読み込み時の意図しない再処理や、URL共有時の誤送信、自動送信される `page_view` へのクエリ混入リスクが完全に防止されます。
+- 以降はトップページ以外のどのページを閲覧しても恒久的にGA4計測から除外されます。
 
 > [!CAUTION]
 > 除外解除URL（`?bantai_admin=clear`）は通常利用者へ案内・公開しないでください。
@@ -27,9 +27,18 @@ https://bantai-education-design.github.io/?bantai_admin=true
 ### 2.2 ローカル環境での自動停止
 `localhost`, `127.0.0.1`, または `file:` プロトコルでページを開いた場合は、URLパラメータの有無に関わらず自動的に `window['ga-disable-G-KPGJ0R2KXR'] = true` が適用され、GA4への通信は一切発生しません。
 
-## 3. 現在の除外状態を確認する方法
+## 3. 本人除外の確認方法（リアルタイム確認を第一選択とする）
 
-ブラウザの開発者ツール（F12）のコンソールで以下を実行します：
+本人除外が正常に機能しているかの確認は、**GA4管理画面の「リアルタイム」レポートを確認することを第一選択**とします。短時間かつ確実にご自身のアクセスが除外されているかを検証できます。
+
+### 3.1 手順 1：GA4リアルタイムレポートでの確認（推奨・第一選択）
+1. 管理者のブラウザで `https://bantai-education-design.github.io/?bantai_admin=true` にアクセスします。
+2. 別途、GA4管理画面（[Google アナリティクス](https://analytics.google.com/)）を開き、左メニューの「レポート」>「リアルタイム」を表示します。
+3. サイト内の複数ページ（トップ、商品一覧、コラム等）を回遊します。
+4. リアルタイムレポートの「過去30分間のユーザー」マップやカードにご自身のアクセスが反映されない（カウントが増加しない）ことを確認します。
+
+### 3.2 手順 2：ブラウザ開発者ツール（F12）での確認（補助確認）
+ブラウザの開発者ツール（F12）のコンソールで以下を実行して確認することも可能です：
 
 ```javascript
 // 1. GA4無効化フラグの確認（除外されていれば true）
@@ -41,18 +50,22 @@ localStorage.getItem('bantai_admin')
 
 また、ネットワーク（Network）タブで `collect` を検索し、ページ読み込み時やボタンクリック時に `google-analytics.com` への通信が発生していないことでも確認できます。
 
-## 4. DebugView確認時の一時的計測有効化と再除外手順
+## 4. 詳細検証・DebugView使用時の手順（Tag Assistant / Debugger連携）
 
-マージ後や検証時に、GA4管理画面の「DebugView」で新規イベントの着信を確認する場合は、次の手順で安全にテストを行います：
+GA4管理画面の「DebugView」は、Chrome拡張機能「Google Analytics Debugger」または「Google Tag Assistant」連携が必要となる**詳細検証用の機能**です。新規イベントのパラメータ詳細や発火タイミングをテストしたい場合にのみ、以下の手順で利用します。
 
-1. **除外を一時解除する**:
-   ブラウザで `https://bantai-education-design.github.io/?bantai_admin=clear` にアクセスします。
-2. **DebugViewで受信を確認する**:
-   Chrome拡張機能「Google Analytics Debugger」をONにするか、通常ブラウザとして操作し、GA4管理画面（管理 > DebugView）でイベントがリアルタイム受信されることを確認します。
-3. **作業終了後、直ちに再除外する**:
-   確認作業が完了したら、速やかに `https://bantai-education-design.github.io/?bantai_admin=true` にアクセスし、本人除外状態へ復帰させます。
-4. **復帰の確認**:
-   コンソールで `window['ga-disable-G-KPGJ0R2KXR']` が `true` に戻ったことを確認します。
+### 4.1 テスト手順
+1. **本人除外を一時解除する**:
+   ブラウザで `https://bantai-education-design.github.io/?bantai_admin=clear` にアクセスします（アドレスバーからクエリは自動消去されます）。
+2. **デバッグツールを起動する**:
+   - 方法A（推奨）: Chrome拡張機能「Google Analytics Debugger」をONにする。
+   - 方法B: [Google Tag Assistant](https://tagassistant.google.com/) からサイトURLを入力してデバッグセッションを開始する。
+3. **DebugViewで受信・パラメータを確認する**:
+   GA4管理画面（管理 > データの表示 > DebugView）を開き、ページ遷移やボタンクリック（BOOTH、モニター、コラム閲覧等）を行ってイベントとパラメータがリアルタイム着信することを確認します。
+4. **検証完了後、直ちに本人除外へ戻す**:
+   テスト作業が完了したら、速やかに `https://bantai-education-design.github.io/?bantai_admin=true` にアクセスし、本人除外状態へ復帰させます。
+5. **復帰の確認**:
+   リアルタイムレポートまたはコンソールで `window['ga-disable-G-KPGJ0R2KXR'] === true` に戻ったことを確認します。
 
 ## 5. 補足：Google公式オプトアウトアドオン
 
