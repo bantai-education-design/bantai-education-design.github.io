@@ -7,6 +7,45 @@
   <meta name="description" content="楽譜・五線紙作成メーカーを中心とした、音楽教材作成ツールの紹介ページです。">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
 
   <!-- KARTE Tag -->
   <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>

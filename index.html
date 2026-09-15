@@ -14,10 +14,40 @@
   <link rel="stylesheet" href="/assets/css/audience-hubs.css?v=20260815-visual1">
   <link rel="stylesheet" href="/assets/css/visual-depth.css?v=20260815-1">
   <link rel="stylesheet" href="/assets/css/visual-depth-phase3.css?v=20260815-1">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
   <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -173,7 +203,7 @@
     =================================================== -->
     <section id="school-address-db" style="background:linear-gradient(135deg,#051326 0%,#0a192f 50%,#112240 100%); padding:72px 0; border-bottom:3px solid var(--warm-gold-500);">
       <div class="container">
-        
+
         <!-- Header -->
         <div style="text-align:center; max-width:860px; margin:0 auto 44px;">
           <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.4); color:#fde68a; padding:6px 18px; border-radius:99px; font-size:0.82rem; font-weight:800; letter-spacing:0.06em; margin-bottom:14px;">
@@ -209,7 +239,7 @@
 
         <!-- 4 Cards Grid -->
         <div class="db-cards-grid">
-          
+
           <!-- Card 1: 教科書会社DB -->
           <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(245,158,11,0.35); border-radius:18px; padding:26px 20px; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.25s, border-color 0.25s; box-shadow:0 12px 32px rgba(0,0,0,0.3);" onmouseover="this.style.borderColor='#f59e0b';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(245,158,11,0.35)';this.style.transform='none'">
             <div>
@@ -743,7 +773,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- ==================================================
       About Us (Ban.Tai Education Design について)
     =================================================== -->

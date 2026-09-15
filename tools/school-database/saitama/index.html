@@ -12,10 +12,40 @@
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/css/school-database.css">
   <link rel="canonical" href="https://bantai-education-design.github.io/tools/school-database/saitama/">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
   <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -291,14 +321,14 @@
 
     <section class="search-section">
       <div class="container">
-        
+
         <!-- 検索パネル -->
         <div class="search-box">
           <div style="background:#fffdf5; border:1px solid var(--gold, #c5a059); border-radius:8px; padding:12px; margin-bottom:14px; font-size:0.84rem; line-height:1.6; color:#705300;">
             <div style="font-weight:700; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
               <span>💡 本データベースの収録範囲（合計 1,929 校・園）</span>
             </div>
-            
+
             <!-- saitama-matrix-table:start -->
             <table style="width:100%; max-width:650px; border-collapse:collapse; margin-bottom:12px; font-size:0.8rem; background:#fff; border:1px solid #e6dbb8; text-align:left;">
               <thead>
@@ -312,7 +342,7 @@
               </tbody>
             </table>
             <!-- saitama-matrix-table:end -->
-            
+
             <p style="margin:0; font-size:0.78rem; color:#8c6b00;">
               ※公立校・園は埼玉県教育委員会「令和8年度埼玉県学校便覧」、私立校・園は埼玉県学事課「埼玉県内の私立学校一覧（令和8年4月1日現在）」の公式データをもとに作成しています。
             </p>
@@ -320,7 +350,7 @@
 
           <h2 class="search-title">検索条件を指定</h2>
           <form id="search-form" onsubmit="return false;">
-            
+
             <div class="search-form-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
               <div class="form-group">
                 <label for="keyword">キーワードで検索</label>

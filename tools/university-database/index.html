@@ -10,6 +10,46 @@
 <style>
 body{background:#f4f7fa;color:#10263a}.uni-wrap{max-width:1180px;margin:0 auto;padding:28px 18px 64px}.uni-hero{display:grid;grid-template-columns:1.02fr .98fr;background:#fff;border:1px solid #dbe5ec;border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(15,39,61,.08)}.uni-copy{padding:54px 44px}.uni-kicker{font-size:.74rem;letter-spacing:.16em;font-weight:900;color:#ad7417}.uni-copy h1{font-size:clamp(2.45rem,5vw,4.55rem);line-height:1.08;margin:10px 0 16px;letter-spacing:-.035em}.uni-copy p{color:#566775;line-height:1.8;margin:0 0 24px}.uni-cta-row{display:flex;flex-wrap:wrap;gap:12px}.uni-cta{display:inline-flex;align-items:center;gap:10px;background:#073a5c;color:#fff;text-decoration:none;padding:14px 20px;border-radius:999px;font-weight:800;box-shadow:0 8px 20px rgba(7,58,92,.18)}.uni-cta.photo{background:#8b6417}.uni-photo{min-height:410px;background-image:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,0)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=88');background-size:cover;background-position:center}.uni-status{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.uni-status span{background:#fff;border:1px solid #dbe5ec;border-radius:999px;padding:9px 13px;font-size:.78rem;font-weight:800}.uni-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.uni-stat{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:16px;text-align:center}.uni-stat strong{display:block;font-size:1.5rem}.uni-stat span{display:block;font-size:.72rem;color:#697480}.uni-section{margin-top:18px;background:#fff;border:1px solid #dfe6ee;border-radius:20px;padding:24px}.uni-section h2{margin:0 0 6px;font-size:1.35rem}.uni-section>p{margin:0 0 18px;color:#637280}.uni-features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.uni-feature{border:1px solid #e2e9ee;border-radius:14px;padding:18px;background:#fbfcfd}.uni-feature h3{font-size:1rem;margin:0 0 6px}.uni-feature p{font-size:.82rem;color:#64707c;margin:0;line-height:1.65}.uni-admin{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;border-color:#d8bd74;background:linear-gradient(135deg,#fffdf7,#fff8e7)}.uni-admin-copy strong{display:block;font-size:1.15rem;color:#6f5117}.uni-admin-copy p{margin:7px 0 0;color:#667480;line-height:1.7}.uni-admin a{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;background:#8b6417;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}.uni-roadmap{display:flex;align-items:center;justify-content:space-between;gap:18px}.uni-roadmap strong{font-size:1.05rem}.uni-roadmap span{color:#657481;font-size:.86rem}.uni-roadmap a{white-space:nowrap;color:#8b5b0e;font-weight:800;text-decoration:none}@media(max-width:760px){.uni-hero{grid-template-columns:1fr}.uni-photo{min-height:230px;order:-1}.uni-copy{padding:30px 22px}.uni-stats{grid-template-columns:1fr 1fr}.uni-features{grid-template-columns:1fr}.uni-admin{grid-template-columns:1fr}.uni-admin a{justify-self:start}.uni-roadmap{align-items:flex-start;flex-direction:column}}@media(max-width:380px){.uni-stats{grid-template-columns:1fr}}
 </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="/index-new.html"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><nav class="menu"><a href="/databases/">DB・情報検索</a><a href="/tools/school-database/">全国学校DB</a></nav></div></header>
