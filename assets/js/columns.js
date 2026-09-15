@@ -1,11 +1,84 @@
 /**
  * Ban.Tai Education Design - Columns & Interactive Utilities
+ *
+ * [コラムGA4計測仕様]
+ * - column_view: モーダル表示開始時に送信
+ * - column_engagement: 閲覧終了時に送信（二重送信防止）
+ *   - 5秒未満: 誤操作として送信しない
+ *   - 5秒以上15秒未満: is_engaged: false
+ *   - 15秒以上: is_engaged: true (一定時間閲覧)
+ * - column_next_action: 記事内リンククリック時に送信
  */
 (function() {
   'use strict';
 
   let allColumns = [];
   let currentCategory = 'all';
+
+  // --- GA4 Column Measurement State ---
+  let activeColumn = null;
+  let columnStartTime = null;
+  let columnEngagementSent = false;
+
+  function isTrackingDisabled() {
+    if (typeof window === 'undefined') return true;
+    if (window['ga-disable-G-KPGJ0R2KXR']) return true;
+    const isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+    let isExcluded = false;
+    try {
+      isExcluded = localStorage.getItem('bantai_ga_disable') === 'true';
+    } catch (e) {}
+    return isLocal || isExcluded;
+  }
+
+  function sanitizeUrl(rawUrl) {
+    if (!rawUrl) return '';
+    const trimmed = rawUrl.trim();
+    if (trimmed.startsWith('mailto:')) return 'mailto:[redacted]';
+    if (trimmed.startsWith('tel:')) return 'tel:[redacted]';
+    try {
+      const parsed = new URL(trimmed, window.location.href);
+      return parsed.origin + parsed.pathname;
+    } catch (e) {
+      return trimmed.split('?')[0].split('#')[0];
+    }
+  }
+
+  function sendColumnGA4(eventName, params = {}) {
+    if (isTrackingDisabled()) return;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+  }
+
+  function endColumnEngagement() {
+    if (!activeColumn || columnEngagementSent || !columnStartTime) return;
+    const durationSeconds = Math.round((Date.now() - columnStartTime) / 1000);
+    columnEngagementSent = true;
+
+    // 5秒未満：誤操作としてcolumn_engagementを送信しない
+    if (durationSeconds < 5) {
+      return;
+    }
+
+    // 5秒以上15秒未満：is_engaged: false
+    // 15秒以上：is_engaged: true (一定時間閲覧)
+    const isEngaged = durationSeconds >= 15;
+    sendColumnGA4('column_engagement', {
+      column_id: activeColumn.id,
+      column_title: activeColumn.title,
+      column_category: activeColumn.category || '',
+      duration_seconds: durationSeconds,
+      is_engaged: isEngaged,
+      engagement_type: isEngaged ? 'engaged_view' : 'short_view'
+    });
+  }
+
+  // ページ離脱時の安全な計測終了
+  window.addEventListener('beforeunload', endColumnEngagement);
+  window.addEventListener('pagehide', endColumnEngagement);
 
   function getCategoryTagClass(slug) {
     switch (slug) {
@@ -89,7 +162,7 @@
     const tagClass = getCategoryTagClass(item.categorySlug || '');
     const isNew = (index === 0);
     const newBadgeHtml = isNew ? '<span class="column-badge-new">NEW 新着</span>' : '';
-    
+
     return `
       <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
         <div class="column-card-media">
@@ -128,36 +201,36 @@
 
   function formatColumnBody(content) {
     if (!content) return '';
-    
+
     // Remove ** asterisks
     let cleaned = content.replace(/\*\*/g, '');
-    
+
     // Split into lines
     const lines = cleaned.split('\n');
     const resultHtml = [];
     let i = 0;
-    
+
     while (i < lines.length) {
       let line = lines[i].trim();
-      
+
       if (!line) {
         i++;
         continue;
       }
-      
+
       // Horizontal Rule
       if (line === '---') {
         resultHtml.push('<hr class="column-content-hr">');
         i++;
         continue;
       }
-      
+
       // Headings
       if (line.startsWith('#')) {
         const headingText = line.replace(/^#+\s*/, '');
         const match = line.match(/^#+/);
         const level = match ? match[0].length : 1;
-        
+
         if (level <= 2) {
           const isYearHeading = /^(19\d{2}|20\d{2}|前史)/.test(headingText.trim());
           const eraPill = isYearHeading ? '<span class="h2-era-pill">時代</span>' : '';
@@ -180,7 +253,7 @@
         i++;
         continue;
       }
-      
+
       // Bullet List Block (* or -)
       if (line.startsWith('* ') || line.startsWith('- ')) {
         const listItems = [];
@@ -189,7 +262,7 @@
           listItems.push(itemText);
           i++;
         }
-        
+
         if (listItems.length > 0) {
           let listHtml = '<ul class="column-feature-list">';
           listItems.forEach(item => {
@@ -200,7 +273,7 @@
         }
         continue;
       }
-      
+
       // Markdown Table Start
       if (line.startsWith('|')) {
         const tableLines = [];
@@ -208,14 +281,14 @@
           tableLines.push(lines[i].trim());
           i++;
         }
-        
+
         if (tableLines.length > 0) {
           let tableHtml = '<div class="column-table-responsive"><table class="column-table">';
           let isHeader = true;
-          
+
           tableLines.forEach(tline => {
             if (tline.includes('---')) return;
-            
+
             const rawCells = tline.split('|');
             const cells = rawCells.slice(1, rawCells.length - 1).map(c => c.trim());
             if (isHeader) {
@@ -225,20 +298,20 @@
               tableHtml += '<tr>' + cells.map(c => `<td>${renderInlineFormatting(c)}</td>`).join('') + '</tr>';
             }
           });
-          
+
           tableHtml += '</tbody></table></div>';
           resultHtml.push(tableHtml);
         }
         continue;
       }
-      
+
       // Image HTML
       if (line.startsWith('<img') || line.startsWith('<figure')) {
         resultHtml.push(`<div class="column-content-image">${line}</div>`);
         i++;
         continue;
       }
-      
+
       // Regular Paragraph: Ensure leading full-width space 　
       let text = line;
       if (!text.startsWith('　')) {
@@ -247,7 +320,7 @@
       resultHtml.push(`<p class="column-paragraph">${renderInlineFormatting(text)}</p>`);
       i++;
     }
-    
+
     return resultHtml.join('\n');
   }
 
@@ -255,6 +328,23 @@
   window.openColumnModal = function(id) {
     const item = allColumns.find(c => c.id === id);
     if (!item) return;
+
+    // 前の記事が閲覧中であれば、その閲覧エンゲージメントを記録
+    if (activeColumn && activeColumn.id !== item.id) {
+      endColumnEngagement();
+    }
+
+    // 新規記事閲覧セッションの開始
+    activeColumn = item;
+    columnStartTime = Date.now();
+    columnEngagementSent = false;
+
+    // column_view 送信
+    sendColumnGA4('column_view', {
+      column_id: item.id,
+      column_title: item.title,
+      column_category: item.category || ''
+    });
 
     let modal = document.getElementById('column-modal');
     if (!modal) {
@@ -295,6 +385,21 @@
       </div>
     `;
 
+    // 記事内リンクのクリックで column_next_action を計測
+    const inlineLinks = modal.querySelectorAll('.column-modal-text a');
+    inlineLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // 先にエンゲージメントを安全に記録
+        endColumnEngagement();
+        sendColumnGA4('column_next_action', {
+          column_id: item.id,
+          column_title: item.title,
+          link_url: sanitizeUrl(link.getAttribute('href') || ''),
+          action_type: 'inline_link_click'
+        });
+      });
+    });
+
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
 
@@ -306,6 +411,10 @@
   };
 
   window.closeColumnModal = function() {
+    endColumnEngagement();
+    activeColumn = null;
+    columnStartTime = null;
+
     const modal = document.getElementById('column-modal');
     if (modal) {
       modal.classList.remove('is-open');
