@@ -12,10 +12,32 @@
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/css/school-database.css">
   <link rel="canonical" href="https://bantai-education-design.github.io/tools/school-database/kumamoto/">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
   <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('bantai_ga_disable') === '1') {
+          localStorage.setItem('bantai_ga_disable', 'true');
+        } else if (params.get('bantai_ga_disable') === '0') {
+          localStorage.removeItem('bantai_ga_disable');
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_ga_disable') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

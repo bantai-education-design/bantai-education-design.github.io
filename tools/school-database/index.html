@@ -11,10 +11,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/css/school-database.css">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
   <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('bantai_ga_disable') === '1') {
+          localStorage.setItem('bantai_ga_disable', 'true');
+        } else if (params.get('bantai_ga_disable') === '0') {
+          localStorage.removeItem('bantai_ga_disable');
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_ga_disable') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -97,7 +119,7 @@
 
     <section class="search-section">
       <div class="container">
-        
+
         <!-- NEW: National Regional & Education Analytics Hub Banner -->
         <div style="background:linear-gradient(135deg, #0c1b33 0%, #172e54 100%); border:2px solid #c5a059; border-radius:14px; padding:24px; color:#fff; margin-bottom:35px; box-shadow:0 8px 24px rgba(12,27,51,0.15); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
           <div style="max-width:720px;">
@@ -117,7 +139,7 @@
 
         <h2 style="font-size:1.4rem; color:var(--navy,#0c1b33); border-bottom:2px solid var(--gold,#c5a059); padding-bottom:10px; margin-bottom:24px;">都道府県を選択</h2>
 
-        
+
         <div class="common-features-notice" style="background:#fff; border:1px solid rgba(7,27,54,0.1); border-radius:12px; padding:20px; margin-bottom:30px;">
           <h3 style="margin-top:0; font-size:1.1rem; color:var(--navy,#0c1b33); display:flex; align-items:center; gap:8px;">
             <i class="fas fa-info-circle" style="color:var(--gold,#c5a059);"></i> 共通機能
