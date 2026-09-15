@@ -28,7 +28,7 @@
                     window.location.protocol === 'file:';
     let isExcluded = false;
     try {
-      isExcluded = localStorage.getItem('bantai_ga_disable') === 'true';
+      isExcluded = localStorage.getItem('bantai_admin') === 'true';
     } catch (e) {}
     return isLocal || isExcluded;
   }

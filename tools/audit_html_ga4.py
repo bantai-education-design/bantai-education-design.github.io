@@ -33,7 +33,7 @@ NON_PUBLIC_MAP = {
 
 GA4_REQUIRED_STRINGS = [
     'https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR',
-    'bantai_ga_disable',
+    'bantai_admin',
     "window['ga-disable-G-KPGJ0R2KXR'] = true",
     "gtag('config', 'G-KPGJ0R2KXR')",
     '/assets/js/analytics-events.js'

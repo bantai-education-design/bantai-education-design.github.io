@@ -16,10 +16,10 @@ body{background:#f4f7fa;color:#10263a}.uni-wrap{max-width:1180px;margin:0 auto;p
     (function() {
       try {
         var params = new URLSearchParams(window.location.search);
-        if (params.get('bantai_ga_disable') === '1') {
-          localStorage.setItem('bantai_ga_disable', 'true');
-        } else if (params.get('bantai_ga_disable') === '0') {
-          localStorage.removeItem('bantai_ga_disable');
+        if (params.get('bantai_admin') === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (params.get('bantai_admin') === 'clear') {
+          localStorage.removeItem('bantai_admin');
         }
       } catch (e) {}
 
@@ -28,7 +28,7 @@ body{background:#f4f7fa;color:#10263a}.uni-wrap{max-width:1180px;margin:0 auto;p
                     window.location.protocol === 'file:';
       var isExcluded = false;
       try {
-        isExcluded = localStorage.getItem('bantai_ga_disable') === 'true';
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
       } catch (e) {}
 
       if (isLocal || isExcluded) {
