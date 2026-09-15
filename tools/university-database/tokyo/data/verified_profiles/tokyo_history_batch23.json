@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 23",
+  "records": {
+    "u000098": {
+      "founded_year": 1881,
+      "opened_year": 1965,
+      "founder": "シャルトル聖パウロ修道女会（設立母体）",
+      "operator": "学校法人白百合学園",
+      "university_goal": "カトリックの人間観を基盤に、知性と感性を調和させ、広い視野と専門的知識を備えて社会に奉仕できる自立した女性を育成します。",
+      "philosophy": "建学の精神としてキリスト教、特にカトリシズムの世界観による人格形成を掲げ、『真・善・美』を教育目標として知性・徳性・感性の調和を重視します。",
+      "sources": [
+        {"source_name":"白百合女子大学 大学の沿革","source_url":"https://www.shirayuri.ac.jp/guide/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"白百合女子大学 建学の精神・教育目標","source_url":"https://www.shirayuri.ac.jp/guide/spirit/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000099": {
+      "founded_year": 1912,
+      "opened_year": 1949,
+      "founder": "中村春二",
+      "operator": "学校法人成蹊学園",
+      "university_goal": "自発的精神と個性を伸ばす人間教育を通して、確かな教養と豊かな人間性を備え、社会の発展に主体的に貢献できる人材を育成します。",
+      "philosophy": "創立者中村春二の『自発的精神の涵養と個性の発見伸長を目指す真の人間教育』を継承し、少人数教育と個性尊重を重視します。",
+      "sources": [
+        {"source_name":"成蹊学園 学園の沿革","source_url":"https://www.seikei.ac.jp/gakuen/struct/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"成蹊大学 教育・研究について","source_url":"https://www.seikei.ac.jp/university/aboutus/edu_info/education/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000100": {
+      "founded_year": 1929,
+      "opened_year": 1947,
+      "founder": "小原國芳",
+      "operator": "学校法人玉川学園",
+      "university_goal": "全人教育を基盤に、知識・道徳・芸術・健康・実践力を調和的に育て、日本社会と世界へ貢献できる自立した人材を育成します。",
+      "philosophy": "『全人教育』を中心理念とし、真・善・美・聖・健・富の6つの価値を調和的に育むこと、自学自律と労作教育を重視します。",
+      "sources": [
+        {"source_name":"玉川学園 沿革","source_url":"https://www.tamagawa.jp/introduction/enkaku/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"玉川学園について","source_url":"https://www.tamagawa.jp/introduction/about/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"玉川大学の学部・研究科の変遷","source_url":"https://www.tamagawa.jp/introduction/history/detail_20433.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000103": {
+      "founded_year": 1900,
+      "opened_year": 1949,
+      "founder": "大倉喜八郎",
+      "operator": "学校法人東京経済大学",
+      "university_goal": "『進一層』の気概と『責任と信用』を備え、実践的な知力をもってグローバル社会で活躍し、専門研究を通じて社会に貢献できる人材を育成します。",
+      "philosophy": "建学の理念『進一層』を軸に、国際性、挑戦し続ける姿勢、責任と信用、実践的な知力を重視します。",
+      "sources": [
+        {"source_name":"東京経済大学 歴史","source_url":"https://www.tku.ac.jp/tku/founder/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京経済大学 教育研究上の目的に関する規程","source_url":"https://www.tku.ac.jp/tku/founder/kyouiku-kitei.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000104": {
+      "founded_year": 1902,
+      "opened_year": 1962,
+      "founder": "藤村トヨ（学園の実質的創設者）",
+      "operator": "学校法人藤村学園",
+      "university_goal": "体育・スポーツの専門的知識と技能、深い洞察力を備え、運動文化を継承し、社会の発展に貢献できる品格ある女子体育指導者を育成します。",
+      "philosophy": "『心身ともに健全で、質素で誠実、礼儀正しい女子体育指導者の育成』を建学の精神とし、体育・スポーツを通した人格形成を重視します。",
+      "sources": [
+        {"source_name":"東京女子体育大学 学園の沿革","source_url":"https://www.twcpe.ac.jp/college/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京女子体育大学 建学の精神・教育理念・教育目的","source_url":"https://www.twcpe.ac.jp/college/spirit.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京女子体育大学 理事長・学長挨拶","source_url":"https://www.twcpe.ac.jp/college/message.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

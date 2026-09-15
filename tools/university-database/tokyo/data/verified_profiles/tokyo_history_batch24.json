@@ -1,0 +1,70 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 24",
+  "records": {
+    "u000105": {
+      "founded_year": 1943,
+      "opened_year": 1949,
+      "founder": "日本基督教団の合同神学校（設立母体）",
+      "operator": "学校法人東京神学大学",
+      "university_goal": "キリスト教神学を研究・教授し、教会の伝道と牧会を担う教職者を養成するとともに、キリスト教学校・施設などで社会に奉仕する人材を育成します。",
+      "philosophy": "福音的かつ公同的なキリスト教信仰に立ち、神学研究と教会形成を結びつけ、伝道者・牧会者を育てることを重視します。",
+      "sources": [
+        {"source_name":"東京神学大学 沿革","source_url":"https://www.tuts.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京神学大学 教育研究上の目的・方針","source_url":"https://www.tuts.ac.jp/about/policy/dca_g/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京神学大学 本学の特色","source_url":"https://www.tuts.ac.jp/about/feature/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000106": {
+      "founded_year": 1954,
+      "opened_year": 1966,
+      "founder": "桑澤洋子",
+      "operator": "学校法人桑沢学園",
+      "university_goal": "デザインと美術の専門的な知識・技術を基盤に、社会の課題を発見し、創造的な造形活動を通して新しい文化と社会をつくり出す人材を育成します。",
+      "philosophy": "『社会をつくり出す創造的な造形活動の探究と実践』を建学の精神とし、デザインと美術を社会との関係の中で実践することを重視します。",
+      "sources": [
+        {"source_name":"東京造形大学 沿革","source_url":"https://www.zokei.ac.jp/university/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京造形大学 建学の精神・理念","source_url":"https://www.zokei.ac.jp/university/identity/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000108": {
+      "founded_year": 1881,
+      "opened_year": 1949,
+      "founder": "フランス獣医学を学んだ陸軍獣医官9名による設立",
+      "operator": "学校法人日本医科大学",
+      "university_goal": "獣医学・獣医保健看護・動物科学・食品科学の教育研究を通じて、生命を尊び、動物と人の健康、食の安全、公衆衛生、生命科学の発展に貢献できる人材を育成します。",
+      "philosophy": "『生命を尊び、科学をもって社会に尽くす』精神を基盤に、獣医・動物・食品・生命科学を通して社会へ貢献することを重視します。",
+      "sources": [
+        {"source_name":"日本獣医生命科学大学 沿革","source_url":"https://www.nvlu.ac.jp/universityguidance/002.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本獣医生命科学大学 学長メッセージ","source_url":"https://www.nvlu.ac.jp/universityguidance/001/032.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000111": {
+      "founded_year": 1923,
+      "opened_year": 1964,
+      "founder": "児玉九十",
+      "operator": "学校法人明星学苑",
+      "university_goal": "生涯にわたり自律的に学び続け、多様な人々と協働しながら幸福を生み出し、地域と世界の課題解決に貢献できる人材を育成します。",
+      "philosophy": "『和の精神のもと、世界に貢献する人を育成する』を建学の精神とし、人格接触による教育、凝念、実践躬行を重視します。",
+      "sources": [
+        {"source_name":"明星学苑 学園の沿革","source_url":"https://www.meisei.ac.jp/mg/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明星学苑 教育理念・建学の精神","source_url":"https://www.meisei.ac.jp/mg/education/concept.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明星大学 建学の精神・教育目標","source_url":"https://www.meisei-u.ac.jp/about/spirit.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000112": {
+      "founded_year": 1933,
+      "opened_year": 1966,
+      "founder": "和光学園の父母・教師有志（設立母体）",
+      "operator": "学校法人和光学園",
+      "university_goal": "自由な研究と学習の共同体として、一人ひとりの個性と可能性を最大限に伸ばし、自ら問いを立て、社会と関わりながら学び続ける人材を育成します。",
+      "philosophy": "大学創設時から『自由な研究と学習の共同体』を掲げ、学部・学科の壁を越えて学ぶ自由と少人数教育、学生の主体性を重視します。",
+      "sources": [
+        {"source_name":"和光大学 建学の理念","source_url":"https://www.wako.ac.jp/about/outline/idea.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"和光大学 歴史","source_url":"https://www.wako.ac.jp/about/point/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"和光大学 教育方針","source_url":"https://www.wako.ac.jp/about/outline/policy.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

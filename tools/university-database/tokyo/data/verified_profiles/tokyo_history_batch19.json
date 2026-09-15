@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo national and public university history/philosophy batch 19",
+  "records": {
+    "u000008": {
+      "founded_year": 1875,
+      "opened_year": 1949,
+      "founder": "文部省（東京女子師範学校として設立）",
+      "operator": "国立大学法人お茶の水女子大学",
+      "university_goal": "学ぶ意欲のある女性に高度な教育研究の機会を提供し、豊かな教養と専門性を備え、国内外でリーダーシップを発揮できる女性を育成することを目指します。",
+      "philosophy": "『学ぶ意欲のあるすべての女性にとって、真摯な夢の実現の場として存在する。』というミッションを基盤に、女性の自立と社会的活躍を支える教育研究を重視します。",
+      "sources": [
+        {"source_name":"お茶の水女子大学 大学沿革","source_url":"https://www.ocha.ac.jp/introduction/info/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"お茶の水女子大学 創立150周年 150年の歩み","source_url":"https://150th.pr.ocha.ac.jp/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000009": {
+      "founded_year": 1918,
+      "opened_year": 1949,
+      "founder": "社団法人電信協会（無線電信講習所として創設）",
+      "operator": "国立大学法人電気通信大学",
+      "university_goal": "情報・通信・電気・電子を中核とした情報理工学の教育研究を通して、高度な専門性、国際性、実践力を備え、社会の発展と新しい価値創造に貢献する人材を育成します。",
+      "philosophy": "日本全国、さらに世界に開かれた大学であるという創設以来の精神を継承し、万人のための先端科学技術教育研究と、人類の持続的発展に貢献する知と技の創造・実践を重視します。",
+      "sources": [
+        {"source_name":"電気通信大学 沿革・歴史","source_url":"https://www.uec.ac.jp/about/profile/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"電気通信大学 学長挨拶","source_url":"https://www.uec.ac.jp/about/president/message.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000011": {
+      "founded_year": 1997,
+      "opened_year": 1997,
+      "founder": "国（政策研究を専門とする国立大学院大学として設置）",
+      "operator": "国立大学法人政策研究大学院大学",
+      "university_goal": "政策プロフェッショナルの養成、学際的な政策研究の促進、世界的な政策研究・教育拠点の形成を通して、日本および世界の民主的統治の発展と高度化に貢献することを目指します。",
+      "philosophy": "現実の政策課題に根差した教育研究を重視し、科学的な政策分析と実践的な政策形成能力を備えた各国の政策リーダーを育成する国際的な政策研究拠点を志向します。",
+      "sources": [
+        {"source_name":"政策研究大学院大学 大学案内","source_url":"https://www.grips.ac.jp/jp/about/index/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"政策研究大学院大学 沿革","source_url":"https://www.grips.ac.jp/jp/about/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000012": {
+      "founded_year": 2005,
+      "opened_year": 2005,
+      "founder": "東京都（都立4大学の再編・統合により設置）",
+      "operator": "東京都公立大学法人",
+      "university_goal": "東京都における学術の中心として、大都市における人間社会の理想像を追求し、豊かな人間性と独創性を備えた人材を育成して、都民の生活と文化の向上・発展に寄与することを目指します。",
+      "philosophy": "『学問の力で、東京から世界の未来を拓く』を将来像に掲げ、大都市東京の課題に立脚した教育研究と、多彩な基礎・応用研究を通じた社会貢献を重視します。",
+      "sources": [
+        {"source_name":"東京都立大学 沿革","source_url":"https://www.tmu.ac.jp/university/info/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京都立大学 大学の目的・使命","source_url":"https://www.tmu.ac.jp/university/philosophy.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000013": {
+      "founded_year": 2006,
+      "opened_year": 2006,
+      "founder": "東京都（東京都と産業界の要請により設置）",
+      "operator": "東京都公立大学法人",
+      "university_goal": "専門的知識と体系化された技術ノウハウを活用して新たな価値を創造し、産業の活性化に資する高度専門職業人を育成することを目指します。",
+      "philosophy": "高度な専門性、実務遂行能力、豊かな人間性と独創性を備えたプロフェッショナルを育成し、産業振興と都民の生活・文化の向上に寄与することを使命とします。",
+      "sources": [
+        {"source_name":"東京都立産業技術大学院大学 大学概要","source_url":"https://aiit.ac.jp/about/overview/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京都立産業技術大学院大学 3つのポリシー","source_url":"https://aiit.ac.jp/about/education/policy.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

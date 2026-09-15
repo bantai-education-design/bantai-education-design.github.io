@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo medical/dental/pharma history batch 10",
+  "records": {
+    "u000054": {
+      "founded_year": 1890,
+      "opened_year": 1952,
+      "founder": "髙山紀齋（創立）、血脇守之助（建学の祖）",
+      "operator": "学校法人東京歯科大学",
+      "university_goal": "歯学の専門学術を教授研究するとともに、豊かな教養と高い人格を備えた人材を養成し、人類の福祉に貢献することを目指します。",
+      "philosophy": "ヒューマニズムを尊重する『歯科医師たる前に人間たれ』を建学の精神とし、人間性豊かな歯科医療人の育成を重視します。",
+      "sources": [
+        {"source_name":"東京歯科大学 建学の精神と大学の目的","source_url":"https://www.tdc.ac.jp/about/principles/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京歯科大学 年表","source_url":"https://www.tdc.ac.jp/about/history/timeline/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000055": {
+      "founded_year": 1881,
+      "opened_year": 1952,
+      "founder": "高木兼寛",
+      "operator": "学校法人慈恵大学",
+      "university_goal": "医学的力量と人間的力量を兼ね備え、病者の側に立つ全人的医療を実践できる医療人を育成することを目指します。",
+      "philosophy": "『病気を診ずして病人を診よ』に象徴される建学の精神を受け継ぎ、あたたかい心と確かな医学を備えた医師・医療人の育成を重視します。",
+      "sources": [
+        {"source_name":"学校法人慈恵大学 本学の源流","source_url":"https://www.jikei.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人慈恵大学 年表","source_url":"https://www.jikei.ac.jp/about/history/chronology/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000060": {
+      "founded_year": 1880,
+      "opened_year": 1949,
+      "founder": "藤田正方",
+      "operator": "学校法人東京薬科大学",
+      "university_goal": "薬学・生命科学の教育研究を通じ、視野が広く心豊かな人材を育成し、人類の福祉と世界の平和に貢献することを目指します。",
+      "philosophy": "建学の精神『花咲け、薬学・生命科学』とヒューマニズムを基盤に、薬学・生命科学分野で社会へ貢献する人材育成を重視します。",
+      "sources": [
+        {"source_name":"東京薬科大学 沿革","source_url":"https://www.toyaku.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京薬科大学 理事長・学長挨拶","source_url":"https://www.toyaku.ac.jp/about/message/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000062": {
+      "founded_year": 1925,
+      "opened_year": 1950,
+      "founder": "額田豊・額田晉",
+      "operator": "学校法人東邦大学",
+      "university_goal": "自然への畏敬、生命の尊厳、人間の謙虚さを原点に、豊かな人間性と均衡の取れた知識・技能を備えた人材を育成することを目指します。",
+      "philosophy": "建学の精神『自然・生命・人間』を受け継ぎ、生命の科学を通して自然と人間を守り、未来をつなぐ人材育成を重視します。",
+      "sources": [
+        {"source_name":"東邦大学 法人案内","source_url":"https://www.toho-u.ac.jp/corporation/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東邦大学 建学の精神・教育の理念","source_url":"https://www.toho-u.ac.jp/univ/023228.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
