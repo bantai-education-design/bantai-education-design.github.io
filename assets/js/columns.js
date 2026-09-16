@@ -117,11 +117,72 @@
       const response = await fetch('/data/columns.json');
       if (!response.ok) throw new Error('Failed to fetch columns data');
       allColumns = await response.json();
+      initTopNewsTicker();
       initHomeColumns();
       initColumnsPage();
       checkUrlQuery();
     } catch (err) {
       console.warn('Columns data loading error:', err);
+    }
+  }
+
+  // Dynamic Auto-Rotating Top News Ticker
+  let topTickerTimer = null;
+  let topTickerIndex = 0;
+
+  function initTopNewsTicker() {
+    const card = document.querySelector('.top-news-card');
+    if (!card || !allColumns || allColumns.length === 0) return;
+
+    const tickerArticles = allColumns.slice(0, 5);
+    if (tickerArticles.length === 0) return;
+
+    const linkEl = card.querySelector('.top-news-title-link');
+    if (!linkEl) return;
+
+    function renderTickerItem(index) {
+      const article = tickerArticles[index];
+      if (!article) return;
+
+      linkEl.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      linkEl.style.opacity = '0';
+      linkEl.style.transform = 'translateY(-4px)';
+
+      setTimeout(() => {
+        linkEl.href = `/columns/?article=${article.id}`;
+        linkEl.setAttribute('onclick', `if(window.openColumnModal){event.preventDefault();window.openColumnModal('${article.id}');}`);
+
+        const dateEl = linkEl.querySelector('.top-news-date');
+        const titleEl = linkEl.querySelector('.top-news-title');
+
+        if (dateEl) dateEl.textContent = article.date;
+        if (titleEl) titleEl.textContent = article.title;
+
+        linkEl.style.opacity = '1';
+        linkEl.style.transform = 'translateY(0)';
+      }, 300);
+    }
+
+    renderTickerItem(0);
+
+    if (tickerArticles.length > 1) {
+      if (topTickerTimer) clearInterval(topTickerTimer);
+
+      function startTimer() {
+        topTickerTimer = setInterval(() => {
+          topTickerIndex = (topTickerIndex + 1) % tickerArticles.length;
+          renderTickerItem(topTickerIndex);
+        }, 5500);
+      }
+
+      startTimer();
+
+      card.addEventListener('mouseenter', () => {
+        if (topTickerTimer) clearInterval(topTickerTimer);
+      });
+      card.addEventListener('mouseleave', () => {
+        startTimer();
+      });
     }
   }
 
