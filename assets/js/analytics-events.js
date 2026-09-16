@@ -135,7 +135,7 @@
 
         if (text.includes('モニター')) {
           actionType = 'モニター登録フォーム遷移';
-          ga4EventName = 'monitor_form_click';
+          ga4EventName = 'monitor_click';
         } else if (text.includes('ライセンス')) {
           actionType = 'ライセンス申請フォーム遷移';
           ga4EventName = 'license_form_click';

@@ -88,7 +88,7 @@
 | イベント名 | パラメータ名 | 説明・トリガー条件 |
 |---|---|---|
 | `booth_click` | `item_name`, `product_name`, `link_url` | BOOTH（販売・配布ページ）リンクのクリック |
-| `monitor_form_click` | `item_name`, `product_name`, `link_url` | モニター登録フォーム（Googleフォーム）リンクのクリック |
+| `monitor_click` | `item_name`, `product_name`, `link_url` | モニター登録フォーム（Googleフォーム）リンクのクリック |
 | `license_form_click` | `item_name`, `product_name`, `link_url` | ライセンス申請フォームリンクのクリック |
 | `product_detail_click` | `item_name`, `product_name`, `link_url` | 製品画像・パネルからの詳細ページ遷移 |
 | `database_nav_click` | `database_name`, `link_url` | 学校DB・大学DB・地域統計等のDB間遷移 |
