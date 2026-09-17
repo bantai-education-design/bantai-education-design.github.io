@@ -175,5 +175,5 @@ jobs:
 # Trigger guard check
 # Trigger guard check for fix PR
 # Trigger guard check for official 2020 Census fix PR
-# Trigger owner-overlap check for cross-source indicators integrity PR 314
 # Trigger owner-overlap check for no-asterisks rule and columns cleanup PR 335
+# Trigger owner-overlap check for Showa schoolgate memories column PR 336
