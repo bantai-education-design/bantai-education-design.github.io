@@ -1,0 +1,68 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 21",
+  "records": {
+    "u000081": {
+      "founded_year": 1863,
+      "opened_year": 1949,
+      "founder": "ジェームス・カーティス・ヘボン",
+      "operator": "学校法人明治学院",
+      "university_goal": "キリスト教に基づく人格教育と学問の自由を基礎に、真理を探究し、多様な他者と共に生き、学びを社会への貢献につなげる人材を育成します。",
+      "philosophy": "学院創設者ヘボンが実践した『Do for Others（他者への貢献）』を教育理念とし、『真理を探究し、世界に貢献する』ことを目指します。",
+      "sources": [
+        {"source_name":"明治学院大学 歴史と沿革","source_url":"https://www.meijigakuin.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明治学院大学 2026年度入学式 学長式辞","source_url":"https://www.meijigakuin.ac.jp/about/president/entrance_ceremony/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000083": {
+      "founded_year": 1874,
+      "opened_year": 1949,
+      "founder": "チャニング・ムーア・ウィリアムズ",
+      "operator": "学校法人立教学院",
+      "university_goal": "キリスト教に基づく人間教育とリベラルアーツ教育を通して、真理を探究する力、他者と共に生きる力、国際性とリーダーシップを備えた人材を育成します。",
+      "philosophy": "『キリスト教に基づく人間教育』を建学の精神とし、『PRO DEO ET PATRIA（神と世界のために）』の精神のもと自由と個性を尊重する教育を重視します。",
+      "sources": [
+        {"source_name":"立教大学 歴史・沿革","source_url":"https://www.rikkyo.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"立教大学 受験をお考えの方へ","source_url":"https://www.rikkyo.ac.jp/target/prospective_students/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000084": {
+      "founded_year": 1580,
+      "opened_year": 1949,
+      "founder": "教蔵院日生（源流となる飯高檀林を開設）",
+      "operator": "学校法人立正大学学園",
+      "university_goal": "立正精神を体得し、時代に適応した知識と技術、専門性と倫理性を備え、人類社会の発展と和平に貢献できる人材を育成します。",
+      "philosophy": "『真実を求め至誠を捧げよう』『正義を尊び邪悪を除こう』『和平を願い人類に尽そう』の三つの誓いを建学の精神とします。",
+      "sources": [
+        {"source_name":"立正大学学園 基本情報・沿革","source_url":"https://www.ris.ac.jp/zh-CHS/rissho_school/release_information/basic_info/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"立正大学 建学の精神","source_url":"https://www.ris.ac.jp/rgd/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000086": {
+      "founded_year": 1996,
+      "opened_year": 1996,
+      "founder": "学校法人国際仏教学院（設立母体）",
+      "operator": "学校法人国際仏教学院",
+      "university_goal": "日本と世界の仏教研究の蓄積を基盤に、高度な文献学・文化学の研究能力と国際的視野を備え、世界で活躍できる仏教研究者を養成します。",
+      "philosophy": "仏教学の精密な学術研究を国際的に発展させるとともに、他宗教への理解を深め、人類普遍の課題について国際的に提言できる研究者の育成を重視します。",
+      "sources": [
+        {"source_name":"国際仏教学大学院大学 沿革","source_url":"https://www.icabs.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国際仏教学大学院大学 本学の理念","source_url":"https://www.icabs.ac.jp/about/purpose/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000090": {
+      "founded_year": 2017,
+      "opened_year": 2018,
+      "founder": "野田智義（設立母体ISL創設者）",
+      "operator": "学校法人至善館",
+      "university_goal": "経営の専門知識だけでなく、全人格リーダーシップ、リベラルアーツ、社会イノベーションを統合し、豊穣で安寧な未来を切り拓く経営リーダーを育成します。",
+      "philosophy": "西洋の合理的経営知と東洋思想、内省、社会への責任を統合し、『MBAを超えた』全人格的なリーダーシップ教育を追求します。",
+      "sources": [
+        {"source_name":"大学院大学至善館 沿革","source_url":"https://shizenkan.ac.jp/ja/history_ja/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大学院大学至善館 設立母体ISL","source_url":"https://shizenkan.ac.jp/ja/isl_ja/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大学院大学至善館 概要","source_url":"https://shizenkan.ac.jp/ja/profile_ja/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

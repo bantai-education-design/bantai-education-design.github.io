@@ -1,0 +1,11 @@
+{
+  "verified_at":"2026-08-15",
+  "prefecture":"東京都",
+  "scope":"Tokyo completion-priority history and philosophy batch 27",
+  "records":{
+    "u000137":{"founded_year":1923,"opened_year":1966,"founder":"七代杉浦六右衞門（六代杉浦六右衞門の写真教育の遺志を継承）","operator":"学校法人東京工芸大学","university_goal":"テクノロジーとアートを融合した教育研究を通して、新たな価値を創造し、社会の発展に貢献できる人材を育成します。","philosophy":"写真の教育研究を原点に、『時勢の必要に応ずべき実技家・研究家を養成し社会の発展に寄与する』という建学の精神を継承し、工・芸融合を重視します。","sources":[{"source_name":"東京工芸大学 100年のあゆみ","source_url":"https://100th.t-kougei.ac.jp/chronology/","verified_at":"2026-08-15","role":"primary"},{"source_name":"東京写真大学の誕生、工学部を設置","source_url":"https://100th.t-kougei.ac.jp/kougeihistory/15/","verified_at":"2026-08-15","role":"primary"}]},
+    "u000139":{"founded_year":1967,"opened_year":2010,"founder":"山﨑良壽","operator":"学校法人ヤマザキ学園","university_goal":"動物看護学と動物人間関係学の理論・技術を身につけ、人と動物の豊かな共生社会に貢献できる専門職・指導者を育成します。","philosophy":"『生命への畏敬』『職業人としての自立』を建学の精神、『生命（いのち）を生きる』を教育理念として、生命観と自然観に支えられた全人格的教育を重視します。","sources":[{"source_name":"ヤマザキ動物看護大学 建学の精神・教育理念","source_url":"https://univ.yamazaki.ac.jp/univ/about/","verified_at":"2026-08-15","role":"primary"},{"source_name":"ヤマザキ学園の歴史","source_url":"https://univ.yamazaki.ac.jp/univ/about/history.html","verified_at":"2026-08-15","role":"primary"}]},
+    "u000140":{"founded_year":1950,"opened_year":2012,"founder":"平川荘作","operator":"学校法人常陽学園","university_goal":"保健医療の専門知識と確かな技術、コミュニケーション能力、豊かな教養と高い倫理性を備え、人に優しく社会に貢献できる医療専門職を育成します。","philosophy":"建学の精神『人に優しく、社会に貢献できる人材の育成』と教育理念『仁愛・知識・技術』を柱に、患者に寄り添う医療人教育を重視します。","sources":[{"source_name":"東京医療学院大学 沿革・組織図","source_url":"https://www.u-ths.ac.jp/about/history","verified_at":"2026-08-15","role":"primary"},{"source_name":"東京医療学院大学 建学の精神・教育理念","source_url":"https://www.u-ths.ac.jp/about/philosophy","verified_at":"2026-08-15","role":"primary"}]},
+    "u000143":{"founded_year":1990,"opened_year":1990,"founder":"学校法人帝京科学大学（設立母体）","operator":"学校法人帝京科学大学","university_goal":"生命の尊厳と自然・人間の共生を深く学び、高度な専門知識と実践的問題解決能力を備え、持続可能な社会の発展に貢献できる人材を育成します。","philosophy":"『人類の将来を正しく見据え、生命の尊厳を深く学び、自然と人間の共生に貢献できる人材を育成し、持続可能な社会の発展に寄与する』ことを建学の精神とします。","sources":[{"source_name":"帝京科学大学 大学概要・建学の精神","source_url":"https://www.ntu.ac.jp/tust/","verified_at":"2026-08-15","role":"primary"},{"source_name":"帝京科学大学 沿革","source_url":"https://www.ntu.ac.jp/tust/history/index.html","verified_at":"2026-08-15","role":"primary"}]}
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 16",
+  "records": {
+    "u000089": {
+      "founded_year": 1951,
+      "opened_year": 2020,
+      "founder": "学校法人電子学園（設立母体）",
+      "operator": "学校法人電子学園",
+      "university_goal": "経営と情報通信技術の理論・実践、国際的コミュニケーション能力を統合し、新しいサービスやビジネスを生み出す人材を育成して産業発展に貢献することを目指します。",
+      "philosophy": "『変化を楽しみ、自ら学び、革新を創造する。』を教育理念とし、理論と実践を架橋するイノベーション教育を重視します。",
+      "sources": [
+        {"source_name":"iU 教員採用情報・沿革","source_url":"https://www.i-u.ac.jp/recruitment/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"iU 目的・教育理念","source_url":"https://www.i-u.ac.jp/admissions/admissions-info/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"iU 組織","source_url":"https://www.i-u.ac.jp/information/organization/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000092": {
+      "founded_year": 2019,
+      "opened_year": 2019,
+      "founder": "学校法人日本教育財団（設立母体）",
+      "operator": "学校法人日本教育財団",
+      "university_goal": "ファッション産業で実践的貢献をなし、専門知識・技術、創造性、教養、国際性を備えて国内外で活躍できる人材を育成することを目指します。",
+      "philosophy": "『創造力』と『豊かな人間性』を教育の根幹に据え、クリエイションとビジネスを理論と実践の両面から学ぶ人間性教育を重視します。",
+      "sources": [
+        {"source_name":"国際ファッション専門職大学 教育情報の公開","source_url":"https://www.piif.ac.jp/about/public_publication/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国際ファッション専門職大学 2019年度入学式","source_url":"https://www.piif.ac.jp/news/13831/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国際ファッション専門職大学 サイトポリシー","source_url":"https://www.piif.ac.jp/policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000120": {
+      "founded_year": 1963,
+      "opened_year": 1996,
+      "founder": "純心聖母会（設立母体、初代会長シスター江角ヤス）",
+      "operator": "学校法人東京純心女子学園",
+      "university_goal": "カトリック精神に基づき、生命をかけがえのない存在として尊重し、他者を思いやり社会に貢献できる看護専門職を育成することを目指します。",
+      "philosophy": "『純心精神』とカトリック的人間観を基盤に、聖母の心をもって他者を尊重し、平和と人間の尊厳に寄与する教育を重視します。",
+      "sources": [
+        {"source_name":"東京純心大学 沿革","source_url":"https://www.t-junshin.ac.jp/univ/col/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京純心大学 看護学科の概要","source_url":"https://www.t-junshin.ac.jp/univ/dep07/department.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京純心大学 現代文化学部募集停止のお知らせ","source_url":"https://www.t-junshin.ac.jp/univ/information/important/20220627.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000131": {
+      "founded_year": 1957,
+      "opened_year": 2006,
+      "founder": "学校法人大原学園（設立母体）",
+      "operator": "学校法人大原学園",
+      "university_goal": "学術的研究による知識、実務で求められる技能、高い職業倫理観を備えた高度な会計専門職業人を育成し、社会に貢献することを目指します。",
+      "philosophy": "大原学園の校訓『感奮興起』を継承し、『学術的研究の実践』『実務的技能の習得』『職業倫理の醸成』を教育の柱とします。",
+      "sources": [
+        {"source_name":"大原大学院大学 大学院概要","source_url":"https://www.o-hara.ac.jp/grad/outline.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大原学園グループとは","source_url":"https://www.o-hara.ac.jp/kyujin/about.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
