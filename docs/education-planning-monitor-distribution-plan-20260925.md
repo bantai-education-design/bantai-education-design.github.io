@@ -8,6 +8,7 @@
 - BOOTHは製品版専用とする。
 - 公式HP版とVector版は同一ZIPを使用し、ファイル名だけでなくSHA-256まで一致させる。
 - 大容量ZIPはGitリポジトリ本体へコミットせず、GitHub Releasesのrelease assetとして配布する。
+- アプリ本体のソースリポジトリはPrivateのため、一般利用者向けRelease assetsは **Publicの公式HPリポジトリ `bantai-education-design/bantai-education-design.github.io` のReleases** に置く。PrivateリポジトリのRelease URLを利用者向けダウンロード先にはしない。
 - 統合版モニターは専用の大容量ZIPを作らず、教務支援システム＋週案システムの2本を組み合わせて利用する。
 - 公式HPの見出しに固定版番号を入れず、「無料モニター版ダウンロード」を恒久見出しとする。版番号は配布ファイル・Release metadataで管理する。
 
@@ -30,7 +31,7 @@
 ## 3. 配布先の役割
 
 - 公式HP: モニター版の紹介・直接ダウンロード・マニュアル・SHA-256・FAQ・製品版導線
-- GitHub Releases: 大容量ZIP・PDFマニュアル・SHA256SUMS.txtの実体保管
+- GitHub Releases: Publicの公式HPリポジトリ上で、大容量ZIP・PDFマニュアル・SHA256SUMS.txtの実体を保管・公開
 - Vector: 無料モニター版の外部配布・認知拡大
 - BOOTH: 製品版のみ販売
 - Google Drive: 非公開バックアップのみ。利用者向け配布には使用しない
@@ -193,7 +194,7 @@ Vector / BOOTH URLは確定後に設定し、推測URLは使用しない。
 ## 11. GitHub容量方針
 
 - 通常Gitリポジトリに100 MiB超のZIPを置かない。
-- 大容量ZIPはGitHub Releasesに置く。
+- 大容量ZIPはPublicの公式HPリポジトリのGitHub Releasesに置く。
 - release assetは1ファイル2 GiB未満を守る。
 - SHA256SUMS.txtを同梱する。
 - リポジトリ本体にはHTML/CSS/JS/JSON/画像等のみを置く。
@@ -212,11 +213,12 @@ Vector / BOOTH URLは確定後に設定し、推測URLは使用しない。
 - SHA-256
 
 ### STEP 2 GitHub Releases
-- Release作成
-- ZIP添付
+- Publicの `bantai-education-design/bantai-education-design.github.io` に配布専用Releaseを作成
+- Privateのアプリリポジトリで検証・ビルドした確定ZIPだけをRelease assetとして添付
 - PDFマニュアル添付
 - SHA256SUMS.txt添付
-- release notes整備
+- release notesに製品名・版・ビルド元commit SHA・ファイルサイズ・SHA-256・利用期限を記録
+- PrivateアプリリポジトリのActions artifactは検証・受け渡し用であり、一般利用者向け恒久URLには使用しない
 
 ### STEP 3 公式HP
 - monitor-downloadページ作成
