@@ -175,3 +175,54 @@
 - 旧案内削除
 - 実機起動確認
 - 公式HP表示確認
+
+
+## 11. Phase 1 監査結果（2026-09-25）
+
+### 通常版系
+- 配布準備ブランチ: `release/monitor-v5.70.12-prep`
+- 配布元コミット: `136fb93f70f5557770d964a9f1b1731819a2fc79`
+- GitHub Actions: `Build monitor distribution packages` 成功
+- `npm run verify:all` 成功
+- 教務支援モニターZIP:
+  - file: `bantai_kyomu_support_monitor_v5.70.12.zip`
+  - size: 170,827,361 bytes
+  - SHA-256: `5f41a18af1c5b3c44773f3cc29e4420ea1c4d9a6e86d36dcdf82d254f7cee424`
+- 週案モニターZIP:
+  - file: `bantai_weekplan_monitor_v5.70.12.zip`
+  - size: 170,690,105 bytes
+  - SHA-256: `73131ca44ecd99b13a20b01e6c80ec61d21951ce2e3d9882253766e2c7c28d73`
+- 共通モニターマニュアルPDFも同一ワークフロー内で生成済み。
+- モニター期限: 2027-03-31。
+- モニター期間中はシリアル登録不要。
+- 公式HP / Vector の2経路配布方針は README / マニュアルに反映済み。
+- BOOTHは製品版専用。
+
+### 調整授業時数対応版
+- 配布準備ブランチ: `release/monitor-v1.0.6-prep`
+- 配布元コミット: `15f660f7b0b8bb2bfc65132d23ad2d45c850cbcf`
+- GitHub Actions: `Build adjusted monitor distribution package` 成功
+- `npm run verify:all` 成功
+- `npm run verify:installer` 成功
+- 印刷・週案印刷・学校設定の検証成功
+- 配布ZIP:
+  - file: `bantai_adjusted_curriculum_monitor_v1.0.6.zip`
+  - size: 170,900,449 bytes
+  - SHA-256: `ddb6466ea032413e7fa17479e49ee730c57acd6fc433fb5634c496afaed4730b`
+- 専用モニターマニュアルPDFも同一ワークフロー内で生成済み。
+- モニター期限: 2027-08-31。
+- モニター期間中はシリアル登録不要。
+- 公式HP / Vector の2経路配布方針は README / マニュアルに反映済み。
+- **未完了ゲート:** `npm run verify:setup` は Stable/Adjusted の実インストール共存検証のため、実Windows環境でのローカル確認が必須。GitHub Actions上では代替しない。
+
+### 配布先に関する重要事項
+- `bantai-kyomu-support-system` と `bantai-adjusted-curriculum-system` は private リポジトリのため、そこに作成した Release asset を一般利用者向け直リンクには使用しない。
+- 一般公開用の大容量ZIPは、public の `bantai-education-design.github.io` リポジトリの GitHub Releases asset として配置する。
+- ZIPをGit履歴には入れない。
+- 公式HPの直DLボタンは public Release asset のURLへ接続する。
+
+### Phase 1 判定
+- 教務支援: 配布物確定候補
+- 週案: 配布物確定候補
+- 調整授業時数対応版: `verify:setup` 完了後に配布物確定
+- Phase 2（public GitHub Release作成）は、上記最終ゲート確認後に実施する。
