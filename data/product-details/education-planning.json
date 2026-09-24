@@ -63,8 +63,8 @@
       "lead": "年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。",
       "actions": [
         {
-          "label": "無料モニター版を見る",
-          "href": "#download",
+          "label": "無料モニター版をダウンロード",
+          "href": "/products/education-planning/monitor-download/",
           "class": "btn btn-primary"
         },
         {
@@ -102,23 +102,23 @@
         "モニター版はシリアル登録不要"
       ],
       "quickFlow": [
-        "Vectorでダウンロード",
+        "公式HPまたはVectorでダウンロード",
         "ZIPを展開",
-        "アプリを起動",
-        "利用開始"
+        "マニュアルを確認",
+        "シリアル不要で利用開始"
       ],
       "actionsClass": "education-pv-actions",
       "actions": [
         {
-          "label": "無料モニター版を見る",
-          "href": "#download",
+          "label": "無料モニター版ダウンロード",
+          "href": "/products/education-planning/monitor-download/",
           "class": "btn btn-primary education-pv-monitor-button",
           "attrs": {
             "data-education-event": "education_pv_monitor_click"
           }
         }
       ],
-      "actionNote": "無料モニター版は登録・シリアル入力不要で、2027年3月31日までご利用いただけます。"
+      "actionNote": "無料モニター版は公式HPまたはVectorから入手でき、登録・シリアル入力不要で2027年3月31日まで利用できます。"
     },
     {
       "type": "audienceCards",
@@ -275,8 +275,8 @@
       "id": "monitor-program",
       "class": "education-monitor-section",
       "eyebrow": "FREE MONITOR PROGRAM",
-      "heading": "無料モニター版をVectorで公開しています",
-      "description": "無料モニター版は登録やシリアル入力なしでお試しいただけます。教務支援システムと週案システムをVectorからそれぞれダウンロードしてください。",
+      "heading": "無料モニター版を公式HP・Vectorで公開します",
+      "description": "教務支援システムと週案システムは、公式HPとVectorの2経路で同一ZIPを配布します。公式HPではバージョン・ファイルサイズ・SHA-256も確認できます。",
       "details": [
         {
           "label": "対象",
@@ -315,13 +315,23 @@
       "actionsClass": "education-monitor-actions",
       "actions": [
         {
-          "label": "教務支援モニターをVectorで入手",
-          "href": "https://www.vector.co.jp/soft/winnt/edu/se528971.html",
+          "label": "無料モニター版ダウンロードページ",
+          "href": "/products/education-planning/monitor-download/",
           "class": "btn btn-primary education-monitor-button"
         },
         {
-          "label": "週案モニターをVectorで入手",
+          "label": "教務支援をVectorで見る",
+          "href": "https://www.vector.co.jp/soft/winnt/edu/se528971.html",
+          "class": "btn btn-light education-monitor-button"
+        },
+        {
+          "label": "週案をVectorで見る",
           "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
+          "class": "btn btn-light education-monitor-button"
+        },
+        {
+          "label": "調整授業時数対応版を見る",
+          "href": "/products/adjusted-curriculum/",
           "class": "btn btn-light education-monitor-button"
         }
       ]
@@ -333,25 +343,19 @@
       "containerClass": "container",
       "boxClass": "download-box",
       "heading": "無料モニター版・製品版はこちら",
-      "description": "統合版の無料モニターは、ファイル容量を考慮して教務支援と週案の2本に分けてVectorで配布しています。製品版はBOOTHで販売しています。",
+      "description": "無料モニター版は公式HPまたはVectorから入手できます。統合版モニターは教務支援と週案の2本を組み合わせて利用します。製品版はBOOTHで提供します。",
       "actionsClass": "dl-grid",
       "actions": [
         {
           "label": "",
-          "labelHtml": "<strong>教務支援モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span>",
-          "href": "https://www.vector.co.jp/soft/winnt/edu/se528971.html",
+          "labelHtml": "<strong>無料モニター版ダウンロード</strong><span>公式HP直配布・Vector・SHA-256・マニュアル</span>",
+          "href": "/products/education-planning/monitor-download/",
           "class": "dl-item"
         },
         {
           "label": "",
           "labelHtml": "<strong>教務支援 製品版 4,500円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span>",
           "href": "https://bantai3.booth.pm/items/8893534",
-          "class": "dl-item"
-        },
-        {
-          "label": "",
-          "labelHtml": "<strong>週案モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span>",
-          "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
           "class": "dl-item"
         },
         {
@@ -371,11 +375,11 @@
         "class": "warning-box",
         "heading": "ダウンロード・購入時のご案内",
         "bullets": [
-          "無料モニター版はVectorからダウンロードしてください。",
-          "統合版の無料モニターは1本の大容量ファイルでは配布せず、教務支援システムと週案システムの2本をそれぞれダウンロードして使用します。",
-          "製品版はBOOTHで販売しています。各製品版には操作マニュアル（PDF）を同梱します。",
-          "保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。",
-          "展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。"
+          "無料モニター版は公式HPまたはVectorからダウンロードできます。公式HP版とVector版は同一ZIPを使用します。",
+          "公式HPには配布ZIPのバージョン・更新日・ファイルサイズ・SHA-256を掲載します。",
+          "統合版の無料モニターは1本の大容量ZIPでは配布せず、教務支援システムと週案システムの2本を組み合わせて使用します。",
+          "製品版はBOOTHで提供します。各製品版には操作マニュアル（PDF）を同梱します。",
+          "保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。"
         ]
       }
     },
@@ -386,13 +390,18 @@
       "containerClass": "container flow-brief-container",
       "heading": "ご利用の流れ",
       "items": [
-        "Vectorで教務支援または週案の無料モニター版をダウンロード",
+        "公式HPまたはVectorから無料モニター版をダウンロード",
         "ZIPファイルを「すべて展開」",
-        "実行用フォルダ内のexeを起動",
-        "シリアル登録なしで利用開始"
+        "同梱マニュアルを確認して実行用フォルダから起動",
+        "モニター期間中はシリアル登録なしで利用開始"
       ],
-      "note": "無料モニター版は2027年3月31日まで利用できます。統合版として試す場合は、教務支援と週案の2本をそれぞれVectorからダウンロードしてください。",
+      "note": "通常版系の無料モニターは2027年3月31日まで利用できます。統合版として試す場合は、教務支援と週案の2本をそれぞれダウンロードしてください。",
       "actions": [
+        {
+          "label": "無料モニター版ダウンロード",
+          "href": "/products/education-planning/monitor-download/",
+          "class": "btn btn-primary"
+        },
         {
           "label": "製品版をBOOTHで見る",
           "href": "https://bantai3.booth.pm/items/8893790",
@@ -410,11 +419,11 @@
       "items": [
         {
           "question": "モニター利用に費用はかかりますか？",
-          "answer": "費用はかかりません。無料モニター版はVectorからダウンロードでき、登録やシリアル入力なしで2027年3月31日まで利用できます。"
+          "answer": "費用はかかりません。無料モニター版は公式HPまたはVectorからダウンロードでき、登録やシリアル入力なしで2027年3月31日まで利用できます。"
         },
         {
           "question": "学校の児童情報をインターネットへ送信しますか？",
-          "answer": "業務データはPC内に保存します。無料モニター版のダウンロード、および製品版の初回シリアル認証にはインターネット接続が必要です。認証後の通常利用はオフラインで行えます。"
+          "answer": "通常利用時の業務データはPC内に保存します。無料モニター版のダウンロード時にはインターネット接続が必要です。製品版では初回シリアル認証時のみインターネット接続が必要で、認証後の通常利用はオフラインで行えます。"
         },
         {
           "question": "Excelが入っていなくても使えますか？",
@@ -422,7 +431,7 @@
         },
         {
           "question": "教育計画システムと週案システムは別々に使えますか？",
-          "answer": "はい。教務支援システム単体版と週案システム単体版を用意しています。統合版は両方を連携して使う製品です。無料モニターは容量を考慮し、教務支援と週案をVectorから別々にダウンロードします。"
+          "answer": "はい。教務支援システム単体版と週案システム単体版を用意しています。統合版は両方を連携して使う製品です。無料モニターは教務支援と週案をそれぞれ公式HPまたはVectorから入手し、2本を組み合わせて利用します。"
         },
         {
           "question": "不具合や改善要望はどこへ連絡しますか？",
@@ -435,12 +444,12 @@
       "class": "education-final-cta",
       "eyebrow": "START WITH BANTAI",
       "heading": "先生の仕事を少し楽にし、子どもと向き合う時間を少し増やす。",
-      "description": "無料モニター版はVectorからすぐに試せます。継続利用には、操作マニュアル付きの買い切り製品版をBOOTHでご用意しています。",
+      "description": "無料モニター版は公式HPまたはVectorから試せます。継続利用には、操作マニュアル付きの買い切り製品版をBOOTHでご用意します。",
       "actionsClass": "education-final-actions",
       "actions": [
         {
-          "label": "無料モニター版を見る",
-          "href": "#download",
+          "label": "無料モニター版ダウンロード",
+          "href": "/products/education-planning/monitor-download/",
           "class": "btn btn-primary education-final-monitor-button",
           "attrs": {
             "data-education-event": "education_final_monitor_click"
