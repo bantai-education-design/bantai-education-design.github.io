@@ -519,14 +519,21 @@ def validate_id_photo(data: dict, html: str, parser: DetailPageParser) -> None:
 def validate_education_planning(data: dict, html: str, parser: DetailPageParser) -> None:
     require_keys(data, {"sections"}, "education-planning root")
 
-    # Monitor registration stays on Google Forms; downloads are centralized on BOOTH.
-    form_url = "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform"
-    booth_url = "https://bantai3.booth.pm/items/8547376"
+    vector_support = "https://www.vector.co.jp/soft/winnt/edu/se528971.html"
+    vector_weekplan = "https://www.vector.co.jp/soft/winnt/edu/se528974.html"
+    booth_support = "https://bantai3.booth.pm/items/8893534"
+    booth_weekplan = "https://bantai3.booth.pm/items/8893762"
+    booth_standard = "https://bantai3.booth.pm/items/8893790"
 
-    require(form_url in html, "Form URL missing")
-    require(booth_url in html, "BOOTH download URL missing")
+    require(vector_support in html, "support Vector URL missing")
+    require(vector_weekplan in html, "weekplan Vector URL missing")
+    require(booth_support in html, "support BOOTH URL missing")
+    require(booth_weekplan in html, "weekplan BOOTH URL missing")
+    require(booth_standard in html, "integrated BOOTH URL missing")
+    require("https://bantai3.booth.pm/items/8547376" not in html, "old BOOTH monitor URL remains")
     require("drive.google.com" not in html, "old Google Drive URL remains")
-    require("Google Drive ダウンロード時" not in html, "old Google Drive warning remains")
+    require("無料モニターに登録して試してみる" not in html, "obsolete monitor registration wording remains")
+    require("固定ライセンスキー" not in html, "obsolete monitor serial wording remains")
 
     # Check section order
     section_types = [section["type"] for section in data["sections"]]
@@ -535,13 +542,14 @@ def validate_education_planning(data: dict, html: str, parser: DetailPageParser)
         "education-planning section order changed"
     )
 
-    # Check headings
+    # Check headings and current release wording
     require("小学校教育計画" in html, "Hero heading missing")
     require("年間計画から日々の週案、提出書類まで" in html, "Workflow heading missing")
     require("Excelシートではなく「専用アプリ」である利点" in html, "Excel vs App heading missing")
-    require("Ver.5.70.7 モニター版 ダウンロード" in html, "Download heading missing")
+    require("無料モニター版・製品版はこちら" in html, "Download heading missing")
+    require("2027年3月31日" in html, "monitor deadline missing")
+    require("操作マニュアル付き" in html, "manual included wording missing")
     require("ご利用の流れ" in html, "Flow brief heading missing")
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate a generated product detail page.")
