@@ -63,13 +63,13 @@
       "lead": "年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。",
       "actions": [
         {
-          "label": "無料モニターに登録して試してみる",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "label": "無料モニター版を見る",
+          "href": "#download",
           "class": "btn btn-primary"
         },
         {
-          "label": "機能を見る",
-          "href": "#features",
+          "label": "BOOTHで統合版を見る",
+          "href": "https://bantai3.booth.pm/items/8893790",
           "class": "btn btn-light"
         }
       ],
@@ -97,28 +97,28 @@
         "音声があります。周囲の環境にご配慮ください。"
       ],
       "assurance": [
-        "モニター期間中は無料",
+        "無料モニター版は2027年3月31日まで",
         "Windows 10・11対応",
-        "基本機能はオフラインで利用可能"
+        "モニター版はシリアル登録不要"
       ],
       "quickFlow": [
-        "登録",
-        "案内メールを確認",
-        "ダウンロード",
+        "Vectorでダウンロード",
+        "ZIPを展開",
+        "アプリを起動",
         "利用開始"
       ],
       "actionsClass": "education-pv-actions",
       "actions": [
         {
-          "label": "無料モニターに登録して試してみる",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "label": "無料モニター版を見る",
+          "href": "#download",
           "class": "btn btn-primary education-pv-monitor-button",
           "attrs": {
             "data-education-event": "education_pv_monitor_click"
           }
         }
       ],
-      "actionNote": "モニター登録およびモニター期間中の利用に料金はかかりません。"
+      "actionNote": "無料モニター版は登録・シリアル入力不要で、2027年3月31日までご利用いただけます。"
     },
     {
       "type": "audienceCards",
@@ -275,8 +275,8 @@
       "id": "monitor-program",
       "class": "education-monitor-section",
       "eyebrow": "FREE MONITOR PROGRAM",
-      "heading": "無料モニターを募集しています",
-      "description": "実際の学校現場でお使いいただき、操作性や分かりやすさについてご意見をお寄せいただける小学校の先生方を募集しています。",
+      "heading": "無料モニター版をVectorで公開しています",
+      "description": "無料モニター版は登録やシリアル入力なしでお試しいただけます。教務支援システムと週案システムをVectorからそれぞれダウンロードしてください。",
       "details": [
         {
           "label": "対象",
@@ -289,11 +289,11 @@
         },
         {
           "label": "利用できる機能",
-          "text": "モニター期間中は対象版の機能を利用可能"
+          "text": "モニター期間中は対象版の全機能を利用可能"
         },
         {
-          "label": "お願い",
-          "text": "使用後の簡単なアンケートや感想へのご協力"
+          "label": "登録・シリアル",
+          "text": "不要"
         },
         {
           "label": "動作環境",
@@ -301,23 +301,28 @@
         },
         {
           "label": "通信",
-          "text": "基本機能はオフラインで利用可能"
+          "text": "ダウンロード時にインターネット接続が必要。通常利用はオフライン可能"
         },
         {
-          "label": "個人情報",
-          "text": "児童・保護者の実名や機密情報を登録フォームやアンケート等へ記載しないようお願いします"
+          "label": "利用期限",
+          "text": "2027年3月31日まで"
         },
         {
-          "label": "期間",
-          "text": "モニター期間は募集案内または登録後の案内をご確認ください"
+          "label": "ご意見",
+          "text": "不具合報告・改善提案・ご感想は任意で、公式お問い合わせ窓口からいつでも受け付けています"
         }
       ],
       "actionsClass": "education-monitor-actions",
       "actions": [
         {
-          "label": "無料モニターに登録して試してみる",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "label": "教務支援モニターをVectorで入手",
+          "href": "https://www.vector.co.jp/soft/winnt/edu/se528971.html",
           "class": "btn btn-primary education-monitor-button"
+        },
+        {
+          "label": "週案モニターをVectorで入手",
+          "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
+          "class": "btn btn-light education-monitor-button"
         }
       ]
     },
@@ -327,24 +332,48 @@
       "sectionClass": "download-section",
       "containerClass": "container",
       "boxClass": "download-box",
-      "heading": "Ver.5.70.7 モニター版 ダウンロード",
-      "description": "本ソフトウェアは、無料モニター登録後に自動返信メールで即時にお送りする固定ライセンスキーを入力することで、すべての機能をご利用いただけます。",
+      "heading": "無料モニター版・製品版はこちら",
+      "description": "統合版の無料モニターは、ファイル容量を考慮して教務支援と週案の2本に分けてVectorで配布しています。製品版はBOOTHで販売しています。",
       "actionsClass": "dl-grid",
       "actions": [
         {
           "label": "",
-          "labelHtml": "<strong>BOOTHから無料ダウンロード</strong><span>商品ページを開き、「無料ダウンロード」からZIPファイルを保存してください。</span>",
-          "href": "https://bantai3.booth.pm/items/8547376",
+          "labelHtml": "<strong>教務支援モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span>",
+          "href": "https://www.vector.co.jp/soft/winnt/edu/se528971.html",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>教務支援 製品版 4,500円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span>",
+          "href": "https://bantai3.booth.pm/items/8893534",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>週案モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span>",
+          "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>週案 製品版 3,000円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span>",
+          "href": "https://bantai3.booth.pm/items/8893762",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>統合版 製品版 7,000円</strong><span>BOOTH｜教務支援＋週案・操作マニュアル付き</span>",
+          "href": "https://bantai3.booth.pm/items/8893790",
           "class": "dl-item"
         }
       ],
       "warningBox": {
         "class": "warning-box",
-        "heading": "ダウンロード時のお願い",
+        "heading": "ダウンロード・購入時のご案内",
         "bullets": [
-          "現在のモニター版は、BOOTHの商品ページから無料でダウンロードできます。",
-          "Google Driveに関する古い案内が表示されている場合は、現在は使用していません。今後はBOOTHからのダウンロードをご利用ください。",
-          "Vectorにも掲載していますが、URLが確定するまでこのページから直接リンクは作成していません。",
+          "無料モニター版はVectorからダウンロードしてください。",
+          "統合版の無料モニターは1本の大容量ファイルでは配布せず、教務支援システムと週案システムの2本をそれぞれダウンロードして使用します。",
+          "製品版はBOOTHで販売しています。各製品版には操作マニュアル（PDF）を同梱します。",
           "保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。",
           "展開したフォルダ内の実行用exeを起動してください。exeファイルのみをフォルダ外へ単体で移動させると起動しません。"
         ]
@@ -357,13 +386,19 @@
       "containerClass": "container flow-brief-container",
       "heading": "ご利用の流れ",
       "items": [
-        "無料モニター登録フォームを送信",
-        "案内メールとライセンスキーを確認",
-        "BOOTHの商品ページからZIPをダウンロードして展開",
-        "アプリを起動し、ライセンスキーを入力して利用開始"
+        "Vectorで教務支援または週案の無料モニター版をダウンロード",
+        "ZIPファイルを「すべて展開」",
+        "実行用フォルダ内のexeを起動",
+        "シリアル登録なしで利用開始"
       ],
-      "note": "モニター期間は募集案内または登録後の案内をご確認ください。現在のモニター版はBOOTHの商品ページから無料でダウンロードできます。ZIPはWindowsの「すべて展開」を使用し、exeだけをフォルダ外へ移動しないでください。",
-      "actions": []
+      "note": "無料モニター版は2027年3月31日まで利用できます。統合版として試す場合は、教務支援と週案の2本をそれぞれVectorからダウンロードしてください。",
+      "actions": [
+        {
+          "label": "製品版をBOOTHで見る",
+          "href": "https://bantai3.booth.pm/items/8893790",
+          "class": "btn btn-light"
+        }
+      ]
     },
     {
       "type": "faq",
@@ -375,11 +410,11 @@
       "items": [
         {
           "question": "モニター利用に費用はかかりますか？",
-          "answer": "登録およびモニター期間中の利用に料金はかかりません。利用条件と案内内容をご確認のうえ、ご参加ください。"
+          "answer": "費用はかかりません。無料モニター版はVectorからダウンロードでき、登録やシリアル入力なしで2027年3月31日まで利用できます。"
         },
         {
           "question": "学校の児童情報をインターネットへ送信しますか？",
-          "answer": "基本機能はオフラインで動作します。ただし、登録フォームやファイルのダウンロードにはインターネット接続が必要です。"
+          "answer": "業務データはPC内に保存します。無料モニター版のダウンロード、および製品版の初回シリアル認証にはインターネット接続が必要です。認証後の通常利用はオフラインで行えます。"
         },
         {
           "question": "Excelが入っていなくても使えますか？",
@@ -387,11 +422,11 @@
         },
         {
           "question": "教育計画システムと週案システムは別々に使えますか？",
-          "answer": "統合版と単体版が用意されていることを、現在のダウンロード構成に合わせて説明しています。"
+          "answer": "はい。教務支援システム単体版と週案システム単体版を用意しています。統合版は両方を連携して使う製品です。無料モニターは容量を考慮し、教務支援と週案をVectorから別々にダウンロードします。"
         },
         {
           "question": "不具合や改善要望はどこへ連絡しますか？",
-          "answer": "登録後の案内、または公式お問い合わせ窓口から受け付ける旨をご確認ください。"
+          "answer": "公式お問い合わせ窓口から受け付けています。学校名や児童情報などの個人情報は送信しないでください。"
         }
       ]
     },
@@ -400,19 +435,24 @@
       "class": "education-final-cta",
       "eyebrow": "START WITH BANTAI",
       "heading": "先生の仕事を少し楽にし、子どもと向き合う時間を少し増やす。",
-      "description": "教育現場40年の経験をもとに、学校で本当に使いやすい道具を目指して改良を続けています。まずは無料モニターとしてお試しください。",
+      "description": "無料モニター版はVectorからすぐに試せます。継続利用には、操作マニュアル付きの買い切り製品版をBOOTHでご用意しています。",
       "actionsClass": "education-final-actions",
       "actions": [
         {
-          "label": "無料モニターに登録して試してみる",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScIw2a5brKZL9XYWpqUj_l-vT7uU_ZvN-lEk_SyWe_hHfQaag/viewform",
+          "label": "無料モニター版を見る",
+          "href": "#download",
           "class": "btn btn-primary education-final-monitor-button",
           "attrs": {
             "data-education-event": "education_final_monitor_click"
           }
+        },
+        {
+          "label": "BOOTHで統合版を見る",
+          "href": "https://bantai3.booth.pm/items/8893790",
+          "class": "btn btn-light"
         }
       ],
-      "actionNote": "登録およびモニター期間中の利用に料金はかかりません。正式版の提供条件は、今後あらためてご案内します。",
+      "actionNote": "製品版は教務支援4,500円、週案3,000円、統合版7,000円。いずれも買い切りで、操作マニュアル付きです。",
       "secondaryLink": {
         "label": "お問い合わせ",
         "href": "/contact/"
