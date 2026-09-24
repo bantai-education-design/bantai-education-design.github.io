@@ -328,6 +328,11 @@
           "label": "週案をVectorで見る",
           "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
           "class": "btn btn-light education-monitor-button"
+        },
+        {
+          "label": "調整授業時数対応版を見る",
+          "href": "/products/adjusted-curriculum/",
+          "class": "btn btn-light education-monitor-button"
         }
       ]
     },
