@@ -89,6 +89,17 @@ def render_actions(product: dict) -> str:
     if detail_url:
         links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
 
+    # 教育計画システムは無料モニター（Vector案内ページ）と製品版（BOOTH）を併記する。
+    if product.get("id") == "education-planning":
+        monitor_url = product.get("monitorUrl")
+        booth_url = product.get("boothUrl")
+        if monitor_url:
+            target = ' target="_blank" rel="noopener noreferrer"' if monitor_url.startswith("http") else ""
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}"{target}>無料モニター版を見る</a>')
+        if booth_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHで製品版を見る</a>')
+        return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
+
     # 2. 第2ボタン (状態に応じて厳密に決定)
     if status == "一時休止中":
         pass  # 一時休止中は外部ボタンを出さず「詳しく見る」のみ

@@ -5,10 +5,11 @@
       "name": "小学校教育計画作成・運営システム",
       "category": "featured",
       "order": 1,
-      "status": "モニター募集中",
+      "status": "公開準備中",
       "recommendation": "主力製品",
       "badges": [
-        "モニター募集中"
+        "無料モニター版あり",
+        "製品版公開準備中"
       ],
       "targetUsers": [
         "教務担当",
@@ -21,10 +22,10 @@
       "detailUrl": "/products/education-planning/",
       "categoryUrl": "/products/school-work/",
       "primaryActionLabel": "詳しく見る",
-      "secondaryActionLabel": "モニターに参加する",
+      "secondaryActionLabel": "無料モニター版を見る",
       "published": true,
-      "monitorUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeIM0bNoL4mKfycoYLAkC11ajGvjRQ3NsX4cB_Y5lP0w840ww/viewform",
-      "boothUrl": null,
+      "monitorUrl": "/monitor/",
+      "boothUrl": "https://bantai3.booth.pm/items/8893790",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
