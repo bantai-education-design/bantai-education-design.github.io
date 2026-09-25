@@ -276,7 +276,7 @@
       "class": "education-monitor-section",
       "eyebrow": "FREE MONITOR PROGRAM",
       "heading": "無料モニター版は公式HP・Vectorから",
-      "description": "教務支援システムと週案システムの無料モニター版を、公式HPとVectorの2経路で配布します。公式HP版とVector版は同一ZIPを使用し、公式HPにはSHA-256を掲載します。",
+      "description": "教務支援システム・週案システムの無料モニター版を公式HPとVectorの2経路で配布します。調整授業時数対応版も専用ページで公開準備を進めています。",
       "details": [
         {
           "label": "対象",
@@ -328,6 +328,11 @@
           "label": "週案をVectorで入手",
           "href": "https://www.vector.co.jp/soft/winnt/edu/se528974.html",
           "class": "btn btn-light education-monitor-button"
+        },
+        {
+          "label": "調整授業時数対応版を見る",
+          "href": "/products/education-planning/adjusted/",
+          "class": "btn btn-light education-monitor-button"
         }
       ]
     },
@@ -341,6 +346,12 @@
       "description": "無料モニター版は公式HPまたはVectorから。製品版はBOOTHから。統合版モニターは教務支援と週案の2本を組み合わせて利用します。",
       "actionsClass": "dl-grid",
       "actions": [
+        {
+          "label": "",
+          "labelHtml": "<strong>公式HP 無料モニター版ダウンロード</strong><span>教務支援・週案・調整授業時数対応版の配布状況、SHA-256、マニュアル</span>",
+          "href": "/products/education-planning/monitor-download/",
+          "class": "dl-item"
+        },
         {
           "label": "",
           "labelHtml": "<strong>教務支援モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span>",
@@ -369,6 +380,12 @@
           "label": "",
           "labelHtml": "<strong>統合版 製品版 7,000円</strong><span>BOOTH｜教務支援＋週案・操作マニュアル付き</span>",
           "href": "https://bantai3.booth.pm/items/8893790",
+          "class": "dl-item"
+        },
+        {
+          "label": "",
+          "labelHtml": "<strong>調整授業時数対応版</strong><span>無料モニター公開準備中｜2027年8月31日まで</span>",
+          "href": "/products/education-planning/adjusted/",
           "class": "dl-item"
         }
       ],
