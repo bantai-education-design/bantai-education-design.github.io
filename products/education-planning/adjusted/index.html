@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>調整授業時数対応版 | Ban.Tai Education Design</title>
+  <meta name="description" content="調整授業時数制度への対応を見据えた小学校教育計画支援アプリ。年間計画、削減・充当、週案連携、時数確認を支援します。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=adjusted-curriculum-20260925-1">
+  <style>
+    .adjusted-hero{padding:74px 0;background:radial-gradient(circle at 80% 20%,rgba(237,217,150,.2),transparent 30%),linear-gradient(135deg,#071b36 0%,#102f58 60%,#173e6d 100%);color:#fff;overflow:hidden}
+    .adjusted-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .adjusted-hero h1{font-size:clamp(2.1rem,4.5vw,4rem);line-height:1.2;margin:.3em 0;color:#fff}
+    .adjusted-hero .lead{max-width:720px}
+    .adjusted-visual{display:grid;grid-template-columns:1fr;gap:12px;position:relative}
+    .adjusted-flow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .adjusted-ui-card{background:rgba(255,255,255,.96);color:var(--navy);border:1px solid rgba(237,217,150,.5);border-radius:18px;padding:18px;box-shadow:0 18px 36px rgba(0,0,0,.18)}
+    .adjusted-ui-card strong{display:block;margin-bottom:8px}
+    .adjusted-ui-lines{display:grid;gap:7px}
+    .adjusted-ui-lines span{height:9px;border-radius:999px;background:#dfe8f3}
+    .adjusted-ui-lines span:nth-child(2){width:78%;background:#e8d8a8}
+    .adjusted-ui-lines span:nth-child(3){width:60%;background:#cfe4d6}
+    .adjusted-arrow{text-align:center;color:#edd996;font-size:1.6rem;font-weight:900}
+    .adjusted-section{padding:76px 0}
+    .adjusted-section.alt{background:#f7f8fb}
+    .adjusted-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .adjusted-feature{background:#fff;border:1px solid rgba(7,27,54,.08);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+    .adjusted-feature .n{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-weight:900;margin-bottom:12px}
+    .adjusted-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .adjusted-principle{background:#fffaf0;border:1px solid rgba(197,160,89,.34);border-radius:18px;padding:22px}
+    .adjusted-warning{background:#fff6f3;border:1px solid #e6b3a8;border-radius:18px;padding:22px}
+    .adjusted-cta{background:linear-gradient(135deg,#071b36,#173e6d);color:#fff;border-radius:26px;padding:34px}
+    .adjusted-cta h2{color:#fff}
+    .adjusted-status{display:inline-flex;padding:7px 12px;border-radius:999px;background:#fff1c8;color:#6b531a;font-weight:800}
+    @media(max-width:860px){
+      .adjusted-hero-grid,.adjusted-feature-grid,.adjusted-principles,.adjusted-flow-row{grid-template-columns:1fr}
+      .adjusted-arrow{transform:rotate(90deg)}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+      <span>Ban.Tai Education Design</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
+      <a href="/">ホーム</a>
+      <a href="/products/" class="active">製品・教材</a>
+      <a href="/products/education-planning/">教育計画システム</a>
+      <a href="/products/education-planning/monitor-download/">無料モニター</a>
+      <a href="/contact/" class="mini">サポート</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="adjusted-hero">
+    <div class="container adjusted-hero-grid">
+      <div>
+        <p class="kicker">ADJUSTED CURRICULUM HOURS EDITION</p>
+        <h1>調整授業時数対応版</h1>
+        <p class="lead">制度変更への対応を見据え、年間計画・削減授業時数・充当先・週案・実績確認を、一つの流れで整理しやすくするためのWindowsアプリです。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/products/education-planning/monitor-download/#adjusted">無料モニター版を見る</a>
+          <a class="btn btn-light" href="#features">できることを見る</a>
+        </div>
+        <p style="margin-top:16px"><span class="adjusted-status">Ver.1.0.6 / 公開前最終確認中</span></p>
+      </div>
+      <div class="adjusted-visual" aria-label="教育計画から週案、時数確認へつながる流れ">
+        <div class="adjusted-flow-row">
+          <div class="adjusted-ui-card">
+            <strong>教育計画</strong>
+            <div class="adjusted-ui-lines"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="adjusted-ui-card">
+            <strong>週案連携</strong>
+            <div class="adjusted-ui-lines"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="adjusted-ui-card">
+            <strong>時数確認</strong>
+            <div class="adjusted-ui-lines"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="adjusted-arrow">教育計画 → 週案 → 実績・時数確認</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section" id="features">
+    <div class="container">
+      <p class="sub">WHAT IT SUPPORTS</p>
+      <h2>調整授業時数対応版でできること</h2>
+      <p>通常版の仕組みを壊さず、調整授業時数制度への対応を独立したアプリとして整備しています。</p>
+      <div class="adjusted-feature-grid" style="margin-top:28px">
+        <article class="adjusted-feature">
+          <span class="n">1</span>
+          <h3>複数の削減・充当を整理</h3>
+          <p>1つの調整計画に、複数の削減明細と複数の充当明細を登録できます。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">2</span>
+          <h3>1/3・2/3コマを維持</h3>
+          <p>1コマ=3ユニット、1/3コマ=1、2/3コマ=2の考え方を維持します。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">3</span>
+          <h3>年間計画・週案と連携</h3>
+          <p>年間計画と調整内容の関係を確認し、週案側の実施状況ともつなげられる構成です。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">4</span>
+          <h3>警告状態を見える化</h3>
+          <p>削減超過、充当不足、未解決端数、合計を確定できない状態などを確認しやすくします。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt">
+    <div class="container">
+      <p class="sub">DESIGN PRINCIPLES</p>
+      <h2>制度未確定の段階でも固定しすぎない設計</h2>
+      <div class="adjusted-principles" style="margin-top:24px">
+        <article class="adjusted-principle">
+          <h3>未確定値をコード固定しない</h3>
+          <p>割合や上限など、制度確定前の値を安易に固定せず、今後の正式な制度内容へ対応しやすくします。</p>
+        </article>
+        <article class="adjusted-principle">
+          <h3>基準計画を限定しない</h3>
+          <p>文部科学省の配当だけでなく、学校が採択した年間配当を基準として扱うことも想定しています。</p>
+        </article>
+        <article class="adjusted-principle">
+          <h3>通常版と完全分離</h3>
+          <p>Stable版を不用意に全面改修せず、調整授業時数対応版を独立して検証・運用します。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section">
+    <div class="container">
+      <p class="sub">FREE MONITOR</p>
+      <h2>無料モニター版</h2>
+      <p>モニター期限は2027年8月31日です。モニター期間中はシリアル登録不要で、入力・保存・印刷・PDF保存・Excel/JSON出力などを利用できます。</p>
+      <div class="adjusted-cta" style="margin-top:26px">
+        <h2>公式HPからの直接ダウンロードを準備しています</h2>
+        <p>公式HP版とVector版は同一ZIPを使用し、SHA-256まで一致させます。現在は公開前の最終ゲートとして、Stable版と調整授業時数対応版のインストール・更新・アンインストール共存確認を残しています。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/products/education-planning/monitor-download/#adjusted">配布状況・SHA-256を見る</a>
+          <a class="btn btn-light" href="/contact/">ご意見・改善要望を送る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt">
+    <div class="container">
+      <div class="adjusted-warning">
+        <h2>制度に関する重要なお願い</h2>
+        <p>本アプリは、教育課程上の判断そのものを自動で決定するものではありません。制度・運用上の最終判断は、最新の法令・通知・教育委員会等の正式資料をご確認ください。重要な授業時数、教育課程、提出書類は、利用者自身でも最終確認してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section">
+    <div class="container">
+      <p class="sub">MANUAL</p>
+      <h2>専用マニュアルも用意します</h2>
+      <p>導入方法、ZIP展開、基本操作、調整計画、年間計画連携、週案連携、警告表示、未解決端数などをまとめたマニュアルをZIPに同梱します。GitHub Release公開後はPDF単体でも公式HPからダウンロードできるようにします。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/products/education-planning/monitor-download/#manuals">マニュアル配布状況を見る</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>Ban.Tai Education Design</h2>
+      <p>教育現場40年の経験をもとに、学校現場の時短・軽量化・効率化を目指して開発しています。</p>
+    </div>
+    <div>
+      <p><strong>お問い合わせ</strong><br><a href="/contact/">公式お問い合わせ</a></p>
+      <p><a href="/legal/">利用規約・免責事項</a></p>
+    </div>
+  </div>
+  <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+</footer>
+</body>
+</html>
