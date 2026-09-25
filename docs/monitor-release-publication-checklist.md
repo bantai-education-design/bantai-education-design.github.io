@@ -23,7 +23,7 @@
 - 共通マニュアル PDF  
   `7d175f986d3d15a011ecb3b583023c384a7c04b828f3b04f145a41285244a114`
 
-### Planned direct URLs
+### Verified published URLs (公開済み・ハッシュ検証完了)
 - 教務支援  
   `https://github.com/bantai-education-design/bantai-education-design.github.io/releases/download/education-monitor-v5.70.12/bantai_kyomu_support_monitor_v5.70.12.zip`
 - 週案  
