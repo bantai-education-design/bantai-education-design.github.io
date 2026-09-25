@@ -226,3 +226,38 @@
 - 週案: 配布物確定候補
 - 調整授業時数対応版: `verify:setup` 完了後に配布物確定
 - Phase 2（public GitHub Release作成）は、上記最終ゲート確認後に実施する。
+
+
+## 12. 通常版系 再ビルド確定（2026-09-25）
+
+Vector用READMEを「公式HP / Vectorの2経路配布」へ修正したため、通常版系を再ビルドした。
+
+- 最終コミット: `d3f8005fb7f5dc9ffd7f60495f24c8540b2bbdad`
+- GitHub Actions run: `36072715441`
+- 結果: SUCCESS
+
+### 教務支援
+- file: `bantai_kyomu_support_monitor_v5.70.12.zip`
+- bytes: 170,827,341
+- SHA-256: `48b39454252b68f15ac1c36cdb7f2d22c5d75277d4c3272c4f09f5ebb94f1315`
+
+### 週案
+- file: `bantai_weekplan_monitor_v5.70.12.zip`
+- bytes: 170,690,132
+- SHA-256: `40dd1486d8bf233d378cda883ec4248875ba661fae713c5fa3e0996b5f36d0a2`
+
+上記2本を通常版系の公式HP公開候補として固定する。
+旧ハッシュ値は公開用に使用しない。
+
+## 13. 公開用Release配置の実装上の制約
+
+現在のGitHub接続ではRelease assetへのバイナリ直接アップロード操作を実行できない。
+そのため、公式HP側のページと文言は先行してDraft実装し、GitHub Releases assetがpublicリポジトリへ配置されるまでは「公式HPから直接ダウンロード」ボタンを準備中表示とする。
+
+公開用Releaseにassetを配置後、以下を満たした時点でボタンを有効化する。
+
+1. public Release URLが取得できる。
+2. Release assetのファイル名が確定している。
+3. Release assetを再ダウンロードしてSHA-256を照合する。
+4. 公式HP掲載ハッシュと一致する。
+5. 実Windows環境で起動確認する。
