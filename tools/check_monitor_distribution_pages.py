@@ -59,8 +59,8 @@ require("releases/download/education-monitor-v5.70.12/bantai_kyomu_support_monit
 require("releases/download/education-monitor-v5.70.12/bantai_weekplan_monitor_v5.70.12.zip" in download, "normal weekplan direct link missing")
 require("releases/download/education-monitor-v5.70.12/bantai_education_planning_monitor_manual_v5.70.12.pdf" in download, "normal manual direct link missing")
 
-# Adjusted monitor candidate must remain staged before verify:setup completes
-require("releases/download/adjusted-monitor-v1.0.6/" not in download, "adjusted direct Release links enabled before asset verification")
-require("最終確認中" in download, "adjusted release gate should remain visible")
+# Adjusted monitor direct-download links must be present and point to verified release
+require("releases/download/adjusted-monitor-v1.0.6/bantai_adjusted_curriculum_monitor_v1.0.6.zip" in download, "adjusted direct link missing")
+require("releases/download/adjusted-monitor-v1.0.6/bantai_adjusted_curriculum_monitor_manual_v1.0.6.pdf" in download, "adjusted manual direct link missing")
 
 print("PASS: monitor distribution pages are consistent with staged release policy")

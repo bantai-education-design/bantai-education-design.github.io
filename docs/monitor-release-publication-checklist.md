@@ -34,13 +34,13 @@
 ## 2. 調整授業時数対応版
 
 ### 公開前ゲート
-Public Releaseを作成する前に、実Windows環境で以下を実行する。
+実Windows環境で以下を実行完了（ALL PASS）。
 
 ```
 npm run verify:setup
 ```
 
-Stable版と調整授業時数対応版について、インストール・更新・アンインストールの共存を確認する。
+Stable版と調整授業時数対応版について、インストール・更新・アンインストール・AppData・保存データの完全共存を実機検証済み。
 
 ### Release
 - Tag: `adjusted-monitor-v1.0.6`
@@ -57,7 +57,7 @@ Stable版と調整授業時数対応版について、インストール・更�
 - 専用マニュアル PDF  
   `962c35279503e04eba737947d46396d4be2412c20a8979791c4fdec956240224`
 
-### Planned direct URLs
+### Verified published URLs (公開済み・ハッシュ検証完了)
 - ZIP  
   `https://github.com/bantai-education-design/bantai-education-design.github.io/releases/download/adjusted-monitor-v1.0.6/bantai_adjusted_curriculum_monitor_v1.0.6.zip`
 - マニュアル  
