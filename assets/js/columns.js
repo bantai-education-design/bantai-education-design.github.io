@@ -149,8 +149,13 @@
       linkEl.style.transform = 'translateY(-4px)';
 
       setTimeout(() => {
-        linkEl.href = `/columns/?article=${article.id}`;
-        linkEl.setAttribute('onclick', `if(window.openColumnModal){event.preventDefault();window.openColumnModal('${article.id}');}`);
+        if (article.pageUrl) {
+          linkEl.href = article.pageUrl;
+          linkEl.removeAttribute('onclick');
+        } else {
+          linkEl.href = `/columns/?article=${article.id}`;
+          linkEl.setAttribute('onclick', `if(window.openColumnModal){event.preventDefault();window.openColumnModal('${article.id}');}`);
+        }
 
         const dateEl = linkEl.querySelector('.top-news-date');
         const titleEl = linkEl.querySelector('.top-news-title');
@@ -226,7 +231,7 @@
     const newBadgeHtml = isNew ? '<span class="column-badge-new">NEW 新着</span>' : '';
 
     return `
-      <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
+      <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="${item.pageUrl ? `window.location.href='${item.pageUrl}'` : `window.openColumnModal('${item.id}')`}">
         <div class="column-card-media">
           <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
           <span class="column-badge ${tagClass}">${escapeHtml(item.category)}</span>
