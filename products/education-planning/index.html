@@ -66,12 +66,11 @@
       <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
       <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
         <a href="/">ホーム</a>
-        <a href="/products/" class="active">製品・教材</a>
-        <a href="/tools/school-database/">全国学校DB</a>
-        <a href="/columns/">コラム</a>
-        <a href="#download">無料ダウンロード</a>
-        <a href="#howto">使い方</a>
-        <a href="/about/">Ban.Taiについて</a>
+        <a href="/products/">製品・教材</a>
+        <a href="/products/education-planning/" class="active">教育計画システム</a>
+        <a href="/products/education-planning/adjusted/">調整授業時数版</a>
+        <a href="/products/education-planning/monitor-download/">無料モニター</a>
+        <a href="#download">ダウンロード</a>
         <a href="/contact/" class="mini">サポート</a>
       </nav>
     </div>
@@ -90,8 +89,11 @@
           <p class="lead">年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。</p>
 
           <div class="actions">
-            <a class="btn btn-primary" href="#download">無料モニター版を見る</a>
-            <a class="btn btn-light" href="https://bantai3.booth.pm/items/8893790">BOOTHで統合版を見る</a>
+            <a class="btn btn-primary" href="/products/education-planning/monitor-download/">無料モニター版ダウンロード</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで入手（教務支援）</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html" target="_blank" rel="noopener noreferrer">Vectorで入手（週案）</a>
+            <a class="btn btn-light" href="/products/education-planning/adjusted/">調整授業時数対応版を見る</a>
+            <a class="btn btn-light" href="https://bantai3.booth.pm/items/8893790" target="_blank" rel="noopener noreferrer">BOOTHで統合版を見る</a>
           </div>
         </div>
         <div class="education-detail-visual">
@@ -123,7 +125,7 @@
             <span class="education-pv-assurance-item">モニター版はシリアル登録不要</span>
           </div>
           <div class="education-pv-quick-flow">
-            <span class="education-pv-quick-flow-step">Vectorでダウンロード</span>
+            <span class="education-pv-quick-flow-step">公式HP / Vectorでダウンロード</span>
             <span class="education-pv-quick-flow-arrow" aria-hidden="true">→</span>
             <span class="education-pv-quick-flow-step">ZIPを展開</span>
             <span class="education-pv-quick-flow-arrow" aria-hidden="true">→</span>
@@ -132,7 +134,9 @@
             <span class="education-pv-quick-flow-step">利用開始</span>
           </div>
           <div class="education-pv-actions">
-            <a class="btn btn-primary education-pv-monitor-button" href="#download" data-education-event="education_pv_monitor_click">無料モニター版を見る</a>
+            <a class="btn btn-primary education-pv-monitor-button" href="/products/education-planning/monitor-download/" data-education-event="education_pv_monitor_click">無料モニター版ダウンロード</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで教務支援を入手</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html" target="_blank" rel="noopener noreferrer">Vectorで週案を入手</a>
           </div>
           <p class="education-pv-action-note">無料モニター版は登録・シリアル入力不要で、2027年3月31日までご利用いただけます。</p>
       </div>
@@ -240,14 +244,79 @@
       </div>
     </section>
 
-    <section class="education-resource-section">
-      <div class="container education-resource-card">
-        <div>
-          <p class="education-resource-kicker">Before You Plan</p>
-          <h2>教育計画を作る前に、教科書会社の年間指導計画を確認する</h2>
-          <p>各教科書会社の公式資料を確認しながら、教育計画システムで週案づくりを進めやすくするためのリンク集です。</p>
+    <!-- 多彩なデータ取込と教科書年間指導計画の活用 -->
+    <section class="education-import-guide-section" id="data-import-guide">
+      <div class="container">
+        <div class="education-section-heading">
+          <p>EFFICIENT PLANNING &amp; DATA IMPORT</p>
+          <h2>ゼロから作らない。学校の実務に合わせた多彩なデータ取込口</h2>
+          <p>年度初めの計画作成は教務にとって大きな負担です。本システムは、前年度のデータ資産や学校行事、時間割、そして教科書会社の年間指導計画を最大限に活かし、ゼロから手入力する手間を大幅に削減します。</p>
         </div>
-        <a class="btn btn-light" href="/resources/textbook-plans/#for-teachers">教科書・年間学習計画ガイドを開く</a>
+
+        <div class="import-source-grid">
+          <article class="import-source-card">
+            <div class="import-source-icon">01</div>
+            <h3>前年度JSONデータの引継ぎ</h3>
+            <p>前年度に本システムで作成した計画データ（JSON形式）をワンクリックで読み込み。年次更新やカレンダー調整を行うだけで、新年度の骨格が瞬時に完成します。</p>
+          </article>
+
+          <article class="import-source-card">
+            <div class="import-source-icon">02</div>
+            <h3>年間行事予定の自在な取込</h3>
+            <p>PDF・Excel・CSV・テキスト貼り付け・画像参照に対応。学校行事一覧や自治体カレンダーのテキストを貼り付けるだけで、授業日数や特別行事をスムーズに展開できます。</p>
+          </article>
+
+          <article class="import-source-card">
+            <div class="import-source-icon">03</div>
+            <h3>時間割のExcel・CSV取込</h3>
+            <p>学校で作成・共有されている基本時間割（ExcelやCSV形式）を読み込み、各学年・学級の週案スロットへ自動配置。時間割の組み直しも容易です。</p>
+          </article>
+
+          <article class="import-source-card">
+            <div class="import-source-icon">04</div>
+            <h3>教科・学年ごとの採択設定</h3>
+            <p>国語、算数、理科、社会など、教科・学年ごとに学校で採択されている教科書発行会社を登録。学校の実情に即した指導計画の管理が可能です。</p>
+          </article>
+        </div>
+
+        <div class="textbook-assistant-box">
+          <div class="textbook-assistant-header">
+            <span class="textbook-assistant-badge">実務効率化の核心</span>
+            <h3>教科書会社の「年間指導計画」をフル活用する</h3>
+            <p>年間指導計画には、単元の配列、配当時数、指導時期の目安など、教育計画を組み立てるための材料がすべて整理されています。教務がゼロから単元名や時数を打ち込む必要はありません。</p>
+          </div>
+
+          <div class="textbook-assistant-content">
+            <div class="assistant-feature-col">
+              <h4>「教科書・単元データ取込アシスタント」の機能</h4>
+              <ul>
+                <li>正規に入手した教科書会社・教育委員会・学校作成の年間指導計画（ExcelやPDFなどの表）から、内容をコピー＆ペーストして貼り付け。</li>
+                <li>タブ区切り、カンマ区切り（半角・全角）、連続スペースなどを自動判定して表形式に展開。</li>
+                <li>「学年・教科・月・単元名・小単元名・配当時数・備考」の各列をマウス操作で対応付け。</li>
+                <li>取り込み前にプレビュー画面で内容や時数合計を確認し、納得してから計画データへ反映・保存。</li>
+              </ul>
+            </div>
+
+            <div class="assistant-compliance-col">
+              <h4>著作権・利用規約に配慮した安心設計</h4>
+              <p class="compliance-note">本機能は、学校現場で著作権や利用規約を遵守して安心して使っていただけるよう、仕様の境界を明確にしています。</p>
+              <ul>
+                <li><strong>完全自動解析ではありません：</strong>独自形式のファイルを機械的に推測するのではなく、先生が画面で確認しながら安全に取り込めます。</li>
+                <li><strong>ネットからの自動無断取得は行いません：</strong>教科書会社のウェブサイト等からデータを勝手に取得・通信する挙動はありません。</li>
+                <li><strong>単元データや本文・画像・図表のアプリ同梱はありません：</strong>著作権に配慮し、教科書の本文や画像・図表などの著作物をアプリ側に無断同梱することは一切ありません。</li>
+                <li><strong>正規入手資料の貼付アシスタント：</strong>学校や先生が正規に入手・ダウンロードされた年間指導計画から、表データを貼り付けて列を対応付けて取り込むための支援機能です。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="textbook-db-link-bar">
+            <div>
+              <strong>教科書各社の公式指導計画をお探しの方へ</strong>
+              <p>当サイトの「教科書・年間学習計画ガイド（教科書会社DB）」では、主要教科書会社20社以上の年間指導計画公開ページへの公式リンクを網羅しています。本システムの採択設定と合わせてご活用いただけます。</p>
+            </div>
+            <a class="btn btn-secondary" href="/resources/textbook-plans/#for-teachers">教科書・年間学習計画ガイドを開く</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -295,8 +364,8 @@
         <div class="education-monitor-card">
           <div>
             <p class="education-monitor-kicker">FREE MONITOR PROGRAM</p>
-            <h2>無料モニター版をVectorで公開しています</h2>
-            <p>無料モニター版は登録やシリアル入力なしでお試しいただけます。教務支援システムと週案システムをVectorからそれぞれダウンロードしてください。</p>
+            <h2>無料モニター版は公式HP・Vectorから</h2>
+            <p>教務支援システムと週案システムの無料モニター版を、公式HPとVectorの2経路で配布します。公式HP版とVector版は同一ZIPを使用し、公式HPにはSHA-256を掲載します。</p>
           </div>
           <ul class="education-monitor-details">
             <li><strong>対象</strong><span>小学校の教職員、教務主任、管理職、または学校業務改善に関わる方</span></li>
@@ -309,8 +378,10 @@
             <li><strong>ご意見</strong><span>不具合報告・改善提案・ご感想は任意で、公式お問い合わせ窓口からいつでも受け付けています</span></li>
           </ul>
           <div class="education-monitor-actions">
-            <a class="btn btn-primary education-monitor-button" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html">教務支援モニターをVectorで入手</a>
-            <a class="btn btn-light education-monitor-button" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html">週案モニターをVectorで入手</a>
+            <a class="btn btn-primary education-monitor-button" href="/products/education-planning/monitor-download/">無料モニター版ダウンロードページ</a>
+            <a class="btn btn-light education-monitor-button" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html">教務支援をVectorで入手</a>
+            <a class="btn btn-light education-monitor-button" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html">週案をVectorで入手</a>
+            <a class="btn btn-light education-monitor-button" href="/products/education-planning/adjusted/">調整授業時数対応版を見る</a>
           </div>
         </div>
       </div>
@@ -320,11 +391,13 @@
       <div class="container">
         <div class="download-box">
           <h2>無料モニター版・製品版はこちら</h2>
-          <p>統合版の無料モニターは、ファイル容量を考慮して教務支援と週案の2本に分けてVectorで配布しています。製品版はBOOTHで販売しています。</p>
+          <p>統合版の無料モニターは、ファイル容量を考慮して教務支援と週案の2本に分け、公式HPまたはVectorから配布します。製品版はBOOTHで販売しています。</p>
           <div class="dl-grid">
             <a class="dl-item" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html"><strong>教務支援モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span></a>
-            <a class="dl-item" href="https://bantai3.booth.pm/items/8893534"><strong>教務支援 製品版 4,500円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span></a>
             <a class="dl-item" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html"><strong>週案モニター（無料）</strong><span>Vectorからダウンロード｜2027年3月31日まで</span></a>
+            <a class="dl-item" href="/products/education-planning/monitor-download/"><strong>公式HP無料モニターDL</strong><span>教務・週案・調整版の直リンク・SHA-256一覧</span></a>
+            <a class="dl-item" href="/products/education-planning/adjusted/"><strong>調整授業時数 先行シミュレーション版</strong><span>2028年先行実施を見据えた無料モニター｜2027年8月31日まで</span></a>
+            <a class="dl-item" href="https://bantai3.booth.pm/items/8893534"><strong>教務支援 製品版 4,500円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span></a>
             <a class="dl-item" href="https://bantai3.booth.pm/items/8893762"><strong>週案 製品版 3,000円</strong><span>BOOTH｜買い切り・操作マニュアル付き</span></a>
             <a class="dl-item" href="https://bantai3.booth.pm/items/8893790"><strong>統合版 製品版 7,000円</strong><span>BOOTH｜教務支援＋週案・操作マニュアル付き</span></a>
           </div>
@@ -333,7 +406,7 @@
         <div class="warning-box">
           <h3>ダウンロード・購入時のご案内</h3>
           <ul>
-                  <li>無料モニター版はVectorからダウンロードしてください。</li>
+                  <li>無料モニター版は公式HPまたはVectorからダウンロードできます。</li><li>公式HP版とVector版は同一ZIPを使用し、公式HPにはSHA-256を掲載します。</li>
                   <li>統合版の無料モニターは1本の大容量ファイルでは配布せず、教務支援システムと週案システムの2本をそれぞれダウンロードして使用します。</li>
                   <li>製品版はBOOTHで販売しています。各製品版には操作マニュアル（PDF）を同梱します。</li>
                   <li>保存後は必ずZIPファイルを右クリックし、<strong>「すべて展開」</strong>（解凍）してください。</li>
@@ -347,12 +420,12 @@
       <div class="container flow-brief-container">
         <h2>ご利用の流れ</h2>
         <ol>
-        <li>Vectorで教務支援または週案の無料モニター版をダウンロード</li>
+        <li>公式HPまたはVectorで無料モニター版をダウンロード</li>
         <li>ZIPファイルを「すべて展開」</li>
         <li>実行用フォルダ内のexeを起動</li>
         <li>シリアル登録なしで利用開始</li>
         </ol>
-      <p>無料モニター版は2027年3月31日まで利用できます。統合版として試す場合は、教務支援と週案の2本をそれぞれVectorからダウンロードしてください。</p>
+      <p>無料モニター版は2027年3月31日まで利用できます。統合版として試す場合は、教務支援と週案の2本をそれぞれ公式HPまたはVectorからダウンロードしてください。</p>
       <div>
         <a class="btn btn-light" href="https://bantai3.booth.pm/items/8893790">製品版をBOOTHで見る</a>
       </div>
@@ -368,7 +441,7 @@
         <div class="education-faq-list">
           <details class="education-faq-item">
             <summary>モニター利用に費用はかかりますか？</summary>
-            <p>費用はかかりません。無料モニター版はVectorからダウンロードでき、登録やシリアル入力なしで2027年3月31日まで利用できます。</p>
+            <p>費用はかかりません。無料モニター版は公式HPまたはVectorからダウンロードでき、登録やシリアル入力なしで2027年3月31日まで利用できます。</p>
           </details>
           <details class="education-faq-item">
             <summary>学校の児童情報をインターネットへ送信しますか？</summary>
@@ -380,7 +453,7 @@
           </details>
           <details class="education-faq-item">
             <summary>教育計画システムと週案システムは別々に使えますか？</summary>
-            <p>はい。教務支援システム単体版と週案システム単体版を用意しています。統合版は両方を連携して使う製品です。無料モニターは容量を考慮し、教務支援と週案をVectorから別々にダウンロードします。</p>
+            <p>はい。教務支援システム単体版と週案システム単体版を用意しています。統合版は両方を連携して使う製品です。無料モニターは容量を考慮し、教務支援と週案を公式HPまたはVectorから別々にダウンロードします。</p>
           </details>
           <details class="education-faq-item">
             <summary>不具合や改善要望はどこへ連絡しますか？</summary>
@@ -394,10 +467,14 @@
       <div class="container education-final-cta-inner">
         <p class="education-final-kicker">START WITH BANTAI</p>
         <h2>先生の仕事を少し楽にし、子どもと向き合う時間を少し増やす。</h2>
-        <p>無料モニター版はVectorからすぐに試せます。継続利用には、操作マニュアル付きの買い切り製品版をBOOTHでご用意しています。</p>
+        <p>無料モニター版は公式HPまたはVectorから試せます。継続利用には、操作マニュアル付きの買い切り製品版をBOOTHでご用意しています。</p>
           <div class="education-final-actions">
-            <a class="btn btn-primary education-final-monitor-button" href="#download" data-education-event="education_final_monitor_click">無料モニター版を見る</a>
-            <a class="btn btn-light" href="https://bantai3.booth.pm/items/8893790">BOOTHで統合版を見る</a>
+            <a class="btn btn-primary education-final-monitor-button" href="/products/education-planning/monitor-download/" data-education-event="education_final_monitor_click">無料モニター版ダウンロード</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで入手（教務支援）</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html" target="_blank" rel="noopener noreferrer">Vectorで入手（週案）</a>
+            <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se529717.html" target="_blank" rel="noopener noreferrer">Vectorで入手（調整版 公開申請中）</a>
+            <a class="btn btn-light" href="/products/education-planning/adjusted/">調整授業時数対応版</a>
+            <a class="btn btn-light" href="https://bantai3.booth.pm/items/8893790" target="_blank" rel="noopener noreferrer">BOOTHで統合版を見る</a>
           </div>
         <p class="education-final-action-note">製品版は教務支援4,500円、週案3,000円、統合版7,000円。いずれも買い切りで、操作マニュアル付きです。</p>
           <a class="education-final-link" href="/contact/">お問い合わせ</a>

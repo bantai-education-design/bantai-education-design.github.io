@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小学校教育計画作成・運営システム 調整授業時数対応版（実習版） | Ban.Tai Education Design</title>
+  <meta name="description" content="文部科学省の調整授業時数制度（授業時数の見直し・削減と再配分）に対応した、小学校教育計画作成・運営システムの特別実習版。年間計画、削減・充当、週案連携、時数確認を一元管理できます。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=adjusted-curriculum-20260925-1">
+  <style>
+    .adjusted-hero{padding:74px 0;background:radial-gradient(circle at 80% 20%,rgba(237,217,150,.2),transparent 30%),linear-gradient(135deg,#071b36 0%,#102f58 60%,#173e6d 100%);color:#fff;overflow:hidden}
+    .adjusted-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .adjusted-hero h1{font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.25;margin:.3em 0;color:#fff}
+    .adjusted-hero .lead{max-width:720px; font-size:1.05rem; line-height:1.8;}
+    .adjusted-visual{display:grid;grid-template-columns:1fr;gap:12px;position:relative}
+    .adjusted-flow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .adjusted-ui-card{background:rgba(255,255,255,.96);color:var(--navy);border:1px solid rgba(237,217,150,.5);border-radius:18px;padding:18px;box-shadow:0 18px 36px rgba(0,0,0,.18)}
+    .adjusted-ui-card strong{display:block;margin-bottom:8px}
+    .adjusted-ui-lines{display:grid;gap:7px}
+    .adjusted-ui-lines span{height:9px;border-radius:999px;background:#dfe8f3}
+    .adjusted-ui-lines span:nth-child(2){width:78%;background:#e8d8a8}
+    .adjusted-ui-lines span:nth-child(3){width:60%;background:#cfe4d6}
+    .adjusted-arrow{text-align:center;color:#edd996;font-size:1.6rem;font-weight:900}
+    .adjusted-section{padding:76px 0}
+    .adjusted-section.alt{background:#f7f8fb}
+    .adjusted-section .sub{margin-bottom:6px}
+    .adjusted-section h2{margin:0 0 12px 0}
+    .adjusted-section .lead{max-width:840px; font-size:1.02rem; line-height:1.8; color:#334155; margin-bottom:24px}
+    .adjusted-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .adjusted-feature{background:#fff;border:1px solid rgba(7,27,54,.08);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+    .adjusted-feature .n{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-weight:900;margin-bottom:12px}
+    .adjusted-principles{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:16px}
+    .adjusted-principle{background:#fffaf0;border:1px solid rgba(197,160,89,.34);border-radius:18px;padding:22px}
+    .adjusted-warning{background:#fff6f3;border:1px solid #e6b3a8;border-radius:18px;padding:22px}
+    .adjusted-cta{background:linear-gradient(135deg,#071b36,#173e6d);color:#fff;border-radius:26px;padding:34px}
+    .adjusted-cta h2{color:#fff}
+    .adjusted-status{display:inline-flex;padding:7px 12px;border-radius:999px;background:#fff1c8;color:#6b531a;font-weight:800}
+    .adjusted-schedule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .adjusted-pilot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    @media(max-width:860px){
+      .adjusted-hero-grid,.adjusted-feature-grid,.adjusted-principles,.adjusted-flow-row,.adjusted-schedule-grid,.adjusted-pilot-grid{grid-template-columns:1fr}
+      .adjusted-arrow{transform:rotate(90deg)}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+      <span>Ban.Tai Education Design</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
+      <a href="/">ホーム</a>
+      <a href="/products/">製品・教材</a>
+      <a href="/products/education-planning/">教育計画システム</a>
+      <a href="/products/education-planning/adjusted/" class="active">調整授業時数版</a>
+      <a href="/products/education-planning/monitor-download/">無料モニター</a>
+      <a href="/contact/" class="mini">サポート</a>
+    </nav>
+  </div>
+</header>
+
+<div style="background:#051326; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.1); font-size:0.85rem;">
+  <div class="container" style="color:rgba(255,255,255,0.7);">
+    <a href="/" style="color:#edd996; text-decoration:none;">ホーム</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <a href="/products/" style="color:#edd996; text-decoration:none;">製品・教材</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <a href="/products/education-planning/" style="color:#edd996; text-decoration:none;">小学校教育計画作成・運営システム</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <span style="color:#fff;">調整授業時数対応版（実習版）</span>
+  </div>
+</div>
+
+<main>
+  <section class="adjusted-hero">
+    <div class="container adjusted-hero-grid">
+      <div>
+        <p class="kicker" style="color:#edd996; font-weight:700; letter-spacing:0.05em; margin-bottom:6px;">小学校教育計画作成・運営システム 特別実習エディション</p>
+        <h1>小学校教育計画作成・運営システム<br><span style="font-size:0.82em; color:#edd996;">調整授業時数対応版（実習版）</span></h1>
+        <p class="lead">文部科学省で議論されている「授業時数の見直し・調整授業時数制度」への対応を見据えた特別実習用アプリです。現在各小学校で通常行われている標準的な教育計画（教務支援・週案）の安定した仕組みを土台に、年間の授業時数削減・探究学習等への充当・週案連携・実績集計の一連の流れを安全に先行シミュレーションいただけます。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#download">無料モニター（実習版）をダウンロード</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se529717.html" target="_blank" rel="noopener noreferrer">Vectorで調整版を入手（公開申請中: SE529717）</a>
+          <a class="btn btn-light" href="/products/education-planning/">現行の教育計画システムを見る</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで現行版を入手</a>
+        </div>
+        <p style="margin-top:16px"><span class="adjusted-status">Ver.1.0.6 無料モニター版（実習版）配布中</span></p>
+      </div>
+      <div class="adjusted-visual" style="text-align:center;">
+        <img src="/assets/images/adjusted-curriculum-overview.png" alt="小学校教育計画システム 調整授業時数対応版を含む製品ラインナップと無料モニター案内" style="width:100%; max-width:560px; border-radius:18px; box-shadow:0 18px 36px rgba(0,0,0,0.35); border:1px solid rgba(237,217,150,0.4);">
+      </div>
+    </div>
+  </section>
+
+  <!-- 実習版（先行シミュレーション版）とは何かの明確な解説ボックス -->
+  <section style="background:#fffaf0; border-bottom:1px solid rgba(197,160,89,0.35); padding:32px 0;">
+    <div class="container">
+      <div style="background:#ffffff; border:2px solid #edd996; border-radius:16px; padding:26px 30px; box-shadow:0 6px 20px rgba(12,27,51,0.06);">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap;">
+          <span style="background:var(--navy); color:#ffffff; font-size:0.8rem; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:0.04em;">最初にご確認ください</span>
+          <h2 style="margin:0; font-size:1.3rem; color:var(--navy);">「実習版」とは何ですか？（15分のお試し体験版ではありません）</h2>
+        </div>
+        <p style="margin:0 0 12px 0; font-size:0.95rem; line-height:1.8; color:#334155;">
+          「15分だけ触れるお試し体験版」や「教育実習生用の練習ソフト」という意味ではありません。文部科学省で議論されている「調整授業時数制度」の将来的な本格導入を見据え、<strong>自校の実際の時間割や配当時数をもとに、どの教科を何時間削減し、探究学習等へどう振り替えられるのかを学校現場で事前に試算・検証（実習・体験）していただくための特別先行エディション</strong>です。
+        </p>
+        <div style="background:#f8fafc; border-left:4px solid var(--navy); padding:12px 16px; border-radius:0 8px 8px 0; margin-bottom:12px;">
+          <p style="margin:0; font-size:0.9rem; line-height:1.7; color:#1e293b;">
+            <strong>利用時間制限はありません：</strong>15分で終了するような機能制限・時間制限はなく、<strong>2027年8月31日まで、入力・保存・印刷・PDF・Excel出力の全機能を何度でも無制限にご利用いただけます。</strong>
+          </p>
+        </div>
+        <p style="margin:0; font-size:0.88rem; line-height:1.7; color:#64748b;">
+          ※なお、制度上の「15分単位のモジュール授業（1/3コマ=15分、2/3コマ=30分）」の計算や時間割配置にも完全対応しています。現在小学校で通常運用されている標準教育計画（通常版）のデータや設定を壊すことなく、同じパソコン上で安全にお試しいただけます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt" id="about-system">
+    <div class="container">
+      <p class="sub">WHAT IS ADJUSTED CURRICULUM HOURS?</p>
+      <h2>そもそも「調整授業時数」とは何なのか？</h2>
+      <p class="lead">文部科学省および中央教育審議会において、児童の主体的・対話的で深い学びの実現や、学校現場の負担軽減・柔軟な教育課程編成を目的として検討が進められている新しい制度です。</p>
+
+      <div style="background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:20px; padding:28px; box-shadow:var(--shadow); margin-bottom:28px;">
+        <h3 style="color:var(--navy); margin-top:0; font-size:1.3rem;">1. 制度の目的：授業時数の縮減と再配分（充当）</h3>
+        <p>従来の全国一律の各教科標準授業時数から、年間で一定時間（例：各教科数時間ずつ）を縮減（削減）し、生まれた時間を学校の裁量で「探究的な学習」「教科等横断的な授業」「地域の特色を生かした体験活動」「補充学習や児童の実態に応じた指導」などへ再配分（充当）できるようにする仕組みです。</p>
+
+        <h3 style="color:var(--navy); margin-top:24px; font-size:1.3rem;">2. 学校現場で直面する実務上の課題</h3>
+        <p>新制度は柔軟な教育活動を可能にする一方で、教務主任や担任の先生方には以下のような極めて複雑な事務負担が発生します。</p>
+        <ul style="padding-left:22px; line-height:1.8; color:#333;">
+          <li>どの教科から何時間減らし、どこに何時間充当するかのバランス計算が複雑</li>
+          <li>1コマ（45分）だけでなく、15分単位のモジュール授業（1/3コマ、2/3コマ）が混在し、時間割作成が困難</li>
+          <li>削減した時数と充当した時数が完全に一致しているか、未解決の端数や不足がないかの確認が膨大</li>
+          <li>年間の計画書だけでなく、日々の週案や授業実績、学期末・年末の時数集計まで整合性を保つ必要がある</li>
+        </ul>
+        <p style="margin-bottom:0;">これらを手作業や複雑なExcel計算だけで管理するのはミスや過重負担の原因となります。</p>
+
+        <h3 style="color:var(--navy); margin-top:24px; font-size:1.3rem;">3. 本アプリが提供する解決策</h3>
+        <p style="margin-bottom:0;">本アプリは、現在学校で通常行われている標準教育計画の操作感はそのままに、この「削減明細」「充当明細」「1/3・2/3コマ」「端数・超過警告」「週案への自動展開」「実績集計」を一つのシステム上で直感的に完結できるように開発されました。</p>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <img src="/assets/images/education-planning-workflow.png" alt="学校教育計画システムの入力から計画・出力までの三段階ワークフロー" style="width:100%; max-width:820px; border-radius:18px; box-shadow:0 18px 36px rgba(0,0,0,0.12); border:1px solid #e2e8f0;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 文部科学省のスケジュールと先行取り組み校の動向 -->
+  <section class="adjusted-section" id="mext-schedule">
+    <div class="container">
+      <p class="sub">SCHEDULE &amp; PILOT SCHOOLS</p>
+      <h2>「調整授業時数」はいつから始まるのか？文科省の予定と先行取り組み</h2>
+      <p class="lead">先生方から最も多く寄せられる「いつから全国で始まるのか」「文科省の予定はどうなっているのか」「すでに始めている学校はあるのか」という疑問について、文部科学省・中央教育審議会（中教審）の最新審議状況をもとに整理しました。</p>
+
+      <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:32px; box-shadow:var(--shadow); margin-bottom:32px;">
+        <h3 style="color:var(--navy); font-size:1.3rem; margin-top:0; border-bottom:2px solid var(--gold); padding-bottom:8px;">1. 文部科学省の予定スケジュール</h3>
+
+        <div class="adjusted-schedule-grid" style="margin-top:24px;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:var(--navy); color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2026〜2027年度</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">制度詳細の確定・法令改正</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              中教審での議論の取りまとめ・答申を経て、学校教育法施行規則の改正や次期学習指導要領の告示が進められます。
+            </p>
+          </div>
+
+          <div style="background:#fffaf0; border:2px solid #edd996; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:#c5a059; color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2028年度（令和10年度）予定</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">全国先行実施（希望校・自治体）</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              次期学習指導要領の全面実施に先駆け、希望する学校や自治体において制度の全国的な先行実施（前倒し導入）が方針として示されています。
+            </p>
+          </div>
+
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:#64748b; color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2030年度（令和12年度）予定</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">小学校での全面実施</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              次期学習指導要領の本格施行に伴い、小学校で全面実施（中学校は2031年度予定）となる見通しです。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:32px; box-shadow:var(--shadow); margin-bottom:32px;">
+        <h3 style="color:var(--navy); font-size:1.3rem; margin-top:0; border-bottom:2px solid var(--gold); padding-bottom:8px;">2. 先行して取り組んでいる学校（先行取り組み校の現状）</h3>
+        <p style="color:#475569; margin:16px 0 20px 0; font-size:0.95rem; line-height:1.75;">
+          制度が全国導入される前から、すでに授業時数の柔軟化や縮減に取り組んでいる先進校・制度が存在します。
+        </p>
+
+        <div class="adjusted-pilot-grid">
+          <div style="background:#f8fafc; border-left:4px solid var(--navy); border-radius:0 12px 12px 0; padding:20px;">
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">教育課程柔軟化サキドリ研究校（サキドリ研究校）</h4>
+            <p style="font-size:0.9rem; color:#334155; line-height:1.7; margin:0 0 10px 0;">
+              将来の調整授業時数制度の導入を見据え、文部科学省が指定して先行的に試行・実証研究を行っている研究校群です。
+            </p>
+            <ul style="padding-left:18px; margin:0; font-size:0.85rem; color:#64748b; line-height:1.65;">
+              <li>各教科の標準時数を一定割合（10%程度を上限とする議論）で縮減</li>
+              <li>生み出した時間を「探究活動」「教科横断的な学習」「習熟度別補習」「教員の教材研究・研修」へ充当</li>
+              <li>15分単位のモジュール授業（1/3コマ）を組み合わせた時間割編成の実効性を検証</li>
+            </ul>
+          </div>
+
+          <div style="background:#f8fafc; border-left:4px solid #c5a059; border-radius:0 12px 12px 0; padding:20px;">
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">授業時数特例校制度（現行の特例制度）</h4>
+            <p style="font-size:0.9rem; color:#334155; line-height:1.7; margin:0 0 10px 0;">
+              令和4年度（2022年度）から既に文部科学大臣の指定によって運用されている現行制度です。
+            </p>
+            <ul style="padding-left:18px; margin:0; font-size:0.85rem; color:#64748b; line-height:1.65;">
+              <li>総授業時数を維持したまま、特定教科の時数を最大1割（10%）まで減らす特別カリキュラム編成が可能</li>
+              <li>東京都、奈良市、つくば市をはじめとする全国の先進公立小中学校や附属校・私立校が指定を受け、地域探究やSTEAM教育、独自教科などを先行実践中</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(135deg, rgba(12,27,51,0.03) 0%, rgba(197,160,89,0.08) 100%); border:2px solid rgba(197,160,89,0.35); border-radius:20px; padding:28px 32px;">
+        <h3 style="color:var(--navy); font-size:1.25rem; margin-top:0;">3. なぜ2028年の先行実施に向けて「今」事前シミュレーションが必要なのか？</h3>
+        <p style="font-size:0.95rem; line-height:1.8; color:#334155; margin-bottom:12px;">
+          2028年度の全国先行実施が迫る中、教育委員会や学校現場が直面しているのが「制度が始まっても、自校の複雑な時間割で本当に回せるのか」という運用の壁です。
+        </p>
+        <ul style="padding-left:20px; font-size:0.9rem; color:#475569; line-height:1.75; margin-bottom:14px;">
+          <li>どの教科から何時間減らし、どこへ振り替えるかのバランス計算が手作業やExcelでは破綻しやすい</li>
+          <li>15分・30分のモジュール授業（1/3コマ、2/3コマ）を通常コマとどう組み合わせて週案・時間割に落とし込むか</li>
+          <li>制度開始後にいきなりゼロから計画を立て始めると、新学期初めの教務業務が大混乱に陥る</li>
+        </ul>
+        <p style="font-size:0.92rem; line-height:1.75; color:var(--navy); margin:0;">
+          <strong>本アプリが2027年8月31日までの長期無料モニターを提供している理由：</strong>2028年の先行実施に先立ち、各学校の実際の時間割データを用いて「安全に事前シミュレーション（試算・検証実習）を完了していただく」ための準備期間として設計されています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt" id="features">
+    <div class="container">
+      <p class="sub">FEATURES & SUPPORT</p>
+      <h2>調整授業時数対応版でできること</h2>
+      <p>現在行われている標準教育計画の運用を壊すことなく、新制度の要件を独立した機能としてスムーズに検証・実践できます。</p>
+      <div class="adjusted-feature-grid" style="margin-top:28px">
+        <article class="adjusted-feature">
+          <span class="n">1</span>
+          <h3>複数の削減・充当を整理</h3>
+          <p>1つの調整計画に、複数の削減明細と複数の充当明細を登録できます。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">2</span>
+          <h3>1/3・2/3コマを維持</h3>
+          <p>1コマ=3ユニット、1/3コマ=1、2/3コマ=2の考え方を維持します。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">3</span>
+          <h3>年間計画・週案と連携</h3>
+          <p>年間計画と調整内容の関係を確認し、週案側の実施状況ともつなげられる構成です。</p>
+        </article>
+        <article class="adjusted-feature">
+          <span class="n">4</span>
+          <h3>警告状態を見える化</h3>
+          <p>削減超過、充当不足、未解決端数、合計を確定できない状態などを確認しやすくします。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt">
+    <div class="container">
+      <p class="sub">DESIGN PRINCIPLES</p>
+      <h2>現場の安心と今後の制度変更を見据えた設計方針</h2>
+      <div class="adjusted-principles" style="margin-top:24px">
+        <article class="adjusted-principle">
+          <h3>制度未確定の段階でも柔軟に設定可能</h3>
+          <p>国の方針決定や各自治体の独自基準にも柔軟に対応できるよう、割合や上限値を固定化せず自由に変更できる設計にしています。</p>
+        </article>
+        <article class="adjusted-principle">
+          <h3>学校採択の計画を基準に設定可能</h3>
+          <p>文部科学省の標準時数配当だけでなく、各学校が独自に編成・採択した年間計画を基準として柔軟に設定できます。</p>
+        </article>
+        <article class="adjusted-principle">
+          <h3>現行の教育計画データと完全分離</h3>
+          <p>現在学校で通常運用されている教育計画や週案のデータとは保存先を完全に分離しているため、既存のデータを上書きしたり壊したりする心配なく、安心して試用・検証できます。</p>
+        </article>
+        <article class="adjusted-principle">
+          <h3>教科書指導計画や既存データを自在に活用</h3>
+          <p>学校採択の教科書会社の年間指導計画（単元配列・配当時数）を取り込むアシスタントや、前年度データの引継ぎ、行事・時間割の読込みに対応。ゼロから手入力することなく、素早く調整授業時数のシミュレーションを組み立てられます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section" id="download">
+    <div class="container">
+      <p class="sub">FREE MONITOR DOWNLOAD</p>
+      <h2>調整授業時数対応版 無料モニター（実習版）</h2>
+      <p>モニター期限は2027年8月31日です。モニター期間中はシリアル登録不要で、入力・保存・印刷・PDF保存・Excel/JSON出力などの全機能をお試しいただけます。</p>
+
+      <div class="adjusted-feature" style="margin-top:28px; border:2px solid #c5a059;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:18px;">
+          <div>
+            <h3 style="font-size:1.4rem; margin:0 0 6px;">調整授業時数対応版（実習用モニター版）</h3>
+            <p style="margin:0; color:#555;">複数の削減・充当明細、1/3・2/3コマ、学校採択の基準計画、削減超過・未解決端数などを検証できる実習版です。</p>
+          </div>
+          <span class="adjusted-status">Ver.1.0.6</span>
+        </div>
+
+        <div class="actions" style="margin-bottom:24px;">
+          <a class="btn btn-primary" href="https://github.com/bantai-education-design/bantai-education-design.github.io/releases/download/adjusted-monitor-v1.0.6/bantai_adjusted_curriculum_monitor_v1.0.6.zip">公式HPから無料ダウンロード（ZIP）</a>
+          <a class="btn btn-primary" href="https://github.com/bantai-education-design/bantai-education-design.github.io/releases/download/adjusted-monitor-v1.0.6/bantai_adjusted_curriculum_monitor_manual_v1.0.6.pdf" target="_blank" rel="noopener noreferrer">専用マニュアルPDFを開く</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se529717.html" target="_blank" rel="noopener noreferrer">Vectorで調整版を入手（公開申請中: SE529717）</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで現行版（教務支援）を入手</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528974.html" target="_blank" rel="noopener noreferrer">Vectorで現行版（週案）を入手</a>
+          <a class="btn btn-light" href="/products/education-planning/monitor-download/">現行標準時数版のモニター一覧を見る</a>
+        </div>
+
+        <div style="background:#f8f9fa; border:1px solid #e2e8f0; border-radius:12px; padding:16px; font-size:0.9rem;">
+          <p style="margin:0 0 8px; font-weight:700; color:var(--navy);">配布ファイル詳細スペック</p>
+          <ul style="margin:0; padding-left:20px; line-height:1.7;">
+            <li>ファイル名: <code>bantai_adjusted_curriculum_monitor_v1.0.6.zip</code></li>
+            <li>ファイルサイズ: 170,900,449 bytes（約163 MB）</li>
+            <li>
+              安全性照合用コード（SHA-256ハッシュ値）: <code style="word-break:break-all;">ddb6466ea032413e7fa17479e49ee730c57acd6fc433fb5634c496afaed4730b</code>
+              <div style="font-size:0.83rem; color:#64748b; margin-top:3px; line-height:1.5;">
+                ※通常のダウンロードや日常のご利用において、この文字列の入力や確認は不要です。学校の情報セキュリティ担当者等で、ダウンロードしたZIPファイルが破損・改ざんされていないか真正性を確認・照合したい方向けに掲載しています。
+              </div>
+            </li>
+            <li>専用マニュアル: <code>bantai_adjusted_curriculum_monitor_manual_v1.0.6.pdf</code>（173,087 bytes）</li>
+            <li>利用期限: 2027年8月31日まで（シリアル登録不要）</li>
+            <li>現行システムとの共存確認: 現在の標準版（Ver.5.70.12）がインストールされているPCでも、既存データや設定を壊さずそのまま同時に使えることを実機検証済み</li>
+            <li>データ保存: 業務データはすべてPC内に保存されます（オフライン利用可能）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt">
+    <div class="container">
+      <div class="adjusted-warning">
+        <h2>制度に関する重要なお願い</h2>
+        <p>本アプリは、教育課程上の判断そのものを自動で決定するものではありません。制度・運用上の最終判断は、最新の法令・通知・教育委員会等の正式資料をご確認ください。重要な授業時数、教育課程、提出書類は、利用者自身でも最終確認してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section">
+    <div class="container">
+      <p class="sub">SUPPORT & FEEDBACK</p>
+      <h2>ご意見・改善要望の受付</h2>
+      <p>実務での試用におけるご意見、使い勝手の改善要望、不具合のご報告は、公式お問い合わせ窓口から随時受け付けています。</p>
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn btn-primary" href="/contact/">公式お問い合わせ窓口へ</a>
+        <a class="btn btn-light" href="/products/education-planning/">現行の教育計画システム（標準時数版）詳細へ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>Ban.Tai Education Design</h2>
+      <p>教育現場40年の経験をもとに、学校現場の時短・軽量化・効率化を目指して開発しています。</p>
+    </div>
+    <div>
+      <p><strong>お問い合わせ</strong><br><a href="/contact/">公式お問い合わせ</a></p>
+      <p><a href="/legal/">利用規約・免責事項</a></p>
+    </div>
+  </div>
+  <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+</footer>
+</body>
+</html>

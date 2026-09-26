@@ -89,13 +89,17 @@ def render_actions(product: dict) -> str:
     if detail_url:
         links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
 
-    # 教育計画システムは無料モニター（Vector案内ページ）と製品版（BOOTH）を併記する。
+    # 教育計画システムは無料モニター、Vector、製品版（BOOTH）、調整版を併記する。
     if product.get("id") == "education-planning":
         monitor_url = product.get("monitorUrl")
+        vector_url = product.get("vectorUrl")
         booth_url = product.get("boothUrl")
         if monitor_url:
             target = ' target="_blank" rel="noopener noreferrer"' if monitor_url.startswith("http") else ""
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}"{target}>無料モニター版を見る</a>')
+        if vector_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-secondary" href="{html_attr(vector_url)}" target="_blank" rel="noopener noreferrer">Vectorで入手</a>')
+        links.append('      <a class="catalog-btn catalog-btn-secondary" href="/products/education-planning/adjusted/">調整版を見る</a>')
         if booth_url:
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHで製品版を見る</a>')
         return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
