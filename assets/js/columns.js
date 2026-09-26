@@ -14,6 +14,8 @@
 
   let allColumns = [];
   let currentCategory = 'all';
+  let currentPage = 1;
+  const ITEMS_PER_PAGE = 15;
 
   // --- GA4 Column Measurement State ---
   let activeColumn = null;
@@ -214,10 +216,83 @@
 
     if (filtered.length === 0) {
       container.innerHTML = '<div class="column-empty"><p>該当するコラムが見つかりませんでした。</p></div>';
+      renderPagination(0, 0);
       return;
     }
 
-    container.innerHTML = filtered.map((column, idx) => renderColumnCard(column, currentCategory === 'all' ? idx : -1)).join('');
+    const totalItems = filtered.length;
+    const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE) || 1;
+
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const pageItems = filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    container.innerHTML = pageItems.map((column, idx) => {
+      const isFirstItem = (currentCategory === 'all' && currentPage === 1 && idx === 0);
+      return renderColumnCard(column, isFirstItem ? 0 : -1);
+    }).join('');
+
+    renderPagination(totalItems, totalPages);
+  }
+
+  function renderPagination(totalItems, totalPages) {
+    let paginationEl = document.getElementById('columns-pagination');
+    const container = document.getElementById('columns-grid');
+
+    if (!paginationEl && container) {
+      paginationEl = document.createElement('div');
+      paginationEl.id = 'columns-pagination';
+      paginationEl.className = 'columns-pagination';
+      paginationEl.setAttribute('aria-label', 'ページネーション');
+      container.parentNode.insertBefore(paginationEl, container.nextSibling);
+    }
+
+    if (!paginationEl) return;
+
+    if (totalPages <= 1) {
+      paginationEl.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+
+    // Prev Button
+    const prevDisabled = currentPage === 1 ? 'disabled' : '';
+    html += `<button type="button" class="pagination-btn nav-btn" data-page="${currentPage - 1}" ${prevDisabled}>&laquo; 前へ</button>`;
+
+    // Page Number Buttons
+    for (let p = 1; p <= totalPages; p++) {
+      const activeClass = p === currentPage ? 'active' : '';
+      html += `<button type="button" class="pagination-btn ${activeClass}" data-page="${p}">${p}</button>`;
+    }
+
+    // Next Button
+    const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    html += `<button type="button" class="pagination-btn nav-btn" data-page="${currentPage + 1}" ${nextDisabled}>次へ &raquo;</button>`;
+
+    // Total Count & Page Info
+    const startNum = (currentPage - 1) * ITEMS_PER_PAGE + 1;
+    const endNum = Math.min(currentPage * ITEMS_PER_PAGE, totalItems);
+    html += `<div class="pagination-info">全 ${totalItems} 件中 ${startNum}〜${endNum} 件目を表示（${currentPage} / ${totalPages} ページ）</div>`;
+
+    paginationEl.innerHTML = html;
+
+    // Attach Click Handlers
+    const btns = paginationEl.querySelectorAll('.pagination-btn[data-page]');
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const targetPage = parseInt(e.currentTarget.getAttribute('data-page'), 10);
+        if (targetPage && targetPage !== currentPage && targetPage >= 1 && targetPage <= totalPages) {
+          currentPage = targetPage;
+          renderFilteredColumns();
+
+          const filterTabs = document.getElementById('category-filter-tabs') || container;
+          filterTabs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   }
 
   function renderColumnCard(item, index) {
@@ -256,6 +331,7 @@
         tabs.forEach(t => t.classList.remove('active'));
         e.currentTarget.classList.add('active');
         currentCategory = e.currentTarget.getAttribute('data-category') || 'all';
+        currentPage = 1;
         renderFilteredColumns();
       });
     });
