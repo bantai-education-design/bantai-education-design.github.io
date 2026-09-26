@@ -225,9 +225,9 @@
       "class": "education-resource-section",
       "cardClass": "container education-resource-card",
       "kickerClass": "education-resource-kicker",
-      "eyebrow": "Before You Plan",
-      "heading": "教育計画を作る前に、教科書会社の年間指導計画を確認する",
-      "description": "各教科書会社の公式資料を確認しながら、教育計画システムで週案づくりを進めやすくするためのリンク集です。",
+      "eyebrow": "EFFICIENT PLANNING & DATA IMPORT",
+      "heading": "ゼロから作らない。多彩なデータ取込口と教科書年間指導計画の活用",
+      "description": "前年度引継ぎ・行事・時間割の取込に加え、正規入手した教科書会社の年間指導計画から単元・時数を取り込むアシスタント機能を搭載。当サイトの教科書会社DBとも連携して活用いただけます。",
       "action": {
         "label": "教科書・年間学習計画ガイドを開く",
         "href": "/resources/textbook-plans/#for-teachers",
