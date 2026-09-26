@@ -30,7 +30,7 @@
 ### Vector
 - 教務支援: https://www.vector.co.jp/soft/winnt/edu/se528971.html
 - 週案: https://www.vector.co.jp/soft/winnt/edu/se528974.html
-- 調整授業時数対応版: Vector登録後に正式URLを設定する。
+- 調整授業時数対応版: https://www.vector.co.jp/soft/winnt/edu/se529717.html（公開申請中: SE529717）
 
 ## 3. GitHub Releases運用
 - ZIPはGitHub Releases assetsとして配布する。
@@ -57,7 +57,7 @@
 - 教務支援システム: 公式HP / Vector / BOOTH / マニュアル / バージョン / 更新日 / SHA-256
 - 週案システム: 同上
 - 統合版: 教務支援ZIPと週案ZIPの2本構成、公式HP2ボタン、Vector2ボタン、BOOTH統合版、統合版利用ガイド
-- 調整授業時数対応版: 公式HP / Vector（URL確定後） / BOOTH（URL確定後） / 専用マニュアル / バージョン / 更新日 / SHA-256
+- 調整授業時数対応版: 公式HP / Vector（SE529717 公開申請中） / BOOTH（URL確定後） / 専用マニュアル / バージョン / 更新日 / SHA-256
 
 ### 調整授業時数対応版ページ
 候補URL: /products/education-planning/adjusted/
