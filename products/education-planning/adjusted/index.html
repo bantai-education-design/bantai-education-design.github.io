@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>調整授業時数対応版 | Ban.Tai Education Design</title>
-  <meta name="description" content="調整授業時数制度への対応を見据えた小学校教育計画支援アプリ。年間計画、削減・充当、週案連携、時数確認を支援します。">
+  <title>小学校教育計画作成・運営システム 調整授業時数対応版（実習版） | Ban.Tai Education Design</title>
+  <meta name="description" content="文部科学省の調整授業時数制度（授業時数の見直し・削減と再配分）に対応した、小学校教育計画作成・運営システムの特別実習版。年間計画、削減・充当、週案連携、時数確認を一元管理できます。">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
   <style>
     .adjusted-hero{padding:74px 0;background:radial-gradient(circle at 80% 20%,rgba(237,217,150,.2),transparent 30%),linear-gradient(135deg,#071b36 0%,#102f58 60%,#173e6d 100%);color:#fff;overflow:hidden}
     .adjusted-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
-    .adjusted-hero h1{font-size:clamp(2.1rem,4.5vw,4rem);line-height:1.2;margin:.3em 0;color:#fff}
-    .adjusted-hero .lead{max-width:720px}
+    .adjusted-hero h1{font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.25;margin:.3em 0;color:#fff}
+    .adjusted-hero .lead{max-width:720px; font-size:1.05rem; line-height:1.8;}
     .adjusted-visual{display:grid;grid-template-columns:1fr;gap:12px;position:relative}
     .adjusted-flow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .adjusted-ui-card{background:rgba(255,255,255,.96);color:var(--navy);border:1px solid rgba(237,217,150,.5);border-radius:18px;padding:18px;box-shadow:0 18px 36px rgba(0,0,0,.18)}
@@ -51,25 +51,38 @@
     <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
     <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
       <a href="/">ホーム</a>
-      <a href="/products/" class="active">製品・教材</a>
+      <a href="/products/">製品・教材</a>
       <a href="/products/education-planning/">教育計画システム</a>
+      <a href="/products/education-planning/adjusted/" class="active">調整授業時数版</a>
       <a href="/products/education-planning/monitor-download/">無料モニター</a>
       <a href="/contact/" class="mini">サポート</a>
     </nav>
   </div>
 </header>
 
+<div style="background:#051326; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.1); font-size:0.85rem;">
+  <div class="container" style="color:rgba(255,255,255,0.7);">
+    <a href="/" style="color:#edd996; text-decoration:none;">ホーム</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <a href="/products/" style="color:#edd996; text-decoration:none;">製品・教材</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <a href="/products/education-planning/" style="color:#edd996; text-decoration:none;">小学校教育計画作成・運営システム</a>
+    <span style="margin:0 6px;">&gt;</span>
+    <span style="color:#fff;">調整授業時数対応版（実習版）</span>
+  </div>
+</div>
+
 <main>
   <section class="adjusted-hero">
     <div class="container adjusted-hero-grid">
       <div>
-        <p class="kicker">ADJUSTED CURRICULUM HOURS EDITION</p>
-        <h1>調整授業時数対応版</h1>
-        <p class="lead">制度変更への対応を見据え、年間計画・削減授業時数・充当先・週案・実績確認を、一つの流れで整理しやすくするためのWindowsアプリです。</p>
+        <p class="kicker" style="color:#edd996; font-weight:700; letter-spacing:0.05em; margin-bottom:6px;">小学校教育計画作成・運営システム 特別実習エディション</p>
+        <h1>小学校教育計画作成・運営システム<br><span style="font-size:0.82em; color:#edd996;">調整授業時数対応版（実習版）</span></h1>
+        <p class="lead">文部科学省の調整授業時数制度（授業時数の見直し・削減と再配分）への対応を見据えた、小学校教育計画作成・運営システム（教務支援・週案）の先行実習用アプリです。通常版のデータを壊さず、年間計画・削減授業時数・充当先・週案・実績確認の一連の流れを安全に検証いただけます。</p>
         <div class="actions">
           <a class="btn btn-primary" href="#download">無料モニター（実習版）をダウンロード</a>
-          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで通常版（教務支援）を入手</a>
-          <a class="btn btn-light" href="#features">できることを見る</a>
+          <a class="btn btn-light" href="/products/education-planning/">通常版（本編）の詳細を見る</a>
+          <a class="btn btn-light" href="https://www.vector.co.jp/soft/winnt/edu/se528971.html" target="_blank" rel="noopener noreferrer">Vectorで通常版を入手</a>
         </div>
         <p style="margin-top:16px"><span class="adjusted-status">Ver.1.0.6 無料モニター版（実習版）配布中</span></p>
       </div>
@@ -96,8 +109,8 @@
   <section class="adjusted-section" id="features">
     <div class="container">
       <p class="sub">WHAT IT SUPPORTS</p>
-      <h2>調整授業時数対応版でできること</h2>
-      <p>通常版の仕組みを壊さず、調整授業時数制度への対応を独立したアプリとして整備しています。</p>
+      <h2>小学校教育計画システムにおける調整授業時数対応版の役割</h2>
+      <p>「小学校教育計画作成・運営システム」は、教務主任の年間教育計画と各学級担任の週案・時数管理をひとつの流れにつなぐ学校実務システムです。本「調整授業時数対応版」は、通常版の安定した業務フローを崩さず、文部科学省の調整授業時数制度（授業時数の見直し・削減と再配分）に特化した計算・配当・週案連携を先行して実習・検証できるように開発された特別エディションです。</p>
       <div class="adjusted-feature-grid" style="margin-top:28px">
         <article class="adjusted-feature">
           <span class="n">1</span>
