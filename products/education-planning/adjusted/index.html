@@ -35,8 +35,10 @@
     .adjusted-cta{background:linear-gradient(135deg,#071b36,#173e6d);color:#fff;border-radius:26px;padding:34px}
     .adjusted-cta h2{color:#fff}
     .adjusted-status{display:inline-flex;padding:7px 12px;border-radius:999px;background:#fff1c8;color:#6b531a;font-weight:800}
+    .adjusted-schedule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .adjusted-pilot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
     @media(max-width:860px){
-      .adjusted-hero-grid,.adjusted-feature-grid,.adjusted-principles,.adjusted-flow-row{grid-template-columns:1fr}
+      .adjusted-hero-grid,.adjusted-feature-grid,.adjusted-principles,.adjusted-flow-row,.adjusted-schedule-grid,.adjusted-pilot-grid{grid-template-columns:1fr}
       .adjusted-arrow{transform:rotate(90deg)}
     }
   </style>
@@ -145,7 +147,93 @@
     </div>
   </section>
 
-  <section class="adjusted-section" id="features">
+  <!-- 文部科学省のスケジュールと先行取り組み校の動向 -->
+  <section class="adjusted-section" id="mext-schedule">
+    <div class="container">
+      <p class="sub">SCHEDULE &amp; PILOT SCHOOLS</p>
+      <h2>「調整授業時数」はいつから始まるのか？文科省の予定と先行取り組み</h2>
+      <p class="lead" style="margin-bottom:32px;">先生方から最も多く寄せられる「いつから全国で始まるのか」「文科省の予定はどうなっているのか」「すでに始めている学校はあるのか」という疑問について、文部科学省・中央教育審議会（中教審）の最新審議状況をもとに整理しました。</p>
+
+      <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:32px; box-shadow:var(--shadow); margin-bottom:32px;">
+        <h3 style="color:var(--navy); font-size:1.3rem; margin-top:0; border-bottom:2px solid var(--gold); padding-bottom:8px;">1. 文部科学省の予定スケジュール</h3>
+
+        <div class="adjusted-schedule-grid" style="margin-top:24px;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:var(--navy); color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2026〜2027年度</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">制度詳細の確定・法令改正</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              中教審での議論の取りまとめ・答申を経て、学校教育法施行規則の改正や次期学習指導要領の告示が進められます。
+            </p>
+          </div>
+
+          <div style="background:#fffaf0; border:2px solid #edd996; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:#c5a059; color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2028年度（令和10年度）予定</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">全国先行実施（希望校・自治体）</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              次期学習指導要領の全面実施に先駆け、希望する学校や自治体において制度の全国的な先行実施（前倒し導入）が方針として示されています。
+            </p>
+          </div>
+
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
+            <span style="display:inline-block; background:#64748b; color:#fff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px;">2030年度（令和12年度）予定</span>
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">小学校での全面実施</h4>
+            <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.65;">
+              次期学習指導要領の本格施行に伴い、小学校で全面実施（中学校は2031年度予定）となる見通しです。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:32px; box-shadow:var(--shadow); margin-bottom:32px;">
+        <h3 style="color:var(--navy); font-size:1.3rem; margin-top:0; border-bottom:2px solid var(--gold); padding-bottom:8px;">2. 先行して取り組んでいる学校（先行取り組み校の現状）</h3>
+        <p style="color:#475569; margin:16px 0 20px 0; font-size:0.95rem; line-height:1.75;">
+          制度が全国導入される前から、すでに授業時数の柔軟化や縮減に取り組んでいる先進校・制度が存在します。
+        </p>
+
+        <div class="adjusted-pilot-grid">
+          <div style="background:#f8fafc; border-left:4px solid var(--navy); border-radius:0 12px 12px 0; padding:20px;">
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">教育課程柔軟化サキドリ研究校（サキドリ研究校）</h4>
+            <p style="font-size:0.9rem; color:#334155; line-height:1.7; margin:0 0 10px 0;">
+              将来の調整授業時数制度の導入を見据え、文部科学省が指定して先行的に試行・実証研究を行っている研究校群です。
+            </p>
+            <ul style="padding-left:18px; margin:0; font-size:0.85rem; color:#64748b; line-height:1.65;">
+              <li>各教科の標準時数を一定割合（10%程度を上限とする議論）で縮減</li>
+              <li>生み出した時間を「探究活動」「教科横断的な学習」「習熟度別補習」「教員の教材研究・研修」へ充当</li>
+              <li>15分単位のモジュール授業（1/3コマ）を組み合わせた時間割編成の実効性を検証</li>
+            </ul>
+          </div>
+
+          <div style="background:#f8fafc; border-left:4px solid #c5a059; border-radius:0 12px 12px 0; padding:20px;">
+            <h4 style="margin:0 0 8px 0; color:var(--navy); font-size:1.1rem;">授業時数特例校制度（現行の特例制度）</h4>
+            <p style="font-size:0.9rem; color:#334155; line-height:1.7; margin:0 0 10px 0;">
+              令和4年度（2022年度）から既に文部科学大臣の指定によって運用されている現行制度です。
+            </p>
+            <ul style="padding-left:18px; margin:0; font-size:0.85rem; color:#64748b; line-height:1.65;">
+              <li>総授業時数を維持したまま、特定教科の時数を最大1割（10%）まで減らす特別カリキュラム編成が可能</li>
+              <li>東京都、奈良市、つくば市をはじめとする全国の先進公立小中学校や附属校・私立校が指定を受け、地域探究やSTEAM教育、独自教科などを先行実践中</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(135deg, rgba(12,27,51,0.03) 0%, rgba(197,160,89,0.08) 100%); border:2px solid rgba(197,160,89,0.35); border-radius:20px; padding:28px 32px;">
+        <h3 style="color:var(--navy); font-size:1.25rem; margin-top:0;">3. なぜ2028年の先行実施に向けて「今」事前シミュレーションが必要なのか？</h3>
+        <p style="font-size:0.95rem; line-height:1.8; color:#334155; margin-bottom:12px;">
+          2028年度の全国先行実施が迫る中、教育委員会や学校現場が直面しているのが「制度が始まっても、自校の複雑な時間割で本当に回せるのか」という運用の壁です。
+        </p>
+        <ul style="padding-left:20px; font-size:0.9rem; color:#475569; line-height:1.75; margin-bottom:14px;">
+          <li>どの教科から何時間減らし、どこへ振り替えるかのバランス計算が手作業やExcelでは破綻しやすい</li>
+          <li>15分・30分のモジュール授業（1/3コマ、2/3コマ）を通常コマとどう組み合わせて週案・時間割に落とし込むか</li>
+          <li>制度開始後にいきなりゼロから計画を立て始めると、新学期初めの教務業務が大混乱に陥る</li>
+        </ul>
+        <p style="font-size:0.92rem; line-height:1.75; color:var(--navy); margin:0;">
+          <strong>本アプリが2027年8月31日までの長期無料モニターを提供している理由：</strong>2028年の先行実施に先立ち、各学校の実際の時間割データを用いて「安全に事前シミュレーション（試算・検証実習）を完了していただく」ための準備期間として設計されています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="adjusted-section alt" id="features">
     <div class="container">
       <p class="sub">FEATURES & SUPPORT</p>
       <h2>調整授業時数対応版でできること</h2>
