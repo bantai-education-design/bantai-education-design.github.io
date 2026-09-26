@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 03",
+  "records": {
+    "u000030": {
+      "founded_year": 1899,
+      "opened_year": 1949,
+      "founder": "下田歌子",
+      "operator": "学校法人実践女子学園",
+      "university_goal": "学園創立以来の女子教育を基盤に、社会の変化に主体的に向き合い、学んだ知識と実践力を生かして社会に貢献できる女性を育成することを目指しています。",
+      "philosophy": "創立者・下田歌子の女子教育への志を受け継ぎ、『女性が社会を変える、世界を変える』という建学の精神のもと、自立して社会に関わる女性の育成を重視しています。",
+      "sources": [
+        {"source_name":"実践女子大学 建学の精神と教育理念","source_url":"https://www.jissen.ac.jp/about/spirit/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"実践女子学園 学園の変遷と復興","source_url":"https://www.jissen.ac.jp/school/history/list03.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000031": {
+      "founded_year": 1927,
+      "opened_year": 1949,
+      "founder": "有元史郎",
+      "operator": "学校法人芝浦工業大学",
+      "university_goal": "工学・理工学の教育研究を通じ、幅広い教養と専門知識、高い倫理観を備え、持続可能な社会の課題解決に貢献できる技術者・理工系人材を育成することを目的としています。",
+      "philosophy": "建学の精神は『社会に学び、社会に貢献する技術者の育成』。実学を重視し、教育理念として『世界に学び、世界に貢献するグローバル理工系人材の育成』を掲げています。",
+      "sources": [
+        {"source_name":"芝浦工業大学 沿革","source_url":"https://www.shibaura-it.ac.jp/about/educational_foundation/summary/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"芝浦工業大学 建学の精神・教育の理念・目的","source_url":"https://www.shibaura-it.ac.jp/about/summary/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000032": {
+      "founded_year": 1838,
+      "opened_year": 1951,
+      "founder": "佐藤泰然",
+      "operator": "学校法人順天堂",
+      "university_goal": "健康総合大学・大学院大学として、教育・研究・診療・実践を通じて、医療・健康・保健・福祉・スポーツなどの分野で国際社会に貢献できる人材を育成することを目指しています。",
+      "philosophy": "学是『仁』、理念『不断前進』、出身校・国籍・性別で差別しない『三無主義』の学風を柱とし、他者を思いやる心と常に高い目標へ進む姿勢を重視しています。",
+      "sources": [
+        {"source_name":"順天堂の沿革","source_url":"https://www.juntendo.ac.jp/about/corp/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"順天堂史年表","source_url":"https://www.juntendo.ac.jp/about/corp/history_ayumi/history/chronology.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"順天堂 学是・理念・学風","source_url":"https://www.juntendo.ac.jp/about/corp/philosophy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000033": {
+      "founded_year": 1913,
+      "opened_year": 1913,
+      "founder": "イエズス会",
+      "operator": "学校法人上智学院",
+      "university_goal": "キリスト教ヒューマニズムを基盤に、国籍・言語・文化・宗教・学問分野の違いを越えて他者と協働し、地球規模の課題解決と持続可能な社会に貢献する人材を育成することを目指しています。",
+      "philosophy": "教育精神『他者のために、他者とともに（For Others, With Others）』を中心に、キリスト教ヒューマニズム、隣人性、国際性を重視し、『叡智が世界をつなぐ』理念の実現を目指しています。",
+      "sources": [
+        {"source_name":"上智大学の沿革","source_url":"https://www.sophia.ac.jp/jpn/aboutsophia/sophia_spirit/historical_record/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"上智大学の理念","source_url":"https://www.sophia.ac.jp/jpn/aboutsophia/sophia_spirit/sophia-idea/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000034": {
+      "founded_year": 1928,
+      "opened_year": 1946,
+      "founder": "上條秀介ら創立同志",
+      "operator": "学校法人昭和医科大学",
+      "university_goal": "医学・歯学・薬学・保健医療の教育研究と診療を通じて、実地に役立ち、国民の健康と社会の文化・公共の福祉に貢献できる医療人を育成することを目指しています。",
+      "philosophy": "建学の精神は『至誠一貫』。常に相手の立場に立ち、真心を尽くす姿勢を貫き、実践的な医療を担う人材を育てることを教育の根幹としています。",
+      "sources": [
+        {"source_name":"昭和医科大学 建学の精神 至誠一貫","source_url":"https://www.showa-u.ac.jp/about_us/mission/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"昭和医科大学の歴史","source_url":"https://www.showa-u.ac.jp/about_us/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"昭和医科大学 創立者 上條秀介","source_url":"https://www.showa-u.ac.jp/about_us/history/founder.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
