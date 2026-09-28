@@ -20,6 +20,10 @@
       "class": "active"
     },
     {
+      "href": "#concept",
+      "label": "この本について"
+    },
+    {
       "href": "#features",
       "label": "この本の特長"
     },
@@ -84,9 +88,32 @@
         }
       ],
       "image": {
-        "src": "/assets/images/books/hogosha-bunrei-cover.png",
-        "alt": "書籍『その一言、保護者にどう届く？』の表紙（仮）"
+        "src": "/assets/images/books/hogosha-bunrei-cover.jpg",
+        "alt": "書籍『その一言、保護者にどう届く？』の表紙"
       }
+    },
+    {
+      "type": "imageGallery",
+      "id": "concept",
+      "class": "section",
+      "eyebrow": "Concept",
+      "heading": "ことばがつながると、子どもの笑顔が増えていく",
+      "gridClass": "grid grid-1",
+      "images": [
+        {
+          "src": "/assets/images/books/hogosha-bunrei-illust-1.jpg",
+          "alt": "連絡帳を読みながら保護者の気持ちを考える先生と、連絡帳・電話・個人面談の場面のイラスト",
+          "style": "width:100%; height:auto; border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,.08);"
+        }
+      ],
+      "footerCards": [
+        {
+          "heading": "忙しい朝に、それでも書いてくれた一言",
+          "paragraphs": [
+            "連絡帳は、余裕のない朝と朝がすれ違う場所です。どんな気持ちで書いてくれたのかを想像し、まず受け止める。そのうえで、この子のためにできることを伝える。この本は、その順番を場面ごとに示します。"
+          ]
+        }
+      ]
     },
     {
       "type": "textCardGrid",
@@ -201,7 +228,14 @@
             }
           ]
         }
-      ]
+      ],
+      "visual": {
+        "class": "visual",
+        "image": {
+          "src": "/assets/images/books/hogosha-bunrei-illust-2.jpg",
+          "alt": "連絡帳・電話・面談の場面と、Excel・Word・テキストの読者特典を紹介するイラスト"
+        }
+      }
     },
     {
       "type": "textCardGrid",
@@ -228,8 +262,8 @@
       "heading": "刊行について",
       "items": [
         "刊行日、価格、販売ページは決まり次第このページでお知らせします。",
-        "表紙の画像は仮のものです。",
-        "本に書いたことは、著者が経験した範囲のことで、多くは東京都の学校での経験がもとになっています。"
+        "本に書いたことは、著者が経験した範囲のことで、多くは東京都の学校での経験がもとになっています。",
+        "イラストはイメージです。"
       ]
     }
   ]
