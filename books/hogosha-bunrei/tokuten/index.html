@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>読者特典　その一言、保護者にどう届く？</title>
+<style>
+  :root { --ink:#222; --sub:#555; --line:#ccc; --accent:#2f5d8a; --bg:#fafaf7; --err:#b3261e; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:"Yu Gothic","YuGothic","Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.8; }
+  main { max-width:560px; margin:0 auto; padding:32px 16px 48px; }
+  h1 { font-size:1.35rem; line-height:1.5; margin:0 0 4px; }
+  .sub { color:var(--sub); font-size:.9rem; margin:0 0 24px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px; margin-bottom:20px; }
+  ul { padding-left:1.2em; margin:8px 0 0; }
+  label { display:block; font-weight:bold; margin-bottom:8px; }
+  input { width:100%; font-size:1.1rem; padding:12px; border:1px solid var(--line); border-radius:6px; }
+  button { width:100%; margin-top:12px; font-size:1.05rem; padding:12px; border:0; border-radius:6px;
+           background:var(--accent); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.6; cursor:wait; }
+  #msg { min-height:1.8em; margin-top:10px; font-size:.95rem; }
+  #msg.err { color:var(--err); }
+  .note { color:var(--sub); font-size:.85rem; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>その一言、保護者にどう届く？<br>読者特典のダウンロード</h1>
+  <p class="sub">現場40年の先輩が教える　連絡帳・電話・面談　基本と極意の文例集</p>
+
+  <div class="card">
+    本書の文例を、ファイルでお使いいただけます。
+    <ul>
+      <li>場面別文例集（121場面、ひと言・短文・丁寧）</li>
+      <li>ひと言返事集、言い換え表、送る前・かける前のチェック</li>
+      <li>Excel・Word・テキストの3形式（ZIPにまとめています）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <form id="f">
+      <label for="w">本に書かれている合言葉を入力してください</label>
+      <input id="w" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="latin" required>
+      <button id="b" type="submit">ダウンロード</button>
+      <div id="msg" role="status"></div>
+    </form>
+  </div>
+
+  <p class="note">
+    ご自身の学級や校内での利用は自由です。ファイルの再配布や販売はご遠慮ください。<br>
+    特典の提供は、予告なく終了することがあります。<br>
+    <span id="trialLine">本をお持ちでない方は、<a href="#" id="trial">無料のお試し版</a>をご覧ください。</span>
+  </p>
+  <p class="note"><a href="/books/hogosha-bunrei/">この本の紹介ページへ</a></p>
+  <p class="note">Ban.Tai Education Design　磐田井</p>
+</main>
+<script>
+const FILE = "tokuten.bin";
+const SAVE_AS = "hogosha-bunrei-tokuten.zip";
+const ITER = 250000;
+const TRIAL_URL = "#";  // BOOTH のお試し版のURLを刊行時に入れる
+if (TRIAL_URL === "#") document.getElementById("trialLine").hidden = true;
+else document.getElementById("trial").href = TRIAL_URL;
+
+async function decrypt(buf, word) {
+  const b = new Uint8Array(buf);
+  if (String.fromCharCode(...b.slice(0, 4)) !== "BT01") throw new Error("format");
+  const salt = b.slice(4, 20), iv = b.slice(20, 32), body = b.slice(32);
+  const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(word), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey({ name: "PBKDF2", salt, iterations: ITER, hash: "SHA-256" },
+                                            base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  return crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, body);
+}
+
+document.getElementById("f").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const msg = document.getElementById("msg"), btn = document.getElementById("b");
+  const word = document.getElementById("w").value.trim().toLowerCase();
+  msg.className = ""; msg.textContent = "確認しています…"; btn.disabled = true;
+  try {
+    const res = await fetch(FILE, { cache: "no-store" });
+    if (!res.ok) throw new Error("fetch");
+    let zip;
+    try { zip = await decrypt(await res.arrayBuffer(), word); }
+    catch { msg.className = "err"; msg.textContent = "合言葉が違うようです。本に書かれているとおりに、もう一度入力してください。"; return; }
+    const url = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
+    const a = Object.assign(document.createElement("a"), { href: url, download: SAVE_AS });
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+    msg.textContent = "ダウンロードを始めました。見つからないときは「ダウンロード」フォルダを確かめてください。";
+  } catch {
+    msg.className = "err"; msg.textContent = "ファイルを読み込めませんでした。時間をおいて、もう一度お試しください。";
+  } finally { btn.disabled = false; }
+});
+</script>
+</body>
+</html>
