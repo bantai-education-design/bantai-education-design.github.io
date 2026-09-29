@@ -11,45 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css?v=black-gold-20260613-featured">
   <link rel="stylesheet" href="/assets/css/audience-hubs.css?v=20260815-3">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
-  <script>
-    (function() {
-      try {
-        var url = new URL(window.location.href);
-        var adminParam = url.searchParams.get('bantai_admin');
-        if (adminParam === 'true') {
-          localStorage.setItem('bantai_admin', 'true');
-        } else if (adminParam === 'clear') {
-          localStorage.removeItem('bantai_admin');
-        }
-
-        if (adminParam !== null) {
-          url.searchParams.delete('bantai_admin');
-          var cleanSearch = url.searchParams.toString();
-          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
-          window.history.replaceState(null, '', newUrl);
-        }
-      } catch (e) {}
-
-      var isLocal = window.location.hostname === 'localhost' ||
-                    window.location.hostname === '127.0.0.1' ||
-                    window.location.protocol === 'file:';
-      var isExcluded = false;
-      try {
-        isExcluded = localStorage.getItem('bantai_admin') === 'true';
-      } catch (e) {}
-
-      if (isLocal || isExcluded) {
-        window['ga-disable-G-KPGJ0R2KXR'] = true;
-      }
-    })();
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KPGJ0R2KXR');
-  </script>
   <script src="/assets/js/analytics-events.js" defer></script>
 </head>
 <body>
@@ -74,8 +35,7 @@
               </div>
               <div class="catalog-card-body">
                 <span class="recommend-badge">主力製品</span>
-                <span class="status-badge">無料モニター版あり</span>
-                <span class="status-badge">製品版公開準備中</span>
+                <span class="status-badge">公開準備中</span>
                 <h3>小学校教育計画作成・運営システム</h3>
                 <div class="target-users-row"><span class="user-tag">教務担当</span><span class="user-tag">小学校教員</span></div>
                 <p class="product-desc">バラバラになりがちな年間計画・週案・時数管理を、長年教務を担ってきた経験から、一つの流れへ整理しました。</p>
@@ -107,6 +67,30 @@
                 <p class="product-desc">初めて楽譜に触れる子どものために、なぞり書きと五線の幅を自由に調整。ちょうど良い一枚をその場で印刷できます。</p>
             <div class="catalog-card-actions">
                   <a class="catalog-btn catalog-btn-secondary secondary-button" href="/products/first-staff-paper/">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card catalog-feature-card"
+                     data-name="書籍『学校の時間割が変わる。』"
+                     data-summary="調整授業時数制度を現場でどう理解し、どう準備するか。年間計画・週案・時数管理の運用から次期学習指導要領案への対応までを解説する実務Web・Kindleガイド。"
+                     data-features=""
+                     data-flagship="false"
+                     data-has-trial="false"
+                     data-has-booth="false"
+                     data-has-vector="false"
+                     data-status="Amazon申請中">
+              <a class="catalog-card-hit-area" href="/books/school-schedule-changes/" aria-label="書籍『学校の時間割が変わる。』の詳細を見る" onkeydown="if(event.key==='Enter'){this.click();}"></a>
+              <div class="catalog-card-media">
+                <img src="/assets/images/books/school-schedule-changes-cover.png" alt="書籍『学校の時間割が変わる。』表紙" class="card-img">
+              </div>
+              <div class="catalog-card-body">
+                <span class="recommend-badge">新刊書籍</span>
+                <span class="status-badge">Amazon申請中</span>
+                <h3>書籍『学校の時間割が変わる。』</h3>
+                <div class="target-users-row"><span class="user-tag">教務担当</span><span class="user-tag">小学校教員</span><span class="user-tag">管理者・一般</span></div>
+                <p class="product-desc">調整授業時数制度を現場でどう理解し、どう準備するか。年間計画・週案・時数管理の運用から次期学習指導要領案への対応までを解説する実務Web・Kindleガイド。</p>
+            <div class="catalog-card-actions">
+                  <a class="catalog-btn catalog-btn-secondary secondary-button" href="/books/school-schedule-changes/">詳しく見る</a>
                 </div>
               </div>
             </article></div></section><section class="catalog-group" aria-labelledby="class-heading"><div class="catalog-group-heading"><h2 id="class-heading">すべての商品</h2></div><div class="catalog-grid catalog-grid-compact">            <article class="catalog-card"
