@@ -1,0 +1,74 @@
+{
+  "bodyClass": "",
+  "styleVersion": "586a1d0_v2",
+  "menuToggle": true,
+  "outputPath": "books/index.html",
+  "pageTitle": "書籍 | Ban.Tai Education Design",
+  "metaDescription": "Ban.Tai Education Design の書籍の紹介です。",
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "ホーム"
+    },
+    {
+      "href": "/products/",
+      "label": "製品・教材"
+    },
+    {
+      "href": "/books/",
+      "label": "書籍",
+      "class": "active"
+    },
+    {
+      "href": "/tools/school-database/",
+      "label": "全国学校DB"
+    },
+    {
+      "href": "/columns/",
+      "label": "コラム"
+    },
+    {
+      "href": "/about/",
+      "label": "Ban.Taiについて"
+    },
+    {
+      "href": "/contact/",
+      "label": "サポート",
+      "class": "mini"
+    }
+  ],
+  "sections": [
+    {
+      "type": "textCardGrid",
+      "class": "section",
+      "eyebrow": "Books",
+      "heading": "書籍",
+      "descriptionParagraphs": [
+        "先生の毎日の仕事に役立つ本を、現場の経験から書いています。"
+      ],
+      "gridClass": "grid grid-2",
+      "items": [
+        {
+          "badge": "近日刊行",
+          "heading": "その一言、保護者にどう届く？",
+          "paragraphs": [
+            "現場40年の先輩が教える　連絡帳・電話・面談　基本と極意の文例集",
+            "連絡帳の返事、電話のかけ方、個人面談の話し方。121場面の文例を、判断の理由とあわせて収めました。"
+          ],
+          "actions": [
+            {
+              "class": "btn btn-primary",
+              "href": "/books/hogosha-bunrei/",
+              "label": "詳しく見る"
+            },
+            {
+              "class": "btn btn-secondary",
+              "href": "/books/hogosha-bunrei/tokuten/",
+              "label": "読者特典"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

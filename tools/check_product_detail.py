@@ -90,6 +90,12 @@ def data_path(slug: str) -> Path:
 
 
 def output_path(slug: str) -> Path:
+    # data の "outputPath" があればそこへ出力する（書籍ページなど products 以外の場所用）
+    data_file = ROOT / "data" / "product-details" / f"{slug}.json"
+    if data_file.exists():
+        custom = json.loads(data_file.read_text(encoding="utf-8")).get("outputPath")
+        if custom:
+            return ROOT / custom
     return ROOT / "products" / slug / "index.html"
 
 
