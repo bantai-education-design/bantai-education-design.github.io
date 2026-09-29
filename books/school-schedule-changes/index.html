@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学校の時間割が変わる。 ― 調整授業時数を現場でどう理解し、どう準備するか | Ban.Tai Education Design</title>
+  <meta name="description" content="磐田井著『学校の時間割が変わる。』の公式書籍紹介ページ。調整授業時数制度の現場での受け止め方、年間指導計画・週案・時数管理の準備から次期学習指導要領案への対応までを詳しく解説。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=20260929-1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+
+  <style>
+    .book-hero {
+      padding: 70px 0 80px;
+      background: radial-gradient(circle at 75% 25%, rgba(237, 217, 150, 0.18), transparent 45%), linear-gradient(135deg, #071b36 0%, #102f58 60%, #184275 100%);
+      color: #fff;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(237, 217, 150, 0.3);
+    }
+    .book-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .book-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(237, 217, 150, 0.15);
+      border: 1px solid rgba(237, 217, 150, 0.4);
+      color: #edd996;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .book-hero h1 {
+      font-family: "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      line-height: 1.25;
+      color: #ffffff;
+      margin: 10px 0 16px;
+      letter-spacing: -0.01em;
+    }
+    .book-subtitle {
+      font-family: "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: #edd996;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .book-author-tag {
+      font-size: 1.05rem;
+      color: #d1e2f7;
+      margin-bottom: 20px;
+    }
+    .book-catch {
+      font-size: 1.15rem;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #edd996;
+      padding: 12px 18px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .book-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn-amazon {
+      background: linear-gradient(135deg, #ff9900 0%, #e67e00 100%);
+      color: #111;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(255, 153, 0, 0.35);
+      border: 1px solid #ffa81a;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-amazon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(255, 153, 0, 0.45);
+      color: #000;
+    }
+    .status-badge-pending {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-left: 4px;
+    }
+    .book-cover-frame {
+      text-align: center;
+      position: relative;
+    }
+    .book-cover-img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s;
+    }
+    .book-cover-img:hover {
+      transform: scale(1.02);
+    }
+    .book-section {
+      padding: 76px 0;
+    }
+    .book-section.alt {
+      background: #f8fafc;
+    }
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-kicker {
+      color: #c5a059;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .section-title-wrap h2 {
+      font-family: "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      color: var(--navy);
+      margin: 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid rgba(7, 27, 54, 0.09);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 10px 30px rgba(7, 27, 54, 0.04);
+      position: relative;
+    }
+    .feature-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: var(--navy);
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .feature-card p {
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .toc-box {
+      background: #fff;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 12px 36px rgba(7, 27, 54, 0.05);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .toc-list {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .toc-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed rgba(7, 27, 54, 0.12);
+    }
+    .toc-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .toc-chapter {
+      font-weight: 700;
+      color: #c5a059;
+      font-size: 0.95rem;
+    }
+    .toc-title {
+      font-size: 1.05rem;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .toc-desc {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .target-card {
+      background: #fff;
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    }
+    .target-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.08rem;
+    }
+    .target-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+    .author-card {
+      background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      border-radius: 24px;
+      padding: 36px;
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .author-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), #173e6d);
+      color: #edd996;
+      display: grid;
+      place-items: center;
+      font-size: 2.2rem;
+      font-family: "Yu Mincho", serif;
+      font-weight: 700;
+      border: 3px solid #edd996;
+      box-shadow: 0 8px 20px rgba(7, 27, 54, 0.15);
+    }
+    .author-info h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin: 0 0 6px;
+    }
+    .author-role {
+      color: #c5a059;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .author-bio {
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .cta-banner {
+      background: linear-gradient(135deg, #071b36 0%, #173e6d 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 44px;
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto;
+      box-shadow: 0 16px 40px rgba(7, 27, 54, 0.2);
+    }
+    .cta-banner h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      font-family: "Yu Mincho", serif;
+    }
+    .cta-banner p {
+      color: #d1e2f7;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+    @media (max-width: 860px) {
+      .book-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .book-catch {
+        border-left: none;
+        border-top: 4px solid #edd996;
+        border-radius: 0 0 10px 10px;
+      }
+      .book-hero-actions {
+        justify-content: center;
+      }
+      .features-grid, .target-grid {
+        grid-template-columns: 1fr;
+      }
+      .toc-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .author-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .author-avatar {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+      <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/products/">製品・教材</a>
+        <a href="/resources/textbook-plans/">📚 教科書会社DB</a>
+        <a href="/tools/school-database/">🏫 全国学校DB</a>
+        <a href="/columns/">コラム</a>
+        <a href="/about/">Ban.Taiについて</a>
+        <a href="/contact/" class="mini">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="book-hero">
+      <div class="container book-hero-grid">
+        <div>
+          <div class="book-kicker">
+            <span>📚 Ban.Tai Education Design 公式書籍</span>
+          </div>
+          <h1>学校の時間割が変わる。</h1>
+          <div class="book-subtitle">― 調整授業時数を現場でどう理解し、どう準備するか ―</div>
+          <div class="book-author-tag">著：磐田井（Ban.Tai Education Design 代表 / 元小・中・高校教員）</div>
+          <div class="book-catch">
+            「学びが変わる 子どもたちの未来が広がる」<br>
+            次期学習指導要領案と調整授業時数制度を、教務40年の視点で実践的に読み解く一冊。
+          </div>
+          <div class="book-hero-actions">
+            <a class="btn-amazon" href="#" onclick="alert('現在Amazonにて出版申請中です。販売開始まで今しばらくお待ちください。'); return false;">
+              <span>Amazonで見る</span>
+              <span class="status-badge-pending">販売申請中</span>
+            </a>
+            <a class="btn btn-secondary" href="/products/education-planning/adjusted/">調整授業時数対応版アプリ</a>
+            <a class="btn btn-light" href="/columns/next-curriculum-info-ai-20260926/">解説コラムを読む</a>
+          </div>
+        </div>
+
+        <div class="book-cover-frame">
+          <img class="book-cover-img" src="/assets/images/books/school-schedule-changes-cover.png" alt="『学校の時間割が変わる。 ― 調整授業時数を現場でどう理解し、どう準備するか ―』表紙画像">
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="book-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">BOOK HIGHLIGHTS</div>
+          <h2>本書の3つの大きな特徴</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-num">1</div>
+            <h3>「案」と「確定値」を冷徹に見極める視点</h3>
+            <p>報道で話題の「15%程度」という数値に惑わされず、告示前の審議まとめ（案）として冷静に整理。現場が固定化すべきでない部分と今から準備すべき骨組みを明確にします。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-num">2</div>
+            <h3>年間計画・週案・時数管理の一元化</h3>
+            <p>標準時数、学校採択時数、実績時数の違いを体系化。どこから削減しどこへ充当したのかを、現場の書類作成や週案へ自然につなげる実務のノウハウを提示します。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-num">3</div>
+            <h3>新領域と生成AIへの現実的アプローチ</h3>
+            <p>小学校「情報の領域」、中学校「情報・技術科」、生成AIの取り扱い、教科書精選の動向を網羅。先生方の負担を増やすことなく、学びの深まりを生み出す方法をアドバイスします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY SECTION -->
+    <section class="book-section alt">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">OVERVIEW</div>
+          <h2>なぜ今、時間割が変わるのか</h2>
+        </div>
+
+        <div style="max-width: 820px; margin: 0 auto; background: #fff; border-radius: 20px; padding: 36px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(7,27,54,0.08);">
+          <p style="font-size: 1.05rem; line-height: 1.85; color: #374151; margin-bottom: 20px;">
+            2026年9月、文部科学省の中央教育審議会にて「次期学習指導要領等に向けた審議まとめ（案）」が示されました。情報教育の抜本的拡充、生成AIの活用、そして話題となっている「調整授業時数制度」の創設など、学校現場には大きな転換が迫られています。
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.85; color: #374151; margin-bottom: 20px;">
+            しかし、新しい制度や新しい領域が提示されるたび、現場の先生方から上がるのは「また仕事が増えるのではないか」という当然の不安です。
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.85; color: #374151; margin: 0;">
+            本書は、小学校・中学校・高校の教員として40年間現場に立ち、現在は教務支援システムを開発する著者が、制度の狙いを冷静に整理し、先生方が見通しを持って準備を進めるための思考と実務のツールをまとめたガイドブックです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE OF CONTENTS -->
+    <section class="book-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">TABLE OF CONTENTS</div>
+          <h2>目次・構成</h2>
+        </div>
+
+        <div class="toc-box">
+          <div class="toc-list">
+            <div class="toc-item">
+              <div class="toc-chapter">第1章</div>
+              <div>
+                <div class="toc-title">学校現場に迫る大きな転換――次期学習指導要領案の全貌</div>
+                <div class="toc-desc">審議まとめ（案）の背景と、「告示」前の段階で現場が押さえるべき基本視点</div>
+              </div>
+            </div>
+
+            <div class="toc-item">
+              <div class="toc-chapter">第2章</div>
+              <div>
+                <div class="toc-title">調整授業時数制度をどう理解し、どう準備するか</div>
+                <div class="toc-desc">「15%程度」の想定値に振り回されない時数設計と、標準・採択・実績時数の区別管理</div>
+              </div>
+            </div>
+
+            <div class="toc-item">
+              <div class="toc-chapter">第3章</div>
+              <div>
+                <div class="toc-title">小学校「情報の領域」と中学校「情報・技術科」の現場運用</div>
+                <div class="toc-desc">探究の領域と情報の領域の組み合わせ、ミニ探究ユニットと情報ブロックの授業配置</div>
+              </div>
+            </div>
+
+            <div class="toc-item">
+              <div class="toc-chapter">第4章</div>
+              <div>
+                <div class="toc-title">生成AI・教科書精選・年間指導計画と週案の連動</div>
+                <div class="toc-desc">AIの答えを材料に判断を深める指導と、教科書会社の動向を踏まえた年間計画の立て方</div>
+              </div>
+            </div>
+
+            <div class="toc-item">
+              <div class="toc-chapter">第5章</div>
+              <div>
+                <div class="toc-title">先生方の負担を減らし、確かな学びを届けるために</div>
+                <div class="toc-desc">学校の年間計画・週案・評価・校務の流れの中に無理なく制度を置き直す実践アプローチ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARGET READERS -->
+    <section class="book-section alt">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">RECOMMENDED FOR</div>
+          <h2>このような方におすすめです</h2>
+        </div>
+
+        <div class="target-grid">
+          <div class="target-card">
+            <h4>教務主任・校務分掌担当の先生</h4>
+            <p>年間指導計画の作成や週案・時数管理のルール整備を担当し、制度変更への事前の備えを考えている方。</p>
+          </div>
+
+          <div class="target-card">
+            <h4>学級担任・教科担当の先生</h4>
+            <p>情報活用能力の指導や生成AIの取り扱い、時数の調整が自分の授業や週案にどう影響するか知りたい方。</p>
+          </div>
+
+          <div class="target-card">
+            <h4>校長・副校長・教頭（学校管理者）</h4>
+            <p>校内研修や教育課程の編成において、断定的な情報に惑わされず確かな方向性を示したい管理者の方。</p>
+          </div>
+
+          <div class="target-card">
+            <h4>教育委員会・教育関係者・保護者</h4>
+            <p>これからの学校教育がどのように変化し、子どもたちの学びがどう深まっていくかに関心をお持ちの方。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHOR SECTION -->
+    <section class="book-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">AUTHOR PROFILE</div>
+          <h2>著者紹介</h2>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar">磐</div>
+          <div class="author-info">
+            <h3>磐田井（Ban.Tai）</h3>
+            <div class="author-role">Ban.Tai Education Design 代表 / 元小・中・高校教員</div>
+            <p class="author-bio">
+              小学校・中学校・高等学校での40年にわたる教職経験を持つ。教務担当として長年年間計画や時間割、週案管理を実務として牽引してきた知見を活かし、現在は教育支援ツールブランド Ban.Tai Education Design を設立。先生方の仕事を軽くし、子どもたちの学びを深めるためのWebシステムや教材、書籍の執筆・開発に取り組んでいる。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="book-section alt">
+      <div class="container">
+        <div class="cta-banner">
+          <h3>Amazon Kindle / 電子書籍にて近日発売予定</h3>
+          <p>
+            現在、Amazon Kindleストアにて出版申請手続きを進めております。販売開始まで今しばらくお待ちください。最新情報は公式ホームページおよびコラムにて案内いたします。
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a class="btn-amazon" href="#" onclick="alert('現在Amazonにて出版申請中です。販売開始まで今しばらくお待ちください。'); return false;">
+              <span>Amazonで見る（販売申請中）</span>
+            </a>
+            <a class="btn btn-light" href="/products/education-planning/adjusted/">調整授業時数対応版アプリを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Ban.Tai Education Design</p>
+        <p class="footer-desc">長年の教育現場経験とシステム開発から生まれた、信頼と使いやすさを追求する教育支援ツールブランドです。</p>
+      </div>
+      <div>
+        <p class="footer-heading">プロダクト</p>
+        <ul class="footer-links">
+          <li><a href="/products/education-planning/">教育計画システム</a></li>
+          <li><a href="/products/education-planning/adjusted/">調整授業時数対応版</a></li>
+          <li><a href="/products/first-staff-paper/">はじめての五線紙メーカー</a></li>
+          <li><a href="/products/kanji-practice/">漢字練習帳</a></li>
+          <li><a href="/products/">全製品一覧</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">コンテンツ・DB</p>
+        <ul class="footer-links">
+          <li><a href="/books/school-schedule-changes/">書籍『学校の時間割が変わる。』</a></li>
+          <li><a href="/columns/">教育コラム</a></li>
+          <li><a href="/resources/textbook-plans/">教科書会社DB</a></li>
+          <li><a href="/tools/school-database/">全国学校DB</a></li>
+          <li><a href="/tools/university-database/">全国大学DB</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">サポート・規約</p>
+        <ul class="footer-links">
+          <li><a href="/about/">Ban.Taiについて</a></li>
+          <li><a href="/contact/">お問い合わせ・サポート</a></li>
+          <li><a href="/legal/">利用規約・特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; 2026 Ban.Tai Education Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

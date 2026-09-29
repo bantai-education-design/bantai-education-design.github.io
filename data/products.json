@@ -351,6 +351,36 @@
       "noteUrl": null,
       "hasTrial": false,
       "isFlagship": false
+    },
+    {
+      "id": "school-schedule-changes-book",
+      "name": "書籍『学校の時間割が変わる。』",
+      "category": "featured",
+      "order": 13,
+      "status": "Amazon申請中",
+      "recommendation": "新刊書籍",
+      "badges": [
+        "Amazon出版申請中"
+      ],
+      "targetUsers": [
+        "教務担当",
+        "小学校教員",
+        "管理者・一般"
+      ],
+      "summary": "調整授業時数制度を現場でどう理解し、どう準備するか。年間計画・週案・時数管理の運用から次期学習指導要領案への対応までを解説する実務Web・Kindleガイド。",
+      "features": [],
+      "image": "/assets/images/books/school-schedule-changes-cover.png",
+      "imageAlt": "書籍『学校の時間割が変わる。』表紙",
+      "detailUrl": "/books/school-schedule-changes/",
+      "categoryUrl": null,
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "Amazon（申請中）",
+      "published": true,
+      "boothUrl": null,
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": false,
+      "isFlagship": false
     }
   ]
 }
