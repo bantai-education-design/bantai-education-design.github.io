@@ -22,8 +22,8 @@
 4. 調整授業時数対応版 モニター版
 
 ### 製品版
-- 教務支援: BOOTH https://bantai3.booth.pm/items/8893534
-- 週案: BOOTH https://bantai3.booth.pm/items/8893762
+- 教務支援: BOOTH https://bantai3.booth.pm/items/8893762
+- 週案: BOOTH https://bantai3.booth.pm/items/8893534
 - 統合版: BOOTH https://bantai3.booth.pm/items/8893790
 - 調整授業時数対応版: BOOTH公開準備後に正式URLを設定する。
 

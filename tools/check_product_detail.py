@@ -521,8 +521,8 @@ def validate_education_planning(data: dict, html: str, parser: DetailPageParser)
 
     vector_support = "https://www.vector.co.jp/soft/winnt/edu/se528971.html"
     vector_weekplan = "https://www.vector.co.jp/soft/winnt/edu/se528974.html"
-    booth_support = "https://bantai3.booth.pm/items/8893534"
-    booth_weekplan = "https://bantai3.booth.pm/items/8893762"
+    booth_support = "https://bantai3.booth.pm/items/8893762"
+    booth_weekplan = "https://bantai3.booth.pm/items/8893534"
     booth_standard = "https://bantai3.booth.pm/items/8893790"
 
     require(vector_support in html, "support Vector URL missing")
