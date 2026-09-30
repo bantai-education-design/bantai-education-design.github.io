@@ -332,6 +332,42 @@
       line-height: 1.75;
       margin: 0;
     }
+    .book-illustration {
+      max-width: 980px;
+      margin: 34px auto 0;
+    }
+    .book-illustration img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 16px 38px rgba(7,27,54,0.16);
+      border: 1px solid rgba(7,27,54,0.08);
+    }
+    .book-illustration figcaption {
+      margin-top: 12px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 8px;
+      max-width: 980px;
+      margin: 26px auto 0;
+    }
+    .workflow-step {
+      background: #fff;
+      border: 1px solid rgba(197,160,89,0.32);
+      border-radius: 14px;
+      padding: 16px 8px;
+      text-align: center;
+      font-weight: 700;
+      color: var(--navy);
+      box-shadow: 0 6px 18px rgba(7,27,54,0.04);
+    }
     .cta-banner {
       background: linear-gradient(135deg, #071b36 0%, #173e6d 100%);
       color: #fff;
@@ -370,6 +406,9 @@
       .features-grid, .target-grid {
         grid-template-columns: 1fr;
       }
+      .workflow-grid {
+        grid-template-columns: 1fr 1fr;
+      }
       .toc-item {
         grid-template-columns: 1fr;
         gap: 6px;
@@ -396,6 +435,7 @@
       <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
         <a href="/">ホーム</a>
         <a href="/products/">製品・教材</a>
+        <a href="/books/" class="active">書籍</a>
         <a href="/resources/textbook-plans/">📚 教科書会社DB</a>
         <a href="/tools/school-database/">🏫 全国学校DB</a>
         <a href="/columns/">コラム</a>
@@ -415,10 +455,10 @@
           </div>
           <h1>学校の時間割が変わる。</h1>
           <div class="book-subtitle">― 調整授業時数を現場でどう理解し、どう準備するか ―</div>
-          <div class="book-author-tag">著：磐田井（Ban.Tai Education Design 代表 / 元小・中・高校教員）</div>
+          <div class="book-author-tag">著：磐田井（Ban.Tai Education Design 代表 / 教育現場40年）</div>
           <div class="book-catch">
-            「学びが変わる 子どもたちの未来が広がる」<br>
-            次期学習指導要領案と調整授業時数制度を、教務40年の視点で実践的に読み解く一冊。
+            制度を知るだけでは、学校の時間割は変えられない。<br>
+            制度 → 年間計画 → 時間割 → 週案 → 実績 → 提出資料まで、学校で「実際に動かす」ところを扱う一冊。
           </div>
           <div class="book-hero-actions">
             <a class="btn-amazon" href="#" onclick="alert('現在Amazonにて出版申請中です。販売開始まで今しばらくお待ちください。'); return false;">
@@ -447,21 +487,53 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-num">1</div>
-            <h3>「案」と「確定値」を冷徹に見極める視点</h3>
-            <p>報道で話題の「15%程度」という数値に惑わされず、告示前の審議まとめ（案）として冷静に整理。現場が固定化すべきでない部分と今から準備すべき骨組みを明確にします。</p>
+            <h3>「確定していること」と「まだ決まっていないこと」を分ける</h3>
+            <p>「15%程度」など注目される数字だけを先取りせず、現在示されている方向性、制度確定後に判断する事項、学校が今から準備できる事項を分けて整理します。</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-num">2</div>
-            <h3>年間計画・週案・時数管理の一元化</h3>
-            <p>標準時数、学校採択時数、実績時数の違いを体系化。どこから削減しどこへ充当したのかを、現場の書類作成や週案へ自然につなげる実務のノウハウを提示します。</p>
+            <h3>制度から教務実務までを一本につなぐ</h3>
+            <p>標準授業時数、学校の計画、削減・充当、年間指導計画、時間割、週案、実績、提出資料を別々に扱わず、一つの運用として整理します。</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-num">3</div>
-            <h3>新領域と生成AIへの現実的アプローチ</h3>
-            <p>小学校「情報の領域」、中学校「情報・技術科」、生成AIの取り扱い、教科書精選の動向を網羅。先生方の負担を増やすことなく、学びの深まりを生み出す方法をアドバイスします。</p>
+            <h3>読んだ内容を対応アプリで確かめられる</h3>
+            <p>本書で考え方を理解し、Ban.Taiの調整授業時数対応版で年間計画や時数管理の流れを具体化。「読む」で終わらず、「学校で使う」までをつなぎます。</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DIFFERENTIATION SECTION -->
+    <section class="book-section alt">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-kicker">WHAT MAKES THIS BOOK DIFFERENT</div>
+          <h2>制度解説だけで終わらない</h2>
+        </div>
+        <div style="max-width:920px;margin:0 auto;">
+          <p style="text-align:center;font-size:1.08rem;line-height:1.9;color:#374151;margin:0 auto 28px;max-width:820px;">
+            調整授業時数を扱う書籍には、制度の解説、学校経営、先行事例を中心にしたものがあります。本書が重点を置くのは、その先にある<strong>「学校でどう運用するか」</strong>です。
+          </p>
+          <div class="workflow-grid" aria-label="制度から提出資料までの実務の流れ">
+            <div class="workflow-step">制度</div>
+            <div class="workflow-step">年間計画</div>
+            <div class="workflow-step">削減・充当</div>
+            <div class="workflow-step">時間割</div>
+            <div class="workflow-step">週案</div>
+            <div class="workflow-step">実績</div>
+            <div class="workflow-step">提出資料</div>
+          </div>
+          <p style="text-align:center;margin:26px auto 0;color:#071b36;font-weight:700;font-size:1.08rem;line-height:1.8;">
+            「制度を理解する」から「教務が実際に動かす」までを、一続きで扱う。
+          </p>
+          <figure class="book-illustration">
+            <img src="/assets/images/books/school-schedule-planning-meeting.webp" alt="制度・年間計画・時間割をつなげて検討する教職員の校内会議のイメージ" loading="lazy">
+            <figcaption>制度を読むだけでなく、年間計画・時間割・授業時数へどう落とし込むかを校内で検討する。</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -488,57 +560,36 @@
       </div>
     </section>
 
+
     <!-- TABLE OF CONTENTS -->
-    <section class="book-section">
+    <section class="book-section" id="contents">
       <div class="container">
         <div class="section-title-wrap">
           <div class="section-kicker">TABLE OF CONTENTS</div>
           <h2>目次・構成</h2>
+          <p style="max-width:760px;margin:14px auto 0;color:#64748b;line-height:1.8;">
+            制度の背景から、年間計画・時間割・週案・実績管理まで。現場で実際に動かす順序に沿って構成しています。
+          </p>
         </div>
-
         <div class="toc-box">
           <div class="toc-list">
-            <div class="toc-item">
-              <div class="toc-chapter">第1章</div>
-              <div>
-                <div class="toc-title">学校現場に迫る大きな転換――次期学習指導要領案の全貌</div>
-                <div class="toc-desc">審議まとめ（案）の背景と、「告示」前の段階で現場が押さえるべき基本視点</div>
-              </div>
-            </div>
-
-            <div class="toc-item">
-              <div class="toc-chapter">第2章</div>
-              <div>
-                <div class="toc-title">調整授業時数制度をどう理解し、どう準備するか</div>
-                <div class="toc-desc">「15%程度」の想定値に振り回されない時数設計と、標準・採択・実績時数の区別管理</div>
-              </div>
-            </div>
-
-            <div class="toc-item">
-              <div class="toc-chapter">第3章</div>
-              <div>
-                <div class="toc-title">小学校「情報の領域」と中学校「情報・技術科」の現場運用</div>
-                <div class="toc-desc">探究の領域と情報の領域の組み合わせ、ミニ探究ユニットと情報ブロックの授業配置</div>
-              </div>
-            </div>
-
-            <div class="toc-item">
-              <div class="toc-chapter">第4章</div>
-              <div>
-                <div class="toc-title">生成AI・教科書精選・年間指導計画と週案の連動</div>
-                <div class="toc-desc">AIの答えを材料に判断を深める指導と、教科書会社の動向を踏まえた年間計画の立て方</div>
-              </div>
-            </div>
-
-            <div class="toc-item">
-              <div class="toc-chapter">第5章</div>
-              <div>
-                <div class="toc-title">先生方の負担を減らし、確かな学びを届けるために</div>
-                <div class="toc-desc">学校の年間計画・週案・評価・校務の流れの中に無理なく制度を置き直す実践アプローチ</div>
-              </div>
-            </div>
+            <div class="toc-item"><div class="toc-chapter">第1章</div><div><div class="toc-title">なぜ今、調整授業時数なのか</div><div class="toc-desc">学校の時間はなぜ変わろうとしているのか／「余白」が求められる背景／次期学習指導要領に向けた議論／先行実施と今後の見通し</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第2章</div><div><div class="toc-title">標準授業時数とは何か</div><div class="toc-desc">標準授業時数の基本／年間授業時数との違い／週時数との関係／「標準」をどう読むか／学校が教育課程を編成するということ</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第3章</div><div><div class="toc-title">調整授業時数制度を正しく理解する</div><div class="toc-desc">何を調整できるのか／総授業時数との関係／削減する教科と充当先／まだ確定していない事項／注目される数値をどう読むか</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第4章</div><div><div class="toc-title">学校の年間計画はどう変わるのか</div><div class="toc-desc">基準となる年間計画／学校採択時数／調整前と調整後の計画／複数教科からの削減／複数の学習活動への充当／年度途中の変更</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第5章</div><div><div class="toc-title">時間割・週時程をどう組み直すか</div><div class="toc-desc">45分授業だけではない時間設計／1/3コマ・2/3コマ／短時間学習／モジュール／週時程への配置／行事との調整／子どもの生活時間から考える時間割</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第6章</div><div><div class="toc-title">年間指導計画と教科書をどうつなぐか</div><div class="toc-desc">教科書会社の年間指導計画／学校独自の年間計画／内容を落とさず時数を見直す／単元配列／教科横断／情報・探究との接続</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第7章</div><div><div class="toc-title">学校は今から何を準備できるか</div><div class="toc-desc">現行制度の中でできる準備／校内での共通理解／サキドリ試行／小さく試す方法／記録を残す／制度確定後に変更できる仕組み</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第8章</div><div><div class="toc-title">先行実践から考える調整授業時数</div><div class="toc-desc">先行校の考え方／余白を何に使うのか／探究・情報・地域学習／研修時間／学校ごとの違い／実践をそのままコピーしないために</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">第9章</div><div><div class="toc-title">年間計画・週案・実績を一つにつなぐ</div><div class="toc-desc">教務と担任のデータ連携／年間計画から週案へ／授業実績の記録／標準・計画・調整・実績の比較／年度途中の点検／提出資料への反映</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">終章</div><div><div class="toc-title">時間割を変えることは、学校を変えること</div><div class="toc-desc">制度対応を目的にしない／何のために時間を生み出すのか／子どもの学びと教師の時間／学校が自分たちの教育課程をつくる</div></div></div>
+            <div class="toc-item"><div class="toc-chapter">巻末資料</div><div><div class="toc-title">学校で使うための資料・確認表</div><div class="toc-desc">文部科学省資料の読み方／制度・用語整理／年間授業時数確認表／調整授業時数記録例／年間計画例／週時程例／校内検討チェックリスト／参考資料・出典一覧／Ban.Tai調整授業時数対応版の使い方</div></div></div>
           </div>
         </div>
+        <figure class="book-illustration">
+          <img src="/assets/images/books/school-schedule-classroom-operation.webp" alt="年間計画・週案・授業・実績をつなげて確認する教師と学ぶ児童のイメージ" loading="lazy">
+          <figcaption>年間計画と週案が日々の授業につながり、実績として戻ってくる。その循環までを本書では扱います。</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -588,7 +639,7 @@
             <h3>磐田井（Ban.Tai）</h3>
             <div class="author-role">Ban.Tai Education Design 代表 / 元小・中・高校教員</div>
             <p class="author-bio">
-              小学校・中学校・高等学校での40年にわたる教職経験を持つ。教務担当として長年年間計画や時間割、週案管理を実務として牽引してきた知見を活かし、現在は教育支援ツールブランド Ban.Tai Education Design を設立。先生方の仕事を軽くし、子どもたちの学びを深めるためのWebシステムや教材、書籍の執筆・開発に取り組んでいる。
+              教育現場40年の経験を持つ。体育・視聴覚・理科主任、教務主幹、生活指導主幹、研究主幹などを経験し、年間計画、時間割、週案、校務運営に携わってきた知見を活かし、現在は教育支援ツールブランド Ban.Tai Education Design を運営。先生方の仕事を軽くし、子どもたちの学びを深めるためのWebシステムや教材、書籍の執筆・開発に取り組んでいる。
             </p>
           </div>
         </div>
