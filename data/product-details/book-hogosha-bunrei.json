@@ -3,7 +3,7 @@
   "styleVersion": "586a1d0_v2",
   "menuToggle": true,
   "outputPath": "books/hogosha-bunrei/index.html",
-  "pageTitle": "その一言、保護者にどう届く？（近日刊行） | Ban.Tai Education Design",
+  "pageTitle": "その一言、保護者にどう届く？ | Ban.Tai Education Design",
   "metaDescription": "現場40年の先輩が教える、連絡帳・電話・面談の基本と極意の文例集。121場面の文例を、判断の理由とあわせて収めた、小学校の先生のための本です。",
   "navLinks": [
     {
@@ -61,7 +61,8 @@
       "textClass": "hero-text",
       "imageContainerClass": "hero-image-container",
       "labels": [
-        "近日刊行",
+        "発売中",
+        "Kindle版",
         "小学校の先生向け"
       ],
       "kicker": "現場40年の先輩が教える",
@@ -78,6 +79,15 @@
       "actions": [
         {
           "class": "btn btn-primary",
+          "href": "https://www.amazon.co.jp/dp/B0HLQCX3GJ",
+          "label": "Amazonで購入する",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
           "href": "#contents",
           "label": "目次を見る"
         },
@@ -283,7 +293,8 @@
       "class": "section-narrow",
       "heading": "刊行について",
       "items": [
-        "刊行日、価格、販売ページは決まり次第このページでお知らせします。",
+        "Kindle版はAmazonで発売中です（2026年10月2日発売）。",
+        "価格や配信状況はAmazonの商品ページでご確認ください。",
         "本に書いたことは、著者が経験した範囲のことで、多くは東京都の学校での経験がもとになっています。",
         "イラストはイメージです。"
       ]

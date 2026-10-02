@@ -55,7 +55,7 @@
         "src": "/assets/images/books/hogosha-bunrei-cover.jpg",
         "alt": "書籍『その一言、保護者にどう届く？』の表紙"
       },
-      "badge": "近日刊行　Kindle版",
+      "badge": "発売中　Kindle版",
       "headingLines": [
         "その一言、",
         "保護者にどう届く？"
@@ -79,6 +79,15 @@
       "actions": [
         {
           "class": "btn btn-primary",
+          "href": "https://www.amazon.co.jp/dp/B0HLQCX3GJ",
+          "label": "Amazonで購入する",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
           "href": "/books/hogosha-bunrei/",
           "label": "詳しく見る"
         },
@@ -156,7 +165,7 @@
       "class": "section-narrow",
       "heading": "刊行について",
       "items": [
-        "刊行日と販売ページは、決まりしだいこのページでお知らせします。",
+        "『その一言、保護者にどう届く？』Kindle版はAmazonで発売中です。",
         "読者特典の合言葉は、本の中に載っています。",
         "イラストはイメージです。"
       ]
