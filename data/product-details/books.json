@@ -114,7 +114,7 @@
         "src": "/assets/images/books/school-schedule-changes-cover.png",
         "alt": "書籍『学校の時間割が変わる。』の表紙"
       },
-      "badge": "Amazon出版申請中　Kindle版",
+      "badge": "発売中　Kindle版",
       "headingLines": [
         "学校の時間割が",
         "変わる。"
@@ -138,6 +138,15 @@
       "actions": [
         {
           "class": "btn btn-primary",
+          "href": "https://www.amazon.co.jp/dp/B0HLSZPLPQ",
+          "label": "Amazonで購入する",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
           "href": "/books/school-schedule-changes/",
           "label": "詳しく見る"
         },
