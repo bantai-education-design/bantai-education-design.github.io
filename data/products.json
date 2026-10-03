@@ -357,10 +357,10 @@
       "name": "書籍『学校の時間割が変わる。』",
       "category": "featured",
       "order": 13,
-      "status": "Amazon申請中",
+      "status": "発売中",
       "recommendation": "新刊書籍",
       "badges": [
-        "Amazon出版申請中"
+        "Kindle版発売中"
       ],
       "targetUsers": [
         "教務担当",
@@ -374,7 +374,7 @@
       "detailUrl": "/books/school-schedule-changes/",
       "categoryUrl": null,
       "primaryActionLabel": "詳しく見る",
-      "secondaryActionLabel": "Amazon（申請中）",
+      "secondaryActionLabel": "Amazonで購入する",
       "published": true,
       "boothUrl": null,
       "vectorUrl": null,
