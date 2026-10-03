@@ -127,6 +127,19 @@
         });
       }
 
+      // --- 2b. Amazon（書籍）への遷移の判定 ---
+      else if (href.includes('amazon.co.jp')) {
+        const bookName = getBookNameFromAmazonUrl(href);
+        element.addEventListener('click', () => {
+          sendKarteEvent('click_action', { item_name: `${bookName} - Amazon遷移` });
+          sendGA4Event('amazon_click', {
+            book_name: bookName,
+            link_url: cleanHref,
+            page_path: window.location.pathname
+          });
+        });
+      }
+
       // --- 3. Google フォーム（モニター登録やライセンス申請など）への遷移の判定 ---
       else if (href.includes('docs.google.com/forms')) {
         const appName = getAppNameFromContext(href, text);
@@ -275,6 +288,16 @@
    * @param {string} text - リンク/ボタンのテキスト
    * @returns {string} 推測されたアプリ名
    */
+  function getBookNameFromAmazonUrl(url) {
+    if (url.includes('B0HLSZPLPQ')) {
+      return '学校の時間割が変わる。';
+    }
+    if (url.includes('B0HLQCX3GJ')) {
+      return 'その一言、保護者にどう届く？';
+    }
+    return 'Amazon商品';
+  }
+
   function getAppNameFromContext(url, text) {
     const lowerUrl = url.toLowerCase();
     if (lowerUrl.includes('bannerstudio') || lowerUrl.includes('banner-studio')) {
