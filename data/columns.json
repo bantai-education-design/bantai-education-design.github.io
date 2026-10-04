@@ -1,5 +1,28 @@
 [
   {
+    "id": "column-school-schedule-book-introduction",
+    "slug": "school-schedule-book-introduction",
+    "title": "『学校の時間割が変わる。』を、いま先生方に読んでほしい――調整授業時数を「分からない」で終わらせないために",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.10.04",
+    "excerpt": "調整授業時数を、制度の言葉だけで終わらせない。標準授業時数、年間指導計画、時間割、週案、実績までを現場実務としてつなぐ書籍『学校の時間割が変わる。』を紹介します。",
+    "thumbnail": "/assets/images/columns/column-school-schedule-book-intro-thumb.webp",
+    "readTime": "約8分",
+    "tags": [
+      "調整授業時数",
+      "時間割",
+      "年間指導計画",
+      "教務主任",
+      "教育課程",
+      "書籍紹介",
+      "学校運営",
+      "次期学習指導要領"
+    ],
+    "content": "# 『学校の時間割が変わる。』を、いま先生方に読んでほしい\n\n## 調整授業時数を「分からない」で終わらせないために\n\n学校の時間割が、これから変わろうとしている。現場に必要なのは「制度が変わるらしい」という断片的な情報ではない。何が変わり、何がまだ決まっておらず、学校として何を準備すればよいのか。その道筋を一冊の本としてまとめた。\n\n**『学校の時間割が変わる。――調整授業時数を現場でどう理解し、どう準備するか』**\n\nこの本は、制度の説明書ではなく、学校で実際に動かすための見取り図である。\n\n標準授業時数、年間指導計画、時間割、週案、実績、提出資料。現場では別々に考えられないものを、一つの流れとして整理している。\n\n特に教務主任・管理職にはもちろん、担任の先生にも読んでほしい。制度の目的が分かると、毎日の一時間の見え方が変わる。\n\n[詳しい紹介ページを読む](https://bantai-education-design.github.io/columns/school-schedule-book-introduction/)\n\n[Amazonで購入する](https://www.amazon.co.jp/dp/B0HLSZPLPQ)",
+    "pageUrl": "/columns/school-schedule-book-introduction/"
+  },
+  {
     "id": "column-x1-technical-history",
     "slug": "x1-technical-history",
     "title": "X1は何がすごかったのか――「パソコンテレビ」からX1 twin、turbo Z IIIまで",
