@@ -180,3 +180,17 @@ For substantial work, report what changed, why, main files, tests/checks and res
 ## Core rule
 
 Verify rather than guess. Prefer the smallest sound change. A code change is not completion; working, verified behavior is.
+
+
+## Independent AI deliverable quality gate (2026-10)
+
+This section adds to, and never overrides, existing repository-specific instructions. The original requirements, safety constraints, tests, and approval gates remain in force. If requirements conflict, apply the stricter non-destructive check and flag the conflict for human review.
+
+1. Separate creator and reviewer roles. Prefer a fresh agent/session with no assumption that the creator's claims are true. Independent AI review is supplementary, not proof of correctness.
+2. Check requirements, authoritative sources, factual claims, dates, calculations, units, logical consistency, terminology, completeness, accessibility, layout, privacy, licenses, and actual output artifacts. Never invent evidence.
+3. Classify findings as Critical (security, privacy, corruption, materially false facts), Major (broken key workflow, unusable output, significant print/layout defect), Minor (small presentation issue), or Needs Review (human judgment or unavailable evidence).
+4. Verify the *delivered artifact*, not merely the source or build: for books inspect final-size PDF pages, typography, blank/overfull pages, images, KDP specifications and actual commercial reading quality; for apps inspect rendered UI, save/reload, boundaries, errors, exports/printing, regression and installation when relevant; for websites inspect deployed URL, mobile layout, images and links. Use only applicable checks.
+5. Record target file/version/commit, source references, exact commands and outcomes, screenshots or page numbers when relevant, findings, fixes, retest results, and unverified items. A claimed PASS without recorded evidence is invalid. Never report an unrun check as passed.
+6. Gate: FAIL while any Critical or Major finding remains; PENDING while a mandatory check or required human decision remains; PASS only after all mandatory checks have verifiable evidence. A passing CI build alone is insufficient.
+7. Fix root causes and add regression checks for recurring failures. Never weaken tests to hide defects, bypass branch protections, merge without required approval, or publish/sell without the user's authorization.
+8. End reports with implemented / verified / unverified / remaining risks / next action. Preserve human judgment over final visual quality, publication and sale.
