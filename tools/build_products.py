@@ -6,6 +6,8 @@ from html import escape
 from pathlib import Path
 from string import Template
 
+from ga4_snippet import inject_ga4
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "products.json"
@@ -214,6 +216,7 @@ def main() -> None:
         featured_cards="\n".join(featured_cards),
         standard_cards="\n".join(standard_cards),
     )
+    output = inject_ga4(output)
     OUTPUT_PATH.write_text(output.rstrip() + "\n", encoding="utf-8", newline="\n")
     print(f"Generated {OUTPUT_PATH.relative_to(ROOT)} from data/products.json")
 
