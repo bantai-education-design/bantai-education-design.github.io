@@ -9,6 +9,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+from ga4_snippet import inject_ga4  # noqa: E402
+
 DATA_DIR = ROOT / "data" / "product-details"
 TEMPLATE_PATH = ROOT / "templates" / "product-detail.html"
 
@@ -1464,6 +1466,7 @@ def build(slug: str) -> Path:
         home_floating=render_home_floating(data),
         script_html=script_html,
     )
+    output = inject_ga4(output)
     path = output_path(slug)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(output.rstrip() + "\n", encoding="utf-8", newline="\n")
