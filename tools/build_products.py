@@ -73,12 +73,13 @@ def render_actions(product: dict) -> str:
         booth_url = product.get("boothUrl")
         detail_url = product.get("detailUrl")
         links: list[str] = []
+        # 他カードと同じく「詳しく見る」を先頭に置く
+        if detail_url:
+            links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
         if trial_download_url:
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_download_url)}" download>試用版をダウンロード</a>')
         if booth_url:
             links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHでライセンスを購入</a>')
-        if detail_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳細を見る</a>')
         return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
 
     status = product.get("status")
