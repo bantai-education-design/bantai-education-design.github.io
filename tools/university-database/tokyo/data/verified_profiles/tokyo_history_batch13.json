@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 13",
+  "records": {
+    "u000126": {
+      "founded_year": 2005,
+      "opened_year": 2005,
+      "founder": "学校法人青葉学園（設置母体）",
+      "operator": "学校法人青葉学園",
+      "university_goal": "医療保健分野で、科学的根拠に基づく専門性と豊かな人間性を備え、社会の課題を新しい視点から総合的に探究・解決できる人材を育成することを目指します。",
+      "philosophy": "科学技術に基づく正確な医療保健の教育・研究・臨床活動と、寛容で温かみのある人間性、生命への畏敬を重視することを建学の精神とします。",
+      "sources": [
+        {"source_name":"東京医療保健大学 建学の精神・沿革","source_url":"https://www.thcu.ac.jp/about/idea.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京医療保健大学 ビジョン","source_url":"https://www.thcu.ac.jp/about/vision.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京医療保健大学 法人情報","source_url":"https://www.thcu.ac.jp/about/disclosure/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000133": {
+      "founded_year": 1925,
+      "opened_year": 2008,
+      "founder": "牛山清人・メイ・ウシヤマ（ハリウッドグループ創業者）",
+      "operator": "学校法人メイ・ウシヤマ学園",
+      "university_goal": "ビューティビジネスに深い知見を持つ高度専門職として、経営者・管理者・指導者を育成することを目指します。",
+      "philosophy": "ハリウッドグループが培ってきたトータルビューティとビューティフルライフの考えを基盤に、美容・ファッション・サービスと経営を結びつけた実践的な専門職教育を重視します。",
+      "sources": [
+        {"source_name":"ハリウッド美容専門大学校 102年の歴史","source_url":"https://www.hollywood.ac.jp/about-us/about/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"ハリウッド大学院大学 募集要項","source_url":"https://ac.hollywood.ac.jp/exam/application/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000138": {
+      "founded_year": 1925,
+      "opened_year": 1979,
+      "founder": "上野陽一",
+      "operator": "学校法人産業能率大学",
+      "university_goal": "マネジメントの思想と理念を究め、それを実践の場で活用できる能力と豊かな人間性を備え、社会の幸福と繁栄に貢献できる人材を育成することを目指します。",
+      "philosophy": "知識は実際に役立ってこそ価値があるという実学教育を基盤に、マネジメントの理論と実践を往還する教育を重視します。",
+      "sources": [
+        {"source_name":"産業能率大学 学校法人の生い立ちとあゆみ","source_url":"https://www.sanno.ac.jp/admin/organiza/nenpyo.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"産業能率大学 学長挨拶","source_url":"https://www.sanno.ac.jp/undergraduate/about/message.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人産業能率大学とは","source_url":"https://www.sanno.ac.jp/admin/organiza/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000073": {
+      "founded_year": 1909,
+      "opened_year": 1964,
+      "founder": "ルーテル派教会・宣教師による神学教育（設立母体）",
+      "operator": "学校法人ルーテル学院",
+      "university_goal": "一人ひとりを大切にする教育を通じ、社会福祉・臨床心理・人間学の専門性と豊かな人間性を備え、他者に寄り添い神と社会に仕える人材を育成することを目指します。",
+      "philosophy": "建学の精神『キリストの心を心とする』を基盤に、愛と奉仕、一人ひとりの尊厳を重んじるキリスト教主義の少人数教育を行います。",
+      "sources": [
+        {"source_name":"ルーテル学院のあゆみ","source_url":"https://www.luther.ac.jp/college/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"ルーテル学院大学 建学の精神とその使命","source_url":"https://www.luther.ac.jp/college/sprit.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"ルーテル学院大学 法人情報","source_url":"https://www.luther.ac.jp/college/corporate/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

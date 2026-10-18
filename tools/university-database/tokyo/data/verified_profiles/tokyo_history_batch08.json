@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 08",
+  "records": {
+    "u000045": {
+      "founded_year": 1923,
+      "opened_year": 1949,
+      "founder": "財団法人大東文化協会",
+      "operator": "学校法人大東文化学園",
+      "university_goal": "東洋文化を基盤に世界の文化を広く研究・教授し、国際的視野と豊かな人格を備え、文化の発展と人類の福祉に貢献できる人材を育成することを目指します。",
+      "philosophy": "建学の精神は漢学の振興と東西文化の融合。東洋文化を尊重しつつ西洋文化を摂取し、新しい文化を創造することを重視します。",
+      "sources": [
+        {"source_name":"大東文化大学 建学の精神・大学の理念・教育の目的","source_url":"https://www.daito.ac.jp/information/about/idea/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大東文化大学 創設からのあゆみ","source_url":"https://www.daito.ac.jp/information/about/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000046": {
+      "founded_year": 1903,
+      "opened_year": 1950,
+      "founder": "川田鐵彌",
+      "operator": "学校法人高千穂学園",
+      "university_goal": "専門的知識と教養を身につけ、自ら考えて行動し、社会の発展と国際社会の平和に貢献できる人材を育成することを目指します。",
+      "philosophy": "学風の指針として『常に半歩先立つ進歩性』を掲げ、『偏らない自由人』『気概ある常識人』『平和的国際人』を学風の目標としています。",
+      "sources": [
+        {"source_name":"高千穂大学 歴史と沿革","source_url":"https://www.takachiho.jp/admission/outline/_1616.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"高千穂大学 建学の精神・教育理念、大学の使命・目的","source_url":"https://www.takachiho.jp/outline/academic_culture.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000047": {
+      "founded_year": 1900,
+      "opened_year": 1949,
+      "founder": "桂太郎",
+      "operator": "学校法人拓殖大学",
+      "university_goal": "国際的な視野、専門的な知識、教養と品格を備え、異なる文化や価値観を尊重しながら国内外で社会に貢献できる人材を育成することを目指します。",
+      "philosophy": "建学の理念は、積極進取の気概と、あらゆる民族から敬慕されるに値する教養と品格を備えた有為な人材の育成です。",
+      "sources": [
+        {"source_name":"拓殖大学 建学の理念","source_url":"https://www.takushoku-u.ac.jp/summary/school-motto.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"拓殖大学 学部・院・別科","source_url":"https://www.takushoku-u.ac.jp/academics/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000048": {
+      "founded_year": 1935,
+      "opened_year": 1953,
+      "founder": "杉浦非水ら",
+      "operator": "学校法人多摩美術大学",
+      "university_goal": "高度な専門性と幅広い教養を備え、創造的な力によって社会に新たな価値を生み出す芸術家、デザイナー、教育者・研究者等を育成することを目指します。",
+      "philosophy": "大学の理念として『自由と意力』を掲げ、自由な精神と創造への強い意志を基盤に、アートとデザインの可能性を追究します。",
+      "sources": [
+        {"source_name":"多摩美術大学 沿革","source_url":"https://www.tamabi.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"多摩美術大学について","source_url":"https://www.tamabi.ac.jp/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

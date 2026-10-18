@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo priority history and philosophy batch 18",
+  "records": {
+    "u000107": {
+      "founded_year": 1948,
+      "opened_year": 1961,
+      "founder": "斎藤秀雄・井口基成ら『子供のための音楽教室』創始者",
+      "operator": "学校法人桐朋学園",
+      "university_goal": "広い知識と高度な音楽専門教育を通じて人格の完成を図り、社会に貢献し世界の音楽文化を創造する個性ある音楽家を育成することを目指します。",
+      "philosophy": "自由で豊かな感性を持つ個性ある音楽家の育成、音楽教育による社会貢献、世界における音楽文化の創造を建学の精神とします。",
+      "sources": [
+        {"source_name":"桐朋学園大学 本学の沿革","source_url":"https://www.tohomusic.ac.jp/college/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"桐朋学園大学 建学の精神・教育目的・教育理念","source_url":"https://www.tohomusic.ac.jp/college/about/policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000141": {
+      "founded_year": 2012,
+      "opened_year": 2012,
+      "founder": "東英弥（建学者）",
+      "operator": "学校法人先端教育機構",
+      "university_goal": "事業及び社会の構想を立案・実践できる人材を育成し、企業や地域の新事業創出、社会課題解決、地域活性化に貢献することを目指します。",
+      "philosophy": "『知の実践研究・教育で、社会の一翼を担う。』を理念とし、構想の普及と構想人材の育成を重視します。",
+      "sources": [
+        {"source_name":"事業構想大学院大学 沿革","source_url":"https://www.mpd.ac.jp/about/history","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"事業構想大学院大学 本学の理念・目的","source_url":"https://www.mpd.ac.jp/about/mission","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000002": {
+      "founded_year": 1873,
+      "opened_year": 1949,
+      "founder": "文部省（官立東京外国語学校を設置）",
+      "operator": "国立大学法人東京外国語大学",
+      "university_goal": "世界の言語・文化・社会に関する教育研究を通じ、多文化共生に寄与し、異なる文化的背景を持つ人々と協働して地球的課題に取り組める人材を育成することを目指します。",
+      "philosophy": "世界の言語とそれを基底とする文化・社会を深く理解し、多言語多文化化する日本と世界で人々の共生に貢献することを使命とします。",
+      "sources": [
+        {"source_name":"東京外国語大学 歴史・沿革","source_url":"https://www.tufs.ac.jp/abouttufs/pr/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京外国語大学 本学の目的・ミッション","source_url":"https://www.tufs.ac.jp/abouttufs/overview/mission.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000004": {
+      "founded_year": 1874,
+      "opened_year": 1949,
+      "founder": "内務省（農事修学場・蚕業試験掛を設置）",
+      "operator": "国立大学法人東京農工大学",
+      "university_goal": "農学・工学および融合領域の教育研究を通して、持続可能な社会の実現、世界の平和、自然環境と調和した科学技術の進展に貢献する人材と知を創出することを目指します。",
+      "philosophy": "『使命志向型教育研究―美しい地球持続のための全学的努力（MORE SENSE）』を基本理念とし、農学・工学の強みを生かして地球規模課題の解決に取り組みます。",
+      "sources": [
+        {"source_name":"東京農工大学 アドミッション・ポリシー","source_url":"https://www.tuat.ac.jp/admission/nyushi_gakubu/admission_policy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京農工大学 大学憲章","source_url":"https://web.tuat.ac.jp/outline/daigakukensho/index.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

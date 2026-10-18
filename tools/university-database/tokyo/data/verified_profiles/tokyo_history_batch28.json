@@ -1,0 +1,59 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo national university history and philosophy batch 28",
+  "records": {
+    "u000001": {
+      "founded_year": 1877,
+      "opened_year": 1877,
+      "founder": "文部省（東京開成学校と東京医学校を統合・再編して設置）",
+      "operator": "国立大学法人東京大学",
+      "university_goal": "学問の自由に基づいて真理の探究と知の創造を進め、世界最高水準の教育研究を維持・発展させるとともに、広い視野、高度な専門性、国際性と開拓者精神を備えた人材を育成することを目指します。",
+      "philosophy": "東京大学憲章に基づき、自治と自律、学問の自由、世界最高水準の教育研究、国際性、研究成果の社会還元を重視します。",
+      "sources": [
+        {"source_name":"東京大学 沿革","source_url":"https://www.u-tokyo.ac.jp/ja/about/history/b03_01.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京大学憲章","source_url":"https://www.u-tokyo.ac.jp/ja/about/overview/b04.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京大学 大学概要","source_url":"https://www.u-tokyo.ac.jp/recruit/info/profile.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000003": {
+      "founded_year": 1873,
+      "opened_year": 1949,
+      "founder": "東京府（東京府小学教則講習所を設置。1949年に都内4師範学校を統合して東京学芸大学を設置）",
+      "operator": "国立大学法人東京学芸大学",
+      "university_goal": "人権を尊重し、すべての人々が共生する社会の建設と世界平和の実現に寄与するため、豊かな人間性と科学的精神、高い知識と教養、創造力・実践力を備えた有為の教育者を養成することを目指します。",
+      "philosophy": "教員養成を基盤として、次世代の子どもの育成と教育課題の解決を主導する全国的拠点大学を目指し、教育人材の養成・高度化・再教育を通じて社会に貢献します。",
+      "sources": [
+        {"source_name":"東京学芸大学 大学史テキスト","source_url":"https://lib.u-gakugei.ac.jp/archives/text","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京学芸大学 大学の目的","source_url":"https://www.u-gakugei.ac.jp/01gaiyo/mokuteki.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京学芸大学 第4期中期目標期間の基本的な目標","source_url":"https://www.u-gakugei.ac.jp/01gaiyo/mokuhyo.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000005": {
+      "founded_year": 1879,
+      "opened_year": 1949,
+      "founder": "文部省（音楽取調掛・東京音楽学校、東京美術学校を前身として1949年に設置）",
+      "operator": "国立大学法人東京藝術大学",
+      "university_goal": "世界最高水準の芸術教育を行い、高い専門性と豊かな人間性を備えた芸術家、教育者、研究者、芸術実践者を養成し、伝統文化の継承と新しい芸術表現の創造を通して社会に貢献することを目指します。",
+      "philosophy": "前身校以来の自由と創造の精神を尊重し、日本文化の伝統と遺産を継承しながら世界の芸術思想・技術を取り入れ、社会とともに芸術の多様な価値を創出することを使命とします。",
+      "sources": [
+        {"source_name":"東京藝術大学 沿革・歴史","source_url":"https://www.geidai.ac.jp/outline/introduction/history","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京藝術大学 大学の概要","source_url":"https://www.geidai.ac.jp/outline/profile","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京藝術大学 使命と目標","source_url":"https://www.geidai.ac.jp/outline/plan/mission","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000006": {
+      "founded_year": 2024,
+      "opened_year": 2024,
+      "founder": "国立大学法人東京工業大学・国立大学法人東京医科歯科大学の統合により設置",
+      "operator": "国立大学法人東京科学大学",
+      "university_goal": "科学の進歩と人々の幸せを探求し、理工学・医歯学に人文社会科学的視点も融合しながら、社会とともに新たな価値を創造し、活力ある未来を築くことを目指します。",
+      "philosophy": "Mission『「科学の進歩」と「人々の幸せ」とを探求し、社会とともに新たな価値を創造する』を掲げ、あらゆる知と技術の探求・融合、多様な個性の尊重、継続的な変革を重視します。",
+      "sources": [
+        {"source_name":"Science Tokyoについて","source_url":"https://www.isct.ac.jp/ja/001/about","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"Science Tokyo 理念","source_url":"https://www.isct.ac.jp/ja/001/about/brand/philosophy","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"Science Tokyo 基本情報","source_url":"https://www.isct.ac.jp/ja/001/about/overview","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

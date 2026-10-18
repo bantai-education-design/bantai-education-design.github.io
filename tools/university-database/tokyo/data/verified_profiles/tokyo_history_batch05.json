@@ -1,0 +1,72 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 05",
+  "records": {
+    "u000040": {
+      "founded_year": 1916,
+      "opened_year": 1948,
+      "founder": "聖マグダレナ・ソフィア・バラ（聖心会創立者）",
+      "operator": "学校法人聖心女子学院",
+      "university_goal": "カトリックの教育精神に基づくリベラル・アーツ教育を通して、自ら考え、多様な人々と協働し、社会に責任をもって関わる女性を育成することを目指します。",
+      "philosophy": "聖心会の教育伝統を基盤に、人間一人ひとりの尊厳を大切にし、知性・精神性・社会への奉仕を統合した全人的な女子教育を重視しています。",
+      "sources": [
+        {"source_name":"聖心女子大学 沿革","source_url":"https://www.u-sacred-heart.ac.jp/about/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"聖心女子大学 学部・大学院","source_url":"https://www.u-sacred-heart.ac.jp/academics/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"聖心女子大学 情報公開","source_url":"https://www.u-sacred-heart.ac.jp/about/data/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000041": {
+      "founded_year": 1935,
+      "opened_year": 1950,
+      "founder": "聖心侍女修道会",
+      "operator": "学校法人清泉女学院",
+      "university_goal": "キリスト教的世界観に立ち、高い知性と豊かな教養、奉仕の精神を備え、自ら考え判断し、他者と共に社会へ貢献できる女性を育成することを目的としています。",
+      "philosophy": "キリスト教ヒューマニズムを建学の精神とし、『まことの知・まことの愛（VERITAS et CARITAS）』の追究を通して、人間の尊厳と他者への奉仕を重視します。",
+      "sources": [
+        {"source_name":"清泉女子大学 学校の沿革・設立母体","source_url":"https://www.seisen-u.ac.jp/overview/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"清泉女子大学 教育研究上の目的","source_url":"https://www.seisen-u.ac.jp/overview/information/education/education.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"清泉女子大学 3つのポリシー","source_url":"https://www.seisen-u.ac.jp/faculty/3policy.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"清泉女子大学 財務状況・法人情報","source_url":"https://www.seisen-u.ac.jp/overview/information/information.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000042": {
+      "founded_year": 1920,
+      "opened_year": 1964,
+      "founder": "ルドルフ・ボーリング・トイスラー",
+      "operator": "学校法人聖路加国際大学",
+      "university_goal": "キリスト教精神を基盤に、医療・看護・保健福祉・公衆衛生の教育研究を通して、人々の健康と福祉、人類への奉仕に貢献する専門職・研究者を育成することを目指します。",
+      "philosophy": "人間を全人的に捉えるキリスト教の愛と奉仕の精神を基盤とし、People-Centered Careを重視して、人々と共に健康を創る教育・実践を進めます。",
+      "sources": [
+        {"source_name":"聖路加国際大学 沿革","source_url":"https://university.luke.ac.jp/about/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"聖路加国際大学 公式サイト","source_url":"https://university.luke.ac.jp/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000043": {
+      "founded_year": 1880,
+      "opened_year": 1949,
+      "founder": "相馬永胤・田尻稲次郎・目賀田種太郎・駒井重格",
+      "operator": "学校法人専修大学",
+      "university_goal": "社会への報恩奉仕という創立の精神を継承し、専門知と現実社会を結び付け、社会課題を主体的に解決できる『社会知性』を備えた人材を育成することを目指します。",
+      "philosophy": "建学の精神は『社会に対する報恩奉仕』、学風は『質実剛健・誠実力行』。21世紀ビジョンとして『社会知性（Socio-Intelligence）の開発』を掲げています。",
+      "sources": [
+        {"source_name":"専修大学 建学の精神・理念","source_url":"https://www.senshu-u.ac.jp/about/spirit/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"専修大学の歴史","source_url":"https://www.senshu-u.ac.jp/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"専修大学 大学基本情報","source_url":"https://www.senshu-u.ac.jp/about/introduction/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000044": {
+      "founded_year": 1926,
+      "opened_year": 1926,
+      "founder": "天台宗・真言宗豊山派・浄土宗（設立母体）",
+      "operator": "学校法人大正大学",
+      "university_goal": "仏教精神に基づく全人教育を通して、自らを磨きながら他者と社会の幸福のために行動し、地域・社会の課題解決に貢献できる人材を育成することを目指します。",
+      "philosophy": "建学の理念は『智慧と慈悲の実践』。教育ビジョンとして『慈悲・自灯明・中道・共生』の4つの人となることを掲げています。",
+      "sources": [
+        {"source_name":"大正大学 大学沿革","source_url":"https://www.tais.ac.jp/guide/outline/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大正大学 建学の理念と教育ビジョン","source_url":"https://www.tais.ac.jp/guide/outline/education_vision/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"大正大学 設置学部・学科等","source_url":"https://www.tais.ac.jp/guide/info/setup/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

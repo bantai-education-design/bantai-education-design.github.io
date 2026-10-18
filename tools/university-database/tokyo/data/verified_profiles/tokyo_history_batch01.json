@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo history and philosophy batch 01",
+  "records": {
+    "u000014": {
+      "founded_year": 1875,
+      "opened_year": 1965,
+      "founder": "跡見花蹊",
+      "operator": "学校法人跡見学園",
+      "university_goal": "学園創立者・跡見花蹊の教育精神を継承し、有能な社会人・家庭人となる女性を育成することを目的としています。実践的な教養を備え、自律し自立した女性の育成を重視しています。",
+      "philosophy": "日本の伝統文化を踏まえ、豊かな教養と自由な精神を持つ自立した女性を育てるという跡見花蹊の教育理念を継承しています。",
+      "sources": [
+        {"source_name":"跡見学園女子大学 理念・建学の精神・沿革","source_url":"https://www.atomi.ac.jp/univ/about/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"跡見学園 学園紹介","source_url":"https://www.atomi.ac.jp/about/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"跡見学園女子大学 3つのポリシー","source_url":"https://www.atomi.ac.jp/univ/about/information/policy/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000015": {
+      "founded_year": 1924,
+      "opened_year": 1991,
+      "founder": "島田依史子",
+      "operator": "学校法人文京学院",
+      "university_goal": "建学の精神「自立と共生」に基づき、広い知識と専門の学芸を教授研究し、社会の発展に寄与するこころ豊かな人間を育成することを目的としています。",
+      "philosophy": "建学の精神は「自立と共生」。校訓「誠実・勤勉・仁愛」を受け継ぎ、互いの違いを認め尊重する共生社会に貢献できる自立した人間の育成を掲げています。",
+      "sources": [
+        {"source_name":"文京学院大学 教育理念・目標とする人材","source_url":"https://www.bgu.ac.jp/about/philosophy/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人文京学院 創立者島田依史子","source_url":"https://www.bgu.ac.jp/corporation/about/founder/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"学校法人文京学院 設置校・キャンパス一覧","source_url":"https://www.bgu.ac.jp/corporation/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000016": {
+      "founded_year": 1923,
+      "opened_year": 1994,
+      "founder": "佐藤重遠・佐藤フユ",
+      "operator": "学校法人目白学園",
+      "university_goal": "創造的な知性、豊かな人間性、応用的な能力を備え、日本の発展と国際社会の平和・福祉に貢献する主体性のある人材を育成することを目的としています。",
+      "philosophy": "学園創立者・佐藤重遠が掲げた建学の精神「主・師・親」を基盤とし、社会への貢献、真理の探究、人を尊び慈しむ姿勢を教育に生かしています。大学の教育理念として「育てて送り出す」を掲げています。",
+      "sources": [
+        {"source_name":"目白学園創立100周年 沿革","source_url":"https://www.mejiro.ac.jp/100th/history/index.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"目白大学 ディプロマ・ポリシー","source_url":"https://www.mejiro.ac.jp/univ/about/dp/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"目白大学 学長あいさつ","source_url":"https://www.mejiro.ac.jp/univ/about/message/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"目白大学 ガバナンス・コード","source_url":"https://www.mejiro.ac.jp/univ/about/governance_code/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000017": {
+      "founded_year": 1926,
+      "opened_year": 1993,
+      "founder": "菅澤重雄",
+      "operator": "学校法人東京成徳学園",
+      "university_goal": "建学の精神「有徳有為な人間の育成」に基づき、広い知識と専門の学芸を教授研究し、創造性と実践性に富む人材を育成して社会に貢献することを目的としています。",
+      "philosophy": "建学の精神は「有徳有為な人間の育成」。五つの教育目標として、おおらかな徳操、高い知性、健全なる身体、勤労の精神、実行の勇気を掲げています。大学開学時には「共生とコミュニケーション」を教育の基本理念としました。",
+      "sources": [
+        {"source_name":"東京成徳大学 建学の精神","source_url":"https://www.tsu.ac.jp/guide/spirit/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京成徳大学 開学30年のあゆみ","source_url":"https://www.tsu.ac.jp/guide/univ30th/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京成徳大学 大学の教育研究上の目的","source_url":"https://www.tsu.ac.jp/guide/purpose/purpose-college/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

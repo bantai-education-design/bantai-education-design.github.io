@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo medical/dental/pharma history batch 11",
+  "records": {
+    "u000067": {
+      "founded_year": 1876,
+      "opened_year": 1952,
+      "founder": "長谷川泰",
+      "operator": "学校法人日本医科大学",
+      "university_goal": "愛と研究心を有する質の高い医師・医学者を育成し、医療を通じて広く人々のために尽くす人材を養成することを目指します。",
+      "philosophy": "建学の精神『済生救民』と学是『克己殉公』を受け継ぎ、医学的力量と豊かな人間性を兼ね備えた医療人・研究者の育成を重視します。",
+      "sources": [
+        {"source_name":"日本医科大学 理念と沿革","source_url":"https://www.nms.ac.jp/college/introduction/policyandhistory/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本医科大学 法人の沿革","source_url":"https://www.nms.ac.jp/houjin/about/history.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000068": {
+      "founded_year": 1907,
+      "opened_year": 1952,
+      "founder": "中原市五郎",
+      "operator": "学校法人日本歯科大学",
+      "university_goal": "学理と技術の双方に優れ、高い人格を備えた歯科医師を養成し、歯科医学・歯科医療の発展に貢献することを目指します。",
+      "philosophy": "建学の精神『自主独立』のもと、自らの判断と責任で学び行動し、学・技両全で人格高尚な歯科医師を育成します。",
+      "sources": [
+        {"source_name":"日本歯科大学 建学の精神","source_url":"https://www.ndu.ac.jp/about/spirit.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本歯科大学 沿革","source_url":"https://www.ndu.ac.jp/about/history.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000082": {
+      "founded_year": 1902,
+      "opened_year": 1949,
+      "founder": "恩田重信",
+      "operator": "学校法人明治薬科大学",
+      "university_goal": "薬物治療に責任を持てる薬剤師、強い探究心と独創性を持つ人材、豊かな人間性と国際性を備えた薬学人を育成することを目指します。",
+      "philosophy": "薬学の普及と社会に有用な薬剤師養成による国民の保健衛生への貢献を建学の精神とし、純粋知と実践知を兼ね備えた人材育成を掲げます。",
+      "sources": [
+        {"source_name":"明治薬科大学 建学の精神・理念","source_url":"https://www.my-pharm.ac.jp/koho/idea/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"明治薬科大学 沿革","source_url":"https://www.my-pharm.ac.jp/koho/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000076": {
+      "founded_year": 1911,
+      "opened_year": 1950,
+      "founder": "星一",
+      "operator": "学校法人星薬科大学",
+      "university_goal": "薬学を通じて世界に奉仕できる人材を育成し、医療・創薬・生命科学の発展と人々の健康に貢献することを目指します。",
+      "philosophy": "『本学は、薬学を通じて、世界に奉仕する人材育成の揺籃である』を建学の精神とし、教育理念『親切第一』を重視します。",
+      "sources": [
+        {"source_name":"星薬科大学 建学の精神・教育理念","source_url":"https://www.hoshi.ac.jp/gaiyou/rinen/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"星薬科大学 沿革","source_url":"https://www.hoshi.ac.jp/gaiyou/enkaku/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

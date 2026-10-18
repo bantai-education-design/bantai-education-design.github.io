@@ -1,0 +1,54 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 17",
+  "records": {
+    "u000135": {
+      "founded_year": 1927,
+      "opened_year": 2009,
+      "founder": "冨田コウ純（宝仙学園創立者）",
+      "operator": "学校法人宝仙学園",
+      "university_goal": "こどもに関する教育学・保育学を教育研究し、高い倫理観、豊かな教養と専門知識を備えた質の高い幼児教育・保育の専門家を育成し、社会に貢献することを目指します。",
+      "philosophy": "『仏教精神を基調とした人間教育によって、品格と知性を兼ね備えた人を造る』を建学の精神とし、『人を造る』教育を継承します。",
+      "sources": [
+        {"source_name":"こども教育宝仙大学 2026 GUIDE BOOK","source_url":"https://www.hosen.ac.jp/contents/wp-content/uploads/2025/03/GuideBook_low2.pdf","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"こども教育宝仙大学 大学機関別認証評価","source_url":"https://www.hosen.ac.jp/contents/wp-content/uploads/2024/10/0d8dcb46e2a1e4ad5f0fd6cd852667df.pdf","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000136": {
+      "founded_year": 1956,
+      "opened_year": 2009,
+      "founder": "花田傳",
+      "operator": "学校法人花田学園",
+      "university_goal": "西洋医学と東洋医学の融合を図り、患者の視点に立ってチーム医療を支え、統合医療に貢献できる感性豊かな医療人を育成することを目指します。",
+      "philosophy": "豊かな知識と確かな技術、患者の目線を大切にするバランスのとれた医療人を養成し、研究的視点を備えた人材を育成して社会に貢献することを建学の精神とします。",
+      "sources": [
+        {"source_name":"東京有明医療大学 建学の歩み","source_url":"https://www.tau.ac.jp/information/outline/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000142": {
+      "founded_year": 2017,
+      "opened_year": 2017,
+      "founder": "学校法人先端教育機構（設立母体）",
+      "operator": "学校法人先端教育機構",
+      "university_goal": "社会構想・コミュニケーションデザイン・実務教育の専門領域で、理論と実践を融合し、社会や組織の変革と新しい社会的価値の創出に貢献できる高度専門職業人を育成します。",
+      "philosophy": "学校法人先端教育機構の理念『知の実践研究・教育で、社会の一翼を担う。』のもと、社会人の実務経験と専門理論を結びつける実践教育を重視します。",
+      "sources": [
+        {"source_name":"社会構想大学院大学 大学院について","source_url":"https://www.socialdesign.ac.jp/about","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"社会構想大学院大学 自己点検・評価報告書","source_url":"https://info.socialdesign.ac.jp/hubfs/socialdesign.ac.jp/documents/2023/selfcheck_2023cd.pdf","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000071": {
+      "founded_year": 1922,
+      "opened_year": 1965,
+      "founder": "二階堂トクヨ",
+      "operator": "学校法人二階堂学園",
+      "university_goal": "体育を中軸に据えた全人教育を通じ、体育・スポーツ・健康・ダンス・子ども運動の分野で社会に貢献できる女性を育成します。",
+      "philosophy": "創立者二階堂トクヨの『体育を中軸に据えた全人教育』と、優雅な立居振舞をそなえた明朗かつ健康な女性づくりの精神を継承します。",
+      "sources": [
+        {"source_name":"日本女子体育大学 沿革","source_url":"https://www.jwcpe.ac.jp/college_info/idea/history/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"日本女子体育大学 学園の歴史","source_url":"https://www.jwcpe.ac.jp/college_info/nikaido/history/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "verified_at": "2026-08-15",
+  "prefecture": "東京都",
+  "scope": "Tokyo completion-priority history and philosophy batch 22",
+  "records": {
+    "u000091": {
+      "founded_year": 2018,
+      "opened_year": 2018,
+      "founder": "学校法人日本教育財団（設立母体）",
+      "operator": "学校法人日本教育財団",
+      "university_goal": "実践知と学術的知見を結びつけ、高度な職業実践に必要な問題発見・解決能力を備えた人材を、広く社会に開かれた通信教育で育成します。",
+      "philosophy": "『創造力』と『豊かな人間性』を教育の根幹とする人間教育を掲げ、自立した人格と実践力を育てます。",
+      "sources": [
+        {"source_name":"東京通信大学とは","source_url":"https://www.internet.ac.jp/about/about-us/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"東京通信大学 教育情報の公開","source_url":"https://www.internet.ac.jp/public/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000093": {
+      "founded_year": 1927,
+      "opened_year": 1993,
+      "founder": "山上曹源",
+      "operator": "学校法人駒澤学園",
+      "university_goal": "変化する社会の中で十分に自己を実現し、新しい文化の創造的担い手となる、人間性豊かな女性を育成します。",
+      "philosophy": "道元禅師の『正念』『行学一如』の禅の精神を基盤に、学びと実践を一体化した人間教育を重視します。",
+      "sources": [
+        {"source_name":"駒沢学園 沿革","source_url":"https://www.komajo.ac.jp/uni/guidance/komajo-history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"駒沢女子大学 本学の歴史","source_url":"https://www.komajo.ac.jp/uni/pickup/history.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000094": {
+      "founded_year": 1941,
+      "opened_year": 1955,
+      "founder": "財団法人興亜協会（設立母体）",
+      "operator": "学校法人亜細亜学園",
+      "university_goal": "自助精神を身につけた誠実な人材を育成し、国際交流と実践的な学びを通じてアジアと世界の発展に貢献できる人材を育てます。",
+      "philosophy": "建学の精神『自助協力』を軸に、自ら考え行動し、互いに協力して社会へ貢献する姿勢を重視します。",
+      "sources": [
+        {"source_name":"亜細亜大学 沿革・あゆみ","source_url":"https://www.asia-u.ac.jp/about/spirit/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"亜細亜大学について","source_url":"https://www.asia-u.ac.jp/about/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000096": {
+      "founded_year": 1926,
+      "opened_year": 1950,
+      "founder": "中館耕蔵・矢田部勁吉・武岡鶴代・榊原直・渡邊敢ら創立メンバー",
+      "operator": "学校法人国立音楽大学",
+      "university_goal": "良識ある音楽家・教育家を育成し、日本および世界の音楽文化・教育・研究の発展に寄与することを目指します。",
+      "philosophy": "『自由、自主、自律の精神』を基本理念とし、音楽を通した全人教育と個性の尊重を重視します。",
+      "sources": [
+        {"source_name":"国立音楽大学 沿革","source_url":"https://www.kunitachi.ac.jp/introduction/history.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国立音楽大学 本学の基本的理念","source_url":"https://www.kunitachi.ac.jp/introduction/idea.html","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国立音楽大学100年のあゆみ Overture","source_url":"https://www.kunitachi.ac.jp/100th/100tn_project/publication/web/history01.html","verified_at":"2026-08-15","role":"primary"}
+      ]
+    },
+    "u000097": {
+      "founded_year": 1949,
+      "opened_year": 1953,
+      "founder": "日本・北米のキリスト教関係者による国際基督教大学創設委員会",
+      "operator": "学校法人国際基督教大学",
+      "university_goal": "国際的社会人としての教養を備え、神と人とに奉仕し、恒久平和の確立に貢献できる人材を育成します。",
+      "philosophy": "国際性・キリスト教・学問の3つの使命を掲げ、学問の自由とリベラルアーツ、世界人権宣言の精神を重視します。",
+      "sources": [
+        {"source_name":"国際基督教大学 使命・沿革","source_url":"https://www.icu.ac.jp/about/commitments/","verified_at":"2026-08-15","role":"primary"},
+        {"source_name":"国際基督教大学 Why ICU","source_url":"https://www.icu.ac.jp/about/whyiculist/","verified_at":"2026-08-15","role":"primary"}
+      ]
+    }
+  }
+}
