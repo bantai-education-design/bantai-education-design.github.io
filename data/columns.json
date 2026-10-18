@@ -1,5 +1,25 @@
 [
   {
+    "id": "column-teacher-salary-shortage-20261018",
+    "slug": "teacher-salary-shortage-20261018",
+    "title": "教員の平均年収は約700万円。それでも教員不足はなぜ続くのか",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.10.18",
+    "excerpt": "小・中学校教員の推計年収は約695万円、高校教員は約722万円。給与統計を読み解き、長時間勤務、採用倍率、休職、教職調整額の引上げを考える。",
+    "thumbnail": "/assets/images/columns/teacher-salary-20261018.svg",
+    "readTime": "約9分",
+    "tags": [
+      "教員給与",
+      "教員不足",
+      "教職調整額",
+      "働き方改革",
+      "学校運営"
+    ],
+    "content": "# 教員の平均年収は約700万円。それでも教員不足はなぜ続くのか\n\n小・中学校教員の推計年収は約695万円、高校教員は約722万円。しかし、平均年収だけでは教員不足を説明できない。\n\n[本文を読む](https://bantai-education-design.github.io/columns/teacher-salary-shortage-20261018/)",
+    "pageUrl": "/columns/teacher-salary-shortage-20261018/"
+  },
+  {
     "id": "column-school-schedule-book-introduction",
     "slug": "school-schedule-book-introduction",
     "title": "『学校の時間割が変わる。』を、いま先生方に読んでほしい――調整授業時数を「分からない」で終わらせないために",
