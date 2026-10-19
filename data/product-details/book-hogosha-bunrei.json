@@ -80,7 +80,16 @@
         {
           "class": "btn btn-primary",
           "href": "https://www.amazon.co.jp/dp/B0HLQCX3GJ",
-          "label": "Amazonで購入する",
+          "label": "Kindle版をAmazonで見る",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "https://www.amazon.co.jp/dp/B0HNBS2XCD",
+          "label": "ペーパーバック第2版をAmazonで見る",
           "attrs": {
             "target": "_blank",
             "rel": "noopener"
