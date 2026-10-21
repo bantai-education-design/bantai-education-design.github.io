@@ -511,8 +511,11 @@
             <div class="column-modal-tags">${tagsHtml}</div>
           </div>
           <div class="column-modal-media">
+            ${item.thumbnailZoom ? `<a href="${item.thumbnail}" target="_blank" rel="noopener noreferrer" aria-label="画像を拡大して確認（新しいタブ）">` : ''}
             <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}">
+            ${item.thumbnailZoom ? '</a>' : ''}
           </div>
+          ${item.thumbnailZoom ? `<p><a href="${item.thumbnail}" target="_blank" rel="noopener noreferrer">画像を拡大して確認（新しいタブ）</a></p>` : ''}
           <div class="column-modal-body">
             <p class="column-modal-lead">${escapeHtml(item.excerpt)}</p>
             <hr class="column-modal-divider">

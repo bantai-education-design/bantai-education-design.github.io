@@ -1,6 +1,7 @@
 """Validate the unpublished club activity column's complete text and tables."""
 
 import json
+import struct
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -37,3 +38,17 @@ def test_article_has_tables_and_corrected_reference():
     assert parser.tables == 2
     assert "https://www.mext.go.jp/sports/content/20251226-spt_oripara-000046627_00234.pdf#page=62" in parser.links
     assert "20251215-spt_oripara-000046180_00234.pdf" not in html
+
+
+def test_official_thumbnail_and_zoom_link():
+    url = "/assets/images/columns/club-activity-instructor-official-thumbnail.png"
+    columns = json.loads((ROOT / "data/columns.json").read_text(encoding="utf-8"))
+    item = next(c for c in columns if c["slug"] == SLUG)
+    assert item["thumbnail"] == url
+    assert item["thumbnailZoom"] is True
+    html = (ROOT / f"columns/{SLUG}/index.html").read_text(encoding="utf-8")
+    assert f'src="{url}"' in html and f'href="{url}"' in html
+    assert f"{SLUG}.svg" not in html
+    data = (ROOT / url.lstrip("/")).read_bytes()
+    assert data[:8] == b"\x89PNG\r\n\x1a\n"
+    assert struct.unpack(">II", data[16:24]) == (1672, 941)
