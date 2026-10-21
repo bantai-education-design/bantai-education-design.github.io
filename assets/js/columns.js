@@ -304,10 +304,12 @@
       <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
         <div class="column-card-media">
           <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
-          <span class="column-badge ${tagClass}">${escapeHtml(item.category)}</span>
-          ${newBadgeHtml}
         </div>
         <div class="column-card-body">
+          <div class="column-card-labels">
+            <span class="column-badge ${tagClass}">${escapeHtml(item.category)}</span>
+            ${newBadgeHtml}
+          </div>
           <div class="column-meta">
             <time datetime="${item.date.replace(/\./g, '-')}">${item.date}</time>
             <span class="column-read-time">${item.readTime || ''}</span>

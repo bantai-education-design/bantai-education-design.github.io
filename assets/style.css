@@ -5558,6 +5558,20 @@ button:focus-visible {
   flex-direction: column;
   flex-grow: 1;
 }
+.column-card-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.column-card-labels .column-badge,
+.column-card-labels .column-badge-new {
+  position: static;
+}
+.column-card-labels .column-badge-new {
+  margin-left: auto;
+}
 .column-meta {
   display: flex;
   align-items: center;
