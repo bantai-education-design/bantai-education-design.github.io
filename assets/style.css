@@ -5744,8 +5744,14 @@ button:focus-visible {
   max-height: 380px;
   object-fit: cover;
 }
-/* Preserve the complete text and diagram in the official tuition thumbnail. */
-.column-modal-media img[src="/assets/images/columns/highschool-tuition-hidden-costs-20261021.webp"] {
+/* Preserve the complete text and diagrams in these official thumbnails. */
+.column-card[data-column-id="column-club-activity-instructor-school-responsibility-20261022"] .column-card-media img,
+.column-card[data-column-id="column-club-activity-instructor-school-responsibility-20261022"]:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+}
+.column-modal-media img[src="/assets/images/columns/highschool-tuition-hidden-costs-20261021.webp"],
+.column-modal-media img[src="/assets/images/columns/club-activity-instructor-official-thumbnail.png"] {
   max-height: none;
 }
 .column-modal-lead {
