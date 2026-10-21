@@ -98,7 +98,7 @@
 ---
 
 ### 参考資料
-- 会計検査院（2026年10月16日）「中学校における部活動指導員の配置支援事業による教員の働き方改革に関する事業効果等について」 https://www.jbaudit.go.jp/report/new/kobetsu07/r081016.html
-- スポーツ庁・文化庁（2025年12月）「部活動改革及び地域クラブ活動の推進等に関する総合的なガイドライン」 https://www.mext.go.jp/sports/b_menu/houdou/jsa_00220.html
-- スポーツ庁等（2026年5月19日）「部活動の遠征等における安全確保について」 https://gkz781swok1ivzu2.www.mext.go.jp/sports/b_menu/hakusho/nc/1418753_00009.html
-- 文部科学省資料「地域クラブ活動における事故等が発生した場合の賠償責任主体」 https://www.mext.go.jp/sports/content/20251215-spt_oripara-000046180_00234.pdf
+- [会計検査院（2026年10月16日）「中学校における部活動指導員の配置支援事業による教員の働き方改革に関する事業効果等について」](https://www.jbaudit.go.jp/report/new/kobetsu07/r081016.html)
+- [スポーツ庁・文化庁（2025年12月）「部活動改革及び地域クラブ活動の推進等に関する総合的なガイドライン」](https://www.mext.go.jp/sports/b_menu/houdou/jsa_00220.html)
+- [スポーツ庁等（2026年5月19日）「部活動の遠征等における安全確保について」](https://www.mext.go.jp/sports/b_menu/hakusho/nc/1418753_00009.html)
+- [文部科学省「部活動改革及び地域クラブ活動の推進等に関する総合的なガイドライン」別冊資料②・9ページ（PDF全体の62ページ）：地域クラブ活動の事故等に関する賠償責任主体](https://www.mext.go.jp/sports/content/20251226-spt_oripara-000046627_00234.pdf#page=62)
