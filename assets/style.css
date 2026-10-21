@@ -5730,6 +5730,10 @@ button:focus-visible {
   max-height: 380px;
   object-fit: cover;
 }
+/* Preserve the complete text and diagram in the official tuition thumbnail. */
+.column-modal-media img[src="/assets/images/columns/highschool-tuition-hidden-costs-20261021.webp"] {
+  max-height: none;
+}
 .column-modal-lead {
   font-size: 1rem;
   font-weight: 600;
