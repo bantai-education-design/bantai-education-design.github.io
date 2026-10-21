@@ -37,3 +37,15 @@ def test_standalone_page_preserves_every_draft_line():
         line = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", line)
         if line and line != "---":
             assert line in page_text
+
+
+def test_listing_and_article_use_official_webp():
+    thumbnail = f"/assets/images/columns/{SLUG}.webp"
+    columns = json.loads((ROOT / "data/columns.json").read_text(encoding="utf-8"))
+    article = next(item for item in columns if item["slug"] == SLUG)
+    assert article["thumbnail"] == thumbnail
+    html = (ROOT / f"columns/{SLUG}/index.html").read_text(encoding="utf-8")
+    assert f'src="{thumbnail}"' in html
+    assert f"{SLUG}.svg" not in html
+    image = (ROOT / thumbnail.lstrip("/")).read_bytes()
+    assert image[:4] == b"RIFF" and image[8:12] == b"WEBP"
