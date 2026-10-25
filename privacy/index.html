@@ -1,0 +1,73 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>プライバシーポリシー | Ban.Tai Education Design</title><meta name="description" content="Ban.Tai Education Design 公式サイトにおけるアクセス解析と、お問い合わせなどでいただく情報の取り扱いについて。"><link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+
+  <!-- KARTE Tag -->
+  <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+  <script async src="https://cdn-edge.karte.io/9b7377fac6a5e8e760f7e836a7dddbf3/edge.js"></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+</head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design"><span>Ban.Tai Education Design</span></a><button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button><nav id="global-menu" class="menu" aria-label="グローバルナビゲーション"><a href="/">ホーム</a><a href="/products/">製品・教材</a><a href="/databases/">教育DB・情報検索</a><a href="/columns/">コラム</a><a href="/about/">Ban.Taiについて</a><a href="/contact/">サポート</a><a class="mini" href="/products/">すべての製品を見る</a></nav></div></header><main><section class="page-hero"><div class="container"><div class="kicker">Ban.Tai Education Design</div><h1>プライバシーポリシー</h1><p class="lead">Ban.Tai Education Design（以下「当サイト」）が、サイトの改善やお問い合わせへの対応のために扱う情報と、その使い方をまとめています。</p></div></section><section class="section"><div class="container card gold">
+<h2>1. 運営者とお問い合わせ先</h2>
+<p>運営者：Ban.Tai Education Design<br>お問い合わせ：<a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+
+<h2>2. アクセス解析について</h2>
+<p>当サイトでは、より使いやすいサイトにするため、次のアクセス解析ツールを利用しています。これらのツールはCookieなどの仕組みを使い、閲覧したページ、滞在時間、どこから来たか、端末やブラウザの種類などの情報を集めます。お名前やメールアドレスなど、個人を特定する情報は含まれません。</p>
+<ul>
+<li>Google アナリティクス（Google LLC）：当サイトからGoogle アナリティクスへは、フォームの入力内容やメールアドレスなどを送らない設定にしています。Googleによる情報の取り扱いは「<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a>」をご覧ください。計測を止めたい場合は「<a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン</a>」をご利用いただけます。</li>
+<li>KARTE（株式会社プレイド）：情報の取り扱いは「<a href="https://karte.io/karte-policy.html" target="_blank" rel="noopener">KARTE プライバシーポリシー</a>」を、計測を止める方法は「<a href="https://karte.io/optout/" target="_blank" rel="noopener">オプトアウト設定方法</a>」をご覧ください。</li>
+</ul>
+<p>集めた情報は、ページの改善や、先生方に役立つ情報・教材づくりの参考にだけ使います。集計結果は運営者だけが確認し、公開しません。ブラウザの設定でCookieを無効にすることもできます。</p>
+
+<h2>3. お問い合わせ・お申し込みでいただく情報</h2>
+<p>メールやGoogle フォーム（モニター版のお申し込みなど）でいただいたお名前、学校名、メールアドレスなどは、ご返信、製品やモニター版のご提供、関連するご案内のためにだけ使います。Google フォームに入力された内容は、Googleのサービス上で管理されます。</p>
+
+<h2>4. 写真の投稿</h2>
+<p>写真の投稿を受け付けるページでは、投稿された写真を確認してから掲載するかどうかを決めます。人物や個人情報が写っている写真、撮影が禁止された場所の写真は掲載しません。</p>
+
+<h2>5. 第三者への提供</h2>
+<p>法令に基づく場合を除き、ご本人の同意なく、いただいた情報を第三者に提供することはありません。</p>
+
+<h2>6. 製品・アプリでの取り扱い</h2>
+<p>各製品・アプリで扱う情報については、それぞれの製品の説明や取扱説明書に記載しています。</p>
+
+<h2>7. このポリシーの変更</h2>
+<p>内容は必要に応じて見直し、変更した場合はこのページでお知らせします。</p>
+<p>制定日：2026年10月25日</p>
+</div></section></main><a class="home-floating" href="/">ホームへ</a><footer class="footer"><div class="container footer-grid"><div><h2>Ban.Tai Education Design</h2><p>教育現場の実務を知る立場から、先生方の日常事務を少しでも軽くするためのアプリ開発を進めています。</p></div><div><p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p><p><a href="/legal/">利用規約・免責事項</a><br><a href="/privacy/">プライバシーポリシー</a></p></div></div><div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div></footer><script src="/assets/site.js"></script></body></html>
