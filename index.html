@@ -919,7 +919,7 @@
               ツールの不具合報告、新しい教材・機能のリクエスト、取材や連携のご相談など、お気軽にお寄せください。
             </p>
           </div>
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('お問い合わせありがとうございます。送信内容を受け付けました。'); this.reset();">
+          <form id="contact-form" class="contact-form" novalidate>
             <div class="form-group">
               <label for="contact-name">お名前 / 学校名（任意）</label>
               <input type="text" id="contact-name" class="form-control" placeholder="例: 班目 太郎（○○小学校）">
@@ -943,10 +943,24 @@
               <textarea id="contact-message" class="form-control" rows="5" required placeholder="具体的内容をご記入ください。"></textarea>
             </div>
             <div class="contact-safety-note">
-              🔒 <strong>安心のお約束：</strong> 送信いただいた情報は、お問い合わせへの回答および製品改善の目的のみに使用し、第三者に提供することはありません。
+              🔒 <strong>安心のお約束：</strong> いただいた情報は、お問い合わせへの回答および製品改善の目的のみに使用し、第三者に提供することはありません。<br>
+              ボタンを押すと、入力内容が入った状態でお使いのメールソフトが開きます。そのまま送信してください。
             </div>
-            <button type="submit" class="btn btn-primary" style="padding:14px; font-weight:700; font-size:1rem; border:none; cursor:pointer;">送信する</button>
+            <button type="submit" class="btn btn-primary" style="padding:14px; font-weight:700; font-size:1rem; border:none; cursor:pointer;">メールで送る</button>
           </form>
+          <div id="contact-result" class="contact-result" hidden>
+            <h3>メールの準備ができました</h3>
+            <p>メールソフトが開いたら、内容を確かめて送信してください。<strong>送信ボタンを押すまで、まだ届いていません。</strong></p>
+            <p id="contact-long-note" class="contact-result-warn" hidden>本文が長いため、メールソフトには件名だけを入れています。下の「本文をコピー」を押して、メールの本文に貼り付けてください。</p>
+            <p>メールソフトが開かない場合は、下のアドレスあてに、本文をコピーして送ってください（Gmailなどのウェブメールでも送れます）。</p>
+            <div class="contact-result-address">
+              <a id="contact-open-mail" href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a>
+              <button type="button" id="contact-copy-address" class="btn btn-light">アドレスをコピー</button>
+            </div>
+            <label for="contact-result-body" class="contact-result-label">送る内容</label>
+            <textarea id="contact-result-body" class="form-control" rows="8" readonly></textarea>
+            <button type="button" id="contact-copy-body" class="btn btn-light">本文をコピー</button>
+          </div>
         </div>
       </div>
     </section>
@@ -966,6 +980,7 @@
     <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
   </footer>
   <script src="/assets/site.js?v=homepage-products-final-1"></script>
+  <script src="/assets/js/contact-form.js" defer></script>
   <script src="/assets/js/columns.js?v=20261004-book-intro"></script>
 </body>
 </html>

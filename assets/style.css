@@ -6474,3 +6474,23 @@ button:focus-visible {
   margin-top: 10px;
   font-weight: 500;
 }
+
+/* トップページのお問い合わせ：メール作成後の案内 */
+.contact-result {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 14px;
+  background: #fffdf7;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-margin-top: 96px; /* 固定ヘッダーに見出しが隠れないように */
+}
+.contact-result h3 { margin: 0; color: var(--navy); font-size: 1.1rem; }
+.contact-result p { margin: 0; font-size: 0.92rem; line-height: 1.8; }
+.contact-result-warn { color: #9a3412; }
+.contact-result-address { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.contact-result-address a { font-weight: 700; word-break: break-all; }
+.contact-result-label { font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+.contact-result .btn { align-self: flex-start; padding: 10px 18px; font-size: 0.9rem; cursor: pointer; }
