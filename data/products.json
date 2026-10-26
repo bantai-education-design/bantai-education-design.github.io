@@ -91,7 +91,7 @@
     },
     {
       "id": "kanji-practice",
-      "name": "漢字練習帳",
+      "name": "漢字練習帳メーカー",
       "category": "standard",
       "order": 4,
       "status": "10日間無料体験",
@@ -106,7 +106,7 @@
       "summary": "子どもによって書きやすいマスの大きさや練習量が異なることを感じてきた担任経験から、その子に合うマス目・線の濃さで漢字プリントをすぐ印刷できるようにしました。",
       "features": [],
       "image": "/assets/images/kanji-practice/card-thumbnail.png",
-      "imageAlt": "漢字練習帳",
+      "imageAlt": "漢字練習帳メーカー",
       "detailUrl": "/products/kanji-practice/",
       "categoryUrl": null,
       "primaryActionLabel": "詳しく見る",

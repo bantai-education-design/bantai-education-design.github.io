@@ -1,6 +1,6 @@
 {
-  "pageTitle": "漢字練習帳 - 子どもに合わせた漢字ノート作成ソフト | Ban.Tai",
-  "metaDescription": "漢字練習帳は、マス目、余白、線の色や太さを自由に選んで、子どもに合わせた最適な漢字練習用紙をいつでも作成・印刷できるWindowsアプリです。",
+  "pageTitle": "漢字練習帳メーカー - 子どもに合わせた漢字ノート作成ソフト | Ban.Tai",
+  "metaDescription": "漢字練習帳メーカーは、マス目、余白、線の色や太さを自由に選んで、子どもに合わせた最適な漢字練習用紙をいつでも作成・印刷できるWindowsアプリです。",
   "bodyClass": "",
   "styleVersion": "586a1d0_v2",
   "menuToggle": true,
@@ -40,7 +40,7 @@
       "class": "mini"
     }
   ],
-  "productName": "漢字練習帳",
+  "productName": "漢字練習帳メーカー",
   "englishName": "Kanji Practice",
   "boothUrl": "https://bantai3.booth.pm/items/8305799",
   "images": [
@@ -82,7 +82,7 @@
       ],
       "image": {
         "src": "/assets/images/kanji-practice/booth-1-main.png",
-        "alt": "漢字練習帳 メインビジュアル"
+        "alt": "漢字練習帳メーカー メインビジュアル"
       }
     },
     {
@@ -101,7 +101,7 @@
       ],
       "image": {
         "src": "/assets/images/kanji-practice/booth-2-diff.png",
-        "alt": "市販ノートと漢字練習帳の違い"
+        "alt": "市販ノートと漢字練習帳メーカーの違い"
       }
     },
     {
@@ -154,7 +154,7 @@
         "10日間の無料体験でお試し。"
       ],
       "paragraphs": [
-        "「漢字練習帳」は、すべての機能を制限なくお使いいただける10日間の無料体験版を提供しています。",
+        "「漢字練習帳メーカー」は、すべての機能を制限なくお使いいただける10日間の無料体験版を提供しています。",
         "面倒な会員登録やクレジットカードの登録は一切不要。体験期間終了後に自動で課金されるような心配もありません。まずは使いやすさや実際の印刷の仕上がりを無料でお試しください。"
       ],
       "actionsStyle": "margin-top:14px;",
@@ -176,7 +176,7 @@
     },
     {
       "type": "downloadCta",
-      "heading": "漢字練習帳ライセンス購入",
+      "heading": "漢字練習帳メーカー ライセンス購入",
       "description": "10日間の体験後も引き続きご利用いただく場合は、BOOTHでシリアルキーの購入をお願いいたします。",
       "actions": [
         {
