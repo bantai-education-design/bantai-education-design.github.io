@@ -91,7 +91,7 @@
     },
     {
       "id": "kanji-practice",
-      "name": "漢字練習帳",
+      "name": "漢字練習帳メーカー",
       "category": "standard",
       "order": 4,
       "status": "10日間無料体験",
@@ -103,10 +103,10 @@
         "小学校教員",
         "保護者"
       ],
-      "summary": "子どもによって書きやすいマスの大きさや練習量が異なることを感じてきた担任経験から、その子に合うマス目・線の濃さで漢字プリントをすぐ印刷できるようにしました。",
+      "summary": "マス目1〜50、余白5〜50mm、線の色と濃さまで、その子に合わせて調整できます。担任経験から生まれた、学校でも家庭でもA4・B5ですぐ印刷できる漢字練習用紙ソフトです。",
       "features": [],
       "image": "/assets/images/kanji-practice/card-thumbnail.png",
-      "imageAlt": "漢字練習帳",
+      "imageAlt": "漢字練習帳メーカー",
       "detailUrl": "/products/kanji-practice/",
       "categoryUrl": null,
       "primaryActionLabel": "詳しく見る",
