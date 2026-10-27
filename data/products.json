@@ -153,24 +153,25 @@
       "name": "絵日記・観察カード作成メーカー",
       "category": "standard",
       "order": 6,
-      "status": "販売中",
+      "status": "10日間無料体験",
       "recommendation": null,
       "badges": [
-        "販売中"
+        "10日間無料体験"
       ],
       "targetUsers": [
-        "小学校教員"
+        "小学校教員",
+        "保護者"
       ],
-      "summary": "活動や学年によって、絵と文章に必要な広さが異なるという現場の不便から、自由な比率で組み合わせられる観察カードを作りました。",
+      "summary": "A4・B4・八つ切・四つ切に対応。絵の広さ（約1/3・約1/2）と文章欄（マス目・横罫線・縦罫線）を組み合わせて、絵日記や観察カードをすぐ印刷できます。",
       "features": [],
-      "image": "/assets/images/observation-card-card.svg",
-      "imageAlt": "絵日記・観察カード作成メーカーの紹介画像",
+      "image": "/assets/images/observation-card/card-thumbnail.png",
+      "imageAlt": "絵日記・観察カード作成メーカー",
       "detailUrl": "/products/observation-card/",
       "categoryUrl": null,
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": "詳細を見る",
       "published": true,
-      "trialDownloadUrl": "/downloads/trials/bantai_observation_card_trial_v1.2.0.zip",
+      "trialDownloadUrl": "/downloads/trials/bantai_observation_card_trial_v1.2.1.zip",
       "boothUrl": "https://bantai3.booth.pm/items/8579732",
       "vectorUrl": null,
       "noteUrl": null,

@@ -222,19 +222,27 @@ def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -
     require(data["versionLabel"] in html, "version label missing")
     validate_url(data["boothUrl"], "boothUrl")
     require(data["boothUrl"] in html, "BOOTH URL missing from generated HTML")
-    require("BOOTH公開中" in html and "Vector準備中" in html and "note準備中" in html, "distribution cards missing")
     forbidden = [
         "vector.co.jp",
         "note.com",
         "github.com/",
-        "/assets/images/observation-card/",
         "/assets/videos/observation-card",
+        "画像なしでも崩れない掲載構成",
+        "スクリーンショット準備中",
+        "外部CDN",
     ]
     visible_html = re.sub(r"<!--.*?-->", "", html, flags=re.S)
     for value in forbidden:
-        require(value not in visible_html, f"forbidden live link or asset reference found: {value}")
+        require(value not in visible_html, f"forbidden live link or internal note found: {value}")
+    for src in re.findall(r'src="(/assets/images/observation-card/[^"]+)"', html):
+        validate_image_path(src, "observation-card image")
+    trial = re.findall(r'href="(/downloads/trials/bantai_observation_card_trial_v[^"]+\.zip)"', html)
+    require(len(trial) >= 1, "trial download link missing")
+    for href in trial:
+        require((ROOT / href.lstrip("/")).exists(), f"trial zip does not exist: {href}")
     section_types = [section["type"] for section in data["sections"]]
     require("hero" in section_types, "hero section missing")
+    require("videoPlaceholder" not in section_types, "video placeholder must not be shown before a video exists")
     targets = next((section for section in data["sections"] if section["type"] == "textCardGrid" and section.get("eyebrow") == "For Whom"), None)
     require(targets is not None and len(targets["items"]) == 3, "target cards must have 3 items")
     features = next((section for section in data["sections"] if section.get("id") == "features"), None)
@@ -242,14 +250,11 @@ def validate_observation_card(data: dict, html: str, parser: DetailPageParser) -
     howto = next((section for section in data["sections"] if section["type"] == "orderedListWithInfo"), None)
     require(howto is not None and len(howto["steps"]) == 4, "howto must have 4 steps")
     require(howto is not None and len(howto["info"]["rows"]) == 4, "environment info must have 4 rows")
-    video = next((section for section in data["sections"] if section["type"] == "videoPlaceholder"), None)
-    require(video is not None and len(video["steps"]) == 5, "video steps must have 5 items")
     distribution = next((section for section in data["sections"] if section.get("id") == "distribution"), None)
     require(distribution is not None and len(distribution["items"]) == 3, "distribution cards must have 3 items")
     notes = next((section for section in data["sections"] if section["type"] == "noticeList"), None)
-    require(notes is not None and len(notes["items"]) == 6, "notice list must have 6 items")
+    require(notes is not None and len(notes["items"]) == 4, "notice list must have 4 items")
     require("PDF出力 / 印刷" in html, "print/PDF wording missing")
-    require("画像なしでも崩れない掲載構成" in html, "placeholder explanation missing")
 
 
 def validate_text_overlay(data: dict, html: str, parser: DetailPageParser) -> None:
