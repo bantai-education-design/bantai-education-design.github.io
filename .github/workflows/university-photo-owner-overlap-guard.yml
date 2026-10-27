@@ -7,7 +7,7 @@ on:
 
 jobs:
   owner-overlap:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
@@ -45,8 +45,8 @@ jobs:
           NODE
       - name: Install Playwright Chromium
         run: |
-          npm install --no-save playwright@1.55.0
-          npx playwright install chromium
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
       - name: Start local site
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/photo-owner-overlap.log 2>&1 &
