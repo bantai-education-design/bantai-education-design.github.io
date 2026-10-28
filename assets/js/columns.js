@@ -243,12 +243,16 @@
       track.style.transform = `translateX(-${index * step()}px)`;
     }
 
-    track.addEventListener('transitionend', () => {
-      // 複製側に入ったら、見た目を変えずに本物の位置へ戻す
-      if (index >= items.length) moveTo(index - items.length, false);
-    });
-
-    function next() { moveTo(index + 1); }
+    // 複製側（末尾）まで進んでいたら、次に動かす直前に見た目を変えず本物の位置へ戻す。
+    // 移動完了の合図（transitionend）には頼らない。アニメーション効果オフの環境では合図が出ず、
+    // 先頭に戻れないまま空白へ進み続けていたため。
+    function next() {
+      if (index >= items.length) {
+        moveTo(index - items.length, false);
+        void track.offsetWidth;
+      }
+      moveTo(index + 1);
+    }
     function prev() {
       if (index === 0) {
         moveTo(items.length, false);
