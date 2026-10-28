@@ -116,7 +116,7 @@
   // Load column data from /data/columns.json
   async function fetchColumns() {
     try {
-      const response = await fetch('/data/columns.json?v=20261028-kochi-teacher-recruitment');
+      const response = await fetch('/data/columns.json?v=20261028-cbt-approved-thumbnail');
       if (!response.ok) throw new Error('Failed to fetch columns data');
       allColumns = await response.json();
       initTopNewsTicker();
