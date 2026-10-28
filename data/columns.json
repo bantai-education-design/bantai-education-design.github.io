@@ -1,5 +1,22 @@
 [
   {
+    "id": "column-bookstores-disappearing",
+    "slug": "bookstores-disappearing",
+    "title": "町の本屋さんは、どこへ消えたのか",
+    "category": "教育・社会",
+    "categorySlug": "education",
+    "date": "2026.10.28",
+    "excerpt": "週に一度は本屋さんに通っていた私も、いつの間にか行かなくなった。書店の減少、読書離れ、子どもの読書環境を考えます。",
+    "thumbnail": "/assets/images/columns/bookstores-disappearing/thumbnail.svg",
+    "readTime": "約9分",
+    "tags": [
+      "書店",
+      "読書離れ",
+      "地域文化"
+    ],
+    "url": "/columns/bookstores-disappearing/"
+  },
+  {
     "id": "column-intel-apx-windows11",
     "slug": "intel-apx-windows11",
     "title": "Windows 11はもっと速くなる？「Intel APX」の仕組みと対応パソコンをやさしく解説",
