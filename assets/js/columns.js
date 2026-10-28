@@ -198,27 +198,27 @@
     container.innerHTML = topColumns.map((column, idx) => renderColumnCard(column, idx)).join('');
   }
 
-  // トップページ：最新コラムのカードを3〜4枚並べ、数秒ごとに1枚ずつ横へ送る
-  const CAROUSEL_COUNT = 8;          // 流すコラムの件数
+  // トップページ：全コラムのカードを3〜4枚ずつ並べ、数秒ごとに1枚ずつ横へ送る
   const CAROUSEL_INTERVAL_MS = 4000; // 1枚送るまでの時間
+  const CAROUSEL_MAX_VISIBLE = 4;    // 1画面に並ぶ最大枚数（column-carousel.css の --cards と合わせる）
 
   function initHomeCarousel() {
     const root = document.getElementById('home-column-carousel');
     if (!root || allColumns.length === 0) return;
 
-    const items = allColumns.slice(0, CAROUSEL_COUNT);
+    const items = allColumns;
     const cardHtml = (item, i, isClone) => {
       const html = renderColumnCard(item, i);
       return isClone ? html.replace('<article ', '<article aria-hidden="true" data-clone="true" ') : html;
     };
 
-    // 最後まで行ったら先頭へ自然につながるよう、先頭カードの複製を末尾に置く
+    // 最後まで行ったら先頭へ自然につながるよう、1画面分の先頭カードの複製を末尾に置く
     root.innerHTML = `
       <button type="button" class="column-carousel-btn is-prev" aria-label="前のコラム">&#8249;</button>
       <div class="column-carousel-viewport">
         <div class="column-carousel-track">
           ${items.map((item, i) => cardHtml(item, i, false)).join('')}
-          ${items.map((item, i) => cardHtml(item, i, true)).join('')}
+          ${items.slice(0, CAROUSEL_MAX_VISIBLE).map((item, i) => cardHtml(item, i, true)).join('')}
         </div>
       </div>
       <button type="button" class="column-carousel-btn is-next" aria-label="次のコラム">&#8250;</button>
@@ -239,7 +239,9 @@
 
     function moveTo(next, animate = true) {
       index = next;
-      track.style.transition = animate ? '' : 'none';
+      // 瞬時に戻すときは、CSS 側の !important 指定より優先させる
+      if (animate) track.style.removeProperty('transition');
+      else track.style.setProperty('transition', 'none', 'important');
       track.style.transform = `translateX(-${index * step()}px)`;
     }
 
