@@ -207,7 +207,6 @@
     if (!root || allColumns.length === 0) return;
 
     const items = allColumns.slice(0, CAROUSEL_COUNT);
-    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const cardHtml = (item, i, isClone) => {
       const html = renderColumnCard(item, i);
       return isClone ? html.replace('<article ', '<article aria-hidden="true" data-clone="true" ') : html;
@@ -262,17 +261,19 @@
       clearInterval(timer);
       timer = null;
       const modalOpen = document.querySelector('#column-modal.is-open');
-      if (reduceMotion || paused || document.hidden || modalOpen || items.length < 2) return;
+      // 「アニメーションを減らす」設定でも自動送りは続け、動きだけを瞬時の切り替えにする（CSS 側で対応）
+      if (paused || document.hidden || modalOpen || items.length < 2) return;
       timer = setInterval(next, CAROUSEL_INTERVAL_MS);
     }
 
     root.querySelector('.is-next').addEventListener('click', () => { next(); restart(); });
     root.querySelector('.is-prev').addEventListener('click', () => { prev(); restart(); });
 
-    // マウスを乗せている間・キーボードで操作中は止める
-    root.addEventListener('mouseenter', () => { paused = true; restart(); });
-    root.addEventListener('mouseleave', () => { paused = false; restart(); });
-    root.addEventListener('focusin', () => { paused = true; restart(); });
+    // キーボードで操作している間だけ止める。
+    // マウスを乗せただけ、矢印をクリックしただけでは止めない（止まったままに見えるため）
+    root.addEventListener('focusin', (e) => {
+      if (e.target.matches(':focus-visible')) { paused = true; restart(); }
+    });
     root.addEventListener('focusout', (e) => {
       if (!root.contains(e.relatedTarget)) { paused = false; restart(); }
     });
