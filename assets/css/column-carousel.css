@@ -42,7 +42,6 @@
 .column-carousel-track {
   display: flex;
   column-gap: var(--gap);
-  transition: transform 0.7s ease;
 }
 .column-carousel-track > .column-card {
   flex: 0 0 calc((100% - var(--gap) * (var(--cards) - 1)) / var(--cards));
@@ -89,6 +88,6 @@
   .column-carousel-btn.is-next { right: -6px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .column-carousel-track { transition: none; }
-}
+/* サイト全体の「アニメーション効果オフ」対策（style.css で全要素の動きを 0.01ms にしている）より優先し、
+   このスライドだけは常に横へ流す */
+.column-carousel .column-carousel-track { transition: transform 0.7s ease !important; }
