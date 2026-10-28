@@ -50,6 +50,13 @@
 }
 .column-carousel-track .column-title { font-size: 1rem; }
 
+/* サムネイルの文字や図が切れないよう、画像全体を収めて表示する（ホバー時の拡大もしない） */
+.column-carousel-track .column-card-media img,
+.column-carousel-track .column-card:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+}
+
 .column-carousel-btn {
   position: absolute;
   top: 38%;
