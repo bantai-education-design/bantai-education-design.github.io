@@ -121,6 +121,7 @@
       allColumns = await response.json();
       initTopNewsTicker();
       initHomeColumns();
+      initHomeCarousel();
       initColumnsPage();
       checkUrlQuery();
     } catch (err) {
@@ -195,6 +196,147 @@
 
     const topColumns = allColumns.slice(0, 3);
     container.innerHTML = topColumns.map((column, idx) => renderColumnCard(column, idx)).join('');
+  }
+
+  // トップページ：最新コラムを数秒ごとに自動で切り替えるスライド
+  const CAROUSEL_COUNT = 4;
+  const CAROUSEL_INTERVAL_MS = 6000;
+
+  function initHomeCarousel() {
+    const root = document.getElementById('home-column-carousel');
+    if (!root || allColumns.length === 0) return;
+
+    const items = allColumns.slice(0, CAROUSEL_COUNT);
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    root.innerHTML = `
+      <div class="column-carousel-viewport">
+        <div class="column-carousel-track">
+          ${items.map((item, i) => `
+            <a class="column-slide" href="/columns/?article=${encodeURIComponent(item.id)}" data-column-id="${escapeHtml(item.id)}">
+              <div class="column-slide-media">
+                <img src="${escapeHtml(item.thumbnail)}" alt="" ${i === 0 ? '' : 'loading="lazy"'}>
+              </div>
+              <div class="column-slide-body">
+                <div class="column-slide-labels">
+                  <span class="column-badge ${getCategoryTagClass(item.categorySlug || '')}">${escapeHtml(item.category)}</span>
+                  <time datetime="${item.date.replace(/\./g, '-')}">${item.date}</time>
+                  <span>${escapeHtml(item.readTime || '')}</span>
+                </div>
+                <h3 class="column-slide-title">${escapeHtml(item.title)}</h3>
+                <p class="column-slide-excerpt">${escapeHtml(item.excerpt)}</p>
+                <span class="column-slide-more">続きを読む &rarr;</span>
+              </div>
+            </a>`).join('')}
+        </div>
+      </div>
+      <div class="column-carousel-controls">
+        <button type="button" class="column-carousel-btn" data-action="prev" aria-label="前のコラム">&#8249;</button>
+        <div class="column-carousel-dots">
+          ${items.map((_, i) => `<button type="button" class="column-carousel-dot" data-index="${i}" aria-label="${i + 1}件目を表示"></button>`).join('')}
+        </div>
+        <button type="button" class="column-carousel-btn" data-action="next" aria-label="次のコラム">&#8250;</button>
+        <button type="button" class="column-carousel-btn" data-action="toggle"></button>
+      </div>
+      <div class="column-carousel-progress" aria-hidden="true"></div>
+    `;
+
+    const track = root.querySelector('.column-carousel-track');
+    const slides = root.querySelectorAll('.column-slide');
+    const dots = root.querySelectorAll('.column-carousel-dot');
+    const toggleBtn = root.querySelector('[data-action="toggle"]');
+    const progress = root.querySelector('.column-carousel-progress');
+
+    let index = 0;
+    let timer = null;
+    let userPaused = reduceMotion; // 「視差効果を減らす」設定の利用者には自動再生しない
+    let hoverPaused = false;
+
+    function show(next) {
+      index = (next + items.length) % items.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((s, i) => {
+        const active = i === index;
+        s.setAttribute('aria-hidden', active ? 'false' : 'true');
+        s.tabIndex = active ? 0 : -1;
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle('is-active', i === index);
+        d.setAttribute('aria-current', i === index ? 'true' : 'false');
+      });
+      restart();
+    }
+
+    function stop() {
+      clearTimeout(timer);
+      timer = null;
+      progress.classList.remove('is-running');
+    }
+
+    function restart() {
+      stop();
+      const modalOpen = document.querySelector('#column-modal.is-open');
+      if (userPaused || hoverPaused || document.hidden || modalOpen || items.length < 2) return;
+      // 進行バーのアニメーションを先頭からやり直すため、再描画を挟む
+      void progress.offsetWidth;
+      progress.style.animationDuration = `${CAROUSEL_INTERVAL_MS}ms`;
+      progress.classList.add('is-running');
+      timer = setTimeout(() => show(index + 1), CAROUSEL_INTERVAL_MS);
+    }
+
+    function updateToggle() {
+      toggleBtn.innerHTML = userPaused ? '&#9654;' : '&#10073;&#10073;';
+      toggleBtn.setAttribute('aria-label', userPaused ? '自動切り替えを再開' : '自動切り替えを停止');
+    }
+
+    root.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (btn) {
+        if (btn.dataset.action === 'prev') show(index - 1);
+        else if (btn.dataset.action === 'next') show(index + 1);
+        else if (btn.dataset.action === 'toggle') { userPaused = !userPaused; updateToggle(); restart(); }
+        else if (btn.dataset.index) show(Number(btn.dataset.index));
+        return;
+      }
+      const slide = e.target.closest('.column-slide');
+      if (slide && window.openColumnModal) {
+        e.preventDefault();
+        stop();
+        window.openColumnModal(slide.dataset.columnId);
+      }
+    });
+
+    // マウスを乗せている間・キーボードで操作中は止める
+    root.addEventListener('mouseenter', () => { hoverPaused = true; restart(); });
+    root.addEventListener('mouseleave', () => { hoverPaused = false; restart(); });
+    root.addEventListener('focusin', () => { hoverPaused = true; restart(); });
+    root.addEventListener('focusout', (e) => {
+      if (!root.contains(e.relatedTarget)) { hoverPaused = false; restart(); }
+    });
+    document.addEventListener('visibilitychange', restart);
+
+    // 記事を閉じたら自動切り替えを再開する
+    const originalClose = window.closeColumnModal;
+    if (typeof originalClose === 'function') {
+      window.closeColumnModal = function() {
+        originalClose.apply(this, arguments);
+        restart();
+      };
+    }
+
+    // スマートフォンの左右スワイプ
+    let touchX = null;
+    root.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 40) show(dx < 0 ? index + 1 : index - 1);
+    });
+
+    if (items.length < 2) root.querySelector('.column-carousel-controls').hidden = true;
+    updateToggle();
+    show(0);
   }
 
   // Render Column List Page

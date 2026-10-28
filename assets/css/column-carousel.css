@@ -1,0 +1,184 @@
+/* トップページ：注目コラムの自動スライド（assets/js/columns.js の initHomeCarousel が描画） */
+.column-carousel-section {
+  background: linear-gradient(180deg, #f7f3ea 0%, #fbfaf7 100%);
+  padding: 56px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.column-carousel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.column-carousel-head h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  color: var(--navy);
+  margin: 6px 0 0;
+}
+.column-carousel-all {
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+}
+.column-carousel-all:hover { color: var(--gold); }
+
+.column-carousel {
+  position: relative;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(7, 27, 54, 0.08);
+  box-shadow: 0 12px 34px rgba(7, 27, 54, 0.08);
+  overflow: hidden;
+}
+.column-carousel-viewport { overflow: hidden; touch-action: pan-y; }
+.column-carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.column-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  min-height: 340px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.column-slide-media {
+  position: relative;
+  background: var(--navy);
+  overflow: hidden;
+}
+.column-slide-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.column-slide:hover .column-slide-media img { transform: scale(1.04); }
+
+.column-slide-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 36px 56px;
+}
+.column-slide-labels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.column-slide-labels .column-badge { position: static; }
+.column-slide-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.15rem, 2.1vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--navy);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.column-slide-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.column-slide-more {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.column-slide:hover .column-slide-more { background: var(--gold); }
+
+/* 操作部：前へ・次へ・停止・ドット */
+.column-carousel-controls {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.column-carousel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(7, 27, 54, 0.15);
+  background: #fff;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.column-carousel-btn:hover { border-color: var(--gold); color: var(--gold); }
+.column-carousel-btn:focus-visible,
+.column-carousel-dot:focus-visible,
+.column-slide:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.column-carousel-dots { display: flex; gap: 6px; margin: 0 4px; }
+.column-carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(7, 27, 54, 0.2);
+  cursor: pointer;
+}
+.column-carousel-dot.is-active { background: var(--gold); width: 26px; border-radius: 6px; }
+
+/* 次の切り替えまでの残り時間 */
+.column-carousel-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background: var(--gold);
+}
+.column-carousel-progress.is-running {
+  animation: column-carousel-progress linear forwards;
+}
+@keyframes column-carousel-progress { from { width: 0; } to { width: 100%; } }
+
+@media (max-width: 760px) {
+  .column-carousel-section { padding: 40px 0 48px; }
+  .column-slide { grid-template-columns: 1fr; min-height: 0; }
+  .column-slide-media { aspect-ratio: 16 / 9; }
+  .column-slide-body { padding: 20px 20px 68px; }
+  .column-slide-excerpt { -webkit-line-clamp: 2; }
+  .column-carousel-controls { left: 20px; right: 20px; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .column-carousel-track,
+  .column-slide-media img { transition: none; }
+}
