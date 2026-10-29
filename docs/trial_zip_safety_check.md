@@ -91,3 +91,11 @@
 - 両ZIPとも100MB未満（73.8MB／76.9MB）で、正常に開封できることを確認。
 - 両ZIPとも、ライセンスキー・購入者情報・危険語（license_key／serial／secret／token／使用禁止／キー同梱 等）に該当するエントリがないことを再確認。
 - 再ZIP版のREADME表題変更と参照修正が反映されていること、README_BOOTH.txt への参照が残っていないことをZIP内で直接確認。
+
+## 追記（2026-10-29）方眼紙メーカー v3.2.0 体験版へ差し替え
+
+- v3.1.2 は試用の制限を外せる弱点が見つかったため、公開ファイルを v3.2.0 体験版に差し替えた。
+- 元ファイル: C:\Users\User\Documents\アプリ\方眼紙メーカー\方眼紙メーカー-v3.2.0-体験版.zip（BOOTHの体験版と同じもの）
+- 配置名: downloads/trials/bantai_graph_paper_trial_v3.2.0.zip（74.0MB）
+- エントリは4件: HouganshiMaker-Setup-3.2.0.exe / manual.pdf / README_体験版.txt / はじめにお読みください.txt
+- 同梱テキスト2件にキー情報・購入者情報なし。旧 bantai_graph_paper_trial_v3.1.2.zip は削除。
