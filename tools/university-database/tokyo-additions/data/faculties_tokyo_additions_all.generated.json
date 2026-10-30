@@ -1,0 +1,160 @@
+[
+ {
+  "id": "f300001",
+  "university_id": "u000173",
+  "name": "商学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300002",
+  "university_id": "u000173",
+  "name": "経済学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300003",
+  "university_id": "u000173",
+  "name": "国際関係学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "国際関係",
+   "情報・AI"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300004",
+  "university_id": "u000173",
+  "name": "人間社会学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "心理",
+   "社会福祉",
+   "社会学",
+   "理学",
+   "体育・スポーツ"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300005",
+  "university_id": "u000173",
+  "name": "言語コミュニケーション学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "国際・語学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300006",
+  "university_id": "u000173",
+  "name": "医療健康学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "看護・医療"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "f300007",
+  "university_id": "u000174",
+  "name": "経営学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "千代田区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京経営大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+    "source_date": "2026-10-30"
+   },
+   {
+    "source_name": "東京経営大学 学部・学科紹介",
+    "source_url": "https://tokyomanagement-u.ac.jp/faculty/",
+    "verified_at": "2026-10-31",
+    "role": "primary"
+   }
+  ]
+ }
+]

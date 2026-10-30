@@ -40,7 +40,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const top=await browser.newPage({viewport:{width:1366,height:1000}});
-            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
             await top.waitForFunction(()=>document.documentElement.dataset.academicBaseline==='ready',{timeout:15000});
             await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             const teikyo=top.locator('.tokyo-card[data-id="u000102"]');

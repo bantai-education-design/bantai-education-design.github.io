@@ -25,7 +25,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200057",
+   "faculty_id": "f200058",
    "name": "こども学部",
    "academic_field_tags": [
     "教育",
@@ -34,19 +34,19 @@
    "campus_municipality": "さいたま市",
    "departments": [
     {
-     "department_id": "d200121",
+     "department_id": "d200122",
      "name": "こども学科",
      "programs": []
     },
     {
-     "department_id": "d200122",
+     "department_id": "d200123",
      "name": "学校教育学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200058",
+   "faculty_id": "f200059",
    "name": "社会学部",
    "academic_field_tags": [
     "社会福祉",
@@ -55,12 +55,12 @@
    "campus_municipality": "さいたま市",
    "departments": [
     {
-     "department_id": "d200123",
+     "department_id": "d200124",
      "name": "総合福祉学科",
      "programs": []
     },
     {
-     "department_id": "d200124",
+     "department_id": "d200125",
      "name": "現代社会学科",
      "programs": []
     }

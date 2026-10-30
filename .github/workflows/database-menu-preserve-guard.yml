@@ -96,8 +96,8 @@ jobs:
             const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
             await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
-            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
-            assert.equal(await route.locator('.tokyo-card[data-card-ready="true"]').count(),144,'Tokyo university database must remain reachable with 144 cards');
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=144,{timeout:20000});
+            assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=144,'University database must remain reachable with at least the 144 Tokyo cards');
             await route.close();
 
             await browser.close();

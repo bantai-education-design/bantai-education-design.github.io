@@ -22,7 +22,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200038",
+   "faculty_id": "f200039",
    "name": "保健医療学部",
    "academic_field_tags": [
     "看護・医療"
@@ -30,12 +30,12 @@
    "campus_municipality": "幸手市",
    "departments": [
     {
-     "department_id": "d200088",
+     "department_id": "d200089",
      "name": "看護学科",
      "programs": []
     },
     {
-     "department_id": "d200089",
+     "department_id": "d200090",
      "name": "理学療法学科",
      "programs": []
     }

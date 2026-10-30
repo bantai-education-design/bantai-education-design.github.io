@@ -9,26 +9,29 @@
  "prefecture": "埼玉県",
  "municipality": "上尾市",
  "operator": "学校法人聖学院",
+ "philosophy": "スクールモットー「神を仰ぎ 人に仕う」を掲げ、キリスト教の精神に基づく教育を行っています。",
  "feature_summary": "上尾市に本部を置き、政治経済学部・人文学部・心理福祉学部の3学部と大学院3研究科で学ぶ大学です。",
- "official_url": "https://www.seigakuin.jp/",
+ "official_url": "https://www.seigakuin-univ.ac.jp/",
+ "admissions_url": "https://www.seigakuin-univ.ac.jp/admissions/",
  "student_counts": {
   "total": 1636,
   "graduate": 41,
   "undergraduate": 1595,
   "as_of": "2026-05-01",
-  "source_id": "s00017003"
+  "source_id": "s00017006"
  },
  "academic_field_tags": [
   "経済・経営・商学",
   "教育",
   "幼児教育・保育",
+  "国際関係",
   "文学・人文",
   "心理",
   "社会福祉"
  ],
  "academics": [
   {
-   "faculty_id": "f200063",
+   "faculty_id": "f200064",
    "name": "政治経済学部",
    "academic_field_tags": [
     "経済・経営・商学"
@@ -36,27 +39,23 @@
    "campus_municipality": "上尾市",
    "departments": [
     {
-     "department_id": "d200136",
+     "department_id": "d200137",
      "name": "政治経済学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200064",
+   "faculty_id": "f200065",
    "name": "人文学部",
    "academic_field_tags": [
     "教育",
     "幼児教育・保育",
+    "国際関係",
     "文学・人文"
    ],
    "campus_municipality": "上尾市",
    "departments": [
-    {
-     "department_id": "d200137",
-     "name": "欧米文化学科",
-     "programs": []
-    },
     {
      "department_id": "d200138",
      "name": "日本文化学科",
@@ -66,11 +65,16 @@
      "department_id": "d200139",
      "name": "子ども教育学科",
      "programs": []
+    },
+    {
+     "department_id": "d200141",
+     "name": "国際文化学科",
+     "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200065",
+   "faculty_id": "f200066",
    "name": "心理福祉学部",
    "academic_field_tags": [
     "心理",
@@ -138,7 +142,7 @@
   {
    "source_id": "s00017001",
    "title": "聖学院大学 公式サイト",
-   "url": "https://www.seigakuin.jp/",
+   "url": "https://www.seigakuin-univ.ac.jp/",
    "publisher": "聖学院大学",
    "source_type": "official_university",
    "verified_at": "2026-10-30",
@@ -154,7 +158,25 @@
    "status": "active"
   },
   {
-   "source_id": "s00017003",
+   "source_id": "s00017004",
+   "title": "聖学院大学 建学の精神",
+   "url": "https://www.seigakuin-univ.ac.jp/mission/",
+   "publisher": "聖学院大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017005",
+   "title": "聖学院大学 入試情報",
+   "url": "https://www.seigakuin-univ.ac.jp/admissions/",
+   "publisher": "聖学院大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017006",
    "title": "大学ポートレート（私学版） 聖学院大学 学生情報",
    "url": "https://up-j.shigaku.go.jp/school/category06/00000000269801000.html",
    "publisher": "大学ポートレート（私学版）",

@@ -27,7 +27,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200059",
+   "faculty_id": "f200060",
    "name": "外国語学部",
    "academic_field_tags": [
     "国際・語学",
@@ -36,29 +36,29 @@
    "campus_municipality": "草加市",
    "departments": [
     {
-     "department_id": "d200125",
+     "department_id": "d200126",
      "name": "ドイツ語学科",
      "programs": []
     },
     {
-     "department_id": "d200126",
+     "department_id": "d200127",
      "name": "英語学科",
      "programs": []
     },
     {
-     "department_id": "d200127",
+     "department_id": "d200128",
      "name": "フランス語学科",
      "programs": []
     },
     {
-     "department_id": "d200128",
+     "department_id": "d200129",
      "name": "交流文化学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200060",
+   "faculty_id": "f200061",
    "name": "国際教養学部",
    "academic_field_tags": [
     "国際・語学",
@@ -67,14 +67,14 @@
    "campus_municipality": "草加市",
    "departments": [
     {
-     "department_id": "d200129",
+     "department_id": "d200130",
      "name": "言語文化学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200061",
+   "faculty_id": "f200062",
    "name": "経済学部",
    "academic_field_tags": [
     "経済・経営・商学",
@@ -83,24 +83,24 @@
    "campus_municipality": "草加市",
    "departments": [
     {
-     "department_id": "d200130",
+     "department_id": "d200131",
      "name": "経済学科",
      "programs": []
     },
     {
-     "department_id": "d200131",
+     "department_id": "d200132",
      "name": "経営学科",
      "programs": []
     },
     {
-     "department_id": "d200132",
+     "department_id": "d200133",
      "name": "国際環境経済学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200062",
+   "faculty_id": "f200063",
    "name": "法学部",
    "academic_field_tags": [
     "法学",
@@ -109,17 +109,17 @@
    "campus_municipality": "草加市",
    "departments": [
     {
-     "department_id": "d200133",
+     "department_id": "d200134",
      "name": "法律学科",
      "programs": []
     },
     {
-     "department_id": "d200134",
+     "department_id": "d200135",
      "name": "国際関係法学科",
      "programs": []
     },
     {
-     "department_id": "d200135",
+     "department_id": "d200136",
      "name": "総合政策学科",
      "programs": []
     }

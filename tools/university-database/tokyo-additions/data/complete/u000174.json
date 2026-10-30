@@ -1,0 +1,113 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000174",
+ "id": "u000174",
+ "name": "東京経営大学",
+ "name_en": "Tokyo Management University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "東京都",
+ "municipality": "千代田区",
+ "operator": "学校法人大原学園",
+ "philosophy": "「いつでも、どこでも、誰もが」学べる学修機会を提供し、将来の社会発展・平和に寄与できる人材の育成を建学の精神としています。",
+ "history_summary": "オンラインのみで卒業できる通信制の大学です（経営学部 経営マネジメント学科）。",
+ "feature_summary": "千代田区に本部を置き、経営学部の1学部で学ぶ大学です。",
+ "official_url": "https://tokyomanagement-u.ac.jp/",
+ "admissions_url": "https://tokyomanagement-u.ac.jp/admission/",
+ "academic_field_tags": [
+  "経済・経営・商学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f300007",
+   "name": "経営学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "千代田区",
+   "departments": [
+    {
+     "department_id": "d300011",
+     "name": "経営マネジメント学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00017401",
+   "name": "本部",
+   "postal_code": "101-0065",
+   "prefecture": "東京都",
+   "municipality": "千代田区",
+   "address": "東京都千代田区西神田2丁目2-10",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00017401",
+   "title": "東京経営大学 公式サイト",
+   "url": "https://tokyomanagement-u.ac.jp/",
+   "publisher": "東京経営大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017402",
+   "title": "文部科学省 令和7年度全国大学一覧（東京経営大学）",
+   "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017403",
+   "title": "東京経営大学 大学紹介",
+   "url": "https://tokyomanagement-u.ac.jp/about/",
+   "publisher": "東京経営大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017404",
+   "title": "東京経営大学 学部・学科紹介",
+   "url": "https://tokyomanagement-u.ac.jp/faculty/",
+   "publisher": "東京経営大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017405",
+   "title": "東京経営大学 入学をお考えの方",
+   "url": "https://tokyomanagement-u.ac.jp/admission/",
+   "publisher": "東京経営大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ },
+ "graduate_schools": []
+}

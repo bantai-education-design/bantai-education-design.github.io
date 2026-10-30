@@ -10,10 +10,10 @@
  "verification": {
   "municipalities_total": 28,
   "addresses_total": 28,
-  "admissions_links_total": 25,
+  "admissions_links_total": 27,
   "student_counts_total": 27,
-  "faculties_total": 72,
-  "departments_total": 148,
+  "faculties_total": 73,
+  "departments_total": 149,
   "graduate_schools_total": 46
  },
  "population_rule": "大学本部所在地が埼玉県（文部科学省 令和7年度全国大学一覧）"

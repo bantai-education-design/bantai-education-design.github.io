@@ -1,0 +1,92 @@
+[
+ {
+  "id": "g300001",
+  "university_id": "u000173",
+  "name": "商学研究科",
+  "organization_type": "graduate_school",
+  "programs": [
+   "商学専攻"
+  ],
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "g300002",
+  "university_id": "u000173",
+  "name": "国際関係学研究科",
+  "organization_type": "graduate_school",
+  "programs": [
+   "国際関係学研究専攻"
+  ],
+  "academic_field_tags": [
+   "国際関係"
+  ],
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "g300003",
+  "university_id": "u000173",
+  "name": "経済学研究科",
+  "organization_type": "graduate_school",
+  "programs": [
+   "経済学専攻"
+  ],
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "g300004",
+  "university_id": "u000173",
+  "name": "臨床心理学研究科",
+  "organization_type": "graduate_school",
+  "programs": [
+   "臨床心理学専攻"
+  ],
+  "academic_field_tags": [
+   "看護・医療",
+   "心理",
+   "理学"
+  ],
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ }
+]

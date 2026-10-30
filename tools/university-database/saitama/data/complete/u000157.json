@@ -9,16 +9,18 @@
  "prefecture": "埼玉県",
  "municipality": "加須市",
  "operator": "学校法人佐藤栄学園",
- "feature_summary": "加須市に本部を置き、法学部・スポーツ健康学部の2学部と大学院1研究科で学ぶ大学です。",
- "official_url": "http://www.hiu.ac.jp/",
+ "feature_summary": "加須市に本部を置き、法学部・スポーツ健康学部・情報デザイン学部の3学部と大学院1研究科で学ぶ大学です。",
+ "official_url": "https://www.hiu.ac.jp/",
  "student_counts": {
   "total": 1135,
   "as_of": "2026-05-01",
-  "source_id": "s00015703"
+  "source_id": "s00015704"
  },
  "academic_field_tags": [
   "法学",
-  "体育・スポーツ"
+  "体育・スポーツ",
+  "情報・AI",
+  "建築・デザイン"
  ],
  "academics": [
   {
@@ -47,6 +49,22 @@
     {
      "department_id": "d200071",
      "name": "スポーツ健康学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200031",
+   "name": "情報デザイン学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "建築・デザイン"
+   ],
+   "campus_municipality": "加須市",
+   "departments": [
+    {
+     "department_id": "d200072",
+     "name": "情報デザイン学科",
      "programs": []
     }
    ]
@@ -84,7 +102,7 @@
   {
    "source_id": "s00015701",
    "title": "平成国際大学 公式サイト",
-   "url": "http://www.hiu.ac.jp/",
+   "url": "https://www.hiu.ac.jp/",
    "publisher": "平成国際大学",
    "source_type": "official_university",
    "verified_at": "2026-10-30",
@@ -101,6 +119,15 @@
   },
   {
    "source_id": "s00015703",
+   "title": "平成国際大学 2026年度学生募集要項（情報デザイン学部 令和8年度開設）",
+   "url": "https://www.hiu.ac.jp/examination_info/application/data/2025-01.pdf",
+   "publisher": "平成国際大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015704",
    "title": "大学ポートレート（私学版） 平成国際大学 学生情報",
    "url": "https://up-j.shigaku.go.jp/school/category06/00000000156801000.html",
    "publisher": "大学ポートレート（私学版）",

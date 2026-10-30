@@ -1597,21 +1597,22 @@
  },
  {
   "id": "d200072",
-  "university_id": "u000159",
+  "university_id": "u000157",
   "faculty_id": "f200031",
-  "name": "学校教育課程",
-  "department_type": "course",
+  "name": "情報デザイン学科",
+  "department_type": "department",
   "academic_field_tags": [
-   "教育"
+   "情報・AI",
+   "建築・デザイン"
   ],
   "campus_prefecture": "埼玉県",
-  "campus_municipality": "越谷市",
+  "campus_municipality": "加須市",
   "status": "active",
   "verification_status": "verified",
   "verified_at": "2026-10-30",
   "sources": [
    {
-    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
+    "source_name": "文部科学省 令和7年度全国大学一覧（平成国際大学）",
     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
     "source_date": "2026-10-30"
    }
@@ -1620,8 +1621,8 @@
  {
   "id": "d200073",
   "university_id": "u000159",
-  "faculty_id": "f200031",
-  "name": "発達教育課程",
+  "faculty_id": "f200032",
+  "name": "学校教育課程",
   "department_type": "course",
   "academic_field_tags": [
    "教育"
@@ -1643,6 +1644,28 @@
   "id": "d200074",
   "university_id": "u000159",
   "faculty_id": "f200032",
+  "name": "発達教育課程",
+  "department_type": "course",
+  "academic_field_tags": [
+   "教育"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "越谷市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200075",
+  "university_id": "u000159",
+  "faculty_id": "f200033",
   "name": "人間科学科",
   "department_type": "department",
   "academic_field_tags": [],
@@ -1660,9 +1683,9 @@
   ]
  },
  {
-  "id": "d200075",
+  "id": "d200076",
   "university_id": "u000159",
-  "faculty_id": "f200032",
+  "faculty_id": "f200033",
   "name": "臨床心理学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1684,9 +1707,9 @@
   ]
  },
  {
-  "id": "d200076",
+  "id": "d200077",
   "university_id": "u000159",
-  "faculty_id": "f200032",
+  "faculty_id": "f200033",
   "name": "心理学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1707,32 +1730,10 @@
   ]
  },
  {
-  "id": "d200077",
-  "university_id": "u000159",
-  "faculty_id": "f200033",
-  "name": "情報システム学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "情報・AI"
-  ],
-  "campus_prefecture": "神奈川県",
-  "campus_municipality": "茅ヶ崎市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200078",
   "university_id": "u000159",
-  "faculty_id": "f200033",
-  "name": "データサイエンス学科",
+  "faculty_id": "f200034",
+  "name": "情報システム学科",
   "department_type": "department",
   "academic_field_tags": [
    "情報・AI"
@@ -1753,7 +1754,29 @@
  {
   "id": "d200079",
   "university_id": "u000159",
-  "faculty_id": "f200033",
+  "faculty_id": "f200034",
+  "name": "データサイエンス学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "情報・AI"
+  ],
+  "campus_prefecture": "神奈川県",
+  "campus_municipality": "茅ヶ崎市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200080",
+  "university_id": "u000159",
+  "faculty_id": "f200034",
   "name": "メディア表現学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1774,33 +1797,10 @@
   ]
  },
  {
-  "id": "d200080",
-  "university_id": "u000159",
-  "faculty_id": "f200034",
-  "name": "日本語日本文学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "国際・語学",
-   "文学・人文"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "越谷市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200081",
   "university_id": "u000159",
-  "faculty_id": "f200034",
-  "name": "英米語英米文学科",
+  "faculty_id": "f200035",
+  "name": "日本語日本文学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学",
@@ -1822,8 +1822,8 @@
  {
   "id": "d200082",
   "university_id": "u000159",
-  "faculty_id": "f200034",
-  "name": "中国語中国文学科",
+  "faculty_id": "f200035",
+  "name": "英米語英米文学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学",
@@ -1845,8 +1845,8 @@
  {
   "id": "d200083",
   "university_id": "u000159",
-  "faculty_id": "f200034",
-  "name": "外国語学科",
+  "faculty_id": "f200035",
+  "name": "中国語中国文学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学",
@@ -1869,6 +1869,29 @@
   "id": "d200084",
   "university_id": "u000159",
   "faculty_id": "f200035",
+  "name": "外国語学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "国際・語学",
+   "文学・人文"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "越谷市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200085",
+  "university_id": "u000159",
+  "faculty_id": "f200036",
   "name": "国際理解学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1888,9 +1911,9 @@
   ]
  },
  {
-  "id": "d200085",
+  "id": "d200086",
   "university_id": "u000159",
-  "faculty_id": "f200035",
+  "faculty_id": "f200036",
   "name": "国際観光学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1911,9 +1934,9 @@
   ]
  },
  {
-  "id": "d200086",
+  "id": "d200087",
   "university_id": "u000159",
-  "faculty_id": "f200036",
+  "faculty_id": "f200037",
   "name": "管理栄養学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1933,9 +1956,9 @@
   ]
  },
  {
-  "id": "d200087",
+  "id": "d200088",
   "university_id": "u000159",
-  "faculty_id": "f200037",
+  "faculty_id": "f200038",
   "name": "経営学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1955,9 +1978,9 @@
   ]
  },
  {
-  "id": "d200088",
+  "id": "d200089",
   "university_id": "u000160",
-  "faculty_id": "f200038",
+  "faculty_id": "f200039",
   "name": "看護学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1977,9 +2000,9 @@
   ]
  },
  {
-  "id": "d200089",
+  "id": "d200090",
   "university_id": "u000160",
-  "faculty_id": "f200038",
+  "faculty_id": "f200039",
   "name": "理学療法学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -1999,32 +2022,10 @@
   ]
  },
  {
-  "id": "d200090",
-  "university_id": "u000161",
-  "faculty_id": "f200039",
-  "name": "診療放射線学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "看護・医療"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "毛呂山町",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（日本医療科学大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200091",
   "university_id": "u000161",
-  "faculty_id": "f200039",
-  "name": "リハビリテーション学科",
+  "faculty_id": "f200040",
+  "name": "診療放射線学科",
   "department_type": "department",
   "academic_field_tags": [
    "看護・医療"
@@ -2045,8 +2046,8 @@
  {
   "id": "d200092",
   "university_id": "u000161",
-  "faculty_id": "f200039",
-  "name": "看護学科",
+  "faculty_id": "f200040",
+  "name": "リハビリテーション学科",
   "department_type": "department",
   "academic_field_tags": [
    "看護・医療"
@@ -2067,7 +2068,29 @@
  {
   "id": "d200093",
   "university_id": "u000161",
-  "faculty_id": "f200039",
+  "faculty_id": "f200040",
+  "name": "看護学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "看護・医療"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "毛呂山町",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（日本医療科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200094",
+  "university_id": "u000161",
+  "faculty_id": "f200040",
   "name": "臨床工学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2088,9 +2111,9 @@
   ]
  },
  {
-  "id": "d200094",
+  "id": "d200095",
   "university_id": "u000161",
-  "faculty_id": "f200039",
+  "faculty_id": "f200040",
   "name": "臨床検査学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2110,9 +2133,9 @@
   ]
  },
  {
-  "id": "d200095",
+  "id": "d200096",
   "university_id": "u000162",
-  "faculty_id": "f200040",
+  "faculty_id": "f200041",
   "name": "機械工学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2132,9 +2155,9 @@
   ]
  },
  {
-  "id": "d200096",
+  "id": "d200097",
   "university_id": "u000162",
-  "faculty_id": "f200040",
+  "faculty_id": "f200041",
   "name": "電気情報工学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2155,9 +2178,9 @@
   ]
  },
  {
-  "id": "d200097",
+  "id": "d200098",
   "university_id": "u000162",
-  "faculty_id": "f200040",
+  "faculty_id": "f200041",
   "name": "環境生命化学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2178,33 +2201,10 @@
   ]
  },
  {
-  "id": "d200098",
-  "university_id": "u000162",
-  "faculty_id": "f200041",
-  "name": "ロボティクス学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "情報・AI",
-   "工学"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "宮代町",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（日本工業大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200099",
   "university_id": "u000162",
-  "faculty_id": "f200041",
-  "name": "情報メディア工学科",
+  "faculty_id": "f200042",
+  "name": "ロボティクス学科",
   "department_type": "department",
   "academic_field_tags": [
    "情報・AI",
@@ -2227,6 +2227,29 @@
   "id": "d200100",
   "university_id": "u000162",
   "faculty_id": "f200042",
+  "name": "情報メディア工学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "情報・AI",
+   "工学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "宮代町",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（日本工業大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200101",
+  "university_id": "u000162",
+  "faculty_id": "f200043",
   "name": "建築学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2246,9 +2269,9 @@
   ]
  },
  {
-  "id": "d200101",
+  "id": "d200102",
   "university_id": "u000162",
-  "faculty_id": "f200041",
+  "faculty_id": "f200042",
   "name": "データサイエンス学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2269,9 +2292,9 @@
   ]
  },
  {
-  "id": "d200102",
+  "id": "d200103",
   "university_id": "u000163",
-  "faculty_id": "f200043",
+  "faculty_id": "f200044",
   "name": "薬学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2291,9 +2314,9 @@
   ]
  },
  {
-  "id": "d200103",
+  "id": "d200104",
   "university_id": "u000163",
-  "faculty_id": "f200044",
+  "faculty_id": "f200045",
   "name": "医療ビジネス薬科学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2315,32 +2338,10 @@
   ]
  },
  {
-  "id": "d200104",
-  "university_id": "u000164",
-  "faculty_id": "f200045",
-  "name": "日本語学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "国際・語学"
-  ],
-  "campus_prefecture": "千葉県",
-  "campus_municipality": "浦安市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（明海大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200105",
   "university_id": "u000164",
-  "faculty_id": "f200045",
-  "name": "英米語学科",
+  "faculty_id": "f200046",
+  "name": "日本語学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学"
@@ -2361,8 +2362,8 @@
  {
   "id": "d200106",
   "university_id": "u000164",
-  "faculty_id": "f200045",
-  "name": "中国語学科",
+  "faculty_id": "f200046",
+  "name": "英米語学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学"
@@ -2384,10 +2385,10 @@
   "id": "d200107",
   "university_id": "u000164",
   "faculty_id": "f200046",
-  "name": "経済学科",
+  "name": "中国語学科",
   "department_type": "department",
   "academic_field_tags": [
-   "経済・経営・商学"
+   "国際・語学"
   ],
   "campus_prefecture": "千葉県",
   "campus_municipality": "浦安市",
@@ -2406,7 +2407,7 @@
   "id": "d200108",
   "university_id": "u000164",
   "faculty_id": "f200047",
-  "name": "不動産学科",
+  "name": "経済学科",
   "department_type": "department",
   "academic_field_tags": [
    "経済・経営・商学"
@@ -2428,6 +2429,28 @@
   "id": "d200109",
   "university_id": "u000164",
   "faculty_id": "f200048",
+  "name": "不動産学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "千葉県",
+  "campus_municipality": "浦安市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（明海大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200110",
+  "university_id": "u000164",
+  "faculty_id": "f200049",
   "name": "ホスピタリティ・ツーリズム学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2447,9 +2470,9 @@
   ]
  },
  {
-  "id": "d200110",
+  "id": "d200111",
   "university_id": "u000164",
-  "faculty_id": "f200049",
+  "faculty_id": "f200050",
   "name": "歯学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2469,9 +2492,9 @@
   ]
  },
  {
-  "id": "d200111",
+  "id": "d200112",
   "university_id": "u000164",
-  "faculty_id": "f200050",
+  "faculty_id": "f200051",
   "name": "口腔保健学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2491,9 +2514,9 @@
   ]
  },
  {
-  "id": "d200112",
+  "id": "d200113",
   "university_id": "u000165",
-  "faculty_id": "f200051",
+  "faculty_id": "f200052",
   "name": "音楽学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2513,9 +2536,9 @@
   ]
  },
  {
-  "id": "d200113",
+  "id": "d200114",
   "university_id": "u000166",
-  "faculty_id": "f200052",
+  "faculty_id": "f200053",
   "name": "看護学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2535,9 +2558,9 @@
   ]
  },
  {
-  "id": "d200114",
+  "id": "d200115",
   "university_id": "u000166",
-  "faculty_id": "f200053",
+  "faculty_id": "f200054",
   "name": "管理栄養学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2557,32 +2580,10 @@
   ]
  },
  {
-  "id": "d200115",
-  "university_id": "u000166",
-  "faculty_id": "f200054",
-  "name": "看護学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "看護・医療"
-  ],
-  "campus_prefecture": "千葉県",
-  "campus_municipality": "千葉市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（東都大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200116",
   "university_id": "u000166",
-  "faculty_id": "f200054",
-  "name": "理学療法学科",
+  "faculty_id": "f200055",
+  "name": "看護学科",
   "department_type": "department",
   "academic_field_tags": [
    "看護・医療"
@@ -2603,7 +2604,29 @@
  {
   "id": "d200117",
   "university_id": "u000166",
-  "faculty_id": "f200054",
+  "faculty_id": "f200055",
+  "name": "理学療法学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "看護・医療"
+  ],
+  "campus_prefecture": "千葉県",
+  "campus_municipality": "千葉市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東都大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200118",
+  "university_id": "u000166",
+  "faculty_id": "f200055",
   "name": "臨床工学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2624,9 +2647,9 @@
   ]
  },
  {
-  "id": "d200118",
+  "id": "d200119",
   "university_id": "u000166",
-  "faculty_id": "f200054",
+  "faculty_id": "f200055",
   "name": "健康科学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2646,9 +2669,9 @@
   ]
  },
  {
-  "id": "d200119",
+  "id": "d200120",
   "university_id": "u000166",
-  "faculty_id": "f200055",
+  "faculty_id": "f200056",
   "name": "看護学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2668,9 +2691,9 @@
   ]
  },
  {
-  "id": "d200120",
+  "id": "d200121",
   "university_id": "u000167",
-  "faculty_id": "f200056",
+  "faculty_id": "f200057",
   "name": "国際コミュニケーション学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2691,9 +2714,9 @@
   ]
  },
  {
-  "id": "d200121",
+  "id": "d200122",
   "university_id": "u000168",
-  "faculty_id": "f200057",
+  "faculty_id": "f200058",
   "name": "こども学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2713,9 +2736,9 @@
   ]
  },
  {
-  "id": "d200122",
+  "id": "d200123",
   "university_id": "u000168",
-  "faculty_id": "f200057",
+  "faculty_id": "f200058",
   "name": "学校教育学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2736,9 +2759,9 @@
   ]
  },
  {
-  "id": "d200123",
+  "id": "d200124",
   "university_id": "u000168",
-  "faculty_id": "f200058",
+  "faculty_id": "f200059",
   "name": "総合福祉学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2759,9 +2782,9 @@
   ]
  },
  {
-  "id": "d200124",
+  "id": "d200125",
   "university_id": "u000168",
-  "faculty_id": "f200058",
+  "faculty_id": "f200059",
   "name": "現代社会学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2781,32 +2804,10 @@
   ]
  },
  {
-  "id": "d200125",
-  "university_id": "u000169",
-  "faculty_id": "f200059",
-  "name": "ドイツ語学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "国際・語学"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "草加市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（獨協大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200126",
   "university_id": "u000169",
-  "faculty_id": "f200059",
-  "name": "英語学科",
+  "faculty_id": "f200060",
+  "name": "ドイツ語学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学"
@@ -2827,8 +2828,8 @@
  {
   "id": "d200127",
   "university_id": "u000169",
-  "faculty_id": "f200059",
-  "name": "フランス語学科",
+  "faculty_id": "f200060",
+  "name": "英語学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学"
@@ -2849,12 +2850,11 @@
  {
   "id": "d200128",
   "university_id": "u000169",
-  "faculty_id": "f200059",
-  "name": "交流文化学科",
+  "faculty_id": "f200060",
+  "name": "フランス語学科",
   "department_type": "department",
   "academic_field_tags": [
-   "国際・語学",
-   "文学・人文"
+   "国際・語学"
   ],
   "campus_prefecture": "埼玉県",
   "campus_municipality": "草加市",
@@ -2873,7 +2873,7 @@
   "id": "d200129",
   "university_id": "u000169",
   "faculty_id": "f200060",
-  "name": "言語文化学科",
+  "name": "交流文化学科",
   "department_type": "department",
   "academic_field_tags": [
    "国際・語学",
@@ -2896,10 +2896,11 @@
   "id": "d200130",
   "university_id": "u000169",
   "faculty_id": "f200061",
-  "name": "経済学科",
+  "name": "言語文化学科",
   "department_type": "department",
   "academic_field_tags": [
-   "経済・経営・商学"
+   "国際・語学",
+   "文学・人文"
   ],
   "campus_prefecture": "埼玉県",
   "campus_municipality": "草加市",
@@ -2917,8 +2918,8 @@
  {
   "id": "d200131",
   "university_id": "u000169",
-  "faculty_id": "f200061",
-  "name": "経営学科",
+  "faculty_id": "f200062",
+  "name": "経済学科",
   "department_type": "department",
   "academic_field_tags": [
    "経済・経営・商学"
@@ -2939,7 +2940,29 @@
  {
   "id": "d200132",
   "university_id": "u000169",
-  "faculty_id": "f200061",
+  "faculty_id": "f200062",
+  "name": "経営学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "草加市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（獨協大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200133",
+  "university_id": "u000169",
+  "faculty_id": "f200062",
   "name": "国際環境経済学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2960,9 +2983,9 @@
   ]
  },
  {
-  "id": "d200133",
+  "id": "d200134",
   "university_id": "u000169",
-  "faculty_id": "f200062",
+  "faculty_id": "f200063",
   "name": "法律学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -2982,9 +3005,9 @@
   ]
  },
  {
-  "id": "d200134",
+  "id": "d200135",
   "university_id": "u000169",
-  "faculty_id": "f200062",
+  "faculty_id": "f200063",
   "name": "国際関係法学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3005,9 +3028,9 @@
   ]
  },
  {
-  "id": "d200135",
+  "id": "d200136",
   "university_id": "u000169",
-  "faculty_id": "f200062",
+  "faculty_id": "f200063",
   "name": "総合政策学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3027,9 +3050,9 @@
   ]
  },
  {
-  "id": "d200136",
+  "id": "d200137",
   "university_id": "u000170",
-  "faculty_id": "f200063",
+  "faculty_id": "f200064",
   "name": "政治経済学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3049,31 +3072,9 @@
   ]
  },
  {
-  "id": "d200137",
-  "university_id": "u000170",
-  "faculty_id": "f200064",
-  "name": "欧米文化学科",
-  "department_type": "department",
-  "academic_field_tags": [
-   "文学・人文"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "上尾市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（聖学院大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   }
-  ]
- },
- {
   "id": "d200138",
   "university_id": "u000170",
-  "faculty_id": "f200064",
+  "faculty_id": "f200065",
   "name": "日本文化学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3095,7 +3096,7 @@
  {
   "id": "d200139",
   "university_id": "u000170",
-  "faculty_id": "f200064",
+  "faculty_id": "f200065",
   "name": "子ども教育学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3119,7 +3120,7 @@
  {
   "id": "d200140",
   "university_id": "u000170",
-  "faculty_id": "f200065",
+  "faculty_id": "f200066",
   "name": "心理福祉学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3141,8 +3142,31 @@
  },
  {
   "id": "d200141",
+  "university_id": "u000170",
+  "faculty_id": "f200065",
+  "name": "国際文化学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "国際関係",
+   "文学・人文"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "上尾市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（聖学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d200142",
   "university_id": "u000171",
-  "faculty_id": "f200066",
+  "faculty_id": "f200067",
   "name": "サービス経営学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3163,9 +3187,9 @@
   ]
  },
  {
-  "id": "d200142",
+  "id": "d200143",
   "university_id": "u000171",
-  "faculty_id": "f200066",
+  "faculty_id": "f200067",
   "name": "健康福祉マネジメント学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3187,9 +3211,9 @@
   ]
  },
  {
-  "id": "d200143",
+  "id": "d200144",
   "university_id": "u000171",
-  "faculty_id": "f200067",
+  "faculty_id": "f200068",
   "name": "看護学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3209,9 +3233,9 @@
   ]
  },
  {
-  "id": "d200144",
+  "id": "d200145",
   "university_id": "u000172",
-  "faculty_id": "f200068",
+  "faculty_id": "f200069",
   "name": "法律学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3231,9 +3255,9 @@
   ]
  },
  {
-  "id": "d200145",
+  "id": "d200146",
   "university_id": "u000172",
-  "faculty_id": "f200069",
+  "faculty_id": "f200070",
   "name": "経済経営学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3253,9 +3277,9 @@
   ]
  },
  {
-  "id": "d200146",
+  "id": "d200147",
   "university_id": "u000172",
-  "faculty_id": "f200070",
+  "faculty_id": "f200071",
   "name": "メディア情報学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3275,9 +3299,9 @@
   ]
  },
  {
-  "id": "d200147",
+  "id": "d200148",
   "university_id": "u000172",
-  "faculty_id": "f200071",
+  "faculty_id": "f200072",
   "name": "スポーツ科学科",
   "department_type": "department",
   "academic_field_tags": [
@@ -3297,9 +3321,9 @@
   ]
  },
  {
-  "id": "d200148",
+  "id": "d200149",
   "university_id": "u000172",
-  "faculty_id": "f200072",
+  "faculty_id": "f200073",
   "name": "心理学科",
   "department_type": "department",
   "academic_field_tags": [

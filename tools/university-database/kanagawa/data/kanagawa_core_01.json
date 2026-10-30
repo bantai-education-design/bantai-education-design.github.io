@@ -1,0 +1,26 @@
+{
+ "records": [
+  {
+   "id": "u000050",
+   "name": "東海大学",
+   "prefecture": "神奈川県",
+   "municipality": "平塚市",
+   "headquarters": {
+    "postal_code": "259-1292",
+    "prefecture": "神奈川県",
+    "municipality": "平塚市",
+    "address": "神奈川県平塚市北金目4-1-1"
+   },
+   "relocated_from": "東京都",
+   "relocation_note": "本部は湘南キャンパス（神奈川県平塚市）。東京都内には品川キャンパス（港区高輪）があります。",
+   "sources": [
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+     "verified_at": "2026-10-31",
+     "role": "secondary"
+    }
+   ]
+  }
+ ]
+}

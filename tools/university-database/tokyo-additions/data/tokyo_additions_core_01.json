@@ -1,0 +1,145 @@
+{
+ "records": [
+  {
+   "id": "u000173",
+   "name": "東京国際大学",
+   "name_en": "Tokyo International University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "東京都",
+   "municipality": "豊島区",
+   "headquarters": {
+    "postal_code": "170-0013",
+    "prefecture": "東京都",
+    "municipality": "豊島区",
+    "address": "東京都豊島区東池袋4-42-31"
+   },
+   "official_url": "https://www.tiu.ac.jp/",
+   "admissions_url": "https://www.tiu.ac.jp/jukensei/",
+   "operator": "学校法人東京国際大学",
+   "opened_year": 1965,
+   "founder": "金子泰藏",
+   "philosophy": "「真の国際人の養成」を教育理念として掲げています。",
+   "name_change_note": "1965年に国際商科大学として創学し、1986年に東京国際大学へ校名変更。2023年9月に池袋キャンパス（本部）を開設し、川越キャンパス（埼玉県川越市）と2拠点で学ぶ。",
+   "student_counts": {
+    "total": 7818,
+    "graduate": 140,
+    "undergraduate": 7678,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "国際関係",
+    "情報・AI",
+    "心理",
+    "社会福祉",
+    "社会学",
+    "理学",
+    "体育・スポーツ",
+    "国際・語学",
+    "看護・医療"
+   ],
+   "feature_summary": "豊島区に本部を置き、商学部・経済学部・国際関係学部・人間社会学部・言語コミュニケーション学部・医療健康学部の6学部と大学院4研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "東京国際大学 公式サイト",
+     "source_url": "https://www.tiu.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-31",
+     "role": "secondary"
+    },
+    {
+     "source_name": "東京国際大学 大学紹介",
+     "source_url": "https://www.tiu.ac.jp/about/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "東京国際大学 沿革",
+     "source_url": "https://www.tiu.ac.jp/about/history/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "東京国際大学 受験生応援サイト",
+     "source_url": "https://www.tiu.ac.jp/jukensei/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 東京国際大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000267001000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000174",
+   "name": "東京経営大学",
+   "name_en": "Tokyo Management University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "東京都",
+   "municipality": "千代田区",
+   "headquarters": {
+    "postal_code": "101-0065",
+    "prefecture": "東京都",
+    "municipality": "千代田区",
+    "address": "東京都千代田区西神田2丁目2-10"
+   },
+   "official_url": "https://tokyomanagement-u.ac.jp/",
+   "admissions_url": "https://tokyomanagement-u.ac.jp/admission/",
+   "operator": "学校法人大原学園",
+   "philosophy": "「いつでも、どこでも、誰もが」学べる学修機会を提供し、将来の社会発展・平和に寄与できる人材の育成を建学の精神としています。",
+   "name_change_note": "オンラインのみで卒業できる通信制の大学です（経営学部 経営マネジメント学科）。",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "feature_summary": "千代田区に本部を置き、経営学部の1学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "東京経営大学 公式サイト",
+     "source_url": "https://tokyomanagement-u.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（東京経営大学）",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+     "verified_at": "2026-10-31",
+     "role": "secondary"
+    },
+    {
+     "source_name": "東京経営大学 大学紹介",
+     "source_url": "https://tokyomanagement-u.ac.jp/about/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "東京経営大学 学部・学科紹介",
+     "source_url": "https://tokyomanagement-u.ac.jp/faculty/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "東京経営大学 入学をお考えの方",
+     "source_url": "https://tokyomanagement-u.ac.jp/admission/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    }
+   ]
+  }
+ ]
+}

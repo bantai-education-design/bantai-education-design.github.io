@@ -28,7 +28,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200045",
+   "faculty_id": "f200046",
    "name": "外国語学部",
    "academic_field_tags": [
     "国際・語学"
@@ -36,24 +36,24 @@
    "campus_municipality": "浦安市",
    "departments": [
     {
-     "department_id": "d200104",
+     "department_id": "d200105",
      "name": "日本語学科",
      "programs": []
     },
     {
-     "department_id": "d200105",
+     "department_id": "d200106",
      "name": "英米語学科",
      "programs": []
     },
     {
-     "department_id": "d200106",
+     "department_id": "d200107",
      "name": "中国語学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200046",
+   "faculty_id": "f200047",
    "name": "経済学部",
    "academic_field_tags": [
     "経済・経営・商学"
@@ -61,14 +61,14 @@
    "campus_municipality": "浦安市",
    "departments": [
     {
-     "department_id": "d200107",
+     "department_id": "d200108",
      "name": "経済学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200047",
+   "faculty_id": "f200048",
    "name": "不動産学部",
    "academic_field_tags": [
     "経済・経営・商学"
@@ -76,14 +76,14 @@
    "campus_municipality": "浦安市",
    "departments": [
     {
-     "department_id": "d200108",
+     "department_id": "d200109",
      "name": "不動産学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200048",
+   "faculty_id": "f200049",
    "name": "ホスピタリティ・ツーリズム学部",
    "academic_field_tags": [
     "観光"
@@ -91,14 +91,14 @@
    "campus_municipality": "浦安市",
    "departments": [
     {
-     "department_id": "d200109",
+     "department_id": "d200110",
      "name": "ホスピタリティ・ツーリズム学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200049",
+   "faculty_id": "f200050",
    "name": "歯学部",
    "academic_field_tags": [
     "歯学"
@@ -106,14 +106,14 @@
    "campus_municipality": "坂戸市",
    "departments": [
     {
-     "department_id": "d200110",
+     "department_id": "d200111",
      "name": "歯学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200050",
+   "faculty_id": "f200051",
    "name": "保健医療学部",
    "academic_field_tags": [
     "看護・医療"
@@ -121,7 +121,7 @@
    "campus_municipality": "浦安市",
    "departments": [
     {
-     "department_id": "d200111",
+     "department_id": "d200112",
      "name": "口腔保健学科",
      "programs": []
     }

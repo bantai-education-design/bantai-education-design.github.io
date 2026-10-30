@@ -34,7 +34,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200031",
+   "faculty_id": "f200032",
    "name": "教育学部",
    "academic_field_tags": [
     "教育"
@@ -42,19 +42,19 @@
    "campus_municipality": "越谷市",
    "departments": [
     {
-     "department_id": "d200072",
+     "department_id": "d200073",
      "name": "学校教育課程",
      "programs": []
     },
     {
-     "department_id": "d200073",
+     "department_id": "d200074",
      "name": "発達教育課程",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200032",
+   "faculty_id": "f200033",
    "name": "人間科学部",
    "academic_field_tags": [
     "看護・医療",
@@ -64,24 +64,24 @@
    "campus_municipality": "越谷市",
    "departments": [
     {
-     "department_id": "d200074",
+     "department_id": "d200075",
      "name": "人間科学科",
      "programs": []
     },
     {
-     "department_id": "d200075",
+     "department_id": "d200076",
      "name": "臨床心理学科",
      "programs": []
     },
     {
-     "department_id": "d200076",
+     "department_id": "d200077",
      "name": "心理学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200033",
+   "faculty_id": "f200034",
    "name": "情報学部",
    "academic_field_tags": [
     "情報・AI",
@@ -90,24 +90,24 @@
    "campus_municipality": "茅ヶ崎市",
    "departments": [
     {
-     "department_id": "d200077",
+     "department_id": "d200078",
      "name": "情報システム学科",
      "programs": []
     },
     {
-     "department_id": "d200078",
+     "department_id": "d200079",
      "name": "データサイエンス学科",
      "programs": []
     },
     {
-     "department_id": "d200079",
+     "department_id": "d200080",
      "name": "メディア表現学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200034",
+   "faculty_id": "f200035",
    "name": "文学部",
    "academic_field_tags": [
     "国際・語学",
@@ -116,29 +116,29 @@
    "campus_municipality": "越谷市",
    "departments": [
     {
-     "department_id": "d200080",
+     "department_id": "d200081",
      "name": "日本語日本文学科",
      "programs": []
     },
     {
-     "department_id": "d200081",
+     "department_id": "d200082",
      "name": "英米語英米文学科",
      "programs": []
     },
     {
-     "department_id": "d200082",
+     "department_id": "d200083",
      "name": "中国語中国文学科",
      "programs": []
     },
     {
-     "department_id": "d200083",
+     "department_id": "d200084",
      "name": "外国語学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200035",
+   "faculty_id": "f200036",
    "name": "国際学部",
    "academic_field_tags": [
     "国際関係",
@@ -147,19 +147,19 @@
    "campus_municipality": "足立区",
    "departments": [
     {
-     "department_id": "d200084",
+     "department_id": "d200085",
      "name": "国際理解学科",
      "programs": []
     },
     {
-     "department_id": "d200085",
+     "department_id": "d200086",
      "name": "国際観光学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200036",
+   "faculty_id": "f200037",
    "name": "健康栄養学部",
    "academic_field_tags": [
     "食・栄養"
@@ -167,14 +167,14 @@
    "campus_municipality": "茅ヶ崎市",
    "departments": [
     {
-     "department_id": "d200086",
+     "department_id": "d200087",
      "name": "管理栄養学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200037",
+   "faculty_id": "f200038",
    "name": "経営学部",
    "academic_field_tags": [
     "経済・経営・商学"
@@ -182,7 +182,7 @@
    "campus_municipality": "足立区",
    "departments": [
     {
-     "department_id": "d200087",
+     "department_id": "d200088",
      "name": "経営学科",
      "programs": []
     }

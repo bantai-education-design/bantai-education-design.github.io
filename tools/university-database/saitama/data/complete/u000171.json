@@ -27,7 +27,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200066",
+   "faculty_id": "f200067",
    "name": "サービス経営学部",
    "academic_field_tags": [
     "社会福祉",
@@ -37,19 +37,19 @@
    "campus_municipality": "狭山市",
    "departments": [
     {
-     "department_id": "d200141",
+     "department_id": "d200142",
      "name": "サービス経営学科",
      "programs": []
     },
     {
-     "department_id": "d200142",
+     "department_id": "d200143",
      "name": "健康福祉マネジメント学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200067",
+   "faculty_id": "f200068",
    "name": "看護学部",
    "academic_field_tags": [
     "看護・医療"
@@ -57,7 +57,7 @@
    "campus_municipality": "狭山市",
    "departments": [
     {
-     "department_id": "d200143",
+     "department_id": "d200144",
      "name": "看護学科",
      "programs": []
     }

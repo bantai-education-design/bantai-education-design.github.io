@@ -93,7 +93,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const top=await browser.newPage({viewport:{width:1366,height:950}});
-            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
             await top.waitForFunction(()=>document.documentElement.dataset.locationOverlay==='ready',{timeout:15000});
             await top.waitForFunction(()=>document.documentElement.dataset.admissionsOverlay==='ready',{timeout:15000});
             await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
@@ -119,7 +119,7 @@ jobs:
             }).length);
             assert.equal(coveredCardCount,144,'All Tokyo cards need a verified admissions route or stopped status');
             const qualityAdmissions=(await top.locator('#quality-admissions').innerText()).trim();
-            assert.equal(qualityAdmissions,'144/144','Public admissions coverage must report 144/144 after canonical sync');
+            const [qa,qt]=qualityAdmissions.split('/').map(Number);assert.ok(qt>=144&&qa===qt,`Public admissions coverage must be complete across all regions: ${qualityAdmissions}`);
 
             for(const id of ['u000001','u000025','u000085']){
               const visual=top.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);

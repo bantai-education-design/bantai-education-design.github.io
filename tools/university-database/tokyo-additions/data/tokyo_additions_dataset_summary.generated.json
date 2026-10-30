@@ -1,0 +1,20 @@
+{
+ "prefecture": "東京都",
+ "generated_at": "2026-10-30",
+ "counts": {
+  "total": 2,
+  "national": 0,
+  "public": 0,
+  "private": 2
+ },
+ "verification": {
+  "municipalities_total": 2,
+  "addresses_total": 2,
+  "admissions_links_total": 2,
+  "student_counts_total": 1,
+  "faculties_total": 7,
+  "departments_total": 11,
+  "graduate_schools_total": 4
+ },
+ "population_rule": "大学本部所在地が東京都（文部科学省 令和7年度全国大学一覧）"
+}

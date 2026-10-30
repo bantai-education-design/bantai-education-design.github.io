@@ -1,0 +1,291 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000173",
+ "id": "u000173",
+ "name": "東京国際大学",
+ "name_en": "Tokyo International University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "東京都",
+ "municipality": "豊島区",
+ "operator": "学校法人東京国際大学",
+ "opened_year": 1965,
+ "founder": "金子泰藏",
+ "philosophy": "「真の国際人の養成」を教育理念として掲げています。",
+ "history_summary": "1965年に国際商科大学として創学し、1986年に東京国際大学へ校名変更。2023年9月に池袋キャンパス（本部）を開設し、川越キャンパス（埼玉県川越市）と2拠点で学ぶ。",
+ "feature_summary": "豊島区に本部を置き、商学部・経済学部・国際関係学部・人間社会学部・言語コミュニケーション学部・医療健康学部の6学部と大学院4研究科で学ぶ大学です。",
+ "official_url": "https://www.tiu.ac.jp/",
+ "admissions_url": "https://www.tiu.ac.jp/jukensei/",
+ "student_counts": {
+  "total": 7818,
+  "graduate": 140,
+  "undergraduate": 7678,
+  "as_of": "2026-05-01",
+  "source_id": "s00017306"
+ },
+ "academic_field_tags": [
+  "経済・経営・商学",
+  "国際関係",
+  "情報・AI",
+  "心理",
+  "社会福祉",
+  "社会学",
+  "理学",
+  "体育・スポーツ",
+  "国際・語学",
+  "看護・医療"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f300001",
+   "name": "商学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d300001",
+     "name": "マーケティング学科",
+     "programs": []
+    },
+    {
+     "department_id": "d300002",
+     "name": "経営学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f300002",
+   "name": "経済学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "豊島区",
+   "departments": [
+    {
+     "department_id": "d300003",
+     "name": "経済学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f300003",
+   "name": "国際関係学部",
+   "academic_field_tags": [
+    "国際関係",
+    "情報・AI"
+   ],
+   "campus_municipality": "豊島区",
+   "departments": [
+    {
+     "department_id": "d300004",
+     "name": "国際関係学科",
+     "programs": []
+    },
+    {
+     "department_id": "d300005",
+     "name": "国際メディア学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f300004",
+   "name": "人間社会学部",
+   "academic_field_tags": [
+    "心理",
+    "社会福祉",
+    "社会学",
+    "理学",
+    "体育・スポーツ"
+   ],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d300006",
+     "name": "福祉心理学科",
+     "programs": []
+    },
+    {
+     "department_id": "d300007",
+     "name": "人間スポーツ学科",
+     "programs": []
+    },
+    {
+     "department_id": "d300008",
+     "name": "スポーツ科学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f300005",
+   "name": "言語コミュニケーション学部",
+   "academic_field_tags": [
+    "国際・語学"
+   ],
+   "campus_municipality": "豊島区",
+   "departments": [
+    {
+     "department_id": "d300009",
+     "name": "英語コミュニケーション学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f300006",
+   "name": "医療健康学部",
+   "academic_field_tags": [
+    "看護・医療"
+   ],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d300010",
+     "name": "理学療法学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g300001",
+   "name": "商学研究科",
+   "programs": [
+    {
+     "name": "商学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  },
+  {
+   "graduate_school_id": "g300002",
+   "name": "国際関係学研究科",
+   "programs": [
+    {
+     "name": "国際関係学研究専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "国際関係"
+   ]
+  },
+  {
+   "graduate_school_id": "g300003",
+   "name": "経済学研究科",
+   "programs": [
+    {
+     "name": "経済学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  },
+  {
+   "graduate_school_id": "g300004",
+   "name": "臨床心理学研究科",
+   "programs": [
+    {
+     "name": "臨床心理学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "看護・医療",
+    "心理",
+    "理学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00017301",
+   "name": "本部",
+   "postal_code": "170-0013",
+   "prefecture": "東京都",
+   "municipality": "豊島区",
+   "address": "東京都豊島区東池袋4-42-31",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00017301",
+   "title": "東京国際大学 公式サイト",
+   "url": "https://www.tiu.ac.jp/",
+   "publisher": "東京国際大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017302",
+   "title": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017303",
+   "title": "東京国際大学 大学紹介",
+   "url": "https://www.tiu.ac.jp/about/",
+   "publisher": "東京国際大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017304",
+   "title": "東京国際大学 沿革",
+   "url": "https://www.tiu.ac.jp/about/history/",
+   "publisher": "東京国際大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017305",
+   "title": "東京国際大学 受験生応援サイト",
+   "url": "https://www.tiu.ac.jp/jukensei/",
+   "publisher": "東京国際大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017306",
+   "title": "大学ポートレート（私学版） 東京国際大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000267001000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

@@ -101,7 +101,8 @@ function apply(u){
 (async()=>{
   try{
     const locations=await loadLocations();
-    const target=locations.find(x=>x.id===id);
+    let target=locations.find(x=>x.id===id);
+    try{const r=await fetch('../kanagawa/data/kanagawa_core_01.json');if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x)target={...(target||{}),...x,name:x.name||target?.name,headquarters:{...(target?.headquarters||{}),...x.headquarters}}}}catch{}
     if(!target)throw new Error(`location missing for ${id}`);
     if(applyLocation(target))return;
     const observer=new MutationObserver(()=>{if(applyLocation(target))observer.disconnect();});
