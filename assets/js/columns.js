@@ -116,7 +116,7 @@
   // Load column data from /data/columns.json
   async function fetchColumns() {
     try {
-      const response = await fetch('/data/columns.json?v=20261028-bookstores-approved');
+      const response = await fetch('/data/columns.json?v=20261030-public-high-school-column');
       if (!response.ok) throw new Error('Failed to fetch columns data');
       allColumns = await response.json();
       initTopNewsTicker();
@@ -581,6 +581,12 @@
   window.openColumnModal = function(id) {
     const item = allColumns.find(c => c.id === id);
     if (!item) return;
+
+    // Standalone articles have a URL but no modal body; open the full article page.
+    if (!item.content && item.url) {
+      window.location.href = item.url;
+      return;
+    }
 
     // 前の記事が閲覧中であれば、その閲覧エンゲージメントを記録
     if (activeColumn && activeColumn.id !== item.id) {
