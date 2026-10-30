@@ -115,6 +115,15 @@ jobs:
             assert.ok((await dokkyo.innerText()).includes('草加市'),'Dokkyo card');
             assert.ok((await dokkyo.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://nyushi.dokkyo.ac.jp'),'admissions link');
             assert.ok((await page.locator('.tokyo-card[data-id="u000155"]').innerText()).includes('日本栄養大学'),'renamed university');
+            const photos=await page.locator('.tokyo-card .real-university-image').count();
+            await page.locator('#pref-filters [data-pref="埼玉県"]').click();await page.waitForTimeout(300);
+            const saitamaPhotos=await page.locator('.tokyo-card .real-university-image').count();
+            assert.ok(saitamaPhotos>=26,`Saitama cards with verified photos: ${saitamaPhotos}`);
+            const src=await page.locator('.tokyo-card[data-id="u000169"] img.university-card-image').getAttribute('src');
+            assert.ok(/commons\.wikimedia\.org|upload\.wikimedia\.org/.test(src||''),'Dokkyo photo from Commons: '+src);
+            assert.equal(await page.locator('.tokyo-card[data-id="u000169"] .image-source-link').count(),1,'photo source link');
+            await page.locator('#pref-filters [data-pref="all"]').click();await page.waitForTimeout(300);
+            console.log('::notice title=Photos::all '+photos+' / saitama '+saitamaPhotos);
             const area=await page.locator('.ref-area').innerText();
             assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);

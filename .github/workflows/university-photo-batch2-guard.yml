@@ -49,7 +49,9 @@ jobs:
             assert.equal(image.license,row.license,`${id}: batch license must be canonical`);
           }
           const verified=Object.values(data.images||{}).filter(x=>x?.rights_status==='verified');
-          assert.equal(verified.length,144,'All 144 university main photos should be rights-verified');
+          const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
+          assert.equal(verified.filter(x=>tokyoIds.has(x.university_id)).length,144,'All 144 Tokyo university main photos should be rights-verified');
+          assert.ok(verified.length>=144,'Region photos may be added beyond the Tokyo 144');
           assert.equal(data.images?.u000123?.source_url,'https://commons.wikimedia.org/wiki/File:LECOffice.jpg','LEC photo approved by owner on 2026-10-30');
           for(const image of verified){
             assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${image.university_id}: Commons file page`);
@@ -63,7 +65,7 @@ jobs:
           const owner=JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/user-photo-overrides.json','utf8'));
           assert.equal(owner.records?.u000094?.rights_status,'verified','Asia University owner photo must remain verified');
           assert.match(owner.records?.u000094?.image_url||'',/^assets\/card-images\//,'Owner photo must remain local and independent from Commons registry');
-          console.log('verified real university photos 144/144; owner override preserved');
+          console.log(`verified real university photos ${verified.length} (Tokyo 144/144); owner override preserved`);
           NODE
       - name: Install Playwright Chromium
         run: |
