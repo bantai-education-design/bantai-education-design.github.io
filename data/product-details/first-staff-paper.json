@@ -309,6 +309,11 @@
             "rel": "noopener",
             "style": "background:linear-gradient(135deg,var(--navy),#1e3d6b); color:#fff; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 4px 15px rgba(7, 27, 54, 0.15);"
           }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ（買い方の案内）"
         }
       ],
       "note": "※ 10日試用版のインストール後は、ライセンス認証を行わずにすぐにお試しいただけます。",
