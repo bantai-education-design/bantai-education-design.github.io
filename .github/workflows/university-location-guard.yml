@@ -124,7 +124,7 @@ jobs:
             for(const id of ['u000001','u000025','u000085']){
               const visual=top.locator(`.tokyo-card[data-id="${id}"] .real-university-image`);
               assert.equal(await visual.count(),1,`${id}: verified real photo visual`);
-              assert.ok((await visual.locator('img').getAttribute('src')).includes('upload.wikimedia.org'));
+              assert.match(await visual.locator('img').getAttribute('src'),/^https:\/\/(upload\.wikimedia\.org\/|commons\.wikimedia\.org\/wiki\/Special:FilePath\/)/,`${id}: Wikimedia photo URL`);
               assert.equal(await visual.locator('.image-source-link').count(),1,`${id}: image source link`);
             }
 
