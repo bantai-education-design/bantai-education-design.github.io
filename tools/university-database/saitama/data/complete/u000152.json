@@ -1,0 +1,180 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000152",
+ "id": "u000152",
+ "name": "埼玉医科大学",
+ "name_en": "Saitama Medical University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "入間郡毛呂山町",
+ "operator": "学校法人埼玉医科大学",
+ "philosophy": "生命への深い愛情と理解と奉仕に生きるすぐれた実地臨床医家の育成などを建学の理念としています。",
+ "feature_summary": "入間郡毛呂山町に本部を置き、医学部・保健医療学部の2学部と大学院2研究科で学ぶ大学です。",
+ "official_url": "https://www.saitama-med.ac.jp/",
+ "admissions_url": "https://adm.saitama-med.ac.jp/",
+ "student_counts": {
+  "total": 1630,
+  "as_of": "2026-05-01",
+  "source_id": "s00015204"
+ },
+ "academic_field_tags": [
+  "医学",
+  "看護・医療",
+  "工学",
+  "社会学",
+  "理学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200019",
+   "name": "医学部",
+   "academic_field_tags": [
+    "医学"
+   ],
+   "campus_municipality": "毛呂山町",
+   "departments": [
+    {
+     "department_id": "d200046",
+     "name": "医学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200020",
+   "name": "保健医療学部",
+   "academic_field_tags": [
+    "看護・医療",
+    "工学"
+   ],
+   "campus_municipality": "日高市",
+   "departments": [
+    {
+     "department_id": "d200047",
+     "name": "看護学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200048",
+     "name": "臨床検査学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200049",
+     "name": "臨床工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200050",
+     "name": "理学療法学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200013",
+   "name": "医学研究科",
+   "programs": [
+    {
+     "name": "生物・医学研究系専攻"
+    },
+    {
+     "name": "社会医学研究系専攻"
+    },
+    {
+     "name": "臨床医学研究系専攻"
+    },
+    {
+     "name": "医科学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "医学",
+    "看護・医療",
+    "社会学",
+    "理学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200014",
+   "name": "看護学研究科",
+   "programs": [
+    {
+     "name": "看護学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "看護・医療"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00015201",
+   "name": "本部",
+   "postal_code": "350-0495",
+   "prefecture": "埼玉県",
+   "municipality": "入間郡毛呂山町",
+   "address": "埼玉県入間郡毛呂山町大字毛呂本郷38番地",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00015201",
+   "title": "埼玉医科大学 公式サイト",
+   "url": "https://www.saitama-med.ac.jp/",
+   "publisher": "埼玉医科大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015202",
+   "title": "文部科学省 令和7年度全国大学一覧（埼玉医科大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015203",
+   "title": "埼玉医科大学 建学の理念",
+   "url": "https://www.saitama-med.ac.jp/about/mission/index.html",
+   "publisher": "埼玉医科大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015204",
+   "title": "大学ポートレート（私学版） 埼玉医科大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000156401000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

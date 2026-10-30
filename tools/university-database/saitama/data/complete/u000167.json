@@ -1,0 +1,126 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000167",
+ "id": "u000167",
+ "name": "武蔵野学院大学",
+ "name_en": "Musashino Gakuin University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "狭山市",
+ "operator": "学校法人武蔵野学院",
+ "philosophy": "建学の精神「他者理解」を掲げています。",
+ "feature_summary": "狭山市に本部を置き、国際コミュニケーション学部の1学部と大学院1研究科で学ぶ大学です。",
+ "official_url": "https://www.musashino.ac.jp/mgu/",
+ "admissions_url": "https://www.musashino.ac.jp/mgu/admission/",
+ "student_counts": {
+  "total": 368,
+  "graduate": 5,
+  "undergraduate": 363,
+  "as_of": "2026-05-01",
+  "source_id": "s00016704"
+ },
+ "academic_field_tags": [
+  "国際・語学",
+  "国際関係"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200056",
+   "name": "国際コミュニケーション学部",
+   "academic_field_tags": [
+    "国際・語学",
+    "国際関係"
+   ],
+   "campus_municipality": "狭山市",
+   "departments": [
+    {
+     "department_id": "d200120",
+     "name": "国際コミュニケーション学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200038",
+   "name": "国際コミュニケーション研究科",
+   "programs": [
+    {
+     "name": "国際コミュニケーション専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "国際・語学",
+    "国際関係"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00016701",
+   "name": "本部",
+   "postal_code": "350-1328",
+   "prefecture": "埼玉県",
+   "municipality": "狭山市",
+   "address": "埼玉県狭山市広瀬台3-26-1",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00016701",
+   "title": "武蔵野学院大学 公式サイト",
+   "url": "https://www.musashino.ac.jp/mgu/",
+   "publisher": "武蔵野学院大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016702",
+   "title": "文部科学省 令和7年度全国大学一覧（武蔵野学院大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016703",
+   "title": "武蔵野学院大学 建学の精神・教育目的・3つのポリシー",
+   "url": "https://www.musashino.ac.jp/mgu/about/3policy/",
+   "publisher": "武蔵野学院大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016704",
+   "title": "大学ポートレート（私学版） 武蔵野学院大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000275601000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

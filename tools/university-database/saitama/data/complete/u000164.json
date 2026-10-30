@@ -1,0 +1,247 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000164",
+ "id": "u000164",
+ "name": "明海大学",
+ "name_en": "Meikai University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "坂戸市",
+ "operator": "学校法人明海大学",
+ "feature_summary": "坂戸市に本部を置き、外国語学部・経済学部・不動産学部・ホスピタリティ・ツーリズム学部・歯学部・保健医療学部の6学部と大学院4研究科で学ぶ大学です。",
+ "official_url": "https://www.meikai.ac.jp/",
+ "admissions_url": "https://www.meikai.ac.jp/03applicant/exam-information/",
+ "student_counts": {
+  "total": 4250,
+  "graduate": 41,
+  "undergraduate": 4209,
+  "as_of": "2026-05-01",
+  "source_id": "s00016404"
+ },
+ "academic_field_tags": [
+  "国際・語学",
+  "経済・経営・商学",
+  "観光",
+  "歯学",
+  "看護・医療"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200045",
+   "name": "外国語学部",
+   "academic_field_tags": [
+    "国際・語学"
+   ],
+   "campus_municipality": "浦安市",
+   "departments": [
+    {
+     "department_id": "d200104",
+     "name": "日本語学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200105",
+     "name": "英米語学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200106",
+     "name": "中国語学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200046",
+   "name": "経済学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "浦安市",
+   "departments": [
+    {
+     "department_id": "d200107",
+     "name": "経済学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200047",
+   "name": "不動産学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "浦安市",
+   "departments": [
+    {
+     "department_id": "d200108",
+     "name": "不動産学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200048",
+   "name": "ホスピタリティ・ツーリズム学部",
+   "academic_field_tags": [
+    "観光"
+   ],
+   "campus_municipality": "浦安市",
+   "departments": [
+    {
+     "department_id": "d200109",
+     "name": "ホスピタリティ・ツーリズム学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200049",
+   "name": "歯学部",
+   "academic_field_tags": [
+    "歯学"
+   ],
+   "campus_municipality": "坂戸市",
+   "departments": [
+    {
+     "department_id": "d200110",
+     "name": "歯学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200050",
+   "name": "保健医療学部",
+   "academic_field_tags": [
+    "看護・医療"
+   ],
+   "campus_municipality": "浦安市",
+   "departments": [
+    {
+     "department_id": "d200111",
+     "name": "口腔保健学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200033",
+   "name": "応用言語学研究科",
+   "programs": [
+    {
+     "name": "応用言語学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "国際・語学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200034",
+   "name": "経済学研究科",
+   "programs": [
+    {
+     "name": "経済学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200035",
+   "name": "不動産学研究科",
+   "programs": [
+    {
+     "name": "不動産学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200036",
+   "name": "歯学研究科",
+   "programs": [
+    {
+     "name": "歯学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "歯学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00016401",
+   "name": "本部",
+   "postal_code": "350-0283",
+   "prefecture": "埼玉県",
+   "municipality": "坂戸市",
+   "address": "埼玉県坂戸市けやき台1-1",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00016401",
+   "title": "明海大学 公式サイト",
+   "url": "https://www.meikai.ac.jp/",
+   "publisher": "明海大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016402",
+   "title": "文部科学省 令和7年度全国大学一覧（明海大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016403",
+   "title": "明海大学 学部・学科",
+   "url": "https://www.meikai.ac.jp/department/",
+   "publisher": "明海大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016404",
+   "title": "大学ポートレート（私学版） 明海大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000156301000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

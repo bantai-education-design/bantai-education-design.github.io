@@ -1,0 +1,193 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000162",
+ "id": "u000162",
+ "name": "日本工業大学",
+ "name_en": "Nippon Institute of Technology",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "南埼玉郡宮代町",
+ "operator": "学校法人日本工業大学",
+ "feature_summary": "南埼玉郡宮代町に本部を置き、基幹工学部・先進工学部・建築学部の3学部と大学院2研究科で学ぶ大学です。",
+ "official_url": "https://www.nit.ac.jp/",
+ "admissions_url": "https://juken.nit.ac.jp/examination/",
+ "student_counts": {
+  "total": 3915,
+  "graduate": 159,
+  "undergraduate": 3756,
+  "as_of": "2026-05-01",
+  "source_id": "s00016203"
+ },
+ "academic_field_tags": [
+  "情報・AI",
+  "理学",
+  "工学",
+  "建築・デザイン",
+  "経済・経営・商学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200040",
+   "name": "基幹工学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "工学"
+   ],
+   "campus_municipality": "宮代町",
+   "departments": [
+    {
+     "department_id": "d200095",
+     "name": "機械工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200096",
+     "name": "電気情報工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200097",
+     "name": "環境生命化学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200041",
+   "name": "先進工学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "工学"
+   ],
+   "campus_municipality": "宮代町",
+   "departments": [
+    {
+     "department_id": "d200098",
+     "name": "ロボティクス学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200099",
+     "name": "情報メディア工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200101",
+     "name": "データサイエンス学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200042",
+   "name": "建築学部",
+   "academic_field_tags": [
+    "建築・デザイン"
+   ],
+   "campus_municipality": "宮代町",
+   "departments": [
+    {
+     "department_id": "d200100",
+     "name": "建築学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200030",
+   "name": "工学研究科",
+   "programs": [
+    {
+     "name": "環境共生システム学専攻"
+    },
+    {
+     "name": "機械システム工学専攻"
+    },
+    {
+     "name": "電子情報メディア工学専攻"
+    },
+    {
+     "name": "建築デザイン学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "情報・AI",
+    "工学",
+    "建築・デザイン"
+   ]
+  },
+  {
+   "graduate_school_id": "g200031",
+   "name": "技術経営研究科",
+   "programs": [
+    {
+     "name": "技術経営専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00016201",
+   "name": "本部",
+   "postal_code": "345-8501",
+   "prefecture": "埼玉県",
+   "municipality": "南埼玉郡宮代町",
+   "address": "埼玉県南埼玉郡宮代町学園台4-1-1",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00016201",
+   "title": "日本工業大学 公式サイト",
+   "url": "https://www.nit.ac.jp/",
+   "publisher": "日本工業大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016202",
+   "title": "文部科学省 令和7年度全国大学一覧（日本工業大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016203",
+   "title": "大学ポートレート（私学版） 日本工業大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000265401000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

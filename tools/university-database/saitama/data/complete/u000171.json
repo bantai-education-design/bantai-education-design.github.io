@@ -1,0 +1,143 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000171",
+ "id": "u000171",
+ "name": "西武文理大学",
+ "name_en": "Bunri University of Hospitality",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "狭山市",
+ "operator": "学校法人文理佐藤学園",
+ "founder": "佐藤英樹",
+ "philosophy": "建学の精神として全人教育を掲げ、知・情・意の調和した人間の育成を目指しています。",
+ "feature_summary": "狭山市に本部を置き、サービス経営学部・看護学部の2学部で学ぶ大学です。",
+ "official_url": "https://www.bunri-c.ac.jp/",
+ "admissions_url": "https://juken.bunri-c.ac.jp/admission/",
+ "student_counts": {
+  "total": 1068,
+  "as_of": "2026-05-01",
+  "source_id": "s00017105"
+ },
+ "academic_field_tags": [
+  "社会福祉",
+  "経済・経営・商学",
+  "観光",
+  "看護・医療"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200066",
+   "name": "サービス経営学部",
+   "academic_field_tags": [
+    "社会福祉",
+    "経済・経営・商学",
+    "観光"
+   ],
+   "campus_municipality": "狭山市",
+   "departments": [
+    {
+     "department_id": "d200141",
+     "name": "サービス経営学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200142",
+     "name": "健康福祉マネジメント学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200067",
+   "name": "看護学部",
+   "academic_field_tags": [
+    "看護・医療"
+   ],
+   "campus_municipality": "狭山市",
+   "departments": [
+    {
+     "department_id": "d200143",
+     "name": "看護学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00017101",
+   "name": "本部",
+   "postal_code": "350-1336",
+   "prefecture": "埼玉県",
+   "municipality": "狭山市",
+   "address": "埼玉県狭山市柏原新田311-1",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00017101",
+   "title": "西武文理大学 公式サイト",
+   "url": "https://www.bunri-c.ac.jp/",
+   "publisher": "西武文理大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017102",
+   "title": "文部科学省 令和7年度全国大学一覧（西武文理大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017103",
+   "title": "西武文理大学 大学紹介",
+   "url": "https://www.bunri-c.ac.jp/about.html",
+   "publisher": "西武文理大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017104",
+   "title": "西武文理大学 学長紹介・沿革・組織",
+   "url": "https://www.bunri-c.ac.jp/about/outline.html",
+   "publisher": "西武文理大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00017105",
+   "title": "大学ポートレート（私学版） 西武文理大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000156901000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ },
+ "graduate_schools": []
+}

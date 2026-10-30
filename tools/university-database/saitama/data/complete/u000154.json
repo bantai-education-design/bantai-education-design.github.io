@@ -1,0 +1,179 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000154",
+ "id": "u000154",
+ "name": "埼玉工業大学",
+ "name_en": "Saitama Institute of Technology",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "深谷市",
+ "operator": "学校法人智香寺学園",
+ "opened_year": 1976,
+ "feature_summary": "深谷市に本部を置き、工学部・人間社会学部の2学部と大学院2研究科で学ぶ大学です。",
+ "official_url": "https://www.sit.ac.jp/",
+ "admissions_url": "https://www.sit.ac.jp/entrance/",
+ "student_counts": {
+  "total": 2054,
+  "graduate": 72,
+  "undergraduate": 1982,
+  "as_of": "2026-05-01",
+  "source_id": "s00015404"
+ },
+ "academic_field_tags": [
+  "情報・AI",
+  "理学",
+  "工学",
+  "心理",
+  "社会学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200023",
+   "name": "工学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "工学"
+   ],
+   "campus_municipality": "深谷市",
+   "departments": [
+    {
+     "department_id": "d200055",
+     "name": "機械工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200056",
+     "name": "生命環境化学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200057",
+     "name": "情報システム学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200024",
+   "name": "人間社会学部",
+   "academic_field_tags": [
+    "心理",
+    "社会学",
+    "情報・AI",
+    "理学"
+   ],
+   "campus_municipality": "深谷市",
+   "departments": [
+    {
+     "department_id": "d200058",
+     "name": "情報社会学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200059",
+     "name": "心理学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200018",
+   "name": "工学研究科",
+   "programs": [
+    {
+     "name": "機械工学専攻"
+    },
+    {
+     "name": "情報システム専攻"
+    },
+    {
+     "name": "生命環境化学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "工学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200019",
+   "name": "人間社会研究科",
+   "programs": [
+    {
+     "name": "情報社会専攻"
+    },
+    {
+     "name": "心理学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "心理",
+    "社会学",
+    "情報・AI",
+    "理学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00015401",
+   "name": "本部",
+   "postal_code": "369-0293",
+   "prefecture": "埼玉県",
+   "municipality": "深谷市",
+   "address": "埼玉県深谷市普済寺1690",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00015401",
+   "title": "埼玉工業大学 公式サイト",
+   "url": "https://www.sit.ac.jp/",
+   "publisher": "埼玉工業大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015402",
+   "title": "文部科学省 令和7年度全国大学一覧（埼玉工業大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015404",
+   "title": "大学ポートレート（私学版） 埼玉工業大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000156501000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

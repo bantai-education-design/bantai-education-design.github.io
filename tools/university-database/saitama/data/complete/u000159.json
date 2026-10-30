@@ -1,0 +1,326 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000159",
+ "id": "u000159",
+ "name": "文教大学",
+ "name_en": "Bunkyo University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "越谷市",
+ "operator": "学校法人文教大学学園",
+ "philosophy": "建学の精神「人間愛」を掲げています。",
+ "feature_summary": "越谷市に本部を置き、教育学部・人間科学部・情報学部・文学部・国際学部・健康栄養学部・経営学部の7学部と大学院5研究科で学ぶ大学です。",
+ "official_url": "https://www.bunkyo.ac.jp/",
+ "admissions_url": "https://www.bunkyo.ac.jp/admission/",
+ "student_counts": {
+  "total": 8891,
+  "as_of": "2026-05-01",
+  "source_id": "s00015904"
+ },
+ "academic_field_tags": [
+  "教育",
+  "看護・医療",
+  "心理",
+  "理学",
+  "情報・AI",
+  "芸術",
+  "国際・語学",
+  "文学・人文",
+  "国際関係",
+  "観光",
+  "食・栄養",
+  "経済・経営・商学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200031",
+   "name": "教育学部",
+   "academic_field_tags": [
+    "教育"
+   ],
+   "campus_municipality": "越谷市",
+   "departments": [
+    {
+     "department_id": "d200072",
+     "name": "学校教育課程",
+     "programs": []
+    },
+    {
+     "department_id": "d200073",
+     "name": "発達教育課程",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200032",
+   "name": "人間科学部",
+   "academic_field_tags": [
+    "看護・医療",
+    "心理",
+    "理学"
+   ],
+   "campus_municipality": "越谷市",
+   "departments": [
+    {
+     "department_id": "d200074",
+     "name": "人間科学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200075",
+     "name": "臨床心理学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200076",
+     "name": "心理学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200033",
+   "name": "情報学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "芸術"
+   ],
+   "campus_municipality": "茅ヶ崎市",
+   "departments": [
+    {
+     "department_id": "d200077",
+     "name": "情報システム学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200078",
+     "name": "データサイエンス学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200079",
+     "name": "メディア表現学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200034",
+   "name": "文学部",
+   "academic_field_tags": [
+    "国際・語学",
+    "文学・人文"
+   ],
+   "campus_municipality": "越谷市",
+   "departments": [
+    {
+     "department_id": "d200080",
+     "name": "日本語日本文学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200081",
+     "name": "英米語英米文学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200082",
+     "name": "中国語中国文学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200083",
+     "name": "外国語学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200035",
+   "name": "国際学部",
+   "academic_field_tags": [
+    "国際関係",
+    "観光"
+   ],
+   "campus_municipality": "足立区",
+   "departments": [
+    {
+     "department_id": "d200084",
+     "name": "国際理解学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200085",
+     "name": "国際観光学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200036",
+   "name": "健康栄養学部",
+   "academic_field_tags": [
+    "食・栄養"
+   ],
+   "campus_municipality": "茅ヶ崎市",
+   "departments": [
+    {
+     "department_id": "d200086",
+     "name": "管理栄養学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200037",
+   "name": "経営学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "足立区",
+   "departments": [
+    {
+     "department_id": "d200087",
+     "name": "経営学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200025",
+   "name": "教育学研究科",
+   "programs": [
+    {
+     "name": "学校教育専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "教育"
+   ]
+  },
+  {
+   "graduate_school_id": "g200026",
+   "name": "人間科学研究科",
+   "programs": [
+    {
+     "name": "臨床心理学専攻"
+    },
+    {
+     "name": "人間科学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "看護・医療",
+    "心理",
+    "理学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200027",
+   "name": "言語文化研究科",
+   "programs": [
+    {
+     "name": "言語文化専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "国際・語学",
+    "文学・人文"
+   ]
+  },
+  {
+   "graduate_school_id": "g200028",
+   "name": "情報学研究科",
+   "programs": [
+    {
+     "name": "情報学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "情報・AI"
+   ]
+  },
+  {
+   "graduate_school_id": "g200029",
+   "name": "国際学研究科",
+   "programs": [
+    {
+     "name": "国際学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "国際関係"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00015901",
+   "name": "本部",
+   "postal_code": "343-8511",
+   "prefecture": "埼玉県",
+   "municipality": "越谷市",
+   "address": "埼玉県越谷市南荻島3337",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00015901",
+   "title": "文教大学 公式サイト",
+   "url": "https://www.bunkyo.ac.jp/",
+   "publisher": "文教大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015902",
+   "title": "文部科学省 令和7年度全国大学一覧（文教大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015903",
+   "title": "文教大学 建学の精神",
+   "url": "https://www.bunkyo.ac.jp/about/ideal/",
+   "publisher": "文教大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015904",
+   "title": "大学ポートレート（私学版） 文教大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000268301000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}
