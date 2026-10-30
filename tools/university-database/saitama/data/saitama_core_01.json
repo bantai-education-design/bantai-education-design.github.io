@@ -77,6 +77,12 @@
    "admissions_url": "https://www.spu.ac.jp/admissions/",
    "operator": "公立大学法人埼玉県立大学",
    "philosophy": "陶冶、進取、創発を基本理念として、保健医療福祉に関する教育・研究の中核となって地域社会に貢献することを掲げています。",
+   "student_counts": {
+    "undergraduate": 1622,
+    "graduate": 131,
+    "total": 1753,
+    "as_of": "2026-05-01"
+   },
    "academic_field_tags": [
     "看護・医療",
     "幼児教育・保育",
@@ -102,6 +108,12 @@
     {
      "source_name": "埼玉県立大学 理念・教育目標",
      "source_url": "https://www.spu.ac.jp/about/idea/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "埼玉県立大学 FACTBOOK（学生数 2026年5月1日時点）",
+     "source_url": "https://www.spu.ac.jp/about/numbers/",
      "verified_at": "2026-10-30",
      "role": "primary"
     }

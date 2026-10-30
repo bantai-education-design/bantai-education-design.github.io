@@ -13,6 +13,12 @@
  "feature_summary": "越谷市に本部を置き、保健医療福祉学部の1学部と大学院1研究科で学ぶ大学です。",
  "official_url": "https://www.spu.ac.jp/",
  "admissions_url": "https://www.spu.ac.jp/admissions/",
+ "student_counts": {
+  "undergraduate": 1622,
+  "graduate": 131,
+  "total": 1753,
+  "as_of": "2026-05-01"
+ },
  "academic_field_tags": [
   "看護・医療",
   "幼児教育・保育",
@@ -106,6 +112,15 @@
    "source_id": "s00014603",
    "title": "埼玉県立大学 理念・教育目標",
    "url": "https://www.spu.ac.jp/about/idea/",
+   "publisher": "埼玉県立大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00014604",
+   "title": "埼玉県立大学 FACTBOOK（学生数 2026年5月1日時点）",
+   "url": "https://www.spu.ac.jp/about/numbers/",
    "publisher": "埼玉県立大学",
    "source_type": "official_university",
    "verified_at": "2026-10-30",
