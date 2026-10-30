@@ -1,0 +1,138 @@
+name: University Saitama guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/university-database/saitama/**'
+      - 'tools/university-database/index.html'
+      - 'tools/university-database/tokyo/assets/**'
+      - '.github/workflows/university-saitama-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/university-database/saitama/**'
+      - '.github/workflows/university-saitama-guard.yml'
+
+jobs:
+  saitama-guard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate Saitama public data
+        run: |
+          node --check tools/university-database/saitama/assets/saitama.js
+          node --check tools/university-database/saitama/assets/ai-card-images.js
+          node --check tools/university-database/saitama/assets/favorites.js
+          node <<'NODE'
+          const fs=require('node:fs');
+          const assert=require('node:assert/strict');
+          const dir='tools/university-database/saitama/data/';
+          const base=JSON.parse(fs.readFileSync(dir+'universities_saitama_all.generated.json','utf8'));
+          const core=JSON.parse(fs.readFileSync(dir+'saitama_core_01.json','utf8')).records;
+          const manifest=JSON.parse(fs.readFileSync(dir+'manifest.json','utf8'));
+          assert.equal(base.length,28,'28 universities');
+          assert.equal(core.length,28,'28 core records');
+          assert.deepEqual(base.map(x=>x.id),core.map(x=>x.id),'core ids match base');
+          assert.equal(new Set(base.map(x=>x.id)).size,28,'unique ids');
+          const by=t=>base.filter(x=>x.establishment_type===t).length;
+          assert.deepEqual([by('national'),by('public'),by('private')],[1,1,26],'type counts');
+          for(const u of core){
+            assert.match(u.official_url||'',/^https?:\/\//,`${u.id} official url`);
+            assert.ok(u.headquarters?.address?.startsWith('埼玉県'),`${u.id} address`);
+            assert.match(u.headquarters?.postal_code||'',/^\d{3}-\d{4}$/,`${u.id} postal`);
+            assert.ok((u.sources||[]).some(s=>s.source_url.includes('mext.go.jp')),`${u.id} MEXT source`);
+            assert.ok(fs.existsSync(`${dir}complete/${u.id}.json`),`${u.id} complete profile`);
+          }
+          assert.equal(manifest.universities,28);
+          const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
+          assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
+          console.log('saitama data ok');
+          NODE
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/saitama-site.log 2>&1 &
+          sleep 2
+      - name: Verify Saitama list, filters, search, compare and detail pages
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          const assert=require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const errors=[];
+            const page=await browser.newPage({viewport:{width:1366,height:950}});
+            page.on('pageerror',e=>errors.push('pageerror '+e.message));
+            page.on('console',m=>{if(m.type()==='error'&&!/googletagmanager|analytics|wikimedia|favicon|ERR_|net::/i.test(m.text()))errors.push('console '+m.text())});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===28,{timeout:20000});
+            const body=await page.locator('body').innerText();
+            assert.ok(!body.includes('東京都144'),'no Tokyo copy left on Saitama page');
+            assert.ok(body.includes('埼玉県28大学'),'Saitama heading');
+            assert.ok(!body.includes('読込エラー'),'no load error');
+            const count=async()=>page.locator('.tokyo-card').count();
+            for(const [type,expected] of [['national',1],['public',1],['private',26],['all',28]]){
+              await page.locator(`.ref-type-filter [data-ref-type="${type}"]`).click();
+              await page.waitForTimeout(250);
+              assert.equal(await count(),expected,`quick filter ${type}`);
+              assert.equal(await page.locator('#type-filters .active').getAttribute('data-type'),type,`list chip synced ${type}`);
+            }
+            await page.locator('#type-filters [data-type="private"]').click();
+            await page.waitForTimeout(250);
+            assert.equal(await count(),26,'list filter private');
+            await page.fill('#tokyo-search-input','看護');
+            await page.waitForTimeout(300);
+            const nurse=await count();
+            assert.ok(nurse>=5&&nurse<26,`search 看護 within private: ${nurse}`);
+            await page.locator('#clear-filters').click();
+            await page.waitForTimeout(250);
+            assert.equal(await count(),28,'clear filters');
+            const dokkyo=page.locator('.tokyo-card[data-id="u000169"]');
+            const dokkyoText=await dokkyo.innerText();
+            assert.ok(dokkyoText.includes('獨協大学')&&dokkyoText.includes('草加市'),dokkyoText);
+            assert.ok((await dokkyo.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://nyushi.dokkyo.ac.jp'),'admissions link');
+            const renamed=await page.locator('.tokyo-card[data-id="u000155"]').innerText();
+            assert.ok(renamed.includes('日本栄養大学'),'renamed university shown with current name');
+            await page.setViewportSize({width:375,height:900});
+            await page.waitForTimeout(300);
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow on list');
+            const sample=await page.evaluate(()=>[...document.querySelectorAll('.tokyo-card')].slice(0,3).map(c=>c.innerText.replace(/\s+/g,' ').slice(0,160)));
+            console.log('::notice title=Saitama list::'+sample.join(' || '));
+            await page.close();
+
+            const ids=Array.from({length:28},(_,i)=>`u${String(145+i).padStart(6,'0')}`);
+            const summary=[];
+            for(const id of ids){
+              const d=await browser.newPage({viewport:{width:1280,height:900}});
+              d.on('pageerror',e=>errors.push(`${id} pageerror ${e.message}`));
+              await d.goto(`http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=${id}`,{waitUntil:'networkidle'});
+              await d.waitForSelector('.complete-hero h1',{timeout:15000});
+              const t=await d.locator('#detail-root').innerText();
+              assert.ok(t.includes('埼玉県'),`${id} detail prefecture`);
+              assert.ok(!t.includes('東京都144'),`${id} no Tokyo copy`);
+              summary.push(`${id}:${(await d.locator('.complete-hero h1').innerText()).trim()}`);
+              if(id==='u000169'){
+                assert.ok(t.includes('外国語学部')&&t.includes('法学部'),'Dokkyo faculties on detail');
+                await d.setViewportSize({width:375,height:900});
+                await d.waitForTimeout(200);
+                assert.equal(await d.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow on detail');
+              }
+              await d.close();
+            }
+            console.log('::notice title=Saitama detail::'+summary.join(' '));
+            const entry=await browser.newPage();
+            await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
+            assert.equal(await entry.locator('a[href="/tools/university-database/saitama/"]').count(),1,'entry page links to Saitama');
+            await entry.close();
+            assert.deepEqual(errors,[],'no script errors');
+            await browser.close();
+            console.log('saitama UI ok');
+          })().catch(err=>{console.log('::error title=Saitama UI::'+String(err.message||err).replace(/\n/g,' ').slice(0,900));process.exit(1)});
+          NODE
