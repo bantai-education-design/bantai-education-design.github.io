@@ -6494,3 +6494,11 @@ button:focus-visible {
 .contact-result-address a { font-weight: 700; word-break: break-all; }
 .contact-result-label { font-size: 0.9rem; font-weight: 700; color: var(--navy); }
 .contact-result .btn { align-self: flex-start; padding: 10px 18px; font-size: 0.9rem; cursor: pointer; }
+
+/* Keep all title text visible in the public high school column thumbnail. */
+.column-card[data-column-id="column-public-high-school-choice-20261030"] .column-card-media img,
+.column-card[data-column-id="column-public-high-school-choice-20261030"]:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+  background: #fff;
+}
