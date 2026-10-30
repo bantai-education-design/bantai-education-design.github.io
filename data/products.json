@@ -65,16 +65,16 @@
       "name": "楽譜・五線紙 作成メーカー",
       "category": "standard",
       "order": 3,
-      "status": "一時休止中",
+      "status": "販売中",
       "recommendation": null,
       "badges": [
-        "一時休止中"
+        "体験版あり"
       ],
       "targetUsers": [
         "音楽教員",
         "一般利用者"
       ],
-      "summary": "現在、通常版楽譜作成メーカーはバージョンアップ準備のため、一時的にご案内を休止しています。",
+      "summary": "授業・練習・作曲に使える、A4・B5の五線紙・ピアノ譜を作るWindowsアプリ。体験版はVector、製品版ライセンスはBOOTHで販売しています。",
       "features": [],
       "image": "/assets/images/staff-paper-v13-card.jpg",
       "imageAlt": "楽譜・五線紙 作成メーカー",
@@ -83,10 +83,10 @@
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": null,
       "published": true,
-      "boothUrl": "https://bantai3.booth.pm/items/8302315",
-      "vectorUrl": null,
+      "boothUrl": "https://bantai3.booth.pm/items/9069579",
+      "vectorUrl": "http://www.vector.co.jp/soft/winnt/art/se528799.html",
       "noteUrl": null,
-      "hasTrial": false,
+      "hasTrial": true,
       "isFlagship": false
     },
     {

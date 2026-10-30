@@ -74,6 +74,11 @@
             "target": "_blank",
             "rel": "noopener noreferrer"
           }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ"
         }
       ],
       "image": {

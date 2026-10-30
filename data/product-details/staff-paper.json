@@ -41,8 +41,8 @@
   "image": "/assets/images/staff-paper-v13-main.jpg",
   "imageAlt": "楽譜・五線紙 作成メーカー 紹介画像",
   "trialDownloadUrl": "https://drive.google.com/file/d/1WGXvjezmWj19GuHEDG9w1O-uPSQ2cxM-/view?usp=sharing",
-  "boothUrl": "https://bantai3.booth.pm/items/8302315",
-  "licenseRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc76qKi1TYyd3Uke_42Lb3rmGpXCWCwKFirZ_7szIfphQ1c_g/viewform?usp=preview",
+  "boothUrl": "https://bantai3.booth.pm/items/9069579",
+  "licenseRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc76qKi1TYyd3Uke_42Lb3rmGpXCWCwKFirZ_7szIfphQ1c_g/viewform",
   "sections": [
     {
       "type": "pageHero",
@@ -55,14 +55,17 @@
     {
       "type": "narrowTextBox",
       "class": "section-narrow",
-      "containerClass": "container warning",
-      "heading": "通常版 楽譜（五線紙）作成メーカー 新規案内休止のお知らせ",
+      "containerClass": "container card gold",
+      "heading": "体験版はVector、製品版ライセンスはBOOTHで",
       "paragraphs": [
         {
-          "html": "通常版「楽譜（五線紙）作成メーカー」は、次期バージョンアップ準備のため、現在新規案内を休止しています。<img src=\"/assets/images/staff-paper-v13-main.jpg\" alt=\"楽譜・五線紙 作成メーカー 紹介画像\" style=\"display:none;\">"
+          "html": "体験版（10日間、出力にSAMPLEの透かし）は、<a href=\"http://www.vector.co.jp/soft/winnt/art/se528799.html\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"font-weight:bold; text-decoration:underline; color:var(--navy);\">Vector</a>から無料でダウンロードできます。<img src=\"/assets/images/staff-paper-v13-main.jpg\" alt=\"楽譜・五線紙 作成メーカー 紹介画像\" style=\"display:none;\">"
         },
         {
-          "html": "現在は、子ども・初心者向けの入門版「<a href=\"../first-staff-paper/\" style=\"font-weight: bold; text-decoration: underline; color: var(--navy);\">Ban.Tai はじめての五線紙メーカー</a>」をご案内しています。詳細については入門版の紹介ページ、または <a href=\"https://bantai3.booth.pm/items/8587307\" target=\"_blank\" style=\"font-weight: bold; text-decoration: underline; color: var(--navy);\">入門版の正式BOOTH URL</a> をご覧ください。"
+          "html": "続けて使う場合は、BOOTHで製品版ライセンス（4,800円）をご購入ください。購入後、申請フォームに注文番号を入れて送信すると、ライセンスキーが自動でメールに届きます。"
+        },
+        {
+          "html": "子ども・初心者向けの入門版「<a href=\"../first-staff-paper/\" style=\"font-weight:bold; text-decoration:underline; color:var(--navy);\">Ban.Tai はじめての五線紙メーカー</a>」もあります。"
         }
       ]
     },
@@ -72,21 +75,35 @@
       "sectionClass": "section",
       "sectionStyle": "background:#fff; text-align:center; padding: 60px 0; border-top: 1px solid rgba(7, 27, 54, 0.04);",
       "containerClass": "container",
-      "heading": "ご購入済みのユーザー様へ",
-      "description": "通常版の新規販売は一時休止しておりますが、すでに通常版をご購入済みのユーザー様のライセンスキー申請は引き続き受け付けております。購入時の注文番号をご用意のうえ、以下よりご申請ください。",
+      "heading": "製品版ライセンスの購入とキーの受け取り",
+      "description": "BOOTHでライセンスを購入したあと、申請フォームにお名前・メールアドレス・注文番号を入れて送信してください。ライセンスキーが自動でメールに届きます。",
       "actionsStyle": "justify-content:center; display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 20px;",
       "actions": [
         {
           "class": "btn btn-primary",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLSc76qKi1TYyd3Uke_42Lb3rmGpXCWCwKFirZ_7szIfphQ1c_g/viewform?usp=preview",
-          "label": "購入後ライセンスキー申請",
+          "href": "https://bantai3.booth.pm/items/9069579",
+          "label": "BOOTHで製品版ライセンスを購入する（4,800円）",
           "attrs": {
             "target": "_blank",
-            "style": "background:linear-gradient(135deg,var(--navy),#1e3d6b); color:#fff; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 4px 15px rgba(7, 27, 54, 0.15);"
+            "rel": "noopener noreferrer"
           }
+        },
+        {
+          "class": "btn",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLSc76qKi1TYyd3Uke_42Lb3rmGpXCWCwKFirZ_7szIfphQ1c_g/viewform",
+          "label": "購入後のライセンスキー申請",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ（買い方の案内）"
         }
       ],
-      "note": "※ 申請フォーム送信後、管理者が購入履歴を確認のうえ、2〜3営業日以内に個別ライセンスキー（BT-SP-XXXX-XXXX-XXXX-XXXX）をご登録のメールアドレス宛に送信いたします。"
+      "note": "※ ライセンスキー（BTAI-XXXX-XXXX-XXXX）は申請後すぐにメールで届きます。届かない場合は迷惑メールのフォルダもご確認ください。"
     }
   ]
 }
