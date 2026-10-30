@@ -1,0 +1,198 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000156",
+ "id": "u000156",
+ "name": "尚美学園大学",
+ "name_en": "Shobi University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "川越市",
+ "operator": "学校法人尚美学園",
+ "founder": "赤松直（尚美学園創立者）",
+ "philosophy": "建学の精神『智と愛』を掲げています。",
+ "feature_summary": "川越市に本部を置き、芸術情報学部・総合政策学部・スポーツマネジメント学部の3学部と大学院2研究科で学ぶ大学です。",
+ "official_url": "https://www.shobi-u.ac.jp/",
+ "admissions_url": "https://www.shobi-u.ac.jp/examinee/admission/",
+ "student_counts": {
+  "total": 3104,
+  "as_of": "2026-05-01",
+  "source_id": "s00015605"
+ },
+ "academic_field_tags": [
+  "情報・AI",
+  "芸術",
+  "経済・経営・商学",
+  "体育・スポーツ"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200026",
+   "name": "芸術情報学部",
+   "academic_field_tags": [
+    "情報・AI",
+    "芸術"
+   ],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d200063",
+     "name": "情報表現学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200064",
+     "name": "音楽表現学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200065",
+     "name": "音楽応用学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200066",
+     "name": "舞台表現学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200069",
+     "name": "芸術表現学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200027",
+   "name": "総合政策学部",
+   "academic_field_tags": [],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d200067",
+     "name": "総合政策学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200028",
+   "name": "スポーツマネジメント学部",
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "体育・スポーツ"
+   ],
+   "campus_municipality": "川越市",
+   "departments": [
+    {
+     "department_id": "d200068",
+     "name": "スポーツマネジメント学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200021",
+   "name": "芸術情報研究科",
+   "programs": [
+    {
+     "name": "情報表現専攻"
+    },
+    {
+     "name": "音楽表現専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "情報・AI",
+    "芸術"
+   ]
+  },
+  {
+   "graduate_school_id": "g200022",
+   "name": "総合政策研究科",
+   "programs": [
+    {
+     "name": "政策行政専攻"
+    }
+   ],
+   "academic_field_tags": []
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00015601",
+   "name": "本部",
+   "postal_code": "350-1110",
+   "prefecture": "埼玉県",
+   "municipality": "川越市",
+   "address": "埼玉県川越市豊田町1-1-1",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00015601",
+   "title": "尚美学園大学 公式サイト",
+   "url": "https://www.shobi-u.ac.jp/",
+   "publisher": "尚美学園大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015602",
+   "title": "文部科学省 令和7年度全国大学一覧（尚美学園大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015603",
+   "title": "尚美学園大学 建学の精神",
+   "url": "https://www.shobi-u.ac.jp/about/overview/built",
+   "publisher": "尚美学園大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015604",
+   "title": "尚美学園大学 学部・大学院",
+   "url": "https://www.shobi-u.ac.jp/faculty/",
+   "publisher": "尚美学園大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015605",
+   "title": "大学ポートレート（私学版） 尚美学園大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000271401000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

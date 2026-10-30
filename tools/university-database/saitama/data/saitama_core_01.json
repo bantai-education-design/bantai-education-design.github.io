@@ -1,0 +1,1652 @@
+{
+ "records": [
+  {
+   "id": "u000145",
+   "name": "埼玉大学",
+   "name_en": "Saitama University",
+   "establishment_type": "national",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "さいたま市",
+   "headquarters": {
+    "postal_code": "338-8570",
+    "prefecture": "埼玉県",
+    "municipality": "さいたま市",
+    "address": "埼玉県さいたま市桜区下大久保255"
+   },
+   "official_url": "https://www.saitama-u.ac.jp/",
+   "admissions_url": "https://www.saitama-u.ac.jp/entrance/",
+   "operator": "国立大学法人埼玉大学",
+   "student_counts": {
+    "undergraduate": 6943,
+    "graduate": 1602,
+    "total": 8545,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "文学・人文",
+    "経済・経営・商学",
+    "教育",
+    "理学",
+    "社会学",
+    "情報・AI",
+    "工学",
+    "建築・デザイン",
+    "国際関係"
+   ],
+   "feature_summary": "さいたま市に本部を置き、教養学部・経済学部・教育学部・理学部・工学部の5学部と大学院4研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "埼玉大学 公式サイト",
+     "source_url": "https://www.saitama-u.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（埼玉大学）",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "埼玉大学 データブック2026（学生数 令和8年5月1日現在）",
+     "source_url": "https://www.saitama-u.ac.jp/media/databook2026.pdf",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    }
+   ]
+  },
+  {
+   "id": "u000146",
+   "name": "埼玉県立大学",
+   "name_en": "Saitama Prefectural University",
+   "establishment_type": "public",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "越谷市",
+   "headquarters": {
+    "postal_code": "343-8540",
+    "prefecture": "埼玉県",
+    "municipality": "越谷市",
+    "address": "埼玉県越谷市三野宮820"
+   },
+   "official_url": "https://www.spu.ac.jp/",
+   "admissions_url": "https://www.spu.ac.jp/admissions/",
+   "operator": "公立大学法人埼玉県立大学",
+   "philosophy": "陶冶、進取、創発を基本理念として、保健医療福祉に関する教育・研究の中核となって地域社会に貢献することを掲げています。",
+   "academic_field_tags": [
+    "看護・医療",
+    "幼児教育・保育",
+    "社会福祉"
+   ],
+   "feature_summary": "越谷市に本部を置き、保健医療福祉学部の1学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "埼玉県立大学 公式サイト",
+     "source_url": "https://www.spu.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（埼玉県立大学）",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "埼玉県立大学 理念・教育目標",
+     "source_url": "https://www.spu.ac.jp/about/idea/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    }
+   ]
+  },
+  {
+   "id": "u000147",
+   "name": "ものつくり大学",
+   "name_en": "Institute of Technologists",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "行田市",
+   "headquarters": {
+    "postal_code": "361-0038",
+    "prefecture": "埼玉県",
+    "municipality": "行田市",
+    "address": "埼玉県行田市前谷333"
+   },
+   "official_url": "https://www.iot.ac.jp/",
+   "admissions_url": "https://www.iot.ac.jp/entrance/",
+   "operator": "学校法人ものつくり大学",
+   "opened_year": 2001,
+   "philosophy": "「ものづくりはひとづくりである」を建学の精神とし、ものづくりの技と心をあわせもつテクノロジストの育成を目指しています。",
+   "student_counts": {
+    "total": 890,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "情報・AI",
+    "工学"
+   ],
+   "feature_summary": "行田市に本部を置き、技能工芸学部の1学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "ものつくり大学 公式サイト",
+     "source_url": "https://www.iot.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（ものつくり大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "ものつくり大学 設立趣旨・理念・ポリシー",
+     "source_url": "https://www.iot.ac.jp/guide/idea/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "ものつくり大学 大学概要",
+     "source_url": "https://www.iot.ac.jp/guide/outline/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） ものつくり大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000007592801000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000148",
+   "name": "人間総合科学大学",
+   "name_en": "University of Human Arts And Sciences",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "さいたま市",
+   "headquarters": {
+    "postal_code": "339-8539",
+    "prefecture": "埼玉県",
+    "municipality": "さいたま市",
+    "address": "埼玉県さいたま市岩槻区馬込1288"
+   },
+   "official_url": "https://www.human.ac.jp/",
+   "admissions_url": "https://www.human.ac.jp/admission/",
+   "operator": "学校法人早稲田医療学園",
+   "opened_year": 2000,
+   "founder": "久住眞理",
+   "student_counts": {
+    "total": 1548,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "食・栄養",
+    "看護・医療"
+   ],
+   "feature_summary": "さいたま市に本部を置き、人間科学部・保健医療学部の2学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "人間総合科学大学 公式サイト",
+     "source_url": "https://www.human.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（人間総合科学大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "人間総合科学大学 創立者・学長メッセージ",
+     "source_url": "https://www.human.ac.jp/guide/message/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 人間総合科学大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000271601000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000149",
+   "name": "共栄大学",
+   "name_en": "Kyoei University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "春日部市",
+   "headquarters": {
+    "postal_code": "344-0051",
+    "prefecture": "埼玉県",
+    "municipality": "春日部市",
+    "address": "埼玉県春日部市内牧4158"
+   },
+   "official_url": "https://www.kyoei.ac.jp/",
+   "admissions_url": "https://www.kyoei.ac.jp/newstage/",
+   "operator": "学校法人共栄学園",
+   "philosophy": "学園の建学の理念「至誠一貫」を教育理念の原点としています。",
+   "student_counts": {
+    "total": 1395,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "国際関係",
+    "教育"
+   ],
+   "feature_summary": "春日部市に本部を置き、国際経営学部・教育学部の2学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "共栄大学 公式サイト",
+     "source_url": "https://www.kyoei.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（共栄大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "共栄大学 教育理念",
+     "source_url": "https://www.kyoei.ac.jp/guidance/greeting/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 共栄大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000275801000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000150",
+   "name": "十文字学園女子大学",
+   "name_en": "Jumonji University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "新座市",
+   "headquarters": {
+    "postal_code": "352-8510",
+    "prefecture": "埼玉県",
+    "municipality": "新座市",
+    "address": "埼玉県新座市菅沢2-1-28"
+   },
+   "official_url": "https://www.jumonji-u.ac.jp/",
+   "admissions_url": "https://www.jumonji-u.ac.jp/jumonji-style/",
+   "operator": "学校法人十文字学園",
+   "student_counts": {
+    "total": 2148,
+    "graduate": 9,
+    "undergraduate": 2139,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "食・栄養",
+    "社会福祉",
+    "教育",
+    "幼児教育・保育",
+    "心理",
+    "文学・人文",
+    "理学",
+    "情報・AI",
+    "建築・デザイン"
+   ],
+   "feature_summary": "新座市に本部を置き、人間生活学部・教育人文学部・社会情報デザイン学部の3学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "十文字学園女子大学 公式サイト",
+     "source_url": "https://www.jumonji-u.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（十文字学園女子大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "十文字学園女子大学 学部・学科・大学院",
+     "source_url": "https://www.jumonji-u.ac.jp/department/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 十文字学園女子大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000270901000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000151",
+   "name": "城西大学",
+   "name_en": "Josai University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "坂戸市",
+   "headquarters": {
+    "postal_code": "350-0295",
+    "prefecture": "埼玉県",
+    "municipality": "坂戸市",
+    "address": "埼玉県坂戸市けやき台1-1"
+   },
+   "official_url": "https://www.josai.ac.jp/",
+   "admissions_url": "https://admission.josai.ac.jp/",
+   "operator": "学校法人城西大学",
+   "opened_year": 1965,
+   "founder": "水田三喜男",
+   "philosophy": "建学の精神「学問による人間形成」を掲げています。",
+   "student_counts": {
+    "total": 6599,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "情報・AI",
+    "理学",
+    "薬学",
+    "看護・医療",
+    "食・栄養"
+   ],
+   "feature_summary": "坂戸市に本部を置き、経済学部・経営学部・理学部・薬学部の4学部と大学院4研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "城西大学 公式サイト",
+     "source_url": "https://www.josai.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（城西大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "城西大学 建学の精神",
+     "source_url": "https://www.josai.ac.jp/about/overview/spirit/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "城西大学 学部・大学院",
+     "source_url": "https://www.josai.ac.jp/faculty/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 城西大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000270501000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000152",
+   "name": "埼玉医科大学",
+   "name_en": "Saitama Medical University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "入間郡毛呂山町",
+   "headquarters": {
+    "postal_code": "350-0495",
+    "prefecture": "埼玉県",
+    "municipality": "入間郡毛呂山町",
+    "address": "埼玉県入間郡毛呂山町大字毛呂本郷38番地"
+   },
+   "official_url": "https://www.saitama-med.ac.jp/",
+   "admissions_url": "https://adm.saitama-med.ac.jp/",
+   "operator": "学校法人埼玉医科大学",
+   "philosophy": "生命への深い愛情と理解と奉仕に生きるすぐれた実地臨床医家の育成などを建学の理念としています。",
+   "student_counts": {
+    "total": 1630,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "医学",
+    "看護・医療",
+    "工学",
+    "社会学",
+    "理学"
+   ],
+   "feature_summary": "入間郡毛呂山町に本部を置き、医学部・保健医療学部の2学部と大学院2研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "埼玉医科大学 公式サイト",
+     "source_url": "https://www.saitama-med.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（埼玉医科大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "埼玉医科大学 建学の理念",
+     "source_url": "https://www.saitama-med.ac.jp/about/mission/index.html",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 埼玉医科大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156401000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000153",
+   "name": "埼玉学園大学",
+   "name_en": "Saitama Gakuen University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "川口市",
+   "headquarters": {
+    "postal_code": "333-0831",
+    "prefecture": "埼玉県",
+    "municipality": "川口市",
+    "address": "埼玉県川口市大字木曽呂1510"
+   },
+   "official_url": "https://www.saigaku.ac.jp/",
+   "admissions_url": "https://www.saigaku.ac.jp/admissions/",
+   "operator": "学校法人峯徳学園",
+   "student_counts": {
+    "total": 1827,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "幼児教育・保育",
+    "心理",
+    "文学・人文",
+    "理学",
+    "経済・経営・商学",
+    "看護・医療",
+    "教育"
+   ],
+   "feature_summary": "川口市に本部を置き、人間学部・経済経営学部の2学部と大学院3研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "埼玉学園大学 公式サイト",
+     "source_url": "https://www.saigaku.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（埼玉学園大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 埼玉学園大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000157402000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000154",
+   "name": "埼玉工業大学",
+   "name_en": "Saitama Institute of Technology",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "深谷市",
+   "headquarters": {
+    "postal_code": "369-0293",
+    "prefecture": "埼玉県",
+    "municipality": "深谷市",
+    "address": "埼玉県深谷市普済寺1690"
+   },
+   "official_url": "https://www.sit.ac.jp/",
+   "admissions_url": "https://www.sit.ac.jp/entrance/",
+   "operator": "学校法人智香寺学園",
+   "opened_year": 1976,
+   "student_counts": {
+    "total": 2054,
+    "graduate": 72,
+    "undergraduate": 1982,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "工学",
+    "心理",
+    "社会学"
+   ],
+   "feature_summary": "深谷市に本部を置き、工学部・人間社会学部の2学部と大学院2研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "埼玉工業大学 公式サイト",
+     "source_url": "https://www.sit.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（埼玉工業大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "埼玉工業大学 公式サイト",
+     "source_url": "https://www.sit.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 埼玉工業大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156501000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000155",
+   "name": "日本栄養大学",
+   "former_names": [
+    "女子栄養大学"
+   ],
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "坂戸市",
+   "headquarters": {
+    "postal_code": "350-0288",
+    "prefecture": "埼玉県",
+    "municipality": "坂戸市",
+    "address": "埼玉県坂戸市千代田3-9-21"
+   },
+   "official_url": "https://www.eiyo.ac.jp/",
+   "admissions_url": "https://www.eiyo.ac.jp/admissions/",
+   "operator": "学校法人香川栄養学園",
+   "opened_year": 1961,
+   "founder": "香川綾",
+   "philosophy": "「食により人間の健康の維持・改善を図る」ことを建学の精神に掲げています。",
+   "name_change_note": "2026年4月に女子栄養大学から日本栄養大学へ名称変更し、男女共学化",
+   "student_counts": {
+    "total": 1724,
+    "graduate": 27,
+    "undergraduate": 1697,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "食・栄養"
+   ],
+   "feature_summary": "坂戸市に本部を置き、栄養学部の1学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "日本栄養大学 公式サイト",
+     "source_url": "https://www.eiyo.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（女子栄養大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "日本栄養大学 建学の精神・教育の理念",
+     "source_url": "https://www.eiyo.ac.jp/about/principle/kengaku/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "香川栄養学園の歩みと沿革",
+     "source_url": "https://kagawa.eiyo.ac.jp/history/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "日本栄養大学 公式サイト",
+     "source_url": "https://www.eiyo.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 日本栄養大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000259601000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000156",
+   "name": "尚美学園大学",
+   "name_en": "Shobi University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "川越市",
+   "headquarters": {
+    "postal_code": "350-1110",
+    "prefecture": "埼玉県",
+    "municipality": "川越市",
+    "address": "埼玉県川越市豊田町1-1-1"
+   },
+   "official_url": "https://www.shobi-u.ac.jp/",
+   "admissions_url": "https://www.shobi-u.ac.jp/examinee/admission/",
+   "operator": "学校法人尚美学園",
+   "founder": "赤松直（尚美学園創立者）",
+   "philosophy": "建学の精神『智と愛』を掲げています。",
+   "student_counts": {
+    "total": 3104,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "情報・AI",
+    "芸術",
+    "経済・経営・商学",
+    "体育・スポーツ"
+   ],
+   "feature_summary": "川越市に本部を置き、芸術情報学部・総合政策学部・スポーツマネジメント学部の3学部と大学院2研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "尚美学園大学 公式サイト",
+     "source_url": "https://www.shobi-u.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（尚美学園大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "尚美学園大学 建学の精神",
+     "source_url": "https://www.shobi-u.ac.jp/about/overview/built",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "尚美学園大学 学部・大学院",
+     "source_url": "https://www.shobi-u.ac.jp/faculty/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 尚美学園大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000271401000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000157",
+   "name": "平成国際大学",
+   "name_en": "Heisei International University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "加須市",
+   "headquarters": {
+    "postal_code": "347-8504",
+    "prefecture": "埼玉県",
+    "municipality": "加須市",
+    "address": "埼玉県加須市水深大立野2000"
+   },
+   "official_url": "http://www.hiu.ac.jp/",
+   "operator": "学校法人佐藤栄学園",
+   "student_counts": {
+    "total": 1135,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "法学",
+    "体育・スポーツ"
+   ],
+   "feature_summary": "加須市に本部を置き、法学部・スポーツ健康学部の2学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "平成国際大学 公式サイト",
+     "source_url": "http://www.hiu.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（平成国際大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 平成国際大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156801000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000158",
+   "name": "教育テック大学院大学",
+   "name_en": "The Graduate School of Management and Education Technology",
+   "establishment_type": "private",
+   "university_type": "graduate_university",
+   "prefecture": "埼玉県",
+   "municipality": "入間市",
+   "headquarters": {
+    "postal_code": "358-0033",
+    "prefecture": "埼玉県",
+    "municipality": "入間市",
+    "address": "埼玉県入間市狭山台1丁目3番7"
+   },
+   "official_url": "https://www.e-mbatech.ac.jp/",
+   "admissions_url": "https://www.e-mbatech.ac.jp/admissions/application/",
+   "operator": "学校法人ＯＣＣ",
+   "opened_year": 2025,
+   "student_counts": {
+    "total": 134,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "教育",
+    "経済・経営・商学",
+    "情報・AI"
+   ],
+   "feature_summary": "入間市に本部を置く大学院大学で、教育情報・経営リーダーシップ研究科を設けています。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "教育テック大学院大学 公式サイト",
+     "source_url": "https://www.e-mbatech.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（教育テック大学院大学）",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "教育テック大学院大学 情報公開",
+     "source_url": "https://www.e-mbatech.ac.jp/about/information/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 教育テック大学院大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000529102000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000159",
+   "name": "文教大学",
+   "name_en": "Bunkyo University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "越谷市",
+   "headquarters": {
+    "postal_code": "343-8511",
+    "prefecture": "埼玉県",
+    "municipality": "越谷市",
+    "address": "埼玉県越谷市南荻島3337"
+   },
+   "official_url": "https://www.bunkyo.ac.jp/",
+   "admissions_url": "https://www.bunkyo.ac.jp/admission/",
+   "operator": "学校法人文教大学学園",
+   "philosophy": "建学の精神「人間愛」を掲げています。",
+   "student_counts": {
+    "total": 8891,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "教育",
+    "看護・医療",
+    "心理",
+    "理学",
+    "情報・AI",
+    "芸術",
+    "国際・語学",
+    "文学・人文",
+    "国際関係",
+    "観光",
+    "食・栄養",
+    "経済・経営・商学"
+   ],
+   "feature_summary": "越谷市に本部を置き、教育学部・人間科学部・情報学部・文学部・国際学部・健康栄養学部・経営学部の7学部と大学院5研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "文教大学 公式サイト",
+     "source_url": "https://www.bunkyo.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（文教大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "文教大学 建学の精神",
+     "source_url": "https://www.bunkyo.ac.jp/about/ideal/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 文教大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000268301000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000160",
+   "name": "日本保健医療大学",
+   "name_en": "Japan University of Health Sciences",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "幸手市",
+   "headquarters": {
+    "postal_code": "340-0113",
+    "prefecture": "埼玉県",
+    "municipality": "幸手市",
+    "address": "埼玉県幸手市幸手1961-2"
+   },
+   "official_url": "https://www.jhsu.ac.jp/",
+   "admissions_url": "https://www.jhsu.ac.jp/%E5%85%A5%E5%AD%A6%E6%A1%88%E5%86%85",
+   "operator": "学校法人共済学院",
+   "student_counts": {
+    "total": 259,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "看護・医療"
+   ],
+   "feature_summary": "幸手市に本部を置き、保健医療学部の1学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "日本保健医療大学 公式サイト",
+     "source_url": "https://www.jhsu.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（日本保健医療大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 日本保健医療大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000009060501000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000161",
+   "name": "日本医療科学大学",
+   "name_en": "Nihon Institute of Medical Science",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "入間郡毛呂山町",
+   "headquarters": {
+    "postal_code": "350-0435",
+    "prefecture": "埼玉県",
+    "municipality": "入間郡毛呂山町",
+    "address": "埼玉県入間郡毛呂山町下川原1276"
+   },
+   "official_url": "https://www.nims.ac.jp/",
+   "operator": "学校法人城西医療学園",
+   "student_counts": {
+    "total": 1538,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "看護・医療",
+    "工学"
+   ],
+   "feature_summary": "入間郡毛呂山町に本部を置き、保健医療学部の1学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "日本医療科学大学 公式サイト",
+     "source_url": "https://www.nims.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（日本医療科学大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 日本医療科学大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000008076501000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000162",
+   "name": "日本工業大学",
+   "name_en": "Nippon Institute of Technology",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "南埼玉郡宮代町",
+   "headquarters": {
+    "postal_code": "345-8501",
+    "prefecture": "埼玉県",
+    "municipality": "南埼玉郡宮代町",
+    "address": "埼玉県南埼玉郡宮代町学園台4-1-1"
+   },
+   "official_url": "https://www.nit.ac.jp/",
+   "admissions_url": "https://juken.nit.ac.jp/examination/",
+   "operator": "学校法人日本工業大学",
+   "student_counts": {
+    "total": 3915,
+    "graduate": 159,
+    "undergraduate": 3756,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "工学",
+    "建築・デザイン",
+    "経済・経営・商学"
+   ],
+   "feature_summary": "南埼玉郡宮代町に本部を置き、基幹工学部・先進工学部・建築学部の3学部と大学院2研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "日本工業大学 公式サイト",
+     "source_url": "https://www.nit.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（日本工業大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 日本工業大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000265401000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000163",
+   "name": "日本薬科大学",
+   "name_en": "Nihon Pharmaceutical University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "北足立郡伊奈町",
+   "headquarters": {
+    "postal_code": "362-0806",
+    "prefecture": "埼玉県",
+    "municipality": "北足立郡伊奈町",
+    "address": "埼玉県北足立郡伊奈町小室10281"
+   },
+   "official_url": "https://www.nichiyaku.ac.jp/",
+   "admissions_url": "https://www.nichiyaku.ac.jp/admission/",
+   "operator": "学校法人都築学園",
+   "opened_year": 2004,
+   "student_counts": {
+    "total": 1162,
+    "graduate": 15,
+    "undergraduate": 1147,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "薬学",
+    "看護・医療",
+    "経済・経営・商学"
+   ],
+   "feature_summary": "北足立郡伊奈町に本部を置き、薬学部・薬科学部の2学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "日本薬科大学 公式サイト",
+     "source_url": "https://www.nichiyaku.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（日本薬科大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "日本薬科大学 建学の精神・教育目標",
+     "source_url": "https://www.nichiyaku.ac.jp/about/educational-goal/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "日本薬科大学 薬科学部 医療ビジネス薬科学科",
+     "source_url": "https://www.nichiyaku.ac.jp/course-information/medical-business-pharmacy/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 日本薬科大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000673502000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000164",
+   "name": "明海大学",
+   "name_en": "Meikai University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "坂戸市",
+   "headquarters": {
+    "postal_code": "350-0283",
+    "prefecture": "埼玉県",
+    "municipality": "坂戸市",
+    "address": "埼玉県坂戸市けやき台1-1"
+   },
+   "official_url": "https://www.meikai.ac.jp/",
+   "admissions_url": "https://www.meikai.ac.jp/03applicant/exam-information/",
+   "operator": "学校法人明海大学",
+   "student_counts": {
+    "total": 4250,
+    "graduate": 41,
+    "undergraduate": 4209,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "国際・語学",
+    "経済・経営・商学",
+    "観光",
+    "歯学",
+    "看護・医療"
+   ],
+   "feature_summary": "坂戸市に本部を置き、外国語学部・経済学部・不動産学部・ホスピタリティ・ツーリズム学部・歯学部・保健医療学部の6学部と大学院4研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "明海大学 公式サイト",
+     "source_url": "https://www.meikai.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（明海大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "明海大学 学部・学科",
+     "source_url": "https://www.meikai.ac.jp/department/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 明海大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156301000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000165",
+   "name": "東邦音楽大学",
+   "name_en": "Toho College of Music",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "川越市",
+   "headquarters": {
+    "postal_code": "350-0015",
+    "prefecture": "埼玉県",
+    "municipality": "川越市",
+    "address": "埼玉県川越市今泉84"
+   },
+   "official_url": "https://www.toho-music.ac.jp/",
+   "admissions_url": "https://www.toho-music.ac.jp/college/admission/",
+   "operator": "学校法人三室戸学園",
+   "student_counts": {
+    "total": 254,
+    "graduate": 39,
+    "undergraduate": 215,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "芸術"
+   ],
+   "feature_summary": "川越市に本部を置き、音楽学部の1学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "東邦音楽大学 公式サイト",
+     "source_url": "https://www.toho-music.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（東邦音楽大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 東邦音楽大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000267401000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000166",
+   "name": "東都大学",
+   "name_en": "Tohto University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "深谷市",
+   "headquarters": {
+    "postal_code": "366-0052",
+    "prefecture": "埼玉県",
+    "municipality": "深谷市",
+    "address": "埼玉県深谷市上柴町西4-2-11"
+   },
+   "official_url": "https://www.tohto.ac.jp/",
+   "admissions_url": "https://www.tohto.ac.jp/admissions/about/",
+   "operator": "学校法人青淵学園",
+   "academic_field_tags": [
+    "看護・医療",
+    "食・栄養",
+    "工学"
+   ],
+   "feature_summary": "深谷市に本部を置き、ヒューマンケア学部・管理栄養学部・幕張ヒューマンケア学部・沼津ヒューマンケア学部の4学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "東都大学 公式サイト",
+     "source_url": "https://www.tohto.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（東都大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000167",
+   "name": "武蔵野学院大学",
+   "name_en": "Musashino Gakuin University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "狭山市",
+   "headquarters": {
+    "postal_code": "350-1328",
+    "prefecture": "埼玉県",
+    "municipality": "狭山市",
+    "address": "埼玉県狭山市広瀬台3-26-1"
+   },
+   "official_url": "https://www.musashino.ac.jp/mgu/",
+   "admissions_url": "https://www.musashino.ac.jp/mgu/admission/",
+   "operator": "学校法人武蔵野学院",
+   "philosophy": "建学の精神「他者理解」を掲げています。",
+   "student_counts": {
+    "total": 368,
+    "graduate": 5,
+    "undergraduate": 363,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "国際・語学",
+    "国際関係"
+   ],
+   "feature_summary": "狭山市に本部を置き、国際コミュニケーション学部の1学部と大学院1研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "武蔵野学院大学 公式サイト",
+     "source_url": "https://www.musashino.ac.jp/mgu/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（武蔵野学院大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "武蔵野学院大学 建学の精神・教育目的・3つのポリシー",
+     "source_url": "https://www.musashino.ac.jp/mgu/about/3policy/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 武蔵野学院大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000275601000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000168",
+   "name": "浦和大学",
+   "name_en": "Urawa University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "さいたま市",
+   "headquarters": {
+    "postal_code": "336-0974",
+    "prefecture": "埼玉県",
+    "municipality": "さいたま市",
+    "address": "埼玉県さいたま市緑区大字大崎3551"
+   },
+   "official_url": "https://www.urawa.ac.jp/",
+   "admissions_url": "https://www.urawa.ac.jp/admission/index.php",
+   "operator": "学校法人九里学園",
+   "student_counts": {
+    "total": 544,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "教育",
+    "幼児教育・保育",
+    "社会福祉",
+    "社会学"
+   ],
+   "feature_summary": "さいたま市に本部を置き、こども学部・社会学部の2学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "浦和大学 公式サイト",
+     "source_url": "https://www.urawa.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（浦和大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 浦和大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000157301000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000169",
+   "name": "獨協大学",
+   "name_en": "Dokkyo University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "草加市",
+   "headquarters": {
+    "postal_code": "340-0042",
+    "prefecture": "埼玉県",
+    "municipality": "草加市",
+    "address": "埼玉県草加市学園町1-1"
+   },
+   "official_url": "https://www.dokkyo.ac.jp/",
+   "admissions_url": "https://nyushi.dokkyo.ac.jp/",
+   "operator": "学校法人獨協学園",
+   "student_counts": {
+    "total": 8460,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "国際・語学",
+    "文学・人文",
+    "経済・経営・商学",
+    "国際関係",
+    "法学",
+    "情報・AI"
+   ],
+   "feature_summary": "草加市に本部を置き、外国語学部・国際教養学部・経済学部・法学部の4学部と大学院3研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "獨協大学 公式サイト",
+     "source_url": "https://www.dokkyo.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（獨協大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "獨協大学 学部学科・大学院",
+     "source_url": "https://www.dokkyo.ac.jp/academics/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 獨協大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156603000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000170",
+   "name": "聖学院大学",
+   "name_en": "Seigakuin University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "上尾市",
+   "headquarters": {
+    "postal_code": "362-8585",
+    "prefecture": "埼玉県",
+    "municipality": "上尾市",
+    "address": "埼玉県上尾市戸崎1-1"
+   },
+   "official_url": "https://www.seigakuin.jp/",
+   "operator": "学校法人聖学院",
+   "student_counts": {
+    "total": 1636,
+    "graduate": 41,
+    "undergraduate": 1595,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "教育",
+    "幼児教育・保育",
+    "文学・人文",
+    "心理",
+    "社会福祉"
+   ],
+   "feature_summary": "上尾市に本部を置き、政治経済学部・人文学部・心理福祉学部の3学部と大学院3研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "聖学院大学 公式サイト",
+     "source_url": "https://www.seigakuin.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（聖学院大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 聖学院大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000269801000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000171",
+   "name": "西武文理大学",
+   "name_en": "Bunri University of Hospitality",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "狭山市",
+   "headquarters": {
+    "postal_code": "350-1336",
+    "prefecture": "埼玉県",
+    "municipality": "狭山市",
+    "address": "埼玉県狭山市柏原新田311-1"
+   },
+   "official_url": "https://www.bunri-c.ac.jp/",
+   "admissions_url": "https://juken.bunri-c.ac.jp/admission/",
+   "operator": "学校法人文理佐藤学園",
+   "founder": "佐藤英樹",
+   "philosophy": "建学の精神として全人教育を掲げ、知・情・意の調和した人間の育成を目指しています。",
+   "student_counts": {
+    "total": 1068,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "社会福祉",
+    "経済・経営・商学",
+    "観光",
+    "看護・医療"
+   ],
+   "feature_summary": "狭山市に本部を置き、サービス経営学部・看護学部の2学部で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "西武文理大学 公式サイト",
+     "source_url": "https://www.bunri-c.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（西武文理大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "西武文理大学 大学紹介",
+     "source_url": "https://www.bunri-c.ac.jp/about.html",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "西武文理大学 学長紹介・沿革・組織",
+     "source_url": "https://www.bunri-c.ac.jp/about/outline.html",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 西武文理大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156901000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  },
+  {
+   "id": "u000172",
+   "name": "駿河台大学",
+   "name_en": "Surugadai University",
+   "establishment_type": "private",
+   "university_type": "university",
+   "prefecture": "埼玉県",
+   "municipality": "飯能市",
+   "headquarters": {
+    "postal_code": "357-8555",
+    "prefecture": "埼玉県",
+    "municipality": "飯能市",
+    "address": "埼玉県飯能市大字阿須字一の木698"
+   },
+   "official_url": "https://www.surugadai.ac.jp/",
+   "admissions_url": "https://www.surugadai.ac.jp/exam/",
+   "operator": "学校法人駿河台大学",
+   "founder": "山﨑春之",
+   "philosophy": "建学の精神「愛情教育」を掲げています。",
+   "student_counts": {
+    "total": 3929,
+    "graduate": 52,
+    "undergraduate": 3877,
+    "as_of": "2026-05-01"
+   },
+   "academic_field_tags": [
+    "法学",
+    "経済・経営・商学",
+    "情報・AI",
+    "体育・スポーツ",
+    "心理",
+    "理学",
+    "看護・医療"
+   ],
+   "feature_summary": "飯能市に本部を置き、法学部・経済経営学部・メディア情報学部・スポーツ科学部・心理学部の5学部と大学院2研究科で学ぶ大学です。",
+   "status": "active",
+   "verification_status": "verified",
+   "verified_at": "2026-10-30",
+   "sources": [
+    {
+     "source_name": "駿河台大学 公式サイト",
+     "source_url": "https://www.surugadai.ac.jp/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "文部科学省 令和7年度全国大学一覧（駿河台大学）",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    },
+    {
+     "source_name": "駿河台大学 大学紹介",
+     "source_url": "https://www.surugadai.ac.jp/about/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "駿河台大学 学部・研究科",
+     "source_url": "https://www.surugadai.ac.jp/faculty/",
+     "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "大学ポートレート（私学版） 駿河台大学 学生情報",
+     "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000156701000.html",
+     "verified_at": "2026-10-30",
+     "role": "secondary"
+    }
+   ]
+  }
+ ]
+}

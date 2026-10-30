@@ -1,0 +1,172 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000153",
+ "id": "u000153",
+ "name": "埼玉学園大学",
+ "name_en": "Saitama Gakuen University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "川口市",
+ "operator": "学校法人峯徳学園",
+ "feature_summary": "川口市に本部を置き、人間学部・経済経営学部の2学部と大学院3研究科で学ぶ大学です。",
+ "official_url": "https://www.saigaku.ac.jp/",
+ "admissions_url": "https://www.saigaku.ac.jp/admissions/",
+ "student_counts": {
+  "total": 1827,
+  "as_of": "2026-05-01",
+  "source_id": "s00015303"
+ },
+ "academic_field_tags": [
+  "幼児教育・保育",
+  "心理",
+  "文学・人文",
+  "理学",
+  "経済・経営・商学",
+  "看護・医療",
+  "教育"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200021",
+   "name": "人間学部",
+   "academic_field_tags": [
+    "幼児教育・保育",
+    "心理",
+    "文学・人文",
+    "理学"
+   ],
+   "campus_municipality": "川口市",
+   "departments": [
+    {
+     "department_id": "d200051",
+     "name": "人間文化学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200052",
+     "name": "子ども発達学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200053",
+     "name": "心理学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200022",
+   "name": "経済経営学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "川口市",
+   "departments": [
+    {
+     "department_id": "d200054",
+     "name": "経済経営学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200015",
+   "name": "心理学研究科",
+   "programs": [
+    {
+     "name": "臨床心理学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "看護・医療",
+    "心理",
+    "理学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200016",
+   "name": "子ども教育学研究科",
+   "programs": [
+    {
+     "name": "子ども教育学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "教育",
+    "幼児教育・保育"
+   ]
+  },
+  {
+   "graduate_school_id": "g200017",
+   "name": "経営学研究科",
+   "programs": [
+    {
+     "name": "経営学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00015301",
+   "name": "本部",
+   "postal_code": "333-0831",
+   "prefecture": "埼玉県",
+   "municipality": "川口市",
+   "address": "埼玉県川口市大字木曽呂1510",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00015301",
+   "title": "埼玉学園大学 公式サイト",
+   "url": "https://www.saigaku.ac.jp/",
+   "publisher": "埼玉学園大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015302",
+   "title": "文部科学省 令和7年度全国大学一覧（埼玉学園大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00015303",
+   "title": "大学ポートレート（私学版） 埼玉学園大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000157402000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

@@ -1,0 +1,312 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000145",
+ "id": "u000145",
+ "name": "埼玉大学",
+ "name_en": "Saitama University",
+ "establishment_type": "national",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "さいたま市",
+ "operator": "国立大学法人埼玉大学",
+ "feature_summary": "さいたま市に本部を置き、教養学部・経済学部・教育学部・理学部・工学部の5学部と大学院4研究科で学ぶ大学です。",
+ "official_url": "https://www.saitama-u.ac.jp/",
+ "admissions_url": "https://www.saitama-u.ac.jp/entrance/",
+ "student_counts": {
+  "undergraduate": 6943,
+  "graduate": 1602,
+  "total": 8545,
+  "as_of": "2026-05-01"
+ },
+ "academic_field_tags": [
+  "文学・人文",
+  "経済・経営・商学",
+  "教育",
+  "理学",
+  "社会学",
+  "情報・AI",
+  "工学",
+  "建築・デザイン",
+  "国際関係"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200001",
+   "name": "教養学部",
+   "academic_field_tags": [
+    "文学・人文"
+   ],
+   "campus_municipality": "さいたま市",
+   "departments": [
+    {
+     "department_id": "d200001",
+     "name": "教養学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200002",
+   "name": "経済学部",
+   "academic_field_tags": [
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "さいたま市",
+   "departments": [
+    {
+     "department_id": "d200002",
+     "name": "経営学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200003",
+     "name": "経済学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200003",
+   "name": "教育学部",
+   "academic_field_tags": [
+    "教育"
+   ],
+   "campus_municipality": "さいたま市",
+   "departments": [
+    {
+     "department_id": "d200004",
+     "name": "学校教育教員養成課程",
+     "programs": []
+    },
+    {
+     "department_id": "d200005",
+     "name": "養護教諭養成課程",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200004",
+   "name": "理学部",
+   "academic_field_tags": [
+    "理学"
+   ],
+   "campus_municipality": "さいたま市",
+   "departments": [
+    {
+     "department_id": "d200006",
+     "name": "数学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200007",
+     "name": "物理学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200008",
+     "name": "基礎化学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200009",
+     "name": "分子生物学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200010",
+     "name": "生体制御学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200005",
+   "name": "工学部",
+   "academic_field_tags": [
+    "社会学",
+    "情報・AI",
+    "理学",
+    "工学",
+    "建築・デザイン"
+   ],
+   "campus_municipality": "さいたま市",
+   "departments": [
+    {
+     "department_id": "d200011",
+     "name": "機械工学・システムデザイン学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200012",
+     "name": "電気電子物理工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200013",
+     "name": "情報工学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200014",
+     "name": "応用化学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200015",
+     "name": "環境社会デザイン学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200001",
+   "name": "文化科学研究科",
+   "programs": [
+    {
+     "name": "日本・アジア研究専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "文学・人文"
+   ]
+  },
+  {
+   "graduate_school_id": "g200002",
+   "name": "人文社会科学研究科",
+   "programs": [
+    {
+     "name": "文化環境専攻"
+    },
+    {
+     "name": "国際日本アジア専攻"
+    },
+    {
+     "name": "経済経営専攻"
+    },
+    {
+     "name": "日本・アジア文化専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "経済・経営・商学",
+    "国際関係",
+    "文学・人文",
+    "社会学"
+   ]
+  },
+  {
+   "graduate_school_id": "g200003",
+   "name": "教育学研究科",
+   "programs": [
+    {
+     "name": "教職実践専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "教育"
+   ]
+  },
+  {
+   "graduate_school_id": "g200004",
+   "name": "理工学研究科",
+   "programs": [
+    {
+     "name": "物理機能系専攻"
+    },
+    {
+     "name": "化学系専攻"
+    },
+    {
+     "name": "数理電子情報系専攻"
+    },
+    {
+     "name": "機械科学系専攻"
+    },
+    {
+     "name": "理工学専攻"
+    },
+    {
+     "name": "生命科学専攻"
+    },
+    {
+     "name": "物質科学専攻"
+    },
+    {
+     "name": "数理電子情報専攻"
+    },
+    {
+     "name": "機械科学専攻"
+    },
+    {
+     "name": "環境社会基盤専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "社会学",
+    "情報・AI",
+    "理学",
+    "工学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00014501",
+   "name": "本部",
+   "postal_code": "338-8570",
+   "prefecture": "埼玉県",
+   "municipality": "さいたま市",
+   "address": "埼玉県さいたま市桜区下大久保255",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00014501",
+   "title": "埼玉大学 公式サイト",
+   "url": "https://www.saitama-u.ac.jp/",
+   "publisher": "埼玉大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00014502",
+   "title": "文部科学省 令和7年度全国大学一覧（埼玉大学）",
+   "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00014503",
+   "title": "埼玉大学 データブック2026（学生数 令和8年5月1日現在）",
+   "url": "https://www.saitama-u.ac.jp/media/databook2026.pdf",
+   "publisher": "埼玉大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}

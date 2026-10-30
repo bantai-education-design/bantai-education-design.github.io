@@ -1,0 +1,103 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000160",
+ "id": "u000160",
+ "name": "日本保健医療大学",
+ "name_en": "Japan University of Health Sciences",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "幸手市",
+ "operator": "学校法人共済学院",
+ "feature_summary": "幸手市に本部を置き、保健医療学部の1学部で学ぶ大学です。",
+ "official_url": "https://www.jhsu.ac.jp/",
+ "admissions_url": "https://www.jhsu.ac.jp/%E5%85%A5%E5%AD%A6%E6%A1%88%E5%86%85",
+ "student_counts": {
+  "total": 259,
+  "as_of": "2026-05-01",
+  "source_id": "s00016003"
+ },
+ "academic_field_tags": [
+  "看護・医療"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200038",
+   "name": "保健医療学部",
+   "academic_field_tags": [
+    "看護・医療"
+   ],
+   "campus_municipality": "幸手市",
+   "departments": [
+    {
+     "department_id": "d200088",
+     "name": "看護学科",
+     "programs": []
+    },
+    {
+     "department_id": "d200089",
+     "name": "理学療法学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00016001",
+   "name": "本部",
+   "postal_code": "340-0113",
+   "prefecture": "埼玉県",
+   "municipality": "幸手市",
+   "address": "埼玉県幸手市幸手1961-2",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00016001",
+   "title": "日本保健医療大学 公式サイト",
+   "url": "https://www.jhsu.ac.jp/",
+   "publisher": "日本保健医療大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016002",
+   "title": "文部科学省 令和7年度全国大学一覧（日本保健医療大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016003",
+   "title": "大学ポートレート（私学版） 日本保健医療大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000009060501000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ },
+ "graduate_schools": []
+}

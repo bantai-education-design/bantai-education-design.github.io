@@ -1,0 +1,19 @@
+{
+ "generated_at": "2026-10-30",
+ "source_repository": "bantai-education-design/daigaku_DB",
+ "source_commit": "78676bb118c23ca5fed00bf32c64bde96b59d93a",
+ "prefecture": "埼玉県",
+ "universities": 28,
+ "faculties": 72,
+ "departments": 148,
+ "graduate_schools": 46,
+ "core_shards": [
+  {
+   "file": "saitama_core_01.json",
+   "count": 28,
+   "first_id": "u000145",
+   "last_id": "u000172"
+  }
+ ],
+ "complete_profiles": 28
+}

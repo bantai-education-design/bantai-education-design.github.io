@@ -1,0 +1,151 @@
+{
+ "schema_version": "1.0",
+ "university_id": "u000163",
+ "id": "u000163",
+ "name": "日本薬科大学",
+ "name_en": "Nihon Pharmaceutical University",
+ "establishment_type": "private",
+ "status": "active",
+ "prefecture": "埼玉県",
+ "municipality": "北足立郡伊奈町",
+ "operator": "学校法人都築学園",
+ "opened_year": 2004,
+ "feature_summary": "北足立郡伊奈町に本部を置き、薬学部・薬科学部の2学部と大学院1研究科で学ぶ大学です。",
+ "official_url": "https://www.nichiyaku.ac.jp/",
+ "admissions_url": "https://www.nichiyaku.ac.jp/admission/",
+ "student_counts": {
+  "total": 1162,
+  "graduate": 15,
+  "undergraduate": 1147,
+  "as_of": "2026-05-01",
+  "source_id": "s00016305"
+ },
+ "academic_field_tags": [
+  "薬学",
+  "看護・医療",
+  "経済・経営・商学"
+ ],
+ "academics": [
+  {
+   "faculty_id": "f200043",
+   "name": "薬学部",
+   "academic_field_tags": [
+    "薬学"
+   ],
+   "campus_municipality": "伊奈町",
+   "departments": [
+    {
+     "department_id": "d200102",
+     "name": "薬学科",
+     "programs": []
+    }
+   ]
+  },
+  {
+   "faculty_id": "f200044",
+   "name": "薬科学部",
+   "academic_field_tags": [
+    "薬学",
+    "看護・医療",
+    "経済・経営・商学"
+   ],
+   "campus_municipality": "文京区",
+   "departments": [
+    {
+     "department_id": "d200103",
+     "name": "医療ビジネス薬科学科",
+     "programs": []
+    }
+   ]
+  }
+ ],
+ "graduate_schools": [
+  {
+   "graduate_school_id": "g200032",
+   "name": "薬学研究科",
+   "programs": [
+    {
+     "name": "薬学専攻"
+    }
+   ],
+   "academic_field_tags": [
+    "薬学"
+   ]
+  }
+ ],
+ "campuses": [
+  {
+   "campus_id": "c00016301",
+   "name": "本部",
+   "postal_code": "362-0806",
+   "prefecture": "埼玉県",
+   "municipality": "北足立郡伊奈町",
+   "address": "埼玉県北足立郡伊奈町小室10281",
+   "nearest_stations": []
+  }
+ ],
+ "sources": [
+  {
+   "source_id": "s00016301",
+   "title": "日本薬科大学 公式サイト",
+   "url": "https://www.nichiyaku.ac.jp/",
+   "publisher": "日本薬科大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016302",
+   "title": "文部科学省 令和7年度全国大学一覧（日本薬科大学）",
+   "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+   "publisher": "文部科学省",
+   "source_type": "government",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016303",
+   "title": "日本薬科大学 建学の精神・教育目標",
+   "url": "https://www.nichiyaku.ac.jp/about/educational-goal/",
+   "publisher": "日本薬科大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016304",
+   "title": "日本薬科大学 薬科学部 医療ビジネス薬科学科",
+   "url": "https://www.nichiyaku.ac.jp/course-information/medical-business-pharmacy/",
+   "publisher": "日本薬科大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016305",
+   "title": "大学ポートレート（私学版） 日本薬科大学 学生情報",
+   "url": "https://up-j.shigaku.go.jp/school/category06/00000000673502000.html",
+   "publisher": "大学ポートレート（私学版）",
+   "source_type": "portrait",
+   "verified_at": "2026-10-30",
+   "status": "active"
+  }
+ ],
+ "verification": {
+  "last_verified_at": "2026-10-30",
+  "verification_status": "partial",
+  "verified_sections": [
+   "basic",
+   "academics",
+   "campuses"
+  ],
+  "pending_sections": [
+   "tuition",
+   "admissions",
+   "careers",
+   "research",
+   "notable_alumni"
+  ],
+  "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+ }
+}
