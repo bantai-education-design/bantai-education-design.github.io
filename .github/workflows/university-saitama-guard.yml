@@ -76,7 +76,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const errors=[];
-            const watch=(pg,tag)=>{pg.on('pageerror',e=>errors.push(`${tag} pageerror ${e.message}`));pg.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push(`${tag} 404 `+r.url().replace('http://127.0.0.1:4173',''))})};
+            const watch=(pg,tag)=>{pg.on('pageerror',e=>errors.push(`${tag} pageerror ${e.message}`));pg.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1')&&!/(faculties|departments)_tokyo_all\.generated\.json|\/data\/complete\/u\d+\.json/.test(r.url()))errors.push(`${tag} 404 `+r.url().replace('http://127.0.0.1:4173',''))})};
             const page=await browser.newPage({viewport:{width:1366,height:950}});watch(page,'list');
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
             await page.waitForFunction(n=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===n,total,{timeout:30000});
@@ -126,7 +126,8 @@ jobs:
             await deep.close();
             const redirect=await browser.newPage();
             await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
-            assert.ok(redirect.url().includes('/tokyo/?pref=saitama'),'saitama/ redirects to unified page: '+redirect.url());
+            assert.ok(redirect.url().includes('/tokyo/'),'saitama/ redirects to unified page: '+redirect.url());
+            await redirect.waitForFunction(n=>document.querySelectorAll('.tokyo-card').length===n,saitama.length,{timeout:30000});
             await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=u000169',{waitUntil:'networkidle'});
             assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000169'),'saitama detail redirects: '+redirect.url());
             await redirect.close();

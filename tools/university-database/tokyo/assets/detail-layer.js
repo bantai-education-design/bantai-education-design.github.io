@@ -25,10 +25,9 @@ async function applyCanonicalAdmissions(){
       if(!state.rows.length){setTimeout(waitForRows,50);return;}
       const apply=()=>{
         state.rows=state.rows.map(row=>byId.has(row.id)?{...row,...byId.get(row.id)}:row);
-        const covered=state.rows.filter(row=>row.admissions_url||row.admissions_status==='stopped').length;
+        // 東京都正本の144校だけで入試導線の網羅を確認する（他地域のデータは対象外）
+        const covered=state.rows.filter(row=>byId.has(row.id)&&(row.admissions_url||row.admissions_status==='stopped')).length;
         if(covered!==144)throw new Error(`admissions coverage ${covered}/144`);
-        const quality=document.querySelector('#quality-admissions');
-        if(quality)quality.textContent='144/144';
         updateCompare();
         render();
       };
