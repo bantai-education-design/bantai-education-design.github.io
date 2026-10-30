@@ -919,5 +919,24 @@
       "家庭学習",
       "小中連携"
     ]
+  },
+  {
+    "id": "column-public-high-school-choice-20261030",
+    "slug": "public-high-school-choice-20261030",
+    "title": "公立高校は、これから何で選ばれるのか",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.10.30",
+    "excerpt": "高校授業料無償化を背景に進む公立高校の入試制度と学びの改革。受けやすさだけでなく、地域で学ぶ意味や費用、支援、進路から高校選びを考えます。",
+    "thumbnail": "/assets/images/columns/public-high-school-choice-thumbnail.webp",
+    "readTime": "約8分",
+    "tags": [
+      "公立高校",
+      "高校入試",
+      "高校改革",
+      "高校授業料無償化",
+      "地域連携"
+    ],
+    "url": "/columns/public-high-school-choice-20261030/"
   }
 ]
