@@ -5,3 +5,4 @@
 .ref-type-chip:hover{border-color:#082844}
 .ref-type-chip:focus-visible{outline:2px solid #2f6fa3;outline-offset:2px}
 .ref-type-chip.active{background:#082844;border-color:#082844;color:#fff}
+.ref-area-list small{display:block;font-size:.66rem;color:#5d6e80;font-weight:700;margin-top:2px}

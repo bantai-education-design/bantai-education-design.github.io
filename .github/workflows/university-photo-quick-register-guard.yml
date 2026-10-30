@@ -151,7 +151,7 @@ jobs:
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'no mobile horizontal overflow');
 
             const db=await browser.newPage({viewport:{width:1366,height:950}});
-            await db.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await db.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
             await db.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             await db.waitForFunction(()=>window.__universityOwnerPhotos?.get('u000094')?.image_url==='assets/card-images/asia-university-bantai.jpg',{timeout:10000});
             await db.waitForFunction(()=>document.querySelector('.tokyo-card[data-id="u000094"] .real-university-image img')?.getAttribute('src')==='assets/card-images/asia-university-bantai.jpg',{timeout:10000});

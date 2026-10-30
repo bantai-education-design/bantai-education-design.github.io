@@ -11,10 +11,11 @@
  "operator": "学校法人城西医療学園",
  "feature_summary": "入間郡毛呂山町に本部を置き、保健医療学部の1学部で学ぶ大学です。",
  "official_url": "https://www.nims.ac.jp/",
+ "admissions_url": "https://www.nims.ac.jp/jyuken/admission.html",
  "student_counts": {
   "total": 1538,
   "as_of": "2026-05-01",
-  "source_id": "s00016103"
+  "source_id": "s00016104"
  },
  "academic_field_tags": [
   "看護・医療",
@@ -22,7 +23,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200039",
+   "faculty_id": "f200040",
    "name": "保健医療学部",
    "academic_field_tags": [
     "看護・医療",
@@ -31,27 +32,27 @@
    "campus_municipality": "毛呂山町",
    "departments": [
     {
-     "department_id": "d200090",
+     "department_id": "d200091",
      "name": "診療放射線学科",
      "programs": []
     },
     {
-     "department_id": "d200091",
+     "department_id": "d200092",
      "name": "リハビリテーション学科",
      "programs": []
     },
     {
-     "department_id": "d200092",
+     "department_id": "d200093",
      "name": "看護学科",
      "programs": []
     },
     {
-     "department_id": "d200093",
+     "department_id": "d200094",
      "name": "臨床工学科",
      "programs": []
     },
     {
-     "department_id": "d200094",
+     "department_id": "d200095",
      "name": "臨床検査学科",
      "programs": []
     }
@@ -90,6 +91,15 @@
   },
   {
    "source_id": "s00016103",
+   "title": "日本医療科学大学 受験生応援サイト",
+   "url": "https://www.nims.ac.jp/jyuken/admission.html",
+   "publisher": "日本医療科学大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016104",
    "title": "大学ポートレート（私学版） 日本医療科学大学 学生情報",
    "url": "https://up-j.shigaku.go.jp/school/category06/00000008076501000.html",
    "publisher": "大学ポートレート（私学版）",

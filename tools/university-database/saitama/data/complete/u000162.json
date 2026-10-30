@@ -28,7 +28,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200040",
+   "faculty_id": "f200041",
    "name": "基幹工学部",
    "academic_field_tags": [
     "情報・AI",
@@ -38,24 +38,24 @@
    "campus_municipality": "宮代町",
    "departments": [
     {
-     "department_id": "d200095",
+     "department_id": "d200096",
      "name": "機械工学科",
      "programs": []
     },
     {
-     "department_id": "d200096",
+     "department_id": "d200097",
      "name": "電気情報工学科",
      "programs": []
     },
     {
-     "department_id": "d200097",
+     "department_id": "d200098",
      "name": "環境生命化学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200041",
+   "faculty_id": "f200042",
    "name": "先進工学部",
    "academic_field_tags": [
     "情報・AI",
@@ -64,24 +64,24 @@
    "campus_municipality": "宮代町",
    "departments": [
     {
-     "department_id": "d200098",
+     "department_id": "d200099",
      "name": "ロボティクス学科",
      "programs": []
     },
     {
-     "department_id": "d200099",
+     "department_id": "d200100",
      "name": "情報メディア工学科",
      "programs": []
     },
     {
-     "department_id": "d200101",
+     "department_id": "d200102",
      "name": "データサイエンス学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200042",
+   "faculty_id": "f200043",
    "name": "建築学部",
    "academic_field_tags": [
     "建築・デザイン"
@@ -89,7 +89,7 @@
    "campus_municipality": "宮代町",
    "departments": [
     {
-     "department_id": "d200100",
+     "department_id": "d200101",
      "name": "建築学科",
      "programs": []
     }

@@ -202,6 +202,7 @@
    "operator": "学校法人早稲田医療学園",
    "opened_year": 2000,
    "founder": "久住眞理",
+   "philosophy": "「人は、心と身体が相関しており、社会的生き物である」という人間観を建学の精神の出発点としています。",
    "student_counts": {
     "total": 1548,
     "as_of": "2026-05-01"
@@ -231,6 +232,12 @@
      "source_name": "人間総合科学大学 創立者・学長メッセージ",
      "source_url": "https://www.human.ac.jp/guide/message/",
      "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "人間総合科学大学 沿革・組織",
+     "source_url": "https://www.human.ac.jp/guide/history/",
+     "verified_at": "2026-10-31",
      "role": "primary"
     },
     {
@@ -765,7 +772,7 @@
     "municipality": "加須市",
     "address": "埼玉県加須市水深大立野2000"
    },
-   "official_url": "http://www.hiu.ac.jp/",
+   "official_url": "https://www.hiu.ac.jp/",
    "operator": "学校法人佐藤栄学園",
    "student_counts": {
     "total": 1135,
@@ -773,16 +780,18 @@
    },
    "academic_field_tags": [
     "法学",
-    "体育・スポーツ"
+    "体育・スポーツ",
+    "情報・AI",
+    "建築・デザイン"
    ],
-   "feature_summary": "加須市に本部を置き、法学部・スポーツ健康学部の2学部と大学院1研究科で学ぶ大学です。",
+   "feature_summary": "加須市に本部を置き、法学部・スポーツ健康学部・情報デザイン学部の3学部と大学院1研究科で学ぶ大学です。",
    "status": "active",
    "verification_status": "verified",
    "verified_at": "2026-10-30",
    "sources": [
     {
      "source_name": "平成国際大学 公式サイト",
-     "source_url": "http://www.hiu.ac.jp/",
+     "source_url": "https://www.hiu.ac.jp/",
      "verified_at": "2026-10-30",
      "role": "primary"
     },
@@ -791,6 +800,12 @@
      "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
      "verified_at": "2026-10-30",
      "role": "secondary"
+    },
+    {
+     "source_name": "平成国際大学 2026年度学生募集要項（情報デザイン学部 令和8年度開設）",
+     "source_url": "https://www.hiu.ac.jp/examination_info/application/data/2025-01.pdf",
+     "verified_at": "2026-10-31",
+     "role": "primary"
     },
     {
      "source_name": "大学ポートレート（私学版） 平成国際大学 学生情報",
@@ -989,6 +1004,7 @@
     "address": "埼玉県入間郡毛呂山町下川原1276"
    },
    "official_url": "https://www.nims.ac.jp/",
+   "admissions_url": "https://www.nims.ac.jp/jyuken/admission.html",
    "operator": "学校法人城西医療学園",
    "student_counts": {
     "total": 1538,
@@ -1014,6 +1030,12 @@
      "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
      "verified_at": "2026-10-30",
      "role": "secondary"
+    },
+    {
+     "source_name": "日本医療科学大学 受験生応援サイト",
+     "source_url": "https://www.nims.ac.jp/jyuken/admission.html",
+     "verified_at": "2026-10-31",
+     "role": "primary"
     },
     {
      "source_name": "大学ポートレート（私学版） 日本医療科学大学 学生情報",
@@ -1096,6 +1118,7 @@
    "admissions_url": "https://www.nichiyaku.ac.jp/admission/",
    "operator": "学校法人都築学園",
    "opened_year": 2004,
+   "philosophy": "建学の精神「個性の伸展による人生練磨」を掲げています。",
    "student_counts": {
     "total": 1162,
     "graduate": 15,
@@ -1134,6 +1157,12 @@
      "source_name": "日本薬科大学 薬科学部 医療ビジネス薬科学科",
      "source_url": "https://www.nichiyaku.ac.jp/course-information/medical-business-pharmacy/",
      "verified_at": "2026-10-30",
+     "role": "primary"
+    },
+    {
+     "source_name": "日本薬科大学 建学の精神・教育目標",
+     "source_url": "https://www.nichiyaku.ac.jp/about/educational-goal/",
+     "verified_at": "2026-10-31",
      "role": "primary"
     },
     {
@@ -1273,6 +1302,7 @@
    "official_url": "https://www.tohto.ac.jp/",
    "admissions_url": "https://www.tohto.ac.jp/admissions/about/",
    "operator": "学校法人青淵学園",
+   "philosophy": "「人の健康と幸せを担う高い志をもち実践力を備えた人を育てる」を建学の精神とし、ヒューマンケアを実践できる医療人材の育成を掲げています。",
    "academic_field_tags": [
     "看護・医療",
     "食・栄養",
@@ -1294,6 +1324,12 @@
      "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
      "verified_at": "2026-10-30",
      "role": "secondary"
+    },
+    {
+     "source_name": "東都大学 建学の精神・基本理念",
+     "source_url": "https://www.tohto.ac.jp/about/idea/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
     }
    ]
   },
@@ -1482,8 +1518,10 @@
     "municipality": "上尾市",
     "address": "埼玉県上尾市戸崎1-1"
    },
-   "official_url": "https://www.seigakuin.jp/",
+   "official_url": "https://www.seigakuin-univ.ac.jp/",
+   "admissions_url": "https://www.seigakuin-univ.ac.jp/admissions/",
    "operator": "学校法人聖学院",
+   "philosophy": "スクールモットー「神を仰ぎ 人に仕う」を掲げ、キリスト教の精神に基づく教育を行っています。",
    "student_counts": {
     "total": 1636,
     "graduate": 41,
@@ -1494,6 +1532,7 @@
     "経済・経営・商学",
     "教育",
     "幼児教育・保育",
+    "国際関係",
     "文学・人文",
     "心理",
     "社会福祉"
@@ -1505,7 +1544,7 @@
    "sources": [
     {
      "source_name": "聖学院大学 公式サイト",
-     "source_url": "https://www.seigakuin.jp/",
+     "source_url": "https://www.seigakuin-univ.ac.jp/",
      "verified_at": "2026-10-30",
      "role": "primary"
     },
@@ -1514,6 +1553,24 @@
      "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
      "verified_at": "2026-10-30",
      "role": "secondary"
+    },
+    {
+     "source_name": "聖学院大学 公式サイト",
+     "source_url": "https://www.seigakuin-univ.ac.jp/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "聖学院大学 建学の精神",
+     "source_url": "https://www.seigakuin-univ.ac.jp/mission/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
+    },
+    {
+     "source_name": "聖学院大学 入試情報",
+     "source_url": "https://www.seigakuin-univ.ac.jp/admissions/",
+     "verified_at": "2026-10-31",
+     "role": "primary"
     },
     {
      "source_name": "大学ポートレート（私学版） 聖学院大学 学生情報",

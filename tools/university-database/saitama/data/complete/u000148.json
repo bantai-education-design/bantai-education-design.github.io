@@ -11,13 +11,14 @@
  "operator": "学校法人早稲田医療学園",
  "opened_year": 2000,
  "founder": "久住眞理",
+ "philosophy": "「人は、心と身体が相関しており、社会的生き物である」という人間観を建学の精神の出発点としています。",
  "feature_summary": "さいたま市に本部を置き、人間科学部・保健医療学部の2学部と大学院1研究科で学ぶ大学です。",
  "official_url": "https://www.human.ac.jp/",
  "admissions_url": "https://www.human.ac.jp/admission/",
  "student_counts": {
   "total": 1548,
   "as_of": "2026-05-01",
-  "source_id": "s00014804"
+  "source_id": "s00014805"
  },
  "academic_field_tags": [
   "食・栄養",
@@ -120,6 +121,15 @@
   },
   {
    "source_id": "s00014804",
+   "title": "人間総合科学大学 沿革・組織",
+   "url": "https://www.human.ac.jp/guide/history/",
+   "publisher": "人間総合科学大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
+   "status": "active"
+  },
+  {
+   "source_id": "s00014805",
    "title": "大学ポートレート（私学版） 人間総合科学大学 学生情報",
    "url": "https://up-j.shigaku.go.jp/school/category06/00000000271601000.html",
    "publisher": "大学ポートレート（私学版）",

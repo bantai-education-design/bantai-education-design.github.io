@@ -1,11 +1,11 @@
 {
  "generated_at": "2026-10-30",
  "source_repository": "bantai-education-design/daigaku_DB",
- "source_commit": "98c8e2f8a9ccda74341694269329a758a19b4902",
+ "source_commit": "5e692d72197d4fa3955d42f71f42f9930544d3f8",
  "prefecture": "埼玉県",
  "universities": 28,
- "faculties": 72,
- "departments": 148,
+ "faculties": 73,
+ "departments": 149,
  "graduate_schools": 46,
  "core_shards": [
   {

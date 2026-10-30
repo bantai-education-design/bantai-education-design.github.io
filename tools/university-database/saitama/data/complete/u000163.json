@@ -10,6 +10,7 @@
  "municipality": "北足立郡伊奈町",
  "operator": "学校法人都築学園",
  "opened_year": 2004,
+ "philosophy": "建学の精神「個性の伸展による人生練磨」を掲げています。",
  "feature_summary": "北足立郡伊奈町に本部を置き、薬学部・薬科学部の2学部と大学院1研究科で学ぶ大学です。",
  "official_url": "https://www.nichiyaku.ac.jp/",
  "admissions_url": "https://www.nichiyaku.ac.jp/admission/",
@@ -18,7 +19,7 @@
   "graduate": 15,
   "undergraduate": 1147,
   "as_of": "2026-05-01",
-  "source_id": "s00016305"
+  "source_id": "s00016306"
  },
  "academic_field_tags": [
   "薬学",
@@ -27,7 +28,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200043",
+   "faculty_id": "f200044",
    "name": "薬学部",
    "academic_field_tags": [
     "薬学"
@@ -35,14 +36,14 @@
    "campus_municipality": "伊奈町",
    "departments": [
     {
-     "department_id": "d200102",
+     "department_id": "d200103",
      "name": "薬学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200044",
+   "faculty_id": "f200045",
    "name": "薬科学部",
    "academic_field_tags": [
     "薬学",
@@ -52,7 +53,7 @@
    "campus_municipality": "文京区",
    "departments": [
     {
-     "department_id": "d200103",
+     "department_id": "d200104",
      "name": "医療ビジネス薬科学科",
      "programs": []
     }
@@ -122,7 +123,7 @@
    "status": "active"
   },
   {
-   "source_id": "s00016305",
+   "source_id": "s00016306",
    "title": "大学ポートレート（私学版） 日本薬科大学 学生情報",
    "url": "https://up-j.shigaku.go.jp/school/category06/00000000673502000.html",
    "publisher": "大学ポートレート（私学版）",

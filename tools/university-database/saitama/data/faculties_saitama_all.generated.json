@@ -691,6 +691,12 @@
     "source_name": "文部科学省 令和7年度全国大学一覧（平成国際大学）",
     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
     "source_date": "2026-10-30"
+   },
+   {
+    "source_name": "平成国際大学 2026年度学生募集要項（情報デザイン学部 令和8年度開設）",
+    "source_url": "https://www.hiu.ac.jp/examination_info/application/data/2025-01.pdf",
+    "verified_at": "2026-10-31",
+    "role": "primary"
    }
   ]
  },
@@ -712,11 +718,45 @@
     "source_name": "文部科学省 令和7年度全国大学一覧（平成国際大学）",
     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
     "source_date": "2026-10-30"
+   },
+   {
+    "source_name": "平成国際大学 2026年度学生募集要項（情報デザイン学部 令和8年度開設）",
+    "source_url": "https://www.hiu.ac.jp/examination_info/application/data/2025-01.pdf",
+    "verified_at": "2026-10-31",
+    "role": "primary"
    }
   ]
  },
  {
   "id": "f200031",
+  "university_id": "u000157",
+  "name": "情報デザイン学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "情報・AI",
+   "建築・デザイン"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "加須市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（平成国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   },
+   {
+    "source_name": "平成国際大学 2026年度学生募集要項（情報デザイン学部 令和8年度開設）",
+    "source_url": "https://www.hiu.ac.jp/examination_info/application/data/2025-01.pdf",
+    "verified_at": "2026-10-31",
+    "role": "primary"
+   }
+  ]
+ },
+ {
+  "id": "f200032",
   "university_id": "u000159",
   "name": "教育学部",
   "organization_type": "faculty",
@@ -737,7 +777,7 @@
   ]
  },
  {
-  "id": "f200032",
+  "id": "f200033",
   "university_id": "u000159",
   "name": "人間科学部",
   "organization_type": "faculty",
@@ -760,7 +800,7 @@
   ]
  },
  {
-  "id": "f200033",
+  "id": "f200034",
   "university_id": "u000159",
   "name": "情報学部",
   "organization_type": "faculty",
@@ -782,7 +822,7 @@
   ]
  },
  {
-  "id": "f200034",
+  "id": "f200035",
   "university_id": "u000159",
   "name": "文学部",
   "organization_type": "faculty",
@@ -804,7 +844,7 @@
   ]
  },
  {
-  "id": "f200035",
+  "id": "f200036",
   "university_id": "u000159",
   "name": "国際学部",
   "organization_type": "faculty",
@@ -826,7 +866,7 @@
   ]
  },
  {
-  "id": "f200036",
+  "id": "f200037",
   "university_id": "u000159",
   "name": "健康栄養学部",
   "organization_type": "faculty",
@@ -847,7 +887,7 @@
   ]
  },
  {
-  "id": "f200037",
+  "id": "f200038",
   "university_id": "u000159",
   "name": "経営学部",
   "organization_type": "faculty",
@@ -868,7 +908,7 @@
   ]
  },
  {
-  "id": "f200038",
+  "id": "f200039",
   "university_id": "u000160",
   "name": "保健医療学部",
   "organization_type": "faculty",
@@ -889,7 +929,7 @@
   ]
  },
  {
-  "id": "f200039",
+  "id": "f200040",
   "university_id": "u000161",
   "name": "保健医療学部",
   "organization_type": "faculty",
@@ -911,7 +951,7 @@
   ]
  },
  {
-  "id": "f200040",
+  "id": "f200041",
   "university_id": "u000162",
   "name": "基幹工学部",
   "organization_type": "faculty",
@@ -934,7 +974,7 @@
   ]
  },
  {
-  "id": "f200041",
+  "id": "f200042",
   "university_id": "u000162",
   "name": "先進工学部",
   "organization_type": "faculty",
@@ -956,7 +996,7 @@
   ]
  },
  {
-  "id": "f200042",
+  "id": "f200043",
   "university_id": "u000162",
   "name": "建築学部",
   "organization_type": "faculty",
@@ -977,7 +1017,7 @@
   ]
  },
  {
-  "id": "f200043",
+  "id": "f200044",
   "university_id": "u000163",
   "name": "薬学部",
   "organization_type": "faculty",
@@ -1004,7 +1044,7 @@
   ]
  },
  {
-  "id": "f200044",
+  "id": "f200045",
   "university_id": "u000163",
   "name": "薬科学部",
   "organization_type": "faculty",
@@ -1033,7 +1073,7 @@
   ]
  },
  {
-  "id": "f200045",
+  "id": "f200046",
   "university_id": "u000164",
   "name": "外国語学部",
   "organization_type": "faculty",
@@ -1060,7 +1100,7 @@
   ]
  },
  {
-  "id": "f200046",
+  "id": "f200047",
   "university_id": "u000164",
   "name": "経済学部",
   "organization_type": "faculty",
@@ -1087,7 +1127,7 @@
   ]
  },
  {
-  "id": "f200047",
+  "id": "f200048",
   "university_id": "u000164",
   "name": "不動産学部",
   "organization_type": "faculty",
@@ -1114,7 +1154,7 @@
   ]
  },
  {
-  "id": "f200048",
+  "id": "f200049",
   "university_id": "u000164",
   "name": "ホスピタリティ・ツーリズム学部",
   "organization_type": "faculty",
@@ -1141,7 +1181,7 @@
   ]
  },
  {
-  "id": "f200049",
+  "id": "f200050",
   "university_id": "u000164",
   "name": "歯学部",
   "organization_type": "faculty",
@@ -1168,7 +1208,7 @@
   ]
  },
  {
-  "id": "f200050",
+  "id": "f200051",
   "university_id": "u000164",
   "name": "保健医療学部",
   "organization_type": "faculty",
@@ -1195,7 +1235,7 @@
   ]
  },
  {
-  "id": "f200051",
+  "id": "f200052",
   "university_id": "u000165",
   "name": "音楽学部",
   "organization_type": "faculty",
@@ -1216,7 +1256,7 @@
   ]
  },
  {
-  "id": "f200052",
+  "id": "f200053",
   "university_id": "u000166",
   "name": "ヒューマンケア学部",
   "organization_type": "faculty",
@@ -1237,7 +1277,7 @@
   ]
  },
  {
-  "id": "f200053",
+  "id": "f200054",
   "university_id": "u000166",
   "name": "管理栄養学部",
   "organization_type": "faculty",
@@ -1258,7 +1298,7 @@
   ]
  },
  {
-  "id": "f200054",
+  "id": "f200055",
   "university_id": "u000166",
   "name": "幕張ヒューマンケア学部",
   "organization_type": "faculty",
@@ -1280,7 +1320,7 @@
   ]
  },
  {
-  "id": "f200055",
+  "id": "f200056",
   "university_id": "u000166",
   "name": "沼津ヒューマンケア学部",
   "organization_type": "faculty",
@@ -1301,7 +1341,7 @@
   ]
  },
  {
-  "id": "f200056",
+  "id": "f200057",
   "university_id": "u000167",
   "name": "国際コミュニケーション学部",
   "organization_type": "faculty",
@@ -1323,7 +1363,7 @@
   ]
  },
  {
-  "id": "f200057",
+  "id": "f200058",
   "university_id": "u000168",
   "name": "こども学部",
   "organization_type": "faculty",
@@ -1345,7 +1385,7 @@
   ]
  },
  {
-  "id": "f200058",
+  "id": "f200059",
   "university_id": "u000168",
   "name": "社会学部",
   "organization_type": "faculty",
@@ -1367,37 +1407,9 @@
   ]
  },
  {
-  "id": "f200059",
-  "university_id": "u000169",
-  "name": "外国語学部",
-  "organization_type": "faculty",
-  "academic_field_tags": [
-   "国際・語学",
-   "文学・人文"
-  ],
-  "campus_prefecture": "埼玉県",
-  "campus_municipality": "草加市",
-  "status": "active",
-  "verification_status": "verified",
-  "verified_at": "2026-10-30",
-  "sources": [
-   {
-    "source_name": "文部科学省 令和7年度全国大学一覧（獨協大学）",
-    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-    "source_date": "2026-10-30"
-   },
-   {
-    "source_name": "獨協大学 学部学科・大学院",
-    "source_url": "https://www.dokkyo.ac.jp/academics/",
-    "verified_at": "2026-10-30",
-    "role": "primary"
-   }
-  ]
- },
- {
   "id": "f200060",
   "university_id": "u000169",
-  "name": "国際教養学部",
+  "name": "外国語学部",
   "organization_type": "faculty",
   "academic_field_tags": [
    "国際・語学",
@@ -1425,6 +1437,34 @@
  {
   "id": "f200061",
   "university_id": "u000169",
+  "name": "国際教養学部",
+  "organization_type": "faculty",
+  "academic_field_tags": [
+   "国際・語学",
+   "文学・人文"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "草加市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（獨協大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   },
+   {
+    "source_name": "獨協大学 学部学科・大学院",
+    "source_url": "https://www.dokkyo.ac.jp/academics/",
+    "verified_at": "2026-10-30",
+    "role": "primary"
+   }
+  ]
+ },
+ {
+  "id": "f200062",
+  "university_id": "u000169",
   "name": "経済学部",
   "organization_type": "faculty",
   "academic_field_tags": [
@@ -1451,7 +1491,7 @@
   ]
  },
  {
-  "id": "f200062",
+  "id": "f200063",
   "university_id": "u000169",
   "name": "法学部",
   "organization_type": "faculty",
@@ -1479,7 +1519,7 @@
   ]
  },
  {
-  "id": "f200063",
+  "id": "f200064",
   "university_id": "u000170",
   "name": "政治経済学部",
   "organization_type": "faculty",
@@ -1500,13 +1540,14 @@
   ]
  },
  {
-  "id": "f200064",
+  "id": "f200065",
   "university_id": "u000170",
   "name": "人文学部",
   "organization_type": "faculty",
   "academic_field_tags": [
    "教育",
    "幼児教育・保育",
+   "国際関係",
    "文学・人文"
   ],
   "campus_prefecture": "埼玉県",
@@ -1523,7 +1564,7 @@
   ]
  },
  {
-  "id": "f200065",
+  "id": "f200066",
   "university_id": "u000170",
   "name": "心理福祉学部",
   "organization_type": "faculty",
@@ -1545,7 +1586,7 @@
   ]
  },
  {
-  "id": "f200066",
+  "id": "f200067",
   "university_id": "u000171",
   "name": "サービス経営学部",
   "organization_type": "faculty",
@@ -1568,7 +1609,7 @@
   ]
  },
  {
-  "id": "f200067",
+  "id": "f200068",
   "university_id": "u000171",
   "name": "看護学部",
   "organization_type": "faculty",
@@ -1589,7 +1630,7 @@
   ]
  },
  {
-  "id": "f200068",
+  "id": "f200069",
   "university_id": "u000172",
   "name": "法学部",
   "organization_type": "faculty",
@@ -1616,7 +1657,7 @@
   ]
  },
  {
-  "id": "f200069",
+  "id": "f200070",
   "university_id": "u000172",
   "name": "経済経営学部",
   "organization_type": "faculty",
@@ -1643,7 +1684,7 @@
   ]
  },
  {
-  "id": "f200070",
+  "id": "f200071",
   "university_id": "u000172",
   "name": "メディア情報学部",
   "organization_type": "faculty",
@@ -1670,7 +1711,7 @@
   ]
  },
  {
-  "id": "f200071",
+  "id": "f200072",
   "university_id": "u000172",
   "name": "スポーツ科学部",
   "organization_type": "faculty",
@@ -1697,7 +1738,7 @@
   ]
  },
  {
-  "id": "f200072",
+  "id": "f200073",
   "university_id": "u000172",
   "name": "心理学部",
   "organization_type": "faculty",

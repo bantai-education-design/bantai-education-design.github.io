@@ -9,6 +9,7 @@
  "prefecture": "埼玉県",
  "municipality": "深谷市",
  "operator": "学校法人青淵学園",
+ "philosophy": "「人の健康と幸せを担う高い志をもち実践力を備えた人を育てる」を建学の精神とし、ヒューマンケアを実践できる医療人材の育成を掲げています。",
  "feature_summary": "深谷市に本部を置き、ヒューマンケア学部・管理栄養学部・幕張ヒューマンケア学部・沼津ヒューマンケア学部の4学部で学ぶ大学です。",
  "official_url": "https://www.tohto.ac.jp/",
  "admissions_url": "https://www.tohto.ac.jp/admissions/about/",
@@ -19,7 +20,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200052",
+   "faculty_id": "f200053",
    "name": "ヒューマンケア学部",
    "academic_field_tags": [
     "看護・医療"
@@ -27,14 +28,14 @@
    "campus_municipality": "深谷市",
    "departments": [
     {
-     "department_id": "d200113",
+     "department_id": "d200114",
      "name": "看護学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200053",
+   "faculty_id": "f200054",
    "name": "管理栄養学部",
    "academic_field_tags": [
     "食・栄養"
@@ -42,14 +43,14 @@
    "campus_municipality": "深谷市",
    "departments": [
     {
-     "department_id": "d200114",
+     "department_id": "d200115",
      "name": "管理栄養学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200054",
+   "faculty_id": "f200055",
    "name": "幕張ヒューマンケア学部",
    "academic_field_tags": [
     "看護・医療",
@@ -58,29 +59,29 @@
    "campus_municipality": "千葉市",
    "departments": [
     {
-     "department_id": "d200115",
+     "department_id": "d200116",
      "name": "看護学科",
      "programs": []
     },
     {
-     "department_id": "d200116",
+     "department_id": "d200117",
      "name": "理学療法学科",
      "programs": []
     },
     {
-     "department_id": "d200117",
+     "department_id": "d200118",
      "name": "臨床工学科",
      "programs": []
     },
     {
-     "department_id": "d200118",
+     "department_id": "d200119",
      "name": "健康科学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200055",
+   "faculty_id": "f200056",
    "name": "沼津ヒューマンケア学部",
    "academic_field_tags": [
     "看護・医療"
@@ -88,7 +89,7 @@
    "campus_municipality": "沼津市",
    "departments": [
     {
-     "department_id": "d200119",
+     "department_id": "d200120",
      "name": "看護学科",
      "programs": []
     }
@@ -123,6 +124,15 @@
    "publisher": "文部科学省",
    "source_type": "government",
    "verified_at": "2026-10-30",
+   "status": "active"
+  },
+  {
+   "source_id": "s00016603",
+   "title": "東都大学 建学の精神・基本理念",
+   "url": "https://www.tohto.ac.jp/about/idea/",
+   "publisher": "東都大学",
+   "source_type": "official_university",
+   "verified_at": "2026-10-31",
    "status": "active"
   }
  ],

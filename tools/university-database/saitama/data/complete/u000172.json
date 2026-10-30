@@ -32,7 +32,7 @@
  ],
  "academics": [
   {
-   "faculty_id": "f200068",
+   "faculty_id": "f200069",
    "name": "法学部",
    "academic_field_tags": [
     "法学"
@@ -40,14 +40,14 @@
    "campus_municipality": "飯能市",
    "departments": [
     {
-     "department_id": "d200144",
+     "department_id": "d200145",
      "name": "法律学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200069",
+   "faculty_id": "f200070",
    "name": "経済経営学部",
    "academic_field_tags": [
     "経済・経営・商学"
@@ -55,14 +55,14 @@
    "campus_municipality": "飯能市",
    "departments": [
     {
-     "department_id": "d200145",
+     "department_id": "d200146",
      "name": "経済経営学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200070",
+   "faculty_id": "f200071",
    "name": "メディア情報学部",
    "academic_field_tags": [
     "情報・AI"
@@ -70,14 +70,14 @@
    "campus_municipality": "飯能市",
    "departments": [
     {
-     "department_id": "d200146",
+     "department_id": "d200147",
      "name": "メディア情報学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200071",
+   "faculty_id": "f200072",
    "name": "スポーツ科学部",
    "academic_field_tags": [
     "体育・スポーツ"
@@ -85,14 +85,14 @@
    "campus_municipality": "飯能市",
    "departments": [
     {
-     "department_id": "d200147",
+     "department_id": "d200148",
      "name": "スポーツ科学科",
      "programs": []
     }
    ]
   },
   {
-   "faculty_id": "f200072",
+   "faculty_id": "f200073",
    "name": "心理学部",
    "academic_field_tags": [
     "心理",
@@ -101,7 +101,7 @@
    "campus_municipality": "飯能市",
    "departments": [
     {
-     "department_id": "d200148",
+     "department_id": "d200149",
      "name": "心理学科",
      "programs": []
     }

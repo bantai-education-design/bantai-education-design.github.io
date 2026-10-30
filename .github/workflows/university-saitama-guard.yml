@@ -1,11 +1,13 @@
-name: University Saitama guard
+name: University unified region guard
 
 on:
   pull_request:
     paths:
       - 'tools/university-database/saitama/**'
       - 'tools/university-database/index.html'
-      - 'tools/university-database/tokyo/assets/**'
+      - 'tools/university-database/tokyo/**'
+      - 'tools/university-database/tokyo-additions/**'
+      - 'tools/university-database/kanagawa/**'
       - '.github/workflows/university-saitama-guard.yml'
   push:
     branches: [main]
@@ -24,9 +26,7 @@ jobs:
           node-version: '22'
       - name: Validate Saitama public data
         run: |
-          node --check tools/university-database/saitama/assets/saitama.js
-          node --check tools/university-database/saitama/assets/ai-card-images.js
-          node --check tools/university-database/saitama/assets/favorites.js
+          for f in tokyo.js search-type-filter.js region-summary.js detail-router-v2.js card-finish.js detail-layer.js favorites.js; do node --check tools/university-database/tokyo/assets/$f; done
           node <<'NODE'
           const fs=require('node:fs');
           const assert=require('node:assert/strict');
@@ -60,81 +60,104 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/saitama-site.log 2>&1 &
           sleep 2
-      - name: Verify Saitama list, filters, search, compare and detail pages
+      - name: Verify unified list (Tokyo + Saitama), prefecture filter, search and detail pages
         run: |
           node <<'NODE'
+          const fs=require('node:fs');
           const {chromium}=require('playwright');
           const assert=require('node:assert/strict');
+          const readRows=f=>fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')):[];
+          const tokyoN=readRows('tools/university-database/tokyo/data/universities_tokyo_all.generated.json').length;
+          const saitama=readRows('tools/university-database/saitama/data/universities_saitama_all.generated.json');
+          const extra=readRows('tools/university-database/tokyo-additions/data/universities_tokyo_additions_all.generated.json');
+          const kanagawa=readRows('tools/university-database/kanagawa/data/universities_kanagawa_all.generated.json');
+          const total=tokyoN+saitama.length+extra.length;
+          const tokyoTotal=tokyoN+extra.filter(x=>x.prefecture==='東京都').length-kanagawa.length;
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const errors=[];
-            const page=await browser.newPage({viewport:{width:1366,height:950}});
-            page.on('pageerror',e=>errors.push('pageerror '+e.message));
-            page.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push('404 '+r.url().replace('http://127.0.0.1:4173',''))});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
-            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===28,{timeout:20000});
-            const body=await page.locator('body').innerText();
-            assert.ok(!body.includes('東京都144'),'no Tokyo copy left on Saitama page');
-            assert.ok(body.includes('埼玉県28大学'),'Saitama heading');
-            assert.ok(!body.includes('読込エラー'),'no load error');
+            const watch=(pg,tag)=>{pg.on('pageerror',e=>errors.push(`${tag} pageerror ${e.message}`));pg.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push(`${tag} 404 `+r.url().replace('http://127.0.0.1:4173',''))})};
+            const page=await browser.newPage({viewport:{width:1366,height:950}});watch(page,'list');
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await page.waitForFunction(n=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===n,total,{timeout:30000});
             const count=async()=>page.locator('.tokyo-card').count();
-            for(const [type,expected] of [['national',1],['public',1],['private',26],['all',28]]){
-              await page.locator(`.ref-type-filter [data-ref-type="${type}"]`).click();
-              await page.waitForTimeout(250);
-              assert.equal(await count(),expected,`quick filter ${type}`);
-              assert.equal(await page.locator('#type-filters .active').getAttribute('data-type'),type,`list chip synced ${type}`);
+            const body=await page.locator('body').innerText();
+            assert.ok(!body.includes('読込エラー'),'no load error');
+            assert.ok(body.includes(`${total}大学`)&&body.includes('東京都・埼玉県'),'hero shows unified count');
+            for(const [pref,expected] of [['埼玉県',saitama.length],['東京都',tokyoTotal],['all',total]]){
+              await page.locator(`.ref-pref-filter [data-ref-pref="${pref}"]`).click();await page.waitForTimeout(300);
+              assert.equal(await count(),expected,`quick pref ${pref}`);
+              assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),pref,`list pref synced ${pref}`);
             }
-            await page.locator('#type-filters [data-type="private"]').click();
-            await page.waitForTimeout(250);
-            assert.equal(await count(),26,'list filter private');
+            await page.locator('#pref-filters [data-pref="埼玉県"]').click();await page.waitForTimeout(300);
+            assert.equal(await count(),saitama.length,'list pref saitama');
+            assert.equal(await page.locator('.ref-pref-filter .active').getAttribute('data-ref-pref'),'埼玉県','quick pref synced from list');
+            for(const [type,expected] of [['national',1],['public',1],['private',saitama.length-2]]){
+              await page.locator(`.ref-type-filter [data-ref-type="${type}"]`).click();await page.waitForTimeout(250);
+              assert.equal(await count(),expected,`saitama ${type}`);
+            }
+            await page.locator('.ref-type-filter [data-ref-type="all"]').click();
             await page.fill('.ref-quick-form input[name="q"]','看護');
-            await page.locator('.ref-quick-form button[type="submit"]').click();
-            await page.waitForTimeout(300);
+            await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(300);
             const nurse=await count();
-            assert.ok(nurse>=5&&nurse<26,`search 看護 within private: ${nurse}`);
-            await page.locator('#clear-filters').click();
-            await page.waitForTimeout(250);
-            assert.equal(await count(),28,'clear filters');
+            assert.ok(nurse>=5&&nurse<saitama.length,`search 看護 within Saitama: ${nurse}`);
+            const cards=await page.locator('.tokyo-card').evaluateAll(cs=>cs.map(c=>c.innerText));
+            assert.ok(cards.every(t=>t.includes('埼玉県')),'Saitama cards show prefecture');
+            await page.locator('#clear-filters').click();await page.waitForTimeout(300);
+            assert.equal(await count(),total,'clear filters');
+            assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),'all','clear resets prefecture');
+            await page.locator('#pref-filters [data-pref="神奈川県"]').click();await page.waitForTimeout(300);
+            assert.equal(await count(),kanagawa.length,'kanagawa filter');
+            const tokai=await page.locator('.tokyo-card[data-id="u000050"]').innerText();
+            assert.ok(tokai.includes('神奈川県')&&tokai.includes('平塚市'),'Tokai shown as Kanagawa: '+tokai.slice(0,120));
+            await page.locator('#pref-filters [data-pref="all"]').click();await page.waitForTimeout(300);
             const dokkyo=page.locator('.tokyo-card[data-id="u000169"]');
-            const dokkyoText=await dokkyo.innerText();
-            assert.ok(dokkyoText.includes('獨協大学')&&dokkyoText.includes('草加市'),dokkyoText);
+            assert.ok((await dokkyo.innerText()).includes('草加市'),'Dokkyo card');
             assert.ok((await dokkyo.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://nyushi.dokkyo.ac.jp'),'admissions link');
-            const renamed=await page.locator('.tokyo-card[data-id="u000155"]').innerText();
-            assert.ok(renamed.includes('日本栄養大学'),'renamed university shown with current name');
-            await page.setViewportSize({width:375,height:900});
-            await page.waitForTimeout(300);
-            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow on list');
-            const sample=await page.evaluate(()=>[...document.querySelectorAll('.tokyo-card')].slice(0,3).map(c=>c.innerText.replace(/\s+/g,' ').slice(0,160)));
-            console.log('::notice title=Saitama list::'+sample.join(' || '));
+            assert.ok((await page.locator('.tokyo-card[data-id="u000155"]').innerText()).includes('日本栄養大学'),'renamed university');
+            const area=await page.locator('.ref-area').innerText();
+            assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
+            await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow');
             await page.close();
-
-            const ids=Array.from({length:28},(_,i)=>`u${String(145+i).padStart(6,'0')}`);
+            const deep=await browser.newPage();watch(deep,'deeplink');
+            await deep.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?pref=saitama',{waitUntil:'networkidle'});
+            await deep.waitForFunction(n=>document.querySelectorAll('.tokyo-card').length===n,saitama.length,{timeout:30000});
+            await deep.close();
+            const redirect=await browser.newPage();
+            await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
+            assert.ok(redirect.url().includes('/tokyo/?pref=saitama'),'saitama/ redirects to unified page: '+redirect.url());
+            await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=u000169',{waitUntil:'networkidle'});
+            assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000169'),'saitama detail redirects: '+redirect.url());
+            await redirect.close();
+            const ids=[...saitama.map(x=>x.id),...extra.map(x=>x.id)];
             const summary=[];
             for(const id of ids){
-              const d=await browser.newPage({viewport:{width:1280,height:900}});
-              d.on('pageerror',e=>errors.push(`${id} pageerror ${e.message}`));
-              d.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push(`${id} 404 `+r.url().replace('http://127.0.0.1:4173',''))});
-              await d.goto(`http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=${id}`,{waitUntil:'networkidle'});
+              const d=await browser.newPage({viewport:{width:1280,height:900}});watch(d,id);
+              await d.goto(`http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=${id}`,{waitUntil:'networkidle'});
               await d.waitForSelector('.complete-hero h1',{timeout:15000});
               const t=await d.locator('#detail-root').innerText();
-              assert.ok(t.includes('埼玉県'),`${id} detail prefecture`);
-              assert.ok(!t.includes('東京都144'),`${id} no Tokyo copy`);
+              assert.ok(/埼玉県|東京都/.test(t),`${id} detail prefecture`);
               summary.push(`${id}:${(await d.locator('.complete-hero h1').innerText()).trim()}`);
-              if(id==='u000169'){
-                assert.ok(t.includes('外国語学部')&&t.includes('法学部'),'Dokkyo faculties on detail');
-                await d.setViewportSize({width:375,height:900});
-                await d.waitForTimeout(200);
-                assert.equal(await d.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow on detail');
-              }
               await d.close();
             }
-            console.log('::notice title=Saitama detail::'+summary.join(' '));
+            console.log('::notice title=Region detail::'+summary.join(' '));
+            const td=await browser.newPage({viewport:{width:1280,height:900}});watch(td,'u000050');
+            await td.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000050',{waitUntil:'networkidle'});
+            await td.waitForFunction(()=>/平塚市/.test(document.querySelector('#detail-root')?.innerText||''),null,{timeout:15000});
+            const tt=await td.locator('#detail-root').innerText();
+            assert.ok(!tt.includes('港区高輪2-3-23')||tt.includes('品川キャンパス'),'Tokai detail uses Hiratsuka HQ');
+            await td.close();
+            const tokyoDetail=await browser.newPage();watch(tokyoDetail,'u000001');
+            await tokyoDetail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=u000001',{waitUntil:'networkidle'});
+            await tokyoDetail.waitForSelector('.complete-hero h1',{timeout:15000});
+            await tokyoDetail.close();
             const entry=await browser.newPage();
             await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
-            assert.equal(await entry.locator('a[href="/tools/university-database/saitama/"]').count(),1,'entry page links to Saitama');
+            assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=saitama"]').count(),1,'entry links to Saitama filter');
             await entry.close();
             assert.deepEqual([...new Set(errors)],[],'no script errors or missing local files');
             await browser.close();
-            console.log('saitama UI ok');
-          })().catch(err=>{console.log('::error title=Saitama UI::'+String(err.message||err).replace(/\n/g,' ').slice(0,900));process.exit(1)});
+            console.log('unified UI ok');
+          })().catch(err=>{console.log('::error title=Unified UI::'+String(err.message||err).replace(/\n/g,' ').slice(0,900));process.exit(1)});
           NODE

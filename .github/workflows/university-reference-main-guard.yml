@@ -42,7 +42,7 @@ jobs:
               const p=await b.newPage({viewport:{width:c.w,height:c.h}});
               const errors=[];
               p.on('pageerror',e=>errors.push(String(e)));
-              await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+              await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
               await p.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
               const data=await p.evaluate(()=>{
                 const rs=s=>[...document.querySelectorAll(s)].map(el=>el.getBoundingClientRect());
@@ -81,7 +81,7 @@ jobs:
               await p.close();
             }
             const detail=await b.newPage({viewport:{width:1024,height:1000}});
-            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             const href=await detail.locator('.card-detail-open').first().getAttribute('href');
             if(!href) throw new Error('first detail href missing');
