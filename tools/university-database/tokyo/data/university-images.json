@@ -2103,6 +2103,21 @@
       "rights_note": "Wikimedia Commonsの個別ファイルページで作者Chris 73、CC BY-SA 3.0を確認。SBI大学院大学が入る泉ガーデンタワーの実景写真として掲載する。",
       "alt": "SBI大学院大学が入る泉ガーデンタワー",
       "reviewed_at": "2026-09-04"
+    },
+    "u000123": {
+      "university_id": "u000123",
+      "university_name": "LEC東京リーガルマインド大学院大学",
+      "rights_status": "verified",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/LECOffice.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:LECOffice.jpg",
+      "source_label": "写真・ライセンス",
+      "creator": "杉山真大",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "rights_note": "Wikimedia Commonsの個別ファイルページで作者（杉山真大）・ライセンス（CC BY-SA 2.5）を確認。LEC東京リーガルマインド水道橋本校の建物外観（2007年撮影）で、人物の特定につながる写り込みはない。2026-10-30に運営者が掲載を承認。",
+      "alt": "LEC東京リーガルマインド水道橋本校の建物外観",
+      "reviewed_at": "2026-10-30",
+      "commons_title": "File:LECOffice.jpg"
     }
   }
 }

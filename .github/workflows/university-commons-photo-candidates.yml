@@ -28,7 +28,7 @@ jobs:
           const r=JSON.parse(fs.readFileSync('tmp/university-commons-candidates.json','utf8'));
           assert.equal(r.coverage.total,144,'Tokyo DB must contain 144 universities');
           assert.ok(r.coverage.verified_real>=1,'existing verified real photos required');
-          assert.ok(r.coverage.target_count>0,'collector must have unresolved targets');
+          assert.equal(r.coverage.target_count,r.coverage.total-r.coverage.verified_real-r.coverage.ai_original,'collector targets must equal universities still lacking a photo (0 is complete)');
           for(const u of r.universities)for(const c of u.candidates){
             assert.ok(c.file_page.startsWith('https://commons.wikimedia.org/wiki/File:'),'Commons file page required');
             assert.ok(c.image_url.startsWith('https://upload.wikimedia.org/'),'Wikimedia original URL required');

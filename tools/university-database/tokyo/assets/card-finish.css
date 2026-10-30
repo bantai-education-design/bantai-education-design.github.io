@@ -26,3 +26,6 @@
 .finished-university-card a:focus-visible,.finished-university-card button:focus-visible{outline:3px solid #d4a947;outline-offset:2px}
 @media(max-width:760px){.finished-university-card .card-actions{grid-template-columns:1fr 1fr}.finished-university-card .official-card-link{grid-column:1/-1}}
 @media(max-width:560px){.finished-university-card .card-visual{min-height:190px}.finished-university-card .card-body{padding:15px}.finished-university-card h3{min-height:0;font-size:1.08rem}.finished-summary{min-height:0}.finished-facts{grid-template-columns:1fr 1fr 1fr}.finished-campus-visual .visual-theme{font-size:.64rem}.finished-fields{min-height:0}}
+.finished-university-card .card-visual.image-failed{background:linear-gradient(135deg,#dfeaf5,#b9cfe4)}
+.finished-university-card .card-visual.image-failed .image-source-link{display:none}
+.finished-university-card .card-visual.image-failed img{display:none}
