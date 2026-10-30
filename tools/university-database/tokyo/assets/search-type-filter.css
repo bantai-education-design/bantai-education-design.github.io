@@ -1,0 +1,7 @@
+/* 検索欄の設置区分選択 */
+.ref-type-filter{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}
+.ref-type-label{font-size:.7rem;font-weight:800;color:#33475b;margin-right:2px}
+.ref-type-chip{border:1px solid #c9d4df;background:#fff;color:#1d3349;border-radius:999px;padding:5px 12px;font-size:.74rem;font-weight:800;cursor:pointer;line-height:1.2}
+.ref-type-chip:hover{border-color:#082844}
+.ref-type-chip:focus-visible{outline:2px solid #2f6fa3;outline-offset:2px}
+.ref-type-chip.active{background:#082844;border-color:#082844;color:#fff}
