@@ -1,0 +1,4749 @@
+{
+ "generated_at": "2026-10-30",
+ "source": "文部科学省 令和7年度全国大学一覧（学部・研究科所在地）",
+ "count": 174,
+ "unmatched": [],
+ "universities": {
+  "u000001": {
+   "name": "東京大学",
+   "campuses": [
+    {
+     "name": "本郷地区キャンパス",
+     "postal_code": "113-0033",
+     "address": "東京都文京区本郷7-3-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "本郷地区キャンパス",
+     "postal_code": "113-8656",
+     "address": "東京都文京区本郷7-3-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "本郷地区キャンパス",
+     "postal_code": "113-8657",
+     "address": "東京都文京区弥生1-1-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "駒場地区キャンパス",
+     "postal_code": "153-8902",
+     "address": "東京都目黒区駒場3-8-1",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    },
+    {
+     "name": "駒場地区キャンパス",
+     "postal_code": "153-8914",
+     "address": "東京都目黒区駒場3-8-1",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    },
+    {
+     "name": "柏地区キャンパス",
+     "postal_code": "277-8561",
+     "address": "千葉県柏市柏の葉5-1-5",
+     "prefecture": "千葉県",
+     "municipality": "柏市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000002": {
+   "name": "東京外国語大学",
+   "campuses": [
+    {
+     "name": "府中キャンパス",
+     "postal_code": "183-8534",
+     "address": "東京都府中市朝日町3-11-1",
+     "prefecture": "東京都",
+     "municipality": "府中市"
+    },
+    {
+     "name": "本郷サテライト",
+     "postal_code": "113-0033",
+     "address": "東京都文京区本郷2-14-10",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京外国語大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000003": {
+   "name": "東京学芸大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "184-8501",
+     "address": "東京都小金井市貫井北町4-1-1",
+     "prefecture": "東京都",
+     "municipality": "小金井市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京学芸大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000004": {
+   "name": "東京農工大学",
+   "campuses": [
+    {
+     "name": "府中キャンパス",
+     "postal_code": "183-8509",
+     "address": "東京都府中市幸町3-5-8",
+     "prefecture": "東京都",
+     "municipality": "府中市"
+    },
+    {
+     "name": "府中キャンパス",
+     "postal_code": "183-8509",
+     "address": "東京都府中市幸町3-5-8",
+     "prefecture": "東京都",
+     "municipality": "府中市"
+    },
+    {
+     "name": "府中キャンパス",
+     "postal_code": "183-8538",
+     "address": "東京都府中市晴見町3-8-1",
+     "prefecture": "東京都",
+     "municipality": "府中市"
+    },
+    {
+     "name": "小金井キャンパス",
+     "postal_code": "184-8588",
+     "address": "東京都小金井市中町2-24-16",
+     "prefecture": "東京都",
+     "municipality": "小金井市"
+    },
+    {
+     "name": "小金井キャンパス",
+     "postal_code": "184-8588",
+     "address": "東京都小金井市中町2-24-16",
+     "prefecture": "東京都",
+     "municipality": "小金井市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京農工大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000005": {
+   "name": "東京藝術大学",
+   "campuses": [
+    {
+     "name": "上野校地",
+     "postal_code": "110-8714",
+     "address": "東京都台東区上野公園12-8",
+     "prefecture": "東京都",
+     "municipality": "台東区"
+    },
+    {
+     "name": "取手校地",
+     "postal_code": "302-0001",
+     "address": "茨城県取手市小文間5000番地",
+     "prefecture": "茨城県",
+     "municipality": "取手市"
+    },
+    {
+     "name": "横浜校地",
+     "postal_code": "231-0005",
+     "address": "神奈川県横浜市中区本町4-44",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市中区"
+    },
+    {
+     "name": "千住校地",
+     "postal_code": "120-0034",
+     "address": "東京都足立区千住1-25-1",
+     "prefecture": "東京都",
+     "municipality": "足立区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県",
+    "茨城県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京芸術大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000006": {
+   "name": "東京科学大学",
+   "campuses": [
+    {
+     "name": "大岡山キャンパス",
+     "postal_code": "152-8550",
+     "address": "東京都目黒区大岡山2-12-1",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    },
+    {
+     "name": "すずかけ台キャンパス",
+     "postal_code": "226-8501",
+     "address": "神奈川県横浜市緑区長津田町4259",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市緑区"
+    },
+    {
+     "name": "田町キャンパス",
+     "postal_code": "108-0023",
+     "address": "東京都港区芝浦3-3-6",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "湯島キャンパス",
+     "postal_code": "113-8510",
+     "address": "東京都文京区湯島1-5-45",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "駿河台キャンパス",
+     "postal_code": "101-0062",
+     "address": "東京都千代田区神田駿河台2-3-10",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "国府台キャンパス",
+     "postal_code": "272-0827",
+     "address": "千葉県市川市国府台2-8-30",
+     "prefecture": "千葉県",
+     "municipality": "市川市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000007": {
+   "name": "東京海洋大学",
+   "campuses": [
+    {
+     "name": "品川キャンパス",
+     "postal_code": "108-8477",
+     "address": "東京都港区港南4-5-7",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "越中島キャンパス",
+     "postal_code": "135-8533",
+     "address": "東京都江東区越中島2-1-6",
+     "prefecture": "東京都",
+     "municipality": "江東区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京海洋大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000008": {
+   "name": "お茶の水女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "112-8610",
+     "address": "東京都文京区大塚2-1-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（お茶の水女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000009": {
+   "name": "電気通信大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "182-8585",
+     "address": "東京都調布市調布ヶ丘1-5-1",
+     "prefecture": "東京都",
+     "municipality": "調布市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（電気通信大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000010": {
+   "name": "一橋大学",
+   "campuses": [
+    {
+     "name": "国立キャンパス",
+     "postal_code": "186-8601",
+     "address": "東京都国立市中2-1",
+     "prefecture": "東京都",
+     "municipality": "国立市"
+    },
+    {
+     "name": "千代田キャンパス",
+     "postal_code": "101-8439",
+     "address": "東京都千代田区一ツ橋2-1-2",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（一橋大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000011": {
+   "name": "政策研究大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "106-8677",
+     "address": "東京都港区六本木7-22-1",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（政策研究大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000012": {
+   "name": "東京都立大学",
+   "campuses": [
+    {
+     "name": "南大沢キャンパス",
+     "postal_code": "192-0397",
+     "address": "東京都八王子市南大沢1-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    },
+    {
+     "name": "日野キャンパス",
+     "postal_code": "191-0065",
+     "address": "東京都日野市旭が丘6-6",
+     "prefecture": "東京都",
+     "municipality": "日野市"
+    },
+    {
+     "name": "荒川キャンパス",
+     "postal_code": "116-8551",
+     "address": "東京都荒川区東尾久7-2-10",
+     "prefecture": "東京都",
+     "municipality": "荒川区"
+    },
+    {
+     "name": "晴海キャンパス",
+     "postal_code": "104-0053",
+     "address": "東京都中央区晴海1-2-2",
+     "prefecture": "東京都",
+     "municipality": "中央区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京都立大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx"
+   }
+  },
+  "u000013": {
+   "name": "東京都立産業技術大学院大学",
+   "campuses": [
+    {
+     "name": "品川シーサイドキャンパス",
+     "postal_code": "140-0011",
+     "address": "東京都品川区東大井1-10-40",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京都立産業技術大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx"
+   }
+  },
+  "u000014": {
+   "name": "跡見学園女子大学",
+   "campuses": [
+    {
+     "name": "文京キャンパス",
+     "postal_code": "112-8687",
+     "address": "東京都文京区大塚1-5-2",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "新座キャンパス",
+     "postal_code": "352-8501",
+     "address": "埼玉県新座市中野1-9-6",
+     "prefecture": "埼玉県",
+     "municipality": "新座市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（跡見学園女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000015": {
+   "name": "文京学院大学",
+   "campuses": [
+    {
+     "name": "本郷キャンパス",
+     "postal_code": "113-8668",
+     "address": "東京都文京区向丘1-19-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "ふじみ野キャンパス",
+     "postal_code": "356-8533",
+     "address": "埼玉県ふじみ野市亀久保1196",
+     "prefecture": "埼玉県",
+     "municipality": "ふじみ野市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（文京学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000016": {
+   "name": "目白大学",
+   "campuses": [
+    {
+     "name": "新宿キャンパス",
+     "postal_code": "161-8539",
+     "address": "東京都新宿区中落合4-31-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "さいたま岩槻キャンパス",
+     "postal_code": "339-8501",
+     "address": "埼玉県さいたま市岩槻区浮谷320",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市岩槻区"
+    },
+    {
+     "name": "国立埼玉病院キャンパス",
+     "postal_code": "351-0102",
+     "address": "埼玉県和光市諏訪2-12",
+     "prefecture": "埼玉県",
+     "municipality": "和光市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（目白大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000017": {
+   "name": "東京成徳大学",
+   "campuses": [
+    {
+     "name": "東京キャンパス",
+     "postal_code": "114-0033",
+     "address": "東京都北区十条台1-7-13",
+     "prefecture": "東京都",
+     "municipality": "北区"
+    },
+    {
+     "name": "千葉キャンパス",
+     "postal_code": "276-0013",
+     "address": "千葉県八千代市保品2014",
+     "prefecture": "千葉県",
+     "municipality": "八千代市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京成徳大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000018": {
+   "name": "東洋学園大学",
+   "campuses": [
+    {
+     "name": "本郷キャンパス",
+     "postal_code": "113-0033",
+     "address": "東京都文京区本郷1-26-3",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東洋学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000019": {
+   "name": "帝京平成大学",
+   "campuses": [
+    {
+     "name": "池袋キャンパス",
+     "postal_code": "170-8445",
+     "address": "東京都豊島区東池袋2-51-4",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    },
+    {
+     "name": "千葉キャンパス",
+     "postal_code": "290-0193",
+     "address": "千葉県市原市うるいど南4-1",
+     "prefecture": "千葉県",
+     "municipality": "市原市"
+    },
+    {
+     "name": "中野キャンパス",
+     "postal_code": "164-8530",
+     "address": "東京都中野区中野4-21-2",
+     "prefecture": "東京都",
+     "municipality": "中野区"
+    },
+    {
+     "name": "ちはら台キャンパス",
+     "postal_code": "290-0192",
+     "address": "千葉県市原市ちはら台西6-19",
+     "prefecture": "千葉県",
+     "municipality": "市原市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（帝京平成大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000020": {
+   "name": "青山学院大学",
+   "campuses": [
+    {
+     "name": "青山キャンパス",
+     "postal_code": "150-8366",
+     "address": "東京都渋谷区渋谷4-4-25",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    },
+    {
+     "name": "相模原キャンパス",
+     "postal_code": "252-5258",
+     "address": "神奈川県相模原市中央区淵野辺5-10-1",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市中央区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（青山学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000021": {
+   "name": "大妻女子大学",
+   "campuses": [
+    {
+     "name": "千代田キャンパス",
+     "postal_code": "102-8357",
+     "address": "東京都千代田区三番町12",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "多摩キャンパス",
+     "postal_code": "206-8540",
+     "address": "東京都多摩市唐木田2-7-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（大妻女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000022": {
+   "name": "学習院大学",
+   "campuses": [
+    {
+     "name": "目白キャンパス",
+     "postal_code": "171-8588",
+     "address": "東京都豊島区目白1-5-1",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（学習院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000023": {
+   "name": "北里大学",
+   "campuses": [
+    {
+     "name": "白金キャンパス",
+     "postal_code": "108-8641",
+     "address": "東京都港区白金5-9-1",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "十和田キャンパス",
+     "postal_code": "034-8628",
+     "address": "青森県十和田市東二十三番町35-1",
+     "prefecture": "青森県",
+     "municipality": "十和田市"
+    },
+    {
+     "name": "相模原キャンパス",
+     "postal_code": "252-0373",
+     "address": "神奈川県相模原市南区北里1-15-1",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市南区"
+    },
+    {
+     "name": "相模原キャンパス",
+     "postal_code": "252-0374",
+     "address": "神奈川県相模原市南区北里1-15-1",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市南区"
+    },
+    {
+     "name": "相模原キャンパス",
+     "postal_code": "252-0329",
+     "address": "神奈川県相模原市南区北里2-1-1",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市南区"
+    },
+    {
+     "name": "新潟キャンパス",
+     "postal_code": "949-7241",
+     "address": "新潟県南魚沼市黒土新田500番",
+     "prefecture": "新潟県",
+     "municipality": "南魚沼市"
+    }
+   ],
+   "prefectures": [
+    "新潟県",
+    "東京都",
+    "神奈川県",
+    "青森県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（北里大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000024": {
+   "name": "共立女子大学",
+   "campuses": [
+    {
+     "name": "神田一ツ橋キャンパス",
+     "postal_code": "101-8437",
+     "address": "東京都千代田区一ツ橋2-2-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "101-0051",
+     "address": "東京都千代田区神田神保町3-27",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "101-0003",
+     "address": "東京都千代田区一ツ橋2-6-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "八王子キャンパス",
+     "postal_code": "193-8666",
+     "address": "東京都八王子市元八王子町1-710",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（共立女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000025": {
+   "name": "慶應義塾大学",
+   "campuses": [
+    {
+     "name": "三田キャンパス",
+     "postal_code": "108-8345",
+     "address": "東京都港区三田2-15-45",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "日吉キャンパス",
+     "postal_code": "223-8521",
+     "address": "神奈川県横浜市港北区日吉4-1-1",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市港北区"
+    },
+    {
+     "name": "信濃町キャンパス",
+     "postal_code": "160-8582",
+     "address": "東京都新宿区信濃町35",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "矢上キャンパス",
+     "postal_code": "223-8522",
+     "address": "神奈川県横浜市港北区日吉3-14-1",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市港北区"
+    },
+    {
+     "name": "湘南藤沢キャンパス",
+     "postal_code": "252-0882",
+     "address": "神奈川県藤沢市遠藤5322",
+     "prefecture": "神奈川県",
+     "municipality": "藤沢市"
+    },
+    {
+     "name": "湘南藤沢キャンパス",
+     "postal_code": "252-0883",
+     "address": "神奈川県藤沢市遠藤4411",
+     "prefecture": "神奈川県",
+     "municipality": "藤沢市"
+    },
+    {
+     "name": "芝共立キャンパス",
+     "postal_code": "105-8512",
+     "address": "東京都港区芝公園1-5-30",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（慶應義塾大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000026": {
+   "name": "工学院大学",
+   "campuses": [
+    {
+     "name": "新宿校舎",
+     "postal_code": "163-8677",
+     "address": "東京都新宿区西新宿1-24-2",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "八王子校舎",
+     "postal_code": "192-0015",
+     "address": "東京都八王子市中野町2665-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（工学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000027": {
+   "name": "國學院大學",
+   "campuses": [
+    {
+     "name": "渋谷キャンパス",
+     "postal_code": "150-8440",
+     "address": "東京都渋谷区東4-10-28",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    },
+    {
+     "name": "たまプラーザキャンパス",
+     "postal_code": "225-0003",
+     "address": "神奈川県横浜市青葉区新石川3-22-1",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市青葉区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（國學院大學）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000028": {
+   "name": "国士舘大学",
+   "campuses": [
+    {
+     "name": "世田谷キャンパス",
+     "postal_code": "154-8515",
+     "address": "東京都世田谷区世田谷4-28-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "町田キャンパス",
+     "postal_code": "195-8550",
+     "address": "東京都町田市広袴1-1-1",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    },
+    {
+     "name": "多摩キャンパス",
+     "postal_code": "206-8515",
+     "address": "東京都多摩市永山7-3-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    },
+    {
+     "name": "国士舘楓の杜キャンパス",
+     "postal_code": "195-0063",
+     "address": "東京都町田市野津田町3101",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    },
+    {
+     "name": "多摩南野キャンパス",
+     "postal_code": "206-0032",
+     "address": "東京都多摩市南野2-11-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（国士舘大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000029": {
+   "name": "駒澤大学",
+   "campuses": [
+    {
+     "name": "駒沢キャンパス",
+     "postal_code": "154-8525",
+     "address": "東京都世田谷区駒沢1-23-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "玉川キャンパス",
+     "postal_code": "157-0068",
+     "address": "東京都世田谷区宇奈根1-1-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "深沢キャンパス",
+     "postal_code": "158-0081",
+     "address": "東京都世田谷区深沢6-8-18",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "駒澤大学 法科大学院",
+     "postal_code": "154-0012",
+     "address": "東京都世田谷区駒沢2-12-5",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（駒澤大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000030": {
+   "name": "実践女子大学",
+   "campuses": [
+    {
+     "name": "日野キャンパス",
+     "postal_code": "191-8510",
+     "address": "東京都日野市大坂上4-1-1",
+     "prefecture": "東京都",
+     "municipality": "日野市"
+    },
+    {
+     "name": "渋谷キャンパス",
+     "postal_code": "150-8538",
+     "address": "東京都渋谷区東1-1-49",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（実践女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000031": {
+   "name": "芝浦工業大学",
+   "campuses": [
+    {
+     "name": "豊洲キャンパス",
+     "postal_code": "135-8548",
+     "address": "東京都江東区豊洲3-7-5",
+     "prefecture": "東京都",
+     "municipality": "江東区"
+    },
+    {
+     "name": "大宮キャンパス",
+     "postal_code": "337-8570",
+     "address": "埼玉県さいたま市見沼区深作307",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市見沼区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（芝浦工業大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000032": {
+   "name": "順天堂大学",
+   "campuses": [
+    {
+     "name": "本郷・お茶の水キャンパス",
+     "postal_code": "113-8421",
+     "address": "東京都文京区本郷2-1-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "さくらキャンパス",
+     "postal_code": "270-1695",
+     "address": "千葉県印西市平賀学園台1-1",
+     "prefecture": "千葉県",
+     "municipality": "印西市"
+    },
+    {
+     "name": "浦安キャンパス",
+     "postal_code": "279-0023",
+     "address": "千葉県浦安市高洲2-5-1",
+     "prefecture": "千葉県",
+     "municipality": "浦安市"
+    },
+    {
+     "name": "三島キャンパス",
+     "postal_code": "411-8787",
+     "address": "静岡県三島市大宮町3-7-33",
+     "prefecture": "静岡県",
+     "municipality": "三島市"
+    },
+    {
+     "name": "浦安・日の出キャンパス",
+     "postal_code": "279-0013",
+     "address": "千葉県浦安市日の出6-8-1",
+     "prefecture": "千葉県",
+     "municipality": "浦安市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都",
+    "静岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（順天堂大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000033": {
+   "name": "上智大学",
+   "campuses": [
+    {
+     "name": "四谷キャンパス",
+     "postal_code": "102-8554",
+     "address": "東京都千代田区紀尾井町7-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "石神井キャンパス",
+     "postal_code": "177-0044",
+     "address": "東京都練馬区上石神井4-32-11",
+     "prefecture": "東京都",
+     "municipality": "練馬区"
+    },
+    {
+     "name": "目白聖母キャンパス",
+     "postal_code": "161-8550",
+     "address": "東京都新宿区下落合4-16-11",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（上智大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000034": {
+   "name": "昭和医科大学",
+   "campuses": [
+    {
+     "name": "旗の台キャンパス",
+     "postal_code": "142-8555",
+     "address": "東京都品川区旗の台1-5-8",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    },
+    {
+     "name": "横浜キャンパス",
+     "postal_code": "226-8555",
+     "address": "神奈川県横浜市緑区十日市場町1865",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市緑区"
+    },
+    {
+     "name": "富士吉田キャンパス",
+     "postal_code": "403-0005",
+     "address": "山梨県富士吉田市上吉田4562",
+     "prefecture": "山梨県",
+     "municipality": "富士吉田市"
+    },
+    {
+     "name": "洗足キャンパス",
+     "postal_code": "145-8515",
+     "address": "東京都大田区北千束2-1-1",
+     "prefecture": "東京都",
+     "municipality": "大田区"
+    }
+   ],
+   "prefectures": [
+    "山梨県",
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（昭和医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000035": {
+   "name": "昭和女子大学",
+   "campuses": [
+    {
+     "name": "世田谷キャンパス",
+     "postal_code": "154-8533",
+     "address": "東京都世田谷区太子堂1-7-57",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（昭和女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000036": {
+   "name": "昭和薬科大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "194-8543",
+     "address": "東京都町田市東玉川学園3-2-1",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（昭和薬科大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000037": {
+   "name": "女子美術大学",
+   "campuses": [
+    {
+     "name": "杉並キャンパス",
+     "postal_code": "166-8538",
+     "address": "東京都杉並区和田1-49-8",
+     "prefecture": "東京都",
+     "municipality": "杉並区"
+    },
+    {
+     "name": "相模原キャンパス",
+     "postal_code": "252-8538",
+     "address": "神奈川県相模原市南区麻溝台1900",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市南区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（女子美術大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000038": {
+   "name": "杉野服飾大学",
+   "campuses": [
+    {
+     "name": "目黒キャンパス",
+     "postal_code": "141-8652",
+     "address": "東京都品川区上大崎4-6-19",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    },
+    {
+     "name": "日野キャンパス",
+     "postal_code": "191-0033",
+     "address": "東京都日野市百草1006-44",
+     "prefecture": "東京都",
+     "municipality": "日野市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（杉野服飾大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000039": {
+   "name": "成城大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "157-8511",
+     "address": "東京都世田谷区成城6-1-20",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（成城大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000040": {
+   "name": "聖心女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "150-8938",
+     "address": "東京都渋谷区広尾4-3-1",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（聖心女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000041": {
+   "name": "清泉女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "141-8642",
+     "address": "東京都品川区東五反田3-16-21",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（清泉女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000042": {
+   "name": "聖路加国際大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "104-0044",
+     "address": "東京都中央区明石町10-1",
+     "prefecture": "東京都",
+     "municipality": "中央区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（聖路加国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000043": {
+   "name": "専修大学",
+   "campuses": [
+    {
+     "name": "神田校舎",
+     "postal_code": "101-8425",
+     "address": "東京都千代田区神田神保町3-8-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "生田校舎",
+     "postal_code": "214-8580",
+     "address": "神奈川県川崎市多摩区東三田2-1-1",
+     "prefecture": "神奈川県",
+     "municipality": "川崎市多摩区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（専修大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000044": {
+   "name": "大正大学",
+   "campuses": [
+    {
+     "name": "巣鴨校舎",
+     "postal_code": "170-8470",
+     "address": "東京都豊島区西巣鴨3-20-1",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    },
+    {
+     "name": "埼玉校舎",
+     "postal_code": "343-0193",
+     "address": "埼玉県北葛飾郡松伏町大字築比地",
+     "prefecture": "埼玉県",
+     "municipality": "北葛飾郡松伏町"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（大正大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000045": {
+   "name": "大東文化大学",
+   "campuses": [
+    {
+     "name": "板橋校舎",
+     "postal_code": "175-8571",
+     "address": "東京都板橋区高島平1-9-1",
+     "prefecture": "東京都",
+     "municipality": "板橋区"
+    },
+    {
+     "name": "東松山校舎",
+     "postal_code": "355-8501",
+     "address": "埼玉県東松山市岩殿560",
+     "prefecture": "埼玉県",
+     "municipality": "東松山市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（大東文化大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000046": {
+   "name": "高千穂大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "168-8508",
+     "address": "東京都杉並区大宮2-19-1",
+     "prefecture": "東京都",
+     "municipality": "杉並区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（高千穂大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000047": {
+   "name": "拓殖大学",
+   "campuses": [
+    {
+     "name": "文京キャンパス",
+     "postal_code": "112-8585",
+     "address": "東京都文京区小日向3-4-14",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "八王子国際キャンパス",
+     "postal_code": "193-0985",
+     "address": "東京都八王子市館町815-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（拓殖大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000048": {
+   "name": "多摩美術大学",
+   "campuses": [
+    {
+     "name": "上野毛キャンパス",
+     "postal_code": "158-8558",
+     "address": "東京都世田谷区上野毛3-15-34",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "八王子キャンパス",
+     "postal_code": "192-0394",
+     "address": "東京都八王子市鑓水2-1723",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（多摩美術大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000049": {
+   "name": "中央大学",
+   "campuses": [
+    {
+     "name": "多摩キャンパス",
+     "postal_code": "192-0393",
+     "address": "東京都八王子市東中野742-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    },
+    {
+     "name": "後楽園キャンパス",
+     "postal_code": "112-8551",
+     "address": "東京都文京区春日1-13-27",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "市ヶ谷田町キャンパス",
+     "postal_code": "162-8478",
+     "address": "東京都新宿区市谷田町1-18",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "茗荷谷キャンパス",
+     "postal_code": "112-8631",
+     "address": "東京都文京区大塚一丁目4-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "駿河台キャンパス",
+     "postal_code": "101-8324",
+     "address": "東京都千代田区神田駿河台3-11-5",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "小石川キャンパス",
+     "postal_code": "112-8586",
+     "address": "東京都文京区春日一丁目4-11",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（中央大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000050": {
+   "name": "東海大学",
+   "campuses": [
+    {
+     "name": "湘南キャンパス",
+     "postal_code": "259-1292",
+     "address": "神奈川県平塚市北金目4-1-1",
+     "prefecture": "神奈川県",
+     "municipality": "平塚市"
+    },
+    {
+     "name": "品川キャンパス",
+     "postal_code": "108-8619",
+     "address": "東京都港区高輪2-3-23",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "静岡キャンパス",
+     "postal_code": "424-8610",
+     "address": "静岡県静岡市清水区折戸3-20-1",
+     "prefecture": "静岡県",
+     "municipality": "静岡市清水区"
+    },
+    {
+     "name": "伊勢原キャンパス",
+     "postal_code": "259-1193",
+     "address": "神奈川県伊勢原市下糟屋143",
+     "prefecture": "神奈川県",
+     "municipality": "伊勢原市"
+    },
+    {
+     "name": "熊本キャンパス",
+     "postal_code": "862-8652",
+     "address": "熊本県熊本市東区渡鹿9-1-1",
+     "prefecture": "熊本県",
+     "municipality": "熊本市東区"
+    },
+    {
+     "name": "阿蘇くまもと臨空キャンパス",
+     "postal_code": "861-2205",
+     "address": "熊本県上益城郡益城町杉堂871-12",
+     "prefecture": "熊本県",
+     "municipality": "上益城郡益城町"
+    },
+    {
+     "name": "札幌キャンパス",
+     "postal_code": "005-8601",
+     "address": "北海道札幌市南区南沢5条1-1-1",
+     "prefecture": "北海道",
+     "municipality": "札幌市南区"
+    }
+   ],
+   "prefectures": [
+    "北海道",
+    "東京都",
+    "熊本県",
+    "神奈川県",
+    "静岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東海大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000051": {
+   "name": "東京医科大学",
+   "campuses": [
+    {
+     "name": "新宿キャンパス",
+     "postal_code": "160-8402",
+     "address": "東京都新宿区新宿6-1-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "西新宿キャンパス",
+     "postal_code": "160-0023",
+     "address": "東京都新宿区西新宿6-7-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000052": {
+   "name": "東京家政大学",
+   "campuses": [
+    {
+     "name": "板橋校舎",
+     "postal_code": "173-8602",
+     "address": "東京都板橋区加賀1-18-1",
+     "prefecture": "東京都",
+     "municipality": "板橋区"
+    },
+    {
+     "name": "狭山校舎",
+     "postal_code": "350-1398",
+     "address": "埼玉県狭山市稲荷山2-15-1",
+     "prefecture": "埼玉県",
+     "municipality": "狭山市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京家政大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000053": {
+   "name": "東京家政学院大学",
+   "campuses": [
+    {
+     "name": "町田キャンパス",
+     "postal_code": "194-0292",
+     "address": "東京都町田市相原町2600",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    },
+    {
+     "name": "千代田三番町キャンパス",
+     "postal_code": "102-8341",
+     "address": "東京都千代田区三番町22",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京家政学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000054": {
+   "name": "東京歯科大学",
+   "campuses": [
+    {
+     "name": "水道橋キャンパス",
+     "postal_code": "101-0061",
+     "address": "東京都千代田区神田三崎町2-9-18",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京歯科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000055": {
+   "name": "東京慈恵会医科大学",
+   "campuses": [
+    {
+     "name": "西新橋キャンパス",
+     "postal_code": "105-8461",
+     "address": "東京都港区西新橋3-25-8",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "国領キャンパス",
+     "postal_code": "182-8570",
+     "address": "東京都調布市国領町8-3-1",
+     "prefecture": "東京都",
+     "municipality": "調布市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京慈恵会医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000056": {
+   "name": "東京女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "167-8585",
+     "address": "東京都杉並区善福寺2-6-1",
+     "prefecture": "東京都",
+     "municipality": "杉並区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000057": {
+   "name": "東京女子医科大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "162-8666",
+     "address": "東京都新宿区河田町8-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京女子医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000058": {
+   "name": "東京電機大学",
+   "campuses": [
+    {
+     "name": "東京千住キャンパス",
+     "postal_code": "120-8551",
+     "address": "東京都足立区千住旭町5",
+     "prefecture": "東京都",
+     "municipality": "足立区"
+    },
+    {
+     "name": "埼玉鳩山キャンパス",
+     "postal_code": "350-0394",
+     "address": "埼玉県比企郡鳩山町大字石坂",
+     "prefecture": "埼玉県",
+     "municipality": "比企郡鳩山町"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京電機大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000059": {
+   "name": "東京農業大学",
+   "campuses": [
+    {
+     "name": "世田谷キャンパス",
+     "postal_code": "156-8502",
+     "address": "東京都世田谷区桜丘1-1-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "厚木キャンパス",
+     "postal_code": "243-0034",
+     "address": "神奈川県厚木市船子1737",
+     "prefecture": "神奈川県",
+     "municipality": "厚木市"
+    },
+    {
+     "name": "北海道オホーツクキャンパス",
+     "postal_code": "099-2493",
+     "address": "北海道網走市八坂196",
+     "prefecture": "北海道",
+     "municipality": "網走市"
+    }
+   ],
+   "prefectures": [
+    "北海道",
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京農業大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000060": {
+   "name": "東京薬科大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "192-0392",
+     "address": "東京都八王子市堀之内1432-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京薬科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000061": {
+   "name": "東京理科大学",
+   "campuses": [
+    {
+     "name": "神楽坂キャンパス（神楽坂校舎）",
+     "postal_code": "162-8601",
+     "address": "東京都新宿区神楽坂1-3",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "神楽坂キャンパス（富士見校舎）",
+     "postal_code": "102-0071",
+     "address": "東京都千代田区富士見1-11-2",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "野田キャンパス",
+     "postal_code": "278-8510",
+     "address": "千葉県野田市山崎2641",
+     "prefecture": "千葉県",
+     "municipality": "野田市"
+    },
+    {
+     "name": "葛飾キャンパス",
+     "postal_code": "125-8585",
+     "address": "東京都葛飾区新宿6-3-1",
+     "prefecture": "東京都",
+     "municipality": "葛飾区"
+    },
+    {
+     "name": "北海道・長万部キャンパス",
+     "postal_code": "049-3514",
+     "address": "北海道山越郡長万部町字富野102-1",
+     "prefecture": "北海道",
+     "municipality": "山越郡長万部町"
+    }
+   ],
+   "prefectures": [
+    "北海道",
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京理科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000062": {
+   "name": "東邦大学",
+   "campuses": [
+    {
+     "name": "医学部・医学研究科",
+     "postal_code": "143-8540",
+     "address": "東京都大田区大森西5-21-16",
+     "prefecture": "東京都",
+     "municipality": "大田区"
+    },
+    {
+     "name": "看護学部・看護学研究科",
+     "postal_code": "143-0015",
+     "address": "東京都大田区大森西4-16-20",
+     "prefecture": "東京都",
+     "municipality": "大田区"
+    },
+    {
+     "name": "薬学部・薬学研究科・理学部・理学研究科・健康科学部",
+     "postal_code": "274-8510",
+     "address": "千葉県船橋市三山2-2-1",
+     "prefecture": "千葉県",
+     "municipality": "船橋市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東邦大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000063": {
+   "name": "東洋大学",
+   "campuses": [
+    {
+     "name": "白山キャンパス",
+     "postal_code": "112-8606",
+     "address": "東京都文京区白山5-28-20",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "赤羽台キャンパス",
+     "postal_code": "115-8650",
+     "address": "東京都北区赤羽台1-7-11",
+     "prefecture": "東京都",
+     "municipality": "北区"
+    },
+    {
+     "name": "川越キャンパス",
+     "postal_code": "350-8585",
+     "address": "埼玉県川越市鯨井2100",
+     "prefecture": "埼玉県",
+     "municipality": "川越市"
+    },
+    {
+     "name": "朝霞キャンパス",
+     "postal_code": "351-8510",
+     "address": "埼玉県朝霞市岡48-1",
+     "prefecture": "埼玉県",
+     "municipality": "朝霞市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東洋大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000064": {
+   "name": "東京音楽大学",
+   "campuses": [
+    {
+     "name": "中目黒・代官山キャンパス",
+     "postal_code": "153-8622",
+     "address": "東京都目黒区上目黒1-9-1",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    },
+    {
+     "name": "池袋キャンパス",
+     "postal_code": "171-8540",
+     "address": "東京都豊島区南池袋3-4-5",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京音楽大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000065": {
+   "name": "二松学舎大学",
+   "campuses": [
+    {
+     "name": "九段キャンパス",
+     "postal_code": "102-8336",
+     "address": "東京都千代田区三番町6-16",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "柏キャンパス",
+     "postal_code": "277-8585",
+     "address": "千葉県柏市大井2590",
+     "prefecture": "千葉県",
+     "municipality": "柏市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（二松学舎大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000066": {
+   "name": "日本大学",
+   "campuses": [
+    {
+     "name": "駿河台キャンパス",
+     "postal_code": "101-8308",
+     "address": "東京都千代田区神田駿河台1-8-14",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "101-8310",
+     "address": "東京都千代田区神田駿河台1-8-13",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "101-8360",
+     "address": "東京都千代田区神田三崎町1-3-2",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "101-8375",
+     "address": "東京都千代田区神田三崎町2-3-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "",
+     "postal_code": "154-8513",
+     "address": "東京都世田谷区下馬3-34-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "",
+     "postal_code": "156-8550",
+     "address": "東京都世田谷区桜上水3-25-40",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "",
+     "postal_code": "157-8570",
+     "address": "東京都世田谷区砧5-2-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "",
+     "postal_code": "173-8610",
+     "address": "東京都板橋区大谷口上町30-1",
+     "prefecture": "東京都",
+     "municipality": "板橋区"
+    },
+    {
+     "name": "",
+     "postal_code": "176-8525",
+     "address": "東京都練馬区旭丘2-42-1",
+     "prefecture": "東京都",
+     "municipality": "練馬区"
+    },
+    {
+     "name": "",
+     "postal_code": "252-0880",
+     "address": "神奈川県藤沢市亀井野1866",
+     "prefecture": "神奈川県",
+     "municipality": "藤沢市"
+    },
+    {
+     "name": "",
+     "postal_code": "271-8587",
+     "address": "千葉県松戸市栄町西2-870-1",
+     "prefecture": "千葉県",
+     "municipality": "松戸市"
+    },
+    {
+     "name": "船橋キャンパス",
+     "postal_code": "274-8501",
+     "address": "千葉県船橋市習志野台7-24-1",
+     "prefecture": "千葉県",
+     "municipality": "船橋市"
+    },
+    {
+     "name": "",
+     "postal_code": "274-8555",
+     "address": "千葉県船橋市習志野台7-7-1",
+     "prefecture": "千葉県",
+     "municipality": "船橋市"
+    },
+    {
+     "name": "津田沼キャンパス",
+     "postal_code": "275-8575",
+     "address": "千葉県習志野市泉町1-2-1",
+     "prefecture": "千葉県",
+     "municipality": "習志野市"
+    },
+    {
+     "name": "実籾キャンパス",
+     "postal_code": "275-8576",
+     "address": "千葉県習志野市新栄2-11-1",
+     "prefecture": "千葉県",
+     "municipality": "習志野市"
+    },
+    {
+     "name": "",
+     "postal_code": "411-8555",
+     "address": "静岡県三島市文教町2-31-145",
+     "prefecture": "静岡県",
+     "municipality": "三島市"
+    },
+    {
+     "name": "",
+     "postal_code": "963-8642",
+     "address": "福島県郡山市田村町徳定字中河原1",
+     "prefecture": "福島県",
+     "municipality": "郡山市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都",
+    "神奈川県",
+    "福島県",
+    "静岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000067": {
+   "name": "日本医科大学",
+   "campuses": [
+    {
+     "name": "千駄木キャンパス",
+     "postal_code": "113-8602",
+     "address": "東京都文京区千駄木1-1-5",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    },
+    {
+     "name": "武蔵境キャンパス",
+     "postal_code": "180-0023",
+     "address": "東京都武蔵野市境南町1-7-1",
+     "prefecture": "東京都",
+     "municipality": "武蔵野市"
+    },
+    {
+     "name": "千葉北総キャンパス",
+     "postal_code": "270-1694",
+     "address": "千葉県印西市鎌苅1715",
+     "prefecture": "千葉県",
+     "municipality": "印西市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000068": {
+   "name": "日本歯科大学",
+   "campuses": [
+    {
+     "name": "日本歯科大学 生命歯学部",
+     "postal_code": "102-8159",
+     "address": "東京都千代田区富士見1-9-20",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "日本歯科大学 新潟生命歯学部",
+     "postal_code": "951-8580",
+     "address": "新潟県新潟市中央区浜浦町1-8",
+     "prefecture": "新潟県",
+     "municipality": "新潟市中央区"
+    }
+   ],
+   "prefectures": [
+    "新潟県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本歯科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000069": {
+   "name": "日本社会事業大学",
+   "campuses": [
+    {
+     "name": "清瀬キャンパス",
+     "postal_code": "204-8555",
+     "address": "東京都清瀬市竹丘3-1-30",
+     "prefecture": "東京都",
+     "municipality": "清瀬市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本社会事業大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000070": {
+   "name": "日本女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "112-8681",
+     "address": "東京都文京区目白台2-8-1",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000071": {
+   "name": "日本女子体育大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "157-8565",
+     "address": "東京都世田谷区北烏山8-19-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本女子体育大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000072": {
+   "name": "日本体育大学",
+   "campuses": [
+    {
+     "name": "東京・世田谷キャンパス",
+     "postal_code": "158-8508",
+     "address": "東京都世田谷区深沢7-1-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "横浜・健志台キャンパス",
+     "postal_code": "227-0033",
+     "address": "神奈川県横浜市青葉区鴨志田町1221-1",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市青葉区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本体育大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000073": {
+   "name": "ルーテル学院大学",
+   "campuses": [
+    {
+     "name": "三鷹キャンパス",
+     "postal_code": "181-0015",
+     "address": "東京都三鷹市大沢3-10-20",
+     "prefecture": "東京都",
+     "municipality": "三鷹市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ルーテル学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000074": {
+   "name": "文化学園大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "151-8523",
+     "address": "東京都渋谷区代々木3-22-1",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（文化学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000075": {
+   "name": "法政大学",
+   "campuses": [
+    {
+     "name": "市ヶ谷キャンパス",
+     "postal_code": "102-8160",
+     "address": "東京都千代田区富士見2-17-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "市ヶ谷キャンパス",
+     "postal_code": "162-0843",
+     "address": "東京都新宿区市谷田町2-15-2",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "小金井キャンパス",
+     "postal_code": "184-8584",
+     "address": "東京都小金井市梶野町3-7-2",
+     "prefecture": "東京都",
+     "municipality": "小金井市"
+    },
+    {
+     "name": "多摩キャンパス",
+     "postal_code": "194-0298",
+     "address": "東京都町田市相原町4342",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（法政大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000076": {
+   "name": "星薬科大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "142-8501",
+     "address": "東京都品川区荏原2-4-41",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（星薬科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000077": {
+   "name": "武蔵大学",
+   "campuses": [
+    {
+     "name": "江古田キャンパス",
+     "postal_code": "176-8534",
+     "address": "東京都練馬区豊玉上1-26-1",
+     "prefecture": "東京都",
+     "municipality": "練馬区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（武蔵大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000078": {
+   "name": "東京都市大学",
+   "campuses": [
+    {
+     "name": "世田谷キャンパス",
+     "postal_code": "158-8557",
+     "address": "東京都世田谷区玉堤1-28-1",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "横浜キャンパス",
+     "postal_code": "224-8551",
+     "address": "神奈川県横浜市都筑区牛久保西3-3-1",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市都筑区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京都市大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000079": {
+   "name": "武蔵野音楽大学",
+   "campuses": [
+    {
+     "name": "江古田キャンパス",
+     "postal_code": "176-8521",
+     "address": "東京都練馬区羽沢1-13-1",
+     "prefecture": "東京都",
+     "municipality": "練馬区"
+    },
+    {
+     "name": "入間キャンパス",
+     "postal_code": "358-8521",
+     "address": "埼玉県入間市中神728",
+     "prefecture": "埼玉県",
+     "municipality": "入間市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（武蔵野音楽大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000080": {
+   "name": "明治大学",
+   "campuses": [
+    {
+     "name": "駿河台キャンパス",
+     "postal_code": "101-8301",
+     "address": "東京都千代田区神田駿河台1-1",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "和泉キャンパス",
+     "postal_code": "168-8555",
+     "address": "東京都杉並区永福1-9-1",
+     "prefecture": "東京都",
+     "municipality": "杉並区"
+    },
+    {
+     "name": "生田キャンパス",
+     "postal_code": "214-8571",
+     "address": "神奈川県川崎市多摩区東三田1-1-1",
+     "prefecture": "神奈川県",
+     "municipality": "川崎市多摩区"
+    },
+    {
+     "name": "中野キャンパス",
+     "postal_code": "164-8525",
+     "address": "東京都中野区中野4-21-1",
+     "prefecture": "東京都",
+     "municipality": "中野区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（明治大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000081": {
+   "name": "明治学院大学",
+   "campuses": [
+    {
+     "name": "白金キャンパス",
+     "postal_code": "108-8636",
+     "address": "東京都港区白金台1-2-37",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "横浜キャンパス",
+     "postal_code": "244-8539",
+     "address": "神奈川県横浜市戸塚区上倉田町1518",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市戸塚区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（明治学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000082": {
+   "name": "明治薬科大学",
+   "campuses": [
+    {
+     "name": "清瀬キャンパス",
+     "postal_code": "204-8588",
+     "address": "東京都清瀬市野塩2-522-1",
+     "prefecture": "東京都",
+     "municipality": "清瀬市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（明治薬科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000083": {
+   "name": "立教大学",
+   "campuses": [
+    {
+     "name": "池袋キャンパス",
+     "postal_code": "171-8501",
+     "address": "東京都豊島区西池袋3-34-1",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    },
+    {
+     "name": "新座キャンパス",
+     "postal_code": "352-8558",
+     "address": "埼玉県新座市北野1-2-26",
+     "prefecture": "埼玉県",
+     "municipality": "新座市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（立教大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000084": {
+   "name": "立正大学",
+   "campuses": [
+    {
+     "name": "品川キャンパス",
+     "postal_code": "141-8602",
+     "address": "東京都品川区大崎4-2-16",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    },
+    {
+     "name": "熊谷キャンパス",
+     "postal_code": "360-0194",
+     "address": "埼玉県熊谷市万吉1700",
+     "prefecture": "埼玉県",
+     "municipality": "熊谷市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（立正大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000085": {
+   "name": "早稲田大学",
+   "campuses": [
+    {
+     "name": "早稲田キャンパス",
+     "postal_code": "169-8050",
+     "address": "東京都新宿区西早稲田1-6-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "戸山キャンパス",
+     "postal_code": "162-8644",
+     "address": "東京都新宿区戸山1-24-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "西早稲田キャンパス",
+     "postal_code": "169-8555",
+     "address": "東京都新宿区大久保3-4-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "所沢キャンパス",
+     "postal_code": "359-1192",
+     "address": "埼玉県所沢市三ヶ島2-579-15",
+     "prefecture": "埼玉県",
+     "municipality": "所沢市"
+    },
+    {
+     "name": "本庄キャンパス",
+     "postal_code": "367-0035",
+     "address": "埼玉県本庄市西富田1011",
+     "prefecture": "埼玉県",
+     "municipality": "本庄市"
+    },
+    {
+     "name": "北九州キャンパス",
+     "postal_code": "808-0135",
+     "address": "福岡県北九州市若松区ひびきの2-7",
+     "prefecture": "福岡県",
+     "municipality": "北九州市若松区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都",
+    "福岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（早稲田大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000086": {
+   "name": "国際仏教学大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "112-0003",
+     "address": "東京都文京区春日2-8-9",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（国際仏教学大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000087": {
+   "name": "東京国際工科専門職大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "160-0023",
+     "address": "東京都新宿区西新宿1-7-3",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京国際工科専門職大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000088": {
+   "name": "東京保健医療専門職大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "135-0043",
+     "address": "東京都江東区塩浜2-22-10",
+     "prefecture": "東京都",
+     "municipality": "江東区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京保健医療専門職大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000089": {
+   "name": "情報経営イノベーション専門職大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "131-0044",
+     "address": "東京都墨田区文花1-18-13",
+     "prefecture": "東京都",
+     "municipality": "墨田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（情報経営イノベーション専門職大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000090": {
+   "name": "大学院大学至善館",
+   "campuses": [
+    {
+     "name": "大学院大学至善館キャンパス",
+     "postal_code": "103-6117",
+     "address": "東京都中央区日本橋二丁目5番1号 日本橋髙島屋三井ビルディング17階",
+     "prefecture": "東京都",
+     "municipality": "中央区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（大学院大学至善館）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000091": {
+   "name": "東京通信大学",
+   "campuses": [
+    {
+     "name": "新宿駅前キャンパス",
+     "postal_code": "160-0023",
+     "address": "東京都新宿区西新宿1-7-3",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京通信大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000092": {
+   "name": "国際ファッション専門職大学",
+   "campuses": [
+    {
+     "name": "東京キャンパス",
+     "postal_code": "160-0023",
+     "address": "東京都新宿区西新宿1-7-3",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "大阪キャンパス",
+     "postal_code": "530-0001",
+     "address": "大阪府大阪市北区梅田3-3-2",
+     "prefecture": "大阪府",
+     "municipality": "大阪市北区"
+    },
+    {
+     "name": "名古屋キャンパス",
+     "postal_code": "450-0002",
+     "address": "愛知県名古屋市中村区名駅4-27-1",
+     "prefecture": "愛知県",
+     "municipality": "名古屋市中村区"
+    }
+   ],
+   "prefectures": [
+    "大阪府",
+    "愛知県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（国際ファッション専門職大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000093": {
+   "name": "駒沢女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "206-8511",
+     "address": "東京都稲城市坂浜238番地",
+     "prefecture": "東京都",
+     "municipality": "稲城市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（駒沢女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000094": {
+   "name": "亜細亜大学",
+   "campuses": [
+    {
+     "name": "武蔵野キャンパス",
+     "postal_code": "180-8629",
+     "address": "東京都武蔵野市境5-8",
+     "prefecture": "東京都",
+     "municipality": "武蔵野市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（亜細亜大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000095": {
+   "name": "桜美林大学",
+   "campuses": [
+    {
+     "name": "町田キャンパス",
+     "postal_code": "194-0294",
+     "address": "東京都町田市常盤町3758",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    },
+    {
+     "name": "新宿キャンパス",
+     "postal_code": "169-0073",
+     "address": "東京都新宿区百人町3-23-1",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    },
+    {
+     "name": "東京ひなたやまキャンパス",
+     "postal_code": "194-0032",
+     "address": "東京都町田市本町田2600-4",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    },
+    {
+     "name": "多摩アカデミーヒルズ",
+     "postal_code": "206-0033",
+     "address": "東京都多摩市落合2-31-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    },
+    {
+     "name": "プラネット淵野辺キャンパス（PFC）",
+     "postal_code": "252-0206",
+     "address": "神奈川県相模原市中央区淵野辺4-16-1",
+     "prefecture": "神奈川県",
+     "municipality": "相模原市中央区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（桜美林大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000096": {
+   "name": "国立音楽大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "190-8520",
+     "address": "東京都立川市柏町5-5-1",
+     "prefecture": "東京都",
+     "municipality": "立川市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（国立音楽大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000097": {
+   "name": "国際基督教大学",
+   "campuses": [
+    {
+     "name": "三鷹キャンパス",
+     "postal_code": "181-8585",
+     "address": "東京都三鷹市大沢3-10-2",
+     "prefecture": "東京都",
+     "municipality": "三鷹市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（国際基督教大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000098": {
+   "name": "白百合女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "182-8525",
+     "address": "東京都調布市緑ヶ丘1-25",
+     "prefecture": "東京都",
+     "municipality": "調布市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（白百合女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000099": {
+   "name": "成蹊大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "180-8633",
+     "address": "東京都武蔵野市吉祥寺北町3-3-1",
+     "prefecture": "東京都",
+     "municipality": "武蔵野市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（成蹊大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000100": {
+   "name": "玉川大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "194-8610",
+     "address": "東京都町田市玉川学園6-1-1",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（玉川大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000101": {
+   "name": "津田塾大学",
+   "campuses": [
+    {
+     "name": "小平キャンパス",
+     "postal_code": "187-8577",
+     "address": "東京都小平市津田町2-1-1",
+     "prefecture": "東京都",
+     "municipality": "小平市"
+    },
+    {
+     "name": "千駄ヶ谷キャンパス",
+     "postal_code": "151-0051",
+     "address": "東京都渋谷区千駄ヶ谷1-18-24",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（津田塾大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000102": {
+   "name": "帝京大学",
+   "campuses": [
+    {
+     "name": "板橋キャンパス",
+     "postal_code": "173-8605",
+     "address": "東京都板橋区加賀2-11-1",
+     "prefecture": "東京都",
+     "municipality": "板橋区"
+    },
+    {
+     "name": "八王子キャンパス",
+     "postal_code": "192-0395",
+     "address": "東京都八王子市大塚359",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    },
+    {
+     "name": "宇都宮キャンパス",
+     "postal_code": "320-8551",
+     "address": "栃木県宇都宮市豊郷台1-1",
+     "prefecture": "栃木県",
+     "municipality": "宇都宮市"
+    },
+    {
+     "name": "福岡キャンパス",
+     "postal_code": "836-8505",
+     "address": "福岡県大牟田市岬町6-22",
+     "prefecture": "福岡県",
+     "municipality": "大牟田市"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "栃木県",
+    "福岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（帝京大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000103": {
+   "name": "東京経済大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "185-8502",
+     "address": "東京都国分寺市南町1-7-34",
+     "prefecture": "東京都",
+     "municipality": "国分寺市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京経済大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000104": {
+   "name": "東京女子体育大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "186-8668",
+     "address": "東京都国立市富士見台4-30-1",
+     "prefecture": "東京都",
+     "municipality": "国立市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京女子体育大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000105": {
+   "name": "東京神学大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "181-0015",
+     "address": "東京都三鷹市大沢3-10-30",
+     "prefecture": "東京都",
+     "municipality": "三鷹市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京神学大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000106": {
+   "name": "東京造形大学",
+   "campuses": [
+    {
+     "name": "八王子宇津貫キャンパス",
+     "postal_code": "192-0992",
+     "address": "東京都八王子市宇津貫町1556",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京造形大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000107": {
+   "name": "桐朋学園大学",
+   "campuses": [
+    {
+     "name": "仙川キャンパス",
+     "postal_code": "182-8510",
+     "address": "東京都調布市若葉町1-41-1",
+     "prefecture": "東京都",
+     "municipality": "調布市"
+    },
+    {
+     "name": "調布キャンパス",
+     "postal_code": "182-0021",
+     "address": "東京都調布市調布ヶ丘1-10-1",
+     "prefecture": "東京都",
+     "municipality": "調布市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（桐朋学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000108": {
+   "name": "日本獣医生命科学大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "180-8602",
+     "address": "東京都武蔵野市境南町1-7-1",
+     "prefecture": "東京都",
+     "municipality": "武蔵野市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本獣医生命科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000109": {
+   "name": "武蔵野大学",
+   "campuses": [
+    {
+     "name": "有明キャンパス",
+     "postal_code": "135-8181",
+     "address": "東京都江東区有明三丁目3番3号",
+     "prefecture": "東京都",
+     "municipality": "江東区"
+    },
+    {
+     "name": "武蔵野キャンパス",
+     "postal_code": "202-8585",
+     "address": "東京都西東京市新町一丁目1番20号",
+     "prefecture": "東京都",
+     "municipality": "西東京市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（武蔵野大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000110": {
+   "name": "武蔵野美術大学",
+   "campuses": [
+    {
+     "name": "鷹の台キャンパス",
+     "postal_code": "187-8505",
+     "address": "東京都小平市小川町1-736",
+     "prefecture": "東京都",
+     "municipality": "小平市"
+    },
+    {
+     "name": "市ヶ谷キャンパス",
+     "postal_code": "162-0843",
+     "address": "東京都新宿区市谷田町1-4",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（武蔵野美術大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000111": {
+   "name": "明星大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "191-8506",
+     "address": "東京都日野市程久保2-1-1",
+     "prefecture": "東京都",
+     "municipality": "日野市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（明星大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000112": {
+   "name": "和光大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "195-8585",
+     "address": "東京都町田市金井ヶ丘5-1-1",
+     "prefecture": "東京都",
+     "municipality": "町田市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（和光大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000113": {
+   "name": "杏林大学",
+   "campuses": [
+    {
+     "name": "三鷹キャンパス",
+     "postal_code": "181-8611",
+     "address": "東京都三鷹市新川6-20-2",
+     "prefecture": "東京都",
+     "municipality": "三鷹市"
+    },
+    {
+     "name": "井の頭キャンパス",
+     "postal_code": "181-8612",
+     "address": "東京都三鷹市下連雀5-4-1",
+     "prefecture": "東京都",
+     "municipality": "三鷹市"
+    },
+    {
+     "name": "八王子キャンパス",
+     "postal_code": "192-8508",
+     "address": "東京都八王子市宮下町476",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（杏林大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000114": {
+   "name": "創価大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "192-8577",
+     "address": "東京都八王子市丹木町1-236",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（創価大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000115": {
+   "name": "日本文化大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "192-0986",
+     "address": "東京都八王子市片倉町977",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本文化大學）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000116": {
+   "name": "東京工科大学",
+   "campuses": [
+    {
+     "name": "八王子キャンパス",
+     "postal_code": "192-0982",
+     "address": "東京都八王子市片倉町1404-1",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    },
+    {
+     "name": "蒲田キャンパス",
+     "postal_code": "144-8535",
+     "address": "東京都大田区西蒲田5-23-22",
+     "prefecture": "東京都",
+     "municipality": "大田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京工科大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000117": {
+   "name": "日本赤十字看護大学",
+   "campuses": [
+    {
+     "name": "広尾キャンパス",
+     "postal_code": "150-0012",
+     "address": "東京都渋谷区広尾4-1-3",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    },
+    {
+     "name": "大宮キャンパス",
+     "postal_code": "338-0001",
+     "address": "埼玉県さいたま市中央区上落合8-7-19",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市中央区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本赤十字看護大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx"
+   }
+  },
+  "u000118": {
+   "name": "恵泉女学園大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "206-8586",
+     "address": "東京都多摩市南野2-10-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（恵泉女学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000119": {
+   "name": "多摩大学",
+   "campuses": [
+    {
+     "name": "多摩キャンパス",
+     "postal_code": "206-0022",
+     "address": "東京都多摩市聖ヶ丘4-1-1",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    },
+    {
+     "name": "湘南キャンパス",
+     "postal_code": "252-0805",
+     "address": "神奈川県藤沢市円行802番地",
+     "prefecture": "神奈川県",
+     "municipality": "藤沢市"
+    },
+    {
+     "name": "品川サテライト・多摩キャンパス",
+     "postal_code": "108-0075",
+     "address": "東京都港区港南2-14-14",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（多摩大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000120": {
+   "name": "東京純心大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "192-0011",
+     "address": "東京都八王子市滝山町二丁目600番地",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京純心大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000121": {
+   "name": "嘉悦大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "187-8578",
+     "address": "東京都小平市花小金井南町2-8-4",
+     "prefecture": "東京都",
+     "municipality": "小平市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（嘉悦大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000122": {
+   "name": "東京富士大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "161-8556",
+     "address": "東京都新宿区下落合1-7-7",
+     "prefecture": "東京都",
+     "municipality": "新宿区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京富士大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000123": {
+   "name": "LEC東京リーガルマインド大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "101-0061",
+     "address": "東京都千代田区神田三崎町2-2-15",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ＬＥＣ東京リーガルマインド大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000124": {
+   "name": "デジタルハリウッド大学",
+   "campuses": [
+    {
+     "name": "デジタルハリウッド大学",
+     "postal_code": "101-0062",
+     "address": "東京都千代田区神田駿河台4-6 御茶ノ水ソラシティアカデミア3F/4F",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（デジタルハリウッド大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000125": {
+   "name": "白梅学園大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "187-8570",
+     "address": "東京都小平市小川町1-830",
+     "prefecture": "東京都",
+     "municipality": "小平市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（白梅学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000126": {
+   "name": "東京医療保健大学",
+   "campuses": [
+    {
+     "name": "五反田キャンパス",
+     "postal_code": "141-8648",
+     "address": "東京都品川区東五反田4-1-17",
+     "prefecture": "東京都",
+     "municipality": "品川区"
+    },
+    {
+     "name": "世田谷キャンパス",
+     "postal_code": "154-8568",
+     "address": "東京都世田谷区世田谷3-11-3",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "国立病院機構キャンパス",
+     "postal_code": "152-8558",
+     "address": "東京都目黒区東が丘2-5-1",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    },
+    {
+     "name": "国立病院機構立川キャンパス",
+     "postal_code": "190-8590",
+     "address": "東京都立川市緑町3256",
+     "prefecture": "東京都",
+     "municipality": "立川市"
+    },
+    {
+     "name": "船橋キャンパス",
+     "postal_code": "273-8710",
+     "address": "千葉県船橋市海神町西1-1042-2",
+     "prefecture": "千葉県",
+     "municipality": "船橋市"
+    },
+    {
+     "name": "雄湊キャンパス",
+     "postal_code": "640-8538",
+     "address": "和歌山県和歌山市東坂ノ上丁3",
+     "prefecture": "和歌山県",
+     "municipality": "和歌山市"
+    },
+    {
+     "name": "日赤和歌山医療センターキャンパス",
+     "postal_code": "640-8269",
+     "address": "和歌山県和歌山市小松原通4―20",
+     "prefecture": "和歌山県",
+     "municipality": "和歌山市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "和歌山県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京医療保健大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000127": {
+   "name": "東京聖栄大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "124-8530",
+     "address": "東京都葛飾区西新小岩1-4-6",
+     "prefecture": "東京都",
+     "municipality": "葛飾区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京聖栄大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000128": {
+   "name": "ビジネス・ブレークスルー大学",
+   "campuses": [
+    {
+     "name": "麹町校舎",
+     "postal_code": "102-0084",
+     "address": "東京都千代田区二番町3 麹町スクエア1階",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ビジネス・ブレークスルー大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000129": {
+   "name": "グロービス経営大学院大学",
+   "campuses": [
+    {
+     "name": "東京校",
+     "postal_code": "102-0084",
+     "address": "東京都千代田区二番町5-1住友不動産麹町ビル",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    },
+    {
+     "name": "大阪校",
+     "postal_code": "532-0003",
+     "address": "大阪府大阪市淀川区宮原1丁目 新大阪阪急ビル4F",
+     "prefecture": "大阪府",
+     "municipality": "大阪市淀川区"
+    },
+    {
+     "name": "名古屋校",
+     "postal_code": "450-6627",
+     "address": "愛知県名古屋市中村区名駅1-1-3 JRゲートタワー27F",
+     "prefecture": "愛知県",
+     "municipality": "名古屋市中村区"
+    },
+    {
+     "name": "福岡校",
+     "postal_code": "812-0012",
+     "address": "福岡県福岡市博多区博多駅中央街8-1 JRJP博多ビル4F",
+     "prefecture": "福岡県",
+     "municipality": "福岡市博多区"
+    },
+    {
+     "name": "仙台特設キャンパス",
+     "postal_code": "980-6126",
+     "address": "宮城県仙台市青葉区中央1-3-1 AER26F",
+     "prefecture": "宮城県",
+     "municipality": "仙台市青葉区"
+    },
+    {
+     "name": "横浜特設キャンパス",
+     "postal_code": "220-0005",
+     "address": "神奈川県横浜市西区南幸1-1-1 JR横浜タワー14F",
+     "prefecture": "神奈川県",
+     "municipality": "横浜市西区"
+    }
+   ],
+   "prefectures": [
+    "大阪府",
+    "宮城県",
+    "愛知県",
+    "東京都",
+    "神奈川県",
+    "福岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（グロービス経営大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000130": {
+   "name": "文化ファッション大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "151-8547",
+     "address": "東京都渋谷区代々木3-22-1",
+     "prefecture": "東京都",
+     "municipality": "渋谷区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（文化ファッション大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000131": {
+   "name": "大原大学院大学",
+   "campuses": [
+    {
+     "name": "大原大学院大学",
+     "postal_code": "101-0065",
+     "address": "東京都千代田区西神田1-2-10",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（大原大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000132": {
+   "name": "東京未来大学",
+   "campuses": [
+    {
+     "name": "堀切キャンパス",
+     "postal_code": "120-0023",
+     "address": "東京都足立区千住曙町34-12",
+     "prefecture": "東京都",
+     "municipality": "足立区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京未来大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000133": {
+   "name": "ハリウッド大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "106-8541",
+     "address": "東京都港区六本木6-4-1 六本木ヒルズ ハリウッドプラザ",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ハリウッド大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000134": {
+   "name": "SBI大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "106-6021",
+     "address": "東京都港区六本木1-6-1",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ＳＢＩ大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000135": {
+   "name": "こども教育宝仙大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "164-8631",
+     "address": "東京都中野区中央2-33-26",
+     "prefecture": "東京都",
+     "municipality": "中野区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（こども教育宝仙大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000136": {
+   "name": "東京有明医療大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "135-0063",
+     "address": "東京都江東区有明2-9-1",
+     "prefecture": "東京都",
+     "municipality": "江東区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京有明医療大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000137": {
+   "name": "東京工芸大学",
+   "campuses": [
+    {
+     "name": "中野キャンパス",
+     "postal_code": "164-8678",
+     "address": "東京都中野区本町2-9-5",
+     "prefecture": "東京都",
+     "municipality": "中野区"
+    },
+    {
+     "name": "厚木キャンパス",
+     "postal_code": "243-0297",
+     "address": "神奈川県厚木市飯山南5-45-1",
+     "prefecture": "神奈川県",
+     "municipality": "厚木市"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京工芸大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000138": {
+   "name": "産業能率大学",
+   "campuses": [
+    {
+     "name": "自由が丘キャンパス",
+     "postal_code": "158-8630",
+     "address": "東京都世田谷区等々力6-39-15",
+     "prefecture": "東京都",
+     "municipality": "世田谷区"
+    },
+    {
+     "name": "湘南キャンパス",
+     "postal_code": "259-1197",
+     "address": "神奈川県伊勢原市上粕屋1573",
+     "prefecture": "神奈川県",
+     "municipality": "伊勢原市"
+    },
+    {
+     "name": "代官山キャンパス",
+     "postal_code": "153-0042",
+     "address": "東京都目黒区青葉台1-4-4",
+     "prefecture": "東京都",
+     "municipality": "目黒区"
+    }
+   ],
+   "prefectures": [
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（産業能率大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000139": {
+   "name": "ヤマザキ動物看護大学",
+   "campuses": [
+    {
+     "name": "南大沢キャンパス",
+     "postal_code": "192-0364",
+     "address": "東京都八王子市南大沢4-7-2",
+     "prefecture": "東京都",
+     "municipality": "八王子市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ヤマザキ動物看護大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000140": {
+   "name": "東京医療学院大学",
+   "campuses": [
+    {
+     "name": "保健医療学部",
+     "postal_code": "206-0033",
+     "address": "東京都多摩市落合4-11",
+     "prefecture": "東京都",
+     "municipality": "多摩市"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京医療学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000141": {
+   "name": "事業構想大学院大学",
+   "campuses": [
+    {
+     "name": "東京本校舎",
+     "postal_code": "107-8411",
+     "address": "東京都港区南青山3-13-16",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "東京別館校舎",
+     "postal_code": "107-8418",
+     "address": "東京都港区南青山3-13-18 313南青山ビル4階",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    },
+    {
+     "name": "仙台別地キャンパス校舎",
+     "postal_code": "983-8477",
+     "address": "宮城県仙台市宮城野区榴岡1-1-1 JR仙台イーストゲートビル7階",
+     "prefecture": "宮城県",
+     "municipality": "仙台市宮城野区"
+    },
+    {
+     "name": "名古屋別地キャンパス校舎",
+     "postal_code": "450-6627",
+     "address": "愛知県名古屋市中村区名駅1-1-3 JRゲートタワー27階",
+     "prefecture": "愛知県",
+     "municipality": "名古屋市中村区"
+    },
+    {
+     "name": "大阪別地キャンパス校舎",
+     "postal_code": "530-0011",
+     "address": "大阪府大阪市北区大深町3-1 グランフロント大阪北館タワーC10階(ナレッジキャピタル内)",
+     "prefecture": "大阪府",
+     "municipality": "大阪市北区"
+    },
+    {
+     "name": "福岡別地キャンパス校舎",
+     "postal_code": "812-0012",
+     "address": "福岡県福岡市博多区博多駅中央街8-1 JRJP博多ビル4階",
+     "prefecture": "福岡県",
+     "municipality": "福岡市博多区"
+    }
+   ],
+   "prefectures": [
+    "大阪府",
+    "宮城県",
+    "愛知県",
+    "東京都",
+    "福岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（事業構想大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000142": {
+   "name": "社会構想大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "107-8418",
+     "address": "東京都港区南青山3-13-18",
+     "prefecture": "東京都",
+     "municipality": "港区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（社会構想大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000143": {
+   "name": "帝京科学大学",
+   "campuses": [
+    {
+     "name": "千住キャンパス",
+     "postal_code": "120-0045",
+     "address": "東京都足立区千住桜木2-2-1",
+     "prefecture": "東京都",
+     "municipality": "足立区"
+    },
+    {
+     "name": "東京西キャンパス",
+     "postal_code": "409-0193",
+     "address": "山梨県上野原市八ツ沢2525",
+     "prefecture": "山梨県",
+     "municipality": "上野原市"
+    }
+   ],
+   "prefectures": [
+    "山梨県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（帝京科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000144": {
+   "name": "東京情報デザイン専門職大学",
+   "campuses": [
+    {
+     "name": "小松川キャンパス",
+     "postal_code": "132-0034",
+     "address": "東京都江戸川区小松川2-7-1",
+     "prefecture": "東京都",
+     "municipality": "江戸川区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京情報デザイン専門職大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx"
+   }
+  },
+  "u000145": {
+   "name": "埼玉大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "338-8570",
+     "address": "埼玉県さいたま市桜区下大久保255",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市桜区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（埼玉大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx"
+   }
+  },
+  "u000146": {
+   "name": "埼玉県立大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "343-8540",
+     "address": "埼玉県越谷市三野宮820",
+     "prefecture": "埼玉県",
+     "municipality": "越谷市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（埼玉県立大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx"
+   }
+  },
+  "u000147": {
+   "name": "ものつくり大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "361-0038",
+     "address": "埼玉県行田市前谷333",
+     "prefecture": "埼玉県",
+     "municipality": "行田市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（ものつくり大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000148": {
+   "name": "人間総合科学大学",
+   "campuses": [
+    {
+     "name": "蓮田キャンパス",
+     "postal_code": "339-8539",
+     "address": "埼玉県さいたま市岩槻区馬込1288",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市岩槻区"
+    },
+    {
+     "name": "岩槻キャンパス",
+     "postal_code": "339-8555",
+     "address": "埼玉県さいたま市岩槻区太田字新正寺曲輪354-3",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市岩槻区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（人間総合科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000149": {
+   "name": "共栄大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "344-0051",
+     "address": "埼玉県春日部市内牧4158",
+     "prefecture": "埼玉県",
+     "municipality": "春日部市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（共栄大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000150": {
+   "name": "十文字学園女子大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "352-8510",
+     "address": "埼玉県新座市菅沢2-1-28",
+     "prefecture": "埼玉県",
+     "municipality": "新座市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（十文字学園女子大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000151": {
+   "name": "城西大学",
+   "campuses": [
+    {
+     "name": "坂戸キャンパス",
+     "postal_code": "350-0295",
+     "address": "埼玉県坂戸市けやき台1-1",
+     "prefecture": "埼玉県",
+     "municipality": "坂戸市"
+    },
+    {
+     "name": "東京紀尾井町キャンパス（３号棟）",
+     "postal_code": "102-0093",
+     "address": "東京都千代田区平河町2-3-20",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（城西大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000152": {
+   "name": "埼玉医科大学",
+   "campuses": [
+    {
+     "name": "毛呂山キャンパス",
+     "postal_code": "350-0495",
+     "address": "埼玉県入間郡毛呂山町大字毛呂本郷38番地",
+     "prefecture": "埼玉県",
+     "municipality": "入間郡毛呂山町"
+    },
+    {
+     "name": "日高キャンパス",
+     "postal_code": "350-1241",
+     "address": "埼玉県日高市大字山根1397番地1",
+     "prefecture": "埼玉県",
+     "municipality": "日高市"
+    },
+    {
+     "name": "川角キャンパス",
+     "postal_code": "350-0496",
+     "address": "埼玉県入間郡毛呂山町大字川角981番地",
+     "prefecture": "埼玉県",
+     "municipality": "入間郡毛呂山町"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（埼玉医科大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000153": {
+   "name": "埼玉学園大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "333-0831",
+     "address": "埼玉県川口市大字木曽呂1510",
+     "prefecture": "埼玉県",
+     "municipality": "川口市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（埼玉学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000154": {
+   "name": "埼玉工業大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "369-0293",
+     "address": "埼玉県深谷市普済寺1690",
+     "prefecture": "埼玉県",
+     "municipality": "深谷市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（埼玉工業大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000155": {
+   "name": "日本栄養大学",
+   "campuses": [
+    {
+     "name": "坂戸キャンパス",
+     "postal_code": "350-0288",
+     "address": "埼玉県坂戸市千代田3-9-21",
+     "prefecture": "埼玉県",
+     "municipality": "坂戸市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（女子栄養大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000156": {
+   "name": "尚美学園大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "350-1110",
+     "address": "埼玉県川越市豊田町1-1-1",
+     "prefecture": "埼玉県",
+     "municipality": "川越市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（尚美学園大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000157": {
+   "name": "平成国際大学",
+   "campuses": [
+    {
+     "name": "加須キャンパス",
+     "postal_code": "347-8504",
+     "address": "埼玉県加須市水深大立野2000",
+     "prefecture": "埼玉県",
+     "municipality": "加須市"
+    },
+    {
+     "name": "大宮サテライトキャンパス",
+     "postal_code": "330-0835",
+     "address": "埼玉県さいたま市大宮区北袋町1-103-1 中村ビル3階B号室",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市大宮区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（平成国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000158": {
+   "name": "教育テック大学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "358-0033",
+     "address": "埼玉県入間市狭山台1丁目3番7",
+     "prefecture": "埼玉県",
+     "municipality": "入間市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（教育テック大学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx"
+   }
+  },
+  "u000159": {
+   "name": "文教大学",
+   "campuses": [
+    {
+     "name": "越谷キャンパス",
+     "postal_code": "343-8511",
+     "address": "埼玉県越谷市南荻島3337",
+     "prefecture": "埼玉県",
+     "municipality": "越谷市"
+    },
+    {
+     "name": "湘南キャンパス",
+     "postal_code": "253-8550",
+     "address": "神奈川県茅ヶ崎市行谷1100",
+     "prefecture": "神奈川県",
+     "municipality": "茅ヶ崎市"
+    },
+    {
+     "name": "東京あだちキャンパス",
+     "postal_code": "121-8577",
+     "address": "東京都足立区花畑5-6-1",
+     "prefecture": "東京都",
+     "municipality": "足立区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都",
+    "神奈川県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（文教大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000160": {
+   "name": "日本保健医療大学",
+   "campuses": [
+    {
+     "name": "幸手北キャンパス",
+     "postal_code": "340-0113",
+     "address": "埼玉県幸手市幸手1961-2",
+     "prefecture": "埼玉県",
+     "municipality": "幸手市"
+    },
+    {
+     "name": "幸手南キャンパス",
+     "postal_code": "340-0145",
+     "address": "埼玉県幸手市平須賀2-555",
+     "prefecture": "埼玉県",
+     "municipality": "幸手市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本保健医療大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000161": {
+   "name": "日本医療科学大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "350-0435",
+     "address": "埼玉県入間郡毛呂山町下川原1276",
+     "prefecture": "埼玉県",
+     "municipality": "入間郡毛呂山町"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本医療科学大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000162": {
+   "name": "日本工業大学",
+   "campuses": [
+    {
+     "name": "埼玉キャンパス",
+     "postal_code": "345-8501",
+     "address": "埼玉県南埼玉郡宮代町学園台4-1-1",
+     "prefecture": "埼玉県",
+     "municipality": "南埼玉郡宮代町"
+    },
+    {
+     "name": "神田キャンパス",
+     "postal_code": "101-0051",
+     "address": "東京都千代田区神田神保町2-5",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本工業大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000163": {
+   "name": "日本薬科大学",
+   "campuses": [
+    {
+     "name": "さいたまキャンパス",
+     "postal_code": "362-0806",
+     "address": "埼玉県北足立郡伊奈町小室10281",
+     "prefecture": "埼玉県",
+     "municipality": "北足立郡伊奈町"
+    },
+    {
+     "name": "お茶の水キャンパス",
+     "postal_code": "113-0034",
+     "address": "東京都文京区湯島3-15-9",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（日本薬科大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000164": {
+   "name": "明海大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "350-0283",
+     "address": "埼玉県坂戸市けやき台1-1",
+     "prefecture": "埼玉県",
+     "municipality": "坂戸市"
+    },
+    {
+     "name": "浦安キャンパス",
+     "postal_code": "279-8550",
+     "address": "千葉県浦安市明海1-2-1",
+     "prefecture": "千葉県",
+     "municipality": "浦安市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（明海大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000165": {
+   "name": "東邦音楽大学",
+   "campuses": [
+    {
+     "name": "川越キャンパス",
+     "postal_code": "350-0015",
+     "address": "埼玉県川越市今泉84",
+     "prefecture": "埼玉県",
+     "municipality": "川越市"
+    },
+    {
+     "name": "文京キャンパス",
+     "postal_code": "112-0012",
+     "address": "東京都文京区大塚4-46-9",
+     "prefecture": "東京都",
+     "municipality": "文京区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東邦音楽大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000166": {
+   "name": "東都大学",
+   "campuses": [
+    {
+     "name": "深谷キャンパス",
+     "postal_code": "366-0052",
+     "address": "埼玉県深谷市上柴町西4-2-11",
+     "prefecture": "埼玉県",
+     "municipality": "深谷市"
+    },
+    {
+     "name": "幕張キャンパス",
+     "postal_code": "261-0025",
+     "address": "千葉県千葉市美浜区ひび野1-1",
+     "prefecture": "千葉県",
+     "municipality": "千葉市美浜区"
+    },
+    {
+     "name": "沼津キャンパス",
+     "postal_code": "410-0032",
+     "address": "静岡県沼津市日の出町1-1",
+     "prefecture": "静岡県",
+     "municipality": "沼津市"
+    }
+   ],
+   "prefectures": [
+    "千葉県",
+    "埼玉県",
+    "静岡県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東都大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000167": {
+   "name": "武蔵野学院大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "350-1328",
+     "address": "埼玉県狭山市広瀬台3-26-1",
+     "prefecture": "埼玉県",
+     "municipality": "狭山市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（武蔵野学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000168": {
+   "name": "浦和大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "336-0974",
+     "address": "埼玉県さいたま市緑区大字大崎3551",
+     "prefecture": "埼玉県",
+     "municipality": "さいたま市緑区"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（浦和大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000169": {
+   "name": "獨協大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "340-0042",
+     "address": "埼玉県草加市学園町1-1",
+     "prefecture": "埼玉県",
+     "municipality": "草加市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（獨協大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000170": {
+   "name": "聖学院大学",
+   "campuses": [
+    {
+     "name": "さいたま上尾キャンパス",
+     "postal_code": "362-8585",
+     "address": "埼玉県上尾市戸崎1-1",
+     "prefecture": "埼玉県",
+     "municipality": "上尾市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（聖学院大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000171": {
+   "name": "西武文理大学",
+   "campuses": [
+    {
+     "name": "埼玉県狭山キャンパス",
+     "postal_code": "350-1336",
+     "address": "埼玉県狭山市柏原新田311-1",
+     "prefecture": "埼玉県",
+     "municipality": "狭山市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（西武文理大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000172": {
+   "name": "駿河台大学",
+   "campuses": [
+    {
+     "name": "",
+     "postal_code": "357-8555",
+     "address": "埼玉県飯能市大字阿須字一の木698",
+     "prefecture": "埼玉県",
+     "municipality": "飯能市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（駿河台大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000173": {
+   "name": "東京国際大学",
+   "campuses": [
+    {
+     "name": "池袋キャンパス",
+     "postal_code": "170-0013",
+     "address": "東京都豊島区東池袋4-42-31",
+     "prefecture": "東京都",
+     "municipality": "豊島区"
+    },
+    {
+     "name": "川越第1キャンパス",
+     "postal_code": "350-1197",
+     "address": "埼玉県川越市的場北1-13-1",
+     "prefecture": "埼玉県",
+     "municipality": "川越市"
+    }
+   ],
+   "prefectures": [
+    "埼玉県",
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx"
+   }
+  },
+  "u000174": {
+   "name": "東京経営大学",
+   "campuses": [
+    {
+     "name": "経営学部",
+     "postal_code": "101-0065",
+     "address": "東京都千代田区西神田2丁目2-10",
+     "prefecture": "東京都",
+     "municipality": "千代田区"
+    }
+   ],
+   "prefectures": [
+    "東京都"
+   ],
+   "source": {
+    "source_name": "文部科学省 文部科学省 令和7年度全国大学一覧（東京経営大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx"
+   }
+  }
+ }
+}

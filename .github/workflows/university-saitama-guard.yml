@@ -8,6 +8,7 @@ on:
       - 'tools/university-database/tokyo/**'
       - 'tools/university-database/tokyo-additions/**'
       - 'tools/university-database/kanagawa/**'
+      - 'tools/university-database/campuses/**'
       - '.github/workflows/university-saitama-guard.yml'
   push:
     branches: [main]
@@ -103,6 +104,18 @@ jobs:
             assert.ok(nurse>=5&&nurse<saitama.length,`search 看護 within Saitama: ${nurse}`);
             const cards=await page.locator('.tokyo-card').evaluateAll(cs=>cs.map(c=>c.innerText));
             assert.ok(cards.every(t=>t.includes('埼玉県')),'Saitama cards show prefecture');
+            await page.locator('.ref-type-filter [data-ref-type="all"]').click();
+            await page.fill('.ref-quick-form input[name="q"]','');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(300);
+            const campusIdx=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
+            const expectCampus=Object.values(campusIdx).filter(v=>v.prefectures.includes('埼玉県')).length;
+            assert.ok(await page.locator('.campus-toggle-list').isVisible(),'campus toggle visible for Saitama');
+            await page.locator('.campus-toggle-list input').check();await page.waitForTimeout(400);
+            assert.equal(await count(),expectCampus,'Saitama incl. campuses');
+            assert.equal(await page.locator('.campus-toggle-quick input').isChecked(),true,'quick toggle synced');
+            const rikkyo=await page.locator('.tokyo-card[data-id="u000110"] .campus-badge, .tokyo-card .campus-badge').first().innerText();
+            assert.ok(rikkyo.includes('埼玉県で学べる'),'campus badge shown: '+rikkyo);
+            await page.locator('.campus-toggle-list input').uncheck();await page.waitForTimeout(300);
+            assert.equal(await count(),saitama.length,'toggle off returns to HQ-based list');
             await page.locator('#clear-filters').click();await page.waitForTimeout(300);
             assert.equal(await count(),total,'clear filters');
             assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),'all','clear resets prefecture');

@@ -2,6 +2,10 @@ const params=new URLSearchParams(location.search);
 const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(),images:new Map()};
 const PREF_CODES={tokyo:'東京都',saitama:'埼玉県',kanagawa:'神奈川県'};
 state.pref=PREF_CODES[params.get('pref')]||'all';
+state.withCampus=params.get('campus')==='1';
+state.campusIdx=new Map();
+// キャンパス所在地（文科省一覧）。本部が他県でも、その県で学べる大学を絞り込みに含めるために使う
+const campusPrefs=row=>state.campusIdx.get(row.id)?.prefectures||[];
 // 東京都版の正本（144校）に加えて読み込む地域データ。各フォルダに <slug>_core_01.json などを置く
 // packs=0 のときは東京都版の正本（144校）だけを表示する（東京都版の検証用）
 const REGION_PACKS=params.get('packs')==='0'?[]:[{base:'../saitama/data/',slug:'saitama'},{base:'../tokyo-additions/data/',slug:'tokyo_additions'},{base:'../kanagawa/data/',slug:'kanagawa',academic:false}];
@@ -27,8 +31,8 @@ const groupByUniversity=rows=>{const m=new Map();for(const row of asList(rows)){
 const putById=(m,row)=>{if(row?.id)m.set(row.id,row)};
 
 function academicNames(row){const g=state.graduateSchools.get(row.id)||[];return [...(state.faculties.get(row.id)||[]).map(x=>x.name),...(state.departments.get(row.id)||[]).map(x=>x.name),...g.flatMap(x=>[x.name,...asList(x.programs).map(p=>typeof p==='string'?p:p?.name).filter(Boolean)])]}
-function searchable(row){return [row.name,prefOf(row),municipality(row),row.headquarters?.address,row.founder,row.operator,row.university_goal,row.philosophy,row.feature_summary,...(row.academic_field_tags||[]),...academicNames(row)].filter(Boolean).join(' ').toLowerCase()}
-function visible(row){const q=state.q.trim().toLowerCase();return (state.pref==='all'||prefOf(row)===state.pref)&&(state.type==='all'||row.establishment_type===state.type)&&(state.status==='all'||(row.admissions_status||'active')===state.status)&&(!q||searchable(row).includes(q))}
+function searchable(row){return [row.name,prefOf(row),municipality(row),...(state.campusIdx.get(row.id)?.campuses||[]).flatMap(c=>[c.name,c.municipality]),row.headquarters?.address,row.founder,row.operator,row.university_goal,row.philosophy,row.feature_summary,...(row.academic_field_tags||[]),...academicNames(row)].filter(Boolean).join(' ').toLowerCase()}
+function visible(row){const q=state.q.trim().toLowerCase();return (state.pref==='all'||prefOf(row)===state.pref||(state.withCampus&&campusPrefs(row).includes(state.pref)))&&(state.type==='all'||row.establishment_type===state.type)&&(state.status==='all'||(row.admissions_status||'active')===state.status)&&(!q||searchable(row).includes(q))}
 function sortRows(rows){const c=new Intl.Collator('ja');return [...rows].sort((a,b)=>{if(state.sort==='municipality')return c.compare(prefOf(a),prefOf(b))||c.compare(municipality(a),municipality(b))||c.compare(a.name,b.name);if(state.sort==='type')return ((typeOrder[a.establishment_type]??9)-(typeOrder[b.establishment_type]??9))||c.compare(a.name,b.name);if(state.sort==='students-desc')return studentTotal(b)-studentTotal(a)||c.compare(a.name,b.name);if(state.sort==='students-asc')return studentTotal(a)-studentTotal(b)||c.compare(a.name,b.name);return c.compare(a.name,b.name)})}
 function syncUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.type!=='all')p.set('type',state.type);if(state.status!=='all')p.set('status',state.status);if(state.sort!=='name')p.set('sort',state.sort);history.replaceState(null,'',`${location.pathname}${p.toString()?`?${p}`:''}${location.hash}`)}
 function mergeUniversityDetails(rows,registry){const o=registry?.universities||{};return rows.map(row=>{const x=o[row.id];return x?{...row,...x,headquarters:{...(row.headquarters||{}),...(x.headquarters||{})}}:row})}
