@@ -44,50 +44,12 @@ if(notice)notice.innerHTML='ⓘ <strong>現在開発・更新中です。</stron
 // that were under-covered in the public snapshot. This layer replaces, rather
 // than appends to, the old per-university arrays so faculty/unit counts cannot
 // be duplicated by legacy snapshots.
-(async()=>{
-  try{
-    const manifestResponse=await fetch('data/public-academic-baseline/manifest.json');
-    if(!manifestResponse.ok)return;
-    const manifest=await manifestResponse.json();
-    if(manifest.schema!=='tokyo-academic-public-baseline-v2'||!Array.isArray(manifest.shards))return;
-    const docs=await Promise.all(manifest.shards.map(async file=>{
-      const r=await fetch(`data/public-academic-baseline/${file}`);
-      return r.ok?r.json():null;
-    }));
-    for(const doc of docs){
-      if(!doc||doc.kind!=='academic_summary')continue;
-      for(const u of doc.universities||[]){
-        const uid=u.university_id;
-        if(!uid)continue;
-        const faculties=[];
-        const departments=[];
-        const graduateSchools=[];
-        (u.faculties||[]).forEach((f,fi)=>{
-          const fid=`baseline-${uid}-f${fi}`;
-          faculties.push({id:fid,university_id:uid,name:f.name,organization_type:'faculty'});
-          (f.units||[]).forEach((d,di)=>departments.push({id:`baseline-${uid}-d${fi}-${di}`,university_id:uid,faculty_id:fid,name:d.name,department_type:d.type||'department'}));
-        });
-        (u.graduate_schools||[]).forEach((g,gi)=>graduateSchools.push({id:`baseline-${uid}-g${gi}`,university_id:uid,name:g.name,organization_type:'graduate_school'}));
-        state.faculties.set(uid,faculties);
-        state.departments.set(uid,departments);
-        state.graduateSchools.set(uid,graduateSchools);
-      }
-    }
-    if(typeof render==='function')render();
-    document.documentElement.dataset.academicBaseline='ready';
-  }catch(err){
-    console.error('Academic baseline overlay failed',err);
-  }
-})();
+/* 埼玉県版: 東京都版の学部ベースライン補正は対象外 */
 
 // Finished card layer: one common quality standard for all 144 universities.
 const cardCss=document.createElement('link');cardCss.rel='stylesheet';cardCss.href='../tokyo/assets/card-finish.css';document.head.appendChild(cardCss);
-const searchVisibilityCss=document.createElement('link');searchVisibilityCss.rel='stylesheet';searchVisibilityCss.href='assets/mobile-search-visibility.css?v=20260824-1749';document.head.appendChild(searchVisibilityCss);
+const searchVisibilityCss=document.createElement('link');searchVisibilityCss.rel='stylesheet';searchVisibilityCss.href='../tokyo/assets/mobile-search-visibility.css?v=20260824-1749';document.head.appendChild(searchVisibilityCss);
 const cardScript=document.createElement('script');cardScript.src='../tokyo/assets/card-finish.js';cardScript.defer=true;document.head.appendChild(cardScript);
 
-// Owner photo registration entry: keep it directly on the Tokyo DB page.
-const photoRegisterScript=document.createElement('script');
-photoRegisterScript.src='assets/photo-register-entry.js?v=20260824-1726';
-photoRegisterScript.defer=true;
-document.head.appendChild(photoRegisterScript);
+// 埼玉県版では写真登録の入口（東京都版専用）を読み込まない
 })();
