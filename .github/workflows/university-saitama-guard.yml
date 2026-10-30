@@ -70,7 +70,7 @@ jobs:
             const errors=[];
             const page=await browser.newPage({viewport:{width:1366,height:950}});
             page.on('pageerror',e=>errors.push('pageerror '+e.message));
-            page.on('console',m=>{if(m.type()==='error'&&!/googletagmanager|analytics|wikimedia|favicon|ERR_|net::/i.test(m.text()))errors.push('console '+m.text())});
+            page.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push('404 '+r.url().replace('http://127.0.0.1:4173',''))});
             await page.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===28,{timeout:20000});
             const body=await page.locator('body').innerText();
@@ -113,6 +113,7 @@ jobs:
             for(const id of ids){
               const d=await browser.newPage({viewport:{width:1280,height:900}});
               d.on('pageerror',e=>errors.push(`${id} pageerror ${e.message}`));
+              d.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1'))errors.push(`${id} 404 `+r.url().replace('http://127.0.0.1:4173',''))});
               await d.goto(`http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=${id}`,{waitUntil:'networkidle'});
               await d.waitForSelector('.complete-hero h1',{timeout:15000});
               const t=await d.locator('#detail-root').innerText();
@@ -132,7 +133,7 @@ jobs:
             await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
             assert.equal(await entry.locator('a[href="/tools/university-database/saitama/"]').count(),1,'entry page links to Saitama');
             await entry.close();
-            assert.deepEqual(errors,[],'no script errors');
+            assert.deepEqual([...new Set(errors)],[],'no script errors or missing local files');
             await browser.close();
             console.log('saitama UI ok');
           })().catch(err=>{console.log('::error title=Saitama UI::'+String(err.message||err).replace(/\n/g,' ').slice(0,900));process.exit(1)});
