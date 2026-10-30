@@ -87,7 +87,8 @@ jobs:
             await page.locator('#type-filters [data-type="private"]').click();
             await page.waitForTimeout(250);
             assert.equal(await count(),26,'list filter private');
-            await page.fill('#tokyo-search-input','看護');
+            await page.fill('.ref-quick-form input[name="q"]','看護');
+            await page.locator('.ref-quick-form button[type="submit"]').click();
             await page.waitForTimeout(300);
             const nurse=await count();
             assert.ok(nurse>=5&&nurse<26,`search 看護 within private: ${nurse}`);
