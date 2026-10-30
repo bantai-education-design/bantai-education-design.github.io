@@ -1,0 +1,1980 @@
+{
+ "generated_at": "2026-10-30",
+ "note": "designated_program: 法令で定められた養成課程の学科名から確定した資格。official_page: 大学公式ページの記載で確認した資格。いずれも所定の単位修得・課程履修が必要。",
+ "groups": [
+  "看護師",
+  "保健師",
+  "助産師",
+  "理学療法士",
+  "作業療法士",
+  "言語聴覚士",
+  "診療放射線技師",
+  "臨床検査技師",
+  "臨床工学技士",
+  "医師",
+  "歯科医師",
+  "歯科衛生士",
+  "薬剤師",
+  "管理栄養士",
+  "栄養士",
+  "保育士",
+  "幼稚園教諭",
+  "小学校教諭",
+  "中学校・高等学校教諭",
+  "特別支援学校教諭",
+  "養護教諭",
+  "栄養教諭",
+  "社会福祉士",
+  "精神保健福祉士",
+  "介護福祉士",
+  "公認心理師",
+  "図書館司書",
+  "学芸員",
+  "建築士",
+  "義肢装具士"
+ ],
+ "jobs": {
+  "看護師": [
+   "病院・クリニックの看護師"
+  ],
+  "保健師": [
+   "保健所・市区町村の保健師",
+   "企業の産業保健師"
+  ],
+  "助産師": [
+   "病院・助産院の助産師"
+  ],
+  "理学療法士": [
+   "リハビリテーション病院・介護施設の理学療法士"
+  ],
+  "作業療法士": [
+   "病院・福祉施設の作業療法士"
+  ],
+  "診療放射線技師": [
+   "病院の放射線科（X線・CT・MRI）"
+  ],
+  "臨床検査技師": [
+   "病院・検査センターの臨床検査技師"
+  ],
+  "臨床工学技士": [
+   "病院の医療機器管理・透析室"
+  ],
+  "医師": [
+   "医師（臨床研修後）"
+  ],
+  "歯科医師": [
+   "歯科医師（臨床研修後）"
+  ],
+  "歯科衛生士": [
+   "歯科医院の歯科衛生士"
+  ],
+  "薬剤師": [
+   "病院・薬局・製薬企業の薬剤師"
+  ],
+  "管理栄養士": [
+   "病院・学校・給食施設の管理栄養士",
+   "食品企業"
+  ],
+  "保育士": [
+   "保育所・児童福祉施設"
+  ],
+  "幼稚園教諭": [
+   "幼稚園・認定こども園の先生"
+  ],
+  "小学校教諭": [
+   "小学校の先生（教員採用試験）"
+  ],
+  "中学校・高等学校教諭": [
+   "中学校・高校の先生（教員採用試験）"
+  ],
+  "特別支援学校教諭": [
+   "特別支援学校の先生"
+  ],
+  "養護教諭": [
+   "学校の保健室の先生"
+  ],
+  "栄養教諭": [
+   "学校の栄養教諭"
+  ],
+  "社会福祉士": [
+   "福祉施設・病院のソーシャルワーカー",
+   "行政の福祉職"
+  ],
+  "精神保健福祉士": [
+   "精神科病院・相談機関のソーシャルワーカー"
+  ],
+  "介護福祉士": [
+   "介護施設の介護福祉士"
+  ],
+  "公認心理師": [
+   "病院・学校・相談機関の心理職"
+  ],
+  "図書館司書": [
+   "公共図書館・学校図書館"
+  ],
+  "学芸員": [
+   "博物館・美術館"
+  ],
+  "建築士": [
+   "設計事務所・建設会社"
+  ],
+  "義肢装具士": [
+   "義肢装具の製作・適合"
+  ]
+ },
+ "universities": {
+  "u000001": {
+   "name": "東京大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.u-tokyo.ac.jp/ja/students/classes/e07_01.html",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.u-tokyo.ac.jp/ja/students/classes/e07_01.html",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000006": {
+   "name": "東京科学大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.isct.ac.jp/ja/001/about/organizations",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.isct.ac.jp/ja/001/about/organizations",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    },
+    {
+     "name": "歯科衛生士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 口腔保健学科",
+     "source_url": "https://www.isct.ac.jp/ja/001/about/organizations",
+     "evidence": "口腔保健学科（養成課程）",
+     "group": "歯科衛生士"
+    }
+   ]
+  },
+  "u000012": {
+   "name": "東京都立大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康福祉学部 作業療法学科",
+     "source_url": "https://www.tmu.ac.jp/academics.html",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康福祉学部 理学療法学科",
+     "source_url": "https://www.tmu.ac.jp/academics.html",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康福祉学部 看護学科",
+     "source_url": "https://www.tmu.ac.jp/academics.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000015": {
+   "name": "文京学院大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療技術学部 作業療法学科",
+     "source_url": "https://info.bgu.ac.jp/faculties",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療技術学部 理学療法学科",
+     "source_url": "https://info.bgu.ac.jp/faculties",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療技術学部 看護学科",
+     "source_url": "https://info.bgu.ac.jp/faculties",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療技術学部 臨床検査学科",
+     "source_url": "https://info.bgu.ac.jp/faculties",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    }
+   ]
+  },
+  "u000016": {
+   "name": "目白大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 作業療法学科",
+     "source_url": "https://www.mejiro.ac.jp/univ/course/",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 理学療法学科",
+     "source_url": "https://www.mejiro.ac.jp/univ/course/",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mejiro.ac.jp/univ/course/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "言語聴覚士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 言語聴覚学科",
+     "source_url": "https://www.mejiro.ac.jp/univ/course/",
+     "evidence": "言語聴覚学科（養成課程）",
+     "group": "言語聴覚士"
+    }
+   ]
+  },
+  "u000019": {
+   "name": "帝京平成大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康メディカル学部 作業療法学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "柔道整復師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "ヒューマンケア学部 柔道整復学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "柔道整復学科（養成課程）",
+     "group": null
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康メディカル学部 理学療法学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "ヒューマンケア学部 看護学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    },
+    {
+     "name": "言語聴覚士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康メディカル学部 言語聴覚学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "言語聴覚学科（養成課程）",
+     "group": "言語聴覚士"
+    },
+    {
+     "name": "鍼灸師（はり師・きゅう師 国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "ヒューマンケア学部 鍼灸学科",
+     "source_url": "https://www.thu.ac.jp/univ",
+     "evidence": "鍼灸学科（養成課程）",
+     "group": null
+    }
+   ]
+  },
+  "u000023": {
+   "name": "北里大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.kitasato-u.ac.jp/jp/academics/department/undergraduate_schools/med.html",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.kitasato-u.ac.jp/jp/academics/department/undergraduate_schools/nrs.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.kitasato-u.ac.jp/jp/academics/department/undergraduate_schools/pharm.html",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000024": {
+   "name": "共立女子大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.kyoritsu-wu.ac.jp/academics/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000025": {
+   "name": "慶應義塾大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.keio.ac.jp/ja/academics/undergraduate/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護医療学部 看護学科",
+     "source_url": "https://www.keio.ac.jp/ja/academics/undergraduate/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.keio.ac.jp/ja/academics/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000030": {
+   "name": "実践女子大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "食科学部 管理栄養学科",
+     "source_url": "https://www.jissen.ac.jp/about/data/index.html",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000032": {
+   "name": "順天堂大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 理学療法学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療看護学部 看護学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 臨床工学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 臨床検査学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    },
+    {
+     "name": "診療放射線技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 診療放射線学科",
+     "source_url": "https://www.juntendo.ac.jp/about/information/",
+     "evidence": "診療放射線学科（養成課程）",
+     "group": "診療放射線技師"
+    }
+   ]
+  },
+  "u000033": {
+   "name": "上智大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "総合人間科学部 看護学科",
+     "source_url": "https://www.sophia.ac.jp/jpn/academics/ug/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000034": {
+   "name": "昭和医科大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 リハビリテーション学科 作業療法学専攻",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "リハビリテーション学科 作業療法学専攻（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 リハビリテーション学科 理学療法学専攻",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "リハビリテーション学科 理学療法学専攻（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.showa-u.ac.jp/education/index.html",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000035": {
+   "name": "昭和女子大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "食健康科学部 管理栄養学科",
+     "source_url": "https://www.swu.ac.jp/admission/aboutus/navi.html",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000036": {
+   "name": "昭和薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.shoyaku.ac.jp/education/faculty/program/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000042": {
+   "name": "聖路加国際大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://university.luke.ac.jp/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000045": {
+   "name": "大東文化大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "スポーツ・健康科学部 看護学科",
+     "source_url": "https://www.daito.ac.jp/education/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000050": {
+   "name": "東海大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.u-tokai.ac.jp/information/public-information/num_student/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 看護学科",
+     "source_url": "https://www.u-tokai.ac.jp/information/public-information/num_student/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000051": {
+   "name": "東京医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.tokyo-med.ac.jp/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 看護学科",
+     "source_url": "https://www.tokyo-med.ac.jp/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000052": {
+   "name": "東京家政大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康科学部 看護学科",
+     "source_url": "https://www.tokyo-kasei.ac.jp/academics/curriculum_tree/departments_list.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "栄養学部 管理栄養学科",
+     "source_url": "https://www.tokyo-kasei.ac.jp/academics/curriculum_tree/departments_list.html",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000054": {
+   "name": "東京歯科大学",
+   "qualifications": [
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.tdc.ac.jp/",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    }
+   ]
+  },
+  "u000055": {
+   "name": "東京慈恵会医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.jikei.ac.jp/university/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 看護学科",
+     "source_url": "https://www.jikei.ac.jp/university/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000057": {
+   "name": "東京女子医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.twmu.ac.jp/univ/about/corporation_27.php",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.twmu.ac.jp/univ/about/corporation_27.php",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000060": {
+   "name": "東京薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.toyaku.ac.jp/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000061": {
+   "name": "東京理科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.tus.ac.jp/academics/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000062": {
+   "name": "東邦大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.toho-u.ac.jp/univ/outline/studnum/studnum_2026.html",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.toho-u.ac.jp/univ/outline/studnum/studnum_2026.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.toho-u.ac.jp/univ/outline/studnum/studnum_2026.html",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000066": {
+   "name": "日本大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.nihon-u.ac.jp/academics/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.nihon-u.ac.jp/academics/",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.nihon-u.ac.jp/academics/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000067": {
+   "name": "日本医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://recruit.nms.ac.jp/college/introduction/overview.html",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    }
+   ]
+  },
+  "u000076": {
+   "name": "星薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.hoshi.ac.jp/kyoiku/gakubuannai/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000082": {
+   "name": "明治薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.my-pharm.ac.jp/education/",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000088": {
+   "name": "東京保健医療専門職大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "リハビリテーション学部 作業療法学科",
+     "source_url": "https://www.tpu.ac.jp/overview/",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "リハビリテーション学部 理学療法学科",
+     "source_url": "https://www.tpu.ac.jp/overview/",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    }
+   ]
+  },
+  "u000093": {
+   "name": "駒沢女子大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.komajo.ac.jp/uni/kouhyou/kouhyou1_1.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000102": {
+   "name": "帝京大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "福岡医療技術学部 作業療法学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "柔道整復師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療技術学部 柔道整復学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "柔道整復学科（養成課程）",
+     "group": null
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "福岡医療技術学部 理学療法学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療技術学部 看護学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療技術学部 臨床検査学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    },
+    {
+     "name": "診療放射線技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療技術学部 診療放射線学科",
+     "source_url": "https://www.teikyo-u.ac.jp/applicants/faculty",
+     "evidence": "診療放射線学科（養成課程）",
+     "group": "診療放射線技師"
+    }
+   ]
+  },
+  "u000109": {
+   "name": "武蔵野大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.musashino-u.ac.jp/admission/faculty/detail/faculty.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.musashino-u.ac.jp/admission/faculty/detail/faculty.html",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000113": {
+   "name": "杏林大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "救急救命士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健学部 救急救命学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "救急救命学科（養成課程）",
+     "group": null
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健学部 看護学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健学部 臨床工学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健学部 臨床検査技術学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "臨床検査技術学科（養成課程）",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "診療放射線技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健学部 診療放射線技術学科",
+     "source_url": "https://www.kyorin-u.ac.jp/univ/outline/information/",
+     "evidence": "診療放射線技術学科（養成課程）",
+     "group": "診療放射線技師"
+    }
+   ]
+  },
+  "u000114": {
+   "name": "創価大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.soka.ac.jp/2026news/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000116": {
+   "name": "東京工科大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 リハビリテーション学科 作業療法学専攻",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "リハビリテーション学科 作業療法学専攻（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 リハビリテーション学科 理学療法学専攻",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "リハビリテーション学科 理学療法学専攻（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 看護学科",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 臨床工学科",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 臨床検査学科",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "言語聴覚士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 リハビリテーション学科 言語聴覚学専攻",
+     "source_url": "https://www.teu.ac.jp/entrance/2026kekka.html",
+     "evidence": "リハビリテーション学科 言語聴覚学専攻（養成課程）",
+     "group": "言語聴覚士"
+    }
+   ]
+  },
+  "u000117": {
+   "name": "日本赤十字看護大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.redcross.ac.jp/academics/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000120": {
+   "name": "東京純心大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.t-junshin.ac.jp/univ/col.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000126": {
+   "name": "東京医療保健大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療保健学部 看護学科",
+     "source_url": "https://www.thcu.ac.jp/faculty/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000127": {
+   "name": "東京聖栄大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康栄養学部 管理栄養学科",
+     "source_url": "https://www.tsc-05.ac.jp/faculty/",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000136": {
+   "name": "東京有明医療大学",
+   "qualifications": [
+    {
+     "name": "柔道整復師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 柔道整復学科",
+     "source_url": "https://www.tau.ac.jp/department/",
+     "evidence": "柔道整復学科（養成課程）",
+     "group": null
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.tau.ac.jp/department/",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "鍼灸師（はり師・きゅう師 国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 鍼灸学科",
+     "source_url": "https://www.tau.ac.jp/department/",
+     "evidence": "鍼灸学科（養成課程）",
+     "group": null
+    }
+   ]
+  },
+  "u000140": {
+   "name": "東京医療学院大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.u-ths.ac.jp/about/history",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000143": {
+   "name": "帝京科学大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 作業療法学科",
+     "source_url": "https://www.ntu.ac.jp/tust/information/configuration_capacity/index.html",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "柔道整復師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 柔道整復学科",
+     "source_url": "https://www.ntu.ac.jp/tust/information/configuration_capacity/index.html",
+     "evidence": "柔道整復学科（養成課程）",
+     "group": null
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 理学療法学科",
+     "source_url": "https://www.ntu.ac.jp/tust/information/configuration_capacity/index.html",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療科学部 看護学科",
+     "source_url": "https://www.ntu.ac.jp/tust/information/configuration_capacity/index.html",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000146": {
+   "name": "埼玉県立大学",
+   "qualifications": [
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療福祉学部 作業療法学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "作業療法学科（養成課程）",
+     "group": "作業療法士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療福祉学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療福祉学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "保健師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "す。 資格・免許の取得には、所定の単位取得が必要です。 1.保健師国家試験の受験資格 （3年次編入の学生含む1学年38人以内）",
+     "group": "保健師"
+    },
+    {
+     "name": "保育士",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "験の受験資格に加え、精神保健福祉士国家試験の受験資格もしくは保育士資格のいずれかを取得することができます。資格の取得には所定の",
+     "group": "保育士"
+    },
+    {
+     "name": "助産師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "験の受験資格 （3年次編入の学生含む1学年38人以内） 2.助産師国家試験の受験資格 （3年次編入の学生含む1学年25人以内）",
+     "group": "助産師"
+    },
+    {
+     "name": "幼稚園教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "を担う人材を育てます。そのために、社会福祉の基盤科目に加え、幼稚園教諭と保育士に必要な科目を配置しています。また、教育・保育実習を",
+     "group": "幼稚園教諭"
+    },
+    {
+     "name": "社会福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "ていきます。 所定の科目を選択すると取得できる資格・合格率 社会福祉士国家試験の受験資格 2025年度 社会福祉士国家試験合格率",
+     "group": "社会福祉士"
+    },
+    {
+     "name": "精神保健福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "ら選択可能な資格・免許 社会福祉士国家試験の受験資格に加え、精神保健福祉士国家試験の受験資格もしくは保育士資格のいずれかを取得すること",
+     "group": "精神保健福祉士"
+    },
+    {
+     "name": "養護教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.spu.ac.jp/academics/",
+     "evidence": "25人以内） （※2026年度入学者からは15人以内） 3.養護教諭一種免許状 （3年次編入の学生を 含まない 1学年10人程度",
+     "group": "養護教諭"
+    }
+   ]
+  },
+  "u000148": {
+   "name": "人間総合科学大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "保健師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "保健医療学部 看護学科 看護師 国家試験受験資格 国家資格 保健師 国家試験受験資格 国家資格 養護教諭二種免許状 保健師免許",
+     "group": "保健師"
+    },
+    {
+     "name": "栄養士",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "学部 健康栄養学科 管理栄養士 国家試験受験資格 国家資格 栄養士 栄養士法に定められる資格 本学卒業とともに取得 栄養教諭（",
+     "group": "栄養士"
+    },
+    {
+     "name": "栄養教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "格 栄養士 栄養士法に定められる資格 本学卒業とともに取得 栄養教諭（ 一種）免許 教職課程に登録し、教職関連科目24 単位の履",
+     "group": "栄養教諭"
+    },
+    {
+     "name": "義肢装具士",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "対策 キャリア紹介 リハビリテーション学科 義肢装具学専攻 義肢装具士 国家試験受験資格 国家資格 その他、ISPO認定義肢装具士",
+     "group": "義肢装具士"
+    },
+    {
+     "name": "認定心理士",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "生より、全学科とも所属学科の学びに加え、副専攻プログラムで「認定心理士」の資格取得を目指すことができます。詳細は左記パンフレットを",
+     "group": null
+    },
+    {
+     "name": "食品衛生管理者・食品衛生監視員（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "職関連科目24 単位の履修で栄養教諭一種免許状が取得できる 食品衛生管理者 任用資格 卒業後、就職先において職務を命ぜられた際に取得。",
+     "group": null
+    },
+    {
+     "name": "養護教諭二種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.human.ac.jp/qualification_employment/certification/",
+     "evidence": "試験受験資格 国家資格 保健師 国家試験受験資格 国家資格 養護教諭二種免許状 保健師免許取得後に申請 第一種衛生管理者 国家資",
+     "group": "養護教諭"
+    }
+   ]
+  },
+  "u000149": {
+   "name": "共栄大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "状 目指せる教員免許状 特別支援学校教諭一種免許状 中学校・高等学校教諭一種免許状 (国語・社会［高等学校は地理歴史または公民］・数",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "保育士",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "行います。「教職アカデミー」や「教職相談」「面接特訓講座」「保育士資格取得へのサポート」等で対策を進めます。 Point 03",
+     "group": "保育士"
+    },
+    {
+     "name": "児童指導員（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "取得できる資格 学校図書館司書教諭 社会福祉主事任用資格 児童指導員任用資格 レクリエーション・インストラクター 准学校心理士",
+     "group": null
+    },
+    {
+     "name": "学校図書館司書教諭",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "の通信課程受講。 別途学費が必要 取得できる資格 学校図書館司書教諭 社会福祉主事任用資格 児童指導員任用資格 レクリエーション",
+     "group": "図書館司書"
+    },
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "進路に合わせて学びを深めます。 選択したコースの学びを中心に小学校教諭一種免許状と幼稚園教諭一種免許状の取得が可能です。 小学校コ",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "幼稚園教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "めます。 選択したコースの学びを中心に小学校教諭一種免許状と幼稚園教諭一種免許状の取得が可能です。 小学校コース 毎年高い小学校教",
+     "group": "幼稚園教諭"
+    },
+    {
+     "name": "特別支援学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "校教諭一種免許状 幼稚園教諭一種免許状 目指せる教員免許状 特別支援学校教諭一種免許状 中学校・高等学校教諭一種免許状 (国語・社会［高",
+     "group": "特別支援学校教諭"
+    },
+    {
+     "name": "社会福祉主事（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.kyoei.ac.jp/course/education/",
+     "evidence": "受講。 別途学費が必要 取得できる資格 学校図書館司書教諭 社会福祉主事任用資格 児童指導員任用資格 レクリエーション・インストラク",
+     "group": null
+    }
+   ]
+  },
+  "u000150": {
+   "name": "十文字学園女子大学",
+   "qualifications": [
+    {
+     "name": "介護福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "、管理栄養士受験資格、養護教諭一種免許、社会福祉士受験資格、介護福祉士受験資格などの国家資格取得に対応した実践的なカリキュラムを設",
+     "group": "介護福祉士"
+    },
+    {
+     "name": "保育士",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "ています。 資格取得をバックアップ 小学校教諭、幼稚園教諭、保育士、管理栄養士受験資格、養護教諭一種免許、社会福祉士受験資格、",
+     "group": "保育士"
+    },
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "ザーとしての役割を果たしています。 資格取得をバックアップ 小学校教諭、幼稚園教諭、保育士、管理栄養士受験資格、養護教諭一種免許、",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "幼稚園教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "役割を果たしています。 資格取得をバックアップ 小学校教諭、幼稚園教諭、保育士、管理栄養士受験資格、養護教諭一種免許、社会福祉士受",
+     "group": "幼稚園教諭"
+    },
+    {
+     "name": "栄養士",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/jumonji-style/",
+     "evidence": "健康栄養学科 「運動」と「食文化」で 健康をサポートできる栄養士を育成 食物栄養学科 高度な専門スキルを身につけ、信頼される",
+     "group": "栄養士"
+    },
+    {
+     "name": "社会福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "、幼稚園教諭、保育士、管理栄養士受験資格、養護教諭一種免許、社会福祉士受験資格、介護福祉士受験資格などの国家資格取得に対応した実践",
+     "group": "社会福祉士"
+    },
+    {
+     "name": "養護教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.jumonji-u.ac.jp/outline/idea/",
+     "evidence": "アップ 小学校教諭、幼稚園教諭、保育士、管理栄養士受験資格、養護教諭一種免許、社会福祉士受験資格、介護福祉士受験資格などの国家資",
+     "group": "養護教諭"
+    }
+   ]
+  },
+  "u000151": {
+   "name": "城西大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000152": {
+   "name": "埼玉医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 臨床工学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 臨床検査学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    }
+   ]
+  },
+  "u000153": {
+   "name": "埼玉学園大学",
+   "qualifications": [
+    {
+     "name": "公認心理師（大学院進学で受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.saigaku.ac.jp/academics/",
+     "evidence": "高度専門職業人を目指します。 心理学研究科 心の健康専門家、公認心理師・臨床心理士になるための科学的知識、高度な実践能力を身につけ",
+     "group": "公認心理師"
+    }
+   ]
+  },
+  "u000155": {
+   "name": "日本栄養大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状（家庭）",
+     "basis": "official_page",
+     "source_url": "https://www.eiyo.ac.jp/faculty/nutritionscience/curriculum/",
+     "evidence": "格とは？ 栄養士 臨床検査技師（国家試験受験資格） 中学校・高等学校教諭 一種免許状「家庭科」 食品微生物検査技士（受験資格） バイ",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "栄養士",
+     "basis": "official_page",
+     "source_url": "https://www.eiyo.ac.jp/faculty/appliednutrition/curriculum/",
+     "evidence": "就職データの詳細をみる 取得できる資格とは？ 管理栄養士◎ 栄養士 栄養教諭一種免許状 食品衛生監視員◆ 食品衛生管理者◆ 栄",
+     "group": "栄養士"
+    },
+    {
+     "name": "栄養教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.eiyo.ac.jp/faculty/appliednutrition/curriculum/",
+     "evidence": "科目及び管理栄養士国家試験受験資格取得のための科目。 エ は栄養教諭資格取得のための科目。このほかにも栄養学部共通専門科目の「日",
+     "group": "栄養教諭"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.eiyo.ac.jp/faculty/nutritionscience/curriculum/",
+     "evidence": "のも特徴の１つ。 生物分析検査学研究室【末吉 茂雄 教授】 臨床検査技師として不可欠な「考える力」。知識や技術とともに、研究を通じて",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "食品衛生管理者・食品衛生監視員（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.eiyo.ac.jp/faculty/appliednutrition/curriculum/",
+     "evidence": "「外国語コミュニケーション」を履修する必要があります。* は食品衛生管理者・食品衛生監視員（任用資格）資格取得のための科目 ★栄養学部",
+     "group": null
+    }
+   ]
+  },
+  "u000156": {
+   "name": "尚美学園大学",
+   "qualifications": [
+    {
+     "name": "学芸員",
+     "basis": "official_page",
+     "source_url": "https://www.shobi-u.ac.jp/certification/qualification/center",
+     "evidence": "・資格 就職・資格TOP キャリア・就職サポート 教職課程・学芸員課程 入試案内 受験生サイト 在学生の方 卒業生の方 保護者",
+     "group": "学芸員"
+    }
+   ]
+  },
+  "u000159": {
+   "name": "文教大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康栄養学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000160": {
+   "name": "日本保健医療大学",
+   "qualifications": [
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000161": {
+   "name": "日本医療科学大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 臨床工学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 臨床検査学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "臨床検査学科（養成課程）",
+     "group": "臨床検査技師"
+    },
+    {
+     "name": "診療放射線技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 診療放射線学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "診療放射線学科（養成課程）",
+     "group": "診療放射線技師"
+    }
+   ]
+  },
+  "u000163": {
+   "name": "日本薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000164": {
+   "name": "明海大学",
+   "qualifications": [
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    },
+    {
+     "name": "歯科衛生士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 口腔保健学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "口腔保健学科（養成課程）",
+     "group": "歯科衛生士"
+    },
+    {
+     "name": "一級建築士（受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.meikai.ac.jp/campuslife/qualification/",
+     "evidence": "ファイナンシャル・プランニング技能士／宅地建物取引士／一・二級建築士受験資格／土地家屋調査士／不動産鑑定士／国家公務員・地方公務",
+     "group": "建築士"
+    },
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.meikai.ac.jp/campuslife/qualification/",
+     "evidence": "日本語学科 学科ページ ─ 授業で学んで取得できる資格 ─ 高等学校教諭一種免許状／中学校教諭一種免許状／小学校教諭二種免許状※／日",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "二級建築士（受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.meikai.ac.jp/campuslife/qualification/",
+     "evidence": "ファイナンシャル・プランニング技能士／宅地建物取引士／一・二級建築士受験資格／土地家屋調査士／不動産鑑定士／国家公務員・地方公務",
+     "group": "建築士"
+    },
+    {
+     "name": "小学校教諭二種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.meikai.ac.jp/campuslife/qualification/",
+     "evidence": "きる資格 ─ 高等学校教諭一種免許状／中学校教諭一種免許状／小学校教諭二種免許状※／日本語教員試験／日本語教育能力検定試験／日本語",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "社会福祉主事（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.meikai.ac.jp/campuslife/qualification/",
+     "evidence": "ジ ─ 授業で学んで取得できる資格 ─ 歯科衛生士国家試験／社会福祉主事任用資格 ─ めざせる職業・職種 ─ 歯科衛生士 歯学部 歯",
+     "group": null
+    }
+   ]
+  },
+  "u000166": {
+   "name": "東都大学",
+   "qualifications": [
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "幕張ヒューマンケア学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "ヒューマンケア学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "管理栄養学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "幕張ヒューマンケア学部 臨床工学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    },
+    {
+     "name": "保健師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.tohto.ac.jp/fukaya/job/",
+     "evidence": "ア学部 看護学科 助産師課程 ヒューマンケア学部 看護学科 保健師課程 管理栄養学部 管理栄養学科 キャンパスライフ キャンパ",
+     "group": "保健師"
+    },
+    {
+     "name": "助産師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.tohto.ac.jp/fukaya/job/",
+     "evidence": "ヒューマンケア学部 看護学科 ヒューマンケア学部 看護学科 助産師課程 ヒューマンケア学部 看護学科 保健師課程 管理栄養学部",
+     "group": "助産師"
+    }
+   ]
+  },
+  "u000167": {
+   "name": "武蔵野学院大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状（英語）",
+     "basis": "official_page",
+     "source_url": "https://www.musashino.ac.jp/mgu/career_employment/qualification/",
+     "evidence": "程を履修し、所定の単位を修得することにより、英語科の中学校・高等学校教諭一種免許状を取得することができます。 さらに、コミュニケーシ",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "社会福祉主事（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.musashino.ac.jp/mgu/career_employment/qualification/",
+     "evidence": "程修了証取得の要件(PDFファイル　280KB) シラバス 社会福祉主事任用資格 社会福祉主事任用資格は、都道府県にある福祉事務所な",
+     "group": null
+    }
+   ]
+  },
+  "u000168": {
+   "name": "浦和大学",
+   "qualifications": [
+    {
+     "name": "中学校教諭一種免許状（社会）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "諭一種免許状 学校図書館司書教諭 幼稚園教諭一種免許状 ※ 中学校教諭一種免許状：社会 ※ 児童指導員 社会福祉主事 レクリエーシ",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "保育士",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "項 免許・資格取得を希望する入学志願者の皆様へ 幼稚園教諭・保育士資格・教員免許状等の取得を希望する方は、出願前に こども性暴",
+     "group": "保育士"
+    },
+    {
+     "name": "健康運動指導士（受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "任者研修修了証 認定心理士 児童指導員 健康運動実践指導者 健康運動指導士 一般講座支援 初級パラスポーツ指導員 中級パラスポーツ指導",
+     "group": null
+    },
+    {
+     "name": "児童指導員（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "育士 幼稚園教諭一種免許状 認定心理士 認定ベビーシッター 児童指導員 母子支援員 児童生活支援員 介護職員初任者研修修了証 社会",
+     "group": null
+    },
+    {
+     "name": "学校図書館司書教諭",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "識と実践力を身につけます。 小学校教諭一種免許状 学校図書館司書教諭 幼稚園教諭一種免許状 ※ 中学校教諭一種免許状：社会 ※",
+     "group": "図書館司書"
+    },
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "ンストラクター こども学科を見る こども学部 学校教育学科 小学校教諭を中心に、教育現場で役立つ知識と実践力を身につけます。 小学",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "幼稚園教諭一種免許状",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "見る 注意事項 免許・資格取得を希望する入学志願者の皆様へ 幼稚園教諭・保育士資格・教員免許状等の取得を希望する方は、出願前に こ",
+     "group": "幼稚園教諭"
+    },
+    {
+     "name": "社会福祉主事（任用資格）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "導員 母子支援員 児童生活支援員 介護職員初任者研修修了証 社会福祉主事 情報処理士 ビジネス実務士 レクリエーション・インストラク",
+     "group": null
+    },
+    {
+     "name": "社会福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "理・健康スポーツを軸に、人の生活を支える専門性を育てます。 社会福祉士国家試験受験資格 社会福祉主事 介護職員初任者研修修了証 認",
+     "group": "社会福祉士"
+    },
+    {
+     "name": "社会調査士",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "中学校教諭一種免許状：社会 高等学校教諭一種免許状：公民 社会調査士 観光実務士 社会福祉主事 情報処理士 ビジネス実務士 レク",
+     "group": null
+    },
+    {
+     "name": "認定心理士",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "庭を支える専門性を育てます。 保育士 幼稚園教諭一種免許状 認定心理士 認定ベビーシッター 児童指導員 母子支援員 児童生活支援員",
+     "group": null
+    },
+    {
+     "name": "高等学校教諭一種免許状（公民）",
+     "basis": "official_page",
+     "source_url": "https://www.urawa.ac.jp/course/requirement.html",
+     "evidence": "、社会で活かせる力を育てます。 中学校教諭一種免許状：社会 高等学校教諭一種免許状：公民 社会調査士 観光実務士 社会福祉主事 情報",
+     "group": "中学校・高等学校教諭"
+    }
+   ]
+  },
+  "u000169": {
+   "name": "獨協大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状（教職課程）",
+     "basis": "official_page",
+     "source_url": "https://nyushi.dokkyo.ac.jp/career/licence",
+     "evidence": "就職・資格 > 教員免許・司書課程 免許及び資格課程(教職・司書教諭・司書、学校司書プログラム) 免許及び資格課程の紹介 教職課",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "図書館司書",
+     "basis": "official_page",
+     "source_url": "https://nyushi.dokkyo.ac.jp/career/licence",
+     "evidence": "教員免許・司書課程 - 獨協大学 入試情報サイト 入試情報サイト 資料請求",
+     "group": "図書館司書"
+    },
+    {
+     "name": "学校図書館司書教諭",
+     "basis": "official_page",
+     "source_url": "https://nyushi.dokkyo.ac.jp/career/licence",
+     "evidence": "就職・資格 > 教員免許・司書課程 免許及び資格課程(教職・司書教諭・司書、学校司書プログラム) 免許及び資格課程の紹介 教職課",
+     "group": "図書館司書"
+    }
+   ]
+  },
+  "u000171": {
+   "name": "西武文理大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "保健師（国家試験受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.bunri-c.ac.jp/career.html",
+     "evidence": "職先 看護学部の卒業生は、ホスピタリティを身につけた看護師・保健師として社会に羽ばたき活躍しています。看護師として病院で、保健",
+     "group": "保健師"
+    }
+   ]
+  },
+  "u000172": {
+   "name": "駿河台大学",
+   "qualifications": [
+    {
+     "name": "図書館司書",
+     "basis": "official_page",
+     "source_url": "https://www.surugadai.ac.jp/faculty/qualification.html",
+     "evidence": "資料請求 SNS トップ 学部・研究科 資格課程 資格課程 司書課程 学芸員課程 資格課程年報 駿河台大学では資格課程を開設",
+     "group": "図書館司書"
+    },
+    {
+     "name": "学芸員",
+     "basis": "official_page",
+     "source_url": "https://www.surugadai.ac.jp/faculty/qualification.html",
+     "evidence": "SNS トップ 学部・研究科 資格課程 資格課程 司書課程 学芸員課程 資格課程年報 駿河台大学では資格課程を開設し、国家資格",
+     "group": "学芸員"
+    }
+   ]
+  },
+  "u000173": {
+   "name": "東京国際大学",
+   "qualifications": [
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医療健康学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "公認心理師（大学院進学で受験資格）",
+     "basis": "official_page",
+     "source_url": "https://www.tiu.ac.jp/department/",
+     "evidence": "育成 池袋キャンパス 臨床心理学研究科 こころの深さがわかる公認心理師・臨床心理士を育てる 川越第1キャンパス 博士論文の要旨およ",
+     "group": "公認心理師"
+    }
+   ]
+  }
+ }
+}

@@ -15,3 +15,13 @@
 .campus-badge{margin:6px 0 4px;padding:7px 10px;border-radius:10px;background:#fff6e0;border:1px solid #ecd28f;color:#5b4310;font-size:.74rem;font-weight:700;line-height:1.5}
 .campus-badge span{display:block;font-size:.68rem;font-weight:900;color:#8b6417}
 .campus-badge small{display:block;font-size:.66rem;color:#7a6a45;font-weight:700}
+/* 取れる資格 */
+.qual-filter-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.qual-select{border:1px solid #c9d4df;border-radius:10px;padding:7px 10px;font-size:.8rem;font-weight:700;color:#1d3349;background:#fff;max-width:100%}
+.qual-filter-quick{margin-top:9px}
+.qual-filter-quick .qual-select{padding:5px 8px;font-size:.74rem;border-radius:999px}
+.qual-chips{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin:6px 0}
+.qual-chips-label{font-size:.66rem;font-weight:900;color:#2c6b4f;margin-right:2px}
+.qual-chip{font-size:.68rem;font-weight:800;padding:3px 8px;border-radius:999px;background:#eaf6ef;border:1px solid #bfe0cc;color:#1f5a3f}
+.qual-chip.is-match{background:#1f5a3f;color:#fff;border-color:#1f5a3f}
+.qual-chip.more{background:#f2f4f7;border-color:#dde3ea;color:#4a5a6a}

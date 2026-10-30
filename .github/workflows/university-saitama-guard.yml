@@ -9,6 +9,7 @@ on:
       - 'tools/university-database/tokyo-additions/**'
       - 'tools/university-database/kanagawa/**'
       - 'tools/university-database/campuses/**'
+      - 'tools/university-database/qualifications/**'
       - '.github/workflows/university-saitama-guard.yml'
   push:
     branches: [main]
@@ -137,6 +138,15 @@ jobs:
             assert.equal(await page.locator('.tokyo-card[data-id="u000169"] .image-source-link').count(),1,'photo source link');
             await page.locator('#pref-filters [data-pref="all"]').click();await page.waitForTimeout(300);
             console.log('::notice title=Photos::all '+photos+' / saitama '+saitamaPhotos);
+            const quals=JSON.parse(fs.readFileSync('tools/university-database/qualifications/qualifications.json','utf8')).universities;
+            const nurseN=Object.values(quals).filter(v=>v.qualifications.some(x=>x.group==='看護師')).length;
+            await page.waitForSelector('#qual-select');
+            await page.selectOption('#qual-select','看護師');await page.waitForTimeout(400);
+            assert.equal(await count(),nurseN,'qualification filter 看護師');
+            assert.equal(await page.locator('#qual-select-quick').inputValue(),'看護師','quick qualification select synced');
+            assert.ok((await page.locator('.tokyo-card .qual-chip.is-match').count())>=1,'matching qualification chip');
+            await page.selectOption('#qual-select','');await page.waitForTimeout(300);
+            assert.equal(await count(),total,'qualification cleared');
             const area=await page.locator('.ref-area').innerText();
             assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
