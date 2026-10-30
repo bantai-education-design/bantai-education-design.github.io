@@ -93,7 +93,7 @@ jobs:
             assert.equal(await source.count(),1,'owner photo source link');
             assert.ok((await source.innerText()).includes('実景保持'),'truthful owner source label');
             assert.equal(await source.getAttribute('href'),'assets/card-images/asia-university-bantai.jpg','owner source relative href');
-            assert.equal(await page.locator('.real-university-image').count(),143,'Replacing one verified photo must keep total at 143');
+            assert.equal(await page.locator('.real-university-image').count(),144,'Replacing one verified photo must keep total at 144');
             await page.setViewportSize({width:375,height:900});
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No mobile horizontal overflow');
             await browser.close();
