@@ -83,12 +83,19 @@
  "campuses": [
   {
    "campus_id": "c00014801",
-   "name": "本部",
+   "name": "岩槻キャンパス",
    "postal_code": "339-8539",
    "prefecture": "埼玉県",
    "municipality": "さいたま市",
    "address": "埼玉県さいたま市岩槻区馬込1288",
-   "nearest_stations": []
+   "official_url": "https://www.human.ac.jp/access/",
+   "nearest_stations": [
+    {
+     "station": "岩槻駅",
+     "line": "東武アーバンパークライン",
+     "access": "徒歩14分、または西口からバス7分（スクールバスあり）"
+    }
+   ]
   }
  ],
  "sources": [

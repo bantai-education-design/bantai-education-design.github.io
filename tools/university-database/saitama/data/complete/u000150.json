@@ -130,12 +130,19 @@
  "campuses": [
   {
    "campus_id": "c00015001",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "352-8510",
    "prefecture": "埼玉県",
    "municipality": "新座市",
    "address": "埼玉県新座市菅沢2-1-28",
-   "nearest_stations": []
+   "official_url": "https://www.jumonji-u.ac.jp/outline/access/",
+   "nearest_stations": [
+    {
+     "station": "新座駅",
+     "line": "JR武蔵野線",
+     "access": "徒歩8分"
+    }
+   ]
   }
  ],
  "sources": [

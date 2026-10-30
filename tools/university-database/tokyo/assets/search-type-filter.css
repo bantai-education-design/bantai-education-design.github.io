@@ -25,3 +25,8 @@
 .qual-chip{font-size:.68rem;font-weight:800;padding:3px 8px;border-radius:999px;background:#eaf6ef;border:1px solid #bfe0cc;color:#1f5a3f}
 .qual-chip.is-match{background:#1f5a3f;color:#fff;border-color:#1f5a3f}
 .qual-chip.more{background:#f2f4f7;border-color:#dde3ea;color:#4a5a6a}
+/* 最寄り駅 */
+.access-line{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;margin:6px 0;font-size:.72rem;color:#29435c;line-height:1.5}
+.access-label{font-size:.66rem;font-weight:900;color:#2f6fa3}
+.access-station b{font-weight:900;color:#0b2c4a}
+.access-bus{font-size:.64rem;font-weight:800;padding:1px 7px;border-radius:999px;background:#eef4fb;border:1px solid #c8d9ec;color:#2f5f8f}

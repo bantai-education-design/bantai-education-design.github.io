@@ -70,12 +70,24 @@
  "campuses": [
   {
    "campus_id": "c00016801",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "336-0974",
    "prefecture": "埼玉県",
    "municipality": "さいたま市",
    "address": "埼玉県さいたま市緑区大字大崎3551",
-   "nearest_stations": []
+   "official_url": "https://www.urawa.ac.jp/access/index.html",
+   "nearest_stations": [
+    {
+     "station": "東川口駅",
+     "line": "JR武蔵野線",
+     "access": "無料スクールバス約12分"
+    },
+    {
+     "station": "浦和美園駅",
+     "line": "埼玉高速鉄道",
+     "access": "無料スクールバス約5分"
+    }
+   ]
   }
  ],
  "sources": [

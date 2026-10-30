@@ -147,6 +147,14 @@ jobs:
             assert.ok((await page.locator('.tokyo-card .qual-chip.is-match').count())>=1,'matching qualification chip');
             await page.selectOption('#qual-select','');await page.waitForTimeout(300);
             assert.equal(await count(),total,'qualification cleared');
+            const access=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
+            assert.ok(Object.keys(access).length>=18,'access records');
+            await page.waitForSelector('.tokyo-card .access-line',{timeout:15000});
+            await page.fill('.ref-quick-form input[name="q"]','獨協大学前');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(400);
+            assert.equal(await count(),1,'station name search');
+            assert.ok((await page.locator('.tokyo-card .access-line').first().innerText()).includes('獨協大学前'),'station shown on card');
+            await page.fill('.ref-quick-form input[name="q"]','');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(400);
+            assert.equal(await count(),total,'station search cleared');
             const area=await page.locator('.ref-area').innerText();
             assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
@@ -162,6 +170,8 @@ jobs:
             await redirect.waitForFunction(n=>document.querySelectorAll('.tokyo-card').length===n,saitama.length,{timeout:30000});
             await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=u000169',{waitUntil:'networkidle'});
             assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000169'),'saitama detail redirects: '+redirect.url());
+            await redirect.waitForSelector('.complete-stations li',{timeout:15000});
+            assert.ok((await redirect.locator('.complete-stations').first().innerText()).includes('獨協大学前'),'detail shows nearest station');
             await redirect.close();
             const ids=[...saitama.map(x=>x.id),...extra.map(x=>x.id)];
             const summary=[];

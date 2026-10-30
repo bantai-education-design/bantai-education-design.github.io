@@ -177,12 +177,19 @@
  "campuses": [
   {
    "campus_id": "c00015101",
-   "name": "本部",
+   "name": "坂戸キャンパス",
    "postal_code": "350-0295",
    "prefecture": "埼玉県",
    "municipality": "坂戸市",
    "address": "埼玉県坂戸市けやき台1-1",
-   "nearest_stations": []
+   "official_url": "https://www.josai.ac.jp/access/sakado/",
+   "nearest_stations": [
+    {
+     "station": "川角駅",
+     "line": "",
+     "access": "踏切を渡り坂を上がった所に正門（徒歩）"
+    }
+   ]
   }
  ],
  "sources": [

@@ -115,12 +115,24 @@
  "campuses": [
   {
    "campus_id": "c00015301",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "333-0831",
    "prefecture": "埼玉県",
    "municipality": "川口市",
    "address": "埼玉県川口市大字木曽呂1510",
-   "nearest_stations": []
+   "official_url": "https://www.saigaku.ac.jp/access/",
+   "nearest_stations": [
+    {
+     "station": "東川口駅",
+     "line": "JR武蔵野線・埼玉高速鉄道線",
+     "access": "南口から無料スクールバス"
+    },
+    {
+     "station": "東浦和駅",
+     "line": "JR武蔵野線",
+     "access": "徒歩約15分"
+    }
+   ]
   }
  ],
  "sources": [

@@ -122,12 +122,19 @@
  "campuses": [
   {
    "campus_id": "c00015401",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "369-0293",
    "prefecture": "埼玉県",
    "municipality": "深谷市",
    "address": "埼玉県深谷市普済寺1690",
-   "nearest_stations": []
+   "official_url": "https://www.sit.ac.jp/access/",
+   "nearest_stations": [
+    {
+     "station": "岡部駅",
+     "line": "JR高崎線",
+     "access": "スクールバス5分（徒歩約15分）"
+    }
+   ]
   }
  ],
  "sources": [

@@ -60,12 +60,19 @@
  "campuses": [
   {
    "campus_id": "c00016701",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "350-1328",
    "prefecture": "埼玉県",
    "municipality": "狭山市",
    "address": "埼玉県狭山市広瀬台3-26-1",
-   "nearest_stations": []
+   "official_url": "https://www.musashino.ac.jp/mgu/access/",
+   "nearest_stations": [
+    {
+     "station": "狭山市駅",
+     "line": "西武新宿線",
+     "access": "西武バス約15分（終点下車）／スクールバスあり"
+    }
+   ]
   }
  ],
  "sources": [
