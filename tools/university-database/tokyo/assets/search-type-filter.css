@@ -6,3 +6,12 @@
 .ref-type-chip:focus-visible{outline:2px solid #2f6fa3;outline-offset:2px}
 .ref-type-chip.active{background:#082844;border-color:#082844;color:#fff}
 .ref-area-list small{display:block;font-size:.66rem;color:#5d6e80;font-weight:700;margin-top:2px}
+/* キャンパス所在地の切り替えとカード表示 */
+.campus-toggle{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px;font-size:.76rem;font-weight:800;color:#1d3349;cursor:pointer}
+.campus-toggle[hidden]{display:none}
+.campus-toggle input{width:17px;height:17px;accent-color:#082844;margin:0}
+.campus-toggle small{font-weight:700;color:#5d6e80}
+.campus-toggle-quick{flex-basis:100%;margin-top:4px}
+.campus-badge{margin:6px 0 4px;padding:7px 10px;border-radius:10px;background:#fff6e0;border:1px solid #ecd28f;color:#5b4310;font-size:.74rem;font-weight:700;line-height:1.5}
+.campus-badge span{display:block;font-size:.68rem;font-weight:900;color:#8b6417}
+.campus-badge small{display:block;font-size:.66rem;color:#7a6a45;font-weight:700}
