@@ -157,6 +157,15 @@ jobs:
             assert.equal(await count(),total,'station search cleared');
             const area=await page.locator('.ref-area').innerText();
             assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
+            // 静的に書かれた大学数（DBトップ・一覧の初期表示・サイトトップ）が実データと一致すること
+            const prefN=p=>page.evaluate(x=>state.rows.filter(r=>((r.region_override&&r.region_override.prefecture)||r.prefecture||(r.headquarters&&r.headquarters.prefecture))===x).length,p);
+            const tokyoN=await prefN('東京都'),saitamaN=await prefN('埼玉県');
+            const dbTop=fs.readFileSync('tools/university-database/index.html','utf8');
+            assert.ok(dbTop.includes(`<strong>${tokyoN}</strong><span>東京都の大学`),'DB top Tokyo count '+tokyoN);
+            assert.ok(dbTop.includes(`<strong>${saitamaN}</strong><span>埼玉県の大学`),'DB top Saitama count '+saitamaN);
+            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式情報確認済み`),'DB top total '+total);
+            assert.ok(fs.readFileSync('tools/university-database/tokyo/index.html','utf8').includes(`合計 <strong>${total}</strong> 大学`),'list static total '+total);
+            assert.ok(fs.readFileSync('index.html','utf8').includes(`${total}校`),'site top count '+total);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
             assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'no mobile overflow');
             await page.close();
