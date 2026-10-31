@@ -59,12 +59,19 @@
  "campuses": [
   {
    "campus_id": "c00014901",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "344-0051",
    "prefecture": "埼玉県",
    "municipality": "春日部市",
    "address": "埼玉県春日部市内牧4158",
-   "nearest_stations": []
+   "official_url": "https://www.kyoei.ac.jp/access/",
+   "nearest_stations": [
+    {
+     "station": "北春日部駅",
+     "line": "",
+     "access": "西口から無料スクールバス5分"
+    }
+   ]
   }
  ],
  "sources": [

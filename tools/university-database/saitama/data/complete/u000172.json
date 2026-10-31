@@ -150,12 +150,29 @@
  "campuses": [
   {
    "campus_id": "c00017201",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "357-8555",
    "prefecture": "埼玉県",
    "municipality": "飯能市",
    "address": "埼玉県飯能市大字阿須字一の木698",
-   "nearest_stations": []
+   "official_url": "https://www.surugadai.ac.jp/access.html",
+   "nearest_stations": [
+    {
+     "station": "元加治駅",
+     "line": "西武池袋線",
+     "access": "無料スクールバス約5分"
+    },
+    {
+     "station": "金子駅",
+     "line": "JR八高線",
+     "access": "無料スクールバス約8分"
+    },
+    {
+     "station": "東飯能駅",
+     "line": "JR八高線・西武池袋線",
+     "access": "東口から無料スクールバス約15分"
+    }
+   ]
   }
  ],
  "sources": [

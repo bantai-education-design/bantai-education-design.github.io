@@ -255,12 +255,29 @@
  "campuses": [
   {
    "campus_id": "c00014501",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "338-8570",
    "prefecture": "埼玉県",
    "municipality": "さいたま市",
    "address": "埼玉県さいたま市桜区下大久保255",
-   "nearest_stations": []
+   "official_url": "https://www.saitama-u.ac.jp/access/accessmap/",
+   "nearest_stations": [
+    {
+     "station": "北浦和駅",
+     "line": "JR京浜東北線",
+     "access": "西口からバス「埼玉大学」ゆき（終点）"
+    },
+    {
+     "station": "南与野駅",
+     "line": "JR埼京線",
+     "access": "北入口・西口からバス（埼玉大学経由）"
+    },
+    {
+     "station": "志木駅",
+     "line": "東武東上線",
+     "access": "東口からバス「南与野駅西口」ゆき（埼玉大学下車）"
+    }
+   ]
   }
  ],
  "sources": [

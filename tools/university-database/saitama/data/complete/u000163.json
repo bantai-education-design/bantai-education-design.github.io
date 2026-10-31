@@ -77,12 +77,24 @@
  "campuses": [
   {
    "campus_id": "c00016301",
-   "name": "本部",
+   "name": "さいたまキャンパス",
    "postal_code": "362-0806",
    "prefecture": "埼玉県",
    "municipality": "北足立郡伊奈町",
    "address": "埼玉県北足立郡伊奈町小室10281",
-   "nearest_stations": []
+   "official_url": "https://www.nichiyaku.ac.jp/access/",
+   "nearest_stations": [
+    {
+     "station": "志久駅",
+     "line": "",
+     "access": "徒歩5分"
+    },
+    {
+     "station": "上尾駅・蓮田駅",
+     "line": "JR",
+     "access": "バス約15分（日本薬科大学前下車）"
+    }
+   ]
   }
  ],
  "sources": [

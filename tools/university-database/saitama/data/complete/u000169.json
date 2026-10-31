@@ -174,12 +174,19 @@
  "campuses": [
   {
    "campus_id": "c00016901",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "340-0042",
    "prefecture": "埼玉県",
    "municipality": "草加市",
    "address": "埼玉県草加市学園町1-1",
-   "nearest_stations": []
+   "official_url": "https://www.dokkyo.ac.jp/about/outline/access.html",
+   "nearest_stations": [
+    {
+     "station": "獨協大学前〈草加松原〉駅",
+     "line": "東武スカイツリーライン（日比谷線・半蔵門線直通）",
+     "access": "西口から徒歩5分"
+    }
+   ]
   }
  ],
  "sources": [

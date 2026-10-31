@@ -61,12 +61,24 @@
  "campuses": [
   {
    "campus_id": "c00014701",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "361-0038",
    "prefecture": "埼玉県",
    "municipality": "行田市",
    "address": "埼玉県行田市前谷333",
-   "nearest_stations": []
+   "official_url": "https://www.iot.ac.jp/guide/access/",
+   "nearest_stations": [
+    {
+     "station": "吹上駅",
+     "line": "JR高崎線",
+     "access": "朝日バス3〜5分（ものつくり大学前・入口下車）"
+    },
+    {
+     "station": "行田市駅",
+     "line": "秩父鉄道",
+     "access": "バス約10分"
+    }
+   ]
   }
  ],
  "sources": [

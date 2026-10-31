@@ -136,12 +136,24 @@
  "campuses": [
   {
    "campus_id": "c00016201",
-   "name": "本部",
+   "name": "本部キャンパス",
    "postal_code": "345-8501",
    "prefecture": "埼玉県",
    "municipality": "南埼玉郡宮代町",
    "address": "埼玉県南埼玉郡宮代町学園台4-1-1",
-   "nearest_stations": []
+   "official_url": "https://www.nit.ac.jp/campus/access",
+   "nearest_stations": [
+    {
+     "station": "東武動物公園駅",
+     "line": "",
+     "access": "西口からスクールバス5分、徒歩14分"
+    },
+    {
+     "station": "新白岡駅",
+     "line": "",
+     "access": "東口からスクールバス12分"
+    }
+   ]
   }
  ],
  "sources": [
