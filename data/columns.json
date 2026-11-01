@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-kanji-practice-maker-update-20261101",
+    "slug": "kanji-practice-maker-update-20261101",
+    "title": "その子のための一枚を、何枚でも",
+    "category": "現場の工夫",
+    "categorySlug": "practice",
+    "date": "2026.11.01",
+    "excerpt": "漢字練習帳メーカーを大きく手直ししました。外枠線と十字点線を分けて調整できる罫線設定、PDF書き出し、ライセンス登録の簡易化、購入窓口の一本化。何をどう変えたのかを詳しく述べます。",
+    "thumbnail": "/assets/images/columns/kanji-practice-maker-update-20261101/thumbnail.webp",
+    "readTime": "約9分",
+    "tags": [
+      "漢字練習帳メーカー",
+      "教材づくり",
+      "印刷用紙",
+      "アップデート",
+      "現場の工夫"
+    ],
+    "url": "/columns/kanji-practice-maker-update-20261101/"
+  },
+  {
     "id": "column-senior-ai-encounter-20261101",
     "slug": "senior-ai-encounter-20261101",
     "title": "この歳でAIに出会えて、よかった。",

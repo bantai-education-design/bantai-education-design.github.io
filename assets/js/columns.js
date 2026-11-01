@@ -116,7 +116,7 @@
   // Load column data from /data/columns.json
   async function fetchColumns() {
     try {
-      const response = await fetch('/data/columns.json?v=20261101-senior-ai');
+      const response = await fetch('/data/columns.json?v=20261101-kanji-practice');
       if (!response.ok) throw new Error('Failed to fetch columns data');
       allColumns = await response.json();
       initTopNewsTicker();
