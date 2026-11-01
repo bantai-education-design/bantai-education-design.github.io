@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-senior-ai-encounter-20261101",
+    "slug": "senior-ai-encounter-20261101",
+    "title": "この歳でAIに出会えて、よかった。",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.01",
+    "excerpt": "シニアになって出会ったAI。その背景には、仕事と暮らしの中心にあった約40年のパソコン歴があります。AIエージェントの基本と、今日から始める身近な使い方を紹介します。",
+    "thumbnail": "/assets/images/columns/senior-ai-encounter-20261101/thumbnail.webp",
+    "readTime": "約10分",
+    "tags": [
+      "AIエージェント",
+      "シニアとAI",
+      "生成AIの始め方",
+      "パソコンの思い出",
+      "学び直し"
+    ],
+    "url": "/columns/senior-ai-encounter-20261101/"
+  },
+  {
     "id": "column-ai-comparison-20261031",
     "slug": "ai-comparison-20261031",
     "title": "ChatGPT・Claude・Gemini、どれを使う？ 毎日使ってわかった違いと、生成AIの最新動向",
