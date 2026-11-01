@@ -42,7 +42,7 @@
   ],
   "productName": "絵日記・観察カード作成メーカー",
   "englishName": "Picture Diary & Observation Card Maker",
-  "versionLabel": "Windows EXE版 v1.2.1",
+  "versionLabel": "Windows EXE版 v1.2.2",
   "boothUrl": "https://bantai3.booth.pm/items/8579732",
   "sections": [
     {
@@ -60,7 +60,7 @@
       "actions": [
         {
           "class": "btn btn-primary",
-          "href": "/downloads/trials/bantai_observation_card_trial_v1.2.1.zip",
+          "href": "/downloads/trials/bantai_observation_card_trial_v1.2.2.zip",
           "label": "10日間無料体験版をダウンロード",
           "attrs": {
             "download": ""
@@ -88,7 +88,7 @@
       "paragraphs": [
         "絵日記・観察カード作成メーカーは、小学校低学年、生活科、理科、夏休みの自由研究、家庭学習で使える観察カードや絵日記用紙を作成するためのWindows用アプリです。",
         "アプリを起動し、用紙サイズ、絵の広さ、マス目、横罫線、縦罫線、余白、線の色、線の濃さを選んで印刷できます。PDF保存にも対応しているため、授業用プリントや家庭学習用の用紙を事前に準備しやすくなります。",
-        "10日間無料で試用できます。試用中の印刷/PDF保存には「SAMPLE / サンプル」の透かしが入り、ライセンスキー（480円）の認証で透かしと期限が解除されます。"
+        "10日間無料で試用できます。試用中の印刷/PDF保存には「SAMPLE / サンプル」の透かしが入り、ライセンスキー（980円）の認証で透かしと期限が解除されます。"
       ],
       "card": {
         "class": "card gold",
@@ -185,7 +185,7 @@
       "eyebrow": "How To Use",
       "heading": "使い方",
       "steps": [
-        "ZIPを展開し、BantaiObservationCardMaker-1.2.1-win-x64.exe を実行してインストールします。",
+        "ZIPを展開し、BantaiObservationCardMaker-1.2.2-win-x64.exe を実行してインストールします。",
         "用紙サイズ、絵の広さ、文章欄のスタイルを選びます。",
         "必要に応じて余白、線の色、線の濃さを調整します。",
         "「PDF出力 / 印刷」ボタンから印刷またはPDF保存を行います。"
@@ -202,12 +202,12 @@
           },
           {
             "label": "形式",
-            "text": "Windows EXE版 v1.2.1（HTML単体版を同梱）",
+            "text": "Windows EXE版 v1.2.2（HTML単体版を同梱）",
             "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);"
           },
           {
             "label": "試用・ライセンス",
-            "text": "10日間無料試用（透かしあり）／ライセンスキー480円で解除",
+            "text": "10日間無料試用（透かしあり）／ライセンスキー980円で解除",
             "rowStyle": "border-bottom:1px solid rgba(7,27,54,.08);"
           },
           {
@@ -223,18 +223,18 @@
       "background": "#f9f9f9",
       "eyebrow": "Distribution",
       "heading": "配布ページ",
-      "description": "試用版は公式HPとBOOTHからダウンロードできます。継続して使う場合は、BOOTHでライセンスキー（480円）を購入してください。",
+      "description": "試用版は公式HPとBOOTHからダウンロードできます。継続して使う場合は、BOOTHでライセンスキー（980円）を購入してください。",
       "gridStyle": "margin-top:22px;",
       "items": [
         {
           "badge": "公式HP",
           "heading": "10日間無料体験版をダウンロードする",
-          "text": "Windows EXE版 v1.2.1。ページ上部のボタンから直接ダウンロードできます。試用中の印刷/PDF保存には透かしが入ります。"
+          "text": "Windows EXE版 v1.2.2。ページ上部のボタンから直接ダウンロードできます。試用中の印刷/PDF保存には透かしが入ります。"
         },
         {
           "badge": "BOOTH",
           "heading": "BOOTHでライセンスキーを購入する",
-          "text": "ライセンスキー（480円）を入力すると、透かしと試用期限が解除されます。キーは購入後、BOOTHの取引メッセージでお届けします。"
+          "text": "ライセンスキー（980円）を入力すると、透かしと試用期限が解除されます。キーは購入後、申請フォームに注文番号とメールアドレスを送ると、メールで自動的に届きます。"
         },
         {
           "badge": "Vector準備中",
