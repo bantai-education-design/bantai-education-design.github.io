@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "education-planning",
-      "name": "小学校教育計画作成・運営システム",
+      "name": "小学校教育計画運営システム",
       "category": "featured",
       "order": 1,
       "status": "公開準備中",
@@ -18,7 +18,7 @@
       "summary": "バラバラになりがちな年間計画・週案・時数管理を、長年教務を担ってきた経験から、一つの流れへ整理しました。",
       "features": [],
       "image": "/assets/images/education-hero.png",
-      "imageAlt": "小学校教育計画作成・運営システム",
+      "imageAlt": "小学校教育計画運営システム",
       "detailUrl": "/products/education-planning/",
       "categoryUrl": "/products/school-work/",
       "primaryActionLabel": "詳しく見る",
@@ -307,7 +307,7 @@
         "学級担任",
         "教務担当"
       ],
-      "summary": "出席番号順・五十音順・誕生日順――用途ごとに作り直していた学級名簿を、選ぶだけですぐ用意できます。",
+      "summary": "出席番号順・五十音順・誕生日順。用途ごとに作り直していた学級名簿を、選ぶだけですぐ用意できます。",
       "features": [],
       "image": "/assets/images/class-roster-maker-thumbnail.svg",
       "imageAlt": "学級名簿メーカー",
@@ -316,7 +316,7 @@
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": "無料で使う",
       "published": true,
-      "downloadUrl": "https://github.com/bantai-education-design/gakkyu-meibo-maker/releases/download/class-roster-maker-v0.6.5/ClassRosterMaker-v0.6.5-Windows.zip",
+      "downloadUrl": "https://bantai-education-design.github.io/downloads/ClassRosterMaker-v1.0.0-Windows.zip",
       "boothUrl": null,
       "vectorUrl": null,
       "noteUrl": null,
