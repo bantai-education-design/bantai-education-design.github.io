@@ -1,5 +1,25 @@
 [
   {
+    "id": "column-meta-muse-ai-agent-20261103",
+    "slug": "meta-muse-ai-agent-20261103",
+    "title": "Metaの「Muse」とは？ スマホで使って感じた戸惑いと、ChatGPTとの違い",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.03",
+    "excerpt": "スマホでMuseを使い、返事を待ちながら感じた戸惑い。ChatGPTやGeminiとの違い、メリットとデメリット、暮らしを手伝うAIの将来性を考えます。",
+    "thumbnail": "/assets/images/columns/meta-muse-ai-agent-20261103/thumbnail.webp",
+    "readTime": "約13分",
+    "tags": [
+      "Muse",
+      "ミューズ",
+      "Meta",
+      "AIエージェント",
+      "ChatGPT",
+      "シニアとAI"
+    ],
+    "url": "/columns/meta-muse-ai-agent-20261103/"
+  },
+  {
     "id": "column-ai-tutor-curiosity-20261103",
     "slug": "ai-tutor-curiosity-20261103",
     "title": "AI家庭教師がいても、先生が拾いたい子どもの「どうして？」",
