@@ -89,6 +89,10 @@
     .adj2-zoom { display: block; position: relative; }
     .adj2-zoom::after { content: "タップで拡大"; display: none; position: absolute; right: 6px; bottom: 6px; background: rgba(17,17,17,.78); color: #e2c98a; font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
     @media (max-width: 860px) { .adj2-zoom::after { display: block; } }
+    .adj2-tabs { margin: 26px auto 0; max-width: 1000px; }
+    .adj2-update { max-width: 820px; margin: 28px auto 0; border: 1px solid rgba(198,161,91,.5); border-radius: 12px; padding: 18px 22px; }
+    .adj2-update h3 { color: #e2c98a; font-size: 1rem; margin: 0 0 8px; }
+    .adj2-update ul { margin: 0; padding-left: 1.2em; line-height: 1.9; color: #d8d2c4; font-size: .93rem; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -170,7 +174,7 @@
           <a class="btn btn-light" href="#difference">通常版とのちがいを見る</a>
         </div>
         <ul class="adj2-chips">
-          <li>Ver.1.0.6</li>
+          <li>Ver.1.0.7</li>
           <li>無料モニター　2027年8月31日まで</li>
           <li>登録・シリアル番号は不要</li>
           <li>Windows 10 / 11</li>
@@ -193,7 +197,7 @@
       <div class="adj2-table-wrap">
         <table class="adj2-table">
           <thead>
-            <tr><th scope="col">できること</th><th scope="col">通常版<br><small>教務支援 Ver.5.70.12</small></th><th scope="col">調整授業時数対応版<br><small>Ver.1.0.6</small></th></tr>
+            <tr><th scope="col">できること</th><th scope="col">通常版<br><small>教務支援 Ver.5.70.12</small></th><th scope="col">調整授業時数対応版<br><small>Ver.1.0.7</small></th></tr>
           </thead>
           <tbody>
             <tr><th scope="row">年間計画・行事・時間割・授業時数・提出書類（9つの手順）</th><td data-label="通常版"><span class="adj2-yes">○</span></td><td data-label="調整版"><span class="adj2-yes">○</span>通常版と同じ</td></tr>
@@ -277,7 +281,7 @@
           <figure class="adj2-shot"><a class="adj2-zoom" href="/assets/images/education-planning-adjusted/adjusted-weekplan-link.webp" target="_blank" rel="noopener" aria-label="画像を拡大して見る（新しいタブ）"><img src="/assets/images/education-planning-adjusted/adjusted-weekplan-link.webp" width="1400" height="222" loading="lazy" alt="週案実績連携の画面。週案システムで出力した提出JSONを取り込む欄"></a></figure>
         </li>
       </ol>
-      <p class="adj2-note">アプリでは、上部のタブを右へ動かした先にある「10. 調整計画」を開きます。画面の幅によっては、タブが右端に隠れて見えないことがあります。</p>
+      <figure class="adj2-shot adj2-tabs"><a class="adj2-zoom" href="/assets/images/education-planning-adjusted/adjusted-tabs-v107.webp" target="_blank" rel="noopener" aria-label="画像を拡大して見る（新しいタブ）"><img src="/assets/images/education-planning-adjusted/adjusted-tabs-v107.webp" width="1400" height="328" loading="lazy" alt="アプリ上部のタブ。右端に「新制度対応」の印が付いた「10. 調整計画」がある"></a><figcaption>アプリでは、「新制度対応」の印が付いた「10. 調整計画」を開きます。キーボードの Alt＋0 でも開けます。</figcaption></figure>
     </div>
   </section>
 
@@ -312,13 +316,23 @@
         <p>2027年8月31日まで、入力・保存・印刷・PDF保存・Excel/JSON出力を含め、すべての機能を使えます。名前やメールアドレスの登録はありません。</p>
       </div>
       <ol class="adj2-start">
-        <li><span>1</span><b>ダウンロード</b>公式サイトからZIPファイルを入手します（約163MB）</li>
+        <li><span>1</span><b>ダウンロード</b>公式サイトからZIPファイルを入手します（約165MB）</li>
         <li><span>2</span><b>すべて展開</b>ZIPを右クリックして「すべて展開」を選びます</li>
         <li><span>3</span><b>起動</b>展開したフォルダのアプリを起動し、「10. 調整計画」を開きます</li>
       </ol>
+      <div class="adj2-update">
+        <h3>Ver.1.0.7（2026年11月）で使いやすくしたところ</h3>
+        <ul>
+          <li>「10. 調整計画」のタブが、どの画面幅でも見えるようになりました。「新制度対応」の印も付きました</li>
+          <li>キーボードの Alt＋0 で、調整計画を開けるようになりました</li>
+          <li>週案の実績と比べる欄に、週案システムの入手先を案内しました</li>
+          <li>回す学習の名前が、入力欄で切れずに表示されるようになりました</li>
+          <li>画面写真つきの「操作の手引き」を同梱しました</li>
+        </ul>
+      </div>
       <div class="adj2-actions adj2-actions-center">
         <a class="btn btn-primary" href="/products/education-planning/monitor-download/#adjusted" data-education-event="adjusted_bottom_monitor">無料モニター版をダウンロード</a>
-        <a class="btn adj2-btn-line" href="/downloads/manuals/bantai_adjusted_curriculum_guide_v1.0.6.pdf" data-education-event="adjusted_manual_pdf">操作の手引き（PDF）</a>
+        <a class="btn adj2-btn-line" href="/downloads/manuals/bantai_adjusted_curriculum_guide_v1.0.7.pdf" data-education-event="adjusted_manual_pdf">操作の手引き（PDF）</a>
         <a class="btn adj2-btn-line" href="/contact/">使ってみた感想を送る</a>
       </div>
     </div>
