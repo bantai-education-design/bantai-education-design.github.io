@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-gemini-notebook-textbook-window",
+    "slug": "gemini-notebook-textbook-window",
+    "title": "Gemini Notebookで海外の教科書を読む。教科書は、その社会の文化を知る窓",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.04",
+    "excerpt": "数百冊の無料教科書から一冊を選ぶ手順と、理科の「水」を題材にした読み比べ、教師の教材研究での活用を紹介します。",
+    "thumbnail": "/assets/images/columns/gemini-notebook-textbook-window/thumbnail.webp",
+    "readTime": "約10分",
+    "tags": [
+      "Gemini Notebook",
+      "教科書",
+      "教材研究",
+      "理科",
+      "異文化理解"
+    ],
+    "url": "/columns/gemini-notebook-textbook-window/"
+  },
+  {
     "id": "column-meta-muse-ai-agent-20261103",
     "slug": "meta-muse-ai-agent-20261103",
     "title": "Metaの「Muse」とは？ スマホで使って感じた戸惑いと、ChatGPTとの違い",
