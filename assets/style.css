@@ -6600,3 +6600,35 @@ img.hero {
   .epv-table td::before { content: attr(data-label); display: block; font-size: .75rem; font-weight: 700; color: #8a6a2c; margin-bottom: 2px; }
   .epv-chart { padding: 14px; }
 }
+
+/* ===== 教育計画システムへの入り口（2026-11） ===== */
+.ep-band { background: #111; color: #f7f4ec; padding: 22px 0; border-top: 2px solid #c6a15b; border-bottom: 2px solid #c6a15b; }
+.ep-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.ep-band-text p { margin: 0; }
+.ep-band-kicker { color: #e2c98a; font-size: .8rem; font-weight: 700; letter-spacing: .08em; }
+.ep-band-title { font-family: 'Noto Serif JP', serif; font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-weight: 700; color: #fff; margin: 4px 0 !important; line-height: 1.5; }
+.ep-band-sub { font-size: .85rem; color: #cfc8b8; line-height: 1.6; }
+.ep-band-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.ep-band-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: .95rem; white-space: nowrap; }
+.ep-band-btn-main { background: linear-gradient(135deg, #c6a15b, #e2c98a); color: #111; }
+.ep-band-btn-sub { border: 1px solid #c6a15b; color: #e2c98a; }
+.ep-band-btn-line { border: 1px solid #c6a15b; color: #6b5220; background: #fff; }
+.ep-band-btn:hover { transform: translateY(-1px); }
+
+.ep-book-apps { background: #f7f4ec; }
+.ep-book-kicker { text-align: center; color: #b58a3b; font-weight: 700; letter-spacing: .14em; font-size: .78rem; margin: 0 0 8px; }
+.ep-book-apps h2 { text-align: center; font-family: 'Noto Serif JP', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0 0 14px; }
+.ep-book-lead { max-width: 760px; margin: 0 auto 30px; text-align: center; color: #55524c; line-height: 1.9; }
+.ep-book-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.ep-book-card { background: #fff; border: 1px solid rgba(198,161,91,.4); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; }
+.ep-book-card-accent { border: 2px solid #c6a15b; }
+.ep-book-tag { display: inline-block; align-self: flex-start; background: #111; color: #e2c98a; font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin: 0 0 10px; }
+.ep-book-card h3 { font-size: 1.1rem; margin: 0 0 12px; line-height: 1.5; }
+.ep-book-card ul { margin: 0 0 14px; padding-left: 1.2em; line-height: 1.9; color: #333; }
+.ep-book-limit { font-size: .85rem; color: #8a6a2c; font-weight: 700; margin: auto 0 14px; }
+.ep-book-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .ep-band-actions, .ep-band-actions .ep-band-btn { width: 100%; }
+  .ep-band-actions .ep-band-btn { flex: 1; }
+  .ep-book-cards { grid-template-columns: 1fr; }
+}
