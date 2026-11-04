@@ -6632,3 +6632,10 @@ img.hero {
   .ep-band-actions .ep-band-btn { flex: 1; }
   .ep-book-cards { grid-template-columns: 1fr; }
 }
+
+/* スマホで団体概要の見出しが1文字ずつ縦に並ぶのを防ぐ（2026-11） */
+@media (max-width: 640px) {
+  .about-table th, .about-table td { display: block; width: auto; }
+  .about-table th { border-bottom: none; padding-bottom: 2px; background: rgba(0, 0, 0, 0.28); }
+  .about-table td { padding-top: 8px; }
+}
