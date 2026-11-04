@@ -86,6 +86,11 @@
 ]
   </script>
   <!-- json-ld:end -->
+  <style>
+    .school-count-table th,.school-count-table td{padding:7px 6px;border-bottom:1px solid rgba(7,27,54,0.08);}
+    .school-count-table td{text-align:right;font-variant-numeric:tabular-nums;}
+    .school-count-table th{text-align:left;font-weight:600;}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -121,7 +126,7 @@
       <div class="container">
         <div class="kicker">Free Web Tool</div>
         <h1>Ban.Tai 全国学校データベース</h1>
-        <p class="lead">学校封筒印刷・宛名作成・広域連携に使える、全国の学校データベースです。都道府県を選択してご利用ください。</p>
+        <p class="lead">全国47都道府県の学校・幼稚園 41,886件を収録した、無料の学校データベースです。学校名・住所・郵便番号で検索でき、封筒の宛名作成や学校名簿づくりに使えます。都道府県を選んでご利用ください。</p>
       </div>
     </section>
 
@@ -158,13 +163,95 @@
         </div>
         <!-- DATABASE_CARDS_START -->
         <div id="prefecture-card-root" class="prefecture-card-root" data-prefecture-card-root aria-live="polite">
-          <p class="prefecture-card-loading">?????????????????</p>
+          <p class="prefecture-card-loading">都道府県の一覧を読み込んでいます…</p>
         </div>
         <!-- DATABASE_CARDS_END -->
 
         <p style="margin:16px 0 0; font-size:0.72rem; color:#a0a6b0; line-height:1.5;">
           都道府県シルエットは、国土交通省「国土数値情報（行政区域データ）」を加工して作成しています。
         </p>
+
+        <!-- 全国の学校数（data/school-database/ の2つのJSONから作成。数字を直すときは元データも確認すること） -->
+        <section class="school-count-summary" aria-labelledby="school-count-heading" style="margin-top:50px; background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(7,27,54,0.04);">
+          <h2 id="school-count-heading" style="margin-top:0; font-size:1.3rem; color:var(--navy,#0c1b33);">全国の学校の数</h2>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:16px; margin:16px 0 20px;">
+            <div style="background:#f7f5ef; border-radius:12px; padding:16px;">
+              <div style="font-size:0.82rem; color:#4a5568;">このデータベースの掲載数</div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--navy,#0c1b33);">41,886<span style="font-size:0.9rem; font-weight:600;"> 校・園</span></div>
+              <div style="font-size:0.75rem; color:#718096;">47都道府県・幼稚園から高等専門学校まで</div>
+            </div>
+            <div style="background:#f7f5ef; border-radius:12px; padding:16px;">
+              <div style="font-size:0.82rem; color:#4a5568;">全国の小学校</div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--navy,#0c1b33);">18,607<span style="font-size:0.9rem; font-weight:600;"> 校</span></div>
+              <div style="font-size:0.75rem; color:#718096;">学校基本調査 2025年5月1日現在</div>
+            </div>
+            <div style="background:#f7f5ef; border-radius:12px; padding:16px;">
+              <div style="font-size:0.82rem; color:#4a5568;">全国の中学校</div>
+              <div style="font-size:1.6rem; font-weight:800; color:var(--navy,#0c1b33);">9,827<span style="font-size:0.9rem; font-weight:600;"> 校</span></div>
+              <div style="font-size:0.75rem; color:#718096;">学校基本調査 2025年5月1日現在</div>
+            </div>
+          </div>
+          <details>
+            <summary style="cursor:pointer; font-weight:700; color:var(--navy,#0c1b33); padding:8px 0;">都道府県別の学校数を見る（47都道府県）</summary>
+            <div style="overflow-x:auto; margin-top:12px;">
+              <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+                <thead>
+                  <tr style="background:#0c1b33; color:#fff;"><th scope="col" style="padding:8px 6px; text-align:left;">都道府県</th><th scope="col" style="padding:8px 6px; text-align:right;">掲載数</th><th scope="col" style="padding:8px 6px; text-align:right;">小学校</th><th scope="col" style="padding:8px 6px; text-align:right;">中学校</th></tr>
+                </thead>
+                <tbody class="school-count-table">
+                <tr><th scope="row"><a href="/tools/school-database/tokyo/">東京都</a></th><td>3,493</td><td>1,315</td><td>796</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kanagawa/">神奈川県</a></th><td>2,227</td><td>877</td><td>472</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/saitama/">埼玉県</a></th><td>1,929</td><td>787</td><td>441</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/chiba/">千葉県</a></th><td>1,823</td><td>756</td><td>385</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/ibaraki/">茨城県</a></th><td>872</td><td>434</td><td>216</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/tochigi/">栃木県</a></th><td>678</td><td>330</td><td>155</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/gunma/">群馬県</a></th><td>651</td><td>296</td><td>157</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/hokkaido/">北海道</a></th><td>1,988</td><td>913</td><td>548</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/miyagi/">宮城県</a></th><td>809</td><td>351</td><td>196</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/aomori/">青森県</a></th><td>551</td><td>242</td><td>151</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/iwate/">岩手県</a></th><td>502</td><td>259</td><td>147</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/akita/">秋田県</a></th><td>362</td><td>167</td><td>103</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/yamagata/">山形県</a></th><td>442</td><td>221</td><td>95</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/fukushima/">福島県</a></th><td>794</td><td>372</td><td>206</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/aichi/">愛知県</a></th><td>2,021</td><td>965</td><td>440</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/niigata/">新潟県</a></th><td>831</td><td>425</td><td>227</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/toyama/">富山県</a></th><td>333</td><td>172</td><td>75</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/ishikawa/">石川県</a></th><td>386</td><td>196</td><td>89</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/fukui/">福井県</a></th><td>358</td><td>188</td><td>76</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/yamanashi/">山梨県</a></th><td>351</td><td>176</td><td>89</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/nagano/">長野県</a></th><td>766</td><td>354</td><td>192</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/gifu/">岐阜県</a></th><td>735</td><td>337</td><td>177</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/shizuoka/">静岡県</a></th><td>1,241</td><td>480</td><td>284</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/osaka/">大阪府</a></th><td>2,087</td><td>977</td><td>511</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/mie/">三重県</a></th><td>736</td><td>360</td><td>167</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/shiga/">滋賀県</a></th><td>498</td><td>219</td><td>102</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kyoto/">京都府</a></th><td>859</td><td>355</td><td>185</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/hyogo/">兵庫県</a></th><td>1,743</td><td>725</td><td>374</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/nara/">奈良県</a></th><td>473</td><td>186</td><td>106</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/wakayama/">和歌山県</a></th><td>467</td><td>235</td><td>123</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/hiroshima/">広島県</a></th><td>1,048</td><td>454</td><td>258</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/tottori/">鳥取県</a></th><td>232</td><td>112</td><td>57</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/shimane/">島根県</a></th><td>402</td><td>187</td><td>93</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/okayama/">岡山県</a></th><td>772</td><td>361</td><td>159</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/yamaguchi/">山口県</a></th><td>680</td><td>284</td><td>158</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kagawa/">香川県</a></th><td>379</td><td>159</td><td>73</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/tokushima/">徳島県</a></th><td>401</td><td>182</td><td>89</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/ehime/">愛媛県</a></th><td>582</td><td>272</td><td>127</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kochi/">高知県</a></th><td>430</td><td>218</td><td>119</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/fukuoka/">福岡県</a></th><td>1,659</td><td>699</td><td>355</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/saga/">佐賀県</a></th><td>340</td><td>156</td><td>89</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/nagasaki/">長崎県</a></th><td>671</td><td>311</td><td>181</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kumamoto/">熊本県</a></th><td>687</td><td>326</td><td>169</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/oita/">大分県</a></th><td>561</td><td>252</td><td>122</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/miyazaki/">宮崎県</a></th><td>505</td><td>230</td><td>131</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/kagoshima/">鹿児島県</a></th><td>905</td><td>471</td><td>210</td></tr>
+                <tr><th scope="row"><a href="/tools/school-database/okinawa/">沖縄県</a></th><td>626</td><td>263</td><td>152</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <p style="margin:16px 0 0; font-size:0.78rem; color:#718096; line-height:1.6;">掲載数は Ban.Tai 全国学校データベースの収録数（国立・公立・私立）です。小学校・中学校の数は文部科学省「学校基本調査」（令和7年度確定値、2025年5月1日現在）によります。数え方が異なるため、両者は一致しません。</p>
+        </section>
 
         <!-- データベース概要案内 -->
         <div style="margin-top:50px; background:#fff; border:1px solid rgba(7,27,54,0.08); border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(7,27,54,0.04);">
