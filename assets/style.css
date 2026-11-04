@@ -6511,3 +6511,92 @@ img.hero {
   transform: none;
   background: #fff;
 }
+
+/* ===== 教育計画システム：図解セクション（2026-11） ===== */
+.epv-section { padding: 72px 0; background: #fff; }
+.epv-ivory { background: #f7f4ec; }
+.epv-dark { background: #111; color: #f7f4ec; }
+.epv-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+.epv-heading-left { text-align: left; margin: 0; }
+.epv-kicker { color: #b58a3b; font-weight: 700; letter-spacing: .14em; font-size: .78rem; margin: 0 0 8px; }
+.epv-heading h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.45; margin: 0 0 14px; }
+.epv-heading p { color: #55524c; line-height: 1.9; margin: 0; }
+.epv-dark .epv-heading p { color: #d8d2c4; }
+.epv-note { text-align: center; color: #66635d; font-size: .85rem; margin: 22px auto 0; max-width: 760px; line-height: 1.8; }
+.epv-note-light { color: #cfc8b8; }
+
+.epv-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.epv-col { background: #fff; border: 1px solid rgba(198,161,91,.35); border-radius: 14px; padding: 24px; }
+.epv-col-after { border: 2px solid #c6a15b; box-shadow: 0 14px 36px rgba(17,17,17,.08); }
+.epv-col h3 { font-size: 1.02rem; margin: 0 0 18px; line-height: 1.6; }
+.epv-tag { display: inline-block; font-size: .78rem; padding: 3px 10px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; }
+.epv-tag-before { background: #ece6da; color: #5b554b; }
+.epv-tag-after { background: #111; color: #e2c98a; }
+.epv-steps { list-style: none; margin: 0; padding: 0; }
+.epv-steps li { background: #faf8f3; border-radius: 8px; padding: 11px 14px; line-height: 1.6; font-size: .95rem; }
+.epv-steps li b { display: inline-block; min-width: 3em; font-size: .78rem; color: #8a6a2c; margin-right: 6px; }
+.epv-steps li.epv-link { background: none; text-align: center; font-size: .8rem; font-weight: 700; padding: 4px 0; }
+.epv-steps li.epv-link::before { content: "↓ "; }
+.epv-link-before { color: #c0603a; }
+.epv-link-after { color: #9a7631; }
+.epv-count { margin: 18px 0 0; text-align: center; font-size: .95rem; }
+.epv-count strong { font-size: 1.15rem; }
+.epv-col-before .epv-count strong { color: #c0603a; }
+.epv-col-after .epv-count strong { color: #9a7631; }
+
+.epv-table-wrap { overflow-x: auto; }
+.epv-table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: .95rem; }
+.epv-table th, .epv-table td { border-bottom: 1px solid rgba(198,161,91,.35); padding: 14px 16px; text-align: left; vertical-align: top; line-height: 1.7; }
+.epv-table thead th { background: #111; color: #e2c98a; font-size: .85rem; }
+.epv-table thead th:last-child { background: #c6a15b; color: #111; }
+.epv-table tbody th { white-space: nowrap; font-weight: 700; }
+.epv-table tbody td:nth-child(2) { color: #66635d; }
+.epv-table tbody td:last-child { font-weight: 600; background: #fbf8f0; }
+
+.epv-year { display: grid; gap: 8px; }
+.epv-year-row { display: grid; grid-template-columns: 76px repeat(4, 1fr); gap: 8px; }
+.epv-year-head div { text-align: center; font-weight: 700; font-size: .9rem; padding: 6px 0; border-bottom: 2px solid #c6a15b; }
+.epv-lane { display: flex; align-items: center; justify-content: center; font-weight: 700; background: #fff; border-radius: 8px; border: 1px solid rgba(198,161,91,.35); }
+.epv-cell { border-radius: 8px; padding: 14px; font-size: .9rem; line-height: 1.65; min-height: 84px; }
+.epv-cell-gold { background: #c6a15b; color: #111; font-weight: 600; }
+.epv-cell-dark { background: #111; color: #f7f4ec; font-weight: 600; }
+.epv-cell-empty { background: #fff; color: #66635d; border: 1px dashed rgba(198,161,91,.5); }
+.epv-when { display: none; }
+
+.epv-chart-layout { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; }
+.epv-legend { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 8px; font-size: .9rem; }
+.epv-key { display: inline-block; width: 22px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
+.epv-key-done { background: #1b1b1b; }
+.epv-key-plan { background: #c6a15b; width: 4px; height: 16px; margin: 0 17px 0 9px; vertical-align: -3px; }
+.epv-key-short { background: #c0603a; }
+.epv-chart { margin: 0; background: #fff; border: 1px solid rgba(198,161,91,.35); border-radius: 14px; padding: 20px; box-shadow: 0 14px 36px rgba(17,17,17,.06); }
+.epv-chart svg { width: 100%; height: auto; display: block; }
+.epv-chart figcaption { font-size: .8rem; color: #66635d; margin-top: 8px; line-height: 1.6; }
+
+.epv-start { list-style: none; padding: 0; margin: 0 auto; max-width: 880px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.epv-start li { background: #1f1f1f; border: 1px solid rgba(198,161,91,.4); border-radius: 12px; padding: 20px; line-height: 1.7; font-size: .92rem; color: #d8d2c4; }
+.epv-start li span { display: inline-flex; width: 30px; height: 30px; border-radius: 50%; background: #c6a15b; color: #111; font-weight: 700; align-items: center; justify-content: center; margin-bottom: 10px; }
+.epv-start li b { display: block; color: #fff; font-size: 1.02rem; margin-bottom: 4px; }
+.epv-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
+
+@media (max-width: 820px) {
+  .epv-section { padding: 52px 0; }
+  .epv-compare, .epv-chart-layout, .epv-start { grid-template-columns: 1fr; }
+  .epv-year-head { display: none; }
+  .epv-year-row { grid-template-columns: 1fr; }
+  .epv-lane { justify-content: flex-start; padding: 10px 14px; background: #111; color: #e2c98a; border: none; }
+  .epv-when { display: block; font-size: .75rem; font-weight: 700; opacity: .8; margin-bottom: 2px; }
+  .epv-cell { min-height: 0; }
+}
+.epv-dark .epv-heading h2 { color: #fff; }
+.epv-dark .epv-actions .btn-secondary { color: #e2c98a; border: 1px solid #c6a15b; background: transparent; }
+@media (max-width: 820px) {
+  .epv-table { min-width: 0; }
+  .epv-table thead { display: none; }
+  .epv-table, .epv-table tbody, .epv-table tr, .epv-table th, .epv-table td { display: block; width: 100%; }
+  .epv-table tr { border: 1px solid rgba(198,161,91,.35); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .epv-table tbody th { background: #111; color: #e2c98a; border: none; }
+  .epv-table td { border: none; padding: 10px 16px; }
+  .epv-table td::before { content: attr(data-label); display: block; font-size: .75rem; font-weight: 700; color: #8a6a2c; margin-bottom: 2px; }
+  .epv-chart { padding: 14px; }
+}
