@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-shizuoka-teaching-seminar-2026",
+    "slug": "shizuoka-teaching-seminar-2026",
+    "title": "先生は、なぜあのとき待ってくれたのか。静岡県の中高生向け教職セミナーに思う",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.05",
+    "excerpt": "先生が返事を待つ数秒、教室では何が起きているのか。静岡県の教職セミナーを手がかりに、教わる側が教える側を考える面白さを綴ります。",
+    "thumbnail": "/assets/images/columns/shizuoka-teaching-seminar-2026/thumbnail.webp",
+    "readTime": "約5分",
+    "tags": [
+      "静岡県",
+      "教職セミナー",
+      "中高生",
+      "進路",
+      "教師"
+    ],
+    "url": "/columns/shizuoka-teaching-seminar-2026/"
+  },
+  {
     "id": "column-gemini-notebook-textbook-window",
     "slug": "gemini-notebook-textbook-window",
     "title": "Gemini Notebookで海外の教科書を読む。教科書は、その社会の文化を知る窓",
