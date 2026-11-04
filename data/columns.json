@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-ai-revision-loop",
+    "slug": "ai-revision-loop",
+    "title": "AIに直してもらうほど、完成が遠のく。やり直しのループを止める5つの視点",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.05",
+    "excerpt": "余白を直すと、残したかった図が消える。本づくりと座席表の印刷を例に、AIへの頼み方と、修正を打ち切る目安を考えます。",
+    "thumbnail": "/assets/images/columns/ai-revision-loop/thumbnail.webp",
+    "readTime": "約14分",
+    "tags": [
+      "生成AI",
+      "プロンプト",
+      "校正",
+      "教材づくり",
+      "AI活用"
+    ],
+    "url": "/columns/ai-revision-loop/"
+  },
+  {
     "id": "column-shizuoka-teaching-seminar-2026",
     "slug": "shizuoka-teaching-seminar-2026",
     "title": "先生は、なぜあのとき待ってくれたのか。静岡県の中高生向け教職セミナーに思う",
