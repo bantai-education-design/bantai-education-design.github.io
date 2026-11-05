@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-shodo-heart",
+    "slug": "shodo-heart",
+    "title": "書道は、なぜ心に響くのか。ユネスコ登録への知らせに思う「一文字の力」",
+    "category": "日常の気づき",
+    "categorySlug": "thoughts",
+    "date": "2026.11.05",
+    "excerpt": "絵でもない、ただの記号でもない。書道のユネスコ登録勧告をきっかけに、線や余白の魅力、児童への声かけ、暮らしで楽しむ一文字を考えます。",
+    "thumbnail": "/assets/images/columns/shodo-heart/thumbnail.webp",
+    "readTime": "約10分",
+    "tags": [
+      "書道",
+      "無形文化遺産",
+      "ユネスコ",
+      "書写",
+      "子どもの表現"
+    ],
+    "url": "/columns/shodo-heart/"
+  },
+  {
     "id": "column-ai-revision-loop",
     "slug": "ai-revision-loop",
     "title": "AIに直してもらうほど、完成が遠のく。やり直しのループを止める5つの視点",
