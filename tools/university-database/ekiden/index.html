@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>三大駅伝 出場校検索 | Ban.Tai 全国大学データベース</title>
+  <meta name="description" content="出雲駅伝・全日本大学駅伝・箱根駅伝の出場校と総合成績を、大学名や大会・年から調べられるBan.Tai全国大学データベースの付録です。">
+  <link rel="canonical" href="https://bantai-education-design.github.io/tools/university-database/ekiden/">
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/ekiden.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try {
+        isExcluded = localStorage.getItem('bantai_admin') === 'true';
+      } catch (e) {}
+
+      if (isLocal || isExcluded) {
+        window['ga-disable-G-KPGJ0R2KXR'] = true;
+      }
+    })();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><span class="brand-title">Ban.Tai Education Design</span></a>
+    <span class="pref-pill ekiden-pill">付録 三大駅伝</span>
+    <nav class="nav-links" aria-label="主要ナビゲーション"><a href="#finder">探す</a><a href="#sources">出典と注記</a><a href="../tokyo/">大学データベース</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="ekiden-hero">
+    <div class="ekiden-hero-inner">
+      <div>
+        <span class="section-kicker">THREE GREAT EKIDEN</span>
+        <h1>駅伝の歩みから、<br><em>大学を知る。</em></h1>
+        <p>出雲駅伝・全日本大学駅伝・箱根駅伝の出場校と総合成績を、大学名や大会・年から調べられます。大学名から、そのまま大学紹介へ進めます。</p>
+      </div>
+      <dl class="ekiden-stats" aria-label="収録の概要">
+        <div><dt>順位表のある大会</dt><dd id="stat-editions">—</dd></div>
+        <div><dt>出場チーム</dt><dd id="stat-teams">—</dd></div>
+        <div><dt>大学紹介とつながる大学</dt><dd id="stat-linked">—</dd></div>
+      </dl>
+    </div>
+    <ol class="series-strip" aria-label="三大駅伝の時期">
+      <li data-series="izumo"><span>10月</span><strong>出雲駅伝</strong><small>6区間 45.1km</small></li>
+      <li data-series="zennihon"><span>11月</span><strong>全日本大学駅伝</strong><small>8区間 106.8km</small></li>
+      <li data-series="hakone"><span>1月</span><strong>箱根駅伝</strong><small>10区間 217.1km</small></li>
+    </ol>
+  </section>
+
+  <section id="finder" class="section ekiden-finder">
+    <div class="ekiden-tabs" role="tablist" aria-label="探し方">
+      <button role="tab" id="tab-univ" aria-controls="panel-univ" aria-selected="true" data-tab="univ">大学から探す</button>
+      <button role="tab" id="tab-race" aria-controls="panel-race" aria-selected="false" data-tab="race" tabindex="-1">大会と年から探す</button>
+      <button role="tab" id="tab-record" aria-controls="panel-record" aria-selected="false" data-tab="record" tabindex="-1">記録から探す</button>
+    </div>
+
+    <!-- 大学から探す -->
+    <div id="panel-univ" class="ekiden-panel" role="tabpanel" aria-labelledby="tab-univ">
+      <form id="univ-search" class="search-shell ekiden-search" role="search">
+        <label class="sr-only" for="univ-q">大学名で探す</label>
+        <input id="univ-q" type="search" placeholder="大学名（今の名前・当時の名前・略称）" autocomplete="off">
+        <button type="submit">探す</button>
+      </form>
+      <div class="ekiden-filters" aria-label="絞り込み">
+        <label>大会<select id="f-series"><option value="">3大会すべて</option><option value="izumo">出雲駅伝</option><option value="zennihon">全日本大学駅伝</option><option value="hakone">箱根駅伝</option></select></label>
+        <label>年代<select id="f-decade"><option value="">すべての年</option></select></label>
+        <label>地区<select id="f-region"><option value="">すべて</option></select></label>
+        <label>都道府県<select id="f-pref"><option value="">すべて</option></select></label>
+        <label>設置区分<select id="f-type"><option value="">すべて</option><option value="national">国立</option><option value="public">公立</option><option value="private">私立</option></select></label>
+        <label class="check"><input id="f-win" type="checkbox">優勝したことがある</label>
+        <label class="check"><input id="f-univonly" type="checkbox" checked>大学だけ（選抜チームを除く）</label>
+      </div>
+      <p class="filter-note">地区は学生陸上競技連盟の地区分け（全日本大学駅伝の公式資料による）です。都道府県・設置区分は大学DBに載っている大学（東京都・埼玉県・神奈川県）で絞り込めます。</p>
+      <div class="ekiden-layout">
+        <div>
+          <p id="univ-count" class="result-count" aria-live="polite">読み込み中</p>
+          <ul id="univ-list" class="team-list" aria-busy="true"></ul>
+        </div>
+        <article id="team-detail" class="team-detail" aria-live="polite">
+          <div class="team-empty">左の一覧から大学を選ぶと、3大会の成績が年表で表示されます。</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 大会と年から探す -->
+    <div id="panel-race" class="ekiden-panel" role="tabpanel" aria-labelledby="tab-race" hidden>
+      <div class="ekiden-filters">
+        <label>大会<select id="r-series"><option value="hakone">箱根駅伝</option><option value="zennihon">全日本大学駅伝</option><option value="izumo">出雲駅伝</option></select></label>
+        <label>回<select id="r-edition"></select></label>
+      </div>
+      <div id="race-head" class="race-head"></div>
+      <div class="table-scroll"><table id="race-table" class="race-table"></table></div>
+    </div>
+
+    <!-- 記録から探す -->
+    <div id="panel-record" class="ekiden-panel" role="tabpanel" aria-labelledby="tab-record" hidden>
+      <p class="filter-note">優勝校の一覧は3大会の全回、三冠と優勝回数は総合成績を収録した範囲で数えています。時代別の記録は第2段階で増やします。</p>
+      <div class="record-grid">
+        <section class="record-card"><h2>三冠（同じ年度に3大会で優勝）</h2><ul id="triple-list"></ul></section>
+        <section class="record-card"><h2>優勝回数（収録範囲）</h2><div class="table-scroll"><table id="wins-table" class="race-table compact"></table></div></section>
+      </div>
+      <section class="record-card wide"><h2>歴代優勝校</h2>
+        <div class="ekiden-filters"><label>大会<select id="w-series"><option value="hakone">箱根駅伝</option><option value="zennihon">全日本大学駅伝</option><option value="izumo">出雲駅伝</option></select></label></div>
+        <div class="table-scroll"><table id="winners-table" class="race-table compact"></table></div>
+      </section>
+    </div>
+  </section>
+
+  <section id="sources" class="section ekiden-sources">
+    <h2>出典と注記</h2>
+    <ul>
+      <li>数値は各大会の公式記録によります。出典: <a href="https://www.hakone-ekiden.jp/" target="_blank" rel="noopener">箱根駅伝公式サイト（関東学生陸上競技連盟）</a>、<a href="https://daigaku-ekiden.com/datafile/index.html" target="_blank" rel="noopener">全日本大学駅伝公式サイト</a>、<a href="https://www.izumo-ekiden.jp/data/index.html" target="_blank" rel="noopener">出雲駅伝公式サイト</a>。各回の出典ページは順位表の上に表示しています。</li>
+      <li id="coverage-note">総合成績の収録範囲を読み込み中です。</li>
+      <li>「参考」はオープン参加など公式記録で順位が付いていない記録、「途中棄権」「失格」「出走せず」は公式記録の表記に従っています。</li>
+      <li>校名が変わった大学は当時の名前で表示し、今の名前でも探せます。</li>
+      <li>年度は4月始まりです。出雲（10月）・全日本（11月）・箱根（翌年1月）を同じ年度として三冠を数えています。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-inner">Ban.Tai Education Design 全国大学データベース 付録「三大駅伝 出場校検索」　<a href="../tokyo/">大学データベースへ戻る</a></div></footer>
+<script src="assets/ekiden.js"></script>
+</body>
+</html>
