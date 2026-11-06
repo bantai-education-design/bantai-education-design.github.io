@@ -54,7 +54,7 @@
   <div class="header-inner">
     <a class="brand" href="/"><span class="brand-title">Ban.Tai Education Design</span></a>
     <span class="pref-pill ekiden-pill">付録 三大駅伝</span>
-    <nav class="nav-links" aria-label="主要ナビゲーション"><a href="#finder">探す</a><a href="#sources">出典と注記</a><a href="../tokyo/">大学データベース</a></nav>
+    <nav class="nav-links" aria-label="主要ナビゲーション"><a href="#finder">探す</a><a href="?tab=basics#finder">駅伝の基本</a><a href="#sources">出典と注記</a><a href="../tokyo/">大学データベース</a></nav>
   </div>
 </header>
 
@@ -84,6 +84,7 @@
       <button role="tab" id="tab-univ" aria-controls="panel-univ" aria-selected="true" data-tab="univ">大学から探す</button>
       <button role="tab" id="tab-race" aria-controls="panel-race" aria-selected="false" data-tab="race" tabindex="-1">大会と年から探す</button>
       <button role="tab" id="tab-record" aria-controls="panel-record" aria-selected="false" data-tab="record" tabindex="-1">記録から探す</button>
+      <button role="tab" id="tab-basics" aria-controls="panel-basics" aria-selected="false" data-tab="basics" tabindex="-1">駅伝の基本</button>
     </div>
 
     <!-- 大学から探す -->
@@ -135,6 +136,22 @@
         <div class="ekiden-filters"><label>大会<select id="w-series"><option value="hakone">箱根駅伝</option><option value="zennihon">全日本大学駅伝</option><option value="izumo">出雲駅伝</option></select></label></div>
         <div class="table-scroll"><table id="winners-table" class="race-table compact"></table></div>
       </section>
+    </div>
+    <!-- 駅伝の基本 -->
+    <div id="panel-basics" class="ekiden-panel basics" role="tabpanel" aria-labelledby="tab-basics" hidden>
+      <p class="basics-lead">三大駅伝のルールやコースを、図と表でまとめました。数字は各大会の公式の要項・コース紹介によります。</p>
+      <section class="basics-block"><h2>ひと目でくらべる</h2><div class="table-scroll"><table id="basics-compare" class="race-table basics-table"></table></div></section>
+      <section class="basics-block"><h2>出場までの道</h2><p class="basics-sub">どんなチームが走るのか。1本の帯が出場チーム全体です。</p><div id="basics-teams" class="figure-scroll"></div></section>
+      <section class="basics-block"><h2>コースと区間</h2>
+        <div class="basics-pills" role="group" aria-label="大会を選ぶ"><button type="button" data-course="izumo">出雲駅伝</button><button type="button" data-course="zennihon">全日本大学駅伝</button><button type="button" data-course="hakone" aria-pressed="true">箱根駅伝</button></div>
+        <p class="basics-sub">区間の長さに合わせて描いた模式図です（地図ではありません）。</p>
+        <div id="basics-course" class="figure-scroll"></div>
+        <div class="table-scroll"><table id="basics-legs" class="race-table basics-table"></table></div>
+        <p id="basics-course-src" class="basics-src"></p>
+      </section>
+      <section class="basics-block"><h2>たすきリレーのしくみ</h2><div id="basics-relay" class="figure-scroll"></div>
+        <h3>繰り上げスタート</h3><div class="table-scroll"><table id="basics-kuriage" class="race-table basics-table"></table></div></section>
+      <section class="basics-block"><h2>駅伝のことば</h2><dl id="basics-terms" class="basics-terms"></dl></section>
     </div>
   </section>
 

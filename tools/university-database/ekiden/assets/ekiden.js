@@ -1,5 +1,5 @@
 /* 三大駅伝 出場校検索（大学DBの付録）
- * データ: data/（daigaku_DB の scripts/ekiden/export_public.py で書き出し、そのまま写したもの）
+ * データ: data/public_export/ekiden/（scripts/ekiden/export_public.py で書き出したもの）
  * URL: ?tab=univ&team=t00001 / ?tab=race&series=hakone&ed=102 / ?tab=record
  */
 (() => {
@@ -105,7 +105,8 @@
     if (p.get('ed')) $('#r-edition').value = p.get('ed');
     renderRace();
     if (p.get('team') && S.teamById.has(p.get('team'))) showTeam(p.get('team'), false);
-    selectTab(['univ', 'race', 'record'].includes(p.get('tab')) ? p.get('tab') : 'univ', false);
+    selectTab(['univ', 'race', 'record', 'basics'].includes(p.get('tab')) ? p.get('tab') : 'univ', false);
+    loadBasics();
   }
 
   /* ---------- タブ ---------- */
@@ -124,6 +125,9 @@
     document.querySelectorAll('.ekiden-tabs [role="tab"]').forEach((t) => {
       const on = t.dataset.tab === name;
       t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      if (on && t.parentElement.scrollWidth > t.parentElement.clientWidth) {
+        t.parentElement.scrollLeft = t.offsetLeft - (t.parentElement.clientWidth - t.offsetWidth) / 2;
+      }
       $(`#panel-${t.dataset.tab}`).hidden = !on;
     });
     if (push) {
@@ -298,6 +302,144 @@
       }).join('')}</tbody>`;
     $('#race-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
     if (!$('#panel-race').hidden) setParams({ tab: 'race', series: s, ed });
+  }
+
+  /* ---------- 駅伝の基本 ---------- */
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)' };
+  function loadBasics() {
+    getJson('basics.json').then((b) => { S.basics = b; renderBasics(); })
+      .catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
+  }
+  function srcLink(src, role) {
+    return `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)} ↗</a>${role === 'secondary' ? '（報道による。公式の要項には記載なし）' : ''}`;
+  }
+  function renderBasics() {
+    const B = S.basics;
+    const races = B.races;
+    const rows = [
+      ['時期', (r) => r.month],
+      ['スタート', (r) => r.start],
+      ['ゴール', (r) => r.finish],
+      ['区間数', (r) => `${r.legs_count}区間`],
+      ['総距離', (r) => `${r.distance_km}km`],
+      ['いちばん長い区間', (r) => { const l = r.legs.reduce((a, b) => (b.km > a.km ? b : a)); return `${l.no}区 ${l.km}km`; }],
+      ['いちばん短い区間', (r) => { const l = r.legs.reduce((a, b) => (b.km < a.km ? b : a)); return `${l.no}区 ${l.km}km`; }],
+      ['出場チーム', (r) => `${r.teams}チーム`],
+      ['走る人数', (r) => r.runners],
+      ['シード', (r) => r.seed],
+    ];
+    $('#basics-compare').innerHTML = `<thead><tr><th></th>${races.map((r) => `<th data-series="${r.series}" class="race-col">${esc(r.name)}</th>`).join('')}</tr></thead><tbody>${
+      rows.map(([label, f]) => `<tr><th scope="row">${label}</th>${races.map((r) => `<td>${esc(f(r))}</td>`).join('')}</tr>`).join('')}</tbody>`;
+
+    $('#basics-teams').innerHTML = teamsChart(races);
+
+    document.querySelectorAll('[data-course]').forEach((b) => b.addEventListener('click', () => showCourse(b.dataset.course)));
+    showCourse('hakone');
+
+    $('#basics-relay').innerHTML = relayFigure() + `<p class="basics-src">出典: ${srcLink(B.relay_rules.zone.source, B.relay_rules.zone.role)}</p>`;
+    $('#basics-kuriage').innerHTML = `<thead><tr><th>大会</th><th>決まり</th><th>出典</th></tr></thead><tbody>${
+      SERIES.map((s) => B.relay_rules.kuriage.find((k) => k.series === s)).filter(Boolean).map((k) =>
+        `<tr><th scope="row">${SERIES_NAME[k.series]}</th><td class="wrap">${esc(k.text)}</td><td class="wrap">${srcLink(k.source, k.role)}</td></tr>`).join('')}</tbody>`;
+    $('#basics-terms').innerHTML = B.terms.map((t) => `<div><dt>${esc(t.term)}</dt><dd>${esc(t.text)}</dd></div>`).join('');
+  }
+
+  // 出場チームの内訳（1本の帯が全体）
+  function teamsChart(races) {
+    const W = 720, L = 130, R = 64, barH = 28, gap = 46, top = 12;
+    const max = Math.max(...races.map((r) => r.teams));
+    const unit = (W - L - R) / max;
+    const shade = [1, 0.62, 0.32];
+    let g = '';
+    races.forEach((r, i) => {
+      const y = top + i * gap;
+      g += `<text x="${L - 12}" y="${y + barH / 2 + 5}" text-anchor="end" font-size="14" font-weight="700" fill="var(--ink)">${esc(r.name)}</text>`;
+      let x = L;
+      r.team_parts.forEach((p, j) => {
+        const w = p.n * unit;
+        g += `<rect x="${x.toFixed(1)}" y="${y}" width="${(w - 2).toFixed(1)}" height="${barH}" rx="5" fill="${COLOR[r.series]}" fill-opacity="${shade[j]}"><title>${esc(p.label)} ${p.n}</title></rect>`;
+        if (w > 26) g += `<text x="${(x + w / 2 - 1).toFixed(1)}" y="${y + barH / 2 + 5}" text-anchor="middle" font-size="13" font-weight="700" fill="${j === 0 ? '#fff' : 'var(--ink)'}">${p.n}</text>`;
+        x += w;
+      });
+      g += `<text x="${(x + 6).toFixed(1)}" y="${y + barH / 2 + 5}" font-size="12" fill="var(--muted)">計${r.teams}</text>`;
+    });
+    const H = top + races.length * gap - 6;
+    const legend = races.map((r) => `<div class="team-legend" data-series="${r.series}"><b>${esc(r.name)}</b><ul>${
+      r.team_parts.map((p, j) => `<li><i style="opacity:${shade[j]}"></i>${esc(p.label)} <b>${p.n}</b></li>`).join('')}</ul><p class="basics-note">${esc(r.team_note)}</p></div>`).join('');
+    return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="三大駅伝の出場チームの内訳">${g}</svg><div class="team-legends">${legend}</div>`;
+  }
+
+  function showCourse(series) {
+    document.querySelectorAll('[data-course]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.course === series));
+    const r = S.basics.races.find((x) => x.series === series);
+    let fig = '';
+    if (series === 'hakone') {
+      fig = courseStrip(r, r.legs.slice(0, 5), r.points.slice(0, 6), '往路（1月2日）大手町 → 芦ノ湖', true)
+          + courseStrip(r, r.legs.slice(5), r.points.slice(5), '復路（1月3日）芦ノ湖 → 大手町', false);
+    } else {
+      fig = courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
+    }
+    $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
+    const hasNote = r.legs.some((l) => l.note);
+    const hasDay = r.legs.some((l) => l.day);
+    $('#basics-legs').innerHTML = `<thead><tr><th>区間</th>${hasDay ? '<th>日</th>' : ''}<th>スタート</th><th>たすきを渡す場所</th><th class="num">距離</th>${hasNote ? '<th>見どころ</th>' : ''}</tr></thead><tbody>${
+      r.legs.map((l) => `<tr><th scope="row">${l.no}区</th>${hasDay ? `<td>${esc(l.day)}</td>` : ''}<td class="wrap">${esc(l.from)}</td><td class="wrap">${esc(l.to)}</td><td class="num">${l.km.toFixed(1)}km</td>${hasNote ? `<td class="wrap">${esc(l.note || '')}</td>` : ''}</tr>`).join('')
+    }<tr class="total"><th scope="row">合計</th>${hasDay ? '<td></td>' : ''}<td></td><td></td><td class="num">${r.distance_km.toFixed(1)}km</td>${hasNote ? '<td></td>' : ''}</tr></tbody>`;
+    $('#basics-course-src').innerHTML = '出典: ' + r.sources.map((s) => srcLink(s)).join('、');
+  }
+
+  // 区間の長さに合わせた帯の図。mountain=true で5区に最高点の印
+  function courseStrip(r, legs, points, title, mountain) {
+    const W = 760, L = 30, R = 30, y = mountain ? 92 : 62, H = y + 84;
+    const total = legs.reduce((a, l) => a + l.km, 0);
+    const scale = (W - L - R) / total;
+    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="700" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
+    const xs = [x];
+    legs.forEach((l, i) => {
+      const w = l.km * scale;
+      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${COLOR[r.series]}" fill-opacity="${i % 2 ? 0.55 : 0.9}"/>`;
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">${l.no}区</text>`;
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
+      if (mountain && l.no === 5) {
+        const mx = x + w * 0.55;
+        g += `<path d="M${(x + 6).toFixed(1)} ${y - 30} L${mx.toFixed(1)} ${y - 62} L${(x + w - 8).toFixed(1)} ${y - 34} Z" fill="#e9e5d8" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>`;
+        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 62}" r="3.5" fill="var(--ink)"/><text x="${(mx - 8).toFixed(1)}" y="${y - 70}" text-anchor="end" font-size="11.5" fill="var(--ink)">最高点 標高約874m</text>`;
+      }
+      x += w;
+      xs.push(x);
+    });
+    points.forEach((p, i) => {
+      const px = Math.min(xs[i], W - R);
+      const end = i === 0 || i === points.length - 1;
+      g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2"/>`;
+      const anchor = i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'middle';
+      if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 8}" x2="${px.toFixed(1)}" y2="${y + 50}" stroke="var(--line)" stroke-width="1.5"/>`;
+      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 700 : 400}" fill="var(--ink)">${esc(p)}</text>`;
+    });
+    return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
+  }
+
+  // たすきの受け渡しの図（中継線と前方20mの中継ゾーン）
+  function relayFigure() {
+    const runner = (cx, color, sash) => `<g transform="translate(${cx},0)">
+      <circle cx="0" cy="62" r="11" fill="${color}"/>
+      <path d="M0 74 L0 112 M0 84 L-16 100 M0 84 L18 94 M0 112 L-14 140 M0 112 L16 138" stroke="${color}" stroke-width="7" stroke-linecap="round" fill="none"/>
+      ${sash ? `<path d="M-7 76 L9 108" stroke="#c9a227" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
+    const W = 720, H = 222, x0 = 270, zone = 260;
+    return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="たすきの受け渡しは中継線から前方20mの中継ゾーンで行う">
+      <rect x="20" y="146" width="${W - 40}" height="14" rx="4" fill="#e9e5d8"/>
+      <rect x="${x0}" y="40" width="${zone}" height="126" rx="8" fill="var(--gold-soft)" fill-opacity=".75"/>
+      <line x1="${x0}" y1="34" x2="${x0}" y2="166" stroke="var(--ink)" stroke-width="3"/>
+      <text x="${x0}" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継線</text>
+      <text x="${x0 + zone / 2}" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継ゾーン（中継線から前方20m）</text>
+      <path d="M${x0 + 4} 182 H${x0 + zone - 4}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
+      ${runner(330, 'var(--ink-soft)', true)}${runner(420, 'var(--ink-soft)', false)}
+      <path d="M352 96 Q376 78 400 92" stroke="#c9a227" stroke-width="3" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+      <text x="376" y="58" text-anchor="middle" font-size="12" fill="var(--ink-soft)">たすき</text>
+      <text x="${W - 30}" y="120" text-anchor="end" font-size="13" fill="var(--ink-soft)">進む向き →</text>
+      <text x="40" y="70" font-size="12.5" fill="var(--ink-soft)">前の区間の選手</text><text x="40" y="90" font-size="12.5" fill="var(--ink-soft)">が走ってくる</text>
+    </svg>`;
   }
 
   /* ---------- 記録から探す ---------- */

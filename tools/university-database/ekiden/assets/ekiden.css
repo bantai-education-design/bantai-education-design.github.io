@@ -121,3 +121,36 @@
   .team-detail{padding:16px}
 }
 .dim{color:var(--muted);font-weight:400}
+
+/* 駅伝の基本 */
+.basics-lead{font-size:1rem;margin:0 0 8px}
+.basics-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.basics-block h2{font-size:1.2rem;margin:0 0 6px}
+.basics-block h3{font-size:1rem;margin:18px 0 8px}
+.basics-sub,.basics-note,.basics-src{font-size:.84rem;color:var(--muted);margin:4px 0 10px}
+.basics-note b{color:var(--ink)}
+.basics-src a{color:inherit}
+.basics-table th[scope="row"]{background:#faf9f5;font-weight:700;white-space:nowrap}
+.basics-table td.wrap{white-space:normal;min-width:9em}
+.basics-table th.race-col{border-top:4px solid var(--s);font-size:.9rem;color:var(--ink)}
+.basics-table tr.total td,.basics-table tr.total th{font-weight:800;background:#faf9f5}
+.figure-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0 10px}
+.fig{display:block;width:100%;min-width:640px;height:auto}
+.fig.course{margin-bottom:6px}
+.basics-pills{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.basics-pills button{font:inherit;font-weight:700;padding:8px 16px;border-radius:999px;border:2px solid var(--s);background:#fff;color:var(--ink);cursor:pointer}
+.basics-pills button[data-course="izumo"]{--s:var(--izumo)}.basics-pills button[data-course="zennihon"]{--s:var(--zennihon)}.basics-pills button[data-course="hakone"]{--s:var(--hakone)}
+.basics-pills button[aria-pressed="true"]{background:var(--s);color:#fff}
+.basics-pills button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.basics-terms{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:0}
+.basics-terms div{background:#faf9f5;border-radius:12px;padding:10px 14px;border-left:4px solid var(--gold)}
+.basics-terms dt{font-weight:800}
+.basics-terms dd{margin:2px 0 0;font-size:.9rem;color:var(--ink-soft)}
+@media (max-width:560px){.basics-block{padding:16px}.fig{min-width:600px}}
+.team-legends{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
+.team-legend{border-top:4px solid var(--s);background:#faf9f5;border-radius:10px;padding:8px 12px;font-size:.86rem}
+.team-legend ul{list-style:none;margin:4px 0;padding:0}
+.team-legend li{display:flex;gap:6px;align-items:baseline;line-height:1.5}
+.team-legend li i{flex:0 0 12px;height:12px;border-radius:3px;background:var(--s);display:inline-block;transform:translateY(1px)}
+.team-legend li b{margin-left:auto}
+@media (max-width:900px){.team-legends{grid-template-columns:1fr}}
