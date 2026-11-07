@@ -99,7 +99,7 @@ jobs:
           const kquals=JSON.parse(fs.readFileSync('tools/university-database/qualifications/qualifications.json','utf8')).universities;
           const kqualIds=['u000050','u000175','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000204','u000205','u000206'];
           assert.equal(kqualIds.filter(id=>kquals[id]).length,30,'Kanagawa qualification universities');
-          assert.equal(kqualIds.reduce((n,id)=>n+kquals[id].qualifications.length,0),83,'Kanagawa qualification items');
+          assert.equal(kqualIds.reduce((n,id)=>n+kquals[id].qualifications.length,0),99,'Kanagawa qualification items');
           for(const id of kqualIds){
             assert.ok(kquals[id].qualifications.every(x=>['designated_program','official_page'].includes(x.basis)&&/^https:\/\//.test(x.source_url)),id+' qualification sources');
           }

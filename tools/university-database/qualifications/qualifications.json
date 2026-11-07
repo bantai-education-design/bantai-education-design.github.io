@@ -2237,6 +2237,30 @@
           "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
           "evidence": "歯学科（養成課程）",
           "group": "歯科医師"
+        },
+        {
+          "name": "中学校・高等学校教諭一種免許状",
+          "basis": "official_page",
+          "department": "文学部 日本文学科・英語英米文学科・文化財学科・ドキュメンテーション学科",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/literature/japanese-index.html",
+          "evidence": "教職課程の所定単位修得（日本文学科は中高国語・高書道、ドキュメンテーション学科は高等学校のみ）",
+          "group": "中学校・高等学校教諭"
+        },
+        {
+          "name": "図書館司書",
+          "basis": "official_page",
+          "department": "文学部 全学科",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/literature/japanese-index.html",
+          "evidence": "司書課程における所定の単位修得（教職免許と併せて司書教諭も取得可）",
+          "group": "図書館司書"
+        },
+        {
+          "name": "学芸員",
+          "basis": "official_page",
+          "department": "文学部 全学科",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/literature/japanese-index.html",
+          "evidence": "学芸員課程における所定の単位修得",
+          "group": "学芸員"
         }
       ]
     },
@@ -2492,6 +2516,30 @@
           "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
           "evidence": "臨床工学科（養成課程）",
           "group": "臨床工学技士"
+        },
+        {
+          "name": "臨床検査技師（国家試験受験資格）",
+          "basis": "official_page",
+          "department": "医用工学部 生命医工学科",
+          "source_url": "https://toin.ac.jp/univ/aims/",
+          "evidence": "生命医工学科における所定の単位修得で臨床検査技師国家試験受験資格を取得可能",
+          "group": "臨床検査技師"
+        },
+        {
+          "name": "小学校教諭一種免許状",
+          "basis": "official_page",
+          "department": "スポーツ科学部 スポーツ教育学科",
+          "source_url": "https://toin.ac.jp/facss/ss_top/career/",
+          "evidence": "スポーツ教育学科の教職課程における所定の単位修得",
+          "group": "小学校教諭"
+        },
+        {
+          "name": "中学校・高等学校教諭一種免許状（保健体育）",
+          "basis": "official_page",
+          "department": "スポーツ科学部 スポーツ教育学科・スポーツ健康科学科",
+          "source_url": "https://toin.ac.jp/facss/ss_top/career/",
+          "evidence": "スポーツ科学部各学科の教職課程における所定の単位修得",
+          "group": "中学校・高等学校教諭"
         }
       ]
     },
@@ -2505,6 +2553,38 @@
           "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
           "evidence": "看護学科（養成課程）",
           "group": "看護師"
+        },
+        {
+          "name": "幼稚園教諭一種免許状",
+          "basis": "official_page",
+          "department": "コミュニケーション文化学部 子ども学科",
+          "source_url": "https://www.shoin-u.ac.jp/job/qualification/",
+          "evidence": "子ども学科の教職課程における所定の単位修得",
+          "group": "幼稚園教諭"
+        },
+        {
+          "name": "保育士",
+          "basis": "official_page",
+          "department": "コミュニケーション文化学部 生活心理学科・子ども学科",
+          "source_url": "https://www.shoin-u.ac.jp/job/qualification/",
+          "evidence": "生活心理学科・子ども学科における所定の単位修得",
+          "group": "保育士"
+        },
+        {
+          "name": "中学校・高等学校教諭一種免許状",
+          "basis": "official_page",
+          "department": "経営文化学部（ビジネスマネジメント学科）・観光メディア文化学部（メディア情報文化学科）・コミュニケーション文化学部（異文化コミュニケーション学科・日本文化コミュニケーション学科）",
+          "source_url": "https://www.shoin-u.ac.jp/job/qualification/",
+          "evidence": "学科により中学（社会・英語・国語）・高校（公民・地理歴史・英語・国語・情報）の教職課程科目修得（メディア情報文化学科は高校情報のみ）",
+          "group": "中学校・高等学校教諭"
+        },
+        {
+          "name": "学芸員",
+          "basis": "official_page",
+          "department": "経営文化学部・観光メディア文化学部・コミュニケーション文化学部 全学科",
+          "source_url": "https://www.shoin-u.ac.jp/job/qualification/",
+          "evidence": "博物館に関する専門教育科目の所定単位修得",
+          "group": "学芸員"
         }
       ]
     },
@@ -2518,6 +2598,38 @@
           "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
           "evidence": "看護学科（養成課程）",
           "group": "看護師"
+        },
+        {
+          "name": "保健師（国家試験受験資格）",
+          "basis": "official_page",
+          "department": "看護学部 看護学科",
+          "source_url": "https://www.soei.ac.jp/guide/info/license/",
+          "evidence": "選択制（養護教諭課程との同時履修不可・1学年最大20名、2年次後期に成績・面接・筆記試験による選抜あり）",
+          "group": "保健師"
+        },
+        {
+          "name": "養護教諭一種免許状",
+          "basis": "official_page",
+          "department": "看護学部 看護学科",
+          "source_url": "https://www.soei.ac.jp/guide/info/license/",
+          "evidence": "選択制（保健師課程との同時履修不可・1学年最大20名、2年次後期に成績・面談・筆記試験による選抜あり）",
+          "group": "養護教諭"
+        },
+        {
+          "name": "幼稚園教諭一種免許状",
+          "basis": "official_page",
+          "department": "こども教育学部 幼児教育学科",
+          "source_url": "https://www.soei.ac.jp/guide/info/license/",
+          "evidence": "選択制の教職課程において所定の科目を学修した学生全員が卒業時に取得可能",
+          "group": "幼稚園教諭"
+        },
+        {
+          "name": "保育士",
+          "basis": "official_page",
+          "department": "こども教育学部 幼児教育学科",
+          "source_url": "https://www.soei.ac.jp/guide/info/license/",
+          "evidence": "選択制の課程において所定の科目を学修した学生全員が卒業時に取得可能",
+          "group": "保育士"
         }
       ]
     },
@@ -2539,6 +2651,22 @@
           "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
           "evidence": "医療薬学科（養成課程）",
           "group": "薬剤師"
+        },
+        {
+          "name": "理学療法士（国家試験受験資格）",
+          "basis": "official_page",
+          "department": "保健医療学部 リハビリテーション学科（理学療法学専攻）",
+          "source_url": "https://sums.ac.jp/html/special/",
+          "evidence": "理学療法学専攻において所定の単位修得で理学療法士国家試験受験資格を取得可能",
+          "group": "理学療法士"
+        },
+        {
+          "name": "作業療法士（国家試験受験資格）",
+          "basis": "official_page",
+          "department": "保健医療学部 リハビリテーション学科（作業療法学専攻）",
+          "source_url": "https://sums.ac.jp/html/special/",
+          "evidence": "作業療法学専攻において所定の単位修得で作業療法士国家試験受験資格を取得可能",
+          "group": "作業療法士"
         }
       ]
     },
