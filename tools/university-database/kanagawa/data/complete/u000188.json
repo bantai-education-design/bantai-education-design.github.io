@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000188",
+  "id": "u000188",
+  "name": "横浜薬科大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "「個性の伸展による人生練磨」を建学の精神とし、自己の専門性とアイデンティティを確立し、生涯を通じて自己の完成を目指すことを教育理念とする。",
+  "mission": "薬学を研究教授し、臨床で実践できる人間性豊かな薬剤師と、薬学の専門知識・技術を備えた研究者・技術者を育成して、学術の深化と人類の福祉に貢献する。",
+  "feature_summary": "横浜市に本部を置き、薬学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.hamayaku.ac.jp/",
+  "admissions_url": "https://www.hamayaku.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 2173,
+    "graduate": 21,
+    "total": 2194,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "薬学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300064",
+      "name": "薬学部",
+      "academic_field_tags": [
+        "薬学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300129",
+          "name": "健康薬学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300130",
+          "name": "漢方薬学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300131",
+          "name": "臨床薬学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300132",
+          "name": "薬科学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300054",
+      "name": "薬学研究科",
+      "programs": [
+        {
+          "name": "薬科学専攻"
+        },
+        {
+          "name": "薬学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "薬学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018801",
+      "name": "本部キャンパス",
+      "postal_code": "245-0066",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市戸塚区",
+      "address": "神奈川県横浜市戸塚区俣野町字東原601-1",
+      "official_url": "https://www.hamayaku.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "戸塚駅",
+          "line": "JR線・横浜市営地下鉄ブルーライン",
+          "access": "西口の戸塚バスセンター2番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+        },
+        {
+          "station": "湘南台駅",
+          "line": "小田急江ノ島線・相鉄いずみ野線・横浜市営地下鉄ブルーライン",
+          "access": "東口2番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+        },
+        {
+          "station": "大船駅",
+          "line": "JR線・湘南モノレール",
+          "access": "西口5番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "薬剤師（国家試験受験資格）",
+      "condition": "薬学部 薬学科（6年制課程）（6年制課程修了で薬剤師国家試験受験資格）",
+      "source_id": "s00018809"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018801",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018802",
+      "title": "横浜薬科大学 公式サイト",
+      "url": "https://www.hamayaku.ac.jp/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018803",
+      "title": "横浜薬科大学 公式入試情報",
+      "url": "https://www.hamayaku.ac.jp/admission/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018804",
+      "title": "横浜薬科大学 教育研究上の目的",
+      "url": "https://www.hamayaku.ac.jp/about/purpose/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018805",
+      "title": "横浜薬科大学 大学の3つの方針",
+      "url": "https://www.hamayaku.ac.jp/about/policies/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018806",
+      "title": "横浜薬科大学 学生状況の公表（2026年5月1日現在）",
+      "url": "https://www.hamayaku.ac.jp/images/material/56/files/gakusei_jokyo.pdf",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018807",
+      "title": "学校法人都築第一学園 令和7年度事業報告書 入学者及び在学者の状況（令和8年5月1日現在）",
+      "url": "https://www.hamayaku.ac.jp/images/material/56/files/r7_jigyouhoukokusyo.pdf",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018808",
+      "title": "横浜薬科大学 交通アクセス",
+      "url": "https://www.hamayaku.ac.jp/access/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018809",
+      "title": "横浜薬科大学 資格・免許情報",
+      "url": "https://www.hamayaku.ac.jp/career/qualification/",
+      "publisher": "横浜薬科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000193",
+  "id": "u000193",
+  "name": "相模女子大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "相模原市",
+  "philosophy": "「高潔善美」を建学の精神とし、「見つめる人になる。見つける人になる。」のスローガンのもと、しなやかな発想力と豊かな包容力を備え、社会に貢献する人材を育成する。",
+  "mission": "女子に高度な知識と専門の学芸を教授研究し、知的・道徳的・応用的能力を伸ばして、建学の精神に基づく教養ある人材を育成する。",
+  "feature_summary": "相模原市に本部を置き、学芸学部・人間社会学部・栄養科学部の3学部と大学院2研究科で学ぶ大学です。",
+  "official_url": "https://www.sagami-wu.ac.jp/",
+  "admissions_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
+  "student_counts": {
+    "undergraduate": 2685,
+    "graduate": 36,
+    "total": 2721,
+    "as_of": "2026-05-01",
+    "note": "学部は学芸学部1,333人・人間社会学部704人・栄養科学部648人の計2,685人、大学院は栄養科学研究科4人・社会起業研究科32人の計36人。短期大学部（37人）を除く"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際・語学",
+    "経済・経営・商学",
+    "社会学",
+    "教育",
+    "幼児教育・保育",
+    "心理",
+    "理学",
+    "情報・AI",
+    "建築・デザイン",
+    "食・栄養",
+    "家政・生活科学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300073",
+      "name": "学芸学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "社会学",
+        "教育",
+        "幼児教育・保育",
+        "情報・AI",
+        "建築・デザイン",
+        "家政・生活科学"
+      ],
+      "campus_municipality": "相模原市",
+      "departments": [
+        {
+          "department_id": "d300150",
+          "name": "日本語日本文学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300151",
+          "name": "英語文化コミュニケーション学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300152",
+          "name": "子ども教育学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300153",
+          "name": "メディア情報学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300154",
+          "name": "生活デザイン学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300074",
+      "name": "人間社会学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "社会学",
+        "心理",
+        "理学"
+      ],
+      "campus_municipality": "相模原市",
+      "departments": [
+        {
+          "department_id": "d300155",
+          "name": "社会マネジメント学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300156",
+          "name": "人間心理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300075",
+      "name": "栄養科学部",
+      "academic_field_tags": [
+        "食・栄養"
+      ],
+      "campus_municipality": "相模原市",
+      "departments": [
+        {
+          "department_id": "d300157",
+          "name": "健康栄養学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300158",
+          "name": "管理栄養学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300060",
+      "name": "栄養科学研究科",
+      "programs": [
+        {
+          "name": "栄養科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "食・栄養"
+      ]
+    },
+    {
+      "graduate_school_id": "g300061",
+      "name": "社会起業研究科",
+      "programs": [
+        {
+          "name": "社会起業専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "社会学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019301",
+      "name": "本部キャンパス",
+      "postal_code": "252-0383",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市南区",
+      "address": "神奈川県相模原市南区文京2-1-1",
+      "official_url": "https://www.sagami-wu.ac.jp/university/access/",
+      "nearest_stations": [
+        {
+          "station": "相模大野駅",
+          "line": "小田急小田原線・江ノ島線",
+          "access": "徒歩10分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "管理栄養士（国家試験受験資格）",
+      "condition": "栄養科学部 管理栄養学科（管理栄養学科（養成課程））",
+      "source_id": "s00019301"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019301",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019302",
+      "title": "相模女子大学 公式サイト",
+      "url": "https://www.sagami-wu.ac.jp/",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019303",
+      "title": "相模女子大学 公式入試情報",
+      "url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019304",
+      "title": "相模女子大学 大学概要・建学の精神・各種ポリシー",
+      "url": "https://www.sagami-wu.ac.jp/university/outline/",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019305",
+      "title": "相模女子大学 情報の公開 収容定員・在籍者数（2026年5月1日現在）",
+      "url": "https://www.sagami-wu.ac.jp/public/capacity/index.html",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019306",
+      "title": "相模女子大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+      "url": "https://www.sagami-wu.ac.jp/media/2026_syuugakusien_university_0713.pdf",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019307",
+      "title": "相模女子大学 交通アクセス",
+      "url": "https://www.sagami-wu.ac.jp/university/access/",
+      "publisher": "相模女子大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

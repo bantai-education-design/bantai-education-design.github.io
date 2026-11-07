@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000184",
+  "id": "u000184",
+  "name": "フェリス女学院大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "「キリスト教の信仰に基づく女子教育」を建学の精神とし、より広い視野から他者の存在を考え、他者のために行動する「For Others」を教育理念として掲げる。",
+  "mission": "キリスト教を教育の基本方針とし、真理と平和を愛して人類の福祉に寄与するとともに、新しい時代を切り拓く豊かな教養と芸術的・文化的素養を備えた女性を育成する。",
+  "feature_summary": "横浜市に本部を置き、グローバル教養学部の1学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://www.ferris.ac.jp/",
+  "admissions_url": "https://www.ferris.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 1849,
+    "graduate": 26,
+    "total": 1875,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際・語学",
+    "国際関係",
+    "社会学",
+    "心理",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300061",
+      "name": "グローバル教養学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際関係",
+        "社会学",
+        "心理"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300122",
+          "name": "国際社会学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300123",
+          "name": "心理コミュニケーション学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300124",
+          "name": "文化表現学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300049",
+      "name": "人文科学研究科",
+      "programs": [
+        {
+          "name": "英語英米文学専攻"
+        },
+        {
+          "name": "日本語日本文学専攻"
+        },
+        {
+          "name": "コミュニケーション学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "社会学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300050",
+      "name": "音楽研究科",
+      "programs": [
+        {
+          "name": "音楽芸術専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "芸術"
+      ]
+    },
+    {
+      "graduate_school_id": "g300051",
+      "name": "国際交流研究科",
+      "programs": [
+        {
+          "name": "国際交流専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "国際関係"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018401",
+      "name": "緑園キャンパス",
+      "postal_code": "245-8650",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市泉区",
+      "address": "神奈川県横浜市泉区緑園4-5-3",
+      "official_url": "https://www.ferris.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "緑園都市駅",
+          "line": "相鉄いずみ野線",
+          "access": "徒歩約3分"
+        },
+        {
+          "station": "東戸塚駅",
+          "line": "JR横須賀線",
+          "access": "神奈中バス「緑園都市駅」行きで約15分、「フェリス女学院」下車徒歩約1分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00018402",
+      "name": "山手キャンパス",
+      "postal_code": "231-8651",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市中区",
+      "address": "神奈川県横浜市中区山手町37",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "グローバル教養学部 国際社会学科・文化表現学科（国際社会学科（中・社会、高・地理歴史・公民）、文化表現学科（中高・英語、国語）で教職課程の所定科目修得）",
+      "source_id": "s00018408"
+    },
+    {
+      "name": "公認心理師（大学における必要な科目）",
+      "condition": "グローバル教養学部 心理コミュニケーション学科（心理専攻）（心理専攻の学生のみ対象・学部での指定単位修得（受験資格には大学院進学等が必要））",
+      "source_id": "s00018409"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018401",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018402",
+      "title": "フェリス女学院大学 公式サイト",
+      "url": "https://www.ferris.ac.jp/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018403",
+      "title": "フェリス女学院大学 公式入試情報",
+      "url": "https://www.ferris.ac.jp/admission/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018404",
+      "title": "フェリス女学院大学 フェリスの原点",
+      "url": "https://www.ferris.ac.jp/about/origin/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018405",
+      "title": "フェリス女学院大学 教育目標・方針",
+      "url": "https://www.ferris.ac.jp/about/approach/support/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018406",
+      "title": "フェリス女学院大学 学生数（2026年5月1日現在）",
+      "url": "https://www.ferris.ac.jp/mt_img/2026zaiseki.pdf",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018407",
+      "title": "フェリス女学院大学 交通アクセス",
+      "url": "https://www.ferris.ac.jp/access/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018408",
+      "title": "フェリス女学院大学 資格・免許情報",
+      "url": "https://www.ferris.ac.jp/academics/qualification/teacher-training-course/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018409",
+      "title": "フェリス女学院大学 資格・免許情報",
+      "url": "https://www.ferris.ac.jp/students-visitor/graduation-requirements/",
+      "publisher": "フェリス女学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

@@ -102,7 +102,7 @@ function apply(u){
   try{
     const locations=await loadLocations();
     let target=locations.find(x=>x.id===id);
-    try{const r=await fetch('../kanagawa/data/kanagawa_core_01.json');if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x)target={...(target||{}),...x,name:x.name||target?.name,headquarters:{...(target?.headquarters||{}),...x.headquarters}}}}catch{}
+    for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x)target={...(target||{}),...x,name:x.name||target?.name,headquarters:{...(target?.headquarters||{}),...x.headquarters}}}}catch{}}
     if(!target)throw new Error(`location missing for ${id}`);
     if(applyLocation(target))return;
     const observer=new MutationObserver(()=>{if(applyLocation(target))observer.disconnect();});
@@ -113,7 +113,8 @@ function apply(u){
 (async()=>{
   try{
     const admissions=await loadAdmissions();
-    const target=admissions.find(x=>x.id===id);
+    let target=admissions.find(x=>x.id===id);
+    if(!target){for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x){target=x;break;}}}catch{}}}
     if(!target)throw new Error(`admissions missing for ${id}`);
     const attempt=()=>applyAdmissions(target);
     if(attempt()){
@@ -127,8 +128,7 @@ function apply(u){
 })();
 (async()=>{
   try{
-    const complete=await fetch(`data/complete/${encodeURIComponent(id)}.json`);
-    if(complete.ok)return;
+    for(const base of ['data/complete/','../saitama/data/complete/','../tokyo-additions/data/complete/','../kanagawa/data/complete/']){const complete=await fetch(`${base}${encodeURIComponent(id)}.json`);if(complete.ok)return;}
     const mr=await fetch('data/public-academic-baseline/manifest.json');
     if(!mr.ok)return;
     const manifest=await mr.json();

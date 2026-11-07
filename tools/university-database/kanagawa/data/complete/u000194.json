@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000194",
+  "id": "u000194",
+  "name": "洗足学園音楽大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "「理想は高遠に、実行は卑近に」を建学の実践標語とし、創造性と人間性豊かな人材の育成を教育理念に掲げる。",
+  "mission": "音楽の専門的な知識・技術に加えて豊かな人間性を養い、個性と創造性を発揮しながら、自らの目的を見いだして自立して生きる人材を育成する。",
+  "feature_summary": "川崎市に本部を置き、音楽学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.senzoku.ac.jp/music/",
+  "admissions_url": "https://www.senzoku.ac.jp/music/admission/",
+  "student_counts": {
+    "undergraduate": 2606,
+    "graduate": 229,
+    "total": 2835,
+    "as_of": "2026-05-01",
+    "note": "学部は音楽学部音楽学科2,606人、大学院は音楽研究科修士課程229人（器楽専攻119人・声楽専攻22人・音楽教育学専攻14人・作曲専攻74人）"
+  },
+  "academic_field_tags": [
+    "教育",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300076",
+      "name": "音楽学部",
+      "academic_field_tags": [
+        "芸術"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300159",
+          "name": "音楽学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300062",
+      "name": "音楽研究科",
+      "programs": [
+        {
+          "name": "器楽専攻"
+        },
+        {
+          "name": "声楽専攻"
+        },
+        {
+          "name": "音楽教育学専攻"
+        },
+        {
+          "name": "作曲専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "教育",
+        "芸術"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019401",
+      "name": "溝の口キャンパス",
+      "postal_code": "213-8580",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市高津区",
+      "address": "神奈川県川崎市高津区久本2-3-1",
+      "official_url": "https://senzoku.ac.jp/music/about/access.html",
+      "nearest_stations": [
+        {
+          "station": "武蔵溝ノ口駅",
+          "line": "JR南武線",
+          "access": "南口から徒歩8分"
+        },
+        {
+          "station": "溝の口駅",
+          "line": "東急田園都市線・大井町線",
+          "access": "南口から徒歩8分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "中学校・高等学校教諭一種免許状（音楽）",
+      "condition": "音楽学部 音楽学科（全コース）（教職課程履修登録（別途履修費要）・所定の単位および介護等体験・教育実習の修了）",
+      "source_id": "s00019408"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019401",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019402",
+      "title": "洗足学園音楽大学 公式サイト",
+      "url": "https://www.senzoku.ac.jp/music/",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019403",
+      "title": "洗足学園音楽大学 公式入試情報",
+      "url": "https://www.senzoku.ac.jp/music/admission/",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019404",
+      "title": "洗足学園音楽大学 教育理念・建学の精神",
+      "url": "https://www.senzoku.ac.jp/music/about/philosophy.html",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019405",
+      "title": "洗足学園音楽大学 教育情報",
+      "url": "https://www.senzoku.ac.jp/music/about/data.html",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019406",
+      "title": "洗足学園音楽大学 情報公開 在籍学生数（2026年5月1日現在）",
+      "url": "https://www.senzoku.ac.jp/music/about/pdf/data/2026/students.pdf",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019407",
+      "title": "洗足学園音楽大学 交通アクセス",
+      "url": "https://senzoku.ac.jp/music/about/access.html",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019408",
+      "title": "洗足学園音楽大学 資格・免許情報",
+      "url": "https://www.senzoku.ac.jp/music/career/teaching_training.html",
+      "publisher": "洗足学園音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

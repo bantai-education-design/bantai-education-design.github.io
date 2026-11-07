@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000179",
+  "id": "u000179",
+  "name": "川崎市立看護大学",
+  "establishment_type": "public",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "地域に開かれた大学として地域と共に学び、確かな知識と豊かな人間性を備えた看護人材を養成して地域へ還元する。",
+  "mission": "看護に関する高度な知識と技術を教授研究し、豊かな教養・人格・高い倫理観と実践力を備え、地域の保健・医療・福祉に寄与する人材を育成し、成果を地域へ還元する。",
+  "feature_summary": "川崎市に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.kawasaki-cn.ac.jp/",
+  "admissions_url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
+  "student_counts": {
+    "undergraduate": 398,
+    "graduate": 27,
+    "total": 425,
+    "as_of": "2025-05-01"
+  },
+  "academic_field_tags": [
+    "看護・医療"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300035",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300079",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300032",
+      "name": "看護学研究科",
+      "programs": [
+        {
+          "name": "看護学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "看護・医療"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017901",
+      "name": "第1キャンパス",
+      "postal_code": "212-0054",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市幸区",
+      "address": "神奈川県川崎市幸区小倉4-30-1",
+      "official_url": "https://www.kawasaki-cn.ac.jp/information/access/",
+      "nearest_stations": [
+        {
+          "station": "矢向駅",
+          "line": "JR南武線",
+          "access": "徒歩約15分"
+        },
+        {
+          "station": "川崎駅",
+          "line": "JR線",
+          "access": "西口から臨港バス川53・川57・川51系統、「末吉橋」下車徒歩3分"
+        },
+        {
+          "station": "新横浜駅",
+          "line": "JR線・横浜市営地下鉄・相鉄新横浜線・東急新横浜線",
+          "access": "北口から横浜市営バス13系統で「末吉橋」下車徒歩3分、または104系統で「末吉」下車徒歩5分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "看護学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00017901"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00017901",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017902",
+      "title": "川崎市立看護大学 公式サイト",
+      "url": "https://www.kawasaki-cn.ac.jp/",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017903",
+      "title": "川崎市立看護大学 公式入試情報",
+      "url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017904",
+      "title": "川崎市立看護大学 理念",
+      "url": "https://www.kawasaki-cn.ac.jp/education/idea/",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017905",
+      "title": "川崎市立看護大学 2025年度自己点検・評価報告書",
+      "url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2025.pdf",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017906",
+      "title": "川崎市立看護大学 沿革",
+      "url": "https://www.kawasaki-cn.ac.jp/information/history/",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017907",
+      "title": "川崎市立看護大学 令和7（2025）年度自己点検・評価報告書（学校基本調査に基づく在籍数）",
+      "url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2026.pdf",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017908",
+      "title": "川崎市立看護大学 交通アクセス",
+      "url": "https://www.kawasaki-cn.ac.jp/information/access/",
+      "publisher": "川崎市立看護大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

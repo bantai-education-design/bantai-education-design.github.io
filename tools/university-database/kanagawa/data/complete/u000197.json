@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000197",
+  "id": "u000197",
+  "name": "昭和音楽大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "「礼・節・技の人間教育」を建学の精神とし、礼儀、節度、技術・技能を備え、高い品性とコミュニケーション能力を持つ音楽家・音楽人を養成する。",
+  "mission": "音楽を中心とする幅広い領域の技能・理論・応用を深く教育研究し、広い視野と高い識見を持つ人材を育成して、文化の向上と社会の福祉に寄与する。",
+  "feature_summary": "川崎市に本部を置き、音楽学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.tosei-showa-music.ac.jp/",
+  "admissions_url": "https://www.tosei-showa-music.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 1229,
+    "graduate": 159,
+    "total": 1388,
+    "as_of": "2026-05-01",
+    "note": "学部は音楽学部1,229人（音楽芸術表現学科889人・音楽芸術運営学科340人）、大学院は音楽研究科159人（修士課程151人・博士後期課程8人）。音楽専攻科（3人）および短期大学部（111人）を除く"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300081",
+      "name": "音楽学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "芸術"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300171",
+          "name": "音楽芸術運営学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300172",
+          "name": "音楽芸術表現学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300065",
+      "name": "音楽研究科",
+      "programs": [
+        {
+          "name": "音楽芸術表現専攻"
+        },
+        {
+          "name": "音楽芸術運営専攻"
+        },
+        {
+          "name": "音楽芸術専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "芸術"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019701",
+      "name": "南校舎",
+      "postal_code": "215-8558",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市麻生区",
+      "address": "神奈川県川崎市麻生区上麻生1-11-1",
+      "official_url": "https://www.tosei-showa-music.ac.jp/access.html",
+      "nearest_stations": [
+        {
+          "station": "新百合ヶ丘駅",
+          "line": "小田急小田原線・多摩線",
+          "access": "徒歩4分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00019702",
+      "name": "北校舎",
+      "postal_code": "215-0004",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市麻生区",
+      "address": "神奈川県川崎市麻生区万福寺1-16-6",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "中学校・高等学校教諭一種免許状（音楽）",
+      "condition": "音楽学部 音楽芸術表現学科・音楽芸術運営学科（教職課程の所定単位修得（弦・管・打楽器演奏家Ⅱコース、舞台スタッフコース、バレエコースは履修不可））",
+      "source_id": "s00019707"
+    },
+    {
+      "name": "小学校教諭二種免許状",
+      "condition": "音楽学部 音楽芸術表現学科・音楽芸術運営学科（本学教職課程と同時に玉川大学通信教育部の2年間課程を履修（要本学推薦・所定単位修得））",
+      "source_id": "s00019707"
+    },
+    {
+      "name": "図書館司書",
+      "condition": "音楽学部 音楽芸術表現学科・音楽芸術運営学科（司書課程（図書館に関する科目）の所定単位修得）",
+      "source_id": "s00019707"
+    },
+    {
+      "name": "学芸員",
+      "condition": "音楽学部 音楽芸術表現学科・音楽芸術運営学科（学芸員課程（博物館に関する科目）の所定単位修得）",
+      "source_id": "s00019707"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019701",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019702",
+      "title": "昭和音楽大学 公式サイト",
+      "url": "https://www.tosei-showa-music.ac.jp/",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019703",
+      "title": "昭和音楽大学 公式入試情報",
+      "url": "https://www.tosei-showa-music.ac.jp/admission/",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019704",
+      "title": "昭和音楽大学 建学の精神・教育目的",
+      "url": "https://www.tosei-showa-music.ac.jp/guide/policy/",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019705",
+      "title": "昭和音楽大学 大学情報の公表 在学生数（2026年度5月1日現在）",
+      "url": "https://www.tosei-showa-music.ac.jp/files/03e0351672bdbfaee6a58a5f63104b8dd1464239.pdf",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019706",
+      "title": "昭和音楽大学 交通アクセス",
+      "url": "https://www.tosei-showa-music.ac.jp/access.html",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019707",
+      "title": "昭和音楽大学 資格・免許情報",
+      "url": "https://www.tosei-showa-music.ac.jp/careercenter/license/",
+      "publisher": "昭和音楽大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

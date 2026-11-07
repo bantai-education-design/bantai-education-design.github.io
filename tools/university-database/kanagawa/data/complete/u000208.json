@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000208",
+  "id": "u000208",
+  "name": "グローバルＢｉｚ専門職大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "斬新な発想力と豊かな想像力をもってリーダーシップを発揮し、国際社会でイノベーションを起こせる人材の育成を教育理念とする。",
+  "mission": "経営・財務・法務、語学、デジタル技術などの知識と実務能力を備え、多様な人々と協働して事業を構想・実行し、新たな価値を生み出すリーダーを育成する。",
+  "feature_summary": "川崎市に本部を置き、グローバルビジネス学部の1学部で学ぶ大学です。",
+  "official_url": "https://gpu.ac.jp/",
+  "admissions_url": "https://gpu.ac.jp/admissions/",
+  "student_counts": {
+    "undergraduate": 92,
+    "graduate": 0,
+    "total": 92,
+    "as_of": "2026-05-01",
+    "note": "グローバルビジネス学部グローバルビジネス学科92人（収容定員392人）。大学院は未設置"
+  },
+  "academic_field_tags": [
+    "国際関係",
+    "経済・経営・商学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300102",
+      "name": "グローバルビジネス学部",
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300204",
+          "name": "グローバルビジネス学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "campus_id": "c00020801",
+      "name": "本部キャンパス",
+      "postal_code": "210-0007",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市川崎区",
+      "address": "神奈川県川崎市川崎区駅前本町22-1",
+      "official_url": "https://gpu.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "京急川崎駅",
+          "line": "京急本線・大師線",
+          "access": "徒歩1分"
+        },
+        {
+          "station": "川崎駅",
+          "line": "JR東海道線・京浜東北線・南武線",
+          "access": "徒歩4分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "s00020801",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020802",
+      "title": "グローバルＢｉｚ専門職大学 公式サイト",
+      "url": "https://gpu.ac.jp/",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020803",
+      "title": "グローバルＢｉｚ専門職大学 公式入試情報",
+      "url": "https://gpu.ac.jp/admissions/",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020804",
+      "title": "グローバルBiz専門職大学 設立の背景・建学の精神",
+      "url": "https://gpu.ac.jp/information/spirit/",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020805",
+      "title": "グローバルBiz専門職大学 入学者受け入れ方針",
+      "url": "https://gpu.ac.jp/admissions/policy/",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020806",
+      "title": "グローバルＢｉｚ専門職大学 高等教育の修学支援新制度確認更新申請書（令和8年5月1日現在）",
+      "url": "https://gpu.ac.jp/wp/wp-content/uploads/2026/09/shugakushien_20260904.pdf",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020807",
+      "title": "グローバルＢｉｚ専門職大学 交通アクセス",
+      "url": "https://gpu.ac.jp/access/",
+      "publisher": "グローバルＢｉｚ専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

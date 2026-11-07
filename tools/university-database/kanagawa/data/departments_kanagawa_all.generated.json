@@ -5,7 +5,9 @@
     "faculty_id": "f300001",
     "name": "文明学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -25,7 +27,9 @@
     "faculty_id": "f300001",
     "name": "歴史学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -45,7 +49,9 @@
     "faculty_id": "f300001",
     "name": "日本文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -65,7 +71,10 @@
     "faculty_id": "f300001",
     "name": "英語文化コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -85,7 +94,9 @@
     "faculty_id": "f300002",
     "name": "アジア学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -105,7 +116,9 @@
     "faculty_id": "f300002",
     "name": "ヨーロッパ・アメリカ学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -125,7 +138,9 @@
     "faculty_id": "f300002",
     "name": "北欧学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -145,7 +160,9 @@
     "faculty_id": "f300002",
     "name": "文芸創作学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -165,7 +182,9 @@
     "faculty_id": "f300002",
     "name": "広報メディア学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -185,7 +204,10 @@
     "faculty_id": "f300002",
     "name": "心理・社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "心理"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -205,7 +227,9 @@
     "faculty_id": "f300003",
     "name": "政治学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -225,7 +249,9 @@
     "faculty_id": "f300003",
     "name": "経済学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -245,7 +271,9 @@
     "faculty_id": "f300004",
     "name": "法律学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -265,7 +293,10 @@
     "faculty_id": "f300005",
     "name": "人間環境学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -285,7 +316,9 @@
     "faculty_id": "f300005",
     "name": "芸術学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -305,7 +338,9 @@
     "faculty_id": "f300006",
     "name": "体育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -325,7 +360,9 @@
     "faculty_id": "f300006",
     "name": "競技スポーツ学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -345,7 +382,9 @@
     "faculty_id": "f300006",
     "name": "武道学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -365,7 +404,9 @@
     "faculty_id": "f300006",
     "name": "生涯スポーツ学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -385,7 +426,9 @@
     "faculty_id": "f300006",
     "name": "スポーツ・レジャーマネジメント学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -405,7 +448,9 @@
     "faculty_id": "f300007",
     "name": "健康マネジメント学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -425,7 +470,9 @@
     "faculty_id": "f300008",
     "name": "数学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -445,7 +492,10 @@
     "faculty_id": "f300008",
     "name": "情報数理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -465,7 +515,9 @@
     "faculty_id": "f300008",
     "name": "物理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -485,7 +537,9 @@
     "faculty_id": "f300008",
     "name": "化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -505,7 +559,9 @@
     "faculty_id": "f300009",
     "name": "情報科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -525,7 +581,10 @@
     "faculty_id": "f300009",
     "name": "コンピュータ応用工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -545,7 +604,9 @@
     "faculty_id": "f300010",
     "name": "応用化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -565,7 +626,9 @@
     "faculty_id": "f300010",
     "name": "電気電子工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -585,7 +648,9 @@
     "faculty_id": "f300010",
     "name": "機械工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -605,7 +670,9 @@
     "faculty_id": "f300010",
     "name": "航空宇宙学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -625,7 +692,9 @@
     "faculty_id": "f300011",
     "name": "観光学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "観光"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -645,7 +714,9 @@
     "faculty_id": "f300012",
     "name": "水産学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "海洋"
+    ],
     "campus_prefecture": "静岡県",
     "campus_municipality": "静岡市",
     "status": "active",
@@ -665,7 +736,10 @@
     "faculty_id": "f300012",
     "name": "海洋生物学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "海洋"
+    ],
     "campus_prefecture": "静岡県",
     "campus_municipality": "静岡市",
     "status": "active",
@@ -685,7 +759,9 @@
     "faculty_id": "f300013",
     "name": "医学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "伊勢原市",
     "status": "active",
@@ -705,7 +781,9 @@
     "faculty_id": "f300013",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "伊勢原市",
     "status": "active",
@@ -725,7 +803,9 @@
     "faculty_id": "f300014",
     "name": "地域創造学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "北海道",
     "campus_municipality": "札幌市",
     "status": "active",
@@ -745,7 +825,10 @@
     "faculty_id": "f300014",
     "name": "国際コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
     "campus_prefecture": "北海道",
     "campus_municipality": "札幌市",
     "status": "active",
@@ -765,7 +848,9 @@
     "faculty_id": "f300015",
     "name": "生物学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "北海道",
     "campus_municipality": "札幌市",
     "status": "active",
@@ -785,7 +870,10 @@
     "faculty_id": "f300015",
     "name": "海洋生物科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "海洋"
+    ],
     "campus_prefecture": "北海道",
     "campus_municipality": "札幌市",
     "status": "active",
@@ -805,7 +893,10 @@
     "faculty_id": "f300016",
     "name": "児童教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -825,7 +916,9 @@
     "faculty_id": "f300017",
     "name": "経営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -845,7 +938,9 @@
     "faculty_id": "f300018",
     "name": "国際学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -865,7 +960,9 @@
     "faculty_id": "f300019",
     "name": "建築学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -885,7 +982,9 @@
     "faculty_id": "f300019",
     "name": "土木工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -905,7 +1004,9 @@
     "faculty_id": "f300020",
     "name": "人文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "静岡県",
     "campus_municipality": "静岡市",
     "status": "active",
@@ -925,7 +1026,9 @@
     "faculty_id": "f300021",
     "name": "経営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "熊本市",
     "status": "active",
@@ -945,7 +1048,9 @@
     "faculty_id": "f300021",
     "name": "地域社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "熊本市",
     "status": "active",
@@ -965,7 +1070,10 @@
     "faculty_id": "f300021",
     "name": "人間情報工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "熊本市",
     "status": "active",
@@ -985,7 +1093,9 @@
     "faculty_id": "f300022",
     "name": "情報通信学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "東京都",
     "campus_municipality": "港区",
     "status": "active",
@@ -1005,7 +1115,9 @@
     "faculty_id": "f300009",
     "name": "情報メディア学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -1025,7 +1137,9 @@
     "faculty_id": "f300010",
     "name": "機械システム工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -1045,7 +1159,10 @@
     "faculty_id": "f300010",
     "name": "医工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "伊勢原市",
     "status": "active",
@@ -1065,7 +1182,10 @@
     "faculty_id": "f300010",
     "name": "生物工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "平塚市",
     "status": "active",
@@ -1085,7 +1205,10 @@
     "faculty_id": "f300012",
     "name": "海洋理工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "海洋"
+    ],
     "campus_prefecture": "静岡県",
     "campus_municipality": "静岡市",
     "status": "active",
@@ -1105,7 +1228,9 @@
     "faculty_id": "f300023",
     "name": "農学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "農学"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "益城町",
     "status": "active",
@@ -1125,7 +1250,9 @@
     "faculty_id": "f300023",
     "name": "動物科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "農学"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "益城町",
     "status": "active",
@@ -1145,7 +1272,11 @@
     "faculty_id": "f300023",
     "name": "食生命科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "農学",
+      "食・栄養"
+    ],
     "campus_prefecture": "熊本県",
     "campus_municipality": "益城町",
     "status": "active",
@@ -1165,7 +1296,9 @@
     "faculty_id": "f300024",
     "name": "学校教員養成課程",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1185,7 +1318,9 @@
     "faculty_id": "f300025",
     "name": "経済学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1205,7 +1340,9 @@
     "faculty_id": "f300026",
     "name": "経営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1225,7 +1362,10 @@
     "faculty_id": "f300027",
     "name": "機械・材料・海洋系学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "海洋"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1245,7 +1385,9 @@
     "faculty_id": "f300027",
     "name": "化学・生命系学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1265,7 +1407,10 @@
     "faculty_id": "f300027",
     "name": "数物・電子情報系学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1285,7 +1430,9 @@
     "faculty_id": "f300028",
     "name": "都市社会共生学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1305,7 +1452,9 @@
     "faculty_id": "f300028",
     "name": "建築学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1325,7 +1474,9 @@
     "faculty_id": "f300028",
     "name": "都市基盤学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1345,7 +1496,10 @@
     "faculty_id": "f300028",
     "name": "環境リスク共生学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1365,7 +1519,10 @@
     "faculty_id": "f300029",
     "name": "国際教養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際関係"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1385,7 +1542,10 @@
     "faculty_id": "f300030",
     "name": "国際商学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1405,7 +1565,9 @@
     "faculty_id": "f300031",
     "name": "理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1425,7 +1587,9 @@
     "faculty_id": "f300032",
     "name": "データサイエンス学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1445,7 +1609,9 @@
     "faculty_id": "f300033",
     "name": "医学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1465,7 +1631,9 @@
     "faculty_id": "f300033",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1485,7 +1653,9 @@
     "faculty_id": "f300034",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横須賀市",
     "status": "active",
@@ -1505,7 +1675,9 @@
     "faculty_id": "f300034",
     "name": "栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横須賀市",
     "status": "active",
@@ -1525,7 +1697,9 @@
     "faculty_id": "f300034",
     "name": "社会福祉学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会福祉"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横須賀市",
     "status": "active",
@@ -1545,7 +1719,9 @@
     "faculty_id": "f300034",
     "name": "リハビリテーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横須賀市",
     "status": "active",
@@ -1565,7 +1741,9 @@
     "faculty_id": "f300035",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -1585,7 +1763,9 @@
     "faculty_id": "f300036",
     "name": "共生科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "箱根町",
     "status": "active",
@@ -1605,7 +1785,9 @@
     "faculty_id": "f300037",
     "name": "法律学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1625,7 +1807,9 @@
     "faculty_id": "f300037",
     "name": "自治行政学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1645,7 +1829,9 @@
     "faculty_id": "f300038",
     "name": "経済学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1665,7 +1851,9 @@
     "faculty_id": "f300038",
     "name": "現代ビジネス学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1685,7 +1873,10 @@
     "faculty_id": "f300039",
     "name": "国際経営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1705,7 +1896,10 @@
     "faculty_id": "f300040",
     "name": "英語英文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1725,7 +1919,9 @@
     "faculty_id": "f300040",
     "name": "スペイン語学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1745,7 +1941,9 @@
     "faculty_id": "f300040",
     "name": "中国語学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1765,7 +1963,9 @@
     "faculty_id": "f300041",
     "name": "国際文化交流学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1785,7 +1985,10 @@
     "faculty_id": "f300041",
     "name": "日本文化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1805,7 +2008,9 @@
     "faculty_id": "f300041",
     "name": "歴史民俗学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1825,7 +2030,9 @@
     "faculty_id": "f300042",
     "name": "人間科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1845,7 +2052,9 @@
     "faculty_id": "f300043",
     "name": "理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1865,7 +2074,9 @@
     "faculty_id": "f300044",
     "name": "機械工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1885,7 +2096,10 @@
     "faculty_id": "f300044",
     "name": "電気電子情報工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1905,7 +2119,10 @@
     "faculty_id": "f300044",
     "name": "経営工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学",
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1925,7 +2142,9 @@
     "faculty_id": "f300044",
     "name": "応用物理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1945,7 +2164,9 @@
     "faculty_id": "f300045",
     "name": "建築学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1965,7 +2186,9 @@
     "faculty_id": "f300046",
     "name": "応用化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -1985,7 +2208,9 @@
     "faculty_id": "f300046",
     "name": "生命機能学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2005,7 +2230,9 @@
     "faculty_id": "f300047",
     "name": "計算機科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2025,7 +2252,10 @@
     "faculty_id": "f300047",
     "name": "システム数理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2045,7 +2275,10 @@
     "faculty_id": "f300048",
     "name": "英語文化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2065,7 +2298,10 @@
     "faculty_id": "f300048",
     "name": "比較文化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2085,7 +2321,9 @@
     "faculty_id": "f300049",
     "name": "現代社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2105,7 +2343,9 @@
     "faculty_id": "f300050",
     "name": "経済学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2125,7 +2365,9 @@
     "faculty_id": "f300051",
     "name": "経営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2145,7 +2387,9 @@
     "faculty_id": "f300052",
     "name": "法学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2165,7 +2409,9 @@
     "faculty_id": "f300052",
     "name": "地域創生学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2185,7 +2431,9 @@
     "faculty_id": "f300053",
     "name": "理工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2205,7 +2453,9 @@
     "faculty_id": "f300054",
     "name": "建築・環境学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2225,7 +2475,9 @@
     "faculty_id": "f300055",
     "name": "コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2245,7 +2497,10 @@
     "faculty_id": "f300055",
     "name": "共生デザイン学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2265,7 +2520,9 @@
     "faculty_id": "f300056",
     "name": "管理栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2285,7 +2542,10 @@
     "faculty_id": "f300057",
     "name": "こども発達学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2305,7 +2565,9 @@
     "faculty_id": "f300058",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2325,7 +2587,9 @@
     "faculty_id": "f300059",
     "name": "日本文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2345,7 +2609,10 @@
     "faculty_id": "f300059",
     "name": "英語英米文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2365,7 +2632,9 @@
     "faculty_id": "f300059",
     "name": "文化財学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2385,7 +2654,9 @@
     "faculty_id": "f300059",
     "name": "ドキュメンテーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2405,7 +2676,9 @@
     "faculty_id": "f300060",
     "name": "歯学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "歯学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2425,7 +2698,10 @@
     "faculty_id": "f300061",
     "name": "国際社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2445,7 +2721,10 @@
     "faculty_id": "f300061",
     "name": "心理コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "心理"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2465,7 +2744,9 @@
     "faculty_id": "f300061",
     "name": "文化表現学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2485,7 +2766,9 @@
     "faculty_id": "f300062",
     "name": "商学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2505,7 +2788,10 @@
     "faculty_id": "f300062",
     "name": "観光マネジメント学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学",
+      "観光"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2525,7 +2811,10 @@
     "faculty_id": "f300062",
     "name": "経営情報学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2545,7 +2834,9 @@
     "faculty_id": "f300063",
     "name": "生涯学習学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2565,7 +2856,9 @@
     "faculty_id": "f300064",
     "name": "健康薬学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2585,7 +2878,9 @@
     "faculty_id": "f300064",
     "name": "漢方薬学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2605,7 +2900,9 @@
     "faculty_id": "f300064",
     "name": "臨床薬学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2625,7 +2922,9 @@
     "faculty_id": "f300064",
     "name": "薬科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -2645,7 +2944,9 @@
     "faculty_id": "f300065",
     "name": "獣医学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "獣医学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2665,7 +2966,9 @@
     "faculty_id": "f300065",
     "name": "動物応用科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "農学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2685,7 +2988,10 @@
     "faculty_id": "f300065",
     "name": "獣医保健看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "獣医学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2705,7 +3011,9 @@
     "faculty_id": "f300066",
     "name": "臨床検査技術学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2725,7 +3033,11 @@
     "faculty_id": "f300066",
     "name": "食品生命科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "農学",
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2745,7 +3057,9 @@
     "faculty_id": "f300066",
     "name": "環境科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -2765,7 +3079,9 @@
     "faculty_id": "f300067",
     "name": "歯学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "歯学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横須賀市",
     "status": "active",
@@ -2785,7 +3101,9 @@
     "faculty_id": "f300068",
     "name": "家政保健学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "家政・生活科学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -2805,7 +3123,9 @@
     "faculty_id": "f300068",
     "name": "管理栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -2825,7 +3145,10 @@
     "faculty_id": "f300069",
     "name": "児童学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -2845,7 +3168,12 @@
     "faculty_id": "f300069",
     "name": "子ども心理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育",
+      "心理",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -2865,7 +3193,9 @@
     "faculty_id": "f300070",
     "name": "教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -2885,7 +3215,9 @@
     "faculty_id": "f300071",
     "name": "機械工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "藤沢市",
     "status": "active",
@@ -2905,7 +3237,9 @@
     "faculty_id": "f300071",
     "name": "総合デザイン学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "藤沢市",
     "status": "active",
@@ -2925,7 +3259,9 @@
     "faculty_id": "f300071",
     "name": "電気電子工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "藤沢市",
     "status": "active",
@@ -2945,7 +3281,10 @@
     "faculty_id": "f300071",
     "name": "人間環境学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "建築・デザイン"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "藤沢市",
     "status": "active",
@@ -2965,7 +3304,9 @@
     "faculty_id": "f300072",
     "name": "情報学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "藤沢市",
     "status": "active",
@@ -2985,7 +3326,9 @@
     "faculty_id": "f300073",
     "name": "日本語日本文学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3005,7 +3348,10 @@
     "faculty_id": "f300073",
     "name": "英語文化コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3025,7 +3371,10 @@
     "faculty_id": "f300073",
     "name": "子ども教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3045,7 +3394,10 @@
     "faculty_id": "f300073",
     "name": "メディア情報学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3065,7 +3417,10 @@
     "faculty_id": "f300073",
     "name": "生活デザイン学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン",
+      "家政・生活科学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3085,7 +3440,10 @@
     "faculty_id": "f300074",
     "name": "社会マネジメント学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3105,7 +3463,10 @@
     "faculty_id": "f300074",
     "name": "人間心理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3125,7 +3486,9 @@
     "faculty_id": "f300075",
     "name": "健康栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3145,7 +3508,9 @@
     "faculty_id": "f300075",
     "name": "管理栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "相模原市",
     "status": "active",
@@ -3165,7 +3530,9 @@
     "faculty_id": "f300076",
     "name": "音楽学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3185,7 +3552,9 @@
     "faculty_id": "f300077",
     "name": "医学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3205,7 +3574,9 @@
     "faculty_id": "f300078",
     "name": "機械工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3225,7 +3596,10 @@
     "faculty_id": "f300078",
     "name": "電気電子情報工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3245,7 +3619,9 @@
     "faculty_id": "f300078",
     "name": "応用化学生物学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3265,7 +3641,10 @@
     "faculty_id": "f300079",
     "name": "情報工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3285,7 +3664,10 @@
     "faculty_id": "f300079",
     "name": "情報ネットワーク・コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3305,7 +3687,9 @@
     "faculty_id": "f300079",
     "name": "情報メディア学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3325,7 +3709,10 @@
     "faculty_id": "f300079",
     "name": "情報システム学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3345,7 +3732,9 @@
     "faculty_id": "f300080",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3365,7 +3754,9 @@
     "faculty_id": "f300080",
     "name": "管理栄養学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3385,7 +3776,10 @@
     "faculty_id": "f300080",
     "name": "臨床工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3405,7 +3799,9 @@
     "faculty_id": "f300081",
     "name": "音楽芸術運営学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3425,7 +3821,10 @@
     "faculty_id": "f300081",
     "name": "音楽芸術表現学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3445,7 +3844,9 @@
     "faculty_id": "f300082",
     "name": "法律学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3465,7 +3866,11 @@
     "faculty_id": "f300083",
     "name": "生命医工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3485,7 +3890,10 @@
     "faculty_id": "f300083",
     "name": "臨床工学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3505,7 +3913,10 @@
     "faculty_id": "f300084",
     "name": "スポーツ教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3525,7 +3936,9 @@
     "faculty_id": "f300084",
     "name": "スポーツ健康科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3545,7 +3958,9 @@
     "faculty_id": "f300085",
     "name": "人間科学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3565,7 +3980,10 @@
     "faculty_id": "f300085",
     "name": "保育子ども学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3585,7 +4003,10 @@
     "faculty_id": "f300086",
     "name": "国際社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3605,7 +4026,10 @@
     "faculty_id": "f300086",
     "name": "国際コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3625,7 +4049,9 @@
     "faculty_id": "f300087",
     "name": "ビジネスマネジメント学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3645,7 +4071,10 @@
     "faculty_id": "f300087",
     "name": "経営法学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学",
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3665,7 +4094,10 @@
     "faculty_id": "f300088",
     "name": "異文化コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際・語学",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3685,7 +4117,11 @@
     "faculty_id": "f300088",
     "name": "生活心理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理",
+      "理学",
+      "家政・生活科学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3705,7 +4141,10 @@
     "faculty_id": "f300088",
     "name": "日本文化コミュニケーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3725,7 +4164,10 @@
     "faculty_id": "f300088",
     "name": "子ども学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3745,7 +4187,10 @@
     "faculty_id": "f300089",
     "name": "観光文化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "観光",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3765,7 +4210,11 @@
     "faculty_id": "f300089",
     "name": "メディア情報文化学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "理学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3785,7 +4234,9 @@
     "faculty_id": "f300090",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "厚木市",
     "status": "active",
@@ -3805,7 +4256,9 @@
     "faculty_id": "f300091",
     "name": "社会福祉学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会福祉"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3825,7 +4278,9 @@
     "faculty_id": "f300091",
     "name": "共生社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3845,7 +4300,10 @@
     "faculty_id": "f300092",
     "name": "心理学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理",
+      "理学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3865,7 +4323,10 @@
     "faculty_id": "f300093",
     "name": "子ども教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3885,7 +4346,10 @@
     "faculty_id": "f300094",
     "name": "美術・デザイン学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "建築・デザイン",
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3905,7 +4369,9 @@
     "faculty_id": "f300095",
     "name": "映画学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -3925,7 +4391,9 @@
     "faculty_id": "f300096",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3945,7 +4413,10 @@
     "faculty_id": "f300097",
     "name": "幼児教育学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3965,7 +4436,9 @@
     "faculty_id": "f300098",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -3985,7 +4458,9 @@
     "faculty_id": "f300098",
     "name": "リハビリテーション学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -4005,7 +4480,10 @@
     "faculty_id": "f300099",
     "name": "医療薬学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学",
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -4025,7 +4503,9 @@
     "faculty_id": "f300100",
     "name": "看護学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "鎌倉市",
     "status": "active",
@@ -4045,7 +4525,9 @@
     "faculty_id": "f300101",
     "name": "ビューティ＆ウェルネス学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "家政・生活科学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "横浜市",
     "status": "active",
@@ -4065,7 +4547,10 @@
     "faculty_id": "f300102",
     "name": "グローバルビジネス学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "経済・経営・商学"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "川崎市",
     "status": "active",
@@ -4085,7 +4570,10 @@
     "faculty_id": "f300103",
     "name": "知能情報社会学科",
     "department_type": "department",
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "情報・AI"
+    ],
     "campus_prefecture": "神奈川県",
     "campus_municipality": "逗子市",
     "status": "active",

@@ -1,0 +1,1021 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000050",
+  "id": "u000050",
+  "name": "東海大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "平塚市",
+  "philosophy": "創立者・松前重義の教育理念を基礎に、若い時期に思想・体躯・知能を培い、希望を星につなぐ姿勢を重視する。文理融合の広い知識と国際的視野を通じて、調和の取れた文明社会の実現を目指す。",
+  "mission": "建学の精神に基づき、自立性と創造性を備え、変化する社会をより良い方向へ導き、調和の取れた文明社会の建設に貢献できる人材を育成する。",
+  "feature_summary": "平塚市に本部を置き、文学部・文化社会学部・政治経済学部・法学部など23学部と大学院17研究科で学ぶ大学です。",
+  "official_url": "https://www.u-tokai.ac.jp/",
+  "admissions_url": "https://www.u-tokai.ac.jp/examination-admissions/",
+  "student_counts": {
+    "undergraduate": 29462,
+    "graduate": 1198,
+    "total": 30660,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際・語学",
+    "国際関係",
+    "法学",
+    "経済・経営・商学",
+    "社会学",
+    "観光",
+    "教育",
+    "幼児教育・保育",
+    "心理",
+    "理学",
+    "工学",
+    "情報・AI",
+    "建築・デザイン",
+    "農学",
+    "海洋",
+    "医学",
+    "看護・医療",
+    "食・栄養",
+    "体育・スポーツ",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300001",
+      "name": "文学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "社会学"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300001",
+          "name": "文明学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300002",
+          "name": "歴史学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300003",
+          "name": "日本文学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300004",
+          "name": "英語文化コミュニケーション学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300002",
+      "name": "文化社会学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際関係",
+        "社会学",
+        "心理"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300005",
+          "name": "アジア学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300006",
+          "name": "ヨーロッパ・アメリカ学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300007",
+          "name": "北欧学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300008",
+          "name": "文芸創作学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300009",
+          "name": "広報メディア学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300010",
+          "name": "心理・社会学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300003",
+      "name": "政治経済学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "社会学"
+      ],
+      "campus_municipality": "港区",
+      "departments": [
+        {
+          "department_id": "d300011",
+          "name": "政治学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300012",
+          "name": "経済学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300004",
+      "name": "法学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300013",
+          "name": "法律学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300005",
+      "name": "教養学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "芸術"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300014",
+          "name": "人間環境学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300015",
+          "name": "芸術学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300006",
+      "name": "体育学部",
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300016",
+          "name": "体育学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300017",
+          "name": "競技スポーツ学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300018",
+          "name": "武道学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300019",
+          "name": "生涯スポーツ学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300020",
+          "name": "スポーツ・レジャーマネジメント学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300007",
+      "name": "健康学部",
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300021",
+          "name": "健康マネジメント学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300008",
+      "name": "理学部",
+      "academic_field_tags": [
+        "理学",
+        "情報・AI"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300022",
+          "name": "数学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300023",
+          "name": "情報数理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300024",
+          "name": "物理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300025",
+          "name": "化学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300009",
+      "name": "情報理工学部",
+      "academic_field_tags": [
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300026",
+          "name": "情報科学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300027",
+          "name": "コンピュータ応用工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300051",
+          "name": "情報メディア学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300010",
+      "name": "工学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "看護・医療"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300028",
+          "name": "応用化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300029",
+          "name": "電気電子工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300030",
+          "name": "機械工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300031",
+          "name": "航空宇宙学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300052",
+          "name": "機械システム工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300053",
+          "name": "医工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300054",
+          "name": "生物工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300011",
+      "name": "観光学部",
+      "academic_field_tags": [
+        "観光"
+      ],
+      "campus_municipality": "港区",
+      "departments": [
+        {
+          "department_id": "d300032",
+          "name": "観光学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300012",
+      "name": "海洋学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "海洋"
+      ],
+      "campus_municipality": "静岡市",
+      "departments": [
+        {
+          "department_id": "d300033",
+          "name": "水産学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300034",
+          "name": "海洋生物学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300055",
+          "name": "海洋理工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300013",
+      "name": "医学部",
+      "academic_field_tags": [
+        "医学",
+        "看護・医療"
+      ],
+      "campus_municipality": "伊勢原市",
+      "departments": [
+        {
+          "department_id": "d300035",
+          "name": "医学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300036",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300014",
+      "name": "国際文化学部",
+      "academic_field_tags": [
+        "国際関係",
+        "社会学",
+        "理学"
+      ],
+      "campus_municipality": "札幌市",
+      "departments": [
+        {
+          "department_id": "d300037",
+          "name": "地域創造学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300038",
+          "name": "国際コミュニケーション学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300015",
+      "name": "生物学部",
+      "academic_field_tags": [
+        "理学",
+        "海洋"
+      ],
+      "campus_municipality": "札幌市",
+      "departments": [
+        {
+          "department_id": "d300039",
+          "name": "生物学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300040",
+          "name": "海洋生物科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300016",
+      "name": "児童教育学部",
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300041",
+          "name": "児童教育学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300017",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "港区",
+      "departments": [
+        {
+          "department_id": "d300042",
+          "name": "経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300018",
+      "name": "国際学部",
+      "academic_field_tags": [
+        "国際関係"
+      ],
+      "campus_municipality": "港区",
+      "departments": [
+        {
+          "department_id": "d300043",
+          "name": "国際学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300019",
+      "name": "建築都市学部",
+      "academic_field_tags": [
+        "工学",
+        "建築・デザイン"
+      ],
+      "campus_municipality": "平塚市",
+      "departments": [
+        {
+          "department_id": "d300044",
+          "name": "建築学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300045",
+          "name": "土木工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300020",
+      "name": "人文学部",
+      "academic_field_tags": [
+        "文学・人文"
+      ],
+      "campus_municipality": "静岡市",
+      "departments": [
+        {
+          "department_id": "d300046",
+          "name": "人文学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300021",
+      "name": "文理融合学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "社会学",
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "熊本市",
+      "departments": [
+        {
+          "department_id": "d300047",
+          "name": "経営学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300048",
+          "name": "地域社会学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300049",
+          "name": "人間情報工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300022",
+      "name": "情報通信学部",
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "campus_municipality": "港区",
+      "departments": [
+        {
+          "department_id": "d300050",
+          "name": "情報通信学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300023",
+      "name": "農学部",
+      "academic_field_tags": [
+        "理学",
+        "農学",
+        "食・栄養"
+      ],
+      "campus_municipality": "益城町",
+      "departments": [
+        {
+          "department_id": "d300056",
+          "name": "農学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300057",
+          "name": "動物科学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300058",
+          "name": "食生命科学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300001",
+      "name": "総合理工学研究科",
+      "programs": [
+        {
+          "name": "総合理工学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "工学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300002",
+      "name": "生物科学研究科",
+      "programs": [
+        {
+          "name": "生物科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300003",
+      "name": "文学研究科",
+      "programs": [
+        {
+          "name": "文明研究専攻"
+        },
+        {
+          "name": "史学専攻"
+        },
+        {
+          "name": "日本文学専攻"
+        },
+        {
+          "name": "英文学専攻"
+        },
+        {
+          "name": "コミュニケーション学専攻"
+        },
+        {
+          "name": "観光学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "社会学",
+        "観光"
+      ]
+    },
+    {
+      "graduate_school_id": "g300004",
+      "name": "政治学研究科",
+      "programs": [
+        {
+          "name": "政治学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "社会学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300005",
+      "name": "経済学研究科",
+      "programs": [
+        {
+          "name": "応用経済学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300006",
+      "name": "法学研究科",
+      "programs": [
+        {
+          "name": "法律学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "法学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300007",
+      "name": "人間環境学研究科",
+      "programs": [
+        {
+          "name": "人間環境学専攻"
+        }
+      ],
+      "academic_field_tags": []
+    },
+    {
+      "graduate_school_id": "g300008",
+      "name": "芸術学研究科",
+      "programs": [
+        {
+          "name": "音響芸術専攻"
+        },
+        {
+          "name": "造型芸術専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "芸術"
+      ]
+    },
+    {
+      "graduate_school_id": "g300009",
+      "name": "体育学研究科",
+      "programs": [
+        {
+          "name": "体育学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ]
+    },
+    {
+      "graduate_school_id": "g300010",
+      "name": "理学研究科",
+      "programs": [
+        {
+          "name": "数理科学専攻"
+        },
+        {
+          "name": "物理学専攻"
+        },
+        {
+          "name": "化学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300011",
+      "name": "工学研究科",
+      "programs": [
+        {
+          "name": "電気電子工学専攻"
+        },
+        {
+          "name": "応用理化学専攻"
+        },
+        {
+          "name": "建築土木工学専攻"
+        },
+        {
+          "name": "機械工学専攻"
+        },
+        {
+          "name": "医用生体工学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "建築・デザイン",
+        "看護・医療"
+      ]
+    },
+    {
+      "graduate_school_id": "g300012",
+      "name": "情報通信学研究科",
+      "programs": [
+        {
+          "name": "情報通信学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "情報・AI"
+      ]
+    },
+    {
+      "graduate_school_id": "g300013",
+      "name": "海洋学研究科",
+      "programs": [
+        {
+          "name": "海洋学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "海洋"
+      ]
+    },
+    {
+      "graduate_school_id": "g300014",
+      "name": "医学研究科",
+      "programs": [
+        {
+          "name": "先端医科学専攻"
+        },
+        {
+          "name": "医科学専攻"
+        },
+        {
+          "name": "看護学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "医学",
+        "看護・医療"
+      ]
+    },
+    {
+      "graduate_school_id": "g300015",
+      "name": "健康学研究科",
+      "programs": [
+        {
+          "name": "健康マネジメント学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ]
+    },
+    {
+      "graduate_school_id": "g300016",
+      "name": "農学研究科",
+      "programs": [
+        {
+          "name": "農学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "農学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300017",
+      "name": "生物学研究科",
+      "programs": [
+        {
+          "name": "生物学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00005001",
+      "name": "湘南キャンパス",
+      "postal_code": "259-1292",
+      "prefecture": "神奈川県",
+      "municipality": "平塚市",
+      "address": "神奈川県平塚市北金目4-1-1",
+      "official_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/",
+      "nearest_stations": [
+        {
+          "station": "東海大学前駅",
+          "line": "小田急線",
+          "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
+        },
+        {
+          "station": "平塚駅",
+          "line": "JR東海道線",
+          "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00005002",
+      "name": "品川キャンパス",
+      "postal_code": "108-8619",
+      "prefecture": "東京都",
+      "municipality": "港区",
+      "address": "東京都港区高輪2-3-23",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00005003",
+      "name": "静岡キャンパス",
+      "postal_code": "424-8610",
+      "prefecture": "静岡県",
+      "municipality": "静岡市清水区",
+      "address": "静岡県静岡市清水区折戸3-20-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00005004",
+      "name": "伊勢原キャンパス",
+      "postal_code": "259-1193",
+      "prefecture": "神奈川県",
+      "municipality": "伊勢原市",
+      "address": "神奈川県伊勢原市下糟屋143",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00005005",
+      "name": "熊本キャンパス",
+      "postal_code": "862-8652",
+      "prefecture": "熊本県",
+      "municipality": "熊本市東区",
+      "address": "熊本県熊本市東区渡鹿9-1-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00005006",
+      "name": "阿蘇くまもと臨空キャンパス",
+      "postal_code": "861-2205",
+      "prefecture": "熊本県",
+      "municipality": "上益城郡益城町",
+      "address": "熊本県上益城郡益城町杉堂871-12",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00005007",
+      "name": "札幌キャンパス",
+      "postal_code": "005-8601",
+      "prefecture": "北海道",
+      "municipality": "札幌市南区",
+      "address": "北海道札幌市南区南沢5条1-1-1",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "医師（国家試験受験資格）",
+      "condition": "医学部 医学科（医学科（養成課程））",
+      "source_id": "s00005001"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "医学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00005001"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00005001",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005002",
+      "title": "東海大学 公式サイト",
+      "url": "https://www.u-tokai.ac.jp/",
+      "publisher": "東海大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005003",
+      "title": "東海大学 公式入試情報",
+      "url": "https://www.u-tokai.ac.jp/examination-admissions/",
+      "publisher": "東海大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005004",
+      "title": "東海大学 建学の精神について",
+      "url": "https://www.u-tokai.ac.jp/about/philosophy-history/spirit/",
+      "publisher": "東海大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005005",
+      "title": "東海大学 理念・憲章",
+      "url": "https://www.u-tokai.ac.jp/about/philosophy-history/concept/",
+      "publisher": "東海大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005006",
+      "title": "大学ポートレート（私学版）東海大学 学生情報（2026年度在籍者数）",
+      "url": "https://up-j.shigaku.go.jp/school/category06/00000000264005000.html",
+      "publisher": "日本私立学校振興・共済事業団（大学ポートレート）",
+      "source_type": "public_organization",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00005007",
+      "title": "東海大学 交通アクセス",
+      "url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/",
+      "publisher": "東海大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

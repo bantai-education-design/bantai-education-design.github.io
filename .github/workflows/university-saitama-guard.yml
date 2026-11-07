@@ -96,6 +96,19 @@ jobs:
           assert.equal(kmanifest.student_count_records,36,'Kanagawa student count manifest');
           assert.equal(kmanifest.campus_records,36,'Kanagawa campus manifest');
           assert.equal(kmanifest.campus_items,76,'Kanagawa campus items manifest');
+          assert.equal(kmanifest.complete_profiles,36,'Kanagawa complete profile manifest');
+          for(const u of kcore){
+            assert.ok((u.academic_field_tags||[]).length>=1,u.id+' Kanagawa field tags');
+            assert.ok((u.feature_summary||'').startsWith(u.municipality),u.id+' Kanagawa feature summary');
+            const cp=JSON.parse(fs.readFileSync(`${kdir}complete/${u.id}.json`,'utf8'));
+            assert.equal(cp.schema_version,'1.0',u.id+' complete schema');
+            assert.equal(cp.university_id,u.id,u.id+' complete id');
+            assert.ok(cp.campuses.length>=1&&cp.campuses[0].nearest_stations.length>=1,u.id+' complete campus and stations');
+            const sids=new Set(cp.sources.map(s=>s.source_id));
+            assert.ok(cp.sources.length>=1&&cp.sources.every(s=>/^https:\/\//.test(s.url)),u.id+' complete sources');
+            assert.ok((cp.qualifications||[]).every(q=>!q.source_id||sids.has(q.source_id)),u.id+' qualification source ids');
+          }
+          assert.ok(kfac.every(f=>(f.academic_field_tags||[]).length>=1),'Kanagawa faculty tags');
           const kcampuses=JSON.parse(fs.readFileSync(kdir+'kanagawa_campuses_01.json','utf8')).universities;
           const allCampuses=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
           assert.equal(Object.keys(kcampuses).length,36,'Kanagawa campuses 36 universities');
@@ -260,15 +273,19 @@ jobs:
             assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000169'),'saitama detail redirects: '+redirect.url());
             await redirect.waitForSelector('.complete-stations li',{timeout:15000});
             assert.ok((await redirect.locator('.complete-stations').first().innerText()).includes('獨協大学前'),'detail shows nearest station');
+            await redirect.goto('http://127.0.0.1:4173/tools/university-database/kanagawa/detail.html?id=u000175',{waitUntil:'networkidle'});
+            assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000175'),'kanagawa detail redirects: '+redirect.url());
+            await redirect.waitForSelector('.complete-stations li',{timeout:15000});
+            assert.ok((await redirect.locator('.complete-stations').first().innerText()).includes('羽沢横浜国大'),'Kanagawa detail shows nearest station');
             await redirect.close();
-            const ids=[...saitama.map(x=>x.id),...extra.map(x=>x.id)];
+            const ids=[...saitama.map(x=>x.id),...extra.map(x=>x.id),...kanagawa.map(x=>x.id)];
             const summary=[];
             for(const id of ids){
               const d=await browser.newPage({viewport:{width:1280,height:900}});watch(d,id);
               await d.goto(`http://127.0.0.1:4173/tools/university-database/tokyo/detail.html?id=${id}`,{waitUntil:'networkidle'});
               await d.waitForSelector('.complete-hero h1',{timeout:15000});
               const t=await d.locator('#detail-root').innerText();
-              assert.ok(/埼玉県|東京都/.test(t),`${id} detail prefecture`);
+              assert.ok(/埼玉県|東京都|神奈川県/.test(t),`${id} detail prefecture`);
               summary.push(`${id}:${(await d.locator('.complete-hero h1').innerText()).trim()}`);
               await d.close();
             }

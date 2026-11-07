@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000183",
+  "id": "u000183",
+  "name": "鶴見大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "仏教、特に禅の教えに基づき、円満な人格の形成と社会に対する感謝・報恩の実践を重視し、「大覚円成 報恩行持」を建学の精神として掲げる。",
+  "mission": "禅の精神に基づく円満な人格と専門的な知識・技能による実践力を備え、感謝と慈愛の心をもって社会の発展と福祉に貢献する人材を育成する。",
+  "feature_summary": "横浜市に本部を置き、文学部・歯学部の2学部と大学院2研究科で学ぶ大学です。",
+  "official_url": "https://www.tsurumi-u.ac.jp/",
+  "admissions_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
+  "student_counts": {
+    "undergraduate": 1448,
+    "graduate": 46,
+    "total": 1494,
+    "as_of": "2026-05-01",
+    "note": "短期大学部（424人）を除く大学学部・大学院の在籍者数"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際・語学",
+    "歯学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300059",
+      "name": "文学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300117",
+          "name": "日本文学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300118",
+          "name": "英語英米文学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300119",
+          "name": "文化財学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300120",
+          "name": "ドキュメンテーション学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300060",
+      "name": "歯学部",
+      "academic_field_tags": [
+        "歯学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300121",
+          "name": "歯学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300047",
+      "name": "歯学研究科",
+      "programs": [
+        {
+          "name": "歯学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "歯学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300048",
+      "name": "文学研究科",
+      "programs": [
+        {
+          "name": "日本文学専攻"
+        },
+        {
+          "name": "英米文学専攻"
+        },
+        {
+          "name": "文化財学専攻"
+        },
+        {
+          "name": "ドキュメンテーション専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018301",
+      "name": "鶴見キャンパス",
+      "postal_code": "230-8501",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市鶴見区",
+      "address": "神奈川県横浜市鶴見区鶴見2-1-3",
+      "official_url": "https://www.tsurumi-u.ac.jp/site/about/accessmap-index.html",
+      "nearest_stations": [
+        {
+          "station": "鶴見駅",
+          "line": "JR京浜東北線・鶴見線",
+          "access": "西口から徒歩5分"
+        },
+        {
+          "station": "京急鶴見駅",
+          "line": "京急本線",
+          "access": "徒歩7分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "歯科医師（国家試験受験資格）",
+      "condition": "歯学部 歯学科（歯学科（養成課程））",
+      "source_id": "s00018301"
+    },
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "文学部 日本文学科・英語英米文学科・文化財学科・ドキュメンテーション学科（教職課程の所定単位修得（日本文学科は中高国語・高書道、ドキュメンテーション学科は高等学校のみ））",
+      "source_id": "s00018309"
+    },
+    {
+      "name": "図書館司書",
+      "condition": "文学部 全学科（司書課程における所定の単位修得（教職免許と併せて司書教諭も取得可））",
+      "source_id": "s00018309"
+    },
+    {
+      "name": "学芸員",
+      "condition": "文学部 全学科（学芸員課程における所定の単位修得）",
+      "source_id": "s00018309"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018301",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018302",
+      "title": "鶴見大学 公式サイト",
+      "url": "https://www.tsurumi-u.ac.jp/",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018303",
+      "title": "鶴見大学 公式入試情報",
+      "url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018304",
+      "title": "鶴見大学 建学の精神",
+      "url": "https://www.tsurumi-u.ac.jp/site/about/spirit.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018305",
+      "title": "鶴見大学 教育方針",
+      "url": "https://www.tsurumi-u.ac.jp/site/about/policy.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018306",
+      "title": "鶴見大学 沿革",
+      "url": "https://www.tsurumi-u.ac.jp/site/about/history.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018307",
+      "title": "鶴見大学 学生数・教職員数（令和8年度／2026年度）",
+      "url": "https://www.tsurumi-u.ac.jp/site/about/student-r8.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018308",
+      "title": "鶴見大学 交通アクセス",
+      "url": "https://www.tsurumi-u.ac.jp/site/about/accessmap-index.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018309",
+      "title": "鶴見大学 資格・免許情報",
+      "url": "https://www.tsurumi-u.ac.jp/site/literature/japanese-index.html",
+      "publisher": "鶴見大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000176",
+  "id": "u000176",
+  "name": "総合研究大学院大学",
+  "establishment_type": "national",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "葉山町",
+  "philosophy": "大学共同利用機関等との緊密な連係・協力の下、世界最高水準の国際的な大学院大学として学術の理論と応用を教育研究し、文化の創造と発展に貢献する。",
+  "mission": "基礎学術分野で国際的に通用する高度な研究的資質と広い視野を備えた研究者を育成する。",
+  "feature_summary": "葉山町に本部を置く大学院大学で、先端学術院を設けています。",
+  "official_url": "https://www.soken.ac.jp/",
+  "admissions_url": "https://www.soken.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 0,
+    "graduate": 592,
+    "total": 592,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "理学"
+  ],
+  "academics": [],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300023",
+      "name": "先端学術院",
+      "programs": [
+        {
+          "name": "先端学術専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017601",
+      "name": "葉山キャンパス",
+      "postal_code": "240-0193",
+      "prefecture": "神奈川県",
+      "municipality": "三浦郡葉山町",
+      "address": "神奈川県三浦郡葉山町（湘南国際村）",
+      "official_url": "https://www.soken.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "逗子駅",
+          "line": "JR横須賀線",
+          "access": "東口1番乗り場から京急バス逗16・逗26系統で約29分、「湘南国際村センター前」下車"
+        },
+        {
+          "station": "逗子・葉山駅",
+          "line": "京急逗子線",
+          "access": "南口1番乗り場から京急バス逗16・逗26系統で約25分、「湘南国際村センター前」下車"
+        },
+        {
+          "station": "汐入駅",
+          "line": "京急本線",
+          "access": "2番乗り場から京急バス汐16系統で約30分、「湘南国際村センター前」下車"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00017602",
+      "name": "吹田市キャンパス",
+      "postal_code": "565-8511",
+      "prefecture": "大阪府",
+      "municipality": "吹田市",
+      "address": "大阪府吹田市千里万博公園10-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017603",
+      "name": "京都市西京区キャンパス",
+      "postal_code": "610-1192",
+      "prefecture": "京都府",
+      "municipality": "京都市西京区",
+      "address": "京都府京都市西京区御陵大枝山町3-2",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017604",
+      "name": "佐倉市キャンパス",
+      "postal_code": "285-8502",
+      "prefecture": "千葉県",
+      "municipality": "佐倉市",
+      "address": "千葉県佐倉市城内町117",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017605",
+      "name": "立川市キャンパス",
+      "postal_code": "190-0014",
+      "prefecture": "東京都",
+      "municipality": "立川市",
+      "address": "東京都立川市緑町10-3",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017606",
+      "name": "岡崎市キャンパス",
+      "postal_code": "444-8585",
+      "prefecture": "愛知県",
+      "municipality": "岡崎市",
+      "address": "愛知県岡崎市明大寺町字西郷中38",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017607",
+      "name": "三鷹市キャンパス",
+      "postal_code": "181-8588",
+      "prefecture": "東京都",
+      "municipality": "三鷹市",
+      "address": "東京都三鷹市大沢2-21-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017608",
+      "name": "土岐市キャンパス",
+      "postal_code": "509-5292",
+      "prefecture": "岐阜県",
+      "municipality": "土岐市",
+      "address": "岐阜県土岐市下石町322-6",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017609",
+      "name": "相模原市中央区キャンパス",
+      "postal_code": "252-5210",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市中央区",
+      "address": "神奈川県相模原市中央区由野台3-1-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017610",
+      "name": "つくば市キャンパス",
+      "postal_code": "305-0801",
+      "prefecture": "茨城県",
+      "municipality": "つくば市",
+      "address": "茨城県つくば市大穂1-1",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017611",
+      "name": "千代田区キャンパス",
+      "postal_code": "101-8430",
+      "prefecture": "東京都",
+      "municipality": "千代田区",
+      "address": "東京都千代田区一ツ橋2-1-2 学術総合センター",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017612",
+      "name": "三島市キャンパス",
+      "postal_code": "411-8540",
+      "prefecture": "静岡県",
+      "municipality": "三島市",
+      "address": "静岡県三島市谷田1111",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "s00017601",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017602",
+      "title": "総合研究大学院大学 公式サイト",
+      "url": "https://www.soken.ac.jp/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017603",
+      "title": "総合研究大学院大学 公式入試情報",
+      "url": "https://www.soken.ac.jp/admission/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017604",
+      "title": "総合研究大学院大学 総研大とは",
+      "url": "https://www.soken.ac.jp/features/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017605",
+      "title": "総合研究大学院大学 教育の目標と方針",
+      "url": "https://www.soken.ac.jp/education/policy/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017606",
+      "title": "総合研究大学院大学 沿革",
+      "url": "https://www.soken.ac.jp/outline/history/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017607",
+      "title": "総合研究大学院大学 データブック 学生数（2026年5月1日現在）",
+      "url": "https://www.soken.ac.jp/outline/dbook/students/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017608",
+      "title": "総合研究大学院大学 交通アクセス",
+      "url": "https://www.soken.ac.jp/access/",
+      "publisher": "総合研究大学院大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

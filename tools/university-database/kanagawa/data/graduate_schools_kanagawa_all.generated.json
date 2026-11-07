@@ -7,7 +7,9 @@
     "programs": [
       "総合理工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -27,7 +29,9 @@
     "programs": [
       "生物科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -52,7 +56,12 @@
       "コミュニケーション学専攻",
       "観光学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学",
+      "社会学",
+      "観光"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -72,7 +81,9 @@
     "programs": [
       "政治学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -92,7 +103,9 @@
     "programs": [
       "応用経済学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -112,7 +125,9 @@
     "programs": [
       "法律学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -153,7 +168,9 @@
       "音響芸術専攻",
       "造型芸術専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -173,7 +190,9 @@
     "programs": [
       "体育学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -195,7 +214,9 @@
       "物理学専攻",
       "化学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -219,7 +240,12 @@
       "機械工学専攻",
       "医用生体工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学",
+      "建築・デザイン",
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -239,7 +265,9 @@
     "programs": [
       "情報通信学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -259,7 +287,9 @@
     "programs": [
       "海洋学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "海洋"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -281,7 +311,10 @@
       "医科学専攻",
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学",
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -301,7 +334,9 @@
     "programs": [
       "健康マネジメント学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -321,7 +356,9 @@
     "programs": [
       "農学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "農学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -341,7 +378,9 @@
     "programs": [
       "生物学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -362,7 +401,9 @@
       "教育支援専攻",
       "高度教職実践専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -384,7 +425,12 @@
       "経営学専攻",
       "国際経済法学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "法学",
+      "経済・経営・商学",
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -406,7 +452,12 @@
       "化学・生命系理工学専攻",
       "数物・電子情報系理工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学",
+      "情報・AI",
+      "海洋"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -428,7 +479,10 @@
       "自然環境専攻",
       "情報環境専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "情報・AI"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -450,7 +504,10 @@
       "都市地域社会専攻",
       "都市イノベーション専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学",
+      "建築・デザイン"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -470,7 +527,9 @@
     "programs": [
       "先端学術専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -490,7 +549,9 @@
     "programs": [
       "都市社会文化専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -510,7 +571,10 @@
     "programs": [
       "国際マネジメント専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -531,7 +595,10 @@
       "物質システム科学専攻",
       "生命環境システム科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -551,7 +618,10 @@
     "programs": [
       "生命医科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "医学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -572,7 +642,10 @@
       "医科学専攻",
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学",
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -593,7 +666,10 @@
       "データサイエンス専攻",
       "ヘルスデータサイエンス専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI",
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -613,7 +689,9 @@
     "programs": [
       "保健福祉学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会福祉"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -633,7 +711,9 @@
     "programs": [
       "ヘルスイノベーション専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -653,7 +733,9 @@
     "programs": [
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -673,7 +755,9 @@
     "programs": [
       "教育実践専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -693,7 +777,9 @@
     "programs": [
       "法律学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -713,7 +799,9 @@
     "programs": [
       "経済学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -733,7 +821,10 @@
     "programs": [
       "国際経営専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係",
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -755,7 +846,11 @@
       "中国言語文化専攻",
       "日本文化専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学",
+      "国際関係"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -775,7 +870,9 @@
     "programs": [
       "人間科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -795,7 +892,9 @@
     "programs": [
       "理学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -816,7 +915,10 @@
       "工学専攻",
       "建築学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "建築・デザイン"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -836,7 +938,9 @@
     "programs": [
       "歴史民俗資料学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -858,7 +962,11 @@
       "比較日本文化専攻",
       "社会学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学",
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -879,7 +987,9 @@
       "経済学専攻",
       "経営学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -900,7 +1010,10 @@
       "法学専攻",
       "地域創生専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学",
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -926,7 +1039,12 @@
       "情報学専攻",
       "総合工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学",
+      "情報・AI",
+      "建築・デザイン"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -946,7 +1064,9 @@
     "programs": [
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -966,7 +1086,9 @@
     "programs": [
       "歯学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "歯学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -989,7 +1111,10 @@
       "文化財学専攻",
       "ドキュメンテーション専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1011,7 +1136,11 @@
       "日本語日本文学専攻",
       "コミュニケーション学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "国際・語学",
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1031,7 +1160,9 @@
     "programs": [
       "音楽芸術専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "芸術"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1051,7 +1182,9 @@
     "programs": [
       "国際交流専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1071,7 +1204,9 @@
     "programs": [
       "商学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1091,7 +1226,9 @@
     "programs": [
       "情報セキュリティ専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1112,7 +1249,9 @@
       "薬科学専攻",
       "薬学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "薬学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1133,7 +1272,10 @@
       "獣医学専攻",
       "動物応用科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "農学",
+      "獣医学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1153,7 +1295,9 @@
     "programs": [
       "環境保健科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1173,7 +1317,9 @@
     "programs": [
       "歯学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "歯学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1193,7 +1339,10 @@
     "programs": [
       "児童学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1214,7 +1363,10 @@
       "機械工学専攻",
       "電気情報工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1234,7 +1386,9 @@
     "programs": [
       "栄養科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1254,7 +1408,9 @@
     "programs": [
       "社会起業専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "社会学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1277,7 +1433,10 @@
       "音楽教育学専攻",
       "作曲専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "教育",
+      "芸術"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1297,7 +1456,9 @@
     "programs": [
       "医科学系専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "医学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1322,7 +1483,11 @@
       "情報工学専攻",
       "ロボット・メカトロニクスシステム専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "理学",
+      "工学",
+      "情報・AI"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1344,7 +1509,10 @@
       "音楽芸術運営専攻",
       "音楽芸術専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "芸術"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1364,7 +1532,9 @@
     "programs": [
       "法律学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "法学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1384,7 +1554,10 @@
     "programs": [
       "医用工学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "工学",
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1404,7 +1577,9 @@
     "programs": [
       "スポーツ科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1424,7 +1599,9 @@
     "programs": [
       "人間科学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "心理"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1444,7 +1621,9 @@
     "programs": [
       "国際協力専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "国際関係"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1464,7 +1643,9 @@
     "programs": [
       "経営管理専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1484,7 +1665,9 @@
     "programs": [
       "看護マネジメント専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1505,7 +1688,13 @@
       "子ども人間学専攻",
       "心理学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "文学・人文",
+      "教育",
+      "幼児教育・保育",
+      "心理",
+      "理学"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1525,7 +1714,9 @@
     "programs": [
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1545,7 +1736,9 @@
     "programs": [
       "保健医療学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",
@@ -1565,7 +1758,9 @@
     "programs": [
       "看護学専攻"
     ],
-    "academic_field_tags": [],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
     "status": "active",
     "verification_status": "mext_verified",
     "verified_at": "2026-11-07",

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000185",
+  "id": "u000185",
+  "name": "横浜商科大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "「安んじて事を托さるる人となれ」を建学の精神とし、高度な専門性、高潔な倫理、使命感・責任感、奉仕の精神を教育の柱とする。",
+  "mission": "実学重視の商学教育を通じ、高度な専門知識、社会への奉仕、職業上の使命感と責任感を備え、託された責任を果たせる人材を育成する。",
+  "feature_summary": "横浜市に本部を置き、商学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.shodai.ac.jp/",
+  "admissions_url": "https://www.shodai.ac.jp/exam_event/schedule/",
+  "student_counts": {
+    "undergraduate": 1359,
+    "graduate": 8,
+    "total": 1367,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "経済・経営・商学",
+    "観光",
+    "情報・AI"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300062",
+      "name": "商学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "観光",
+        "情報・AI"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300125",
+          "name": "商学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300126",
+          "name": "観光マネジメント学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300127",
+          "name": "経営情報学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300052",
+      "name": "商学研究科",
+      "programs": [
+        {
+          "name": "商学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018501",
+      "name": "つるみキャンパス",
+      "postal_code": "230-8577",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市鶴見区",
+      "address": "神奈川県横浜市鶴見区東寺尾4-11-1",
+      "official_url": "https://www.shodai.ac.jp/access/index.html",
+      "nearest_stations": [
+        {
+          "station": "生麦駅",
+          "line": "京急本線",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "大口駅",
+          "line": "JR横浜線",
+          "access": "徒歩20分"
+        },
+        {
+          "station": "横浜駅",
+          "line": "JR線・東急東横線・京急本線・横浜市営地下鉄",
+          "access": "東口バスターミナル15番から市営バス7・29系統で「岸谷」下車徒歩5分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00018502",
+      "name": "みどりキャンパス",
+      "postal_code": "226-0024",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市緑区",
+      "address": "神奈川県横浜市緑区西八朔町776",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "高等学校教諭一種免許状（商業）",
+      "condition": "商学部 商学科（商学科の学生のみ履修可能・教職課程の所定単位修得）",
+      "source_id": "s00018507"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018501",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018502",
+      "title": "横浜商科大学 公式サイト",
+      "url": "https://www.shodai.ac.jp/",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018503",
+      "title": "横浜商科大学 公式入試情報",
+      "url": "https://www.shodai.ac.jp/exam_event/schedule/",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018504",
+      "title": "横浜商科大学 建学の精神・大学のポリシー",
+      "url": "https://www.shodai.ac.jp/university/admission/",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018505",
+      "title": "横浜商科大学 学生数・教職員数（2026年5月現在）",
+      "url": "https://www.shodai.ac.jp/university/number/",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018506",
+      "title": "横浜商科大学 交通アクセス",
+      "url": "https://www.shodai.ac.jp/access/index.html",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018507",
+      "title": "横浜商科大学 資格・免許情報",
+      "url": "https://www.shodai.ac.jp/education/department/teaching_job/",
+      "publisher": "横浜商科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

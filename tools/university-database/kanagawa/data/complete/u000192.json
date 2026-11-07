@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000192",
+  "id": "u000192",
+  "name": "湘南工科大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "藤沢市",
+  "philosophy": "「社会に貢献する技術者の育成」をミッションに掲げ、技術力と人間力を備え、自ら未来を描いて挑戦し実現する人材の育成を目指す。",
+  "mission": "工学に関する教育研究を通じて学問研究を推進し、社会の規範となる人格を形成するとともに、夢と理想を科学の場で実現できる人材を育成する。",
+  "feature_summary": "藤沢市に本部を置き、工学部・情報学部の2学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.shonan-it.ac.jp/",
+  "admissions_url": "https://www.shonan-it.ac.jp/examination/",
+  "student_counts": {
+    "undergraduate": 2060,
+    "graduate": 47,
+    "total": 2107,
+    "as_of": "2026-05-01",
+    "note": "学部は工学部949人・情報学部1,111人の計2,060人、大学院は工学研究科47人（博士前期課程42人・博士後期課程5人）"
+  },
+  "academic_field_tags": [
+    "工学",
+    "情報・AI",
+    "建築・デザイン"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300071",
+      "name": "工学部",
+      "academic_field_tags": [
+        "工学",
+        "建築・デザイン"
+      ],
+      "campus_municipality": "藤沢市",
+      "departments": [
+        {
+          "department_id": "d300145",
+          "name": "機械工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300146",
+          "name": "総合デザイン学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300147",
+          "name": "電気電子工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300148",
+          "name": "人間環境学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300072",
+      "name": "情報学部",
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "campus_municipality": "藤沢市",
+      "departments": [
+        {
+          "department_id": "d300149",
+          "name": "情報学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300059",
+      "name": "工学研究科",
+      "programs": [
+        {
+          "name": "機械工学専攻"
+        },
+        {
+          "name": "電気情報工学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "工学",
+        "情報・AI"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019201",
+      "name": "湘南工科大学校舎",
+      "postal_code": "251-8511",
+      "prefecture": "神奈川県",
+      "municipality": "藤沢市",
+      "address": "神奈川県藤沢市辻堂西海岸1-1-25",
+      "official_url": "https://www.shonan-it.ac.jp/oc/2026/",
+      "nearest_stations": [
+        {
+          "station": "辻堂駅",
+          "line": "JR東海道線",
+          "access": "東改札南口から徒歩約15分、またはバス約5分「浜見山」下車"
+        },
+        {
+          "station": "藤沢駅",
+          "line": "JR東海道線・小田急江ノ島線・江ノ島電鉄線",
+          "access": "北口からバス約11分「浜見山」下車"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "工学部 全学科・情報学部 情報学科（学科に応じた教職課程（中学技術・数学、高校工業・数学・情報）の所定単位修得および介護等体験・教育実習修了）",
+      "source_id": "s00019208"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019201",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019202",
+      "title": "湘南工科大学 公式サイト",
+      "url": "https://www.shonan-it.ac.jp/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019203",
+      "title": "湘南工科大学 公式入試情報",
+      "url": "https://www.shonan-it.ac.jp/examination/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019204",
+      "title": "湘南工科大学 ミッション・教育理念・各種方針",
+      "url": "https://www.shonan-it.ac.jp/outline/idea/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019205",
+      "title": "湘南工科大学 ブランド・ステートメント",
+      "url": "https://www.shonan-it.ac.jp/outline/idea/statement/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019206",
+      "title": "湘南工科大学 高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+      "url": "https://www.shonan-it.ac.jp/media/syugaku_report_R8_2026.07.07.pdf",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019207",
+      "title": "湘南工科大学 交通アクセス",
+      "url": "https://www.shonan-it.ac.jp/oc/2026/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019208",
+      "title": "湘南工科大学 資格・免許情報",
+      "url": "https://www.shonan-it.ac.jp/faculties/general/education/",
+      "publisher": "湘南工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}
