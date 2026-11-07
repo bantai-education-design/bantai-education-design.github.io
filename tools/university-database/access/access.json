@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30",
+ "generated_at": "2026-11-07",
  "note": "各大学公式アクセスページの記載。時刻表・運行日は各大学でご確認ください。",
  "universities": {
   "u000145": {
@@ -272,6 +272,101 @@
    ],
    "school_bus": false,
    "source_url": "https://www.tiu.ac.jp/about/access/"
+  },
+  "u000050": {
+   "campus": "湘南キャンパス",
+   "stations": [
+    {
+     "station": "東海大学前駅",
+     "line": "小田急線",
+     "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
+    },
+    {
+     "station": "平塚駅",
+     "line": "JR東海道線",
+     "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/"
+  },
+  "u000175": {
+   "campus": "常盤台キャンパス",
+   "stations": [
+    {
+     "station": "羽沢横浜国大駅",
+     "line": "相鉄新横浜線・JR線",
+     "access": "徒歩約15分"
+    },
+    {
+     "station": "三ツ沢上町駅",
+     "line": "横浜市営地下鉄ブルーライン",
+     "access": "徒歩約16分"
+    },
+    {
+     "station": "和田町駅",
+     "line": "相鉄本線",
+     "access": "徒歩約20分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu2020.pdf"
+  },
+  "u000176": {
+   "campus": "葉山キャンパス",
+   "stations": [
+    {
+     "station": "逗子駅",
+     "line": "JR横須賀線",
+     "access": "東口1番乗り場から京急バス逗16・逗26系統で約29分、「湘南国際村センター前」下車"
+    },
+    {
+     "station": "逗子・葉山駅",
+     "line": "京急逗子線",
+     "access": "南口1番乗り場から京急バス逗16・逗26系統で約25分、「湘南国際村センター前」下車"
+    },
+    {
+     "station": "汐入駅",
+     "line": "京急本線",
+     "access": "2番乗り場から京急バス汐16系統で約30分、「湘南国際村センター前」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.soken.ac.jp/access/"
+  },
+  "u000177": {
+   "campus": "金沢八景キャンパス",
+   "stations": [
+    {
+     "station": "金沢八景駅",
+     "line": "京急本線・京急逗子線・金沢シーサイドライン",
+     "access": "徒歩約5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.yokohama-cu.ac.jp/access/hakkei_campusmap.html"
+  },
+  "u000178": {
+   "campus": "横須賀キャンパス",
+   "stations": [
+    {
+     "station": "県立大学駅",
+     "line": "京急本線",
+     "access": "徒歩約7分"
+    },
+    {
+     "station": "横須賀中央駅",
+     "line": "京急本線",
+     "access": "徒歩約15分"
+    },
+    {
+     "station": "横須賀駅",
+     "line": "JR横須賀線",
+     "access": "徒歩約40分、またはバス約10分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kuhs.ac.jp/access/"
   }
  }
 }
