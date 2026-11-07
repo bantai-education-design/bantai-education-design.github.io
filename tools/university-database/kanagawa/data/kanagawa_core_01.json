@@ -851,10 +851,24 @@
           "source_url": "https://fanclub.azabu-u.ac.jp/exam/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 大学情報公開・各種方針",
+          "source_url": "https://www.azabu-u.ac.jp/about/open/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 大学の歴史・建学の精神",
+          "source_url": "https://www.azabu-u.ac.jp/about/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.azabu-u.ac.jp/",
-      "admissions_url": "https://fanclub.azabu-u.ac.jp/exam/"
+      "admissions_url": "https://fanclub.azabu-u.ac.jp/exam/",
+      "university_goal": "獣医学、畜産学、獣医保健看護学、動物応用科学、生命科学、環境科学の専門教育研究を通じて応用力と人格を養い、学術の進歩、生活の向上、平和社会の建設に貢献する。",
+      "philosophy": "「学理の討究と誠実なる実践」を建学の精神とし、「地球共生系―人と動物と環境の共生をめざして―」を教育理念として掲げる。"
     },
     {
       "id": "u000190",
@@ -890,10 +904,18 @@
           "source_url": "https://www.kdu.ac.jp/dental/exams/outline/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 理念・精神",
+          "source_url": "https://www.kdu.ac.jp/corporations/outline/ideal/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kdu.ac.jp/",
-      "admissions_url": "https://www.kdu.ac.jp/dental/exams/outline/"
+      "admissions_url": "https://www.kdu.ac.jp/dental/exams/outline/",
+      "university_goal": "歯科医師としての熟練と人間としての優しさを身につけるため、学問・技術・人への理解を統合した教育を行う。",
+      "philosophy": "すべてのものへの慈しみと生命を大切にする「愛の精神」の実践を建学の精神とし、「学をまなび、技を習い、人を識る愛の教育」を教育理念とする。"
     },
     {
       "id": "u000191",
@@ -929,10 +951,24 @@
           "source_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 建学の精神",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/spirit/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 教育方針",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/policy/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kamakura-u.ac.jp/",
-      "admissions_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/"
+      "admissions_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/",
+      "university_goal": "高度で専門的な学術と応用の教育研究を通じて、科学的教養と優雅な性情を養い、人類の福祉と文化の向上発展に寄与する。",
+      "philosophy": "「感謝と奉仕に生きる人づくり」を教育理念、「科学的教養の向上と優雅な性情の涵養」を教育目標とし、徳育・知育・体育の調和を重視する。"
     },
     {
       "id": "u000192",
@@ -968,10 +1004,24 @@
           "source_url": "https://www.shonan-it.ac.jp/examination/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 ミッション・教育理念・各種方針",
+          "source_url": "https://www.shonan-it.ac.jp/outline/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 ブランド・ステートメント",
+          "source_url": "https://www.shonan-it.ac.jp/outline/idea/statement/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shonan-it.ac.jp/",
-      "admissions_url": "https://www.shonan-it.ac.jp/examination/"
+      "admissions_url": "https://www.shonan-it.ac.jp/examination/",
+      "university_goal": "工学に関する教育研究を通じて学問研究を推進し、社会の規範となる人格を形成するとともに、夢と理想を科学の場で実現できる人材を育成する。",
+      "philosophy": "「社会に貢献する技術者の育成」をミッションに掲げ、技術力と人間力を備え、自ら未来を描いて挑戦し実現する人材の育成を目指す。"
     },
     {
       "id": "u000193",
@@ -1007,10 +1057,18 @@
           "source_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 大学概要・建学の精神・各種ポリシー",
+          "source_url": "https://www.sagami-wu.ac.jp/university/outline/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.sagami-wu.ac.jp/",
-      "admissions_url": "https://www.sagami-wu.ac.jp/exam/exam-info/"
+      "admissions_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
+      "university_goal": "女子に高度な知識と専門の学芸を教授研究し、知的・道徳的・応用的能力を伸ばして、建学の精神に基づく教養ある人材を育成する。",
+      "philosophy": "「高潔善美」を建学の精神とし、「見つめる人になる。見つける人になる。」のスローガンのもと、しなやかな発想力と豊かな包容力を備え、社会に貢献する人材を育成する。"
     },
     {
       "id": "u000194",
