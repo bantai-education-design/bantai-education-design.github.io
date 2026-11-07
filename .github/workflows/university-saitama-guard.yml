@@ -78,8 +78,17 @@ jobs:
             assert.ok((u.philosophy||'').length>=20,id+' philosophy');
             assert.ok((u.sources||[]).some(s=>s.role==='primary'&&!s.source_url.includes('mext.go.jp')),id+' official profile source');
           }
-          assert.equal(kcore.filter(x=>x.philosophy).length,5,'five verified Kanagawa profiles');
-          assert.equal(JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8')).verified_profiles,5,'Kanagawa profile manifest');
+          const privateProfileIds=['u000050','u000180','u000181','u000182','u000183'];
+          for(const id of privateProfileIds){
+            const u=kcore.find(x=>x.id===id);
+            assert.ok((u?.philosophy||'').length>=20,id+' private philosophy');
+            assert.ok((u?.university_goal||'').length>=20,id+' private university goal');
+            assert.ok((u.sources||[]).some(s=>s.role==='primary'&&!s.source_url.includes('mext.go.jp')),id+' private official profile source');
+          }
+          assert.equal(kcore.filter(x=>x.philosophy).length,10,'ten verified Kanagawa profiles');
+          const kmanifest=JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8'));
+          assert.equal(kmanifest.verified_profiles,10,'Kanagawa profile manifest');
+          assert.equal(kmanifest.private_verified_profiles,5,'Kanagawa private profile manifest');
           const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
           assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
           console.log('saitama data ok');
