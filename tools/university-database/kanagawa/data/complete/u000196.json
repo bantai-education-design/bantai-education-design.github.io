@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000196",
+  "id": "u000196",
+  "name": "神奈川工科大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "厚木市",
+  "philosophy": "「考え・行動する人材の育成―社会で活躍できる人づくり―」を大学の教育目的とし、主体性、探究姿勢、協働力、社会的責任と倫理観を重視する。",
+  "mission": "自然科学・情報・データサイエンスの基礎と専門知識・技能を備え、課題を発見して論理的に解決し、他者と協働しながら社会で活躍できる技術系職業人を育成する。",
+  "feature_summary": "厚木市に本部を置き、工学部・情報学部・健康医療科学部の3学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.kait.jp/",
+  "admissions_url": "https://op.kait.jp/",
+  "student_counts": {
+    "undergraduate": 4117,
+    "graduate": 118,
+    "total": 4235,
+    "as_of": "2026-05-01",
+    "note": "学部は工学部1,209人・情報学部2,148人・創造工学部116人・応用バイオ科学部83人・健康医療科学部561人の計4,117人（男3,402・女715）、大学院は工学研究科118人（男106・女12）"
+  },
+  "academic_field_tags": [
+    "社会学",
+    "理学",
+    "工学",
+    "情報・AI",
+    "看護・医療",
+    "食・栄養"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300078",
+      "name": "工学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "厚木市",
+      "departments": [
+        {
+          "department_id": "d300161",
+          "name": "機械工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300162",
+          "name": "電気電子情報工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300163",
+          "name": "応用化学生物学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300079",
+      "name": "情報学部",
+      "academic_field_tags": [
+        "社会学",
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "厚木市",
+      "departments": [
+        {
+          "department_id": "d300164",
+          "name": "情報工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300165",
+          "name": "情報ネットワーク・コミュニケーション学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300166",
+          "name": "情報メディア学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300167",
+          "name": "情報システム学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300080",
+      "name": "健康医療科学部",
+      "academic_field_tags": [
+        "工学",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "campus_municipality": "厚木市",
+      "departments": [
+        {
+          "department_id": "d300168",
+          "name": "看護学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300169",
+          "name": "管理栄養学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300170",
+          "name": "臨床工学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300064",
+      "name": "工学研究科",
+      "programs": [
+        {
+          "name": "機械工学専攻"
+        },
+        {
+          "name": "電気電子工学専攻"
+        },
+        {
+          "name": "応用化学・バイオサイエンス専攻"
+        },
+        {
+          "name": "機械システム工学専攻"
+        },
+        {
+          "name": "情報工学専攻"
+        },
+        {
+          "name": "ロボット・メカトロニクスシステム専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "情報・AI"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019601",
+      "name": "本部キャンパス",
+      "postal_code": "243-0292",
+      "prefecture": "神奈川県",
+      "municipality": "厚木市",
+      "address": "神奈川県厚木市下荻野1030",
+      "official_url": "https://www.kait.jp/directions/",
+      "nearest_stations": [
+        {
+          "station": "本厚木駅",
+          "line": "小田急小田原線",
+          "access": "北口1番から一般路線バスで「神奈川工科大学前」下車、または厚木バスセンターから直通バス。通常約25分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "健康医療科学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00019601"
+    },
+    {
+      "name": "管理栄養士（国家試験受験資格）",
+      "condition": "健康医療科学部 管理栄養学科（管理栄養学科（養成課程））",
+      "source_id": "s00019601"
+    },
+    {
+      "name": "臨床工学技士（国家試験受験資格）",
+      "condition": "健康医療科学部 臨床工学科（臨床工学科（養成課程））",
+      "source_id": "s00019601"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019601",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019602",
+      "title": "神奈川工科大学 公式サイト",
+      "url": "https://www.kait.jp/",
+      "publisher": "神奈川工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019603",
+      "title": "神奈川工科大学 公式入試情報",
+      "url": "https://op.kait.jp/",
+      "publisher": "神奈川工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019604",
+      "title": "神奈川工科大学 大学・学部等の教育目的と方針",
+      "url": "https://www.kait.jp/about/information/aim/",
+      "publisher": "神奈川工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019605",
+      "title": "神奈川工科大学 情報公開 在籍学生数・収容定員（2026年5月1日現在）",
+      "url": "https://www.kait.jp/about/information/faculty/",
+      "publisher": "神奈川工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019606",
+      "title": "神奈川工科大学 交通アクセス",
+      "url": "https://www.kait.jp/directions/",
+      "publisher": "神奈川工科大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

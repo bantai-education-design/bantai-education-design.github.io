@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000180",
+  "id": "u000180",
+  "name": "星槎大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "箱根町",
+  "philosophy": "「社会に必要とされることを創造し、常に新たな道を切り開き、それを成し遂げる」を建学の精神とし、「共生」を教育理念の中心に据える。",
+  "mission": "人と人、人と自然が共生する社会の創造に貢献するため、教育・福祉・環境・国際関係を横断する広い知力、共生する心、課題探究能力を育成する。",
+  "feature_summary": "箱根町に本部を置き、共生科学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.seisa.ac.jp/",
+  "admissions_url": "https://www.seisa.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 3653,
+    "graduate": 135,
+    "total": 3788,
+    "as_of": "2026-05-01",
+    "note": "学部は共生科学部正科生3,653人（2026年5月1日現在、科目等履修生・特修生除く）、大学院は教育学研究科・教育実践研究科の在学中135人（2026年7月1日時点）"
+  },
+  "academic_field_tags": [
+    "社会学",
+    "教育"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300036",
+      "name": "共生科学部",
+      "academic_field_tags": [
+        "社会学"
+      ],
+      "campus_municipality": "箱根町",
+      "departments": [
+        {
+          "department_id": "d300080",
+          "name": "共生科学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300033",
+      "name": "教育実践研究科",
+      "programs": [
+        {
+          "name": "教育実践専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "教育"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018001",
+      "name": "箱根キャンパス",
+      "postal_code": "250-0613",
+      "prefecture": "神奈川県",
+      "municipality": "足柄下郡箱根町",
+      "address": "神奈川県足柄下郡箱根町仙石原817-255",
+      "official_url": "https://seisa-hakonesengokuharasc.jp/access",
+      "nearest_stations": [
+        {
+          "station": "箱根湯本駅",
+          "line": "箱根登山電車",
+          "access": "箱根登山バス「湖尻・桃源台」行きで約30分、「仙石案内所前」下車徒歩5分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00018002",
+      "name": "横浜キャンパス",
+      "postal_code": "231-0021",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市中区",
+      "address": "神奈川県横浜市中区日本大通11番地 横浜情報文化センター5F",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00018003",
+      "name": "芦別キャンパス",
+      "postal_code": "075-0163",
+      "prefecture": "北海道",
+      "municipality": "芦別市",
+      "address": "北海道芦別市緑泉町5-14",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00018004",
+      "name": "横浜事務局",
+      "postal_code": "227-8522",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市青葉区",
+      "address": "神奈川県横浜市青葉区さつきが丘8-80",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "幼稚園教諭一種免許状",
+      "condition": "共生科学部 共生科学科（初等教育専攻）（教職課程登録・所定の単位修得（2種免許状も対応））",
+      "source_id": "s00018009"
+    },
+    {
+      "name": "小学校教諭一種免許状",
+      "condition": "共生科学部 共生科学科（初等教育専攻）（教職課程登録・所定の単位修得および介護等体験（2種免許状も対応））",
+      "source_id": "s00018009"
+    },
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "共生科学部 共生科学科（共生科学専攻・スポーツ身体表現専攻・グローカルコミュニケーション専攻）（専攻により社会・地理歴史・公民、保健体育、英語の教職課程科目修得）",
+      "source_id": "s00018009"
+    },
+    {
+      "name": "特別支援学校教諭一種免許状",
+      "condition": "共生科学部 共生科学科（共生科学専攻）（基礎免許状の所持を前提に教職課程の所定単位修得）",
+      "source_id": "s00018009"
+    },
+    {
+      "name": "社会福祉士（国家試験受験資格）",
+      "condition": "共生科学部 共生科学科（福祉専攻）（正科生として福祉専攻に入学し厚生労働大臣指定科目を修得して卒業）",
+      "source_id": "s00018010"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018001",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018002",
+      "title": "星槎大学 公式サイト",
+      "url": "https://www.seisa.ac.jp/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018003",
+      "title": "星槎大学 公式入試情報",
+      "url": "https://www.seisa.ac.jp/admission/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018004",
+      "title": "星槎大学 理念・設立趣旨",
+      "url": "https://seisa.ac.jp/about/outline/philosophy/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018005",
+      "title": "星槎大学 沿革",
+      "url": "https://seisa.ac.jp/about/outline/history/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018006",
+      "title": "星槎大学 共生科学部 学生数（令和8年5月1日現在）",
+      "url": "https://seisa.ac.jp/pdf/report/seisa-about-gakusei_20260501.pdf",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018007",
+      "title": "星槎大学 大学院標準修業年限内修了割合・在学状況（令和8年7月1日時点）",
+      "url": "https://seisa.ac.jp/pdf/report/daigakuin_20260701.pdf",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018008",
+      "title": "星槎大学 交通アクセス",
+      "url": "https://seisa-hakonesengokuharasc.jp/access",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018009",
+      "title": "星槎大学 資格・免許情報",
+      "url": "https://seisa.ac.jp/license/teacher/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018010",
+      "title": "星槎大学 資格・免許情報",
+      "url": "https://seisa.ac.jp/license/social/",
+      "publisher": "星槎大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

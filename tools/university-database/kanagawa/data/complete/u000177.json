@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000177",
+  "id": "u000177",
+  "name": "横浜市立大学",
+  "establishment_type": "public",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "国際都市・横浜と共に歩み、教育・研究・医療分野をリードし、社会の発展に寄与する市民の誇りとなる大学を目指す。",
+  "mission": "幅広い教養と高い専門的能力を育成し、教育・研究・医療を通じて横浜市民・地域社会の要請に応えるとともに世界へ貢献する。",
+  "feature_summary": "横浜市に本部を置き、国際教養学部・国際商学部・理学部・データサイエンス学部・医学部の5学部と大学院6研究科で学ぶ大学です。",
+  "official_url": "https://www.yokohama-cu.ac.jp/",
+  "admissions_url": "https://www.yokohama-cu.ac.jp/admissions/",
+  "student_counts": {
+    "undergraduate": 4304,
+    "graduate": 1007,
+    "total": 5311,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際関係",
+    "経済・経営・商学",
+    "社会学",
+    "理学",
+    "工学",
+    "情報・AI",
+    "医学",
+    "看護・医療"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300029",
+      "name": "国際教養学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際関係"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300069",
+          "name": "国際教養学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300030",
+      "name": "国際商学部",
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300070",
+          "name": "国際商学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300031",
+      "name": "理学部",
+      "academic_field_tags": [
+        "理学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300071",
+          "name": "理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300032",
+      "name": "データサイエンス学部",
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300072",
+          "name": "データサイエンス学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300033",
+      "name": "医学部",
+      "academic_field_tags": [
+        "医学",
+        "看護・医療"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300073",
+          "name": "医学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300074",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300024",
+      "name": "都市社会文化研究科",
+      "programs": [
+        {
+          "name": "都市社会文化専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "社会学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300025",
+      "name": "国際マネジメント研究科",
+      "programs": [
+        {
+          "name": "国際マネジメント専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300026",
+      "name": "生命ナノシステム科学研究科",
+      "programs": [
+        {
+          "name": "物質システム科学専攻"
+        },
+        {
+          "name": "生命環境システム科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "工学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300027",
+      "name": "生命医科学研究科",
+      "programs": [
+        {
+          "name": "生命医科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "医学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300028",
+      "name": "医学研究科",
+      "programs": [
+        {
+          "name": "医科学専攻"
+        },
+        {
+          "name": "看護学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "医学",
+        "看護・医療"
+      ]
+    },
+    {
+      "graduate_school_id": "g300029",
+      "name": "データサイエンス研究科",
+      "programs": [
+        {
+          "name": "データサイエンス専攻"
+        },
+        {
+          "name": "ヘルスデータサイエンス専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "情報・AI",
+        "看護・医療"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017701",
+      "name": "金沢八景キャンパス",
+      "postal_code": "236-0027",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市金沢区",
+      "address": "神奈川県横浜市金沢区瀬戸22-2",
+      "official_url": "https://www.yokohama-cu.ac.jp/access/hakkei_campusmap.html",
+      "nearest_stations": [
+        {
+          "station": "金沢八景駅",
+          "line": "京急本線・京急逗子線・金沢シーサイドライン",
+          "access": "徒歩約5分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00017702",
+      "name": "福浦キャンパス",
+      "postal_code": "236-0004",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市金沢区",
+      "address": "神奈川県横浜市金沢区福浦3-9",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017703",
+      "name": "鶴見キャンパス",
+      "postal_code": "230-0045",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市鶴見区",
+      "address": "神奈川県横浜市鶴見区末広町1-7-29",
+      "official_url": null,
+      "nearest_stations": []
+    },
+    {
+      "campus_id": "c00017704",
+      "name": "舞岡キャンパス",
+      "postal_code": "244-0813",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市戸塚区",
+      "address": "神奈川県横浜市戸塚区舞岡町641-12",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "医師（国家試験受験資格）",
+      "condition": "医学部 医学科（医学科（養成課程））",
+      "source_id": "s00017701"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "医学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00017701"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00017701",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017702",
+      "title": "横浜市立大学 公式サイト",
+      "url": "https://www.yokohama-cu.ac.jp/",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017703",
+      "title": "横浜市立大学 公式入試情報",
+      "url": "https://www.yokohama-cu.ac.jp/admissions/",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017704",
+      "title": "横浜市立大学 大学の理念",
+      "url": "https://www.yokohama-cu.ac.jp/univ/outline/philosophy/index.html",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017705",
+      "title": "横浜市立大学 大学の目的",
+      "url": "https://www.yokohama-cu.ac.jp/info/objective/university.html",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017706",
+      "title": "横浜市立大学 YCU PROFILE 2025",
+      "url": "https://www.yokohama-cu.ac.jp/u2ou5s0000001hf9-att/YCUPROFILE2025-20251217new.pdf",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017707",
+      "title": "横浜市立大学 収容定員・在学者数（2026年5月1日現在）",
+      "url": "https://www.yokohama-cu.ac.jp/info/student/kjkjjl0000000bdn-att/R7shuyouteiinzaigakushasu.pdf",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017708",
+      "title": "横浜市立大学 交通アクセス",
+      "url": "https://www.yokohama-cu.ac.jp/access/hakkei_campusmap.html",
+      "publisher": "横浜市立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

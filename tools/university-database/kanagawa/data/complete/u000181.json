@@ -1,0 +1,531 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000181",
+  "id": "u000181",
+  "name": "神奈川大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "創立者・米田吉盛の「教育は人を造るにあり」という信念のもと、「質実剛健、積極進取、中正堅実」を建学の精神として掲げる。",
+  "mission": "真の実学を目指す伝統を踏まえ、自立した良識ある市民としての判断力・実践力、国際的感性、専門的知識と技能を備え、自ら成長できる人材を育成する。",
+  "feature_summary": "横浜市に本部を置き、法学部・経済学部・経営学部・外国語学部など11学部と大学院8研究科で学ぶ大学です。",
+  "official_url": "https://www.kanagawa-u.ac.jp/",
+  "admissions_url": "https://www.kanagawa-u.ac.jp/admissions/",
+  "student_counts": {
+    "undergraduate": 18878,
+    "graduate": 558,
+    "total": 19436,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "国際・語学",
+    "国際関係",
+    "法学",
+    "経済・経営・商学",
+    "心理",
+    "理学",
+    "工学",
+    "情報・AI",
+    "建築・デザイン"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300037",
+      "name": "法学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300081",
+          "name": "法律学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300082",
+          "name": "自治行政学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300038",
+      "name": "経済学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300083",
+          "name": "経済学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300084",
+          "name": "現代ビジネス学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300039",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300085",
+          "name": "国際経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300040",
+      "name": "外国語学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300086",
+          "name": "英語英文学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300087",
+          "name": "スペイン語学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300088",
+          "name": "中国語学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300041",
+      "name": "国際日本学部",
+      "academic_field_tags": [
+        "文学・人文",
+        "国際関係",
+        "理学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300089",
+          "name": "国際文化交流学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300090",
+          "name": "日本文化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300091",
+          "name": "歴史民俗学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300042",
+      "name": "人間科学部",
+      "academic_field_tags": [
+        "心理"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300092",
+          "name": "人間科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300043",
+      "name": "理学部",
+      "academic_field_tags": [
+        "理学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300093",
+          "name": "理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300044",
+      "name": "工学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "理学",
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300094",
+          "name": "機械工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300095",
+          "name": "電気電子情報工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300096",
+          "name": "経営工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300097",
+          "name": "応用物理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300045",
+      "name": "建築学部",
+      "academic_field_tags": [
+        "建築・デザイン"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300098",
+          "name": "建築学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300046",
+      "name": "化学生命学部",
+      "academic_field_tags": [
+        "理学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300099",
+          "name": "応用化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300100",
+          "name": "生命機能学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300047",
+      "name": "情報学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300101",
+          "name": "計算機科学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300102",
+          "name": "システム数理学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300034",
+      "name": "法学研究科",
+      "programs": [
+        {
+          "name": "法律学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "法学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300035",
+      "name": "経済学研究科",
+      "programs": [
+        {
+          "name": "経済学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300036",
+      "name": "経営学研究科",
+      "programs": [
+        {
+          "name": "国際経営専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300037",
+      "name": "人文学研究科",
+      "programs": [
+        {
+          "name": "欧米言語文化専攻"
+        },
+        {
+          "name": "中国言語文化専攻"
+        },
+        {
+          "name": "日本文化専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "国際関係"
+      ]
+    },
+    {
+      "graduate_school_id": "g300038",
+      "name": "人間科学研究科",
+      "programs": [
+        {
+          "name": "人間科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "心理"
+      ]
+    },
+    {
+      "graduate_school_id": "g300039",
+      "name": "理学研究科",
+      "programs": [
+        {
+          "name": "理学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300040",
+      "name": "工学研究科",
+      "programs": [
+        {
+          "name": "工学専攻"
+        },
+        {
+          "name": "建築学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "工学",
+        "建築・デザイン"
+      ]
+    },
+    {
+      "graduate_school_id": "g300041",
+      "name": "歴史民俗資料学研究科",
+      "programs": [
+        {
+          "name": "歴史民俗資料学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00018101",
+      "name": "横浜キャンパス",
+      "postal_code": "221-8686",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市神奈川区",
+      "address": "神奈川県横浜市神奈川区六角橋3-27-1",
+      "official_url": "https://www.kanagawa-u.ac.jp/access/yokohama/",
+      "nearest_stations": [
+        {
+          "station": "白楽駅",
+          "line": "東急東横線",
+          "access": "徒歩13分"
+        },
+        {
+          "station": "東白楽駅",
+          "line": "東急東横線",
+          "access": "徒歩13分"
+        },
+        {
+          "station": "横浜駅",
+          "line": "JR線・私鉄・横浜市営地下鉄",
+          "access": "西口から横浜市営バス36・82系統で約14分、「神奈川大学入口」または「六角橋西町」下車"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00018102",
+      "name": "みなとみらいキャンパス",
+      "postal_code": "220-8739",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市西区",
+      "address": "神奈川県横浜市西区みなとみらい4-5-3",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "法・経済・経営・外国語・国際日本・人間科学・理・工・建築・化学生命・情報学部（各学科の教職課程で所定の単位修得（建築学科は高校工業のみ、情報学部先端情報領域プログラムは除く））",
+      "source_id": "s00018107"
+    },
+    {
+      "name": "学芸員",
+      "condition": "全学部（学芸員課程）（博物館法に基づく学芸員課程の所定単位修得）",
+      "source_id": "s00018108"
+    },
+    {
+      "name": "一級建築士・二級建築士（受験資格）",
+      "condition": "建築学部 建築学科（国土交通大臣が指定する建築に関する科目（指定科目）を修めて卒業）",
+      "source_id": "s00018109"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00018101",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018102",
+      "title": "神奈川大学 公式サイト",
+      "url": "https://www.kanagawa-u.ac.jp/",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018103",
+      "title": "神奈川大学 公式入試情報",
+      "url": "https://www.kanagawa-u.ac.jp/admissions/",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018104",
+      "title": "神奈川大学 建学の精神・大学の理念",
+      "url": "https://www.kanagawa-u.ac.jp/aboutus/timeline/philosophy/",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018105",
+      "title": "神奈川大学 基本情報 在学生データ 全学生数（2026年5月1日現在）",
+      "url": "https://www.kanagawa-u.ac.jp/disclosure/data/student/current/whole/student.html",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018106",
+      "title": "神奈川大学 交通アクセス",
+      "url": "https://www.kanagawa-u.ac.jp/access/yokohama/",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018107",
+      "title": "神奈川大学 資格・免許情報",
+      "url": "https://www.kanagawa-u.ac.jp/disclosure/education/qualification/teacher.html",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018108",
+      "title": "神奈川大学 資格・免許情報",
+      "url": "https://www.kanagawa-u.ac.jp/disclosure/education/qualification/curator.html",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00018109",
+      "title": "神奈川大学 資格・免許情報",
+      "url": "https://www.kanagawa-u.ac.jp/career/qualification/",
+      "publisher": "神奈川大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

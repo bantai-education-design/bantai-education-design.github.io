@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000178",
+  "id": "u000178",
+  "name": "神奈川県立保健福祉大学",
+  "establishment_type": "public",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横須賀市",
+  "philosophy": "保健・医療・福祉の対象を温もりのある「ひと」と捉え、領域を越えた連携と協働によりヒューマンサービスを実現する。",
+  "mission": "保健・医療・福祉の連携と総合化、生涯にわたる継続教育、地域社会への貢献を通じ、ヒューマンサービスを実践できる人材を育成する。",
+  "feature_summary": "横須賀市に本部を置き、保健福祉学部の1学部と大学院2研究科で学ぶ大学です。",
+  "official_url": "https://www.kuhs.ac.jp/",
+  "admissions_url": "https://www.kuhs.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 960,
+    "graduate": 141,
+    "total": 1101,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "社会福祉",
+    "看護・医療",
+    "食・栄養"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300034",
+      "name": "保健福祉学部",
+      "academic_field_tags": [
+        "社会福祉",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "campus_municipality": "横須賀市",
+      "departments": [
+        {
+          "department_id": "d300075",
+          "name": "看護学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300076",
+          "name": "栄養学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300077",
+          "name": "社会福祉学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300078",
+          "name": "リハビリテーション学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300030",
+      "name": "保健福祉学研究科",
+      "programs": [
+        {
+          "name": "保健福祉学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "社会福祉"
+      ]
+    },
+    {
+      "graduate_school_id": "g300031",
+      "name": "ヘルスイノベーション研究科",
+      "programs": [
+        {
+          "name": "ヘルスイノベーション専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "看護・医療"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017801",
+      "name": "横須賀キャンパス",
+      "postal_code": "238-8522",
+      "prefecture": "神奈川県",
+      "municipality": "横須賀市",
+      "address": "神奈川県横須賀市平成町1-10-1",
+      "official_url": "https://www.kuhs.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "県立大学駅",
+          "line": "京急本線",
+          "access": "徒歩約7分"
+        },
+        {
+          "station": "横須賀中央駅",
+          "line": "京急本線",
+          "access": "徒歩約15分"
+        },
+        {
+          "station": "横須賀駅",
+          "line": "JR横須賀線",
+          "access": "徒歩約40分、またはバス約10分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00017802",
+      "name": "川崎キャンパス",
+      "postal_code": "210-0821",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市川崎区",
+      "address": "神奈川県川崎市川崎区殿町3-25-10 Research Gate Building TONOMACHI 2-A棟 2・3階",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "保健福祉学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00017801"
+    },
+    {
+      "name": "養護教諭一種免許状",
+      "condition": "保健福祉学部 看護学科（選択希望者のみ・学内選考あり）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "栄養士免許",
+      "condition": "保健福祉学部 栄養学科（卒業時に取得可能）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "管理栄養士（国家試験受験資格）",
+      "condition": "保健福祉学部 栄養学科（管理栄養士国家試験受験資格）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "栄養教諭一種免許状",
+      "condition": "保健福祉学部 栄養学科（選択希望者のみ・学内選考あり）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "社会福祉士（国家試験受験資格）",
+      "condition": "保健福祉学部 社会福祉学科（社会福祉士国家試験受験資格）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "精神保健福祉士（国家試験受験資格）",
+      "condition": "保健福祉学部 社会福祉学科（選択希望者のみ・学内選考あり）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "介護福祉士（国家試験受験資格）",
+      "condition": "保健福祉学部 社会福祉学科（選択希望者のみ・学内選考あり）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "condition": "保健福祉学部 リハビリテーション学科 理学療法学専攻（理学療法学専攻）",
+      "source_id": "s00017808"
+    },
+    {
+      "name": "作業療法士（国家試験受験資格）",
+      "condition": "保健福祉学部 リハビリテーション学科 作業療法学専攻（作業療法学専攻）",
+      "source_id": "s00017808"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00017801",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017802",
+      "title": "神奈川県立保健福祉大学 公式サイト",
+      "url": "https://www.kuhs.ac.jp/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017803",
+      "title": "神奈川県立保健福祉大学 公式入試情報",
+      "url": "https://www.kuhs.ac.jp/admission/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017804",
+      "title": "神奈川県立保健福祉大学 本学の基本理念",
+      "url": "https://www.kuhs.ac.jp/information/education/idea/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017805",
+      "title": "神奈川県立保健福祉大学 本学の沿革",
+      "url": "https://www.kuhs.ac.jp/information/about/history/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017806",
+      "title": "神奈川県立保健福祉大学 入学定員・収容定員・在学生数（2026年5月1日現在）",
+      "url": "https://www.kuhs.ac.jp/information/about/capacity/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017807",
+      "title": "神奈川県立保健福祉大学 交通アクセス",
+      "url": "https://www.kuhs.ac.jp/access/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017808",
+      "title": "神奈川県立保健福祉大学 資格・免許情報",
+      "url": "https://shi.kuhs.ac.jp/career/qualification/",
+      "publisher": "神奈川県立保健福祉大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

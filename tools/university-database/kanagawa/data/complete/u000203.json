@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000203",
+  "id": "u000203",
+  "name": "日本映画大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "人間の尊厳、公平、自由と個性を尊重し、人間を深く観察する姿勢と、既成の枠を越えて未踏の地へ踏み込む自由な精神と勇気を重視する。",
+  "mission": "「人間重視」を基本に、高度化する知識・技術への対応力と問題解決能力を備え、実学と現場を結ぶ幅広い映画制作能力を持つ専門職業人・研究者を養成する。",
+  "feature_summary": "川崎市に本部を置き、映画学部の1学部で学ぶ大学です。",
+  "official_url": "https://www.eiga.ac.jp/",
+  "admissions_url": "https://www.eiga.ac.jp/admissions/",
+  "student_counts": {
+    "undergraduate": 468,
+    "graduate": 0,
+    "total": 468,
+    "as_of": "2026-05-01",
+    "note": "映画学部映画学科468人（男310・女158）。大学院は未設置"
+  },
+  "academic_field_tags": [
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300095",
+      "name": "映画学部",
+      "academic_field_tags": [
+        "芸術"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300196",
+          "name": "映画学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "campus_id": "c00020301",
+      "name": "新百合ヶ丘校舎",
+      "postal_code": "215-0004",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市麻生区",
+      "address": "神奈川県川崎市麻生区万福寺1-16-30",
+      "official_url": "https://www.eiga.ac.jp/access",
+      "nearest_stations": [
+        {
+          "station": "新百合ヶ丘駅",
+          "line": "小田急小田原線・多摩線",
+          "access": "北口から徒歩1分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00020302",
+      "name": "白山校舎",
+      "postal_code": "215-0014",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市麻生区",
+      "address": "神奈川県川崎市麻生区白山2-1-1",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "s00020301",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020302",
+      "title": "日本映画大学 公式サイト",
+      "url": "https://www.eiga.ac.jp/",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020303",
+      "title": "日本映画大学 公式入試情報",
+      "url": "https://www.eiga.ac.jp/admissions/",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020304",
+      "title": "日本映画大学 理念と建学の精神",
+      "url": "https://www.eiga.ac.jp/about/mission",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020305",
+      "title": "日本映画大学 教育の方針と課程",
+      "url": "https://www.eiga.ac.jp/about/data/education",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020306",
+      "title": "日本映画大学 情報公開 学生数（2026年5月1日現在）",
+      "url": "https://www.eiga.ac.jp/about/data/overview/",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020307",
+      "title": "日本映画大学 交通アクセス",
+      "url": "https://www.eiga.ac.jp/access",
+      "publisher": "日本映画大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000205",
+  "id": "u000205",
+  "name": "湘南医療大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "「人を尊び、命を尊び、個を敬愛す」を建学の理念とし、幅広い教養と根拠に基づく専門知識・技術、責任感、使命感、主体的な実践力を重視する。",
+  "mission": "高度な知識・技術と豊かな人間性を育み、創造的かつ実践的な教育研究を通じて、チーム医療と地域医療に貢献できる医療従事者を養成する。",
+  "feature_summary": "横浜市に本部を置き、保健医療学部・薬学部の2学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://sums.ac.jp/",
+  "admissions_url": "https://sums.ac.jp/examinee-support/admission/",
+  "student_counts": {
+    "undergraduate": 1274,
+    "graduate": 41,
+    "total": 1315,
+    "as_of": "2026-05-01",
+    "note": "学部は薬学部324人・保健医療学部950人（看護学科618人・リハビリテーション学科理学療法学専攻186人・作業療法学専攻146人）の計1,274人、大学院は保健医療学研究科41人（修士課程28人・博士後期課程13人）。専攻科（35人）および介護福祉別科（65人）を除く"
+  },
+  "academic_field_tags": [
+    "薬学",
+    "看護・医療"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300098",
+      "name": "保健医療学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300199",
+          "name": "看護学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300200",
+          "name": "リハビリテーション学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300099",
+      "name": "薬学部",
+      "academic_field_tags": [
+        "薬学",
+        "看護・医療"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300201",
+          "name": "医療薬学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300075",
+      "name": "保健医療学研究科",
+      "programs": [
+        {
+          "name": "保健医療学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "看護・医療"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00020501",
+      "name": "東戸塚キャンパス",
+      "postal_code": "244-0806",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市戸塚区",
+      "address": "神奈川県横浜市戸塚区上品濃16-48",
+      "official_url": "https://sums.ac.jp/html/access/",
+      "nearest_stations": [
+        {
+          "station": "東戸塚駅",
+          "line": "JR横須賀線・湘南新宿ライン",
+          "access": "西口から徒歩15分"
+        }
+      ]
+    },
+    {
+      "campus_id": "c00020502",
+      "name": "横浜山手キャンパス",
+      "postal_code": "231-0862",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市中区",
+      "address": "神奈川県横浜市中区山手町27",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "condition": "保健医療学部 看護学科（看護学科（養成課程））",
+      "source_id": "s00020501"
+    },
+    {
+      "name": "薬剤師（国家試験受験資格）",
+      "condition": "薬学部 医療薬学科（医療薬学科（養成課程））",
+      "source_id": "s00020501"
+    },
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "condition": "保健医療学部 リハビリテーション学科（理学療法学専攻）（理学療法学専攻において所定の単位修得で理学療法士国家試験受験資格を取得可能）",
+      "source_id": "s00020507"
+    },
+    {
+      "name": "作業療法士（国家試験受験資格）",
+      "condition": "保健医療学部 リハビリテーション学科（作業療法学専攻）（作業療法学専攻において所定の単位修得で作業療法士国家試験受験資格を取得可能）",
+      "source_id": "s00020507"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00020501",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020502",
+      "title": "湘南医療大学 公式サイト",
+      "url": "https://sums.ac.jp/",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020503",
+      "title": "湘南医療大学 公式入試情報",
+      "url": "https://sums.ac.jp/examinee-support/admission/",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020504",
+      "title": "湘南医療大学 理念",
+      "url": "https://sums.ac.jp/html/about/idea.html",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020505",
+      "title": "湘南医療大学 情報公開 学生数（2026年5月1日現在）",
+      "url": "https://sums.ac.jp/html/disclosure/02/02/",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020506",
+      "title": "湘南医療大学 交通アクセス",
+      "url": "https://sums.ac.jp/html/access/",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020507",
+      "title": "湘南医療大学 資格・免許情報",
+      "url": "https://sums.ac.jp/html/special/",
+      "publisher": "湘南医療大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

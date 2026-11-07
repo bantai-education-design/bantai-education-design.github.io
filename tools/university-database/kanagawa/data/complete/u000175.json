@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000175",
+  "id": "u000175",
+  "name": "横浜国立大学",
+  "establishment_type": "national",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。",
+  "mission": "学術の中心として幅広い知識と深い専門の学芸を教授研究し、知的・道徳的・応用的能力を発展させ、創造性ある高度専門職業人を育成して社会の福祉と持続的発展に貢献する。",
+  "feature_summary": "横浜市に本部を置き、教育学部・経済学部・経営学部・理工学部・都市科学部の5学部と大学院5研究科で学ぶ大学です。",
+  "official_url": "https://www.ynu.ac.jp/",
+  "admissions_url": "https://www.ynu.ac.jp/exam/",
+  "student_counts": {
+    "undergraduate": 7512,
+    "graduate": 2262,
+    "total": 9774,
+    "as_of": "2026-05-01"
+  },
+  "academic_field_tags": [
+    "国際関係",
+    "法学",
+    "経済・経営・商学",
+    "社会学",
+    "教育",
+    "理学",
+    "工学",
+    "情報・AI",
+    "建築・デザイン",
+    "海洋"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300024",
+      "name": "教育学部",
+      "academic_field_tags": [
+        "教育"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300059",
+          "name": "学校教員養成課程",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300025",
+      "name": "経済学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300060",
+          "name": "経済学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300026",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300061",
+          "name": "経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300027",
+      "name": "理工学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "情報・AI",
+        "海洋"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300062",
+          "name": "機械・材料・海洋系学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300063",
+          "name": "化学・生命系学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300064",
+          "name": "数物・電子情報系学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300028",
+      "name": "都市科学部",
+      "academic_field_tags": [
+        "社会学",
+        "理学",
+        "工学",
+        "建築・デザイン"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300065",
+          "name": "都市社会共生学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300066",
+          "name": "建築学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300067",
+          "name": "都市基盤学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300068",
+          "name": "環境リスク共生学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300018",
+      "name": "教育学研究科",
+      "programs": [
+        {
+          "name": "教育支援専攻"
+        },
+        {
+          "name": "高度教職実践専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "教育"
+      ]
+    },
+    {
+      "graduate_school_id": "g300019",
+      "name": "国際社会科学府",
+      "programs": [
+        {
+          "name": "経済学専攻"
+        },
+        {
+          "name": "経営学専攻"
+        },
+        {
+          "name": "国際経済法学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "国際関係",
+        "法学",
+        "経済・経営・商学",
+        "社会学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300020",
+      "name": "理工学府",
+      "programs": [
+        {
+          "name": "機械・材料・海洋系工学専攻"
+        },
+        {
+          "name": "化学・生命系理工学専攻"
+        },
+        {
+          "name": "数物・電子情報系理工学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "情報・AI",
+        "海洋"
+      ]
+    },
+    {
+      "graduate_school_id": "g300021",
+      "name": "環境情報学府",
+      "programs": [
+        {
+          "name": "人工環境専攻"
+        },
+        {
+          "name": "自然環境専攻"
+        },
+        {
+          "name": "情報環境専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "理学",
+        "情報・AI"
+      ]
+    },
+    {
+      "graduate_school_id": "g300022",
+      "name": "都市イノベーション学府",
+      "programs": [
+        {
+          "name": "建築都市文化専攻"
+        },
+        {
+          "name": "都市地域社会専攻"
+        },
+        {
+          "name": "都市イノベーション専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "社会学",
+        "建築・デザイン"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017501",
+      "name": "常盤台キャンパス",
+      "postal_code": "240-8501",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市保土ケ谷区",
+      "address": "神奈川県横浜市保土ケ谷区常盤台79-1",
+      "official_url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu2020.pdf",
+      "nearest_stations": [
+        {
+          "station": "羽沢横浜国大駅",
+          "line": "相鉄新横浜線・JR線",
+          "access": "徒歩約15分"
+        },
+        {
+          "station": "三ツ沢上町駅",
+          "line": "横浜市営地下鉄ブルーライン",
+          "access": "徒歩約16分"
+        },
+        {
+          "station": "和田町駅",
+          "line": "相鉄本線",
+          "access": "徒歩約20分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "小学校教諭一種免許状",
+      "condition": "教育学部 学校教員養成課程（所定の単位修得により取得可能）",
+      "source_id": "s00017509"
+    },
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "教育学部・理工学部・都市科学部（環境リスク共生学科）（教育学部（中1・2種、高1種）、理工学部（数学・理科・情報）、都市科学部環境リスク共生学科（理科）で所定科目修得）",
+      "source_id": "s00017509"
+    },
+    {
+      "name": "特別支援学校教諭一種免許状",
+      "condition": "教育学部 学校教員養成課程（知的障害者・肢体不自由者・病弱者領域（主免許は聴覚障害者領域も追加取得可、2種も対応））",
+      "source_id": "s00017509"
+    },
+    {
+      "name": "一級建築士・二級建築士（受験資格）",
+      "condition": "都市科学部 建築学科（指定科目修得・卒業で一級・二級・木造建築士試験受験資格（登録時に所定の実務経験が必要））",
+      "source_id": "s00017509"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00017501",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017502",
+      "title": "横浜国立大学 公式サイト",
+      "url": "https://www.ynu.ac.jp/",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017503",
+      "title": "横浜国立大学 公式入試情報",
+      "url": "https://www.ynu.ac.jp/exam/",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017504",
+      "title": "横浜国立大学 YNU REPORT 2025",
+      "url": "https://www.ynu.ac.jp/about/public/publish/ynureport/pdf/YNU_REPORT_2025_A3.pdf",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017505",
+      "title": "横浜国立大学 大学案内（大学憲章・沿革）",
+      "url": "https://global.ynu.ac.jp/wordpress/wp-content/uploads/2024/07/2019_2020_leaflet_j_web.pdf",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017506",
+      "title": "横浜国立大学 学則・目的",
+      "url": "https://www.ynu.ac.jp/about/information/law/instructional/pdf/data-H25keizai.pdf",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017507",
+      "title": "横浜国立大学 学生数（2026年5月1日現在）",
+      "url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu_06-10.pdf",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017508",
+      "title": "横浜国立大学 交通アクセス",
+      "url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu2020.pdf",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017509",
+      "title": "横浜国立大学 資格・免許情報",
+      "url": "https://www.ynu.ac.jp/career/qualification/",
+      "publisher": "横浜国立大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

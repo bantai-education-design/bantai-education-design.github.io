@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000198",
+  "id": "u000198",
+  "name": "桐蔭横浜大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "社会連帯、求学、道義、平和と国際性を重んじる建学の精神を基盤に、「個の充実」「実務家養成」「開かれた大学」「国際交流」を教育の柱とする。",
+  "mission": "日本と世界の将来を見据えて社会に貢献し、自ら判断して実行するとともに、仲間と協働できる人材を育成し、市民性と人権意識を養う。",
+  "feature_summary": "横浜市に本部を置き、法学部・医用工学部・スポーツ科学部の3学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://toin.ac.jp/univ/",
+  "admissions_url": "https://toin.ac.jp/ouen/",
+  "student_counts": {
+    "undergraduate": 2216,
+    "graduate": 42,
+    "total": 2258,
+    "as_of": "2026-05-01",
+    "note": "学部は法学部607人・医用工学部204人・スポーツ科学部1,173人・現代教養学環232人の計2,216人（男1,692・女524）、大学院は法学研究科10人・工学研究科23人・スポーツ科学研究科9人の計42人（男22・女20）"
+  },
+  "academic_field_tags": [
+    "法学",
+    "教育",
+    "理学",
+    "工学",
+    "看護・医療",
+    "体育・スポーツ"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300082",
+      "name": "法学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300173",
+          "name": "法律学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300083",
+      "name": "医用工学部",
+      "academic_field_tags": [
+        "理学",
+        "工学",
+        "看護・医療"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300174",
+          "name": "生命医工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300175",
+          "name": "臨床工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300084",
+      "name": "スポーツ科学部",
+      "academic_field_tags": [
+        "教育",
+        "体育・スポーツ"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300176",
+          "name": "スポーツ教育学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300177",
+          "name": "スポーツ健康科学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300066",
+      "name": "法学研究科",
+      "programs": [
+        {
+          "name": "法律学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "法学"
+      ]
+    },
+    {
+      "graduate_school_id": "g300067",
+      "name": "工学研究科",
+      "programs": [
+        {
+          "name": "医用工学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "工学",
+        "看護・医療"
+      ]
+    },
+    {
+      "graduate_school_id": "g300068",
+      "name": "スポーツ科学研究科",
+      "programs": [
+        {
+          "name": "スポーツ科学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00019801",
+      "name": "本部キャンパス",
+      "postal_code": "225-8503",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市青葉区",
+      "address": "神奈川県横浜市青葉区鉄町1614",
+      "official_url": "https://toin.ac.jp/univ/accessmap/",
+      "nearest_stations": [
+        {
+          "station": "青葉台駅",
+          "line": "東急田園都市線",
+          "access": "バス約10～15分「桐蔭学園前」下車"
+        },
+        {
+          "station": "市が尾駅",
+          "line": "東急田園都市線",
+          "access": "バス約10～15分「桐蔭学園前」または「桐蔭学園入口」下車"
+        },
+        {
+          "station": "柿生駅",
+          "line": "小田急小田原線",
+          "access": "バス約15～20分「桐蔭学園」または「桐蔭学園入口」下車"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "臨床工学技士（国家試験受験資格）",
+      "condition": "医用工学部 臨床工学科（臨床工学科（養成課程））",
+      "source_id": "s00019801"
+    },
+    {
+      "name": "臨床検査技師（国家試験受験資格）",
+      "condition": "医用工学部 生命医工学科（生命医工学科における所定の単位修得で臨床検査技師国家試験受験資格を取得可能）",
+      "source_id": "s00019808"
+    },
+    {
+      "name": "小学校教諭一種免許状",
+      "condition": "スポーツ科学部 スポーツ教育学科（スポーツ教育学科の教職課程における所定の単位修得）",
+      "source_id": "s00019809"
+    },
+    {
+      "name": "中学校・高等学校教諭一種免許状（保健体育）",
+      "condition": "スポーツ科学部 スポーツ教育学科・スポーツ健康科学科（スポーツ科学部各学科の教職課程における所定の単位修得）",
+      "source_id": "s00019809"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00019801",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019802",
+      "title": "桐蔭横浜大学 公式サイト",
+      "url": "https://toin.ac.jp/univ/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019803",
+      "title": "桐蔭横浜大学 公式入試情報",
+      "url": "https://toin.ac.jp/ouen/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019804",
+      "title": "桐蔭横浜大学 建学の精神・学園訓",
+      "url": "https://toin.ac.jp/univ/about/spirit/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019805",
+      "title": "桐蔭横浜大学 大学憲章",
+      "url": "https://toin.ac.jp/univ/about/charter/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019806",
+      "title": "桐蔭横浜大学 教育研究組織図・学生数（令和8年5月1日現在）",
+      "url": "https://toin.ac.jp/univ/wp-content/uploads/sites/10/2026/09/02_R8_organization_chart-1.pdf",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019807",
+      "title": "桐蔭横浜大学 交通アクセス",
+      "url": "https://toin.ac.jp/univ/accessmap/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019808",
+      "title": "桐蔭横浜大学 資格・免許情報",
+      "url": "https://toin.ac.jp/univ/aims/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00019809",
+      "title": "桐蔭横浜大学 資格・免許情報",
+      "url": "https://toin.ac.jp/facss/ss_top/career/",
+      "publisher": "桐蔭横浜大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

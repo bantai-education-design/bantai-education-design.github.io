@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000207",
+  "id": "u000207",
+  "name": "ビューティ＆ウェルネス専門職大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "横浜市",
+  "philosophy": "「美しく聡明で品格あるプロフェッショナルの育成」を教育理念とし、心身の健康、相手を理解したサービス、礼節と信頼を重視する。",
+  "mission": "心身の美と健康に関する理論・技術と高度な専門知識、洗練された技術、ホスピタリティを備え、人々の健康とQOL向上に貢献し新たな価値を創造できる専門職人材を養成する。",
+  "feature_summary": "横浜市に本部を置き、ビューティ＆ウェルネス学部の1学部で学ぶ大学です。",
+  "official_url": "https://www.b-w.ac.jp/",
+  "admissions_url": "https://www.b-w.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 546,
+    "graduate": 0,
+    "total": 546,
+    "as_of": "2026-05-01",
+    "note": "ビューティ＆ウェルネス学部ビューティ＆ウェルネス学科546人（収容定員868人）。大学院は未設置"
+  },
+  "academic_field_tags": [
+    "家政・生活科学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300101",
+      "name": "ビューティ＆ウェルネス学部",
+      "academic_field_tags": [
+        "家政・生活科学"
+      ],
+      "campus_municipality": "横浜市",
+      "departments": [
+        {
+          "department_id": "d300203",
+          "name": "ビューティ＆ウェルネス学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "campus_id": "c00020701",
+      "name": "横浜キャンパス",
+      "postal_code": "224-0012",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市都筑区",
+      "address": "神奈川県横浜市都筑区牛久保3-9-3",
+      "official_url": "https://www.b-w.ac.jp/oc_lp/",
+      "nearest_stations": [
+        {
+          "station": "中川駅",
+          "line": "横浜市営地下鉄ブルーライン",
+          "access": "徒歩14分"
+        },
+        {
+          "station": "鷺沼駅",
+          "line": "東急田園都市線",
+          "access": "徒歩17分"
+        },
+        {
+          "station": "たまプラーザ駅",
+          "line": "東急田園都市線",
+          "access": "南口から東急バスで約8分「研究所前」下車徒歩5分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "s00020701",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020702",
+      "title": "ビューティ＆ウェルネス専門職大学 公式サイト",
+      "url": "https://www.b-w.ac.jp/",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020703",
+      "title": "ビューティ＆ウェルネス専門職大学 公式入試情報",
+      "url": "https://www.b-w.ac.jp/admission/",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020704",
+      "title": "ビューティ＆ウェルネス専門職大学 本学について",
+      "url": "https://www.b-w.ac.jp/about/",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020705",
+      "title": "ビューティ＆ウェルネス専門職大学 情報公開",
+      "url": "https://www.b-w.ac.jp/disclosure/",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020706",
+      "title": "ビューティ＆ウェルネス専門職大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+      "url": "https://www.b-w.ac.jp/wp/wp-content/uploads/2026/06/e6ab56186a5934968daf5dc8ba4848b8.pdf",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020707",
+      "title": "ビューティ＆ウェルネス専門職大学 交通アクセス",
+      "url": "https://www.b-w.ac.jp/oc_lp/",
+      "publisher": "ビューティ＆ウェルネス専門職大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

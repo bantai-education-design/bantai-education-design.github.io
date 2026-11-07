@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000209",
+  "id": "u000209",
+  "name": "ZEN大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "逗子市",
+  "philosophy": "オンライン教育の力で、世界の多様な学習者に開かれた学びの機会を提供し、高等教育の民主化、学びの個別化、デジタル時代への適応を教育の柱とする。",
+  "mission": "数理、情報、文化・思想、社会、経済、デジタル産業を横断して学び、複雑で変化の速いAI社会を生き抜き、個性と価値を発揮して社会で活躍できる自立した人材を育成する。",
+  "feature_summary": "逗子市に本部を置き、知能情報社会学部の1学部で学ぶ大学です。",
+  "official_url": "https://zen.ac.jp/",
+  "admissions_url": "https://zen.ac.jp/admission",
+  "student_counts": {
+    "undergraduate": 6976,
+    "graduate": 0,
+    "total": 6976,
+    "as_of": "2026-05-01",
+    "note": "知能情報社会学部知能情報社会学科（通信教育課程）正科生6,976人（収容定員7,000人・2学年分）。大学院は未設置"
+  },
+  "academic_field_tags": [
+    "社会学",
+    "情報・AI"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300103",
+      "name": "知能情報社会学部",
+      "academic_field_tags": [
+        "社会学",
+        "情報・AI"
+      ],
+      "campus_municipality": "逗子市",
+      "departments": [
+        {
+          "department_id": "d300205",
+          "name": "知能情報社会学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "campus_id": "c00020901",
+      "name": "知能情報社会学部",
+      "postal_code": "249-0007",
+      "prefecture": "神奈川県",
+      "municipality": "逗子市",
+      "address": "神奈川県逗子市新宿3丁目12番11号",
+      "official_url": "https://zen.ac.jp/zmc/topics/vw4vejx2nl",
+      "nearest_stations": [
+        {
+          "station": "逗子駅",
+          "line": "JR横須賀線",
+          "access": "徒歩15分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "s00020901",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020902",
+      "title": "ZEN大学 公式サイト",
+      "url": "https://zen.ac.jp/",
+      "publisher": "ZEN大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020903",
+      "title": "ZEN大学 公式入試情報",
+      "url": "https://zen.ac.jp/admission",
+      "publisher": "ZEN大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020904",
+      "title": "ZEN大学 情報公開",
+      "url": "https://zen.ac.jp/disclosures",
+      "publisher": "ZEN大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020905",
+      "title": "ZEN大学 情報公開 在籍者数（2026年5月1日現在）",
+      "url": "https://img.zen-univ.jp/disclosure/enrolled-students_260717.pdf",
+      "publisher": "ZEN大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020906",
+      "title": "ZEN大学 交通アクセス",
+      "url": "https://zen.ac.jp/zmc/topics/vw4vejx2nl",
+      "publisher": "ZEN大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}

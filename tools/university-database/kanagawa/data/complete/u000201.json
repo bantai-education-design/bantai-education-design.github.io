@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000201",
+  "id": "u000201",
+  "name": "田園調布学園大学",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "神奈川県",
+  "municipality": "川崎市",
+  "philosophy": "「捨我精進」を建学の精神とし、自我を慎み、目前の事柄に純粋にまい進する姿勢を通じて、柔軟で寛容な心と真剣に取り組む力を養う。",
+  "mission": "福祉・保育・心理の専門性と実践力を備え、一人ひとりの尊厳と人間性を尊重し、社会の多様なニーズに柔軟かつ的確に応えて貢献できる人材を育成する。",
+  "feature_summary": "川崎市に本部を置き、人間福祉学部・人間科学部・子ども教育学部の3学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.dcu.ac.jp/",
+  "admissions_url": "https://www.dcu.ac.jp/admission/",
+  "student_counts": {
+    "undergraduate": 1072,
+    "graduate": 40,
+    "total": 1112,
+    "as_of": "2026-05-01",
+    "note": "学部は人間福祉学部548人・子ども未来学部109人・子ども教育学部168人・人間科学部247人の計1,072人、大学院は人間学研究科40人（子ども人間学専攻10人・心理学専攻30人）"
+  },
+  "academic_field_tags": [
+    "文学・人文",
+    "社会学",
+    "社会福祉",
+    "教育",
+    "幼児教育・保育",
+    "心理",
+    "理学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300091",
+      "name": "人間福祉学部",
+      "academic_field_tags": [
+        "社会学",
+        "社会福祉"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300191",
+          "name": "社会福祉学科",
+          "programs": []
+        },
+        {
+          "department_id": "d300192",
+          "name": "共生社会学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300092",
+      "name": "人間科学部",
+      "academic_field_tags": [
+        "心理",
+        "理学"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300193",
+          "name": "心理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f300093",
+      "name": "子ども教育学部",
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育"
+      ],
+      "campus_municipality": "川崎市",
+      "departments": [
+        {
+          "department_id": "d300194",
+          "name": "子ども教育学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g300073",
+      "name": "人間学研究科",
+      "programs": [
+        {
+          "name": "子ども人間学専攻"
+        },
+        {
+          "name": "心理学専攻"
+        }
+      ],
+      "academic_field_tags": [
+        "文学・人文",
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00020101",
+      "name": "本部キャンパス",
+      "postal_code": "215-8542",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市麻生区",
+      "address": "神奈川県川崎市麻生区東百合丘3-4-1",
+      "official_url": "https://www.dcu.ac.jp/access/",
+      "nearest_stations": [
+        {
+          "station": "新百合ヶ丘駅",
+          "line": "小田急小田原線・多摩線",
+          "access": "小田急バスで約10～15分「田園調布学園大学」または「田園調布学園大学前」下車"
+        },
+        {
+          "station": "たまプラーザ駅",
+          "line": "東急田園都市線",
+          "access": "小田急バスで約16分「田園調布学園大学前」下車"
+        },
+        {
+          "station": "あざみ野駅",
+          "line": "東急田園都市線・横浜市営地下鉄ブルーライン",
+          "access": "東急バスで約18分「田園調布学園大学」下車"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "社会福祉士（国家試験受験資格）",
+      "condition": "人間福祉学部 社会福祉学科・共生社会学科（心理福祉コース）（社会福祉学科全専攻、および共生社会学科の心理福祉コース（2年次選択）で指定科目修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "精神保健福祉士（国家試験受験資格）",
+      "condition": "人間福祉学部 社会福祉学科（社会福祉専攻）（社会福祉専攻で所定の指定科目修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "介護福祉士（国家試験受験資格）",
+      "condition": "人間福祉学部 社会福祉学科（介護福祉専攻）（介護福祉専攻で所定の指定科目修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "中学校・高等学校教諭一種免許状",
+      "condition": "人間福祉学部 共生社会学科（特別支援教育コース）（2年次選択の特別支援教育コースで中学（社会）・高校（公民・福祉）の所定科目修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "特別支援学校教諭一種免許状",
+      "condition": "人間福祉学部 共生社会学科（特別支援教育コース）（中学（社会）または高校（公民・福祉）免許状を基礎免許状として特別支援教育コースで取得可能）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "小学校教諭一種免許状",
+      "condition": "子ども教育学部 子ども教育学科（幼小コース）（2年次選択の幼小コースで所定の単位修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "幼稚園教諭一種免許状",
+      "condition": "子ども教育学部 子ども教育学科（幼小コース・幼保コース）（2年次選択の幼小コース・幼保コースで所定の単位修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "保育士",
+      "condition": "子ども教育学部 子ども教育学科（幼保コース）（2年次選択の幼保コースで所定の単位修得）",
+      "source_id": "s00020107"
+    },
+    {
+      "name": "公認心理師（大学における必要な科目）",
+      "condition": "人間科学部 心理学科（心理学科で指定科目を履修後、大学院修士課程の指定科目履修または所定の実務経験で受験資格）",
+      "source_id": "s00020107"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00020101",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020102",
+      "title": "田園調布学園大学 公式サイト",
+      "url": "https://www.dcu.ac.jp/",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020103",
+      "title": "田園調布学園大学 公式入試情報",
+      "url": "https://www.dcu.ac.jp/admission/",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020104",
+      "title": "田園調布学園大学 大学概要・建学の精神・3方針",
+      "url": "https://www.dcu.ac.jp/overview/about/",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020105",
+      "title": "田園調布学園大学 情報公開 入学者数・収容定員・在籍者数（2026年5月1日現在）",
+      "url": "https://www.dcu.ac.jp/cms/files/dcu/kanri/0150/BMOeNuPV.pdf",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020106",
+      "title": "田園調布学園大学 交通アクセス",
+      "url": "https://www.dcu.ac.jp/access/",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    },
+    {
+      "source_id": "s00020107",
+      "title": "田園調布学園大学 資格・免許情報",
+      "url": "https://www.dcu.ac.jp/career/list/index.html",
+      "publisher": "田園調布学園大学",
+      "source_type": "official_university",
+      "verified_at": "2026-11-07",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-07",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses",
+      "qualifications"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・学部学科・研究科・キャンパスは文部科学省「令和7年度全国大学一覧」および大学公式サイト、理念・目的・入試導線・交通アクセス・資格は大学公式ページ、在学者数は各大学公式公表資料および大学ポートレートで確認。学費・入試日程・就職実績・研究・著名卒業生などは一次情報確認後に順次追加する。"
+  }
+}
