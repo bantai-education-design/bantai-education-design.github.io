@@ -34,10 +34,24 @@
           "source_url": "https://www.u-tokai.ac.jp/examination-admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "東海大学 建学の精神について",
+          "source_url": "https://www.u-tokai.ac.jp/about/philosophy-history/spirit/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東海大学 理念・憲章",
+          "source_url": "https://www.u-tokai.ac.jp/about/philosophy-history/concept/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.u-tokai.ac.jp/",
-      "admissions_url": "https://www.u-tokai.ac.jp/examination-admissions/"
+      "admissions_url": "https://www.u-tokai.ac.jp/examination-admissions/",
+      "university_goal": "建学の精神に基づき、自立性と創造性を備え、変化する社会をより良い方向へ導き、調和の取れた文明社会の建設に貢献できる人材を育成する。",
+      "philosophy": "創立者・松前重義の教育理念を基礎に、若い時期に思想・体躯・知能を培い、希望を星につなぐ姿勢を重視する。文理融合の広い知識と国際的視野を通じて、調和の取れた文明社会の実現を目指す。"
     },
     {
       "id": "u000175",
@@ -372,10 +386,24 @@
           "source_url": "https://www.seisa.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 理念・設立趣旨",
+          "source_url": "https://seisa.ac.jp/about/outline/philosophy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 沿革",
+          "source_url": "https://seisa.ac.jp/about/outline/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.seisa.ac.jp/",
-      "admissions_url": "https://www.seisa.ac.jp/admission/"
+      "admissions_url": "https://www.seisa.ac.jp/admission/",
+      "university_goal": "人と人、人と自然が共生する社会の創造に貢献するため、教育・福祉・環境・国際関係を横断する広い知力、共生する心、課題探究能力を育成する。",
+      "philosophy": "「社会に必要とされることを創造し、常に新たな道を切り開き、それを成し遂げる」を建学の精神とし、「共生」を教育理念の中心に据える。"
     },
     {
       "id": "u000181",
@@ -411,10 +439,18 @@
           "source_url": "https://www.kanagawa-u.ac.jp/admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 建学の精神・大学の理念",
+          "source_url": "https://www.kanagawa-u.ac.jp/aboutus/timeline/philosophy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kanagawa-u.ac.jp/",
-      "admissions_url": "https://www.kanagawa-u.ac.jp/admissions/"
+      "admissions_url": "https://www.kanagawa-u.ac.jp/admissions/",
+      "university_goal": "真の実学を目指す伝統を踏まえ、自立した良識ある市民としての判断力・実践力、国際的感性、専門的知識と技能を備え、自ら成長できる人材を育成する。",
+      "philosophy": "創立者・米田吉盛の「教育は人を造るにあり」という信念のもと、「質実剛健、積極進取、中正堅実」を建学の精神として掲げる。"
     },
     {
       "id": "u000182",
@@ -450,10 +486,24 @@
           "source_url": "https://ao.kanto-gakuin.ac.jp/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 建学の精神",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/about-university/the-spirit-of-the-founding.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 沿革",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/about-university/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://univ.kanto-gakuin.ac.jp/",
-      "admissions_url": "https://ao.kanto-gakuin.ac.jp/"
+      "admissions_url": "https://ao.kanto-gakuin.ac.jp/",
+      "university_goal": "キリスト教の精神に基づく広く深い教養と奉仕の精神を養い、多様性の中で自己を確立し、他者と共により良い社会を創る知識・知恵・行動力を育成する。",
+      "philosophy": "キリスト教の精神を建学の精神とし、校訓「人になれ 奉仕せよ」のもと、人間形成と、他者・社会・人類のために行動する奉仕を重視する。"
     },
     {
       "id": "u000183",
@@ -489,10 +539,30 @@
           "source_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 建学の精神",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/spirit.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 教育方針",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/policy.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 沿革",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.tsurumi-u.ac.jp/",
-      "admissions_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html"
+      "admissions_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
+      "university_goal": "禅の精神に基づく円満な人格と専門的な知識・技能による実践力を備え、感謝と慈愛の心をもって社会の発展と福祉に貢献する人材を育成する。",
+      "philosophy": "仏教、特に禅の教えに基づき、円満な人格の形成と社会に対する感謝・報恩の実践を重視し、「大覚円成 報恩行持」を建学の精神として掲げる。"
     },
     {
       "id": "u000184",
