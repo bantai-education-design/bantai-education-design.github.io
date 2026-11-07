@@ -94,11 +94,20 @@ jobs:
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
           assert.equal(kmanifest.access_records,36,'Kanagawa access manifest');
           assert.equal(kmanifest.student_count_records,36,'Kanagawa student count manifest');
+          assert.equal(kmanifest.campus_records,36,'Kanagawa campus manifest');
+          assert.equal(kmanifest.campus_items,76,'Kanagawa campus items manifest');
+          const kcampuses=JSON.parse(fs.readFileSync(kdir+'kanagawa_campuses_01.json','utf8')).universities;
+          const allCampuses=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
+          assert.equal(Object.keys(kcampuses).length,36,'Kanagawa campuses 36 universities');
+          assert.equal(Object.keys(allCampuses).length,209,'Total 209 universities in campus_index');
           const kscIds=['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000203','u000204','u000205','u000206','u000207','u000208','u000209'];
           assert.equal(kcore.filter(x=>Number.isInteger(x.student_counts?.total)&&x.student_counts.total>0).length,36,'Kanagawa student counts verified');
           for(const id of kscIds){
             const u=kcore.find(x=>x.id===id);
             assert.ok(Number.isInteger(u?.student_counts?.total)&&u.student_counts.total>0,id+' student count total');
+            assert.ok(kcampuses[id]?.campuses?.length>=1,id+' Kanagawa campus');
+            assert.ok(allCampuses[id]?.campuses?.length>=1,id+' in campus_index');
+            assert.ok(allCampuses[id]?.prefectures?.includes('神奈川県'),id+' has Kanagawa prefecture in campus_index');
           }
           const kaccess=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
           for(const id of ['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000203','u000204','u000205','u000206','u000207','u000208','u000209']){
@@ -186,6 +195,11 @@ jobs:
             assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),'all','clear resets prefecture');
             await page.locator('#pref-filters [data-pref="神奈川県"]').click();await page.waitForTimeout(300);
             assert.equal(await count(),kanagawa.length,'kanagawa filter');
+            const expectKanagawaCampus=Object.values(campusIdx).filter(v=>v.prefectures.includes('神奈川県')).length;
+            await page.locator('.campus-toggle-list input').check();await page.waitForTimeout(400);
+            assert.equal(await count(),expectKanagawaCampus,'Kanagawa incl. campuses');
+            await page.locator('.campus-toggle-list input').uncheck();await page.waitForTimeout(300);
+            assert.equal(await count(),kanagawa.length,'Kanagawa toggle off returns to HQ-based list');
             const tokai=await page.locator('.tokyo-card[data-id="u000050"]').innerText();
             assert.ok(tokai.includes('神奈川県')&&tokai.includes('平塚市'),'Tokai shown as Kanagawa: '+tokai.slice(0,120));
             await page.locator('#pref-filters [data-pref="all"]').click();await page.waitForTimeout(300);
