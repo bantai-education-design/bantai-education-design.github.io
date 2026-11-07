@@ -73,8 +73,10 @@ jobs:
           const saitama=readRows('tools/university-database/saitama/data/universities_saitama_all.generated.json');
           const extra=readRows('tools/university-database/tokyo-additions/data/universities_tokyo_additions_all.generated.json');
           const kanagawa=readRows('tools/university-database/kanagawa/data/universities_kanagawa_all.generated.json');
-          const total=tokyoN+saitama.length+extra.length;
-          const tokyoTotal=tokyoN+extra.filter(x=>x.prefecture==='東京都').length-kanagawa.length;
+          const tokyoRows=readRows('tools/university-database/tokyo/data/universities_tokyo_all.generated.json');
+          const total=new Set([...tokyoRows,...saitama,...extra,...kanagawa].map(x=>x.id)).size;
+          const movedToKanagawa=kanagawa.filter(k=>[...tokyoRows,...extra].some(x=>x.id===k.id)).length;
+          const tokyoTotal=tokyoN+extra.filter(x=>x.prefecture==='東京都').length-movedToKanagawa;
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const errors=[];
@@ -85,7 +87,7 @@ jobs:
             const count=async()=>page.locator('.tokyo-card').count();
             const body=await page.locator('body').innerText();
             assert.ok(!body.includes('読込エラー'),'no load error');
-            assert.ok(body.includes(`${total}大学`)&&body.includes('東京都・埼玉県'),'hero shows unified count');
+            assert.ok(body.includes(`${total}大学`)&&body.includes('東京都・埼玉県・神奈川県'),'hero shows unified count');
             for(const [pref,expected] of [['埼玉県',saitama.length],['東京都',tokyoTotal],['all',total]]){
               await page.locator(`.ref-pref-filter [data-ref-pref="${pref}"]`).click();await page.waitForTimeout(300);
               assert.equal(await count(),expected,`quick pref ${pref}`);
@@ -163,7 +165,8 @@ jobs:
             const dbTop=fs.readFileSync('tools/university-database/index.html','utf8');
             assert.ok(dbTop.includes(`<strong>${tokyoN}</strong><span>東京都の大学`),'DB top Tokyo count '+tokyoN);
             assert.ok(dbTop.includes(`<strong>${saitamaN}</strong><span>埼玉県の大学`),'DB top Saitama count '+saitamaN);
-            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式情報確認済み`),'DB top total '+total);
+            assert.ok(dbTop.includes(`<strong>${kanagawa.length}</strong><span>神奈川県の大学`),'DB top Kanagawa count '+kanagawa.length);
+            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 本部所在地確認済み`),'DB top total '+total);
             assert.ok(fs.readFileSync('tools/university-database/tokyo/index.html','utf8').includes(`合計 <strong>${total}</strong> 大学`),'list static total '+total);
             assert.ok(fs.readFileSync('index.html','utf8').includes(`${total}校`),'site top count '+total);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
@@ -207,6 +210,7 @@ jobs:
             const entry=await browser.newPage();
             await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
             assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=saitama"]').count(),1,'entry links to Saitama filter');
+            assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=kanagawa"]').count(),1,'entry links to Kanagawa filter');
             await entry.close();
             assert.deepEqual([...new Set(errors)],[],'no script errors or missing local files');
             await browser.close();
