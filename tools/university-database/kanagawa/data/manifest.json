@@ -1,9 +1,20 @@
 {
- "kind": "relocations",
- "slug": "kanagawa",
- "source_commit": "5e692d72197d4fa3955d42f71f42f9930544d3f8",
- "count": 1,
- "ids": [
-  "u000050"
- ]
+  "generated_at": "2026-11-07",
+  "source": "文部科学省 令和7年度全国大学一覧",
+  "prefecture": "神奈川県",
+  "universities": 35,
+  "type_counts": {
+    "national": 2,
+    "public": 3,
+    "private": 30
+  },
+  "core_shards": [
+    {
+      "file": "kanagawa_core_01.json",
+      "count": 35,
+      "first_id": "u000173",
+      "last_id": "u000206"
+    }
+  ],
+  "scope_note": "大学名、設置区分、郵便番号、本部所在地を文部科学省一覧で確認。公式URL・入試URL・学部等は一次情報確認後に追加する。"
 }
