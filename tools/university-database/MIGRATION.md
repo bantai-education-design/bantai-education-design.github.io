@@ -67,3 +67,11 @@
 - 初期13校版・代表6校版を本番データとして使用しない。
 - manifestを更新せずに公開データを差し替えない。
 - 144校分のコアシャードが欠けた状態で部分表示を継続しない。
+
+## 付録 三大駅伝 出場校検索（2026-11-07 追加）
+
+- 公開場所: `tools/university-database/ekiden/`（画面 `index.html`、`assets/`、データ `data/`）
+- データの正本: 非公開リポジトリ `daigaku_DB` の `data/ekiden/`（公式記録から写した `raw/` と、スキーマ検査つきの作成スクリプト）
+- 更新手順: `daigaku_DB` で `python3 scripts/ekiden/build_all.py` を実行し、`python3 scripts/ekiden/publish_to_site.py <このリポジトリ>` で `ekiden/data/` を上書きする。データJSONを手で直さない
+- 大学紹介ページとの連携: `tokyo/detail.html` が `tokyo/assets/ekiden-detail.js` と `ekiden-detail.css` を読み込み、駅伝に出場した大学だけに「駅伝の成績」欄を出す。駅伝ページからは `tokyo/detail.html?id=<大学ID>` で大学紹介へ移る
+- 入口: `tokyo/index.html` のメニュー「三大駅伝」と、大学一覧の上の案内カード

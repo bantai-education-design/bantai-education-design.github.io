@@ -1,0 +1,48 @@
+{
+ "schema": "ekiden-public-v1",
+ "source_repository": "bantai-education-design/daigaku_DB",
+ "source_commit": "109dfe88893ba56f60955ba06fdf6bc44b2160cb",
+ "generated_at": "2026-11-07T08:37:54+09:00",
+ "coverage": {
+  "izumo": {
+   "editions": 19,
+   "from_edition": 18,
+   "to_edition": 38,
+   "from_year": 2006,
+   "to_year": 2026
+  },
+  "zennihon": {
+   "editions": 21,
+   "from_edition": 38,
+   "to_edition": 58,
+   "from_year": 2006,
+   "to_year": 2026
+  },
+  "hakone": {
+   "editions": 20,
+   "from_edition": 83,
+   "to_edition": 102,
+   "from_year": 2007,
+   "to_year": 2026
+  }
+ },
+ "counts": {
+  "taikai": 198,
+  "teams": 80,
+  "teams_linked_to_university_db": 24,
+  "results": {
+   "izumo": 402,
+   "zennihon": 557,
+   "hakone": 422
+  }
+ },
+ "files": [
+  "basics.json",
+  "results_hakone.json",
+  "results_izumo.json",
+  "results_zennihon.json",
+  "taikai.json",
+  "team_summary.json",
+  "teams.json"
+ ]
+}

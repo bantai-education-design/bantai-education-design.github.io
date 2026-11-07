@@ -1,0 +1,156 @@
+/* 三大駅伝 出場校検索（大学DBの付録）。prototype.css の色と形に合わせる */
+:root{
+  --izumo:#c2410c;     /* 出雲: 夕日の朱 */
+  --zennihon:#1d4ed8;  /* 全日本: 伊勢路の藍 */
+  --hakone:#0f766e;    /* 箱根: 山の緑 */
+  --ok-bg:#eef7f2;
+}
+.brand-logo{height:34px;width:auto}
+.ekiden-pill{background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:700;font-size:.85rem;white-space:nowrap}
+
+.ekiden-hero{background:radial-gradient(circle at 85% 10%,rgba(201,162,39,.22),transparent 45%),var(--ink);color:#fff;padding:56px 20px 28px}
+.ekiden-hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:end}
+.ekiden-hero .section-kicker{color:var(--gold);letter-spacing:.14em;font-size:.78rem;font-weight:700}
+.ekiden-hero h1{font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.25;margin:.3em 0 .4em}
+.ekiden-hero h1 em{font-style:normal;color:var(--gold)}
+.ekiden-hero p{color:#d6d8dc;max-width:38em}
+.ekiden-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0}
+.ekiden-stats div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px}
+.ekiden-stats dt{font-size:.78rem;color:#c8cbd1}
+.ekiden-stats dd{margin:4px 0 0;font-size:1.6rem;font-weight:800;color:#fff}
+.series-strip{max-width:1180px;margin:28px auto 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.series-strip li{border-radius:14px;padding:12px 16px;background:rgba(255,255,255,.05);border-left:5px solid var(--s);display:flex;flex-direction:column}
+.series-strip li span{font-size:.78rem;color:#c8cbd1}
+.series-strip li small{color:#c8cbd1}
+[data-series="izumo"]{--s:var(--izumo)}[data-series="zennihon"]{--s:var(--zennihon)}[data-series="hakone"]{--s:var(--hakone)}
+
+.ekiden-finder{max-width:1180px;margin:auto;padding:32px 20px}
+.ekiden-tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px;overflow-x:auto}
+.ekiden-tabs button{appearance:none;border:0;background:none;padding:12px 18px;font:inherit;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+.ekiden-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+.ekiden-tabs button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.ekiden-search{display:flex;gap:8px;max-width:640px}
+.ekiden-search input{flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.ekiden-search button{font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:999px;background:var(--ink);color:#fff;cursor:pointer}
+.ekiden-filters{display:flex;flex-wrap:wrap;gap:10px 16px;margin:16px 0 6px;align-items:center}
+.ekiden-filters label{display:flex;align-items:center;gap:6px;font-size:.9rem;color:var(--ink-soft)}
+.ekiden-filters select{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;max-width:100%}
+.ekiden-filters .check input{width:18px;height:18px;accent-color:var(--ink)}
+.filter-note{font-size:.82rem;color:var(--muted);margin:4px 0 12px}
+
+.ekiden-layout{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:20px;align-items:start}
+.result-count{font-weight:700;margin:6px 0 8px}
+.team-list{list-style:none;margin:0;padding:0;max-height:70vh;overflow:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+.team-list li+li{border-top:1px solid var(--line)}
+.team-list button{width:100%;text-align:left;border:0;background:none;font:inherit;padding:10px 14px;cursor:pointer;display:grid;gap:2px}
+.team-list button:hover,.team-list button[aria-current="true"]{background:var(--gold-soft)}
+.team-list strong{font-size:1rem}
+.team-list small{color:var(--muted);font-size:.8rem}
+.badges{display:flex;gap:4px;flex-wrap:wrap}
+.badge{font-size:.72rem;font-weight:700;border-radius:999px;padding:1px 8px;color:#fff;background:var(--s,var(--muted))}
+
+.team-detail{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-height:240px}
+.team-empty{color:var(--muted);padding:40px 10px;text-align:center}
+.team-detail h2{margin:0 0 2px;font-size:1.5rem}
+.team-sub{color:var(--muted);font-size:.88rem;margin:0 0 12px}
+.univ-link{display:inline-block;margin:4px 0 16px;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem}
+.univ-link.pending{background:#eceae2;color:var(--muted);cursor:default}
+.series-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.series-card{border-radius:14px;border:1px solid var(--line);border-top:5px solid var(--s);padding:10px 12px}
+.series-card h3{margin:0 0 6px;font-size:.92rem}
+.series-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:.84rem}
+.series-card dt{color:var(--muted)}
+.series-card dd{margin:0;font-weight:700}
+.series-card.none{opacity:.55}
+.crown{background:var(--gold-soft);border-radius:12px;padding:8px 12px;font-weight:700;margin-bottom:14px}
+.chart-wrap{border:1px solid var(--line);border-radius:14px;padding:8px;margin-bottom:14px;background:#fff}
+.chart-wrap svg{width:100%;height:auto;display:block}
+.chart-legend{display:flex;gap:14px;font-size:.8rem;padding:4px 8px}
+.chart-legend span::before{content:"";display:inline-block;width:14px;height:3px;background:var(--s);vertical-align:middle;margin-right:5px}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:#fff}
+.race-table{width:100%;border-collapse:collapse;font-size:.88rem;font-variant-numeric:tabular-nums}
+.race-table th,.race-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.race-table th{background:#faf9f5;font-size:.8rem;color:var(--ink-soft);position:sticky;top:0}
+.race-table td.num,.race-table th.num{text-align:right}
+.race-table tr.win td{background:var(--gold-soft);font-weight:700}
+.race-table tr.open td{color:var(--muted)}
+.race-table a{color:inherit;text-decoration-color:var(--gold);text-underline-offset:3px}
+.race-table button.link{border:0;background:none;font:inherit;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;cursor:pointer}
+.race-table.compact td,.race-table.compact th{padding:6px 10px}
+.status{font-size:.78rem;border-radius:6px;padding:1px 6px;background:#eceae2;color:var(--ink-soft)}
+.race-head{margin:12px 0}
+.race-head h2{margin:0;font-size:1.3rem}
+.race-head p{margin:2px 0;color:var(--muted);font-size:.86rem}
+.race-head a{color:inherit}
+
+.record-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.record-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:16px}
+.record-card h2{font-size:1.1rem;margin:0 0 10px}
+.record-card ul{margin:0;padding-left:1.2em}
+
+.ekiden-sources{max-width:1180px;margin:auto;padding:12px 20px 48px;font-size:.9rem;color:var(--ink-soft)}
+.ekiden-sources h2{font-size:1.1rem}
+.site-footer{background:var(--ink);color:#c8cbd1;font-size:.82rem}
+.footer-inner{max-width:1180px;margin:auto;padding:18px 20px}
+
+@media (max-width:900px){
+  .ekiden-hero-inner{grid-template-columns:1fr}
+  .ekiden-layout{grid-template-columns:1fr}
+  .team-list{max-height:40vh}
+  .record-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .ekiden-hero{padding:36px 16px 20px}
+  .ekiden-stats{grid-template-columns:1fr 1fr 1fr}
+  .ekiden-stats dd{font-size:1.25rem}
+  .ekiden-pill{display:none}
+  .ekiden-hero h1{font-size:1.75rem}
+  .ekiden-hero p{font-size:.92rem;margin:0}
+  .ekiden-hero-inner{gap:16px}
+  .ekiden-stats div{padding:10px}
+  .ekiden-stats dt{font-size:.7rem;line-height:1.35}
+  .series-strip{gap:6px;margin-top:14px}
+  .series-strip li{padding:8px 10px}
+  .series-strip li strong{font-size:.86rem;line-height:1.3}
+  .series-strip li small{display:none}
+  .ekiden-finder{padding:24px 16px}
+  .series-cards{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .team-detail{padding:16px}
+}
+.dim{color:var(--muted);font-weight:400}
+
+/* 駅伝の基本 */
+.basics-lead{font-size:1rem;margin:0 0 8px}
+.basics-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.basics-block h2{font-size:1.2rem;margin:0 0 6px}
+.basics-block h3{font-size:1rem;margin:18px 0 8px}
+.basics-sub,.basics-note,.basics-src{font-size:.84rem;color:var(--muted);margin:4px 0 10px}
+.basics-note b{color:var(--ink)}
+.basics-src a{color:inherit}
+.basics-table th[scope="row"]{background:#faf9f5;font-weight:700;white-space:nowrap}
+.basics-table td.wrap{white-space:normal;min-width:9em}
+.basics-table th.race-col{border-top:4px solid var(--s);font-size:.9rem;color:var(--ink)}
+.basics-table tr.total td,.basics-table tr.total th{font-weight:800;background:#faf9f5}
+.figure-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0 10px}
+.fig{display:block;width:100%;min-width:640px;height:auto}
+.fig.course{margin-bottom:6px}
+.basics-pills{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.basics-pills button{font:inherit;font-weight:700;padding:8px 16px;border-radius:999px;border:2px solid var(--s);background:#fff;color:var(--ink);cursor:pointer}
+.basics-pills button[data-course="izumo"]{--s:var(--izumo)}.basics-pills button[data-course="zennihon"]{--s:var(--zennihon)}.basics-pills button[data-course="hakone"]{--s:var(--hakone)}
+.basics-pills button[aria-pressed="true"]{background:var(--s);color:#fff}
+.basics-pills button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.basics-terms{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:0}
+.basics-terms div{background:#faf9f5;border-radius:12px;padding:10px 14px;border-left:4px solid var(--gold)}
+.basics-terms dt{font-weight:800}
+.basics-terms dd{margin:2px 0 0;font-size:.9rem;color:var(--ink-soft)}
+@media (max-width:560px){.basics-block{padding:16px}.fig{min-width:600px}}
+.team-legends{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
+.team-legend{border-top:4px solid var(--s);background:#faf9f5;border-radius:10px;padding:8px 12px;font-size:.86rem}
+.team-legend ul{list-style:none;margin:4px 0;padding:0}
+.team-legend li{display:flex;gap:6px;align-items:baseline;line-height:1.5}
+.team-legend li i{flex:0 0 12px;height:12px;border-radius:3px;background:var(--s);display:inline-block;transform:translateY(1px)}
+.team-legend li b{margin-left:auto}
+@media (max-width:900px){.team-legends{grid-template-columns:1fr}}
