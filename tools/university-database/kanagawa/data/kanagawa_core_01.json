@@ -598,10 +598,24 @@
           "source_url": "https://www.ferris.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 フェリスの原点",
+          "source_url": "https://www.ferris.ac.jp/about/origin/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 教育目標・方針",
+          "source_url": "https://www.ferris.ac.jp/about/approach/support/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.ferris.ac.jp/",
-      "admissions_url": "https://www.ferris.ac.jp/admission/"
+      "admissions_url": "https://www.ferris.ac.jp/admission/",
+      "university_goal": "キリスト教を教育の基本方針とし、真理と平和を愛して人類の福祉に寄与するとともに、新しい時代を切り拓く豊かな教養と芸術的・文化的素養を備えた女性を育成する。",
+      "philosophy": "「キリスト教の信仰に基づく女子教育」を建学の精神とし、より広い視野から他者の存在を考え、他者のために行動する「For Others」を教育理念として掲げる。"
     },
     {
       "id": "u000185",
@@ -637,10 +651,18 @@
           "source_url": "https://www.shodai.ac.jp/exam_event/schedule/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 建学の精神・大学のポリシー",
+          "source_url": "https://www.shodai.ac.jp/university/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shodai.ac.jp/",
-      "admissions_url": "https://www.shodai.ac.jp/exam_event/schedule/"
+      "admissions_url": "https://www.shodai.ac.jp/exam_event/schedule/",
+      "university_goal": "実学重視の商学教育を通じ、高度な専門知識、社会への奉仕、職業上の使命感と責任感を備え、託された責任を果たせる人材を育成する。",
+      "philosophy": "「安んじて事を托さるる人となれ」を建学の精神とし、高度な専門性、高潔な倫理、使命感・責任感、奉仕の精神を教育の柱とする。"
     },
     {
       "id": "u000186",
@@ -676,10 +698,18 @@
           "source_url": "https://www.yashima.ac.jp/univ/entrance/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 建学の精神・教育の理念",
+          "source_url": "https://www.yashima.ac.jp/univ/about/information/policy.php",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yashima.ac.jp/univ/",
-      "admissions_url": "https://www.yashima.ac.jp/univ/entrance/"
+      "admissions_url": "https://www.yashima.ac.jp/univ/entrance/",
+      "university_goal": "人間性豊かなeラーニングを通じ、個人や社会の学習課題を発見・解決し、新たな道を拓くための人間性、基礎力、問題解決力、創造力を育成する。",
+      "philosophy": "「教育の原点は家庭である」という考えに基づき、家庭教育・学校教育・社会教育の融合と、生涯学習社会の実現、すべての人への高等教育機会の提供を目指す。"
     },
     {
       "id": "u000187",
@@ -715,10 +745,24 @@
           "source_url": "https://www.iisec.ac.jp/admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 情報セキュリティ基本方針",
+          "source_url": "https://www.iisec.ac.jp/about/info_release/isbasicpolicy.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 育成する人材像",
+          "source_url": "https://www.iisec.ac.jp/education/objective/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.iisec.ac.jp/",
-      "admissions_url": "https://www.iisec.ac.jp/admissions/"
+      "admissions_url": "https://www.iisec.ac.jp/admissions/",
+      "university_goal": "情報セキュリティを技術・管理運営・法制度・心理・倫理などの総合科学として捉え、現実の問題解決を担う高度専門技術者・実務家と、将来を先導する研究者を育成する。",
+      "philosophy": "高度な知識と技術、豊かな人間性を兼ね備えた職業人の育成を建学の理念とし、情報セキュリティの理論と応用を教育研究して科学技術の進展に寄与する。"
     },
     {
       "id": "u000188",
@@ -754,10 +798,24 @@
           "source_url": "https://www.hamayaku.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 教育研究上の目的",
+          "source_url": "https://www.hamayaku.ac.jp/about/purpose/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 大学の3つの方針",
+          "source_url": "https://www.hamayaku.ac.jp/about/policies/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.hamayaku.ac.jp/",
-      "admissions_url": "https://www.hamayaku.ac.jp/admission/"
+      "admissions_url": "https://www.hamayaku.ac.jp/admission/",
+      "university_goal": "薬学を研究教授し、臨床で実践できる人間性豊かな薬剤師と、薬学の専門知識・技術を備えた研究者・技術者を育成して、学術の深化と人類の福祉に貢献する。",
+      "philosophy": "「個性の伸展による人生練磨」を建学の精神とし、自己の専門性とアイデンティティを確立し、生涯を通じて自己の完成を目指すことを教育理念とする。"
     },
     {
       "id": "u000189",
