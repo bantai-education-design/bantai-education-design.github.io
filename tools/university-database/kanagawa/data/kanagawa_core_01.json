@@ -73,10 +73,27 @@
           "source_url": "https://www.ynu.ac.jp/exam/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 YNU REPORT 2025",
+          "source_url": "https://www.ynu.ac.jp/about/public/publish/ynureport/pdf/YNU_REPORT_2025_A3.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 大学案内（大学憲章・沿革）",
+          "source_url": "https://global.ynu.ac.jp/wordpress/wp-content/uploads/2024/07/2019_2020_leaflet_j_web.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.ynu.ac.jp/",
-      "admissions_url": "https://www.ynu.ac.jp/exam/"
+      "admissions_url": "https://www.ynu.ac.jp/exam/",
+      "founded_year": 1874,
+      "opened_year": 1949,
+      "operator": "国立大学法人横浜国立大学",
+      "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。"
     },
     {
       "id": "u000176",
@@ -112,10 +129,33 @@
           "source_url": "https://www.soken.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 総研大とは",
+          "source_url": "https://www.soken.ac.jp/features/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 教育の目標と方針",
+          "source_url": "https://www.soken.ac.jp/education/policy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 沿革",
+          "source_url": "https://www.soken.ac.jp/outline/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.soken.ac.jp/",
-      "admissions_url": "https://www.soken.ac.jp/admission/"
+      "admissions_url": "https://www.soken.ac.jp/admission/",
+      "founded_year": 1988,
+      "opened_year": 1988,
+      "operator": "国立大学法人総合研究大学院大学",
+      "university_goal": "基礎学術分野で国際的に通用する高度な研究的資質と広い視野を備えた研究者を育成する。",
+      "philosophy": "大学共同利用機関等との緊密な連係・協力の下、世界最高水準の国際的な大学院大学として学術の理論と応用を教育研究し、文化の創造と発展に貢献する。"
     },
     {
       "id": "u000177",
@@ -151,10 +191,34 @@
           "source_url": "https://www.yokohama-cu.ac.jp/admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 大学の理念",
+          "source_url": "https://www.yokohama-cu.ac.jp/univ/outline/philosophy/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 大学の目的",
+          "source_url": "https://www.yokohama-cu.ac.jp/info/objective/university.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 YCU PROFILE 2025",
+          "source_url": "https://www.yokohama-cu.ac.jp/u2ou5s0000001hf9-att/YCUPROFILE2025-20251217new.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yokohama-cu.ac.jp/",
-      "admissions_url": "https://www.yokohama-cu.ac.jp/admissions/"
+      "admissions_url": "https://www.yokohama-cu.ac.jp/admissions/",
+      "founded_year": 1928,
+      "opened_year": 1949,
+      "operator": "公立大学法人横浜市立大学",
+      "university_goal": "幅広い教養と高い専門的能力を育成し、教育・研究・医療を通じて横浜市民・地域社会の要請に応えるとともに世界へ貢献する。",
+      "philosophy": "国際都市・横浜と共に歩み、教育・研究・医療分野をリードし、社会の発展に寄与する市民の誇りとなる大学を目指す。"
     },
     {
       "id": "u000178",
@@ -190,10 +254,27 @@
           "source_url": "https://www.kuhs.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 本学の基本理念",
+          "source_url": "https://www.kuhs.ac.jp/information/education/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 本学の沿革",
+          "source_url": "https://www.kuhs.ac.jp/information/about/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kuhs.ac.jp/",
-      "admissions_url": "https://www.kuhs.ac.jp/admission/"
+      "admissions_url": "https://www.kuhs.ac.jp/admission/",
+      "founded_year": 2003,
+      "opened_year": 2003,
+      "operator": "公立大学法人神奈川県立保健福祉大学",
+      "university_goal": "保健・医療・福祉の連携と総合化、生涯にわたる継続教育、地域社会への貢献を通じ、ヒューマンサービスを実践できる人材を育成する。",
+      "philosophy": "保健・医療・福祉の対象を温もりのある「ひと」と捉え、領域を越えた連携と協働によりヒューマンサービスを実現する。"
     },
     {
       "id": "u000179",
@@ -229,10 +310,33 @@
           "source_url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 理念",
+          "source_url": "https://www.kawasaki-cn.ac.jp/education/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 2025年度自己点検・評価報告書",
+          "source_url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2025.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 沿革",
+          "source_url": "https://www.kawasaki-cn.ac.jp/information/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kawasaki-cn.ac.jp/",
-      "admissions_url": "https://www.kawasaki-cn.ac.jp/entranceexam/"
+      "admissions_url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
+      "founded_year": 2022,
+      "opened_year": 2022,
+      "university_goal": "看護に関する高度な知識と技術を教授研究し、豊かな教養・人格・高い倫理観と実践力を備え、地域の保健・医療・福祉に寄与する人材を育成し、成果を地域へ還元する。",
+      "philosophy": "地域に開かれた大学として地域と共に学び、確かな知識と豊かな人間性を備えた看護人材を養成して地域へ還元する。"
     },
     {
       "id": "u000180",
