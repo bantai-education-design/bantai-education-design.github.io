@@ -50,6 +50,25 @@ jobs:
             assert.ok(fs.existsSync(`${dir}complete/${u.id}.json`),`${u.id} complete profile`);
           }
           assert.equal(manifest.universities,28);
+          const kdir='tools/university-database/kanagawa/data/';
+          const kbase=JSON.parse(fs.readFileSync(kdir+'universities_kanagawa_all.generated.json','utf8'));
+          const kcore=JSON.parse(fs.readFileSync(kdir+'kanagawa_core_01.json','utf8')).records;
+          const kfac=JSON.parse(fs.readFileSync(kdir+'faculties_kanagawa_all.generated.json','utf8'));
+          const kdep=JSON.parse(fs.readFileSync(kdir+'departments_kanagawa_all.generated.json','utf8'));
+          const kgrad=JSON.parse(fs.readFileSync(kdir+'graduate_schools_kanagawa_all.generated.json','utf8'));
+          assert.equal(kbase.length,36,'36 Kanagawa universities');
+          assert.equal(kcore.length,36,'36 Kanagawa core records');
+          assert.deepEqual(kbase.map(x=>x.id),kcore.map(x=>x.id),'Kanagawa ids match');
+          assert.deepEqual(['national','public','private'].map(t=>kbase.filter(x=>x.establishment_type===t).length),[2,3,31],'Kanagawa type counts');
+          assert.equal(kfac.length,103,'Kanagawa faculties');
+          assert.equal(kdep.length,205,'Kanagawa departments');
+          assert.equal(kgrad.length,76,'Kanagawa graduate schools');
+          assert.ok(kcore.some(x=>x.id==='u000209'&&x.name==='ZEN大学'),'ZEN University included');
+          for(const u of kcore){
+            assert.match(u.official_url||'',/^https:\/\//,u.id+' official URL');
+            assert.match(u.admissions_url||'',/^https:\/\//,u.id+' admissions URL');
+            assert.ok(u.headquarters?.address?.startsWith('神奈川県'),u.id+' Kanagawa address');
+          }
           const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
           assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
           console.log('saitama data ok');
@@ -166,7 +185,7 @@ jobs:
             assert.ok(dbTop.includes(`<strong>${tokyoN}</strong><span>東京都の大学`),'DB top Tokyo count '+tokyoN);
             assert.ok(dbTop.includes(`<strong>${saitamaN}</strong><span>埼玉県の大学`),'DB top Saitama count '+saitamaN);
             assert.ok(dbTop.includes(`<strong>${kanagawa.length}</strong><span>神奈川県の大学`),'DB top Kanagawa count '+kanagawa.length);
-            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 本部所在地確認済み`),'DB top total '+total);
+            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式・入試導線確認済み`),'DB top total '+total);
             assert.ok(fs.readFileSync('tools/university-database/tokyo/index.html','utf8').includes(`合計 <strong>${total}</strong> 大学`),'list static total '+total);
             assert.ok(fs.readFileSync('index.html','utf8').includes(`${total}校`),'site top count '+total);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
