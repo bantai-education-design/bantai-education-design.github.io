@@ -1767,12 +1767,31 @@
           "source_url": "https://www.shoin-u.ac.jp/introduction/principle/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 情報公開 R8学生に関するデータ（2026年度在学生数）",
+          "source_url": "https://www.shoin-u.ac.jp/cms_wp/wp-content/uploads/R8%E5%AD%A6%E7%94%9F%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）松蔭大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000271301000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shoin-u.ac.jp/",
       "admissions_url": "https://www.shoin-u.ac.jp/exam/",
       "university_goal": "広い教養と専門性を養い、ホスピタリティを基盤に人間性を磨き、知識を実践に生かして社会で活躍できる、心身ともに健全な人材を育成する。",
-      "philosophy": "吉田松陰の実学精神に基づく「知行合一」を校是とし、学んだ知識を行動に生かし、実践を通じて知識を深める生きた学問を重視する。"
+      "philosophy": "吉田松陰の実学精神に基づく「知行合一」を校是とし、学んだ知識を行動に生かし、実践を通じて知識を深める生きた学問を重視する。",
+      "student_counts": {
+        "undergraduate": 537,
+        "graduate": 9,
+        "total": 546,
+        "as_of": "2026-05-01",
+        "note": "大学公式「R8学生に関するデータ」における2026年度在学生数（学部537人・大学院9人・計546人）。なお大学ポートレート掲載の2026年度学部・研究科別内訳は経営文化学部202人・コミュニケーション文化学部170人・観光メディア文化学部53人・看護学部96人（学部計521人）、経営管理研究科5人・看護学研究科3人（大学院計8人）"
+      }
     },
     {
       "id": "u000201",
@@ -1814,12 +1833,25 @@
           "source_url": "https://www.dcu.ac.jp/overview/about/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 情報公開 入学者数・収容定員・在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.dcu.ac.jp/cms/files/dcu/kanri/0150/BMOeNuPV.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.dcu.ac.jp/",
       "admissions_url": "https://www.dcu.ac.jp/admission/",
       "university_goal": "福祉・保育・心理の専門性と実践力を備え、一人ひとりの尊厳と人間性を尊重し、社会の多様なニーズに柔軟かつ的確に応えて貢献できる人材を育成する。",
-      "philosophy": "「捨我精進」を建学の精神とし、自我を慎み、目前の事柄に純粋にまい進する姿勢を通じて、柔軟で寛容な心と真剣に取り組む力を養う。"
+      "philosophy": "「捨我精進」を建学の精神とし、自我を慎み、目前の事柄に純粋にまい進する姿勢を通じて、柔軟で寛容な心と真剣に取り組む力を養う。",
+      "student_counts": {
+        "undergraduate": 1072,
+        "graduate": 40,
+        "total": 1112,
+        "as_of": "2026-05-01",
+        "note": "学部は人間福祉学部548人・子ども未来学部109人・子ども教育学部168人・人間科学部247人の計1,072人、大学院は人間学研究科40人（子ども人間学専攻10人・心理学専攻30人）"
+      }
     },
     {
       "id": "u000202",
@@ -1861,12 +1893,25 @@
           "source_url": "https://www.yokohama-art.ac.jp/about/public_information/educational_research",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 情報公開 在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.yokohama-art.ac.jp/about/public_information/number_of_students/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yokohama-art.ac.jp/",
       "admissions_url": "https://www.yokohama-art.ac.jp/admission/",
       "university_goal": "美術・デザインの専門的な表現技術と理論的知識、社会性と幅広い教養を修得させ、創造的に社会へ貢献できる人材を育成する。",
-      "philosophy": "「美術による創造性豊かな人間形成」を建学の精神とし、表現技術・理論・教養を統合して、創造力、洞察力、問題解決力、倫理観を養う。"
+      "philosophy": "「美術による創造性豊かな人間形成」を建学の精神とし、表現技術・理論・教養を統合して、創造力、洞察力、問題解決力、倫理観を養う。",
+      "student_counts": {
+        "undergraduate": 839,
+        "graduate": 0,
+        "total": 839,
+        "as_of": "2026-05-01",
+        "note": "美術学部美術・デザイン学科839人（男250・女589）。大学院は未設置"
+      }
     },
     {
       "id": "u000203",
@@ -1914,12 +1959,25 @@
           "source_url": "https://www.eiga.ac.jp/about/data/education",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://www.eiga.ac.jp/about/data/overview/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.eiga.ac.jp/",
       "admissions_url": "https://www.eiga.ac.jp/admissions/",
       "university_goal": "「人間重視」を基本に、高度化する知識・技術への対応力と問題解決能力を備え、実学と現場を結ぶ幅広い映画制作能力を持つ専門職業人・研究者を養成する。",
-      "philosophy": "人間の尊厳、公平、自由と個性を尊重し、人間を深く観察する姿勢と、既成の枠を越えて未踏の地へ踏み込む自由な精神と勇気を重視する。"
+      "philosophy": "人間の尊厳、公平、自由と個性を尊重し、人間を深く観察する姿勢と、既成の枠を越えて未踏の地へ踏み込む自由な精神と勇気を重視する。",
+      "student_counts": {
+        "undergraduate": 468,
+        "graduate": 0,
+        "total": 468,
+        "as_of": "2026-05-01",
+        "note": "映画学部映画学科468人（男310・女158）。大学院は未設置"
+      }
     },
     {
       "id": "u000204",
@@ -1961,12 +2019,25 @@
           "source_url": "https://www.soei.ac.jp/guide/vision/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 情報公開 定員・在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.soei.ac.jp/guide/info/capacity/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.soei.ac.jp/",
       "admissions_url": "https://www.soei.ac.jp/exam/",
       "university_goal": "科学的思考に基づく判断力、人間への多面的理解、専門的な知識・技能を備え、地域社会に貢献できる人材を育成する。",
-      "philosophy": "「考えて行動のできる人」の育成を建学の精神とし、深く考えることを生活行動と自己完成につなげる教育を重視する。"
+      "philosophy": "「考えて行動のできる人」の育成を建学の精神とし、深く考えることを生活行動と自己完成につなげる教育を重視する。",
+      "student_counts": {
+        "undergraduate": 521,
+        "graduate": 7,
+        "total": 528,
+        "as_of": "2026-05-01",
+        "note": "学部は看護学部332人・こども教育学部189人の計521人（男100・女421）、大学院は看護学研究科7人（男1・女6）"
+      }
     },
     {
       "id": "u000205",
@@ -2008,12 +2079,25 @@
           "source_url": "https://sums.ac.jp/html/about/idea.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://sums.ac.jp/html/disclosure/02/02/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://sums.ac.jp/",
       "admissions_url": "https://sums.ac.jp/examinee-support/admission/",
       "university_goal": "高度な知識・技術と豊かな人間性を育み、創造的かつ実践的な教育研究を通じて、チーム医療と地域医療に貢献できる医療従事者を養成する。",
-      "philosophy": "「人を尊び、命を尊び、個を敬愛す」を建学の理念とし、幅広い教養と根拠に基づく専門知識・技術、責任感、使命感、主体的な実践力を重視する。"
+      "philosophy": "「人を尊び、命を尊び、個を敬愛す」を建学の理念とし、幅広い教養と根拠に基づく専門知識・技術、責任感、使命感、主体的な実践力を重視する。",
+      "student_counts": {
+        "undergraduate": 1274,
+        "graduate": 41,
+        "total": 1315,
+        "as_of": "2026-05-01",
+        "note": "学部は薬学部324人・保健医療学部950人（看護学科618人・リハビリテーション学科理学療法学専攻186人・作業療法学専攻146人）の計1,274人、大学院は保健医療学研究科41人（修士課程28人・博士後期課程13人）。専攻科（35人）および介護福祉別科（65人）を除く"
+      }
     },
     {
       "id": "u000206",
@@ -2055,12 +2139,25 @@
           "source_url": "https://www.sku.ac.jp/over_view/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 情報公開 入学者数、収容定員、在籍者数（令和8年5月1日現在）",
+          "source_url": "https://www.sku.ac.jp/wp-content/uploads/2026/08/R8.5.1%E5%85%A5%E5%AD%A6%E8%80%85%E6%95%B0%E3%80%81%E5%8F%8E%E5%AE%B9%E5%AE%9A%E5%93%A1%E3%80%81%E5%9C%A8%E7%B1%8D%E8%80%85%E6%95%B0.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.sku.ac.jp/",
       "admissions_url": "https://www.sku.ac.jp/admissions",
       "university_goal": "幅広い教養と哲学的思考を基盤に豊かな人間性と高い倫理性を養い、医療・ケアの進歩や地域の多様なニーズに対応できる高度な知識・技術を持つ医療専門職を育成する。",
-      "philosophy": "「生命だけは平等だ」という理念のもと、いつでも、どこでも、誰もが最善の医療・ケアを受けられる社会を目指し、研鑽を続ける医療人を育成する。"
+      "philosophy": "「生命だけは平等だ」という理念のもと、いつでも、どこでも、誰もが最善の医療・ケアを受けられる社会を目指し、研鑽を続ける医療人を育成する。",
+      "student_counts": {
+        "undergraduate": 405,
+        "graduate": 18,
+        "total": 423,
+        "as_of": "2026-05-01",
+        "note": "学部は看護学部看護学科405人、大学院は看護学研究科18人（博士前期課程10人・博士後期課程8人）"
+      }
     },
     {
       "id": "u000207",
@@ -2108,12 +2205,25 @@
           "source_url": "https://www.b-w.ac.jp/disclosure/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.b-w.ac.jp/wp/wp-content/uploads/2026/06/e6ab56186a5934968daf5dc8ba4848b8.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.b-w.ac.jp/",
       "admissions_url": "https://www.b-w.ac.jp/admission/",
       "university_goal": "心身の美と健康に関する理論・技術と高度な専門知識、洗練された技術、ホスピタリティを備え、人々の健康とQOL向上に貢献し新たな価値を創造できる専門職人材を養成する。",
-      "philosophy": "「美しく聡明で品格あるプロフェッショナルの育成」を教育理念とし、心身の健康、相手を理解したサービス、礼節と信頼を重視する。"
+      "philosophy": "「美しく聡明で品格あるプロフェッショナルの育成」を教育理念とし、心身の健康、相手を理解したサービス、礼節と信頼を重視する。",
+      "student_counts": {
+        "undergraduate": 546,
+        "graduate": 0,
+        "total": 546,
+        "as_of": "2026-05-01",
+        "note": "ビューティ＆ウェルネス学部ビューティ＆ウェルネス学科546人（収容定員868人）。大学院は未設置"
+      }
     },
     {
       "id": "u000208",
@@ -2161,12 +2271,25 @@
           "source_url": "https://gpu.ac.jp/admissions/policy/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "グローバルＢｉｚ専門職大学 高等教育の修学支援新制度確認更新申請書（令和8年5月1日現在）",
+          "source_url": "https://gpu.ac.jp/wp/wp-content/uploads/2026/09/shugakushien_20260904.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://gpu.ac.jp/",
       "admissions_url": "https://gpu.ac.jp/admissions/",
       "university_goal": "経営・財務・法務、語学、デジタル技術などの知識と実務能力を備え、多様な人々と協働して事業を構想・実行し、新たな価値を生み出すリーダーを育成する。",
-      "philosophy": "斬新な発想力と豊かな想像力をもってリーダーシップを発揮し、国際社会でイノベーションを起こせる人材の育成を教育理念とする。"
+      "philosophy": "斬新な発想力と豊かな想像力をもってリーダーシップを発揮し、国際社会でイノベーションを起こせる人材の育成を教育理念とする。",
+      "student_counts": {
+        "undergraduate": 92,
+        "graduate": 0,
+        "total": 92,
+        "as_of": "2026-05-01",
+        "note": "グローバルビジネス学部グローバルビジネス学科92人（収容定員392人）。大学院は未設置"
+      }
     },
     {
       "id": "u000209",
@@ -2208,12 +2331,25 @@
           "source_url": "https://zen.ac.jp/disclosures",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 情報公開 在籍者数（2026年5月1日現在）",
+          "source_url": "https://img.zen-univ.jp/disclosure/enrolled-students_260717.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://zen.ac.jp/",
       "admissions_url": "https://zen.ac.jp/admission",
       "university_goal": "数理、情報、文化・思想、社会、経済、デジタル産業を横断して学び、複雑で変化の速いAI社会を生き抜き、個性と価値を発揮して社会で活躍できる自立した人材を育成する。",
-      "philosophy": "オンライン教育の力で、世界の多様な学習者に開かれた学びの機会を提供し、高等教育の民主化、学びの個別化、デジタル時代への適応を教育の柱とする。"
+      "philosophy": "オンライン教育の力で、世界の多様な学習者に開かれた学びの機会を提供し、高等教育の民主化、学びの個別化、デジタル時代への適応を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 6976,
+        "graduate": 0,
+        "total": 6976,
+        "as_of": "2026-05-01",
+        "note": "知能情報社会学部知能情報社会学科（通信教育課程）正科生6,976人（収容定員7,000人・2学年分）。大学院は未設置"
+      }
     }
   ]
 }
