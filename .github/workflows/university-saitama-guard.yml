@@ -75,6 +75,8 @@ jobs:
             assert.ok(u, id+' profile record');
             assert.ok(Number.isInteger(u.founded_year),id+' founded year');
             assert.ok(Number.isInteger(u.opened_year),id+' opened year');
+            assert.ok(u.operator,id+' operator');
+            assert.ok(Number.isInteger(u.student_counts?.total)&&u.student_counts.total>0,id+' student counts');
             assert.ok((u.philosophy||'').length>=20,id+' philosophy');
             assert.ok((u.sources||[]).some(s=>s.role==='primary'&&!s.source_url.includes('mext.go.jp')),id+' official profile source');
           }

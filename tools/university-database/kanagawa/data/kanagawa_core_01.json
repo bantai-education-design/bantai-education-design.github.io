@@ -106,6 +106,12 @@
           "source_url": "https://www.ynu.ac.jp/about/information/law/instructional/pdf/data-H25keizai.pdf",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 学生数（2026年5月1日現在）",
+          "source_url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu_06-10.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.ynu.ac.jp/",
@@ -114,7 +120,13 @@
       "opened_year": 1949,
       "operator": "国立大学法人横浜国立大学",
       "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。",
-      "university_goal": "学術の中心として幅広い知識と深い専門の学芸を教授研究し、知的・道徳的・応用的能力を発展させ、創造性ある高度専門職業人を育成して社会の福祉と持続的発展に貢献する。"
+      "university_goal": "学術の中心として幅広い知識と深い専門の学芸を教授研究し、知的・道徳的・応用的能力を発展させ、創造性ある高度専門職業人を育成して社会の福祉と持続的発展に貢献する。",
+      "student_counts": {
+        "undergraduate": 7512,
+        "graduate": 2262,
+        "total": 9774,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000176",
@@ -168,6 +180,12 @@
           "source_url": "https://www.soken.ac.jp/outline/history/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 データブック 学生数（2026年5月1日現在）",
+          "source_url": "https://www.soken.ac.jp/outline/dbook/students/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.soken.ac.jp/",
@@ -176,7 +194,13 @@
       "opened_year": 1988,
       "operator": "国立大学法人総合研究大学院大学",
       "university_goal": "基礎学術分野で国際的に通用する高度な研究的資質と広い視野を備えた研究者を育成する。",
-      "philosophy": "大学共同利用機関等との緊密な連係・協力の下、世界最高水準の国際的な大学院大学として学術の理論と応用を教育研究し、文化の創造と発展に貢献する。"
+      "philosophy": "大学共同利用機関等との緊密な連係・協力の下、世界最高水準の国際的な大学院大学として学術の理論と応用を教育研究し、文化の創造と発展に貢献する。",
+      "student_counts": {
+        "undergraduate": 0,
+        "graduate": 592,
+        "total": 592,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000177",
@@ -231,6 +255,12 @@
           "source_date": "2025",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 収容定員・在学者数（2026年5月1日現在）",
+          "source_url": "https://www.yokohama-cu.ac.jp/info/student/kjkjjl0000000bdn-att/R7shuyouteiinzaigakushasu.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yokohama-cu.ac.jp/",
@@ -239,7 +269,13 @@
       "opened_year": 1949,
       "operator": "公立大学法人横浜市立大学",
       "university_goal": "幅広い教養と高い専門的能力を育成し、教育・研究・医療を通じて横浜市民・地域社会の要請に応えるとともに世界へ貢献する。",
-      "philosophy": "国際都市・横浜と共に歩み、教育・研究・医療分野をリードし、社会の発展に寄与する市民の誇りとなる大学を目指す。"
+      "philosophy": "国際都市・横浜と共に歩み、教育・研究・医療分野をリードし、社会の発展に寄与する市民の誇りとなる大学を目指す。",
+      "student_counts": {
+        "undergraduate": 4304,
+        "graduate": 1007,
+        "total": 5311,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000178",
@@ -287,6 +323,12 @@
           "source_url": "https://www.kuhs.ac.jp/information/about/history/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 入学定員・収容定員・在学生数（2026年5月1日現在）",
+          "source_url": "https://www.kuhs.ac.jp/information/about/capacity/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kuhs.ac.jp/",
@@ -295,7 +337,13 @@
       "opened_year": 2003,
       "operator": "公立大学法人神奈川県立保健福祉大学",
       "university_goal": "保健・医療・福祉の連携と総合化、生涯にわたる継続教育、地域社会への貢献を通じ、ヒューマンサービスを実践できる人材を育成する。",
-      "philosophy": "保健・医療・福祉の対象を温もりのある「ひと」と捉え、領域を越えた連携と協働によりヒューマンサービスを実現する。"
+      "philosophy": "保健・医療・福祉の対象を温もりのある「ひと」と捉え、領域を越えた連携と協働によりヒューマンサービスを実現する。",
+      "student_counts": {
+        "undergraduate": 960,
+        "graduate": 141,
+        "total": 1101,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000179",
@@ -350,6 +398,12 @@
           "source_url": "https://www.kawasaki-cn.ac.jp/information/history/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 令和7（2025）年度自己点検・評価報告書（学校基本調査に基づく在籍数）",
+          "source_url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2026.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kawasaki-cn.ac.jp/",
@@ -357,7 +411,14 @@
       "founded_year": 2022,
       "opened_year": 2022,
       "university_goal": "看護に関する高度な知識と技術を教授研究し、豊かな教養・人格・高い倫理観と実践力を備え、地域の保健・医療・福祉に寄与する人材を育成し、成果を地域へ還元する。",
-      "philosophy": "地域に開かれた大学として地域と共に学び、確かな知識と豊かな人間性を備えた看護人材を養成して地域へ還元する。"
+      "philosophy": "地域に開かれた大学として地域と共に学び、確かな知識と豊かな人間性を備えた看護人材を養成して地域へ還元する。",
+      "operator": "川崎市",
+      "student_counts": {
+        "undergraduate": 398,
+        "graduate": 27,
+        "total": 425,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000180",
