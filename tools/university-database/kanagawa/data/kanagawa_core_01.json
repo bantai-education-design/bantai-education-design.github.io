@@ -46,12 +46,24 @@
           "source_url": "https://www.u-tokai.ac.jp/about/philosophy-history/concept/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）東海大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000264005000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.u-tokai.ac.jp/",
       "admissions_url": "https://www.u-tokai.ac.jp/examination-admissions/",
       "university_goal": "建学の精神に基づき、自立性と創造性を備え、変化する社会をより良い方向へ導き、調和の取れた文明社会の建設に貢献できる人材を育成する。",
-      "philosophy": "創立者・松前重義の教育理念を基礎に、若い時期に思想・体躯・知能を培い、希望を星につなぐ姿勢を重視する。文理融合の広い知識と国際的視野を通じて、調和の取れた文明社会の実現を目指す。"
+      "philosophy": "創立者・松前重義の教育理念を基礎に、若い時期に思想・体躯・知能を培い、希望を星につなぐ姿勢を重視する。文理融合の広い知識と国際的視野を通じて、調和の取れた文明社会の実現を目指す。",
+      "student_counts": {
+        "undergraduate": 29462,
+        "graduate": 1198,
+        "total": 30660,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000175",
@@ -466,12 +478,31 @@
           "source_url": "https://seisa.ac.jp/about/outline/history/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 共生科学部 学生数（令和8年5月1日現在）",
+          "source_url": "https://seisa.ac.jp/pdf/report/seisa-about-gakusei_20260501.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 大学院標準修業年限内修了割合・在学状況（令和8年7月1日時点）",
+          "source_url": "https://seisa.ac.jp/pdf/report/daigakuin_20260701.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.seisa.ac.jp/",
       "admissions_url": "https://www.seisa.ac.jp/admission/",
       "university_goal": "人と人、人と自然が共生する社会の創造に貢献するため、教育・福祉・環境・国際関係を横断する広い知力、共生する心、課題探究能力を育成する。",
-      "philosophy": "「社会に必要とされることを創造し、常に新たな道を切り開き、それを成し遂げる」を建学の精神とし、「共生」を教育理念の中心に据える。"
+      "philosophy": "「社会に必要とされることを創造し、常に新たな道を切り開き、それを成し遂げる」を建学の精神とし、「共生」を教育理念の中心に据える。",
+      "student_counts": {
+        "undergraduate": 3653,
+        "graduate": 135,
+        "total": 3788,
+        "as_of": "2026-05-01",
+        "note": "学部は共生科学部正科生3,653人（2026年5月1日現在、科目等履修生・特修生除く）、大学院は教育学研究科・教育実践研究科の在学中135人（2026年7月1日時点）"
+      }
     },
     {
       "id": "u000181",
@@ -513,12 +544,24 @@
           "source_url": "https://www.kanagawa-u.ac.jp/aboutus/timeline/philosophy/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 基本情報 在学生データ 全学生数（2026年5月1日現在）",
+          "source_url": "https://www.kanagawa-u.ac.jp/disclosure/data/student/current/whole/student.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kanagawa-u.ac.jp/",
       "admissions_url": "https://www.kanagawa-u.ac.jp/admissions/",
       "university_goal": "真の実学を目指す伝統を踏まえ、自立した良識ある市民としての判断力・実践力、国際的感性、専門的知識と技能を備え、自ら成長できる人材を育成する。",
-      "philosophy": "創立者・米田吉盛の「教育は人を造るにあり」という信念のもと、「質実剛健、積極進取、中正堅実」を建学の精神として掲げる。"
+      "philosophy": "創立者・米田吉盛の「教育は人を造るにあり」という信念のもと、「質実剛健、積極進取、中正堅実」を建学の精神として掲げる。",
+      "student_counts": {
+        "undergraduate": 18878,
+        "graduate": 558,
+        "total": 19436,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000182",
@@ -566,12 +609,24 @@
           "source_url": "https://univ.kanto-gakuin.ac.jp/about-university/history.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 在籍学生数一覧（2026年5月1日現在）",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/wp-content/uploads/2026_disclosure_5-2.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://univ.kanto-gakuin.ac.jp/",
       "admissions_url": "https://ao.kanto-gakuin.ac.jp/",
       "university_goal": "キリスト教の精神に基づく広く深い教養と奉仕の精神を養い、多様性の中で自己を確立し、他者と共により良い社会を創る知識・知恵・行動力を育成する。",
-      "philosophy": "キリスト教の精神を建学の精神とし、校訓「人になれ 奉仕せよ」のもと、人間形成と、他者・社会・人類のために行動する奉仕を重視する。"
+      "philosophy": "キリスト教の精神を建学の精神とし、校訓「人になれ 奉仕せよ」のもと、人間形成と、他者・社会・人類のために行動する奉仕を重視する。",
+      "student_counts": {
+        "undergraduate": 11555,
+        "graduate": 227,
+        "total": 11782,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000183",
@@ -625,12 +680,25 @@
           "source_url": "https://www.tsurumi-u.ac.jp/site/about/history.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 学生数・教職員数（令和8年度／2026年度）",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/student-r8.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.tsurumi-u.ac.jp/",
       "admissions_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
       "university_goal": "禅の精神に基づく円満な人格と専門的な知識・技能による実践力を備え、感謝と慈愛の心をもって社会の発展と福祉に貢献する人材を育成する。",
-      "philosophy": "仏教、特に禅の教えに基づき、円満な人格の形成と社会に対する感謝・報恩の実践を重視し、「大覚円成 報恩行持」を建学の精神として掲げる。"
+      "philosophy": "仏教、特に禅の教えに基づき、円満な人格の形成と社会に対する感謝・報恩の実践を重視し、「大覚円成 報恩行持」を建学の精神として掲げる。",
+      "student_counts": {
+        "undergraduate": 1448,
+        "graduate": 46,
+        "total": 1494,
+        "as_of": "2026-05-01",
+        "note": "短期大学部（424人）を除く大学学部・大学院の在籍者数"
+      }
     },
     {
       "id": "u000184",
@@ -678,12 +746,24 @@
           "source_url": "https://www.ferris.ac.jp/about/approach/support/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 学生数（2026年5月1日現在）",
+          "source_url": "https://www.ferris.ac.jp/mt_img/2026zaiseki.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.ferris.ac.jp/",
       "admissions_url": "https://www.ferris.ac.jp/admission/",
       "university_goal": "キリスト教を教育の基本方針とし、真理と平和を愛して人類の福祉に寄与するとともに、新しい時代を切り拓く豊かな教養と芸術的・文化的素養を備えた女性を育成する。",
-      "philosophy": "「キリスト教の信仰に基づく女子教育」を建学の精神とし、より広い視野から他者の存在を考え、他者のために行動する「For Others」を教育理念として掲げる。"
+      "philosophy": "「キリスト教の信仰に基づく女子教育」を建学の精神とし、より広い視野から他者の存在を考え、他者のために行動する「For Others」を教育理念として掲げる。",
+      "student_counts": {
+        "undergraduate": 1849,
+        "graduate": 26,
+        "total": 1875,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000185",
@@ -725,12 +805,24 @@
           "source_url": "https://www.shodai.ac.jp/university/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 学生数・教職員数（2026年5月現在）",
+          "source_url": "https://www.shodai.ac.jp/university/number/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shodai.ac.jp/",
       "admissions_url": "https://www.shodai.ac.jp/exam_event/schedule/",
       "university_goal": "実学重視の商学教育を通じ、高度な専門知識、社会への奉仕、職業上の使命感と責任感を備え、託された責任を果たせる人材を育成する。",
-      "philosophy": "「安んじて事を托さるる人となれ」を建学の精神とし、高度な専門性、高潔な倫理、使命感・責任感、奉仕の精神を教育の柱とする。"
+      "philosophy": "「安んじて事を托さるる人となれ」を建学の精神とし、高度な専門性、高潔な倫理、使命感・責任感、奉仕の精神を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 1359,
+        "graduate": 8,
+        "total": 1367,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000186",
@@ -772,12 +864,25 @@
           "source_url": "https://www.yashima.ac.jp/univ/about/information/policy.php",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 学生数（令和8年5月1日現在）",
+          "source_url": "https://www.yashima.ac.jp/univ/files/students.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yashima.ac.jp/univ/",
       "admissions_url": "https://www.yashima.ac.jp/univ/entrance/",
       "university_goal": "人間性豊かなeラーニングを通じ、個人や社会の学習課題を発見・解決し、新たな道を拓くための人間性、基礎力、問題解決力、創造力を育成する。",
-      "philosophy": "「教育の原点は家庭である」という考えに基づき、家庭教育・学校教育・社会教育の融合と、生涯学習社会の実現、すべての人への高等教育機会の提供を目指す。"
+      "philosophy": "「教育の原点は家庭である」という考えに基づき、家庭教育・学校教育・社会教育の融合と、生涯学習社会の実現、すべての人への高等教育機会の提供を目指す。",
+      "student_counts": {
+        "undergraduate": 1177,
+        "graduate": 0,
+        "total": 1177,
+        "as_of": "2026-05-01",
+        "note": "生涯学習学部正科生1,177人（科目等履修生510人・特修生1人を除く、含めた全在籍者は1,688人）"
+      }
     },
     {
       "id": "u000187",
@@ -825,12 +930,24 @@
           "source_url": "https://www.iisec.ac.jp/education/objective/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 入学者数・在学者数（2026年5月1日現在）",
+          "source_url": "https://www.iisec.ac.jp/about/info_release/pdf/gakuseisu2026.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.iisec.ac.jp/",
       "admissions_url": "https://www.iisec.ac.jp/admissions/",
       "university_goal": "情報セキュリティを技術・管理運営・法制度・心理・倫理などの総合科学として捉え、現実の問題解決を担う高度専門技術者・実務家と、将来を先導する研究者を育成する。",
-      "philosophy": "高度な知識と技術、豊かな人間性を兼ね備えた職業人の育成を建学の理念とし、情報セキュリティの理論と応用を教育研究して科学技術の進展に寄与する。"
+      "philosophy": "高度な知識と技術、豊かな人間性を兼ね備えた職業人の育成を建学の理念とし、情報セキュリティの理論と応用を教育研究して科学技術の進展に寄与する。",
+      "student_counts": {
+        "undergraduate": 0,
+        "graduate": 78,
+        "total": 78,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000188",
@@ -878,12 +995,30 @@
           "source_url": "https://www.hamayaku.ac.jp/about/policies/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 学生状況の公表（2026年5月1日現在）",
+          "source_url": "https://www.hamayaku.ac.jp/images/material/56/files/gakusei_jokyo.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "学校法人都築第一学園 令和7年度事業報告書 入学者及び在学者の状況（令和8年5月1日現在）",
+          "source_url": "https://www.hamayaku.ac.jp/images/material/56/files/r7_jigyouhoukokusyo.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.hamayaku.ac.jp/",
       "admissions_url": "https://www.hamayaku.ac.jp/admission/",
       "university_goal": "薬学を研究教授し、臨床で実践できる人間性豊かな薬剤師と、薬学の専門知識・技術を備えた研究者・技術者を育成して、学術の深化と人類の福祉に貢献する。",
-      "philosophy": "「個性の伸展による人生練磨」を建学の精神とし、自己の専門性とアイデンティティを確立し、生涯を通じて自己の完成を目指すことを教育理念とする。"
+      "philosophy": "「個性の伸展による人生練磨」を建学の精神とし、自己の専門性とアイデンティティを確立し、生涯を通じて自己の完成を目指すことを教育理念とする。",
+      "student_counts": {
+        "undergraduate": 2173,
+        "graduate": 21,
+        "total": 2194,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000189",
@@ -931,12 +1066,24 @@
           "source_url": "https://www.azabu-u.ac.jp/about/history.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 入学者数、収容定員、在籍学生数（2025年5月1日現在）",
+          "source_url": "https://www.azabu-u.ac.jp/about/files/current20250501.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.azabu-u.ac.jp/",
       "admissions_url": "https://fanclub.azabu-u.ac.jp/exam/",
       "university_goal": "獣医学、畜産学、獣医保健看護学、動物応用科学、生命科学、環境科学の専門教育研究を通じて応用力と人格を養い、学術の進歩、生活の向上、平和社会の建設に貢献する。",
-      "philosophy": "「学理の討究と誠実なる実践」を建学の精神とし、「地球共生系―人と動物と環境の共生をめざして―」を教育理念として掲げる。"
+      "philosophy": "「学理の討究と誠実なる実践」を建学の精神とし、「地球共生系―人と動物と環境の共生をめざして―」を教育理念として掲げる。",
+      "student_counts": {
+        "undergraduate": 2491,
+        "graduate": 115,
+        "total": 2606,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000190",
