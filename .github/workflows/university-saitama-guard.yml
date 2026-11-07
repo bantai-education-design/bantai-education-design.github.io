@@ -90,6 +90,12 @@ jobs:
           const kmanifest=JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8'));
           assert.equal(kmanifest.verified_profiles,36,'Kanagawa profile manifest');
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
+          assert.equal(kmanifest.access_records,5,'Kanagawa access manifest');
+          const kaccess=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
+          for(const id of ['u000050','u000175','u000176','u000177','u000178']){
+            assert.ok(kaccess[id]?.stations?.length>=1,id+' Kanagawa access');
+            assert.match(kaccess[id].source_url||'',/^https:\/\//,id+' access source');
+          }
           const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
           assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
           console.log('saitama data ok');
