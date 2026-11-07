@@ -452,6 +452,101 @@
    ],
    "school_bus": false,
    "source_url": "https://www.tsurumi-u.ac.jp/site/about/accessmap-index.html"
+  },
+  "u000184": {
+   "campus": "緑園キャンパス",
+   "stations": [
+    {
+     "station": "緑園都市駅",
+     "line": "相鉄いずみ野線",
+     "access": "徒歩約3分"
+    },
+    {
+     "station": "東戸塚駅",
+     "line": "JR横須賀線",
+     "access": "神奈中バス「緑園都市駅」行きで約15分、「フェリス女学院」下車徒歩約1分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.ferris.ac.jp/access/"
+  },
+  "u000185": {
+   "campus": "つるみキャンパス",
+   "stations": [
+    {
+     "station": "生麦駅",
+     "line": "京急本線",
+     "access": "徒歩15分"
+    },
+    {
+     "station": "大口駅",
+     "line": "JR横浜線",
+     "access": "徒歩20分"
+    },
+    {
+     "station": "横浜駅",
+     "line": "JR線・東急東横線・京急本線・横浜市営地下鉄",
+     "access": "東口バスターミナル15番から市営バス7・29系統で「岸谷」下車徒歩5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.shodai.ac.jp/access/index.html"
+  },
+  "u000186": {
+   "campus": "横浜本学キャンパス",
+   "stations": [
+    {
+     "station": "高島町駅",
+     "line": "横浜市営地下鉄ブルーライン",
+     "access": "徒歩1分"
+    },
+    {
+     "station": "戸部駅",
+     "line": "京急本線",
+     "access": "徒歩5分"
+    },
+    {
+     "station": "横浜駅",
+     "line": "JR線・私鉄・横浜市営地下鉄",
+     "access": "東口から徒歩10分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.yashima.ac.jp/univ/information/access.php"
+  },
+  "u000187": {
+   "campus": "横浜キャンパス",
+   "stations": [
+    {
+     "station": "横浜駅",
+     "line": "JR線・私鉄・横浜市営地下鉄",
+     "access": "きた西口から徒歩1分、西口から徒歩3分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.iisec.ac.jp/access/"
+  },
+  "u000188": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "戸塚駅",
+     "line": "JR線・横浜市営地下鉄ブルーライン",
+     "access": "西口の戸塚バスセンター2番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+    },
+    {
+     "station": "湘南台駅",
+     "line": "小田急江ノ島線・相鉄いずみ野線・横浜市営地下鉄ブルーライン",
+     "access": "東口2番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+    },
+    {
+     "station": "大船駅",
+     "line": "JR線・湘南モノレール",
+     "access": "西口5番から「ドリームハイツ」または「俣野公園・横浜薬大前」行きで「俣野公園・横浜薬大前」下車徒歩1分"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.hamayaku.ac.jp/access/"
   }
  }
 }
