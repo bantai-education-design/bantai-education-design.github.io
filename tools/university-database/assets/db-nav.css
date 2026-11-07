@@ -1,0 +1,20 @@
+/* 全国大学データベース 共通メニュー（ホームへ戻る・入口の切り替え） */
+.dbnav{background:#082844;color:#fff;position:relative;z-index:20}
+.dbnav-inner{max-width:1338px;margin:0 auto;padding:8px 22px;display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.dbnav-inner::-webkit-scrollbar{display:none}
+.dbnav a{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.34);color:#fff;text-decoration:none;font:800 .8rem/1 system-ui,-apple-system,"Noto Sans JP",sans-serif;white-space:nowrap}
+.dbnav a:hover,.dbnav a:focus-visible{background:rgba(255,255,255,.12)}
+.dbnav a[aria-current="page"]{background:#f0c85b;border-color:#f0c85b;color:#0b1d30}
+.dbnav .dbnav-home{background:#fff;color:#082844;border-color:#fff}
+.dbnav .dbnav-home:hover{background:#eef2f6}
+.dbnav-label{flex:none;color:#f0c85b;font:900 .74rem/1 system-ui,sans-serif;margin:0 2px 0 8px;white-space:nowrap}
+.dbnav .dbnav-sub{margin-left:auto;border-color:transparent;font-weight:700;color:#cbd5e1}
+@media(max-width:620px){.dbnav-inner{padding:8px 12px;gap:6px}.dbnav a{min-height:34px;padding:0 11px;font-size:.74rem}.dbnav-label{display:none}.dbnav .dbnav-sub{margin-left:0}}
+/* 大学一覧（tokyo）: 見た目だけの文字メニューを消し、本物のメニューに置きかえる */
+.site-header.dbnav-host{padding-bottom:0!important}
+.site-header.dbnav-host:after,.dbnav-host .header-inner:after{content:none!important;display:none!important}
+.dbnav-host .header-fav{position:static!important;margin-left:auto!important;color:#122a42!important}
+/* 大学紹介ページ: ホームへ戻る */
+.detail-right{display:inline-flex;align-items:center;gap:12px}
+.detail-home{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:#fff;color:#082844!important;text-decoration:none;font-weight:800;font-size:.8rem;white-space:nowrap}
+@media(max-width:760px){.detail-header-inner{flex-direction:row!important;align-items:center!important}.detail-right strong{display:none}}
