@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30",
+ "generated_at": "2026-11-07",
  "note": "designated_program: 法令で定められた養成課程の学科名から確定した資格。official_page: 大学公式ページの記載で確認した資格。いずれも所定の単位修得・課程履修が必要。",
  "groups": [
   "看護師",
@@ -1973,6 +1973,254 @@
      "source_url": "https://www.tiu.ac.jp/department/",
      "evidence": "育成 池袋キャンパス 臨床心理学研究科 こころの深さがわかる公認心理師・臨床心理士を育てる 川越第1キャンパス 博士論文の要旨およ",
      "group": "公認心理師"
+    }
+   ]
+  },
+  "u000177": {
+   "name": "横浜市立大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000178": {
+   "name": "神奈川県立保健福祉大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健福祉学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000179": {
+   "name": "川崎市立看護大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000182": {
+   "name": "関東学院大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "栄養学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000183": {
+   "name": "鶴見大学",
+   "qualifications": [
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    }
+   ]
+  },
+  "u000189": {
+   "name": "麻布大学",
+   "qualifications": [
+    {
+     "name": "臨床検査技師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "生命・環境科学部 臨床検査技術学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "臨床検査技術学科（養成課程）",
+     "group": "臨床検査技師"
+    }
+   ]
+  },
+  "u000190": {
+   "name": "神奈川歯科大学",
+   "qualifications": [
+    {
+     "name": "歯科医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "歯学部 歯学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "歯学科（養成課程）",
+     "group": "歯科医師"
+    }
+   ]
+  },
+  "u000191": {
+   "name": "鎌倉女子大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "家政学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000193": {
+   "name": "相模女子大学",
+   "qualifications": [
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "栄養科学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    }
+   ]
+  },
+  "u000195": {
+   "name": "聖マリアンナ医科大学",
+   "qualifications": [
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "医学科（養成課程）",
+     "group": "医師"
+    }
+   ]
+  },
+  "u000196": {
+   "name": "神奈川工科大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康医療科学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康医療科学部 管理栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "管理栄養学科（養成課程）",
+     "group": "管理栄養士"
+    },
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康医療科学部 臨床工学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    }
+   ]
+  },
+  "u000198": {
+   "name": "桐蔭横浜大学",
+   "qualifications": [
+    {
+     "name": "臨床工学技士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医用工学部 臨床工学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "臨床工学科（養成課程）",
+     "group": "臨床工学技士"
+    }
+   ]
+  },
+  "u000200": {
+   "name": "松蔭大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000204": {
+   "name": "横浜創英大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000205": {
+   "name": "湘南医療大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "保健医療学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 医療薬学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "医療薬学科（養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000206": {
+   "name": "湘南鎌倉医療大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+     "evidence": "看護学科（養成課程）",
+     "group": "看護師"
     }
    ]
   }
