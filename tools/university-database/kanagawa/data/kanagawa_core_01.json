@@ -1,26 +1,879 @@
 {
- "records": [
-  {
-   "id": "u000050",
-   "name": "東海大学",
-   "prefecture": "神奈川県",
-   "municipality": "平塚市",
-   "headquarters": {
-    "postal_code": "259-1292",
-    "prefecture": "神奈川県",
-    "municipality": "平塚市",
-    "address": "神奈川県平塚市北金目4-1-1"
-   },
-   "relocated_from": "東京都",
-   "relocation_note": "本部は湘南キャンパス（神奈川県平塚市）。東京都内には品川キャンパス（港区高輪）があります。",
-   "sources": [
+  "records": [
     {
-     "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
-     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
-     "verified_at": "2026-10-31",
-     "role": "secondary"
+      "id": "u000175",
+      "name": "横浜国立大学",
+      "establishment_type": "national",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "240-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市保土ケ谷区常盤台79-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000176",
+      "name": "総合研究大学院大学",
+      "establishment_type": "national",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "葉山町",
+      "headquarters": {
+        "postal_code": "240-0193",
+        "prefecture": "神奈川県",
+        "municipality": "葉山町",
+        "address": "神奈川県三浦郡葉山町（湘南国際村）"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000177",
+      "name": "横浜市立大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "236-0027",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市金沢区瀬戸22-2"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000178",
+      "name": "神奈川県立保健福祉大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横須賀市",
+      "headquarters": {
+        "postal_code": "238-8522",
+        "prefecture": "神奈川県",
+        "municipality": "横須賀市",
+        "address": "神奈川県横須賀市平成町1-10-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000179",
+      "name": "川崎市立看護大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "212-0054",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市幸区小倉4-30-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000050",
+      "name": "東海大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "平塚市",
+      "headquarters": {
+        "postal_code": "259-1292",
+        "prefecture": "神奈川県",
+        "municipality": "平塚市",
+        "address": "神奈川県平塚市北金目4-1-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000180",
+      "name": "星槎大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "箱根町",
+      "headquarters": {
+        "postal_code": "250-0613",
+        "prefecture": "神奈川県",
+        "municipality": "箱根町",
+        "address": "神奈川県足柄下郡箱根町仙石原817-255"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000181",
+      "name": "神奈川大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "221-8686",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市神奈川区六角橋3-27-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000182",
+      "name": "関東学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "236-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市金沢区六浦東1-50-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000183",
+      "name": "鶴見大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "230-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市鶴見区鶴見2-1-3"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000184",
+      "name": "フェリス女学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "245-8650",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市泉区緑園4-5-3"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000185",
+      "name": "横浜商科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "230-8577",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市鶴見区東寺尾4-11-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000186",
+      "name": "八洲学園大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "220-0021",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市西区桜木町7-42"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000187",
+      "name": "情報セキュリティ大学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "221-0835",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市神奈川区鶴屋町2-14-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000188",
+      "name": "横浜薬科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "245-0066",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市戸塚区俣野町字東原601-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000189",
+      "name": "麻布大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市",
+      "headquarters": {
+        "postal_code": "252-5201",
+        "prefecture": "神奈川県",
+        "municipality": "相模原市",
+        "address": "神奈川県相模原市中央区淵野辺1-17-71"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000190",
+      "name": "神奈川歯科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横須賀市",
+      "headquarters": {
+        "postal_code": "238-8580",
+        "prefecture": "神奈川県",
+        "municipality": "横須賀市",
+        "address": "神奈川県横須賀市稲岡町82番地"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000191",
+      "name": "鎌倉女子大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "鎌倉市",
+      "headquarters": {
+        "postal_code": "247-8512",
+        "prefecture": "神奈川県",
+        "municipality": "鎌倉市",
+        "address": "神奈川県鎌倉市大船6-1-3"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000192",
+      "name": "湘南工科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "藤沢市",
+      "headquarters": {
+        "postal_code": "251-8511",
+        "prefecture": "神奈川県",
+        "municipality": "藤沢市",
+        "address": "神奈川県藤沢市辻堂西海岸1-1-25"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000193",
+      "name": "相模女子大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市",
+      "headquarters": {
+        "postal_code": "252-0383",
+        "prefecture": "神奈川県",
+        "municipality": "相模原市",
+        "address": "神奈川県相模原市南区文京2-1-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000194",
+      "name": "洗足学園音楽大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "213-8580",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市高津区久本2-3-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000195",
+      "name": "聖マリアンナ医科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "216-8511",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市宮前区菅生2-16-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000196",
+      "name": "神奈川工科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "厚木市",
+      "headquarters": {
+        "postal_code": "243-0292",
+        "prefecture": "神奈川県",
+        "municipality": "厚木市",
+        "address": "神奈川県厚木市下荻野1030"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000197",
+      "name": "昭和音楽大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-8558",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区上麻生1-11-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000198",
+      "name": "桐蔭横浜大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "225-8503",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市青葉区鉄町1614"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000199",
+      "name": "東洋英和女学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "226-0015",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市緑区三保町32"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000200",
+      "name": "松蔭大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "厚木市",
+      "headquarters": {
+        "postal_code": "243-0124",
+        "prefecture": "神奈川県",
+        "municipality": "厚木市",
+        "address": "神奈川県厚木市森の里若宮9-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000201",
+      "name": "田園調布学園大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-8542",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区東百合丘3-4-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000202",
+      "name": "横浜美術大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "227-0033",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市青葉区鴨志田町1204"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000203",
+      "name": "日本映画大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-0004",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区万福寺1-16-30"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000204",
+      "name": "横浜創英大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "226-0015",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市緑区三保町1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000205",
+      "name": "湘南医療大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "244-0806",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市戸塚区上品濃16-48"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000206",
+      "name": "湘南鎌倉医療大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "鎌倉市",
+      "headquarters": {
+        "postal_code": "247-0066",
+        "prefecture": "神奈川県",
+        "municipality": "鎌倉市",
+        "address": "神奈川県鎌倉市山崎1195-3"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000207",
+      "name": "ビューティ＆ウェルネス専門職大学",
+      "establishment_type": "private",
+      "university_type": "professional_university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "224-0012",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市都筑区牛久保3-9-3"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "u000208",
+      "name": "グローバルＢｉｚ専門職大学",
+      "establishment_type": "private",
+      "university_type": "professional_university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "210-0007",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市川崎区駅前本町22-1"
+      },
+      "status": "active",
+      "verification_status": "mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

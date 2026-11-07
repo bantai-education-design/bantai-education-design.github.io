@@ -1,8 +1,282 @@
 [
- {
-  "id": "u000050",
-  "name": "東海大学",
-  "prefecture": "神奈川県",
-  "municipality": "平塚市"
- }
+  {
+    "id": "u000175",
+    "name": "横浜国立大学",
+    "establishment_type": "national",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000176",
+    "name": "総合研究大学院大学",
+    "establishment_type": "national",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "葉山町"
+  },
+  {
+    "id": "u000177",
+    "name": "横浜市立大学",
+    "establishment_type": "public",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000178",
+    "name": "神奈川県立保健福祉大学",
+    "establishment_type": "public",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横須賀市"
+  },
+  {
+    "id": "u000179",
+    "name": "川崎市立看護大学",
+    "establishment_type": "public",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000050",
+    "name": "東海大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "平塚市"
+  },
+  {
+    "id": "u000180",
+    "name": "星槎大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "箱根町"
+  },
+  {
+    "id": "u000181",
+    "name": "神奈川大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000182",
+    "name": "関東学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000183",
+    "name": "鶴見大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000184",
+    "name": "フェリス女学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000185",
+    "name": "横浜商科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000186",
+    "name": "八洲学園大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000187",
+    "name": "情報セキュリティ大学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000188",
+    "name": "横浜薬科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000189",
+    "name": "麻布大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "相模原市"
+  },
+  {
+    "id": "u000190",
+    "name": "神奈川歯科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横須賀市"
+  },
+  {
+    "id": "u000191",
+    "name": "鎌倉女子大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "鎌倉市"
+  },
+  {
+    "id": "u000192",
+    "name": "湘南工科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "藤沢市"
+  },
+  {
+    "id": "u000193",
+    "name": "相模女子大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "相模原市"
+  },
+  {
+    "id": "u000194",
+    "name": "洗足学園音楽大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000195",
+    "name": "聖マリアンナ医科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000196",
+    "name": "神奈川工科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "厚木市"
+  },
+  {
+    "id": "u000197",
+    "name": "昭和音楽大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000198",
+    "name": "桐蔭横浜大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000199",
+    "name": "東洋英和女学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000200",
+    "name": "松蔭大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "厚木市"
+  },
+  {
+    "id": "u000201",
+    "name": "田園調布学園大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000202",
+    "name": "横浜美術大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000203",
+    "name": "日本映画大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  },
+  {
+    "id": "u000204",
+    "name": "横浜創英大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000205",
+    "name": "湘南医療大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000206",
+    "name": "湘南鎌倉医療大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "鎌倉市"
+  },
+  {
+    "id": "u000207",
+    "name": "ビューティ＆ウェルネス専門職大学",
+    "establishment_type": "private",
+    "university_type": "professional_university",
+    "prefecture": "神奈川県",
+    "municipality": "横浜市"
+  },
+  {
+    "id": "u000208",
+    "name": "グローバルＢｉｚ専門職大学",
+    "establishment_type": "private",
+    "university_type": "professional_university",
+    "prefecture": "神奈川県",
+    "municipality": "川崎市"
+  }
 ]

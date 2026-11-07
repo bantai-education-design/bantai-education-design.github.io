@@ -1,8 +1,8 @@
-// 収録件数・品質表示を、読み込んだ全地域（東京都・埼玉県・神奈川県の先行掲載分）の実データから表示する。
+// 収録件数・品質表示を、読み込んだ全地域（東京都・埼玉県・神奈川県）の実データから表示する。
 (()=>{
 if(typeof state==='undefined')return;
 const PREFS=['東京都','埼玉県','神奈川県'];
-const NOTES={'神奈川県':'神奈川県版は準備中（本部が神奈川県の大学を先行掲載）'};
+const NOTES={};
 const byPref=p=>state.rows.filter(r=>(r.prefecture||r.headquarters?.prefecture||'東京都')===p);
 const count=(rows,t)=>rows.filter(r=>r.establishment_type===t).length;
 const label=()=>PREFS.filter(p=>byPref(p).length&&!NOTES[p]).join('・');
