@@ -2007,6 +2007,78 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
      "evidence": "看護学科（養成課程）",
      "group": "看護師"
+    },
+    {
+     "name": "養護教諭一種免許状",
+     "basis": "official_page",
+     "department": "保健福祉学部 看護学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "選択希望者のみ・学内選考あり",
+     "group": "養護教諭"
+    },
+    {
+     "name": "栄養士免許",
+     "basis": "official_page",
+     "department": "保健福祉学部 栄養学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "卒業時に取得可能",
+     "group": "栄養士"
+    },
+    {
+     "name": "管理栄養士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 栄養学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "管理栄養士国家試験受験資格",
+     "group": "管理栄養士"
+    },
+    {
+     "name": "栄養教諭一種免許状",
+     "basis": "official_page",
+     "department": "保健福祉学部 栄養学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "選択希望者のみ・学内選考あり",
+     "group": "栄養教諭"
+    },
+    {
+     "name": "社会福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 社会福祉学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "社会福祉士国家試験受験資格",
+     "group": "社会福祉士"
+    },
+    {
+     "name": "精神保健福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 社会福祉学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "選択希望者のみ・学内選考あり",
+     "group": "精神保健福祉士"
+    },
+    {
+     "name": "介護福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 社会福祉学科",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "選択希望者のみ・学内選考あり",
+     "group": "介護福祉士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 リハビリテーション学科 理学療法学専攻",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "理学療法学専攻",
+     "group": "理学療法士"
+    },
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "保健福祉学部 リハビリテーション学科 作業療法学専攻",
+     "source_url": "https://shi.kuhs.ac.jp/career/qualification/",
+     "evidence": "作業療法学専攻",
+     "group": "作業療法士"
     }
    ]
   },
@@ -2067,6 +2139,22 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "臨床検査技術学科（養成課程）",
      "group": "臨床検査技師"
+    },
+    {
+     "name": "獣医師（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "獣医学部 獣医学科",
+     "source_url": "https://www.azabu-u.ac.jp/academic_graduate/qualification/",
+     "evidence": "取得可能な国家試験受験資格",
+     "group": null
+    },
+    {
+     "name": "愛玩動物看護師（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "獣医学部 獣医保健看護学科",
+     "source_url": "https://www.azabu-u.ac.jp/academic_graduate/qualification/",
+     "evidence": "取得可能な国家試験受験資格",
+     "group": null
     }
    ]
   },
@@ -2093,6 +2181,70 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "管理栄養学科（養成課程）",
      "group": "管理栄養士"
+    },
+    {
+     "name": "養護教諭一種免許状",
+     "basis": "official_page",
+     "department": "家政学部 家政保健学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "所定科目の単位修得",
+     "group": "養護教諭"
+    },
+    {
+     "name": "栄養教諭一種免許状",
+     "basis": "official_page",
+     "department": "家政学部 管理栄養学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "栄養士免許取得を前提に所定科目修得",
+     "group": "栄養教諭"
+    },
+    {
+     "name": "保育士",
+     "basis": "official_page",
+     "department": "児童学部 児童学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "所定科目の単位修得",
+     "group": "保育士"
+    },
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "児童学部 児童学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "所定科目の単位修得",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "教育学部 教育学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "教職課程の所定科目修得",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "特別支援学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "教育学部 教育学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "基礎免許状取得を前提に所定科目修得",
+     "group": "特別支援学校教諭"
+    },
+    {
+     "name": "学芸員",
+     "basis": "official_page",
+     "department": "教育学部 教育学科",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "所定科目の単位修得",
+     "group": "学芸員"
+    },
+    {
+     "name": "図書館司書",
+     "basis": "official_page",
+     "department": "大学全学科（他大学課程履修制度）",
+     "source_url": "https://www.kamakura-u.ac.jp/guide/index.html",
+     "evidence": "清泉女子大学の司書課程履修制度",
+     "group": "図書館司書"
     }
    ]
   },
@@ -2221,6 +2373,19 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "看護学科（養成課程）",
      "group": "看護師"
+    }
+   ]
+  },
+  "u000188": {
+   "name": "横浜薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "薬学部 薬学科（6年制課程）",
+     "source_url": "https://www.hamayaku.ac.jp/career/qualification/",
+     "evidence": "6年制課程修了で薬剤師国家試験受験資格",
+     "group": "薬剤師"
     }
    ]
   }
