@@ -90,9 +90,9 @@ jobs:
           const kmanifest=JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8'));
           assert.equal(kmanifest.verified_profiles,36,'Kanagawa profile manifest');
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
-          assert.equal(kmanifest.access_records,10,'Kanagawa access manifest');
+          assert.equal(kmanifest.access_records,15,'Kanagawa access manifest');
           const kaccess=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
-          for(const id of ['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183']){
+          for(const id of ['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188']){
             assert.ok(kaccess[id]?.stations?.length>=1,id+' Kanagawa access');
             assert.match(kaccess[id].source_url||'',/^https:\/\//,id+' access source');
           }
