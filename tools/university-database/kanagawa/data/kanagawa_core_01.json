@@ -1351,10 +1351,18 @@
           "source_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 建学の精神・教育目標",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/about/kengaku.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.toyoeiwa.ac.jp/daigaku/",
-      "admissions_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/"
+      "admissions_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/",
+      "university_goal": "専門に根ざした幅広い教養を備え、国際化・情報化した社会に適応し、キリスト教精神に基づいて他者を思いやり奉仕できる自立した女性を育成する。",
+      "philosophy": "「敬神奉仕」を建学の精神とし、神を敬い隣人を愛して仕える姿勢を土台に、キリスト教による人間形成と人格形成を重視する。"
     },
     {
       "id": "u000200",
@@ -1390,10 +1398,18 @@
           "source_url": "https://www.shoin-u.ac.jp/exam/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 建学の精神と大学の基本理念",
+          "source_url": "https://www.shoin-u.ac.jp/introduction/principle/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shoin-u.ac.jp/",
-      "admissions_url": "https://www.shoin-u.ac.jp/exam/"
+      "admissions_url": "https://www.shoin-u.ac.jp/exam/",
+      "university_goal": "広い教養と専門性を養い、ホスピタリティを基盤に人間性を磨き、知識を実践に生かして社会で活躍できる、心身ともに健全な人材を育成する。",
+      "philosophy": "吉田松陰の実学精神に基づく「知行合一」を校是とし、学んだ知識を行動に生かし、実践を通じて知識を深める生きた学問を重視する。"
     },
     {
       "id": "u000201",
@@ -1429,10 +1445,18 @@
           "source_url": "https://www.dcu.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 大学概要・建学の精神・3方針",
+          "source_url": "https://www.dcu.ac.jp/overview/about/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.dcu.ac.jp/",
-      "admissions_url": "https://www.dcu.ac.jp/admission/"
+      "admissions_url": "https://www.dcu.ac.jp/admission/",
+      "university_goal": "福祉・保育・心理の専門性と実践力を備え、一人ひとりの尊厳と人間性を尊重し、社会の多様なニーズに柔軟かつ的確に応えて貢献できる人材を育成する。",
+      "philosophy": "「捨我精進」を建学の精神とし、自我を慎み、目前の事柄に純粋にまい進する姿勢を通じて、柔軟で寛容な心と真剣に取り組む力を養う。"
     },
     {
       "id": "u000202",
@@ -1468,10 +1492,18 @@
           "source_url": "https://www.yokohama-art.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 教育研究上の目的",
+          "source_url": "https://www.yokohama-art.ac.jp/about/public_information/educational_research",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.yokohama-art.ac.jp/",
-      "admissions_url": "https://www.yokohama-art.ac.jp/admission/"
+      "admissions_url": "https://www.yokohama-art.ac.jp/admission/",
+      "university_goal": "美術・デザインの専門的な表現技術と理論的知識、社会性と幅広い教養を修得させ、創造的に社会へ貢献できる人材を育成する。",
+      "philosophy": "「美術による創造性豊かな人間形成」を建学の精神とし、表現技術・理論・教養を統合して、創造力、洞察力、問題解決力、倫理観を養う。"
     },
     {
       "id": "u000203",
@@ -1507,10 +1539,24 @@
           "source_url": "https://www.eiga.ac.jp/admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 理念と建学の精神",
+          "source_url": "https://www.eiga.ac.jp/about/mission",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 教育の方針と課程",
+          "source_url": "https://www.eiga.ac.jp/about/data/education",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.eiga.ac.jp/",
-      "admissions_url": "https://www.eiga.ac.jp/admissions/"
+      "admissions_url": "https://www.eiga.ac.jp/admissions/",
+      "university_goal": "「人間重視」を基本に、高度化する知識・技術への対応力と問題解決能力を備え、実学と現場を結ぶ幅広い映画制作能力を持つ専門職業人・研究者を養成する。",
+      "philosophy": "人間の尊厳、公平、自由と個性を尊重し、人間を深く観察する姿勢と、既成の枠を越えて未踏の地へ踏み込む自由な精神と勇気を重視する。"
     },
     {
       "id": "u000204",
