@@ -1,0 +1,4102 @@
+[
+  {
+    "id": "d300001",
+    "university_id": "u000050",
+    "faculty_id": "f300001",
+    "name": "文明学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300002",
+    "university_id": "u000050",
+    "faculty_id": "f300001",
+    "name": "歴史学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300003",
+    "university_id": "u000050",
+    "faculty_id": "f300001",
+    "name": "日本文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300004",
+    "university_id": "u000050",
+    "faculty_id": "f300001",
+    "name": "英語文化コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300005",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "アジア学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300006",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "ヨーロッパ・アメリカ学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300007",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "北欧学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300008",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "文芸創作学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300009",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "広報メディア学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300010",
+    "university_id": "u000050",
+    "faculty_id": "f300002",
+    "name": "心理・社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300011",
+    "university_id": "u000050",
+    "faculty_id": "f300003",
+    "name": "政治学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300012",
+    "university_id": "u000050",
+    "faculty_id": "f300003",
+    "name": "経済学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300013",
+    "university_id": "u000050",
+    "faculty_id": "f300004",
+    "name": "法律学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300014",
+    "university_id": "u000050",
+    "faculty_id": "f300005",
+    "name": "人間環境学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300015",
+    "university_id": "u000050",
+    "faculty_id": "f300005",
+    "name": "芸術学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300016",
+    "university_id": "u000050",
+    "faculty_id": "f300006",
+    "name": "体育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300017",
+    "university_id": "u000050",
+    "faculty_id": "f300006",
+    "name": "競技スポーツ学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300018",
+    "university_id": "u000050",
+    "faculty_id": "f300006",
+    "name": "武道学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300019",
+    "university_id": "u000050",
+    "faculty_id": "f300006",
+    "name": "生涯スポーツ学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300020",
+    "university_id": "u000050",
+    "faculty_id": "f300006",
+    "name": "スポーツ・レジャーマネジメント学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300021",
+    "university_id": "u000050",
+    "faculty_id": "f300007",
+    "name": "健康マネジメント学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300022",
+    "university_id": "u000050",
+    "faculty_id": "f300008",
+    "name": "数学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300023",
+    "university_id": "u000050",
+    "faculty_id": "f300008",
+    "name": "情報数理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300024",
+    "university_id": "u000050",
+    "faculty_id": "f300008",
+    "name": "物理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300025",
+    "university_id": "u000050",
+    "faculty_id": "f300008",
+    "name": "化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300026",
+    "university_id": "u000050",
+    "faculty_id": "f300009",
+    "name": "情報科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300027",
+    "university_id": "u000050",
+    "faculty_id": "f300009",
+    "name": "コンピュータ応用工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300028",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "応用化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300029",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "電気電子工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300030",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "機械工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300031",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "航空宇宙学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300032",
+    "university_id": "u000050",
+    "faculty_id": "f300011",
+    "name": "観光学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300033",
+    "university_id": "u000050",
+    "faculty_id": "f300012",
+    "name": "水産学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "静岡県",
+    "campus_municipality": "静岡市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300034",
+    "university_id": "u000050",
+    "faculty_id": "f300012",
+    "name": "海洋生物学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "静岡県",
+    "campus_municipality": "静岡市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300035",
+    "university_id": "u000050",
+    "faculty_id": "f300013",
+    "name": "医学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "伊勢原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300036",
+    "university_id": "u000050",
+    "faculty_id": "f300013",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "伊勢原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300037",
+    "university_id": "u000050",
+    "faculty_id": "f300014",
+    "name": "地域創造学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "北海道",
+    "campus_municipality": "札幌市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300038",
+    "university_id": "u000050",
+    "faculty_id": "f300014",
+    "name": "国際コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "北海道",
+    "campus_municipality": "札幌市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300039",
+    "university_id": "u000050",
+    "faculty_id": "f300015",
+    "name": "生物学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "北海道",
+    "campus_municipality": "札幌市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300040",
+    "university_id": "u000050",
+    "faculty_id": "f300015",
+    "name": "海洋生物科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "北海道",
+    "campus_municipality": "札幌市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300041",
+    "university_id": "u000050",
+    "faculty_id": "f300016",
+    "name": "児童教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300042",
+    "university_id": "u000050",
+    "faculty_id": "f300017",
+    "name": "経営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300043",
+    "university_id": "u000050",
+    "faculty_id": "f300018",
+    "name": "国際学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300044",
+    "university_id": "u000050",
+    "faculty_id": "f300019",
+    "name": "建築学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300045",
+    "university_id": "u000050",
+    "faculty_id": "f300019",
+    "name": "土木工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300046",
+    "university_id": "u000050",
+    "faculty_id": "f300020",
+    "name": "人文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "静岡県",
+    "campus_municipality": "静岡市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300047",
+    "university_id": "u000050",
+    "faculty_id": "f300021",
+    "name": "経営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "熊本市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300048",
+    "university_id": "u000050",
+    "faculty_id": "f300021",
+    "name": "地域社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "熊本市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300049",
+    "university_id": "u000050",
+    "faculty_id": "f300021",
+    "name": "人間情報工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "熊本市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300050",
+    "university_id": "u000050",
+    "faculty_id": "f300022",
+    "name": "情報通信学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "港区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300051",
+    "university_id": "u000050",
+    "faculty_id": "f300009",
+    "name": "情報メディア学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300052",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "機械システム工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300053",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "医工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "伊勢原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300054",
+    "university_id": "u000050",
+    "faculty_id": "f300010",
+    "name": "生物工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "平塚市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300055",
+    "university_id": "u000050",
+    "faculty_id": "f300012",
+    "name": "海洋理工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "静岡県",
+    "campus_municipality": "静岡市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300056",
+    "university_id": "u000050",
+    "faculty_id": "f300023",
+    "name": "農学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "益城町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300057",
+    "university_id": "u000050",
+    "faculty_id": "f300023",
+    "name": "動物科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "益城町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300058",
+    "university_id": "u000050",
+    "faculty_id": "f300023",
+    "name": "食生命科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "熊本県",
+    "campus_municipality": "益城町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東海大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300059",
+    "university_id": "u000175",
+    "faculty_id": "f300024",
+    "name": "学校教員養成課程",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300060",
+    "university_id": "u000175",
+    "faculty_id": "f300025",
+    "name": "経済学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300061",
+    "university_id": "u000175",
+    "faculty_id": "f300026",
+    "name": "経営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300062",
+    "university_id": "u000175",
+    "faculty_id": "f300027",
+    "name": "機械・材料・海洋系学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300063",
+    "university_id": "u000175",
+    "faculty_id": "f300027",
+    "name": "化学・生命系学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300064",
+    "university_id": "u000175",
+    "faculty_id": "f300027",
+    "name": "数物・電子情報系学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300065",
+    "university_id": "u000175",
+    "faculty_id": "f300028",
+    "name": "都市社会共生学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300066",
+    "university_id": "u000175",
+    "faculty_id": "f300028",
+    "name": "建築学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300067",
+    "university_id": "u000175",
+    "faculty_id": "f300028",
+    "name": "都市基盤学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300068",
+    "university_id": "u000175",
+    "faculty_id": "f300028",
+    "name": "環境リスク共生学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜国立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300069",
+    "university_id": "u000177",
+    "faculty_id": "f300029",
+    "name": "国際教養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300070",
+    "university_id": "u000177",
+    "faculty_id": "f300030",
+    "name": "国際商学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300071",
+    "university_id": "u000177",
+    "faculty_id": "f300031",
+    "name": "理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300072",
+    "university_id": "u000177",
+    "faculty_id": "f300032",
+    "name": "データサイエンス学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300073",
+    "university_id": "u000177",
+    "faculty_id": "f300033",
+    "name": "医学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300074",
+    "university_id": "u000177",
+    "faculty_id": "f300033",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜市立大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300075",
+    "university_id": "u000178",
+    "faculty_id": "f300034",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横須賀市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川県立保健福祉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300076",
+    "university_id": "u000178",
+    "faculty_id": "f300034",
+    "name": "栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横須賀市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川県立保健福祉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300077",
+    "university_id": "u000178",
+    "faculty_id": "f300034",
+    "name": "社会福祉学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横須賀市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川県立保健福祉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300078",
+    "university_id": "u000178",
+    "faculty_id": "f300034",
+    "name": "リハビリテーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横須賀市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川県立保健福祉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300079",
+    "university_id": "u000179",
+    "faculty_id": "f300035",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（川崎市立看護大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300080",
+    "university_id": "u000180",
+    "faculty_id": "f300036",
+    "name": "共生科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "箱根町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（星槎大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300081",
+    "university_id": "u000181",
+    "faculty_id": "f300037",
+    "name": "法律学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300082",
+    "university_id": "u000181",
+    "faculty_id": "f300037",
+    "name": "自治行政学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300083",
+    "university_id": "u000181",
+    "faculty_id": "f300038",
+    "name": "経済学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300084",
+    "university_id": "u000181",
+    "faculty_id": "f300038",
+    "name": "現代ビジネス学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300085",
+    "university_id": "u000181",
+    "faculty_id": "f300039",
+    "name": "国際経営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300086",
+    "university_id": "u000181",
+    "faculty_id": "f300040",
+    "name": "英語英文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300087",
+    "university_id": "u000181",
+    "faculty_id": "f300040",
+    "name": "スペイン語学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300088",
+    "university_id": "u000181",
+    "faculty_id": "f300040",
+    "name": "中国語学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300089",
+    "university_id": "u000181",
+    "faculty_id": "f300041",
+    "name": "国際文化交流学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300090",
+    "university_id": "u000181",
+    "faculty_id": "f300041",
+    "name": "日本文化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300091",
+    "university_id": "u000181",
+    "faculty_id": "f300041",
+    "name": "歴史民俗学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300092",
+    "university_id": "u000181",
+    "faculty_id": "f300042",
+    "name": "人間科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300093",
+    "university_id": "u000181",
+    "faculty_id": "f300043",
+    "name": "理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300094",
+    "university_id": "u000181",
+    "faculty_id": "f300044",
+    "name": "機械工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300095",
+    "university_id": "u000181",
+    "faculty_id": "f300044",
+    "name": "電気電子情報工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300096",
+    "university_id": "u000181",
+    "faculty_id": "f300044",
+    "name": "経営工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300097",
+    "university_id": "u000181",
+    "faculty_id": "f300044",
+    "name": "応用物理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300098",
+    "university_id": "u000181",
+    "faculty_id": "f300045",
+    "name": "建築学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300099",
+    "university_id": "u000181",
+    "faculty_id": "f300046",
+    "name": "応用化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300100",
+    "university_id": "u000181",
+    "faculty_id": "f300046",
+    "name": "生命機能学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300101",
+    "university_id": "u000181",
+    "faculty_id": "f300047",
+    "name": "計算機科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300102",
+    "university_id": "u000181",
+    "faculty_id": "f300047",
+    "name": "システム数理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300103",
+    "university_id": "u000182",
+    "faculty_id": "f300048",
+    "name": "英語文化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300104",
+    "university_id": "u000182",
+    "faculty_id": "f300048",
+    "name": "比較文化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300105",
+    "university_id": "u000182",
+    "faculty_id": "f300049",
+    "name": "現代社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300106",
+    "university_id": "u000182",
+    "faculty_id": "f300050",
+    "name": "経済学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300107",
+    "university_id": "u000182",
+    "faculty_id": "f300051",
+    "name": "経営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300108",
+    "university_id": "u000182",
+    "faculty_id": "f300052",
+    "name": "法学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300109",
+    "university_id": "u000182",
+    "faculty_id": "f300052",
+    "name": "地域創生学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300110",
+    "university_id": "u000182",
+    "faculty_id": "f300053",
+    "name": "理工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300111",
+    "university_id": "u000182",
+    "faculty_id": "f300054",
+    "name": "建築・環境学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300112",
+    "university_id": "u000182",
+    "faculty_id": "f300055",
+    "name": "コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300113",
+    "university_id": "u000182",
+    "faculty_id": "f300055",
+    "name": "共生デザイン学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300114",
+    "university_id": "u000182",
+    "faculty_id": "f300056",
+    "name": "管理栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300115",
+    "university_id": "u000182",
+    "faculty_id": "f300057",
+    "name": "こども発達学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300116",
+    "university_id": "u000182",
+    "faculty_id": "f300058",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（関東学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300117",
+    "university_id": "u000183",
+    "faculty_id": "f300059",
+    "name": "日本文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鶴見大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300118",
+    "university_id": "u000183",
+    "faculty_id": "f300059",
+    "name": "英語英米文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鶴見大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300119",
+    "university_id": "u000183",
+    "faculty_id": "f300059",
+    "name": "文化財学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鶴見大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300120",
+    "university_id": "u000183",
+    "faculty_id": "f300059",
+    "name": "ドキュメンテーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鶴見大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300121",
+    "university_id": "u000183",
+    "faculty_id": "f300060",
+    "name": "歯学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鶴見大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300122",
+    "university_id": "u000184",
+    "faculty_id": "f300061",
+    "name": "国際社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（フェリス女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300123",
+    "university_id": "u000184",
+    "faculty_id": "f300061",
+    "name": "心理コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（フェリス女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300124",
+    "university_id": "u000184",
+    "faculty_id": "f300061",
+    "name": "文化表現学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（フェリス女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300125",
+    "university_id": "u000185",
+    "faculty_id": "f300062",
+    "name": "商学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300126",
+    "university_id": "u000185",
+    "faculty_id": "f300062",
+    "name": "観光マネジメント学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300127",
+    "university_id": "u000185",
+    "faculty_id": "f300062",
+    "name": "経営情報学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300128",
+    "university_id": "u000186",
+    "faculty_id": "f300063",
+    "name": "生涯学習学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（八洲学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300129",
+    "university_id": "u000188",
+    "faculty_id": "f300064",
+    "name": "健康薬学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜薬科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300130",
+    "university_id": "u000188",
+    "faculty_id": "f300064",
+    "name": "漢方薬学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜薬科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300131",
+    "university_id": "u000188",
+    "faculty_id": "f300064",
+    "name": "臨床薬学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜薬科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300132",
+    "university_id": "u000188",
+    "faculty_id": "f300064",
+    "name": "薬科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜薬科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300133",
+    "university_id": "u000189",
+    "faculty_id": "f300065",
+    "name": "獣医学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300134",
+    "university_id": "u000189",
+    "faculty_id": "f300065",
+    "name": "動物応用科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300135",
+    "university_id": "u000189",
+    "faculty_id": "f300065",
+    "name": "獣医保健看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300136",
+    "university_id": "u000189",
+    "faculty_id": "f300066",
+    "name": "臨床検査技術学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300137",
+    "university_id": "u000189",
+    "faculty_id": "f300066",
+    "name": "食品生命科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300138",
+    "university_id": "u000189",
+    "faculty_id": "f300066",
+    "name": "環境科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麻布大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300139",
+    "university_id": "u000190",
+    "faculty_id": "f300067",
+    "name": "歯学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横須賀市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川歯科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300140",
+    "university_id": "u000191",
+    "faculty_id": "f300068",
+    "name": "家政保健学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鎌倉女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300141",
+    "university_id": "u000191",
+    "faculty_id": "f300068",
+    "name": "管理栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鎌倉女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300142",
+    "university_id": "u000191",
+    "faculty_id": "f300069",
+    "name": "児童学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鎌倉女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300143",
+    "university_id": "u000191",
+    "faculty_id": "f300069",
+    "name": "子ども心理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鎌倉女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300144",
+    "university_id": "u000191",
+    "faculty_id": "f300070",
+    "name": "教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（鎌倉女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300145",
+    "university_id": "u000192",
+    "faculty_id": "f300071",
+    "name": "機械工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "藤沢市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300146",
+    "university_id": "u000192",
+    "faculty_id": "f300071",
+    "name": "総合デザイン学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "藤沢市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300147",
+    "university_id": "u000192",
+    "faculty_id": "f300071",
+    "name": "電気電子工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "藤沢市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300148",
+    "university_id": "u000192",
+    "faculty_id": "f300071",
+    "name": "人間環境学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "藤沢市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300149",
+    "university_id": "u000192",
+    "faculty_id": "f300072",
+    "name": "情報学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "藤沢市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300150",
+    "university_id": "u000193",
+    "faculty_id": "f300073",
+    "name": "日本語日本文学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300151",
+    "university_id": "u000193",
+    "faculty_id": "f300073",
+    "name": "英語文化コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300152",
+    "university_id": "u000193",
+    "faculty_id": "f300073",
+    "name": "子ども教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300153",
+    "university_id": "u000193",
+    "faculty_id": "f300073",
+    "name": "メディア情報学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300154",
+    "university_id": "u000193",
+    "faculty_id": "f300073",
+    "name": "生活デザイン学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300155",
+    "university_id": "u000193",
+    "faculty_id": "f300074",
+    "name": "社会マネジメント学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300156",
+    "university_id": "u000193",
+    "faculty_id": "f300074",
+    "name": "人間心理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300157",
+    "university_id": "u000193",
+    "faculty_id": "f300075",
+    "name": "健康栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300158",
+    "university_id": "u000193",
+    "faculty_id": "f300075",
+    "name": "管理栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "相模原市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（相模女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300159",
+    "university_id": "u000194",
+    "faculty_id": "f300076",
+    "name": "音楽学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（洗足学園音楽大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300160",
+    "university_id": "u000195",
+    "faculty_id": "f300077",
+    "name": "医学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖マリアンナ医科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300161",
+    "university_id": "u000196",
+    "faculty_id": "f300078",
+    "name": "機械工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300162",
+    "university_id": "u000196",
+    "faculty_id": "f300078",
+    "name": "電気電子情報工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300163",
+    "university_id": "u000196",
+    "faculty_id": "f300078",
+    "name": "応用化学生物学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300164",
+    "university_id": "u000196",
+    "faculty_id": "f300079",
+    "name": "情報工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300165",
+    "university_id": "u000196",
+    "faculty_id": "f300079",
+    "name": "情報ネットワーク・コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300166",
+    "university_id": "u000196",
+    "faculty_id": "f300079",
+    "name": "情報メディア学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300167",
+    "university_id": "u000196",
+    "faculty_id": "f300079",
+    "name": "情報システム学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300168",
+    "university_id": "u000196",
+    "faculty_id": "f300080",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300169",
+    "university_id": "u000196",
+    "faculty_id": "f300080",
+    "name": "管理栄養学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300170",
+    "university_id": "u000196",
+    "faculty_id": "f300080",
+    "name": "臨床工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神奈川工科大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300171",
+    "university_id": "u000197",
+    "faculty_id": "f300081",
+    "name": "音楽芸術運営学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（昭和音楽大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300172",
+    "university_id": "u000197",
+    "faculty_id": "f300081",
+    "name": "音楽芸術表現学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（昭和音楽大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300173",
+    "university_id": "u000198",
+    "faculty_id": "f300082",
+    "name": "法律学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（桐蔭横浜大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300174",
+    "university_id": "u000198",
+    "faculty_id": "f300083",
+    "name": "生命医工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（桐蔭横浜大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300175",
+    "university_id": "u000198",
+    "faculty_id": "f300083",
+    "name": "臨床工学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（桐蔭横浜大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300176",
+    "university_id": "u000198",
+    "faculty_id": "f300084",
+    "name": "スポーツ教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（桐蔭横浜大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300177",
+    "university_id": "u000198",
+    "faculty_id": "f300084",
+    "name": "スポーツ健康科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（桐蔭横浜大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300178",
+    "university_id": "u000199",
+    "faculty_id": "f300085",
+    "name": "人間科学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東洋英和女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300179",
+    "university_id": "u000199",
+    "faculty_id": "f300085",
+    "name": "保育子ども学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東洋英和女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300180",
+    "university_id": "u000199",
+    "faculty_id": "f300086",
+    "name": "国際社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東洋英和女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300181",
+    "university_id": "u000199",
+    "faculty_id": "f300086",
+    "name": "国際コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東洋英和女学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300182",
+    "university_id": "u000200",
+    "faculty_id": "f300087",
+    "name": "ビジネスマネジメント学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300183",
+    "university_id": "u000200",
+    "faculty_id": "f300087",
+    "name": "経営法学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300184",
+    "university_id": "u000200",
+    "faculty_id": "f300088",
+    "name": "異文化コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300185",
+    "university_id": "u000200",
+    "faculty_id": "f300088",
+    "name": "生活心理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300186",
+    "university_id": "u000200",
+    "faculty_id": "f300088",
+    "name": "日本文化コミュニケーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300187",
+    "university_id": "u000200",
+    "faculty_id": "f300088",
+    "name": "子ども学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300188",
+    "university_id": "u000200",
+    "faculty_id": "f300089",
+    "name": "観光文化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300189",
+    "university_id": "u000200",
+    "faculty_id": "f300089",
+    "name": "メディア情報文化学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300190",
+    "university_id": "u000200",
+    "faculty_id": "f300090",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "厚木市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（松蔭大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300191",
+    "university_id": "u000201",
+    "faculty_id": "f300091",
+    "name": "社会福祉学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（田園調布学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300192",
+    "university_id": "u000201",
+    "faculty_id": "f300091",
+    "name": "共生社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（田園調布学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300193",
+    "university_id": "u000201",
+    "faculty_id": "f300092",
+    "name": "心理学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（田園調布学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300194",
+    "university_id": "u000201",
+    "faculty_id": "f300093",
+    "name": "子ども教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（田園調布学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300195",
+    "university_id": "u000202",
+    "faculty_id": "f300094",
+    "name": "美術・デザイン学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜美術大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300196",
+    "university_id": "u000203",
+    "faculty_id": "f300095",
+    "name": "映画学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（日本映画大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300197",
+    "university_id": "u000204",
+    "faculty_id": "f300096",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜創英大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300198",
+    "university_id": "u000204",
+    "faculty_id": "f300097",
+    "name": "幼児教育学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（横浜創英大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300199",
+    "university_id": "u000205",
+    "faculty_id": "f300098",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300200",
+    "university_id": "u000205",
+    "faculty_id": "f300098",
+    "name": "リハビリテーション学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300201",
+    "university_id": "u000205",
+    "faculty_id": "f300099",
+    "name": "医療薬学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300202",
+    "university_id": "u000206",
+    "faculty_id": "f300100",
+    "name": "看護学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "鎌倉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（湘南鎌倉医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300203",
+    "university_id": "u000207",
+    "faculty_id": "f300101",
+    "name": "ビューティ＆ウェルネス学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "横浜市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（ビューティ＆ウェルネス専門職大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300204",
+    "university_id": "u000208",
+    "faculty_id": "f300102",
+    "name": "グローバルビジネス学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "川崎市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（グローバルＢｉｚ専門職大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  },
+  {
+    "id": "d300205",
+    "university_id": "u000209",
+    "faculty_id": "f300103",
+    "name": "知能情報社会学科",
+    "department_type": "department",
+    "academic_field_tags": [],
+    "campus_prefecture": "神奈川県",
+    "campus_municipality": "逗子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-07",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（ZEN大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+        "source_date": "2026-11-07"
+      }
+    ]
+  }
+]
