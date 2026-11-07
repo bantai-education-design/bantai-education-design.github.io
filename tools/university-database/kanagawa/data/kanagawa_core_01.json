@@ -1592,10 +1592,18 @@
           "source_url": "https://www.soei.ac.jp/exam/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 理念・特徴",
+          "source_url": "https://www.soei.ac.jp/guide/vision/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.soei.ac.jp/",
-      "admissions_url": "https://www.soei.ac.jp/exam/"
+      "admissions_url": "https://www.soei.ac.jp/exam/",
+      "university_goal": "科学的思考に基づく判断力、人間への多面的理解、専門的な知識・技能を備え、地域社会に貢献できる人材を育成する。",
+      "philosophy": "「考えて行動のできる人」の育成を建学の精神とし、深く考えることを生活行動と自己完成につなげる教育を重視する。"
     },
     {
       "id": "u000205",
@@ -1631,10 +1639,18 @@
           "source_url": "https://sums.ac.jp/examinee-support/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 理念",
+          "source_url": "https://sums.ac.jp/html/about/idea.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://sums.ac.jp/",
-      "admissions_url": "https://sums.ac.jp/examinee-support/admission/"
+      "admissions_url": "https://sums.ac.jp/examinee-support/admission/",
+      "university_goal": "高度な知識・技術と豊かな人間性を育み、創造的かつ実践的な教育研究を通じて、チーム医療と地域医療に貢献できる医療従事者を養成する。",
+      "philosophy": "「人を尊び、命を尊び、個を敬愛す」を建学の理念とし、幅広い教養と根拠に基づく専門知識・技術、責任感、使命感、主体的な実践力を重視する。"
     },
     {
       "id": "u000206",
@@ -1670,10 +1686,18 @@
           "source_url": "https://www.sku.ac.jp/admissions",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 大学概要・建学の精神",
+          "source_url": "https://www.sku.ac.jp/over_view/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.sku.ac.jp/",
-      "admissions_url": "https://www.sku.ac.jp/admissions"
+      "admissions_url": "https://www.sku.ac.jp/admissions",
+      "university_goal": "幅広い教養と哲学的思考を基盤に豊かな人間性と高い倫理性を養い、医療・ケアの進歩や地域の多様なニーズに対応できる高度な知識・技術を持つ医療専門職を育成する。",
+      "philosophy": "「生命だけは平等だ」という理念のもと、いつでも、どこでも、誰もが最善の医療・ケアを受けられる社会を目指し、研鑽を続ける医療人を育成する。"
     },
     {
       "id": "u000207",
@@ -1709,10 +1733,24 @@
           "source_url": "https://www.b-w.ac.jp/admission/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 本学について",
+          "source_url": "https://www.b-w.ac.jp/about/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 情報公開",
+          "source_url": "https://www.b-w.ac.jp/disclosure/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.b-w.ac.jp/",
-      "admissions_url": "https://www.b-w.ac.jp/admission/"
+      "admissions_url": "https://www.b-w.ac.jp/admission/",
+      "university_goal": "心身の美と健康に関する理論・技術と高度な専門知識、洗練された技術、ホスピタリティを備え、人々の健康とQOL向上に貢献し新たな価値を創造できる専門職人材を養成する。",
+      "philosophy": "「美しく聡明で品格あるプロフェッショナルの育成」を教育理念とし、心身の健康、相手を理解したサービス、礼節と信頼を重視する。"
     },
     {
       "id": "u000208",
@@ -1748,10 +1786,24 @@
           "source_url": "https://gpu.ac.jp/admissions/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "グローバルBiz専門職大学 設立の背景・建学の精神",
+          "source_url": "https://gpu.ac.jp/information/spirit/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルBiz専門職大学 入学者受け入れ方針",
+          "source_url": "https://gpu.ac.jp/admissions/policy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://gpu.ac.jp/",
-      "admissions_url": "https://gpu.ac.jp/admissions/"
+      "admissions_url": "https://gpu.ac.jp/admissions/",
+      "university_goal": "経営・財務・法務、語学、デジタル技術などの知識と実務能力を備え、多様な人々と協働して事業を構想・実行し、新たな価値を生み出すリーダーを育成する。",
+      "philosophy": "斬新な発想力と豊かな想像力をもってリーダーシップを発揮し、国際社会でイノベーションを起こせる人材の育成を教育理念とする。"
     },
     {
       "id": "u000209",
@@ -1787,10 +1839,18 @@
           "source_url": "https://zen.ac.jp/admission",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 情報公開",
+          "source_url": "https://zen.ac.jp/disclosures",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://zen.ac.jp/",
-      "admissions_url": "https://zen.ac.jp/admission"
+      "admissions_url": "https://zen.ac.jp/admission",
+      "university_goal": "数理、情報、文化・思想、社会、経済、デジタル産業を横断して学び、複雑で変化の速いAI社会を生き抜き、個性と価値を発揮して社会で活躍できる自立した人材を育成する。",
+      "philosophy": "オンライン教育の力で、世界の多様な学習者に開かれた学びの機会を提供し、高等教育の民主化、学びの個別化、デジタル時代への適応を教育の柱とする。"
     }
   ]
 }
