@@ -86,6 +86,7 @@ jobs:
             assert.ok((u.sources||[]).some(s=>s.role==='primary'&&!s.source_url.includes('mext.go.jp')),id+' private official profile source');
           }
           assert.equal(kcore.filter(x=>x.philosophy).length,36,'all thirty-six Kanagawa profiles verified');
+          assert.equal(kcore.filter(x=>x.university_goal).length,36,'all thirty-six Kanagawa university goals verified');
           const kmanifest=JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8'));
           assert.equal(kmanifest.verified_profiles,36,'Kanagawa profile manifest');
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
