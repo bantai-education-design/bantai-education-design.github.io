@@ -69,6 +69,17 @@ jobs:
             assert.match(u.admissions_url||'',/^https:\/\//,u.id+' admissions URL');
             assert.ok(u.headquarters?.address?.startsWith('神奈川県'),u.id+' Kanagawa address');
           }
+          const verifiedKanagawaIds=['u000175','u000176','u000177','u000178','u000179'];
+          for(const id of verifiedKanagawaIds){
+            const u=kcore.find(x=>x.id===id);
+            assert.ok(u, id+' profile record');
+            assert.ok(Number.isInteger(u.founded_year),id+' founded year');
+            assert.ok(Number.isInteger(u.opened_year),id+' opened year');
+            assert.ok((u.philosophy||'').length>=20,id+' philosophy');
+            assert.ok((u.sources||[]).some(s=>s.role==='primary'&&!s.source_url.includes('mext.go.jp')),id+' official profile source');
+          }
+          assert.equal(kcore.filter(x=>x.philosophy).length,5,'five verified Kanagawa profiles');
+          assert.equal(JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8')).verified_profiles,5,'Kanagawa profile manifest');
           const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
           assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
           console.log('saitama data ok');
