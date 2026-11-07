@@ -137,6 +137,21 @@
 .figure-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:6px 0 10px}
 .fig{display:block;width:100%;min-width:640px;height:auto}
 .fig.course{margin-bottom:6px}
+.course-overview-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:12px;margin:10px 0 14px}
+.course-map-card,.course-elevation-card{border:1px solid var(--line);border-radius:18px;background:#faf9f5;overflow:hidden}
+.course-map-head,.course-elevation-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:13px 16px 10px}
+.course-map-head h3,.course-elevation-head h3{font-size:.95rem;margin:0}
+.course-map-head span,.course-elevation-head span{font-size:.72rem;color:var(--muted)}
+.course-map{height:340px;background:#e8edf0}
+.course-map-note{font-size:.72rem;color:var(--muted);line-height:1.55;margin:0;padding:9px 14px 11px}
+.course-map-note a{color:inherit}
+.course-elevation{display:block;width:100%;height:auto}
+.course-pin{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--pin);color:#fff;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.28);font:800 11px/1 sans-serif}
+.course-pin.is-end{width:31px;height:31px;background:var(--ink)}
+.leaflet-popup-content{font-family:inherit;line-height:1.45}
+.leaflet-popup-content b{display:block;margin-bottom:2px}
+.leaflet-control-attribution{font-size:9px}
+@media (max-width:820px){.course-overview-grid{grid-template-columns:1fr}.course-map{height:300px}}
 .basics-pills{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
 .basics-pills button{font:inherit;font-weight:700;padding:8px 16px;border-radius:999px;border:2px solid var(--s);background:#fff;color:var(--ink);cursor:pointer}
 .basics-pills button[data-course="izumo"]{--s:var(--izumo)}.basics-pills button[data-course="zennihon"]{--s:var(--zennihon)}.basics-pills button[data-course="hakone"]{--s:var(--hakone)}
