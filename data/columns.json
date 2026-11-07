@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-learning-decline-society",
+    "slug": "learning-decline-society",
+    "title": "学力低下は、社会が弱くなったサインなのか",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.07",
+    "excerpt": "PISAの学力低下を手がかりに、支える優しさと自分で考える力、民主主義を支える学びについて考えます。",
+    "thumbnail": "/assets/images/columns/learning-decline-society/thumbnail.svg",
+    "readTime": "約12分",
+    "tags": [
+      "PISA",
+      "学力",
+      "民主主義",
+      "福祉",
+      "考える力"
+    ],
+    "url": "/columns/learning-decline-society/"
+  },
+  {
     "id": "column-shodo-heart",
     "slug": "shodo-heart",
     "title": "書道は、なぜ心に響くのか。ユネスコ登録への知らせに思う「一文字の力」",
