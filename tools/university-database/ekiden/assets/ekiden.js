@@ -388,22 +388,31 @@
     $('#basics-course-src').innerHTML = '出典: ' + r.sources.map((s) => srcLink(s)).join('、');
   }
 
-  // 区間の長さに合わせた帯の図。mountain=true で5区に最高点の印
+  // 区間の長さに合わせたコース図。mountain=true で5区の標高イメージを添える
   function courseStrip(r, legs, points, title, mountain) {
-    const W = 760, L = 30, R = 30, y = mountain ? 92 : 62, H = y + 84;
+    const W = 760, L = 38, R = 38, y = mountain ? 118 : 88, H = y + 92;
     const total = legs.reduce((a, l) => a + l.km, 0);
     const scale = (W - L - R) / total;
-    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="700" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
+    const totalLabel = `${Math.round(total * 10) / 10}km`;
+    let x = L, g = `<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="18" fill="#faf9f5" stroke="var(--line)"/>
+      <text x="${L}" y="29" font-size="14" font-weight="800" fill="var(--ink)">${esc(title)}</text>
+      <rect x="${W - R - 66}" y="13" width="66" height="25" rx="12.5" fill="${COLOR[r.series]}" fill-opacity=".11"/>
+      <text x="${W - R - 33}" y="30" font-size="12" font-weight="700" text-anchor="middle" fill="${COLOR[r.series]}">${totalLabel}</text>
+      <path d="M${L} ${y} H${W - R}" stroke="var(--line)" stroke-width="8" stroke-linecap="round"/>`;
     const xs = [x];
     legs.forEach((l, i) => {
       const w = l.km * scale;
-      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${COLOR[r.series]}" fill-opacity="${i % 2 ? 0.55 : 0.9}"/>`;
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">${l.no}区</text>`;
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
+      const mid = x + w / 2;
+      g += `<path d="M${(x + 2).toFixed(1)} ${y} H${(x + w - 2).toFixed(1)}" stroke="${COLOR[r.series]}" stroke-width="8" stroke-linecap="round" opacity="${i % 2 ? .64 : 1}"/>`;
+      g += `<circle cx="${mid.toFixed(1)}" cy="${y}" r="15" fill="#fff" stroke="${COLOR[r.series]}" stroke-width="2.5"/>
+        <text x="${mid.toFixed(1)}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="800" fill="${COLOR[r.series]}">${l.no}</text>
+        <text x="${mid.toFixed(1)}" y="${y - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">${l.no}区</text>
+        <text x="${mid.toFixed(1)}" y="${y + 37}" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
       if (mountain && l.no === 5) {
-        const mx = x + w * 0.55;
-        g += `<path d="M${(x + 6).toFixed(1)} ${y - 30} L${mx.toFixed(1)} ${y - 62} L${(x + w - 8).toFixed(1)} ${y - 34} Z" fill="#e9e5d8" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>`;
-        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 62}" r="3.5" fill="var(--ink)"/><text x="${(mx - 8).toFixed(1)}" y="${y - 70}" text-anchor="end" font-size="11.5" fill="var(--ink)">最高点 標高約874m</text>`;
+        const mx = x + w * 0.56;
+        g += `<path d="M${(x + 5).toFixed(1)} ${y - 39} Q${(x + w * .25).toFixed(1)} ${y - 47} ${mx.toFixed(1)} ${y - 72} T${(x + w - 4).toFixed(1)} ${y - 43}" fill="none" stroke="${COLOR[r.series]}" stroke-width="2" opacity=".38"/>
+          <circle cx="${mx.toFixed(1)}" cy="${y - 72}" r="4" fill="${COLOR[r.series]}"/>
+          <text x="${(mx - 7).toFixed(1)}" y="${y - 80}" text-anchor="end" font-size="11" font-weight="700" fill="var(--ink)">最高点 約874m</text>`;
       }
       x += w;
       xs.push(x);
@@ -411,34 +420,45 @@
     points.forEach((p, i) => {
       const px = Math.min(xs[i], W - R);
       const end = i === 0 || i === points.length - 1;
-      g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2"/>`;
+      if (end) g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="8" fill="${COLOR[r.series]}" stroke="#fff" stroke-width="3"/>`;
       const anchor = i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'middle';
-      if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 8}" x2="${px.toFixed(1)}" y2="${y + 50}" stroke="var(--line)" stroke-width="1.5"/>`;
-      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 700 : 400}" fill="var(--ink)">${esc(p)}</text>`;
+      if (!end) g += `<line x1="${px.toFixed(1)}" y1="${y + 17}" x2="${px.toFixed(1)}" y2="${y + 50 + (i % 2) * 17}" stroke="var(--line)" stroke-width="1.5"/>`;
+      g += `<text x="${(i === 0 ? px - 2 : i === points.length - 1 ? px + 2 : px).toFixed(1)}" y="${y + (end ? 61 : 62 + (i % 2) * 17)}" text-anchor="${anchor}" font-size="11.5" font-weight="${end ? 800 : 500}" fill="var(--ink)">${esc(p)}</text>`;
     });
     return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
   }
 
   // たすきの受け渡しの図（中継線と前方20mの中継ゾーン）
   function relayFigure() {
-    const runner = (cx, color, sash) => `<g transform="translate(${cx},0)">
-      <circle cx="0" cy="62" r="11" fill="${color}"/>
-      <path d="M0 74 L0 112 M0 84 L-16 100 M0 84 L18 94 M0 112 L-14 140 M0 112 L16 138" stroke="${color}" stroke-width="7" stroke-linecap="round" fill="none"/>
-      ${sash ? `<path d="M-7 76 L9 108" stroke="#c9a227" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
-    const W = 720, H = 222, x0 = 270, zone = 260;
+    const runner = (cx, cy, flip, bib, sash) => `<g transform="translate(${cx},${cy}) scale(${flip ? -1 : 1},1)">
+      <circle cx="2" cy="-48" r="12" fill="var(--ink)"/>
+      <path d="M-5 -35 Q8 -38 16 -25 L21 1 Q12 13 -3 8 L-14 -18 Q-13 -30 -5 -35Z" fill="${bib}"/>
+      <path d="M-10 -24 Q-28 -13 -36 4 M15 -23 Q29 -11 41 -4" fill="none" stroke="var(--ink)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M3 8 Q-5 29 -28 46 M12 7 Q26 23 39 44" fill="none" stroke="var(--ink)" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-37 4 L-45 9 M41 -4 L49 -1 M-29 46 L-39 49 M39 44 L49 46" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
+      <rect x="-1" y="-24" width="13" height="15" rx="2" fill="#fff" opacity=".92"/>
+      ${sash ? `<path d="M-10 -29 L17 5" stroke="#d4a719" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
+    const W = 760, H = 268, x0 = 240, zone = 360;
     return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="たすきの受け渡しは中継線から前方20mの中継ゾーンで行う">
-      <rect x="20" y="146" width="${W - 40}" height="14" rx="4" fill="#e9e5d8"/>
-      <rect x="${x0}" y="40" width="${zone}" height="126" rx="8" fill="var(--gold-soft)" fill-opacity=".75"/>
-      <line x1="${x0}" y1="34" x2="${x0}" y2="166" stroke="var(--ink)" stroke-width="3"/>
-      <text x="${x0}" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継線</text>
-      <text x="${x0 + zone / 2}" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継ゾーン（中継線から前方20m）</text>
-      <path d="M${x0 + 4} 182 H${x0 + zone - 4}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
-      <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
-      ${runner(330, 'var(--ink-soft)', true)}${runner(420, 'var(--ink-soft)', false)}
-      <path d="M352 96 Q376 78 400 92" stroke="#c9a227" stroke-width="3" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-      <text x="376" y="58" text-anchor="middle" font-size="12" fill="var(--ink-soft)">たすき</text>
-      <text x="${W - 30}" y="120" text-anchor="end" font-size="13" fill="var(--ink-soft)">進む向き →</text>
-      <text x="40" y="70" font-size="12.5" fill="var(--ink-soft)">前の区間の選手</text><text x="40" y="90" font-size="12.5" fill="var(--ink-soft)">が走ってくる</text>
+      <defs><marker id="relay-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
+      <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="18" fill="#faf9f5" stroke="var(--line)"/>
+      <rect x="${x0}" y="45" width="${zone}" height="156" rx="14" fill="var(--gold-soft)"/>
+      <text x="${x0 + 18}" y="68" font-size="12" font-weight="800" fill="#876c13">20m 中継ゾーン</text>
+      <path d="M28 174 H732" stroke="#ded9ca" stroke-width="22" stroke-linecap="round"/>
+      <path d="M28 174 H732" stroke="#fff" stroke-width="2" stroke-dasharray="18 12" opacity=".9"/>
+      <line x1="${x0}" y1="35" x2="${x0}" y2="211" stroke="var(--ink)" stroke-width="4"/>
+      <rect x="${x0 - 36}" y="14" width="72" height="25" rx="12.5" fill="var(--ink)"/>
+      <text x="${x0}" y="31" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">中継線</text>
+      ${runner(342, 145, false, 'var(--hakone)', true)}${runner(487, 145, false, '#315c8a', false)}
+      <path d="M386 117 Q421 92 452 111" stroke="#d4a719" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="7 7" marker-end="url(#relay-arrow)"/>
+      <rect x="374" y="63" width="91" height="26" rx="13" fill="#fff" stroke="var(--line)"/>
+      <text x="419.5" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">たすきを渡す</text>
+      <path d="M${x0 + 8} 226 H${x0 + zone - 8}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#relay-arrow)" marker-start="url(#relay-arrow)"/>
+      <text x="${x0 + zone / 2}" y="251" text-anchor="middle" font-size="13" font-weight="800" fill="var(--ink)">中継線から前方20m</text>
+      <path d="M635 112 H710" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#relay-arrow)"/>
+      <text x="672" y="101" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink-soft)">進む向き</text>
+      <text x="55" y="94" font-size="12" font-weight="700" fill="var(--ink)">前の区間の選手</text>
+      <text x="55" y="112" font-size="11.5" fill="var(--ink-soft)">中継線へ走ってくる</text>
     </svg>`;
   }
 
