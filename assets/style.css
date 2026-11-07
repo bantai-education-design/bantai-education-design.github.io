@@ -6639,3 +6639,13 @@ img.hero {
   .about-table th { border-bottom: none; padding-bottom: 2px; background: rgba(0, 0, 0, 0.28); }
   .about-table td { padding-top: 8px; }
 }
+
+/* Keep the approved learning-decline watercolor thumbnail and its lettering fully visible. */
+.column-card[data-column-id="column-learning-decline-society"] .column-card-media {
+  background: #fff8f0;
+}
+.column-card[data-column-id="column-learning-decline-society"] .column-card-media img,
+.column-card[data-column-id="column-learning-decline-society"]:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+}
