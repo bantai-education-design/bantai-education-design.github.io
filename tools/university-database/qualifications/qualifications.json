@@ -1976,6 +1976,43 @@
     }
    ]
   },
+  "u000175": {
+   "name": "横浜国立大学",
+   "qualifications": [
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "教育学部 学校教員養成課程",
+     "source_url": "https://www.ynu.ac.jp/career/qualification/",
+     "evidence": "所定の単位修得により取得可能",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "教育学部・理工学部・都市科学部（環境リスク共生学科）",
+     "source_url": "https://www.ynu.ac.jp/career/qualification/",
+     "evidence": "教育学部（中1・2種、高1種）、理工学部（数学・理科・情報）、都市科学部環境リスク共生学科（理科）で所定科目修得",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "特別支援学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "教育学部 学校教員養成課程",
+     "source_url": "https://www.ynu.ac.jp/career/qualification/",
+     "evidence": "知的障害者・肢体不自由者・病弱者領域（主免許は聴覚障害者領域も追加取得可、2種も対応）",
+     "group": "特別支援学校教諭"
+    },
+    {
+     "name": "一級建築士・二級建築士（受験資格）",
+     "basis": "official_page",
+     "department": "都市科学部 建築学科",
+     "source_url": "https://www.ynu.ac.jp/career/qualification/",
+     "evidence": "指定科目修得・卒業で一級・二級・木造建築士試験受験資格（登録時に所定の実務経験が必要）",
+     "group": "建築士"
+    }
+   ]
+  },
   "u000177": {
    "name": "横浜市立大学",
    "qualifications": [
@@ -2095,6 +2132,80 @@
     }
    ]
   },
+  "u000180": {
+   "name": "星槎大学",
+   "qualifications": [
+    {
+     "name": "幼稚園教諭一種免許状",
+     "basis": "official_page",
+     "department": "共生科学部 共生科学科（初等教育専攻）",
+     "source_url": "https://seisa.ac.jp/license/teacher/",
+     "evidence": "教職課程登録・所定の単位修得（2種免許状も対応）",
+     "group": "幼稚園教諭"
+    },
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "共生科学部 共生科学科（初等教育専攻）",
+     "source_url": "https://seisa.ac.jp/license/teacher/",
+     "evidence": "教職課程登録・所定の単位修得および介護等体験（2種免許状も対応）",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "共生科学部 共生科学科（共生科学専攻・スポーツ身体表現専攻・グローカルコミュニケーション専攻）",
+     "source_url": "https://seisa.ac.jp/license/teacher/",
+     "evidence": "専攻により社会・地理歴史・公民、保健体育、英語の教職課程科目修得",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "特別支援学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "共生科学部 共生科学科（共生科学専攻）",
+     "source_url": "https://seisa.ac.jp/license/teacher/",
+     "evidence": "基礎免許状の所持を前提に教職課程の所定単位修得",
+     "group": "特別支援学校教諭"
+    },
+    {
+     "name": "社会福祉士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "共生科学部 共生科学科（福祉専攻）",
+     "source_url": "https://seisa.ac.jp/license/social/",
+     "evidence": "正科生として福祉専攻に入学し厚生労働大臣指定科目を修得して卒業",
+     "group": "社会福祉士"
+    }
+   ]
+  },
+  "u000181": {
+   "name": "神奈川大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "法・経済・経営・外国語・国際日本・人間科学・理・工・建築・化学生命・情報学部",
+     "source_url": "https://www.kanagawa-u.ac.jp/disclosure/education/qualification/teacher.html",
+     "evidence": "各学科の教職課程で所定の単位修得（建築学科は高校工業のみ、情報学部先端情報領域プログラムは除く）",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "学芸員",
+     "basis": "official_page",
+     "department": "全学部（学芸員課程）",
+     "source_url": "https://www.kanagawa-u.ac.jp/disclosure/education/qualification/curator.html",
+     "evidence": "博物館法に基づく学芸員課程の所定単位修得",
+     "group": "学芸員"
+    },
+    {
+     "name": "一級建築士・二級建築士（受験資格）",
+     "basis": "official_page",
+     "department": "建築学部 建築学科",
+     "source_url": "https://www.kanagawa-u.ac.jp/career/qualification/",
+     "evidence": "国土交通大臣が指定する建築に関する科目（指定科目）を修めて卒業",
+     "group": "建築士"
+    }
+   ]
+  },
   "u000182": {
    "name": "関東学院大学",
    "qualifications": [
@@ -2126,6 +2237,74 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "歯学科（養成課程）",
      "group": "歯科医師"
+    }
+   ]
+  },
+  "u000184": {
+   "name": "フェリス女学院大学",
+   "qualifications": [
+    {
+     "name": "中学校・高等学校教諭一種免許状",
+     "basis": "official_page",
+     "department": "グローバル教養学部 国際社会学科・文化表現学科",
+     "source_url": "https://www.ferris.ac.jp/academics/qualification/teacher-training-course/",
+     "evidence": "国際社会学科（中・社会、高・地理歴史・公民）、文化表現学科（中高・英語、国語）で教職課程の所定科目修得",
+     "group": "中学校・高等学校教諭"
+    },
+    {
+     "name": "公認心理師（大学における必要な科目）",
+     "basis": "official_page",
+     "department": "グローバル教養学部 心理コミュニケーション学科（心理専攻）",
+     "source_url": "https://www.ferris.ac.jp/students-visitor/graduation-requirements/",
+     "evidence": "心理専攻の学生のみ対象・学部での指定単位修得（受験資格には大学院進学等が必要）",
+     "group": "公認心理師"
+    }
+   ]
+  },
+  "u000185": {
+   "name": "横浜商科大学",
+   "qualifications": [
+    {
+     "name": "高等学校教諭一種免許状（商業）",
+     "basis": "official_page",
+     "department": "商学部 商学科",
+     "source_url": "https://www.shodai.ac.jp/education/department/teaching_job/",
+     "evidence": "商学科の学生のみ履修可能・教職課程の所定単位修得",
+     "group": "中学校・高等学校教諭"
+    }
+   ]
+  },
+  "u000186": {
+   "name": "八洲学園大学",
+   "qualifications": [
+    {
+     "name": "図書館司書",
+     "basis": "official_page",
+     "department": "生涯学習学部 生涯学習学科",
+     "source_url": "https://www.yashima.ac.jp/univ/qualification/",
+     "evidence": "所定の司書科目単位修得",
+     "group": "図書館司書"
+    },
+    {
+     "name": "学芸員",
+     "basis": "official_page",
+     "department": "生涯学習学部 生涯学習学科",
+     "source_url": "https://www.yashima.ac.jp/univ/qualification/",
+     "evidence": "所定の学芸員科目単位修得",
+     "group": "学芸員"
+    }
+   ]
+  },
+  "u000188": {
+   "name": "横浜薬科大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "薬学部 薬学科（6年制課程）",
+     "source_url": "https://www.hamayaku.ac.jp/career/qualification/",
+     "evidence": "6年制課程修了で薬剤師国家試験受験資格",
+     "group": "薬剤師"
     }
    ]
   },
@@ -2373,19 +2552,6 @@
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "看護学科（養成課程）",
      "group": "看護師"
-    }
-   ]
-  },
-  "u000188": {
-   "name": "横浜薬科大学",
-   "qualifications": [
-    {
-     "name": "薬剤師（国家試験受験資格）",
-     "basis": "official_page",
-     "department": "薬学部 薬学科（6年制課程）",
-     "source_url": "https://www.hamayaku.ac.jp/career/qualification/",
-     "evidence": "6年制課程修了で薬剤師国家試験受験資格",
-     "group": "薬剤師"
     }
    ]
   }
