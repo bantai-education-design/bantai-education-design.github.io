@@ -1,5 +1,13 @@
 [
   {
+    "id": "u000050",
+    "name": "東海大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "平塚市"
+  },
+  {
     "id": "u000175",
     "name": "横浜国立大学",
     "establishment_type": "national",
@@ -38,14 +46,6 @@
     "university_type": "university",
     "prefecture": "神奈川県",
     "municipality": "川崎市"
-  },
-  {
-    "id": "u000050",
-    "name": "東海大学",
-    "establishment_type": "private",
-    "university_type": "university",
-    "prefecture": "神奈川県",
-    "municipality": "平塚市"
   },
   {
     "id": "u000180",
@@ -278,5 +278,13 @@
     "university_type": "professional_university",
     "prefecture": "神奈川県",
     "municipality": "川崎市"
+  },
+  {
+    "id": "u000209",
+    "name": "ZEN大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "神奈川県",
+    "municipality": "逗子市"
   }
 ]
