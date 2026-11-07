@@ -100,6 +100,12 @@
           "source_url": "https://global.ynu.ac.jp/wordpress/wp-content/uploads/2024/07/2019_2020_leaflet_j_web.pdf",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 学則・目的",
+          "source_url": "https://www.ynu.ac.jp/about/information/law/instructional/pdf/data-H25keizai.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.ynu.ac.jp/",
@@ -107,7 +113,8 @@
       "founded_year": 1874,
       "opened_year": 1949,
       "operator": "国立大学法人横浜国立大学",
-      "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。"
+      "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。",
+      "university_goal": "学術の中心として幅広い知識と深い専門の学芸を教授研究し、知的・道徳的・応用的能力を発展させ、創造性ある高度専門職業人を育成して社会の福祉と持続的発展に貢献する。"
     },
     {
       "id": "u000176",
