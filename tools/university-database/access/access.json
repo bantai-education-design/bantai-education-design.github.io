@@ -547,6 +547,343 @@
    ],
    "school_bus": true,
    "source_url": "https://www.hamayaku.ac.jp/access/"
+  },
+  "u000189": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "矢部駅",
+     "line": "JR横浜線",
+     "access": "北口から徒歩4分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.azabu-u.ac.jp/access/"
+  },
+  "u000190": {
+   "campus": "横須賀キャンパス",
+   "stations": [
+    {
+     "station": "横須賀中央駅",
+     "line": "京急本線",
+     "access": "東口から徒歩10分"
+    },
+    {
+     "station": "横須賀駅",
+     "line": "JR横須賀線",
+     "access": "京急バスで約5分「大滝町」下車徒歩5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kdu.ac.jp/corporations/access/"
+  },
+  "u000191": {
+   "campus": "大船キャンパス",
+   "stations": [
+    {
+     "station": "大船駅",
+     "line": "JR線・湘南モノレール",
+     "access": "東口または笠間口から徒歩8分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kamakura-u.ac.jp/houjin/access/index.html"
+  },
+  "u000192": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "辻堂駅",
+     "line": "JR東海道線",
+     "access": "東改札南口から徒歩約15分、またはバス約5分「浜見山」下車"
+    },
+    {
+     "station": "藤沢駅",
+     "line": "JR東海道線・小田急江ノ島線・江ノ島電鉄線",
+     "access": "北口からバス約11分「浜見山」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.shonan-it.ac.jp/oc/2026/"
+  },
+  "u000193": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "相模大野駅",
+     "line": "小田急小田原線・江ノ島線",
+     "access": "徒歩10分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.sagami-wu.ac.jp/university/access/"
+  },
+  "u000194": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "武蔵溝ノ口駅",
+     "line": "JR南武線",
+     "access": "南口から徒歩8分"
+    },
+    {
+     "station": "溝の口駅",
+     "line": "東急田園都市線・大井町線",
+     "access": "南口から徒歩8分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://senzoku.ac.jp/music/about/access.html"
+  },
+  "u000195": {
+   "campus": "菅生キャンパス",
+   "stations": [
+    {
+     "station": "向ヶ丘遊園駅",
+     "line": "小田急小田原線",
+     "access": "小田急バスで約20分「聖マリアンナ医科大学」下車"
+    },
+    {
+     "station": "新百合ヶ丘駅",
+     "line": "小田急小田原線・多摩線",
+     "access": "小田急バスで約30分「聖マリアンナ医科大学」下車"
+    },
+    {
+     "station": "溝の口駅・武蔵溝ノ口駅",
+     "line": "東急田園都市線・大井町線・JR南武線",
+     "access": "川崎市バスで約35分「聖マリアンナ医科大学前」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.marianna-u.ac.jp/houjin/access/univ/"
+  },
+  "u000196": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "本厚木駅",
+     "line": "小田急小田原線",
+     "access": "北口1番から一般路線バスで「神奈川工科大学前」下車、または厚木バスセンターから直通バス。通常約25分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kait.jp/directions/"
+  },
+  "u000197": {
+   "campus": "南校舎",
+   "stations": [
+    {
+     "station": "新百合ヶ丘駅",
+     "line": "小田急小田原線・多摩線",
+     "access": "徒歩4分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.tosei-showa-music.ac.jp/access.html"
+  },
+  "u000198": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "青葉台駅",
+     "line": "東急田園都市線",
+     "access": "バス約10～15分「桐蔭学園前」下車"
+    },
+    {
+     "station": "市が尾駅",
+     "line": "東急田園都市線",
+     "access": "バス約10～15分「桐蔭学園前」または「桐蔭学園入口」下車"
+    },
+    {
+     "station": "柿生駅",
+     "line": "小田急小田原線",
+     "access": "バス約15～20分「桐蔭学園」または「桐蔭学園入口」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://toin.ac.jp/univ/accessmap/"
+  },
+  "u000199": {
+   "campus": "横浜校地",
+   "stations": [
+    {
+     "station": "十日市場駅",
+     "line": "JR横浜線",
+     "access": "バス約5分「郵便局前」下車徒歩5分"
+    },
+    {
+     "station": "青葉台駅",
+     "line": "東急田園都市線",
+     "access": "バス約15分「郵便局前」下車徒歩5分"
+    },
+    {
+     "station": "三ツ境駅",
+     "line": "相鉄本線",
+     "access": "バス約20分「霧が丘高校前」下車徒歩10分、または約25分「郵便局前」下車徒歩5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.toyoeiwa.ac.jp/daigaku/access/"
+  },
+  "u000200": {
+   "campus": "厚木森の里キャンパス",
+   "stations": [
+    {
+     "station": "本厚木駅",
+     "line": "小田急小田原線",
+     "access": "厚木バスセンター9番から森の里行きで約20分「通信研究所前」下車"
+    },
+    {
+     "station": "愛甲石田駅",
+     "line": "小田急小田原線",
+     "access": "4番乗り場から松蔭大学行きで約10分、大学内バス停下車"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.shoin-u.ac.jp/access/"
+  },
+  "u000201": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "新百合ヶ丘駅",
+     "line": "小田急小田原線・多摩線",
+     "access": "小田急バスで約10～15分「田園調布学園大学」または「田園調布学園大学前」下車"
+    },
+    {
+     "station": "たまプラーザ駅",
+     "line": "東急田園都市線",
+     "access": "小田急バスで約16分「田園調布学園大学前」下車"
+    },
+    {
+     "station": "あざみ野駅",
+     "line": "東急田園都市線・横浜市営地下鉄ブルーライン",
+     "access": "東急バスで約18分「田園調布学園大学」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.dcu.ac.jp/access/"
+  },
+  "u000202": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "青葉台駅",
+     "line": "東急田園都市線",
+     "access": "3番乗り場から東急バス「日体大」行きで約10分、「横浜美術大学（すみよし台）」下車"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.yokohama-art.ac.jp/about/access"
+  },
+  "u000203": {
+   "campus": "新百合ヶ丘キャンパス",
+   "stations": [
+    {
+     "station": "新百合ヶ丘駅",
+     "line": "小田急小田原線・多摩線",
+     "access": "北口から徒歩1分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.eiga.ac.jp/access"
+  },
+  "u000204": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "十日市場駅",
+     "line": "JR横浜線",
+     "access": "1番乗り場から23系統で「郵便局前」下車徒歩5分、または徒歩20分"
+    },
+    {
+     "station": "青葉台駅",
+     "line": "東急田園都市線",
+     "access": "8番乗り場から23系統で「郵便局前」下車徒歩5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.soei.ac.jp/guide/access/"
+  },
+  "u000205": {
+   "campus": "東戸塚キャンパス",
+   "stations": [
+    {
+     "station": "東戸塚駅",
+     "line": "JR横須賀線・湘南新宿ライン",
+     "access": "西口から徒歩15分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://sums.ac.jp/html/access/"
+  },
+  "u000206": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "富士見町駅",
+     "line": "湘南モノレール",
+     "access": "徒歩6分"
+    },
+    {
+     "station": "大船駅",
+     "line": "JR線・湘南モノレール",
+     "access": "徒歩20分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.sku.ac.jp/access/"
+  },
+  "u000207": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "中川駅",
+     "line": "横浜市営地下鉄ブルーライン",
+     "access": "徒歩14分"
+    },
+    {
+     "station": "鷺沼駅",
+     "line": "東急田園都市線",
+     "access": "徒歩17分"
+    },
+    {
+     "station": "たまプラーザ駅",
+     "line": "東急田園都市線",
+     "access": "南口から東急バスで約8分「研究所前」下車徒歩5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.b-w.ac.jp/oc_lp/"
+  },
+  "u000208": {
+   "campus": "本部キャンパス",
+   "stations": [
+    {
+     "station": "京急川崎駅",
+     "line": "京急本線・大師線",
+     "access": "徒歩1分"
+    },
+    {
+     "station": "川崎駅",
+     "line": "JR東海道線・京浜東北線・南武線",
+     "access": "徒歩4分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://gpu.ac.jp/access/"
+  },
+  "u000209": {
+   "campus": "逗子キャンパス",
+   "stations": [
+    {
+     "station": "逗子駅",
+     "line": "JR横須賀線",
+     "access": "徒歩15分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://zen.ac.jp/zmc/topics/vw4vejx2nl"
   }
  }
 }
