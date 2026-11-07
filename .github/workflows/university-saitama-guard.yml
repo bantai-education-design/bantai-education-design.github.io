@@ -90,9 +90,9 @@ jobs:
           const kmanifest=JSON.parse(fs.readFileSync(kdir+'manifest.json','utf8'));
           assert.equal(kmanifest.verified_profiles,36,'Kanagawa profile manifest');
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
-          assert.equal(kmanifest.access_records,15,'Kanagawa access manifest');
+          assert.equal(kmanifest.access_records,36,'Kanagawa access manifest');
           const kaccess=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
-          for(const id of ['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188']){
+          for(const id of ['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000203','u000204','u000205','u000206','u000207','u000208','u000209']){
             assert.ok(kaccess[id]?.stations?.length>=1,id+' Kanagawa access');
             assert.match(kaccess[id].source_url||'',/^https:\/\//,id+' access source');
           }
