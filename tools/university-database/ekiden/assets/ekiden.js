@@ -309,6 +309,7 @@
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)' };
   const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e' };
   let activeCourseMap = null;
+  let activeSectionMap = null;
   function loadBasics() {
     getJson('basics.json').then((b) => { S.basics = b; renderBasics(); })
       .catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
@@ -382,7 +383,10 @@
       fig += courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
     }
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
-    requestAnimationFrame(() => renderCourseMap(r));
+    requestAnimationFrame(() => {
+      renderCourseMap(r);
+      if (series === 'hakone') initHakoneSectionGuide();
+    });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
     $('#basics-legs').innerHTML = `<thead><tr><th>区間</th>${hasDay ? '<th>日</th>' : ''}<th>スタート</th><th>たすきを渡す場所</th><th class="num">距離</th>${hasNote ? '<th>見どころ</th>' : ''}</tr></thead><tbody>${
@@ -420,7 +424,90 @@
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
         ${elevationFeatureGraphic(r)}
       </section>
-    </div>`;
+    </div>${r.series === 'hakone' ? hakoneSectionGuide() : ''}`;
+  }
+
+  const HAKONE_SECTIONS = {
+    5: {
+      no: 5, title: '5区　山上り', direction: '小田原中継所 → 芦ノ湖', distance: '20.8km',
+      summary: '小田原から箱根の山へ。16.2km地点の国道1号最高点（約874m）まで上り、その後は芦ノ湖へ下ります。',
+      route: [[35.245907,139.129822],[35.236652,139.104575],[35.239032,139.073894],[35.24186,139.062762],[35.2324,139.0517],[35.219776,139.043487],[35.2041,139.0310],[35.189735,139.037781]],
+      points: [
+        {km:'0.0km', name:'小田原中継所', note:'スタート', pos:[35.245907,139.129822]},
+        {km:'—', name:'箱根湯本', note:'山上りへ', pos:[35.236652,139.104575]},
+        {km:'—', name:'大平台・宮ノ下', note:'曲がりながら上る', pos:[35.2402,139.0678]},
+        {km:'16.2km', name:'国道1号最高点', note:'約874m・ここから下り', pos:[35.2117,139.0368]},
+        {km:'19km以降', name:'箱根神社大鳥居付近', note:'終盤', pos:[35.2037,139.0306]},
+        {km:'20.8km', name:'芦ノ湖', note:'フィニッシュ', pos:[35.189735,139.037781]},
+      ],
+    },
+    6: {
+      no: 6, title: '6区　山下り', direction: '芦ノ湖 → 小田原中継所', distance: '20.8km',
+      summary: '芦ノ湖を出て最初の約4kmは上り。その後は急な下りが続き、最後の約3kmは再び脚を使う区間です。',
+      route: [[35.189735,139.037781],[35.2041,139.0310],[35.219776,139.043487],[35.2324,139.0517],[35.24186,139.062762],[35.239032,139.073894],[35.236652,139.104575],[35.245907,139.129822]],
+      points: [
+        {km:'0.0km', name:'芦ノ湖', note:'スタート', pos:[35.189735,139.037781]},
+        {km:'約4km', name:'上りの終わり', note:'ここから山下り', pos:[35.2117,139.0368]},
+        {km:'—', name:'芦之湯・小涌園', note:'急な下りとカーブ', pos:[35.2261,139.0476]},
+        {km:'—', name:'宮ノ下・大平台', note:'下りが続く', pos:[35.2402,139.0678]},
+        {km:'残り約3km', name:'箱根湯本付近', note:'終盤の走り直し', pos:[35.236652,139.104575]},
+        {km:'20.8km', name:'小田原中継所', note:'たすき渡し', pos:[35.245907,139.129822]},
+      ],
+    },
+  };
+
+  function hakoneSectionGuide() {
+    return `<section class="hakone-section-guide" aria-labelledby="hakone-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="hakone-section-title">区間ごとに、どこを走るか見る</h3></div>
+        <div class="hakone-section-switch" role="group" aria-label="箱根駅伝の区間を選ぶ">
+          <button type="button" data-hakone-section="5" aria-pressed="true">5区 山上り</button>
+          <button type="button" data-hakone-section="6" aria-pressed="false">6区 山下り</button>
+        </div>
+      </div>
+      <div id="hakone-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div class="hakone-section-grid">
+        <div><div id="hakone-section-map" class="hakone-section-map" role="application" aria-label="箱根駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は公式コース上の主要地点を結んだ位置確認用の概略です。</p></div>
+        <div id="hakone-section-profile" class="hakone-section-profile"></div>
+      </div>
+    </section>`;
+  }
+
+  function initHakoneSectionGuide() {
+    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.addEventListener('click', () => renderHakoneSection(Number(button.dataset.hakoneSection))));
+    renderHakoneSection(5);
+  }
+
+  function renderHakoneSection(no) {
+    const d = HAKONE_SECTIONS[no];
+    if (!d) return;
+    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.hakoneSection) === no)));
+    $('#hakone-section-summary').innerHTML = `<div><b>${d.title}</b><span>${d.direction}</span></div><strong>${d.distance}</strong><p>${d.summary}</p>`;
+    $('#hakone-section-profile').innerHTML = hakoneSectionProfile(d);
+    renderHakoneSectionMap(d);
+  }
+
+  function hakoneSectionProfile(d) {
+    const stops = d.points.map((p, i) => `<li class="${i === 0 ? 'is-start' : i === d.points.length - 1 ? 'is-finish' : ''}"><span class="section-km">${p.km}</span><i aria-hidden="true"></i><span><b>${p.name}</b><small>${p.note}</small></span></li>`).join('');
+    const profile = d.no === 5
+      ? `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="5区は小田原から16.2キロ地点の最高点まで上り、その後芦ノ湖へ下る"><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-area"/><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-line"/><circle cx="238" cy="24" r="5"/><text x="238" y="14" text-anchor="middle">16.2km・約874m</text><text x="18" y="145">小田原</text><text x="302" y="145" text-anchor="end">芦ノ湖 20.8km</text></svg>`
+      : `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="6区は芦ノ湖から最初の約4キロを上り、その後小田原へ急に下る"><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-area"/><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-line"/><circle cx="73" cy="24" r="5"/><text x="73" y="14" text-anchor="middle">約4km・上り終わり</text><text x="18" y="145">芦ノ湖</text><text x="302" y="145" text-anchor="end">小田原 20.8km</text></svg>`;
+    return `<h4>高低差と走る順番</h4>${profile}<ol class="section-timeline section-${d.no}">${stops}</ol><p class="section-source-note">距離・高低差の説明は箱根駅伝公式サイトに基づきます。「—」は公式説明で通過距離を確認できないため、数値を付けていません。</p>`;
+  }
+
+  function renderHakoneSectionMap(d) {
+    const el = $('#hakone-section-map');
+    if (!el || typeof L === 'undefined') return;
+    if (activeSectionMap) activeSectionMap.remove();
+    activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
+    const line = L.polyline(d.route, { color: MAP_COLOR.hakone, weight: 6, opacity: .86 }).addTo(activeSectionMap);
+    d.points.forEach((p, i) => {
+      const end = i === 0 || i === d.points.length - 1;
+      const icon = L.divIcon({ className: '', html: `<span class="course-pin${end ? ' is-end' : ''}" style="--pin:${MAP_COLOR.hakone}">${i === 0 ? 'S' : i === d.points.length - 1 ? 'F' : i}</span>`, iconSize: [end ? 31 : 26, end ? 31 : 26], iconAnchor: [end ? 15.5 : 13, end ? 15.5 : 13] });
+      L.marker(p.pos, { icon }).addTo(activeSectionMap).bindPopup(`<b>${p.km}　${p.name}</b>${p.note}`);
+    });
+    activeSectionMap.fitBounds(line.getBounds(), { padding: [26, 26] });
   }
 
   // 標高値が公表されていない地点を数値化せず、公式コース説明にある
@@ -583,3 +670,4 @@
     $('#winners-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
   }
 })();
+
