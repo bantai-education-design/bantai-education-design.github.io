@@ -372,12 +372,12 @@
   function showCourse(series) {
     document.querySelectorAll('[data-course]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.course === series));
     const r = S.basics.races.find((x) => x.series === series);
-    let fig = '';
+    let fig = courseOverview(r);
     if (series === 'hakone') {
-      fig = courseStrip(r, r.legs.slice(0, 5), r.points.slice(0, 6), '往路（1月2日）大手町 → 芦ノ湖', true)
+      fig += courseStrip(r, r.legs.slice(0, 5), r.points.slice(0, 6), '往路（1月2日）大手町 → 芦ノ湖', true)
           + courseStrip(r, r.legs.slice(5), r.points.slice(5), '復路（1月3日）芦ノ湖 → 大手町', false);
     } else {
-      fig = courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
+      fig += courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
     }
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
     const hasNote = r.legs.some((l) => l.note);
@@ -386,6 +386,58 @@
       r.legs.map((l) => `<tr><th scope="row">${l.no}区</th>${hasDay ? `<td>${esc(l.day)}</td>` : ''}<td class="wrap">${esc(l.from)}</td><td class="wrap">${esc(l.to)}</td><td class="num">${l.km.toFixed(1)}km</td>${hasNote ? `<td class="wrap">${esc(l.note || '')}</td>` : ''}</tr>`).join('')
     }<tr class="total"><th scope="row">合計</th>${hasDay ? '<td></td>' : ''}<td></td><td></td><td class="num">${r.distance_km.toFixed(1)}km</td>${hasNote ? '<td></td>' : ''}</tr></tbody>`;
     $('#basics-course-src').innerHTML = '出典: ' + r.sources.map((s) => srcLink(s)).join('、');
+  }
+
+  // 公式コース記載を基に、位置関係と起伏の特徴を簡略化したオリジナル模式図。
+  // 道路形状や未公表の標高値を推測しないため、数値地図・標高グラフとは区別して表示する。
+  function courseOverview(r) {
+    const layouts = {
+      izumo: {
+        map: [[58,164],[138,139],[231,145],[318,92],[252,47],[151,61],[92,101]],
+        short: ['出雲大社','市役所','斐川','平田','鳶巣','ワイナリー','出雲ドーム'],
+        profile: 'M426 143 C448 139 461 113 478 124 S510 145 528 137 S560 132 576 128 S607 108 625 126 S656 141 685 132',
+        notes: ['1区 浜山公園のアップダウン','5区 細かなアップダウン'],
+      },
+      zennihon: {
+        map: [[83,42],[113,75],[142,108],[172,137],[207,162],[244,185],[281,207],[317,232],[354,254]],
+        short: ['熱田神宮','1中継','2中継','3中継','4中継','5中継','6中継','7中継','伊勢神宮'],
+        profile: 'M426 126 C442 104 456 147 472 118 S502 98 518 130 S548 146 566 124 S600 131 618 127 S653 129 685 126',
+        notes: ['前半 小刻みなアップダウン','後半 比較的フラット'],
+      },
+      hakone: {
+        map: [[54,83],[115,105],[176,126],[239,154],[299,176],[361,213]],
+        short: ['大手町','鶴見','戸塚','平塚','小田原','芦ノ湖'],
+        profile: 'M426 151 C458 148 485 143 512 139 S553 135 574 137 C590 132 606 72 628 43 C641 72 653 132 670 139 S681 147 688 147',
+        notes: ['5区 山上り・最高点 約874m','6区 山下り'],
+      },
+    };
+    const d = layouts[r.series];
+    const mapPath = d.map.map((p, i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join(' ');
+    const points = d.map.map((p, i) => {
+      const end = i === 0 || i === d.map.length - 1;
+      const labelY = p[1] + (i % 2 ? 24 : -12);
+      return `<circle cx="${p[0]}" cy="${p[1]}" r="${end ? 7 : 5}" fill="${end ? COLOR[r.series] : '#fff'}" stroke="${COLOR[r.series]}" stroke-width="2.5"/>
+        <text x="${p[0]}" y="${labelY}" text-anchor="middle" font-size="10.5" font-weight="${end ? 800 : 600}" fill="var(--ink)">${esc(d.short[i])}</text>`;
+    }).join('');
+    const direction = r.series === 'hakone'
+      ? '<text x="207" y="274" text-anchor="middle" font-size="11" fill="var(--muted)">往路・復路は同じ中継地点を逆向きに結ぶ</text>'
+      : '<text x="207" y="274" text-anchor="middle" font-size="11" fill="var(--muted)">スタートからフィニッシュへの位置関係</text>';
+    return `<svg class="fig course-overview" viewBox="0 0 760 300" role="img" aria-label="${esc(r.name)}のコース模式地図と高低差の特徴">
+      <rect x="1" y="1" width="758" height="298" rx="18" fill="#faf9f5" stroke="var(--line)"/>
+      <line x1="392" y1="20" x2="392" y2="280" stroke="var(--line)"/>
+      <text x="28" y="31" font-size="14" font-weight="800" fill="var(--ink)">コース模式地図</text>
+      <text x="420" y="31" font-size="14" font-weight="800" fill="var(--ink)">高低差の特徴</text>
+      <text x="363" y="31" text-anchor="end" font-size="10.5" fill="var(--muted)">上が北</text>
+      <path d="M362 51 V38 M357 45 L362 38 L367 45" fill="none" stroke="var(--ink-soft)" stroke-width="1.5"/>
+      <path d="${mapPath}" fill="none" stroke="${COLOR[r.series]}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+      ${points}${direction}
+      <line x1="426" y1="166" x2="688" y2="166" stroke="var(--line)" stroke-width="1.5"/>
+      <path d="${d.profile}" fill="none" stroke="${COLOR[r.series]}" stroke-width="5" stroke-linecap="round"/>
+      <text x="426" y="184" font-size="10.5" fill="var(--muted)">スタート</text>
+      <text x="688" y="184" text-anchor="end" font-size="10.5" fill="var(--muted)">${r.series === 'hakone' ? '大手町へ' : 'フィニッシュ'}</text>
+      ${d.notes.map((n, i) => `<rect x="420" y="${208 + i * 31}" width="280" height="24" rx="12" fill="#fff" stroke="var(--line)"/><text x="434" y="${224 + i * 31}" font-size="11.5" font-weight="700" fill="var(--ink-soft)">${esc(n)}</text>`).join('')}
+      <text x="420" y="286" font-size="10.5" fill="var(--muted)">※高さは特徴を示す模式図。縦軸は実測値ではありません。</text>
+    </svg>`;
   }
 
   // 区間の長さに合わせたコース図。mountain=true で5区の標高イメージを添える
