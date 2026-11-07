@@ -1125,12 +1125,31 @@
           "source_url": "https://www.kdu.ac.jp/corporations/outline/ideal/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 情報公開 学生数（令和8年5月1日現在）",
+          "source_url": "https://www.kdu.ac.jp/dental/outline/info/studentcount.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学大学院 情報公開 大学院学生数（令和8年5月1日現在）",
+          "source_url": "https://graduate.kdu.ac.jp/info/studentcount/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kdu.ac.jp/",
       "admissions_url": "https://www.kdu.ac.jp/dental/exams/outline/",
       "university_goal": "歯科医師としての熟練と人間としての優しさを身につけるため、学問・技術・人への理解を統合した教育を行う。",
-      "philosophy": "すべてのものへの慈しみと生命を大切にする「愛の精神」の実践を建学の精神とし、「学をまなび、技を習い、人を識る愛の教育」を教育理念とする。"
+      "philosophy": "すべてのものへの慈しみと生命を大切にする「愛の精神」の実践を建学の精神とし、「学をまなび、技を習い、人を識る愛の教育」を教育理念とする。",
+      "student_counts": {
+        "undergraduate": 715,
+        "graduate": 67,
+        "total": 782,
+        "as_of": "2026-05-01",
+        "note": "学部は歯学部715人（男430・女285）、大学院は歯学研究科67人（男42・女25、研究生1人を除く）。短期大学部（354人）を除く大学・大学院の在籍者数"
+      }
     },
     {
       "id": "u000191",
@@ -1178,12 +1197,25 @@
           "source_url": "https://www.kamakura-u.ac.jp/profile/policy/index.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 情報公開 入学者数、収容定員、在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/disclosure/student/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kamakura-u.ac.jp/",
       "admissions_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/",
       "university_goal": "高度で専門的な学術と応用の教育研究を通じて、科学的教養と優雅な性情を養い、人類の福祉と文化の向上発展に寄与する。",
-      "philosophy": "「感謝と奉仕に生きる人づくり」を教育理念、「科学的教養の向上と優雅な性情の涵養」を教育目標とし、徳育・知育・体育の調和を重視する。"
+      "philosophy": "「感謝と奉仕に生きる人づくり」を教育理念、「科学的教養の向上と優雅な性情の涵養」を教育目標とし、徳育・知育・体育の調和を重視する。",
+      "student_counts": {
+        "undergraduate": 2167,
+        "graduate": 17,
+        "total": 2184,
+        "as_of": "2026-05-01",
+        "note": "学部は家政学部921人・児童学部887人・教育学部332人・教育メディアクリエーション学環27人の計2,167人、大学院は児童学研究科修士課程17人。短期大学部・専攻科を除く"
+      }
     },
     {
       "id": "u000192",
@@ -1231,12 +1263,25 @@
           "source_url": "https://www.shonan-it.ac.jp/outline/idea/statement/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.shonan-it.ac.jp/media/syugaku_report_R8_2026.07.07.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.shonan-it.ac.jp/",
       "admissions_url": "https://www.shonan-it.ac.jp/examination/",
       "university_goal": "工学に関する教育研究を通じて学問研究を推進し、社会の規範となる人格を形成するとともに、夢と理想を科学の場で実現できる人材を育成する。",
-      "philosophy": "「社会に貢献する技術者の育成」をミッションに掲げ、技術力と人間力を備え、自ら未来を描いて挑戦し実現する人材の育成を目指す。"
+      "philosophy": "「社会に貢献する技術者の育成」をミッションに掲げ、技術力と人間力を備え、自ら未来を描いて挑戦し実現する人材の育成を目指す。",
+      "student_counts": {
+        "undergraduate": 2060,
+        "graduate": 47,
+        "total": 2107,
+        "as_of": "2026-05-01",
+        "note": "学部は工学部949人・情報学部1,111人の計2,060人、大学院は工学研究科47人（博士前期課程42人・博士後期課程5人）"
+      }
     },
     {
       "id": "u000193",
@@ -1278,12 +1323,31 @@
           "source_url": "https://www.sagami-wu.ac.jp/university/outline/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 情報の公開 収容定員・在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.sagami-wu.ac.jp/public/capacity/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.sagami-wu.ac.jp/media/2026_syuugakusien_university_0713.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.sagami-wu.ac.jp/",
       "admissions_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
       "university_goal": "女子に高度な知識と専門の学芸を教授研究し、知的・道徳的・応用的能力を伸ばして、建学の精神に基づく教養ある人材を育成する。",
-      "philosophy": "「高潔善美」を建学の精神とし、「見つめる人になる。見つける人になる。」のスローガンのもと、しなやかな発想力と豊かな包容力を備え、社会に貢献する人材を育成する。"
+      "philosophy": "「高潔善美」を建学の精神とし、「見つめる人になる。見つける人になる。」のスローガンのもと、しなやかな発想力と豊かな包容力を備え、社会に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 2685,
+        "graduate": 36,
+        "total": 2721,
+        "as_of": "2026-05-01",
+        "note": "学部は学芸学部1,333人・人間社会学部704人・栄養科学部648人の計2,685人、大学院は栄養科学研究科4人・社会起業研究科32人の計36人。短期大学部（37人）を除く"
+      }
     },
     {
       "id": "u000194",
@@ -1331,12 +1395,25 @@
           "source_url": "https://www.senzoku.ac.jp/music/about/data.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 情報公開 在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.senzoku.ac.jp/music/about/pdf/data/2026/students.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.senzoku.ac.jp/music/",
       "admissions_url": "https://www.senzoku.ac.jp/music/admission/",
       "university_goal": "音楽の専門的な知識・技術に加えて豊かな人間性を養い、個性と創造性を発揮しながら、自らの目的を見いだして自立して生きる人材を育成する。",
-      "philosophy": "「理想は高遠に、実行は卑近に」を建学の実践標語とし、創造性と人間性豊かな人材の育成を教育理念に掲げる。"
+      "philosophy": "「理想は高遠に、実行は卑近に」を建学の実践標語とし、創造性と人間性豊かな人材の育成を教育理念に掲げる。",
+      "student_counts": {
+        "undergraduate": 2606,
+        "graduate": 229,
+        "total": 2835,
+        "as_of": "2026-05-01",
+        "note": "学部は音楽学部音楽学科2,606人、大学院は音楽研究科修士課程229人（器楽専攻119人・声楽専攻22人・音楽教育学専攻14人・作曲専攻74人）"
+      }
     },
     {
       "id": "u000195",
@@ -1378,12 +1455,25 @@
           "source_url": "https://www.marianna-u.ac.jp/univ/uni_info/prospectus.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）聖マリアンナ医科大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000320101000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.marianna-u.ac.jp/",
       "admissions_url": "https://www.marianna-u.ac.jp/univ/ent_info/",
       "university_goal": "医学の教育研究を行い、高度な知識・技術と確固たる倫理観を備えた臨床医・医学研究者を養成し、医学の発展と社会の福祉に貢献する。",
-      "philosophy": "キリスト教的人類愛に根ざした「生命の尊厳」を基調とし、医師としての使命を自覚して人類社会に奉仕し、研究成果を人類の福祉に生かす医師を育成する。"
+      "philosophy": "キリスト教的人類愛に根ざした「生命の尊厳」を基調とし、医師としての使命を自覚して人類社会に奉仕し、研究成果を人類の福祉に生かす医師を育成する。",
+      "student_counts": {
+        "undergraduate": 720,
+        "graduate": 94,
+        "total": 814,
+        "as_of": "2026-05-01",
+        "note": "学部は医学部医学科720人（男307・女413）、大学院は医学研究科94人（男58・女36）"
+      }
     },
     {
       "id": "u000196",
@@ -1425,12 +1515,25 @@
           "source_url": "https://www.kait.jp/about/information/aim/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "神奈川工科大学 情報公開 在籍学生数・収容定員（2026年5月1日現在）",
+          "source_url": "https://www.kait.jp/about/information/faculty/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.kait.jp/",
       "admissions_url": "https://op.kait.jp/",
       "university_goal": "自然科学・情報・データサイエンスの基礎と専門知識・技能を備え、課題を発見して論理的に解決し、他者と協働しながら社会で活躍できる技術系職業人を育成する。",
-      "philosophy": "「考え・行動する人材の育成―社会で活躍できる人づくり―」を大学の教育目的とし、主体性、探究姿勢、協働力、社会的責任と倫理観を重視する。"
+      "philosophy": "「考え・行動する人材の育成―社会で活躍できる人づくり―」を大学の教育目的とし、主体性、探究姿勢、協働力、社会的責任と倫理観を重視する。",
+      "student_counts": {
+        "undergraduate": 4117,
+        "graduate": 118,
+        "total": 4235,
+        "as_of": "2026-05-01",
+        "note": "学部は工学部1,209人・情報学部2,148人・創造工学部116人・応用バイオ科学部83人・健康医療科学部561人の計4,117人（男3,402・女715）、大学院は工学研究科118人（男106・女12）"
+      }
     },
     {
       "id": "u000197",
@@ -1472,12 +1575,25 @@
           "source_url": "https://www.tosei-showa-music.ac.jp/guide/policy/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "昭和音楽大学 大学情報の公表 在学生数（2026年度5月1日現在）",
+          "source_url": "https://www.tosei-showa-music.ac.jp/files/03e0351672bdbfaee6a58a5f63104b8dd1464239.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.tosei-showa-music.ac.jp/",
       "admissions_url": "https://www.tosei-showa-music.ac.jp/admission/",
       "university_goal": "音楽を中心とする幅広い領域の技能・理論・応用を深く教育研究し、広い視野と高い識見を持つ人材を育成して、文化の向上と社会の福祉に寄与する。",
-      "philosophy": "「礼・節・技の人間教育」を建学の精神とし、礼儀、節度、技術・技能を備え、高い品性とコミュニケーション能力を持つ音楽家・音楽人を養成する。"
+      "philosophy": "「礼・節・技の人間教育」を建学の精神とし、礼儀、節度、技術・技能を備え、高い品性とコミュニケーション能力を持つ音楽家・音楽人を養成する。",
+      "student_counts": {
+        "undergraduate": 1229,
+        "graduate": 159,
+        "total": 1388,
+        "as_of": "2026-05-01",
+        "note": "学部は音楽学部1,229人（音楽芸術表現学科889人・音楽芸術運営学科340人）、大学院は音楽研究科159人（修士課程151人・博士後期課程8人）。音楽専攻科（3人）および短期大学部（111人）を除く"
+      }
     },
     {
       "id": "u000198",
@@ -1525,12 +1641,25 @@
           "source_url": "https://toin.ac.jp/univ/about/charter/",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 教育研究組織図・学生数（令和8年5月1日現在）",
+          "source_url": "https://toin.ac.jp/univ/wp-content/uploads/sites/10/2026/09/02_R8_organization_chart-1.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://toin.ac.jp/univ/",
       "admissions_url": "https://toin.ac.jp/ouen/",
       "university_goal": "日本と世界の将来を見据えて社会に貢献し、自ら判断して実行するとともに、仲間と協働できる人材を育成し、市民性と人権意識を養う。",
-      "philosophy": "社会連帯、求学、道義、平和と国際性を重んじる建学の精神を基盤に、「個の充実」「実務家養成」「開かれた大学」「国際交流」を教育の柱とする。"
+      "philosophy": "社会連帯、求学、道義、平和と国際性を重んじる建学の精神を基盤に、「個の充実」「実務家養成」「開かれた大学」「国際交流」を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 2216,
+        "graduate": 42,
+        "total": 2258,
+        "as_of": "2026-05-01",
+        "note": "学部は法学部607人・医用工学部204人・スポーツ科学部1,173人・現代教養学環232人の計2,216人（男1,692・女524）、大学院は法学研究科10人・工学研究科23人・スポーツ科学研究科9人の計42人（男22・女20）"
+      }
     },
     {
       "id": "u000199",
@@ -1572,12 +1701,31 @@
           "source_url": "https://www.toyoeiwa.ac.jp/daigaku/about/kengaku.html",
           "verified_at": "2026-11-07",
           "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/about/jyoho/05.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学大学院 情報公開 在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigakuin/jyoho.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
         }
       ],
       "official_url": "https://www.toyoeiwa.ac.jp/daigaku/",
       "admissions_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/",
       "university_goal": "専門に根ざした幅広い教養を備え、国際化・情報化した社会に適応し、キリスト教精神に基づいて他者を思いやり奉仕できる自立した女性を育成する。",
-      "philosophy": "「敬神奉仕」を建学の精神とし、神を敬い隣人を愛して仕える姿勢を土台に、キリスト教による人間形成と人格形成を重視する。"
+      "philosophy": "「敬神奉仕」を建学の精神とし、神を敬い隣人を愛して仕える姿勢を土台に、キリスト教による人間形成と人格形成を重視する。",
+      "student_counts": {
+        "undergraduate": 776,
+        "graduate": 70,
+        "total": 846,
+        "as_of": "2026-05-01",
+        "note": "学部は人間科学部365人・国際社会学部225人・人間社会学部186人の計776人、大学院は人間科学研究科44人（修士40・博士後期4）・国際協力研究科26人の計70人（六本木校地開講分を含む）"
+      }
     },
     {
       "id": "u000200",

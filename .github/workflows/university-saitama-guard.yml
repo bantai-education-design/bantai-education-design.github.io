@@ -93,9 +93,9 @@ jobs:
           assert.equal(kmanifest.verified_profiles,36,'Kanagawa profile manifest');
           assert.equal(kmanifest.private_verified_profiles,31,'Kanagawa private profile manifest');
           assert.equal(kmanifest.access_records,36,'Kanagawa access manifest');
-          assert.equal(kmanifest.student_count_records,16,'Kanagawa student count manifest');
-          const kscIds=['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189'];
-          assert.equal(kcore.filter(x=>Number.isInteger(x.student_counts?.total)&&x.student_counts.total>0).length,16,'Kanagawa student counts verified');
+          assert.equal(kmanifest.student_count_records,26,'Kanagawa student count manifest');
+          const kscIds=['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199'];
+          assert.equal(kcore.filter(x=>Number.isInteger(x.student_counts?.total)&&x.student_counts.total>0).length,26,'Kanagawa student counts verified');
           for(const id of kscIds){
             const u=kcore.find(x=>x.id===id);
             assert.ok(Number.isInteger(u?.student_counts?.total)&&u.student_counts.total>0,id+' student count total');
