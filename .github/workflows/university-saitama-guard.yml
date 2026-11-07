@@ -96,6 +96,13 @@ jobs:
             assert.ok(kaccess[id]?.stations?.length>=1,id+' Kanagawa access');
             assert.match(kaccess[id].source_url||'',/^https:\/\//,id+' access source');
           }
+          const kquals=JSON.parse(fs.readFileSync('tools/university-database/qualifications/qualifications.json','utf8')).universities;
+          const kqualIds=['u000050','u000177','u000178','u000179','u000182','u000183','u000189','u000190','u000191','u000193','u000195','u000196','u000198','u000200','u000204','u000205','u000206'];
+          assert.equal(kqualIds.filter(id=>kquals[id]).length,17,'Kanagawa qualification universities');
+          assert.equal(kqualIds.reduce((n,id)=>n+kquals[id].qualifications.length,0),23,'Kanagawa qualification items');
+          for(const id of kqualIds){
+            assert.ok(kquals[id].qualifications.every(x=>x.basis==='designated_program'&&/^https:\/\//.test(x.source_url)),id+' qualification sources');
+          }
           const tokyoIds=new Set(JSON.parse(fs.readFileSync('tools/university-database/tokyo/data/universities_tokyo_all.generated.json','utf8')).map(x=>x.id));
           assert.ok(base.every(x=>!tokyoIds.has(x.id)),'ids do not collide with Tokyo');
           console.log('saitama data ok');
