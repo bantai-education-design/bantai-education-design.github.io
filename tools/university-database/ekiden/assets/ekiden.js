@@ -723,10 +723,11 @@
     return `<div class="course-overview-grid">
       <section class="course-map-card" aria-label="${esc(r.name)}の公式コース地図">
         <div class="course-map-head"><h3>コース地図</h3><span>公式資料で確認</span></div>
-        <div class="course-map" style="display:grid;place-items:center;padding:1.4rem;text-align:center;background:linear-gradient(145deg,#f6f2ea,#fff)">
-          <div><b style="display:block;font-size:1.12rem;margin-bottom:.55rem">${esc(mapLabel)}</b><p style="margin:0 0 1rem;color:var(--muted)">推測した道路線ではなく、大会公式の地図を開きます。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式地図を開く ↗</a></div>
+        <div class="official-map-wrap">
+          <iframe class="official-map-frame" src="${esc(r.map_url)}#page=1&view=FitH&toolbar=0" title="${esc(r.name)} ${esc(mapLabel)}" loading="lazy"></iframe>
+          <div class="official-map-fallback"><b>${esc(mapLabel)}</b><p>地図が表示されない端末では、下のボタンから公式資料を開いてください。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式地図を大きく開く ↗</a></div>
         </div>
-        <p class="course-map-note">中継所名と区間距離は下の区間表示でも確認できます。</p>
+        <p class="course-map-note">大会公式PDFの地図を表示しています。中継所名と区間距離は下の区間表示でも確認できます。</p>
       </section>
       <section class="course-elevation-card" aria-label="${esc(r.name)}の高低差の特徴">
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>公式発表だけで読む</span></div>
