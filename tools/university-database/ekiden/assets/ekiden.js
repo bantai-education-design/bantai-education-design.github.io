@@ -387,6 +387,7 @@
       renderCourseMap(r);
       if (series === 'hakone') initHakoneSectionGuide();
       if (series === 'izumo') initIzumoSectionGuide(r);
+      if (series === 'zennihon') initZennihonSectionGuide(r);
     });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
@@ -425,7 +426,45 @@
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
         ${elevationFeatureGraphic(r)}
       </section>
-    </div>${r.series === 'hakone' ? hakoneSectionGuide() : r.series === 'izumo' ? izumoSectionGuide(r) : ''}`;
+    </div>${r.series === 'hakone' ? hakoneSectionGuide() : r.series === 'izumo' ? izumoSectionGuide(r) : r.series === 'zennihon' ? zennihonSectionGuide(r) : ''}`;
+  }
+
+  function zennihonSectionGuide(r) {
+    return `<section class="hakone-section-guide zennihon-section-guide" aria-labelledby="zennihon-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="zennihon-section-title">1区ずつ、走る場所を見る</h3></div>
+        <div class="hakone-section-switch zennihon-section-switch" role="group" aria-label="全日本大学駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-zennihon-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
+      </div>
+      <div id="zennihon-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div class="hakone-section-grid">
+        <div><div id="zennihon-section-map" class="hakone-section-map" role="application" aria-label="全日本大学駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は区間の始点と終点を結ぶ位置確認用の概略です。実際の道路形状は公式コースで確認できます。</p></div>
+        <div id="zennihon-section-profile" class="hakone-section-profile"></div>
+      </div>
+    </section>`;
+  }
+
+  function initZennihonSectionGuide(r) {
+    document.querySelectorAll('[data-zennihon-section]').forEach((button) => button.addEventListener('click', () => renderZennihonSection(r, Number(button.dataset.zennihonSection))));
+    renderZennihonSection(r, 1);
+  }
+
+  function renderZennihonSection(r, no) {
+    const leg = r.legs.find((item) => item.no === no);
+    const start = r._mapOverview.coords[no - 1];
+    const finish = r._mapOverview.coords[no];
+    if (!leg || !start || !finish) return;
+    const terrain = no <= 4 ? '前半区間：公式コース説明では、小刻みなアップダウンが多い区間です。' : '後半区間：公式コース説明では、前半に比べて比較的平らな区間です。';
+    document.querySelectorAll('[data-zennihon-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.zennihonSection) === no)));
+    $('#zennihon-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${terrain}</p>`;
+    $('#zennihon-section-profile').innerHTML = zennihonSectionProfile(leg);
+    renderSimpleSectionMap({ elementId: 'zennihon-section-map', start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.zennihon });
+  }
+
+  function zennihonSectionProfile(leg) {
+    const front = leg.no <= 4;
+    const path = front ? 'M18 87 C42 50 62 119 88 72 S132 52 157 91 S203 116 230 72 S271 58 302 84' : 'M18 86 C71 81 112 89 158 84 S245 87 302 83';
+    const label = front ? '前半：小刻みなアップダウンが多い' : '後半：比較的平ら';
+    return `<h4>${leg.no}区の高低差の特徴</h4><svg class="section-profile-svg zennihon-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${label}"><path d="${path}" class="section-profile-area"/><path d="${path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${label}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">中継所 ${leg.km.toFixed(1)}km</text></svg><div class="profile-caution"><b>標高の実測グラフではありません</b><span>公式説明の「前半」「後半」の特徴を区間に対応させた模式図です。</span></div><ol class="izumo-route-order zennihon-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離とコースの特徴は全日本大学駅伝公式の開催要項・コース紹介に基づきます。</p>`;
   }
 
   function izumoSectionGuide(r) {
@@ -455,7 +494,7 @@
     document.querySelectorAll('[data-izumo-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.izumoSection) === no)));
     $('#izumo-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note || '公式資料に記載された区間情報を表示しています。')}</p>`;
     $('#izumo-section-profile').innerHTML = izumoSectionProfile(leg);
-    renderSimpleSectionMap({ start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
+    renderSimpleSectionMap({ elementId: 'izumo-section-map', start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
   }
 
   function izumoSectionProfile(leg) {
@@ -471,7 +510,7 @@
   }
 
   function renderSimpleSectionMap(d) {
-    const el = $('#izumo-section-map');
+    const el = $('#' + d.elementId);
     if (!el || typeof L === 'undefined') return;
     if (activeSectionMap) activeSectionMap.remove();
     activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
