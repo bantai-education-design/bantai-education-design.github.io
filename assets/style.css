@@ -6649,3 +6649,11 @@ img.hero {
   object-fit: contain;
   transform: none;
 }
+
+/* Keep Google school-AI column artwork and the full headline visible in cards. */
+.column-card[data-column-id="column-google-school-ai-controls-2026"] .column-card-media { background: #fffaf2; }
+.column-card[data-column-id="column-google-school-ai-controls-2026"] .column-card-media img,
+.column-card[data-column-id="column-google-school-ai-controls-2026"]:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+}
