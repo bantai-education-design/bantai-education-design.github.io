@@ -720,13 +720,13 @@
 
   function womenCourseOverview(r) {
     const mapLabel = r.series === 'wzennihon' ? '公式コース・交通規制図' : '公式コースマップ';
-    const mapAsset = r.series === 'wzennihon' ? 'assets/wzennihon-course-map.svg' : 'assets/wfujisan-course-map.svg';
+    const mapAsset = r.series === 'wzennihon' ? 'assets/wzennihon-course-map.webp' : 'assets/wfujisan-course-map.webp';
     return `<div class="course-overview-grid">
       <section class="course-map-card" aria-label="${esc(r.name)}の公式コース地図">
         <div class="course-map-head"><h3>コース地図</h3><span>公式資料で確認</span></div>
         <div class="official-map-wrap">
           <a class="official-map-link" href="${esc(r.map_url)}" target="_blank" rel="noopener" aria-label="${esc(r.name)}の公式地図を大きく開く">
-            <img class="official-map-image" src="${mapAsset}" alt="${esc(r.name)}の公式コース地図" loading="lazy">
+            <img class="official-map-image" src="${mapAsset}" alt="${esc(r.name)}の公式コース地図" decoding="async">
           </a>
           <div class="official-map-fallback"><b>${esc(mapLabel)}</b><p>地図を選ぶと、大会公式PDFを大きく開けます。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式PDFを開く ↗</a></div>
         </div>
