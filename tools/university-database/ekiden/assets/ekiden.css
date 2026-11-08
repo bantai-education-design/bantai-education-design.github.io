@@ -377,3 +377,9 @@ body[data-gender="women"] .entry-women {
 .official-map-fallback p{margin:0 0 10px;color:var(--muted);font-size:.88rem}
 @media (max-width:768px){.official-map-frame{height:420px}}
 @media (max-width:480px){.official-map-frame{height:340px}.official-map-fallback{padding:12px}.official-map-fallback .button{display:block;width:100%;box-sizing:border-box}}
+
+/* 外部PDF埋め込みが遮断されても地図が消えない、サイト内公式図版表示 */
+.official-map-link{display:block;background:#fff;overflow:auto;max-height:560px}
+.official-map-image{display:block;width:100%;height:auto;object-fit:contain}
+@media (max-width:768px){.official-map-link{max-height:500px}}
+@media (max-width:480px){.official-map-link{max-height:420px}.official-map-image{min-width:620px}}
