@@ -1093,7 +1093,7 @@
   // 人物は生成済みのアニメ風イラストを使い、線や距離表示だけをSVGで重ねる。
   function relayFigure() {
     const W = 720, H = 250, x0 = 250, zone = 360;
-    const art = G === 'women' ? 'assets/relay-women.webp' : 'assets/relay-men.webp';
+    const art = G === 'women' ? 'assets/relay-women.svg' : 'assets/relay-men.svg';
     return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="たすきの受け渡しは中継線から前方20mの中継ゾーンで行う">
       <rect x="18" y="165" width="${W - 36}" height="14" rx="4" fill="#e9e5d8"/>
       <rect x="${x0}" y="36" width="${zone}" height="150" rx="14" fill="var(--gold-soft)" fill-opacity=".62"/>
