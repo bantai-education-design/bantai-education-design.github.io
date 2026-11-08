@@ -40,6 +40,8 @@
   const newState = () => ({ taikai: [], teams: [], summary: new Map(), results: {}, byTaikai: new Map(), byTeam: new Map(), taikaiById: new Map(), teamById: new Map() });
   const DATA = { men: newState(), women: null };
   let S = DATA.men;
+  // 基本情報は男女で共用し、切り替え時に選択した側を必ず再描画する
+  let BASICS = null;
 
   // 区間成績（大会ごとに、順位表で初めて開いたときに読む）
   const KUKAN = new Map();  // series -> Promise<{ editions:Set, byResult:Map }>
@@ -221,6 +223,10 @@
       $('#f-pref').insertAdjacentHTML('beforeend', `<option value="${esc(p)}">${esc(p)}</option>`);
     });
     $('#basics-women').hidden = g !== 'women';
+    if (BASICS) {
+      S.basics = BASICS;
+      renderBasics();
+    }
     fillEditions();
     renderList();
     renderRecord();
@@ -584,8 +590,11 @@
   const SVGNS = 'http://www.w3.org/2000/svg';
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
   function loadBasics() {
-    getJson('basics.json').then((b) => { S.basics = b; renderBasics(); })
-      .catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
+    getJson('basics.json?v=20261108-2').then((b) => {
+      BASICS = b;
+      S.basics = BASICS;
+      renderBasics();
+    }).catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
   }
   function srcLink(src, role) {
     return `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)} ↗</a>${role === 'secondary' ? '（報道による。公式の要項には記載なし）' : ''}`;
