@@ -1,5 +1,25 @@
 [
   {
+    "id": "column-google-school-ai-controls-2026",
+    "slug": "google-school-ai-controls-2026",
+    "title": "Googleの学校AI制限をどう考えるか――辞書・検索・AIと、子どもの考える力",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.08",
+    "excerpt": "Googleが学校の児童生徒アカウントでAIを初期無効化へ。辞書と検索の変化、考える力、学校の責任を教室経験から考えます。",
+    "thumbnail": "/assets/images/columns/google-school-ai-controls-2026/thumbnail.png",
+    "readTime": "約10分",
+    "tags": [
+      "Google",
+      "生成AI",
+      "国語辞典",
+      "GIGAスクール",
+      "学校教育",
+      "考える力"
+    ],
+    "url": "/columns/google-school-ai-controls-2026/"
+  },
+  {
     "id": "column-learning-decline-society",
     "slug": "learning-decline-society",
     "title": "学力低下は、社会が弱くなったサインなのか",
