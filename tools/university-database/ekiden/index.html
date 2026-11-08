@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>三大駅伝 出場校検索 | Ban.Tai 全国大学データベース</title>
-  <meta name="description" content="出雲駅伝・全日本大学駅伝・箱根駅伝の出場校と総合成績を、大学名や大会・年から調べられるBan.Tai全国大学データベースの付録です。">
+  <meta name="description" content="男子三大駅伝、全日本大学女子駅伝、富士山女子駅伝、予選会・選考会の出場校と成績を調べられるBan.Tai全国大学データベースの付録です。">
   <link rel="canonical" href="https://bantai-education-design.github.io/tools/university-database/ekiden/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="三大駅伝 出場校検索 | Ban.Tai 全国大学データベース">
-  <meta property="og:description" content="出雲駅伝・全日本大学駅伝・箱根駅伝の出場校と総合成績を、大学名や大会・年から調べられます。">
+  <meta property="og:description" content="三大駅伝・女子駅伝・予選会の出場校と成績を、大学名や大会・年から調べられます。">
   <meta property="og:url" content="https://bantai-education-design.github.io/tools/university-database/ekiden/">
   <meta property="og:image" content="https://bantai-education-design.github.io/tools/university-database/ekiden/assets/ogp.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/base.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="assets/ekiden.css?v=20261108-8">
+  <link rel="stylesheet" href="assets/ekiden.css?v=20261108-9">
   <link rel="stylesheet" href="../assets/db-nav.css?v=20261107">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -80,7 +80,7 @@
         <div><dt>大学紹介とつながる大学</dt><dd id="stat-linked">—</dd></div>
       </dl>
     </div>
-    <ol class="series-strip" aria-label="三大駅伝の時期">
+    <ol id="series-strip" class="series-strip" aria-label="大会の時期">
       <li data-series="izumo"><span>10月</span><strong>出雲駅伝</strong><small>6区間 45.1km</small></li>
       <li data-series="zennihon"><span>11月</span><strong>全日本大学駅伝</strong><small>8区間 106.8km</small></li>
       <li data-series="hakone"><span>1月</span><strong>箱根駅伝</strong><small>10区間 217.1km</small></li>
@@ -88,6 +88,10 @@
   </section>
 
   <section id="finder" class="section ekiden-finder">
+    <div class="gender-switch" role="group" aria-label="男子・女子を選ぶ">
+      <button type="button" data-gender="men" aria-pressed="true">男子<small>三大駅伝</small></button>
+      <button type="button" data-gender="women" aria-pressed="false">女子<small>全日本大学女子駅伝・富士山女子駅伝</small></button>
+    </div>
     <div class="ekiden-tabs" role="tablist" aria-label="探し方">
       <button role="tab" id="tab-univ" aria-controls="panel-univ" aria-selected="true" data-tab="univ">大学から探す</button>
       <button role="tab" id="tab-race" aria-controls="panel-race" aria-selected="false" data-tab="race" tabindex="-1">大会と年から探す</button>
@@ -137,7 +141,7 @@
     <div id="panel-record" class="ekiden-panel" role="tabpanel" aria-labelledby="tab-record" hidden>
       <p class="filter-note">優勝校の一覧は3大会の全回、三冠と優勝回数は総合成績を収録した範囲で数えています。時代別の記録は第2段階で増やします。</p>
       <div class="record-grid">
-        <section class="record-card"><h2>三冠（同じ年度に3大会で優勝）</h2><ul id="triple-list"></ul></section>
+        <section class="record-card"><h2 id="crown-head">三冠（同じ年度に3大会で優勝）</h2><ul id="triple-list"></ul></section>
         <section class="record-card"><h2>優勝回数（収録範囲）</h2><div class="table-scroll"><table id="wins-table" class="race-table compact"></table></div></section>
       </div>
       <section class="record-card wide"><h2>歴代優勝校</h2>
@@ -147,7 +151,8 @@
     </div>
     <!-- 駅伝の基本 -->
     <div id="panel-basics" class="ekiden-panel basics" role="tabpanel" aria-labelledby="tab-basics" hidden>
-      <p class="basics-lead">三大駅伝のルールやコースを、図と表でまとめました。数字は各大会の公式の要項・コース紹介によります。</p>
+      <p id="basics-women" class="basics-note" hidden>女子は全日本大学女子駅伝と富士山女子駅伝を表示します。出場の仕組みは2026年の公式要項、区間は公式記録・コース紹介によります。</p>
+      <p class="basics-lead">大学駅伝のルールやコースを、図と表でまとめました。数字は各大会の公式の要項・コース紹介によります。</p>
       <section class="basics-block"><h2>ひと目でくらべる</h2><div class="table-scroll"><table id="basics-compare" class="race-table basics-table"></table></div></section>
       <section class="basics-block"><h2>出場までの道</h2><p class="basics-sub">どんなチームが走るのか。1本の帯が出場チーム全体です。</p><div id="basics-teams" class="figure-scroll"></div></section>
       <section class="basics-block"><h2>コースと区間</h2>
@@ -177,7 +182,7 @@
 
 <footer class="site-footer"><div class="footer-inner">Ban.Tai Education Design 全国大学データベース 付録「三大駅伝 出場校検索」　<a href="../tokyo/">大学データベースへ戻る</a></div></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="assets/ekiden.js?v=20261108-8"></script>
+<script src="assets/ekiden.js?v=20261108-9"></script>
 </body>
 </html>
 

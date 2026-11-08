@@ -1,47 +1,154 @@
 /* 三大駅伝 出場校検索（大学DBの付録）
  * データ: data/public_export/ekiden/（scripts/ekiden/export_public.py で書き出したもの）
  * URL: ?tab=univ&team=t00001 / ?tab=race&series=hakone&ed=102 / ?tab=record
+ *      女子は g=women を付ける（第2段階 工程20）: ?g=women&tab=race&series=wfujisan&ed=2025
+ *      区間成績を開いた状態: &open=<成績ID>（第2段階 工程21）
+ *      予選会: ?tab=race&series=q:hakone&ed=hakone-q-102（大会の値は q:<本大会>、回の値は予選会の大会ID。第2段階 工程22）
+ * 選手名は区間成績の表の中だけで見せる。選手名で探す使い方はしない（DATA_POLICY 10-1）
  */
 (() => {
   'use strict';
   const BASE = 'data/';
-  const SERIES = ['izumo', 'zennihon', 'hakone'];
-  const SERIES_NAME = { izumo: '出雲駅伝', zennihon: '全日本大学駅伝', hakone: '箱根駅伝' };
-  const SERIES_SHORT = { izumo: '出雲', zennihon: '全日本', hakone: '箱根' };
+  // 男子（三大駅伝）と女子（2大会）。切り替えると下の SERIES などを差し替える
+  const GENDER = {
+    men: { series: ['izumo', 'zennihon', 'hakone'],
+      name: { izumo: '出雲駅伝', zennihon: '全日本大学駅伝', hakone: '箱根駅伝' },
+      short: { izumo: '出雲', zennihon: '全日本', hakone: '箱根' },
+      all: '3大会すべて', crownKey: 'triple_crown_seasons', crownName: '三冠', crownHead: '三冠（同じ年度に3大会で優勝）',
+      crownLong: '三冠（出雲・全日本・箱根を同じ年度に優勝）', strip: [['izumo', '10月', '6区間 45.1km'], ['zennihon', '11月', '8区間 106.8km'], ['hakone', '1月', '10区間 217.1km']] },
+    women: { series: ['wzennihon', 'wfujisan'],
+      name: { wzennihon: '全日本大学女子駅伝', wfujisan: '富士山女子駅伝' },
+      short: { wzennihon: '全日本女子', wfujisan: '富士山' },
+      all: '2大会すべて', crownKey: 'double_crown_seasons', crownName: '二冠', crownHead: '二冠（同じ年度に2大会で優勝）',
+      crownLong: '二冠（全日本大学女子駅伝・富士山女子駅伝を同じ年度に優勝）', strip: [['wzennihon', '10月', '6区間 38.0km'], ['wfujisan', '12月', '7区間 43.4km']] },
+  };
+  // 予選会（第2段階 工程22）。男子・女子のどちらの画面でも使う
+  const Q_NAME = { hakone: '箱根駅伝予選会', zennihon: '全日本大学駅伝 地区選考会', wzennihon: '全日本大学女子駅伝 地区代表・記録選考' };
+  const Q_SERIES = { men: ['hakone', 'zennihon'], women: ['wzennihon'] };
+  const Q = { taikai: new Map(), byTaikai: new Map(), byTeam: new Map(), runners: null };
+  let G = 'men';
+  let SERIES = GENDER.men.series;
+  let SERIES_NAME = GENDER.men.name;
+  let SERIES_SHORT = GENDER.men.short;
   const TYPE_NAME = { national: '国立', public: '公立', private: '私立' };
   const STATUS_NAME = { open: '参考', dnf: '途中棄権', disqualified: '失格', dns: '出走せず' };
-  // 公式HPの大学紹介ページ。東京都・埼玉県・神奈川県の大学は同じ詳細ページで大学IDから開ける
+  // 公式HPの大学紹介ページ。大学IDから詳細ページを開く
   const UNIV_DETAIL = '../tokyo/detail.html?id=';
 
   const $ = (s) => document.querySelector(s);
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const S = { taikai: [], teams: [], summary: new Map(), results: {}, byTaikai: new Map(), byTeam: new Map(), taikaiById: new Map(), teamById: new Map() };
+  const newState = () => ({ taikai: [], teams: [], summary: new Map(), results: {}, byTaikai: new Map(), byTeam: new Map(), taikaiById: new Map(), teamById: new Map() });
+  const DATA = { men: newState(), women: null };
+  let S = DATA.men;
+
+  // 区間成績（大会ごとに、順位表で初めて開いたときに読む）
+  const KUKAN = new Map();  // series -> Promise<{ editions:Set, byResult:Map }>
+  const LEG_STATUS = { open: '参考', dnf: '途中棄権', disqualified: '失格' };
+  function loadKukan(series) {
+    if (!KUKAN.has(series)) {
+      KUKAN.set(series, getJson(`kukan_${series}.json`).then((d) => {
+        const col = Object.fromEntries(d.columns.map((c, i) => [c, i]));
+        const byResult = new Map();
+        d.rows.forEach((row) => {
+          const o = Object.fromEntries(d.columns.map((c) => [c, row[col[c]]]));
+          if (!byResult.has(o.result_id)) byResult.set(o.result_id, []);
+          byResult.get(o.result_id).push(o);
+        });
+        return { editions: new Set(d.editions), byResult };
+      }).catch(() => null));
+    }
+    return KUKAN.get(series);
+  }
+  function legMarks(r) {
+    return [r.leg_awards ? `<span class="leg-mark award" title="区間1位の区間の数">区間賞${r.leg_awards}</span>` : '',
+      r.leg_records ? `<span class="leg-mark record" title="区間新記録の区間の数">区間新${r.leg_records}</span>` : ''].join('');
+  }
+  function legTable(legs) {
+    return `<table class="leg-table"><caption class="sr-only">区間成績</caption><thead><tr><th class="num">区間</th><th>選手</th><th class="num">区間順位</th><th class="num">区間記録</th><th>印</th></tr></thead><tbody>${
+      legs.map((k) => {
+        const rank = k.leg_status === 'ranked' ? `${k.leg_rank}位` : `<span class="status">${LEG_STATUS[k.leg_status] || ''}</span>`;
+        const marks = [k.leg_status === 'ranked' && k.leg_rank === 1 ? '<span class="leg-mark award">区間賞</span>' : '',
+          k.leg_record ? '<span class="leg-mark record">区間新</span>' : '', k.kuriage ? '<span class="leg-mark">繰り上げ</span>' : ''].join('');
+        const name = k.runner_name ? esc(k.runner_name) : '<span class="dim">（名前は確認中）</span>';
+        return `<tr><td class="num">${k.leg}区</td><td>${name}</td><td class="num">${rank}</td><td class="num">${esc(k.leg_time || '—')}</td><td>${marks}${k.note ? `<small class="dim">${esc(k.note)}</small>` : ''}</td></tr>`;
+      }).join('')}</tbody></table>`;
+  }
+
+  const fmtDate = (d) => d.replace(/-/g, '/').replace('/', '年').replace('/', '月') + '日';
+  const REGION_ORDER = ['関東', '北海道', '東北', '北信越', '東海', '関西', '中国四国', '九州', '記録'];
+  const Q_SHORT = { hakone: '箱根予選会', zennihon: '全日本 選考', wzennihon: '全日本女子 選考' };
+  function qLabel(t) {
+    const where = t.region ? (t.gender === 'women' ? ` ${t.region}代表` : ` ${t.region}`) : (t.series === 'wzennihon' && t.id.endsWith('-record') ? ' 記録による選考' : '');
+    return `第${t.edition}回（${t.year}年）${where}`;
+  }
+  function qResultText(r) {
+    return r.qualified ? '<span class="q-pass">通過</span>' : (r.result_status === 'dns' ? '' : '<span class="q-fail">通過ならず</span>');
+  }
+  function loadQRunners() {
+    if (!Q.runners) {
+      Q.runners = getJson('qualifier_runners.json').then((d) => {
+        const m = new Map();
+        d.rows.forEach((row) => {
+          const o = Object.fromEntries(d.columns.map((c, i) => [c, row[i]]));
+          if (!m.has(o.result_id)) m.set(o.result_id, []);
+          m.get(o.result_id).push(o);
+        });
+        return m;
+      }).catch(() => null);
+    }
+    return Q.runners;
+  }
 
   const getJson = (f) => fetch(BASE + f).then((r) => { if (!r.ok) throw new Error(f); return r.json(); });
 
-  Promise.all(['manifest.json', 'taikai.json', 'teams.json', 'team_summary.json', ...SERIES.map((s) => `results_${s}.json`)].map(getJson))
-    .then(([manifest, taikai, teams, summary, ...results]) => {
-      S.manifest = manifest;
-      S.taikai = taikai.taikai;
-      S.teams = teams.teams;
-      summary.summary.forEach((x) => S.summary.set(x.team_id, x));
-      S.taikai.forEach((t) => S.taikaiById.set(t.id, t));
-      S.teams.forEach((t) => S.teamById.set(t.id, t));
-      SERIES.forEach((s, i) => {
-        S.results[s] = results[i];
-        results[i].results.forEach((r) => {
-          if (!S.byTaikai.has(r.taikai_id)) S.byTaikai.set(r.taikai_id, []);
-          S.byTaikai.get(r.taikai_id).push(r);
-          if (!S.byTeam.has(r.team_id)) S.byTeam.set(r.team_id, []);
-          S.byTeam.get(r.team_id).push(r);
-        });
+  function fill(st, series, taikai, teams, summary, results) {
+    st.taikai = taikai;
+    st.teams = teams;
+    summary.forEach((x) => st.summary.set(x.team_id, x));
+    st.taikai.forEach((t) => st.taikaiById.set(t.id, t));
+    st.teams.forEach((t) => st.teamById.set(t.id, t));
+    series.forEach((s, i) => {
+      st.results[s] = results[i];
+      results[i].results.forEach((r) => {
+        if (!st.byTaikai.has(r.taikai_id)) st.byTaikai.set(r.taikai_id, []);
+        st.byTaikai.get(r.taikai_id).push(r);
+        if (!st.byTeam.has(r.team_id)) st.byTeam.set(r.team_id, []);
+        st.byTeam.get(r.team_id).push(r);
       });
-      init();
-    })
-    .catch(() => {
-      $('#univ-count').textContent = '読み込みエラー';
-      $('#univ-list').innerHTML = '<li class="team-empty">駅伝データを読み込めませんでした。時間をおいて開き直してください。</li>';
     });
+    return st;
+  }
+  // 女子のデータは、女子に切り替えたときに読む
+  function loadWomen() {
+    if (DATA.women) return Promise.resolve(DATA.women);
+    return Promise.all(['women.json', ...GENDER.women.series.map((s) => `results_${s}.json`)].map(getJson)).then(([w, ...results]) => {
+      const st = fill(newState(), GENDER.women.series, w.taikai, w.teams, w.summary, results);
+      st.manifest = { coverage: w.coverage, counts: w.counts };
+      DATA.women = st;
+      return st;
+    });
+  }
+
+  Promise.all(['manifest.json', 'taikai.json', 'teams.json', 'team_summary.json', 'qualifiers.json', ...SERIES.map((s) => `results_${s}.json`)].map(getJson))
+    .then(([manifest, taikai, teams, summary, qual, ...results]) => {
+      fill(S, SERIES, taikai.taikai, teams.teams, summary.summary, results);
+      qual.taikai.forEach((t) => Q.taikai.set(t.id, t));
+      qual.results.forEach((r) => {
+        if (!Q.byTaikai.has(r.taikai_id)) Q.byTaikai.set(r.taikai_id, []);
+        Q.byTaikai.get(r.taikai_id).push(r);
+        if (!Q.byTeam.has(r.team_id)) Q.byTeam.set(r.team_id, []);
+        Q.byTeam.get(r.team_id).push(r);
+      });
+      S.manifest = manifest;
+      const g = new URLSearchParams(location.search).get('g') === 'women' ? 'women' : 'men';
+      if (g === 'women') loadWomen().then(() => init('women')).catch(loadError);
+      else init('men');
+    })
+    .catch(loadError);
+  function loadError() {
+    $('#univ-count').textContent = '読み込みエラー';
+    $('#univ-list').innerHTML = '<li class="team-empty">駅伝データを読み込めませんでした。時間をおいて開き直してください。</li>';
+  }
 
   /* ---------- 共通 ---------- */
   function seasonLabel(season) { return `${season}年度`; }
@@ -59,13 +166,27 @@
     if (r.overall_rank) return `${r.overall_rank}位`;
     return `<span class="status">${esc(STATUS_NAME[r.result_status] || r.result_status)}</span>`;
   }
+  // 富士山女子駅伝は回ではなく年で呼ぶ（大会IDも年）
+  function edOf(tk) { return tk.edition ?? tk.year; }
+  function raceTitle(tk) { return tk.series === 'wfujisan' ? `${SERIES_NAME[tk.series]} ${tk.year}年` : `${SERIES_NAME[tk.series]} 第${tk.edition}回`; }
+  function edLabel(tk) { return tk.series === 'wfujisan' ? `${tk.year}年` : `第${tk.edition}回（${tk.year}年）`; }
   function setParams(obj) {
     const p = new URLSearchParams();
+    if (G === 'women') p.set('g', 'women');
     Object.entries(obj).forEach(([k, v]) => { if (v) p.set(k, v); });
     history.replaceState(null, '', `${location.pathname}?${p.toString()}${location.hash}`);
   }
 
-  function init() {
+  // 男子・女子を切り替える。画面の選択肢・集計を選んだ側のデータで作り直す
+  function applyGender(g) {
+    G = g;
+    S = DATA[g];
+    const cfg = GENDER[g];
+    ({ series: SERIES, name: SERIES_NAME, short: SERIES_SHORT } = cfg);
+    S.current = S.current || null;
+    document.querySelectorAll('.gender-switch [data-gender]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.gender === g));
+    document.body.dataset.gender = g;
+    $('#series-strip').innerHTML = cfg.strip.map(([s, m, d]) => `<li data-series="${s}"><span>${m}</span><strong>${SERIES_NAME[s]}</strong><small>${d}</small></li>`).join('');
     const m = S.manifest;
     const editions = Object.values(m.coverage).reduce((a, c) => a + c.editions, 0);
     $('#stat-editions').textContent = `${editions}回`;
@@ -73,22 +194,54 @@
     $('#stat-linked').textContent = `${m.counts.teams_linked_to_university_db}校`;
     $('#coverage-note').textContent = '総合成績の収録範囲: ' + SERIES.map((s) => {
       const c = m.coverage[s];
-      return `${SERIES_NAME[s]} 第${c.from_edition}回（${c.from_year}年）〜第${c.to_edition}回（${c.to_year}年）`;
+      return s === 'wfujisan' ? `${SERIES_NAME[s]} ${c.from_year}年〜${c.to_year}年のうち${c.editions}回（結果の資料がある年）`
+        : `${SERIES_NAME[s]} 第${c.from_edition}回（${c.from_year}年）〜第${c.to_edition}回（${c.to_year}年）`;
     }).join('、') + '。大会ごとの優勝校は全回を収録しています。古い回の総合成績は順次追加します。';
 
+    const opts = (list) => list.map((s) => `<option value="${s}">${SERIES_NAME[s]}</option>`).join('');
+    $('#f-series').innerHTML = `<option value="">${cfg.all}</option>` + opts(SERIES) + '<option value="q">予選会に出た</option>';
+    const raceOrder = g === 'men' ? ['hakone', 'zennihon', 'izumo'] : SERIES;
+    $('#r-series').innerHTML = opts(raceOrder) + `<optgroup label="予選会">${Q_SERIES[g].map((s) => `<option value="q:${s}">${Q_NAME[s]}</option>`).join('')}</optgroup>`;
+    $('#w-series').innerHTML = opts(raceOrder);
+    $('#crown-head').textContent = cfg.crownHead;
     // 年代の選択肢（収録範囲の年から）
     const years = S.taikai.filter((t) => S.byTaikai.has(t.id)).map((t) => t.year);
+    $('#f-decade').innerHTML = '<option value="">すべての年</option>';
     for (let d = Math.floor(Math.min(...years) / 10) * 10; d <= Math.max(...years); d += 10) {
       $('#f-decade').insertAdjacentHTML('beforeend', `<option value="${d}">${d}年代</option>`);
     }
+    $('#f-region').innerHTML = '<option value="">すべて</option>';
     ['北海道', '東北', '関東', '北信越', '東海', '関西', '中国四国', '九州'].filter((r) => S.teams.some((t) => t.region === r)).forEach((r) => {
       $('#f-region').insertAdjacentHTML('beforeend', `<option value="${esc(r)}">${esc(r)}</option>`);
     });
+    $('#f-region').value = '';
+    $('#f-region').closest('label').style.display = g === 'women' ? 'none' : '';  // 女子は地区の公式資料がまだない
+    $('#f-pref').innerHTML = '<option value="">すべて</option>';
     [...new Set(S.teams.map((t) => t.prefecture).filter(Boolean))].sort().forEach((p) => {
       $('#f-pref').insertAdjacentHTML('beforeend', `<option value="${esc(p)}">${esc(p)}</option>`);
     });
+    $('#basics-women').hidden = g !== 'women';
+    fillEditions();
+    renderList();
+    renderRecord();
+    renderRace();
+    if (S.current && S.teamById.has(S.current)) showTeam(S.current, false);
+    else $('#team-detail').innerHTML = `<div class="team-empty">左の一覧から大学を選ぶと、${SERIES.length}大会の成績が年表で表示されます。</div>`;
+  }
 
+  function init(g) {
     bindTabs();
+    document.querySelectorAll('.gender-switch [data-gender]').forEach((b) => b.addEventListener('click', () => {
+      const want = b.dataset.gender;
+      if (want === G) return;
+      b.setAttribute('aria-busy', 'true');
+      (want === 'women' ? loadWomen() : Promise.resolve(DATA.men)).then(() => {
+        b.removeAttribute('aria-busy');
+        applyGender(want);
+        const tab = document.querySelector('.ekiden-tabs [aria-selected="true"]').dataset.tab;
+        selectTab(tab, true);
+      }).catch(() => { b.removeAttribute('aria-busy'); alert('女子のデータを読み込めませんでした。'); });
+    }));
     ['#f-series', '#f-decade', '#f-region', '#f-pref', '#f-type', '#f-win', '#f-univonly'].forEach((id) => $(id).addEventListener('change', renderList));
     $('#univ-q').addEventListener('input', renderList);
     $('#univ-search').addEventListener('submit', (e) => { e.preventDefault(); renderList(); const b = $('#univ-list button'); if (b) b.click(); });
@@ -96,14 +249,13 @@
     $('#r-edition').addEventListener('change', renderRace);
     $('#w-series').addEventListener('change', renderWinners);
 
-    fillEditions();
-    renderList();
-    renderRecord();
+    applyGender(g);
 
     const p = new URLSearchParams(location.search);
-    if (p.get('series') && SERIES.includes(p.get('series'))) { $('#r-series').value = p.get('series'); fillEditions(); }
+    const okSeries = (v) => SERIES.includes(v) || (v.startsWith('q:') && Q_SERIES[G].includes(v.slice(2)));
+    if (p.get('series') && okSeries(p.get('series'))) { $('#r-series').value = p.get('series'); fillEditions(); }
     if (p.get('ed')) $('#r-edition').value = p.get('ed');
-    renderRace();
+    renderRace(p.get('open'));
     if (p.get('team') && S.teamById.has(p.get('team'))) showTeam(p.get('team'), false);
     selectTab(['univ', 'race', 'record', 'basics'].includes(p.get('tab')) ? p.get('tab') : 'univ', false);
     loadBasics();
@@ -158,6 +310,13 @@
       if (pref && t.prefecture !== pref) return false;
       if (type && t.establishment_type !== type) return false;
       if (!matches(t, q)) return false;
+      if (series === 'q') {
+        const qa = (Q.byTeam.get(t.id) || []).filter((r) => {
+          const tk = Q.taikai.get(r.taikai_id);
+          return decade === null || (tk.year >= decade && tk.year < decade + 10);
+        });
+        return qa.length && (!win || qa.some((r) => r.qualified));
+      }
       const apps = appearancesOf(t.id).filter((r) => {
         const tk = S.taikaiById.get(r.taikai_id);
         if (series && tk.series !== series) return false;
@@ -174,8 +333,10 @@
     list.setAttribute('aria-busy', 'false');
     list.innerHTML = rows.map((t) => {
       const sm = S.summary.get(t.id);
+      const qn = (Q.byTeam.get(t.id) || []).length;
       const badges = SERIES.filter((s) => sm && sm.series[s]).map((s) =>
-        `<span class="badge" data-series="${s}">${SERIES_SHORT[s]} ${sm.series[s].appearances}回</span>`).join('');
+        `<span class="badge" data-series="${s}">${SERIES_SHORT[s]} ${sm.series[s].appearances}回</span>`).join('') +
+        (qn ? `<span class="badge badge-q">予選会 ${qn}回</span>` : '');
       const sub = [t.region && `${t.region}地区`, t.prefecture, TYPE_NAME[t.establishment_type]].filter(Boolean).join('・') || (t.team_type === 'university' ? '大学紹介 準備中' : '選抜・連合チーム');
       return `<li><button type="button" data-team="${t.id}" ${S.current === t.id ? 'aria-current="true"' : ''}><strong>${esc(t.display_name)}</strong><small>${esc(sub)}</small><span class="badges">${badges}</span></button></li>`;
     }).join('') || '<li class="team-empty">条件に合うチームがありません。</li>';
@@ -205,7 +366,8 @@
         <dt>最高</dt><dd>${x.best_rank ? x.best_rank + '位' : '—'}</dd>
         <dt>優勝</dt><dd>${x.wins ? `${x.wins}回（${x.win_years.join('、')}年）` : 'なし'}</dd></dl></section>`;
     }).join('');
-    const crown = sm.triple_crown_seasons ? `<p class="crown">三冠（出雲・全日本・箱根を同じ年度に優勝）: ${sm.triple_crown_seasons.map(seasonLabel).join('、')}</p>` : '';
+    const ck = GENDER[G].crownKey;
+    const crown = sm[ck] ? `<p class="crown">${GENDER[G].crownLong}: ${sm[ck].map(seasonLabel).join('、')}</p>` : '';
 
     // 年度ごとの年表
     const rows = appearancesOf(teamId).concat((S.byTeam.get(teamId) || []).filter((r) => r.result_status === 'dns'));
@@ -215,22 +377,39 @@
       if (!bySeason.has(tk.season)) bySeason.set(tk.season, {});
       bySeason.get(tk.season)[tk.series] = r;
     });
-    const seasons = [...bySeason.keys()].sort().reverse();
-    const table = `<div class="table-scroll"><table class="race-table compact"><thead><tr><th>年度</th>${SERIES.map((s) => `<th>${SERIES_SHORT[s]}</th>`).join('')}</tr></thead><tbody>${
+    // 予選会は、通過したら出る本大会の年度に並べる（箱根予選会は10月でも、その年度の箱根の欄の年度）
+    const qBySeason = new Map();
+    (Q.byTeam.get(teamId) || []).forEach((r) => {
+      const qt = Q.taikai.get(r.taikai_id);
+      const main = S.taikaiById.get(qt.qualifies_for);
+      const y = main ? main.season : String(qt.year);
+      if (!qBySeason.has(y)) qBySeason.set(y, []);
+      qBySeason.get(y).push(r);
+    });
+    const hasQ = qBySeason.size > 0;
+    const seasons = [...new Set([...bySeason.keys(), ...qBySeason.keys()])].sort().reverse();
+    const chartSeasons = seasons.filter((y) => bySeason.has(y));
+    const qCell = (y) => (qBySeason.get(y) || []).map((r) => {
+      const qt = Q.taikai.get(r.taikai_id);
+      const rank = r.overall_rank ? `${r.overall_rank}位` : (r.result_status === 'dnf' ? '記録なし' : '');
+      return `<button type="button" class="link q-cell" data-race="q:${qt.series}|${qt.id}|${r.id}" title="${Q_NAME[qt.series]} ${qLabel(qt)}を見る">${Q_SHORT[qt.series]}${qt.region && qt.series === 'zennihon' ? `（${qt.region}）` : ''} ${rank} ${r.qualified ? '<span class="q-pass">通過</span>' : '<span class="q-fail">通過ならず</span>'}</button>`;
+    }).join('') || '—';
+    const table = `<div class="table-scroll"><table class="race-table compact"><thead><tr><th>年度</th>${SERIES.map((s) => `<th>${SERIES_SHORT[s]}</th>`).join('')}${hasQ ? '<th>予選会</th>' : ''}</tr></thead><tbody>${
       seasons.map((y) => `<tr><td>${seasonLabel(y)}</td>${SERIES.map((s) => {
-        const r = bySeason.get(y)[s];
+        const r = (bySeason.get(y) || {})[s];
         if (!r) return '<td>—</td>';
         const tk = S.taikaiById.get(r.taikai_id);
-        return `<td><button type="button" class="link" data-race="${tk.series}|${tk.edition}" title="${SERIES_NAME[s]} 第${tk.edition}回（${tk.year}年）の順位表を見る">${rankCell(r)}</button></td>`;
-      }).join('')}</tr>`).join('')}</tbody></table></div>`;
+        const aw = r.leg_awards ? `<small class="leg-count" title="区間賞（区間1位）の数">区間賞${r.leg_awards}</small>` : '';
+        return `<td><button type="button" class="link" data-race="${tk.series}|${edOf(tk)}|${r.id}" title="${raceTitle(tk)}（${tk.year}年）の順位表を見る">${rankCell(r)}</button>${aw}</td>`;
+      }).join('')}${hasQ ? `<td>${qCell(y)}</td>` : ''}</tr>`).join('')}</tbody></table></div>`;
 
     $('#team-detail').innerHTML = `<h2>${esc(t.display_name)}</h2><p class="team-sub">${esc(subParts.join('　'))}</p>${link}${crown}
       <div class="series-cards">${cards}</div>
-      <div class="chart-wrap">${rankChart(bySeason, seasons)}<div class="chart-legend">${SERIES.map((s) => `<span data-series="${s}">${SERIES_SHORT[s]}</span>`).join('')}</div></div>
+      <div class="chart-wrap">${rankChart(bySeason, chartSeasons)}<div class="chart-legend">${SERIES.map((s) => `<span data-series="${s}">${SERIES_SHORT[s]}</span>`).join('')}</div></div>
       ${table}`;
     $('#team-detail').querySelectorAll('[data-race]').forEach((b) => b.addEventListener('click', () => {
-      const [s, ed] = b.dataset.race.split('|');
-      $('#r-series').value = s; fillEditions(); $('#r-edition').value = ed; renderRace(); selectTab('race', true);
+      const [s, ed, rid] = b.dataset.race.split('|');
+      $('#r-series').value = s; fillEditions(); $('#r-edition').value = ed; selectTab('race', true); renderRace(rid);
       $('#finder').scrollIntoView({ behavior: 'smooth' });
     }));
     if (push) setParams({ tab: 'univ', team: teamId });
@@ -248,7 +427,7 @@
     maxRank = Math.ceil(maxRank / 5) * 5;
     const x = (y) => L + (maxY === minY ? (W - L - R) / 2 : (y - minY) / (maxY - minY) * (W - L - R));
     const yy = (rank) => T + (rank - 1) / (maxRank - 1) * (H - T - B);
-    const color = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)' };
+    const color = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
     let g = '';
     for (let rk = 1; rk <= maxRank; rk += (maxRank > 15 ? 5 : 2)) {
       g += `<line x1="${L}" x2="${W - R}" y1="${yy(rk)}" y2="${yy(rk)}" stroke="#ebe8de"/><text x="${L - 6}" y="${yy(rk) + 4}" font-size="11" text-anchor="end" fill="#6b7280">${rk}位</text>`;
@@ -270,12 +449,21 @@
   /* ---------- 大会と年から探す ---------- */
   function fillEditions() {
     const s = $('#r-series').value;
-    const list = S.taikai.filter((t) => t.series === s).sort((a, b) => b.edition - a.edition);
+    if (s.startsWith('q:')) {
+      const qs = s.slice(2);
+      const list = [...Q.taikai.values()].filter((t) => t.series === qs && (t.gender || 'men') === G)
+        .sort((a, b) => b.edition - a.edition || REGION_ORDER.indexOf(a.region || '記録') - REGION_ORDER.indexOf(b.region || '記録'));
+      $('#r-edition').innerHTML = list.map((t) => `<option value="${t.id}">${qLabel(t)}</option>`).join('');
+      return;
+    }
+    const list = S.taikai.filter((t) => t.series === s).sort((a, b) => edOf(b) - edOf(a));
     $('#r-edition').innerHTML = list.map((t) =>
-      `<option value="${t.edition}">第${t.edition}回（${t.year}年）${t.status === 'cancelled' ? ' 中止' : S.byTaikai.has(t.id) ? '' : ' 優勝のみ'}</option>`).join('');
+      `<option value="${edOf(t)}">${edLabel(t)}${t.status === 'cancelled' ? ' 中止' : S.byTaikai.has(t.id) ? '' : ' 優勝のみ'}</option>`).join('');
   }
-  function renderRace() {
+  function renderRace(openId) {
+    if (typeof openId !== 'string') openId = null;
     const s = $('#r-series').value;
+    if (s.startsWith('q:')) { renderQualifier(openId); return; }
     const ed = Number($('#r-edition').value);
     const tk = S.taikaiById.get(`${s}-${ed}`);
     if (!tk) return;
@@ -283,33 +471,118 @@
     const facts = [tk.date ? tk.date.replace(/-/g, '/').replace('/', '年').replace('/', '月') + '日' : `${tk.year}年`,
       tk.legs && tk.distance_km ? `${tk.legs}区間 ${tk.distance_km}km` : '', tk.teams_count ? `${tk.teams_count}チーム` : ''].filter(Boolean).join('　');
     const winTeam = tk.winner_team_id && S.teamById.get(tk.winner_team_id);
-    $('#race-head').innerHTML = `<h2>${SERIES_NAME[s]} 第${tk.edition}回</h2><p>${esc(facts)}</p>${
+    $('#race-head').innerHTML = `<h2>${raceTitle(tk)}</h2><p>${esc(facts)}</p>${
       tk.status === 'cancelled' ? '<p>この回は中止されました。</p>' :
       `<p>優勝: ${esc(winTeam ? winTeam.display_name : tk.winner_name)}（${esc(tk.winning_time || '')}）</p>`}
-      <p>出典: <a href="${esc(tk.source_url)}" target="_blank" rel="noopener">${SERIES_NAME[s]}公式サイト ↗</a>${tk.note ? '　' + esc(tk.note) : ''}</p>`;
+      <p>出典: <a href="${esc(tk.source_url)}" target="_blank" rel="noopener">${G === 'women' ? '公式の記録 ↗' : SERIES_NAME[s] + '公式サイト ↗'}</a>${tk.note ? '　' + esc(tk.note) : ''}</p>`;
     const hk = s === 'hakone';
     if (!rows.length) {
-      $('#race-table').innerHTML = tk.status === 'cancelled' ? '' : '<tbody><tr><td>この回の総合成績は、まだ収録していません（優勝校のみ）。</td></tr></tbody>';
+      const why = s === 'wfujisan' ? 'この年は結果の資料が公開されていないか読み取れないため、優勝校のみです。' : 'この回の総合成績は、まだ収録していません（優勝校のみ）。';
+      $('#race-table').innerHTML = tk.status === 'cancelled' ? '' : `<tbody><tr><td>${why}</td></tr></tbody>`;
       return;
     }
+    const ncol = hk ? 5 : 3;
     $('#race-table').innerHTML = `<thead><tr><th class="num">順位</th><th>チーム</th><th class="num">総合記録</th>${hk ? '<th class="num">往路</th><th class="num">復路</th>' : ''}</tr></thead><tbody>${
       rows.map((r) => {
         const team = S.teamById.get(r.team_id);
         const cls = r.overall_rank === 1 ? 'win' : r.overall_rank ? '' : 'open';
         const legs = hk ? `<td class="num">${r.outbound_rank ? r.outbound_rank + '位 ' : ''}${esc(r.outbound_time || '—')}</td><td class="num">${r.return_rank ? r.return_rank + '位 ' : ''}${esc(r.return_time || '—')}</td>` : '';
         const name = r.name_at_entry !== team.display_name && !team.display_name.startsWith(r.name_at_entry) ? `${esc(r.name_at_entry)}<small class="dim">（今の${esc(team.display_name)}）</small>` : esc(r.name_at_entry);
-        return `<tr class="${cls}"><td class="num">${rankCell(r)}</td><td><button type="button" class="link" data-team="${team.id}">${name}</button>${r.note ? `<br><small class="dim">${esc(r.note)}</small>` : ''}</td><td class="num">${esc(r.overall_time || '—')}</td>${legs}</tr>`;
+        return `<tr class="${cls}" data-result="${r.id}"><td class="num">${rankCell(r)}</td><td><button type="button" class="link" data-team="${team.id}">${name}</button>${legMarks(r)}<button type="button" class="leg-toggle" data-legs="${r.id}" aria-expanded="false" aria-controls="legs-${r.id}" hidden>区間成績</button>${r.note ? `<br><small class="dim">${esc(r.note)}</small>` : ''}</td><td class="num">${esc(r.overall_time || '—')}</td>${legs}</tr>`;
       }).join('')}</tbody>`;
     $('#race-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
-    if (!$('#panel-race').hidden) setParams({ tab: 'race', series: s, ed });
+    if (!$('#panel-race').hidden) setParams({ tab: 'race', series: s, ed, open: openId });
+    // 区間成績のある回は「区間成績」ボタンを出す
+    const tableEl = $('#race-table');
+    const token = (renderRace.token = (renderRace.token || 0) + 1);  // 描き直したら前の描画の処理は捨てる
+    loadKukan(s).then((K) => {
+      if (!K || !K.editions.has(edOf(tk)) || token !== renderRace.token) return;
+      tableEl.querySelectorAll('.leg-toggle').forEach((b) => {
+        if (!K.byResult.has(b.dataset.legs)) return;
+        b.hidden = false;
+        b.addEventListener('click', () => toggleLegs(b, K, ncol, s, ed));
+        if (b.dataset.legs === openId) toggleLegs(b, K, ncol, s, ed, true);
+      });
+    });
+  }
+
+  // 予選会の成績表（第2段階 工程22）
+  function renderQualifier(openId) {
+    const s = $('#r-series').value;
+    const tid = $('#r-edition').value;
+    const t = Q.taikai.get(tid);
+    renderRace.token = (renderRace.token || 0) + 1;
+    if (!t) { $('#race-head').innerHTML = ''; $('#race-table').innerHTML = ''; return; }
+    const rows = (Q.byTaikai.get(tid) || []).slice().sort((a, b) =>
+      (b.qualified - a.qualified) * 0 || (a.overall_rank || 999) - (b.overall_rank || 999) || a.name_at_entry.localeCompare(b.name_at_entry, 'ja'));
+    const passed = rows.filter((r) => r.qualified).length;
+    const facts = [t.date ? fmtDate(t.date) : `${t.year}年`, `${rows.length}チーム`, `通過 ${passed}校`].join('　');
+    const main = S.taikaiById.get(t.qualifies_for);
+    $('#race-head').innerHTML = `<h2>${Q_NAME[t.series]} ${qLabel(t)}</h2><p>${esc(facts)}</p>
+      ${main ? `<p>通過したチームが出る大会: <button type="button" class="link" data-main="${main.series}|${edOf(main)}">${raceTitle(main)}</button></p>` : ''}
+      <p>出典: <a href="${esc(t.source_url)}" target="_blank" rel="noopener">${esc(t.source_name || '公式の記録')} ↗</a>${t.note ? '　' + esc(t.note) : ''}</p>`;
+    const hasRunners = t.series === 'hakone';
+    const timed = rows.some((r) => r.overall_time);
+    $('#race-table').innerHTML = `<thead><tr><th class="num">順位</th><th>チーム</th>${timed ? '<th class="num">記録</th>' : ''}<th>結果</th></tr></thead><tbody>${
+      rows.map((r) => {
+        const team = S.teamById.get(r.team_id) || { id: r.team_id, display_name: r.name_at_entry };
+        const name = esc(team.display_name) + (r.name_at_entry !== team.display_name ? `<small class="dim">（記録上の名前 ${esc(r.name_at_entry)}）</small>` : '');
+        const btn = hasRunners && r.overall_time ? `<button type="button" class="leg-toggle" data-runners="${r.id}" aria-expanded="false" aria-controls="runners-${r.id}">10人の記録</button>` : '';
+        const rank = r.overall_rank ? `${r.overall_rank}位` : (r.result_status === 'dnf' ? '<span class="status">記録なし</span>' : '—');
+        return `<tr class="${r.qualified ? 'q-row-pass' : ''}" data-result="${r.id}"><td class="num">${rank}</td><td><button type="button" class="link" data-team="${team.id}">${name}</button>${btn}${r.note ? `<br><small class="dim">${esc(r.note)}</small>` : ''}</td>${timed ? `<td class="num">${esc(r.overall_time || '—')}</td>` : ''}<td>${qResultText(r)}</td></tr>`;
+      }).join('')}</tbody>`;
+    const ncol = timed ? 4 : 3;
+    $('#race-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
+    $('#race-head').querySelectorAll('[data-main]').forEach((b) => b.addEventListener('click', () => {
+      const [ms, med] = b.dataset.main.split('|'); $('#r-series').value = ms; fillEditions(); $('#r-edition').value = med; renderRace();
+    }));
+    if (!$('#panel-race').hidden) setParams({ tab: 'race', series: s, ed: tid, open: openId });
+    $('#race-table').querySelectorAll('[data-runners]').forEach((b) => {
+      b.addEventListener('click', () => toggleRunners(b, ncol, s, tid));
+      if (b.dataset.runners === openId) toggleRunners(b, ncol, s, tid, true);
+    });
+  }
+  function toggleRunners(b, ncol, s, tid, scroll) {
+    const tr = b.closest('tr');
+    if (b.getAttribute('aria-expanded') === 'true') {
+      const next = tr.nextElementSibling;
+      if (next && next.classList.contains('legs-row')) next.remove();
+      b.setAttribute('aria-expanded', 'false'); b.textContent = '10人の記録';
+      setParams({ tab: 'race', series: s, ed: tid });
+      return;
+    }
+    b.setAttribute('aria-expanded', 'true'); b.textContent = '10人の記録を閉じる';
+    loadQRunners().then((m) => {
+      const list = (m && m.get(b.dataset.runners)) || [];
+      tr.insertAdjacentHTML('afterend', `<tr class="legs-row" id="runners-${b.dataset.runners}"><td colspan="${ncol}"><div class="table-scroll"><table class="leg-table"><caption class="sr-only">チームの合計に入った10人</caption><thead><tr><th class="num">チーム内</th><th class="num">個人順位</th><th>選手</th><th class="num">学年</th><th class="num">記録</th></tr></thead><tbody>${
+        list.map((x) => `<tr><td class="num">${x.order_in_team}</td><td class="num">${x.place}位</td><td>${x.runner_name ? esc(x.runner_name) : '<span class="dim">（名前は伏せています）</span>'}</td><td class="num">${esc(x.runner_grade || '')}</td><td class="num">${esc(x.time)}</td></tr>`).join('')}</tbody></table></div></td></tr>`);
+      setParams({ tab: 'race', series: s, ed: tid, open: b.dataset.runners });
+      if (scroll) tr.scrollIntoView({ block: 'center' });
+    });
+  }
+
+  function toggleLegs(b, K, ncol, s, ed, scroll) {
+    const tr = b.closest('tr');
+    const open = b.getAttribute('aria-expanded') === 'true';
+    const next = tr.nextElementSibling;
+    if (open) {
+      if (next && next.classList.contains('legs-row')) next.remove();
+      b.setAttribute('aria-expanded', 'false');
+      b.textContent = '区間成績';
+      setParams({ tab: 'race', series: s, ed });
+      return;
+    }
+    const legs = K.byResult.get(b.dataset.legs).slice().sort((a, c) => a.leg - c.leg);
+    tr.insertAdjacentHTML('afterend', `<tr class="legs-row" id="legs-${b.dataset.legs}"><td colspan="${ncol}"><div class="table-scroll">${legTable(legs)}</div></td></tr>`);
+    b.setAttribute('aria-expanded', 'true');
+    b.textContent = '区間成績を閉じる';
+    setParams({ tab: 'race', series: s, ed, open: b.dataset.legs });
+    if (scroll) tr.scrollIntoView({ block: 'center' });
   }
 
   /* ---------- 駅伝の基本 ---------- */
   const SVGNS = 'http://www.w3.org/2000/svg';
-  const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)' };
-  const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e' };
-  let activeCourseMap = null;
-  let activeSectionMap = null;
+  const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
   function loadBasics() {
     getJson('basics.json').then((b) => { S.basics = b; renderBasics(); })
       .catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
@@ -319,7 +592,7 @@
   }
   function renderBasics() {
     const B = S.basics;
-    const races = B.races;
+    const races = B.races.filter((r) => (r.gender || 'men') === G);
     const rows = [
       ['時期', (r) => r.month],
       ['スタート', (r) => r.start],
@@ -337,13 +610,18 @@
 
     $('#basics-teams').innerHTML = teamsChart(races);
 
+    const pills = document.querySelector('.basics-pills');
+    pills.innerHTML = races.map((r) => `<button type="button" data-course="${r.series}">${esc(r.name)}</button>`).join('');
     document.querySelectorAll('[data-course]').forEach((b) => b.addEventListener('click', () => showCourse(b.dataset.course)));
-    showCourse('hakone');
+    if (races[0]) showCourse(races[0].series);
 
     $('#basics-relay').innerHTML = relayFigure() + `<p class="basics-src">出典: ${srcLink(B.relay_rules.zone.source, B.relay_rules.zone.role)}</p>`;
+    const kuriage = SERIES.map((s) => B.relay_rules.kuriage.find((k) => k.series === s)).filter(Boolean);
     $('#basics-kuriage').innerHTML = `<thead><tr><th>大会</th><th>決まり</th><th>出典</th></tr></thead><tbody>${
-      SERIES.map((s) => B.relay_rules.kuriage.find((k) => k.series === s)).filter(Boolean).map((k) =>
-        `<tr><th scope="row">${SERIES_NAME[k.series]}</th><td class="wrap">${esc(k.text)}</td><td class="wrap">${srcLink(k.source, k.role)}</td></tr>`).join('')}</tbody>`;
+      kuriage.length ? kuriage.map((k) =>
+        `<tr><th scope="row">${SERIES_NAME[k.series]}</th><td class="wrap">${esc(k.text)}</td><td class="wrap">${srcLink(k.source, k.role)}</td></tr>`).join('')
+        : '<tr><td colspan="3" class="wrap">女子2大会の大会別の繰り上げ規定は、公式資料で確認できた内容を今後追加します。</td></tr>'
+    }</tbody>`;
     $('#basics-terms').innerHTML = B.terms.map((t) => `<div><dt>${esc(t.term)}</dt><dd>${esc(t.text)}</dd></div>`).join('');
   }
 
@@ -369,13 +647,13 @@
     const H = top + races.length * gap - 6;
     const legend = races.map((r) => `<div class="team-legend" data-series="${r.series}"><b>${esc(r.name)}</b><ul>${
       r.team_parts.map((p, j) => `<li><i style="opacity:${shade[j]}"></i>${esc(p.label)} <b>${p.n}</b></li>`).join('')}</ul><p class="basics-note">${esc(r.team_note)}</p></div>`).join('');
-    return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="三大駅伝の出場チームの内訳">${g}</svg><div class="team-legends">${legend}</div>`;
+    return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="${G === 'women' ? '女子2大会' : '男子三大駅伝'}の出場チームの内訳">${g}</svg><div class="team-legends">${legend}</div>`;
   }
 
   function showCourse(series) {
     document.querySelectorAll('[data-course]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.course === series));
     const r = S.basics.races.find((x) => x.series === series);
-    let fig = courseOverview(r);
+    let fig = ['izumo', 'zennihon', 'hakone'].includes(series) ? courseOverview(r) : '';
     if (series === 'hakone') {
       fig += courseStrip(r, r.legs.slice(0, 5), r.points.slice(0, 6), '往路（1月2日）大手町 → 芦ノ湖', true)
           + courseStrip(r, r.legs.slice(5), r.points.slice(5), '復路（1月3日）芦ノ湖 → 大手町', false);
@@ -383,7 +661,7 @@
       fig += courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
     }
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
-    requestAnimationFrame(() => {
+    if (['izumo', 'zennihon', 'hakone'].includes(series)) requestAnimationFrame(() => {
       renderCourseMap(r);
       if (series === 'hakone') initHakoneSectionGuide(r);
       if (series === 'izumo') initIzumoSectionGuide(r);
@@ -397,7 +675,6 @@
     $('#basics-course-src').innerHTML = '出典: ' + r.sources.map((s) => srcLink(s)).join('、');
   }
 
-  // 公式の地点名・住所を国土地理院住所検索で照合した地図と、公式説明に基づく起伏図。
   // 地点間の線は位置関係を示すもので、実際の道路形状とは区別して表示する。
   function courseOverview(r) {
     const layouts = {
@@ -693,31 +970,22 @@
     activeCourseMap.fitBounds(line.getBounds(), { padding: [28, 28] });
   }
 
-  // 区間の長さに合わせたコース図。mountain=true で5区の標高イメージを添える
+  // 区間の長さに合わせた帯の図。mountain=true で5区に最高点の印
   function courseStrip(r, legs, points, title, mountain) {
-    const W = 760, L = 38, R = 38, y = mountain ? 118 : 88, H = y + 92;
+    const W = 760, L = 30, R = 30, y = mountain ? 92 : 62, H = y + 84;
     const total = legs.reduce((a, l) => a + l.km, 0);
     const scale = (W - L - R) / total;
-    const totalLabel = `${Math.round(total * 10) / 10}km`;
-    let x = L, g = `<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="18" fill="#faf9f5" stroke="var(--line)"/>
-      <text x="${L}" y="29" font-size="14" font-weight="800" fill="var(--ink)">${esc(title)}</text>
-      <rect x="${W - R - 66}" y="13" width="66" height="25" rx="12.5" fill="${COLOR[r.series]}" fill-opacity=".11"/>
-      <text x="${W - R - 33}" y="30" font-size="12" font-weight="700" text-anchor="middle" fill="${COLOR[r.series]}">${totalLabel}</text>
-      <path d="M${L} ${y} H${W - R}" stroke="var(--line)" stroke-width="8" stroke-linecap="round"/>`;
+    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="700" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
     const xs = [x];
     legs.forEach((l, i) => {
       const w = l.km * scale;
-      const mid = x + w / 2;
-      g += `<path d="M${(x + 2).toFixed(1)} ${y} H${(x + w - 2).toFixed(1)}" stroke="${COLOR[r.series]}" stroke-width="8" stroke-linecap="round" opacity="${i % 2 ? .64 : 1}"/>`;
-      g += `<circle cx="${mid.toFixed(1)}" cy="${y}" r="15" fill="#fff" stroke="${COLOR[r.series]}" stroke-width="2.5"/>
-        <text x="${mid.toFixed(1)}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="800" fill="${COLOR[r.series]}">${l.no}</text>
-        <text x="${mid.toFixed(1)}" y="${y - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">${l.no}区</text>
-        <text x="${mid.toFixed(1)}" y="${y + 37}" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
+      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${COLOR[r.series]}" fill-opacity="${i % 2 ? 0.55 : 0.9}"/>`;
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">${l.no}区</text>`;
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
       if (mountain && l.no === 5) {
-        const mx = x + w * 0.56;
-        g += `<path d="M${(x + 5).toFixed(1)} ${y - 39} Q${(x + w * .25).toFixed(1)} ${y - 47} ${mx.toFixed(1)} ${y - 72} T${(x + w - 4).toFixed(1)} ${y - 43}" fill="none" stroke="${COLOR[r.series]}" stroke-width="2" opacity=".38"/>
-          <circle cx="${mx.toFixed(1)}" cy="${y - 72}" r="4" fill="${COLOR[r.series]}"/>
-          <text x="${(mx - 7).toFixed(1)}" y="${y - 80}" text-anchor="end" font-size="11" font-weight="700" fill="var(--ink)">最高点 約874m</text>`;
+        const mx = x + w * 0.55;
+        g += `<path d="M${(x + 6).toFixed(1)} ${y - 30} L${mx.toFixed(1)} ${y - 62} L${(x + w - 8).toFixed(1)} ${y - 34} Z" fill="#e9e5d8" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>`;
+        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 62}" r="3.5" fill="var(--ink)"/><text x="${(mx - 8).toFixed(1)}" y="${y - 70}" text-anchor="end" font-size="11.5" fill="var(--ink)">最高点 標高約874m</text>`;
       }
       x += w;
       xs.push(x);
@@ -725,52 +993,41 @@
     points.forEach((p, i) => {
       const px = Math.min(xs[i], W - R);
       const end = i === 0 || i === points.length - 1;
-      if (end) g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="8" fill="${COLOR[r.series]}" stroke="#fff" stroke-width="3"/>`;
+      g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2"/>`;
       const anchor = i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'middle';
-      if (!end) g += `<line x1="${px.toFixed(1)}" y1="${y + 17}" x2="${px.toFixed(1)}" y2="${y + 50 + (i % 2) * 17}" stroke="var(--line)" stroke-width="1.5"/>`;
-      g += `<text x="${(i === 0 ? px - 2 : i === points.length - 1 ? px + 2 : px).toFixed(1)}" y="${y + (end ? 61 : 62 + (i % 2) * 17)}" text-anchor="${anchor}" font-size="11.5" font-weight="${end ? 800 : 500}" fill="var(--ink)">${esc(p)}</text>`;
+      if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 8}" x2="${px.toFixed(1)}" y2="${y + 50}" stroke="var(--line)" stroke-width="1.5"/>`;
+      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 700 : 400}" fill="var(--ink)">${esc(p)}</text>`;
     });
     return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
   }
 
   // たすきの受け渡しの図（中継線と前方20mの中継ゾーン）
   function relayFigure() {
-    const runner = (cx, cy, flip, bib, sash) => `<g transform="translate(${cx},${cy}) scale(${flip ? -1 : 1},1)">
-      <circle cx="2" cy="-48" r="12" fill="var(--ink)"/>
-      <path d="M-5 -35 Q8 -38 16 -25 L21 1 Q12 13 -3 8 L-14 -18 Q-13 -30 -5 -35Z" fill="${bib}"/>
-      <path d="M-10 -24 Q-28 -13 -36 4 M15 -23 Q29 -11 41 -4" fill="none" stroke="var(--ink)" stroke-width="8" stroke-linecap="round"/>
-      <path d="M3 8 Q-5 29 -28 46 M12 7 Q26 23 39 44" fill="none" stroke="var(--ink)" stroke-width="9" stroke-linecap="round"/>
-      <path d="M-37 4 L-45 9 M41 -4 L49 -1 M-29 46 L-39 49 M39 44 L49 46" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
-      <rect x="-1" y="-24" width="13" height="15" rx="2" fill="#fff" opacity=".92"/>
-      ${sash ? `<path d="M-10 -29 L17 5" stroke="#d4a719" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
-    const W = 760, H = 268, x0 = 240, zone = 360;
+    const runner = (cx, color, sash) => `<g transform="translate(${cx},0)">
+      <circle cx="0" cy="62" r="11" fill="${color}"/>
+      <path d="M0 74 L0 112 M0 84 L-16 100 M0 84 L18 94 M0 112 L-14 140 M0 112 L16 138" stroke="${color}" stroke-width="7" stroke-linecap="round" fill="none"/>
+      ${sash ? `<path d="M-7 76 L9 108" stroke="#c9a227" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
+    const W = 720, H = 222, x0 = 270, zone = 260;
     return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="たすきの受け渡しは中継線から前方20mの中継ゾーンで行う">
-      <defs><marker id="relay-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
-      <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="18" fill="#faf9f5" stroke="var(--line)"/>
-      <rect x="${x0}" y="45" width="${zone}" height="156" rx="14" fill="var(--gold-soft)"/>
-      <text x="${x0 + 18}" y="68" font-size="12" font-weight="800" fill="#876c13">20m 中継ゾーン</text>
-      <path d="M28 174 H732" stroke="#ded9ca" stroke-width="22" stroke-linecap="round"/>
-      <path d="M28 174 H732" stroke="#fff" stroke-width="2" stroke-dasharray="18 12" opacity=".9"/>
-      <line x1="${x0}" y1="35" x2="${x0}" y2="211" stroke="var(--ink)" stroke-width="4"/>
-      <rect x="${x0 - 36}" y="14" width="72" height="25" rx="12.5" fill="var(--ink)"/>
-      <text x="${x0}" y="31" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">中継線</text>
-      ${runner(342, 145, false, 'var(--hakone)', true)}${runner(487, 145, false, '#315c8a', false)}
-      <path d="M386 117 Q421 92 452 111" stroke="#d4a719" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="7 7" marker-end="url(#relay-arrow)"/>
-      <rect x="374" y="63" width="91" height="26" rx="13" fill="#fff" stroke="var(--line)"/>
-      <text x="419.5" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">たすきを渡す</text>
-      <path d="M${x0 + 8} 226 H${x0 + zone - 8}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#relay-arrow)" marker-start="url(#relay-arrow)"/>
-      <text x="${x0 + zone / 2}" y="251" text-anchor="middle" font-size="13" font-weight="800" fill="var(--ink)">中継線から前方20m</text>
-      <path d="M635 112 H710" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#relay-arrow)"/>
-      <text x="672" y="101" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink-soft)">進む向き</text>
-      <text x="55" y="94" font-size="12" font-weight="700" fill="var(--ink)">前の区間の選手</text>
-      <text x="55" y="112" font-size="11.5" fill="var(--ink-soft)">中継線へ走ってくる</text>
+      <rect x="20" y="146" width="${W - 40}" height="14" rx="4" fill="#e9e5d8"/>
+      <rect x="${x0}" y="40" width="${zone}" height="126" rx="8" fill="var(--gold-soft)" fill-opacity=".75"/>
+      <line x1="${x0}" y1="34" x2="${x0}" y2="166" stroke="var(--ink)" stroke-width="3"/>
+      <text x="${x0}" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継線</text>
+      <text x="${x0 + zone / 2}" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継ゾーン（中継線から前方20m）</text>
+      <path d="M${x0 + 4} 182 H${x0 + zone - 4}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
+      ${runner(330, 'var(--ink-soft)', true)}${runner(420, 'var(--ink-soft)', false)}
+      <path d="M352 96 Q376 78 400 92" stroke="#c9a227" stroke-width="3" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+      <text x="376" y="58" text-anchor="middle" font-size="12" fill="var(--ink-soft)">たすき</text>
+      <text x="${W - 30}" y="120" text-anchor="end" font-size="13" fill="var(--ink-soft)">進む向き →</text>
+      <text x="40" y="70" font-size="12.5" fill="var(--ink-soft)">前の区間の選手</text><text x="40" y="90" font-size="12.5" fill="var(--ink-soft)">が走ってくる</text>
     </svg>`;
   }
 
   /* ---------- 記録から探す ---------- */
   function renderRecord() {
     const crowns = [];
-    S.summary.forEach((sm) => (sm.triple_crown_seasons || []).forEach((y) => crowns.push([y, sm.team_id])));
+    S.summary.forEach((sm) => (sm[GENDER[G].crownKey] || []).forEach((y) => crowns.push([y, sm.team_id])));
     crowns.sort((a, b) => a[0] - b[0]);
     $('#triple-list').innerHTML = crowns.map(([y, tid]) => `<li>${seasonLabel(y)} <button type="button" class="link" data-team="${tid}">${esc(S.teamById.get(tid).display_name)}</button></li>`).join('') || '<li>収録範囲ではなし</li>';
     const wins = [...S.summary.values()].map((sm) => ({ tid: sm.team_id, w: SERIES.map((s) => sm.series[s]?.wins || 0) }))
@@ -782,14 +1039,13 @@
   }
   function renderWinners() {
     const s = $('#w-series').value;
-    const list = S.taikai.filter((t) => t.series === s).sort((a, b) => b.edition - a.edition);
+    const list = S.taikai.filter((t) => t.series === s).sort((a, b) => edOf(b) - edOf(a));
     $('#winners-table').innerHTML = `<thead><tr><th class="num">回</th><th>年</th><th>優勝</th><th class="num">記録</th></tr></thead><tbody>${
       list.map((t) => {
         const team = t.winner_team_id && S.teamById.get(t.winner_team_id);
         const name = t.status === 'cancelled' ? '<span class="status">中止</span>' : team ? `<button type="button" class="link" data-team="${team.id}">${esc(t.winner_name)}</button>` : esc(t.winner_name || '');
-        return `<tr><td class="num">${t.edition}</td><td>${t.year}</td><td>${name}</td><td class="num">${esc(t.winning_time || '')}</td></tr>`;
+        return `<tr><td class="num">${t.series === 'wfujisan' ? '' : t.edition}</td><td>${t.year}</td><td>${name}</td><td class="num">${esc(t.winning_time || '')}</td></tr>`;
       }).join('')}</tbody>`;
     $('#winners-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
   }
 })();
-
