@@ -590,7 +590,7 @@
   const SVGNS = 'http://www.w3.org/2000/svg';
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
   function loadBasics() {
-    getJson('basics.json?v=20261108-2').then((b) => {
+    getJson('basics.json?v=20261108-3').then((b) => {
       BASICS = b;
       S.basics = BASICS;
       renderBasics();
@@ -662,7 +662,7 @@
   function showCourse(series) {
     document.querySelectorAll('[data-course]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.course === series));
     const r = S.basics.races.find((x) => x.series === series);
-    let fig = ['izumo', 'zennihon', 'hakone'].includes(series) ? courseOverview(r) : '';
+    let fig = courseOverview(r);
     if (series === 'hakone') {
       fig += courseStrip(r, r.legs.slice(0, 5), r.points.slice(0, 6), '往路（1月2日）大手町 → 芦ノ湖', true)
           + courseStrip(r, r.legs.slice(5), r.points.slice(5), '復路（1月3日）芦ノ湖 → 大手町', false);
@@ -670,11 +670,12 @@
       fig += courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
     }
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
-    if (['izumo', 'zennihon', 'hakone'].includes(series)) requestAnimationFrame(() => {
-      renderCourseMap(r);
+    requestAnimationFrame(() => {
+      if (['izumo', 'zennihon', 'hakone'].includes(series)) renderCourseMap(r);
       if (series === 'hakone') initHakoneSectionGuide(r);
       if (series === 'izumo') initIzumoSectionGuide(r);
       if (series === 'zennihon') initZennihonSectionGuide(r);
+      if (series === 'wzennihon' || series === 'wfujisan') initWomenSectionGuide(r);
     });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
@@ -686,6 +687,7 @@
 
   // 地点間の線は位置関係を示すもので、実際の道路形状とは区別して表示する。
   function courseOverview(r) {
+    if (r.series === 'wzennihon' || r.series === 'wfujisan') return womenCourseOverview(r);
     const layouts = {
       izumo: {
         coords: [[35.392628,132.684174],[35.36705,132.754578],[35.387589,132.808548],[35.442329,132.825989],[35.403526,132.777512],[35.395527,132.711395],[35.382694,132.739319]],
@@ -713,6 +715,67 @@
         ${elevationFeatureGraphic(r)}
       </section>
     </div>${r.series === 'hakone' ? hakoneSectionGuide(r) : r.series === 'izumo' ? izumoSectionGuide(r) : r.series === 'zennihon' ? zennihonSectionGuide(r) : ''}`;
+  }
+
+
+  function womenCourseOverview(r) {
+    const mapLabel = r.series === 'wzennihon' ? '公式コース・交通規制図' : '公式コースマップ';
+    return `<div class="course-overview-grid">
+      <section class="course-map-card" aria-label="${esc(r.name)}の公式コース地図">
+        <div class="course-map-head"><h3>コース地図</h3><span>公式資料で確認</span></div>
+        <div class="course-map" style="display:grid;place-items:center;padding:1.4rem;text-align:center;background:linear-gradient(145deg,#f6f2ea,#fff)">
+          <div><b style="display:block;font-size:1.12rem;margin-bottom:.55rem">${esc(mapLabel)}</b><p style="margin:0 0 1rem;color:var(--muted)">推測した道路線ではなく、大会公式の地図を開きます。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式地図を開く ↗</a></div>
+        </div>
+        <p class="course-map-note">中継所名と区間距離は下の区間表示でも確認できます。</p>
+      </section>
+      <section class="course-elevation-card" aria-label="${esc(r.name)}の高低差の特徴">
+        <div class="course-elevation-head"><h3>高低差の特徴</h3><span>公式発表だけで読む</span></div>
+        ${elevationFeatureGraphic(r)}
+      </section>
+    </div>${womenSectionGuide(r)}`;
+  }
+
+  function womenSectionGuide(r) {
+    return `<section class="hakone-section-guide women-section-guide" aria-labelledby="women-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="women-section-title">1区ずつ、走る場所と特徴を見る</h3></div>
+        <div class="hakone-section-switch" role="group" aria-label="${esc(r.name)}の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-women-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
+      </div>
+      <div id="women-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div id="women-section-profile" class="hakone-section-profile" style="max-width:760px;margin:1rem auto 0"></div>
+    </section>`;
+  }
+
+  function initWomenSectionGuide(r) {
+    document.querySelectorAll('[data-women-section]').forEach((button) => button.addEventListener('click', () => renderWomenSection(r, Number(button.dataset.womenSection))));
+    renderWomenSection(r, 1);
+  }
+
+  function renderWomenSection(r, no) {
+    const leg = r.legs.find((item) => item.no === no);
+    if (!leg) return;
+    document.querySelectorAll('[data-women-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.womenSection) === no)));
+    $('#women-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note)}</p>`;
+    $('#women-section-profile').innerHTML = womenSectionProfile(r, leg);
+  }
+
+  function womenSectionProfile(r, leg) {
+    const fujisan = {
+      1:['M18 91 C62 56 100 112 143 82 S230 56 302 89','20mの上り下り'],
+      2:['M18 38 C84 53 148 81 212 103 S270 119 302 126','高低差98mの長い下り'],
+      3:['M18 88 C92 85 164 89 230 86 S276 88 302 86','ほぼ平坦'],
+      4:['M18 88 C92 85 164 89 230 86 S276 88 302 86','ほぼ平坦・冬の風'],
+      7:['M18 116 C87 114 133 111 169 97 S226 55 302 25','3km過ぎから4.6kmで169m上る'],
+    };
+    const wzen = {
+      1:['M18 88 C92 85 164 89 230 86 S276 88 302 86','比較的平坦'],
+      4:['M18 92 C62 64 94 109 132 78 S190 59 223 94 S270 106 302 76','緩やかなアップダウン'],
+      5:['M18 106 C78 105 116 96 153 77 S220 31 258 52 S282 72 302 68','仙台城跡周辺の長い上り'],
+    };
+    const p = (r.series === 'wfujisan' ? fujisan : wzen)[leg.no];
+    const graphic = p ? `<svg class="section-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${esc(p[1])}"><path d="${p[0]}" class="section-profile-area"/><path d="${p[0]}" class="section-profile-line"/><text x="160" y="20" text-anchor="middle">${esc(p[1])}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">${leg.km.toFixed(1)}km</text></svg>`
+      : `<div class="section-no-elevation"><b>推測の高低曲線は描いていません</b><p>公式紹介に具体的な起伏が示されていないため、走る場所と区間の特徴を文字で確認できます。</p></div>`;
+    return `<h4>${leg.no}区の走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離・中継所・特徴は大会公式資料に基づきます。曲線は公式説明の模式図で、標高の実測グラフではありません。</p>`;
   }
 
   function zennihonSectionGuide(r) {
@@ -921,6 +984,23 @@
   // 標高値が公表されていない地点を数値化せず、公式コース説明にある
   // 「アップダウン」「平ら」「山上り・山下り」を地点・区間と結び付けて示す。
   function elevationFeatureGraphic(r) {
+    if (r.series === 'wfujisan') {
+      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="富士山女子駅伝は2区で98メートル下り、7区は3キロ過ぎから4.6キロで169メートル上る">
+        <path d="M28 65 C75 78 111 107 151 127 S205 144 252 147 C285 146 314 120 342 78 S375 31 392 24" fill="none" stroke="#a12b6d" stroke-width="7" stroke-linecap="round"/>
+        <line x1="28" y1="170" x2="392" y2="170" class="elev-base"/>
+        <text x="28" y="196" class="elev-place">浅間大社</text><text x="150" y="196" text-anchor="middle" class="elev-place">2区終点</text><text x="392" y="196" text-anchor="end" class="elev-place">競技場</text>
+        <text x="96" y="53" text-anchor="middle" class="elev-kicker">2区　高低差98mの下り</text><text x="326" y="112" text-anchor="middle" class="elev-kicker">7区　169m上る</text>
+        <circle cx="392" cy="24" r="6" fill="#fff" stroke="#a12b6d" stroke-width="4"/><text x="388" y="14" text-anchor="end" class="elev-peak">最高標高176m</text>
+      </svg><p class="course-elevation-note"><b>読みどころ:</b> 全体の高低差は174m。2区の長い下りと、最終7区の厳しい上りが対照的です。</p>`;
+    }
+    if (r.series === 'wzennihon') {
+      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="全日本大学女子駅伝は1区が比較的平坦、4区に緩やかなアップダウン、5区に仙台城跡周辺の長い上りがある">
+        <path d="M28 145 C75 142 110 147 149 143 C177 118 197 165 224 132 C250 126 270 81 300 58 S348 91 392 83" fill="none" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+        <line x1="28" y1="170" x2="392" y2="170" class="elev-base"/>
+        <text x="70" y="204" text-anchor="middle" class="elev-place">1区 比較的平坦</text><text x="205" y="204" text-anchor="middle" class="elev-place">4区 緩やかな起伏</text><text x="334" y="204" text-anchor="middle" class="elev-place">5区 長い上り</text>
+        <text x="315" y="45" text-anchor="middle" class="elev-kicker">仙台城跡周辺</text>
+      </svg><p class="course-elevation-note"><b>読みどころ:</b> 具体的な標高値は公表資料にないため、公式紹介に明記された区間の特徴だけを示します。</p>`;
+    }
     if (r.series === 'hakone') {
       return `<svg class="course-elevation" viewBox="0 0 420 340" role="img" aria-label="箱根駅伝は5区で国道1号の最高点約874メートルへ上り、復路6区で山を下る。2区・7区・8区にも起伏がある">
         <defs><linearGradient id="hakoneMountain" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d9eee9"/><stop offset="1" stop-color="#75b7a7"/></linearGradient></defs>
@@ -1010,26 +1090,21 @@
     return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
   }
 
-  // たすきの受け渡しの図（中継線と前方20mの中継ゾーン）
+  // 人物は生成済みのアニメ風イラストを使い、線や距離表示だけをSVGで重ねる。
   function relayFigure() {
-    const runner = (cx, color, sash) => `<g transform="translate(${cx},0)">
-      <circle cx="0" cy="62" r="11" fill="${color}"/>
-      <path d="M0 74 L0 112 M0 84 L-16 100 M0 84 L18 94 M0 112 L-14 140 M0 112 L16 138" stroke="${color}" stroke-width="7" stroke-linecap="round" fill="none"/>
-      ${sash ? `<path d="M-7 76 L9 108" stroke="#c9a227" stroke-width="6" stroke-linecap="round"/>` : ''}</g>`;
-    const W = 720, H = 222, x0 = 270, zone = 260;
+    const W = 720, H = 250, x0 = 250, zone = 360;
+    const art = G === 'women' ? 'assets/relay-women.webp' : 'assets/relay-men.webp';
     return `<svg class="fig" viewBox="0 0 ${W} ${H}" role="img" aria-label="たすきの受け渡しは中継線から前方20mの中継ゾーンで行う">
-      <rect x="20" y="146" width="${W - 40}" height="14" rx="4" fill="#e9e5d8"/>
-      <rect x="${x0}" y="40" width="${zone}" height="126" rx="8" fill="var(--gold-soft)" fill-opacity=".75"/>
-      <line x1="${x0}" y1="34" x2="${x0}" y2="166" stroke="var(--ink)" stroke-width="3"/>
-      <text x="${x0}" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継線</text>
-      <text x="${x0 + zone / 2}" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継ゾーン（中継線から前方20m）</text>
-      <path d="M${x0 + 4} 182 H${x0 + zone - 4}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
+      <rect x="18" y="165" width="${W - 36}" height="14" rx="4" fill="#e9e5d8"/>
+      <rect x="${x0}" y="36" width="${zone}" height="150" rx="14" fill="var(--gold-soft)" fill-opacity=".62"/>
+      <line x1="${x0}" y1="30" x2="${x0}" y2="186" stroke="var(--ink)" stroke-width="3"/>
+      <text x="${x0}" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継線</text>
+      <image href="${art}" x="265" y="42" width="320" height="164" preserveAspectRatio="xMidYMid meet"/>
+      <path d="M${x0 + 4} 214 H${x0 + zone - 4}" stroke="var(--ink)" stroke-width="1.5" marker-end="url(#arr)" marker-start="url(#arr)"/>
       <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink)"/></marker></defs>
-      ${runner(330, 'var(--ink-soft)', true)}${runner(420, 'var(--ink-soft)', false)}
-      <path d="M352 96 Q376 78 400 92" stroke="#c9a227" stroke-width="3" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-      <text x="376" y="58" text-anchor="middle" font-size="12" fill="var(--ink-soft)">たすき</text>
-      <text x="${W - 30}" y="120" text-anchor="end" font-size="13" fill="var(--ink-soft)">進む向き →</text>
-      <text x="40" y="70" font-size="12.5" fill="var(--ink-soft)">前の区間の選手</text><text x="40" y="90" font-size="12.5" fill="var(--ink-soft)">が走ってくる</text>
+      <text x="${x0 + zone / 2}" y="239" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">中継ゾーン（中継線から前方20m）</text>
+      <text x="38" y="90" font-size="13" fill="var(--ink-soft)">前の区間の選手が</text><text x="38" y="112" font-size="13" fill="var(--ink-soft)">たすきをつなぐ</text>
+      <text x="${W - 28}" y="146" text-anchor="end" font-size="13" fill="var(--ink-soft)">進む向き →</text>
     </svg>`;
   }
 
