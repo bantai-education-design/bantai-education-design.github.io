@@ -368,3 +368,12 @@ body[data-gender="women"] .entry-women {
     border-radius: 16px;
   }
 }
+
+/* 女子2大会の公式コース地図。PDFが表示できない端末には常設のリンクを残す */
+.official-map-wrap{background:#f6f2ea;border-radius:0 0 16px 16px;overflow:hidden}
+.official-map-frame{display:block;width:100%;height:520px;border:0;background:#fff}
+.official-map-fallback{padding:14px 18px 18px;text-align:center;border-top:1px solid var(--line)}
+.official-map-fallback b{display:block;font-size:1rem;margin-bottom:4px}
+.official-map-fallback p{margin:0 0 10px;color:var(--muted);font-size:.88rem}
+@media (max-width:768px){.official-map-frame{height:420px}}
+@media (max-width:480px){.official-map-frame{height:340px}.official-map-fallback{padding:12px}.official-map-fallback .button{display:block;width:100%;box-sizing:border-box}}
