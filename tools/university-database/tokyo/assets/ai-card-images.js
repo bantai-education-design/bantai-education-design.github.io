@@ -21,7 +21,7 @@ async function applyVerifiedAcademicStructure(){try{const urls=['data/academic-s
 async function applyVerifiedDepartmentPatches(){try{const response=await fetch('data/departments-mejiro-verified.json');if(!response.ok)return;const registry=await response.json();const apply=()=>{if(!state.rows.length){setTimeout(apply,90);return;}const universityId=registry.university_id;const records=(registry.records||[]).map(x=>({...x,university_id:universityId||x.university_id}));if(universityId&&records.length)state.departments.set(universityId,mergeById(state.departments.get(universityId)||[],records));updateSnapshot();updateGuiCoverage();updateCompare();render();};apply();}catch{}}
 const coverageTimer=setInterval(()=>{if(state.rows.length){updateGuiCoverage();applyCardThemes();clearInterval(coverageTimer);}},120);
 applyVerifiedLocations();applyVerifiedProfileOverlays();applyVerifiedAcademicStructure();applyVerifiedDepartmentPatches();
-const detailCss=document.createElement('link');detailCss.rel='stylesheet';detailCss.href='assets/detail-layer.css';document.head.appendChild(detailCss);const detailScript=document.createElement('script');detailScript.src='assets/detail-layer.js';detailScript.defer=true;document.head.appendChild(detailScript);
+const detailCss=document.createElement('link');detailCss.rel='stylesheet';detailCss.href='assets/detail-layer.css';document.head.appendChild(detailCss);const detailScript=document.createElement('script');detailScript.src='assets/detail-layer.js?v=20261108';detailScript.defer=true;document.head.appendChild(detailScript);
 })();
 
 (async()=>{

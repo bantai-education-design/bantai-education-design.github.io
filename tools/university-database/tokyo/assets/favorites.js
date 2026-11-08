@@ -87,7 +87,7 @@ const cardScript=document.createElement('script');cardScript.src='assets/card-fi
 
 // Owner photo registration entry: keep it directly on the Tokyo DB page.
 const photoRegisterScript=document.createElement('script');
-photoRegisterScript.src='assets/photo-register-entry.js?v=20260824-1726';
+photoRegisterScript.src='assets/photo-register-entry.js?v=20261108';
 photoRegisterScript.defer=true;
 document.head.appendChild(photoRegisterScript);
 })();
