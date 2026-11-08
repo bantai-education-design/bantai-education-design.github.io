@@ -386,6 +386,7 @@
     requestAnimationFrame(() => {
       renderCourseMap(r);
       if (series === 'hakone') initHakoneSectionGuide();
+      if (series === 'izumo') initIzumoSectionGuide(r);
     });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
@@ -424,7 +425,63 @@
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
         ${elevationFeatureGraphic(r)}
       </section>
-    </div>${r.series === 'hakone' ? hakoneSectionGuide() : ''}`;
+    </div>${r.series === 'hakone' ? hakoneSectionGuide() : r.series === 'izumo' ? izumoSectionGuide(r) : ''}`;
+  }
+
+  function izumoSectionGuide(r) {
+    return `<section class="hakone-section-guide izumo-section-guide" aria-labelledby="izumo-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="izumo-section-title">1区ずつ、走る場所を見る</h3></div>
+        <div class="hakone-section-switch izumo-section-switch" role="group" aria-label="出雲駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-izumo-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
+      </div>
+      <div id="izumo-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div class="hakone-section-grid">
+        <div><div id="izumo-section-map" class="hakone-section-map" role="application" aria-label="出雲駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は区間の始点と終点を結ぶ位置確認用の概略です。実際の道路形状は公式コースで確認できます。</p></div>
+        <div id="izumo-section-profile" class="hakone-section-profile"></div>
+      </div>
+    </section>`;
+  }
+
+  function initIzumoSectionGuide(r) {
+    document.querySelectorAll('[data-izumo-section]').forEach((button) => button.addEventListener('click', () => renderIzumoSection(r, Number(button.dataset.izumoSection))));
+    renderIzumoSection(r, 1);
+  }
+
+  function renderIzumoSection(r, no) {
+    const leg = r.legs.find((item) => item.no === no);
+    const start = r._mapOverview.coords[no - 1];
+    const finish = r._mapOverview.coords[no];
+    if (!leg || !start || !finish) return;
+    document.querySelectorAll('[data-izumo-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.izumoSection) === no)));
+    $('#izumo-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note || '公式資料に記載された区間情報を表示しています。')}</p>`;
+    $('#izumo-section-profile').innerHTML = izumoSectionProfile(leg);
+    renderSimpleSectionMap({ start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
+  }
+
+  function izumoSectionProfile(leg) {
+    const profiles = {
+      1: { path:'M18 105 C58 103 77 59 105 75 S153 119 181 86 S236 67 302 82', label:'浜山公園のアップダウン', aria:'1区は浜山公園にアップダウンがある' },
+      5: { path:'M18 91 C50 72 76 110 105 82 S157 62 185 94 S235 108 302 84', label:'ぶどう畑の細かなアップダウン', aria:'5区はぶどう畑の中に細かなアップダウンがある' },
+    };
+    const p = profiles[leg.no];
+    const graphic = p
+      ? `<svg class="section-profile-svg izumo-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${p.aria}"><path d="${p.path}" class="section-profile-area"/><path d="${p.path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${p.label}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">中継所 ${leg.km.toFixed(1)}km</text></svg>`
+      : `<div class="section-no-elevation"><b>高低差の数値は未掲載</b><p>公式の区間紹介に具体的な標高値がないため、推測の曲線は描いていません。</p></div>`;
+    return `<h4>${leg.no}区の走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note || '区間情報を確認中')}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離・見どころは出雲駅伝公式サイトと公式記録に基づきます。</p>`;
+  }
+
+  function renderSimpleSectionMap(d) {
+    const el = $('#izumo-section-map');
+    if (!el || typeof L === 'undefined') return;
+    if (activeSectionMap) activeSectionMap.remove();
+    activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
+    const line = L.polyline([d.start, d.finish], { color: d.color, weight: 6, opacity: .86, dashArray: '12 7' }).addTo(activeSectionMap);
+    [[d.start, 'S', d.from], [d.finish, 'F', d.to]].forEach(([pos, label, name]) => {
+      const icon = L.divIcon({ className: '', html: `<span class="course-pin is-end" style="--pin:${d.color}">${label}</span>`, iconSize: [31,31], iconAnchor: [15.5,15.5] });
+      L.marker(pos, { icon }).addTo(activeSectionMap).bindPopup(`<b>${label === 'S' ? 'スタート' : '中継所'}</b>${esc(name)}`);
+    });
+    activeSectionMap.fitBounds(line.getBounds(), { padding: [46, 46] });
   }
 
   const HAKONE_SECTIONS = {
