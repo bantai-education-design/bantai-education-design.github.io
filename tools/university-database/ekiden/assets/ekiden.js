@@ -720,14 +720,17 @@
 
   function womenCourseOverview(r) {
     const mapLabel = r.series === 'wzennihon' ? '公式コース・交通規制図' : '公式コースマップ';
+    const mapAsset = r.series === 'wzennihon' ? 'assets/wzennihon-course-map.svg' : 'assets/wfujisan-course-map.svg';
     return `<div class="course-overview-grid">
       <section class="course-map-card" aria-label="${esc(r.name)}の公式コース地図">
         <div class="course-map-head"><h3>コース地図</h3><span>公式資料で確認</span></div>
         <div class="official-map-wrap">
-          <iframe class="official-map-frame" src="${esc(r.map_url)}#page=1&view=FitH&toolbar=0" title="${esc(r.name)} ${esc(mapLabel)}" loading="lazy"></iframe>
-          <div class="official-map-fallback"><b>${esc(mapLabel)}</b><p>地図が表示されない端末では、下のボタンから公式資料を開いてください。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式地図を大きく開く ↗</a></div>
+          <a class="official-map-link" href="${esc(r.map_url)}" target="_blank" rel="noopener" aria-label="${esc(r.name)}の公式地図を大きく開く">
+            <img class="official-map-image" src="${mapAsset}" alt="${esc(r.name)}の公式コース地図" loading="lazy">
+          </a>
+          <div class="official-map-fallback"><b>${esc(mapLabel)}</b><p>地図を選ぶと、大会公式PDFを大きく開けます。</p><a class="button" href="${esc(r.map_url)}" target="_blank" rel="noopener">公式PDFを開く ↗</a></div>
         </div>
-        <p class="course-map-note">大会公式PDFの地図を表示しています。中継所名と区間距離は下の区間表示でも確認できます。</p>
+        <p class="course-map-note">大会公式PDFの地図を画像化して表示しています。出典・詳細は公式PDFで確認できます。</p>
       </section>
       <section class="course-elevation-card" aria-label="${esc(r.name)}の高低差の特徴">
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>公式発表だけで読む</span></div>
