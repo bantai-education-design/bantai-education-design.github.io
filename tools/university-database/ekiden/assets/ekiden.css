@@ -257,3 +257,114 @@
 /* 年表に予選会の列が入っても、詳しい表示が画面より広がらないようにする */
 .team-detail{min-width:0;max-width:100%}
 .race-table.compact td:last-child .q-cell{white-space:normal;min-width:9em}
+
+
+/* 男子・女子を同格で選べるページ入口 */
+.ekiden-entry {
+  padding-top: 34px;
+  padding-bottom: 18px;
+}
+.entry-heading {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+.entry-heading h2 {
+  margin: 4px 0 8px;
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+.entry-heading p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.entry-card {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 190px;
+  padding: 26px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(31, 41, 55, .09);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.entry-card::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  bottom: -42px;
+  width: 150px;
+  height: 150px;
+  border: 28px solid rgba(255, 255, 255, .35);
+  border-radius: 50%;
+}
+.entry-card:hover,
+.entry-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(31, 41, 55, .15);
+}
+.entry-card:focus-visible {
+  outline: 3px solid var(--focus, #1d4ed8);
+  outline-offset: 3px;
+}
+.entry-men {
+  background: linear-gradient(135deg, #eef7f5, #dcefeb);
+}
+.entry-women {
+  background: linear-gradient(135deg, #fff0f5, #f4e4f2);
+}
+.entry-card > strong {
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.7vw, 2rem);
+}
+.entry-card > span:not(.entry-label) {
+  max-width: 34rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.entry-card > b {
+  align-self: end;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .82);
+  font-size: .92rem;
+}
+.entry-label {
+  width: fit-content;
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+body[data-gender="men"] .entry-men {
+  border-color: var(--hakone);
+}
+body[data-gender="women"] .entry-women {
+  border-color: var(--wzennihon);
+}
+@media (max-width: 700px) {
+  .ekiden-entry {
+    padding-top: 24px;
+  }
+  .entry-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .entry-card {
+    min-height: 0;
+    padding: 20px;
+    border-radius: 16px;
+  }
+}

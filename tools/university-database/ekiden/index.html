@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>三大駅伝 出場校検索 | Ban.Tai 全国大学データベース</title>
+  <title>大学駅伝 出場校・記録 | Ban.Tai 全国大学データベース</title>
   <meta name="description" content="男子三大駅伝、全日本大学女子駅伝、富士山女子駅伝、予選会・選考会の出場校と成績を調べられるBan.Tai全国大学データベースの付録です。">
   <link rel="canonical" href="https://bantai-education-design.github.io/tools/university-database/ekiden/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="三大駅伝 出場校検索 | Ban.Tai 全国大学データベース">
+  <meta property="og:title" content="大学駅伝 出場校・記録 | Ban.Tai 全国大学データベース">
   <meta property="og:description" content="三大駅伝・女子駅伝・予選会の出場校と成績を、大学名や大会・年から調べられます。">
   <meta property="og:url" content="https://bantai-education-design.github.io/tools/university-database/ekiden/">
   <meta property="og:image" content="https://bantai-education-design.github.io/tools/university-database/ekiden/assets/ogp.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/base.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="assets/ekiden.css?v=20261108-10">
+  <link rel="stylesheet" href="assets/ekiden.css?v=20261108-11">
   <link rel="stylesheet" href="../assets/db-nav.css?v=20261107">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -64,15 +64,15 @@
     <span class="pref-pill ekiden-pill">全国大学データベース 付録</span>
   </div>
 </header>
-<nav class="dbnav" aria-label="全国大学データベースのメニュー"><div class="dbnav-inner"><a class="dbnav-home" href="/">⌂ ホーム</a><a href="/tools/university-database/">全国大学DBトップ</a><a href="/tools/university-database/tokyo/">大学を探す</a><a href="/tools/university-database/ekiden/" aria-current="page">三大駅伝</a><a href="/tools/university-database/tokyo/photo-submit/">大学写真を送る</a></div></nav>
+<nav class="dbnav" aria-label="全国大学データベースのメニュー"><div class="dbnav-inner"><a class="dbnav-home" href="/">⌂ ホーム</a><a href="/tools/university-database/">全国大学DBトップ</a><a href="/tools/university-database/tokyo/">大学を探す</a><a href="/tools/university-database/ekiden/" aria-current="page">大学駅伝</a><a href="/tools/university-database/tokyo/photo-submit/">大学写真を送る</a></div></nav>
 
 <main>
   <section class="ekiden-hero">
     <div class="ekiden-hero-inner">
       <div>
-        <span class="section-kicker">THREE GREAT EKIDEN</span>
-        <h1>駅伝の歩みから、<br><em>大学を知る。</em></h1>
-        <p>出雲駅伝・全日本大学駅伝・箱根駅伝の出場校と総合成績を、大学名や大会・年から調べられます。大学名から、そのまま大学紹介へ進めます。</p>
+        <span class="section-kicker">UNIVERSITY EKIDEN ARCHIVE</span>
+        <h1>大学駅伝を、<br><em>男子・女子から調べる。</em></h1>
+        <p>男子三大駅伝、全日本大学女子駅伝、富士山女子駅伝、予選会・選考会の出場校と成績を調べられます。</p>
       </div>
       <dl class="ekiden-stats" aria-label="収録の概要">
         <div><dt>順位表のある大会</dt><dd id="stat-editions">—</dd></div>
@@ -87,8 +87,30 @@
     </ol>
   </section>
 
+  <section class="section ekiden-entry" aria-labelledby="ekiden-entry-title">
+    <div class="entry-heading">
+      <span class="section-kicker">CHOOSE YOUR EKIDEN</span>
+      <h2 id="ekiden-entry-title">男子・女子から選ぶ</h2>
+      <p>見たい大学駅伝を選ぶと、それぞれの大会・出場校・記録を表示します。</p>
+    </div>
+    <div class="entry-grid">
+      <a class="entry-card entry-men" data-entry-gender="men" href="./">
+        <span class="entry-label">MEN</span>
+        <strong>男子大学駅伝</strong>
+        <span>出雲駅伝・全日本大学駅伝・箱根駅伝・予選会</span>
+        <b>男子の記録を見る <span aria-hidden="true">→</span></b>
+      </a>
+      <a class="entry-card entry-women" data-entry-gender="women" href="./?g=women">
+        <span class="entry-label">WOMEN</span>
+        <strong>女子大学駅伝</strong>
+        <span>全日本大学女子駅伝・富士山女子駅伝・選考会</span>
+        <b>女子の記録を見る <span aria-hidden="true">→</span></b>
+      </a>
+    </div>
+  </section>
+
   <section id="finder" class="section ekiden-finder">
-    <div class="gender-switch" role="group" aria-label="男子・女子を選ぶ">
+    <div class="gender-switch" role="group" aria-label="表示する大学駅伝を切り替える">
       <button type="button" data-gender="men" aria-pressed="true">男子<small>三大駅伝</small></button>
       <button type="button" data-gender="women" aria-pressed="false">女子<small>全日本大学女子駅伝・富士山女子駅伝</small></button>
     </div>
@@ -180,7 +202,7 @@
   </section>
 </main>
 
-<footer class="site-footer"><div class="footer-inner">Ban.Tai Education Design 全国大学データベース 付録「三大駅伝 出場校検索」　<a href="../tokyo/">大学データベースへ戻る</a></div></footer>
+<footer class="site-footer"><div class="footer-inner">Ban.Tai Education Design 全国大学データベース 付録「大学駅伝 出場校・記録」　<a href="../tokyo/">大学データベースへ戻る</a></div></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="assets/ekiden.js?v=20261108-10"></script>
 </body>
