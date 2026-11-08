@@ -3,6 +3,8 @@
   --izumo:#c2410c;     /* 出雲: 夕日の朱 */
   --zennihon:#1d4ed8;  /* 全日本: 伊勢路の藍 */
   --hakone:#0f766e;    /* 箱根: 山の緑 */
+  --wzennihon:#be185d; /* 全日本大学女子駅伝: 杜の都の紅 */
+  --wfujisan:#6d28d9;  /* 富士山女子駅伝: 富士の紫 */
   --ok-bg:#eef7f2;
 }
 .brand-logo{height:34px;width:auto}
@@ -22,7 +24,7 @@
 .series-strip li{border-radius:14px;padding:12px 16px;background:rgba(255,255,255,.05);border-left:5px solid var(--s);display:flex;flex-direction:column}
 .series-strip li span{font-size:.78rem;color:#c8cbd1}
 .series-strip li small{color:#c8cbd1}
-[data-series="izumo"]{--s:var(--izumo)}[data-series="zennihon"]{--s:var(--zennihon)}[data-series="hakone"]{--s:var(--hakone)}
+[data-series="izumo"]{--s:var(--izumo)}[data-series="zennihon"]{--s:var(--zennihon)}[data-series="hakone"]{--s:var(--hakone)}[data-series="wzennihon"]{--s:var(--wzennihon)}[data-series="wfujisan"]{--s:var(--wfujisan)}
 
 .ekiden-finder{max-width:1180px;margin:auto;padding:32px 20px}
 .ekiden-tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px;overflow-x:auto}
@@ -197,7 +199,7 @@
 @media (max-width:560px){.hakone-section-guide{margin-left:-7px;margin-right:-7px;padding:12px}.hakone-section-head{align-items:stretch;flex-direction:column}.hakone-section-switch button{flex:1}.hakone-section-summary{grid-template-columns:1fr}.hakone-section-summary>strong{grid-row:2}.hakone-section-summary p{grid-row:3}.hakone-section-map{height:300px}.hakone-section-profile{padding:14px 10px}.section-timeline::before{left:76px}.section-timeline li{grid-template-columns:61px 14px 1fr;gap:8px}}
 .basics-pills{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
 .basics-pills button{font:inherit;font-weight:700;padding:8px 16px;border-radius:999px;border:2px solid var(--s);background:#fff;color:var(--ink);cursor:pointer}
-.basics-pills button[data-course="izumo"]{--s:var(--izumo)}.basics-pills button[data-course="zennihon"]{--s:var(--zennihon)}.basics-pills button[data-course="hakone"]{--s:var(--hakone)}
+.basics-pills button[data-course="izumo"]{--s:var(--izumo)}.basics-pills button[data-course="zennihon"]{--s:var(--zennihon)}.basics-pills button[data-course="hakone"]{--s:var(--hakone)}.basics-pills button[data-course="wzennihon"]{--s:var(--wzennihon)}.basics-pills button[data-course="wfujisan"]{--s:var(--wfujisan)}
 .basics-pills button[aria-pressed="true"]{background:var(--s);color:#fff}
 .basics-pills button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .basics-terms{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin:0}
@@ -213,3 +215,45 @@
 .team-legend li b{margin-left:auto}
 @media (max-width:900px){.team-legends{grid-template-columns:1fr}}
 
+/* 男子・女子の切り替え（第2段階 工程20） */
+.gender-switch{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.gender-switch button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:10px 16px;border:1.5px solid var(--line,#d9d4c7);border-radius:12px;background:#fff;color:inherit;font:inherit;font-weight:700;font-size:1rem;cursor:pointer;min-height:44px}
+.gender-switch button small{font-weight:400;font-size:.78rem;color:var(--ink-soft,#5b6170)}
+.gender-switch button[aria-pressed="true"]{border-color:#1f2937;background:#1f2937;color:#fff}
+.gender-switch button[aria-pressed="true"] small{color:#e5e7eb}
+.gender-switch button[aria-busy="true"]{opacity:.6}
+.gender-switch button:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.basics-note{margin:0 0 12px;padding:10px 14px;border-left:4px solid var(--wzennihon);background:#fdf2f8;border-radius:6px}
+@media (max-width:600px){.gender-switch button{flex:1 1 0;min-width:0}.gender-switch button small{font-size:.72rem}}
+
+/* 区間成績（第2段階 工程21） */
+.leg-mark{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;font-size:.72rem;font-weight:700;background:#efeadb;color:#4b4535;vertical-align:1px;white-space:nowrap}
+.leg-mark.award{background:#c9a227;color:#1f1a08}
+.leg-mark.record{background:#b91c1c;color:#fff}
+.leg-toggle{margin-left:8px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:.78rem;cursor:pointer;min-height:28px;white-space:nowrap}
+.leg-toggle[aria-expanded="true"]{background:#1f2937;color:#fff;border-color:#1f2937}
+.leg-toggle:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.legs-row>td{background:#faf8f1;padding:8px 10px 14px}
+.leg-table{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:8px}
+.leg-table th,.leg-table td{padding:6px 8px;border-bottom:1px solid #eee9dc;text-align:left}
+.leg-table .num{text-align:right;white-space:nowrap}
+.leg-table small{display:block}
+.leg-count{display:block;font-size:.7rem;color:#8a6d0b;font-weight:700}
+/* 区間成績の表は、順位表が横に広くても画面の幅に収める */
+.legs-row .table-scroll{position:sticky;left:0;max-width:calc(100vw - 52px)}
+@media (max-width:600px){
+  .leg-table{font-size:.8rem}
+  .leg-table th,.leg-table td{padding:5px 5px}
+  .leg-mark{margin-left:4px;padding:1px 5px}
+  .leg-toggle{display:block;margin:4px 0 0}
+}
+
+/* 予選会（第2段階 工程22） */
+.q-pass{display:inline-block;padding:1px 7px;border-radius:999px;background:#166534;color:#fff;font-size:.75rem;font-weight:700;white-space:nowrap}
+.q-fail{display:inline-block;padding:1px 7px;border-radius:999px;background:#efeadb;color:#4b4535;font-size:.75rem;white-space:nowrap}
+.q-row-pass>td{background:#f0f7ef}
+.badge-q{background:#e7e2d3;color:#3f3a2c}
+.q-cell{display:block;text-align:left;margin:2px 0;font-size:.82rem}
+/* 年表に予選会の列が入っても、詳しい表示が画面より広がらないようにする */
+.team-detail{min-width:0;max-width:100%}
+.race-table.compact td:last-child .q-cell{white-space:normal;min-width:9em}
