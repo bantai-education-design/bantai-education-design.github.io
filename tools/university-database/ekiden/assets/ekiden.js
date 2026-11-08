@@ -385,7 +385,7 @@
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
     requestAnimationFrame(() => {
       renderCourseMap(r);
-      if (series === 'hakone') initHakoneSectionGuide();
+      if (series === 'hakone') initHakoneSectionGuide(r);
       if (series === 'izumo') initIzumoSectionGuide(r);
       if (series === 'zennihon') initZennihonSectionGuide(r);
     });
@@ -426,7 +426,7 @@
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
         ${elevationFeatureGraphic(r)}
       </section>
-    </div>${r.series === 'hakone' ? hakoneSectionGuide() : r.series === 'izumo' ? izumoSectionGuide(r) : r.series === 'zennihon' ? zennihonSectionGuide(r) : ''}`;
+    </div>${r.series === 'hakone' ? hakoneSectionGuide(r) : r.series === 'izumo' ? izumoSectionGuide(r) : r.series === 'zennihon' ? zennihonSectionGuide(r) : ''}`;
   }
 
   function zennihonSectionGuide(r) {
@@ -552,14 +552,11 @@
     },
   };
 
-  function hakoneSectionGuide() {
+  function hakoneSectionGuide(r) {
     return `<section class="hakone-section-guide" aria-labelledby="hakone-section-title">
       <div class="hakone-section-head">
         <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="hakone-section-title">区間ごとに、どこを走るか見る</h3></div>
-        <div class="hakone-section-switch" role="group" aria-label="箱根駅伝の区間を選ぶ">
-          <button type="button" data-hakone-section="5" aria-pressed="true">5区 山上り</button>
-          <button type="button" data-hakone-section="6" aria-pressed="false">6区 山下り</button>
-        </div>
+        <div class="hakone-section-switch hakone-all-section-switch" role="group" aria-label="箱根駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-hakone-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
       </div>
       <div id="hakone-section-summary" class="hakone-section-summary" aria-live="polite"></div>
       <div class="hakone-section-grid">
@@ -569,18 +566,47 @@
     </section>`;
   }
 
-  function initHakoneSectionGuide() {
-    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.addEventListener('click', () => renderHakoneSection(Number(button.dataset.hakoneSection))));
-    renderHakoneSection(5);
+  function initHakoneSectionGuide(r) {
+    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.addEventListener('click', () => renderHakoneSection(r, Number(button.dataset.hakoneSection))));
+    renderHakoneSection(r, 1);
   }
 
-  function renderHakoneSection(no) {
-    const d = HAKONE_SECTIONS[no];
+  function renderHakoneSection(r, no) {
+    const d = HAKONE_SECTIONS[no] || buildHakoneSection(r, no);
     if (!d) return;
     document.querySelectorAll('[data-hakone-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.hakoneSection) === no)));
     $('#hakone-section-summary').innerHTML = `<div><b>${d.title}</b><span>${d.direction}</span></div><strong>${d.distance}</strong><p>${d.summary}</p>`;
-    $('#hakone-section-profile').innerHTML = hakoneSectionProfile(d);
+    $('#hakone-section-profile').innerHTML = d.points.length > 2 ? hakoneSectionProfile(d) : hakoneSimpleSectionProfile(d);
     renderHakoneSectionMap(d);
+  }
+
+  function buildHakoneSection(r, no) {
+    const leg = r.legs.find((item) => item.no === no);
+    if (!leg) return null;
+    const outbound = [[35.687069,139.765045],[35.517773,139.687561],[35.389053,139.520615],[35.313683,139.33139],[35.245907,139.129822],[35.189735,139.037781]];
+    const coords = outbound.concat(outbound.slice(0,5).reverse());
+    const start = coords[no - 1], finish = coords[no];
+    return {
+      no, title:`${no}区　${leg.day}`, direction:`${leg.from} → ${leg.to}`, distance:`${leg.km.toFixed(1)}km`, summary:leg.note,
+      route:[start, finish],
+      points:[
+        {km:'0.0km', name:leg.from, note:'スタート', pos:start},
+        {km:`${leg.km.toFixed(1)}km`, name:leg.to, note:no === 10 ? 'フィニッシュ' : 'たすき渡し', pos:finish},
+      ],
+    };
+  }
+
+  function hakoneSimpleSectionProfile(d) {
+    const profiles = {
+      1:{path:'M18 91 C82 88 154 92 222 88 C247 83 269 58 286 72 S298 87 302 84',label:'17km過ぎ　六郷橋',aria:'1区は17キロ過ぎの六郷橋が勝負どころ'},
+      2:{path:'M18 92 C53 61 75 112 107 75 S160 55 191 96 S246 110 302 72',label:'権太坂など起伏が多い',aria:'2区は権太坂など起伏が多い'},
+      4:{path:'M18 90 C92 88 161 91 222 87 S274 68 302 55',label:'平地区間・終盤に緩やかな上り',aria:'4区は平地区間で終盤に緩やかな上りがある'},
+      7:{path:'M18 87 C52 66 78 105 109 79 S161 64 192 94 S249 105 302 81',label:'小さなアップダウンが続く',aria:'7区は小さなアップダウンが続く'},
+      8:{path:'M18 99 C92 96 155 92 205 83 S264 51 302 39',label:'湘南新道の上り坂',aria:'8区は湘南新道の上り坂がある'},
+    };
+    const p = profiles[d.no];
+    const graphic = p ? `<svg class="section-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${p.aria}"><path d="${p.path}" class="section-profile-area"/><path d="${p.path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${p.label}</text><text x="18" y="137">${esc(d.points[0].name)}</text><text x="302" y="137" text-anchor="end">${d.distance}</text></svg>` : `<div class="section-no-elevation hakone-no-elevation"><b>高低差は推測していません</b><p>公式紹介は景観・風・逆転・フィニッシュなどを説明していますが、具体的な起伏は示していないため曲線を描いていません。</p></div>`;
+    return `<h4>${d.no}区の高低差と走りどころ</h4>${graphic}<ol class="izumo-route-order hakone-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(d.points[0].name)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(d.summary)}</b></div></li><li><span>F</span><div><small>${d.distance}</small><b>${esc(d.points[1].name)}</b></div></li></ol><p class="section-source-note">区間距離・特徴は箱根駅伝公式サイトに基づきます。図は標高の実測グラフではありません。</p>`;
   }
 
   function hakoneSectionProfile(d) {
