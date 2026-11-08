@@ -42,6 +42,9 @@
   let S = DATA.men;
   // 基本情報は男女で共用し、切り替え時に選択した側を必ず再描画する
   let BASICS = null;
+  // Leaflet地図の再描画時に、既存インスタンスを安全に破棄するため保持する
+  let activeCourseMap = null;
+  let activeSectionMap = null;
 
   // 区間成績（大会ごとに、順位表で初めて開いたときに読む）
   const KUKAN = new Map();  // series -> Promise<{ editions:Set, byResult:Map }>
