@@ -592,6 +592,7 @@
   /* ---------- 駅伝の基本 ---------- */
   const SVGNS = 'http://www.w3.org/2000/svg';
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
+  const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e' };
   function loadBasics() {
     getJson('basics.json?v=20261108-3').then((b) => {
       BASICS = b;
