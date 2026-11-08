@@ -309,6 +309,7 @@
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)' };
   const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e' };
   let activeCourseMap = null;
+  let activeSectionMap = null;
   function loadBasics() {
     getJson('basics.json').then((b) => { S.basics = b; renderBasics(); })
       .catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
@@ -382,7 +383,11 @@
       fig += courseStrip(r, r.legs, r.points, `${r.points[0]} → ${r.points[r.points.length - 1]}`, false);
     }
     $('#basics-course').innerHTML = fig + (r.course_note ? `<p class="basics-note">${esc(r.course_note)}</p>` : '');
-    requestAnimationFrame(() => renderCourseMap(r));
+    requestAnimationFrame(() => {
+      renderCourseMap(r);
+      if (series === 'hakone') initHakoneSectionGuide();
+      if (series === 'izumo') initIzumoSectionGuide(r);
+    });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
     $('#basics-legs').innerHTML = `<thead><tr><th>区間</th>${hasDay ? '<th>日</th>' : ''}<th>スタート</th><th>たすきを渡す場所</th><th class="num">距離</th>${hasNote ? '<th>見どころ</th>' : ''}</tr></thead><tbody>${
@@ -398,20 +403,14 @@
       izumo: {
         coords: [[35.392628,132.684174],[35.36705,132.754578],[35.387589,132.808548],[35.442329,132.825989],[35.403526,132.777512],[35.395527,132.711395],[35.382694,132.739319]],
         short: ['出雲大社正面鳥居前','出雲市役所前','ゆめタウン斐川前','JAラピタひらた店前','鳶巣CC前','島根ワイナリー前','出雲ドーム前'],
-        profile: 'M426 143 C448 139 461 113 478 124 S510 145 528 137 S560 132 576 128 S607 108 625 126 S656 141 685 132',
-        notes: ['1区 浜山公園のアップダウン','5区 細かなアップダウン'],
       },
       zennihon: {
         coords: [[35.125538,136.909073],[35.088169,136.83284],[35.056435,136.722656],[35.0042,136.630936],[34.884689,136.599258],[34.786518,136.546295],[34.685066,136.518753],[34.547501,136.579849],[34.439827,136.762283]],
         short: ['熱田神宮西門前','第1中継所','第2中継所','第3中継所','第4中継所','第5中継所','第6中継所','第7中継所','伊勢神宮内宮'],
-        profile: 'M426 126 C442 104 456 147 472 118 S502 98 518 130 S548 146 566 124 S600 131 618 127 S653 129 685 126',
-        notes: ['前半 小刻みなアップダウン','後半 比較的フラット'],
       },
       hakone: {
         coords: [[35.687069,139.765045],[35.517773,139.687561],[35.389053,139.520615],[35.313683,139.33139],[35.245907,139.129822],[35.189735,139.037781]],
         short: ['大手町・読売新聞社前','鶴見中継所','戸塚中継所','平塚中継所','小田原中継所','芦ノ湖'],
-        profile: 'M426 151 C458 148 485 143 512 139 S553 135 574 137 C590 132 606 72 628 43 C641 72 653 132 670 139 S681 147 688 147',
-        notes: ['5区 山上り・最高点 約874m','6区 山下り'],
       },
     };
     const d = layouts[r.series];
@@ -423,17 +422,190 @@
         <p class="course-map-note">地図: <a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">国土地理院</a>。線は中継地点間の位置関係を示し、実際の道路形状は下の公式出典で確認できます。</p>
       </section>
       <section class="course-elevation-card" aria-label="${esc(r.name)}の高低差の特徴">
-        <div class="course-elevation-head"><h3>高低差の特徴</h3><span>公式コース説明に基づく模式図</span></div>
-        <svg class="course-elevation" viewBox="390 32 330 260" role="img" aria-label="${esc(r.name)}の高低差の特徴図">
-          <line x1="426" y1="166" x2="688" y2="166" stroke="var(--line)" stroke-width="1.5"/>
-          <path d="${d.profile}" fill="none" stroke="${COLOR[r.series]}" stroke-width="5" stroke-linecap="round"/>
-          <text x="426" y="184" font-size="10.5" fill="var(--muted)">スタート</text>
-          <text x="688" y="184" text-anchor="end" font-size="10.5" fill="var(--muted)">${r.series === 'hakone' ? '大手町へ' : 'フィニッシュ'}</text>
-          ${d.notes.map((n, i) => `<rect x="420" y="${208 + i * 31}" width="280" height="24" rx="12" fill="#fff" stroke="var(--line)"/><text x="434" y="${224 + i * 31}" font-size="11.5" font-weight="700" fill="var(--ink-soft)">${esc(n)}</text>`).join('')}
-          <text x="420" y="286" font-size="10.5" fill="var(--muted)">※縦軸は実測値ではありません。</text>
-        </svg>
+        <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
+        ${elevationFeatureGraphic(r)}
       </section>
-    </div>`;
+    </div>${r.series === 'hakone' ? hakoneSectionGuide() : r.series === 'izumo' ? izumoSectionGuide(r) : ''}`;
+  }
+
+  function izumoSectionGuide(r) {
+    return `<section class="hakone-section-guide izumo-section-guide" aria-labelledby="izumo-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="izumo-section-title">1区ずつ、走る場所を見る</h3></div>
+        <div class="hakone-section-switch izumo-section-switch" role="group" aria-label="出雲駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-izumo-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
+      </div>
+      <div id="izumo-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div class="hakone-section-grid">
+        <div><div id="izumo-section-map" class="hakone-section-map" role="application" aria-label="出雲駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は区間の始点と終点を結ぶ位置確認用の概略です。実際の道路形状は公式コースで確認できます。</p></div>
+        <div id="izumo-section-profile" class="hakone-section-profile"></div>
+      </div>
+    </section>`;
+  }
+
+  function initIzumoSectionGuide(r) {
+    document.querySelectorAll('[data-izumo-section]').forEach((button) => button.addEventListener('click', () => renderIzumoSection(r, Number(button.dataset.izumoSection))));
+    renderIzumoSection(r, 1);
+  }
+
+  function renderIzumoSection(r, no) {
+    const leg = r.legs.find((item) => item.no === no);
+    const start = r._mapOverview.coords[no - 1];
+    const finish = r._mapOverview.coords[no];
+    if (!leg || !start || !finish) return;
+    document.querySelectorAll('[data-izumo-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.izumoSection) === no)));
+    $('#izumo-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note || '公式資料に記載された区間情報を表示しています。')}</p>`;
+    $('#izumo-section-profile').innerHTML = izumoSectionProfile(leg);
+    renderSimpleSectionMap({ start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
+  }
+
+  function izumoSectionProfile(leg) {
+    const profiles = {
+      1: { path:'M18 105 C58 103 77 59 105 75 S153 119 181 86 S236 67 302 82', label:'浜山公園のアップダウン', aria:'1区は浜山公園にアップダウンがある' },
+      5: { path:'M18 91 C50 72 76 110 105 82 S157 62 185 94 S235 108 302 84', label:'ぶどう畑の細かなアップダウン', aria:'5区はぶどう畑の中に細かなアップダウンがある' },
+    };
+    const p = profiles[leg.no];
+    const graphic = p
+      ? `<svg class="section-profile-svg izumo-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${p.aria}"><path d="${p.path}" class="section-profile-area"/><path d="${p.path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${p.label}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">中継所 ${leg.km.toFixed(1)}km</text></svg>`
+      : `<div class="section-no-elevation"><b>高低差の数値は未掲載</b><p>公式の区間紹介に具体的な標高値がないため、推測の曲線は描いていません。</p></div>`;
+    return `<h4>${leg.no}区の走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note || '区間情報を確認中')}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離・見どころは出雲駅伝公式サイトと公式記録に基づきます。</p>`;
+  }
+
+  function renderSimpleSectionMap(d) {
+    const el = $('#izumo-section-map');
+    if (!el || typeof L === 'undefined') return;
+    if (activeSectionMap) activeSectionMap.remove();
+    activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
+    const line = L.polyline([d.start, d.finish], { color: d.color, weight: 6, opacity: .86, dashArray: '12 7' }).addTo(activeSectionMap);
+    [[d.start, 'S', d.from], [d.finish, 'F', d.to]].forEach(([pos, label, name]) => {
+      const icon = L.divIcon({ className: '', html: `<span class="course-pin is-end" style="--pin:${d.color}">${label}</span>`, iconSize: [31,31], iconAnchor: [15.5,15.5] });
+      L.marker(pos, { icon }).addTo(activeSectionMap).bindPopup(`<b>${label === 'S' ? 'スタート' : '中継所'}</b>${esc(name)}`);
+    });
+    activeSectionMap.fitBounds(line.getBounds(), { padding: [46, 46] });
+  }
+
+  const HAKONE_SECTIONS = {
+    5: {
+      no: 5, title: '5区　山上り', direction: '小田原中継所 → 芦ノ湖', distance: '20.8km',
+      summary: '小田原から箱根の山へ。16.2km地点の国道1号最高点（約874m）まで上り、その後は芦ノ湖へ下ります。',
+      route: [[35.245907,139.129822],[35.236652,139.104575],[35.239032,139.073894],[35.24186,139.062762],[35.2324,139.0517],[35.219776,139.043487],[35.2041,139.0310],[35.189735,139.037781]],
+      points: [
+        {km:'0.0km', name:'小田原中継所', note:'スタート', pos:[35.245907,139.129822]},
+        {km:'—', name:'箱根湯本', note:'山上りへ', pos:[35.236652,139.104575]},
+        {km:'—', name:'大平台・宮ノ下', note:'曲がりながら上る', pos:[35.2402,139.0678]},
+        {km:'16.2km', name:'国道1号最高点', note:'約874m・ここから下り', pos:[35.2117,139.0368]},
+        {km:'19km以降', name:'箱根神社大鳥居付近', note:'終盤', pos:[35.2037,139.0306]},
+        {km:'20.8km', name:'芦ノ湖', note:'フィニッシュ', pos:[35.189735,139.037781]},
+      ],
+    },
+    6: {
+      no: 6, title: '6区　山下り', direction: '芦ノ湖 → 小田原中継所', distance: '20.8km',
+      summary: '芦ノ湖を出て最初の約4kmは上り。その後は急な下りが続き、最後の約3kmは再び脚を使う区間です。',
+      route: [[35.189735,139.037781],[35.2041,139.0310],[35.219776,139.043487],[35.2324,139.0517],[35.24186,139.062762],[35.239032,139.073894],[35.236652,139.104575],[35.245907,139.129822]],
+      points: [
+        {km:'0.0km', name:'芦ノ湖', note:'スタート', pos:[35.189735,139.037781]},
+        {km:'約4km', name:'上りの終わり', note:'ここから山下り', pos:[35.2117,139.0368]},
+        {km:'—', name:'芦之湯・小涌園', note:'急な下りとカーブ', pos:[35.2261,139.0476]},
+        {km:'—', name:'宮ノ下・大平台', note:'下りが続く', pos:[35.2402,139.0678]},
+        {km:'残り約3km', name:'箱根湯本付近', note:'終盤の走り直し', pos:[35.236652,139.104575]},
+        {km:'20.8km', name:'小田原中継所', note:'たすき渡し', pos:[35.245907,139.129822]},
+      ],
+    },
+  };
+
+  function hakoneSectionGuide() {
+    return `<section class="hakone-section-guide" aria-labelledby="hakone-section-title">
+      <div class="hakone-section-head">
+        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="hakone-section-title">区間ごとに、どこを走るか見る</h3></div>
+        <div class="hakone-section-switch" role="group" aria-label="箱根駅伝の区間を選ぶ">
+          <button type="button" data-hakone-section="5" aria-pressed="true">5区 山上り</button>
+          <button type="button" data-hakone-section="6" aria-pressed="false">6区 山下り</button>
+        </div>
+      </div>
+      <div id="hakone-section-summary" class="hakone-section-summary" aria-live="polite"></div>
+      <div class="hakone-section-grid">
+        <div><div id="hakone-section-map" class="hakone-section-map" role="application" aria-label="箱根駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は公式コース上の主要地点を結んだ位置確認用の概略です。</p></div>
+        <div id="hakone-section-profile" class="hakone-section-profile"></div>
+      </div>
+    </section>`;
+  }
+
+  function initHakoneSectionGuide() {
+    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.addEventListener('click', () => renderHakoneSection(Number(button.dataset.hakoneSection))));
+    renderHakoneSection(5);
+  }
+
+  function renderHakoneSection(no) {
+    const d = HAKONE_SECTIONS[no];
+    if (!d) return;
+    document.querySelectorAll('[data-hakone-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.hakoneSection) === no)));
+    $('#hakone-section-summary').innerHTML = `<div><b>${d.title}</b><span>${d.direction}</span></div><strong>${d.distance}</strong><p>${d.summary}</p>`;
+    $('#hakone-section-profile').innerHTML = hakoneSectionProfile(d);
+    renderHakoneSectionMap(d);
+  }
+
+  function hakoneSectionProfile(d) {
+    const stops = d.points.map((p, i) => `<li class="${i === 0 ? 'is-start' : i === d.points.length - 1 ? 'is-finish' : ''}"><span class="section-km">${p.km}</span><i aria-hidden="true"></i><span><b>${p.name}</b><small>${p.note}</small></span></li>`).join('');
+    const profile = d.no === 5
+      ? `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="5区は小田原から16.2キロ地点の最高点まで上り、その後芦ノ湖へ下る"><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-area"/><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-line"/><circle cx="238" cy="24" r="5"/><text x="238" y="14" text-anchor="middle">16.2km・約874m</text><text x="18" y="145">小田原</text><text x="302" y="145" text-anchor="end">芦ノ湖 20.8km</text></svg>`
+      : `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="6区は芦ノ湖から最初の約4キロを上り、その後小田原へ急に下る"><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-area"/><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-line"/><circle cx="73" cy="24" r="5"/><text x="73" y="14" text-anchor="middle">約4km・上り終わり</text><text x="18" y="145">芦ノ湖</text><text x="302" y="145" text-anchor="end">小田原 20.8km</text></svg>`;
+    return `<h4>高低差と走る順番</h4>${profile}<ol class="section-timeline section-${d.no}">${stops}</ol><p class="section-source-note">距離・高低差の説明は箱根駅伝公式サイトに基づきます。「—」は公式説明で通過距離を確認できないため、数値を付けていません。</p>`;
+  }
+
+  function renderHakoneSectionMap(d) {
+    const el = $('#hakone-section-map');
+    if (!el || typeof L === 'undefined') return;
+    if (activeSectionMap) activeSectionMap.remove();
+    activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
+    const line = L.polyline(d.route, { color: MAP_COLOR.hakone, weight: 6, opacity: .86 }).addTo(activeSectionMap);
+    d.points.forEach((p, i) => {
+      const end = i === 0 || i === d.points.length - 1;
+      const icon = L.divIcon({ className: '', html: `<span class="course-pin${end ? ' is-end' : ''}" style="--pin:${MAP_COLOR.hakone}">${i === 0 ? 'S' : i === d.points.length - 1 ? 'F' : i}</span>`, iconSize: [end ? 31 : 26, end ? 31 : 26], iconAnchor: [end ? 15.5 : 13, end ? 15.5 : 13] });
+      L.marker(p.pos, { icon }).addTo(activeSectionMap).bindPopup(`<b>${p.km}　${p.name}</b>${p.note}`);
+    });
+    activeSectionMap.fitBounds(line.getBounds(), { padding: [26, 26] });
+  }
+
+  // 標高値が公表されていない地点を数値化せず、公式コース説明にある
+  // 「アップダウン」「平ら」「山上り・山下り」を地点・区間と結び付けて示す。
+  function elevationFeatureGraphic(r) {
+    if (r.series === 'hakone') {
+      return `<svg class="course-elevation" viewBox="0 0 420 340" role="img" aria-label="箱根駅伝は5区で国道1号の最高点約874メートルへ上り、復路6区で山を下る。2区・7区・8区にも起伏がある">
+        <defs><linearGradient id="hakoneMountain" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d9eee9"/><stop offset="1" stop-color="#75b7a7"/></linearGradient></defs>
+        <text x="24" y="28" class="elev-kicker">往路　東京 → 箱根</text>
+        <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92 L382 126 L28 126 Z" fill="url(#hakoneMountain)"/>
+        <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+        <line x1="28" y1="126" x2="382" y2="126" class="elev-base"/>
+        <g class="elev-place"><text x="28" y="148">大手町</text><text x="278" y="148" text-anchor="middle">小田原</text><text x="382" y="148" text-anchor="end">芦ノ湖</text></g>
+        <g class="elev-leg"><text x="154" y="72" text-anchor="middle">1〜4区</text><text x="154" y="89" text-anchor="middle">2区などに起伏</text><text x="325" y="117" text-anchor="middle">5区　山上り</text></g>
+        <circle cx="347" cy="25" r="7" fill="#fff" stroke="#0f766e" stroke-width="4"/><text x="347" y="16" text-anchor="middle" class="elev-peak">国道1号最高点 約874m</text>
+        <text x="24" y="190" class="elev-kicker">復路　箱根 → 東京</text>
+        <path d="M28 213 C43 225 55 273 79 287 C111 300 146 292 184 286 S264 281 382 288" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+        <line x1="28" y1="298" x2="382" y2="298" class="elev-base"/>
+        <g class="elev-place"><text x="28" y="320">芦ノ湖</text><text x="100" y="320" text-anchor="middle">小田原</text><text x="382" y="320" text-anchor="end">大手町</text></g>
+        <g class="elev-leg"><text x="68" y="239" text-anchor="middle">6区</text><text x="68" y="256" text-anchor="middle">山下り</text><text x="244" y="272" text-anchor="middle">7・8区　小さな起伏や上りあり</text></g>
+      </svg><p class="course-elevation-note"><b>読みどころ:</b> 大きな高低差が表れるのは、往路5区の山上りと復路6区の山下りです。</p>`;
+    }
+    if (r.series === 'zennihon') {
+      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="全日本大学駅伝は前半に小刻みなアップダウンが多く、後半は比較的平ら">
+        <rect x="20" y="28" width="220" height="188" rx="16" fill="#eef3ff"/><rect x="240" y="28" width="160" height="188" rx="16" fill="#f2f7f6"/>
+        <text x="38" y="55" class="elev-kicker">前半　1〜4区</text><text x="258" y="55" class="elev-kicker">後半　5〜8区</text>
+        <path d="M38 151 C56 112 73 178 91 127 S126 92 145 145 S180 174 201 124 S224 102 238 142" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+        <path d="M250 146 C280 141 310 148 339 144 S372 146 389 143" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+        <g class="elev-feature"><text x="139" y="196" text-anchor="middle">小刻みなアップダウンが多い</text><text x="320" y="196" text-anchor="middle">比較的平ら</text></g>
+        <g class="elev-place"><text x="24" y="243">熱田神宮</text><text x="210" y="243" text-anchor="middle">第4中継所</text><text x="396" y="243" text-anchor="end">伊勢神宮</text></g>
+        <path d="M38 260 H382" stroke="#1d4ed8" stroke-width="3"/><path d="M382 260 l-10 -6 v12 z" fill="#1d4ed8"/>
+      </svg><p class="course-elevation-note"><b>読みどころ:</b> 前半は起伏への対応、後半は長い平坦区間での持続力が鍵になります。</p>`;
+    }
+    return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="出雲駅伝は1区の浜山公園と5区のぶどう畑にアップダウンがある">
+      <rect x="20" y="30" width="112" height="184" rx="16" fill="#fff1e8"/><rect x="254" y="30" width="78" height="184" rx="16" fill="#fff1e8"/>
+      <path d="M28 151 C42 145 53 104 69 126 S98 173 118 137 C142 149 164 151 190 149 S229 148 258 146 C270 119 284 104 297 139 S318 160 330 146 C352 149 369 147 392 145" fill="none" stroke="#c2410c" stroke-width="7" stroke-linecap="round"/>
+      <text x="76" y="57" text-anchor="middle" class="elev-kicker">1区</text><text x="76" y="77" text-anchor="middle" class="elev-feature">浜山公園</text><text x="76" y="96" text-anchor="middle" class="elev-feature">アップダウン</text>
+      <text x="293" y="57" text-anchor="middle" class="elev-kicker">5区</text><text x="293" y="77" text-anchor="middle" class="elev-feature">ぶどう畑</text><text x="293" y="96" text-anchor="middle" class="elev-feature">細かな起伏</text>
+      <g class="elev-place"><text x="24" y="241">出雲大社</text><text x="208" y="241" text-anchor="middle">第3中継所</text><text x="396" y="241" text-anchor="end">出雲ドーム</text></g>
+      <path d="M38 260 H382" stroke="#c2410c" stroke-width="3"/><path d="M382 260 l-10 -6 v12 z" fill="#c2410c"/>
+    </svg><p class="course-elevation-note"><b>読みどころ:</b> 起伏が明記されているのは1区の浜山公園と5区のぶどう畑です。</p>`;
   }
 
   function renderCourseMap(r) {
@@ -555,3 +727,4 @@
     $('#winners-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
   }
 })();
+
