@@ -1,5 +1,25 @@
 [
   {
+    "id": "column-university-ekiden-database-story-2026",
+    "slug": "university-ekiden-database-story-2026",
+    "title": "大学駅伝を、もっと深く楽しむために――Ban.Tai大学データベースに「駅伝から探す」を加えました",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.08",
+    "excerpt": "男子・女子5大会の記録、区間やコース地図、高低差の特徴。資料照合と修正を重ねてきた大学駅伝データベースの魅力を紹介します。",
+    "thumbnail": "/assets/images/columns/university-ekiden-database-story-2026/thumbnail.svg",
+    "readTime": "約17分",
+    "tags": [
+      "大学駅伝",
+      "箱根駅伝",
+      "出雲駅伝",
+      "全日本大学駅伝",
+      "女子駅伝",
+      "大学データベース"
+    ],
+    "url": "/columns/university-ekiden-database-story-2026/"
+  },
+  {
     "id": "column-google-school-ai-controls-2026",
     "slug": "google-school-ai-controls-2026",
     "title": "Googleの学校AI制限をどう考えるか――辞書・検索・AIと、子どもの考える力",
