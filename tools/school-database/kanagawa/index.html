@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>神奈川県の学校一覧・住所・電話番号 | Ban.Tai Education Design</title>
-  <meta name="description" content="神奈川県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計2,227校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。">
+  <meta name="description" content="神奈川県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計2,227校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、Google Mapsでの所在地確認にも便利です。">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,7 +88,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "神奈川県の学校一覧・住所・電話番号 | Ban.Tai Education Design",
-    "description": "神奈川県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計2,227校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、CSVダウンロードにも便利です。",
+    "description": "神奈川県の学校一覧・住所検索データベースです。小学校・中学校・高等学校など国公私立7種類、合計2,227校・園を収録し、学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、封筒印刷用の宛名コピー、Google Mapsでの所在地確認にも便利です。",
     "url": "https://bantai-education-design.github.io/tools/school-database/kanagawa/",
     "inLanguage": "ja",
     "isPartOf": {
@@ -137,15 +137,15 @@
         "name": "学校の電話番号を一覧で確認できますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。"
+          "text": "はい、検索結果には各学校の電話番号を表示しています。"
         }
       },
       {
         "@type": "Question",
-        "name": "学校住所をCSVで保存できますか？",
+        "name": "学校の場所を地図で確認できますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。"
+          "text": "はい、検索結果の「Google Maps」から学校・園の所在地を地図で確認できます。"
         }
       },
       {
@@ -286,7 +286,7 @@
     <div style="background:var(--navy, #0c1b33); border-bottom:2px solid var(--gold, #c5a059); padding:14px 0;">
       <div class="container" style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
         <span style="background:var(--gold, #c5a059); color:#0c1b33; font-size:0.7rem; font-weight:800; padding:3px 10px; border-radius:99px; white-space:nowrap; flex-shrink:0;">神奈川県版</span>
-        <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;">このページは、Ban.Tai Education Design が提供する<strong style="color:#fff;">神奈川県学校データベース</strong>です。アプリのインストール不要で、神奈川県の国立・公立・私立学校（全2,227校・園）の宛先検索、宛名コピー、Google Maps表示、CSVダウンロードを利用できます。</p>
+        <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;">このページは、Ban.Tai Education Design が提供する<strong style="color:#fff;">神奈川県学校データベース</strong>です。アプリのインストール不要で、神奈川県の国立・公立・私立学校（全2,227校・園）の宛先検索、宛名コピー、Google Maps表示、Google Mapsで所在地を確認できます。</p>
       </div>
     </div>
 
@@ -461,12 +461,6 @@
         <!-- 検索結果ヘッダー -->
         <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
           <div class="results-count">検索結果:<span id="count">0</span>件</div>
-          <div>
-            <a class="btn btn-light" id="csv-download-btn" href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 10px 20px; border-radius: 6px; font-weight: 700; border: 1px solid var(--gold, #c5a059); color: var(--navy, #0c1b33); background: #fffdf8; text-decoration: none; transition: all 0.2s ease;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
-              検索結果の宛先データCSVをダウンロード
-            </a>
-          </div>
         </div>
 
         <!-- 検索結果リスト -->
@@ -501,7 +495,6 @@
           <li>設置区分（国立・公立・私立）や、小学校・中学校・高等学校などの学校種で絞り込んだ一覧表示</li>
           <li>宛名データのコピー（校長先生宛て・園長先生宛てなど敬称を選択可能）</li>
           <li>Google Mapsでの所在地確認</li>
-          <li>検索結果の宛先データをCSV形式でダウンロード</li>
         </ul>
         <h3 class="pref-seo-content-subheading">こんな時に便利です</h3>
         <ul class="pref-usecase-list">
@@ -529,11 +522,11 @@
         </details>
         <details class="pref-faq-item">
           <summary>学校の電話番号を一覧で確認できますか？</summary>
-          <p>はい、検索結果には各学校の電話番号を表示しており、CSVダウンロードにも電話番号を含めています。</p>
+          <p>はい、検索結果には各学校の電話番号を表示しています。</p>
         </details>
         <details class="pref-faq-item">
-          <summary>学校住所をCSVで保存できますか？</summary>
-          <p>はい、検索結果の学校名・住所・郵便番号・電話番号をCSV形式でダウンロードできます。</p>
+          <summary>学校の場所を地図で確認できますか？</summary>
+          <p>はい、検索結果の「Google Maps」から学校・園の所在地を地図で確認できます。</p>
         </details>
         <details class="pref-faq-item">
           <summary>学校へ郵送する宛名を作成できますか？</summary>
