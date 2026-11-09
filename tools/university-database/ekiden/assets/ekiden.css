@@ -26,7 +26,25 @@
 .series-strip li small{color:#c8cbd1}
 [data-series="izumo"]{--s:var(--izumo)}[data-series="zennihon"]{--s:var(--zennihon)}[data-series="hakone"]{--s:var(--hakone)}[data-series="wzennihon"]{--s:var(--wzennihon)}[data-series="wfujisan"]{--s:var(--wfujisan)}
 
-.ekiden-finder{max-width:1180px;margin:auto;padding:32px 20px}
+.ekiden-guide-entry{max-width:1140px;margin:32px auto 0;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(135deg,var(--gold-soft),#fff);border:1px solid var(--gold);border-radius:20px}
+.ekiden-guide-entry .section-kicker,.finder-heading .section-kicker,.basics-guide-heading .section-kicker{color:#8a6812;letter-spacing:.12em;font-size:.75rem;font-weight:800}
+.ekiden-guide-entry h2,.finder-heading h2,.basics-guide-heading h2{margin:4px 0 6px}
+.ekiden-guide-entry p,.finder-heading p,.basics-guide-heading p{margin:0;color:var(--muted)}
+.guide-entry-link{flex:none;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:800}
+.guide-entry-link:hover{background:#34373d}
+.guide-entry-link:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.ekiden-finder{max-width:1180px;margin:auto;padding:40px 20px 32px}
+.finder-heading{margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.basics-guide{max-width:1180px;margin:16px auto 48px;padding:40px 20px;border-top:8px solid var(--gold);background:#fff}
+.basics-guide-heading{margin-bottom:24px}
+#basics-guide{scroll-margin-top:92px}
+@media (max-width:700px){
+  .ekiden-guide-entry{margin:20px 16px 0;padding:20px;display:grid;gap:16px;border-radius:16px}
+  .guide-entry-link{width:100%;box-sizing:border-box;justify-content:center}
+  .ekiden-finder{padding-top:32px}
+  .basics-guide{margin-top:8px;padding-top:32px}
+}
 .ekiden-tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px;overflow-x:auto}
 .ekiden-tabs button{appearance:none;border:0;background:none;padding:12px 18px;font:inherit;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
 .ekiden-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
