@@ -454,69 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   }
 
-  // 10. CSVダウンロード
-  const downloadBtn = document.getElementById('csv-download-btn');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      downloadFilteredCSV(currentFilteredResults);
-      trackEvent('school_csv', {
-        'file_name': 'chiba_schools_address_filtered.csv',
-        'results_count': currentFilteredResults.length
-      });
-    });
-  }
-
-  function downloadFilteredCSV(data) {
-    if (!data || data.length === 0) {
-      alert('ダウンロードするデータがありません。');
-      return;
-    }
-
-    let csvContent = '﻿';
-    csvContent += '"都道府県","市町村","設置区分","学校種別","学校名","学校名（かな）","郵便番号","所在地","電話番号","課程","出典元","公式ホームページ"\n';
-
-    data.forEach(item => {
-      const row = [
-        item.prefecture || '千葉県',
-        item.municipality || '',
-        item.establishment || '',
-        item.school_type || '',
-        item.name || '',
-        item.name_kana || '',
-        item.postal_code || '',
-        item.address || '',
-        item.phone || '',
-        Array.isArray(item.course) ? item.course.join('・') : '',
-        item.source_name || '',
-        item.website || ''
-      ].map(val => sanitizeForCSV(val));
-
-      csvContent += row.join(',') + '\n';
-    });
-
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `chiba_schools_address_filtered_${new Date().toISOString().slice(0, 10)}.csv`);
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  function sanitizeForCSV(val) {
-    if (val === null || val === undefined) val = '';
-    let str = String(val).strip ? String(val).trim() : String(val);
-    if (str.startsWith('=') || str.startsWith('+') || str.startsWith('-') || str.startsWith('@')) {
-      str = "'" + str;
-    }
-    return `"${str.replace(/"/g, '""')}"`;
-  }
-
-  // 11. GA4 イベント送信
+  // 10. GA4 イベント送信
   function trackEvent(eventName, params = {}) {
     if (typeof gtag === 'function') {
       gtag('event', eventName, params);
