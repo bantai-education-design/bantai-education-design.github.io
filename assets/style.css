@@ -6658,6 +6658,14 @@ img.hero {
   transform: none;
 }
 
+/* Waiting with children column: preserve the full thumbnail text, including on hover. */
+.column-card[data-column-id="column-waiting-with-children-2026"] .column-card-media { background: #fff9ee; }
+.column-card[data-column-id="column-waiting-with-children-2026"] .column-card-media img,
+.column-card[data-column-id="column-waiting-with-children-2026"]:hover .column-card-media img {
+  object-fit: contain;
+  transform: none;
+}
+
 /* University ekiden column: keep every character of the 16:9 thumbnail visible. */
 .column-card[data-column-id="column-university-ekiden-database-story-2026"] .column-card-media { background: #fff9ee; }
 .column-card[data-column-id="column-university-ekiden-database-story-2026"] .column-card-media img,
