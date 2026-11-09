@@ -100,7 +100,7 @@ def build_features(pref_name: str, meta: dict) -> list[str]:
         "設置区分（国立・公立・私立）や、小学校・中学校・高等学校などの学校種で絞り込んだ一覧表示",
         "宛名データのコピー（校長先生宛て・園長先生宛てなど敬称を選択可能）",
         "Google Mapsでの所在地確認",
-        "Google Mapsで学校・園の所在地を確認",
+        "Google Mapsでの所在地確認",
     ]
 
 
