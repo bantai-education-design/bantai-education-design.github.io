@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/base.css">
   <link rel="stylesheet" href="assets/vendor/leaflet.css?v=1.9.4">
-  <link rel="stylesheet" href="assets/ekiden.css?v=20261109-15">
+  <link rel="stylesheet" href="assets/ekiden.css?v=20261109-16">
   <link rel="stylesheet" href="../assets/db-nav.css?v=20261108">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -109,7 +109,21 @@
     </div>
   </section>
 
-  <section id="finder" class="section ekiden-finder">
+  <section class="section ekiden-guide-entry" aria-labelledby="basics-entry-title">
+    <div>
+      <span class="section-kicker">LEARN EKIDEN</span>
+      <h2 id="basics-entry-title">駅伝の基本を知る</h2>
+      <p>駅伝のルール、たすきリレー、各大会のコースと区間を図と表で確認できます。</p>
+    </div>
+    <a class="guide-entry-link" href="#basics-guide">基本解説を見る <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section id="finder" class="section ekiden-finder" aria-labelledby="finder-title">
+    <div class="finder-heading">
+      <span class="section-kicker">SEARCH EKIDEN</span>
+      <h2 id="finder-title">大会・大学・記録を探す</h2>
+      <p>男子・女子を選び、3つの探し方から記録を検索できます。</p>
+    </div>
     <div class="gender-switch" role="group" aria-label="表示する大学駅伝を切り替える">
       <button type="button" data-gender="men" aria-pressed="true">男子<small>三大駅伝</small></button>
       <button type="button" data-gender="women" aria-pressed="false">女子<small>全日本大学女子駅伝・富士山女子駅伝</small></button>
@@ -118,7 +132,6 @@
       <button role="tab" id="tab-univ" aria-controls="panel-univ" aria-selected="true" data-tab="univ">大学から探す</button>
       <button role="tab" id="tab-race" aria-controls="panel-race" aria-selected="false" data-tab="race" tabindex="-1">大会と年から探す</button>
       <button role="tab" id="tab-record" aria-controls="panel-record" aria-selected="false" data-tab="record" tabindex="-1">記録から探す</button>
-      <button role="tab" id="tab-basics" aria-controls="panel-basics" aria-selected="false" data-tab="basics" tabindex="-1">駅伝の基本</button>
     </div>
 
     <!-- 大学から探す -->
@@ -171,8 +184,15 @@
         <div class="table-scroll"><table id="winners-table" class="race-table compact"></table></div>
       </section>
     </div>
-    <!-- 駅伝の基本 -->
-    <div id="panel-basics" class="ekiden-panel basics" role="tabpanel" aria-labelledby="tab-basics" hidden>
+  </section>
+
+  <section id="basics-guide" class="section basics-guide" aria-labelledby="basics-guide-title">
+    <div class="basics-guide-heading">
+      <span class="section-kicker">LEARN EKIDEN</span>
+      <h2 id="basics-guide-title">駅伝の基本</h2>
+      <p>検索とは別に、大学駅伝の仕組みを順に学べる解説です。</p>
+    </div>
+    <div id="panel-basics" class="basics" role="region" aria-labelledby="basics-guide-title">
       <p id="basics-women" class="basics-note" hidden>女子は全日本大学女子駅伝と富士山女子駅伝を表示します。出場の仕組みは2026年の公式要項、区間は公式記録・コース紹介によります。</p>
       <p class="basics-lead">大学駅伝のルールやコースを、図と表でまとめました。数字は各大会の公式の要項・コース紹介によります。</p>
       <section class="basics-block"><h2>ひと目でくらべる</h2><div class="table-scroll"><table id="basics-compare" class="race-table basics-table"></table></div></section>

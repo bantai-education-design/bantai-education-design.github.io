@@ -266,8 +266,12 @@
     if (p.get('ed')) $('#r-edition').value = p.get('ed');
     renderRace(p.get('open'));
     if (p.get('team') && S.teamById.has(p.get('team'))) showTeam(p.get('team'), false);
-    selectTab(['univ', 'race', 'record', 'basics'].includes(p.get('tab')) ? p.get('tab') : 'univ', false);
+    const requestedTab = p.get('tab');
+    selectTab(['univ', 'race', 'record'].includes(requestedTab) ? requestedTab : 'univ', false);
     loadBasics();
+    if (requestedTab === 'basics' && !location.hash) {
+      requestAnimationFrame(() => $('#basics-guide').scrollIntoView({ block: 'start' }));
+    }
   }
 
   /* ---------- タブ ---------- */
@@ -598,7 +602,7 @@
       BASICS = b;
       S.basics = BASICS;
       renderBasics();
-    }).catch(() => { $('#tab-basics').hidden = true; $('#panel-basics').innerHTML = ''; });
+    }).catch(() => { $('#basics-guide').hidden = true; });
   }
   function srcLink(src, role) {
     return `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)} ↗</a>${role === 'secondary' ? '（報道による。公式の要項には記載なし）' : ''}`;
