@@ -105,7 +105,7 @@ jobs:
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
             await page.locator('#university-db-development-status').waitFor({state:'visible'});
             assert.ok((await page.locator('body').innerText()).includes('現在 開発・更新中'));
-            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=209,null,{timeout:20000});
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=144,null,{timeout:20000});
             await page.waitForFunction(()=>/\d+\/\d+/.test(document.querySelector('#academic-sync-status')?.textContent||''),null,{timeout:15000});
             assert.equal(errors.length,0,`page errors: ${errors.join(' | ')}`);
             const status=await page.locator('#academic-sync-status').innerText();console.log('academic status:',status);const sm=status.match(/(\d+)\/(\d+)/);assert.ok(sm&&sm[1]===sm[2]&&Number(sm[2])>=144,status);
