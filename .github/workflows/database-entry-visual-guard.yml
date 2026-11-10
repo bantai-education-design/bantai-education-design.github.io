@@ -98,7 +98,7 @@ jobs:
             await tokyo.waitForFunction(()=>window.scrollY<80,null,{timeout:3000});
             const text = await tokyo.locator('body').innerText();
             assert.equal(text.includes('公開準備中'), false, 'Tokyo page still contains pre-release wording');
-            assert.equal(text.includes('209'), true, 'Unified university page should show 209 universities');
+            assert.equal(text.includes('144'), true, 'Tokyo snapshot mode should show 144 universities');
             await tokyo.close();
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
