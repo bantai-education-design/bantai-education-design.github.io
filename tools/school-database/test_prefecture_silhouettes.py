@@ -351,7 +351,7 @@ def test_no_new_badge_remains():
 
 def test_search_form_elements_preserved_on_standard_pages():
     """静的HTML方式（.search-box）の47都道府県すべてのページで、検索
-    フォームのinput/select/checkbox/radioおよびCSV・宛名コピー機能の
+    フォームのinput/select/checkbox/radioおよび宛名コピー機能の
     要素が維持されていることを確認する（東京都のみ、並び順機能と
     Google Maps文言を持たない旧来の別テンプレートのため一部項目を
     対象外とする）。"""
@@ -377,7 +377,7 @@ def test_search_form_elements_preserved_on_standard_pages():
         assert 'type="radio"' in html and "honorific" in html, (
             f"{slug}: 宛名選択のラジオボタンが見つかりません"
         )
-        assert 'id="csv-download-btn"' in html, f"{slug}: CSVダウンロードボタンが見つかりません"
+        assert 'id="csv-download-btn"' not in html, f"{slug}: 廃止したCSVダウンロードボタンが残っています"
         if slug != "tokyo":
             # 東京都ページの静的な説明文にはGoogle Mapsの文言がそもそも
             # 含まれていない（既存の別テンプレートによる差分であり、

@@ -165,7 +165,7 @@ def fix_portal_description(prefecture_metadata: list[dict]) -> bool:
     new_description = (
         f"学校封筒印刷・宛名作成に使える、全国47都道府県対応の学校データベースポータルです"
         f"（掲載校・園数 合計{format_number(national_total)}件）。都道府県を選択して、"
-        f"学校名・住所・電話番号での検索、宛名コピー、CSV出力、Google Maps連携がご利用いただけます。"
+        f"学校名・住所・電話番号での検索、宛名コピー、Google Maps連携がご利用いただけます。"
     )
     match = re.search(r'<meta name="description" content="[^"]*">', html)
     if not match:
