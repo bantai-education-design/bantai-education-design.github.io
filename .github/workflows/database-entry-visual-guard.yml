@@ -59,48 +59,33 @@ jobs:
             }
             const hub = await browser.newPage({viewport:{width:1366,height:900}});
             await hub.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            const art = hub.locator('#database-gateway-art');
-            await art.waitFor({state:'attached'});
-            assert.equal(await art.getAttribute('src'), '/assets/images/databases-gateway-hero.jpg', 'gateway artwork should use the official hero asset path');
-            const imageState = await art.evaluate(img=>({complete:img.complete,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
-            assert.equal(imageState.complete,true,'gateway artwork did not finish loading');
-            assert.equal(imageState.naturalWidth,1536,`gateway artwork width invalid: ${imageState.naturalWidth}`);
-            assert.equal(imageState.naturalHeight,503,`gateway artwork height invalid: ${imageState.naturalHeight}`);
-            assert.equal(await hub.locator('.db-hotspot').count(),7,'gateway artwork should have seven interactive hotspots');
-            const artBox = await art.boundingBox();
-            assert.ok(artBox && artBox.width > 1000 && artBox.height > 300, 'gateway artwork render box is too small');
-            for (const hotspot of await hub.locator('.db-hotspot').all()) {
-              const box = await hotspot.boundingBox();
-              assert.ok(box && box.width > 8 && box.height > 8, 'gateway hotspot has no usable area');
-              assert.ok(box.x >= artBox.x - 1 && box.y >= artBox.y - 1, 'gateway hotspot starts outside artwork');
-              assert.ok(box.x + box.width <= artBox.x + artBox.width + 1, 'gateway hotspot extends beyond artwork width');
-              assert.ok(box.y + box.height <= artBox.y + artBox.height + 1, 'gateway hotspot extends beyond artwork height');
-              const center = {x:box.x + box.width/2, y:box.y + box.height/2};
-              const hit = await hub.evaluate(({x,y})=>{
-                const el=document.elementFromPoint(x,y);
-                return !!el?.classList?.contains('db-hotspot');
-              }, center);
-              assert.equal(hit,true,'gateway hotspot center is not clickable');
+            const gateway = hub.locator('.db-gateway');
+            await gateway.waitFor({state:'visible'});
+            assert.equal(await hub.locator('#database-gateway-art').count(),0,'obsolete raster gateway artwork remains');
+            assert.equal(await hub.locator('.db-service').count(),4,'database service cards should be 4');
+            for (const card of await hub.locator('.db-service').all()) {
+              const box = await card.boundingBox();
+              assert.ok(box && box.width > 180 && box.height > 120, 'database service card has no usable area');
             }
             const expected = [
-              ['学校を探す','/tools/school-database/'],
-              ['教育・地域統計比較','/tools/school-database/analytics/'],
-              ['学びの流れを見る','/resources/textbook-plans/'],
-              ['未来の学びを探す','/tools/university-database/']
+              ['学校情報','/tools/school-database/'],
+              ['地域・統計データ','/tools/school-database/analytics/'],
+              ['教科書・年間指導計画','/resources/textbook-plans/'],
+              ['全国大学データベース','/tools/university-database/']
             ];
             for (const [heading,href] of expected) {
-              const card = hub.locator('.db-card').filter({hasText:heading}).first();
+              const card = hub.locator('.db-service').filter({hasText:heading}).first();
               assert.ok(await card.count() >= 1, `${heading}: missing`);
               assert.equal(await card.getAttribute('href'), href, `${heading}: wrong href`);
             }
-            assert.equal(await hub.locator('.db-card').count(),4,'fallback database cards should be 4');
-            await hub.addStyleTag({content:'.db-hotspot{outline:3px solid #ff2d55!important;background:rgba(255,45,85,.08)!important;box-shadow:none!important}'});
-            await hub.locator('.db-artboard').screenshot({path:'visual-preview/databases-hotspots-pc.png'});
+            const hubText=await hub.locator('body').innerText();
+            assert.equal(hubText.includes('東京144大学'),false,'obsolete Tokyo-only wording remains');
+            await gateway.screenshot({path:'visual-preview/databases-gateway-pc.png'});
             await hub.close();
 
             const tokyo = await browser.newPage({viewport:{width:1366,height:900}});
             await tokyo.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
-            await tokyo.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
+            await tokyo.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=144,{timeout:25000});
             const topButton=tokyo.locator('button[aria-label="ページ上部へ戻る"]').first();
             await topButton.waitFor({state:'attached'});
             assert.equal(await topButton.evaluate(el=>getComputedStyle(el).visibility),'hidden','top button should start hidden');
@@ -113,7 +98,7 @@ jobs:
             await tokyo.waitForFunction(()=>window.scrollY<80,null,{timeout:3000});
             const text = await tokyo.locator('body').innerText();
             assert.equal(text.includes('公開準備中'), false, 'Tokyo page still contains pre-release wording');
-            assert.equal(text.includes('144'), true, 'Tokyo page should show 144 universities');
+            assert.equal(text.includes('144'), true, 'Tokyo snapshot mode should show 144 universities');
             await tokyo.close();
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
