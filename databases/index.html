@@ -11,18 +11,29 @@
 <style>
 *{box-sizing:border-box}
 .db-main{background:#fff;min-height:100vh}
-.db-visual-menu{background:#031b2f}
-.db-artboard{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0;background:#031b2f}
-.db-artboard>img{display:block;width:100%;height:auto}
-.db-hotspot{position:absolute;display:block;z-index:2;border-radius:18px;outline:2px solid transparent;transition:outline-color .18s,box-shadow .18s;cursor:pointer}
-.db-hotspot:hover,.db-hotspot:focus-visible,.db-hotspot:active{outline-color:#ffd66f;box-shadow:0 0 0 4px rgba(255,214,111,.35);cursor:pointer}
-.hot-school-card{left:45.90%;top:4.25%;width:14.40%;height:38.48%}
-.hot-stats-card{left:45.90%;top:49.70%;width:14.40%;height:38.77%}
-.hot-textbook-card{left:78.10%;top:5.88%;width:16.80%;height:37.05%}
-.hot-university-card{left:78.10%;top:49.85%;width:16.90%;height:39.09%}
-.hot-school-btn{left:4.50%;top:77.54%;width:10.90%;height:11.81%;border-radius:999px}
-.hot-textbook-btn{left:16.20%;top:77.54%;width:15.60%;height:11.81%;border-radius:999px}
-.hot-university-btn{left:32.60%;top:77.54%;width:11.70%;height:11.81%;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#ffbd43;color:#102033;font-weight:800;font-size:clamp(10px,1.25vw,20px);line-height:1;box-shadow:0 4px 12px rgba(0,0,0,.18);text-decoration:none}
+.db-visual-menu{position:relative;overflow:hidden;background:radial-gradient(circle at 68% 46%,rgba(225,169,45,.22),transparent 24%),linear-gradient(135deg,#031b2f 0%,#062a43 58%,#031522 100%);color:#fff}
+.db-visual-menu::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(90deg,transparent,#000 42%,#000)}
+.db-gateway{position:relative;z-index:1;display:grid;grid-template-columns:minmax(300px,.9fr) minmax(520px,1.25fr);gap:clamp(28px,4vw,64px);max-width:1360px;margin:auto;padding:clamp(42px,5vw,78px) clamp(24px,4vw,64px)}
+.db-intro{align-self:center}
+.db-kicker{margin:0 0 14px;color:#ffc14f;font-weight:900;letter-spacing:.16em;font-size:.82rem}
+.db-intro h1{margin:0;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.25rem,4.2vw,4.3rem);line-height:1.18;letter-spacing:.02em}
+.db-intro h1 span{display:block;color:#ffc14f}
+.db-lead{max-width:650px;margin:24px 0 0;color:#e5edf3;font-size:clamp(1rem,1.4vw,1.18rem);font-weight:700;line-height:1.9}
+.db-primary-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.db-primary-links a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;background:#fff;color:#102a3e;font-weight:900;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.db-primary-links a:last-child{background:#ffc14f}
+.db-primary-links a:hover,.db-primary-links a:focus-visible{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,193,79,.25)}
+.db-service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-self:center}
+.db-service{position:relative;display:flex;min-height:190px;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:24px;border:1px solid rgba(255,208,117,.5);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045));color:#fff;text-decoration:none;box-shadow:0 18px 42px rgba(0,0,0,.22);backdrop-filter:blur(4px);transition:transform .18s,border-color .18s,background .18s}
+.db-service::after{content:"";position:absolute;inset:auto -25% -55% 30%;height:150px;border-radius:50%;background:rgba(255,193,79,.13);filter:blur(8px)}
+.db-service:hover,.db-service:focus-visible{transform:translateY(-4px);border-color:#ffd77b;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.07))}
+.db-service-icon{position:absolute;top:20px;right:22px;font-size:2.25rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3))}
+.db-service small{color:#ffc95f;font-weight:900;letter-spacing:.08em}
+.db-service h2{margin:6px 0 7px;font-size:clamp(1.25rem,1.8vw,1.7rem);line-height:1.3}
+.db-service p{position:relative;z-index:1;margin:0;color:#dce8ef;line-height:1.6;font-size:.9rem}
+.db-service strong{position:relative;z-index:1;margin-top:13px;color:#ffd36b}
+.db-service--university{border-color:#ffc14f;background:linear-gradient(145deg,rgba(255,193,79,.22),rgba(255,255,255,.06))}
+.db-service--university small{color:#ffe0a0}
 .db-mobile-fallback{display:none;padding:28px 16px 44px;background:linear-gradient(180deg,#fff,#f7fafc)}
 .db-mobile-fallback h2{margin:0 0 18px;text-align:center;color:#15364f;font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
 .db-mobile-grid{display:grid;gap:14px;max-width:720px;margin:auto}
@@ -31,10 +42,18 @@
 .db-card h3{margin:6px 0 7px}
 .db-card p{margin:0;color:#667a8a;line-height:1.65;font-size:.88rem}
 .db-card strong{display:inline-block;margin-top:10px;color:#0b4d73}
+@media(max-width:900px){
+  .db-gateway{grid-template-columns:1fr;padding:42px 24px}
+  .db-intro{text-align:center}
+  .db-lead{margin-left:auto;margin-right:auto}
+  .db-primary-links{justify-content:center}
+}
 @media(max-width:700px){
-  .db-artboard{overflow-x:hidden}
-  .db-mobile-fallback{display:block}
-  .db-hotspot{border-radius:8px}
+  .db-gateway{padding:34px 16px}
+  .db-intro h1{font-size:2.35rem}
+  .db-service-grid{grid-template-columns:1fr;gap:12px}
+  .db-service{min-height:156px;padding:20px}
+  .db-mobile-fallback{display:none}
 }
 </style>
   <!-- Google tag (gtag.js) -->
@@ -99,15 +118,30 @@
 <main class="db-main">
   <a href="/tools/university-database/tokyo/photo-submit/?v=20260904-1500" hidden aria-hidden="true" tabindex="-1">大学写真を送る</a>
   <section class="db-visual-menu" aria-label="教育情報データベースの総合メニュー">
-    <div class="db-artboard">
-      <img id="database-gateway-art" src="/assets/images/databases-gateway-hero.jpg" width="1536" height="503" alt="教育情報を、探す・比べる・活かす。学校情報、教科書・年間指導計画、地域・統計データ、大学情報をひとつの教育データ基盤から探すメニュー">
-      <a class="db-hotspot hot-school-card" href="/tools/school-database/" aria-label="全国学校データベースを開く"></a>
-      <a class="db-hotspot hot-stats-card" href="/tools/school-database/analytics/" aria-label="全国47都道府県 教育・地域統計比較ダッシュボードを開く"></a>
-      <a class="db-hotspot hot-textbook-card" href="/resources/textbook-plans/" aria-label="教科書会社・年間指導計画を開く"></a>
-      <a class="db-hotspot hot-university-card" href="/tools/university-database/" aria-label="大学データベースを開く"></a>
-      <a class="db-hotspot hot-school-btn" href="/tools/school-database/" aria-label="学校を探す"></a>
-      <a class="db-hotspot hot-textbook-btn" href="/resources/textbook-plans/" aria-label="教科書・年間指導計画を見る"></a>
-      <a class="db-hotspot hot-university-btn" href="/tools/university-database/" aria-label="全国大学データベースを見る">全国大学DB&nbsp; →</a>
+    <div class="db-gateway">
+      <div class="db-intro">
+        <p class="db-kicker">EDUCATION DATA GATEWAY</p>
+        <h1>教育情報を、<span>探す・比べる・活かす。</span></h1>
+        <p class="db-lead">全国の学校・大学を探す。教科書の年間指導計画を見る。47都道府県の教育・地域統計を比べる。目的に合った入口から、必要な情報へ進めます。</p>
+        <div class="db-primary-links">
+          <a href="/tools/school-database/">全国学校DB <span aria-hidden="true">→</span></a>
+          <a href="/tools/university-database/">全国大学DB <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="db-service-grid">
+        <a class="db-service" href="/tools/school-database/">
+          <span class="db-service-icon" aria-hidden="true">🏫</span><small>全国47都道府県</small><h2>学校情報</h2><p>学校名・住所・校種などから探せます。</p><strong>全国学校DBを開く →</strong>
+        </a>
+        <a class="db-service" href="/resources/textbook-plans/">
+          <span class="db-service-icon" aria-hidden="true">📖</span><small>教科書会社別</small><h2>教科書・年間指導計画</h2><p>教科書と年間の学習の流れを確認できます。</p><strong>年間指導計画を見る →</strong>
+        </a>
+        <a class="db-service" href="/tools/school-database/analytics/">
+          <span class="db-service-icon" aria-hidden="true">🗾</span><small>全国47都道府県</small><h2>地域・統計データ</h2><p>教育と地域の指標を全国で比較できます。</p><strong>比較ダッシュボードを開く →</strong>
+        </a>
+        <a class="db-service db-service--university" href="/tools/university-database/">
+          <span class="db-service-icon" aria-hidden="true">🎓</span><small>全国の大学情報</small><h2>全国大学データベース</h2><p>地域を限定せず、大学検索・比較・詳細情報へ進めます。</p><strong>全国大学DBを開く →</strong>
+        </a>
+      </div>
     </div>
   </section>
   <section class="db-mobile-fallback" aria-label="データベース一覧">
