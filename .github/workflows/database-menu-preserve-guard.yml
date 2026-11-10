@@ -54,23 +54,24 @@ jobs:
               assert.ok((await page.evaluate(()=>window.scrollY)) < 2, `${viewport.name}: direct load must start at page top`);
               assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${viewport.name}: horizontal overflow`);
 
-              const art=page.locator('#database-gateway-art');
-              const imageState=await art.evaluate(img=>({complete:img.complete,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
-              assert.equal(imageState.complete,true,`${viewport.name}: gateway artwork did not load`);
-              assert.equal(imageState.naturalWidth,1536,`${viewport.name}: gateway width`);
-              assert.equal(imageState.naturalHeight,503,`${viewport.name}: gateway height`);
-              const box=await art.boundingBox();
-              assert.ok(box && box.width>760,`${viewport.name}: gateway width too small`);
-              const expectedRatio=1536/503;
-              assert.ok(Math.abs((box.width/box.height)-expectedRatio)<0.04,`${viewport.name}: gateway aspect ratio changed`);
-
-              const uniHotspot=page.locator('.hot-university-card');
-              assert.equal(await uniHotspot.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university card must open university hub`);
-              const statsHotspot=page.locator('.hot-stats-card');
-              assert.equal(await statsHotspot.getAttribute('href'),'/tools/school-database/analytics/',`${viewport.name}: stats card must open analytics hub`);
-              const uniButton=page.locator('.hot-university-btn');
-              assert.equal(await uniButton.getAttribute('href'),'/tools/university-database/',`${viewport.name}: university button must open university hub`);
-              assert.equal(await page.locator('.db-hotspot').count(),7,`${viewport.name}: hotspot count changed`);
+              const gateway=page.locator('.db-gateway');
+              await gateway.waitFor({state:'visible'});
+              assert.equal(await page.locator('#database-gateway-art').count(),0,`${viewport.name}: obsolete gateway artwork remains`);
+              assert.equal(await page.locator('.db-service').count(),4,`${viewport.name}: service card count changed`);
+              const bodyText=await page.locator('body').innerText();
+              assert.equal(bodyText.includes('東京144大学'),false,`${viewport.name}: obsolete Tokyo-only wording remains`);
+              const expected=[
+                ['/tools/school-database/','学校情報'],
+                ['/resources/textbook-plans/','教科書・年間指導計画'],
+                ['/tools/school-database/analytics/','地域・統計データ'],
+                ['/tools/university-database/','全国大学データベース']
+              ];
+              for(const [href,label] of expected){
+                const card=page.locator(`.db-service[href="${href}"]`);
+                assert.equal(await card.count(),1,`${viewport.name}: missing ${label}`);
+                assert.ok((await card.innerText()).includes(label),`${viewport.name}: missing label ${label}`);
+              }
+              assert.ok(bodyText.includes('全国の大学情報')&&bodyText.includes('地域を限定せず'),`${viewport.name}: nationwide university guidance missing`);
 
               if(viewport.width<=860){
                 const toggle=page.locator('.menu-toggle');
@@ -88,7 +89,7 @@ jobs:
 
             const route=await browser.newPage({viewport:{width:904,height:633}});
             await route.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            await route.locator('.hot-university-btn').click();
+            await route.locator('.db-service[href="/tools/university-database/"]').click();
             await route.waitForURL('**/tools/university-database/');
             const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-submit/"]').first();
             await photoEntry.waitFor({state:'visible'});
@@ -96,8 +97,8 @@ jobs:
             const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
             await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
-            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=144,{timeout:20000});
-            assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=144,'University database must remain reachable with at least the 144 Tokyo cards');
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=209,{timeout:25000});
+            assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=209,'University database must remain reachable with all 209 published cards');
             await route.close();
 
             await browser.close();
