@@ -1,2 +1,10 @@
 ﻿__pycache__/
 *.py[cod]
+
+# Private admin runtime must remain outside the repository.
+node_modules/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.env
+.env.*

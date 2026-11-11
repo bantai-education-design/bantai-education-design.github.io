@@ -1,0 +1,44 @@
+name: Admin management center
+on:
+  pull_request:
+    paths:
+      - 'services/admin-center/**'
+      - 'admin/**'
+      - 'index.html'
+      - 'assets/css/admin-entry.css'
+      - '.github/workflows/admin-management-center.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: services/admin-center/package-lock.json
+      - run: npm ci
+        working-directory: services/admin-center
+      - run: npm test
+        working-directory: services/admin-center
+      - run: npm audit
+        working-directory: services/admin-center
+      - name: Verify reproducible editor bundle
+        run: |
+          npm run build --prefix services/admin-center
+          git diff --exit-code -- admin/center/editor.js
+      - run: npx playwright install --with-deps chromium
+        working-directory: services/admin-center
+      - name: Verify browser workflows and desktop/mobile layouts
+        run: node services/admin-center/test/browser.mjs
+        env:
+          SCREENSHOT_DIR: ${{ runner.temp }}/admin-center-screenshots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: admin-center-screenshots
+          path: ${{ runner.temp }}/admin-center-screenshots
