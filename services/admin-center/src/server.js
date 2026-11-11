@@ -1,9 +1,10 @@
 import http from 'node:http';
-import {readFileSync,mkdirSync,writeFileSync,existsSync,realpathSync,readdirSync} from 'node:fs';
+import {readFileSync,mkdirSync,writeFileSync,existsSync,realpathSync,readdirSync,lstatSync} from 'node:fs';
 import {resolve,dirname,extname,sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {randomBytes,createHash,scryptSync,timingSafeEqual,randomUUID} from 'node:crypto';
 import {Store} from './store.js';
+import {runtimeConfig} from './runtime.js';
 import {GitHub} from './github.js';
 import {validateArticle,articlePage,safeURL} from './content.js';
 import {importLegacy,legacyPath,legacyCandidatePath,legacyPage,validateLegacyIdentity} from './legacy.js';
@@ -22,7 +23,10 @@ export function createApp({origin,dataDir,password,githubToken,development=false
   if(!password || !/^[a-f0-9]{32}:[a-f0-9]{128}$/.test(password)) throw Error('ADMIN_PASSWORD_HASHが未設定または不正です');
   dataDir=resolve(dataDir || '');
   if(dataDir===root || dataDir.startsWith(root+sep)) throw Error('保存先は公開リポジトリ外を指定してください');
+  mkdirSync(dataDir,{recursive:true,mode:0o700});dataDir=realpathSync(dataDir);
+  if(dataDir===root || dataDir.startsWith(root+sep))throw Error('保存先の実体は公開リポジトリ外にしてください');
   mkdirSync(resolve(dataDir,'images'),{recursive:true,mode:0o700});
+  if(!lstatSync(resolve(dataDir,'images')).isDirectory())throw Error('画像保存先にシンボリックリンクは使用できません');
   const store=new Store(resolve(dataDir,'admin.sqlite'));
   const gh=github || new GitHub(githubToken);
   let publishing=false;
@@ -42,6 +46,7 @@ export function createApp({origin,dataDir,password,githubToken,development=false
     if(!development) res.setHeader('Strict-Transport-Security','max-age=31536000');
     try {
       const path=new URL(req.url,origin).pathname;
+      if(path==='/healthz' && req.method==='GET'){store.db.prepare('SELECT 1').get();return send(res,200,{ok:true});}
       const mutate=!['GET','HEAD'].includes(req.method);
       if(mutate && req.headers.origin!==origin) return send(res,403,{message:'許可されていない送信元です'});
       if(req.method==='POST' && path==='/api/login') {
@@ -184,8 +189,13 @@ export function createApp({origin,dataDir,password,githubToken,development=false
   return {server,store};
 }
 if(process.argv[1]===fileURLToPath(import.meta.url)) {
-  const {ADMIN_ORIGIN,ADMIN_DATA_DIR,ADMIN_PASSWORD_HASH,ADMIN_GITHUB_TOKEN,ADMIN_DEV_HTTP,PORT}=process.env;
-  if(!ADMIN_DATA_DIR) throw Error('ADMIN_DATA_DIRを設定してください');
-  const {server}=createApp({origin:ADMIN_ORIGIN,dataDir:ADMIN_DATA_DIR,password:ADMIN_PASSWORD_HASH,githubToken:ADMIN_GITHUB_TOKEN,development:ADMIN_DEV_HTTP==='1'});
-  server.listen(Number(PORT || 8787),'127.0.0.1',()=>console.log('Ban.Tai管理サーバー起動'));
+  const config=runtimeConfig(),{server,store}=createApp(config);
+  server.listen(config.port,config.host,()=>console.log('Ban.Tai管理サーバー起動'));
+  let stopping=false;
+  function shutdown(){
+    if(stopping)return;stopping=true;
+    server.close(()=>{store.db.close();process.exit(0);});
+    setTimeout(()=>process.exit(1),110000).unref();
+  }
+  process.on('SIGTERM',shutdown);process.on('SIGINT',shutdown);
 }

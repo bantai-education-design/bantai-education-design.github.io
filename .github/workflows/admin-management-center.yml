@@ -5,6 +5,7 @@ on:
       - 'services/admin-center/**'
       - 'admin/**'
       - 'index.html'
+      - 'render.yaml'
       - 'assets/css/admin-entry.css'
       - '.github/workflows/admin-management-center.yml'
   workflow_dispatch:
@@ -13,7 +14,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,6 +38,27 @@ jobs:
         run: node services/admin-center/test/browser.mjs
         env:
           SCREENSHOT_DIR: ${{ runner.temp }}/admin-center-screenshots
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate managed-hosting Blueprint against official schema
+        run: |
+          python -m pip install PyYAML==6.0.3 jsonschema==4.26.0
+          python - <<'PY'
+          import json, urllib.request, yaml, jsonschema
+          with urllib.request.urlopen('https://render.com/schema/render.yaml.json', timeout=30) as response:
+              schema = json.load(response)
+          with open('render.yaml') as source:
+              jsonschema.validate(yaml.safe_load(source), schema)
+          print('Render Blueprint schema: OK (no resources created)')
+          PY
+      - name: Build non-root admin runtime image
+        run: docker build --file services/admin-center/deploy/Dockerfile --tag bantai-admin-center:local .
+      - name: Verify persistent container and deployment configuration
+        run: node services/admin-center/test/container.mjs
+        env:
+          ADMIN_DOMAIN: admin.example.invalid
+          ADMIN_SECRET_DIR: /tmp
       - uses: actions/upload-artifact@v4
         if: always()
         with:
