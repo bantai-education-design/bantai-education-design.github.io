@@ -4,6 +4,7 @@ import Image from '@tiptap/extension-image';
 import {Table,TableRow,TableHeader,TableCell} from '@tiptap/extension-table';
 import {renderDoc} from './content.js';
 const $=s=>document.querySelector(s), publicSite='https://bantai-education-design.github.io';
+let profiles=[];
 let csrf='',article=null,editor=null,timer=null,dirty=false,saving=null,generation=0,conflict=false;
 const notice=s=>{$('#notice').textContent=s;};
 const run=fn=>async(...args)=>{try{await fn(...args);}catch(e){notice(e.message);}};
@@ -20,9 +21,28 @@ const chart=Node.create({
   renderHTML({HTMLAttributes}){return ['div',mergeAttributes(HTMLAttributes,{'data-chart':'true'}),'棒グラフ'];},
   addNodeView(){return ({node})=>{const dom=document.createElement('div');dom.innerHTML=renderDoc({type:'doc',content:[node.toJSON()]});return {dom};};}
 });
+const preserved=Node.create({
+  name:'preserved',group:'block',atom:true,selectable:true,
+  addAttributes(){return {index:{default:null}};},
+  parseHTML(){return [{tag:'div[data-preserved]'}];},
+  renderHTML(){return ['div',{'data-preserved':'true'},'原本保持ブロック'];},
+  addNodeView(){return ({node})=>{const dom=document.createElement('div');dom.className='preserved-block';const title=document.createElement('strong');title.textContent='原本のレイアウトを保持';const p=document.createElement('p');p.textContent=article?.legacy?.labels[node.attrs.index] || '画像・表・独自レイアウト';dom.append(title,p);return {dom};};}
+});
+const legacyParagraph=Node.create({
+  name:'legacyParagraph',group:'block',content:'inline*',
+  addAttributes(){return {index:{default:null}};},
+  parseHTML(){return [{tag:'p[data-legacy-paragraph]'}];},
+  renderHTML(){return ['p',{'data-legacy-paragraph':'true'},0];}
+});
+const legacyContainer=Node.create({
+  name:'legacyContainer',group:'block',content:'block*',defining:true,
+  addAttributes(){return {index:{default:null}};},
+  parseHTML(){return [{tag:'div[data-legacy-container]'}];},
+  renderHTML(){return ['div',{'data-legacy-container':'true',class:'legacy-container'},0];}
+});
 function changed(){if(!article)return;dirty=true;generation++;$('#save-status').textContent='未保存…';clearTimeout(timer);timer=setTimeout(()=>run(save)(),1000);}
 function setupEditor(){
-  editor=new Editor({element:$('#editor'),extensions:[StarterKit.configure({heading:{levels:[2,3]},link:{openOnClick:false,protocols:['https','http']}}),Image.configure({allowBase64:false}),Table,TableRow,TableHeader,TableCell,chart],content:{type:'doc',content:[{type:'paragraph'}]},onUpdate:changed,editorProps:{handlePaste:(_v,event)=>{
+  editor=new Editor({element:$('#editor'),extensions:[StarterKit.configure({heading:{levels:[2,3]},link:{openOnClick:false,protocols:['https','http']}}),Image.configure({allowBase64:false}),Table,TableRow,TableHeader,TableCell,chart,preserved,legacyParagraph,legacyContainer],content:{type:'doc',content:[{type:'paragraph'}]},onUpdate:changed,editorProps:{handlePaste:(_v,event)=>{
     // External rich HTML can introduce unknown or tracking image URLs. Paste prose only.
     const text=event.clipboardData?.getData('text/plain');if(text){event.preventDefault();editor.commands.insertContent(text.split('\n').map(text=>({type:'paragraph',content:text?[{type:'text',text}]:[]})));return true;}return false;
   },handleDrop:(_v,e)=>{e.preventDefault();notice('画像は「画像」ボタンからアップロードしてください。');return true;}}});
@@ -33,13 +53,14 @@ async function listDrafts(){
   if(!list.length)$('#draft-list').textContent='下書きはまだありません。';
 }
 async function versions(){
-  const versions=await api(`articles/${article.id}/versions`);$('#versions').replaceChildren();
+  const id=article?.id;if(!id)return;const versions=await api(`articles/${id}/versions`);if(article?.id!==id)return;$('#versions').replaceChildren();
   for(const v of versions){const row=document.createElement('div');row.className='history-row';row.textContent=`第${v.revision}版 · ${new Date(v.created).toLocaleString('ja-JP')}`;const b=document.createElement('button');b.textContent='この版を復元';b.onclick=run(async()=>{
     if(!confirm('この版を新しい下書きとして復元しますか？'))return;
-    await save();await openArticle(await api(`articles/${article.id}/restore`,'POST',{revision:article.revision,target:v.revision}));notice('下書きを復元しました。公開ページは変更していません。');
+    await save();if(article?.id!==id)throw Error('編集中の記事が変わりました。履歴を開き直してください。');await openArticle(await api(`articles/${id}/restore`,'POST',{revision:article.revision,target:v.revision}));notice('下書きを復元しました。公開ページは変更していません。');
   });row.append(b);$('#versions').append(row);}
 }
 async function openArticle(a){
+  if(dirty || saving)await save();
   clearTimeout(timer);article=a;dirty=false;conflict=false;$('#title').value=a.title;$('#excerpt').value=a.excerpt;
   editor.commands.setContent(a.doc,{emitUpdate:false});$('#writing').hidden=false;$('#empty-editor').hidden=true;$('#save-status').textContent=`第${a.revision}版 保存済み`;
   await Promise.all([listDrafts(),versions()]);
@@ -63,20 +84,45 @@ async function save(){
   await Promise.all([listDrafts(),versions()]);
 }
 async function loadLegacy(){
-  const rows=await api('legacy');$('#legacy-list').replaceChildren();
-  for(const r of rows){const a=document.createElement('a');a.textContent=r.title;a.href=publicSite+(r.url || '/columns/');a.target='_blank';a.rel='noopener';const p=document.createElement('p');p.append(a);$('#legacy-list').append(p);}
+  const rows=await api('legacy');const render=()=>{
+    $('#legacy-list').replaceChildren();const query=$('#legacy-search').value.trim().toLowerCase();
+    for(const r of rows.filter(x=>!query || x.title.toLowerCase().includes(query))){
+      const p=document.createElement('div');p.className='legacy-row';const a=document.createElement('a');a.textContent=r.title;a.href=publicSite+(r.url || '/columns/');a.target='_blank';a.rel='noopener';p.append(a);
+      for(const fresh of [false,true]){const b=document.createElement('button');b.textContent=fresh?'最新版を再取込':'編集する';b.onclick=run(async()=>{
+        await save();if(fresh && !confirm('現在の下書きを残し、最新版を別の下書きとして取り込みます。続けますか？'))return;
+        b.disabled=true;try{await openArticle(await api('legacy/import','POST',{catalogId:r.id,fresh}));notice('既存記事を下書きに取り込みました。元の記事は公開申請・承認まで変わりません。');}finally{b.disabled=false;}
+      });p.append(b);}
+      $('#legacy-list').append(p);
+    }
+  };$('#legacy-search').oninput=render;render();
+}
+async function loadProfiles(){
+  profiles=await api('universities');const select=$('#profile-select');
+  for(const p of profiles){const o=document.createElement('option');o.value=p.region+'/'+p.id;o.textContent=`${p.name}（${{tokyo:'東京',kanagawa:'神奈川',saitama:'埼玉'}[p.region]} / ${p.id}）`;select.append(o);}
+  select.onchange=()=>{const p=profiles.find(x=>x.region+'/'+x.id===select.value);if(!p)return;
+    const f=$('#proposal-form');f.elements.region.value=p.region;f.elements.universityId.value=p.id;f.elements.source.value=p.source;
+    $('#profile-field').replaceChildren();for(const [key,label] of Object.entries(p.fieldLabels)){const o=document.createElement('option');o.value=key;o.textContent=label;$('#profile-field').append(o);}
+    const fill=()=>{const key=$('#profile-field').value;f.elements.field.value=key;f.elements.before.value=p.fields[key];f.elements.after.value=p.fields[key];};$('#profile-field').onchange=fill;fill();
+  };
 }
 async function history(){
   const h=await api('history');$('#requests').replaceChildren();$('#events').replaceChildren();
   if(!h.requests.length)$('#requests').textContent='公開申請はまだありません。';
   for(const r of h.requests){const p=document.createElement('p');p.className='history-row';p.textContent=`${{'publish':'公開','unpublish':'非公開','university-proposal':'大学DB修正提案'}[r.action]} / ${{open:'申請中',merged:'マージ済み（配信は要確認）',closed:'取り下げ'}[r.state] || r.state} `;const a=document.createElement('a');a.href=r.url;a.textContent=`PR #${r.number}`;a.target='_blank';a.rel='noopener';p.append(a);$('#requests').append(p);}
-  for(const e of h.events){const p=document.createElement('p');p.className='history-row';p.textContent=`${new Date(e.created).toLocaleString('ja-JP')} · ${e.kind} ${JSON.stringify(e.detail)}`;$('#events').append(p);}
+  const labels={'draft.saved':'下書きを保存','draft.restored':'下書きを復元','legacy.imported':'既存記事を取り込み','publication.requested':'公開・非公開を申請','publication.merged':'マージを確認','publication.closed':'申請の取り下げを確認','image.uploaded':'画像をアップロード','university.proposed':'大学情報の修正提案を保存','university.requested':'大学情報の申請を作成','session.login':'ログイン'};
+  for(const e of h.events){const p=document.createElement('p');p.className='history-row';p.textContent=`${new Date(e.created).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})} · ${labels[e.kind] || '操作を記録'}${e.detail.revision?' · 第'+e.detail.revision+'版':''}`;$('#events').append(p);}
 }
 async function proposals(){
   const rows=await api('proposals');$('#proposals').replaceChildren();
-  for(const p of rows){const el=document.createElement('div');el.className='history-row';const text=document.createElement('p');text.textContent=`${p.region} · ${p.universityId} · ${p.field}: ${p.before} → ${p.after}`;const b=document.createElement('button');b.textContent='修正提案をPRにする';b.onclick=run(async()=>{if(!confirm('修正提案を公開リポジトリのPRに載せます。続けますか？'))return;b.disabled=true;try{const r=await api(`proposals/${p.id}/submit`,'POST',{});notice(`PR #${r.number}を作成しました。公開DBへの適用はレビュー後です。`);}finally{b.disabled=false;}});el.append(text,b);$('#proposals').append(el);}
+  for(const p of rows){const el=document.createElement('div');el.className='history-row';const text=document.createElement('p');text.textContent=`${{tokyo:'東京',kanagawa:'神奈川',saitama:'埼玉'}[p.region]} · ${p.universityId} · ${profiles.find(x=>x.id===p.universityId && x.region===p.region)?.fieldLabels[p.field] || p.field}: ${p.before || '（未登録）'} → ${p.after}`;el.append(text);
+    for(const apply of [false,true]){const b=document.createElement('button');b.textContent=apply?'DB反映を申請（PR）':'提案だけをPRにする';if(apply && (!p.sourceConfirmed || !profiles.some(x=>x.id===p.universityId && x.region===p.region && Object.hasOwn(x.fieldLabels,p.field)))){b.disabled=true;b.title='対応プロフィールの大学・項目を選び、公式出典を確認して保存してください';}b.onclick=run(async()=>{
+      if(!confirm(apply?'公式出典と変更前後を確認しましたか？対象プロフィールを変更する公開PRを作成します。':'修正提案を公開リポジトリのPRに載せます。続けますか？'))return;
+      b.disabled=true;try{const r=await api(`proposals/${p.id}/submit`,'POST',{apply});notice(`PR #${r.number}を作成しました。反映はレビュー・承認後です。`);await history();}finally{b.disabled=false;}
+    });el.append(b);}
+    $('#proposals').append(el);
+  }
 }
-async function enter(session){csrf=session.csrf;$('#login').hidden=true;$('#workspace').hidden=false;$('#logout').hidden=false;if(!editor)setupEditor();notice(session.publicationConfigured===false?'下書き編集を利用できます。公開用のGitHub接続は未設定です。':'');await Promise.all([listDrafts(),loadLegacy(),proposals(),history()]);const tab=document.querySelector('[data-tab="'+location.hash.slice(1).replace(/[^a-z]/g,'')+'"]');if(tab)tab.click();}
+async function enter(session){csrf=session.csrf;$('#login').hidden=true;$('#workspace').hidden=false;$('#logout').hidden=false;if(!editor)setupEditor();notice(session.publicationConfigured===false?'下書き編集を利用できます。公開用のGitHub接続は未設定です。':'');await Promise.all([listDrafts(),loadLegacy(),loadProfiles(),proposals(),history()]);const tab=document.querySelector('[data-tab="'+location.hash.slice(1).replace(/[^a-z]/g,'')+'"]');if(tab)tab.click();}
 $('#login-form').onsubmit=run(async e=>{e.preventDefault();const s=await api('login','POST',{password:$('#password').value});$('#password').value='';await enter({...s,...await api('session')});});
 $('#logout').onclick=run(async()=>{await save();await api('logout','POST',{});location.reload();});
 $('#new').onclick=run(async()=>{await save();const a=await api('articles','POST',{title:'新しいコラム',excerpt:'',doc:{type:'doc',content:[{type:'paragraph'}]}});await openArticle(a);$('#title').focus();});
@@ -113,6 +159,6 @@ for(const action of ['publish','unpublish'])$('#'+action).onclick=run(async()=>{
 });
 for(const b of document.querySelectorAll('[data-tab]'))b.onclick=run(async()=>{await save();for(const p of document.querySelectorAll('.panel'))p.hidden=p.id!==b.dataset.tab;for(const tab of document.querySelectorAll('[data-tab]'))tab.removeAttribute('aria-current');b.setAttribute('aria-current','page');if(b.dataset.tab==='history')await history();});
 $('#sync').onclick=run(async()=>{await api('sync','POST',{});await history();notice('GitHubの状態を更新しました。');});
-$('#proposal-form').onsubmit=run(async e=>{e.preventDefault();await api('proposals','POST',Object.fromEntries(new FormData(e.target)));e.target.reset();await proposals();notice('修正提案を保存しました。公開DBはまだ変更していません。');});
+$('#proposal-form').onsubmit=run(async e=>{e.preventDefault();await api('proposals','POST',{...Object.fromEntries(new FormData(e.target)),sourceConfirmed:e.target.elements.sourceConfirmed.checked});e.target.reset();$('#profile-select').value='';$('#profile-field').replaceChildren(new Option('大学を選択してください',''));await proposals();notice('修正提案を保存しました。公開DBはまだ変更していません。');});
 window.addEventListener('beforeunload',e=>{if(dirty||saving){e.preventDefault();e.returnValue='';}});
 api('session').then(enter).catch(e=>{if(e.status!==401)notice('管理サーバーに接続できません。公式サイトの管理入口から開いてください。');});

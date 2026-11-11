@@ -5,14 +5,14 @@ export function safeURL(value) {
   if (!['https:', 'http:'].includes(u.protocol) || u.username || u.password) throw Error('http/httpsのURLを指定してください');
   return u.href;
 }
-export function validateArticle(a) {
+export function validateArticle(a, options = {}) {
   if (!a || typeof a.title !== 'string' || !a.title.trim() || a.title.length > 200) throw Error('タイトルは1〜200文字です');
   if (typeof a.excerpt !== 'string' || a.excerpt.length > 500) throw Error('概要は500文字以内です');
   if (!a.doc || a.doc.type !== 'doc' || JSON.stringify(a.doc).length > 500000) throw Error('本文が不正です');
-  renderDoc(a.doc);
+  renderDoc(a.doc,s=>s,options);
   return {title:a.title.trim(), excerpt:a.excerpt, doc:a.doc};
 }
-export function renderDoc(doc, imageURL = s => s) {
+export function renderDoc(doc, imageURL = s => s, options = {}) {
   let count = 0;
   function node(n, depth = 0) {
     if (++count > 10000 || depth > 25 || !n || typeof n !== 'object') throw Error('本文が複雑すぎます');
@@ -46,6 +46,16 @@ export function renderDoc(doc, imageURL = s => s) {
         if (Number(attrs.colspan || 1) !== 1 || Number(attrs.rowspan || 1) !== 1) throw Error('結合セルは未対応です');
         const t = n.type === 'tableCell' ? 'td' : 'th'; return `<${t}>${children()}</${t}>`;
       }
+      case 'legacyParagraph': case 'legacyContainer': {
+        const index=attrs.index,block=options.preserved?.[index],kind=n.type==='legacyParagraph'?'paragraph':'container';
+        if(!Number.isInteger(index) || index<0 || block?.kind!==kind)throw Error('原本の本文構造が不正です');
+        return block.openHtml+children()+block.closeHtml;
+      }
+      case 'preserved': {
+        const index=attrs.index,block=options.preserved?.[index];
+        if(!Number.isInteger(index) || index<0 || !block)throw Error('原本保持ブロックが不正です');
+        return block.isTitle && options.title!==options.originalTitle ? `${block.openHtml || '<h1>'}${escape(options.title || '')}${block.closeHtml || '</h1>'}` : block.html;
+      }
       case 'image': {
         if (!/^\/assets\/images\/admin\/[a-f0-9]{64}\.(png|jpg|webp)$/.test(attrs.src)) throw Error('管理画面から画像をアップロードしてください');
         return `<figure><img src="${escape(imageURL(attrs.src))}" alt="${escape(attrs.alt || '')}"><figcaption>${escape(attrs.title || '')}</figcaption></figure>`;
@@ -59,10 +69,10 @@ export function renderDoc(doc, imageURL = s => s) {
       default: throw Error(`未対応の本文形式: ${String(n.type).slice(0,40)}`);
     }
   }
-  return node(doc);
+  const rendered=node(doc);if(rendered.length>2000000)throw Error('本文の表示サイズが大きすぎます');return rendered;
 }
-export function articlePage(a, imageURL) {
-  return `<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(a.title)} | Ban.Tai</title><meta name="description" content="${escape(a.excerpt)}"><link rel="stylesheet" href="/admin/center/content.css"><main class="article"><a href="/columns/">コラム一覧へ</a><h1>${escape(a.title)}</h1>${renderDoc(a.doc, imageURL)}</main></html>`;
+export function articlePage(a, imageURL, options = {}) {
+  return `<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(a.title)} | Ban.Tai</title><meta name="description" content="${escape(a.excerpt)}"><link rel="stylesheet" href="/admin/center/content.css"><main class="article"><a href="/columns/">コラム一覧へ</a><h1>${escape(a.title)}</h1>${renderDoc(a.doc, imageURL, options)}</main></html>`;
 }
 export function imagePaths(doc) {
   const out = new Set();

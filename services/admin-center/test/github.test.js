@@ -43,6 +43,6 @@ test('write allowlist rejects source, secrets, other articles and null blob',asy
  await assert.rejects(gh.createPR([{path:'data/columns.json',content:null}],'x','y'),/パス/);
 });
 test('publication state becomes merged only after GitHub confirms it',async()=>{
- const {gh}=fake();const updates=[],events=[];const s={requests:()=>[{id:'r',state:'open',number:1,url:'https://github.com/example/repo/pull/1',action:'publish',article_id:id,revision:2}],db:{prepare:()=>({run:(...args)=>updates.push(args)})},event:(...args)=>events.push(args)};
+ const {gh}=fake();const updates=[],events=[];const s={requests:()=>[{id:'r',state:'open',number:1,url:'https://github.com/example/repo/pull/1',action:'publish',article_id:id,revision:2}],updateRequestState:(r,state)=>{updates.push([state,r.id]);events.push(['publication.'+state]);}};
  await gh.sync(s);assert.deepEqual(updates,[['merged','r']]);assert.equal(events[0][0],'publication.merged');
 });

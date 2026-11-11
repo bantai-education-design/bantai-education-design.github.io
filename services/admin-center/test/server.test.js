@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync,rmSync} from 'node:fs';
+import {mkdtempSync,rmSync,readFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {createApp,passwordHash} from '../src/server.js';
 const doc=text=>({type:'doc',content:[{type:'paragraph',content:[{type:'text',text}]}]});
 const article={title:'テスト記事',excerpt:'概要',doc:doc('文章')};
-async function fixture(t){
+async function fixture(t,options={}){
   const dataDir=mkdtempSync(join(tmpdir(),'bantai-test-'));
-  const {server,store}=createApp({origin:'http://localhost',development:true,dataDir,password:passwordHash('test-password')});
+  const {server,store}=createApp({origin:'http://localhost',development:true,dataDir,password:passwordHash('test-password'),...options});
   await new Promise(r=>server.listen(0,'127.0.0.1',r));
   t.after(async()=>{await new Promise(r=>server.close(r));store.db.close();rmSync(dataDir,{recursive:true,force:true});});
   const base=`http://127.0.0.1:${server.address().port}`;let cookie='',csrf='';
@@ -81,4 +81,35 @@ test('production login emits a Secure host cookie',async t=>{
  const r=await fetch(`http://127.0.0.1:${server.address().port}/api/login`,{method:'POST',headers:{Origin:'https://manage.example.org','Content-Type':'application/json'},body:JSON.stringify({password:'test-password'})});
  assert.equal(r.status,200);const cookie=r.headers.get('set-cookie');assert.match(cookie,/^__Host-bantai=/);assert.match(cookie,/; Secure/);assert.ok(!cookie.includes('Domain='));assert.match(r.headers.get('strict-transport-security'),/31536000/);
  assert.throws(()=>createApp({origin:'http://example.org',development:true,dataDir,password:passwordHash('test')}),/loopback/);
+});
+
+test('existing article imports are authenticated, idempotent, refreshable and retain origin through restore',async t=>{
+ const read=path=>readFileSync(new URL('../../../'+path,import.meta.url),'utf8');
+ const gh={request:async()=>({object:{sha:'fixture'}}),read:async path=>read(path)};
+ const f=await fixture(t,{github:gh});
+ assert.equal((await f.request('/api/legacy/import','POST',{catalogId:'column-waiting-with-children-2026'})).r.status,401);await f.login();
+ const a=(await f.request('/api/legacy/import','POST',{catalogId:'column-waiting-with-children-2026'})).data;
+ assert.equal(a.legacy.catalogId,'column-waiting-with-children-2026');assert.ok(a.legacy.labels.length>0);
+ const again=(await f.request('/api/legacy/import','POST',{catalogId:a.legacy.catalogId})).data;assert.equal(a.id,again.id);
+ const edited=(await f.request('/api/articles/'+a.id,'PUT',{...a,title:'編集したタイトル'})).data;assert.equal(edited.legacy.catalogId,a.legacy.catalogId);assert.equal(edited.revision,2);
+ const preview=await f.request(`/api/articles/${a.id}/preview`);assert.match(preview.data,/編集したタイトル/);assert.match(preview.data,/thumbnail.png/);
+ const restored=(await f.request(`/api/articles/${a.id}/restore`,'POST',{revision:2,target:1})).data;assert.equal(restored.title,a.title);assert.equal(restored.legacy.catalogId,a.legacy.catalogId);
+ const fresh=(await f.request('/api/legacy/import','POST',{catalogId:a.legacy.catalogId,fresh:true})).data;assert.notEqual(fresh.id,a.id);assert.ok(f.store.get(a.id));
+ assert.equal((await f.request('/api/legacy/import','POST',{catalogId:'nonexistent'})).r.status,400);
+});
+test('profile apply request includes current validated profile and proposal in one PR',async t=>{
+ const original=JSON.parse(readFileSync(new URL('../../../tools/university-database/tokyo/data/complete/u000001.json',import.meta.url)));
+ let sent;
+ const gh={request:async()=>({object:{sha:'current'}}),read:async()=>JSON.stringify(original),createPR:async(...args)=>{sent=args;return {html_url:'https://github.com/example/repo/pull/2',number:2};}};
+ const f=await fixture(t,{github:gh});await f.login();
+ const list=(await f.request('/api/universities')).data;assert.ok(list.some(p=>p.id==='u000001'));assert.ok(list.length>=66);
+ const proposal=(await f.request('/api/proposals','POST',{region:'tokyo',universityId:'u000001',field:'feature_summary',before:original.feature_summary,after:'テスト説明',reason:'公式出典確認',source:original.official_url,sourceConfirmed:true})).data;
+ const result=await f.request(`/api/proposals/${proposal.id}/submit`,'POST',{apply:true});assert.equal(result.r.status,201,JSON.stringify(result.data));assert.equal(sent[0].length,2);assert.equal(sent[3],'current');
+ const changed=JSON.parse(sent[0][1].content);assert.equal(changed.feature_summary,'テスト説明');assert.deepEqual(changed.student_counts,original.student_counts);
+});
+test('successful publish records one request and supports baseline sync metadata',async t=>{
+ const gh={publish:async()=>({html_url:'https://github.com/example/repo/pull/3',number:3,baseline:{expectedEntryHash:'entry',expectedSourceHash:'source'}})};
+ const f=await fixture(t,{github:gh});await f.login();const a=(await f.request('/api/articles','POST',article)).data;
+ const result=await f.request(`/api/articles/${a.id}/publish`,'POST',{revision:1});assert.equal(result.r.status,201,JSON.stringify(result.data));
+ assert.equal(f.store.requests().length,1);assert.equal(f.store.requests()[0].number,3);assert.equal(JSON.parse(f.store.db.prepare('SELECT body FROM request_results').get().body).expectedEntryHash,'entry');
 });
