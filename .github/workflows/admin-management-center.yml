@@ -5,7 +5,6 @@ on:
       - 'services/admin-center/**'
       - 'admin/**'
       - 'index.html'
-      - 'render.yaml'
       - 'assets/css/admin-entry.css'
       - '.github/workflows/admin-management-center.yml'
   workflow_dispatch:
@@ -24,41 +23,37 @@ jobs:
           cache-dependency-path: services/admin-center/package-lock.json
       - run: npm ci
         working-directory: services/admin-center
+      - name: Build editor and trusted Workers assets
+        run: |
+          npm run build --prefix services/admin-center
+          node services/admin-center/cloudflare/build-assets.js
+          git diff --exit-code -- admin/center/editor.js
       - run: npm test
         working-directory: services/admin-center
       - run: npm audit
         working-directory: services/admin-center
-      - name: Verify reproducible editor bundle
-        run: |
-          npm run build --prefix services/admin-center
-          git diff --exit-code -- admin/center/editor.js
-      - run: npx playwright install --with-deps chromium
+      - name: Validate free-tier Worker bundle without deploying
+        run: npx wrangler deploy --dry-run --config cloudflare/wrangler.jsonc
         working-directory: services/admin-center
-      - name: Verify browser workflows and desktop/mobile layouts
-        run: node services/admin-center/test/browser.mjs
         env:
-          SCREENSHOT_DIR: ${{ runner.temp }}/admin-center-screenshots
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Validate managed-hosting Blueprint against official schema
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Verify actual local Workers runtime and D1
+        run: node services/admin-center/test/cloudflare-local.mjs
+        env:
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Verify browser workflows using preinstalled official browser image
         run: |
-          python -m pip install PyYAML==6.0.3 jsonschema==4.26.0
-          python - <<'PY'
-          import json, urllib.request, yaml, jsonschema
-          with urllib.request.urlopen('https://render.com/schema/render.yaml.json', timeout=30) as response:
-              schema = json.load(response)
-          with open('render.yaml') as source:
-              jsonschema.validate(yaml.safe_load(source), schema)
-          print('Render Blueprint schema: OK (no resources created)')
-          PY
-      - name: Build non-root admin runtime image
+          mkdir -p "$RUNNER_TEMP/admin-center-screenshots"
+          docker run --rm --shm-size=1g \
+            --volume "$PWD:/work:ro" \
+            --volume "$RUNNER_TEMP/admin-center-screenshots:/screenshots" \
+            --env SCREENSHOT_DIR=/screenshots --workdir /work --entrypoint node \
+            mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e \
+            services/admin-center/test/browser.mjs
+      - name: Build optional persistent Node runtime image
         run: docker build --file services/admin-center/deploy/Dockerfile --tag bantai-admin-center:local .
-      - name: Verify persistent container and deployment configuration
+      - name: Verify optional persistent container configuration
         run: node services/admin-center/test/container.mjs
-        env:
-          ADMIN_DOMAIN: admin.example.invalid
-          ADMIN_SECRET_DIR: /tmp
       - uses: actions/upload-artifact@v4
         if: always()
         with:

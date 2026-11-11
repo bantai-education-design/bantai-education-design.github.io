@@ -1,16 +1,16 @@
 # Ban.Tai 管理センター サーバー
 
-設計・読み取り専用監査は [設計書](../../docs/admin-center/design.md)。GitHub Pagesだけでは安全なサーバー認証を提供できないため、編集サーバーはRender等のマネージド環境へ配置する。利用者の自前サーバーは不要。今回のPRは本番接続・デプロイを実行しない。
+設計・読み取り専用監査は [設計書](../../docs/admin-center/design.md)。GitHub Pagesだけでは安全なサーバー認証を提供できないため、主案はCloudflare Workers Free＋D1 Freeへ配置する。利用者の自前サーバーは不要。今回のPRは本番接続・デプロイを実行しない。
 
 ## ローカル検証
 
-Node.js 24（node:sqlite使用）とnpmを用意し、このディレクトリで `npm ci`、`npm test`、`npm run build`。ブラウザー検証は `node test/browser.mjs`（PlaywrightとChromiumが必要）。CIはブラウザーをインストールして実行する。
+Node.js 24（node:sqlite使用）とnpmを用意し、このディレクトリで `npm ci`、`npm test`、`npm run build`（Workersの準備は `npm run build:cloudflare`）。ブラウザー検証は `node test/browser.mjs`（PlaywrightとChromiumが必要）。CIはブラウザーをインストールして実行する。
 
 ローカル手動確認には、リポジトリ外の永続ディレクトリとテスト専用パスワードハッシュを設定し、`ADMIN_DEV_HTTP=1`、`ADMIN_ORIGIN=http://127.0.0.1:8787`、`PORT=8787` を設定して `npm start`。開発HTTPモードはloopbackでのみ使用できる。本番用パスワードや本番GitHubトークンをローカル検証に使わない。`test/browser.mjs` は一時ディレクトリ・テスト専用資格情報を作成して自動削除する。
 
 ## 本番セットアップ
 
-自前サーバーを用意しない場合は、[マネージド配置案](deploy/README.md) を優先してください。Renderの設定・費用見積り・承認前に実行しない範囲を具体化しています。以下は一般的な配置の詳細です。
+自前サーバーを用意しない場合は、[Cloudflare無料配置案](cloudflare/README.md) を優先してください。有料Render案は採用せず、Freeの上限・認証・保存・アカウント接続手順を具体化しています。以下は一般的な配置の詳細です。
 
 1. Node.js 24の常駐サーバーとHTTPSリバースプロキシを用意。サーバーは127.0.0.1にbindする。ホストOSの非管理ユーザーで起動し、外部から直接ポートへ到達させない。全API/画面/画像は同じHTTPS originから配信。プロキシで最大8MB・レート制限・タイムアウトを設定する。CORSは許可しない。
 2. アプリ専用の永続ディレクトリをリポジトリ外に用意し、所有者のみアクセス可能にする。SQLite/WALとimagesが下書きの原本。サーバーレスの一時FSでは運用不可。

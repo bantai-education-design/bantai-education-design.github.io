@@ -46,6 +46,7 @@ export function createApp({origin,dataDir,password,githubToken,development=false
     if(!development) res.setHeader('Strict-Transport-Security','max-age=31536000');
     try {
       const path=new URL(req.url,origin).pathname;
+      if(path==='/api/auth-config' && req.method==='GET')return send(res,200,{provider:'password',ready:true,maxImageBytes:5*1024*1024});
       if(path==='/healthz' && req.method==='GET'){store.db.prepare('SELECT 1').get();return send(res,200,{ok:true});}
       const mutate=!['GET','HEAD'].includes(req.method);
       if(mutate && req.headers.origin!==origin) return send(res,403,{message:'許可されていない送信元です'});

@@ -25,6 +25,14 @@ export function importLegacy(entry,sourceHtml=null,sourcePath=legacyPath(entry))
     source=sourceHtml;const dom=parse(source,{sourceCodeLocationInfo:true});container=find(dom,'article') || find(dom,'main');
     if(!container?.sourceCodeLocation?.startTag || !container.sourceCodeLocation.endTag)throw Error('本文範囲を安全に特定できません');
     origin.range=[container.sourceCodeLocation.startTag.endOffset,container.sourceCodeLocation.endTag.startOffset];
+    origin.metadata=[];
+    function metadata(n){
+      const loc=n.sourceCodeLocation;
+      if(n.tagName==='title' && loc?.startTag && loc.endTag)origin.metadata.push({start:loc.startTag.endOffset,end:loc.endTag.startOffset,type:'title'});
+      if(n.tagName==='meta' && ['description','og:title','og:description'].includes(attr(n,'name') || attr(n,'property'))){const key=attr(n,'name')?'name':'property';origin.metadata.push({start:loc.startOffset,end:loc.endOffset,type:attr(n,key),key});}
+      for(const c of children(n))metadata(c);
+    }
+    metadata(dom);
   } else {
     if(typeof entry.content!=='string')throw Error('本文がありません');
     source=new MarkdownIt({html:false,linkify:false}).render(entry.content);container=parseFragment(source,{sourceCodeLocationInfo:true});
@@ -71,6 +79,11 @@ export function legacyPage(article,origin) {
   const body=renderDoc(article.doc,s=>s,options);
   if(!origin.sourceHtml)return null;
   if(article.title===origin.entry.title && article.excerpt===(origin.entry.excerpt || '') && JSON.stringify(article.doc)===JSON.stringify(origin.originalDoc))return origin.sourceHtml;
+  if(origin.metadata){
+    const replacements=[[origin.range[0],origin.range[1],body],...origin.metadata.map(m=>[m.start,m.end,m.type==='title'?escape(article.title)+' | Ban.Tai':`<meta ${m.key}="${m.type}" content="${escape(m.type==='og:title'?article.title:article.excerpt)}">`])];
+    let html=origin.sourceHtml;for(const [start,end,value] of replacements.sort((a,b)=>b[0]-a[0]))html=html.slice(0,start)+value+html.slice(end);return html;
+  }
+  // Compatibility for snapshots made before metadata offsets were recorded.
   let html=origin.sourceHtml.slice(0,origin.range[0])+body+origin.sourceHtml.slice(origin.range[1]);
   const dom=parse(html,{sourceCodeLocationInfo:true}),replacements=[];
   function visit(n){

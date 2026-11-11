@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "bantai-admin-center",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
+  "vars": {"ADMIN_GITHUB_LOGIN":"bantai-education-design"},
+  // Placeholder database ID for local validation only; replace with the real Free-plan D1 ID before deployment.
+  "d1_databases": [{"binding":"DB","database_name":"bantai-admin-center","database_id":"00000000-0000-0000-0000-000000000000","migrations_dir":"./migrations"}],
+  "observability": {"enabled":false}
+}

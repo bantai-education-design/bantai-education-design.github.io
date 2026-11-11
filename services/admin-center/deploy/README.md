@@ -1,3 +1,7 @@
+# 有料・常駐環境の参考構成（今回は採用しない）
+
+利用者は費用をかけない案を優先するため、主案は [Cloudflare無料構成](../cloudflare/README.md) です。以下のRender/Docker設定は代替用の参考として保持し、自動適用・契約・課金はしません。Blueprintは `render.yaml.example` に退避しています。
+
 # サーバーを所有しない運用者向けの配置案
 
 **準備済みの配置案です。クラウドサービスの契約・課金・デプロイはまだ行っていません。**
@@ -22,7 +26,7 @@
 
 ## 具体的な配置設定
 
-リポジトリ直下の `render.yaml` を用意しています。Render DashboardのBlueprint作成で、対象リポジトリと `feat/bantai-admin-center` ブランチを選びます。**作成ボタンを押すと有料リソースが作成されるため、費用の承認前には実行しません。**
+参考用の `services/admin-center/deploy/render.yaml.example` を用意しています。Render DashboardのBlueprint作成で、対象リポジトリと `feat/bantai-admin-center` ブランチを選びます。**作成ボタンを押すと有料リソースが作成されるため、費用の承認前には実行しません。**
 
 - Node.js 24.22.2で、コミット済みの編集画面とサーバーを起動。
 - データ保存先は `/var/data/bantai-admin/live`。マウント `/var/data/bantai-admin` 内だけが永続領域。

@@ -4,13 +4,13 @@ import Image from '@tiptap/extension-image';
 import {Table,TableRow,TableHeader,TableCell} from '@tiptap/extension-table';
 import {renderDoc} from './content.js';
 const $=s=>document.querySelector(s), publicSite='https://bantai-education-design.github.io';
-let profiles=[];
-let csrf='',article=null,editor=null,timer=null,dirty=false,saving=null,generation=0,conflict=false;
+let profiles=[],maxImageBytes=5*1024*1024;
+let csrf='',article=null,editor=null,timer=null,dirty=false,saving=null,generation=0,conflict=false,busyPublication=false;
 const notice=s=>{$('#notice').textContent=s;};
 const run=fn=>async(...args)=>{try{await fn(...args);}catch(e){notice(e.message);}};
 async function api(path,method='GET',body) {
   const r=await fetch('/api/'+path,{method,headers:{'Content-Type':'application/json','X-CSRF-Token':csrf},body:body===undefined?undefined:JSON.stringify(body),credentials:'same-origin',cache:'no-store'});
-  const d=await r.json();
+  let d;try{d=await r.json();}catch{throw Error('保存先が応答していません。未保存の本文を保護し、接続と利用上限を確認してください。');}
   if(!r.ok) {const e=Error(d.message || '接続に失敗しました');e.status=r.status;throw e;}
   return d;
 }
@@ -117,7 +117,7 @@ async function proposals(){
   for(const p of rows){const el=document.createElement('div');el.className='history-row';const text=document.createElement('p');text.textContent=`${{tokyo:'東京',kanagawa:'神奈川',saitama:'埼玉'}[p.region]} · ${p.universityId} · ${profiles.find(x=>x.id===p.universityId && x.region===p.region)?.fieldLabels[p.field] || p.field}: ${p.before || '（未登録）'} → ${p.after}`;el.append(text);
     for(const apply of [false,true]){const b=document.createElement('button');b.textContent=apply?'DB反映を申請（PR）':'提案だけをPRにする';if(apply && (!p.sourceConfirmed || !profiles.some(x=>x.id===p.universityId && x.region===p.region && Object.hasOwn(x.fieldLabels,p.field)))){b.disabled=true;b.title='対応プロフィールの大学・項目を選び、公式出典を確認して保存してください';}b.onclick=run(async()=>{
       if(!confirm(apply?'公式出典と変更前後を確認しましたか？対象プロフィールを変更する公開PRを作成します。':'修正提案を公開リポジトリのPRに載せます。続けますか？'))return;
-      b.disabled=true;try{const r=await api(`proposals/${p.id}/submit`,'POST',{apply});notice(`PR #${r.number}を作成しました。反映はレビュー・承認後です。`);await history();}finally{b.disabled=false;}
+      b.disabled=true;busyPublication=true;try{const r=await api(`proposals/${p.id}/submit`,'POST',{apply});notice(`PR #${r.number}を作成しました。反映はレビュー・承認後です。`);await history();}finally{b.disabled=false;busyPublication=false;}
     });el.append(b);}
     $('#proposals').append(el);
   }
@@ -145,7 +145,7 @@ $('#toolbar').onclick=run(async e=>{
 });
 $('#image-input').onchange=run(async e=>{
   const file=e.target.files[0];e.target.value='';if(!file)return;
-  if(file.size>5*1024*1024)throw Error('画像は5MB以内で選択してください');
+  if(file.size>maxImageBytes)throw Error(`画像は${Math.round(maxImageBytes/1000000)}MB以内で選択してください`);
   const alt=prompt('画像の説明（読み上げにも使用）',file.name);if(alt===null)return;
   notice('画像をアップロード中…');const bytes=new Uint8Array(await file.arrayBuffer());let raw='';for(let i=0;i<bytes.length;i+=8192)raw+=String.fromCharCode(...bytes.subarray(i,i+8192));
   const img=await api('images','POST',{base64:btoa(raw)});insertBlock({type:'image',attrs:{src:img.src,alt,title:alt}});notice('画像を挿入しました。下書きを保存中です。');await save();notice('画像を挿入して下書きを保存しました。');
@@ -153,12 +153,18 @@ $('#image-input').onchange=run(async e=>{
 for(const action of ['publish','unpublish'])$('#'+action).onclick=run(async()=>{
   await save();if(!article)return;
   if(!confirm(action==='publish'?'記事と画像を公開PRに載せます。権利・内容を確認しましたか？':'非公開化のPRを作成します。反映は承認・マージ後です。続けますか？'))return;
-  $('#publish').disabled=true;$('#unpublish').disabled=true;
+  $('#publish').disabled=true;$('#unpublish').disabled=true;busyPublication=true;
   try{const r=await api(`articles/${article.id}/${action}`,'POST',{revision:article.revision});notice(`PR #${r.number}を作成しました。公開履歴から確認してください。`);await history();}
-  finally{$('#publish').disabled=false;$('#unpublish').disabled=false;}
+  finally{$('#publish').disabled=false;$('#unpublish').disabled=false;busyPublication=false;}
 });
 for(const b of document.querySelectorAll('[data-tab]'))b.onclick=run(async()=>{await save();for(const p of document.querySelectorAll('.panel'))p.hidden=p.id!==b.dataset.tab;for(const tab of document.querySelectorAll('[data-tab]'))tab.removeAttribute('aria-current');b.setAttribute('aria-current','page');if(b.dataset.tab==='history')await history();});
 $('#sync').onclick=run(async()=>{await api('sync','POST',{});await history();notice('GitHubの状態を更新しました。');});
 $('#proposal-form').onsubmit=run(async e=>{e.preventDefault();await api('proposals','POST',{...Object.fromEntries(new FormData(e.target)),sourceConfirmed:e.target.elements.sourceConfirmed.checked});e.target.reset();$('#profile-select').value='';$('#profile-field').replaceChildren(new Option('大学を選択してください',''));await proposals();notice('修正提案を保存しました。公開DBはまだ変更していません。');});
-window.addEventListener('beforeunload',e=>{if(dirty||saving){e.preventDefault();e.returnValue='';}});
-api('session').then(enter).catch(e=>{if(e.status!==401)notice('管理サーバーに接続できません。公式サイトの管理入口から開いてください。');});
+window.addEventListener('beforeunload',e=>{if(dirty||saving||busyPublication){e.preventDefault();e.returnValue='';}});
+async function initialize(){
+ try{const c=await api('auth-config');maxImageBytes=c.maxImageBytes || maxImageBytes;
+   if(c.provider==='github'){$('#login-form').hidden=true;$('#github-login').hidden=!c.ready;$('#login-help').textContent=c.ready?'管理者として登録されたGitHubアカウントでログインしてください。':'GitHubログインの初期設定が未完了です。';$('#image-help').textContent='本文の好きな位置を選んで挿入。無料構成の画像は1MB以内、1記事9枚以内です。';}
+ }catch{}
+ try{await enter(await api('session'));}catch(e){if(e.status!==401)notice('管理サーバーに接続できません。公式サイトの管理入口から開いてください。');}
+}
+initialize();
