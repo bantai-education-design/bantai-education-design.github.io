@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#111111">
-  <title>大学写真 審査・掲載 | Ban.Tai</title>
+  <title>Ban.Tai 管理センター</title>
   <link rel="stylesheet" href="admin.css?v=20260826-1155">
   <link rel="stylesheet" href="review-tools.css?v=20260827-1930">
+  <link rel="stylesheet" href="center-hub.css">
 </head>
 <body>
   <header class="admin-header">
     <a class="brand" href="../" aria-label="Ban.Tai Education Design トップへ">
       <span class="brand-mark" aria-hidden="true">B</span>
-      <span><strong>Ban.Tai Education Design</strong><small>UNIVERSITY PHOTO ADMIN</small></span>
+      <span><strong>Ban.Tai Education Design</strong><small>MANAGEMENT CENTER</small></span>
     </a>
     <a class="public-link" href="../tools/university-database/tokyo/">公開大学DBを確認</a>
   </header>
 
   <main class="admin-main">
+    <section class="review-home" aria-labelledby="center-title">
+      <span class="card-kicker">BAN.TAI WORKSPACE</span><h1 id="center-title">Ban.Tai 管理センター</h1>
+      <p>コラム・大学情報・写真の管理と、公開履歴をまとめて確認できます。</p>
+      <nav class="center-menu" aria-label="管理センターの機能">
+        <a data-center-tab="columns" href="#center-connection">コラム管理</a>
+        <a data-center-tab="universities" href="#center-connection">大学DB管理</a>
+        <a href="#photo-management">大学写真管理</a>
+        <a data-center-tab="history" href="#center-connection">公開履歴</a>
+      </nav>
+      <p id="center-connection" role="status">編集サーバーの接続設定を確認しています。</p>
+      <a id="center-open" class="primary-button" hidden>ログインして編集を始める →</a>
+    </section>
+    <div id="photo-management"></div>
     <section class="hero" aria-labelledby="admin-title">
       <div class="hero-copy">
         <span class="eyebrow">BAN.TAI UNIVERSITY PHOTO</span>
@@ -98,6 +112,7 @@
     <span>Ban.Tai Education Design</span>
     <a href="../">公式サイトへ戻る</a>
   </footer>
+  <script src="center-entry.js"></script>
   <script src="photo-review-runtime.js?v=20260827-1915"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+# Example fragment for a dedicated management HTTPS virtual host.
+# Keep your existing certificate and server_name configuration.
+# Replace the port if ADMIN_LOCAL_PORT is different. Do not replace the public site.
+location / {
+    client_max_body_size 8m;
+    proxy_pass http://127.0.0.1:8787;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header Origin $http_origin;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_read_timeout 120s;
+}

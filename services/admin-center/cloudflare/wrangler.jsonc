@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "bantai-admin-center",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
+  "vars": {"ADMIN_GITHUB_LOGIN":"bantai-education-design"},
+  // Dedicated D1 created on the confirmed Workers Free account; never bind an existing production DB here.
+  "d1_databases": [{"binding":"DB","database_name":"bantai-admin-center","database_id":"24da1473-581a-451a-8d50-1ccb378b569f","migrations_dir":"./migrations"}],
+  "observability": {"enabled":false}
+}

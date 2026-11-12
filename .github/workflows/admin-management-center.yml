@@ -1,0 +1,61 @@
+name: Admin management center
+on:
+  pull_request:
+    paths:
+      - 'services/admin-center/**'
+      - 'admin/**'
+      - 'index.html'
+      - 'assets/css/admin-entry.css'
+      - '.github/workflows/admin-management-center.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: services/admin-center/package-lock.json
+      - run: npm ci
+        working-directory: services/admin-center
+      - name: Build editor and trusted Workers assets
+        run: |
+          npm run build --prefix services/admin-center
+          node services/admin-center/cloudflare/build-assets.js
+          git diff --exit-code -- admin/center/editor.js
+      - run: npm test
+        working-directory: services/admin-center
+      - run: npm audit
+        working-directory: services/admin-center
+      - name: Validate free-tier Worker bundle without deploying
+        run: npx wrangler deploy --dry-run --config cloudflare/wrangler.jsonc
+        working-directory: services/admin-center
+        env:
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Verify actual local Workers runtime and D1
+        run: node services/admin-center/test/cloudflare-local.mjs
+        env:
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Verify browser workflows using preinstalled official browser image
+        run: |
+          mkdir -p "$RUNNER_TEMP/admin-center-screenshots"
+          docker run --rm --shm-size=1g \
+            --volume "$PWD:/work:ro" \
+            --volume "$RUNNER_TEMP/admin-center-screenshots:/screenshots" \
+            --env SCREENSHOT_DIR=/screenshots --workdir /work --entrypoint node \
+            mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e \
+            services/admin-center/test/browser.mjs
+      - name: Build optional persistent Node runtime image
+        run: docker build --file services/admin-center/deploy/Dockerfile --tag bantai-admin-center:local .
+      - name: Verify optional persistent container configuration
+        run: node services/admin-center/test/container.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: admin-center-screenshots
+          path: ${{ runner.temp }}/admin-center-screenshots

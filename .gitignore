@@ -1,2 +1,14 @@
 ﻿__pycache__/
 *.py[cod]
+
+# Private admin runtime must remain outside the repository.
+node_modules/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.env
+.env.*
+services/admin-center/cloudflare/public/
+services/admin-center/cloudflare/.wrangler/
+services/admin-center/cloudflare/.dev.vars*
+services/admin-center/cloudflare/generated-legacy.json
