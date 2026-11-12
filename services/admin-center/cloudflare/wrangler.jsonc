@@ -7,7 +7,7 @@
   "workers_dev": true,
   "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
   "vars": {"ADMIN_GITHUB_LOGIN":"bantai-education-design"},
-  // Placeholder database ID for local validation only; replace with the real Free-plan D1 ID before deployment.
-  "d1_databases": [{"binding":"DB","database_name":"bantai-admin-center","database_id":"00000000-0000-0000-0000-000000000000","migrations_dir":"./migrations"}],
+  // Dedicated D1 created on the confirmed Workers Free account; never bind an existing production DB here.
+  "d1_databases": [{"binding":"DB","database_name":"bantai-admin-center","database_id":"24da1473-581a-451a-8d50-1ccb378b569f","migrations_dir":"./migrations"}],
   "observability": {"enabled":false}
 }

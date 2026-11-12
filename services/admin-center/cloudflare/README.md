@@ -1,6 +1,6 @@
 # 自前サーバー・月額契約を前提にしない管理センター
 
-利用者の希望に従い、**Cloudflare Workers Free＋D1 Free** を主案にします。有料Render案は採用せず、参考設定を `deploy/render.yaml.example` に退避しました。ルートに自動適用される有料Blueprintは置きません。クラウド環境作成、プラン変更、課金、実デプロイは未実施です。
+利用者の希望に従い、**Cloudflare Workers Free＋D1 Free** を主案にします。有料Render案は採用せず、参考設定を `deploy/render.yaml.example` に退避しました。ルートに自動適用される有料Blueprintは置きません。2026-11-12に利用者の画面でWorkers Free（$0・Current plan）を確認し、新規専用D1と認証設定前のテストWorkerを作成しました。プラン変更・有料製品の契約は行っていません。
 
 ## 構成と、無料枠の条件
 
@@ -49,18 +49,28 @@ npx wrangler deploy --dry-run --config cloudflare/wrangler.jsonc
 
 ## 利用開始に必要なアカウント設定
 
-こちらの作業環境にはCloudflareアカウントへの接続がないため、この部分はまだ実行していません。秘密情報をチャットへ書く必要はありません。
+Wranglerへのログイン、無料プラン確認、新規専用DB作成・初回スキーマ適用、テストWorker配置まで実施済みです。GitHub OAuth Appと公開申請用の権限設定は未完了です。秘密情報をチャットへ書く必要はありません。
 
 1. 利用者がCloudflareの無料アカウントへログインする。Workers Freeであることを確認し、有料プラン・R2を契約しない。
 2. WranglerのOAuthログインを利用する。APIトークンの平文をチャットへ送らない。
-3. FreeのD1データベースを1個作成し、実際に返された非秘密のDB IDを `wrangler.jsonc` へ設定する。現在の全ゼロIDはローカル検証用のプレースホルダー。
+3. FreeのD1データベースを1個作成し、実際に返された非秘密のDB IDを `wrangler.jsonc` へ設定する。実DB IDは設定済みです（非秘密）。
 4. 接続先・DB名・IDを確認してから、初回スキーマを適用する。既存本番DBを作り直したり削除したりしない。`migrations/0001_admin.sql` は新規専用DB向け。
 5. 生成した実際の `workers.dev` URLを使ってGitHub OAuth Appを登録し、コールバックを `/auth/callback` にする。存在しないURLを推測して登録しない。
 6. `GITHUB_OAUTH_CLIENT_ID`、`GITHUB_OAUTH_CLIENT_SECRET`、32バイト以上のランダムな `SESSION_SECRET` をWorkers Secretsへ登録する。管理者名は `ADMIN_GITHUB_LOGIN`。GitHubへの公開申請を使う際だけ、対象リポジトリに限定した `ADMIN_GITHUB_TOKEN` を別のSecretとして登録する。ログイン用OAuthスコープは `read:user` に限定し、そのユーザートークンを公開トークンへ流用しない。
 7. 認証・自動保存・再読込・画像・復元、FreeのCPU/容量、公開してよいテスト内容でのPR作成まで受入確認する。人間の承認なしにマージしない。
 8. 成功後、確認済みの実URLだけを `admin/center-config.json` へ別PRで設定する。現在はdisabled。
 
-DB作成・スキーマ適用・Workerの公開・入口有効化は、対象アカウントと設定をレビューしてから行います。自動デプロイやPaidへの変更は設定しません。
+DB作成・初回スキーマ適用・テストWorker配置は新規専用リソースに限って実施しました。入口有効化・本番切替・マージは未実施です。自動デプロイやPaidへの変更は設定しません。
+
+### 2026-11-12 接続記録
+
+- テストURL: https://bantai-admin-center.bantai-admin-center.workers.dev
+- OAuthコールバック: https://bantai-admin-center.bantai-admin-center.workers.dev/auth/callback
+- 新規D1: `bantai-admin-center`、APAC、`24da1473-581a-451a-8d50-1ccb378b569f`。作成直前の既存D1・Worker一覧は空でした。初回16 SQLコマンド適用成功。
+- `SESSION_SECRET` はランダム生成して標準入力からWorkers Secretへ登録（値はリポジトリ・ログに保存しない）。GitHub OAuth App設定前はログイン不可のままです。
+- ビルド、29件のテスト、実ローカルWorkers+D1結合テストは再実行して成功。
+- 実URLの検証は作業環境のEnvoyプロキシが上流接続エラー503を返すため未完了。DNS解決とCloudflareへの配置完了は確認済み。APIによる認証拒否・実DB永続化・CPU上限の受入確認は残っています。
+- `admin/center-config.json` は引き続きdisabled。公開記事・大学DB・元画像は未変更。
 
 ## バックアップ
 
