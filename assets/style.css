@@ -6673,3 +6673,8 @@ img.hero {
   object-fit: contain;
   transform: none;
 }
+
+/* Keep every word visible on the approved Victor/Pioneer watercolor cover. */
+.column-card[data-column-id="column-victor-pioneer-sound-and-picture-memory-2026"] .column-card-media{background:#fcf7ec}
+.column-card[data-column-id="column-victor-pioneer-sound-and-picture-memory-2026"] .column-card-media img,
+.column-card[data-column-id="column-victor-pioneer-sound-and-picture-memory-2026"]:hover .column-card-media img{object-fit:contain;transform:none}
