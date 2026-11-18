@@ -13,9 +13,10 @@ const list=(xs=[])=>xs.length?`<ul class="complete-list">${xs.map(x=>`<li>${esc(
 const section=(no,title,lead,body,extra='')=>`<section class="detail-section complete-section ${extra}"><div class="detail-section-head"><span>${no}</span><div><h2>${esc(title)}</h2>${lead?`<p>${esc(lead)}</p>`:''}</div></div>${body}</section>`;
 const mapsUrl=(name,address)=>`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} ${address||''}`.trim())}`;
 const namesSummary=(items=[],max=8)=>{const names=items.map(x=>x.name).filter(Boolean);return names.length?`${names.slice(0,max).join('、')}${names.length>max?`、ほか${names.length-max}`:''}`:'—'};
-const REGION_COMPLETE=['../saitama/data/complete/','../tokyo-additions/data/complete/','../kanagawa/data/complete/'];
-const loadProfile=async()=>{const r=await fetch(`data/complete/${encodeURIComponent(id)}.json`);if(r.status!==404)return r;for(const base of REGION_COMPLETE){const x=await fetch(`${base}${encodeURIComponent(id)}.json`);if(x.ok)return x}return r};
-loadProfile().then(r=>{if(r.status===404){legacy();return null}if(!r.ok)throw new Error('profile');return r.json()}).then(p=>{
+const completeProfileUrl=uid=>{const m=/^u(\d{6})$/.exec(uid||'');if(!m)return null;const n=Number(m[1]);if(n===1||n===2)return `data/complete/${uid}.json`;if(n===50||(n>=175&&n<=209))return `../kanagawa/data/complete/${uid}.json`;if(n>=145&&n<=172)return `../saitama/data/complete/${uid}.json`;if(n===173||n===174)return `../tokyo-additions/data/complete/${uid}.json`;return null};
+const profileUrl=completeProfileUrl(id);
+if(!profileUrl){legacy();return}
+fetch(profileUrl).then(r=>{if(r.status===404){legacy();return null}if(!r.ok)throw new Error('profile');return r.json()}).then(p=>{
 if(!p)return;if(p.schema_version!=='1.0')throw new Error('schema');
 const sources=new Map((p.sources||[]).map(s=>[s.source_id,s]));
 const sourceLink=sid=>{const s=sources.get(sid);return s?`<a class="complete-source-inline" href="${esc(s.url)}" target="_blank" rel="noopener">出典 ↗</a>`:''};

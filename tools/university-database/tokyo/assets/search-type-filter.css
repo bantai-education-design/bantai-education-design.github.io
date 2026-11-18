@@ -78,3 +78,33 @@
   .active-filters-bar{flex-direction:column;align-items:stretch}
   .active-filters-bar .sort-row{width:100%;justify-content:space-between;flex-wrap:wrap}
 }
+/* 工程3：検索状態の保存・表示件数制御・簡潔一覧／詳細カード切替 */
+.view-mode-switch{display:inline-flex;align-items:center;gap:4px;padding:3px;border:1px solid #c5d1dc;border-radius:999px;background:#f4f7fa}
+.view-mode-label{font-size:.72rem;font-weight:800;color:#4a5d70;padding:0 6px}
+.view-mode-btn{border:0;background:transparent;color:#1d3349;font-size:.74rem;font-weight:800;padding:5px 11px;border-radius:999px;cursor:pointer;line-height:1.2}
+.view-mode-btn.active{background:#082844;color:#fff;box-shadow:0 2px 6px rgba(8,40,68,.18)}
+.pagination-bar{margin:22px auto 6px;padding:18px 20px;border:1px solid #d5e0ea;border-radius:16px;background:#fff;box-shadow:0 6px 18px rgba(13,37,58,.06);display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.pagination-bar[hidden]{display:none!important}
+.pagination-status{width:100%;max-width:440px;display:grid;gap:7px;font-size:.86rem;color:#284158}
+.pagination-status strong{color:#082844;font-weight:900}
+.pagination-track{height:7px;border-radius:999px;background:#e6edf4;overflow:hidden}
+.pagination-track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#082844,#c99b27)}
+.pagination-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.pagination-more-btn{min-height:44px;padding:10px 22px;border-radius:999px;background:#082844;color:#fff;font-weight:900;border:0;cursor:pointer}
+.pagination-all-btn,.pagination-collapse-btn{min-height:42px;padding:9px 16px;border-radius:999px;border:1px solid #b8c7d6;background:#f7fafc;color:#15324b;font-weight:800;cursor:pointer}
+#tokyo-grid.is-compact-view{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+.tokyo-card.is-compact-card{min-height:0!important;border-radius:14px!important;padding:0!important}
+.tokyo-card.is-compact-card .compact-card-body{padding:14px 16px!important;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}
+.tokyo-card.is-compact-card .compact-card-top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-bottom:6px}
+.compact-type-pill{padding:2px 9px;border-radius:999px;font-size:.7rem;font-weight:900;background:#082844;color:#fff}
+.compact-type-pill.type-public{background:#1b6a53}
+.compact-type-pill.type-private{background:#3a4f66}
+.compact-meta-fact{font-size:.74rem;font-weight:800;color:#354c63}
+.tokyo-card.is-compact-card h3{margin:0 0 4px!important;font-size:1.08rem!important}
+.compact-tags-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.compact-card-side{display:flex;flex-direction:column;gap:6px;min-width:220px}
+.tokyo-card.is-compact-card .finished-card-actions{margin:0!important}
+@media(max-width:760px){
+  .tokyo-card.is-compact-card .compact-card-body{grid-template-columns:1fr}
+  .compact-card-side{min-width:0;width:100%}
+}

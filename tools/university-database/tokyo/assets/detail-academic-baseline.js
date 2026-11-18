@@ -128,7 +128,8 @@ function apply(u){
 })();
 (async()=>{
   try{
-    for(const base of ['data/complete/','../saitama/data/complete/','../tokyo-additions/data/complete/','../kanagawa/data/complete/']){const complete=await fetch(`${base}${encodeURIComponent(id)}.json`);if(complete.ok)return;}
+    const m=/^u(\d{6})$/.exec(id||''),n=m?Number(m[1]):0;
+    if(n===1||n===2||n===50||(n>=145&&n<=209))return;
     const mr=await fetch('data/public-academic-baseline/manifest.json');
     if(!mr.ok)return;
     const manifest=await mr.json();
