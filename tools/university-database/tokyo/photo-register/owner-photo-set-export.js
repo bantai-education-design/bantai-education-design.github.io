@@ -135,7 +135,7 @@ function rightsBase(id,name){return {
   source_label:'撮影者提供・実景保持',
   creator:'Ban.Tai Education Design提供',
   license:'撮影者本人提供・本DB利用許諾',
-  rights_note:'撮影者本人からBan.Tai東京都大学DBでの利用許諾を受けた実景写真。大学公式写真の転載ではない。生成AIによる再描画・生成補完・景観要素の追加削除・背景置換は行わず、90度単位の回転、±5度以内の傾き補正、軽微なトリミング、明るさ・コントラスト調整だけを許可する。',
+  rights_note:'撮影者本人からBan.Tai全国大学DBでの利用許諾を受けた実景写真。大学公式写真の転載ではない。生成AIによる再描画・生成補完・景観要素の追加削除・背景置換は行わず、90度単位の回転、±5度以内の傾き補正、軽微なトリミング、明るさ・コントラスト調整だけを許可する。',
   reviewed_at:new Date().toISOString().slice(0,10),
   scene_integrity:'scene_unchanged',
   ai_redraw:false,

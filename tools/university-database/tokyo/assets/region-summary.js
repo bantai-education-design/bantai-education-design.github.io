@@ -22,6 +22,18 @@ function apply(){
   const fourth=[...document.querySelectorAll('.trust-item strong')].find(s=>/公開完成|学部・学科/.test(s.textContent));
   if(fourth){const b=fourth.querySelector('b');if(b)b.textContent=`${total}/${total}`}
   const extra=PREFS.some(p=>NOTES[p]&&byPref(p).length);const lead=extra?`${areas}を中心に${total}大学`:`${areas}の${total}大学`;
+  const heroBox=document.querySelector('.hero-copy');
+  if(heroBox){
+    const sub=PREFS.map(p=>{const r=byPref(p);return r.length?`${p.replace(/[都県]$/,'')}${r.length}`:''}).filter(Boolean).join('・');
+    heroBox.dataset.heroBadge=`🏫 ${areas} ${total}大学収録（${sub}）`;
+  }
+  if(typeof searchable==='function'){
+    document.querySelectorAll('.discovery-card[data-query]').forEach(btn=>{
+      const q=String(btn.dataset.query||'').trim().toLowerCase();
+      const s=btn.querySelector('strong');
+      if(s&&q){const n=rows.filter(r=>searchable(r).includes(q)).length;s.dataset.count=`${n} 大学`;}
+    });
+  }
   const hero=document.querySelector('.hero-copy p');if(hero)hero.innerHTML=`${lead}を、学びたいこと・地域・設置区分・大学の特色から探せるデータベースです。<br>大学公式情報や公的資料を優先し、比較しやすい形に整理しています。`;
   const notice=document.querySelector('.ref-notice');if(notice&&/公開中/.test(notice.textContent))notice.innerHTML=`ⓘ ${lead}を公開中です。大学情報は更新される場合があります。出願・入試の最新情報は各大学の公式情報もご確認ください。`;
   const foot=document.querySelector('.footer-inner span');if(foot)foot.textContent=`${lead} · 全国大学データベース`;
