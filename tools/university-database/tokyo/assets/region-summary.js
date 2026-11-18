@@ -28,10 +28,17 @@ function apply(){
     heroBox.dataset.heroBadge=`🏫 ${areas} ${total}大学収録（${sub}）`;
   }
   if(typeof searchable==='function'){
-    document.querySelectorAll('.discovery-card[data-query]').forEach(btn=>{
-      const q=String(btn.dataset.query||'').trim().toLowerCase();
+    document.querySelectorAll('.discovery-card').forEach(btn=>{
       const s=btn.querySelector('strong');
-      if(s&&q){const n=rows.filter(r=>searchable(r).includes(q)).length;s.dataset.count=`${n} 大学`;}
+      if(!s)return;
+      if(btn.dataset.field&&typeof window.matchesField==='function'){
+        const n=rows.filter(r=>window.matchesField(r,btn.dataset.field)).length;
+        s.dataset.count=`${n} 大学`;
+      }else if(btn.dataset.query){
+        const q=String(btn.dataset.query||'').trim().toLowerCase();
+        const n=rows.filter(r=>searchable(r).includes(q)).length;
+        s.dataset.count=`${n} 大学`;
+      }
     });
   }
   const hero=document.querySelector('.hero-copy p');if(hero)hero.innerHTML=`${lead}を、学びたいこと・地域・設置区分・大学の特色から探せるデータベースです。<br>大学公式情報や公的資料を優先し、比較しやすい形に整理しています。`;
