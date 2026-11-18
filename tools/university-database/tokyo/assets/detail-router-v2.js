@@ -32,9 +32,10 @@ const optJson=u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null);
 
 Promise.all([
   fetch(profileUrl).then(r=>{if(r.status===404){legacy();return null}if(!r.ok)throw new Error('profile');return r.json()}),
+  optJson('../campuses/campus_index.json'),
   optJson('../qualifications/qualifications.json'),
   optJson('../access/access.json')
-]).then(([p,qualDoc,accessDoc])=>{
+]).then(([p,campusDoc,qualDoc,accessDoc])=>{
 if(!p)return;if(p.schema_version!=='1.0')throw new Error('schema');
 const sources=new Map((p.sources||[]).map(s=>[s.source_id,s]));
 const firstSource=(p.sources||[])[0]||null;
@@ -45,7 +46,20 @@ const sourceDate=sid=>{const s=sources.get(sid);return s?.verified_at||p.verific
 const student=p.student_counts||{},verification=p.verification||{},verified=verification.verification_status==='verified';
 const verifiedSet=new Set(verification.verified_sections||[]);
 const stopped=p.status==='recruitment_stopped'||p.status==='admissions_stopped'||p.admissions_status==='stopped';
-const academics=p.academics||[],grads=p.graduate_schools||[],campuses=p.campuses||[];
+const academics=p.academics||[],grads=p.graduate_schools||[];
+const rawCampuses=(p.campuses||[]).map(c=>({...c}));
+const idxCampuses=(campusDoc?.universities?.[id]?.campuses)||[];
+if(rawCampuses.length===1&&(rawCampuses[0].name==='本部'||!rawCampuses[0].name)&&idxCampuses[0]?.name){
+  rawCampuses[0].name=idxCampuses[0].name;
+}
+for(const ic of idxCampuses){
+  const norm=s=>String(s||'').replace(/[\s　\-−ー]/g,'');
+  const exists=rawCampuses.some(rc=>(rc.postal_code&&ic.postal_code&&rc.postal_code===ic.postal_code)||(rc.address&&ic.address&&norm(rc.address)===norm(ic.address))||(rc.name&&ic.name&&rc.name===ic.name));
+  if(!exists){
+    rawCampuses.push({name:ic.name||'キャンパス',postal_code:ic.postal_code||'',prefecture:ic.prefecture||'',municipality:ic.municipality||'',address:ic.address||'',official_url:rawCampuses[0]?.official_url||null,nearest_stations:[]});
+  }
+}
+const campuses=rawCampuses;
 const graduateOnly=!academics.length&&grads.length>0;
 const departments=academics.flatMap(f=>f.departments||[]);
 const unitCount=departments.length;
@@ -108,36 +122,44 @@ const t=(p.tuition||[])[0];
 const tuitionBody=stopped
   ? stateBox('not_applicable','学生募集停止のため、新規入学者向けの学費掲載は該当しません。')
   : t
-    ? `<div class="complete-money-grid"><div><small>収録状態・対象年度</small><strong>${badge('verified')} ${esc(t.academic_year)}年度</strong></div><div><small>入学料</small><strong>${yen(t.admission_fee)}</strong></div><div><small>授業料（年額）</small><strong>${yen(t.annual_tuition)}</strong></div><div class="is-total"><small>初年度基本額</small><strong>${yen(t.first_year_total)}</strong></div></div><p class="complete-caption">初年度基本額は公式に掲載された入学料と年額授業料の合計です（最終確認日：${esc(sourceDate(t.source_id))}）。 ${sourceLink(t.source_id)}</p>`
+    ? `<div class="complete-money-grid"><div><small>収録状態・対象年度</small><strong>${badge('verified')} ${esc(t.academic_year)}年度</strong></div><div><small>入学料</small><strong>${yen(t.admission_fee)}</strong></div><div><small>授業料（年額）</small><strong>${yen(t.annual_tuition)}</strong></div><div class="is-total"><small>初年度基本額</small><strong>${yen(t.first_year_total)}</strong></div></div><p class="complete-caption">初年度基本額は公式に掲載された入学料と年額授業料の合計です（最終確認日：${esc(sourceDate(t.source_id))}）。${t.note?` ${esc(t.note)}`:''} ${sourceLink(t.source_id)}</p>`
     : stateBox('uninvestigated','学費・初年度納入額は公式募集要項・学費ページの一次資料から順次登録します（推測による金額補完は行いません）。');
 const tuitionSec=section('04','学費','対象年度と出典を固定し、確認済みの公式金額だけを表示します。',tuitionBody);
 
 const adm=p.admissions||{};
 const admUrl=adm.admissions_url||p.admissions_url;
+const guideUrl=adm.application_guidelines_url||p.application_guidelines_url;
+const webAppUrl=adm.web_application_url||p.web_application_url;
 const methodList=adm.methods||[];
-const methodHtml=methodList.map(m=>`<article class="complete-card"><div class="complete-card-head"><h3>${esc(m.name)}</h3>${ext(m.official_url,'公式')}</div><dl class="complete-mini-facts">${m.quota!==undefined&&m.quota!==null?fact('募集人員',`${Number(m.quota).toLocaleString('ja-JP')}人`):''}${fact('出願期間',esc(m.application_period||''))}${fact('試験日',esc(m.exam_date||''))}${fact('合格発表',esc(m.result_date||''))}</dl></article>`).join('');
+const methodHtml=methodList.map(m=>`<article class="complete-card"><div class="complete-card-head"><h3>${esc(m.name)}</h3>${ext(m.official_url,'公式')}</div><dl class="complete-mini-facts">${m.quota!==undefined&&m.quota!==null?fact('募集人員',`${Number(m.quota).toLocaleString('ja-JP')}人`):''}${fact('出願期間',esc(m.application_period||''))}${fact('試験日・選考方法',esc(m.exam_date||''))}${fact('合格発表',esc(m.result_date||''))}</dl></article>`).join('');
 let admissionBody='';
 if(stopped){
   admissionBody=stateBox('not_applicable','学生募集停止を一次資料で確認済みです。');
 }else if(methodList.length){
-  const webNote=adm.web_application_url
-    ? `<div class="dq-state-box">${badge('verified')}<span>Web出願サイト確認済み</span>${ext(adm.web_application_url,'Web出願サイト')}</div>`
+  const webNote=webAppUrl
+    ? `<div class="dq-state-box">${badge('verified','Web出願URL：確認済み')}<span>公式Web出願サイトの導線を確認済みです。</span>${ext(webAppUrl,'Web出願サイト')}</div>`
     : (verifiedSet.has('admissions')
         ? stateBox('not_published','調査時点で常時公開のWeb出願直リンクは公式掲載なし（出願期間中に公式入試ページから案内されます）。')
         : stateBox('uninvestigated','Web出願サイトの直リンクは未調査です。公式入試ページをご確認ください。'));
-  admissionBody=`${webNote}<div class="complete-three" style="margin-top:12px">${methodHtml}</div><div class="detail-actions" style="margin-top:12px">${ext(admUrl,'入試公式','primary')}${ext(adm.application_guidelines_url||p.application_guidelines_url,'募集要項・選抜要項')}</div>`;
+  admissionBody=`${webNote}<div class="complete-three" style="margin-top:12px">${methodHtml}</div><div class="detail-actions" style="margin-top:12px">${ext(admUrl,'入試公式','primary')}${ext(guideUrl,'募集要項・選抜要項')}${ext(webAppUrl,'Web出願サイト')}${ext(p.open_campus_url,'オープンキャンパス')}${ext(p.brochure_request_url,'資料請求')}</div>`;
 }else{
   const urlState=admUrl
     ? `<div class="dq-state-box">${badge('verified','入試公式URL：確認済み')}<span>公式入試情報ページへの導線を確認済みです（最終確認日：${esc(verification.last_verified_at||firstSource?.verified_at||'2026-10-30')}）。</span></div>`
     : stateBox('uninvestigated','公式入試情報ページのURLを照合中です。大学公式サイトトップから入試案内をご確認ください。');
-  const schedState=stateBox('uninvestigated','選抜方式別の出願期間・試験日・合格発表日・Web出願URLは、公式学生募集要項（一次資料）から順次登録します。');
-  admissionBody=`<div style="display:grid;gap:10px">${urlState}${schedState}</div><div class="detail-actions" style="margin-top:12px">${ext(admUrl||p.official_url,admUrl?'公式入試情報ページを開く':'大学公式サイトを開く','primary')}${ext(adm.application_guidelines_url||p.application_guidelines_url,'募集要項・選抜要項')}</div>`;
+  const guideState=guideUrl
+    ? `<div class="dq-state-box">${badge('verified','募集要項・選抜要項URL：確認済み')}<span>公式の学生募集要項・入学者選抜要項への導線を確認済みです。</span></div>`
+    : '';
+  const webState=webAppUrl
+    ? `<div class="dq-state-box">${badge('verified','Web出願URL：確認済み')}<span>公式Web出願・インターネット出願案内ページへの導線を確認済みです。</span></div>`
+    : '';
+  const schedState=stateBox('uninvestigated','選抜方式別の出願期間・試験日・合格発表日の個別数値は、公式学生募集要項（一次資料）から順次登録します。');
+  admissionBody=`<div style="display:grid;gap:10px">${urlState}${guideState}${webState}${schedState}</div><div class="detail-actions" style="margin-top:12px">${ext(admUrl||p.official_url,admUrl?'公式入試情報ページを開く':'大学公式サイトを開く','primary')}${ext(guideUrl,'募集要項・選抜要項')}${ext(webAppUrl,'Web出願・インターネット出願')}${ext(p.open_campus_url,'オープンキャンパス')}${ext(p.brochure_request_url,'資料請求')}</div>`;
 }
 const admissionSec=section('05','入試方式・Web出願',`${adm.admission_year||'最新'}年度入試の公式導線と収録状態です。`,admissionBody);
 
 let qualBody='';
 if(quals.length){
-  qualBody=`<p style="margin:0 0 10px">${badge('verified')} 養成課程・公式資格案内から <strong>${quals.length}件</strong> を確認済み</p><ul class="complete-rich-list">${quals.map(q=>`<li><strong>${esc(q.name)}</strong><span>${esc(q.condition||q.department||q.faculty||'')}</span>${q.source_id?sourceLink(q.source_id):''}</li>`).join('')}</ul>`;
+  qualBody=`<p style="margin:0 0 10px">${badge('verified')} 養成課程・公式資格案内から <strong>${quals.length}件</strong> を確認済み</p><ul class="complete-rich-list">${quals.map(q=>`<li><strong>${esc(q.name)}</strong><span>${esc(q.condition||q.department||q.faculty||'')}</span>${q.source_id?sourceLink(q.source_id):(q.source_url?`<a class="complete-source-inline" href="${esc(q.source_url)}" target="_blank" rel="noopener">出典 ↗</a>`:'')}</li>`).join('')}</ul>`;
 }else if(graduateOnly){
   qualBody=stateBox('not_applicable','学部を置かない大学院大学のため、学部段階の教員免許・国家試験養成課程は該当しません。');
 }else if(p.prefecture==='神奈川県'||verifiedSet.has('qualifications')){
@@ -146,10 +168,12 @@ if(quals.length){
   qualBody=stateBox('uninvestigated','取得可能資格・免許は文部科学省課程認定資料および大学公式資格ページから順次照合・登録中です。');
 }
 
-const careerFields=(p.careers||{}).main_career_fields||[];
-const careerEmp=(p.careers||{}).main_employers||[];
-const careerBody=(careerFields.length||careerEmp.length)
-  ? `<p style="margin:0 0 10px">${badge('verified')} 公式進路・就職公表データから確認済み</p><ul class="complete-list">${careerFields.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${careerEmp.length?`<h4>主な就職先例</h4><ul class="complete-list">${careerEmp.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`
+const careerObj=p.careers||{};
+const careerFields=careerObj.main_career_fields||[];
+const careerEmp=careerObj.main_employers||[];
+const careerSummary=careerObj.summary||'';
+const careerBody=(careerFields.length||careerEmp.length||careerSummary)
+  ? `<p style="margin:0 0 10px">${badge('verified')} 公式進路・就職公表データから確認済み ${careerObj.source_id?sourceLink(careerObj.source_id):''}</p>${careerSummary?`<p style="margin:0 0 10px">${esc(careerSummary)}</p>`:''}${careerFields.length?`<ul class="complete-list">${careerFields.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${careerEmp.length?`<h4>主な就職先例</h4><ul class="complete-list">${careerEmp.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}`
   : stateBox('uninvestigated','就職率・主な進路分野・国家試験合格実績は、大学公式の進路公表資料（対象年度・母数明記のもの）から順次登録します。');
 const careerSec=section('06','資格・進路','取得可能資格と公式進路情報の収録状態です。',`<div class="complete-two"><article class="complete-card"><h3>主な資格・免許</h3>${qualBody}</article><article class="complete-card"><h3>進路・就職実績</h3>${careerBody}</article></div>`);
 
@@ -171,8 +195,11 @@ const activitySec=section('07','研究・スポーツ・著名卒業生','ラン
 const qualStatus=quals.length?'verified':(graduateOnly?'not_applicable':((p.prefecture==='神奈川県'||verifiedSet.has('qualifications'))?'not_published':'uninvestigated'));
 const stationStatus=allStations.length?'verified':(isCorrespondence?'not_applicable':'uninvestigated');
 const admUrlStatus=stopped?'not_applicable':(admUrl?'verified':'uninvestigated');
+const guideStatus=stopped?'not_applicable':(guideUrl?'verified':'uninvestigated');
+const webStatus=stopped?'not_applicable':(webAppUrl?'verified':(verifiedSet.has('admissions')?'not_published':'uninvestigated'));
 const admSchedStatus=stopped?'not_applicable':(methodList.length?'verified':'uninvestigated');
 const tuitionStatus=stopped?'not_applicable':(t?'verified':'uninvestigated');
+const careerStatus=stopped?'not_applicable':((careerFields.length||careerEmp.length||careerSummary)?'verified':'uninvestigated');
 const studentStatus=student.total?'verified':'uninvestigated';
 const baseDate=verification.last_verified_at||firstSource?.verified_at||'2026-10-30';
 
@@ -181,11 +208,12 @@ const statusRows=[
   ['教育組織（学部・学科）',badge(graduateOnly?'not_applicable':'verified'),graduateOnly?'大学院大学':'令和7年度〜2026年度',baseDate,sourceCell(firstSource?.source_id)],
   ['大学院研究科',badge(grads.length?'verified':'not_applicable'),grads.length?`${grads.length}研究科`:'設置なし（確認済み）',baseDate,sourceCell(firstSource?.source_id)],
   ['在籍者数（学生数）',badge(studentStatus),student.total?`${student.as_of||'2026-05-01'}基準`:'未収録',student.total?sourceDate(student.source_id):'—',student.total?sourceCell(student.source_id):'—'],
-  ['キャンパス・最寄駅',`${badge('verified','所在地：確認済み')} ${badge(stationStatus,'最寄駅：'+STATUS_META[stationStatus].label)}`,'現行キャンパス',baseDate,sourceCell(firstSource?.source_id)],
+  ['キャンパス・最寄駅',`${badge('verified',`所在地：${campuses.length}拠点確認済み`)} ${badge(stationStatus,'最寄駅：'+STATUS_META[stationStatus].label)}`,'現行キャンパス',baseDate,sourceCell(firstSource?.source_id)],
   ['取得可能資格',badge(qualStatus),quals.length?`${quals.length}件確認済み`:'—',baseDate,quals[0]?.source_id?sourceCell(quals[0].source_id):sourceCell(firstSource?.source_id)],
-  ['入試公式URL導線',badge(admUrlStatus),stopped?'募集停止':'現行入試案内',baseDate,admUrl?`<a class="complete-source-inline" href="${esc(admUrl)}" target="_blank" rel="noopener">公式入試ページ ↗</a>`:'—'],
+  ['入試・募集要項・Web出願導線',`${badge(admUrlStatus,'入試：'+STATUS_META[admUrlStatus].label)} ${badge(guideStatus,'募集要項：'+STATUS_META[guideStatus].label)} ${badge(webStatus,'Web出願：'+STATUS_META[webStatus].label)}`,stopped?'募集停止':'現行入試案内',baseDate,admUrl?`<a class="complete-source-inline" href="${esc(admUrl)}" target="_blank" rel="noopener">公式入試ページ ↗</a>`:'—'],
   ['選抜日程・募集要項詳細',badge(admSchedStatus),methodList.length?`${adm.admission_year||2026}年度`:'順次登録',methodList.length?baseDate:'—',methodList.length?sourceCell(firstSource?.source_id):'—'],
-  ['学費・初年度納入額',badge(tuitionStatus),t?`${t.academic_year}年度`:'順次登録',t?sourceDate(t.source_id):'—',t?sourceCell(t.source_id):'—']
+  ['学費・初年度納入額',badge(tuitionStatus),t?`${t.academic_year}年度`:'順次登録',t?sourceDate(t.source_id):'—',t?sourceCell(t.source_id):'—'],
+  ['進路・就職実績',badge(careerStatus),careerObj.target_year?`${careerObj.target_year}年度卒業生`:(careerFields.length?'公式公表実績':'順次登録'),careerStatus==='verified'?(careerObj.as_of||baseDate):'—',careerObj.source_id?sourceCell(careerObj.source_id):(careerStatus==='verified'?sourceCell(firstSource?.source_id):'—')]
 ].map(([item,stHtml,yr,dt,src])=>`<tr><td><strong>${esc(item)}</strong></td><td>${stHtml}</td><td>${esc(yr)}</td><td>${esc(dt)}</td><td>${src}</td></tr>`).join('');
 
 const statusTable=`<div class="dq-table-wrap"><table class="dq-table"><thead><tr><th>データ項目</th><th>収録状態</th><th>対象年度・基準日</th><th>最終確認日</th><th>一次資料・出典</th></tr></thead><tbody>${statusRows}</tbody></table></div>`;

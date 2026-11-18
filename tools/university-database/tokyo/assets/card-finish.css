@@ -29,3 +29,6 @@
 .finished-university-card .card-visual.image-failed{background:linear-gradient(135deg,#dfeaf5,#b9cfe4)}
 .finished-university-card .card-visual.image-failed .image-source-link{display:none}
 .finished-university-card .card-visual.image-failed img{display:none}
+.card-decision-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.card-sub-link{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;background:#f4f7fa;border:1px solid #d7e2ec;color:#1b4668;font-size:.66rem;font-weight:800;text-decoration:none;transition:background .15s ease,border-color .15s ease}
+.card-sub-link:hover{background:#e8f0f7;border-color:#adc3d8}
