@@ -8,7 +8,8 @@ if(!location.search&&savedSession&&savedSession.returning&&savedSession.search){
 const params=new URLSearchParams(location.search);
 const initialLimit=Math.max(PAGE_SIZE,Number(params.get('limit'))||(savedSession?.returning&&savedSession?.limit?Number(savedSession.limit):PAGE_SIZE)||PAGE_SIZE);
 const initialView=(params.get('view')||(savedSession?.returning?savedSession.view:''))==='compact'?'compact':'card';
-const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',field:params.get('field')||'all',dept:params.get('dept')||'',view:initialView,limit:initialLimit,faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(),images:new Map()};
+const initialCompare=(params.get('compare')||(savedSession?.returning?savedSession.compare:'')||'').split(',').map(x=>x.trim()).filter(x=>/^u\d{6}$/.test(x)).slice(0,4);
+const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',field:params.get('field')||'all',dept:params.get('dept')||'',view:initialView,limit:initialLimit,faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(initialCompare),compareDiffOnly:params.get('diff')==='1',completeProfiles:new Map(),images:new Map()};
 const PREF_CODES={tokyo:'東京都',saitama:'埼玉県',kanagawa:'神奈川県'};
 const PREF_SLUGS={'東京都':'tokyo','埼玉県':'saitama','神奈川県':'kanagawa'};
 state.pref=PREF_CODES[params.get('pref')]||(['東京都','埼玉県','神奈川県'].includes(params.get('pref'))?params.get('pref'):'all');
@@ -147,7 +148,7 @@ function matchReasons(row){
 }
 window.matchReasons=matchReasons;
 function sortRows(rows){const c=new Intl.Collator('ja');return [...rows].sort((a,b)=>{if(state.sort==='municipality')return c.compare(prefOf(a),prefOf(b))||c.compare(municipality(a),municipality(b))||c.compare(a.name,b.name);if(state.sort==='type')return ((typeOrder[a.establishment_type]??9)-(typeOrder[b.establishment_type]??9))||c.compare(a.name,b.name);if(state.sort==='students-desc')return studentTotal(b)-studentTotal(a)||c.compare(a.name,b.name);if(state.sort==='students-asc')return studentTotal(a)-studentTotal(b)||c.compare(a.name,b.name);return c.compare(a.name,b.name)})}
-function syncUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.pref!=='all')p.set('pref',PREF_SLUGS[state.pref]||state.pref);if(state.type!=='all')p.set('type',state.type);if(state.field&&state.field!=='all')p.set('field',state.field);if(state.qual)p.set('qual',state.qual);if(state.dept)p.set('dept',state.dept);if(state.withCampus)p.set('campus','1');if(state.status!=='all')p.set('status',state.status);if(state.sort!=='name')p.set('sort',state.sort);if(state.view==='compact')p.set('view','compact');if(state.limit>PAGE_SIZE)p.set('limit',String(state.limit));history.replaceState(null,'',`${location.pathname}${p.toString()?`?${p}`:''}${location.hash}`)}
+function syncUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.pref!=='all')p.set('pref',PREF_SLUGS[state.pref]||state.pref);if(state.type!=='all')p.set('type',state.type);if(state.field&&state.field!=='all')p.set('field',state.field);if(state.qual)p.set('qual',state.qual);if(state.dept)p.set('dept',state.dept);if(state.withCampus)p.set('campus','1');if(state.status!=='all')p.set('status',state.status);if(state.sort!=='name')p.set('sort',state.sort);if(state.view==='compact')p.set('view','compact');if(state.limit>PAGE_SIZE)p.set('limit',String(state.limit));if(state.compare.size)p.set('compare',[...state.compare].join(','));if(state.compareDiffOnly&&state.compare.size>=2)p.set('diff','1');history.replaceState(null,'',`${location.pathname}${p.toString()?`?${p}`:''}${location.hash}`)}
 function saveSearchSession(cardId='',returning=false){
   try{
     const prev=JSON.parse(sessionStorage.getItem(SEARCH_STATE_KEY)||'null')||{};
@@ -157,6 +158,7 @@ function saveSearchSession(cardId='',returning=false){
       cardId:cardId||prev.cardId||'',
       limit:state.limit,
       view:state.view,
+      compare:[...state.compare].join(','),
       returning:!!returning,
       ts:Date.now()
     }));
@@ -271,11 +273,183 @@ async function loadUniversityBundle(){
   return [...tokyo,...added];
 }
 async function loadAcademicBundle(){const [gg,bf,bd,...docs]=await Promise.all([optionalJson('data/graduate_schools_tokyo_all.generated.json'),optionalJson('data/faculties.json'),optionalJson('data/departments.json'),...SNAPSHOTS.map(n=>optionalObject(`data/${n}`))]);const fm=new Map(),dm=new Map(),gm=new Map();for(const r of asList(bf))putById(fm,r);for(const r of asList(bd))putById(dm,r);for(const r of asList(gg))putById(gm,r);for(const d of docs)flatten(d,fm,dm,gm);const packDocs=await Promise.all(REGION_PACKS.filter(p=>p.academic!==false).map(p=>Promise.all(['faculties','departments','graduate_schools'].map(k=>optionalJson(`${p.base}${k}_${p.slug}_all.generated.json`)))));for(const [pf,pd,pg] of packDocs){for(const r of asList(pf))putById(fm,r);for(const r of asList(pd))putById(dm,r);for(const r of asList(pg))putById(gm,r)}return {faculties:[...fm.values()],departments:[...dm.values()],graduateSchools:[...gm.values()],source:asList(gg).length?'merged':'snapshots'}}
-function selectedRows(){return state.rows.filter(r=>state.compare.has(r.id))}
-function updateCompare(){const rows=selectedRows(),slots=document.querySelector('#compare-items'),label=document.querySelector('#compare-count'),open=document.querySelector('#open-compare');if(label)label.textContent=rows.length;if(open)open.disabled=rows.length<2;const html=rows.map(r=>`<div class="compare-slot-v2"><strong>${esc(r.name)}</strong><small>${esc(typeLabel[r.establishment_type]||'')} · ${esc(municipality(r))}</small><button type="button" data-remove-compare="${esc(r.id)}">外す</button></div>`);while(html.length<4)html.push('<div class="compare-slot-v2">＋ 大学を追加</div>');slots.innerHTML=html.join('')}
-function toggleCompare(id){if(state.compare.has(id))state.compare.delete(id);else if(state.compare.size<4)state.compare.add(id);else return;updateCompare();render()}
-function compareTable(){const rows=selectedRows(),data=rows.map(r=>({type:typeLabel[r.establishment_type]||'',place:`${prefOf(r)} ${municipality(r)}`,students:formatStudents(r),fields:(r.academic_field_tags||[]).join('、')||'—',academic:academicNames(r).slice(0,10).join('、')||'情報更新中',feature:r.feature_summary||'—',admission:r.admissions_url||r.official_url||'',map:mapsUrl(r)}));const row=(label,key,fmt=v=>esc(v))=>`<tr><th>${label}</th>${data.map(d=>`<td>${fmt(d[key])}</td>`).join('')}</tr>`;return `<table class="compare-table"><thead><tr><th>比較項目</th>${rows.map(r=>`<th>${esc(r.name)}</th>`).join('')}</tr></thead><tbody>${row('設置区分','type')}${row('所在地','place')}${row('在籍者数','students')}${row('学問分野','fields')}${row('学部・研究科','academic')}${row('特色','feature')}${row('入試情報','admission',v=>v?`<a href="${esc(v)}" target="_blank" rel="noopener">公式入試情報 ↗</a>`:'—')}${row('Google Maps','map',v=>`<a href="${esc(v)}" target="_blank" rel="noopener">地図で確認 ↗</a>`)}</tbody></table>`}
-function openCompare(){if(state.compare.size<2)return;document.querySelector('#compare-table-wrap').innerHTML=compareTable();document.querySelector('#compare-dialog').showModal()}
+function selectedRows(){
+  const order=[...state.compare];
+  return order.map(id=>state.rows.find(r=>r.id===id)).filter(Boolean);
+}
+function completeProfilePath(uid){
+  const m=/^u(\d{6})$/.exec(uid||'');if(!m)return null;const n=Number(m[1]);
+  if(n===1||n===2)return `data/complete/${uid}.json`;
+  if(n===50||(n>=175&&n<=209))return `../kanagawa/data/complete/${uid}.json`;
+  if(n>=145&&n<=172)return `../saitama/data/complete/${uid}.json`;
+  if(n===173||n===174)return `../tokyo-additions/data/complete/${uid}.json`;
+  return null;
+}
+async function ensureCompleteProfiles(ids){
+  await Promise.all(ids.map(async id=>{
+    if(state.completeProfiles.has(id))return;
+    const url=completeProfilePath(id);
+    if(!url){state.completeProfiles.set(id,null);return;}
+    try{
+      const r=await fetch(url);
+      state.completeProfiles.set(id,r.ok?await r.json():null);
+    }catch{
+      state.completeProfiles.set(id,null);
+    }
+  }));
+}
+const cmpBadge=(st,txt)=>{const cls={verified:'dq-verified',uninvestigated:'dq-uninvestigated',not_published:'dq-not-published',not_applicable:'dq-not-applicable',updating:'dq-updating',expired:'dq-expired'}[st]||'dq-uninvestigated';return `<span class="dq-badge ${cls}">${esc(txt)}</span>`;};
+function updateCompare(){const rows=selectedRows(),slots=document.querySelector('#compare-items'),label=document.querySelector('#compare-count'),open=document.querySelector('#open-compare');if(label)label.textContent=rows.length;if(open)open.disabled=rows.length<2;const html=rows.map(r=>`<div class="compare-slot-v2 is-filled"><strong>${esc(r.name)}</strong><small>${esc(typeLabel[r.establishment_type]||'')} · ${esc(prefOf(r))} ${esc(municipality(r))}</small><button type="button" data-remove-compare="${esc(r.id)}" aria-label="${esc(r.name)}を比較候補から外す">外す</button></div>`);while(html.length<4)html.push('<div class="compare-slot-v2">＋ 大学を追加（最大4校）</div>');if(slots)slots.innerHTML=html.join('');syncUrl();}
+function toggleCompare(id){if(state.compare.has(id))state.compare.delete(id);else if(state.compare.size<4)state.compare.add(id);else return;updateCompare();render();if(document.querySelector('#compare-dialog')?.open){if(state.compare.size<2)document.querySelector('#compare-dialog').close();else openCompare();}}
+function buildCompareRecord(r){
+  const id=r.id;
+  const cp=state.completeProfiles.get(id)||null;
+  const stopped=r.admissions_status==='stopped'||r.status==='recruitment_stopped'||cp?.status==='recruitment_stopped';
+  const f=state.faculties.get(id)||[],d=state.departments.get(id)||[],g=state.graduateSchools.get(id)||[];
+  const graduateOnly=!f.length&&g.length>0;
+  const fields=(r.academic_field_tags||cp?.academic_field_tags||[]);
+  const fieldsNorm=fields.join('、')||'uninvestigated';
+  const fieldsHtml=fields.length?`<div class="cmp-tags">${fields.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:`${cmpBadge('uninvestigated','未調査')} <small>分野タグ照合中</small>`;
+
+  const facNames=f.map(x=>x.name).filter(Boolean);
+  const gradNames=g.map(x=>x.name).filter(Boolean);
+  const acadNorm=graduateOnly?`grad:${gradNames.join(',')}`:`fac:${facNames.join(',')}:dept:${d.length}`;
+  const acadHtml=graduateOnly
+    ? `${cmpBadge('not_applicable','学部該当なし（大学院大学）')}<div class="cmp-sub">研究科 ${gradNames.length}：${esc(gradNames.slice(0,5).join('、'))}</div>`
+    : (facNames.length
+        ? `<div><strong>学部 ${facNames.length} ／ 学科等 ${d.length}</strong>${gradNames.length?` ／ 研究科 ${gradNames.length}`:''}</div><div class="cmp-sub">${esc(facNames.slice(0,6).join('、'))}${facNames.length>6?`、ほか${facNames.length-6}`:''}</div>`
+        : `${cmpBadge('uninvestigated','未調査')}`);
+
+  const idxCampuses=(state.campusIdx.get(id)?.campuses)||[];
+  const campList=idxCampuses.length?idxCampuses:(cp?.campuses||[]);
+  const campNorm=campList.length?campList.map(c=>`${c.name}:${c.municipality}`).join('|'):`${prefOf(r)}:${municipality(r)}`;
+  const campHtml=campList.length
+    ? `<div>${cmpBadge('verified',`${campList.length}拠点確認済み`)}</div><ul class="cmp-list">${campList.slice(0,4).map(c=>`<li><strong>${esc(c.name||'本部キャンパス')}</strong><span>（${esc(c.prefecture||'')} ${esc(c.municipality||'')}）</span></li>`).join('')}${campList.length>4?`<li>ほか${campList.length-4}拠点</li>`:''}</ul>`
+    : `<div>${cmpBadge('verified','本部確認済み')} ${esc(prefOf(r))} ${esc(municipality(r))}</div>`;
+
+  const accObj=state.accessIdx.get(id);
+  const stList=(accObj?.stations?.length?accObj.stations:(cp?.campuses?.[0]?.nearest_stations||[]));
+  const isCorr=/通信制/.test(cp?.history_summary||'')||/通信制/.test(r.feature_summary||'');
+  const stNorm=stList.length?stList.map(s=>s.station).join(','):(isCorr?'not_applicable':'uninvestigated');
+  const stHtml=stList.length
+    ? `<div>${cmpBadge('verified','確認済み')}</div><ul class="cmp-list">${stList.slice(0,3).map(s=>`<li><strong>${esc(s.station)}</strong>${s.access?` <span>${esc(s.access)}</span>`:''}</li>`).join('')}</ul>`
+    : (isCorr
+        ? `${cmpBadge('not_applicable','該当なし')}<div class="cmp-sub">オンライン通信制課程</div>`
+        : `${cmpBadge('uninvestigated','未調査')}<div class="cmp-sub">公式アクセスページ照合前（<a href="${esc(mapsUrl(r))}" target="_blank" rel="noopener">地図 ↗</a>）</div>`);
+
+  const admUrl=r.admissions_url||cp?.admissions_url||'';
+  const guideUrl=r.application_guidelines_url||cp?.application_guidelines_url||cp?.admissions?.application_guidelines_url||'';
+  const webUrl=r.web_application_url||cp?.web_application_url||cp?.admissions?.web_application_url||'';
+  const methods=cp?.admissions?.methods||[];
+  const admNorm=stopped?'stopped':`adm:${!!admUrl}:guide:${!!guideUrl}:web:${!!webUrl}:m:${methods.length}`;
+  let admHtml='';
+  if(stopped){
+    admHtml=`${cmpBadge('not_applicable','募集停止')}<div class="cmp-sub">学生募集停止を一次資料で確認済み</div>`;
+  }else{
+    const links=[];
+    if(admUrl)links.push(`<a class="cmp-link primary" href="${esc(admUrl)}" target="_blank" rel="noopener">公式入試情報 ↗</a>`);
+    if(guideUrl)links.push(`<a class="cmp-link" href="${esc(guideUrl)}" target="_blank" rel="noopener">募集要項 ↗</a>`);
+    if(webUrl)links.push(`<a class="cmp-link" href="${esc(webUrl)}" target="_blank" rel="noopener">Web出願 ↗</a>`);
+    const mHtml=methods.length
+      ? `<div class="cmp-sub" style="margin-top:4px">${cmpBadge('verified',`${cp.admissions.admission_year||2027}年度日程確認済み`)} ${methods.slice(0,2).map(m=>`${esc(m.name)}（試験：${esc(m.exam_date||'要項参照')}）`).join(' ／ ')}</div>`
+      : `<div class="cmp-sub" style="margin-top:4px">${cmpBadge('uninvestigated','個別日程：未調査')} 募集要項から順次登録</div>`;
+    admHtml=`<div>${cmpBadge(admUrl?'verified':'uninvestigated',admUrl?'入試導線：確認済み':'入試導線：未調査')}</div><div class="cmp-links">${links.join('')}</div>${mHtml}`;
+  }
+
+  const t=(cp?.tuition||[])[0];
+  const tNorm=stopped?'stopped':(t?`${t.academic_year}:${t.first_year_total}`:'uninvestigated');
+  const tHtml=stopped
+    ? `${cmpBadge('not_applicable','該当なし（募集停止）')}`
+    : (t
+        ? `<div>${cmpBadge('verified',`${t.academic_year}年度確認済み`)}</div><div><strong>初年度合計：${Number(t.first_year_total).toLocaleString('ja-JP')}円</strong></div><div class="cmp-sub">入学料 ${Number(t.admission_fee).toLocaleString('ja-JP')}円 ／ 授業料 ${Number(t.annual_tuition).toLocaleString('ja-JP')}円</div>`
+        : `${cmpBadge('uninvestigated','未調査')}<div class="cmp-sub">公式学費資料から順次登録（推測補完なし）</div>`);
+
+  const quals=(state.qualIdx.get(id)||cp?.qualifications||[]);
+  const qNorm=quals.length?quals.map(q=>q.name).sort().join(','):(graduateOnly?'not_applicable':(prefOf(r)==='神奈川県'?'not_published':'uninvestigated'));
+  const qHtml=quals.length
+    ? `<div>${cmpBadge('verified',`${quals.length}件確認済み`)}</div><div class="cmp-tags" style="margin-top:4px">${quals.slice(0,5).map(q=>`<span>${esc(q.name.replace(/（.*?）/g,''))}</span>`).join('')}${quals.length>5?`<span>ほか${quals.length-5}件</span>`:''}</div>`
+    : (graduateOnly
+        ? `${cmpBadge('not_applicable','該当なし')}<div class="cmp-sub">大学院大学のため学部養成課程なし</div>`
+        : (prefOf(r)==='神奈川県'
+            ? `${cmpBadge('not_published','公式掲載なし')}<div class="cmp-sub">課程認定一覧・公式ページ調査済み</div>`
+            : `${cmpBadge('uninvestigated','未調査')}<div class="cmp-sub">課程認定資料・公式ページ照合前</div>`));
+
+  const stCount=studentTotal(r)||Number(cp?.student_counts?.total)||0;
+  const stAsOf=r.student_counts?.as_of||cp?.student_counts?.as_of||'2026-05-01';
+  const stCountNorm=stCount?String(stCount):'uninvestigated';
+  const stCountHtml=stCount
+    ? `<div>${cmpBadge('verified','確認済み')} <strong>${stCount.toLocaleString('ja-JP')}人</strong></div><div class="cmp-sub">${esc(stAsOf)}基準</div>`
+    : `${cmpBadge('uninvestigated','未調査')}<div class="cmp-sub">公式統計・ポートレート照合前</div>`;
+
+  const ocUrl=r.open_campus_url||cp?.open_campus_url||'';
+  const brUrl=r.brochure_request_url||cp?.brochure_request_url||'';
+  const ocNorm=stopped?'stopped':`oc:${!!ocUrl}:br:${!!brUrl}`;
+  const ocHtml=stopped
+    ? `${cmpBadge('not_applicable','該当なし（募集停止）')}`
+    : ((ocUrl||brUrl)
+        ? `<div>${cmpBadge('verified','公式導線確認済み')}</div><div class="cmp-links">${ocUrl?`<a class="cmp-link" href="${esc(ocUrl)}" target="_blank" rel="noopener">オープンキャンパス ↗</a>`:''}${brUrl?`<a class="cmp-link" href="${esc(brUrl)}" target="_blank" rel="noopener">資料請求 ↗</a>`:''}</div>`
+        : `${cmpBadge('uninvestigated','未調査')}<div class="cmp-sub">公式サイト・入試ページから確認可能</div>`);
+
+  const vDate=r.verified_at||cp?.verification?.last_verified_at||(r.sources?.[0]?.verified_at)||(cp?.sources?.[0]?.verified_at)||'2026-10-30';
+  const favMemo=(typeof window.getFavoriteNote==='function'?window.getFavoriteNote(id):'')||'';
+
+  return {
+    id,name:r.name,
+    type:{norm:r.establishment_type,html:`<strong>${esc(typeLabel[r.establishment_type]||'')}</strong> ／ ${stopped?'募集停止':'募集継続'}`},
+    fields:{norm:fieldsNorm,html:fieldsHtml},
+    academic:{norm:acadNorm,html:acadHtml},
+    campus:{norm:campNorm,html:campHtml},
+    access:{norm:stNorm,html:stHtml},
+    admissions:{norm:admNorm,html:admHtml},
+    tuition:{norm:tNorm,html:tHtml},
+    qualifications:{norm:qNorm,html:qHtml},
+    students:{norm:stCountNorm,html:stCountHtml},
+    opencampus:{norm:ocNorm,html:ocHtml},
+    verified:{norm:vDate,html:`<div><strong>最終確認：${esc(vDate)}</strong></div><div class="cmp-links"><a class="cmp-link" href="detail.html?id=${encodeURIComponent(id)}">詳細・一次資料出典を見る →</a>${r.official_url?`<a class="cmp-link" href="${esc(r.official_url)}" target="_blank" rel="noopener">大学公式 ↗</a>`:''}</div>`},
+    memo:{norm:favMemo,html:`<div class="cmp-memo-box"><textarea class="cmp-memo-input" rows="2" maxlength="120" data-fav-note-input="${esc(id)}" placeholder="志望理由・気になる点・オープンキャンパス日程などの個人メモ（自動保存）">${esc(favMemo)}</textarea></div>`}
+  };
+}
+function compareTable(){
+  const rows=selectedRows();
+  const data=rows.map(buildCompareRecord);
+  const spec=[
+    ['設置区分・募集状態','type'],
+    ['学びの分野','fields'],
+    ['学部・学科・研究科','academic'],
+    ['キャンパス所在地','campus'],
+    ['通学・最寄駅','access'],
+    ['入試導線・選抜日程','admissions'],
+    ['学費・初年度納入額','tuition'],
+    ['取得可能資格','qualifications'],
+    ['在籍学生数','students'],
+    ['オープンキャンパス・資料請求','opencampus'],
+    ['最終確認日・詳細導線','verified'],
+    ['自分の比較メモ（端末保存）','memo']
+  ];
+  let shownCount=0;
+  const bodyRows=spec.map(([label,key])=>{
+    const norms=data.map(d=>d[key].norm);
+    const isDiff=new Set(norms).size>1;
+    if(state.compareDiffOnly&&!isDiff&&key!=='verified'&&key!=='memo')return '';
+    shownCount++;
+    return `<tr class="${isDiff?'is-diff-row':'is-same-row'}"><th><span>${esc(label)}</span>${isDiff?'<em class="cmp-diff-tag">違いあり</em>':'<em class="cmp-same-tag">共通</em>'}</th>${data.map(d=>`<td>${d[key].html}</td>`).join('')}</tr>`;
+  }).filter(Boolean).join('');
+
+  const shareUrl=`${location.origin}${location.pathname}?compare=${encodeURIComponent(rows.map(r=>r.id).join(','))}${state.compareDiffOnly?'&diff=1':''}`;
+  const toolbar=`<div class="compare-toolbar"><label class="compare-diff-toggle"><input type="checkbox" id="compare-diff-checkbox" ${state.compareDiffOnly?'checked':''}><span>異なる項目だけ表示</span></label><div class="compare-toolbar-actions"><button type="button" class="btn" id="copy-compare-url-btn" data-share-url="${esc(shareUrl)}">共有URLをコピー</button><button type="button" class="btn" id="print-compare-btn">印刷・PDF保存</button></div></div><p class="compare-status-note">※ 空欄を推測で埋めず、「確認済み」「未調査」「公式掲載なし」「該当なし」の状態を明示しています。独自の点数付けや大学ランキングは行いません。</p>`;
+  return `${toolbar}<div class="compare-table-scroll"><table class="compare-table"><thead><tr><th>比較項目（${shownCount}項目）</th>${rows.map(r=>`<th><div class="cmp-th-head"><strong>${esc(r.name)}</strong><button type="button" class="cmp-th-remove" data-remove-compare="${esc(r.id)}">外す ×</button></div></th>`).join('')}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+}
+async function openCompare(){
+  if(state.compare.size<2)return;
+  const dlg=document.querySelector('#compare-dialog');
+  const wrap=document.querySelector('#compare-table-wrap');
+  if(!dlg||!wrap)return;
+  if(!dlg.open)dlg.showModal();
+  wrap.innerHTML='<p style="padding:18px">比較データを読み込んでいます…</p>';
+  await ensureCompleteProfiles([...state.compare]);
+  wrap.innerHTML=compareTable();
+  syncUrl();
+}
 function installDevelopmentStatus(){if(document.querySelector('#university-db-development-status'))return;const style=document.createElement('style');style.textContent='.university-development-status{background:#18140a;color:#fff;border-top:1px solid #8f7229;border-bottom:1px solid #8f7229;padding:14px 18px;line-height:1.55}.university-development-status .inner{max-width:1180px;margin:auto;display:flex;gap:14px;align-items:flex-start}.university-development-status .label{background:#f3c95a;color:#241b05;border-radius:999px;padding:5px 10px;font-weight:900;font-size:.82rem;white-space:nowrap}.university-development-status p{margin:2px 0;color:#f2ead7;font-size:.9rem}.university-development-status small{display:block;margin-top:4px;color:#d9cda9}.academic-summary.is-pending{border:1px dashed #c79d3d;background:#fff9e8;padding:10px;border-radius:12px}@media(max-width:640px){.university-development-status .inner{display:block}.university-development-status .label{display:inline-block;margin-bottom:8px}}';document.head.appendChild(style);const b=document.createElement('section');b.id='university-db-development-status';b.className='university-development-status';b.innerHTML='<div class="inner"><span class="label">現在 開発・更新中</span><div><strong>東京都・埼玉県・神奈川県の大学の基本情報を優先して再点検しています。</strong><p>学部・学科、所在地、Google Mapsの大学別表示を優先更新中です。未同期の項目は「更新中」と表示します。</p></div></div>';const main=document.querySelector('main'),hero=document.querySelector('.tokyo-hero');if(main&&hero)main.insertBefore(b,hero)}
 function updateAcademicStatus(source){const covered=state.rows.filter(r=>(state.faculties.get(r.id)||[]).length||(state.graduateSchools.get(r.id)||[]).length).length,s=document.querySelector('#academic-sync-status');if(s&&state.rows.length)s.textContent=`教育組織データ ${covered}/${state.rows.length}校を読込（${source==='merged'?'集約＋検証済みスナップショット':'検証済みスナップショット'}）・内容は継続更新中`}
 
@@ -309,6 +483,34 @@ function restoreScrollIfReturning(){
 }
 
 installDevelopmentStatus();input.value=state.q;if(deptInput)deptInput.value=state.dept;sortSelect.value=['name','municipality','type','students-desc','students-asc'].includes(state.sort)?state.sort:'name';state.sort=sortSelect.value;activate(document.querySelector('#pref-filters'),'pref',state.pref);activate(document.querySelector('#type-filters'),'type',state.type);activate(document.querySelector('#field-filters'),'fieldChip',state.field);activate(document.querySelector('#status-filters'),'status',state.status);syncViewModeUI();if(state.qual||state.dept||state.withCampus||state.status!=='all'){const adv=document.querySelector('#advanced-filters');if(adv)adv.open=true;}
-Promise.all([loadUniversityBundle(),loadAcademicBundle(),optionalObject('data/university-images.json'),optionalObject('data/university-detail-overrides.json'),optionalObject('data/tokyo_admissions_batch01.json')]).then(([rows,a,img,detail,admissions])=>{state.rows=mergeAdmissionDetails(mergeUniversityDetails(asList(rows),detail),admissions);state.faculties=groupByUniversity(a.faculties);state.departments=groupByUniversity(a.departments);state.graduateSchools=groupByUniversity(a.graduateSchools);state.images=new Map(Object.entries(img.images||{}));document.querySelector('#stat-total')?.replaceChildren(document.createTextNode(String(state.rows.length)));bindQuality({});updateSnapshot();updateAcademicStatus(a.source);updateCompare();render();restoreScrollIfReturning()}).catch(err=>{console.error('Tokyo university DB load failed',err);const s=document.querySelector('#academic-sync-status');if(s)s.textContent=`教育組織データ読込エラー：${err.message}`;grid.innerHTML='<div class="empty">大学データを読み込めませんでした。</div>';count.textContent='読込エラー';grid.setAttribute('aria-busy','false')});
+Promise.all([loadUniversityBundle(),loadAcademicBundle(),optionalObject('data/university-images.json'),optionalObject('data/university-detail-overrides.json'),optionalObject('data/tokyo_admissions_batch01.json')]).then(([rows,a,img,detail,admissions])=>{state.rows=mergeAdmissionDetails(mergeUniversityDetails(asList(rows),detail),admissions);const validIds=new Set(state.rows.map(r=>r.id));for(const cid of [...state.compare])if(!validIds.has(cid))state.compare.delete(cid);state.faculties=groupByUniversity(a.faculties);state.departments=groupByUniversity(a.departments);state.graduateSchools=groupByUniversity(a.graduateSchools);state.images=new Map(Object.entries(img.images||{}));document.querySelector('#stat-total')?.replaceChildren(document.createTextNode(String(state.rows.length)));bindQuality({});updateSnapshot();updateAcademicStatus(a.source);updateCompare();render();restoreScrollIfReturning();if(params.get('compare')&&state.compare.size>=2&&!savedSession?.returning)openCompare();}).catch(err=>{console.error('Tokyo university DB load failed',err);const s=document.querySelector('#academic-sync-status');if(s)s.textContent=`教育組織データ読込エラー：${err.message}`;grid.innerHTML='<div class="empty">大学データを読み込めませんでした。</div>';count.textContent='読込エラー';grid.setAttribute('aria-busy','false')});
 if(!REGION_PACKS.length)fetch('data/tokyo_dataset_summary.generated.json').then(r=>r.ok?r.json():Promise.reject()).then(bindQuality).catch(()=>{});
 document.querySelector('#tokyo-search').addEventListener('submit',e=>{e.preventDefault();runQuery(input.value)});input.addEventListener('input',()=>{state.q=input.value;state.limit=PAGE_SIZE;render()});clearQueryBtn?.addEventListener('click',()=>{state.q='';state.limit=PAGE_SIZE;input.value='';input.focus();render()});deptInput?.addEventListener('input',()=>{state.dept=deptInput.value;state.limit=PAGE_SIZE;render()});document.querySelectorAll('[data-query]').forEach(b=>b.addEventListener('click',()=>runQuery(b.dataset.query)));document.querySelectorAll('.discovery-card[data-field]').forEach(b=>b.addEventListener('click',()=>runField(b.dataset.field)));document.querySelector('#pref-filters')?.addEventListener('click',e=>{const b=e.target.closest('[data-pref]');if(!b)return;state.pref=b.dataset.pref;state.limit=PAGE_SIZE;activate(e.currentTarget,'pref',state.pref);render();document.dispatchEvent(new CustomEvent('bantai:pref-change'))});document.querySelector('#type-filters').addEventListener('click',e=>{const b=e.target.closest('[data-type]');if(!b)return;state.type=b.dataset.type;state.limit=PAGE_SIZE;activate(e.currentTarget,'type',state.type);render()});document.querySelector('#field-filters')?.addEventListener('click',e=>{const b=e.target.closest('[data-field-chip]');if(!b)return;state.field=b.dataset.fieldChip;state.limit=PAGE_SIZE;activate(e.currentTarget,'fieldChip',state.field);render()});document.querySelector('#status-filters').addEventListener('click',e=>{const b=e.target.closest('[data-status]');if(!b)return;state.status=b.dataset.status;state.limit=PAGE_SIZE;activate(e.currentTarget,'status',state.status);render()});sortSelect.addEventListener('change',()=>{state.sort=sortSelect.value;render()});document.querySelector('#view-mode-switch')?.addEventListener('click',e=>{const b=e.target.closest('[data-view-mode]');if(!b)return;state.view=b.dataset.viewMode==='compact'?'compact':'card';render()});document.querySelector('#pagination-bar')?.addEventListener('click',e=>{if(e.target.closest('#load-more-btn')){const prevCount=grid.querySelectorAll('.tokyo-card').length;state.limit+=PAGE_SIZE;render();const nextCard=grid.querySelectorAll('.tokyo-card')[prevCount];if(nextCard)nextCard.focus({preventScroll:true});}else if(e.target.closest('#show-all-btn')){const prevCount=grid.querySelectorAll('.tokyo-card').length;state.limit=Math.max(state.rows.length,209);render();const nextCard=grid.querySelectorAll('.tokyo-card')[prevCount];if(nextCard)nextCard.focus({preventScroll:true});}else if(e.target.closest('#collapse-list-btn')){state.limit=PAGE_SIZE;render();document.querySelector('#search')?.scrollIntoView({behavior:'smooth',block:'start'});}});document.querySelector('#clear-filters').addEventListener('click',reset);document.querySelector('#active-filters-list')?.addEventListener('click',e=>{const b=e.target.closest('[data-clear-filter]');if(b)clearSingleFilter(b.dataset.clearFilter)});grid.addEventListener('click',e=>{const clr=e.target.closest('[data-clear-filter]');if(clr){clearSingleFilter(clr.dataset.clearFilter);return;}const b=e.target.closest('[data-compare]');if(b)toggleCompare(b.dataset.compare)});document.addEventListener('click',e=>{const a=e.target.closest('a[href*="detail.html"]');if(a){const m=a.getAttribute('href').match(/[?&]id=([^&#]+)/);saveSearchSession(m?decodeURIComponent(m[1]):'',true);}},true);let scrollTimer=null;window.addEventListener('scroll',()=>{if(scrollTimer)clearTimeout(scrollTimer);scrollTimer=setTimeout(()=>saveSearchSession(),150);},{passive:true});document.querySelector('#compare-items').addEventListener('click',e=>{const b=e.target.closest('[data-remove-compare]');if(b)toggleCompare(b.dataset.removeCompare)});document.querySelector('#clear-compare').addEventListener('click',()=>{state.compare.clear();updateCompare();render()});document.querySelector('#open-compare').addEventListener('click',openCompare);
+document.querySelector('#compare-table-wrap')?.addEventListener('change',e=>{
+  if(e.target.id==='compare-diff-checkbox'){
+    state.compareDiffOnly=e.target.checked;
+    document.querySelector('#compare-table-wrap').innerHTML=compareTable();
+    syncUrl();
+  }
+});
+document.querySelector('#compare-table-wrap')?.addEventListener('click',e=>{
+  const rm=e.target.closest('[data-remove-compare]');
+  if(rm){toggleCompare(rm.dataset.removeCompare);return;}
+  const copyBtn=e.target.closest('#copy-compare-url-btn');
+  if(copyBtn){
+    const url=copyBtn.dataset.shareUrl||location.href;
+    navigator.clipboard?.writeText(url).catch(()=>{});
+    copyBtn.textContent='✓ 共有URLをコピーしました';
+    setTimeout(()=>{if(copyBtn.isConnected)copyBtn.textContent='共有URLをコピー';},2200);
+    return;
+  }
+  if(e.target.closest('#print-compare-btn')){
+    window.print();
+  }
+});
+document.querySelector('#compare-table-wrap')?.addEventListener('input',e=>{
+  const ta=e.target.closest('[data-fav-note-input]');
+  if(ta&&typeof window.setFavoriteNote==='function'){
+    window.setFavoriteNote(ta.dataset.favNoteInput,ta.value);
+  }
+});

@@ -32,3 +32,43 @@
 .card-decision-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .card-sub-link{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;background:#f4f7fa;border:1px solid #d7e2ec;color:#1b4668;font-size:.66rem;font-weight:800;text-decoration:none;transition:background .15s ease,border-color .15s ease}
 .card-sub-link:hover{background:#e8f0f7;border-color:#adc3d8}
+.favorite-note-box{margin-top:4px;padding:7px 9px;border-radius:9px;background:#fffcf2;border:1px solid #e6d7a7}
+.favorite-note-label{display:flex;flex-direction:column;gap:4px;font-size:.65rem;font-weight:800;color:#665014}
+.favorite-note-input{width:100%;box-sizing:border-box;padding:5px 8px;border:1px solid #d5c38a;border-radius:6px;background:#fff;color:#172a3a;font-size:.74rem}
+.compare-dialog{width:min(1180px,95vw);max-height:90vh;padding:0;border:1px solid #c9d6e2;border-radius:18px;box-shadow:0 22px 54px rgba(8,28,46,.32)}
+.compare-dialog::backdrop{background:rgba(8,22,36,.52);backdrop-filter:blur(2px)}
+.compare-dialog-inner{padding:20px;box-sizing:border-box;max-width:100%}
+.compare-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 12px;margin-bottom:8px;border-radius:12px;background:#f4f7fa;border:1px solid #dbe4ed}
+.compare-diff-toggle{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:800;color:#13324d;cursor:pointer}
+.compare-diff-toggle input{width:16px;height:16px;accent-color:#0b3557}
+.compare-toolbar-actions{display:flex;flex-wrap:wrap;gap:8px}
+.compare-toolbar-actions .btn{padding:6px 12px;border-radius:8px;border:1px solid #bfd0e0;background:#fff;color:#0e3251;font-size:.76rem;font-weight:800;cursor:pointer}
+.compare-toolbar-actions .btn:hover{background:#e9f1f8}
+.compare-status-note{margin:0 0 10px;font-size:.72rem;color:#516678;line-height:1.5}
+.compare-table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #d7e1eb;border-radius:12px;background:#fff}
+.compare-table{width:100%;min-width:680px;border-collapse:collapse;font-size:.78rem;line-height:1.55}
+.compare-table th,.compare-table td{padding:10px 12px;border-bottom:1px solid #e3ebf2;border-right:1px solid #eef3f7;vertical-align:top;text-align:left}
+.compare-table thead th{background:#0b2842;color:#fff;font-weight:900;position:sticky;top:0;z-index:2}
+.compare-table tbody th{width:155px;min-width:135px;background:#f7f9fb;color:#14324c;font-weight:800}
+.compare-table tr.is-diff-row tbody th,.compare-table tr.is-diff-row>th{background:#fdf9ec}
+.cmp-th-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.cmp-th-remove{padding:2px 7px;border-radius:6px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:.66rem;cursor:pointer;white-space:nowrap}
+.cmp-diff-tag,.cmp-same-tag{display:inline-block;margin-top:4px;padding:1px 6px;border-radius:999px;font-size:.62rem;font-style:normal;font-weight:800}
+.cmp-diff-tag{background:#f5e3a4;color:#594100}
+.cmp-same-tag{background:#e4ecf3;color:#4e657a}
+.cmp-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.cmp-tags span{padding:2px 7px;border-radius:999px;background:#edf3f8;color:#2c4a63;font-size:.66rem;font-weight:700}
+.cmp-list{margin:4px 0 0;padding-left:16px;font-size:.74rem;color:#243b50}
+.cmp-sub{margin-top:3px;font-size:.71rem;color:#556b7d}
+.cmp-links{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.cmp-link{display:inline-flex;align-items:center;padding:3px 8px;border-radius:6px;background:#f0f5fa;border:1px solid #cddbe8;color:#123e63;font-size:.68rem;font-weight:800;text-decoration:none}
+.cmp-link.primary{background:#0b3557;border-color:#0b3557;color:#fff}
+.cmp-memo-input{width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #cbd8e4;border-radius:7px;font-size:.74rem;font-family:inherit;resize:vertical}
+@media print{
+  body>*:not(#compare-dialog){display:none!important}
+  #compare-dialog{position:static!important;width:100%!important;max-width:none!important;max-height:none!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+  .compare-dialog-close,.compare-toolbar,.cmp-th-remove{display:none!important}
+  .compare-table-scroll{overflow:visible!important;border:1px solid #999!important}
+  .compare-table{min-width:0!important;font-size:9pt!important}
+  .compare-table thead th{background:#eee!important;color:#000!important}
+}
