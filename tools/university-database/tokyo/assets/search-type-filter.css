@@ -108,3 +108,13 @@
   .tokyo-card.is-compact-card .compact-card-body{grid-template-columns:1fr}
   .compact-card-side{min-width:0;width:100%}
 }
+/* 工程4：一覧カード上のデータ状態バッジと基準日・確認日表示 */
+.dq-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:.68rem;font-weight:900;line-height:1.25;border:1px solid transparent;white-space:nowrap}
+.dq-verified{background:#e8f6ee;color:#1b5e3c;border-color:#b7dfc7}
+.dq-uninvestigated{background:#fff6e0;color:#7a520b;border-color:#e8ce8e}
+.dq-not-published{background:#f2eff8;color:#4f3878;border-color:#d4cae8}
+.dq-not-applicable{background:#eef2f6;color:#425568;border-color:#cfd9e3}
+.dq-updating{background:#e7f2fc;color:#144d82;border-color:#b6d5f2}
+.dq-expired{background:#fdecec;color:#8c2323;border-color:#f1b9b9}
+.card-fact-sub{display:block;font-size:.64rem;color:#5a6d7e;font-weight:700;margin-top:1px}
+.card-verified-meta{margin:4px 0 8px;font-size:.68rem;color:#52667a;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
