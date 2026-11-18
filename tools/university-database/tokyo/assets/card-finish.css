@@ -64,6 +64,35 @@
 .cmp-link{display:inline-flex;align-items:center;padding:3px 8px;border-radius:6px;background:#f0f5fa;border:1px solid #cddbe8;color:#123e63;font-size:.68rem;font-weight:800;text-decoration:none}
 .cmp-link.primary{background:#0b3557;border-color:#0b3557;color:#fff}
 .cmp-memo-input{width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #cbd8e4;border-radius:7px;font-size:.74rem;font-family:inherit;resize:vertical}
+.ui-svg-icon{display:inline-block;vertical-align:-2px;flex-shrink:0}
+.visual-unregistered-tag{position:absolute;right:10px;bottom:10px;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.88);color:#2a455e;font-size:.58rem;font-weight:800;letter-spacing:.02em}
+.finished-university-card .card-visual{aspect-ratio:16/9;height:auto;min-height:155px;max-height:195px}
+.card-more-details{margin-top:2px;border:1px solid #dfe8f0;border-radius:9px;background:#f8fafc;padding:5px 9px}
+.card-more-details summary{cursor:pointer;font-size:.68rem;font-weight:800;color:#174267;list-style:none}
+.card-more-details summary::-webkit-details-marker{display:none}
+.card-more-body{display:flex;flex-direction:column;gap:8px;margin-top:7px;padding-top:7px;border-top:1px dashed #d3dfe9}
+.card-more-group strong{display:block;margin-bottom:4px;font-size:.65rem;color:#334e68}
+.card-more-stations{margin:0;padding-left:15px;font-size:.68rem;color:#243b50}
+.finished-university-card .card-actions .primary{background:#123e63;border-color:#123e63;color:#fff;font-weight:800}
+.finished-university-card .card-actions .official-card-link,.finished-university-card .card-actions .map-card-link{background:#fff;border:1px solid #c9d7e4;color:#153856;font-weight:800}
+.mobile-bottom-dock{display:none}
+@media(max-width:768px){
+  body{padding-bottom:68px}
+  .scroll-top-button{bottom:76px!important}
+  .mobile-bottom-dock{position:fixed;left:0;right:0;bottom:0;z-index:75;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:7px 10px calc(7px + env(safe-area-inset-bottom,0px));background:rgba(8,28,46,.96);border-top:1px solid rgba(255,255,255,.18);box-shadow:0 -8px 24px rgba(5,18,32,.26);backdrop-filter:blur(8px)}
+  .mobile-dock-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:42px;padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.09);color:#fff;font-size:.74rem;font-weight:800;cursor:pointer;min-width:0}
+  .mobile-dock-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-dock-btn b{display:inline-flex;align-items:center;justify-content:center;padding:1px 6px;border-radius:999px;background:#f3c95a;color:#1b1403;font-size:.64rem;font-weight:900}
+  .mobile-dock-btn.is-compare.is-ready{background:#f3c95a;border-color:#f3c95a;color:#181203}
+  .mobile-dock-btn.is-compare.is-ready b{background:#0b2842;color:#fff}
+}
+@media(max-width:360px){
+  .finished-university-card .card-body{padding:12px}
+  .finished-university-card .card-actions{grid-template-columns:1fr 1fr;gap:5px}
+  .finished-university-card .card-actions .btn{font-size:.64rem;padding:6px 4px}
+  .card-sub-link{font-size:.62rem;padding:3px 6px}
+  .mobile-dock-btn{font-size:.68rem;padding:5px 4px;gap:3px}
+}
 @media print{
   body>*:not(#compare-dialog){display:none!important}
   #compare-dialog{position:static!important;width:100%!important;max-width:none!important;max-height:none!important;border:0!important;box-shadow:none!important;overflow:visible!important}
