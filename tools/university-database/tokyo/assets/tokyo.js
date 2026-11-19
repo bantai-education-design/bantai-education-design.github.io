@@ -9,7 +9,7 @@ const params=new URLSearchParams(location.search);
 const initialLimit=Math.max(PAGE_SIZE,Number(params.get('limit'))||(savedSession?.returning&&savedSession?.limit?Number(savedSession.limit):PAGE_SIZE)||PAGE_SIZE);
 const initialView=(params.get('view')||(savedSession?.returning?savedSession.view:''))==='compact'?'compact':'card';
 const initialCompare=(params.get('compare')||(savedSession?.returning?savedSession.compare:'')||'').split(',').map(x=>x.trim()).filter(x=>/^u\d{6}$/.test(x)).slice(0,4);
-const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',field:params.get('field')||'all',dept:params.get('dept')||'',view:initialView,limit:initialLimit,faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(initialCompare),compareDiffOnly:params.get('diff')==='1',completeProfiles:new Map(),images:new Map()};
+const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',field:params.get('field')||'all',dept:params.get('dept')||'',scale:params.get('scale')||'all',admGuide:params.get('adm')||'all',view:initialView,limit:initialLimit,faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(initialCompare),compareDiffOnly:params.get('diff')==='1',completeProfiles:new Map(),images:new Map()};
 const PREF_CODES={tokyo:'東京都',saitama:'埼玉県',kanagawa:'神奈川県'};
 const PREF_SLUGS={'東京都':'tokyo','埼玉県':'saitama','神奈川県':'kanagawa'};
 state.pref=PREF_CODES[params.get('pref')]||(['東京都','埼玉県','神奈川県'].includes(params.get('pref'))?params.get('pref'):'all');
@@ -66,6 +66,24 @@ function matchesField(row,fieldId=state.field){
   if(!cat||!cat.re)return true;
   return [...(row.academic_field_tags||[]),...academicNames(row)].some(t=>cat.re.test(t));
 }
+const SCALE_LABELS={small:'小規模（1,500人未満）',medium:'中規模（1,500〜4,999人）',large:'大規模（5,000人以上）'};
+const ADM_GUIDE_LABELS={web:'Web出願URL確認済み',guidelines:'募集要項URL確認済み',opencampus:'オープンキャンパスURL確認済み'};
+function matchesScale(row,scale=state.scale){
+  if(!scale||scale==='all')return true;
+  const n=studentTotal(row);
+  if(!n)return false;
+  if(scale==='small')return n<1500;
+  if(scale==='medium')return n>=1500&&n<5000;
+  if(scale==='large')return n>=5000;
+  return true;
+}
+function matchesAdmGuide(row,adm=state.admGuide){
+  if(!adm||adm==='all')return true;
+  if(adm==='web')return !!(row.web_application_url);
+  if(adm==='guidelines')return !!(row.application_guidelines_url);
+  if(adm==='opencampus')return !!(row.open_campus_url);
+  return true;
+}
 function matchesDept(row,deptQuery=state.dept){
   const dq=String(deptQuery||'').trim().toLowerCase();
   if(!dq)return true;
@@ -81,8 +99,10 @@ function matchesAll(row,ov={}){
   const field=ov.field??state.field;
   const qual=ov.qual??state.qual;
   const dept=ov.dept??state.dept;
+  const scale=ov.scale??state.scale;
+  const admGuide=ov.admGuide??state.admGuide;
   const status=ov.status??state.status;
-  return (!qual||qualGroups(row).includes(qual))&&(pref==='all'||prefOf(row)===pref||(withCampus&&campusPrefs(row).includes(pref)))&&(type==='all'||row.establishment_type===type)&&matchesField(row,field)&&matchesDept(row,dept)&&(status==='all'||(row.admissions_status||'active')===status)&&(!q||searchable(row).includes(q));
+  return (!qual||qualGroups(row).includes(qual))&&(pref==='all'||prefOf(row)===pref||(withCampus&&campusPrefs(row).includes(pref)))&&(type==='all'||row.establishment_type===type)&&matchesField(row,field)&&matchesDept(row,dept)&&matchesScale(row,scale)&&matchesAdmGuide(row,admGuide)&&(status==='all'||(row.admissions_status||'active')===status)&&(!q||searchable(row).includes(q));
 }
 function visible(row){return matchesAll(row)}
 function activeFilterItems(){
@@ -93,6 +113,8 @@ function activeFilterItems(){
   if(state.field&&state.field!=='all'){const cat=FIELD_CATEGORIES.find(c=>c.id===state.field);items.push({key:'field',label:`分野: ${cat?cat.label:state.field}`});}
   if(state.qual)items.push({key:'qual',label:`資格: ${state.qual}`});
   if(state.dept.trim())items.push({key:'dept',label:`学部・学科: ${state.dept.trim()}`});
+  if(state.scale&&state.scale!=='all')items.push({key:'scale',label:`大学規模: ${SCALE_LABELS[state.scale]||state.scale}`});
+  if(state.admGuide&&state.admGuide!=='all')items.push({key:'admGuide',label:`入試・イベント導線: ${ADM_GUIDE_LABELS[state.admGuide]||state.admGuide}`});
   if(state.withCampus&&state.pref!=='all')items.push({key:'withCampus',label:`${state.pref}のキャンパス所在地を含む`});
   if(state.status!=='all')items.push({key:'status',label:`募集状態: ${state.status==='stopped'?'募集停止':'募集継続'}`});
   return items;
@@ -125,6 +147,12 @@ function matchReasons(row){
     const us=[...new Set(academicNames(row).filter(n=>String(n).toLowerCase().includes(dq)))].slice(0,2);
     reasons.push(`学部・学科等：${us.length?us.join('・'):state.dept.trim()}`);
   }
+  if(state.scale&&state.scale!=='all'){
+    reasons.push(`規模：在籍者数 ${formatStudents(row)}（${SCALE_LABELS[state.scale]}）`);
+  }
+  if(state.admGuide&&state.admGuide!=='all'){
+    reasons.push(`公式導線：${ADM_GUIDE_LABELS[state.admGuide]}`);
+  }
   if(state.status!=='all')reasons.push(`募集状態：${(row.admissions_status||'active')==='stopped'?'募集停止':'募集継続'}`);
   const q=state.q.trim().toLowerCase();
   if(q){
@@ -148,7 +176,7 @@ function matchReasons(row){
 }
 window.matchReasons=matchReasons;
 function sortRows(rows){const c=new Intl.Collator('ja');return [...rows].sort((a,b)=>{if(state.sort==='municipality')return c.compare(prefOf(a),prefOf(b))||c.compare(municipality(a),municipality(b))||c.compare(a.name,b.name);if(state.sort==='type')return ((typeOrder[a.establishment_type]??9)-(typeOrder[b.establishment_type]??9))||c.compare(a.name,b.name);if(state.sort==='students-desc')return studentTotal(b)-studentTotal(a)||c.compare(a.name,b.name);if(state.sort==='students-asc')return studentTotal(a)-studentTotal(b)||c.compare(a.name,b.name);return c.compare(a.name,b.name)})}
-function syncUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.pref!=='all')p.set('pref',PREF_SLUGS[state.pref]||state.pref);if(state.type!=='all')p.set('type',state.type);if(state.field&&state.field!=='all')p.set('field',state.field);if(state.qual)p.set('qual',state.qual);if(state.dept)p.set('dept',state.dept);if(state.withCampus)p.set('campus','1');if(state.status!=='all')p.set('status',state.status);if(state.sort!=='name')p.set('sort',state.sort);if(state.view==='compact')p.set('view','compact');if(state.limit>PAGE_SIZE)p.set('limit',String(state.limit));if(state.compare.size)p.set('compare',[...state.compare].join(','));if(state.compareDiffOnly&&state.compare.size>=2)p.set('diff','1');history.replaceState(null,'',`${location.pathname}${p.toString()?`?${p}`:''}${location.hash}`)}
+function syncUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.pref!=='all')p.set('pref',PREF_SLUGS[state.pref]||state.pref);if(state.type!=='all')p.set('type',state.type);if(state.field&&state.field!=='all')p.set('field',state.field);if(state.qual)p.set('qual',state.qual);if(state.dept)p.set('dept',state.dept);if(state.scale&&state.scale!=='all')p.set('scale',state.scale);if(state.admGuide&&state.admGuide!=='all')p.set('adm',state.admGuide);if(state.withCampus)p.set('campus','1');if(state.status!=='all')p.set('status',state.status);if(state.sort!=='name')p.set('sort',state.sort);if(state.view==='compact')p.set('view','compact');if(state.limit>PAGE_SIZE)p.set('limit',String(state.limit));if(state.compare.size)p.set('compare',[...state.compare].join(','));if(state.compareDiffOnly&&state.compare.size>=2)p.set('diff','1');history.replaceState(null,'',`${location.pathname}${p.toString()?`?${p}`:''}${location.hash}`)}
 function saveSearchSession(cardId='',returning=false){
   try{
     const prev=JSON.parse(sessionStorage.getItem(SEARCH_STATE_KEY)||'null')||{};
@@ -179,7 +207,7 @@ function renderActiveFilters(){
   const items=activeFilterItems();
   if(clearQueryBtn)clearQueryBtn.hidden=!state.q;
   if(clearAllBtn)clearAllBtn.disabled=items.length===0;
-  const advCount=[state.qual,state.dept.trim(),state.withCampus&&state.pref!=='all',state.status!=='all'].filter(Boolean).length;
+  const advCount=[state.qual,state.dept.trim(),state.scale!=='all',state.admGuide!=='all',state.withCampus&&state.pref!=='all',state.status!=='all'].filter(Boolean).length;
   if(advBadge){advBadge.hidden=advCount===0;advBadge.textContent=`${advCount}件選択中`;}
   if(!listEl)return;
   if(!items.length){
@@ -198,6 +226,8 @@ function emptyStateHtml(){
     else if(it.key==='field')ov.field='all';
     else if(it.key==='qual')ov.qual='';
     else if(it.key==='dept')ov.dept='';
+    else if(it.key==='scale')ov.scale='all';
+    else if(it.key==='admGuide')ov.admGuide='all';
     else if(it.key==='withCampus')ov.withCampus=false;
     else if(it.key==='status')ov.status='all';
     const n=state.rows.filter(r=>matchesAll(r,ov)).length;
@@ -248,11 +278,34 @@ function clearSingleFilter(key){
   else if(key==='field'){state.field='all';activate(document.querySelector('#field-filters'),'fieldChip','all');}
   else if(key==='qual'){state.qual='';const qs=document.querySelector('#qual-select');if(qs)qs.value='';}
   else if(key==='dept'){state.dept='';if(deptInput)deptInput.value='';}
+  else if(key==='scale'){state.scale='all';}
+  else if(key==='admGuide'){state.admGuide='all';}
   else if(key==='withCampus'){state.withCampus=false;document.dispatchEvent(new CustomEvent('bantai:pref-change'));}
   else if(key==='status'){state.status='all';activate(document.querySelector('#status-filters'),'status','all');}
   render();
 }
-function reset(){state.q='';state.qual='';state.field='all';state.dept='';state.withCampus=false;state.limit=PAGE_SIZE;{const qs=document.querySelector('#qual-select');if(qs)qs.value='';}if(deptInput)deptInput.value='';state.pref='all';activate(document.querySelector('#pref-filters'),'pref','all');state.type='all';state.status='all';state.sort='name';input.value='';sortSelect.value='name';activate(document.querySelector('#type-filters'),'type','all');activate(document.querySelector('#field-filters'),'fieldChip','all');activate(document.querySelector('#status-filters'),'status','all');document.dispatchEvent(new CustomEvent('bantai:pref-change'));render()}
+function reset(){state.q='';state.qual='';state.field='all';state.dept='';state.scale='all';state.admGuide='all';state.withCampus=false;state.limit=PAGE_SIZE;{const qs=document.querySelector('#qual-select');if(qs)qs.value='';}if(deptInput)deptInput.value='';state.pref='all';activate(document.querySelector('#pref-filters'),'pref','all');state.type='all';state.status='all';state.sort='name';input.value='';sortSelect.value='name';activate(document.querySelector('#type-filters'),'type','all');activate(document.querySelector('#field-filters'),'fieldChip','all');activate(document.querySelector('#status-filters'),'status','all');document.dispatchEvent(new CustomEvent('bantai:pref-change'));render()}
+function applyGuidedSearch(cfg={}){
+  state.limit=PAGE_SIZE;
+  state.q='';if(input)input.value='';
+  state.dept='';if(deptInput)deptInput.value='';
+  state.status='all';activate(document.querySelector('#status-filters'),'status','all');
+  state.field=cfg.field||'all';activate(document.querySelector('#field-filters'),'fieldChip',state.field);
+  state.qual=cfg.qual||'';{const qs=document.querySelector('#qual-select');if(qs)qs.value=state.qual;}
+  state.pref=cfg.pref||'all';activate(document.querySelector('#pref-filters'),'pref',state.pref);
+  state.withCampus=Boolean(cfg.withCampus&&state.pref!=='all');
+  state.type=cfg.type||'all';activate(document.querySelector('#type-filters'),'type',state.type);
+  state.scale=cfg.scale||'all';
+  state.admGuide=cfg.admGuide||'all';
+  document.dispatchEvent(new CustomEvent('bantai:pref-change'));
+  render();
+  document.querySelector('#search')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+window.applyGuidedSearch=applyGuidedSearch;
+window.matchesAllUniversities=matchesAll;
+window.FIELD_CATEGORIES=FIELD_CATEGORIES;
+window.SCALE_LABELS=SCALE_LABELS;
+window.ADM_GUIDE_LABELS=ADM_GUIDE_LABELS;
 function runQuery(q){state.q=q;state.limit=PAGE_SIZE;input.value=q;render();document.querySelector('#search').scrollIntoView({behavior:'smooth',block:'start'})}
 function runField(fieldId){state.field=fieldId;state.limit=PAGE_SIZE;activate(document.querySelector('#field-filters'),'fieldChip',state.field);render();document.querySelector('#search').scrollIntoView({behavior:'smooth',block:'start'})}
 function updateSnapshot(){const s=document.querySelector('#snapshot-students'),f=document.querySelector('#snapshot-fields');if(s)s.textContent=state.rows.every(r=>studentTotal(r)>0)?`${(state.rows.reduce((n,r)=>n+studentTotal(r),0)/10000).toFixed(1)}万`:'詳細同期中';if(f)f.textContent=state.rows.every(r=>(r.academic_field_tags||[]).length)?`${new Set(state.rows.flatMap(r=>r.academic_field_tags||[])).size}分野`:'詳細同期中'}
