@@ -1,0 +1,11 @@
+{$ADMIN_DOMAIN} {
+    request_body {
+        max_size 8MB
+    }
+    header -Server
+    reverse_proxy admin:8787 {
+        transport http {
+            response_header_timeout 120s
+        }
+    }
+}

@@ -1,0 +1,15 @@
+CREATE TABLE articles(id TEXT PRIMARY KEY, revision INTEGER NOT NULL, body TEXT NOT NULL);
+CREATE TABLE versions(id INTEGER PRIMARY KEY, article_id TEXT NOT NULL, revision INTEGER NOT NULL, body TEXT NOT NULL, created TEXT NOT NULL, UNIQUE(article_id,revision));
+CREATE TABLE events(id INTEGER PRIMARY KEY, kind TEXT NOT NULL, detail TEXT NOT NULL, created TEXT NOT NULL);
+CREATE TABLE sessions(hash TEXT PRIMARY KEY, csrf TEXT NOT NULL, expires INTEGER NOT NULL);
+CREATE TABLE attempts(ip TEXT PRIMARY KEY, count INTEGER NOT NULL, expires INTEGER NOT NULL);
+CREATE TABLE requests(id TEXT PRIMARY KEY, article_id TEXT, revision INTEGER, action TEXT NOT NULL, url TEXT NOT NULL, number INTEGER NOT NULL, state TEXT NOT NULL);
+CREATE TABLE origins(article_id TEXT PRIMARY KEY, catalog_id TEXT NOT NULL, body TEXT NOT NULL);
+CREATE TABLE request_results(request_id TEXT PRIMARY KEY, body TEXT NOT NULL);
+CREATE TABLE proposals(id TEXT PRIMARY KEY, body TEXT NOT NULL, created TEXT NOT NULL);
+CREATE TABLE images(path TEXT PRIMARY KEY, mime TEXT NOT NULL, size INTEGER NOT NULL);
+CREATE TABLE image_chunks(path TEXT NOT NULL, part INTEGER NOT NULL, data BLOB NOT NULL, PRIMARY KEY(path,part));
+CREATE TABLE locks(name TEXT PRIMARY KEY, owner TEXT NOT NULL, expires INTEGER NOT NULL);
+CREATE INDEX versions_article ON versions(article_id,revision);
+CREATE INDEX origins_catalog ON origins(catalog_id);
+CREATE INDEX sessions_expiry ON sessions(expires);
