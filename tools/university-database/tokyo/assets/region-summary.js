@@ -12,7 +12,7 @@ function apply(){
   const h3=[...document.querySelectorAll('.ref-panel h3')].find(h=>h.textContent.startsWith('収録エリア'));
   if(h3)h3.textContent=`収録エリア：${areas}`;
   const list=document.querySelector('.ref-area-list');
-  if(list)list.innerHTML=PREFS.map(p=>{const r=byPref(p);return r.length?`<span>📍 ${p} <b>${r.length}</b><small>${NOTES[p]||`国立${count(r,'national')}・公立${count(r,'public')}・私立${count(r,'private')}`}</small></span>`:''}).join('');
+  if(list)list.innerHTML=PREFS.map(p=>{const r=byPref(p);return r.length?`<span class="ref-area-row"><span class="ref-area-name">📍 ${p}</span><b class="ref-area-num">${r.length}</b><small class="ref-area-breakdown">${NOTES[p]||`国立${count(r,'national')}・公立${count(r,'public')}・私立${count(r,'private')}`}</small></span>`:''}).join('');
   const tot=document.querySelector('.ref-area-total strong');if(tot)tot.textContent=String(total);
   const set=(sel,v)=>{const el=document.querySelector(sel);if(el)el.textContent=v};
   set('#quality-official',`${rows.filter(r=>r.official_url).length}/${total}`);
