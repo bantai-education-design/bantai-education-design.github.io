@@ -1,5 +1,24 @@
 [
   {
+    "id": "column-parent-teacher-conference",
+    "slug": "parent-teacher-conference",
+    "title": "個人面談、こんな言い方をしていませんか？",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.20",
+    "excerpt": "個人面談で子どもの課題をどう伝えるか。具体的な文例、保護者の話の聞き方、面談前の準備を教育現場40年の経験から考えます。",
+    "thumbnail": "/assets/images/columns/parent-teacher-conference/thumbnail.webp",
+    "readTime": "約5分",
+    "tags": [
+      "個人面談",
+      "保護者対応",
+      "小学校",
+      "学級経営",
+      "教師"
+    ],
+    "url": "/columns/parent-teacher-conference/"
+  },
+  {
     "id": "column-teacher-route-school-type-20261119",
     "slug": "teacher-route-school-type-20261119",
     "title": "教員を目指す大学選び。ランキングより「校種」と「教科」から考える",
