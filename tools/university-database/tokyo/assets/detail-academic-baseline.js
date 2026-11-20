@@ -6,7 +6,7 @@ const LOCATION_SHARDS=Array.from({length:6},(_,i)=>`data/tokyo_locations_${Strin
 const ADMISSION_SHARDS=Array.from({length:6},(_,i)=>`data/tokyo_admissions_${String(i+1).padStart(2,'0')}.json`);
 const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const summary=(items,label,max=8)=>{const names=(items||[]).map(x=>x.name).filter(Boolean);return names.length?`${label} ${names.length}：${names.slice(0,max).join('、')}${names.length>max?`、ほか${names.length-max}`:''}`:`${label}：該当なし`};
-const listHtml=(items,empty)=>items.length?`<ul class="detail-list">${items.map(x=>`<li>${esc(x.name)}</li>`).join('')}</ul>`:`<p class="detail-empty">${esc(empty)}</p>`;
+const listHtml=(items,empty,badgeText='該当なし',badgeCls='dq-not-applicable')=>items.length?`<ul class="detail-list">${items.map(x=>`<li>${esc(x.name)}</li>`).join('')}</ul>`:`<div class="dq-state-box"><span class="dq-badge ${badgeCls}">${esc(badgeText)}</span><span>${esc(empty)}</span></div>`;
 function setStat(label,value){for(const box of root.querySelectorAll('.detail-stat')){if(box.querySelector('small')?.textContent?.trim()===label){const strong=box.querySelector('strong');if(strong)strong.textContent=value;}}}
 function setFact(label,value){for(const box of root.querySelectorAll('.detail-fact')){if(box.querySelector('dt')?.textContent?.trim()===label){const dd=box.querySelector('dd');if(dd)dd.textContent=value;return true;}}return false}
 function setAcademicColumn(label,items,empty){for(const h3 of root.querySelectorAll('.detail-academic h3')){if(h3.textContent?.trim()!==label)continue;const wrap=h3.parentElement;if(!wrap)continue;[...wrap.children].filter(x=>x!==h3).forEach(x=>x.remove());wrap.insertAdjacentHTML('beforeend',listHtml(items,empty));return true;}return false}
@@ -89,12 +89,12 @@ function apply(u){
   setStat('学部',graduateOnly?'該当なし':String(faculties.length));
   setStat('学科等',graduateOnly?'該当なし':String(units.length));
   setStat('研究科',grads.length?String(grads.length):'—');
-  setFact('学部',graduateOnly?'学部を置かない大学院大学です。':summary(faculties,'学部'));
-  setFact('学科・課程等',graduateOnly?'学部・学科は該当しません。':summary(units,'学科等'));
-  setFact('研究科',grads.length?summary(grads,'研究科'):'研究科：該当なし／確認済み情報なし');
+  setFact('学部',graduateOnly?'該当なし（学部を置かない大学院大学です）':summary(faculties,'学部'));
+  setFact('学科・課程等',graduateOnly?'該当なし（学部・学科は設置されていません）':summary(units,'学科等'));
+  setFact('研究科',grads.length?summary(grads,'研究科'):'該当なし（大学院研究科を置かない大学）');
   setAcademicColumn('学部',faculties,graduateOnly?'学部を置かない大学院大学です。':'確認済み学部情報はありません。');
   setAcademicColumn('学科・課程等',units,graduateOnly?'学部・学科は該当しません。':'確認済み学科・課程情報はありません。');
-  setAcademicColumn('研究科',grads,'確認済み研究科情報はありません。');
+  setAcademicColumn('研究科',grads,'大学院研究科は設置されていません（文部科学省全国大学一覧で確認済み）。');
   root.dataset.academicBaseline='ready';
   return true;
 }
@@ -128,7 +128,8 @@ function apply(u){
 })();
 (async()=>{
   try{
-    for(const base of ['data/complete/','../saitama/data/complete/','../tokyo-additions/data/complete/','../kanagawa/data/complete/']){const complete=await fetch(`${base}${encodeURIComponent(id)}.json`);if(complete.ok)return;}
+    const m=/^u(\d{6})$/.exec(id||''),n=m?Number(m[1]):0;
+    if(n===1||n===2||n===50||(n>=145&&n<=209))return;
     const mr=await fetch('data/public-academic-baseline/manifest.json');
     if(!mr.ok)return;
     const manifest=await mr.json();

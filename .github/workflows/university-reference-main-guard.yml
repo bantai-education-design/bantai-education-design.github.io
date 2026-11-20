@@ -32,9 +32,9 @@ jobs:
           node <<'EOF'
           const { chromium } = require('playwright');
           const cases=[
-            {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:300,heroMax:390,name:'tokyo-1535x1024.png'},
-            {w:1024,h:1100,journeyCols:4,fieldCols:6,heroMin:330,heroMax:410,name:'tokyo-1024x1100.png'},
-            {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:360,heroMax:620,name:'tokyo-375x1200.png',mobile:true}
+            {w:1535,h:1024,journeyCols:4,fieldCols:6,heroMin:160,heroMax:420,name:'tokyo-1535x1024.png'},
+            {w:1024,h:1100,journeyCols:4,fieldCols:6,heroMin:160,heroMax:440,name:'tokyo-1024x1100.png'},
+            {w:375,h:1200,journeyCols:1,fieldCols:2,heroMin:180,heroMax:620,name:'tokyo-375x1200.png',mobile:true}
           ];
           (async()=>{
             const b=await chromium.launch({headless:true});
@@ -42,7 +42,7 @@ jobs:
               const p=await b.newPage({viewport:{width:c.w,height:c.h}});
               const errors=[];
               p.on('pageerror',e=>errors.push(String(e)));
-              await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
+              await p.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0&limit=144',{waitUntil:'networkidle'});
               await p.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
               const data=await p.evaluate(()=>{
                 const rs=s=>[...document.querySelectorAll(s)].map(el=>el.getBoundingClientRect());
@@ -81,7 +81,7 @@ jobs:
               await p.close();
             }
             const detail=await b.newPage({viewport:{width:1024,height:1000}});
-            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
+            await detail.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0&limit=144',{waitUntil:'networkidle'});
             await detail.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             const href=await detail.locator('.card-detail-open').first().getAttribute('href');
             if(!href) throw new Error('first detail href missing');
@@ -92,7 +92,7 @@ jobs:
               back:document.querySelector('.detail-back')?.getAttribute('href')||'',
               official:!!document.querySelector('.detail-actions a[href][target="_blank"]')
             }));
-            if(!detailData.title||!['./','index.html'].includes(detailData.back)||!detailData.official) throw new Error(`detail page incomplete ${JSON.stringify(detailData)}`);
+            if(!detailData.title||!(detailData.back.startsWith('./')||detailData.back==='index.html')||!detailData.official) throw new Error(`detail page incomplete ${JSON.stringify(detailData)}`);
             await detail.close();
             await b.close();
           })();

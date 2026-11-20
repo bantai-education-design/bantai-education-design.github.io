@@ -16,7 +16,7 @@ let receiverConfig=null;
 
 function setUniversity(){
   const hasUniversity=!!university;
-  selected.textContent=hasUniversity?university:'大学名を入力してください';
+  selected.textContent=hasUniversity?university:'未選択';
   pageTitle.textContent=hasUniversity?`${university}へ写真を送る`:'大学写真を送る';
   if(manual)manual.hidden=hasUniversity;
 }

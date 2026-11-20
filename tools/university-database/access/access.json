@@ -2,6 +2,79 @@
  "generated_at": "2026-11-07",
  "note": "各大学公式アクセスページの記載。時刻表・運行日は各大学でご確認ください。",
  "universities": {
+  "u000001": {
+   "campus": "本郷地区キャンパス",
+   "stations": [
+    {
+     "station": "本郷三丁目駅",
+     "line": "東京メトロ丸ノ内線",
+     "access": "徒歩8分",
+     "walk_minutes": 8
+    },
+    {
+     "station": "本郷三丁目駅",
+     "line": "都営大江戸線",
+     "access": "徒歩6分",
+     "walk_minutes": 6
+    },
+    {
+     "station": "湯島駅・根津駅",
+     "line": "東京メトロ千代田線",
+     "access": "徒歩8分",
+     "walk_minutes": 8
+    },
+    {
+     "station": "東大前駅",
+     "line": "東京メトロ南北線",
+     "access": "徒歩1分",
+     "walk_minutes": 1
+    },
+    {
+     "station": "春日駅",
+     "line": "都営三田線",
+     "access": "徒歩10分",
+     "walk_minutes": 10
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-tokyo.ac.jp/ja/about/campus-guide/map01_02.html"
+  },
+  "u000002": {
+   "campus": "府中キャンパス",
+   "stations": [
+    {
+     "station": "多磨駅",
+     "line": "西武多摩川線",
+     "access": "徒歩5分",
+     "walk_minutes": 5
+    },
+    {
+     "station": "飛田給駅",
+     "line": "京王線",
+     "access": "北口から京王バス約10分、『東京外国語大学前』下車",
+     "walk_minutes": null
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.tufs.ac.jp/abouttufs/contactus/access.html"
+  },
+  "u000050": {
+   "campus": "湘南キャンパス",
+   "stations": [
+    {
+     "station": "東海大学前駅",
+     "line": "小田急線",
+     "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
+    },
+    {
+     "station": "平塚駅",
+     "line": "JR東海道線",
+     "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/"
+  },
   "u000145": {
    "campus": "本部キャンパス",
    "stations": [
@@ -272,23 +345,6 @@
    ],
    "school_bus": false,
    "source_url": "https://www.tiu.ac.jp/about/access/"
-  },
-  "u000050": {
-   "campus": "湘南キャンパス",
-   "stations": [
-    {
-     "station": "東海大学前駅",
-     "line": "小田急線",
-     "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
-    },
-    {
-     "station": "平塚駅",
-     "line": "JR東海道線",
-     "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
-    }
-   ],
-   "school_bus": false,
-   "source_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/"
   },
   "u000175": {
    "campus": "常盤台キャンパス",
