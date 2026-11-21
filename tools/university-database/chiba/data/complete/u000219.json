@@ -222,7 +222,18 @@
       "address": "千葉県習志野市津田沼2-17-1",
       "prefecture": "千葉県",
       "municipality": "習志野市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "津田沼駅",
+          "line": "JR総武線",
+          "access": "南口徒歩1分"
+        },
+        {
+          "station": "新習志野駅",
+          "line": "JR京葉線",
+          "access": "新習志野キャンパス徒歩6分"
+        }
+      ]
     },
     {
       "name": "新習志野校舎",
@@ -233,7 +244,14 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "一級・二級建築士（受験資格）",
+      "department": "創造工学部 建築学科",
+      "group": "建築士",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -257,12 +275,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "「世界文化に技術で貢献する」を建学の精神とし、ものづくりと科学技術による社会貢献を重視する。",
+  "mission": "工学・情報・デザイン・経営の高度な専門力を培い、次世代の産業と社会を切り拓く技術者・研究者を育成する。",
+  "student_counts": {
+    "undergraduate": 9541,
+    "graduate": 989,
+    "total": 10530,
+    "as_of": "2026-05-01"
   }
 }

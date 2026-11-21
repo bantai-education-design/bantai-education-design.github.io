@@ -96,7 +96,18 @@
       "address": "千葉県我孫子市下ケ戸1133",
       "prefecture": "千葉県",
       "municipality": "我孫子市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "天王台駅",
+          "line": "JR常磐線",
+          "access": "北口バス約5分（徒歩20分）"
+        },
+        {
+          "station": "東我孫子駅",
+          "line": "JR成田線",
+          "access": "徒歩20分"
+        }
+      ]
     },
     {
       "name": "目白キャンパス",
@@ -125,12 +136,16 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy"
     ]
-  }
+  },
+  "philosophy": "「感謝の心」「女性の自覚」「社会への奉仕」を建学の精神とし、人間味豊かな女性の育成を掲げる。",
+  "mission": "文学・生活創造の学びを通じて、自覚と責任をもって社会に奉仕できる人材の育成を目指してきた。"
 }

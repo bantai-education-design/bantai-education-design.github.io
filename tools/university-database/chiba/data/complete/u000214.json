@@ -58,7 +58,13 @@
       "address": "千葉県柏市柏1225-6",
       "prefecture": "千葉県",
       "municipality": "柏市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "柏駅",
+          "line": "JR常磐線・東武アーバンパークライン",
+          "access": "東口バス「柏学園前」下車徒歩3分（徒歩20分）"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -85,12 +91,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "世界の人々や文化を理解・尊重する姿勢を大切にし、探究的な学びを通じて主体的に考え行動する力を培う。",
+  "mission": "教育および国際教養の専門性を生かし、平和で豊かな国際社会の実現に貢献できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 890,
+    "graduate": 0,
+    "total": 890,
+    "as_of": "2025-05-01"
   }
 }

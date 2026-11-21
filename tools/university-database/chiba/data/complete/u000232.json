@@ -85,7 +85,18 @@
       "address": "千葉県流山市駒木474",
       "prefecture": "千葉県",
       "municipality": "流山市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "豊四季駅",
+          "line": "東武アーバンパークライン",
+          "access": "徒歩12分"
+        },
+        {
+          "station": "流山おおたかの森駅",
+          "line": "つくばエクスプレス・東武アーバンパークライン",
+          "access": "スクールバスまたは徒歩18分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -112,12 +123,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「人間陶冶」を基盤に、情報教育と国際教育を重視した実践的な学びを展開する。",
+  "mission": "社会学およびメディアコミュニケーションの専門力を培い、現代社会で活躍できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 2510,
+    "graduate": 0,
+    "total": 2510,
+    "as_of": "2026-05-01"
   }
 }

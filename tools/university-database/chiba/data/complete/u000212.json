@@ -110,7 +110,18 @@
       "address": "千葉県銚子市潮見町3",
       "prefecture": "千葉県",
       "municipality": "銚子市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "外川駅",
+          "line": "銚子電鉄",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "銚子駅",
+          "line": "JR総武本線",
+          "access": "バス約15分"
+        }
+      ]
     },
     {
       "name": "千葉科学大学 マリーナキャンパス",
@@ -121,7 +132,20 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "薬剤師（国家試験受験資格）",
+      "department": "薬学部 薬学科",
+      "group": "薬剤師",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -145,12 +169,17 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications"
     ]
-  }
+  },
+  "philosophy": "「ひとりひとりの若人が持つ能力を最大限に引き出し、技術者として社会人として社会に貢献できる人材を養成する」を建学の精神とする。",
+  "mission": "薬学・危機管理学・看護学の専門知識と実践力を備え、安全・安心な社会の構築に寄与する人材を育成する。"
 }

@@ -215,7 +215,13 @@
       "address": "千葉県東金市求名1",
       "prefecture": "千葉県",
       "municipality": "東金市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "求名駅",
+          "line": "JR東金線",
+          "access": "徒歩5分"
+        }
+      ]
     },
     {
       "name": "東京紀尾井町キャンパス（１号棟）",
@@ -234,7 +240,26 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "department": "福祉総合学部 理学療法学科",
+      "group": "理学療法士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "薬剤師（国家試験受験資格）",
+      "department": "薬学部 医療薬学科",
+      "group": "薬剤師",
+      "source_id": "src-official"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -258,12 +283,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "「学問による人間形成」を建学の精神とし、「国際社会で生きる人間としての人格形成」を教育理念とする。",
+  "mission": "多彩な専門領域と国際交流を通じて、グローバルな視野と実践力をもって社会に貢献する人材を育成する。",
+  "student_counts": {
+    "undergraduate": 5104,
+    "graduate": 0,
+    "total": 5104,
+    "as_of": "2025-05-01"
   }
 }

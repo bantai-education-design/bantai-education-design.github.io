@@ -80,7 +80,13 @@
       "address": "千葉県我孫子市久寺家451",
       "prefecture": "千葉県",
       "municipality": "我孫子市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "我孫子駅",
+          "line": "JR常磐線",
+          "access": "北口バス約7分（徒歩20分）"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -107,12 +113,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「公正な社会観・倫理観の涵養」を建学の精神とし、誠実さと奉仕の心、不断の研鑽を重んじる。",
+  "mission": "商学・法学・現代教養の学びを通じて、社会の変化に対応し誠実に貢献できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 3317,
+    "graduate": 0,
+    "total": 3317,
+    "as_of": "2025-05-01"
   }
 }

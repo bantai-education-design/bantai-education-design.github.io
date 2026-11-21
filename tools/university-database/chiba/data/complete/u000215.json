@@ -40,7 +40,13 @@
       "address": "千葉県木更津市東太田3-4-5",
       "prefecture": "千葉県",
       "municipality": "木更津市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "木更津駅",
+          "line": "JR内房線",
+          "access": "東口スクールバス約7分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -67,12 +73,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「真心教育」を建学の精神とし、人間性の全人的形成と一人ひとりの可能性の伸長を重視する。",
+  "mission": "法学の基礎と実務的視点を身につけ、地域社会や企業・公務の現場で活躍できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 591,
+    "graduate": 0,
+    "total": 591,
+    "as_of": "2026-05-01"
   }
 }

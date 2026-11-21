@@ -61,7 +61,23 @@
       "address": "千葉県千葉市美浜区若葉2-10-1",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "海浜幕張駅",
+          "line": "JR京葉線",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "幕張駅",
+          "line": "JR総武線",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "京成幕張駅",
+          "line": "京成千葉線",
+          "access": "徒歩15分"
+        }
+      ]
     },
     {
       "name": "仁戸名キャンパス",
@@ -72,7 +88,38 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "健康科学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "栄養士",
+      "department": "健康科学部 栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "歯科衛生士（国家試験受験資格）",
+      "department": "健康科学部 歯科衛生学科",
+      "group": "歯科衛生士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "department": "健康科学部 リハビリテーション学科 理学療法学専攻",
+      "group": "理学療法士",
+      "source_id": "src-official"
+    },
+    {
+      "name": "作業療法士（国家試験受験資格）",
+      "department": "健康科学部 リハビリテーション学科 作業療法学専攻",
+      "group": "作業療法士",
+      "source_id": "src-official"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -96,12 +143,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "生命の尊厳と多様性を重んじる高い倫理観と豊かな人間性を育み、保健医療の専門職を養成する。",
+  "mission": "地域社会の健康づくりと保健医療の国際化に貢献し、県民の健康増進を支える実践的専門職を育成する。",
+  "student_counts": {
+    "undergraduate": 739,
+    "graduate": 0,
+    "total": 739,
+    "as_of": "2026-04-01"
   }
 }

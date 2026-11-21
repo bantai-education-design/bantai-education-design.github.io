@@ -48,7 +48,13 @@
       "address": "千葉県鴨川市横渚462",
       "prefecture": "千葉県",
       "municipality": "鴨川市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "安房鴨川駅",
+          "line": "JR外房線",
+          "access": "徒歩12分"
+        }
+      ]
     },
     {
       "name": "東町キャンパス",
@@ -59,7 +65,14 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -83,12 +96,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "幅広い教養と人間への愛と尊厳をもって保健医療福祉システムを担う医療人材の育成を建学の理念とする。",
+  "mission": "基幹病院との密接な連携による実践的な看護教育を通じて、地域と国際社会の医療に貢献する看護職を育成する。",
+  "student_counts": {
+    "undergraduate": 252,
+    "graduate": 19,
+    "total": 271,
+    "as_of": "2026-05-01"
   }
 }

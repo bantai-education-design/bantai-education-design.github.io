@@ -106,10 +106,28 @@
       "address": "千葉県八千代市大学町1-1",
       "prefecture": "千葉県",
       "municipality": "八千代市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "八千代緑が丘駅",
+          "line": "東葉高速線",
+          "access": "無料スクールバス約20分"
+        },
+        {
+          "station": "勝田台駅",
+          "line": "京成本線・東葉高速線",
+          "access": "無料スクールバス約20分"
+        }
+      ]
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -133,12 +151,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "「知徳一体」と実学重視の人間教育を建学の精神とし、広い国際視野と強い実行力を育む。",
+  "mission": "教員養成・看護・観光・国際ビジネスなどの専門教育を通じて、現代社会の課題に応える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1544,
+    "graduate": 0,
+    "total": 1544,
+    "as_of": "2026-05-01"
   }
 }

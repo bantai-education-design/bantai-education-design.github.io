@@ -64,10 +64,28 @@
       "address": "千葉県千葉市若葉区御成台4-1",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "千城台駅",
+          "line": "千葉都市モノレール",
+          "access": "バス約7分"
+        },
+        {
+          "station": "千葉駅",
+          "line": "JR総武線",
+          "access": "直通バス約25分"
+        }
+      ]
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -91,12 +109,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "情報社会の発展に寄与する「文理融合・実践重視」の学びを掲げ、分野を超えて未来を切り拓く力を培う。",
+  "mission": "総合情報学と看護学の専門知識を融合し、高度情報化社会と地域医療を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1893,
+    "graduate": 33,
+    "total": 1926,
+    "as_of": "2026-05-01"
   }
 }

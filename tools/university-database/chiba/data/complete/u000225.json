@@ -84,7 +84,18 @@
       "address": "千葉県千葉市美浜区若葉1-4-1",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "海浜幕張駅",
+          "line": "JR京葉線",
+          "access": "北口徒歩15分（バス5分）"
+        },
+        {
+          "station": "幕張駅",
+          "line": "JR総武線",
+          "access": "徒歩15分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -111,12 +122,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「言葉は世界をつなぐ平和の礎」を建学の精神とし、異文化理解とコミュニケーション能力の深化を重視する。",
+  "mission": "高度な語学運用力と教養を身につけ、多様な文化の架け橋となって国際社会に貢献する人材を育成する。",
+  "student_counts": {
+    "undergraduate": 3898,
+    "graduate": 0,
+    "total": 3898,
+    "as_of": "2025-05-01"
   }
 }

@@ -48,7 +48,18 @@
       "address": "千葉県夷隅郡大多喜町久我原1500",
       "prefecture": "千葉県",
       "municipality": "夷隅郡大多喜町",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "久我原駅",
+          "line": "いすみ鉄道",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "荻窪駅",
+          "line": "JR中央線・東京メトロ丸ノ内線",
+          "access": "東京校舎徒歩7分"
+        }
+      ]
     },
     {
       "name": "東京校舎",
@@ -59,7 +70,14 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -83,12 +101,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "キリスト教の信仰と愛を基盤とし、身体・知性・心の調和ある発達を促す全人的教育を建学の精神とする。",
+  "mission": "全人的看護（ホリスティック・ナーシング）の理念に基づき、人々の健康と尊厳を守る看護職を育成する。",
+  "student_counts": {
+    "undergraduate": 101,
+    "graduate": 8,
+    "total": 109,
+    "as_of": "2025-05-01"
   }
 }

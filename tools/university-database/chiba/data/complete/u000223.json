@@ -144,10 +144,34 @@
       "address": "千葉県市川市国府台2-3-1",
       "prefecture": "千葉県",
       "municipality": "市川市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "国府台駅",
+          "line": "京成本線",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "市川駅",
+          "line": "JR総武線",
+          "access": "北口バス「和洋女子大前」下車すぐ"
+        }
+      ]
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "栄養士",
+      "department": "家政学部 健康栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -171,12 +195,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "「和魂洋才」の精神を基盤とし、日本の伝統文化を尊重しつつ世界の新しい知識・技術を主体的に学ぶ姿勢を培う。",
+  "mission": "人文・家政・看護・国際などの専門教育を通じて、自立し社会で活躍できる女性を育成する。",
+  "student_counts": {
+    "undergraduate": 2871,
+    "graduate": 0,
+    "total": 2871,
+    "as_of": "2025-05-01"
   }
 }

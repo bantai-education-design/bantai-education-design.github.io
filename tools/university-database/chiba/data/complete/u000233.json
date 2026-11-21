@@ -56,10 +56,29 @@
       "address": "千葉県浦安市明海5-8-1",
       "prefecture": "千葉県",
       "municipality": "浦安市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "新浦安駅",
+          "line": "JR京葉線",
+          "access": "バス「明海南小学校」下車徒歩4分（徒歩25分）"
+        }
+      ]
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "department": "健康科学部 理学療法学科",
+      "group": "理学療法士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "健康科学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -83,12 +102,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "生命の尊厳が重んじられる社会の構築を目指し、専門技術と高い倫理観・国際性を備えた医療人の育成を理念とする。",
+  "mission": "看護・理学療法・整復医療の専門教育を通じて、超高齢化社会と国際社会に貢献する医療人を育成する。",
+  "student_counts": {
+    "undergraduate": 1029,
+    "graduate": 0,
+    "total": 1029,
+    "as_of": "2026-05-01"
   }
 }

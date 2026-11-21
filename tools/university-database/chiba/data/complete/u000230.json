@@ -52,7 +52,13 @@
       "address": "千葉県印西市内野3-301-5",
       "prefecture": "千葉県",
       "municipality": "印西市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "千葉ニュータウン中央駅",
+          "line": "北総線",
+          "access": "バス「電話局」下車徒歩7分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -79,12 +85,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "聖書に基づく福音主義キリスト教信仰に立ち、世界と日本の教会および社会に仕える人材の養成を建学の精神とする。",
+  "mission": "神学と国際教養の深い学びを通じて、誠実に他者と社会へ仕える指導者を育成する。",
+  "student_counts": {
+    "undergraduate": 94,
+    "graduate": 44,
+    "total": 138,
+    "as_of": "2025-05-01"
   }
 }

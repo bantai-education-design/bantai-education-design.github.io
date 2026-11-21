@@ -57,7 +57,15 @@
       "feature_summary": "千葉市に本部を置き、国際教養学部・文学部・法政経学部・教育学部など11学部と大学院8研究科で学ぶ大学です。",
       "operator": "国立大学法人千葉大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「つねに、より高きものを目指して」を基本理念とし、自然と人間と社会についての深く広い教養と高い倫理観を培う。",
+      "university_goal": "豊かな教養と高度な専門性、国際性を備え、社会の発展と学術の進歩に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 10450,
+        "graduate": 3472,
+        "total": 13922,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000211",
@@ -107,7 +115,15 @@
       "feature_summary": "千葉市に本部を置き、健康科学部の1学部で学ぶ大学です。",
       "operator": "千葉県",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "生命の尊厳と多様性を重んじる高い倫理観と豊かな人間性を育み、保健医療の専門職を養成する。",
+      "university_goal": "地域社会の健康づくりと保健医療の国際化に貢献し、県民の健康増進を支える実践的専門職を育成する。",
+      "student_counts": {
+        "undergraduate": 739,
+        "graduate": 0,
+        "total": 739,
+        "as_of": "2026-04-01"
+      }
     },
     {
       "id": "u000212",
@@ -156,7 +172,9 @@
       "feature_summary": "銚子市に本部を置き、薬学部・危機管理学部・看護学部の3学部と大学院3研究科で学ぶ大学です。",
       "operator": "学校法人加計学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「ひとりひとりの若人が持つ能力を最大限に引き出し、技術者として社会人として社会に貢献できる人材を養成する」を建学の精神とする。",
+      "university_goal": "薬学・危機管理学・看護学の専門知識と実践力を備え、安全・安心な社会の構築に寄与する人材を育成する。"
     },
     {
       "id": "u000213",
@@ -204,7 +222,15 @@
       "feature_summary": "四街道市に本部を置き、人間文化学部の1学部で学ぶ大学です。",
       "operator": "学校法人愛国学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「親切正直」を校訓とし、豊かな知識と技術、美しい情操と奉仕の心を備えた健全な女性の育成を建学の精神とする。",
+      "university_goal": "人間文化に関する幅広い学びを通じて、自立した社会人として地域・社会に貢献できる人材を育成する。",
+      "student_counts": {
+        "undergraduate": 53,
+        "graduate": 0,
+        "total": 53,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000214",
@@ -253,7 +279,15 @@
       "feature_summary": "柏市に本部を置き、教育学部・国際教養学部の2学部で学ぶ大学です。",
       "operator": "学校法人開智学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "世界の人々や文化を理解・尊重する姿勢を大切にし、探究的な学びを通じて主体的に考え行動する力を培う。",
+      "university_goal": "教育および国際教養の専門性を生かし、平和で豊かな国際社会の実現に貢献できる人材を育成する。",
+      "student_counts": {
+        "undergraduate": 890,
+        "graduate": 0,
+        "total": 890,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000215",
@@ -300,7 +334,15 @@
       "feature_summary": "木更津市に本部を置き、法学部の1学部で学ぶ大学です。",
       "operator": "学校法人君津学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「真心教育」を建学の精神とし、人間性の全人的形成と一人ひとりの可能性の伸長を重視する。",
+      "university_goal": "法学の基礎と実務的視点を身につけ、地域社会や企業・公務の現場で活躍できる人材を育成する。",
+      "student_counts": {
+        "undergraduate": 591,
+        "graduate": 0,
+        "total": 591,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000216",
@@ -360,7 +402,15 @@
       "feature_summary": "東金市に本部を置き、経営情報学部・国際人文学部・福祉総合学部・薬学部など7学部と大学院7研究科で学ぶ大学です。",
       "operator": "学校法人城西大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「学問による人間形成」を建学の精神とし、「国際社会で生きる人間としての人格形成」を教育理念とする。",
+      "university_goal": "多彩な専門領域と国際交流を通じて、グローバルな視野と実践力をもって社会に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 5104,
+        "graduate": 0,
+        "total": 5104,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000217",
@@ -417,7 +467,15 @@
       "feature_summary": "千葉市に本部を置き、総合福祉学部・コミュニティ政策学部・経営学部・教育学部など7学部と大学院2研究科で学ぶ大学です。",
       "operator": "学校法人大乗淑徳学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "仏教の教えに基づく「利他共生」を建学の精神とし、他者の喜びを自らの喜びとして共に生きる心を育む。",
+      "university_goal": "福祉・医療・教育・経営などの実学を通じて、共生社会の実現に貢献できる専門人材を育成する。",
+      "student_counts": {
+        "undergraduate": 5267,
+        "graduate": 0,
+        "total": 5267,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000218",
@@ -467,7 +525,15 @@
       "feature_summary": "千葉市に本部を置き、経済学部・国際学部・教育学部・情報マネジメント学部の4学部で学ぶ大学です。",
       "operator": "学校法人千葉敬愛学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「敬天愛人」を建学の精神とし、天を敬い人を愛する誠実な姿勢と豊かな人間性を養う。",
+      "university_goal": "経済・国際・教育・情報の学びを通じて、主体的に課題を解決し地域と世界に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 1812,
+        "graduate": 0,
+        "total": 1812,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000219",
@@ -520,7 +586,15 @@
       "feature_summary": "習志野市に本部を置き、工学部・創造工学部・先進工学部・情報変革科学部など5学部と大学院5研究科で学ぶ大学です。",
       "operator": "学校法人千葉工業大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「世界文化に技術で貢献する」を建学の精神とし、ものづくりと科学技術による社会貢献を重視する。",
+      "university_goal": "工学・情報・デザイン・経営の高度な専門力を培い、次世代の産業と社会を切り拓く技術者・研究者を育成する。",
+      "student_counts": {
+        "undergraduate": 9541,
+        "graduate": 989,
+        "total": 10530,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000220",
@@ -569,7 +643,15 @@
       "feature_summary": "市川市に本部を置き、商経学部・サービス創造学部・人間社会学部・総合政策学部の4学部と大学院3研究科で学ぶ大学です。",
       "operator": "学校法人千葉学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「有用の学術と商業道徳の涵養」を建学の精神とし、高い倫理観と実学の融合を目指す。",
+      "university_goal": "経済・経営・政策・サービス創造の知見を生かし、持続可能な社会とビジネスを担う人材を育成する。",
+      "student_counts": {
+        "undergraduate": 6256,
+        "graduate": 292,
+        "total": 6548,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000221",
@@ -618,7 +700,15 @@
       "feature_summary": "我孫子市に本部を置き、商学部・法学部・現代教養学部の3学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人中央学院",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「公正な社会観・倫理観の涵養」を建学の精神とし、誠実さと奉仕の心、不断の研鑽を重んじる。",
+      "university_goal": "商学・法学・現代教養の学びを通じて、社会の変化に対応し誠実に貢献できる人材を育成する。",
+      "student_counts": {
+        "undergraduate": 3317,
+        "graduate": 0,
+        "total": 3317,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000222",
@@ -669,7 +759,9 @@
       "feature_summary": "柏市に本部を置き、外国語学部・経済学部・国際学部・経営学部など5学部と大学院3研究科で学ぶ大学です。",
       "operator": "学校法人廣池学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "道徳科学に基づく「知徳一体」を建学の精神とし、仁愛の精神と現代の科学・知識の調和を図る。",
+      "university_goal": "高い倫理観と国際性、専門知識を兼ね備え、人類の平和と社会の持続的発展に寄与する人材を育成する。"
     },
     {
       "id": "u000223",
@@ -723,7 +815,15 @@
       "feature_summary": "市川市に本部を置き、人文学部・国際学部・家政学部・看護学部の4学部と大学院3研究科で学ぶ大学です。",
       "operator": "学校法人和洋学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「和魂洋才」の精神を基盤とし、日本の伝統文化を尊重しつつ世界の新しい知識・技術を主体的に学ぶ姿勢を培う。",
+      "university_goal": "人文・家政・看護・国際などの専門教育を通じて、自立し社会で活躍できる女性を育成する。",
+      "student_counts": {
+        "undergraduate": 2871,
+        "graduate": 0,
+        "total": 2871,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000224",
@@ -771,7 +871,15 @@
       "feature_summary": "勝浦市に本部を置き、体育学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人国際武道大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "武道と体育の精神を通じて、不動の人生観・平和の世界観・忍耐礼節・国際友情を養うことを建学訓とする。",
+      "university_goal": "武道およびスポーツ科学の専門知識と指導力を備え、社会と国際交流に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 1344,
+        "graduate": 10,
+        "total": 1358,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000225",
@@ -820,7 +928,15 @@
       "feature_summary": "千葉市に本部を置き、外国語学部・グローバル・リベラルアーツ学部の2学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人佐野学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「言葉は世界をつなぐ平和の礎」を建学の精神とし、異文化理解とコミュニケーション能力の深化を重視する。",
+      "university_goal": "高度な語学運用力と教養を身につけ、多様な文化の架け橋となって国際社会に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 3898,
+        "graduate": 0,
+        "total": 3898,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000226",
@@ -867,7 +983,15 @@
       "feature_summary": "千葉市に本部を置き、経済学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人千葉経済学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "渋沢栄一の思想に由来する「片手に論語 片手に算盤」を建学の精神とし、倫理観と実学の両立を掲げる。",
+      "university_goal": "経済学・経営学の実践的な学びを通じて、地域経済と社会の発展に寄与する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 1178,
+        "graduate": 0,
+        "total": 1178,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000227",
@@ -919,7 +1043,15 @@
       "feature_summary": "八千代市に本部を置き、総合経営学部・グローバルマネジメント学部・学校教師学部・観光ビジネス学部など5学部で学ぶ大学です。",
       "operator": "学校法人秀明学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「知徳一体」と実学重視の人間教育を建学の精神とし、広い国際視野と強い実行力を育む。",
+      "university_goal": "教員養成・看護・観光・国際ビジネスなどの専門教育を通じて、現代社会の課題に応える人材を育成する。",
+      "student_counts": {
+        "undergraduate": 1544,
+        "graduate": 0,
+        "total": 1544,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000228",
@@ -966,7 +1098,9 @@
       "feature_summary": "我孫子市に本部を置く大学です（2027年度以降の全学部・大学院の学生募集停止を公式発表済み）。",
       "operator": "学校法人川村学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「感謝の心」「女性の自覚」「社会への奉仕」を建学の精神とし、人間味豊かな女性の育成を掲げる。",
+      "university_goal": "文学・生活創造の学びを通じて、自覚と責任をもって社会に奉仕できる人材の育成を目指してきた。"
     },
     {
       "id": "u000229",
@@ -1014,7 +1148,15 @@
       "feature_summary": "千葉市に本部を置き、総合情報学部・看護学部の2学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人東京農業大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "情報社会の発展に寄与する「文理融合・実践重視」の学びを掲げ、分野を超えて未来を切り拓く力を培う。",
+      "university_goal": "総合情報学と看護学の専門知識を融合し、高度情報化社会と地域医療を支える人材を育成する。",
+      "student_counts": {
+        "undergraduate": 1893,
+        "graduate": 33,
+        "total": 1926,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000230",
@@ -1063,7 +1205,15 @@
       "feature_summary": "印西市に本部を置き、神学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人東京キリスト教学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "聖書に基づく福音主義キリスト教信仰に立ち、世界と日本の教会および社会に仕える人材の養成を建学の精神とする。",
+      "university_goal": "神学と国際教養の深い学びを通じて、誠実に他者と社会へ仕える指導者を育成する。",
+      "student_counts": {
+        "undergraduate": 94,
+        "graduate": 44,
+        "total": 138,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000231",
@@ -1120,7 +1270,15 @@
       "feature_summary": "松戸市に本部を置き、教育学部・心理・福祉学部・文学部・人間栄養学部など6学部と大学院7研究科で学ぶ大学です。",
       "operator": "学校法人東京聖徳学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "聖徳太子の「和」の精神を建学の理念とし、思いやりと協調性を備えた人間教育・女性教育を重視する。",
+      "university_goal": "教育・心理・福祉・文学・栄養・看護・音楽の幅広い専門性を生かし、社会を支える人材を育成する。",
+      "student_counts": {
+        "undergraduate": 2560,
+        "graduate": 0,
+        "total": 2560,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000232",
@@ -1172,7 +1330,15 @@
       "feature_summary": "流山市に本部を置き、社会学部・メディアコミュニケーション学部の2学部で学ぶ大学です。",
       "operator": "学校法人江戸川学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「人間陶冶」を基盤に、情報教育と国際教育を重視した実践的な学びを展開する。",
+      "university_goal": "社会学およびメディアコミュニケーションの専門力を培い、現代社会で活躍できる人材を育成する。",
+      "student_counts": {
+        "undergraduate": 2510,
+        "graduate": 0,
+        "total": 2510,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000233",
@@ -1222,7 +1388,15 @@
       "feature_summary": "浦安市に本部を置き、健康科学部の1学部で学ぶ大学です。",
       "operator": "学校法人ＳＢＣ東京医療大学",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "生命の尊厳が重んじられる社会の構築を目指し、専門技術と高い倫理観・国際性を備えた医療人の育成を理念とする。",
+      "university_goal": "看護・理学療法・整復医療の専門教育を通じて、超高齢化社会と国際社会に貢献する医療人を育成する。",
+      "student_counts": {
+        "undergraduate": 1029,
+        "graduate": 0,
+        "total": 1029,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000234",
@@ -1271,7 +1445,15 @@
       "feature_summary": "千葉市に本部を置き、発達教育学部・保健医療学部・看護学部の3学部で学ぶ大学です。",
       "operator": "学校法人植草学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "「徳育を教育の根幹とする」建学の精神と「インクルーシブ教育」の実践を掲げる。",
+      "university_goal": "発達教育・保健医療・看護の専門性を備え、すべての人が共に生きる社会を支える人材を育成する。",
+      "student_counts": {
+        "undergraduate": 594,
+        "graduate": 0,
+        "total": 594,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000235",
@@ -1318,7 +1500,15 @@
       "feature_summary": "夷隅郡大多喜町に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人三育学院",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "キリスト教の信仰と愛を基盤とし、身体・知性・心の調和ある発達を促す全人的教育を建学の精神とする。",
+      "university_goal": "全人的看護（ホリスティック・ナーシング）の理念に基づき、人々の健康と尊厳を守る看護職を育成する。",
+      "student_counts": {
+        "undergraduate": 101,
+        "graduate": 8,
+        "total": 109,
+        "as_of": "2025-05-01"
+      }
     },
     {
       "id": "u000236",
@@ -1365,7 +1555,15 @@
       "feature_summary": "鴨川市に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "学校法人鉄蕉館",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "幅広い教養と人間への愛と尊厳をもって保健医療福祉システムを担う医療人材の育成を建学の理念とする。",
+      "university_goal": "基幹病院との密接な連携による実践的な看護教育を通じて、地域と国際社会の医療に貢献する看護職を育成する。",
+      "student_counts": {
+        "undergraduate": 252,
+        "graduate": 19,
+        "total": 271,
+        "as_of": "2026-05-01"
+      }
     },
     {
       "id": "u000237",
@@ -1413,7 +1611,9 @@
       "feature_summary": "千葉市に本部を置き、教養学部の1学部と大学院1研究科で学ぶ大学です。",
       "operator": "放送大学学園",
       "operator_source": "文部科学省 令和7年度全国大学一覧 https://www.mext.go.jp/content/20260611-mxt_daigakuc01-000050331_05.xlsx",
-      "operator_verified_at": "2026-11-21"
+      "operator_verified_at": "2026-11-21",
+      "philosophy": "広く国民に大学教育の機会を開き、生涯学習の拠点として「いつでも、どこでも学べる開かれた大学」を実現することを理念とする。",
+      "university_goal": "放送やオンラインを活用した多様な教養・専門教育を通じて、生涯にわたる学びと社会貢献を支援する。"
     }
   ]
 }

@@ -42,7 +42,13 @@
       "address": "千葉県四街道市四街道1532",
       "prefecture": "千葉県",
       "municipality": "四街道市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "四街道駅",
+          "line": "JR総武本線・成田線",
+          "access": "北口徒歩7分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -69,12 +75,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「親切正直」を校訓とし、豊かな知識と技術、美しい情操と奉仕の心を備えた健全な女性の育成を建学の精神とする。",
+  "mission": "人間文化に関する幅広い学びを通じて、自立した社会人として地域・社会に貢献できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 53,
+    "graduate": 0,
+    "total": 53,
+    "as_of": "2026-05-01"
   }
 }

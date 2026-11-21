@@ -53,7 +53,18 @@
       "address": "千葉県千葉市稲毛区轟町3-59-5",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "作草部駅",
+          "line": "千葉都市モノレール",
+          "access": "徒歩5分"
+        },
+        {
+          "station": "西千葉駅",
+          "line": "JR総武線",
+          "access": "北口徒歩13分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -80,12 +91,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "渋沢栄一の思想に由来する「片手に論語 片手に算盤」を建学の精神とし、倫理観と実学の両立を掲げる。",
+  "mission": "経済学・経営学の実践的な学びを通じて、地域経済と社会の発展に寄与する人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1178,
+    "graduate": 0,
+    "total": 1178,
+    "as_of": "2026-05-01"
   }
 }

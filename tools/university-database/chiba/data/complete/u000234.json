@@ -73,7 +73,18 @@
       "address": "千葉県千葉市若葉区小倉町1639番3",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "千城台北駅",
+          "line": "千葉都市モノレール",
+          "access": "徒歩10分"
+        },
+        {
+          "station": "都賀駅",
+          "line": "JR総武本線",
+          "access": "バス約15分"
+        }
+      ]
     },
     {
       "name": "千葉医療センター内椿森キャンパス",
@@ -84,7 +95,14 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -108,12 +126,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "「徳育を教育の根幹とする」建学の精神と「インクルーシブ教育」の実践を掲げる。",
+  "mission": "発達教育・保健医療・看護の専門性を備え、すべての人が共に生きる社会を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 594,
+    "graduate": 0,
+    "total": 594,
+    "as_of": "2026-05-01"
   }
 }

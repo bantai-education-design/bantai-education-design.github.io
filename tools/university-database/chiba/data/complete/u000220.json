@@ -121,7 +121,18 @@
       "address": "千葉県市川市国府台1-3-1",
       "prefecture": "千葉県",
       "municipality": "市川市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "国府台駅",
+          "line": "京成本線",
+          "access": "徒歩10分"
+        },
+        {
+          "station": "市川駅",
+          "line": "JR総武線",
+          "access": "北口バス約10分（徒歩20分）"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -148,12 +159,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「有用の学術と商業道徳の涵養」を建学の精神とし、高い倫理観と実学の融合を目指す。",
+  "mission": "経済・経営・政策・サービス創造の知見を生かし、持続可能な社会とビジネスを担う人材を育成する。",
+  "student_counts": {
+    "undergraduate": 6256,
+    "graduate": 292,
+    "total": 6548,
+    "as_of": "2026-05-01"
   }
 }

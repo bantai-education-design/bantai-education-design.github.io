@@ -195,7 +195,18 @@
       "address": "千葉県千葉市中央区大巌寺町200",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "蘇我駅",
+          "line": "JR京葉線・外房線・内房線",
+          "access": "東口バス約8分"
+        },
+        {
+          "station": "鎌取駅",
+          "line": "JR外房線",
+          "access": "バス利用"
+        }
+      ]
     },
     {
       "name": "千葉第二キャンパス",
@@ -222,7 +233,20 @@
       "nearest_stations": []
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護栄養学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "栄養士",
+      "department": "看護栄養学部 栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -246,12 +270,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "仏教の教えに基づく「利他共生」を建学の精神とし、他者の喜びを自らの喜びとして共に生きる心を育む。",
+  "mission": "福祉・医療・教育・経営などの実学を通じて、共生社会の実現に貢献できる専門人材を育成する。",
+  "student_counts": {
+    "undergraduate": 5267,
+    "graduate": 0,
+    "total": 5267,
+    "as_of": "2025-05-01"
   }
 }

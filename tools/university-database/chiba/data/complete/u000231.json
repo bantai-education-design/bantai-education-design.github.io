@@ -192,10 +192,29 @@
       "address": "千葉県松戸市岩瀬550",
       "prefecture": "千葉県",
       "municipality": "松戸市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "松戸駅",
+          "line": "JR常磐線・新京成線",
+          "access": "東口徒歩5分"
+        }
+      ]
     }
   ],
-  "qualifications": [],
+  "qualifications": [
+    {
+      "name": "栄養士",
+      "department": "人間栄養学部 人間栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
   "sources": [
     {
       "source_id": "src-mext",
@@ -219,12 +238,24 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "qualifications",
+      "student_counts"
     ]
+  },
+  "philosophy": "聖徳太子の「和」の精神を建学の理念とし、思いやりと協調性を備えた人間教育・女性教育を重視する。",
+  "mission": "教育・心理・福祉・文学・栄養・看護・音楽の幅広い専門性を生かし、社会を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 2560,
+    "graduate": 0,
+    "total": 2560,
+    "as_of": "2026-05-01"
   }
 }

@@ -93,7 +93,18 @@
       "address": "千葉県千葉市稲毛区穴川1-5-21",
       "prefecture": "千葉県",
       "municipality": "千葉市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "稲毛駅",
+          "line": "JR総武線",
+          "access": "東口徒歩13分（バス5分）"
+        },
+        {
+          "station": "穴川駅",
+          "line": "千葉都市モノレール",
+          "access": "徒歩12分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -120,12 +131,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "「敬天愛人」を建学の精神とし、天を敬い人を愛する誠実な姿勢と豊かな人間性を養う。",
+  "mission": "経済・国際・教育・情報の学びを通じて、主体的に課題を解決し地域と世界に貢献する人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1812,
+    "graduate": 0,
+    "total": 1812,
+    "as_of": "2026-05-01"
   }
 }

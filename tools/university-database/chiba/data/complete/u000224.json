@@ -54,7 +54,13 @@
       "address": "千葉県勝浦市新官841",
       "prefecture": "千葉県",
       "municipality": "勝浦市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "勝浦駅",
+          "line": "JR外房線",
+          "access": "徒歩15分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -81,12 +87,23 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy",
+      "student_counts"
     ]
+  },
+  "philosophy": "武道と体育の精神を通じて、不動の人生観・平和の世界観・忍耐礼節・国際友情を養うことを建学訓とする。",
+  "mission": "武道およびスポーツ科学の専門知識と指導力を備え、社会と国際交流に貢献する人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1344,
+    "graduate": 10,
+    "total": 1358,
+    "as_of": "2026-05-01"
   }
 }

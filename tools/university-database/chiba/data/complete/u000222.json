@@ -127,7 +127,18 @@
       "address": "千葉県柏市光ケ丘2-1-1",
       "prefecture": "千葉県",
       "municipality": "柏市",
-      "nearest_stations": []
+      "nearest_stations": [
+        {
+          "station": "南柏駅",
+          "line": "JR常磐線・東京メトロ千代田線",
+          "access": "東口バス4分（徒歩13分）"
+        },
+        {
+          "station": "新柏駅",
+          "line": "東武アーバンパークライン",
+          "access": "徒歩15分"
+        }
+      ]
     }
   ],
   "qualifications": [],
@@ -154,12 +165,16 @@
   "verification": {
     "last_verified_at": "2026-11-21",
     "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
       "basic_info",
+      "campuses",
       "headquarters",
       "official_url",
-      "admissions_url",
-      "academics",
-      "campuses"
+      "philosophy"
     ]
-  }
+  },
+  "philosophy": "道徳科学に基づく「知徳一体」を建学の精神とし、仁愛の精神と現代の科学・知識の調和を図る。",
+  "mission": "高い倫理観と国際性、専門知識を兼ね備え、人類の平和と社会の持続的発展に寄与する人材を育成する。"
 }
