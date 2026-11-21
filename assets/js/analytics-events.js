@@ -140,6 +140,18 @@
         });
       }
 
+      // --- 2c. コラムから書籍紹介ページへ進んだクリック ---
+      else if (element.hasAttribute('data-book-detail-link') && href.startsWith('/books/')) {
+        const bookId = element.getAttribute('data-book-detail-link');
+        element.addEventListener('click', () => {
+          sendGA4Event('book_detail_click', {
+            book_id: bookId,
+            link_url: cleanHref,
+            page_path: window.location.pathname
+          });
+        });
+      }
+
       // --- 3. Google フォーム（モニター登録やライセンス申請など）への遷移の判定 ---
       else if (href.includes('docs.google.com/forms')) {
         const appName = getAppNameFromContext(href, text);
@@ -292,7 +304,7 @@
     if (url.includes('B0HLSZPLPQ')) {
       return '学校の時間割が変わる。';
     }
-    if (url.includes('B0HLQCX3GJ')) {
+    if (url.includes('B0HLQCX3GJ') || url.includes('B0HNBS2XCD')) {
       return 'その一言、保護者にどう届く？';
     }
     return 'Amazon商品';
