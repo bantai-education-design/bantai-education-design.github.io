@@ -111,7 +111,8 @@ def main() -> None:
         if not product.get("detailUrl"):
             fail(f"{product['id']}: detailUrl is required")
         if product.get("image"):
-            image_path = ROOT / product["image"].lstrip("/")
+            # キャッシュ対策の ?v=... は実ファイル名に含めない
+            image_path = ROOT / product["image"].split("?", 1)[0].lstrip("/")
             if not image_path.exists():
                 fail(f"{product['id']}: image not found: {product['image']}")
         elif not product.get("usePlaceholder"):
@@ -132,12 +133,16 @@ def main() -> None:
     if len(parser.cards) != len(sorted_products):
         fail(f"card count mismatch: expected {len(sorted_products)}, found {len(parser.cards)}")
 
+    # ページは「おすすめ（featured）」の段を先に、その後に通常の段を並べる
+    page_order = [p for p in sorted_products if p.get("category") == "featured"] + [
+        p for p in sorted_products if p.get("category") != "featured"
+    ]
     card_names = [card["name"] for card in parser.cards]
-    product_names = [product["name"] for product in sorted_products]
+    product_names = [product["name"] for product in page_order]
     if card_names != product_names:
         fail(f"product order mismatch: {card_names} != {product_names}")
 
-    for product, card in zip(sorted_products, parser.cards):
+    for product, card in zip(page_order, parser.cards):
         if product["detailUrl"] not in card["detail_links"]:
             fail(f"{product['id']}: card hit area link missing")
         if product["detailUrl"] not in card["button_links"]:
