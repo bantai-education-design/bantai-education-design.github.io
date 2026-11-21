@@ -17,7 +17,7 @@
 |---|---|---|---|---|---|---|---|
 | はじめての五線紙メーカー | v2.0.0 | はじめての五線紙メーカー_v2.0.0_BOOTH.zip（ほかGumroad_Trial版・Vector版も同サイズで存在） | Documents\アプリ\03_配布物・ZIP・EXE\ | 88.3MB | bantai_first_staff_paper_trial_v2.0.0.zip | 可（ただし100MBに近い） | GitHub Releases 併用を推奨（サイズと今後の版更新頻度を考慮） |
 | 漢字練習帳 | 版表記なし（BOOTH販売中） | kanji-practice-sheet-1.0.0-windows.zip（同内容らしき kanji-sheet-100-win.zip も同日・同サイズで存在） | Documents\アプリ\漢字練習帳\ | 163.6MB | bantai_kanji_practice_trial_v1.0.0.zip | 不可（100MB超） | GitHub Releases 必須 |
-| 方眼紙メーカー | v3.1.2 | 方眼紙メーカー-v3.1.2-体験版.zip（体験版ビルドが明確に分離されている） | Documents\アプリ\方眼紙メーカー\release\ | 73.8MB | bantai_graph_paper_trial_v3.1.2.zip | 可 | /downloads/trials/ 直置きで可（Releases併用も選択可） |
+| 方眼紙メーカー | v3.2.0（2026-10-29 差し替え） | 方眼紙メーカー-v3.2.0-体験版.zip（体験版ビルドが明確に分離されている） | Documents\アプリ\方眼紙メーカー\ | 74.0MB | bantai_graph_paper_trial_v3.2.0.zip | 可 | /downloads/trials/ 直置きで可（Releases併用も選択可） |
 | 絵日記・観察カード作成メーカー | v1.2.0 | 絵日記・観察カード作成メーカー-v1.2.0-Vector-Trial-Windows.zip（試用版ビルド。BOOTH版・Vector版も同サイズで存在） | Documents\アプリ\観察カード\04_Release\ | 76.9MB | bantai_observation_card_trial_v1.2.0.zip | 可 | /downloads/trials/ 直置きで可（Releases併用も選択可） |
 | 小学校教育計画作成・運営システム モニター版 | Ver.5.70.7 | 下記「教育計画システムの補足」参照（候補複数） | Documents\アプリ\ ほか | 277〜833MB | bantai_education_planning_monitor_v5.70.x.zip（版確定後に決定） | 不可（100MB超） | GitHub Releases 必須。かつ配布する版と構成の確定が先 |
 
