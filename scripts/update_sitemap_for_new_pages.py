@@ -59,7 +59,7 @@ def missing_entries(root: Path, sitemap: Path) -> list[tuple[str, str]]:
     missing = []
     for glob in INDEX_GLOBS:
         for path in sorted(root.glob(glob)):
-            if not path.is_file() or not page_is_eligible(path.relative_to(root) if False else path):
+            if not path.is_file() or not page_is_eligible(path):
                 continue
             rel = path.relative_to(root)
             link = canonical_for(rel)
