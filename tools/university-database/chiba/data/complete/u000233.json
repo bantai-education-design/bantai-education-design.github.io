@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000233",
+  "id": "u000233",
+  "name": "SBC東京医療大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "浦安市",
+  "operator": "学校法人ＳＢＣ東京医療大学",
+  "feature_summary": "浦安市に本部を置き、健康科学部の1学部で学ぶ大学です。",
+  "official_url": "https://www.sbctmu.ac.jp/",
+  "admissions_url": "https://www.sbctmu.ac.jp/admissions/",
+  "academic_field_tags": [
+    "看護・医療",
+    "理学",
+    "法学",
+    "体育・スポーツ"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400081",
+      "name": "健康科学部",
+      "academic_field_tags": [
+        "看護・医療",
+        "理学",
+        "法学",
+        "体育・スポーツ"
+      ],
+      "campus_municipality": "浦安市",
+      "departments": [
+        {
+          "department_id": "d400138",
+          "name": "理学療法学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400139",
+          "name": "整復医療・トレーナー学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400140",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "健康科学部",
+      "postal_code": "279-8567",
+      "address": "千葉県浦安市明海5-8-1",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "nearest_stations": [
+        {
+          "station": "新浦安駅",
+          "line": "JR京葉線",
+          "access": "バス「明海南小学校」下車徒歩4分（徒歩25分）"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "理学療法士（国家試験受験資格）",
+      "department": "健康科学部 理学療法学科",
+      "group": "理学療法士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "健康科学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "SBC東京医療大学 公式サイト",
+      "url": "https://www.sbctmu.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "SBC東京医療大学 公式入試情報",
+      "url": "https://www.sbctmu.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "生命の尊厳が重んじられる社会の構築を目指し、専門技術と高い倫理観・国際性を備えた医療人の育成を理念とする。",
+  "mission": "看護・理学療法・整復医療の専門教育を通じて、超高齢化社会と国際社会に貢献する医療人を育成する。",
+  "student_counts": {
+    "undergraduate": 1029,
+    "graduate": 0,
+    "total": 1029,
+    "as_of": "2026-05-01"
+  }
+}

@@ -102,7 +102,7 @@ function apply(u){
   try{
     const locations=await loadLocations();
     let target=locations.find(x=>x.id===id);
-    for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x)target={...(target||{}),...x,name:x.name||target?.name,headquarters:{...(target?.headquarters||{}),...x.headquarters}}}}catch{}}
+    for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json','../chiba/data/chiba_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x)target={...(target||{}),...x,name:x.name||target?.name,headquarters:{...(target?.headquarters||{}),...x.headquarters}}}}catch{}}
     if(!target)throw new Error(`location missing for ${id}`);
     if(applyLocation(target))return;
     const observer=new MutationObserver(()=>{if(applyLocation(target))observer.disconnect();});
@@ -114,7 +114,7 @@ function apply(u){
   try{
     const admissions=await loadAdmissions();
     let target=admissions.find(x=>x.id===id);
-    if(!target){for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x){target=x;break;}}}catch{}}}
+    if(!target){for(const f of ['../saitama/data/saitama_core_01.json','../tokyo-additions/data/tokyo_additions_core_01.json','../kanagawa/data/kanagawa_core_01.json','../chiba/data/chiba_core_01.json']){try{const r=await fetch(f);if(r.ok){const x=((await r.json()).records||[]).find(v=>v.id===id);if(x){target=x;break;}}}catch{}}}
     if(!target)throw new Error(`admissions missing for ${id}`);
     const attempt=()=>applyAdmissions(target);
     if(attempt()){

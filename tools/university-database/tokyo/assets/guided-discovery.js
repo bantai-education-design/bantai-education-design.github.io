@@ -53,10 +53,11 @@ function buildSection(){
             <span class="guided-q-no">Q3</span>
             <label class="guided-q-title" for="guided-pref">通える地域はどこですか？</label>
             <select id="guided-pref" class="guided-select">
-              <option value="all">指定しない（3都県すべて）</option>
+              <option value="all">指定しない（4都県すべて）</option>
               <option value="東京都">東京都</option>
               <option value="埼玉県">埼玉県</option>
               <option value="神奈川県">神奈川県</option>
+              <option value="千葉県">千葉県</option>
             </select>
             <label class="guided-check"><input type="checkbox" id="guided-campus" disabled><span>他県本部でも、その都県にキャンパスがある大学を含める</span></label>
           </div>

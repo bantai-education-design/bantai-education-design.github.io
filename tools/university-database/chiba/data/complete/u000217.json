@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000217",
+  "id": "u000217",
+  "name": "淑徳大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "学校法人大乗淑徳学園",
+  "feature_summary": "千葉市に本部を置き、総合福祉学部・コミュニティ政策学部・経営学部・教育学部など7学部と大学院2研究科で学ぶ大学です。",
+  "official_url": "https://www.shukutoku.ac.jp/",
+  "admissions_url": "https://www.shukutoku.ac.jp/admission/",
+  "academic_field_tags": [
+    "看護・医療",
+    "理学",
+    "食・栄養",
+    "経済・経営・商学",
+    "教育",
+    "心理",
+    "福祉",
+    "社会学",
+    "観光",
+    "文学・人文",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400027",
+      "name": "総合福祉学部",
+      "academic_field_tags": [
+        "理学",
+        "教育",
+        "心理",
+        "福祉",
+        "社会学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400043",
+          "name": "社会福祉学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400044",
+          "name": "教育福祉学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400045",
+          "name": "実践心理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400028",
+      "name": "コミュニティ政策学部",
+      "academic_field_tags": [
+        "心理"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400046",
+          "name": "コミュニティ政策学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400029",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "社会学",
+        "観光"
+      ],
+      "campus_municipality": "板橋区",
+      "departments": [
+        {
+          "department_id": "d400047",
+          "name": "経営学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400048",
+          "name": "観光経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400030",
+      "name": "教育学部",
+      "academic_field_tags": [
+        "教育"
+      ],
+      "campus_municipality": "三芳町",
+      "departments": [
+        {
+          "department_id": "d400049",
+          "name": "こども教育学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400031",
+      "name": "看護栄養学部",
+      "academic_field_tags": [
+        "看護・医療",
+        "食・栄養"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400050",
+          "name": "看護学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400051",
+          "name": "栄養学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400032",
+      "name": "人文学部",
+      "academic_field_tags": [
+        "心理",
+        "文学・人文",
+        "芸術"
+      ],
+      "campus_municipality": "板橋区",
+      "departments": [
+        {
+          "department_id": "d400052",
+          "name": "表現学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400053",
+          "name": "歴史学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400054",
+          "name": "人間科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400033",
+      "name": "地域創生学部",
+      "academic_field_tags": [
+        "総合・教養"
+      ],
+      "campus_municipality": "三芳町",
+      "departments": [
+        {
+          "department_id": "d400055",
+          "name": "地域創生学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400019",
+      "name": "総合福祉研究科",
+      "programs": [
+        "社会福祉学専攻",
+        "心理学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400020",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "千葉キャンパス",
+      "postal_code": "260-8701",
+      "address": "千葉県千葉市中央区大巌寺町200",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": [
+        {
+          "station": "蘇我駅",
+          "line": "JR京葉線・外房線・内房線",
+          "access": "東口バス約8分"
+        },
+        {
+          "station": "鎌取駅",
+          "line": "JR外房線",
+          "access": "バス利用"
+        }
+      ]
+    },
+    {
+      "name": "千葉第二キャンパス",
+      "postal_code": "260-8703",
+      "address": "千葉県千葉市中央区仁戸名町673",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    },
+    {
+      "name": "埼玉キャンパス",
+      "postal_code": "354-8510",
+      "address": "埼玉県入間郡三芳町藤久保1150-1",
+      "prefecture": "埼玉県",
+      "municipality": "入間郡三芳町",
+      "nearest_stations": []
+    },
+    {
+      "name": "東京キャンパス",
+      "postal_code": "174-8631",
+      "address": "東京都板橋区前野町6-36-4",
+      "prefecture": "東京都",
+      "municipality": "板橋区",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護栄養学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "栄養士",
+      "department": "看護栄養学部 栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "淑徳大学 公式サイト",
+      "url": "https://www.shukutoku.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "淑徳大学 公式入試情報",
+      "url": "https://www.shukutoku.ac.jp/admission/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "仏教の教えに基づく「利他共生」を建学の精神とし、他者の喜びを自らの喜びとして共に生きる心を育む。",
+  "mission": "福祉・医療・教育・経営などの実学を通じて、共生社会の実現に貢献できる専門人材を育成する。",
+  "student_counts": {
+    "undergraduate": 5267,
+    "graduate": 0,
+    "total": 5267,
+    "as_of": "2025-05-01"
+  }
+}
