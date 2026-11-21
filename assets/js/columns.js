@@ -416,7 +416,8 @@
     return `
       <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
         <div class="column-card-media">
-          <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
+          <img class="column-card-media-bg" src="${item.thumbnail}" alt="" aria-hidden="true" loading="lazy">
+          <img class="column-card-media-main" src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
         </div>
         <div class="column-card-body">
           <div class="column-card-labels">
