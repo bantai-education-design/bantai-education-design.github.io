@@ -1,6 +1,37 @@
 {
   "products": [
     {
+      "id": "class-canvas",
+      "name": "学級経営支援システム「みんなのクラス・キャンバス」",
+      "category": "featured",
+      "order": 1,
+      "status": "10日間無料体験",
+      "recommendation": "新登場",
+      "badges": [
+        "10日間無料体験",
+        "先行モニター版"
+      ],
+      "targetUsers": [
+        "学級担任",
+        "小・中学校教員"
+      ],
+      "summary": "座席表・グループ編成・名簿管理を直感的に。先生の学級経営をサポートする完全オフライン対応の座席・名簿作成システム。",
+      "features": [],
+      "image": "/assets/images/brand-logo.png",
+      "imageAlt": "学級経営支援システム「みんなのクラス・キャンバス」",
+      "detailUrl": "/products/class-canvas/",
+      "categoryUrl": "/products/school-work/",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料お試し",
+      "published": true,
+      "monitorUrl": "/downloads/minnano_class_canvas_v0.16.0.zip",
+      "boothUrl": "https://bantai3.booth.pm/",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": true
+    },
+    {
       "id": "education-planning",
       "name": "小学校教育計画作成・運営システム",
       "category": "featured",
