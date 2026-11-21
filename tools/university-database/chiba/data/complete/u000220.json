@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000220",
+  "id": "u000220",
+  "name": "千葉商科大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "市川市",
+  "operator": "学校法人千葉学園",
+  "feature_summary": "市川市に本部を置き、商経学部・サービス創造学部・人間社会学部・総合政策学部の4学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://www.cuc.ac.jp/",
+  "admissions_url": "https://www.cuc.ac.jp/prospective/",
+  "academic_field_tags": [
+    "情報・AI",
+    "経済・経営・商学",
+    "社会学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400043",
+      "name": "商経学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400078",
+          "name": "商学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400079",
+          "name": "経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400044",
+      "name": "サービス創造学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400080",
+          "name": "サービス創造学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400045",
+      "name": "人間社会学部",
+      "academic_field_tags": [
+        "社会学"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400081",
+          "name": "人間社会学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400046",
+      "name": "総合政策学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "経済・経営・商学",
+        "社会学"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400082",
+          "name": "経済学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400083",
+          "name": "政策情報学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400026",
+      "name": "政策研究科",
+      "programs": [
+        "政策専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400027",
+      "name": "商学研究科",
+      "programs": [
+        "商学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400028",
+      "name": "会計ファイナンス研究科",
+      "programs": [
+        "会計ファイナンス専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "市川キャンパス",
+      "postal_code": "272-8512",
+      "address": "千葉県市川市国府台1-3-1",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "千葉商科大学 公式サイト",
+      "url": "https://www.cuc.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "千葉商科大学 公式入試情報",
+      "url": "https://www.cuc.ac.jp/prospective/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000213",
+  "id": "u000213",
+  "name": "愛国学園大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "四街道市",
+  "operator": "学校法人愛国学園",
+  "feature_summary": "四街道市に本部を置き、人間文化学部の1学部で学ぶ大学です。",
+  "official_url": "https://aikoku-u.ac.jp/",
+  "admissions_url": "https://aikoku-u.ac.jp/exam/summary",
+  "academic_field_tags": [
+    "理学",
+    "心理"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400016",
+      "name": "人間文化学部",
+      "academic_field_tags": [
+        "理学",
+        "心理"
+      ],
+      "campus_municipality": "四街道市",
+      "departments": [
+        {
+          "department_id": "d400030",
+          "name": "人間文化学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "284-0005",
+      "address": "千葉県四街道市四街道1532",
+      "prefecture": "千葉県",
+      "municipality": "四街道市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "愛国学園大学 公式サイト",
+      "url": "https://aikoku-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "愛国学園大学 公式入試情報",
+      "url": "https://aikoku-u.ac.jp/exam/summary",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

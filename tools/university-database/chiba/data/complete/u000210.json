@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000210",
+  "id": "u000210",
+  "name": "千葉大学",
+  "establishment_type": "national",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "国立大学法人千葉大学",
+  "feature_summary": "千葉市に本部を置き、国際教養学部・文学部・法政経学部・教育学部など11学部と大学院8研究科で学ぶ大学です。",
+  "official_url": "https://www.chiba-u.ac.jp/",
+  "admissions_url": "https://www.chiba-u.ac.jp/admissions/",
+  "academic_field_tags": [
+    "医学",
+    "薬学",
+    "看護・医療",
+    "工学",
+    "情報・AI",
+    "理学",
+    "農学",
+    "法学",
+    "経済・経営・商学",
+    "国際関係",
+    "教育",
+    "社会学",
+    "文学・人文"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400001",
+      "name": "国際教養学部",
+      "academic_field_tags": [
+        "国際関係",
+        "社会学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400001",
+          "name": "国際教養学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400002",
+      "name": "文学部",
+      "academic_field_tags": [
+        "文学・人文"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400002",
+          "name": "人文学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400003",
+      "name": "法政経学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400003",
+          "name": "法政経学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400004",
+      "name": "教育学部",
+      "academic_field_tags": [
+        "教育"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400004",
+          "name": "学校教員養成課程",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400005",
+      "name": "理学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "理学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400005",
+          "name": "数学・情報数理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400006",
+          "name": "物理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400007",
+          "name": "化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400008",
+          "name": "生物学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400009",
+          "name": "地球科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400006",
+      "name": "工学部",
+      "academic_field_tags": [
+        "工学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400010",
+          "name": "総合工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400007",
+      "name": "園芸学部",
+      "academic_field_tags": [
+        "理学",
+        "農学",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400011",
+          "name": "園芸学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400012",
+          "name": "応用生命化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400013",
+          "name": "緑地環境学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400014",
+          "name": "食料資源経済学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400008",
+      "name": "医学部",
+      "academic_field_tags": [
+        "医学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400015",
+          "name": "医学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400009",
+      "name": "薬学部",
+      "academic_field_tags": [
+        "薬学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400016",
+          "name": "薬学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400017",
+          "name": "薬科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400010",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400018",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400011",
+      "name": "情報・データサイエンス学部",
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400019",
+          "name": "情報・データサイエンス学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400001",
+      "name": "人文公共学府",
+      "programs": [
+        "人文科学専攻",
+        "公共社会科学専攻",
+        "人文公共学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400002",
+      "name": "専門法務研究科",
+      "programs": [
+        "法務専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400003",
+      "name": "教育学研究科",
+      "programs": [
+        "学校教育学専攻",
+        "高度教職実践専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400004",
+      "name": "融合理工学府",
+      "programs": [
+        "数学情報科学専攻",
+        "地球環境科学専攻",
+        "先進理化学専攻",
+        "創成工学専攻",
+        "基幹工学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400005",
+      "name": "園芸学研究科",
+      "programs": [
+        "環境園芸学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400006",
+      "name": "医学薬学府",
+      "programs": [
+        "医科学専攻",
+        "総合薬品科学専攻",
+        "先端医学薬学専攻",
+        "先進予防医学共同専攻",
+        "先端創薬科学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400007",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400008",
+      "name": "情報・データサイエンス学府",
+      "programs": [
+        "情報・データサイエンス専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "西千葉キャンパス",
+      "postal_code": "263-8522",
+      "address": "千葉県千葉市稲毛区弥生町1-33",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    },
+    {
+      "name": "亥鼻キャンパス",
+      "postal_code": "260-8670",
+      "address": "千葉県千葉市中央区亥鼻1-8-1",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    },
+    {
+      "name": "松戸キャンパス",
+      "postal_code": "271-8510",
+      "address": "千葉県松戸市松戸648",
+      "prefecture": "千葉県",
+      "municipality": "松戸市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "千葉大学 公式サイト",
+      "url": "https://www.chiba-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "千葉大学 公式入試情報",
+      "url": "https://www.chiba-u.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

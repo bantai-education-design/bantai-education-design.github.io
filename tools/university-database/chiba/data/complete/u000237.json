@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000237",
+  "id": "u000237",
+  "name": "放送大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "放送大学学園",
+  "feature_summary": "千葉市に本部を置き、教養学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.ouj.ac.jp/",
+  "admissions_url": "https://www.ouj.ac.jp/admission/",
+  "academic_field_tags": [
+    "社会学",
+    "文学・人文"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400087",
+      "name": "教養学部",
+      "academic_field_tags": [
+        "社会学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400146",
+          "name": "教養学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400051",
+      "name": "文化科学研究科",
+      "programs": [
+        "文化科学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "本部（幕張）",
+      "postal_code": "261-8586",
+      "address": "千葉県千葉市美浜区若葉2-11",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20260611-mxt_daigakuc01-000050331_05.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "放送大学 公式サイト",
+      "url": "https://www.ouj.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "放送大学 公式入試情報",
+      "url": "https://www.ouj.ac.jp/admission/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

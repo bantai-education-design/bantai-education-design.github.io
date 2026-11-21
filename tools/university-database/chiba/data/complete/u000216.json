@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000216",
+  "id": "u000216",
+  "name": "城西国際大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "東金市",
+  "operator": "学校法人城西大学",
+  "feature_summary": "東金市に本部を置き、経営情報学部・国際人文学部・福祉総合学部・薬学部など7学部と大学院7研究科で学ぶ大学です。",
+  "official_url": "https://www.jiu.ac.jp/",
+  "admissions_url": "https://www.jiu.ac.jp/admissions/",
+  "academic_field_tags": [
+    "薬学",
+    "看護・医療",
+    "情報・AI",
+    "建築・デザイン",
+    "理学",
+    "法学",
+    "経済・経営・商学",
+    "国際関係",
+    "福祉",
+    "社会学",
+    "観光",
+    "文学・人文",
+    "芸術",
+    "体育・スポーツ"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400020",
+      "name": "経営情報学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400034",
+          "name": "総合経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400021",
+      "name": "国際人文学部",
+      "academic_field_tags": [
+        "理学",
+        "国際関係",
+        "文学・人文"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400035",
+          "name": "国際文化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400036",
+          "name": "国際交流学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400022",
+      "name": "福祉総合学部",
+      "academic_field_tags": [
+        "看護・医療",
+        "理学",
+        "法学",
+        "福祉"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400037",
+          "name": "福祉総合学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400038",
+          "name": "理学療法学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400023",
+      "name": "薬学部",
+      "academic_field_tags": [
+        "薬学",
+        "看護・医療"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400039",
+          "name": "医療薬学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400024",
+      "name": "メディア学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "芸術"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400040",
+          "name": "メディア情報学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400025",
+      "name": "観光学部",
+      "academic_field_tags": [
+        "社会学",
+        "観光"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400041",
+          "name": "観光学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400026",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "東金市",
+      "departments": [
+        {
+          "department_id": "d400042",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400012",
+      "name": "人文科学研究科",
+      "programs": [
+        "比較文化専攻",
+        "国際文化専攻",
+        "女性学専攻",
+        "グローバルコミュニケーション専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400013",
+      "name": "経営情報学研究科",
+      "programs": [
+        "起業マネジメント専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400014",
+      "name": "ビジネスデザイン研究科",
+      "programs": [
+        "ビジネスデザイン専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400015",
+      "name": "福祉総合学研究科",
+      "programs": [
+        "福祉社会専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400016",
+      "name": "薬学研究科",
+      "programs": [
+        "医療薬学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400017",
+      "name": "国際アドミニストレーション研究科",
+      "programs": [
+        "国際アドミニストレーション専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400018",
+      "name": "健康科学研究科",
+      "programs": [
+        "健康科学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "千葉東金キャンパス",
+      "postal_code": "283-8555",
+      "address": "千葉県東金市求名1",
+      "prefecture": "千葉県",
+      "municipality": "東金市",
+      "nearest_stations": []
+    },
+    {
+      "name": "東京紀尾井町キャンパス（１号棟）",
+      "postal_code": "102-0094",
+      "address": "東京都千代田区紀尾井町3-26",
+      "prefecture": "東京都",
+      "municipality": "千代田区",
+      "nearest_stations": []
+    },
+    {
+      "name": "東京紀尾井町キャンパス（３号棟）",
+      "postal_code": "102-0093",
+      "address": "東京都千代田区平河町2-3-20",
+      "prefecture": "東京都",
+      "municipality": "千代田区",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "城西国際大学 公式サイト",
+      "url": "https://www.jiu.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "城西国際大学 公式入試情報",
+      "url": "https://www.jiu.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

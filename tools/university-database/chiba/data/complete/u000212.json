@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000212",
+  "id": "u000212",
+  "name": "千葉科学大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "銚子市",
+  "operator": "学校法人加計学園",
+  "feature_summary": "銚子市に本部を置き、薬学部・危機管理学部・看護学部の3学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://www.cis.ac.jp/",
+  "admissions_url": "https://www.cis.ac.jp/admission/",
+  "academic_field_tags": [
+    "薬学",
+    "看護・医療",
+    "理学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400013",
+      "name": "薬学部",
+      "academic_field_tags": [
+        "薬学"
+      ],
+      "campus_municipality": "銚子市",
+      "departments": [
+        {
+          "department_id": "d400024",
+          "name": "薬学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400014",
+      "name": "危機管理学部",
+      "academic_field_tags": [
+        "看護・医療",
+        "理学"
+      ],
+      "campus_municipality": "銚子市",
+      "departments": [
+        {
+          "department_id": "d400025",
+          "name": "危機管理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400026",
+          "name": "保健医療学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400027",
+          "name": "航空技術危機管理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400028",
+          "name": "動物危機管理学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400015",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "銚子市",
+      "departments": [
+        {
+          "department_id": "d400029",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400009",
+      "name": "薬学研究科",
+      "programs": [
+        "薬学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400010",
+      "name": "危機管理学研究科",
+      "programs": [
+        "危機管理学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400011",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "千葉科学大学 本部キャンパス",
+      "postal_code": "288-0025",
+      "address": "千葉県銚子市潮見町3",
+      "prefecture": "千葉県",
+      "municipality": "銚子市",
+      "nearest_stations": []
+    },
+    {
+      "name": "千葉科学大学 マリーナキャンパス",
+      "postal_code": "288-0025",
+      "address": "千葉県銚子市潮見町15-8",
+      "prefecture": "千葉県",
+      "municipality": "銚子市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "千葉科学大学 公式サイト",
+      "url": "https://www.cis.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "千葉科学大学 公式入試情報",
+      "url": "https://www.cis.ac.jp/admission/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

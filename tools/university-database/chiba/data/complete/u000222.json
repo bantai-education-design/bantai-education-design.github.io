@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000222",
+  "id": "u000222",
+  "name": "麗澤大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "柏市",
+  "operator": "学校法人廣池学園",
+  "feature_summary": "柏市に本部を置き、外国語学部・経済学部・国際学部・経営学部など5学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://www.reitaku-u.ac.jp/",
+  "admissions_url": "https://www.reitaku-u.ac.jp/admissions/",
+  "academic_field_tags": [
+    "工学",
+    "経済・経営・商学",
+    "国際関係",
+    "国際・語学",
+    "教育"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400050",
+      "name": "外国語学部",
+      "academic_field_tags": [
+        "国際・語学"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400087",
+          "name": "外国語学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400051",
+      "name": "経済学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400088",
+          "name": "経済学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400052",
+      "name": "国際学部",
+      "academic_field_tags": [
+        "国際関係"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400089",
+          "name": "国際学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400053",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400090",
+          "name": "経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400054",
+      "name": "工学部",
+      "academic_field_tags": [
+        "工学"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400091",
+          "name": "工学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400030",
+      "name": "言語教育研究科",
+      "programs": [
+        "日本語教育学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400031",
+      "name": "経済研究科",
+      "programs": [
+        "経営学専攻",
+        "経済学・経営学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400032",
+      "name": "学校教育研究科",
+      "programs": [
+        "道徳教育専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "麗澤大学キャンパス",
+      "postal_code": "277-8686",
+      "address": "千葉県柏市光ケ丘2-1-1",
+      "prefecture": "千葉県",
+      "municipality": "柏市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "麗澤大学 公式サイト",
+      "url": "https://www.reitaku-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "麗澤大学 公式入試情報",
+      "url": "https://www.reitaku-u.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

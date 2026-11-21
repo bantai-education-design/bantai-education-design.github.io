@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000224",
+  "id": "u000224",
+  "name": "国際武道大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "勝浦市",
+  "operator": "学校法人国際武道大学",
+  "feature_summary": "勝浦市に本部を置き、体育学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.budo-u.ac.jp/",
+  "admissions_url": "https://www.budo-u.ac.jp/examination/admission/",
+  "academic_field_tags": [
+    "国際関係",
+    "体育・スポーツ"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400059",
+      "name": "体育学部",
+      "academic_field_tags": [
+        "体育・スポーツ"
+      ],
+      "campus_municipality": "勝浦市",
+      "departments": [
+        {
+          "department_id": "d400101",
+          "name": "武道学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400102",
+          "name": "体育学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400036",
+      "name": "武道・スポーツ研究科",
+      "programs": [
+        "武道・スポーツ専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "299-5295",
+      "address": "千葉県勝浦市新官841",
+      "prefecture": "千葉県",
+      "municipality": "勝浦市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "国際武道大学 公式サイト",
+      "url": "https://www.budo-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "国際武道大学 公式入試情報",
+      "url": "https://www.budo-u.ac.jp/examination/admission/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

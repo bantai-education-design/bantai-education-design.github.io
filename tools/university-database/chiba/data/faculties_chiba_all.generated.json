@@ -1,0 +1,1897 @@
+[
+  {
+    "id": "f400001",
+    "university_id": "u000210",
+    "name": "国際教養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400002",
+    "university_id": "u000210",
+    "name": "文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "文学・人文"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400003",
+    "university_id": "u000210",
+    "name": "法政経学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "法学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400004",
+    "university_id": "u000210",
+    "name": "教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400005",
+    "university_id": "u000210",
+    "name": "理学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "理学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400006",
+    "university_id": "u000210",
+    "name": "工学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400007",
+    "university_id": "u000210",
+    "name": "園芸学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "農学",
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400008",
+    "university_id": "u000210",
+    "name": "医学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "医学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400009",
+    "university_id": "u000210",
+    "name": "薬学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "薬学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400010",
+    "university_id": "u000210",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400011",
+    "university_id": "u000210",
+    "name": "情報・データサイエンス学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400012",
+    "university_id": "u000211",
+    "name": "健康科学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "歯学",
+      "看護・医療",
+      "食・栄養",
+      "体育・スポーツ"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉県立保健医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400013",
+    "university_id": "u000212",
+    "name": "薬学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "薬学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "銚子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400014",
+    "university_id": "u000212",
+    "name": "危機管理学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療",
+      "理学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "銚子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400015",
+    "university_id": "u000212",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "銚子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400016",
+    "university_id": "u000213",
+    "name": "人間文化学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "心理"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "四街道市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（愛国学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400017",
+    "university_id": "u000214",
+    "name": "教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（開智国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400018",
+    "university_id": "u000214",
+    "name": "国際教養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（開智国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400019",
+    "university_id": "u000215",
+    "name": "法学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "法学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "木更津市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（清和大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400020",
+    "university_id": "u000216",
+    "name": "経営情報学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400021",
+    "university_id": "u000216",
+    "name": "国際人文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "国際関係",
+      "文学・人文"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400022",
+    "university_id": "u000216",
+    "name": "福祉総合学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療",
+      "理学",
+      "法学",
+      "福祉"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400023",
+    "university_id": "u000216",
+    "name": "薬学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "薬学",
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400024",
+    "university_id": "u000216",
+    "name": "メディア学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "芸術"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400025",
+    "university_id": "u000216",
+    "name": "観光学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "社会学",
+      "観光"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400026",
+    "university_id": "u000216",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "東金市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400027",
+    "university_id": "u000217",
+    "name": "総合福祉学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "教育",
+      "心理",
+      "福祉",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400028",
+    "university_id": "u000217",
+    "name": "コミュニティ政策学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "心理"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400029",
+    "university_id": "u000217",
+    "name": "経営学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学",
+      "社会学",
+      "観光"
+    ],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "板橋区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400030",
+    "university_id": "u000217",
+    "name": "教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育"
+    ],
+    "campus_prefecture": "埼玉県",
+    "campus_municipality": "三芳町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400031",
+    "university_id": "u000217",
+    "name": "看護栄養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療",
+      "食・栄養"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400032",
+    "university_id": "u000217",
+    "name": "人文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "心理",
+      "文学・人文",
+      "芸術"
+    ],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "板橋区",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400033",
+    "university_id": "u000217",
+    "name": "地域創生学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "総合・教養"
+    ],
+    "campus_prefecture": "埼玉県",
+    "campus_municipality": "三芳町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400034",
+    "university_id": "u000218",
+    "name": "経済学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（敬愛大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400035",
+    "university_id": "u000218",
+    "name": "国際学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（敬愛大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400036",
+    "university_id": "u000218",
+    "name": "教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（敬愛大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400037",
+    "university_id": "u000218",
+    "name": "情報マネジメント学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（敬愛大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400038",
+    "university_id": "u000219",
+    "name": "工学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学",
+      "情報・AI",
+      "理学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "習志野市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400039",
+    "university_id": "u000219",
+    "name": "創造工学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学",
+      "建築・デザイン"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "習志野市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400040",
+    "university_id": "u000219",
+    "name": "先進工学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学",
+      "情報・AI",
+      "理学",
+      "芸術"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "習志野市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400041",
+    "university_id": "u000219",
+    "name": "情報変革科学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学",
+      "情報・AI"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "習志野市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400042",
+    "university_id": "u000219",
+    "name": "未来変革科学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "建築・デザイン",
+      "理学",
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "習志野市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400043",
+    "university_id": "u000220",
+    "name": "商経学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400044",
+    "university_id": "u000220",
+    "name": "サービス創造学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400045",
+    "university_id": "u000220",
+    "name": "人間社会学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400046",
+    "university_id": "u000220",
+    "name": "総合政策学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "経済・経営・商学",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400047",
+    "university_id": "u000221",
+    "name": "商学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "我孫子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（中央学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400048",
+    "university_id": "u000221",
+    "name": "法学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "法学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "我孫子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（中央学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400049",
+    "university_id": "u000221",
+    "name": "現代教養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "我孫子市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（中央学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400050",
+    "university_id": "u000222",
+    "name": "外国語学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際・語学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400051",
+    "university_id": "u000222",
+    "name": "経済学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400052",
+    "university_id": "u000222",
+    "name": "国際学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400053",
+    "university_id": "u000222",
+    "name": "経営学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400054",
+    "university_id": "u000222",
+    "name": "工学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "工学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "柏市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400055",
+    "university_id": "u000223",
+    "name": "人文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "心理",
+      "文学・人文"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400056",
+    "university_id": "u000223",
+    "name": "国際学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "国際・語学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400057",
+    "university_id": "u000223",
+    "name": "家政学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "食・栄養",
+      "福祉"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400058",
+    "university_id": "u000223",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "市川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400059",
+    "university_id": "u000224",
+    "name": "体育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "勝浦市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（国際武道大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400060",
+    "university_id": "u000225",
+    "name": "外国語学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "国際・語学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神田外語大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400061",
+    "university_id": "u000225",
+    "name": "グローバル・リベラルアーツ学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神田外語大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400062",
+    "university_id": "u000226",
+    "name": "経済学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉経済大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400063",
+    "university_id": "u000227",
+    "name": "総合経営学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "八千代市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（秀明大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400064",
+    "university_id": "u000227",
+    "name": "グローバルマネジメント学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "八千代市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（秀明大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400065",
+    "university_id": "u000227",
+    "name": "学校教師学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "八千代市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（秀明大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400066",
+    "university_id": "u000227",
+    "name": "観光ビジネス学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "社会学",
+      "観光"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "八千代市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（秀明大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400067",
+    "university_id": "u000227",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "八千代市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（秀明大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400068",
+    "university_id": "u000228",
+    "name": "文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "国際関係",
+      "国際・語学",
+      "心理",
+      "文学・人文"
+    ],
+    "campus_prefecture": "東京都",
+    "campus_municipality": "豊島区",
+    "status": "stopped",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（川村学園女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400069",
+    "university_id": "u000228",
+    "name": "生活創造学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "社会学",
+      "観光"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "我孫子市",
+    "status": "stopped",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（川村学園女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400070",
+    "university_id": "u000229",
+    "name": "総合情報学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東京情報大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400071",
+    "university_id": "u000229",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東京情報大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400072",
+    "university_id": "u000230",
+    "name": "神学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "国際関係",
+      "社会学",
+      "文学・人文"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "印西市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東京基督教大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400073",
+    "university_id": "u000231",
+    "name": "教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400074",
+    "university_id": "u000231",
+    "name": "心理・福祉学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "心理",
+      "福祉",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400075",
+    "university_id": "u000231",
+    "name": "文学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "文学・人文"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400076",
+    "university_id": "u000231",
+    "name": "人間栄養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "食・栄養"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400077",
+    "university_id": "u000231",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400078",
+    "university_id": "u000231",
+    "name": "音楽学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "芸術"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "松戸市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400079",
+    "university_id": "u000232",
+    "name": "社会学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "理学",
+      "経済・経営・商学",
+      "心理",
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "流山市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（江戸川大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400080",
+    "university_id": "u000232",
+    "name": "メディアコミュニケーション学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "情報・AI",
+      "理学",
+      "芸術"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "流山市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（江戸川大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400081",
+    "university_id": "u000233",
+    "name": "健康科学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療",
+      "理学",
+      "法学",
+      "体育・スポーツ"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "浦安市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（SBC東京医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400082",
+    "university_id": "u000234",
+    "name": "発達教育学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "教育",
+      "幼児教育・保育"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（植草学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400083",
+    "university_id": "u000234",
+    "name": "保健医療学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（植草学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400084",
+    "university_id": "u000234",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（植草学園大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400085",
+    "university_id": "u000235",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "大多喜町",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（三育学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400086",
+    "university_id": "u000236",
+    "name": "看護学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "鴨川市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（亀田医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "f400087",
+    "university_id": "u000237",
+    "name": "教養学部",
+    "organization_type": "faculty",
+    "academic_field_tags": [
+      "社会学"
+    ],
+    "campus_prefecture": "千葉県",
+    "campus_municipality": "千葉市",
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（放送大学）",
+        "source_url": "https://www.mext.go.jp/content/20260611-mxt_daigakuc01-000050331_05.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  }
+]

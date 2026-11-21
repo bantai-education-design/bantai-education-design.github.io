@@ -10,9 +10,9 @@ const initialLimit=Math.max(PAGE_SIZE,Number(params.get('limit'))||(savedSession
 const initialView=(params.get('view')||(savedSession?.returning?savedSession.view:''))==='compact'?'compact':'card';
 const initialCompare=(params.get('compare')||(savedSession?.returning?savedSession.compare:'')||'').split(',').map(x=>x.trim()).filter(x=>/^u\d{6}$/.test(x)).slice(0,4);
 const state={rows:[],q:params.get('q')||'',type:params.get('type')||'all',status:params.get('status')||'all',sort:params.get('sort')||'name',field:params.get('field')||'all',dept:params.get('dept')||'',scale:params.get('scale')||'all',admGuide:params.get('adm')||'all',view:initialView,limit:initialLimit,faculties:new Map(),departments:new Map(),graduateSchools:new Map(),compare:new Set(initialCompare),compareDiffOnly:params.get('diff')==='1',completeProfiles:new Map(),images:new Map()};
-const PREF_CODES={tokyo:'東京都',saitama:'埼玉県',kanagawa:'神奈川県'};
-const PREF_SLUGS={'東京都':'tokyo','埼玉県':'saitama','神奈川県':'kanagawa'};
-state.pref=PREF_CODES[params.get('pref')]||(['東京都','埼玉県','神奈川県'].includes(params.get('pref'))?params.get('pref'):'all');
+const PREF_CODES={tokyo:'東京都',saitama:'埼玉県',kanagawa:'神奈川県',chiba:'千葉県'};
+const PREF_SLUGS={'東京都':'tokyo','埼玉県':'saitama','神奈川県':'kanagawa','千葉県':'chiba'};
+state.pref=PREF_CODES[params.get('pref')]||(['東京都','埼玉県','神奈川県','千葉県'].includes(params.get('pref'))?params.get('pref'):'all');
 state.withCampus=params.get('campus')==='1';
 state.campusIdx=new Map();
 state.qual=params.get('qual')||'';
@@ -35,7 +35,7 @@ const qualGroups=row=>(state.qualIdx.get(row.id)||[]).map(x=>x.group).filter(Boo
 const campusPrefs=row=>state.campusIdx.get(row.id)?.prefectures||[];
 // 東京都版の正本（144校）に加えて読み込む地域データ。各フォルダに <slug>_core_01.json などを置く
 // packs=0 のときは東京都版の正本（144校）だけを表示する（東京都版の検証用）
-const REGION_PACKS=params.get('packs')==='0'?[]:[{base:'../saitama/data/',slug:'saitama'},{base:'../tokyo-additions/data/',slug:'tokyo_additions'},{base:'../kanagawa/data/',slug:'kanagawa'}];
+const REGION_PACKS=params.get('packs')==='0'?[]:[{base:'../saitama/data/',slug:'saitama'},{base:'../tokyo-additions/data/',slug:'tokyo_additions'},{base:'../kanagawa/data/',slug:'kanagawa'},{base:'../chiba/data/',slug:'chiba'}];
 const prefOf=row=>row.prefecture||row.headquarters?.prefecture||'東京都';
 const grid=document.querySelector('#tokyo-grid');
 const count=document.querySelector('#tokyo-result-count');
@@ -334,6 +334,7 @@ function completeProfilePath(uid){
   const m=/^u(\d{6})$/.exec(uid||'');if(!m)return null;const n=Number(m[1]);
   if(n===1||n===2)return `data/complete/${uid}.json`;
   if(n===50||(n>=175&&n<=209))return `../kanagawa/data/complete/${uid}.json`;
+  if(n>=210&&n<=237)return `../chiba/data/complete/${uid}.json`;
   if(n>=145&&n<=172)return `../saitama/data/complete/${uid}.json`;
   if(n===173||n===174)return `../tokyo-additions/data/complete/${uid}.json`;
   return null;
@@ -503,7 +504,7 @@ async function openCompare(){
   wrap.innerHTML=compareTable();
   syncUrl();
 }
-function installDevelopmentStatus(){if(document.querySelector('#university-db-development-status'))return;const style=document.createElement('style');style.textContent='.university-development-status{background:#18140a;color:#fff;border-top:1px solid #8f7229;border-bottom:1px solid #8f7229;padding:14px 18px;line-height:1.55}.university-development-status .inner{max-width:1180px;margin:auto;display:flex;gap:14px;align-items:flex-start}.university-development-status .label{background:#f3c95a;color:#241b05;border-radius:999px;padding:5px 10px;font-weight:900;font-size:.82rem;white-space:nowrap}.university-development-status p{margin:2px 0;color:#f2ead7;font-size:.9rem}.university-development-status small{display:block;margin-top:4px;color:#d9cda9}.academic-summary.is-pending{border:1px dashed #c79d3d;background:#fff9e8;padding:10px;border-radius:12px}@media(max-width:640px){.university-development-status .inner{display:block}.university-development-status .label{display:inline-block;margin-bottom:8px}}';document.head.appendChild(style);const b=document.createElement('section');b.id='university-db-development-status';b.className='university-development-status';b.innerHTML='<div class="inner"><span class="label">現在 開発・更新中</span><div><strong>東京都・埼玉県・神奈川県の大学の基本情報を優先して再点検しています。</strong><p>学部・学科、所在地、Google Mapsの大学別表示を優先更新中です。未同期の項目は「更新中」と表示します。</p></div></div>';const main=document.querySelector('main'),hero=document.querySelector('.tokyo-hero');if(main&&hero)main.insertBefore(b,hero)}
+function installDevelopmentStatus(){if(document.querySelector('#university-db-development-status'))return;const style=document.createElement('style');style.textContent='.university-development-status{background:#18140a;color:#fff;border-top:1px solid #8f7229;border-bottom:1px solid #8f7229;padding:14px 18px;line-height:1.55}.university-development-status .inner{max-width:1180px;margin:auto;display:flex;gap:14px;align-items:flex-start}.university-development-status .label{background:#f3c95a;color:#241b05;border-radius:999px;padding:5px 10px;font-weight:900;font-size:.82rem;white-space:nowrap}.university-development-status p{margin:2px 0;color:#f2ead7;font-size:.9rem}.university-development-status small{display:block;margin-top:4px;color:#d9cda9}.academic-summary.is-pending{border:1px dashed #c79d3d;background:#fff9e8;padding:10px;border-radius:12px}@media(max-width:640px){.university-development-status .inner{display:block}.university-development-status .label{display:inline-block;margin-bottom:8px}}';document.head.appendChild(style);const b=document.createElement('section');b.id='university-db-development-status';b.className='university-development-status';b.innerHTML='<div class="inner"><span class="label">現在 開発・更新中</span><div><strong>東京都・埼玉県・神奈川県・千葉県の大学の基本情報を優先して再点検しています。</strong><p>学部・学科、所在地、Google Mapsの大学別表示を優先更新中です。未同期の項目は「更新中」と表示します。</p></div></div>';const main=document.querySelector('main'),hero=document.querySelector('.tokyo-hero');if(main&&hero)main.insertBefore(b,hero)}
 function updateAcademicStatus(source){const covered=state.rows.filter(r=>(state.faculties.get(r.id)||[]).length||(state.graduateSchools.get(r.id)||[]).length).length,s=document.querySelector('#academic-sync-status');if(s&&state.rows.length)s.textContent=`教育組織データ ${covered}/${state.rows.length}校を読込（${source==='merged'?'集約＋検証済みスナップショット':'検証済みスナップショット'}）・内容は継続更新中`}
 
 let scrollRestored=false;

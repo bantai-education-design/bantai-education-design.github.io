@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000226",
+  "id": "u000226",
+  "name": "千葉経済大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "学校法人千葉経済学園",
+  "feature_summary": "千葉市に本部を置き、経済学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.cku.ac.jp/",
+  "admissions_url": "https://www.cku.ac.jp/admission/",
+  "academic_field_tags": [
+    "経済・経営・商学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400062",
+      "name": "経済学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400108",
+          "name": "経済学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400109",
+          "name": "経営学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400038",
+      "name": "経済学研究科",
+      "programs": [
+        "経済学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "263-0021",
+      "address": "千葉県千葉市稲毛区轟町3-59-5",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "千葉経済大学 公式サイト",
+      "url": "https://www.cku.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "千葉経済大学 公式入試情報",
+      "url": "https://www.cku.ac.jp/admission/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "basic_info",
+      "headquarters",
+      "official_url",
+      "admissions_url",
+      "academics",
+      "campuses"
+    ]
+  }
+}

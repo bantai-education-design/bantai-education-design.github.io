@@ -99,10 +99,10 @@ jobs:
             await route.waitForURL('**/tools/university-database/tokyo/');
             await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=24,{timeout:25000});
             const countText=await route.locator('#tokyo-result-count').innerText();
-            assert.ok(countText.includes('209'),`University database result count must show 209 published universities: ${countText}`);
+            assert.ok(countText.includes('237'),`University database result count must show 237 published universities: ${countText}`);
             await route.locator('#show-all-btn').click();
-            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=209,{timeout:25000});
-            assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=209,'University database must remain reachable with all 209 published cards');
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=237,{timeout:25000});
+            assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=237,'University database must remain reachable with all 237 published cards');
             await route.close();
 
             await browser.close();

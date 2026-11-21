@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-21",
+  "source": "文部科学省 令和7年度全国大学一覧・各大学公式サイト",
+  "prefecture": "千葉県",
+  "universities": 28,
+  "type_counts": {
+    "national": 1,
+    "public": 1,
+    "private": 26
+  },
+  "faculties": 87,
+  "departments": 146,
+  "graduate_schools": 51,
+  "official_urls": 28,
+  "admissions_urls": 28,
+  "core_shards": [
+    {
+      "file": "chiba_core_01.json",
+      "count": 28,
+      "first_id": "u000210",
+      "last_id": "u000237"
+    }
+  ],
+  "scope_note": "文部科学省 令和7年度全国大学一覧および各大学公式サイトに基づき、千葉県に本部を置く全28大学（国立1・公立1・私立26、放送大学含む）の大学名・設置区分・郵便番号・本部所在地・設置者・公式URL・公式入試URL・募集継続中の学部/学科/研究科/専攻・全42キャンパス所在地・詳細プロフィール（Schema v1.0）を一次資料で確認して収録。川村学園女子大学は2026年8月28日付公式発表に基づき募集停止扱い。未調査の在学生数・学費・最寄り駅・取得可能資格・写真は推測補完を行わず未調査として管理し、一次資料確認後に順次拡充する。",
+  "campus_records": 28,
+  "campus_items": 42,
+  "complete_profiles": 28
+}
