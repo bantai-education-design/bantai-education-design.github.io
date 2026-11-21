@@ -1,0 +1,20 @@
+name: サイトマップ自動登録の安全検査
+on:
+  pull_request:
+    paths:
+      - 'scripts/update_sitemap_for_new_pages.py'
+      - 'tests/test_sitemap_auto.py'
+      - 'sitemap.xml'
+      - '.github/workflows/auto-sitemap.yml'
+      - '.github/workflows/sitemap-guard.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python syntax check
+        run: python3 -m py_compile scripts/update_sitemap_for_new_pages.py tests/test_sitemap_auto.py
+      - name: Test sitemap preservation and new URLs
+        run: python3 -m unittest discover -s tests -p 'test_sitemap_auto.py' -v
