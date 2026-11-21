@@ -72,10 +72,12 @@ def link_attrs(url: str) -> str:
 
 
 def free_action(product: dict) -> tuple[str, str] | None:
-    """無料の入り口。公式HPに実物（ZIP・ページ）があるときだけ出す。
-    BOOTHやVectorのページを「無料で試す」の代わりにしない。"""
-    if product.get("trialDownloadUrl"):
-        return "10日間無料で試す", product["trialDownloadUrl"]
+    """無料の入り口。試用版・モニター版・無料ツールが実際に手に入る場所へ案内する。
+    trialDownloadUrl（公式HPのZIP）を優先し、なければ trialUrl（BOOTHの0円体験版やVectorなど、確認済みの配布先）。
+    購入ページを試用の代わりにはしない（trialUrl はデータで明示したものだけを使う）。"""
+    trial = product.get("trialDownloadUrl") or product.get("trialUrl")
+    if trial:
+        return "10日間無料で試す", trial
     if product.get("status") == "無料ツール":
         url = product.get("webUrl") or product.get("downloadUrl")
         if url:
@@ -86,10 +88,9 @@ def free_action(product: dict) -> tuple[str, str] | None:
 
 
 def purchase_action(product: dict) -> tuple[str, str] | None:
-    """購入先。アプリはBOOTHに一本化。製品版が公開準備中のものは「見る」にする。書籍はAmazon。"""
-    if product.get("boothUrl"):
-        label = "BOOTHで製品版を見る" if product.get("status") == "公開準備中" else "BOOTHで購入する"
-        return label, product["boothUrl"]
+    """購入先。BOOTHの商品が見つからないもの（boothActive が false）は出さない。書籍はAmazon。"""
+    if product.get("boothUrl") and product.get("boothActive", True):
+        return "BOOTHで購入する", product["boothUrl"]
     if product.get("amazonUrl"):
         return "Amazonで購入する", product["amazonUrl"]
     return None
