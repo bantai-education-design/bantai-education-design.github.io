@@ -1,5 +1,25 @@
 [
   {
+    "id": "column-class-canvas-detailed-guide",
+    "slug": "class-canvas-detailed-guide",
+    "title": "一人ひとりの顔が浮かぶ席替えを｜学級経営支援システム「みんなのクラス・キャンバス」詳細解説",
+    "category": "現場の工夫",
+    "categorySlug": "practice",
+    "date": "2026.11.21",
+    "excerpt": "席替えと班決めで放課後をすり減らさない。視力配慮・人間関係・班編成・教室投影・完全オフライン設計まで、先生の繊細な判断をやさしく支える学級経営支援システム「みんなのクラス・キャンバス」の設計思想と全機能を詳しく解説します。",
+    "thumbnail": "/assets/images/columns/class-canvas-detailed-guide/thumbnail.webp",
+    "readTime": "約12分",
+    "tags": [
+      "学級経営",
+      "席替え",
+      "小学校",
+      "中学校",
+      "教員の働き方改革",
+      "ICT教育"
+    ],
+    "url": "/columns/class-canvas-detailed-guide/"
+  },
+  {
     "id": "column-parent-teacher-conference",
     "slug": "parent-teacher-conference",
     "title": "個人面談、こんな言い方をしていませんか？",
