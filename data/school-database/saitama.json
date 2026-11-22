@@ -354,7 +354,15 @@
     "website": "https://ohmiyakoryo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001155",
@@ -388,7 +396,15 @@
     "website": "https://om-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0009",
@@ -898,7 +914,21 @@
     "website": "https://ohmiyachuo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111220000039",
@@ -1425,7 +1455,15 @@
     "website": "https://ohmiya-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0008",
@@ -1986,7 +2024,27 @@
     "website": "https://omiyasyogyo-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001057",
@@ -2003,7 +2061,16 @@
     "website": "https://oh-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県",
+        "presentation": "R7.12.5"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0010",
@@ -2343,7 +2410,27 @@
     "website": "https://izumi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "高等学校における通級による指導の研究",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000389",
@@ -2751,7 +2838,21 @@
     "website": "https://tokiwa-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "看護",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000311",
@@ -3312,7 +3413,27 @@
     "website": "https://urawa-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000058",
@@ -3329,7 +3450,51 @@
     "website": "https://urawaichijo-h.spec.ed.jp/ichijo/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000254",
@@ -3346,7 +3511,27 @@
     "website": "https://urawanishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "地理歴史",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111220000011",
@@ -3958,7 +4143,27 @@
     "website": "https://urawa-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111220000048",
@@ -5233,7 +5438,21 @@
     "website": "https://iwatsuki-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000352",
@@ -5250,7 +5469,27 @@
     "website": "https://iwatsuki-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0011",
@@ -5760,7 +5999,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111220100158",
@@ -6321,7 +6568,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111220100165",
@@ -6338,7 +6593,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "数学",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "C111220100076",
@@ -6440,7 +6703,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111220100174",
@@ -6559,7 +6830,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111220100058",
@@ -6661,7 +6940,15 @@
     "website": "https://kawagoe-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000094",
@@ -6678,7 +6965,33 @@
     "website": "https://kawagoe-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111220000020",
@@ -6712,7 +7025,27 @@
     "website": "https://kawagoejoshi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "地理歴史",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000101",
@@ -6729,7 +7062,27 @@
     "website": "https://kawagoesogo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001002",
@@ -6746,7 +7099,15 @@
     "website": "https://kawagoenishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001235",
@@ -6763,7 +7124,27 @@
     "website": "https://kawagoehatsukari-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "地理歴史",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "高等学校における通級による指導の研究",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000806",
@@ -6780,7 +7161,15 @@
     "website": "https://kawagoeminami-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0025",
@@ -7494,7 +7883,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生活",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111220200255",
@@ -7919,7 +8316,27 @@
     "website": "https://kumagaya-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000423",
@@ -7953,7 +8370,15 @@
     "website": "https://kumagaya-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000076",
@@ -7970,7 +8395,21 @@
     "website": "https://kumajo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000815",
@@ -7987,7 +8426,15 @@
     "website": "https://kumanishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "D111210000067",
@@ -8004,7 +8451,33 @@
     "website": "https://kumanou-ah.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "収益力のある農業を学ぶ担い手育成プログラム推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001039",
@@ -8021,7 +8494,21 @@
     "website": "https://menuma-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000053",
@@ -8038,7 +8525,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "A111220300014",
@@ -8667,7 +9168,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "算数",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111220300352",
@@ -8871,7 +9380,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111220300511",
@@ -10044,7 +10561,21 @@
     "website": "https://kawaguchikita-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000263",
@@ -10061,7 +10592,27 @@
     "website": "https://kawaguchi-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111220000057",
@@ -10095,7 +10646,15 @@
     "website": "https://kawaguchiseiryo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000931",
@@ -10112,7 +10671,15 @@
     "website": "https://kawaguchihigashi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001379",
@@ -10129,7 +10696,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000133",
@@ -10622,7 +11197,15 @@
     "website": "https://shinsyukan-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000151",
@@ -11013,7 +11596,27 @@
     "website": "https://chichibu-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "ICTを活用した遠隔教育導入・展開実証事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000138",
@@ -11030,7 +11633,27 @@
     "website": "https://chichibunoko-bh.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000179",
@@ -12237,7 +12860,21 @@
     "website": "https://tokorozawa-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000753",
@@ -12254,7 +12891,27 @@
     "website": "https://tokokita-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000600",
@@ -12271,7 +12928,15 @@
     "website": "https://tokorozawa-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001093",
@@ -12305,7 +12970,15 @@
     "website": "https://tokonishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_中_0034",
@@ -12679,7 +13352,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111220900032",
@@ -12713,7 +13394,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "技術・家庭技術分野",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "C111220900041",
@@ -12730,7 +13419,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111220900069",
@@ -12815,7 +13512,33 @@
     "website": "https://hanno-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0031",
@@ -13580,7 +14303,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111221000066",
@@ -13665,7 +14396,45 @@
     "website": "https://fudooka-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "ICTを活用した遠隔教育導入・展開実証事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0048",
@@ -13835,7 +14604,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221100067",
@@ -13852,7 +14629,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221100138",
@@ -13886,7 +14671,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221100085",
@@ -14022,7 +14815,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111221100029",
@@ -14124,7 +14925,33 @@
     "website": "https://kodama-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000147",
@@ -14141,7 +14968,33 @@
     "website": "https://honjo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0045",
@@ -14464,7 +15317,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221200066",
@@ -14634,7 +15495,21 @@
     "website": "https://matsuyama-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000307",
@@ -14651,7 +15526,21 @@
     "website": "https://matsujo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0041",
@@ -15127,7 +16016,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221400171",
@@ -15144,7 +16041,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "体力課題解決研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221400135",
@@ -15212,7 +16117,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "体力課題解決研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221400082",
@@ -15552,7 +16465,45 @@
     "website": "https://kasukabe-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000548",
@@ -15569,7 +16520,21 @@
     "website": "https://kasukabe-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000218",
@@ -15586,7 +16551,27 @@
     "website": "https://kasujo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000904",
@@ -15603,7 +16588,15 @@
     "website": "https://kasukabehigashi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001128",
@@ -15620,7 +16613,15 @@
     "website": "https://showa-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0050",
@@ -15892,7 +16893,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221500045",
@@ -16062,7 +17071,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221500063",
@@ -16266,7 +17283,15 @@
     "website": "https://sayamakeizai-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000487",
@@ -16283,7 +17308,21 @@
     "website": "https://sayama-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001164",
@@ -16300,7 +17339,15 @@
     "website": "https://sayamaseiryo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000557",
@@ -16317,7 +17364,27 @@
     "website": "https://sr-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0033",
@@ -16368,7 +17435,22 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究指定校",
+        "authority": "埼玉県",
+        "presentation": "成果報告会R8.3予定"
+      }
+    ]
   },
   {
     "id": "E111230000492",
@@ -16572,7 +17654,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上研究校指定事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111221600115",
@@ -16657,7 +17747,21 @@
     "website": "https://fukushi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001397",
@@ -16674,7 +17778,27 @@
     "website": "https://hanyu-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000290",
@@ -16691,7 +17815,15 @@
     "website": "https://hajitsu-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000888",
@@ -16708,7 +17840,15 @@
     "website": "https://hanyu1-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "地理歴史",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "E111230000320",
@@ -17218,7 +18358,15 @@
     "website": "https://konosu-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000566",
@@ -17235,7 +18383,21 @@
     "website": "https://koujo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "家庭",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001084",
@@ -17252,7 +18414,33 @@
     "website": "https://shuo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "地理歴史",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "A111221800106",
@@ -17677,7 +18865,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111221800013",
@@ -17898,7 +19094,15 @@
     "website": "https://fukasyo-ch.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000325",
@@ -17915,7 +19119,15 @@
     "website": "https://fukaya1-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0047",
@@ -18289,7 +19501,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県",
+        "presentation": "R7.11.19"
+      }
+    ]
   },
   {
     "id": "B111221900050",
@@ -18493,7 +19714,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "図画工作",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111221900069",
@@ -18527,7 +19756,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "図画工作",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111221900103",
@@ -18748,7 +19985,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県",
+        "presentation": "R7.11.28"
+      }
+    ]
   },
   {
     "id": "C111221900049",
@@ -18833,7 +20079,15 @@
     "website": "https://ageo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000977",
@@ -18850,7 +20104,21 @@
     "website": "https://takanodai-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001217",
@@ -18867,7 +20135,27 @@
     "website": "https://ageotachibana-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "高等学校における通級による指導の研究",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000897",
@@ -18952,7 +20240,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0256",
@@ -19292,7 +20594,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222100127",
@@ -19462,7 +20772,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222100154",
@@ -19700,7 +21018,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111222100116",
@@ -19768,7 +21094,21 @@
     "website": "https://soka-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001262",
@@ -19785,7 +21125,15 @@
     "website": "https://sokanishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001100",
@@ -19819,7 +21167,21 @@
     "website": "https://sonanko-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000366",
@@ -20159,7 +21521,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222200028",
@@ -20329,7 +21699,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "社会",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111222200180",
@@ -20414,7 +21792,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222200304",
@@ -20669,7 +22055,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111222200124",
@@ -20924,7 +22318,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000593",
@@ -20941,7 +22349,33 @@
     "website": "https://koshigayakita-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール事業(SSH)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "公民",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "オンライン連携講座事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001342",
@@ -20958,7 +22392,15 @@
     "website": "https://ksg-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001048",
@@ -20992,7 +22434,15 @@
     "website": "https://koshigayahigashi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000780",
@@ -21009,7 +22459,21 @@
     "website": "https://koshigayaminami-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0053",
@@ -21213,7 +22677,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222300027",
@@ -21672,7 +23144,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "外国語活動・外国語",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111222400106",
@@ -21723,7 +23203,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "図画工作",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "C111222400042",
@@ -21740,7 +23228,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111222400060",
@@ -21842,7 +23338,33 @@
     "website": "https://shoyo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001066",
@@ -21859,7 +23381,33 @@
     "website": "https://nanryo-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000419",
@@ -22267,7 +23815,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222500043",
@@ -22420,7 +23976,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111222500069",
@@ -22777,7 +24341,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111222700103",
@@ -22896,7 +24468,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111222700058",
@@ -22981,7 +24561,27 @@
     "website": "https://asaka-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000986",
@@ -22998,7 +24598,15 @@
     "website": "https://asakanishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0307",
@@ -23355,7 +24963,15 @@
     "website": "https://shiki-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0014",
@@ -23559,7 +25175,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "国語",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111222900021",
@@ -23661,7 +25285,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001351",
@@ -23678,7 +25310,27 @@
     "website": "https://wakoku-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000071",
@@ -24035,7 +25687,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "家庭",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111223000046",
@@ -24188,7 +25848,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223000035",
@@ -24222,7 +25890,22 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県",
+        "presentation": "R8.1.16"
+      }
+    ]
   },
   {
     "id": "C111223000044",
@@ -24239,7 +25922,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223000062",
@@ -24324,7 +26015,27 @@
     "website": "https://niiza-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "高等学校における通級による指導の研究",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001226",
@@ -24341,7 +26052,21 @@
     "website": "https://nsg-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000995",
@@ -24358,7 +26083,34 @@
     "website": "https://niizayanase-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "道徳",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "ICTを活用した遠隔教育導入・展開実証事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県",
+        "presentation": "R7.11.26"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0015",
@@ -24579,7 +26331,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223100016",
@@ -24681,7 +26441,33 @@
     "website": "https://okenishi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "A111223200028",
@@ -24953,7 +26739,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111223200188",
@@ -25310,7 +27104,27 @@
     "website": "https://kuki-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000520",
@@ -25327,7 +27141,15 @@
     "website": "https://kuki-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001360",
@@ -25361,7 +27183,21 @@
     "website": "https://kurihashihokusai-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000968",
@@ -25378,7 +27214,15 @@
     "website": "https://washinomiya-h.spec.ed.jp",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000259",
@@ -25616,7 +27460,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "埼玉県英語指導方法改善事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223300014",
@@ -25633,7 +27485,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "埼玉県英語指導方法改善事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223300032",
@@ -25667,7 +27527,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上研究校指定事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223300041",
@@ -25701,7 +27569,27 @@
     "website": "https://kitamoto-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000464",
@@ -25854,7 +27742,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223400060",
@@ -26228,7 +28124,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "特別活動",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "B111223500112",
@@ -26466,7 +28370,15 @@
     "website": "https://fujimi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111240000025",
@@ -26653,7 +28565,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "体力課題解決研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223700094",
@@ -26687,7 +28607,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223700058",
@@ -26721,7 +28649,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "体力課題解決研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223700085",
@@ -26993,7 +28929,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111223700065",
@@ -27061,7 +29005,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "数学",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000824",
@@ -27078,7 +29036,21 @@
     "website": "https://misato-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001119",
@@ -27095,7 +29067,21 @@
     "website": "https://misatokita-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001315",
@@ -27112,7 +29098,21 @@
     "website": "https://misato-th.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000197",
@@ -27129,7 +29129,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "教育課程の未来デザイン研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000536",
@@ -27282,7 +29296,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223800020",
@@ -27418,7 +29440,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県",
+        "presentation": "R7.11.25"
+      }
+    ]
   },
   {
     "id": "C111223800028",
@@ -27452,7 +29483,27 @@
     "website": "https://hasudashouin-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000044",
@@ -27673,7 +29724,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223900010",
@@ -27775,7 +29834,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111223900109",
@@ -27945,7 +30012,27 @@
     "website": "https://sakado-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001020",
@@ -27962,7 +30049,15 @@
     "website": "https://sw-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0037",
@@ -28115,7 +30210,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県",
+        "presentation": "R7.11.11"
+      }
+    ]
   },
   {
     "id": "B111224000017",
@@ -28217,7 +30321,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県",
+        "presentation": "R7.11.11"
+      }
+    ]
   },
   {
     "id": "C111224000033",
@@ -28268,7 +30381,27 @@
     "website": "https://sattesakura-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0372",
@@ -28387,7 +30520,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111224100025",
@@ -28506,7 +30647,21 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "メンタルヘルス研究推進校",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111224100032",
@@ -28540,7 +30695,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210001173",
@@ -28557,7 +30720,27 @@
     "website": "https://tseifu-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0373",
@@ -28744,7 +30927,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "体力課題解決研究指定校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "D111210000762",
@@ -28761,7 +30952,27 @@
     "website": "https://hidaka-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000080",
@@ -29084,7 +31295,27 @@
     "website": "https://yoshikawaminami-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0384",
@@ -29543,7 +31774,21 @@
     "website": "https://fujimino-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0389",
@@ -29781,7 +32026,15 @@
     "website": "https://shiraoka-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000509",
@@ -29951,7 +32204,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "総合的な学習の時間",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "C111230100020",
@@ -30019,7 +32280,21 @@
     "website": "https://inagakuen.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "埼玉と世界をつなぐハイブリッド型国際交流事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "文化部活動指導員活用事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0018",
@@ -30189,7 +32464,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "埼玉県英語指導方法改善事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111232400032",
@@ -30223,7 +32506,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "埼玉県英語指導方法改善事業",
+        "authority": "埼玉県",
+        "presentation": "合同開催R7.10.22"
+      }
+    ]
   },
   {
     "id": "C111232400023",
@@ -30325,7 +32617,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上プロジェクト教員加配校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111232600014",
@@ -30648,7 +32948,21 @@
     "website": "https://nameso-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多言語コミュニケーション能力強化事業(県立高校グローバル教育総合推進事業)",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "A111234200025",
@@ -30733,7 +33047,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上研究校指定事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111234200021",
@@ -30954,7 +33276,33 @@
     "website": "https://ogawa-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111234600029",
@@ -30988,7 +33336,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111234600010",
@@ -31022,7 +33378,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県",
+        "presentation": "R7.11.18"
+      }
+    ]
   },
   {
     "id": "C111234600027",
@@ -31464,7 +33829,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111236200019",
@@ -31481,7 +33854,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和6〜7",
+        "subject": "",
+        "designation": "学力向上研究校指定事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "C111236200017",
@@ -31498,7 +33879,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和5〜7",
+        "subject": "",
+        "designation": "SDGsの実現に向けた教育推進事業",
+        "authority": "埼玉県",
+        "presentation": "R7.11.19"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0402",
@@ -31600,7 +33990,27 @@
     "website": "https://ogano-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "ICTを活用した遠隔教育導入・展開実証事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "高等学校における通級による指導の研究",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "B111236900012",
@@ -31940,7 +34350,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "道徳教育研究推進モデル校",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0405",
@@ -32076,7 +34494,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "総合的な学習の時間",
+        "designation": "実践検証協力校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "C111240800013",
@@ -32331,7 +34757,21 @@
     "website": "https://miyashiro-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000446",
@@ -32620,7 +35060,33 @@
     "website": "https://sugito-ah.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "収益力のある農業を学ぶ担い手育成プログラム推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "多文化共生推進事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "未来の職業人材育成事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0056",
@@ -32773,7 +35239,21 @@
     "website": "https://matsubushi-h.spec.ed.jp/",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "学習サポーターの配置",
+        "authority": "埼玉県"
+      },
+      {
+        "year": "令和7",
+        "subject": "",
+        "designation": "就職支援アドバイザー派遣事業",
+        "authority": "埼玉県"
+      }
+    ]
   },
   {
     "id": "E111230000428",
