@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortSelect = document.getElementById('sort-order');
   const typeCheckboxes = document.querySelectorAll('.type-checkbox');
   const estCheckboxes = document.querySelectorAll('.est-checkbox');
+  const researchOnlyCheckbox = document.getElementById('research-only');
+  const researchAuthoritySelect = document.getElementById('research-authority');
   const resultsContainer = document.getElementById('results-list');
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
@@ -145,6 +147,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  if (researchOnlyCheckbox) {
+    researchOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'research_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (researchAuthoritySelect) {
+    researchAuthoritySelect.addEventListener('change', () => {
+      if (researchAuthoritySelect.value && researchOnlyCheckbox && !researchOnlyCheckbox.checked) {
+        researchOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'research_authority',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
   honorificRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
       selectedHonorific = e.target.value;
@@ -218,20 +243,34 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(cb => cb.checked)
       .map(cb => cb.value);
 
+    const researchOnly = researchOnlyCheckbox ? researchOnlyCheckbox.checked : false;
+    const selectedAuthority = researchAuthoritySelect ? researchAuthoritySelect.value : '';
+
     const filtered = schoolData.filter(school => {
+      const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
+      const matchesResearchKeyword = keyword && designations.some(d =>
+        (d.subject && d.subject.toLowerCase().includes(keyword)) ||
+        (d.designation && d.designation.toLowerCase().includes(keyword)) ||
+        (d.year && d.year.toLowerCase().includes(keyword)) ||
+        (d.authority && d.authority.toLowerCase().includes(keyword))
+      );
+
       const matchesKeyword = !keyword ||
         school.school_name.toLowerCase().includes(keyword) ||
         (school.school_name_kana && school.school_name_kana.toLowerCase().includes(keyword)) ||
         (school.municipality && school.municipality.toLowerCase().includes(keyword)) ||
         (school.postal_code && school.postal_code.includes(keyword)) ||
         (school.address && school.address.toLowerCase().includes(keyword)) ||
-        (school.phone && school.phone.includes(keyword));
+        (school.phone && school.phone.includes(keyword)) ||
+        matchesResearchKeyword;
 
       const matchesCity = !selectedCity || school.municipality === selectedCity;
       const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
       const matchesEst = checkedEsts.length === 0 || checkedEsts.includes(school.establishment_type);
+      const matchesResearch = (!researchOnly || designations.length > 0) &&
+        (!selectedAuthority || designations.some(d => d.authority === selectedAuthority));
 
-      return matchesKeyword && matchesCity && matchesType && matchesEst;
+      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch;
     });
 
     const sortedResults = applySorting(filtered, sortMode);
@@ -271,12 +310,52 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
+      const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
+      const researchBadgeHtml = designations.length > 0
+        ? '<span class="school-badge-research">研究指定校</span>'
+        : '';
+
+      let researchListHtml = '';
+      if (designations.length > 0) {
+        const itemsHtml = designations.map(d => {
+          const authClass = d.authority === '文部科学省'
+            ? 'research-authority-tag--mext'
+            : d.authority === '東京都'
+              ? 'research-authority-tag--pref'
+              : 'research-authority-tag--muni';
+          const yearLabel = formatResearchYear(d.year);
+          const subjectHtml = d.subject
+            ? `<span class="research-subject">${escapeHtml(d.subject)}</span>`
+            : '';
+          const desigHtml = d.designation
+            ? `<span class="research-designation">${d.subject ? `（${escapeHtml(d.designation)}）` : escapeHtml(d.designation)}</span>`
+            : '';
+          const presHtml = d.presentation
+            ? `<span class="research-presentation">発表予定: ${escapeHtml(d.presentation)}</span>`
+            : '';
+          return `
+            <div class="school-research-item">
+              <span class="research-authority-tag ${authClass}">${escapeHtml(d.authority || '')}</span>
+              ${yearLabel ? `<span class="research-year">${escapeHtml(yearLabel)}</span>` : ''}
+              ${subjectHtml}${desigHtml}${presHtml}
+            </div>
+          `;
+        }).join('');
+        researchListHtml = `
+          <div class="school-research-list">
+            <div class="school-research-heading">研究指定・推進校（令和8年度一覧）</div>
+            ${itemsHtml}
+          </div>
+        `;
+      }
+
       card.innerHTML = `
         <div class="school-info">
           <div class="school-badges">
             <span class="${estBadgeClass}">${school.establishment_type}</span>
             <span class="school-badge-type">${school.school_type}</span>
             ${school.municipality ? `<span class="school-badge-city">${school.municipality}</span>` : ''}
+            ${researchBadgeHtml}
           </div>
           <h3 class="school-name">${escapeHtml(school.school_name)}</h3>
           <div class="school-address-row">
@@ -284,6 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="addr">${escapeHtml(school.address)}</span>
           </div>
           <div class="school-tel-row">TEL: ${school.phone ? escapeHtml(school.phone) : 'なし'}</div>
+          ${researchListHtml}
         </div>
         <div class="school-actions">
           <div class="action-buttons-group">
@@ -466,6 +546,16 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
+  }
+
+  function formatResearchYear(year) {
+    if (!year) return '';
+    const trimmed = String(year).trim();
+    if (!trimmed) return '';
+    if (trimmed.endsWith('年度') || trimmed.endsWith('年') || trimmed.endsWith('〜') || trimmed.endsWith('～')) {
+      return trimmed;
+    }
+    return `${trimmed}年度`;
   }
 
   function escapeHtml(str) {

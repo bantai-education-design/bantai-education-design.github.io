@@ -1792,3 +1792,100 @@ h3.region-header {
     height: 16px;
   }
 }
+
+/* 研究指定校フィルター・表示エリア */
+.research-filter-group {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(7, 27, 54, 0.1);
+}
+
+.filter-chip--research {
+  border-color: rgba(197, 160, 89, 0.45);
+  background: #fffdf5;
+}
+
+.school-badge-research {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #fdf6e3;
+  color: #8a6410;
+  border: 1px solid rgba(197, 160, 89, 0.55);
+}
+
+.school-research-list {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #faf8f2;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-left: 3px solid var(--gold, #c5a059);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.school-research-heading {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--navy, #0c1b33);
+  letter-spacing: 0.02em;
+}
+
+.school-research-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink, #2d3748);
+}
+
+.research-authority-tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.research-authority-tag--mext {
+  background: #0c1b33;
+  color: #fff;
+}
+
+.research-authority-tag--pref {
+  background: #2b4c7e;
+  color: #fff;
+}
+
+.research-authority-tag--muni {
+  background: #e9eef5;
+  color: #1f365c;
+}
+
+.research-year {
+  font-weight: 700;
+  color: #7c590a;
+  white-space: nowrap;
+}
+
+.research-subject {
+  font-weight: 700;
+  color: var(--navy, #0c1b33);
+}
+
+.research-designation {
+  color: #4a5568;
+}
+
+.research-presentation {
+  font-size: 0.74rem;
+  color: #718096;
+}
