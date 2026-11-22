@@ -1631,7 +1631,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-福島市-福島明成高等学校",
@@ -1650,7 +1658,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-福島市-福島東稜高等学校",
@@ -1688,7 +1704,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-福島市-福島西高等学校",
@@ -2657,7 +2681,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-伊達市-伊達市立伊達中学校",
@@ -2752,7 +2784,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-伊達市-伊達市立霊山中学校",
@@ -5412,7 +5452,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-郡山市-あさか開成高等学校",
@@ -5469,7 +5517,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-郡山市-尚志高等学校",
@@ -5583,7 +5639,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-郡山市-郡山商業高等学校",
@@ -5621,7 +5685,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-郡山市-郡山東高等学校",
@@ -5659,7 +5731,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-郡山市-郡山高等学校",
@@ -5678,7 +5758,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-郡山市-あぶくま支援学校",
@@ -5735,7 +5823,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-郡山市-須賀川支援学校郡山校",
@@ -6324,7 +6420,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-須賀川市-須賀川支援学校",
@@ -6894,7 +6998,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-石川郡石川町-石川高等学校",
@@ -7863,7 +7975,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-幼稚園-西白河郡西郷村-学校法人西郷幼稚園",
@@ -9250,7 +9370,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜12",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-会津若松市-若松商業高等学校",
@@ -9288,7 +9416,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-会津若松市-会津支援学校",
@@ -11397,7 +11533,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-幼稚園-南相馬市-原町みなみこども園",
@@ -11796,7 +11940,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-南相馬市-相馬農業高等学校",
@@ -12005,7 +12157,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-双葉郡楢葉町-楢葉町立楢葉小学校",
@@ -12879,7 +13039,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-いわき市-いわき市立勿来第三小学校",
@@ -14665,7 +14833,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-いわき市-いわき商業情報高等学校四倉校舎",
@@ -14741,7 +14917,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-いわき市-いわき総合高等学校好間校舎",
@@ -14874,7 +15058,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-いわき市-東日本国際大学附属昌平高等学校",
@@ -14893,7 +15085,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-いわき市-東日本国際大学附属昌平高等学校-2",
@@ -14912,7 +15112,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-いわき市-磐城桜が丘高等学校",
@@ -15007,7 +15215,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-いわき市-いわき支援学校",

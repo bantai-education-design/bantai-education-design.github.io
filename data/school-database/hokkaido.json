@@ -301,7 +301,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-ニセコ町-ニセコ町立ニセコ中学校",
@@ -2125,7 +2133,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-倶知安町-倶知安町立倶知安中学校",
@@ -4291,7 +4307,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-函館市-北海道立函館商業高等学校",
@@ -6628,7 +6652,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-北見市-北海道立北見工業高等学校",
@@ -6685,7 +6717,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      },
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-北見市-北海道立常呂高等学校",
@@ -6723,7 +6769,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-北見市端野町三区-北見市端野町三区立端野中学校",
@@ -9668,7 +9722,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-室蘭市-北海道立室蘭清水丘高等学校",
@@ -9991,7 +10053,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-寿都町-寿都町立寿都中学校",
@@ -10979,7 +11049,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-小樽市-北照高等学校",
@@ -11663,7 +11741,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/tkk/yoran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-岩見沢市-北海道立岩見沢農業高等学校",
@@ -12955,7 +13041,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-帯広市-北海道立帯広緑陽高等学校",
@@ -13487,7 +13581,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-平取町-平取町立平取中学校",
@@ -13734,7 +13836,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-弟子屈町-弟子屈町立川湯中学校",
@@ -14285,7 +14395,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-新ひだか町-新ひだか町立三石中学校",
@@ -15387,7 +15505,15 @@
     "source_url": "https://www.hokkyodai.ac.jp/attached/school_list/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-旭川市-旭川市立共栄小学校",
@@ -17059,7 +17185,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-旭川市-北海道立旭川永嶺高等学校",
@@ -17154,7 +17288,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-旭川市-旭川明成高等学校",
@@ -17173,7 +17315,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-旭川市-旭川藤星高等学校",
@@ -17743,7 +17893,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立二条小学校",
@@ -17895,7 +18053,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立幌西小学校",
@@ -18408,7 +18574,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市北区-札幌市立あいの里東中学校",
@@ -19567,7 +19741,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市北区-北海道立札幌北陵高等学校",
@@ -20574,7 +20756,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市南区-東海大学付属札幌高等学校",
@@ -21201,7 +21391,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市手稲区-札幌市立前田中学校",
@@ -21847,7 +22045,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市手稲区-北海道立札幌あすかぜ高等学校",
@@ -22170,7 +22376,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中等教育学校-札幌市東区-札幌市立札幌開成中等教育学校",
@@ -22322,7 +22536,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市東区-札幌市立北園小学校",
@@ -22664,7 +22886,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市東区-札幌市立苗穂小学校",
@@ -22930,7 +23160,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市東区-札幌大谷高等学校",
@@ -25058,7 +25296,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市西区-北海道立札幌西陵高等学校",
@@ -25096,7 +25342,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市豊平区-札幌市立あやめ野中学校",
@@ -26179,7 +26433,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-枝幸町-枝幸町立枝幸中学校",
@@ -26920,7 +27182,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-様似町-様似町立様似中学校",
@@ -27338,7 +27608,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-歌志内市-歌志内市立歌志内学園小学校",
@@ -28003,7 +28281,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-江別市-立命館慶祥高等学校",
@@ -28098,7 +28384,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-池田町-池田町立池田中学校",
@@ -28174,7 +28468,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-沼田町-沼田町立沼田中学校",
@@ -28839,7 +29141,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-浦臼町-浦臼町立浦臼中学校",
@@ -28877,7 +29187,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/stk/soragatukouitiran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-深川市-深川市立一已中学校",
@@ -29086,7 +29404,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-深川市-北海道立深川東高等学校",
@@ -29219,7 +29545,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-清里町-清里町立清里中学校",
@@ -30416,7 +30750,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-白糠町-白糠町立茶路中学校",
@@ -30777,7 +31119,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/oky/11_soumu/125972.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-知内町-知内町立知内高等学校",
@@ -32392,7 +32742,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-美唄市-北海道立美唄聖華高等学校",
@@ -34140,7 +34498,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-苫小牧市-北海道立苫小牧東高等学校",
@@ -34159,7 +34525,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-苫小牧市-北海道立苫小牧総合経済高等学校",
@@ -34691,7 +35065,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/tky/65283.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-豊頃町-豊頃町立大津小学校",
@@ -36667,7 +37049,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      },
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-釧路市-北海道立阿寒高等学校",
@@ -37389,7 +37785,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-鶴居村-鶴居村立鶴居中学校",
@@ -37617,7 +38021,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-鹿部町-鹿部町立鹿部中学校",

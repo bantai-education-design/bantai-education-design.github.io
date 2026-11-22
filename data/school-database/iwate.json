@@ -985,7 +985,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-久慈市-久慈市立三崎中学校",
@@ -1422,7 +1430,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-九戸村-九戸村立九戸中学校",
@@ -1764,7 +1780,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "道徳",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-八幡平市-八幡平市立松尾中学校",
@@ -1802,7 +1826,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "教科等",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-八幡平市-八幡平市立西根第一中学校",
@@ -1916,7 +1948,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "国語",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-八幡平市-八幡平市立平舘小学校",
@@ -2011,7 +2051,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "算数",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-私立-幼稚園-八幡平市-ひなぎく幼稚園",
@@ -2600,7 +2648,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/shigaku/1006747/1006748.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-北上市-岩手県立北上翔南高等学校",
@@ -2638,7 +2694,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-北上市-岩手県立黒沢尻工業高等学校",
@@ -2657,7 +2721,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-大槌町-大槌町立吉里吉里中学校",
@@ -3436,7 +3508,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-奥州市-奥州市立若柳小学校",
@@ -3645,7 +3725,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-宮古市-宮古市立宮古西中学校",
@@ -4177,7 +4265,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-宮古市-岩手県立宮古水産高等学校",
@@ -4329,7 +4425,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "全教科",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-岩手町-岩手町立一方井小学校",
@@ -4386,7 +4490,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "全教科",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-岩泉町-岩泉町立小川中学校",
@@ -4937,7 +5049,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "研究指定校",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-滝沢市-滝沢市立滝沢第二中学校",
@@ -5127,7 +5247,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "研究指定校",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-滝沢市-滝沢市立鵜飼小学校",
@@ -5146,7 +5274,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "研究指定校",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-私立-幼稚園-滝沢市-あさひ幼稚園",
@@ -5203,7 +5339,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-田野畑村-田野畑村立田野畑中学校",
@@ -5393,7 +5537,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "教育課程一般（学力向上）",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-盛岡市-盛岡市立北松園中学校",
@@ -5469,7 +5621,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "教育課程一般（学力向上）",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-盛岡市-盛岡市立城西中学校",
@@ -5640,7 +5800,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-盛岡市-盛岡市立見前南中学校",
@@ -5678,7 +5846,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-盛岡市-盛岡市立黒石野中学校",
@@ -5697,7 +5873,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "教育課程一般（学力向上）",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-私立-中学校-盛岡市-盛岡白百合学園中学校",
@@ -5754,7 +5938,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "国語",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立中野小学校",
@@ -5887,7 +6079,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "国語・算数",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立土淵小学校",
@@ -6267,7 +6467,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立渋民小学校",
@@ -6362,7 +6570,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立見前南小学校",
@@ -6400,7 +6616,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立都南東小学校",
@@ -6457,7 +6681,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "小中一貫教育",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立高松小学校",
@@ -6894,7 +7126,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-盛岡市-岩手県立盛岡工業高等学校",
@@ -6932,7 +7172,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-盛岡市-岩手県立盛岡第三高等学校",
@@ -6951,7 +7199,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-盛岡市-岩手県立盛岡第二高等学校",
@@ -7008,7 +7264,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/shigaku/1006747/1006748.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-私立-高等学校-盛岡市-江南義塾盛岡高等学校",
@@ -7065,7 +7329,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/shigaku/1006747/1006748.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-私立-高等学校-盛岡市-盛岡大学附属高等学校",
@@ -7103,7 +7375,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-私立-高等学校-盛岡市-盛岡白百合学園高等学校",
@@ -7122,7 +7402,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/shigaku/1006747/1006748.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-私立-高等学校-盛岡市-盛岡誠桜高等学校",
@@ -7179,7 +7467,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業実践研修会実施校",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-矢巾町-矢巾町立不動小学校",
@@ -7198,7 +7494,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業実践研修会実施校",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-矢巾町-矢巾町立徳田小学校",
@@ -7312,7 +7616,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "全教科・特別支援",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-紫波町-紫波町立紫波第三中学校",
@@ -7369,7 +7681,21 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和8〜9",
+        "subject": "サキドリ研究事業",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-紫波町-紫波町立日詰小学校",
@@ -8148,7 +8474,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-高等学校-花巻市-岩手県立花巻農業高等学校",
@@ -8167,7 +8501,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-私立-高等学校-花巻市-花巻東高等学校",
@@ -8224,7 +8566,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "全教科・特別支援",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-葛巻町-葛巻町立葛巻中学校",
@@ -8262,7 +8612,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "全教科・特別支援",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-葛巻町-葛巻町立小屋瀬小学校",
@@ -8509,7 +8867,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-遠野市-遠野市立遠野西中学校",
@@ -9516,7 +9882,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "教科一般",
+        "designation": "研究指定校等（盛岡教育事務所管内）",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-雫石町-雫石町立雫石小学校",
