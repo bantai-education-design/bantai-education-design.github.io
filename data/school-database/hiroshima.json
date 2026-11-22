@@ -858,6 +858,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -879,6 +887,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1413,7 +1429,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E7%B2%9F%E5%B1%8B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2335,7 +2359,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%91%89%E4%B8%AD%E5%A4%AE%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -3439,6 +3471,14 @@
     "verified_date": "",
     "course": [
       "通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3460,6 +3500,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3481,6 +3529,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3544,6 +3600,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -5818,6 +5882,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8449,6 +8521,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8491,6 +8571,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8594,7 +8682,15 @@
     "source_url": "https://www.hiroshima-u.ac.jp/fuzoku",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82-%E5%BA%83%E5%B3%B6%E5%A5%B3%E5%AD%A6%E9%99%A2%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1",
@@ -8657,6 +8753,14 @@
     "verified_date": "",
     "course": [
       "全日制\n\n通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8678,6 +8782,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8825,6 +8937,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8846,6 +8966,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8867,6 +9001,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8888,6 +9036,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・文理融合基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8951,6 +9107,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8972,6 +9136,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9035,6 +9207,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9056,6 +9236,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9182,6 +9370,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9203,6 +9399,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9266,6 +9470,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9760,7 +9972,15 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%BD%90%E4%BC%AF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%BE%8E%E9%88%B4%E3%81%8C%E4%B8%98%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12192,7 +12412,15 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E8%8A%B8%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%9F%A2%E9%87%8E%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12572,7 +12800,15 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%89%9B%E7%94%B0%E6%96%B0%E7%94%BA%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13123,7 +13359,15 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%8F%A3%E5%92%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13619,6 +13863,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -13640,6 +13892,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -14990,6 +15250,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -16265,6 +16533,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -16307,6 +16583,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -17691,7 +17975,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E5%A4%A7%E6%B4%A5%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -19466,6 +19758,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -19487,6 +19787,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -19739,6 +20047,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -19802,6 +20118,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
