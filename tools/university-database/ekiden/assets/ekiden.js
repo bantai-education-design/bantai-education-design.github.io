@@ -724,13 +724,102 @@
   /* ---------- 駅伝の基本 ---------- */
   const SVGNS = 'http://www.w3.org/2000/svg';
   const COLOR = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
-  const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e' };
+  const MAP_COLOR = { izumo: '#c2410c', zennihon: '#1d4ed8', hakone: '#0f766e', wzennihon: '#be185d', wfujisan: '#6d28d9' };
+  let ELEV_DATA = null;
   function loadBasics() {
-    getJson('basics.json?v=20261108-3').then((b) => {
+    Promise.all([
+      getJson('basics.json?v=20261108-3'),
+      getJson('elevation_profiles.json?v=20261122-1').catch(() => null)
+    ]).then(([b, elev]) => {
       BASICS = b;
+      ELEV_DATA = elev;
       S.basics = BASICS;
       renderBasics();
     }).catch(() => { $('#basics-guide').hidden = true; });
+  }
+
+  // 国土地理院 数値標高モデル（DEM）を輪切りにした実地形断面SVGを描画する
+  function renderDemCrossSectionSvg(legData, seriesKey, opts = {}) {
+    if (!legData || !legData.samples || !legData.samples.length) return '';
+    const W = opts.w || 340, H = opts.h || 175;
+    const padL = 38, padR = 14, padT = 24, padB = 26;
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+    const pts = legData.samples;
+    const totalKm = legData.km || pts[pts.length - 1][2] || 1;
+    const rawMax = Math.max(...pts.map((p) => p[3]));
+    // 標高スケール：平地区間でも輪切りの地層と微地形（橋・坂）が読み取れるよう最小上限を40mとし、山岳区間は実標高に合わせる
+    const ceilM = rawMax > 400 ? 900 : rawMax > 150 ? 200 : rawMax > 60 ? 80 : 40;
+    const xAt = (km) => padL + (km / totalKm) * plotW;
+    const yAt = (m) => padT + plotH - Math.min(1, Math.max(0, m / ceilM)) * plotH;
+    const baseLineY = padT + plotH;
+
+    const polyPts = pts.map((p) => `${xAt(p[2]).toFixed(1)},${yAt(p[3]).toFixed(1)}`).join(' ');
+    const areaPath = `M${xAt(pts[0][2]).toFixed(1)},${baseLineY} L` + pts.map((p) => `${xAt(p[2]).toFixed(1)},${yAt(p[3]).toFixed(1)}`).join(' L') + ` L${xAt(pts[pts.length - 1][2]).toFixed(1)},${baseLineY} Z`;
+    const subSoilPath = `M${xAt(pts[0][2]).toFixed(1)},${baseLineY} L` + pts.map((p) => `${xAt(p[2]).toFixed(1)},${Math.min(baseLineY, yAt(p[3]) + 9).toFixed(1)}`).join(' L') + ` L${xAt(pts[pts.length - 1][2]).toFixed(1)},${baseLineY} Z`;
+
+    const c = MAP_COLOR[seriesKey] || '#0f766e';
+    const uid = `dem-${seriesKey}-${legData.no}`;
+    // 標高メモリ線（3段階）
+    const steps = ceilM === 900 ? [0, 400, 800] : ceilM === 200 ? [0, 100, 200] : ceilM === 80 ? [0, 40, 80] : [0, 20, 40];
+    const gridHtml = steps.map((m) => {
+      const y = yAt(m).toFixed(1);
+      return `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="${m === 0 ? '' : '3 2'}"/>
+              <text x="${padL - 5}" y="${(Number(y) + 3.5).toFixed(1)}" font-size="9.5" font-weight="700" text-anchor="end" fill="#64748b">${m}m</text>`;
+    }).join('');
+
+    // 距離メモリ（垂線＝地形の輪切りスリット）
+    let slitsHtml = '';
+    for (let i = 4; i < pts.length - 1; i += 4) {
+      const sx = xAt(pts[i][2]).toFixed(1);
+      const sy = yAt(pts[i][3]).toFixed(1);
+      slitsHtml += `<line x1="${sx}" y1="${sy}" x2="${sx}" y2="${baseLineY}" stroke="${c}" stroke-opacity="0.16" stroke-width="1"/>`;
+    }
+
+    // 最高標高地点マーカー
+    let maxIdx = 0;
+    pts.forEach((p, i) => { if (p[3] > pts[maxIdx][3]) maxIdx = i; });
+    const mx = xAt(pts[maxIdx][2]), my = yAt(pts[maxIdx][3]);
+    const peakAnchor = mx > W - 95 ? 'end' : mx < 95 ? 'start' : 'middle';
+    const peakBadge = `<circle cx="${mx.toFixed(1)}" cy="${my.toFixed(1)}" r="4" fill="#fbbf24" stroke="${c}" stroke-width="2"/>
+      <text x="${mx.toFixed(1)}" y="${Math.max(13, my - 6).toFixed(1)}" font-size="9.5" font-weight="800" text-anchor="${peakAnchor}" fill="#92400e">最高 ${pts[maxIdx][3].toFixed(0)}m（${pts[maxIdx][2].toFixed(1)}km）</text>`;
+
+    return `<div class="dem-cross-wrap">
+      <div class="dem-metrics-bar">
+        <span>スタート <b>${pts[0][3].toFixed(0)}m</b></span>
+        <span>最高 <b>${legData.max_m.toFixed(0)}m</b></span>
+        <span>累積上り <b>+${legData.gain_m}m</b> ／ 下り <b>-${legData.drop_m}m</b></span>
+        <span>ゴール <b>${pts[pts.length - 1][3].toFixed(0)}m</b></span>
+      </div>
+      <svg class="section-profile-svg dem-profile-svg" viewBox="0 0 ${W} ${H}" data-series="${seriesKey}" data-leg="${legData.no}" role="img" aria-label="${esc(legData.no)}区の実地形断面図（最高標高${legData.max_m}m）">
+        <defs>
+          <linearGradient id="${uid}-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${c}" stop-opacity="0.52"/>
+            <stop offset="65%" stop-color="#b45309" stop-opacity="0.24"/>
+            <stop offset="100%" stop-color="#78350f" stop-opacity="0.12"/>
+          </linearGradient>
+          <pattern id="${uid}-hatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#78350f" stroke-opacity="0.14" stroke-width="1.5"/>
+          </pattern>
+        </defs>
+        ${gridHtml}
+        <!-- 地層断面（輪切りハッチング＋グラデーション） -->
+        <path d="${areaPath}" fill="url(#${uid}-fill)"/>
+        <path d="${subSoilPath}" fill="url(#${uid}-hatch)"/>
+        ${slitsHtml}
+        <!-- 地表面ライン -->
+        <polyline fill="none" stroke="${c}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="${polyPts}"/>
+        <!-- 基底岩盤ライン -->
+        <line x1="${padL}" y1="${baseLineY}" x2="${W - padR}" y2="${baseLineY}" stroke="#475569" stroke-width="2"/>
+        ${peakBadge}
+        <!-- ホバー連動カーソル -->
+        <line class="dem-hover-line" x1="0" y1="${padT}" x2="0" y2="${baseLineY}" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 2" visibility="hidden"/>
+        <circle class="dem-hover-dot" cx="0" cy="0" r="4.5" fill="#fbbf24" stroke="#111827" stroke-width="1.8" visibility="hidden"/>
+        <text x="${padL}" y="${H - 7}" font-size="10" font-weight="700" fill="#475569">0km（${esc(legData.from)}）</text>
+        <text x="${(padL + plotW / 2).toFixed(1)}" y="${H - 7}" font-size="9.5" text-anchor="middle" fill="#64748b">${(totalKm / 2).toFixed(1)}km</text>
+        <text x="${W - padR}" y="${H - 7}" font-size="10" font-weight="700" text-anchor="end" fill="#475569">${totalKm.toFixed(1)}km（${esc(legData.to)}）</text>
+      </svg>
+      <div class="dem-hover-readout" aria-live="polite">断面図にマウスを重ねると、その地点の距離・実測標高・地図上の位置を表示します</div>
+    </div>`;
   }
   function srcLink(src, role) {
     return `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)} ↗</a>${role === 'secondary' ? '（報道による。公式の要項には記載なし）' : ''}`;
@@ -855,7 +944,7 @@
       <section class="course-map-card" aria-label="${esc(r.name)}のコース地図">
         <div class="course-map-head"><h3>コース地図</h3><span>拡大・移動できます</span></div>
         <div id="course-map" class="course-map" role="application" aria-label="${esc(r.name)}のスタート、中継所、フィニッシュの地図"></div>
-        <p class="course-map-note">地図: <a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">国土地理院</a>。線は中継地点間の位置関係を示し、実際の道路形状は下の公式出典で確認できます。</p>
+        <p class="course-map-note">地図: <a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">国土地理院</a>。コース経路に沿ったポリラインと各中継所を表示しています。</p>
       </section>
       <section class="course-elevation-card" aria-label="${esc(r.name)}の高低差の特徴">
         <div class="course-elevation-head"><h3>高低差の特徴</h3><span>地点と区間で読む</span></div>
@@ -902,31 +991,85 @@
     renderWomenSection(r, 1);
   }
 
+  let activeHoverMarker = null;
+  function bindDemCrossSectionHover(containerEl, seriesKey, legNo) {
+    if (!containerEl || !ELEV_DATA || !ELEV_DATA.series[seriesKey]) return;
+    const legData = ELEV_DATA.series[seriesKey].legs.find((l) => l.no === legNo);
+    if (!legData || !legData.samples || !legData.samples.length) return;
+    const svg = containerEl.querySelector('.dem-profile-svg');
+    const hLine = containerEl.querySelector('.dem-hover-line');
+    const hDot = containerEl.querySelector('.dem-hover-dot');
+    const readout = containerEl.querySelector('.dem-hover-readout');
+    if (!svg || !hLine || !hDot) return;
+
+    const W = 340, H = 175, padL = 38, padR = 14, padT = 24, padB = 26;
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+    const pts = legData.samples;
+    const totalKm = legData.km || pts[pts.length - 1][2] || 1;
+    const rawMax = Math.max(...pts.map((p) => p[3]));
+    const ceilM = rawMax > 400 ? 900 : rawMax > 150 ? 200 : rawMax > 60 ? 80 : 40;
+    const xAt = (km) => padL + (km / totalKm) * plotW;
+    const yAt = (m) => padT + plotH - Math.min(1, Math.max(0, m / ceilM)) * plotH;
+
+    function onMove(clientX) {
+      const rect = svg.getBoundingClientRect();
+      if (!rect.width) return;
+      const relX = ((clientX - rect.left) / rect.width) * W;
+      const frac = Math.min(1, Math.max(0, (relX - padL) / plotW));
+      const targetKm = frac * totalKm;
+      let best = pts[0], minDiff = Infinity;
+      for (const p of pts) {
+        const d = Math.abs(p[2] - targetKm);
+        if (d < minDiff) { minDiff = d; best = p; }
+      }
+      const cx = xAt(best[2]).toFixed(1), cy = yAt(best[3]).toFixed(1);
+      hLine.setAttribute('x1', cx); hLine.setAttribute('x2', cx);
+      hLine.setAttribute('visibility', 'visible');
+      hDot.setAttribute('cx', cx); hDot.setAttribute('cy', cy);
+      hDot.setAttribute('visibility', 'visible');
+      if (readout) {
+        readout.innerHTML = `地点：スタートから <b>${best[2].toFixed(1)}km</b> ／ 実測標高 <b>${best[3].toFixed(1)}m</b> <span class="dim">（北緯${best[0].toFixed(3)}° 東経${best[1].toFixed(3)}°）</span>`;
+      }
+      if (activeSectionMap && typeof L !== 'undefined') {
+        const latlng = [best[0], best[1]];
+        if (!activeHoverMarker) {
+          const icon = L.divIcon({ className: '', html: '<span class="dem-map-cursor"></span>', iconSize: [18, 18], iconAnchor: [9, 9] });
+          activeHoverMarker = L.marker(latlng, { icon, interactive: false }).addTo(activeSectionMap);
+        } else {
+          activeHoverMarker.setLatLng(latlng);
+          if (!activeSectionMap.hasLayer(activeHoverMarker)) activeHoverMarker.addTo(activeSectionMap);
+        }
+      }
+    }
+
+    svg.addEventListener('mousemove', (e) => onMove(e.clientX));
+    svg.addEventListener('touchmove', (e) => { if (e.touches[0]) onMove(e.touches[0].clientX); }, { passive: true });
+    svg.addEventListener('mouseleave', () => {
+      hLine.setAttribute('visibility', 'hidden');
+      hDot.setAttribute('visibility', 'hidden');
+      if (activeHoverMarker && activeSectionMap) {
+        activeSectionMap.removeLayer(activeHoverMarker);
+        activeHoverMarker = null;
+      }
+    });
+  }
+
   function renderWomenSection(r, no) {
     const leg = r.legs.find((item) => item.no === no);
     if (!leg) return;
     document.querySelectorAll('[data-women-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.womenSection) === no)));
     $('#women-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note)}</p>`;
-    $('#women-section-profile').innerHTML = womenSectionProfile(r, leg);
+    const profileEl = $('#women-section-profile');
+    profileEl.innerHTML = womenSectionProfile(r, leg);
+    bindDemCrossSectionHover(profileEl, r.series, leg.no);
   }
 
   function womenSectionProfile(r, leg) {
-    const fujisan = {
-      1:['M18 91 C62 56 100 112 143 82 S230 56 302 89','20mの上り下り'],
-      2:['M18 38 C84 53 148 81 212 103 S270 119 302 126','高低差98mの長い下り'],
-      3:['M18 88 C92 85 164 89 230 86 S276 88 302 86','ほぼ平坦'],
-      4:['M18 88 C92 85 164 89 230 86 S276 88 302 86','ほぼ平坦・冬の風'],
-      7:['M18 116 C87 114 133 111 169 97 S226 55 302 25','3km過ぎから4.6kmで169m上る'],
-    };
-    const wzen = {
-      1:['M18 88 C92 85 164 89 230 86 S276 88 302 86','比較的平坦'],
-      4:['M18 92 C62 64 94 109 132 78 S190 59 223 94 S270 106 302 76','緩やかなアップダウン'],
-      5:['M18 106 C78 105 116 96 153 77 S220 31 258 52 S282 72 302 68','仙台城跡周辺の長い上り'],
-    };
-    const p = (r.series === 'wfujisan' ? fujisan : wzen)[leg.no];
-    const graphic = p ? `<svg class="section-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${esc(p[1])}"><path d="${p[0]}" class="section-profile-area"/><path d="${p[0]}" class="section-profile-line"/><text x="160" y="20" text-anchor="middle">${esc(p[1])}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">${leg.km.toFixed(1)}km</text></svg>`
-      : `<div class="section-no-elevation"><b>推測の高低曲線は描いていません</b><p>公式紹介に具体的な起伏が示されていないため、走る場所と区間の特徴を文字で確認できます。</p></div>`;
-    return `<h4>${leg.no}区の走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離・中継所・特徴は大会公式資料に基づきます。曲線は公式説明の模式図で、標高の実測グラフではありません。</p>`;
+    const demLeg = ELEV_DATA && ELEV_DATA.series[r.series] ? ELEV_DATA.series[r.series].legs.find((l) => l.no === leg.no) : null;
+    const graphic = demLeg
+      ? renderDemCrossSectionSvg(demLeg, r.series)
+      : `<div class="section-no-elevation"><b>標高データを読み込み中</b></div>`;
+    return `<h4>${leg.no}区の実地形断面（国土地理院DEM）と走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">標高断面は国土地理院の数値標高モデル（DEM）をコース経路に沿って輪切り抽出した実測地形データに基づきます。</p>`;
   }
 
   function zennihonSectionGuide(r) {
@@ -956,15 +1099,20 @@
     const terrain = no <= 4 ? '前半区間：公式コース説明では、小刻みなアップダウンが多い区間です。' : '後半区間：公式コース説明では、前半に比べて比較的平らな区間です。';
     document.querySelectorAll('[data-zennihon-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.zennihonSection) === no)));
     $('#zennihon-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${terrain}</p>`;
-    $('#zennihon-section-profile').innerHTML = zennihonSectionProfile(leg);
-    renderSimpleSectionMap({ elementId: 'zennihon-section-map', start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.zennihon });
+    const profileEl = $('#zennihon-section-profile');
+    profileEl.innerHTML = zennihonSectionProfile(leg);
+    const demLeg = ELEV_DATA && ELEV_DATA.series.zennihon ? ELEV_DATA.series.zennihon.legs.find((l) => l.no === leg.no) : null;
+    const poly = demLeg && demLeg.samples ? demLeg.samples.map((p) => [p[0], p[1]]) : [start, finish];
+    renderSimpleSectionMap({ elementId: 'zennihon-section-map', start, finish, poly, from: leg.from, to: leg.to, color: MAP_COLOR.zennihon });
+    bindDemCrossSectionHover(profileEl, 'zennihon', leg.no);
   }
 
   function zennihonSectionProfile(leg) {
-    const front = leg.no <= 4;
-    const path = front ? 'M18 87 C42 50 62 119 88 72 S132 52 157 91 S203 116 230 72 S271 58 302 84' : 'M18 86 C71 81 112 89 158 84 S245 87 302 83';
-    const label = front ? '前半：小刻みなアップダウンが多い' : '後半：比較的平ら';
-    return `<h4>${leg.no}区の高低差の特徴</h4><svg class="section-profile-svg zennihon-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${label}"><path d="${path}" class="section-profile-area"/><path d="${path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${label}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">中継所 ${leg.km.toFixed(1)}km</text></svg><div class="profile-caution"><b>標高の実測グラフではありません</b><span>公式説明の「前半」「後半」の特徴を区間に対応させた模式図です。</span></div><ol class="izumo-route-order zennihon-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離とコースの特徴は全日本大学駅伝公式の開催要項・コース紹介に基づきます。</p>`;
+    const demLeg = ELEV_DATA && ELEV_DATA.series.zennihon ? ELEV_DATA.series.zennihon.legs.find((l) => l.no === leg.no) : null;
+    const graphic = demLeg
+      ? renderDemCrossSectionSvg(demLeg, 'zennihon')
+      : '';
+    return `<h4>${leg.no}区の実地形断面（国土地理院DEM）</h4>${graphic}<ol class="izumo-route-order zennihon-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">標高断面は国土地理院の数値標高モデル（DEM）をコース経路に沿って輪切り抽出した実測地形データに基づきます。</p>`;
   }
 
   function izumoSectionGuide(r) {
@@ -975,7 +1123,7 @@
       </div>
       <div id="izumo-section-summary" class="hakone-section-summary" aria-live="polite"></div>
       <div class="hakone-section-grid">
-        <div><div id="izumo-section-map" class="hakone-section-map" role="application" aria-label="出雲駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は区間の始点と終点を結ぶ位置確認用の概略です。実際の道路形状は公式コースで確認できます。</p></div>
+        <div><div id="izumo-section-map" class="hakone-section-map" role="application" aria-label="出雲駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。断面図にマウスを重ねると、地図上にも対応する地点が表示されます。</p></div>
         <div id="izumo-section-profile" class="hakone-section-profile"></div>
       </div>
     </section>`;
@@ -993,34 +1141,36 @@
     if (!leg || !start || !finish) return;
     document.querySelectorAll('[data-izumo-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.izumoSection) === no)));
     $('#izumo-section-summary').innerHTML = `<div><b>${leg.no}区</b><span>${esc(leg.from)} → ${esc(leg.to)}</span></div><strong>${leg.km.toFixed(1)}km</strong><p>${esc(leg.note || '公式資料に記載された区間情報を表示しています。')}</p>`;
-    $('#izumo-section-profile').innerHTML = izumoSectionProfile(leg);
-    renderSimpleSectionMap({ elementId: 'izumo-section-map', start, finish, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
+    const profileEl = $('#izumo-section-profile');
+    profileEl.innerHTML = izumoSectionProfile(leg);
+    const demLeg = ELEV_DATA && ELEV_DATA.series.izumo ? ELEV_DATA.series.izumo.legs.find((l) => l.no === leg.no) : null;
+    const poly = demLeg && demLeg.samples ? demLeg.samples.map((p) => [p[0], p[1]]) : [start, finish];
+    renderSimpleSectionMap({ elementId: 'izumo-section-map', start, finish, poly, from: leg.from, to: leg.to, color: MAP_COLOR.izumo });
+    bindDemCrossSectionHover(profileEl, 'izumo', leg.no);
   }
 
   function izumoSectionProfile(leg) {
-    const profiles = {
-      1: { path:'M18 105 C58 103 77 59 105 75 S153 119 181 86 S236 67 302 82', label:'浜山公園のアップダウン', aria:'1区は浜山公園にアップダウンがある' },
-      5: { path:'M18 91 C50 72 76 110 105 82 S157 62 185 94 S235 108 302 84', label:'ぶどう畑の細かなアップダウン', aria:'5区はぶどう畑の中に細かなアップダウンがある' },
-    };
-    const p = profiles[leg.no];
-    const graphic = p
-      ? `<svg class="section-profile-svg izumo-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${p.aria}"><path d="${p.path}" class="section-profile-area"/><path d="${p.path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${p.label}</text><text x="18" y="137">スタート</text><text x="302" y="137" text-anchor="end">中継所 ${leg.km.toFixed(1)}km</text></svg>`
-      : `<div class="section-no-elevation"><b>高低差の数値は未掲載</b><p>公式の区間紹介に具体的な標高値がないため、推測の曲線は描いていません。</p></div>`;
-    return `<h4>${leg.no}区の走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note || '区間情報を確認中')}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">区間距離・見どころは出雲駅伝公式サイトと公式記録に基づきます。</p>`;
+    const demLeg = ELEV_DATA && ELEV_DATA.series.izumo ? ELEV_DATA.series.izumo.legs.find((l) => l.no === leg.no) : null;
+    const graphic = demLeg
+      ? renderDemCrossSectionSvg(demLeg, 'izumo')
+      : '';
+    return `<h4>${leg.no}区の実地形断面（国土地理院DEM）と走りどころ</h4>${graphic}<ol class="izumo-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(leg.from)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(leg.note || '区間情報を確認中')}</b></div></li><li><span>F</span><div><small>${leg.km.toFixed(1)}km</small><b>${esc(leg.to)}</b></div></li></ol><p class="section-source-note">標高断面は国土地理院の数値標高モデル（DEM）をコース経路に沿って輪切り抽出した実測地形データに基づきます。</p>`;
   }
 
   function renderSimpleSectionMap(d) {
     const el = $('#' + d.elementId);
     if (!el || typeof L === 'undefined') return;
     if (activeSectionMap) activeSectionMap.remove();
+    activeHoverMarker = null;
     activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
     L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
-    const line = L.polyline([d.start, d.finish], { color: d.color, weight: 6, opacity: .86, dashArray: '12 7' }).addTo(activeSectionMap);
+    const routeCoords = d.poly && d.poly.length > 2 ? d.poly : [d.start, d.finish];
+    const line = L.polyline(routeCoords, { color: d.color, weight: 6, opacity: .88 }).addTo(activeSectionMap);
     [[d.start, 'S', d.from], [d.finish, 'F', d.to]].forEach(([pos, label, name]) => {
       const icon = L.divIcon({ className: '', html: `<span class="course-pin is-end" style="--pin:${d.color}">${label}</span>`, iconSize: [31,31], iconAnchor: [15.5,15.5] });
       L.marker(pos, { icon }).addTo(activeSectionMap).bindPopup(`<b>${label === 'S' ? 'スタート' : '中継所'}</b>${esc(name)}`);
     });
-    activeSectionMap.fitBounds(line.getBounds(), { padding: [46, 46] });
+    activeSectionMap.fitBounds(line.getBounds(), { padding: [36, 36] });
   }
 
   const HAKONE_SECTIONS = {
@@ -1060,7 +1210,7 @@
       </div>
       <div id="hakone-section-summary" class="hakone-section-summary" aria-live="polite"></div>
       <div class="hakone-section-grid">
-        <div><div id="hakone-section-map" class="hakone-section-map" role="application" aria-label="箱根駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。線は公式コース上の主要地点を結んだ位置確認用の概略です。</p></div>
+        <div><div id="hakone-section-map" class="hakone-section-map" role="application" aria-label="箱根駅伝の区間別コース地図"></div><p class="course-map-note">地図: 国土地理院。右の実地形断面図にマウスを重ねると、地図上にも対応する地点が表示されます。</p></div>
         <div id="hakone-section-profile" class="hakone-section-profile"></div>
       </div>
     </section>`;
@@ -1076,8 +1226,14 @@
     if (!d) return;
     document.querySelectorAll('[data-hakone-section]').forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.hakoneSection) === no)));
     $('#hakone-section-summary').innerHTML = `<div><b>${d.title}</b><span>${d.direction}</span></div><strong>${d.distance}</strong><p>${d.summary}</p>`;
-    $('#hakone-section-profile').innerHTML = d.points.length > 2 ? hakoneSectionProfile(d) : hakoneSimpleSectionProfile(d);
+    const profileEl = $('#hakone-section-profile');
+    profileEl.innerHTML = d.points.length > 2 ? hakoneSectionProfile(d) : hakoneSimpleSectionProfile(d);
+    const demLeg = ELEV_DATA && ELEV_DATA.series.hakone ? ELEV_DATA.series.hakone.legs.find((l) => l.no === d.no) : null;
+    if (demLeg && demLeg.samples && demLeg.samples.length > 2) {
+      d.poly = demLeg.samples.map((p) => [p[0], p[1]]);
+    }
     renderHakoneSectionMap(d);
+    bindDemCrossSectionHover(profileEl, 'hakone', d.no);
   }
 
   function buildHakoneSection(r, no) {
@@ -1097,33 +1253,27 @@
   }
 
   function hakoneSimpleSectionProfile(d) {
-    const profiles = {
-      1:{path:'M18 91 C82 88 154 92 222 88 C247 83 269 58 286 72 S298 87 302 84',label:'17km過ぎ　六郷橋',aria:'1区は17キロ過ぎの六郷橋が勝負どころ'},
-      2:{path:'M18 92 C53 61 75 112 107 75 S160 55 191 96 S246 110 302 72',label:'権太坂など起伏が多い',aria:'2区は権太坂など起伏が多い'},
-      4:{path:'M18 90 C92 88 161 91 222 87 S274 68 302 55',label:'平地区間・終盤に緩やかな上り',aria:'4区は平地区間で終盤に緩やかな上りがある'},
-      7:{path:'M18 87 C52 66 78 105 109 79 S161 64 192 94 S249 105 302 81',label:'小さなアップダウンが続く',aria:'7区は小さなアップダウンが続く'},
-      8:{path:'M18 99 C92 96 155 92 205 83 S264 51 302 39',label:'湘南新道の上り坂',aria:'8区は湘南新道の上り坂がある'},
-    };
-    const p = profiles[d.no];
-    const graphic = p ? `<svg class="section-profile-svg" viewBox="0 0 320 145" role="img" aria-label="${p.aria}"><path d="${p.path}" class="section-profile-area"/><path d="${p.path}" class="section-profile-line"/><text x="160" y="24" text-anchor="middle">${p.label}</text><text x="18" y="137">${esc(d.points[0].name)}</text><text x="302" y="137" text-anchor="end">${d.distance}</text></svg>` : `<div class="section-no-elevation hakone-no-elevation"><b>高低差は推測していません</b><p>公式紹介は景観・風・逆転・フィニッシュなどを説明していますが、具体的な起伏は示していないため曲線を描いていません。</p></div>`;
-    return `<h4>${d.no}区の高低差と走りどころ</h4>${graphic}<ol class="izumo-route-order hakone-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(d.points[0].name)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(d.summary)}</b></div></li><li><span>F</span><div><small>${d.distance}</small><b>${esc(d.points[1].name)}</b></div></li></ol><p class="section-source-note">区間距離・特徴は箱根駅伝公式サイトに基づきます。図は標高の実測グラフではありません。</p>`;
+    const demLeg = ELEV_DATA && ELEV_DATA.series.hakone ? ELEV_DATA.series.hakone.legs.find((l) => l.no === d.no) : null;
+    const graphic = demLeg ? renderDemCrossSectionSvg(demLeg, 'hakone') : '';
+    return `<h4>${d.no}区の実地形断面（国土地理院DEM）と走りどころ</h4>${graphic}<ol class="izumo-route-order hakone-route-order"><li><span>S</span><div><small>スタート</small><b>${esc(d.points[0].name)}</b></div></li><li><span>→</span><div><small>公式の見どころ</small><b>${esc(d.summary)}</b></div></li><li><span>F</span><div><small>${d.distance}</small><b>${esc(d.points[1].name)}</b></div></li></ol><p class="section-source-note">標高断面は国土地理院の数値標高モデル（DEM）をコース経路に沿って輪切り抽出した実測地形データに基づきます。</p>`;
   }
 
   function hakoneSectionProfile(d) {
     const stops = d.points.map((p, i) => `<li class="${i === 0 ? 'is-start' : i === d.points.length - 1 ? 'is-finish' : ''}"><span class="section-km">${p.km}</span><i aria-hidden="true"></i><span><b>${p.name}</b><small>${p.note}</small></span></li>`).join('');
-    const profile = d.no === 5
-      ? `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="5区は小田原から16.2キロ地点の最高点まで上り、その後芦ノ湖へ下る"><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-area"/><path d="M18 126 C62 120 92 102 126 82 S190 42 238 24 C256 48 274 66 302 77" class="section-profile-line"/><circle cx="238" cy="24" r="5"/><text x="238" y="14" text-anchor="middle">16.2km・約874m</text><text x="18" y="145">小田原</text><text x="302" y="145" text-anchor="end">芦ノ湖 20.8km</text></svg>`
-      : `<svg class="section-profile-svg" viewBox="0 0 320 150" role="img" aria-label="6区は芦ノ湖から最初の約4キロを上り、その後小田原へ急に下る"><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-area"/><path d="M18 72 C35 55 52 35 73 24 C102 58 126 86 166 106 S243 123 302 127" class="section-profile-line"/><circle cx="73" cy="24" r="5"/><text x="73" y="14" text-anchor="middle">約4km・上り終わり</text><text x="18" y="145">芦ノ湖</text><text x="302" y="145" text-anchor="end">小田原 20.8km</text></svg>`;
-    return `<h4>高低差と走る順番</h4>${profile}<ol class="section-timeline section-${d.no}">${stops}</ol><p class="section-source-note">距離・高低差の説明は箱根駅伝公式サイトに基づきます。「—」は公式説明で通過距離を確認できないため、数値を付けていません。</p>`;
+    const demLeg = ELEV_DATA && ELEV_DATA.series.hakone ? ELEV_DATA.series.hakone.legs.find((l) => l.no === d.no) : null;
+    const profile = demLeg ? renderDemCrossSectionSvg(demLeg, 'hakone') : '';
+    return `<h4>${d.no}区の実地形断面（国土地理院DEM）と走る順番</h4>${profile}<ol class="section-timeline section-${d.no}">${stops}</ol><p class="section-source-note">標高断面は国土地理院の数値標高モデル（DEM）をコース経路に沿って輪切り抽出した実測地形データに基づきます。</p>`;
   }
 
   function renderHakoneSectionMap(d) {
     const el = $('#hakone-section-map');
     if (!el || typeof L === 'undefined') return;
     if (activeSectionMap) activeSectionMap.remove();
+    activeHoverMarker = null;
     activeSectionMap = L.map(el, { scrollWheelZoom: false, zoomControl: true });
     L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', { attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>', maxZoom: 18 }).addTo(activeSectionMap);
-    const line = L.polyline(d.route, { color: MAP_COLOR.hakone, weight: 6, opacity: .86 }).addTo(activeSectionMap);
+    const routeCoords = d.poly && d.poly.length > 2 ? d.poly : d.route;
+    const line = L.polyline(routeCoords, { color: MAP_COLOR.hakone, weight: 6, opacity: .88 }).addTo(activeSectionMap);
     d.points.forEach((p, i) => {
       const end = i === 0 || i === d.points.length - 1;
       const icon = L.divIcon({ className: '', html: `<span class="course-pin${end ? ' is-end' : ''}" style="--pin:${MAP_COLOR.hakone}">${i === 0 ? 'S' : i === d.points.length - 1 ? 'F' : i}</span>`, iconSize: [end ? 31 : 26, end ? 31 : 26], iconAnchor: [end ? 15.5 : 13, end ? 15.5 : 13] });
@@ -1132,66 +1282,127 @@
     activeSectionMap.fitBounds(line.getBounds(), { padding: [26, 26] });
   }
 
-  // 標高値が公表されていない地点を数値化せず、公式コース説明にある
-  // 「アップダウン」「平ら」「山上り・山下り」を地点・区間と結び付けて示す。
+  // 国土地理院 数値標高モデル（DEM）を輪切りにしたコース全体の実地形断面図と、地図連携を描画する
   function elevationFeatureGraphic(r) {
-    if (r.series === 'wfujisan') {
-      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="富士山女子駅伝は2区で98メートル下り、7区は3キロ過ぎから4.6キロで169メートル上る">
-        <path d="M28 65 C75 78 111 107 151 127 S205 144 252 147 C285 146 314 120 342 78 S375 31 392 24" fill="none" stroke="#a12b6d" stroke-width="7" stroke-linecap="round"/>
-        <line x1="28" y1="170" x2="392" y2="170" class="elev-base"/>
-        <text x="28" y="196" class="elev-place">浅間大社</text><text x="150" y="196" text-anchor="middle" class="elev-place">2区終点</text><text x="392" y="196" text-anchor="end" class="elev-place">競技場</text>
-        <text x="96" y="53" text-anchor="middle" class="elev-kicker">2区　高低差98mの下り</text><text x="326" y="112" text-anchor="middle" class="elev-kicker">7区　169m上る</text>
-        <circle cx="392" cy="24" r="6" fill="#fff" stroke="#a12b6d" stroke-width="4"/><text x="388" y="14" text-anchor="end" class="elev-peak">最高標高176m</text>
-      </svg><p class="course-elevation-note"><b>読みどころ:</b> 全体の高低差は174m。2区の長い下りと、最終7区の厳しい上りが対照的です。</p>`;
+    const demSeries = ELEV_DATA && ELEV_DATA.series[r.series];
+    if (!demSeries) {
+      return '<p class="course-elevation-note">国土地理院の数値標高モデル（DEM）から実地形断面を読み込んでいます…</p>';
     }
-    if (r.series === 'wzennihon') {
-      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="全日本大学女子駅伝は1区が比較的平坦、4区に緩やかなアップダウン、5区に仙台城跡周辺の長い上りがある">
-        <path d="M28 145 C75 142 110 147 149 143 C177 118 197 165 224 132 C250 126 270 81 300 58 S348 91 392 83" fill="none" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
-        <line x1="28" y1="170" x2="392" y2="170" class="elev-base"/>
-        <text x="70" y="204" text-anchor="middle" class="elev-place">1区 比較的平坦</text><text x="205" y="204" text-anchor="middle" class="elev-place">4区 緩やかな起伏</text><text x="334" y="204" text-anchor="middle" class="elev-place">5区 長い上り</text>
-        <text x="315" y="45" text-anchor="middle" class="elev-kicker">仙台城跡周辺</text>
-      </svg><p class="course-elevation-note"><b>読みどころ:</b> 具体的な標高値は公表資料にないため、公式紹介に明記された区間の特徴だけを示します。</p>`;
+
+    // 区間リストを連結して、コース全体（または往路・復路ごと）の連続した地形断面ポリゴンを生成するヘルパー
+    function buildFullCrossSection(legsSubset, boxX, boxY, boxW, boxH, ceilM, uid, color) {
+      const totalKm = legsSubset.reduce((a, l) => a + l.km, 0);
+      const xAt = (km) => boxX + (km / totalKm) * boxW;
+      const baseY = boxY + boxH;
+      const yAt = (m) => {
+        if (ceilM >= 800) {
+          if (m <= 100) return baseY - (Math.max(0, m) / 100) * (boxH * 0.36);
+          return baseY - (boxH * 0.36) - Math.min(1, (m - 100) / 800) * (boxH * 0.64);
+        }
+        return baseY - Math.min(1, Math.max(0, m / ceilM)) * boxH;
+      };
+
+      let cumKm = 0;
+      const allPts = [];
+      const relayLines = [];
+      legsSubset.forEach((leg, idx) => {
+        if (idx > 0) relayLines.push({ km: cumKm, no: leg.no, from: leg.from });
+        leg.samples.forEach((s, sIdx) => {
+          if (idx > 0 && sIdx === 0) return;
+          allPts.push([cumKm + s[2], s[3], leg.no]);
+        });
+        cumKm += leg.km;
+      });
+
+      const poly = allPts.map((p) => `${xAt(p[0]).toFixed(1)},${yAt(p[1]).toFixed(1)}`).join(' ');
+      const area = `M${xAt(0).toFixed(1)},${baseY} L` + allPts.map((p) => `${xAt(p[0]).toFixed(1)},${yAt(p[1]).toFixed(1)}`).join(' L') + ` L${xAt(totalKm).toFixed(1)},${baseY} Z`;
+      const soil = `M${xAt(0).toFixed(1)},${baseY} L` + allPts.map((p) => `${xAt(p[0]).toFixed(1)},${Math.min(baseY, yAt(p[1]) + 10).toFixed(1)}`).join(' L') + ` L${xAt(totalKm).toFixed(1)},${baseY} Z`;
+
+      // 標高グリッド
+      const steps = ceilM >= 800 ? [0, 400, 800] : ceilM >= 150 ? [0, 100, 180] : ceilM >= 70 ? [0, 35, 70] : [0, 20, 40];
+      const grid = steps.map((m) => {
+        const y = yAt(m).toFixed(1);
+        return `<line x1="${boxX}" y1="${y}" x2="${boxX + boxW}" y2="${y}" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="${m === 0 ? '' : '3 2'}"/>
+                <text x="${boxX - 5}" y="${(Number(y) + 3.5).toFixed(1)}" font-size="9.5" font-weight="700" text-anchor="end" fill="#64748b">${m}m</text>`;
+      }).join('');
+
+      // 中継所ごとの垂直輪切りスリット線と区間番号
+      let relays = '';
+      let prevKm = 0;
+      legsSubset.forEach((leg, idx) => {
+        const midKm = prevKm + leg.km / 2;
+        relays += `<text x="${xAt(midKm).toFixed(1)}" y="${baseY - 4}" font-size="9.5" font-weight="800" text-anchor="middle" fill="${color}" opacity="0.85">${leg.no}区</text>`;
+        if (idx > 0) {
+          const rx = xAt(prevKm).toFixed(1);
+          relays += `<line x1="${rx}" y1="${boxY + 4}" x2="${rx}" y2="${baseY}" stroke="#475569" stroke-width="1" stroke-dasharray="2 2" stroke-opacity="0.55"/>`;
+        }
+        prevKm += leg.km;
+      });
+
+      // 最高地点
+      let maxP = allPts[0];
+      allPts.forEach((p) => { if (p[1] > maxP[1]) maxP = p; });
+      const mx = xAt(maxP[0]), my = yAt(maxP[1]);
+      const anchor = mx > boxX + boxW - 85 ? 'end' : mx < boxX + 85 ? 'start' : 'middle';
+
+      return `
+        <defs>
+          <linearGradient id="${uid}-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${color}" stop-opacity="0.55"/>
+            <stop offset="65%" stop-color="#b45309" stop-opacity="0.24"/>
+            <stop offset="100%" stop-color="#78350f" stop-opacity="0.12"/>
+          </linearGradient>
+          <pattern id="${uid}-hatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#78350f" stroke-opacity="0.15" stroke-width="1.5"/>
+          </pattern>
+        </defs>
+        ${grid}
+        <path d="${area}" fill="url(#${uid}-fill)"/>
+        <path d="${soil}" fill="url(#${uid}-hatch)"/>
+        ${relays}
+        <polyline fill="none" stroke="${color}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="${poly}"/>
+        <line x1="${boxX}" y1="${baseY}" x2="${boxX + boxW}" y2="${baseY}" stroke="#334155" stroke-width="2"/>
+        <circle cx="${mx.toFixed(1)}" cy="${my.toFixed(1)}" r="4.5" fill="#fbbf24" stroke="${color}" stroke-width="2"/>
+        <text x="${mx.toFixed(1)}" y="${Math.max(boxY + 10, my - 6).toFixed(1)}" font-size="10" font-weight="800" text-anchor="${anchor}" fill="#92400e">▲ 最高 ${maxP[1].toFixed(0)}m（${maxP[2]}区）</text>
+      `;
     }
+
+    const c = MAP_COLOR[r.series] || '#0f766e';
     if (r.series === 'hakone') {
-      return `<svg class="course-elevation" viewBox="0 0 420 340" role="img" aria-label="箱根駅伝は5区で国道1号の最高点約874メートルへ上り、復路6区で山を下る。2区・7区・8区にも起伏がある">
-        <defs><linearGradient id="hakoneMountain" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d9eee9"/><stop offset="1" stop-color="#75b7a7"/></linearGradient></defs>
-        <text x="24" y="28" class="elev-kicker">往路　東京 → 箱根</text>
-        <!-- 背景に相模湾と富士山のシルエット -->
-        <path d="M168 126 L195 82 L204 82 L232 126 Z" fill="#3b82f6" fill-opacity="0.14"/>
-        <path d="M188 93 L195 82 L204 82 L211 93 L206 91 L200 95 L194 91 Z" fill="#ffffff" fill-opacity="0.8"/>
-        <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92 L382 126 L28 126 Z" fill="url(#hakoneMountain)"/>
-        <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
-        <line x1="28" y1="126" x2="382" y2="126" class="elev-base"/>
-        <g class="elev-place"><text x="28" y="148">大手町</text><text x="278" y="148" text-anchor="middle">小田原</text><text x="382" y="148" text-anchor="end">芦ノ湖</text></g>
-        <g class="elev-leg"><text x="148" y="68" text-anchor="middle">1〜4区（花の2区・湘南）</text><text x="148" y="85" text-anchor="middle">権太坂などに起伏</text><text x="325" y="117" text-anchor="middle">5区　山上り</text></g>
-        <circle cx="347" cy="25" r="7" fill="#fbbf24" stroke="#0f766e" stroke-width="3.5"/><text x="347" y="15" text-anchor="middle" class="elev-peak">⛰ 国道1号最高点 約874m</text>
-        <text x="24" y="190" class="elev-kicker">復路　箱根 → 東京</text>
-        <path d="M28 213 C43 225 55 273 79 287 C111 300 146 292 184 286 S264 281 382 288 L382 298 L28 298 Z" fill="url(#hakoneMountain)" fill-opacity="0.55"/>
-        <path d="M28 213 C43 225 55 273 79 287 C111 300 146 292 184 286 S264 281 382 288" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
-        <line x1="28" y1="298" x2="382" y2="298" class="elev-base"/>
-        <g class="elev-place"><text x="28" y="320">芦ノ湖</text><text x="100" y="320" text-anchor="middle">小田原</text><text x="382" y="320" text-anchor="end">大手町</text></g>
-        <g class="elev-leg"><text x="68" y="239" text-anchor="middle">6区</text><text x="68" y="256" text-anchor="middle">山下り</text><text x="244" y="272" text-anchor="middle">7・8区　小さな起伏や遊行寺の坂</text></g>
-      </svg><p class="course-elevation-note"><b>読みどころ:</b> 大きな高低差が表れるのは、往路5区の山上りと復路6区の山下りです。</p>`;
+      const outLegs = demSeries.legs.slice(0, 5);
+      const retLegs = demSeries.legs.slice(5, 10);
+      return `<svg class="course-elevation" viewBox="0 0 420 340" role="img" aria-label="国土地理院の標高データに基づく箱根駅伝の往路・復路実地形断面図">
+        <text x="38" y="22" class="elev-kicker">往路（1〜5区 107.5km）実地形断面</text>
+        ${buildFullCrossSection(outLegs, 40, 32, 362, 96, 900, 'hk-out-dem', '#0f766e')}
+        <g class="elev-place"><text x="40" y="145">大手町(6m)</text><text x="172" y="145" text-anchor="middle">権太坂・戸塚(70m)</text><text x="292" y="145" text-anchor="middle">小田原(35m)</text><text x="402" y="145" text-anchor="end">芦ノ湖(743m)</text></g>
+        <text x="38" y="184" class="elev-kicker">復路（6〜10区 109.6km）実地形断面</text>
+        ${buildFullCrossSection(retLegs, 40, 194, 362, 96, 900, 'hk-ret-dem', '#0f766e')}
+        <g class="elev-place"><text x="40" y="308">芦ノ湖(743m)</text><text x="148" y="308" text-anchor="middle">小田原(35m)</text><text x="268" y="308" text-anchor="middle">遊行寺坂(69m)</text><text x="402" y="308" text-anchor="end">大手町(6m)</text></g>
+      </svg><p class="course-elevation-note"><b>実地形の輪切り（国土地理院DEM）:</b> 2区権太坂・戸塚の壁（約70m）から4区小田原（35m）、5区の最高点（約874m）・芦ノ湖（743m）まで、実際の道路座標の標高を断面表示しています。</p>`;
     }
-    if (r.series === 'zennihon') {
-      return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="全日本大学駅伝は前半に小刻みなアップダウンが多く、後半は比較的平ら">
-        <rect x="20" y="28" width="220" height="188" rx="16" fill="#eef3ff"/><rect x="240" y="28" width="160" height="188" rx="16" fill="#f2f7f6"/>
-        <text x="38" y="55" class="elev-kicker">前半　1〜4区</text><text x="258" y="55" class="elev-kicker">後半　5〜8区</text>
-        <path d="M38 151 C56 112 73 178 91 127 S126 92 145 145 S180 174 201 124 S224 102 238 142" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
-        <path d="M250 146 C280 141 310 148 339 144 S372 146 389 143" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
-        <g class="elev-feature"><text x="139" y="196" text-anchor="middle">小刻みなアップダウンが多い</text><text x="320" y="196" text-anchor="middle">比較的平ら</text></g>
-        <g class="elev-place"><text x="24" y="243">熱田神宮</text><text x="210" y="243" text-anchor="middle">第4中継所</text><text x="396" y="243" text-anchor="end">伊勢神宮</text></g>
-        <path d="M38 260 H382" stroke="#1d4ed8" stroke-width="3"/><path d="M382 260 l-10 -6 v12 z" fill="#1d4ed8"/>
-      </svg><p class="course-elevation-note"><b>読みどころ:</b> 前半は起伏への対応、後半は長い平坦区間での持続力が鍵になります。</p>`;
-    }
-    return `<svg class="course-elevation" viewBox="0 0 420 290" role="img" aria-label="出雲駅伝は1区の浜山公園と5区のぶどう畑にアップダウンがある">
-      <rect x="20" y="30" width="112" height="184" rx="16" fill="#fff1e8"/><rect x="254" y="30" width="78" height="184" rx="16" fill="#fff1e8"/>
-      <path d="M28 151 C42 145 53 104 69 126 S98 173 118 137 C142 149 164 151 190 149 S229 148 258 146 C270 119 284 104 297 139 S318 160 330 146 C352 149 369 147 392 145" fill="none" stroke="#c2410c" stroke-width="7" stroke-linecap="round"/>
-      <text x="76" y="57" text-anchor="middle" class="elev-kicker">1区</text><text x="76" y="77" text-anchor="middle" class="elev-feature">浜山公園</text><text x="76" y="96" text-anchor="middle" class="elev-feature">アップダウン</text>
-      <text x="293" y="57" text-anchor="middle" class="elev-kicker">5区</text><text x="293" y="77" text-anchor="middle" class="elev-feature">ぶどう畑</text><text x="293" y="96" text-anchor="middle" class="elev-feature">細かな起伏</text>
-      <g class="elev-place"><text x="24" y="241">出雲大社</text><text x="208" y="241" text-anchor="middle">第3中継所</text><text x="396" y="241" text-anchor="end">出雲ドーム</text></g>
-      <path d="M38 260 H382" stroke="#c2410c" stroke-width="3"/><path d="M382 260 l-10 -6 v12 z" fill="#c2410c"/>
-    </svg><p class="course-elevation-note"><b>読みどころ:</b> 起伏が明記されているのは1区の浜山公園と5区のぶどう畑です。</p>`;
+
+    const maxAll = Math.max(...demSeries.legs.map((l) => l.max_m));
+    const ceil = maxAll > 150 ? 200 : maxAll > 60 ? 80 : 40;
+    const startName = demSeries.legs[0].from;
+    const endName = demSeries.legs[demSeries.legs.length - 1].to;
+    const startElev = demSeries.legs[0].samples[0][3].toFixed(0);
+    const endSamples = demSeries.legs[demSeries.legs.length - 1].samples;
+    const endElev = endSamples[endSamples.length - 1][3].toFixed(0);
+    const notes = {
+      izumo: '1区浜山公園付近（約20m）と、5区鳶巣〜島根ワイナリー間の丘陵（最高約69m）の実地形起伏がはっきり表れます。',
+      zennihon: '1〜2区の木曽三川河口域（海抜0〜4m）、3〜4区の四日市・鈴鹿の段丘（最高28m）、8区伊勢神宮内宮へ向かう緩やかな上り（約26m）を実測標高で断面化しています。',
+      wzennihon: '仙台市内の海岸平野側（2区・標高5m）から、広瀬川を越え5区の仙台城跡・東北大川内周辺（最高約54m）へ上る実地形断面です。',
+      wfujisan: '富士山本宮浅間大社（標高119m）から2区で富士市街（18m）へ一気に100m以上下り、最終7区で富士総合運動公園（約173m）へ駆け上がる劇的な断面です。'
+    };
+
+    return `<svg class="course-elevation" viewBox="0 0 420 270" role="img" aria-label="国土地理院の標高データに基づく${esc(r.name)}の実地形断面図">
+      <text x="38" y="24" class="elev-kicker">${esc(r.name)}（全${demSeries.legs.length}区間 ${r.distance_km}km）実地形断面</text>
+      ${buildFullCrossSection(demSeries.legs, 40, 38, 362, 165, ceil, `ov-${r.series}-dem`, c)}
+      <g class="elev-place">
+        <text x="40" y="224">${esc(startName)}(${startElev}m)</text>
+        <text x="402" y="224" text-anchor="end">${esc(endName)}(${endElev}m)</text>
+      </g>
+    </svg><p class="course-elevation-note"><b>実地形の輪切り（国土地理院DEM）:</b> ${esc(notes[r.series] || '')}</p>`;
   }
 
   function renderCourseMap(r) {
@@ -1204,7 +1415,15 @@
       attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>',
       maxZoom: 18,
     }).addTo(activeCourseMap);
-    const line = L.polyline(d.coords, { color: MAP_COLOR[r.series], weight: 5, opacity: .72, dashArray: '10 7' }).addTo(activeCourseMap);
+    // 実道路ポリライン（ELEV_DATA）があれば実際の走行ルートに沿って描画する
+    const demSeries = ELEV_DATA && ELEV_DATA.series[r.series];
+    let polyCoords = d.coords;
+    if (demSeries) {
+      const legsToDraw = r.series === 'hakone' ? demSeries.legs.slice(0, 5) : demSeries.legs;
+      polyCoords = [];
+      legsToDraw.forEach((leg) => leg.samples.forEach((s) => polyCoords.push([s[0], s[1]])));
+    }
+    const line = L.polyline(polyCoords, { color: MAP_COLOR[r.series], weight: 5, opacity: .85 }).addTo(activeCourseMap);
     d.coords.forEach((latlng, i) => {
       const end = i === 0 || i === d.coords.length - 1;
       const icon = L.divIcon({ className: '', html: `<span class="course-pin${end ? ' is-end' : ''}" style="--pin:${MAP_COLOR[r.series]}">${i === 0 ? 'S' : i === d.coords.length - 1 ? 'F' : i}</span>`, iconSize: [end ? 31 : 26, end ? 31 : 26], iconAnchor: [end ? 15.5 : 13, end ? 15.5 : 13] });
@@ -1214,45 +1433,127 @@
     activeCourseMap.fitBounds(line.getBounds(), { padding: [28, 28] });
   }
 
-  // 区間の長さに合わせた帯の図。mountain=true で5区（および権太坂・富士山シルエット）に高低差断面を描く
+  // 区間の長さに合わせた帯＋国土地理院DEMの実地形輪切り断面を重ねた図
   function courseStrip(r, legs, points, title, mountain) {
-    const W = 760, L = 30, R = 30, y = mountain ? 102 : 66, H = y + 84;
+    const W = 760, L = 34, R = 30, y = 128, topY = 38, profH = 74, H = y + 90;
     const total = legs.reduce((a, l) => a + l.km, 0);
     const scale = (W - L - R) / total;
-    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="800" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" font-weight="700" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
-    if (mountain && r.series === 'hakone') {
-      // 往路（大手町→芦ノ湖）の高低差断面シルエットと富士山透かしを背後に重ねる
-      g += `<defs>
-        <linearGradient id="stripElevGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#0f766e" stop-opacity="0.28"/>
-          <stop offset="100%" stop-color="#0f766e" stop-opacity="0.04"/>
-        </linearGradient>
-        <linearGradient id="stripPeakGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#d97706" stop-opacity="0.38"/>
-          <stop offset="100%" stop-color="#d97706" stop-opacity="0.06"/>
-        </linearGradient>
-      </defs>`;
-      // 3区背後の富士山シルエット
-      g += `<path d="M350 ${y - 8} L382 ${y - 46} L392 ${y - 46} L424 ${y - 8} Z" fill="#3b82f6" fill-opacity="0.11"/>`;
-      g += `<path d="M375 ${y - 37} L382 ${y - 46} L392 ${y - 46} L399 ${y - 37} L393 ${y - 39} L387 ${y - 35} L381 ${y - 39} Z" fill="#ffffff" fill-opacity="0.65"/>`;
-      // 1〜4区のゆるやかな起伏シルエット（2区権太坂）
-      g += `<path d="M${L} ${y - 9} L160 ${y - 9} L172 ${y - 14} L190 ${y - 9} L255 ${y - 10} L276 ${y - 22} L296 ${y - 12} L318 ${y - 20} L336 ${y - 10} L530 ${y - 10} L594 ${y - 16} L594 ${y - 7} L${L} ${y - 7} Z" fill="url(#stripElevGrad)"/>`;
+    const c = MAP_COLOR[r.series] || '#0f766e';
+    let x = L;
+    let g = `<text x="${L}" y="22" font-size="14" font-weight="800" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" font-weight="700" text-anchor="end" fill="var(--muted)">実地形断面（国土地理院DEM） ／ 総距離 ${Math.round(total * 10) / 10}km</text>`;
+
+    // 実地形断面（ELEV_DATA）から連続断面ポリゴンを構築
+    const demSeries = ELEV_DATA && ELEV_DATA.series[r.series];
+    if (demSeries) {
+      const demLegs = legs.map((l) => demSeries.legs.find((dl) => dl.no === l.no)).filter(Boolean);
+      if (demLegs.length === legs.length) {
+        // 箱根駅伝の1〜4区・7〜10区（最高70m）と5・6区（最高874m）の両方が一つの断面図で鮮明に見えるよう、
+        // 100m以下を45%の高さで描き、100m〜900mを上部55%で描く「二段地形断面スケール（実測値目盛り付き）」を採用
+        const isHakone = r.series === 'hakone';
+        const maxM = Math.max(...demLegs.map((dl) => dl.max_m));
+        const ceilM = maxM > 150 ? 200 : maxM > 60 ? 80 : 40;
+        const baseY = y - 8;
+        const elevToY = (m) => {
+          if (isHakone) {
+            if (m <= 100) return baseY - (m / 100) * (profH * 0.42);
+            return baseY - (profH * 0.42) - Math.min(1, (m - 100) / 800) * (profH * 0.58);
+          }
+          return baseY - Math.min(1, Math.max(0, m / ceilM)) * profH;
+        };
+
+        const uid = `strip-dem-${r.series}-${legs[0].no}`;
+        g += `<defs>
+          <linearGradient id="${uid}-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${c}" stop-opacity="0.50"/>
+            <stop offset="65%" stop-color="#b45309" stop-opacity="0.24"/>
+            <stop offset="100%" stop-color="#78350f" stop-opacity="0.10"/>
+          </linearGradient>
+          <pattern id="${uid}-hatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#78350f" stroke-opacity="0.16" stroke-width="1.5"/>
+          </pattern>
+        </defs>`;
+
+        // 標高基準破線
+        const refLevels = isHakone ? [50, 400, 800] : (ceilM === 200 ? [50, 150] : ceilM === 80 ? [30, 60] : [15, 30]);
+        refLevels.forEach((rm) => {
+          const ry = elevToY(rm).toFixed(1);
+          g += `<line x1="${L}" y1="${ry}" x2="${W - R}" y2="${ry}" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>`;
+          g += `<text x="${L - 4}" y="${(Number(ry) + 3).toFixed(1)}" font-size="9" font-weight="700" text-anchor="end" fill="#64748b">${rm}m</text>`;
+        });
+
+        let cumKm = 0;
+        const allPts = [];
+        demLegs.forEach((dl, idx) => {
+          dl.samples.forEach((s, sIdx) => {
+            if (idx > 0 && sIdx === 0) return;
+            const px = L + (cumKm + s[2]) * scale;
+            const py = elevToY(s[3]);
+            allPts.push({ x: px, y: py, km: cumKm + s[2], m: s[3], no: dl.no });
+          });
+          cumKm += dl.km;
+        });
+
+        const polyStr = allPts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+        const areaStr = `M${L},${baseY} L` + allPts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' L') + ` L${(L + total * scale).toFixed(1)},${baseY} Z`;
+        const soilStr = `M${L},${baseY} L` + allPts.map((p) => `${p.x.toFixed(1)},${Math.min(baseY, p.y + 10).toFixed(1)}`).join(' L') + ` L${(L + total * scale).toFixed(1)},${baseY} Z`;
+
+        g += `<path d="${areaStr}" fill="url(#${uid}-fill)"/>`;
+        g += `<path d="${soilStr}" fill="url(#${uid}-hatch)"/>`;
+        // 地形輪切りスリット線
+        for (let i = 6; i < allPts.length - 1; i += 6) {
+          g += `<line x1="${allPts[i].x.toFixed(1)}" y1="${allPts[i].y.toFixed(1)}" x2="${allPts[i].x.toFixed(1)}" y2="${baseY}" stroke="${c}" stroke-opacity="0.16" stroke-width="1"/>`;
+        }
+        g += `<polyline fill="none" stroke="${c}" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" points="${polyStr}"/>`;
+
+        // 箱根2区・8区（権太坂・戸塚の壁 約70m）や5区・6区（最高点 約874m）などの実測ピーク注記
+        if (isHakone && mountain) {
+          // 2区の最高点（戸塚・権太坂付近）
+          const leg2Pts = allPts.filter((p) => p.no === 2);
+          const p2Max = leg2Pts.reduce((a, b) => (b.m > a.m ? b : a), leg2Pts[0]);
+          if (p2Max) {
+            g += `<circle cx="${p2Max.x.toFixed(1)}" cy="${p2Max.y.toFixed(1)}" r="3.2" fill="#fff" stroke="${c}" stroke-width="2"/>`;
+            g += `<text x="${(p2Max.x - 10).toFixed(1)}" y="${(p2Max.y - 6).toFixed(1)}" font-size="10" font-weight="800" text-anchor="middle" fill="#0f766e">権太坂・戸塚の壁 ${p2Max.m.toFixed(0)}m</text>`;
+          }
+          // 5区の最高点（874m）
+          const leg5Pts = allPts.filter((p) => p.no === 5);
+          const p5Max = leg5Pts.reduce((a, b) => (b.m > a.m ? b : a), leg5Pts[0]);
+          if (p5Max) {
+            g += `<circle cx="${p5Max.x.toFixed(1)}" cy="${p5Max.y.toFixed(1)}" r="4.5" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>`;
+            g += `<text x="${(p5Max.x - 6).toFixed(1)}" y="${(p5Max.y - 7).toFixed(1)}" font-size="11" font-weight="800" text-anchor="end" fill="#92400e">▲ 国道1号最高点 標高約874m</text>`;
+          }
+        } else if (isHakone && !mountain) {
+          // 6区の最高点（874m）と8区遊行寺坂（69m）
+          const leg6Pts = allPts.filter((p) => p.no === 6);
+          const p6Max = leg6Pts.reduce((a, b) => (b.m > a.m ? b : a), leg6Pts[0]);
+          if (p6Max) {
+            g += `<circle cx="${p6Max.x.toFixed(1)}" cy="${p6Max.y.toFixed(1)}" r="4.5" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>`;
+            g += `<text x="${(p6Max.x + 8).toFixed(1)}" y="${(p6Max.y - 5).toFixed(1)}" font-size="11" font-weight="800" text-anchor="start" fill="#92400e">▲ 最高点 約874mから山下り（-949m）</text>`;
+          }
+          const leg8Pts = allPts.filter((p) => p.no === 8);
+          const p8Max = leg8Pts.reduce((a, b) => (b.m > a.m ? b : a), leg8Pts[0]);
+          if (p8Max) {
+            g += `<circle cx="${p8Max.x.toFixed(1)}" cy="${p8Max.y.toFixed(1)}" r="3.2" fill="#fff" stroke="${c}" stroke-width="2"/>`;
+            g += `<text x="${p8Max.x.toFixed(1)}" y="${(p8Max.y - 6).toFixed(1)}" font-size="10" font-weight="800" text-anchor="middle" fill="#0f766e">遊行寺坂 ${p8Max.m.toFixed(0)}m</text>`;
+          }
+        }
+      }
     }
+
     const xs = [x];
     const SUB_TAG = { 1: '開幕区間', 2: '花の2区', 3: '湘南・富士', 4: '山へのつなぎ', 5: '山上り', 6: '山下り', 7: '寒暖差', 8: '遊行寺坂', 9: '復路エース', 10: '日本橋・大手町' };
     legs.forEach((l, i) => {
       const w = l.km * scale;
-      const isHakone5 = mountain && l.no === 5;
-      if (isHakone5) {
-        const mx = x + w * 0.62;
-        g += `<path d="M${x.toFixed(1)} ${y - 14} C${(x + w * 0.25).toFixed(1)} ${y - 26} ${(x + w * 0.45).toFixed(1)} ${y - 54} ${mx.toFixed(1)} ${y - 68} C${(x + w * 0.78).toFixed(1)} ${y - 54} ${(x + w * 0.9).toFixed(1)} ${y - 42} ${(x + w - 3).toFixed(1)} ${y - 36} L${(x + w - 3).toFixed(1)} ${y - 7} L${x.toFixed(1)} ${y - 7} Z" fill="url(#stripPeakGrad)" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>`;
-        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 68}" r="4.5" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>`;
-        g += `<text x="${(mx - 6).toFixed(1)}" y="${y - 74}" text-anchor="end" font-size="11.5" font-weight="800" fill="#92400e">⛰ 最高点 標高約874m</text>`;
+      const isPeakLeg = (r.series === 'hakone' && (l.no === 5 || l.no === 6)) || (r.series === 'wfujisan' && l.no === 7);
+      const wx = x;
+      if (i > 0) {
+        g += `<line x1="${wx.toFixed(1)}" y1="${topY}" x2="${wx.toFixed(1)}" y2="${y - 7}" stroke="#475569" stroke-width="1" stroke-dasharray="2 2" stroke-opacity="0.5"/>`;
       }
-      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${isHakone5 ? '#d97706' : COLOR[r.series]}" fill-opacity="${i % 2 ? 0.65 : 0.95}"/>`;
-      const subTag = r.series === 'hakone' && SUB_TAG[l.no] ? `（${SUB_TAG[l.no]}）` : '';
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="12.5" font-weight="800" fill="${isHakone5 ? '#92400e' : 'var(--ink)'}">${l.no}区<tspan font-size="10.5" font-weight="700" fill="var(--ink-soft)">${subTag}</tspan></text>`;
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
+      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${isPeakLeg ? '#d97706' : COLOR[r.series]}" fill-opacity="${i % 2 ? 0.68 : 0.95}"/>`;
+      const cx = (x + w / 2).toFixed(1);
+      g += `<text x="${cx}" y="${y + 20}" text-anchor="middle" font-size="11.5" font-weight="800" fill="${isPeakLeg ? '#92400e' : 'var(--ink)'}">${l.no}区 <tspan font-weight="700">${l.km.toFixed(1)}km</tspan></text>`;
+      if (r.series === 'hakone' && SUB_TAG[l.no]) {
+        g += `<text x="${cx}" y="${y + 33}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${isPeakLeg ? '#b45309' : 'var(--ink-soft)'}">（${SUB_TAG[l.no]}）</text>`;
+      }
       x += w;
       xs.push(x);
     });
@@ -1261,10 +1562,10 @@
       const end = i === 0 || i === points.length - 1;
       g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2.2"/>`;
       const anchor = i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'middle';
-      if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 8}" x2="${px.toFixed(1)}" y2="${y + 50}" stroke="var(--line)" stroke-width="1.5"/>`;
-      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 800 : 600}" fill="var(--ink)">${esc(p)}</text>`;
+      if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 36}" x2="${px.toFixed(1)}" y2="${y + 56}" stroke="var(--line)" stroke-width="1.5"/>`;
+      g += `<text x="${(i === 0 ? px - 4 : i === points.length - 1 ? px + 4 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 70 : 50)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 800 : 600}" fill="var(--ink)">${esc(p)}</text>`;
     });
-    return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
+    return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の実地形断面・区間図">${g}</svg>`;
   }
 
   // 人物は生成済みのアニメ風イラストを使い、線や距離表示だけをSVGで重ねる。

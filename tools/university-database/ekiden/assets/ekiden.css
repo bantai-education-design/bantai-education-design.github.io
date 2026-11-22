@@ -566,3 +566,48 @@ body[data-gender="women"] .entry-women {
   color:#92400e;
   border:1px solid #f59e0b;
 }
+
+/* ---------- 国土地理院DEM 実地形断面（輪切り地層・地図ホバー連動） ---------- */
+.dem-cross-wrap{margin:0 0 10px}
+.dem-metrics-bar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px 12px;
+  padding:6px 10px;
+  margin-bottom:6px;
+  border-radius:9px;
+  background:#f8fafc;
+  border:1px solid var(--line);
+  font-size:.75rem;
+  color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;
+}
+.dem-metrics-bar b{color:var(--ink);font-weight:800}
+.dem-profile-svg{
+  max-height:190px;
+  cursor:crosshair;
+  border:1px solid #d6dfd9;
+  background:linear-gradient(180deg,#f8fafc 0%,#f1f5f9 100%);
+}
+.dem-hover-readout{
+  margin-top:4px;
+  padding:5px 9px;
+  border-radius:8px;
+  background:#faf9f5;
+  border:1px solid var(--line);
+  font-size:.74rem;
+  color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;
+}
+.dem-hover-readout b{color:#92400e;font-weight:800}
+.dem-map-cursor{
+  display:block;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#fbbf24;
+  border:3px solid #111827;
+  box-shadow:0 0 0 4px rgba(251,191,36,.45);
+}
