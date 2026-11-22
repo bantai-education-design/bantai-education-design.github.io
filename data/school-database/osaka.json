@@ -4137,6 +4137,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -6847,6 +6853,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -9165,6 +9177,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -9436,7 +9454,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市住之江区-大阪市立北粉浜小学校",
@@ -9938,7 +9964,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市住吉区-大阪市立大和川中学校",
@@ -10356,7 +10390,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 研究校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-私立-小学校-大阪市住吉区-帝塚山学院小学校",
@@ -10815,7 +10857,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "不登校の未然防止・解決",
+        "designation": "大阪市総合教育センター 研究校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市北区-大阪市立大淀中学校",
@@ -12099,7 +12149,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市大正区-大阪市立中泉尾小学校",
@@ -12641,7 +12699,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市天王寺区-大阪市立生魂小学校",
@@ -12660,7 +12726,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市天王寺区-大阪市立真田山小学校",
@@ -12981,6 +13055,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -13687,7 +13767,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市平野区-大阪市立長吉出戸小学校",
@@ -14064,7 +14152,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市旭区-大阪市立旭東中学校",
@@ -14629,7 +14725,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市東住吉区-大阪市立白鷺中学校",
@@ -14743,7 +14847,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市東住吉区-大阪市立北田辺小学校",
@@ -15703,7 +15815,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "不登校の未然防止・解決",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-大阪市東淀川区-関西大学北陽中学校",
@@ -16462,7 +16582,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市此花区-大阪市立梅香小学校",
@@ -17035,7 +17163,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市淀川区-大阪市立三国小学校",
@@ -17493,6 +17629,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -17735,7 +17879,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市港区-大阪市立弁天小学校",
@@ -18214,7 +18366,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市生野区-大阪市立巽小学校",
@@ -18707,7 +18867,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市福島区-大阪市立海老江西小学校",
@@ -19649,7 +19817,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "教育DX・ICT活用",
+        "designation": "リーディングDXスクール事業指定校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西淀川区-大阪市立佃小学校",
@@ -19763,7 +19939,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "教育DX・ICT活用",
+        "designation": "リーディングDXスクール事業指定校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西淀川区-大阪市立川北小学校",
@@ -21082,6 +21266,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -21319,7 +21509,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市鶴見区-大阪市立横堤小学校",
@@ -25142,6 +25340,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -28327,6 +28531,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
@@ -35566,6 +35776,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -37719,6 +37937,12 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
       }
     ]
   },
