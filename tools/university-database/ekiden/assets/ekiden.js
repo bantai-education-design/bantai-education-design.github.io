@@ -35,6 +35,83 @@
   // 公式HPの大学紹介ページ。大学IDから詳細ページを開く
   const UNIV_DETAIL = '../tokyo/detail.html?id=';
 
+  // 駅伝ドラマ可視化スタイル：各大学のたすき色（スクールカラー）定義
+  const TASUKI_MAP = {
+    '青山学院大学': { bg: '#006948', stripe: '#ffffff', label: 'フレッシュグリーン' },
+    '駒澤大学':     { bg: '#5b2c83', stripe: '#ffffff', label: '藤色（紫）' },
+    '早稲田大学':   { bg: '#8e1728', stripe: '#ffffff', label: '臙脂（えんじ）' },
+    '中央大学':     { bg: '#c8102e', stripe: '#ffffff', label: '真紅（白C）' },
+    '國學院大學':   { bg: '#6d28d9', stripe: '#f59e0b', label: '江戸紫' },
+    '順天堂大学':   { bg: '#1e3a8a', stripe: '#dc2626', label: '紺青・赤' },
+    '東洋大学':     { bg: '#1e293b', stripe: '#ffffff', label: '鉄紺（てつこん）' },
+    '東海大学':     { bg: '#1d4ed8', stripe: '#ffffff', label: '東海ブルー' },
+    '城西大学':     { bg: '#eab308', stripe: '#1e3a8a', label: 'イエロー・紺' },
+    '創価大学':     { bg: '#dc2626', stripe: '#2563eb', label: '赤・青ストライプ' },
+    '帝京大学':     { bg: '#e11d48', stripe: '#ffffff', label: 'ファイヤーレッド' },
+    '日本大学':     { bg: '#ec4899', stripe: '#ffffff', label: '桜色（ピンク）' },
+    '法政大学':     { bg: '#ea580c', stripe: '#1e3a8a', label: 'オレンジ・紺' },
+    '明治大学':     { bg: '#4c1d95', stripe: '#fbbf24', label: '紫紺（しこん）' },
+    '立教大学':     { bg: '#6b21a8', stripe: '#ffffff', label: '江戸紫' },
+    '大東文化大学': { bg: '#65a30d', stripe: '#ffffff', label: 'ライトグリーン' },
+    '日本体育大学': { bg: '#0369a1', stripe: '#ffffff', label: 'コバルトブルー' },
+    '山梨学院大学': { bg: '#0284c7', stripe: '#ffffff', label: 'プルシアンブルー' },
+    '神奈川大学':   { bg: '#312e81', stripe: '#ffffff', label: 'プラウドブルー' },
+    '東京農業大学': { bg: '#15803d', stripe: '#ffffff', label: '松葉緑（大根グリーン）' },
+    '東京国際大学': { bg: '#0f172a', stripe: '#d4a72c', label: 'ネイビー・ゴールド' },
+    '中央学院大学': { bg: '#7e22ce', stripe: '#eab308', label: 'パープル・イエロー' },
+    '国士舘大学':   { bg: '#1d4ed8', stripe: '#dc2626', label: '青・赤' },
+    '専修大学':     { bg: '#14532d', stripe: '#b91c1c', label: '深緑・エンジ' },
+    '拓殖大学':     { bg: '#f97316', stripe: '#ffffff', label: 'オレンジ' },
+    '亜細亜大学':   { bg: '#0284c7', stripe: '#fde047', label: 'マリンブルー' },
+    '駿河台大学':   { bg: '#0369a1', stripe: '#facc15', label: 'ブルー・イエロー' },
+    '上武大学':     { bg: '#111827', stripe: '#dc2626', label: '黒・赤' },
+    '筑波大学':     { bg: '#7c3aed', stripe: '#ffffff', label: '桐の紫（筑波パープル）' },
+    '慶應義塾大学': { bg: '#1e3a8a', stripe: '#dc2626', label: '三色旗（紺・赤）' },
+    '東京大学':     { bg: '#38bdf8', stripe: '#ffffff', label: '淡青（ライトブルー）' },
+    '京都大学':     { bg: '#1e3a8a', stripe: '#ffffff', label: '濃青（ダークブルー）' },
+    '名城大学':     { bg: '#dc2626', stripe: '#1d4ed8', label: '真紅・ブルー' },
+    '立命館大学':   { bg: '#7f1d1d', stripe: '#ffffff', label: 'エンジ（立命館レッド）' },
+    '佛教大学':     { bg: '#7e22ce', stripe: '#ffffff', label: '紫' },
+    '京都産業大学': { bg: '#1e3a8a', stripe: '#ffffff', label: '神山ブルー' },
+    '大阪学院大学': { bg: '#1d4ed8', stripe: '#dc2626', label: 'ブルー・レッド' },
+    '東北福祉大学': { bg: '#b91c1c', stripe: '#ffffff', label: 'エンジ' },
+    '関西大学':     { bg: '#4c1d95', stripe: '#ffffff', label: '紫紺' },
+    '関西学院大学': { bg: '#1e3a8a', stripe: '#fbbf24', label: '新月ブルー' },
+    '松山大学':     { bg: '#1e40af', stripe: '#ffffff', label: 'コバルトブルー' },
+    '福岡大学':     { bg: '#7f1d1d', stripe: '#ffffff', label: 'エンジ' },
+    '玉川大学':     { bg: '#1e3a8a', stripe: '#ffffff', label: 'ネイビー' },
+    '白鷗大学':     { bg: '#0284c7', stripe: '#ffffff', label: 'スカイブルー' }
+  };
+  const FALLBACK_COLORS = ['#0f766e', '#1d4ed8', '#b45309', '#6d28d9', '#be185d', '#15803d', '#334155', '#9333ea'];
+  function getTasuki(name) {
+    const clean = String(name || '').trim();
+    if (TASUKI_MAP[clean]) return TASUKI_MAP[clean];
+    for (const [k, v] of Object.entries(TASUKI_MAP)) {
+      if (clean.includes(k) || k.includes(clean)) return v;
+    }
+    let h = 0;
+    for (let i = 0; i < clean.length; i++) h = (h * 31 + clean.charCodeAt(i)) >>> 0;
+    return { bg: FALLBACK_COLORS[h % FALLBACK_COLORS.length], stripe: '#ffffff', label: 'チームカラー' };
+  }
+  function tasukiSwatch(name, sizeClass = '') {
+    const t = getTasuki(name);
+    return `<span class="tasuki-swatch ${sizeClass}" style="--t-bg:${t.bg};--t-stripe:${t.stripe}" title="${esc(name)}（${esc(t.label)}）" aria-hidden="true"></span>`;
+  }
+  function rankBadgeHtml(r) {
+    if (!r) return '<span class="dim">—</span>';
+    if (r.overall_rank === 1) return '<span class="rank-medal medal-1" title="優勝（1位）">1位 👑</span>';
+    if (r.overall_rank === 2) return '<span class="rank-medal medal-2" title="準優勝（2位）">2位</span>';
+    if (r.overall_rank === 3) return '<span class="rank-medal medal-3" title="3位">3位</span>';
+    if (r.overall_rank) return `<span class="rank-num">${r.overall_rank}位</span>`;
+    return `<span class="status">${esc(STATUS_NAME[r.result_status] || r.result_status)}</span>`;
+  }
+  const SEED_RANK = { hakone: 10, zennihon: 8, wzennihon: 8 };
+  const SEED_NOTE = {
+    hakone: '11位以下は10月の箱根駅伝予選会から本戦出場を目指します',
+    zennihon: '9位以下は各地区の選考会から次回出場を目指します',
+    wzennihon: '9位以下は各地区代表選考・5000m記録選考から次回出場を目指します'
+  };
+
   const $ = (s) => document.querySelector(s);
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const newState = () => ({ taikai: [], teams: [], summary: new Map(), results: {}, byTaikai: new Map(), byTeam: new Map(), taikaiById: new Map(), teamById: new Map() });
@@ -351,7 +428,7 @@
         `<span class="badge" data-series="${s}">${SERIES_SHORT[s]} ${sm.series[s].appearances}回</span>`).join('') +
         (qn ? `<span class="badge badge-q">予選会 ${qn}回</span>` : '');
       const sub = [t.region && `${t.region}地区`, t.prefecture, TYPE_NAME[t.establishment_type]].filter(Boolean).join('・') || (t.team_type === 'university' ? '大学紹介 準備中' : '選抜・連合チーム');
-      return `<li><button type="button" data-team="${t.id}" ${S.current === t.id ? 'aria-current="true"' : ''}><strong>${esc(t.display_name)}</strong><small>${esc(sub)}</small><span class="badges">${badges}</span></button></li>`;
+      return `<li><button type="button" data-team="${t.id}" ${S.current === t.id ? 'aria-current="true"' : ''}><strong class="team-list-title">${tasukiSwatch(t.display_name, 'sm')}<span>${esc(t.display_name)}</span></strong><small>${esc(sub)}</small><span class="badges">${badges}</span></button></li>`;
     }).join('') || '<li class="team-empty">条件に合うチームがありません。</li>';
     list.querySelectorAll('button[data-team]').forEach((b) => b.addEventListener('click', () => showTeam(b.dataset.team, true)));
   }
@@ -376,11 +453,12 @@
       return `<section class="series-card" data-series="${s}"><h3>${SERIES_NAME[s]}</h3><dl>
         <dt>出場</dt><dd>${x.appearances}回</dd>
         <dt>期間</dt><dd>${x.first_year}〜${x.last_year}年</dd>
-        <dt>最高</dt><dd>${x.best_rank ? x.best_rank + '位' : '—'}</dd>
+        <dt>最高</dt><dd>${x.best_rank ? (x.best_rank === 1 ? '<span class="best-rank-win">1位 👑</span>' : x.best_rank + '位') : '—'}</dd>
         <dt>優勝</dt><dd>${x.wins ? `${x.wins}回（${x.win_years.join('、')}年）` : 'なし'}</dd></dl></section>`;
     }).join('');
     const ck = GENDER[G].crownKey;
-    const crown = sm[ck] ? `<p class="crown">${GENDER[G].crownLong}: ${sm[ck].map(seasonLabel).join('、')}</p>` : '';
+    const crownSeasons = sm[ck] || [];
+    const crown = crownSeasons.length ? `<p class="crown"><span class="crown-icon" aria-hidden="true">👑</span>${GENDER[G].crownLong}: ${crownSeasons.map(seasonLabel).join('、')}</p>` : '';
 
     // 年度ごとの年表
     const rows = appearancesOf(teamId).concat((S.byTeam.get(teamId) || []).filter((r) => r.result_status === 'dns'));
@@ -407,8 +485,9 @@
       const rank = r.overall_rank ? `${r.overall_rank}位` : (r.result_status === 'dnf' ? '記録なし' : '');
       return `<button type="button" class="link q-cell" data-race="q:${qt.series}|${qt.id}|${r.id}" title="${Q_NAME[qt.series]} ${qLabel(qt)}を見る">${Q_SHORT[qt.series]}${qt.region && qt.series === 'zennihon' ? `（${qt.region}）` : ''} ${rank} ${r.qualified ? '<span class="q-pass">通過</span>' : '<span class="q-fail">通過ならず</span>'}</button>`;
     }).join('') || '—';
+    const crownSet = new Set(crownSeasons.map(String));
     const table = `<div class="table-scroll"><table class="race-table compact"><thead><tr><th>年度</th>${SERIES.map((s) => `<th>${SERIES_SHORT[s]}</th>`).join('')}${hasQ ? '<th>予選会</th>' : ''}</tr></thead><tbody>${
-      seasons.map((y) => `<tr><td>${seasonLabel(y)}</td>${SERIES.map((s) => {
+      seasons.map((y) => `<tr class="${crownSet.has(String(y)) ? 'win' : ''}"><td>${seasonLabel(y)}${crownSet.has(String(y)) ? ` <span class="leg-mark award">👑${GENDER[G].crownName}</span>` : ''}</td>${SERIES.map((s) => {
         const r = (bySeason.get(y) || {})[s];
         if (!r) return '<td>—</td>';
         const tk = S.taikaiById.get(r.taikai_id);
@@ -416,9 +495,27 @@
         return `<td><button type="button" class="link" data-race="${tk.series}|${edOf(tk)}|${r.id}" title="${raceTitle(tk)}（${tk.year}年）の順位表を見る">${rankCell(r)}</button>${aw}</td>`;
       }).join('')}${hasQ ? `<td>${qCell(y)}</td>` : ''}</tr>`).join('')}</tbody></table></div>`;
 
-    $('#team-detail').innerHTML = `<h2>${esc(t.display_name)}</h2><p class="team-sub">${esc(subParts.join('　'))}</p>${link}${crown}
+    const tasuki = getTasuki(t.display_name);
+    const detailEl = $('#team-detail');
+    detailEl.style.setProperty('--team-bg', tasuki.bg);
+    detailEl.style.setProperty('--team-stripe', tasuki.stripe);
+    detailEl.innerHTML = `<div class="team-tasuki-banner" aria-hidden="true"></div>
+      <div class="team-header-row">
+        <div class="team-title-wrap">
+          ${tasukiSwatch(t.display_name, 'lg')}
+          <div>
+            <div class="team-heading-line">
+              <h2>${esc(t.display_name)}</h2>
+              <span class="tasuki-color-pill">たすき色：${esc(tasuki.label)}</span>
+            </div>
+            <p class="team-sub">${esc(subParts.join('　'))}</p>
+          </div>
+        </div>
+        ${link}
+      </div>
+      ${crown}
       <div class="series-cards">${cards}</div>
-      <div class="chart-wrap">${rankChart(bySeason, chartSeasons)}<div class="chart-legend">${SERIES.map((s) => `<span data-series="${s}">${SERIES_SHORT[s]}</span>`).join('')}</div></div>
+      <div class="chart-wrap">${rankChart(bySeason, chartSeasons, crownSeasons)}<div class="chart-legend">${SERIES.map((s) => `<span data-series="${s}">${SERIES_SHORT[s]}</span>`).join('')}<b class="chart-legend-note">★＝優勝（1位）　破線＝シード権目安（10位）</b></div></div>
       ${table}`;
     $('#team-detail').querySelectorAll('[data-race]').forEach((b) => b.addEventListener('click', () => {
       const [s, ed, rid] = b.dataset.race.split('|');
@@ -429,22 +526,38 @@
     if (push && matchMedia('(max-width:900px)').matches) $('#team-detail').scrollIntoView({ behavior: 'smooth' });
   }
 
-  // 順位の推移（上ほど上位）。年度を横軸に3大会を重ねる
-  function rankChart(bySeason, seasonsDesc) {
+  // 順位の推移（上ほど上位）。年度を横軸に3大会を重ね、優勝（★）と三冠／二冠帯・シード権ラインを表示する
+  function rankChart(bySeason, seasonsDesc, crownSeasons = []) {
     const seasons = [...seasonsDesc].reverse().map(Number);
     if (!seasons.length) return '';
-    const W = 640, H = 210, L = 36, R = 12, T = 14, B = 28;
+    const W = 660, H = 228, L = 42, R = 18, T = 24, B = 30;
     const minY = seasons[0], maxY = seasons[seasons.length - 1];
     let maxRank = 10;
     bySeason.forEach((v) => Object.values(v).forEach((r) => { if (r.overall_rank) maxRank = Math.max(maxRank, r.overall_rank); }));
-    maxRank = Math.ceil(maxRank / 5) * 5;
+    maxRank = Math.max(15, Math.ceil(maxRank / 5) * 5);
     const x = (y) => L + (maxY === minY ? (W - L - R) / 2 : (y - minY) / (maxY - minY) * (W - L - R));
     const yy = (rank) => T + (rank - 1) / (maxRank - 1) * (H - T - B);
     const color = { izumo: 'var(--izumo)', zennihon: 'var(--zennihon)', hakone: 'var(--hakone)', wzennihon: 'var(--wzennihon)', wfujisan: 'var(--wfujisan)' };
     let g = '';
     for (let rk = 1; rk <= maxRank; rk += (maxRank > 15 ? 5 : 2)) {
-      g += `<line x1="${L}" x2="${W - R}" y1="${yy(rk)}" y2="${yy(rk)}" stroke="#ebe8de"/><text x="${L - 6}" y="${yy(rk) + 4}" font-size="11" text-anchor="end" fill="#6b7280">${rk}位</text>`;
+      const isTop = rk === 1;
+      g += `<line x1="${L}" x2="${W - R}" y1="${yy(rk)}" y2="${yy(rk)}" stroke="${isTop ? '#f59e0b' : '#ebe8de'}" stroke-opacity="${isTop ? '0.55' : '1'}"/><text x="${L - 7}" y="${yy(rk) + 4}" font-size="11" font-weight="${isTop ? '700' : '400'}" text-anchor="end" fill="${isTop ? '#b45309' : '#6b7280'}">${rk}位</text>`;
     }
+    // 10位シード権目安ライン（破線）
+    if (maxRank >= 10) {
+      const sy = yy(10);
+      g += `<line x1="${L}" x2="${W - R}" y1="${sy}" y2="${sy}" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="5 3" stroke-opacity="0.55"/>`;
+      g += `<text x="${W - R - 4}" y="${sy - 4}" font-size="10" font-weight="700" text-anchor="end" fill="#0f766e" opacity="0.85">シード権目安（10位）</text>`;
+    }
+    // 三冠・二冠達成年度のゴールドハイライト縦帯
+    const crownName = GENDER[G].crownName;
+    (crownSeasons || []).map(Number).filter((cy) => cy >= minY && cy <= maxY).forEach((cy) => {
+      const cx = x(cy);
+      const bw = Math.min(34, Math.max(20, (W - L - R) / Math.max(4, maxY - minY + 1)));
+      g += `<rect x="${(cx - bw / 2).toFixed(1)}" y="${T - 14}" width="${bw.toFixed(1)}" height="${H - T - B + 18}" rx="6" fill="#f59e0b" fill-opacity="0.16" stroke="#d97706" stroke-opacity="0.45" stroke-dasharray="2 2"/>`;
+      g += `<text x="${cx.toFixed(1)}" y="${T - 4}" font-size="10" font-weight="800" text-anchor="middle" fill="#b45309">👑${cy}${crownName}</text>`;
+    });
+
     const step = Math.max(1, Math.ceil((maxY - minY) / 8));
     for (let y = minY; y <= maxY; y += step) g += `<text x="${x(y)}" y="${H - 8}" font-size="11" text-anchor="middle" fill="#6b7280">${y}</text>`;
     SERIES.forEach((s) => {
@@ -453,8 +566,14 @@
       // 出場しなかった年度で線を切る
       let path = '';
       pts.forEach(([y, r], i) => { path += `${i && pts[i - 1][0] === y - 1 ? 'L' : 'M'}${x(y).toFixed(1)},${yy(r.overall_rank).toFixed(1)}`; });
-      g += `<path d="${path}" fill="none" stroke="${color[s]}" stroke-width="2.2"/>`;
-      g += pts.map(([y, r]) => `<circle cx="${x(y).toFixed(1)}" cy="${yy(r.overall_rank).toFixed(1)}" r="3.4" fill="${color[s]}"><title>${seasonLabel(y)} ${SERIES_NAME[s]} ${r.overall_rank}位</title></circle>`).join('');
+      g += `<path d="${path}" fill="none" stroke="${color[s]}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+      g += pts.map(([y, r]) => {
+        const cx = x(y).toFixed(1), cy = yy(r.overall_rank).toFixed(1);
+        if (r.overall_rank === 1) {
+          return `<g><circle cx="${cx}" cy="${cy}" r="6.8" fill="#fbbf24" stroke="${color[s]}" stroke-width="2"/><text x="${cx}" y="${(Number(cy) + 3.4).toFixed(1)}" font-size="9" font-weight="800" text-anchor="middle" fill="#78350f">★</text><title>${seasonLabel(y)} ${SERIES_NAME[s]} 1位（優勝）</title></g>`;
+        }
+        return `<circle cx="${cx}" cy="${cy}" r="3.6" fill="${color[s]}" stroke="#fff" stroke-width="1.2"><title>${seasonLabel(y)} ${SERIES_NAME[s]} ${r.overall_rank}位</title></circle>`;
+      }).join('');
     });
     return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="年度ごとの総合順位の推移">${g}</svg>`;
   }
@@ -495,13 +614,22 @@
       return;
     }
     const ncol = hk ? 5 : 3;
+    const seedRank = SEED_RANK[s] || 0;
+    const seedNote = SEED_NOTE[s] || '';
     $('#race-table').innerHTML = `<thead><tr><th class="num">順位</th><th>チーム</th><th class="num">総合記録</th>${hk ? '<th class="num">往路</th><th class="num">復路</th>' : ''}</tr></thead><tbody>${
       rows.map((r) => {
         const team = S.teamById.get(r.team_id);
-        const cls = r.overall_rank === 1 ? 'win' : r.overall_rank ? '' : 'open';
-        const legs = hk ? `<td class="num">${r.outbound_rank ? r.outbound_rank + '位 ' : ''}${esc(r.outbound_time || '—')}</td><td class="num">${r.return_rank ? r.return_rank + '位 ' : ''}${esc(r.return_time || '—')}</td>` : '';
+        const cls = r.overall_rank === 1 ? 'win' : (seedRank && r.overall_rank && r.overall_rank <= seedRank ? 'seed-zone' : (r.overall_rank ? '' : 'open'));
+        const outBadge = r.outbound_rank === 1 ? '<span class="sub-win-badge">往路1位</span> ' : (r.outbound_rank ? r.outbound_rank + '位 ' : '');
+        const retBadge = r.return_rank === 1 ? '<span class="sub-win-badge">復路1位</span> ' : (r.return_rank ? r.return_rank + '位 ' : '');
+        const legs = hk ? `<td class="num">${outBadge}${esc(r.outbound_time || '—')}</td><td class="num">${retBadge}${esc(r.return_time || '—')}</td>` : '';
         const name = r.name_at_entry !== team.display_name && !team.display_name.startsWith(r.name_at_entry) ? `${esc(r.name_at_entry)}<small class="dim">（今の${esc(team.display_name)}）</small>` : esc(r.name_at_entry);
-        return `<tr class="${cls}" data-result="${r.id}"><td class="num">${rankCell(r)}</td><td><button type="button" class="link" data-team="${team.id}">${name}</button>${legMarks(r)}<button type="button" class="leg-toggle" data-legs="${r.id}" aria-expanded="false" aria-controls="legs-${r.id}" hidden>区間成績</button>${r.note ? `<br><small class="dim">${esc(r.note)}</small>` : ''}</td><td class="num">${esc(r.overall_time || '—')}</td>${legs}</tr>`;
+        const seedTag = (seedRank && r.overall_rank === seedRank) ? '<span class="seed-cutoff-tag">シード権</span>' : '';
+        const rowHtml = `<tr class="${cls}" data-result="${r.id}"><td class="num">${rankBadgeHtml(r)}</td><td><div class="team-cell-inner">${tasukiSwatch(team.display_name)}<button type="button" class="link" data-team="${team.id}">${name}</button>${seedTag}${legMarks(r)}<button type="button" class="leg-toggle" data-legs="${r.id}" aria-expanded="false" aria-controls="legs-${r.id}" hidden>区間成績</button></div>${r.note ? `<small class="dim team-row-note">${esc(r.note)}</small>` : ''}</td><td class="num">${esc(r.overall_time || '—')}</td>${legs}</tr>`;
+        if (seedRank && r.overall_rank === seedRank) {
+          return rowHtml + `<tr class="seed-divider-row" data-series="${s}"><td colspan="${ncol}"><div class="seed-divider-bar"><span class="seed-divider-pill">▲ ここまで次回大会シード権（上位${seedRank}校）</span><span class="seed-divider-note">${esc(seedNote)}</span></div></td></tr>`;
+        }
+        return rowHtml;
       }).join('')}</tbody>`;
     $('#race-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
     if (!$('#panel-race').hidden) setParams({ tab: 'race', series: s, ed, open: openId });
@@ -687,8 +815,19 @@
     });
     const hasNote = r.legs.some((l) => l.note);
     const hasDay = r.legs.some((l) => l.day);
+    const LEG_TAGS = {
+      hakone: { 1: '開幕区間', 2: '花の2区', 3: '湘南の海風', 4: '山へのつなぎ', 5: '天下の険・山上り', 6: '急勾配・山下り', 7: '寒暖差の7区', 8: '遊行寺の坂', 9: '復路のエース区間', 10: '大手町フィニッシュ' },
+      izumo: { 1: '出雲大社スタート', 2: '最短スピード区間', 3: '斐伊川・エース区間', 4: '北山山系を望む', 5: 'ぶどう畑の起伏', 6: '最長アンカー決戦' },
+      zennihon: { 1: '熱田神宮スタート', 2: '序盤のスピード戦', 3: '伊勢湾岸の駆け引き', 4: '前半の起伏区間', 5: '中盤の要所', 6: '伊勢路のつなぎ', 7: '準アンカー長距離', 8: '伊勢神宮フィニッシュ' },
+      wzennihon: { 1: '杜の都スタート', 2: '最短スピード区間', 3: '広瀬川を渡る', 4: '中盤の起伏と風', 5: '最長・仙台城跡の上り', 6: '競技場フィニッシュ' },
+      wfujisan: { 1: '浅間大社周回', 2: '高低差98mの下り', 3: '最短スピード区間', 4: '富士川の冬風', 5: '最長・田子の浦港', 6: '富士山を望む直線', 7: '169m上る最大の難関' }
+    };
+    const tagMap = LEG_TAGS[r.series] || {};
     $('#basics-legs').innerHTML = `<thead><tr><th>区間</th>${hasDay ? '<th>日</th>' : ''}<th>スタート</th><th>たすきを渡す場所</th><th class="num">距離</th>${hasNote ? '<th>見どころ</th>' : ''}</tr></thead><tbody>${
-      r.legs.map((l) => `<tr><th scope="row">${l.no}区</th>${hasDay ? `<td>${esc(l.day)}</td>` : ''}<td class="wrap">${esc(l.from)}</td><td class="wrap">${esc(l.to)}</td><td class="num">${l.km.toFixed(1)}km</td>${hasNote ? `<td class="wrap">${esc(l.note || '')}</td>` : ''}</tr>`).join('')
+      r.legs.map((l) => {
+        const tag = tagMap[l.no] ? `<span class="leg-drama-tag ${l.no === 5 && r.series === 'hakone' || l.no === 7 && r.series === 'wfujisan' ? 'is-peak' : ''}">${esc(tagMap[l.no])}</span> ` : '';
+        return `<tr><th scope="row">${l.no}区</th>${hasDay ? `<td>${esc(l.day)}</td>` : ''}<td class="wrap">${esc(l.from)}</td><td class="wrap">${esc(l.to)}</td><td class="num">${l.km.toFixed(1)}km</td>${hasNote ? `<td class="wrap">${tag}${esc(l.note || '')}</td>` : ''}</tr>`;
+      }).join('')
     }<tr class="total"><th scope="row">合計</th>${hasDay ? '<td></td>' : ''}<td></td><td></td><td class="num">${r.distance_km.toFixed(1)}km</td>${hasNote ? '<td></td>' : ''}</tr></tbody>`;
     $('#basics-course-src').innerHTML = '出典: ' + r.sources.map((s) => srcLink(s)).join('、');
   }
@@ -750,7 +889,7 @@
   function womenSectionGuide(r) {
     return `<section class="hakone-section-guide women-section-guide" aria-labelledby="women-section-title">
       <div class="hakone-section-head">
-        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="women-section-title">1区ずつ、走る場所と特徴を見る</h3></div>
+        <div><p class="section-kicker">走者の目線で見る区間ガイド</p><h3 id="women-section-title">1区ずつ、走る場所と特徴を見る</h3></div>
         <div class="hakone-section-switch" role="group" aria-label="${esc(r.name)}の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-women-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
       </div>
       <div id="women-section-summary" class="hakone-section-summary" aria-live="polite"></div>
@@ -793,7 +932,7 @@
   function zennihonSectionGuide(r) {
     return `<section class="hakone-section-guide zennihon-section-guide" aria-labelledby="zennihon-section-title">
       <div class="hakone-section-head">
-        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="zennihon-section-title">1区ずつ、走る場所を見る</h3></div>
+        <div><p class="section-kicker">走者の目線で見る区間ガイド</p><h3 id="zennihon-section-title">1区ずつ、走る場所を見る</h3></div>
         <div class="hakone-section-switch zennihon-section-switch" role="group" aria-label="全日本大学駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-zennihon-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
       </div>
       <div id="zennihon-section-summary" class="hakone-section-summary" aria-live="polite"></div>
@@ -831,7 +970,7 @@
   function izumoSectionGuide(r) {
     return `<section class="hakone-section-guide izumo-section-guide" aria-labelledby="izumo-section-title">
       <div class="hakone-section-head">
-        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="izumo-section-title">1区ずつ、走る場所を見る</h3></div>
+        <div><p class="section-kicker">走者の目線で見る区間ガイド</p><h3 id="izumo-section-title">1区ずつ、走る場所を見る</h3></div>
         <div class="hakone-section-switch izumo-section-switch" role="group" aria-label="出雲駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-izumo-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
       </div>
       <div id="izumo-section-summary" class="hakone-section-summary" aria-live="polite"></div>
@@ -916,7 +1055,7 @@
   function hakoneSectionGuide(r) {
     return `<section class="hakone-section-guide" aria-labelledby="hakone-section-title">
       <div class="hakone-section-head">
-        <div><p class="section-kicker">RUNNER'S VIEW</p><h3 id="hakone-section-title">区間ごとに、どこを走るか見る</h3></div>
+        <div><p class="section-kicker">走者の目線で見る区間ガイド</p><h3 id="hakone-section-title">区間ごとに、どこを走るか見る</h3></div>
         <div class="hakone-section-switch hakone-all-section-switch" role="group" aria-label="箱根駅伝の区間を選ぶ">${r.legs.map((leg) => `<button type="button" data-hakone-section="${leg.no}" aria-pressed="${leg.no === 1}">${leg.no}区</button>`).join('')}</div>
       </div>
       <div id="hakone-section-summary" class="hakone-section-summary" aria-live="polite"></div>
@@ -1017,17 +1156,21 @@
       return `<svg class="course-elevation" viewBox="0 0 420 340" role="img" aria-label="箱根駅伝は5区で国道1号の最高点約874メートルへ上り、復路6区で山を下る。2区・7区・8区にも起伏がある">
         <defs><linearGradient id="hakoneMountain" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d9eee9"/><stop offset="1" stop-color="#75b7a7"/></linearGradient></defs>
         <text x="24" y="28" class="elev-kicker">往路　東京 → 箱根</text>
+        <!-- 背景に相模湾と富士山のシルエット -->
+        <path d="M168 126 L195 82 L204 82 L232 126 Z" fill="#3b82f6" fill-opacity="0.14"/>
+        <path d="M188 93 L195 82 L204 82 L211 93 L206 91 L200 95 L194 91 Z" fill="#ffffff" fill-opacity="0.8"/>
         <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92 L382 126 L28 126 Z" fill="url(#hakoneMountain)"/>
         <path d="M28 116 C80 112 126 105 178 108 S247 112 278 101 C302 90 323 43 347 25 C361 49 370 74 382 92" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
         <line x1="28" y1="126" x2="382" y2="126" class="elev-base"/>
         <g class="elev-place"><text x="28" y="148">大手町</text><text x="278" y="148" text-anchor="middle">小田原</text><text x="382" y="148" text-anchor="end">芦ノ湖</text></g>
-        <g class="elev-leg"><text x="154" y="72" text-anchor="middle">1〜4区</text><text x="154" y="89" text-anchor="middle">2区などに起伏</text><text x="325" y="117" text-anchor="middle">5区　山上り</text></g>
-        <circle cx="347" cy="25" r="7" fill="#fff" stroke="#0f766e" stroke-width="4"/><text x="347" y="16" text-anchor="middle" class="elev-peak">国道1号最高点 約874m</text>
+        <g class="elev-leg"><text x="148" y="68" text-anchor="middle">1〜4区（花の2区・湘南）</text><text x="148" y="85" text-anchor="middle">権太坂などに起伏</text><text x="325" y="117" text-anchor="middle">5区　山上り</text></g>
+        <circle cx="347" cy="25" r="7" fill="#fbbf24" stroke="#0f766e" stroke-width="3.5"/><text x="347" y="15" text-anchor="middle" class="elev-peak">⛰ 国道1号最高点 約874m</text>
         <text x="24" y="190" class="elev-kicker">復路　箱根 → 東京</text>
+        <path d="M28 213 C43 225 55 273 79 287 C111 300 146 292 184 286 S264 281 382 288 L382 298 L28 298 Z" fill="url(#hakoneMountain)" fill-opacity="0.55"/>
         <path d="M28 213 C43 225 55 273 79 287 C111 300 146 292 184 286 S264 281 382 288" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
         <line x1="28" y1="298" x2="382" y2="298" class="elev-base"/>
         <g class="elev-place"><text x="28" y="320">芦ノ湖</text><text x="100" y="320" text-anchor="middle">小田原</text><text x="382" y="320" text-anchor="end">大手町</text></g>
-        <g class="elev-leg"><text x="68" y="239" text-anchor="middle">6区</text><text x="68" y="256" text-anchor="middle">山下り</text><text x="244" y="272" text-anchor="middle">7・8区　小さな起伏や上りあり</text></g>
+        <g class="elev-leg"><text x="68" y="239" text-anchor="middle">6区</text><text x="68" y="256" text-anchor="middle">山下り</text><text x="244" y="272" text-anchor="middle">7・8区　小さな起伏や遊行寺の坂</text></g>
       </svg><p class="course-elevation-note"><b>読みどころ:</b> 大きな高低差が表れるのは、往路5区の山上りと復路6区の山下りです。</p>`;
     }
     if (r.series === 'zennihon') {
@@ -1071,33 +1214,55 @@
     activeCourseMap.fitBounds(line.getBounds(), { padding: [28, 28] });
   }
 
-  // 区間の長さに合わせた帯の図。mountain=true で5区に最高点の印
+  // 区間の長さに合わせた帯の図。mountain=true で5区（および権太坂・富士山シルエット）に高低差断面を描く
   function courseStrip(r, legs, points, title, mountain) {
-    const W = 760, L = 30, R = 30, y = mountain ? 92 : 62, H = y + 84;
+    const W = 760, L = 30, R = 30, y = mountain ? 102 : 66, H = y + 84;
     const total = legs.reduce((a, l) => a + l.km, 0);
     const scale = (W - L - R) / total;
-    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="700" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
+    let x = L, g = `<text x="${L}" y="22" font-size="14" font-weight="800" fill="var(--ink)">${esc(title)}</text><text x="${W - R}" y="22" font-size="12" font-weight="700" text-anchor="end" fill="var(--muted)">${Math.round(total * 10) / 10}km</text>`;
+    if (mountain && r.series === 'hakone') {
+      // 往路（大手町→芦ノ湖）の高低差断面シルエットと富士山透かしを背後に重ねる
+      g += `<defs>
+        <linearGradient id="stripElevGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0f766e" stop-opacity="0.28"/>
+          <stop offset="100%" stop-color="#0f766e" stop-opacity="0.04"/>
+        </linearGradient>
+        <linearGradient id="stripPeakGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d97706" stop-opacity="0.38"/>
+          <stop offset="100%" stop-color="#d97706" stop-opacity="0.06"/>
+        </linearGradient>
+      </defs>`;
+      // 3区背後の富士山シルエット
+      g += `<path d="M350 ${y - 8} L382 ${y - 46} L392 ${y - 46} L424 ${y - 8} Z" fill="#3b82f6" fill-opacity="0.11"/>`;
+      g += `<path d="M375 ${y - 37} L382 ${y - 46} L392 ${y - 46} L399 ${y - 37} L393 ${y - 39} L387 ${y - 35} L381 ${y - 39} Z" fill="#ffffff" fill-opacity="0.65"/>`;
+      // 1〜4区のゆるやかな起伏シルエット（2区権太坂）
+      g += `<path d="M${L} ${y - 9} L160 ${y - 9} L172 ${y - 14} L190 ${y - 9} L255 ${y - 10} L276 ${y - 22} L296 ${y - 12} L318 ${y - 20} L336 ${y - 10} L530 ${y - 10} L594 ${y - 16} L594 ${y - 7} L${L} ${y - 7} Z" fill="url(#stripElevGrad)"/>`;
+    }
     const xs = [x];
+    const SUB_TAG = { 1: '開幕区間', 2: '花の2区', 3: '湘南・富士', 4: '山へのつなぎ', 5: '山上り', 6: '山下り', 7: '寒暖差', 8: '遊行寺坂', 9: '復路エース', 10: '日本橋・大手町' };
     legs.forEach((l, i) => {
       const w = l.km * scale;
-      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${COLOR[r.series]}" fill-opacity="${i % 2 ? 0.55 : 0.9}"/>`;
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink)">${l.no}区</text>`;
-      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
-      if (mountain && l.no === 5) {
-        const mx = x + w * 0.55;
-        g += `<path d="M${(x + 6).toFixed(1)} ${y - 30} L${mx.toFixed(1)} ${y - 62} L${(x + w - 8).toFixed(1)} ${y - 34} Z" fill="#e9e5d8" stroke="var(--muted)" stroke-width="1.5" stroke-linejoin="round"/>`;
-        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 62}" r="3.5" fill="var(--ink)"/><text x="${(mx - 8).toFixed(1)}" y="${y - 70}" text-anchor="end" font-size="11.5" fill="var(--ink)">最高点 標高約874m</text>`;
+      const isHakone5 = mountain && l.no === 5;
+      if (isHakone5) {
+        const mx = x + w * 0.62;
+        g += `<path d="M${x.toFixed(1)} ${y - 14} C${(x + w * 0.25).toFixed(1)} ${y - 26} ${(x + w * 0.45).toFixed(1)} ${y - 54} ${mx.toFixed(1)} ${y - 68} C${(x + w * 0.78).toFixed(1)} ${y - 54} ${(x + w * 0.9).toFixed(1)} ${y - 42} ${(x + w - 3).toFixed(1)} ${y - 36} L${(x + w - 3).toFixed(1)} ${y - 7} L${x.toFixed(1)} ${y - 7} Z" fill="url(#stripPeakGrad)" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>`;
+        g += `<circle cx="${mx.toFixed(1)}" cy="${y - 68}" r="4.5" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>`;
+        g += `<text x="${(mx - 6).toFixed(1)}" y="${y - 74}" text-anchor="end" font-size="11.5" font-weight="800" fill="#92400e">⛰ 最高点 標高約874m</text>`;
       }
+      g += `<rect x="${x.toFixed(1)}" y="${y - 7}" width="${(w - 3).toFixed(1)}" height="14" rx="7" fill="${isHakone5 ? '#d97706' : COLOR[r.series]}" fill-opacity="${i % 2 ? 0.65 : 0.95}"/>`;
+      const subTag = r.series === 'hakone' && SUB_TAG[l.no] ? `（${SUB_TAG[l.no]}）` : '';
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y - 16}" text-anchor="middle" font-size="12.5" font-weight="800" fill="${isHakone5 ? '#92400e' : 'var(--ink)'}">${l.no}区<tspan font-size="10.5" font-weight="700" fill="var(--ink-soft)">${subTag}</tspan></text>`;
+      g += `<text x="${(x + w / 2).toFixed(1)}" y="${y + 24}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-soft)">${l.km.toFixed(1)}km</text>`;
       x += w;
       xs.push(x);
     });
     points.forEach((p, i) => {
       const px = Math.min(xs[i], W - R);
       const end = i === 0 || i === points.length - 1;
-      g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2"/>`;
+      g += `<circle cx="${px.toFixed(1)}" cy="${y}" r="${end ? 7 : 5}" fill="#fff" stroke="var(--ink)" stroke-width="2.2"/>`;
       const anchor = i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'middle';
       if (i % 2 && !end) g += `<line x1="${px.toFixed(1)}" y1="${y + 8}" x2="${px.toFixed(1)}" y2="${y + 50}" stroke="var(--line)" stroke-width="1.5"/>`;
-      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 700 : 400}" fill="var(--ink)">${esc(p)}</text>`;
+      g += `<text x="${(i === 0 ? px - 6 : i === points.length - 1 ? px + 6 : px).toFixed(1)}" y="${y + (i % 2 && !end ? 62 : 44)}" text-anchor="${anchor}" font-size="12" font-weight="${end ? 800 : 600}" fill="var(--ink)">${esc(p)}</text>`;
     });
     return `<svg class="fig course" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(r.name)} ${esc(title)} の区間図">${g}</svg>`;
   }
@@ -1125,11 +1290,17 @@
     const crowns = [];
     S.summary.forEach((sm) => (sm[GENDER[G].crownKey] || []).forEach((y) => crowns.push([y, sm.team_id])));
     crowns.sort((a, b) => a[0] - b[0]);
-    $('#triple-list').innerHTML = crowns.map(([y, tid]) => `<li>${seasonLabel(y)} <button type="button" class="link" data-team="${tid}">${esc(S.teamById.get(tid).display_name)}</button></li>`).join('') || '<li>収録範囲ではなし</li>';
+    $('#triple-list').innerHTML = crowns.map(([y, tid]) => {
+      const tm = S.teamById.get(tid);
+      return `<li class="crown-list-item"><span class="crown-year-badge">👑 ${seasonLabel(y)}</span> ${tasukiSwatch(tm.display_name, 'sm')}<button type="button" class="link" data-team="${tid}">${esc(tm.display_name)}</button></li>`;
+    }).join('') || '<li>収録範囲ではなし</li>';
     const wins = [...S.summary.values()].map((sm) => ({ tid: sm.team_id, w: SERIES.map((s) => sm.series[s]?.wins || 0) }))
       .filter((x) => x.w.some(Boolean)).sort((a, b) => b.w.reduce((p, q) => p + q) - a.w.reduce((p, q) => p + q));
     $('#wins-table').innerHTML = `<thead><tr><th>チーム</th>${SERIES.map((s) => `<th class="num">${SERIES_SHORT[s]}</th>`).join('')}<th class="num">計</th></tr></thead><tbody>${
-      wins.map((x) => `<tr><td><button type="button" class="link" data-team="${x.tid}">${esc(S.teamById.get(x.tid).display_name)}</button></td>${x.w.map((n) => `<td class="num">${n || ''}</td>`).join('')}<td class="num">${x.w.reduce((p, q) => p + q)}</td></tr>`).join('')}</tbody>`;
+      wins.map((x) => {
+        const tm = S.teamById.get(x.tid);
+        return `<tr><td><div class="team-cell-inner">${tasukiSwatch(tm.display_name, 'sm')}<button type="button" class="link" data-team="${x.tid}">${esc(tm.display_name)}</button></div></td>${x.w.map((n) => `<td class="num">${n || ''}</td>`).join('')}<td class="num"><strong>${x.w.reduce((p, q) => p + q)}</strong></td></tr>`;
+      }).join('')}</tbody>`;
     document.querySelectorAll('#panel-record [data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
     renderWinners();
   }
@@ -1139,7 +1310,7 @@
     $('#winners-table').innerHTML = `<thead><tr><th class="num">回</th><th>年</th><th>優勝</th><th class="num">記録</th></tr></thead><tbody>${
       list.map((t) => {
         const team = t.winner_team_id && S.teamById.get(t.winner_team_id);
-        const name = t.status === 'cancelled' ? '<span class="status">中止</span>' : team ? `<button type="button" class="link" data-team="${team.id}">${esc(t.winner_name)}</button>` : esc(t.winner_name || '');
+        const name = t.status === 'cancelled' ? '<span class="status">中止</span>' : team ? `<div class="team-cell-inner">${tasukiSwatch(team.display_name, 'sm')}<button type="button" class="link" data-team="${team.id}">${esc(t.winner_name)}</button></div>` : `<div class="team-cell-inner">${tasukiSwatch(t.winner_name, 'sm')}<span>${esc(t.winner_name || '')}</span></div>`;
         return `<tr><td class="num">${t.series === 'wfujisan' ? '' : t.edition}</td><td>${t.year}</td><td>${name}</td><td class="num">${esc(t.winning_time || '')}</td></tr>`;
       }).join('')}</tbody>`;
     $('#winners-table').querySelectorAll('[data-team]').forEach((b) => b.addEventListener('click', () => { selectTab('univ', false); showTeam(b.dataset.team, true); }));
