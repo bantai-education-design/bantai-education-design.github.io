@@ -132,32 +132,61 @@ def parse_all() -> dict[str, list[dict]]:
                     })
                     saki_cnt += 1
 
-    # 3. SSH FY2026
+    # 3. JST SSH all active schools (230 schools nationwide)
     ssh_cnt = 0
-    with pdfplumber.open(CACHE_DIR / "mext_ssh_r8.pdf") as pdf:
-        for page in pdf.pages:
-            for t in page.extract_tables():
-                for row in t:
-                    if not row or len(row) < 3:
-                        continue
-                    no = clean(row[0])
-                    if not no.isdigit():
-                        continue
-                    pref = norm_pref(row[1])
-                    if not pref:
-                        continue
-                    sname = clean(row[2]).replace(" ", "")
-                    if not sname:
-                        continue
-                    by_slug[PREF_SLUGS[pref]].append({
-                        "school_name": sname,
-                        "muni_hint": "",
-                        "year": "令和8〜12",
-                        "subject": "理数・科学技術",
-                        "designation": "スーパーサイエンスハイスクール（SSH）",
-                        "authority": "文部科学省",
-                    })
-                    ssh_cnt += 1
+    jst_html_path = Path(
+        r"C:\Users\User\.gemini\antigravity\brain\d33ccb9c-6d5b-43b8-ad87-7b7acc4093e6\scratch\chubu_research\jst_ssh.html"
+    )
+    if jst_html_path.exists():
+        jhtml = jst_html_path.read_text(encoding="utf-8")
+        card_pat = re.compile(
+            r'<p class="pre-txt">都道府県：<span>([^<]+)</span></p>.*?'
+            r'<p class="school-name">(?:<a[^>]*>)?([^<]+)(?:</a>)?</p>.*?'
+            r'<span class="rect">指定年度</span><span>([^<]+)</span>.*?'
+            r'<span class="rect">分類</span><span>([^<]+)</span>',
+            re.S,
+        )
+        for m in card_pat.finditer(jhtml):
+            pref = norm_pref(m.group(1))
+            sname = clean(m.group(2)).replace(" ", "")
+            yr_raw = clean(m.group(3)).replace("年度", "")
+            cls_raw = clean(m.group(4))
+            if not pref or not sname:
+                continue
+            by_slug[PREF_SLUGS[pref]].append({
+                "school_name": sname,
+                "muni_hint": "",
+                "year": yr_raw,
+                "subject": "理数・科学技術",
+                "designation": f"スーパーサイエンスハイスクール（SSH・{cls_raw}）" if cls_raw else "スーパーサイエンスハイスクール（SSH）",
+                "authority": "文部科学省",
+            })
+            ssh_cnt += 1
+    else:
+        with pdfplumber.open(CACHE_DIR / "mext_ssh_r8.pdf") as pdf:
+            for page in pdf.pages:
+                for t in page.extract_tables():
+                    for row in t:
+                        if not row or len(row) < 3:
+                            continue
+                        no = clean(row[0])
+                        if not no.isdigit():
+                            continue
+                        pref = norm_pref(row[1])
+                        if not pref:
+                            continue
+                        sname = clean(row[2]).replace(" ", "")
+                        if not sname:
+                            continue
+                        by_slug[PREF_SLUGS[pref]].append({
+                            "school_name": sname,
+                            "muni_hint": "",
+                            "year": "令和8〜12",
+                            "subject": "理数・科学技術",
+                            "designation": "スーパーサイエンスハイスクール（SSH）",
+                            "authority": "文部科学省",
+                        })
+                        ssh_cnt += 1
 
     OUT_JSON.write_text(json.dumps(by_slug, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Parsed MEXT national R8: DX={dx_cnt}, Sakidori={saki_cnt}, SSH_R8={ssh_cnt}, prefectures={len(by_slug)}")
