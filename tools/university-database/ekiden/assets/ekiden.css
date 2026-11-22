@@ -401,3 +401,168 @@ body[data-gender="women"] .entry-women {
 .official-map-image{display:block;width:100%;height:auto;object-fit:contain}
 @media (max-width:768px){.official-map-link{max-height:500px}}
 @media (max-width:480px){.official-map-link{max-height:420px}.official-map-image{min-width:620px}}
+
+/* ---------- 駅伝ドラマ可視化スタイル（たすき色帯・王冠プロット・シード権ライン・区間名物タグ） ---------- */
+.ekiden-hero{position:relative;overflow:hidden}
+.ekiden-hero-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.ekiden-hero-inner,.series-strip{position:relative;z-index:1}
+
+/* たすき色スウォッチ（斜め白またはサブカラー帯入り） */
+.tasuki-swatch{
+  display:inline-block;
+  width:8px;
+  height:20px;
+  border-radius:3px;
+  background-color:var(--t-bg,#0f766e);
+  background-image:linear-gradient(135deg,transparent 36%,var(--t-stripe,#fff) 36%,var(--t-stripe,#fff) 64%,transparent 64%);
+  box-shadow:0 0 0 1px rgba(15,23,42,.15);
+  flex:0 0 auto;
+  vertical-align:middle;
+}
+.tasuki-swatch.sm{width:6px;height:16px;border-radius:2px}
+.tasuki-swatch.lg{width:14px;height:38px;border-radius:5px;box-shadow:0 2px 6px rgba(15,23,42,.18)}
+
+.team-list-title{display:flex;align-items:center;gap:8px}
+
+/* 大学別カードの上部たすきカラー帯＆ヘッダーレイアウト */
+.team-detail{position:relative;overflow:hidden;padding-top:26px}
+.team-tasuki-banner{
+  position:absolute;
+  top:0;left:0;right:0;
+  height:7px;
+  background:linear-gradient(90deg,var(--team-bg,#0f766e) 0%,var(--team-bg,#0f766e) 72%,var(--gold,#c9a227) 100%);
+}
+.team-header-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px 16px;
+  margin-bottom:10px;
+}
+.team-title-wrap{display:flex;align-items:center;gap:12px}
+.team-heading-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.team-heading-line h2{margin:0;font-size:1.55rem}
+.team-title-wrap .team-sub{margin:3px 0 0}
+.tasuki-color-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 9px;
+  border-radius:999px;
+  font-size:.74rem;
+  font-weight:700;
+  background:#f4f2ea;
+  color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.team-header-row .univ-link{margin:0}
+.best-rank-win{color:#92400e;font-weight:800}
+.crown{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+  border:1px solid #f59e0b;
+  color:#78350f;
+  border-radius:12px;
+  padding:9px 14px;
+  font-weight:800;
+  margin-bottom:14px;
+  box-shadow:0 4px 14px rgba(217,119,6,.12);
+}
+.crown-icon{font-size:1.05rem}
+.chart-legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:.8rem;padding:4px 8px}
+.chart-legend-note{margin-left:auto;font-size:.76rem;color:var(--ink-soft);font-weight:700}
+
+/* 順位表の表彰台メダル＆シード権ライン */
+.team-cell-inner{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap}
+.team-row-note{display:block;margin-top:2px;padding-left:15px}
+.rank-medal{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  padding:2px 8px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.82rem;
+  white-space:nowrap;
+}
+.rank-medal.medal-1{background:linear-gradient(135deg,#fde68a,#f59e0b);color:#78350f;box-shadow:0 1px 4px rgba(217,119,6,.25)}
+.rank-medal.medal-2{background:linear-gradient(135deg,#f1f5f9,#cbd5e1);color:#0f172a}
+.rank-medal.medal-3{background:linear-gradient(135deg,#fed7aa,#d97706);color:#fff}
+.rank-num{font-weight:700}
+.sub-win-badge{
+  display:inline-block;
+  padding:1px 6px;
+  border-radius:6px;
+  font-size:.72rem;
+  font-weight:800;
+  background:#fef3c7;
+  color:#92400e;
+  border:1px solid #f59e0b;
+}
+.seed-cutoff-tag{
+  display:inline-block;
+  padding:1px 7px;
+  border-radius:999px;
+  font-size:.7rem;
+  font-weight:800;
+  background:#dcfce7;
+  color:#166534;
+}
+.seed-divider-row td{
+  padding:0!important;
+  border-bottom:1px solid var(--line);
+}
+.seed-divider-bar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 14px;
+  padding:7px 12px;
+  background:linear-gradient(90deg,rgba(15,118,110,.12) 0%,rgba(201,162,39,.12) 100%);
+  border-top:2px dashed var(--s,#0f766e);
+}
+.seed-divider-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 10px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:800;
+  background:var(--s,#0f766e);
+  color:#fff;
+}
+.seed-divider-note{font-size:.78rem;color:var(--ink-soft);font-weight:600}
+
+/* 区間名物バッジ＆三冠リスト */
+.leg-drama-tag{
+  display:inline-block;
+  padding:1px 8px;
+  margin-right:4px;
+  border-radius:999px;
+  font-size:.73rem;
+  font-weight:800;
+  background:#eef6f4;
+  color:#0f766e;
+  border:1px solid rgba(15,118,110,.25);
+  white-space:nowrap;
+}
+.leg-drama-tag.is-peak{
+  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  color:#92400e;
+  border-color:#f59e0b;
+}
+.crown-list-item{display:flex;align-items:center;gap:8px;margin:6px 0}
+.crown-year-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 8px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:800;
+  background:#fef3c7;
+  color:#92400e;
+  border:1px solid #f59e0b;
+}
