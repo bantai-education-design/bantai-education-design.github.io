@@ -28,6 +28,25 @@ CONTENT_KEYS = (
 EDITORIAL_DIRS = ("/columns/", "/books/", "/book2/", "/drafts/")
 EDITORIAL_EXTS = (".md", ".txt", ".html", ".htm")
 
+MARKER_MUTATION_RE = re.compile(
+    r"(?:"
+    r">>?"
+    r"|\b(?:git\s+(?:add|rm|mv|restore|checkout|reset)|del|erase|rm|mv|cp|tee|touch|sed|truncate)"
+    r"|\b(?:Set-Content|Add-Content|Out-File|New-Item|Remove-Item|Move-Item|Copy-Item|Clear-Content|Rename-Item)"
+    r"|\b(?:python|python3|py|node|pwsh|powershell|cmd|bash|sh)\b"
+    r")",
+    re.I,
+)
+
+
+def normalize_command(command: str) -> str:
+    """Collapse line continuations and strip simple quote/backtick obfuscation."""
+    # Join shell/PowerShell line continuations (\ or ` followed by newline)
+    collapsed = re.sub(r"[\\`]\r?\n", " ", command)
+    # Strip quotes and PowerShell escape backticks inside tokens (e.g. "--ad"min, `--admin)
+    dequoted = re.sub(r"[\"'`]", "", collapsed)
+    return dequoted
+
 
 def extract_written_text(args: dict) -> str:
     parts = []
@@ -45,6 +64,23 @@ def extract_written_text(args: dict) -> str:
     return "\n".join(parts)
 
 
+def check_command_segment(segment: str) -> dict | None:
+    if re.search(r"\bgh\s+pr\s+merge\b.*--admin\b", segment, re.I):
+        return {"decision": "deny", "reason": "Ban.Tai policy: gh pr merge --admin is prohibited."}
+    if re.search(r"\b(?:iex|Invoke-Expression|eval)\b", segment, re.I) and re.search(
+        r"\b(?:gh|git|admin|force|simple-public-flow\.marker)\b", segment, re.I
+    ):
+        return {
+            "decision": "deny",
+            "reason": "Ban.Tai policy: dynamic shell evaluation (iex/Invoke-Expression/eval) with git/gh/protected targets is prohibited.",
+        }
+    if re.search(r"simple-public-flow\.marker", segment, re.I) and MARKER_MUTATION_RE.search(segment):
+        return {"decision": "deny", "reason": "Ban.Tai protected marker must not be changed."}
+    if re.search(r"\bgit\s+push\b.*(?:\s(?:--force|-f|--force-with-lease)(?:\s|$)|\s\+[^\s]+)", segment, re.I):
+        return {"decision": "deny", "reason": "Force push requires separate human review."}
+    return None
+
+
 def decide(event: dict) -> dict:
     call = event.get("toolCall")
     if not isinstance(call, dict) or not isinstance(call.get("args"), dict):
@@ -57,15 +93,19 @@ def decide(event: dict) -> dict:
         command = next((args.get(k) for k in COMMAND_KEYS if isinstance(args.get(k), str)), "")
         if not command:
             return {"decision": "deny", "reason": "CommandLine missing; cannot inspect command."}
-        if re.search(r"\bgh\s+pr\s+merge\b[^\r\n;|&]*--admin\b", command, re.I):
-            return {"decision": "deny", "reason": "Ban.Tai policy: gh pr merge --admin is prohibited."}
-        if re.search(
-            r"\b(?:git\s+(?:add|rm|mv|restore|checkout)|(?:del|erase|rm|Remove-Item))\b[^\r\n;|&]*simple-public-flow\.marker\b",
-            command,
-            re.I,
-        ):
-            return {"decision": "deny", "reason": "Ban.Tai protected marker must not be changed."}
-        if re.search(r"\bgit\s+push\b[^\r\n;|&]*\s(?:--force|-f)(?:\s|$)", command, re.I):
+        norm = normalize_command(command)
+        # Check each chained command segment (;, &&, ||, |, newline)
+        for seg in re.split(r"[\r\n;|&]+", norm):
+            seg = seg.strip()
+            if not seg:
+                continue
+            verdict = check_command_segment(seg)
+            if verdict is not None:
+                return verdict
+        # Cross-segment variable splitting bypass (e.g. $flag='--admin'; gh pr merge 1 $flag)
+        if re.search(r"\bgh\s+pr\s+merge\b", norm, re.I) and re.search(r"--admin\b", norm, re.I):
+            return {"decision": "deny", "reason": "Ban.Tai policy: split/variable --admin with gh pr merge is prohibited."}
+        if re.search(r"\bgit\s+push\b", norm, re.I) and re.search(r"(?:--force|--force-with-lease)\b", norm, re.I):
             return {"decision": "deny", "reason": "Force push requires separate human review."}
     elif name in WRITE_TOOLS:
         target = next((args.get(k) for k in PATH_KEYS if isinstance(args.get(k), str)), "")
