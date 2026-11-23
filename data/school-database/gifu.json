@@ -12609,7 +12609,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）水球",
+        "year": "2026年（令和8年度）",
+        "division": "全国大会",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "gifu-公立-高等学校-岐阜県立大垣桜高等学校",
