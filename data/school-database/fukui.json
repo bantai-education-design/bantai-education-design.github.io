@@ -4347,7 +4347,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "fukui-私立-高等学校-福井市-福井南高等学校",

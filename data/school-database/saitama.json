@@ -1556,7 +1556,16 @@
     "website": "http://www.omiyakaisei.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "D111210000334",
@@ -1606,7 +1615,16 @@
     "website": "http://www.omiyakaisei.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "D211210300018",
@@ -2870,7 +2888,23 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "C111210600027",
@@ -4868,7 +4902,16 @@
     "website": "https://www.urawa-akenohoshi.ed.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "ST_私_中_0004",
@@ -5395,7 +5438,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "B111211000096",
@@ -17404,7 +17456,23 @@
     "website": "",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "https://www.pref.saitama.lg.jp/a0204/shiritsuitiran/index.html",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "C111221500052",
@@ -25512,7 +25580,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "B111222900049",
@@ -27085,7 +27162,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "B111223200099",
@@ -32321,7 +32407,16 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "C111224600019",
@@ -33247,7 +33342,16 @@
     "website": "",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "https://www.pref.saitama.lg.jp/a0204/shiritsuitiran/index.html",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0040",
