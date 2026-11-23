@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const researchAuthoritySelect = document.getElementById('research-authority');
   const musicOnlyCheckbox = document.getElementById('music-only');
   const musicContestSelect = document.getElementById('music-contest');
+  const sportsOnlyCheckbox = document.getElementById('sports-only');
+  const sportsCategorySelect = document.getElementById('sports-category');
   const resultsContainer = document.getElementById('results-list');
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
@@ -185,6 +187,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  if (sportsOnlyCheckbox) {
+    sportsOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'sports_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (sportsCategorySelect) {
+    sportsCategorySelect.addEventListener('change', () => {
+      if (sportsCategorySelect.value && sportsOnlyCheckbox && !sportsOnlyCheckbox.checked) {
+        sportsOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'sports_category',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
   });
 
   honorificRadios.forEach(radio => {
@@ -264,10 +289,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedAuthority = researchAuthoritySelect ? researchAuthoritySelect.value : '';
     const musicOnly = musicOnlyCheckbox ? musicOnlyCheckbox.checked : false;
     const selectedContest = musicContestSelect ? musicContestSelect.value : '';
+    const sportsOnly = sportsOnlyCheckbox ? sportsOnlyCheckbox.checked : false;
+    const selectedSport = sportsCategorySelect ? sportsCategorySelect.value : '';
 
     const filtered = schoolData.filter(school => {
       const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
       const musicAwards = Array.isArray(school.music_awards) ? school.music_awards : [];
+      const sportsAwards = Array.isArray(school.sports_awards) ? school.sports_awards : [];
+      const matchesSportsKeyword = keyword && sportsAwards.some(sp =>
+        (sp.sport && sp.sport.toLowerCase().includes(keyword)) ||
+        (sp.contest && sp.contest.toLowerCase().includes(keyword)) ||
+        (sp.year && sp.year.toLowerCase().includes(keyword)) ||
+        (sp.division && sp.division.toLowerCase().includes(keyword)) ||
+        (sp.award && sp.award.toLowerCase().includes(keyword))
+      );
       const matchesMusicKeyword = keyword && musicAwards.some(m =>
         (m.contest && m.contest.toLowerCase().includes(keyword)) ||
         (m.year && m.year.toLowerCase().includes(keyword)) ||
@@ -290,7 +325,8 @@ document.addEventListener('DOMContentLoaded', () => {
         (school.address && school.address.toLowerCase().includes(keyword)) ||
         (school.phone && school.phone.includes(keyword)) ||
         matchesResearchKeyword ||
-        matchesMusicKeyword;
+        matchesMusicKeyword ||
+        matchesSportsKeyword;
 
       const matchesCity = !selectedCity || school.municipality === selectedCity;
       const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
@@ -302,7 +338,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesMusic = (!musicOnly || musicAwards.length > 0) &&
         (!selectedContest || musicAwards.some(m => m.contest === selectedContest));
 
-      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch && matchesMusic;
+      const matchesSports = (!sportsOnly || sportsAwards.length > 0) &&
+        (!selectedSport || sportsAwards.some(sp => sp.sport === selectedSport));
+
+      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch && matchesMusic && matchesSports;
     });
 
     const sortedResults = applySorting(filtered, sortMode);
@@ -340,6 +379,39 @@ document.addEventListener('DOMContentLoaded', () => {
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             公式HP
           </a>
+        `;
+      }
+
+      const sportsAwards = Array.isArray(school.sports_awards) ? school.sports_awards : [];
+      const sportsBadgeHtml = sportsAwards.length > 0
+        ? '<span class="school-badge-sports">スポーツ全国実績</span>'
+        : '';
+
+      let sportsListHtml = '';
+      if (sportsAwards.length > 0) {
+        const topSp = sportsAwards[0];
+        const summaryMeta = [topSp.sport, topSp.award, topSp.year].filter(Boolean).join('・');
+        const spItemsHtml = sportsAwards.map(sp => {
+          const aw = sp.award || '';
+          const awClass = aw.includes('優勝') && !aw.includes('準優勝')
+            ? 'sports-award-tag--champ'
+            : aw.includes('準優勝')
+              ? 'sports-award-tag--runnerup'
+              : 'sports-award-tag--semi';
+          const metaParts = [sp.year, sp.division].filter(Boolean).join(' / ');
+          return `
+            <div class="school-sports-item">
+              <span class="sports-award-tag ${awClass}">${escapeHtml(aw)}</span>
+              <span class="sports-contest-name">${escapeHtml(sp.contest || sp.sport || '')}</span>
+              ${metaParts ? `<span class="sports-meta">${escapeHtml(metaParts)}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+        sportsListHtml = `
+          <details class="school-sports-details">
+            <summary class="school-sports-summary">スポーツ全国実績（${sportsAwards.length}件） ${escapeHtml(summaryMeta)}</summary>
+            <div class="school-sports-list">${spItemsHtml}</div>
+          </details>
         `;
       }
 
@@ -425,6 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${courseText ? `<span class="school-badge-city">${escapeHtml(courseText)}</span>` : ''}
             ${researchBadgeHtml}
             ${musicBadgeHtml}
+            ${sportsBadgeHtml}
           </div>
           <h3 class="school-name">${escapeHtml(school.name)}</h3>
           <div class="school-address-row">
@@ -434,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="school-tel-row">TEL: ${school.phone ? escapeHtml(school.phone) : 'なし'}</div>
           ${researchListHtml}
           ${musicListHtml}
+          ${sportsListHtml}
         </div>
         <div class="school-actions">
           <div class="action-buttons-group">

@@ -17377,7 +17377,16 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2024年（第76回）",
+        "division": "女子",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-旭川市-旭川志峯高等学校",

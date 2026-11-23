@@ -4299,7 +4299,16 @@
     "website": "https://www.urajitsu.ed.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2025年（第97回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0077",

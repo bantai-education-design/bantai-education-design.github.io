@@ -14206,7 +14206,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2024年（第106回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "kyoto-私立-高等学校-京都外大西高等学校",
@@ -15698,7 +15707,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2026年（第105回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "kyoto-国立-高等学校-京都教育大学附属高等学校",
@@ -15880,7 +15898,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2025年（第78回）",
+        "division": "女子",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2024年（第77回）",
+        "division": "女子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "kyoto-私立-高等学校-京都美山高等学校",
@@ -16211,7 +16245,30 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2026年（第78回）",
+        "division": "男子",
+        "award": "優勝"
+      },
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2025年（第78回）",
+        "division": "男子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2024年（第77回）",
+        "division": "男子",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "kyoto-私立-高等学校-洛南高等学校",
@@ -16360,7 +16417,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2025年（第37回）",
+        "division": "女子",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "kyoto-私立-高等学校-立命館高等学校",

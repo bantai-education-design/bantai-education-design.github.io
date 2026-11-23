@@ -6986,6 +6986,36 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2026年（第105回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2025年（第77回）",
+        "division": "男子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "サッカー",
+        "contest": "全国高等学校サッカー選手権大会",
+        "year": "2025年（第103回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2024年（第103回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      }
     ]
   },
   {
@@ -7032,7 +7062,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2025年（第78回）",
+        "division": "男子",
+        "award": "優勝"
+      },
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2024年（第77回）",
+        "division": "男子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "fukuoka-私立-高等学校-福岡市-福岡大学附属若葉高等学校",
@@ -7592,6 +7638,22 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2025年（第78回）",
+        "division": "男子",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2024年（第77回）",
+        "division": "男子",
+        "award": "ベスト4"
+      }
     ]
   },
   {
@@ -7770,6 +7832,15 @@
         "year": "2024年（第72回）",
         "division": "高等学校の部",
         "award": "金賞"
+      }
+    ],
+    "sports_awards": [
+      {
+        "sport": "バスケットボール（ウインターカップ）",
+        "contest": "全国高等学校バスケットボール選手権大会（ウインターカップ）",
+        "year": "2024年（第77回）",
+        "division": "女子",
+        "award": "ベスト4"
       }
     ]
   },
@@ -17738,7 +17809,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2024年（第75回）",
+        "division": "男子",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "fukuoka-私立-高等学校-大牟田市-明光学園高等学校",

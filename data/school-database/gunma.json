@@ -10750,7 +10750,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "サッカー",
+        "contest": "全国高等学校サッカー選手権大会",
+        "year": "2025年（第103回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "gunma-公立-高等学校-太田市立太田高等学校",
@@ -12478,7 +12487,30 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2026年（第108回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      },
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2025年（第97回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2024年（第96回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "gunma-私立-高等学校-高崎商科大学附属高等学校",
