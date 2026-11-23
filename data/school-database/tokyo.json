@@ -74894,7 +74894,16 @@
       "高校連携"
     ],
     "website": "https://www.kaijo.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2025年（第61回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -75552,7 +75561,16 @@
       "高校連携"
     ],
     "website": "https://www.kogyokusha.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2026年（第62回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -75826,7 +75844,16 @@
       "高校連携"
     ],
     "website": "https://www.komabajh.toho-u.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2025年（第49回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -76567,7 +76594,16 @@
       "高校連携"
     ],
     "website": "https://www.shirayuri.ed.jp/top.html",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2024年（第48回）",
+        "division": "女子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -76810,7 +76846,23 @@
       "高校連携"
     ],
     "website": "https://www.seisokugakuen.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "華道",
+        "contest": "全国高校生花いけバトル",
+        "year": "2025年（第9回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "category": "華道",
+        "contest": "全国高校生花いけバトル",
+        "year": "2024年（第4回全国選抜）",
+        "division": "全国選抜",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -76959,7 +77011,16 @@
       "高校連携"
     ],
     "website": "https://tokyo-senior.soka.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "箏曲・日本音楽",
+        "contest": "全国高等学校総合文化祭 日本音楽部門（箏曲）",
+        "year": "2026年（第50回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",

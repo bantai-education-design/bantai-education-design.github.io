@@ -9394,7 +9394,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "演劇",
+        "contest": "全国高等学校演劇大会",
+        "year": "2026年（第72回）",
+        "division": "全国大会",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "yamaguchi-私立-高等学校-光市-聖光高等学校",

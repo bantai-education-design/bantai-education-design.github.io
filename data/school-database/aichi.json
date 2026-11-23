@@ -5217,6 +5217,22 @@
     "verified_date": "2026-07-26",
     "course": [
       "全 男子部"
+    ],
+    "culture_awards": [
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2026年（第50回）",
+        "division": "女子団体",
+        "award": "優勝"
+      },
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2025年（第49回）",
+        "division": "女子団体",
+        "award": "優勝"
+      }
     ]
   },
   {

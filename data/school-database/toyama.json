@@ -6383,6 +6383,15 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "絵画・漫画",
+        "contest": "全国高等学校漫画選手権大会（まんが甲子園）",
+        "year": "2026年（第35回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -6525,6 +6534,15 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "絵画・漫画",
+        "contest": "全国高等学校漫画選手権大会（まんが甲子園）",
+        "year": "2024年（第33回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
       }
     ]
   },

@@ -7889,7 +7889,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2025年（第61回）",
+        "division": "女子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "ishikawa-私立-高等学校-金沢学院大学附属第二高等学校",

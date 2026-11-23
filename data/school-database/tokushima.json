@@ -1496,6 +1496,15 @@
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "演劇",
+        "contest": "全国高等学校演劇大会",
+        "year": "2026年（第72回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -1515,7 +1524,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "演劇",
+        "contest": "全国高等学校演劇大会",
+        "year": "2024年（第70回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "id": "tokushima-公立-高等学校-徳島市-徳島県立城西高等学校",
