@@ -17,8 +17,8 @@ Standard operating procedure for collecting, merging, validating, and shipping f
 2. Preserve existing records when adding new years or categories. Merge and deduplicate cleanly rather than overwriting prior years.
 3. Never stage or delete unrelated untracked files under `scratch/`.
 4. Never modify `simple-public-flow.marker`.
-6. Treat the AGENTS.md human approval rule as binding: preparing a PR does not authorize merging.
-5. Never use `--admin` with `gh pr merge`. Always wait for all required GitHub Actions CI checks to pass and perform a normal merge.
+5. Treat the AGENTS.md human approval rule as binding: preparing a PR does not authorize merging.
+6. Never use `--admin` with `gh pr merge`. Always wait for all required GitHub Actions CI checks to pass and perform a normal merge.
 
 ## Procedure
 
@@ -62,7 +62,7 @@ git commit -m "<concise English or Japanese summary>"
 git push -u origin feature/<descriptive-topic>
 gh pr create --title "<title>" --body "<summary with counts and sources>"
 gh pr checks <pr-number> --watch
-\# Only after explicit human approval and required checks are verified:
+# Only after explicit human approval and required checks are verified:
 gh pr merge <pr-number> --merge --delete-branch
 git checkout main
 git pull origin main
