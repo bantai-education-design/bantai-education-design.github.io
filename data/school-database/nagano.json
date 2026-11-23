@@ -5148,7 +5148,16 @@
     "source_url": "https://www.pref.nagano.lg.jp/ken-manabi/kyoiku/gakko/shochu/shiritsuchu/mebo.html",
     "source_date": "2026-04-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校軟式野球大会",
+        "year": "2024年（第46回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "nagano-0259",

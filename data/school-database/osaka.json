@@ -11082,7 +11082,23 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全日本中学校バレーボール選手権大会",
+        "year": "2025年（第55回）",
+        "division": "女子",
+        "award": "優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全日本中学校バレーボール選手権大会",
+        "year": "2024年（第54回）",
+        "division": "女子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市北区-大阪市立中之島小学校",
@@ -12773,7 +12789,16 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全日本中学校バレーボール選手権大会",
+        "year": "2025年（第55回）",
+        "division": "男子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市天王寺区-大阪市立五条小学校",
@@ -26840,7 +26865,16 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校バスケットボール大会",
+        "year": "2024年（第54回）",
+        "division": "女子",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-東大阪市-近畿大学附属中学校",

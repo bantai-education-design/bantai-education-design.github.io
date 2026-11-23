@@ -12536,7 +12536,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2026年（令和8年度）",
+        "division": "男子学校対抗",
+        "award": "準優勝"
+      },
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2025年（令和7年度）",
+        "division": "男子学校対抗",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "gifu-公立-高等学校-岐阜県立大垣商業高等学校",
@@ -12838,7 +12854,30 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2026年（令和8年度）",
+        "division": "女子学校対抗",
+        "award": "優勝"
+      },
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2025年（令和7年度）",
+        "division": "女子学校対抗",
+        "award": "優勝"
+      },
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2024年（令和6年度）",
+        "division": "女子学校対抗",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "gifu-公立-高等学校-岐阜県立岐阜農林高等学校",

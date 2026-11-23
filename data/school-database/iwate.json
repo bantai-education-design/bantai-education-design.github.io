@@ -6036,6 +6036,15 @@
         "designation": "研究指定校等（盛岡教育事務所管内）",
         "authority": "市町村"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2025年（第33回）",
+        "division": "女子",
+        "award": "準優勝"
+      }
     ]
   },
   {

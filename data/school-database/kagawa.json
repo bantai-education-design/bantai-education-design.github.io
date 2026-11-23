@@ -2426,7 +2426,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2026年（令和8年度）",
+        "division": "女子学校対抗",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "kagawa-公立-高等学校-高松市-香川県立高松南高等学校",

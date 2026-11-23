@@ -9689,7 +9689,37 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校バスケットボール大会",
+        "year": "2026年（第56回）",
+        "division": "男子",
+        "award": "優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校バスケットボール大会",
+        "year": "2026年（第56回）",
+        "division": "女子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校バスケットボール大会",
+        "year": "2025年（第55回）",
+        "division": "女子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校バスケットボール大会",
+        "year": "2024年（第54回）",
+        "division": "男子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "mie-公立-中学校-四日市市立三滝中学校",

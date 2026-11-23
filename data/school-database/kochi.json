@@ -1222,7 +1222,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校軟式野球大会",
+        "year": "2026年（第48回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校軟式野球大会",
+        "year": "2024年（第46回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "kochi-国立-中学校-高知市-高知大学教育学部附属中学校",

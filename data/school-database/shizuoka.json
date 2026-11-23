@@ -17598,7 +17598,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2024年（第32回）",
+        "division": "男子",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "shizuoka-公立-中学校-浜松市立舞阪中学校",
@@ -19156,7 +19165,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校サッカー大会",
+        "year": "2026年（第57回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校サッカー大会",
+        "year": "2025年（第56回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "shizuoka-公立-中学校-静岡市立中島中学校",

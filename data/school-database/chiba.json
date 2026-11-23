@@ -6427,6 +6427,15 @@
         "authority": "市町村",
         "presentation": "令和9年度"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2024年（第32回）",
+        "division": "男子",
+        "award": "準優勝"
+      }
     ]
   },
   {
