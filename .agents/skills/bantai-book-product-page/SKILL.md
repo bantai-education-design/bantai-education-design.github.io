@@ -37,4 +37,4 @@ python tools/school-database/test_seo_metadata.py
 ### 4. Visual Check and PR Ship
 
 - Verify desktop and mobile layout in the browser (especially card boundaries and button alignment).
-- Commit only intended files on a feature branch, open a PR, wait for all CI guards to pass, merge cleanly without `--admin`, and sync local `main`.
+- Commit only intended files on a feature branch, open a PR, wait for all CI guards to pass, request explicit human merge approval, merge cleanly without `--admin` only after authorization, and sync local `main`.

@@ -6,106 +6,88 @@ import re
 import sys
 
 PROTECTED_MARKER = "simple-public-flow.marker"
-
-EDITORIAL_PATH_PATTERNS = (
-    "/columns/",
-    "/books/",
-    "/book2/",
-    "/drafts/",
-    "/data/columns/",
+WRITE_TOOLS = frozenset({
+    "write_file",
+    "edit_file",
+    "write_to_file",
+    "replace_file_content",
+    "multi_replace_file_content",
+})
+COMMAND_KEYS = ("CommandLine", "commandLine", "command")
+PATH_KEYS = ("Path", "path", "TargetFile", "targetFile")
+CONTENT_KEYS = (
+    "Content",
+    "content",
+    "Replacement",
+    "replacement",
+    "CodeContent",
+    "codeContent",
+    "ReplacementContent",
+    "replacementContent",
 )
-
-EDITORIAL_EXTENSIONS = (".html", ".htm", ".md", ".txt", ".json")
-
-
-def normalize_path(path: str) -> str:
-    return path.replace("\\", "/").lower()
+EDITORIAL_DIRS = ("/columns/", "/books/", "/book2/", "/drafts/")
+EDITORIAL_EXTS = (".md", ".txt", ".html", ".htm")
 
 
-def is_editorial_target(path: str) -> bool:
-    norm = normalize_path(path)
-    if not norm.endswith(EDITORIAL_EXTENSIONS):
-        return False
-    return any(pattern in norm for pattern in EDITORIAL_PATH_PATTERNS)
+def extract_written_text(args: dict) -> str:
+    parts = []
+    for key in CONTENT_KEYS:
+        val = args.get(key)
+        if isinstance(val, str):
+            parts.append(val)
+    chunks = args.get("ReplacementChunks") or args.get("replacementChunks")
+    if isinstance(chunks, list):
+        for chunk in chunks:
+            if isinstance(chunk, dict):
+                rc = chunk.get("ReplacementContent") or chunk.get("replacementContent")
+                if isinstance(rc, str):
+                    parts.append(rc)
+    return "\n".join(parts)
 
 
-def check_run_command(args: dict) -> dict:
-    cmd = str(args.get("CommandLine") or args.get("commandLine") or "")
+def decide(event: dict) -> dict:
+    call = event.get("toolCall")
+    if not isinstance(call, dict) or not isinstance(call.get("args"), dict):
+        return {"decision": "deny", "reason": "Invalid hook payload; cannot check safety."}
 
-    if re.search(r"\bgh\s+pr\s+merge\b", cmd) and re.search(r"(^|\s)--admin(\s|$)", cmd):
-        return {
-            "decision": "deny",
-            "reason": (
-                "Ban.Taiルール違反: gh pr merge に --admin は使用禁止です。"
-                "全CIチェック通過後に通常マージ（gh pr merge <num> --merge --delete-branch）を実行してください。"
-            ),
-        }
+    name = str(call.get("name") or "")
+    args = call["args"]
 
-    if PROTECTED_MARKER in cmd:
-        return {
-            "decision": "deny",
-            "reason": (
-                f"Ban.Taiルール違反: {PROTECTED_MARKER} への操作は禁止されています。"
-            ),
-        }
-
-    return {"decision": "allow"}
-
-
-def check_file_write(tool_name: str, args: dict) -> dict:
-    path = str(args.get("Path") or args.get("path") or "")
-    norm = normalize_path(path)
-
-    if norm.endswith(PROTECTED_MARKER):
-        return {
-            "decision": "deny",
-            "reason": (
-                f"Ban.Taiルール違反: {PROTECTED_MARKER} は変更禁止です。"
-            ),
-        }
-
-    if is_editorial_target(path):
-        content = ""
-        if tool_name == "write_file":
-            content = str(args.get("Content") or args.get("content") or "")
-        elif tool_name == "edit_file":
-            content = str(args.get("Replacement") or args.get("replacement") or "")
-
-        if "**" in content:
-            return {
-                "decision": "deny",
-                "reason": (
-                    "Ban.Tai執筆ルール違反: コラム・書籍・記事ファイル内にマークダウン太字記号(**)は使用禁止です。"
-                    "プレーンな日本語、カギ括弧（「」）、または見出しタグで表現してください。"
-                ),
-            }
+    if name == "run_command":
+        command = next((args.get(k) for k in COMMAND_KEYS if isinstance(args.get(k), str)), "")
+        if not command:
+            return {"decision": "deny", "reason": "CommandLine missing; cannot inspect command."}
+        if re.search(r"\bgh\s+pr\s+merge\b[^\r\n;|&]*--admin\b", command, re.I):
+            return {"decision": "deny", "reason": "Ban.Tai policy: gh pr merge --admin is prohibited."}
+        if re.search(
+            r"\b(?:git\s+(?:add|rm|mv|restore|checkout)|(?:del|erase|rm|Remove-Item))\b[^\r\n;|&]*simple-public-flow\.marker\b",
+            command,
+            re.I,
+        ):
+            return {"decision": "deny", "reason": "Ban.Tai protected marker must not be changed."}
+        if re.search(r"\bgit\s+push\b[^\r\n;|&]*\s(?:--force|-f)(?:\s|$)", command, re.I):
+            return {"decision": "deny", "reason": "Force push requires separate human review."}
+    elif name in WRITE_TOOLS:
+        target = next((args.get(k) for k in PATH_KEYS if isinstance(args.get(k), str)), "")
+        if not target:
+            return {"decision": "deny", "reason": "File target missing; cannot check safety."}
+        normalized = target.replace("\\", "/")
+        if normalized.rstrip("/").endswith("/" + PROTECTED_MARKER) or normalized == PROTECTED_MARKER:
+            return {"decision": "deny", "reason": "Ban.Tai protected marker must not be changed."}
+        prefixed = "/" + normalized.lstrip("/").lower()
+        if any(d in prefixed for d in EDITORIAL_DIRS) and prefixed.endswith(EDITORIAL_EXTS):
+            if "**" in extract_written_text(args):
+                return {"decision": "deny", "reason": "Editorial text contains forbidden ** markers."}
 
     return {"decision": "allow"}
 
 
 def main() -> int:
-    raw = sys.stdin.read().strip()
-    if not raw:
-        print(json.dumps({"decision": "allow"}, ensure_ascii=False))
-        return 0
-
     try:
-        payload = json.loads(raw)
-    except json.JSONDecodeError:
-        print(json.dumps({"decision": "allow"}, ensure_ascii=False))
-        return 0
-
-    tool_call = payload.get("toolCall") or {}
-    tool_name = str(tool_call.get("name") or "")
-    args = tool_call.get("args") or {}
-
-    if tool_name == "run_command":
-        result = check_run_command(args)
-    elif tool_name in ("write_file", "edit_file"):
-        result = check_file_write(tool_name, args)
-    else:
-        result = {"decision": "allow"}
-
+        event = json.load(sys.stdin)
+        result = decide(event) if isinstance(event, dict) else {"decision": "deny", "reason": "Invalid hook payload."}
+    except (ValueError, TypeError) as exc:
+        result = {"decision": "deny", "reason": f"Cannot parse hook payload: {exc}"}
     print(json.dumps(result, ensure_ascii=False))
     return 0
 
