@@ -188,6 +188,11 @@
             "target": "_blank",
             "rel": "noopener noreferrer"
           }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ（買い方の案内）"
         }
       ],
       "note": "本ソフトはWindows用アプリです。Mac、iPhone、Androidでは動作しません。初回起動時にWindows Defender SmartScreenの警告が表示される場合があります。"

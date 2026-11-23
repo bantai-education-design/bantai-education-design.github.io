@@ -369,6 +369,22 @@ def validate_banner_studio(data: dict, html: str, parser: DetailPageParser) -> N
         require(value not in html, f"forbidden external distribution link found: {value}")
 
 
+def validate_staff_paper_booth_sales(data: dict, html: str) -> None:
+    validate_image_path(data["image"], "staff-paper image")
+    validate_url(data["boothUrl"], "boothUrl")
+    validate_url(data["licenseRequestUrl"], "licenseRequestUrl")
+    require(data["boothUrl"] == "https://bantai3.booth.pm/items/9069579", "staff-paper must link to the public BOOTH item")
+    require(html.count(data["boothUrl"]) >= 1, "BOOTH URL missing")
+    require(html.count(data["licenseRequestUrl"]) >= 1, "license request URL missing")
+    require("bantai3.booth.pm/items/8302315" not in html, "private BOOTH item must not be linked")
+    require("vector.co.jp/soft/winnt/art/se528799.html" in html, "Vector trial link missing")
+    require("4,800円" in html, "price missing")
+    require("/guide/booth/" in html, "BOOTH purchase guide link missing")
+    require("新規案内を休止しています" not in html, "old suspension notice must be removed")
+    section_types = [section["type"] for section in data["sections"]]
+    require(section_types == ["pageHero", "narrowTextBox", "downloadCta"], "staff-paper sections mismatch")
+
+
 def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> None:
     require_keys(
         data,
@@ -376,6 +392,13 @@ def validate_staff_paper(data: dict, html: str, parser: DetailPageParser) -> Non
         "staff-paper root",
     )
     is_suspended = any(sec["type"] == "narrowTextBox" for sec in data["sections"])
+    # 2026-10-30: 体験版はVector、製品版ライセンスはBOOTH（9069579）で販売再開
+    is_booth_sales = any(
+        sec["type"] == "narrowTextBox" and "BOOTH" in sec.get("heading", "") for sec in data["sections"]
+    )
+    if is_booth_sales:
+        validate_staff_paper_booth_sales(data, html)
+        return
     validate_image_path(data["image"], "staff-paper image")
     require(html.count(data["image"]) == 2, "staff-paper image reference count changed")
     require(data["imageAlt"] in html, "staff-paper image alt missing")
