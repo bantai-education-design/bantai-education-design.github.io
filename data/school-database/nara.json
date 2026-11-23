@@ -7970,7 +7970,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）剣道",
+        "year": "2025年（第72回）",
+        "division": "男子団体",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "nara-私立-高等学校-奈良女子高等学校",

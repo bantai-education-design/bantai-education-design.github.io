@@ -7961,6 +7961,15 @@
         "division": "高等学校の部",
         "award": "銅賞"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）相撲",
+        "year": "2026年（令和8年度）",
+        "division": "団体",
+        "award": "3位"
+      }
     ]
   },
   {
@@ -7980,7 +7989,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）相撲",
+        "year": "2025年（令和7年度）",
+        "division": "団体",
+        "award": "準優勝"
+      },
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）相撲",
+        "year": "2024年（令和6年度）",
+        "division": "団体",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "ishikawa-私立-高等学校-金沢高等学校",

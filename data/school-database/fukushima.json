@@ -2887,7 +2887,16 @@
     "source_url": "https://www.pref.fukushima.lg.jp/sec/01135b/shigaku13.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）剣道",
+        "year": "2024年（第71回）",
+        "division": "男子団体",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-特別支援学校-伊達市-だて支援学校",
