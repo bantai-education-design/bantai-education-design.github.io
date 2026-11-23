@@ -1,7 +1,7 @@
 // 収録件数・品質表示を、読み込んだ全地域（東京都・埼玉県・神奈川県）の実データから表示する。
 (()=>{
 if(typeof state==='undefined')return;
-const PREFS=['東京都','埼玉県','神奈川県'];
+const PREFS=['東京都','埼玉県','神奈川県','千葉県'];
 const NOTES={};
 const byPref=p=>state.rows.filter(r=>(r.prefecture||r.headquarters?.prefecture||'東京都')===p);
 const count=(rows,t)=>rows.filter(r=>r.establishment_type===t).length;

@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000229",
+  "id": "u000229",
+  "name": "東京情報大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "学校法人東京農業大学",
+  "feature_summary": "千葉市に本部を置き、総合情報学部・看護学部の2学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.tuis.ac.jp/",
+  "admissions_url": "https://www.tuis.ac.jp/preparatory/",
+  "academic_field_tags": [
+    "看護・医療",
+    "情報・AI"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400070",
+      "name": "総合情報学部",
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400121",
+          "name": "総合情報学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400071",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400122",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400040",
+      "name": "総合情報学研究科",
+      "programs": [
+        "総合情報学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "東京情報大学",
+      "postal_code": "265-8501",
+      "address": "千葉県千葉市若葉区御成台4-1",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": [
+        {
+          "station": "千城台駅",
+          "line": "千葉都市モノレール",
+          "access": "バス約7分"
+        },
+        {
+          "station": "千葉駅",
+          "line": "JR総武線",
+          "access": "直通バス約25分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "東京情報大学 公式サイト",
+      "url": "https://www.tuis.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "東京情報大学 公式入試情報",
+      "url": "https://www.tuis.ac.jp/preparatory/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "情報社会の発展に寄与する「文理融合・実践重視」の学びを掲げ、分野を超えて未来を切り拓く力を培う。",
+  "mission": "総合情報学と看護学の専門知識を融合し、高度情報化社会と地域医療を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1893,
+    "graduate": 33,
+    "total": 1926,
+    "as_of": "2026-05-01"
+  }
+}

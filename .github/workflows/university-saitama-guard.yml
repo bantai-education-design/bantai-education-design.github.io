@@ -8,6 +8,7 @@ on:
       - 'tools/university-database/tokyo/**'
       - 'tools/university-database/tokyo-additions/**'
       - 'tools/university-database/kanagawa/**'
+      - 'tools/university-database/chiba/**'
       - 'tools/university-database/campuses/**'
       - 'tools/university-database/qualifications/**'
       - '.github/workflows/university-saitama-guard.yml'
@@ -112,7 +113,7 @@ jobs:
           const kcampuses=JSON.parse(fs.readFileSync(kdir+'kanagawa_campuses_01.json','utf8')).universities;
           const allCampuses=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
           assert.equal(Object.keys(kcampuses).length,36,'Kanagawa campuses 36 universities');
-          assert.equal(Object.keys(allCampuses).length,209,'Total 209 universities in campus_index');
+          assert.equal(Object.keys(allCampuses).length,237,'Total 237 universities in campus_index');
           const kscIds=['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000203','u000204','u000205','u000206','u000207','u000208','u000209'];
           assert.equal(kcore.filter(x=>Number.isInteger(x.student_counts?.total)&&x.student_counts.total>0).length,36,'Kanagawa student counts verified');
           for(const id of kscIds){
@@ -157,8 +158,9 @@ jobs:
           const saitama=readRows('tools/university-database/saitama/data/universities_saitama_all.generated.json');
           const extra=readRows('tools/university-database/tokyo-additions/data/universities_tokyo_additions_all.generated.json');
           const kanagawa=readRows('tools/university-database/kanagawa/data/universities_kanagawa_all.generated.json');
+          const chiba=readRows('tools/university-database/chiba/data/universities_chiba_all.generated.json');
           const tokyoRows=readRows('tools/university-database/tokyo/data/universities_tokyo_all.generated.json');
-          const total=new Set([...tokyoRows,...saitama,...extra,...kanagawa].map(x=>x.id)).size;
+          const total=new Set([...tokyoRows,...saitama,...extra,...kanagawa,...chiba].map(x=>x.id)).size;
           const movedToKanagawa=kanagawa.filter(k=>[...tokyoRows,...extra].some(x=>x.id===k.id)).length;
           const tokyoTotal=tokyoN+extra.filter(x=>x.prefecture==='東京都').length-movedToKanagawa;
           (async()=>{
@@ -276,6 +278,7 @@ jobs:
             assert.ok(dbTop.includes(`<strong>${tokyoN}</strong><span>東京都の大学`),'DB top Tokyo count '+tokyoN);
             assert.ok(dbTop.includes(`<strong>${saitamaN}</strong><span>埼玉県の大学`),'DB top Saitama count '+saitamaN);
             assert.ok(dbTop.includes(`<strong>${kanagawa.length}</strong><span>神奈川県の大学`),'DB top Kanagawa count '+kanagawa.length);
+            assert.ok(dbTop.includes(`<strong>${chiba.length}</strong><span>千葉県の大学`),'DB top Chiba count '+chiba.length);
             assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式情報・所在地確認済み`),'DB top total '+total);
             assert.ok(fs.readFileSync('tools/university-database/tokyo/index.html','utf8').includes(`合計 <strong>${total}</strong> 大学`),'list static total '+total);
             assert.ok(fs.readFileSync('index.html','utf8').includes(`${total}校`),'site top count '+total);
@@ -329,6 +332,7 @@ jobs:
             await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
             assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=saitama"]').count(),1,'entry links to Saitama filter');
             assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=kanagawa"]').count(),1,'entry links to Kanagawa filter');
+            assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=chiba"]').count(),1,'entry links to Chiba filter');
             await entry.close();
             assert.deepEqual([...new Set(errors)],[],'no script errors or missing local files');
             await browser.close();

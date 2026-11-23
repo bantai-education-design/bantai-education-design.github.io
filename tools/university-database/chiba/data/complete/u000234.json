@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000234",
+  "id": "u000234",
+  "name": "植草学園大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "千葉市",
+  "operator": "学校法人植草学園",
+  "feature_summary": "千葉市に本部を置き、発達教育学部・保健医療学部・看護学部の3学部で学ぶ大学です。",
+  "official_url": "https://www.uekusa.ac.jp/",
+  "admissions_url": "https://www.uekusa.ac.jp/admission_event/",
+  "academic_field_tags": [
+    "看護・医療",
+    "教育",
+    "幼児教育・保育"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400082",
+      "name": "発達教育学部",
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400141",
+          "name": "発達支援教育学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400083",
+      "name": "保健医療学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400142",
+          "name": "リハビリテーション学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400084",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "千葉市",
+      "departments": [
+        {
+          "department_id": "d400143",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "千葉若葉キャンパス",
+      "postal_code": "264-0007",
+      "address": "千葉県千葉市若葉区小倉町1639番3",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": [
+        {
+          "station": "千城台北駅",
+          "line": "千葉都市モノレール",
+          "access": "徒歩10分"
+        },
+        {
+          "station": "都賀駅",
+          "line": "JR総武本線",
+          "access": "バス約15分"
+        }
+      ]
+    },
+    {
+      "name": "千葉医療センター内椿森キャンパス",
+      "postal_code": "260-0042",
+      "address": "千葉県千葉市中央区椿森4丁目1-2",
+      "prefecture": "千葉県",
+      "municipality": "千葉市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "植草学園大学 公式サイト",
+      "url": "https://www.uekusa.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "植草学園大学 公式入試情報",
+      "url": "https://www.uekusa.ac.jp/admission_event/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「徳育を教育の根幹とする」建学の精神と「インクルーシブ教育」の実践を掲げる。",
+  "mission": "発達教育・保健医療・看護の専門性を備え、すべての人が共に生きる社会を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 594,
+    "graduate": 0,
+    "total": 594,
+    "as_of": "2026-05-01"
+  }
+}

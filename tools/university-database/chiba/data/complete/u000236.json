@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000236",
+  "id": "u000236",
+  "name": "亀田医療大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "鴨川市",
+  "operator": "学校法人鉄蕉館",
+  "feature_summary": "鴨川市に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.kameda.ac.jp/",
+  "admissions_url": "https://www.kameda.ac.jp/applicants/",
+  "academic_field_tags": [
+    "看護・医療"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400086",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "鴨川市",
+      "departments": [
+        {
+          "department_id": "d400145",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400050",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "横渚キャンパス",
+      "postal_code": "296-0001",
+      "address": "千葉県鴨川市横渚462",
+      "prefecture": "千葉県",
+      "municipality": "鴨川市",
+      "nearest_stations": [
+        {
+          "station": "安房鴨川駅",
+          "line": "JR外房線",
+          "access": "徒歩12分"
+        }
+      ]
+    },
+    {
+      "name": "東町キャンパス",
+      "postal_code": "296-0041",
+      "address": "千葉県鴨川市東町1343-4",
+      "prefecture": "千葉県",
+      "municipality": "鴨川市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "亀田医療大学 公式サイト",
+      "url": "https://www.kameda.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "亀田医療大学 公式入試情報",
+      "url": "https://www.kameda.ac.jp/applicants/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "幅広い教養と人間への愛と尊厳をもって保健医療福祉システムを担う医療人材の育成を建学の理念とする。",
+  "mission": "基幹病院との密接な連携による実践的な看護教育を通じて、地域と国際社会の医療に貢献する看護職を育成する。",
+  "student_counts": {
+    "undergraduate": 252,
+    "graduate": 19,
+    "total": 271,
+    "as_of": "2026-05-01"
+  }
+}

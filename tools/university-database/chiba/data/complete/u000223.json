@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000223",
+  "id": "u000223",
+  "name": "和洋女子大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "市川市",
+  "operator": "学校法人和洋学園",
+  "feature_summary": "市川市に本部を置き、人文学部・国際学部・家政学部・看護学部の4学部と大学院3研究科で学ぶ大学です。",
+  "official_url": "https://www.wayo.ac.jp/",
+  "admissions_url": "https://www.wayo.ac.jp/admission",
+  "academic_field_tags": [
+    "看護・医療",
+    "理学",
+    "食・栄養",
+    "国際関係",
+    "国際・語学",
+    "心理",
+    "福祉",
+    "文学・人文"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400055",
+      "name": "人文学部",
+      "academic_field_tags": [
+        "理学",
+        "心理",
+        "文学・人文"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400092",
+          "name": "日本文学文化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400093",
+          "name": "心理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400094",
+          "name": "こども発達学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400056",
+      "name": "国際学部",
+      "academic_field_tags": [
+        "国際関係",
+        "国際・語学"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400095",
+          "name": "英語コミュニケーション学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400096",
+          "name": "国際学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400057",
+      "name": "家政学部",
+      "academic_field_tags": [
+        "食・栄養",
+        "福祉"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400097",
+          "name": "服飾造形学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400098",
+          "name": "健康栄養学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400099",
+          "name": "家政福祉学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400058",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "市川市",
+      "departments": [
+        {
+          "department_id": "d400100",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400033",
+      "name": "人文科学研究科",
+      "programs": [
+        "英語文学専攻",
+        "日本文学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400034",
+      "name": "総合生活研究科",
+      "programs": [
+        "総合生活専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400035",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "国府台キャンパス",
+      "postal_code": "272-8533",
+      "address": "千葉県市川市国府台2-3-1",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "nearest_stations": [
+        {
+          "station": "国府台駅",
+          "line": "京成本線",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "市川駅",
+          "line": "JR総武線",
+          "access": "北口バス「和洋女子大前」下車すぐ"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "栄養士",
+      "department": "家政学部 健康栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "和洋女子大学 公式サイト",
+      "url": "https://www.wayo.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "和洋女子大学 公式入試情報",
+      "url": "https://www.wayo.ac.jp/admission",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「和魂洋才」の精神を基盤とし、日本の伝統文化を尊重しつつ世界の新しい知識・技術を主体的に学ぶ姿勢を培う。",
+  "mission": "人文・家政・看護・国際などの専門教育を通じて、自立し社会で活躍できる女性を育成する。",
+  "student_counts": {
+    "undergraduate": 2871,
+    "graduate": 0,
+    "total": 2871,
+    "as_of": "2025-05-01"
+  }
+}

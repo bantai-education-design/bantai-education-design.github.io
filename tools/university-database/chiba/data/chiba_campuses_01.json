@@ -1,0 +1,531 @@
+{
+  "generated_at": "2026-11-21",
+  "source": "文部科学省 令和7年度全国大学一覧（学部・研究科所在地）",
+  "prefecture": "千葉県",
+  "count": 28,
+  "universities": {
+    "u000210": {
+      "name": "千葉大学",
+      "campuses": [
+        {
+          "name": "西千葉キャンパス",
+          "postal_code": "263-8522",
+          "address": "千葉県千葉市稲毛区弥生町1-33",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "亥鼻キャンパス",
+          "postal_code": "260-8670",
+          "address": "千葉県千葉市中央区亥鼻1-8-1",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "松戸キャンパス",
+          "postal_code": "271-8510",
+          "address": "千葉県松戸市松戸648",
+          "prefecture": "千葉県",
+          "municipality": "松戸市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000211": {
+      "name": "千葉県立保健医療大学",
+      "campuses": [
+        {
+          "name": "幕張キャンパス",
+          "postal_code": "261-0014",
+          "address": "千葉県千葉市美浜区若葉2-10-1",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "仁戸名キャンパス",
+          "postal_code": "260-0801",
+          "address": "千葉県千葉市中央区仁戸名町645-1",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000212": {
+      "name": "千葉科学大学",
+      "campuses": [
+        {
+          "name": "千葉科学大学 本部キャンパス",
+          "postal_code": "288-0025",
+          "address": "千葉県銚子市潮見町3",
+          "prefecture": "千葉県",
+          "municipality": "銚子市"
+        },
+        {
+          "name": "千葉科学大学 マリーナキャンパス",
+          "postal_code": "288-0025",
+          "address": "千葉県銚子市潮見町15-8",
+          "prefecture": "千葉県",
+          "municipality": "銚子市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000213": {
+      "name": "愛国学園大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "284-0005",
+          "address": "千葉県四街道市四街道1532",
+          "prefecture": "千葉県",
+          "municipality": "四街道市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000214": {
+      "name": "開智国際大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "277-0005",
+          "address": "千葉県柏市柏1225-6",
+          "prefecture": "千葉県",
+          "municipality": "柏市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000215": {
+      "name": "清和大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "292-8555",
+          "address": "千葉県木更津市東太田3-4-5",
+          "prefecture": "千葉県",
+          "municipality": "木更津市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000216": {
+      "name": "城西国際大学",
+      "campuses": [
+        {
+          "name": "千葉東金キャンパス",
+          "postal_code": "283-8555",
+          "address": "千葉県東金市求名1",
+          "prefecture": "千葉県",
+          "municipality": "東金市"
+        },
+        {
+          "name": "東京紀尾井町キャンパス（１号棟）",
+          "postal_code": "102-0094",
+          "address": "東京都千代田区紀尾井町3-26",
+          "prefecture": "東京都",
+          "municipality": "千代田区"
+        },
+        {
+          "name": "東京紀尾井町キャンパス（３号棟）",
+          "postal_code": "102-0093",
+          "address": "東京都千代田区平河町2-3-20",
+          "prefecture": "東京都",
+          "municipality": "千代田区"
+        }
+      ],
+      "prefectures": [
+        "千葉県",
+        "東京都"
+      ]
+    },
+    "u000217": {
+      "name": "淑徳大学",
+      "campuses": [
+        {
+          "name": "千葉キャンパス",
+          "postal_code": "260-8701",
+          "address": "千葉県千葉市中央区大巌寺町200",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "千葉第二キャンパス",
+          "postal_code": "260-8703",
+          "address": "千葉県千葉市中央区仁戸名町673",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "埼玉キャンパス",
+          "postal_code": "354-8510",
+          "address": "埼玉県入間郡三芳町藤久保1150-1",
+          "prefecture": "埼玉県",
+          "municipality": "入間郡三芳町"
+        },
+        {
+          "name": "東京キャンパス",
+          "postal_code": "174-8631",
+          "address": "東京都板橋区前野町6-36-4",
+          "prefecture": "東京都",
+          "municipality": "板橋区"
+        }
+      ],
+      "prefectures": [
+        "千葉県",
+        "埼玉県",
+        "東京都"
+      ]
+    },
+    "u000218": {
+      "name": "敬愛大学",
+      "campuses": [
+        {
+          "name": "稲毛キャンパス",
+          "postal_code": "263-8588",
+          "address": "千葉県千葉市稲毛区穴川1-5-21",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000219": {
+      "name": "千葉工業大学",
+      "campuses": [
+        {
+          "name": "津田沼校舎",
+          "postal_code": "275-0016",
+          "address": "千葉県習志野市津田沼2-17-1",
+          "prefecture": "千葉県",
+          "municipality": "習志野市"
+        },
+        {
+          "name": "新習志野校舎",
+          "postal_code": "275-0023",
+          "address": "千葉県習志野市芝園2-1-1",
+          "prefecture": "千葉県",
+          "municipality": "習志野市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000220": {
+      "name": "千葉商科大学",
+      "campuses": [
+        {
+          "name": "市川キャンパス",
+          "postal_code": "272-8512",
+          "address": "千葉県市川市国府台1-3-1",
+          "prefecture": "千葉県",
+          "municipality": "市川市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000221": {
+      "name": "中央学院大学",
+      "campuses": [
+        {
+          "name": "中央学院大学 我孫子キャンパス",
+          "postal_code": "270-1196",
+          "address": "千葉県我孫子市久寺家451",
+          "prefecture": "千葉県",
+          "municipality": "我孫子市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000222": {
+      "name": "麗澤大学",
+      "campuses": [
+        {
+          "name": "麗澤大学キャンパス",
+          "postal_code": "277-8686",
+          "address": "千葉県柏市光ケ丘2-1-1",
+          "prefecture": "千葉県",
+          "municipality": "柏市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000223": {
+      "name": "和洋女子大学",
+      "campuses": [
+        {
+          "name": "国府台キャンパス",
+          "postal_code": "272-8533",
+          "address": "千葉県市川市国府台2-3-1",
+          "prefecture": "千葉県",
+          "municipality": "市川市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000224": {
+      "name": "国際武道大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "299-5295",
+          "address": "千葉県勝浦市新官841",
+          "prefecture": "千葉県",
+          "municipality": "勝浦市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000225": {
+      "name": "神田外語大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "261-0014",
+          "address": "千葉県千葉市美浜区若葉1-4-1",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000226": {
+      "name": "千葉経済大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "263-0021",
+          "address": "千葉県千葉市稲毛区轟町3-59-5",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000227": {
+      "name": "秀明大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "276-0003",
+          "address": "千葉県八千代市大学町1-1",
+          "prefecture": "千葉県",
+          "municipality": "八千代市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000228": {
+      "name": "川村学園女子大学",
+      "campuses": [
+        {
+          "name": "我孫子キャンパス",
+          "postal_code": "270-1138",
+          "address": "千葉県我孫子市下ケ戸1133",
+          "prefecture": "千葉県",
+          "municipality": "我孫子市"
+        },
+        {
+          "name": "目白キャンパス",
+          "postal_code": "171-0031",
+          "address": "東京都豊島区目白3-1-19",
+          "prefecture": "東京都",
+          "municipality": "豊島区"
+        }
+      ],
+      "prefectures": [
+        "千葉県",
+        "東京都"
+      ]
+    },
+    "u000229": {
+      "name": "東京情報大学",
+      "campuses": [
+        {
+          "name": "東京情報大学",
+          "postal_code": "265-8501",
+          "address": "千葉県千葉市若葉区御成台4-1",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000230": {
+      "name": "東京基督教大学",
+      "campuses": [
+        {
+          "name": "-",
+          "postal_code": "270-1347",
+          "address": "千葉県印西市内野3-301-5",
+          "prefecture": "千葉県",
+          "municipality": "印西市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000231": {
+      "name": "聖徳大学",
+      "campuses": [
+        {
+          "name": "松戸キャンパス",
+          "postal_code": "271-8555",
+          "address": "千葉県松戸市岩瀬550",
+          "prefecture": "千葉県",
+          "municipality": "松戸市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000232": {
+      "name": "江戸川大学",
+      "campuses": [
+        {
+          "name": "駒木キャンパス",
+          "postal_code": "270-0198",
+          "address": "千葉県流山市駒木474",
+          "prefecture": "千葉県",
+          "municipality": "流山市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000233": {
+      "name": "SBC東京医療大学",
+      "campuses": [
+        {
+          "name": "健康科学部",
+          "postal_code": "279-8567",
+          "address": "千葉県浦安市明海5-8-1",
+          "prefecture": "千葉県",
+          "municipality": "浦安市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000234": {
+      "name": "植草学園大学",
+      "campuses": [
+        {
+          "name": "千葉若葉キャンパス",
+          "postal_code": "264-0007",
+          "address": "千葉県千葉市若葉区小倉町1639番3",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        },
+        {
+          "name": "千葉医療センター内椿森キャンパス",
+          "postal_code": "260-0042",
+          "address": "千葉県千葉市中央区椿森4丁目1-2",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000235": {
+      "name": "三育学院大学",
+      "campuses": [
+        {
+          "name": "大多喜キャンパス",
+          "postal_code": "298-0297",
+          "address": "千葉県夷隅郡大多喜町久我原1500",
+          "prefecture": "千葉県",
+          "municipality": "夷隅郡大多喜町"
+        },
+        {
+          "name": "東京校舎",
+          "postal_code": "167-0032",
+          "address": "東京都杉並区天沼3-17-15",
+          "prefecture": "東京都",
+          "municipality": "杉並区"
+        }
+      ],
+      "prefectures": [
+        "千葉県",
+        "東京都"
+      ]
+    },
+    "u000236": {
+      "name": "亀田医療大学",
+      "campuses": [
+        {
+          "name": "横渚キャンパス",
+          "postal_code": "296-0001",
+          "address": "千葉県鴨川市横渚462",
+          "prefecture": "千葉県",
+          "municipality": "鴨川市"
+        },
+        {
+          "name": "東町キャンパス",
+          "postal_code": "296-0041",
+          "address": "千葉県鴨川市東町1343-4",
+          "prefecture": "千葉県",
+          "municipality": "鴨川市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    },
+    "u000237": {
+      "name": "放送大学",
+      "campuses": [
+        {
+          "name": "本部（幕張）",
+          "postal_code": "261-8586",
+          "address": "千葉県千葉市美浜区若葉2-11",
+          "prefecture": "千葉県",
+          "municipality": "千葉市"
+        }
+      ],
+      "prefectures": [
+        "千葉県"
+      ]
+    }
+  }
+}

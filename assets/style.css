@@ -4592,6 +4592,29 @@ img.hero {
   max-width: 100%;
 }
 
+/* 製品一覧カードの統一ボタン：詳しく見る（黒）→ 無料の入り口（緑）→ 購入（金）を常に縦に並べる */
+.catalog-card-actions.is-stacked {
+  flex-direction: column;
+}
+
+.catalog-card-actions.is-stacked .catalog-btn {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.catalog-btn-free {
+  background: #047857;
+  color: #ffffff;
+  border: 1px solid #047857;
+}
+
+.catalog-btn-free:hover {
+  background: #065f46;
+  border-color: #065f46;
+  color: #ffffff;
+}
+
 /* ==========================================================================
    Ban.Tai Official Website Redesign 2026 - Modern Educational SaaS Theme
    ========================================================================== */

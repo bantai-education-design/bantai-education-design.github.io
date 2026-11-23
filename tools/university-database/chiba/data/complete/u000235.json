@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000235",
+  "id": "u000235",
+  "name": "三育学院大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "夷隅郡大多喜町",
+  "operator": "学校法人三育学院",
+  "feature_summary": "夷隅郡大多喜町に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.saniku.ac.jp/",
+  "admissions_url": "https://www.saniku.ac.jp/admissions/",
+  "academic_field_tags": [
+    "看護・医療"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400085",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "大多喜町",
+      "departments": [
+        {
+          "department_id": "d400144",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400049",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "大多喜キャンパス",
+      "postal_code": "298-0297",
+      "address": "千葉県夷隅郡大多喜町久我原1500",
+      "prefecture": "千葉県",
+      "municipality": "夷隅郡大多喜町",
+      "nearest_stations": [
+        {
+          "station": "久我原駅",
+          "line": "いすみ鉄道",
+          "access": "徒歩15分"
+        },
+        {
+          "station": "荻窪駅",
+          "line": "JR中央線・東京メトロ丸ノ内線",
+          "access": "東京校舎徒歩7分"
+        }
+      ]
+    },
+    {
+      "name": "東京校舎",
+      "postal_code": "167-0032",
+      "address": "東京都杉並区天沼3-17-15",
+      "prefecture": "東京都",
+      "municipality": "杉並区",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "三育学院大学 公式サイト",
+      "url": "https://www.saniku.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "三育学院大学 公式入試情報",
+      "url": "https://www.saniku.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "キリスト教の信仰と愛を基盤とし、身体・知性・心の調和ある発達を促す全人的教育を建学の精神とする。",
+  "mission": "全人的看護（ホリスティック・ナーシング）の理念に基づき、人々の健康と尊厳を守る看護職を育成する。",
+  "student_counts": {
+    "undergraduate": 101,
+    "graduate": 8,
+    "total": 109,
+    "as_of": "2025-05-01"
+  }
+}

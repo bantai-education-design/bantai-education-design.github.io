@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000228",
+  "id": "u000228",
+  "name": "川村学園女子大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "stopped",
+  "prefecture": "千葉県",
+  "municipality": "我孫子市",
+  "operator": "学校法人川村学園",
+  "feature_summary": "我孫子市に本部を置く大学です（2027年度以降の全学部・大学院の学生募集停止を公式発表済み）。",
+  "official_url": "https://www.kgwu.ac.jp/",
+  "admissions_url": "https://www.kgwu.ac.jp/",
+  "academic_field_tags": [
+    "理学",
+    "国際関係",
+    "国際・語学",
+    "心理",
+    "社会学",
+    "観光",
+    "文学・人文"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400068",
+      "name": "文学部",
+      "academic_field_tags": [
+        "理学",
+        "国際関係",
+        "国際・語学",
+        "心理",
+        "文学・人文"
+      ],
+      "campus_municipality": "豊島区",
+      "departments": [
+        {
+          "department_id": "d400115",
+          "name": "国際英語学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400116",
+          "name": "史学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400117",
+          "name": "心理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400118",
+          "name": "日本文化学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400069",
+      "name": "生活創造学部",
+      "academic_field_tags": [
+        "理学",
+        "社会学",
+        "観光"
+      ],
+      "campus_municipality": "我孫子市",
+      "departments": [
+        {
+          "department_id": "d400119",
+          "name": "生活文化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400120",
+          "name": "観光文化学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400039",
+      "name": "人文科学研究科",
+      "programs": [
+        "心理学専攻",
+        "比較文化専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "我孫子キャンパス",
+      "postal_code": "270-1138",
+      "address": "千葉県我孫子市下ケ戸1133",
+      "prefecture": "千葉県",
+      "municipality": "我孫子市",
+      "nearest_stations": [
+        {
+          "station": "天王台駅",
+          "line": "JR常磐線",
+          "access": "北口バス約5分（徒歩20分）"
+        },
+        {
+          "station": "東我孫子駅",
+          "line": "JR成田線",
+          "access": "徒歩20分"
+        }
+      ]
+    },
+    {
+      "name": "目白キャンパス",
+      "postal_code": "171-0031",
+      "address": "東京都豊島区目白3-1-19",
+      "prefecture": "東京都",
+      "municipality": "豊島区",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "川村学園女子大学 公式サイト",
+      "url": "https://www.kgwu.ac.jp/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy"
+    ]
+  },
+  "philosophy": "「感謝の心」「女性の自覚」「社会への奉仕」を建学の精神とし、人間味豊かな女性の育成を掲げる。",
+  "mission": "文学・生活創造の学びを通じて、自覚と責任をもって社会に奉仕できる人材の育成を目指してきた。"
+}
