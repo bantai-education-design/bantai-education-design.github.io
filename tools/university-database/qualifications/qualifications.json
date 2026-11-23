@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07",
+ "generated_at": "2026-11-21",
  "note": "designated_program: 法令で定められた養成課程の学科名から確定した資格。official_page: 大学公式ページの記載で確認した資格。いずれも所定の単位修得・課程履修が必要。",
  "groups": [
   "看護師",
@@ -2954,6 +2954,300 @@
      "department": "看護学部 看護学科",
      "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
      "evidence": "看護学科（養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000210": {
+   "name": "千葉大学",
+   "qualifications": [
+    {
+     "name": "小学校教諭一種免許状",
+     "basis": "designated_program",
+     "department": "教育学部 学校教員養成課程",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+     "evidence": "学校教員養成課程（文部科学省全国大学一覧 養成課程）",
+     "group": "小学校教諭"
+    },
+    {
+     "name": "医師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "医学部 医学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+     "evidence": "医学科（文部科学省全国大学一覧 養成課程）",
+     "group": "医師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+     "evidence": "薬学科（文部科学省全国大学一覧 養成課程）",
+     "group": "薬剤師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000211": {
+   "name": "千葉県立保健医療大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康科学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "栄養士",
+     "basis": "designated_program",
+     "department": "健康科学部 栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "栄養学科（文部科学省全国大学一覧 養成課程）",
+     "group": "栄養士"
+    },
+    {
+     "name": "歯科衛生士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康科学部 歯科衛生学科",
+     "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+     "evidence": "歯科衛生学科（文部科学省全国大学一覧 養成課程）",
+     "group": "歯科衛生士"
+    },
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "健康科学部 リハビリテーション学科 理学療法学専攻",
+     "source_url": "https://www.pref.chiba.lg.jp/hoken/",
+     "evidence": "リハビリテーション学科理学療法学専攻（千葉県公式公表）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "作業療法士（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "健康科学部 リハビリテーション学科 作業療法学専攻",
+     "source_url": "https://www.pref.chiba.lg.jp/hoken/",
+     "evidence": "リハビリテーション学科作業療法学専攻（千葉県公式公表）",
+     "group": "作業療法士"
+    }
+   ]
+  },
+  "u000212": {
+   "name": "千葉科学大学",
+   "qualifications": [
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "薬学部 薬学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "薬学科（文部科学省全国大学一覧 養成課程）",
+     "group": "薬剤師"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000216": {
+   "name": "城西国際大学",
+   "qualifications": [
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "福祉総合学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（文部科学省全国大学一覧 養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "薬剤師（国家試験受験資格）",
+     "basis": "official_page",
+     "department": "薬学部 医療薬学科",
+     "source_url": "https://www.jiu.ac.jp/",
+     "evidence": "薬学部医療薬学科（6年制薬剤師養成課程）",
+     "group": "薬剤師"
+    }
+   ]
+  },
+  "u000217": {
+   "name": "淑徳大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護栄養学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    },
+    {
+     "name": "栄養士",
+     "basis": "designated_program",
+     "department": "看護栄養学部 栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "栄養学科（文部科学省全国大学一覧 養成課程）",
+     "group": "栄養士"
+    }
+   ]
+  },
+  "u000219": {
+   "name": "千葉工業大学",
+   "qualifications": [
+    {
+     "name": "一級・二級建築士（受験資格）",
+     "basis": "designated_program",
+     "department": "創造工学部 建築学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "建築学科（文部科学省全国大学一覧 養成課程）",
+     "group": "建築士"
+    }
+   ]
+  },
+  "u000223": {
+   "name": "和洋女子大学",
+   "qualifications": [
+    {
+     "name": "栄養士",
+     "basis": "designated_program",
+     "department": "家政学部 健康栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "健康栄養学科（文部科学省全国大学一覧 養成課程）",
+     "group": "栄養士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000227": {
+   "name": "秀明大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000229": {
+   "name": "東京情報大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000231": {
+   "name": "聖徳大学",
+   "qualifications": [
+    {
+     "name": "栄養士",
+     "basis": "designated_program",
+     "department": "人間栄養学部 人間栄養学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "人間栄養学科（文部科学省全国大学一覧 養成課程）",
+     "group": "栄養士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000233": {
+   "name": "SBC東京医療大学",
+   "qualifications": [
+    {
+     "name": "理学療法士（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康科学部 理学療法学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "理学療法学科（文部科学省全国大学一覧 養成課程）",
+     "group": "理学療法士"
+    },
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "健康科学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000234": {
+   "name": "植草学園大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000235": {
+   "name": "三育学院大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
+     "group": "看護師"
+    }
+   ]
+  },
+  "u000236": {
+   "name": "亀田医療大学",
+   "qualifications": [
+    {
+     "name": "看護師（国家試験受験資格）",
+     "basis": "designated_program",
+     "department": "看護学部 看護学科",
+     "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+     "evidence": "看護学科（文部科学省全国大学一覧 養成課程）",
      "group": "看護師"
     }
    ]

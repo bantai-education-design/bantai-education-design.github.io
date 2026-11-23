@@ -1,0 +1,1183 @@
+[
+  {
+    "id": "g400001",
+    "university_id": "u000210",
+    "name": "人文公共学府",
+    "organization_type": "graduate_school",
+    "programs": [
+      "人文科学専攻",
+      "公共社会科学専攻",
+      "人文公共学専攻"
+    ],
+    "academic_field_tags": [
+      "社会学",
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400002",
+    "university_id": "u000210",
+    "name": "専門法務研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "法務専攻"
+    ],
+    "academic_field_tags": [
+      "総合・教養"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400003",
+    "university_id": "u000210",
+    "name": "教育学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "学校教育学専攻",
+      "高度教職実践専攻"
+    ],
+    "academic_field_tags": [
+      "教育"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400004",
+    "university_id": "u000210",
+    "name": "融合理工学府",
+    "organization_type": "graduate_school",
+    "programs": [
+      "数学情報科学専攻",
+      "地球環境科学専攻",
+      "先進理化学専攻",
+      "創成工学専攻",
+      "基幹工学専攻"
+    ],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI",
+      "理学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400005",
+    "university_id": "u000210",
+    "name": "園芸学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "環境園芸学専攻"
+    ],
+    "academic_field_tags": [
+      "農学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400006",
+    "university_id": "u000210",
+    "name": "医学薬学府",
+    "organization_type": "graduate_school",
+    "programs": [
+      "医科学専攻",
+      "総合薬品科学専攻",
+      "先端医学薬学専攻",
+      "先進予防医学共同専攻",
+      "先端創薬科学専攻"
+    ],
+    "academic_field_tags": [
+      "医学",
+      "薬学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400007",
+    "university_id": "u000210",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400008",
+    "university_id": "u000210",
+    "name": "情報・データサイエンス学府",
+    "organization_type": "graduate_school",
+    "programs": [
+      "情報・データサイエンス専攻"
+    ],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉大学）",
+        "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400009",
+    "university_id": "u000212",
+    "name": "薬学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "薬学専攻"
+    ],
+    "academic_field_tags": [
+      "薬学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400010",
+    "university_id": "u000212",
+    "name": "危機管理学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "危機管理学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療",
+      "理学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400011",
+    "university_id": "u000212",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉科学大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400012",
+    "university_id": "u000216",
+    "name": "人文科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "比較文化専攻",
+      "国際文化専攻",
+      "女性学専攻",
+      "グローバルコミュニケーション専攻"
+    ],
+    "academic_field_tags": [
+      "国際関係",
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400013",
+    "university_id": "u000216",
+    "name": "経営情報学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "起業マネジメント専攻"
+    ],
+    "academic_field_tags": [
+      "情報・AI",
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400014",
+    "university_id": "u000216",
+    "name": "ビジネスデザイン研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "ビジネスデザイン専攻"
+    ],
+    "academic_field_tags": [
+      "建築・デザイン"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400015",
+    "university_id": "u000216",
+    "name": "福祉総合学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "福祉社会専攻"
+    ],
+    "academic_field_tags": [
+      "福祉",
+      "社会学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400016",
+    "university_id": "u000216",
+    "name": "薬学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "医療薬学専攻"
+    ],
+    "academic_field_tags": [
+      "薬学",
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400017",
+    "university_id": "u000216",
+    "name": "国際アドミニストレーション研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "国際アドミニストレーション専攻"
+    ],
+    "academic_field_tags": [
+      "国際関係"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400018",
+    "university_id": "u000216",
+    "name": "健康科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "健康科学専攻"
+    ],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（城西国際大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400019",
+    "university_id": "u000217",
+    "name": "総合福祉研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "社会福祉学専攻",
+      "心理学専攻"
+    ],
+    "academic_field_tags": [
+      "理学",
+      "心理",
+      "福祉",
+      "社会学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400020",
+    "university_id": "u000217",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（淑徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400021",
+    "university_id": "u000219",
+    "name": "工学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "機械工学専攻",
+      "機械電子創成工学専攻",
+      "先端材料工学専攻",
+      "電気電子工学専攻",
+      "情報通信システム工学専攻",
+      "応用化学専攻",
+      "工学専攻"
+    ],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI",
+      "理学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400022",
+    "university_id": "u000219",
+    "name": "創造工学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "建築学専攻",
+      "都市環境工学専攻",
+      "デザイン科学専攻"
+    ],
+    "academic_field_tags": [
+      "工学",
+      "建築・デザイン"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400023",
+    "university_id": "u000219",
+    "name": "先進工学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "未来ロボティクス専攻",
+      "生命科学専攻",
+      "知能メディア工学専攻"
+    ],
+    "academic_field_tags": [
+      "工学",
+      "情報・AI",
+      "理学",
+      "芸術"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400024",
+    "university_id": "u000219",
+    "name": "情報科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "情報科学専攻"
+    ],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400025",
+    "university_id": "u000219",
+    "name": "社会システム科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "マネジメント工学専攻"
+    ],
+    "academic_field_tags": [
+      "工学",
+      "社会学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉工業大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400026",
+    "university_id": "u000220",
+    "name": "政策研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "政策専攻"
+    ],
+    "academic_field_tags": [
+      "総合・教養"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400027",
+    "university_id": "u000220",
+    "name": "商学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "商学専攻"
+    ],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400028",
+    "university_id": "u000220",
+    "name": "会計ファイナンス研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "会計ファイナンス専攻"
+    ],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉商科大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400029",
+    "university_id": "u000221",
+    "name": "商学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "商学専攻"
+    ],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（中央学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400030",
+    "university_id": "u000222",
+    "name": "言語教育研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "日本語教育学専攻"
+    ],
+    "academic_field_tags": [
+      "国際・語学",
+      "教育"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400031",
+    "university_id": "u000222",
+    "name": "経済研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "経営学専攻",
+      "経済学・経営学専攻"
+    ],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400032",
+    "university_id": "u000222",
+    "name": "学校教育研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "道徳教育専攻"
+    ],
+    "academic_field_tags": [
+      "教育"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（麗澤大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400033",
+    "university_id": "u000223",
+    "name": "人文科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "英語文学専攻",
+      "日本文学専攻"
+    ],
+    "academic_field_tags": [
+      "国際・語学",
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400034",
+    "university_id": "u000223",
+    "name": "総合生活研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "総合生活専攻"
+    ],
+    "academic_field_tags": [
+      "総合・教養"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400035",
+    "university_id": "u000223",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（和洋女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400036",
+    "university_id": "u000224",
+    "name": "武道・スポーツ研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "武道・スポーツ専攻"
+    ],
+    "academic_field_tags": [
+      "体育・スポーツ"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（国際武道大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400037",
+    "university_id": "u000225",
+    "name": "言語科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "英語学専攻",
+      "日本語学専攻",
+      "言語科学専攻"
+    ],
+    "academic_field_tags": [
+      "国際・語学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（神田外語大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400038",
+    "university_id": "u000226",
+    "name": "経済学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "経済学専攻"
+    ],
+    "academic_field_tags": [
+      "経済・経営・商学"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（千葉経済大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400039",
+    "university_id": "u000228",
+    "name": "人文科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "心理学専攻",
+      "比較文化専攻"
+    ],
+    "academic_field_tags": [
+      "理学",
+      "心理",
+      "文学・人文"
+    ],
+    "status": "stopped",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（川村学園女子大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400040",
+    "university_id": "u000229",
+    "name": "総合情報学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "総合情報学専攻"
+    ],
+    "academic_field_tags": [
+      "情報・AI"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東京情報大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400041",
+    "university_id": "u000230",
+    "name": "神学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "神学専攻"
+    ],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（東京基督教大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400042",
+    "university_id": "u000231",
+    "name": "児童学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "児童学専攻"
+    ],
+    "academic_field_tags": [
+      "幼児教育・保育"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400043",
+    "university_id": "u000231",
+    "name": "臨床心理学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "臨床心理学専攻"
+    ],
+    "academic_field_tags": [
+      "理学",
+      "心理"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400044",
+    "university_id": "u000231",
+    "name": "言語文化研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "日本文化専攻",
+      "英米文化専攻"
+    ],
+    "academic_field_tags": [
+      "国際・語学",
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400045",
+    "university_id": "u000231",
+    "name": "人間栄養学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "人間栄養学専攻"
+    ],
+    "academic_field_tags": [
+      "食・栄養"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400046",
+    "university_id": "u000231",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400047",
+    "university_id": "u000231",
+    "name": "音楽文化研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "音楽表現専攻",
+      "音楽教育専攻",
+      "音楽専攻"
+    ],
+    "academic_field_tags": [
+      "教育",
+      "芸術"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400048",
+    "university_id": "u000231",
+    "name": "教職研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "教職実践専攻"
+    ],
+    "academic_field_tags": [
+      "総合・教養"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（聖徳大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400049",
+    "university_id": "u000235",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（三育学院大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400050",
+    "university_id": "u000236",
+    "name": "看護学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "看護学専攻"
+    ],
+    "academic_field_tags": [
+      "看護・医療"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（亀田医療大学）",
+        "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  },
+  {
+    "id": "g400051",
+    "university_id": "u000237",
+    "name": "文化科学研究科",
+    "organization_type": "graduate_school",
+    "programs": [
+      "文化科学専攻"
+    ],
+    "academic_field_tags": [
+      "文学・人文"
+    ],
+    "status": "active",
+    "verification_status": "mext_verified",
+    "verified_at": "2026-11-21",
+    "sources": [
+      {
+        "source_name": "文部科学省 令和7年度全国大学一覧（放送大学）",
+        "source_url": "https://www.mext.go.jp/content/20260611-mxt_daigakuc01-000050331_05.xlsx",
+        "source_date": "2026-11-21"
+      }
+    ]
+  }
+]

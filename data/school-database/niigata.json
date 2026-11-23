@@ -862,6 +862,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1643,6 +1651,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1706,6 +1722,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1727,6 +1757,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1769,6 +1807,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1812,6 +1858,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2010,7 +2064,15 @@
     "source_url": "https://www.city.niigata.lg.jp/kosodate/gakko/gakko_keikaku/indexbinran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-小学校-新潟市江南区-亀田小学校",
@@ -2029,7 +2091,15 @@
     "source_url": "https://www.city.niigata.lg.jp/kosodate/gakko/gakko_keikaku/indexbinran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-小学校-新潟市江南区-亀田東小学校",
@@ -2219,7 +2289,15 @@
     "source_url": "https://www.city.niigata.lg.jp/kosodate/gakko/gakko_keikaku/indexbinran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-中学校-新潟市江南区-大江山中学校",
@@ -2797,6 +2875,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2818,6 +2904,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3810,6 +3904,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3895,6 +3997,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -4009,7 +4119,15 @@
     "source_url": "https://www.city.niigata.lg.jp/kosodate/gakko/gakko_keikaku/indexbinran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-小学校-新潟市西蒲区-岩室小学校",
@@ -4180,7 +4298,15 @@
     "source_url": "https://www.city.niigata.lg.jp/kosodate/gakko/gakko_keikaku/indexbinran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-中学校-新潟市西蒲区-中之口中学校",
@@ -5816,6 +5942,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -5837,6 +5971,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8293,6 +8435,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8377,6 +8527,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9044,6 +9202,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9086,6 +9252,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9107,6 +9281,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9775,6 +9957,14 @@
     "course": [
       "全日制",
       "通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -9859,6 +10049,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・文理融合基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -10533,6 +10731,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -10820,7 +11026,15 @@
     "source_url": "https://www.pref.niigata.lg.jp/site/kyoiku/1196007390231.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-小学校-十日町市-西小学校",
@@ -10934,7 +11148,15 @@
     "source_url": "https://www.pref.niigata.lg.jp/site/kyoiku/1196007390231.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-中学校-十日町市-十日町中学校",
@@ -11110,6 +11332,14 @@
     "course": [
       "全日制",
       "定時制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -11131,6 +11361,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -11937,7 +12175,15 @@
     "source_url": "https://www.pref.niigata.lg.jp/site/kyoiku/1196007390231.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "niigata-公立-特別支援学校-燕市-県立吉田特別支援学校",
@@ -13610,6 +13856,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -13652,6 +13906,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {

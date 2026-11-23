@@ -301,7 +301,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-ニセコ町-ニセコ町立ニセコ中学校",
@@ -1080,7 +1088,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-中標津町-中標津町立中標津東小学校",
@@ -1118,7 +1140,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-中標津町-中標津町立計根別学園小学校",
@@ -1669,7 +1699,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/ibk/ichiran_date.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-伊達市-伊達市立関内小学校",
@@ -1916,7 +1954,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sbk/youran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-余市-余市立西中学校",
@@ -2125,7 +2171,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-倶知安町-倶知安町立倶知安中学校",
@@ -4291,7 +4345,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-函館市-北海道立函館商業高等学校",
@@ -4443,7 +4505,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-別海町-別海町立上風連中学校",
@@ -5260,7 +5336,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-北広若葉町-北広若葉町立双葉小学校",
@@ -6628,7 +6712,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-北見市-北海道立北見工業高等学校",
@@ -6685,7 +6777,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      },
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-北見市-北海道立常呂高等学校",
@@ -6723,7 +6829,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-北見市端野町三区-北見市端野町三区立端野中学校",
@@ -9668,7 +9782,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-室蘭市-北海道立室蘭清水丘高等学校",
@@ -9991,7 +10113,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-寿都町-寿都町立寿都中学校",
@@ -10979,7 +11109,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-小樽市-北照高等学校",
@@ -11663,7 +11801,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/tkk/yoran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-岩見沢市-北海道立岩見沢農業高等学校",
@@ -12955,7 +13101,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-帯広市-北海道立帯広緑陽高等学校",
@@ -13487,7 +13641,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-平取町-平取町立平取中学校",
@@ -13734,7 +13896,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-弟子屈町-弟子屈町立川湯中学校",
@@ -14285,7 +14455,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-新ひだか町-新ひだか町立三石中学校",
@@ -15121,7 +15299,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・管楽合奏部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立明星中学校",
@@ -15254,7 +15440,27 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立永山南中学校",
@@ -15273,7 +15479,27 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立神居中学校",
@@ -15387,7 +15613,15 @@
     "source_url": "https://www.hokkyodai.ac.jp/attached/school_list/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-旭川市-旭川市立共栄小学校",
@@ -17059,7 +17293,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-旭川市-北海道立旭川永嶺高等学校",
@@ -17154,7 +17396,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-旭川市-旭川明成高等学校",
@@ -17173,7 +17423,29 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-旭川市-旭川藤星高等学校",
@@ -17572,7 +17844,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市中央区-札幌市立向陵中学校",
@@ -17743,7 +18023,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立二条小学校",
@@ -17895,7 +18183,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立幌西小学校",
@@ -17914,7 +18210,33 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "小学校・合唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立日新小学校",
@@ -18351,7 +18673,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市中央区-札幌聖心女子学院高等学校",
@@ -18408,7 +18738,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市北区-札幌市立あいの里東中学校",
@@ -18446,7 +18784,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市北区-札幌市立光陽中学校",
@@ -19567,7 +19913,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市北区-北海道立札幌北陵高等学校",
@@ -20574,7 +20928,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市南区-東海大学付属札幌高等学校",
@@ -20593,7 +20955,27 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-中学校-札幌市厚別区-星槎もみじ中学校",
@@ -21125,7 +21507,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市厚別区-北海道立札幌厚別高等学校",
@@ -21182,7 +21572,16 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞",
+        "detail": "Berry Pickin'「余光」"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市厚別区-星槎国際高等学校",
@@ -21201,7 +21600,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市手稲区-札幌市立前田中学校",
@@ -21847,7 +22254,29 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市手稲区-北海道立札幌あすかぜ高等学校",
@@ -22075,7 +22504,21 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・合唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市東区-札幌市立東栄中学校",
@@ -22170,7 +22613,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中等教育学校-札幌市東区-札幌市立札幌開成中等教育学校",
@@ -22322,7 +22773,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市東区-札幌市立北園小学校",
@@ -22664,7 +23123,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市東区-札幌市立苗穂小学校",
@@ -22930,7 +23397,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市東区-札幌大谷高等学校",
@@ -23006,7 +23481,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市清田区-札幌市立平岡中央中学校",
@@ -23196,7 +23679,27 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市清田区-札幌市立平岡公園小学校",
@@ -23652,7 +24155,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市白石区-札幌市立柏丘中学校",
@@ -24336,7 +24847,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市西区-札幌市立発寒中学校",
@@ -24355,7 +24874,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市西区-札幌市立福井野中学校",
@@ -25058,7 +25585,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市西区-北海道立札幌西陵高等学校",
@@ -25096,7 +25631,23 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市豊平区-札幌市立あやめ野中学校",
@@ -25495,7 +26046,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市豊平区-札幌市立月寒東小学校",
@@ -25514,7 +26073,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市豊平区-札幌市立東園小学校",
@@ -26179,7 +26746,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-枝幸町-枝幸町立枝幸中学校",
@@ -26920,7 +27495,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-様似町-様似町立様似中学校",
@@ -27338,7 +27921,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-歌志内市-歌志内市立歌志内学園小学校",
@@ -28003,7 +28594,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-江別市-立命館慶祥高等学校",
@@ -28098,7 +28697,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-池田町-池田町立池田中学校",
@@ -28174,7 +28781,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-沼田町-沼田町立沼田中学校",
@@ -28839,7 +29454,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-浦臼町-浦臼町立浦臼中学校",
@@ -28877,7 +29500,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/stk/soragatukouitiran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-深川市-深川市立一已中学校",
@@ -29086,7 +29717,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-深川市-北海道立深川東高等学校",
@@ -29219,7 +29858,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-清里町-清里町立清里中学校",
@@ -30416,7 +31063,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-白糠町-白糠町立茶路中学校",
@@ -30777,7 +31432,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/oky/11_soumu/125972.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-知内町-知内町立知内高等学校",
@@ -31746,7 +32409,28 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/okh/school.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞",
+        "detail": "文部科学大臣賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-網走市-網走市立第三中学校",
@@ -32392,7 +33076,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-美唄市-北海道立美唄聖華高等学校",
@@ -34140,7 +34832,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "定時制・通信制",
+        "designation": "北海道高等学校定時制・通信制パワーアップ事業（研究推進校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-苫小牧市-北海道立苫小牧東高等学校",
@@ -34159,7 +34859,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-苫小牧市-北海道立苫小牧総合経済高等学校",
@@ -34691,7 +35399,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/tky/65283.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-豊頃町-豊頃町立大津小学校",
@@ -35071,7 +35787,27 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/okh/school.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-遠軽町-遠軽町立丸瀬布小学校",
@@ -35280,7 +36016,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-中学校-釧路市-武修館中学校",
@@ -36667,7 +37411,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "医進・地域医療",
+        "designation": "地域医療を支える人づくりプロジェクト事業（医進類型指定校）",
+        "authority": "北海道"
+      },
+      {
+        "year": "令和8",
+        "subject": "キャリア・就職指導",
+        "designation": "就職指導の改善に関する研究（実践研究校）",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-釧路市-北海道立阿寒高等学校",
@@ -37389,7 +38147,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-鶴居村-鶴居村立鶴居中学校",
@@ -37617,7 +38383,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "地域連携・総合学科等",
+        "designation": "小規模総合学科等による地域と連携・協働した高校魅力化推進事業",
+        "authority": "北海道"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-鹿部町-鹿部町立鹿部中学校",

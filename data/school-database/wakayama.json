@@ -1059,7 +1059,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-59",
@@ -1653,7 +1661,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-92",
@@ -2697,7 +2713,27 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "wakayama-150",
@@ -4533,7 +4569,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-252",
@@ -6657,7 +6701,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-370",
@@ -7107,7 +7159,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-395",
@@ -7143,7 +7203,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-397",
@@ -7377,7 +7445,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-410",
@@ -7395,7 +7471,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-411",
@@ -7413,7 +7497,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-412",
@@ -7521,7 +7613,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-418",
@@ -7557,7 +7657,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-420",
@@ -7593,7 +7701,21 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-422",
@@ -7701,7 +7823,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-428",
@@ -7737,7 +7867,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-430",
@@ -7863,7 +8001,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-437",
@@ -7953,7 +8099,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-442",
@@ -8169,7 +8323,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "wakayama-454",

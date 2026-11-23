@@ -352,7 +352,7 @@
             <div class="search-form-grid" style="grid-template-columns: 1.5fr 1fr 1fr;">
               <div class="form-group">
                 <label for="keyword">キーワードで検索</label>
-                <input type="text" id="keyword" class="form-control" placeholder="学校名・かな・市町村・郵便番号・住所・電話番号">
+                <input type="text" id="keyword" class="form-control" placeholder="学校名・かな・市町村・郵便番号・住所・電話番号・研究指定の教科や事業名）">
               </div>
               <div class="form-group">
                 <label for="city">市町村を選択</label>
@@ -425,6 +425,47 @@
                 </label>
               </div>
             </div>
+
+
+            <!-- research-filter:start -->
+            <div class="form-group research-filter-group">
+              <label>研究指定・実践推進校（令和8年度一覧）</label>
+              <div class="checkbox-group" style="align-items: center;">
+                <label class="filter-chip filter-chip--research">
+                  <input type="checkbox" id="research-only" class="research-checkbox" value="1">
+                  <span>研究指定校のみ表示</span>
+                </label>
+                <select id="research-authority" class="form-control" aria-label="指定主体で絞り込み" style="width: auto; min-width: 180px; padding: 8px 12px; font-size: 0.86rem;">
+                  <option value="">すべての指定主体</option>
+                  <option value="文部科学省">文部科学省指定</option>
+                  <option value="群馬県">群馬県教育委員会指定</option>
+                </select>
+              </div>
+            </div>
+            <!-- research-filter:end -->
+
+
+            <!-- music-filter:start -->
+            <div class="form-group music-filter-group">
+              <label>音楽コンクール全国大会実績（金・銀・銅・出場校）</label>
+              <div class="checkbox-group" style="align-items: center;">
+                <label class="filter-chip filter-chip--music">
+                  <input type="checkbox" id="music-only" class="music-checkbox" value="1">
+                  <span>音楽コンクール実績校のみ表示</span>
+                </label>
+                <select id="music-contest" class="form-control" aria-label="音楽コンクールで絞り込み" style="width: auto; min-width: 220px; padding: 8px 12px; font-size: 0.86rem;">
+                  <option value="">すべての音楽コンクール</option>
+                  <option value="NHK全国学校音楽コンクール（Nコン）">NHK全国学校音楽コンクール（Nコン）</option>
+                  <option value="全日本合唱コンクール">全日本合唱コンクール</option>
+                  <option value="全日本吹奏楽コンクール">全日本吹奏楽コンクール</option>
+                  <option value="全日本マーチングコンテスト">全日本マーチングコンテスト</option>
+                  <option value="こども音楽コンクール">こども音楽コンクール</option>
+                  <option value="日本学校合奏コンクール（全国学校合奏コンクール）">日本学校合奏コンクール（全国学校合奏コンクール）</option>
+                  <option value="全国高等学校軽音楽コンテスト">全国高等学校軽音楽コンテスト</option>
+                </select>
+              </div>
+            </div>
+            <!-- music-filter:end -->
 
           </form>
         </div>

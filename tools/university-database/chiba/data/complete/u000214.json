@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000214",
+  "id": "u000214",
+  "name": "開智国際大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "柏市",
+  "operator": "学校法人開智学園",
+  "feature_summary": "柏市に本部を置き、教育学部・国際教養学部の2学部で学ぶ大学です。",
+  "official_url": "https://www.kaichi.ac.jp/",
+  "admissions_url": "https://www.kaichi.ac.jp/examination/admission-2/",
+  "academic_field_tags": [
+    "国際関係",
+    "教育",
+    "社会学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400017",
+      "name": "教育学部",
+      "academic_field_tags": [
+        "教育"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400031",
+          "name": "教育学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400018",
+      "name": "国際教養学部",
+      "academic_field_tags": [
+        "国際関係",
+        "社会学"
+      ],
+      "campus_municipality": "柏市",
+      "departments": [
+        {
+          "department_id": "d400032",
+          "name": "国際教養学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "277-0005",
+      "address": "千葉県柏市柏1225-6",
+      "prefecture": "千葉県",
+      "municipality": "柏市",
+      "nearest_stations": [
+        {
+          "station": "柏駅",
+          "line": "JR常磐線・東武アーバンパークライン",
+          "access": "東口バス「柏学園前」下車徒歩3分（徒歩20分）"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "開智国際大学 公式サイト",
+      "url": "https://www.kaichi.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "開智国際大学 公式入試情報",
+      "url": "https://www.kaichi.ac.jp/examination/admission-2/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "student_counts"
+    ]
+  },
+  "philosophy": "世界の人々や文化を理解・尊重する姿勢を大切にし、探究的な学びを通じて主体的に考え行動する力を培う。",
+  "mission": "教育および国際教養の専門性を生かし、平和で豊かな国際社会の実現に貢献できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 890,
+    "graduate": 0,
+    "total": 890,
+    "as_of": "2025-05-01"
+  }
+}
