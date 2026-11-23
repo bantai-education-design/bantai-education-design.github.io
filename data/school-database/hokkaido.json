@@ -6767,7 +6767,16 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-北見市-北海道立北見緑陵高等学校",
@@ -12654,7 +12663,16 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/tky/65283.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-帯広市-帯広市立緑丘小学校",
@@ -18282,7 +18300,16 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立桑園小学校",
@@ -21910,7 +21937,16 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市手稲区-札幌市立手稲北小学校",
@@ -24503,7 +24539,16 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市白石区-札幌市立東札幌小学校",
@@ -26789,6 +26834,15 @@
         "subject": "キャリア・就職指導",
         "designation": "就職指導の改善に関する研究（実践研究校）",
         "authority": "北海道"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },

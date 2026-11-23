@@ -3780,6 +3780,15 @@
         "designation": "教育課程特例校",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
     ]
   },
   {
@@ -5849,6 +5858,15 @@
         "designation": "特色ある学校づくり推進校",
         "authority": "区市町村",
         "presentation": "09.1.22"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
       }
     ]
   },
@@ -10141,6 +10159,15 @@
         "designation": "教育課程特例校",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
     ]
   },
   {
@@ -11291,6 +11318,15 @@
         "authority": "区市町村",
         "presentation": "誌上"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -11627,6 +11663,15 @@
         "subject": "教科「日本語」",
         "designation": "教育課程特例校",
         "authority": "文部科学省"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -12186,6 +12231,15 @@
         "designation": "園・校における架け橋期のカリキュラム",
         "authority": "区市町村",
         "presentation": "09.01.25"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
       }
     ]
   },
@@ -13221,6 +13275,15 @@
         "authority": "区市町村",
         "presentation": "令和8発表予定"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -13854,6 +13917,15 @@
         "designation": "学校図書館活用実践指定校",
         "authority": "区市町村",
         "presentation": "08.02.18"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
       }
     ]
   },
@@ -16762,7 +16834,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -17900,7 +17981,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -19642,6 +19732,15 @@
         "subject": "読書活動",
         "designation": "学校図書館利活用推進校",
         "authority": "区市町村"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
       }
     ]
   },
@@ -22517,6 +22616,15 @@
         "designation": "教育課程特例校",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -22721,7 +22829,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -24776,7 +24893,23 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -26274,7 +26407,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -26944,7 +27086,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -28389,7 +28540,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -29270,7 +29430,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -30361,6 +30530,15 @@
         "authority": "区市町村",
         "presentation": "09.01.29"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -30592,7 +30770,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -30768,6 +30955,15 @@
         "subject": "全教科",
         "designation": "幼児期の育ちと学びをつなぐ授業デザインモデル校",
         "authority": "東京都"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
       }
     ]
   },
@@ -31127,7 +31323,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -31225,7 +31430,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -32023,6 +32237,22 @@
         "subject": "",
         "designation": "人権尊重教育推進校",
         "authority": "東京都"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
       }
     ]
   },
@@ -34622,6 +34852,15 @@
         "subject": "探究的な学び",
         "designation": "大田区教育委員会教育研究推進校",
         "authority": "区市町村"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -38678,7 +38917,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -44370,7 +44618,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -45501,6 +45758,15 @@
         "designation": "研究開発学校",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
     ]
   },
   {
@@ -46410,6 +46676,15 @@
         "designation": "都立中学校等における地域展開促進事業",
         "authority": "東京都"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -46690,6 +46965,15 @@
         "designation": "主体的で深い学び・指導と評価の一体化・幼保小の連携",
         "authority": "区市町村",
         "presentation": "09.01.22"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -49937,6 +50221,15 @@
         "designation": "エンジョイスポーツプロジェクト",
         "authority": "東京都"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
     ]
   },
   {
@@ -52744,6 +53037,15 @@
         "designation": "進学指導研究校",
         "authority": "東京都"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
     ]
   },
   {
@@ -53183,6 +53485,15 @@
         "subject": "",
         "designation": "都立中学校等における地域展開促進事業",
         "authority": "東京都"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -69983,7 +70294,23 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -70073,7 +70400,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -70091,7 +70427,23 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -70235,7 +70587,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -70451,7 +70812,16 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -70487,7 +70857,23 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -72139,7 +72525,16 @@
       "宛名印刷"
     ],
     "website": "http://js.jumonji-u.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -72348,7 +72743,16 @@
       "宛名印刷"
     ],
     "website": "https://www.fuzoku.joshibi.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -72405,7 +72809,16 @@
       "宛名印刷"
     ],
     "website": "https://www.shukusu.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -72918,7 +73331,16 @@
       "宛名印刷"
     ],
     "website": "https://www.chofu.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -73089,7 +73511,23 @@
       "宛名印刷"
     ],
     "website": "https://www.dendai.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -73108,7 +73546,16 @@
       "宛名印刷"
     ],
     "website": "https://www.tcu-todoroki.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -73307,7 +73754,16 @@
       "宛名印刷"
     ],
     "website": "https://tokiwamatsu.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -73377,7 +73833,23 @@
       "宛名印刷"
     ],
     "website": "https://www.dokkyo.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -73490,7 +73962,23 @@
       "宛名印刷"
     ],
     "website": "https://nichidai1-edu.note.jp/?gs=56fc1633b6ee",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -74041,7 +74529,23 @@
       "宛名印刷"
     ],
     "website": "https://www.nakanogakuen.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -76237,7 +76741,16 @@
       "高校連携"
     ],
     "website": "http://js.jumonji-u.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77428,7 +77941,16 @@
       "高校連携"
     ],
     "website": "https://www.chofu.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77737,7 +78259,23 @@
       "高校連携"
     ],
     "website": "https://www.dendai.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77757,7 +78295,16 @@
       "高校連携"
     ],
     "website": "https://www.tcu-todoroki.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -78017,7 +78564,16 @@
       "高校連携"
     ],
     "website": "https://tokiwamatsu.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -78130,7 +78686,23 @@
       "高校連携"
     ],
     "website": "https://www.dokkyo.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -78308,7 +78880,23 @@
       "高校連携"
     ],
     "website": "https://nichidai1-edu.note.jp/?gs=e2d5c0de7469",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -79134,6 +79722,22 @@
         "division": "全国大会",
         "award": "3位"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
     ]
   },
   {
@@ -79560,7 +80164,23 @@
       "宛名印刷",
       "高校連携"
     ],
-    "website": ""
+    "website": "",
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",

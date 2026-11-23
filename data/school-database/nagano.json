@@ -1615,7 +1615,16 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "nagano-0085",
@@ -9994,7 +10003,16 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "nagano-0499",

@@ -7766,7 +7766,16 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-柏市-柏市立酒井根小学校",
@@ -13458,6 +13467,15 @@
         "year": "2025年（第78回）",
         "division": "中学生部門（混声）",
         "award": "金賞"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -23005,7 +23023,16 @@
     "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8syougaku.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "chiba-私立-小学校-市川市-昭和学院小学校",
@@ -29023,7 +29050,16 @@
     "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8syougaku.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-船橋市-船橋市立七林小学校",
@@ -33936,7 +33972,16 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-東金市-東金市立日吉台小学校",

@@ -1959,6 +1959,15 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
     ]
   },
   {
@@ -6176,6 +6185,15 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },

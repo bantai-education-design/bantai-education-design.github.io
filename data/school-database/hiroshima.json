@@ -886,7 +886,16 @@
     "source_url": "https://www.hiroshima-u.ac.jp/fuzoku",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B9%BC%E4%BF%9D%E9%80%A3%E6%90%BA%E5%9E%8B%E8%AA%8D%E5%AE%9A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92-%E4%B8%89%E5%8E%9F%E5%B8%82-%E3%81%BF%E3%81%A9%E3%82%8A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92",
@@ -6189,6 +6198,15 @@
         "subject": "生徒指導",
         "designation": "生徒指導サポート実践校",
         "authority": "広島県"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
       }
     ]
   },
@@ -20501,7 +20519,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E6%B3%89%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -21061,7 +21088,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/hiroshimakennsiritugakkou/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E8%8B%B1%E6%95%B0%E5%AD%A6%E9%A4%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1",

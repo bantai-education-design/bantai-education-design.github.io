@@ -73,7 +73,23 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/gakko/private-schools/elementary-junior-high-school/",
     "source_date": "2026-07-27",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立三の丸小学校",
@@ -8151,7 +8167,16 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/gakko/private-schools/elementary-junior-high-school/",
     "source_date": "2026-07-27",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-取手市-取手市立取手第一中学校",
@@ -11658,7 +11683,23 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/gakko/private-schools/elementary-junior-high-school/",
     "source_date": "2026-07-27",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-守谷市-守谷市立大井沢小学校",
