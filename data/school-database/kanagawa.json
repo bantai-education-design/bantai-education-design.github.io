@@ -10413,7 +10413,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#07_r8_juniorhighschool_yokohama.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市港北区-横浜市立新田中学校",
@@ -11594,6 +11602,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞",
+        "detail": "郡山市長賞"
+      }
     ]
   },
   {
@@ -12930,6 +12947,14 @@
         "subject": "総合的な探究の時間",
         "designation": "教育課程研究開発校",
         "authority": "神奈川県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞"
       }
     ]
   },
@@ -20030,7 +20055,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#03_r8_primaryschool_kawasaki.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-川崎市高津区-川崎市立子母口小学校",
@@ -25876,6 +25909,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -29035,7 +29082,22 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "大阪市長賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-中学校-鎌倉市-鎌倉国際文理中学校",
@@ -29345,6 +29407,21 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "大阪府知事賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "優良賞"
+      }
     ]
   },
   {

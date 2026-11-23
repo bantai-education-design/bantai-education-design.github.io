@@ -917,7 +917,15 @@
     "source_url": "https://www.pref.miyagi.jp/documents/6697/r7_meibo.pdf",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立三条中学校",
@@ -1134,7 +1142,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/aobaku-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立広陵中学校",
@@ -2479,7 +2495,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/miyagino-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市宮城野区-仙台市立東華中学校",
@@ -3544,6 +3568,26 @@
     "verified_date": "",
     "course": [
       "普通科"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -4767,6 +4811,14 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -5915,7 +5967,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/izumi-03.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市泉区-仙台市立寺岡中学校",
@@ -7748,7 +7808,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/lss.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-塩竈市-塩竈市立第二中学校",
@@ -8751,7 +8819,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/lss.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-白石市-白石市立白石中学校",
@@ -9858,7 +9934,21 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-多賀城市-宮城県貞山高等学校",
@@ -10873,7 +10963,15 @@
     "source_url": "https://www.pref.miyagi.jp/documents/6697/r7_meibo.pdf",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-大崎市-大崎市立三本木中学校",

@@ -3543,7 +3543,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "小学校・合奏第1部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "ishikawa-公立-小学校-金沢市立三和小学校",
@@ -5886,6 +5894,14 @@
         "designation": "自立した学習者の育成 ~粘り強く考え、適切に判断・表現する力を育む~",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -7900,6 +7916,14 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
       }
     ]
   },

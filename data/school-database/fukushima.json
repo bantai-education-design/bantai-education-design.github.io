@@ -548,7 +548,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-福島市-福島市立庭坂小学校",
@@ -1536,7 +1544,21 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-高等学校-福島市-福島北高等学校",
@@ -4445,7 +4467,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-郡山市-郡山市立桃見台小学校",
@@ -4521,7 +4551,16 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "最優秀賞",
+        "detail": "福島県教育長賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-郡山市-郡山市立永盛小学校",
@@ -5167,7 +5206,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-郡山市-郡山市立熱海中学校",
@@ -5281,7 +5328,23 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞",
+        "detail": "郡山市長賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "大阪市長賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-郡山市-郡山市立郡山第七中学校",
@@ -5338,7 +5401,16 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞",
+        "detail": "福島県教育長賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-郡山市-郡山市立郡山第五中学校",
@@ -5525,6 +5597,20 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -5666,7 +5752,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-郡山市-郡山女子大学附属高等学校",
@@ -5765,6 +5859,14 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞"
       }
     ]
   },
@@ -6656,7 +6758,21 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-田村市-田村市立船引南中学校",
@@ -8933,7 +9049,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-会津若松市-会津若松市立謹教小学校",
@@ -9180,7 +9304,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-中学校-会津若松市-会津若松市立第四中学校",
@@ -9199,7 +9331,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-義務教育学校-会津若松市-会津若松市立河東学園",
@@ -9377,6 +9517,21 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "文部科学大臣賞"
       }
     ]
   },
@@ -13522,7 +13677,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/sityousongakkol.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-公立-小学校-いわき市-いわき市立永崎小学校",
@@ -15196,7 +15359,15 @@
     "source_url": "https://www.pref.fukushima.lg.jp/site/edu/kenritu.html",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "fukushima-私立-高等学校-いわき市-福島県磐城第一高等学校",

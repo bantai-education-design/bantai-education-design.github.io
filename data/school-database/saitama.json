@@ -286,7 +286,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "C111210100022",
@@ -421,7 +429,15 @@
     "website": "https://www.saitamasakae-h.ed.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "E111240000034",
@@ -744,7 +760,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "B111210200014",
@@ -1462,6 +1486,14 @@
         "subject": "",
         "designation": "オンライン連携講座事業",
         "authority": "埼玉県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
       }
     ]
   },
@@ -6947,6 +6979,14 @@
         "subject": "",
         "designation": "オンライン連携講座事業",
         "authority": "埼玉県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞"
       }
     ]
   },
@@ -12622,7 +12662,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "C111220800060",
@@ -12873,6 +12921,20 @@
         "subject": "",
         "designation": "学習サポーターの配置",
         "authority": "埼玉県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "グランプリ"
+      },
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "奨励賞"
       }
     ]
   },
@@ -15540,6 +15602,15 @@
         "designation": "県立高校学際的な学び推進事業「学」SAITAMAプロジェクト",
         "authority": "埼玉県"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "大阪府知事賞"
+      }
     ]
   },
   {
@@ -16329,7 +16400,15 @@
     "website": "",
     "source_name": "埼玉県教育委員会「令和8年度埼玉県学校便覧」",
     "source_url": "https://www.pref.saitama.lg.jp/e2201/binran2026.html",
-    "source_date": "2026-07-08"
+    "source_date": "2026-07-08",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "id": "C111221400044",
@@ -16638,7 +16717,15 @@
     "website": "https://www.k-kyoei.ed.jp/",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "http://www.saitamashigaku.com/pages/6/",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0051",
@@ -22063,6 +22150,14 @@
         "designation": "メンタルヘルス研究推進校",
         "authority": "埼玉県"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -22490,7 +22585,27 @@
     "website": "",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "https://www.pref.saitama.lg.jp/a0204/shiritsuitiran/index.html",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "ST_私_高_0054",
@@ -28132,6 +28247,14 @@
         "designation": "実践検証協力校",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
     ]
   },
   {
@@ -32293,6 +32416,26 @@
         "subject": "",
         "designation": "文化部活動指導員活用事業",
         "authority": "埼玉県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
       }
     ]
   },
