@@ -1,0 +1,25 @@
+name: Weekly site health audit
+
+on:
+  schedule:
+    # Every Monday at 08:00 JST (Sunday 23:00 UTC)
+    - cron: '0 23 * * 0'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/weekly_health_audit.py'
+      - '.github/workflows/weekly-site-health-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  weekly-health-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run read-only weekly site health audit
+        run: python scripts/weekly_health_audit.py
