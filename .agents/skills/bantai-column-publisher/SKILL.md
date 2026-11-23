@@ -58,4 +58,4 @@ python tools/school-database/test_seo_metadata.py
 ### 4. Visual Verification and PR Merge
 
 - For layout or visual changes, verify desktop and mobile rendering before merge.
-- Create a PR, wait for all GitHub Actions guards (`ga-tracking-guard`, `sitemap-guard`, etc.) to pass, then merge normally without `--admin` and sync local `main`.
+- Create a PR, wait for all GitHub Actions guards (`ga-tracking-guard`, `sitemap-guard`, etc.) to pass, then request explicit human merge approval, merge normally without `--admin` only after authorization, and sync local `main`.
