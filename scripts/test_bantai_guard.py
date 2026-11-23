@@ -4,7 +4,8 @@ import importlib.util
 import unittest
 from pathlib import Path
 
-SCRIPT = Path(__file__).resolve().parent / "bantai_guard.py"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SCRIPT = REPO_ROOT / ".agents" / "scripts" / "bantai_guard.py"
 spec = importlib.util.spec_from_file_location("bantai_guard", SCRIPT)
 guard = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(guard)
@@ -28,6 +29,8 @@ class GuardTests(unittest.TestCase):
 
     def test_protected_marker_denied(self):
         for item in (
+            event("write_file", Path="simple-public-flow.marker", Content="changed"),
+            event("edit_file", Path="C:/repo/simple-public-flow.marker", Replacement="x"),
             event("write_to_file", TargetFile="simple-public-flow.marker", CodeContent="changed"),
             event("replace_file_content", TargetFile="C:/repo/simple-public-flow.marker", ReplacementContent="x"),
             event("run_command", CommandLine="git add simple-public-flow.marker"),
@@ -36,16 +39,21 @@ class GuardTests(unittest.TestCase):
                 self.assertEqual(guard.decide(item)["decision"], "deny")
 
     def test_editorial_text_marker_denied(self):
-        self.assertEqual(
-            guard.decide(event("write_to_file", TargetFile="columns/example/article.md", CodeContent="This is **bold**"))["decision"],
-            "deny",
-        )
+        for item in (
+            event("write_file", Path="columns/example/article.html", Content="<p>**bold**</p>"),
+            event("edit_file", Path="books/book2/index.html", Replacement="<p>**強調**</p>"),
+            event("write_to_file", TargetFile="columns/example/article.md", CodeContent="This is **bold**"),
+        ):
+            with self.subTest(item=item):
+                self.assertEqual(guard.decide(item)["decision"], "deny")
 
     def test_normal_editorial_text_allowed(self):
-        self.assertEqual(
-            guard.decide(event("write_to_file", TargetFile="columns/example/article.md", CodeContent="普通の日本語"))["decision"],
-            "allow",
-        )
+        for item in (
+            event("write_file", Path="columns/example/article.md", Content="普通の日本語"),
+            event("write_to_file", TargetFile="columns/example/article.md", CodeContent="普通の日本語"),
+        ):
+            with self.subTest(item=item):
+                self.assertEqual(guard.decide(item)["decision"], "allow")
 
     def test_missing_arguments_fail_closed(self):
         self.assertEqual(guard.decide({"toolCall": {"name": "run_command", "args": {}}})["decision"], "deny")

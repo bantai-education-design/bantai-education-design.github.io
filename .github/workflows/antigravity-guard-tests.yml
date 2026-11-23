@@ -4,14 +4,14 @@ on:
   pull_request:
     paths:
       - '.agents/hooks.json'
-      - 'scripts/bantai_guard.py'
+      - '.agents/scripts/bantai_guard.py'
       - 'scripts/test_bantai_guard.py'
       - '.github/workflows/antigravity-guard-tests.yml'
   push:
     branches: [main]
     paths:
       - '.agents/hooks.json'
-      - 'scripts/bantai_guard.py'
+      - '.agents/scripts/bantai_guard.py'
       - 'scripts/test_bantai_guard.py'
       - '.github/workflows/antigravity-guard-tests.yml'
 
