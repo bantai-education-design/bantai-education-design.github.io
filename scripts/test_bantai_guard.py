@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Focused unit tests for the Antigravity PreToolUse safety hook."""
 import importlib.util
+import json
+import shlex
 import unittest
 from pathlib import Path
 
@@ -16,6 +18,15 @@ def event(name, **args):
 
 
 class GuardTests(unittest.TestCase):
+    def test_hook_config_points_to_existing_script(self):
+        hooks = json.loads((REPO_ROOT / '.agents' / 'hooks.json').read_text(encoding='utf-8'))
+        for entry in hooks['bantai-guard']['PreToolUse']:
+            for hook in entry['hooks']:
+                command = shlex.split(hook['command'])
+                self.assertGreaterEqual(len(command), 2)
+                self.assertTrue((REPO_ROOT / command[1]).is_file(), hook['command'])
+
+
     def test_normal_commands_allowed(self):
         for cmd in ("python -m unittest", "gh pr checks 123 --watch", "gh pr merge 123 --merge"):
             with self.subTest(cmd=cmd):
