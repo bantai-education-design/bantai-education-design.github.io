@@ -1,0 +1,30 @@
+name: Antigravity subagent policy tests
+
+on:
+  pull_request:
+    paths:
+      - '.agents/agents/**'
+      - 'scripts/test_bantai_subagents.py'
+      - 'docs/ANTIGRAVITY_SUBAGENTS_20261123.md'
+      - '.github/workflows/antigravity-subagent-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.agents/agents/**'
+      - 'scripts/test_bantai_subagents.py'
+      - 'docs/ANTIGRAVITY_SUBAGENTS_20261123.md'
+      - '.github/workflows/antigravity-subagent-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  subagent-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate subagent definitions and pilot safeguards
+        run: python -m unittest discover -s scripts -p 'test_bantai_subagents.py' -v
