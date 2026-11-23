@@ -1088,7 +1088,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-中標津町-中標津町立中標津東小学校",
@@ -1126,7 +1140,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-中標津町-中標津町立計根別学園小学校",
@@ -4474,6 +4496,12 @@
         "year": "2026年（第79回）",
         "division": "中学生部門",
         "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
       }
     ]
   },
@@ -5292,7 +5320,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-北広若葉町-北広若葉町立双葉小学校",
@@ -15247,7 +15283,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・管楽合奏部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立明星中学校",
@@ -15387,6 +15431,18 @@
         "year": "2026年（第74回）",
         "division": "中学校の部",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -15412,6 +15468,18 @@
       {
         "contest": "全日本吹奏楽コンクール",
         "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
         "division": "中学校の部",
         "award": "金賞"
       }
@@ -17354,6 +17422,12 @@
         "year": "2026年（第74回）",
         "division": "高等学校の部",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -17754,7 +17828,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市中央区-札幌市立向陵中学校",
@@ -18115,6 +18197,12 @@
     "course": [],
     "music_awards": [
       {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
         "contest": "こども音楽コンクール",
         "year": "令和7年度（第73期）",
         "division": "小学校・合唱部門",
@@ -18122,9 +18210,15 @@
       },
       {
         "contest": "全日本合唱コンクール",
-        "year": "2026年（第79回）",
+        "year": "2025年（第78回）",
         "division": "小学生部門",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
       }
     ]
   },
@@ -18563,7 +18657,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市中央区-札幌聖心女子学院高等学校",
@@ -18666,7 +18768,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市北区-札幌市立光陽中学校",
@@ -20836,6 +20946,18 @@
         "year": "2026年（第74回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -22122,6 +22244,12 @@
         "year": "2026年（第79回）",
         "division": "高等学校部門",
         "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銀賞"
       }
     ]
   },
@@ -22351,7 +22479,21 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・合唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市東区-札幌市立東栄中学校",
@@ -23525,6 +23667,12 @@
         "year": "2026年（第93回）",
         "division": "小学校の部",
         "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
       }
     ]
   },
@@ -23982,7 +24130,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市白石区-札幌市立柏丘中学校",
@@ -24666,7 +24822,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市西区-札幌市立発寒中学校",
@@ -35596,15 +35760,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "銅賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
-        "award": "全国大会出場"
+        "award": "銀賞"
       }
     ]
   },

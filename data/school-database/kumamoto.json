@@ -2475,7 +2475,21 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-公立-中学校-天草市-天草市立本渡東中学校",
@@ -3487,7 +3501,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-公立-小学校-山鹿市-山鹿市立三玉小学校",
@@ -3568,6 +3590,12 @@
       {
         "contest": "全日本合唱コンクール",
         "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
         "division": "小学生部門",
         "award": "金賞"
       }
@@ -5511,7 +5539,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-公立-小学校-熊本市-熊本市立帯山西小学校",
@@ -6808,6 +6844,14 @@
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -6994,6 +7038,18 @@
         "year": "2026年（第79回）",
         "division": "中学生部門",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
       }
     ]
   },
@@ -7147,7 +7203,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-公立-中学校-熊本市-熊本市立日吉中学校",
@@ -7172,6 +7236,12 @@
         "contest": "全日本合唱コンクール",
         "year": "2026年（第79回）",
         "division": "中学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
         "award": "銀賞"
       }
     ]
@@ -7976,6 +8046,18 @@
         "year": "2026年（第79回）",
         "division": "高等学校部門",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
       }
     ]
   },
@@ -8015,7 +8097,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-公立-高等学校-熊本市-熊本県立湧心館高等学校",
@@ -8103,15 +8193,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "高等学校以上の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "高等学校以上の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },
@@ -9022,7 +9118,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "kumamoto-私立-高等学校-玉名市-玉名女子高等学校",
@@ -9044,12 +9148,6 @@
     "course": [],
     "music_awards": [
       {
-        "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "高等学校以上の部",
-        "award": "金賞"
-      },
-      {
         "contest": "全日本吹奏楽コンクール",
         "year": "2026年（第74回）",
         "division": "高等学校の部",
@@ -9060,6 +9158,30 @@
         "year": "2026年（第39回）",
         "division": "高等学校以上の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
       }
     ]
   },

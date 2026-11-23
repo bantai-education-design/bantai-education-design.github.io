@@ -4507,7 +4507,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-中学校-千葉市緑区-千葉市立土気南中学校",
@@ -5709,6 +5717,37 @@
         "year": "2026年（第74回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2025年（第14回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞",
+        "detail": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
       }
     ]
   },
@@ -8349,7 +8388,21 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-中学校-柏市-柏市立風早中学校",
@@ -8695,12 +8748,6 @@
     ],
     "music_awards": [
       {
-        "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "高等学校以上の部",
-        "award": "金賞"
-      },
-      {
         "contest": "全日本吹奏楽コンクール",
         "year": "2026年（第74回）",
         "division": "高等学校の部",
@@ -8711,6 +8758,30 @@
         "year": "2026年（第39回）",
         "division": "高等学校以上の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -10942,15 +11013,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "銀賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
-        "award": "全国大会出場"
+        "award": "銀賞"
       }
     ]
   },
@@ -13324,6 +13401,13 @@
     "course": [],
     "music_awards": [
       {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "大阪市教育委員会教育長賞"
+      },
+      {
         "contest": "こども音楽コンクール",
         "year": "令和7年度（第73期）",
         "division": "中学校・重唱部門",
@@ -13331,10 +13415,9 @@
       },
       {
         "contest": "全日本合唱コンクール",
-        "year": "2026年（第79回）",
-        "division": "中学生部門",
-        "award": "金賞",
-        "detail": "大阪市教育委員会教育長賞"
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "金賞"
       }
     ]
   },
@@ -13464,6 +13547,12 @@
         "year": "2026年（第74回）",
         "division": "中学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -13925,6 +14014,14 @@
         "designation": "アウトプットを通じた学びの共有 ~個別と協働を行き来する授業と自律的な学習 ~",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -13957,6 +14054,14 @@
         "subject": "言語活用科の推進 (日本語分野)",
         "designation": "自分の考えや学んだことを自分の言葉で表現できる生徒の育成のための指導方法の工夫 ~学びを深めるための授業改善~",
         "authority": "市町村"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
       }
     ]
   },
@@ -14076,15 +14181,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "高等学校以上の部",
         "award": "銅賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "高等学校以上の部",
-        "award": "全国大会出場"
+        "award": "銅賞"
       }
     ]
   },
@@ -14227,6 +14338,18 @@
         "year": "2026年（第93回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2025年（第92回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2024年（第91回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
       }
     ]
   },
@@ -14256,6 +14379,12 @@
         "year": "2026年（第15回）",
         "division": "高等学校の部",
         "award": "最優秀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
       }
     ]
   },
@@ -22688,7 +22817,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-市川市-市川市立若宮小学校",
@@ -23109,7 +23246,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-中学校-市川市-市川市立第二中学校",
@@ -27623,6 +27768,13 @@
     "course": [],
     "music_awards": [
       {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "最優秀賞",
+        "detail": "文部科学大臣賞"
+      },
+      {
         "contest": "こども音楽コンクール",
         "year": "令和7年度（第73期）",
         "division": "小学校・重奏部門",
@@ -27635,8 +27787,14 @@
         "award": "文部科学大臣賞"
       },
       {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・合奏第2部門",
+        "award": "文部科学大臣賞"
+      },
+      {
         "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
-        "year": "2026年（第15回）",
+        "year": "2024年（第13回）",
         "division": "小学校の部",
         "award": "最優秀賞",
         "detail": "文部科学大臣賞"
@@ -27724,6 +27882,19 @@
         "year": "令和7年度（第73期）",
         "division": "中学校・合奏第2部門",
         "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・重奏部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞",
+        "detail": "郡山市長賞"
       }
     ]
   },
@@ -27808,15 +27979,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },
@@ -27879,15 +28056,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },
@@ -27990,12 +28173,6 @@
         "award": "最優秀賞"
       },
       {
-        "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "高等学校以上の部",
-        "award": "金賞"
-      },
-      {
         "contest": "全日本吹奏楽コンクール",
         "year": "2026年（第74回）",
         "division": "高等学校の部",
@@ -28006,6 +28183,30 @@
         "year": "2026年（第39回）",
         "division": "高等学校以上の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -29000,7 +29201,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-船橋市-船橋市立前原小学校",
@@ -29409,6 +29618,13 @@
         "year": "2026年（第15回）",
         "division": "小学校の部",
         "award": "優秀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "小学校の部",
+        "award": "最優秀賞",
+        "detail": "郡山市長賞"
       }
     ]
   },
@@ -29429,7 +29645,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・合奏第1部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-船橋市-船橋市立湊町小学校",
@@ -29728,7 +29952,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・管楽合奏部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-小学校-船橋市-船橋市立豊富小学校",
@@ -30247,7 +30479,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-中学校-船橋市-船橋市立旭中学校",
@@ -30292,6 +30532,12 @@
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "金賞"
       }
     ]
   },
@@ -30319,6 +30565,12 @@
         "year": "2026年（第74回）",
         "division": "中学校の部",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -30466,6 +30718,14 @@
         "designation": "グローバル社会で求められる資質の育成 ~世界の平和に向けて行動する地球市民としての姿を目指して~",
         "authority": "市町村"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・合奏第2部門",
+        "award": "文部科学大臣賞"
+      }
     ]
   },
   {
@@ -30485,7 +30745,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kouhou/kyouikubinran/documents/5-1-r7.xls",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・合奏第2部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "chiba-公立-中学校-船橋市-船橋市立豊富中学校",
@@ -30927,15 +31195,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "高等学校以上の部",
         "award": "銀賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "高等学校以上の部",
-        "award": "全国大会出場"
+        "award": "銅賞"
       }
     ]
   },
@@ -32281,7 +32555,15 @@
     "source_url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/shiritsugakkou/documents/r8chugaku.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "chiba-私立-中学校-八千代市-秀明大学学校教師学部附属秀明八千代中学校",
@@ -32447,6 +32729,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
     ]
   },
   {
