@@ -116,7 +116,7 @@
   // Load column data from /data/columns.json
   async function fetchColumns() {
     try {
-      const response = await fetch('/data/columns.json?v=20261028-bookstores-approved');
+      const response = await fetch('/data/columns.json?v=20261107-learning-decline');
       if (!response.ok) throw new Error('Failed to fetch columns data');
       allColumns = await response.json();
       initTopNewsTicker();
@@ -416,7 +416,8 @@
     return `
       <article class="column-card ${isNew ? 'is-new-card' : ''}" tabindex="0" data-column-id="${item.id}" onclick="window.openColumnModal('${item.id}')">
         <div class="column-card-media">
-          <img src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
+          <img class="column-card-media-bg" src="${item.thumbnail}" alt="" aria-hidden="true" loading="lazy">
+          <img class="column-card-media-main" src="${item.thumbnail}" alt="${escapeHtml(item.title)}" loading="lazy">
         </div>
         <div class="column-card-body">
           <div class="column-card-labels">
@@ -581,6 +582,12 @@
   window.openColumnModal = function(id) {
     const item = allColumns.find(c => c.id === id);
     if (!item) return;
+
+    // Standalone articles have a URL but no modal body; open the full article page.
+    if (!item.content && item.url) {
+      window.location.href = item.url;
+      return;
+    }
 
     // 前の記事が閲覧中であれば、その閲覧エンゲージメントを記録
     if (activeColumn && activeColumn.id !== item.id) {

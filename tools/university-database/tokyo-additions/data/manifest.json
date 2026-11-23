@@ -1,0 +1,19 @@
+{
+ "generated_at": "2026-10-30",
+ "source_repository": "bantai-education-design/daigaku_DB",
+ "source_commit": "5e692d72197d4fa3955d42f71f42f9930544d3f8",
+ "prefecture": "東京都",
+ "universities": 2,
+ "faculties": 7,
+ "departments": 11,
+ "graduate_schools": 4,
+ "core_shards": [
+  {
+   "file": "tokyo_additions_core_01.json",
+   "count": 2,
+   "first_id": "u000173",
+   "last_id": "u000174"
+  }
+ ],
+ "complete_profiles": 2
+}

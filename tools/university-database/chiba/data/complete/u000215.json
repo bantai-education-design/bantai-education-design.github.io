@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000215",
+  "id": "u000215",
+  "name": "清和大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "木更津市",
+  "operator": "学校法人君津学園",
+  "feature_summary": "木更津市に本部を置き、法学部の1学部で学ぶ大学です。",
+  "official_url": "https://www.seiwa-univ.ac.jp/",
+  "admissions_url": "https://www.seiwa-univ.ac.jp/exam/",
+  "academic_field_tags": [
+    "法学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400019",
+      "name": "法学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "木更津市",
+      "departments": [
+        {
+          "department_id": "d400033",
+          "name": "法律学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "292-8555",
+      "address": "千葉県木更津市東太田3-4-5",
+      "prefecture": "千葉県",
+      "municipality": "木更津市",
+      "nearest_stations": [
+        {
+          "station": "木更津駅",
+          "line": "JR内房線",
+          "access": "東口スクールバス約7分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "清和大学 公式サイト",
+      "url": "https://www.seiwa-univ.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "清和大学 公式入試情報",
+      "url": "https://www.seiwa-univ.ac.jp/exam/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「真心教育」を建学の精神とし、人間性の全人的形成と一人ひとりの可能性の伸長を重視する。",
+  "mission": "法学の基礎と実務的視点を身につけ、地域社会や企業・公務の現場で活躍できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 591,
+    "graduate": 0,
+    "total": 591,
+    "as_of": "2026-05-01"
+  }
+}

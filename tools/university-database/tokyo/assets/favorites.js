@@ -1,11 +1,22 @@
 (()=>{
 const KEY='bantai:university-db:tokyo:favorites:v1';
+const NOTES_KEY='bantai:university-db:tokyo:favorite-notes:v1';
 let favorites=new Set();
+let notes={};
 try{favorites=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));}catch{}
+try{notes=JSON.parse(localStorage.getItem(NOTES_KEY)||'{}')||{};}catch{}
 const save=()=>localStorage.setItem(KEY,JSON.stringify([...favorites]));
+const saveNotes=()=>localStorage.setItem(NOTES_KEY,JSON.stringify(notes));
+window.getFavoriteNote=id=>String(notes[id]||'');
+window.setFavoriteNote=(id,text)=>{
+  const v=String(text||'').slice(0,120);
+  if(v.trim())notes[id]=v;
+  else delete notes[id];
+  saveNotes();
+};
 const label=(name,on)=>`${name}を${on?'お気に入りから外す':'お気に入りに追加'}`;
-function syncHeader(){const b=document.querySelector('.header-fav');if(!b)return;const compact=matchMedia('(max-width:620px)').matches;b.innerHTML=compact?`♥ <span class="fav-count">${favorites.size}</span>`:`♥ お気に入り <span class="fav-count">${favorites.size}</span>`;b.setAttribute('aria-label',`お気に入り大学 ${favorites.size}校`);b.title=`お気に入り大学 ${favorites.size}校`;b.onclick=()=>{document.querySelector('#search')?.scrollIntoView({behavior:'smooth'});document.body.classList.toggle('show-favorites-only');decorate();};}
-function decorate(){document.querySelectorAll('.tokyo-card[data-id]').forEach(card=>{const id=card.dataset.id;const name=card.querySelector('h3')?.textContent?.trim()||'大学';const on=favorites.has(id);let b=card.querySelector('.favorite-toggle');if(!b){b=document.createElement('button');b.type='button';b.className='favorite-toggle';b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();favorites.has(id)?favorites.delete(id):favorites.add(id);save();syncHeader();decorate();});card.querySelector('.card-visual')?.appendChild(b);}b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',label(name,on));b.title=label(name,on);b.textContent=on?'♥':'♡';card.classList.toggle('is-favorite',on);card.hidden=document.body.classList.contains('show-favorites-only')&&!on;});}
+function syncHeader(){const b=document.querySelector('.header-fav');if(!b)return;const compact=matchMedia('(max-width:620px)').matches;b.innerHTML=compact?`♥ <span class="fav-count">${favorites.size}</span>`:`♥ お気に入り <span class="fav-count">${favorites.size}</span>`;b.setAttribute('aria-label',`お気に入り大学 ${favorites.size}校`);b.title=`お気に入り大学 ${favorites.size}校`;b.onclick=()=>{document.querySelector('#search')?.scrollIntoView({behavior:'smooth'});document.body.classList.toggle('show-favorites-only');if(typeof render==='function')render();decorate();};}
+function decorate(){document.querySelectorAll('.tokyo-card[data-id]').forEach(card=>{const id=card.dataset.id;const name=card.querySelector('h3')?.textContent?.trim()||'大学';const on=favorites.has(id);let b=card.querySelector('.favorite-toggle');if(!b){b=document.createElement('button');b.type='button';b.className='favorite-toggle';b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();favorites.has(id)?favorites.delete(id):favorites.add(id);save();syncHeader();decorate();});(card.querySelector('.card-visual')||card.querySelector('.compact-card-top')||card)?.appendChild(b);}b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',label(name,on));b.title=label(name,on);b.textContent=on?'♥':'♡';card.classList.toggle('is-favorite',on);card.hidden=document.body.classList.contains('show-favorites-only')&&!on;let memoBox=card.querySelector('.favorite-note-box');if(on||notes[id]){if(!memoBox){memoBox=document.createElement('div');memoBox.className='favorite-note-box';memoBox.innerHTML=`<label class="favorite-note-label"><span>📝 個人メモ（端末保存）</span><input type="text" class="favorite-note-input" maxlength="120" placeholder="志望理由・気になる学部・日程などをメモ"></label>`;const inp=memoBox.querySelector('input');inp.value=notes[id]||'';inp.addEventListener('click',e=>e.stopPropagation());inp.addEventListener('keydown',e=>e.stopPropagation());inp.addEventListener('input',()=>{window.setFavoriteNote(id,inp.value);});const body=card.querySelector('.card-body')||card;const cmpBtn=body.querySelector('.compare-toggle');if(cmpBtn)cmpBtn.insertAdjacentElement('afterend',memoBox);else body.appendChild(memoBox);}else{const inp=memoBox.querySelector('input');if(inp&&document.activeElement!==inp)inp.value=notes[id]||'';}}else if(memoBox){memoBox.remove();}});}
 const grid=document.querySelector('#tokyo-grid');if(grid)new MutationObserver(decorate).observe(grid,{childList:true});syncHeader();decorate();
 
 // Long-list navigation: show a floating control only after the user has scrolled.
@@ -34,11 +45,6 @@ const syncTopButton=()=>{
 window.addEventListener('scroll',syncTopButton,{passive:true});
 syncTopButton();
 if(matchMedia('(max-width:620px)').matches){topButton.style.right='12px';topButton.style.bottom='14px';topButton.style.padding='9px 11px';topButton.querySelector('small').style.display='none';}
-
-const heroLead=document.querySelector('.hero-copy p');
-if(heroLead)heroLead.innerHTML='東京都144大学を、学びたいこと・地域・設置区分・大学の特色から探せるデータベースです。<br>大学公式情報や公的資料を優先し、比較しやすい形に整理しています。';
-const notice=document.querySelector('.ref-notice');
-if(notice)notice.innerHTML='ⓘ <strong>現在開発・更新中です。</strong> 学部・学科・所在地・地図リンクを再確認しています。出願・入試の最新情報は各大学の公式情報もご確認ください。';
 
 // Apply the authoritative compact academic baseline for the 66 universities
 // that were under-covered in the public snapshot. This layer replaces, rather
@@ -87,7 +93,7 @@ const cardScript=document.createElement('script');cardScript.src='assets/card-fi
 
 // Owner photo registration entry: keep it directly on the Tokyo DB page.
 const photoRegisterScript=document.createElement('script');
-photoRegisterScript.src='assets/photo-register-entry.js?v=20260824-1726';
+photoRegisterScript.src='assets/photo-register-entry.js?v=20261108';
 photoRegisterScript.defer=true;
 document.head.appendChild(photoRegisterScript);
 })();

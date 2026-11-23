@@ -1527,7 +1527,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-85",
@@ -1599,7 +1607,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-89",
@@ -2283,7 +2299,27 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-127",
@@ -2301,7 +2337,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-128",
@@ -3507,7 +3551,46 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞",
+        "detail": "静岡県教育委員会教育長賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-195",
@@ -5379,7 +5462,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-299",
@@ -5523,7 +5614,27 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-307",
@@ -5595,7 +5706,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-311",
@@ -5703,7 +5822,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-317",
@@ -7647,7 +7774,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-425",
@@ -7827,7 +7962,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-435",
@@ -7935,7 +8078,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-441",
@@ -7971,7 +8122,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-443",
@@ -8007,7 +8166,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-445",
@@ -8043,7 +8210,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-447",
@@ -8061,7 +8236,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-448",
@@ -8151,7 +8334,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-453",
@@ -8187,7 +8378,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-455",
@@ -8241,7 +8440,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-458",
@@ -8277,7 +8484,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-460",
@@ -8295,7 +8510,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-461",
@@ -8313,7 +8536,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-462",
@@ -8385,7 +8616,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-466",
@@ -8403,7 +8642,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-467",
@@ -8439,7 +8686,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-469",
@@ -8457,7 +8712,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-470",
@@ -8475,7 +8738,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-471",
@@ -8655,7 +8926,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-481",
@@ -8709,7 +8988,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-484",
@@ -8799,7 +9086,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyazaki-489",

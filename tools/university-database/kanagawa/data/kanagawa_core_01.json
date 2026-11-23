@@ -1,0 +1,2725 @@
+{
+  "records": [
+    {
+      "id": "u000050",
+      "name": "東海大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "平塚市",
+      "headquarters": {
+        "postal_code": "259-1292",
+        "prefecture": "神奈川県",
+        "municipality": "平塚市",
+        "address": "神奈川県平塚市北金目4-1-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-3.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東海大学 公式サイト",
+          "source_url": "https://www.u-tokai.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東海大学 公式入試情報",
+          "source_url": "https://www.u-tokai.ac.jp/examination-admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東海大学 建学の精神について",
+          "source_url": "https://www.u-tokai.ac.jp/about/philosophy-history/spirit/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東海大学 理念・憲章",
+          "source_url": "https://www.u-tokai.ac.jp/about/philosophy-history/concept/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）東海大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000264005000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.u-tokai.ac.jp/",
+      "admissions_url": "https://www.u-tokai.ac.jp/examination-admissions/",
+      "university_goal": "建学の精神に基づき、自立性と創造性を備え、変化する社会をより良い方向へ導き、調和の取れた文明社会の建設に貢献できる人材を育成する。",
+      "philosophy": "創立者・松前重義の教育理念を基礎に、若い時期に思想・体躯・知能を培い、希望を星につなぐ姿勢を重視する。文理融合の広い知識と国際的視野を通じて、調和の取れた文明社会の実現を目指す。",
+      "student_counts": {
+        "undergraduate": 29462,
+        "graduate": 1198,
+        "total": 30660,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "国際関係",
+        "法学",
+        "経済・経営・商学",
+        "社会学",
+        "観光",
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学",
+        "工学",
+        "情報・AI",
+        "建築・デザイン",
+        "農学",
+        "海洋",
+        "医学",
+        "看護・医療",
+        "食・栄養",
+        "体育・スポーツ",
+        "芸術"
+      ],
+      "feature_summary": "平塚市に本部を置き、文学部・文化社会学部・政治経済学部・法学部など23学部と大学院17研究科で学ぶ大学です。",
+      "operator": "学校法人東海大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000264005000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000175",
+      "name": "横浜国立大学",
+      "establishment_type": "national",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "240-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市保土ケ谷区常盤台79-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 公式サイト",
+          "source_url": "https://www.ynu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 公式入試情報",
+          "source_url": "https://www.ynu.ac.jp/exam/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 YNU REPORT 2025",
+          "source_url": "https://www.ynu.ac.jp/about/public/publish/ynureport/pdf/YNU_REPORT_2025_A3.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 大学案内（大学憲章・沿革）",
+          "source_url": "https://global.ynu.ac.jp/wordpress/wp-content/uploads/2024/07/2019_2020_leaflet_j_web.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 学則・目的",
+          "source_url": "https://www.ynu.ac.jp/about/information/law/instructional/pdf/data-H25keizai.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜国立大学 学生数（2026年5月1日現在）",
+          "source_url": "https://www.ynu.ac.jp/about/public/publish/general/pdf/ynu_06-10.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.ynu.ac.jp/",
+      "admissions_url": "https://www.ynu.ac.jp/exam/",
+      "founded_year": 1874,
+      "opened_year": 1949,
+      "operator": "国立大学法人横浜国立大学",
+      "philosophy": "現実社会との関わりを重視する「実践性」、新しい試みを推進する「先進性」、社会に門戸を開く「開放性」、海外交流を促進する「国際性」を大学憲章の精神として掲げる。",
+      "university_goal": "学術の中心として幅広い知識と深い専門の学芸を教授研究し、知的・道徳的・応用的能力を発展させ、創造性ある高度専門職業人を育成して社会の福祉と持続的発展に貢献する。",
+      "student_counts": {
+        "undergraduate": 7512,
+        "graduate": 2262,
+        "total": 9774,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "国際関係",
+        "法学",
+        "経済・経営・商学",
+        "社会学",
+        "教育",
+        "理学",
+        "工学",
+        "情報・AI",
+        "建築・デザイン",
+        "海洋"
+      ],
+      "feature_summary": "横浜市に本部を置き、教育学部・経済学部・経営学部・理工学部・都市科学部の5学部と大学院5研究科で学ぶ大学です。"
+    },
+    {
+      "id": "u000176",
+      "name": "総合研究大学院大学",
+      "establishment_type": "national",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "葉山町",
+      "headquarters": {
+        "postal_code": "240-0193",
+        "prefecture": "神奈川県",
+        "municipality": "葉山町",
+        "address": "神奈川県三浦郡葉山町（湘南国際村）"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_01.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 公式サイト",
+          "source_url": "https://www.soken.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 公式入試情報",
+          "source_url": "https://www.soken.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 総研大とは",
+          "source_url": "https://www.soken.ac.jp/features/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 教育の目標と方針",
+          "source_url": "https://www.soken.ac.jp/education/policy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 沿革",
+          "source_url": "https://www.soken.ac.jp/outline/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "総合研究大学院大学 データブック 学生数（2026年5月1日現在）",
+          "source_url": "https://www.soken.ac.jp/outline/dbook/students/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.soken.ac.jp/",
+      "admissions_url": "https://www.soken.ac.jp/admission/",
+      "founded_year": 1988,
+      "opened_year": 1988,
+      "operator": "国立大学法人総合研究大学院大学",
+      "university_goal": "基礎学術分野で国際的に通用する高度な研究的資質と広い視野を備えた研究者を育成する。",
+      "philosophy": "大学共同利用機関等との緊密な連係・協力の下、世界最高水準の国際的な大学院大学として学術の理論と応用を教育研究し、文化の創造と発展に貢献する。",
+      "student_counts": {
+        "undergraduate": 0,
+        "graduate": 592,
+        "total": 592,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "理学"
+      ],
+      "feature_summary": "葉山町に本部を置く大学院大学で、先端学術院を設けています。"
+    },
+    {
+      "id": "u000177",
+      "name": "横浜市立大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "236-0027",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市金沢区瀬戸22-2"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 公式サイト",
+          "source_url": "https://www.yokohama-cu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 公式入試情報",
+          "source_url": "https://www.yokohama-cu.ac.jp/admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 大学の理念",
+          "source_url": "https://www.yokohama-cu.ac.jp/univ/outline/philosophy/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 大学の目的",
+          "source_url": "https://www.yokohama-cu.ac.jp/info/objective/university.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 YCU PROFILE 2025",
+          "source_url": "https://www.yokohama-cu.ac.jp/u2ou5s0000001hf9-att/YCUPROFILE2025-20251217new.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜市立大学 収容定員・在学者数（2026年5月1日現在）",
+          "source_url": "https://www.yokohama-cu.ac.jp/info/student/kjkjjl0000000bdn-att/R7shuyouteiinzaigakushasu.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.yokohama-cu.ac.jp/",
+      "admissions_url": "https://www.yokohama-cu.ac.jp/admissions/",
+      "founded_year": 1928,
+      "opened_year": 1949,
+      "operator": "公立大学法人横浜市立大学",
+      "university_goal": "幅広い教養と高い専門的能力を育成し、教育・研究・医療を通じて横浜市民・地域社会の要請に応えるとともに世界へ貢献する。",
+      "philosophy": "国際都市・横浜と共に歩み、教育・研究・医療分野をリードし、社会の発展に寄与する市民の誇りとなる大学を目指す。",
+      "student_counts": {
+        "undergraduate": 4304,
+        "graduate": 1007,
+        "total": 5311,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際関係",
+        "経済・経営・商学",
+        "社会学",
+        "理学",
+        "工学",
+        "情報・AI",
+        "医学",
+        "看護・医療"
+      ],
+      "feature_summary": "横浜市に本部を置き、国際教養学部・国際商学部・理学部・データサイエンス学部・医学部の5学部と大学院6研究科で学ぶ大学です。"
+    },
+    {
+      "id": "u000178",
+      "name": "神奈川県立保健福祉大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横須賀市",
+      "headquarters": {
+        "postal_code": "238-8522",
+        "prefecture": "神奈川県",
+        "municipality": "横須賀市",
+        "address": "神奈川県横須賀市平成町1-10-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 公式サイト",
+          "source_url": "https://www.kuhs.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 公式入試情報",
+          "source_url": "https://www.kuhs.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 本学の基本理念",
+          "source_url": "https://www.kuhs.ac.jp/information/education/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 本学の沿革",
+          "source_url": "https://www.kuhs.ac.jp/information/about/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川県立保健福祉大学 入学定員・収容定員・在学生数（2026年5月1日現在）",
+          "source_url": "https://www.kuhs.ac.jp/information/about/capacity/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kuhs.ac.jp/",
+      "admissions_url": "https://www.kuhs.ac.jp/admission/",
+      "founded_year": 2003,
+      "opened_year": 2003,
+      "operator": "公立大学法人神奈川県立保健福祉大学",
+      "university_goal": "保健・医療・福祉の連携と総合化、生涯にわたる継続教育、地域社会への貢献を通じ、ヒューマンサービスを実践できる人材を育成する。",
+      "philosophy": "保健・医療・福祉の対象を温もりのある「ひと」と捉え、領域を越えた連携と協働によりヒューマンサービスを実現する。",
+      "student_counts": {
+        "undergraduate": 960,
+        "graduate": 141,
+        "total": 1101,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "社会福祉",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "feature_summary": "横須賀市に本部を置き、保健福祉学部の1学部と大学院2研究科で学ぶ大学です。"
+    },
+    {
+      "id": "u000179",
+      "name": "川崎市立看護大学",
+      "establishment_type": "public",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "212-0054",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市幸区小倉4-30-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_02.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 公式サイト",
+          "source_url": "https://www.kawasaki-cn.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 公式入試情報",
+          "source_url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 理念",
+          "source_url": "https://www.kawasaki-cn.ac.jp/education/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 2025年度自己点検・評価報告書",
+          "source_url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2025.pdf",
+          "source_date": "2025",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 沿革",
+          "source_url": "https://www.kawasaki-cn.ac.jp/information/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "川崎市立看護大学 令和7（2025）年度自己点検・評価報告書（学校基本調査に基づく在籍数）",
+          "source_url": "https://www.kawasaki-cn.ac.jp/pdf/inspection_01_2026.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kawasaki-cn.ac.jp/",
+      "admissions_url": "https://www.kawasaki-cn.ac.jp/entranceexam/",
+      "founded_year": 2022,
+      "opened_year": 2022,
+      "university_goal": "看護に関する高度な知識と技術を教授研究し、豊かな教養・人格・高い倫理観と実践力を備え、地域の保健・医療・福祉に寄与する人材を育成し、成果を地域へ還元する。",
+      "philosophy": "地域に開かれた大学として地域と共に学び、確かな知識と豊かな人間性を備えた看護人材を養成して地域へ還元する。",
+      "operator": "川崎市",
+      "student_counts": {
+        "undergraduate": 398,
+        "graduate": 27,
+        "total": 425,
+        "as_of": "2025-05-01"
+      },
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "feature_summary": "川崎市に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。"
+    },
+    {
+      "id": "u000180",
+      "name": "星槎大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "箱根町",
+      "headquarters": {
+        "postal_code": "250-0613",
+        "prefecture": "神奈川県",
+        "municipality": "箱根町",
+        "address": "神奈川県足柄下郡箱根町仙石原817-255"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 公式サイト",
+          "source_url": "https://www.seisa.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 公式入試情報",
+          "source_url": "https://www.seisa.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 理念・設立趣旨",
+          "source_url": "https://seisa.ac.jp/about/outline/philosophy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 沿革",
+          "source_url": "https://seisa.ac.jp/about/outline/history/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 共生科学部 学生数（令和8年5月1日現在）",
+          "source_url": "https://seisa.ac.jp/pdf/report/seisa-about-gakusei_20260501.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "星槎大学 大学院標準修業年限内修了割合・在学状況（令和8年7月1日時点）",
+          "source_url": "https://seisa.ac.jp/pdf/report/daigakuin_20260701.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.seisa.ac.jp/",
+      "admissions_url": "https://www.seisa.ac.jp/admission/",
+      "university_goal": "人と人、人と自然が共生する社会の創造に貢献するため、教育・福祉・環境・国際関係を横断する広い知力、共生する心、課題探究能力を育成する。",
+      "philosophy": "「社会に必要とされることを創造し、常に新たな道を切り開き、それを成し遂げる」を建学の精神とし、「共生」を教育理念の中心に据える。",
+      "student_counts": {
+        "undergraduate": 3653,
+        "graduate": 135,
+        "total": 3788,
+        "as_of": "2026-05-01",
+        "note": "学部は共生科学部正科生3,653人（2026年5月1日現在、科目等履修生・特修生除く）、大学院は教育学研究科・教育実践研究科の在学中135人（2026年7月1日時点）"
+      },
+      "academic_field_tags": [
+        "社会学",
+        "教育"
+      ],
+      "feature_summary": "箱根町に本部を置き、共生科学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人国際学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000431401000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000181",
+      "name": "神奈川大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "221-8686",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市神奈川区六角橋3-27-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 公式サイト",
+          "source_url": "https://www.kanagawa-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 公式入試情報",
+          "source_url": "https://www.kanagawa-u.ac.jp/admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 建学の精神・大学の理念",
+          "source_url": "https://www.kanagawa-u.ac.jp/aboutus/timeline/philosophy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川大学 基本情報 在学生データ 全学生数（2026年5月1日現在）",
+          "source_url": "https://www.kanagawa-u.ac.jp/disclosure/data/student/current/whole/student.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kanagawa-u.ac.jp/",
+      "admissions_url": "https://www.kanagawa-u.ac.jp/admissions/",
+      "university_goal": "真の実学を目指す伝統を踏まえ、自立した良識ある市民としての判断力・実践力、国際的感性、専門的知識と技能を備え、自ら成長できる人材を育成する。",
+      "philosophy": "創立者・米田吉盛の「教育は人を造るにあり」という信念のもと、「質実剛健、積極進取、中正堅実」を建学の精神として掲げる。",
+      "student_counts": {
+        "undergraduate": 18878,
+        "graduate": 558,
+        "total": 19436,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "国際関係",
+        "法学",
+        "経済・経営・商学",
+        "心理",
+        "理学",
+        "工学",
+        "情報・AI",
+        "建築・デザイン"
+      ],
+      "feature_summary": "横浜市に本部を置き、法学部・経済学部・経営学部・外国語学部など11学部と大学院8研究科で学ぶ大学です。",
+      "operator": "学校法人神奈川大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319501000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000182",
+      "name": "関東学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "236-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市金沢区六浦東1-50-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 公式サイト",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 公式入試情報",
+          "source_url": "https://ao.kanto-gakuin.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 建学の精神",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/about-university/the-spirit-of-the-founding.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 沿革",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/about-university/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "関東学院大学 在籍学生数一覧（2026年5月1日現在）",
+          "source_url": "https://univ.kanto-gakuin.ac.jp/wp-content/uploads/2026_disclosure_5-2.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://univ.kanto-gakuin.ac.jp/",
+      "admissions_url": "https://ao.kanto-gakuin.ac.jp/",
+      "university_goal": "キリスト教の精神に基づく広く深い教養と奉仕の精神を養い、多様性の中で自己を確立し、他者と共により良い社会を創る知識・知恵・行動力を育成する。",
+      "philosophy": "キリスト教の精神を建学の精神とし、校訓「人になれ 奉仕せよ」のもと、人間形成と、他者・社会・人類のために行動する奉仕を重視する。",
+      "student_counts": {
+        "undergraduate": 11555,
+        "graduate": 227,
+        "total": 11782,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "国際関係",
+        "法学",
+        "経済・経営・商学",
+        "社会学",
+        "教育",
+        "幼児教育・保育",
+        "理学",
+        "工学",
+        "情報・AI",
+        "建築・デザイン",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "feature_summary": "横浜市に本部を置き、国際文化学部・社会学部・経済学部・経営学部など11学部と大学院5研究科で学ぶ大学です。",
+      "operator": "学校法人関東学院",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319701000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000183",
+      "name": "鶴見大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "230-8501",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市鶴見区鶴見2-1-3"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 公式サイト",
+          "source_url": "https://www.tsurumi-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 公式入試情報",
+          "source_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 建学の精神",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/spirit.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 教育方針",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/policy.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 沿革",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鶴見大学 学生数・教職員数（令和8年度／2026年度）",
+          "source_url": "https://www.tsurumi-u.ac.jp/site/about/student-r8.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.tsurumi-u.ac.jp/",
+      "admissions_url": "https://www.tsurumi-u.ac.jp/soshiki/list10-1.html",
+      "university_goal": "禅の精神に基づく円満な人格と専門的な知識・技能による実践力を備え、感謝と慈愛の心をもって社会の発展と福祉に貢献する人材を育成する。",
+      "philosophy": "仏教、特に禅の教えに基づき、円満な人格の形成と社会に対する感謝・報恩の実践を重視し、「大覚円成 報恩行持」を建学の精神として掲げる。",
+      "student_counts": {
+        "undergraduate": 1448,
+        "graduate": 46,
+        "total": 1494,
+        "as_of": "2026-05-01",
+        "note": "短期大学部（424人）を除く大学学部・大学院の在籍者数"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "歯学"
+      ],
+      "feature_summary": "横浜市に本部を置き、文学部・歯学部の2学部と大学院2研究科で学ぶ大学です。",
+      "operator": "学校法人総持学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320001000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000184",
+      "name": "フェリス女学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "245-8650",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市泉区緑園4-5-3"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 公式サイト",
+          "source_url": "https://www.ferris.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 公式入試情報",
+          "source_url": "https://www.ferris.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 フェリスの原点",
+          "source_url": "https://www.ferris.ac.jp/about/origin/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 教育目標・方針",
+          "source_url": "https://www.ferris.ac.jp/about/approach/support/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "フェリス女学院大学 学生数（2026年5月1日現在）",
+          "source_url": "https://www.ferris.ac.jp/mt_img/2026zaiseki.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.ferris.ac.jp/",
+      "admissions_url": "https://www.ferris.ac.jp/admission/",
+      "university_goal": "キリスト教を教育の基本方針とし、真理と平和を愛して人類の福祉に寄与するとともに、新しい時代を切り拓く豊かな教養と芸術的・文化的素養を備えた女性を育成する。",
+      "philosophy": "「キリスト教の信仰に基づく女子教育」を建学の精神とし、より広い視野から他者の存在を考え、他者のために行動する「For Others」を教育理念として掲げる。",
+      "student_counts": {
+        "undergraduate": 1849,
+        "graduate": 26,
+        "total": 1875,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "国際関係",
+        "社会学",
+        "心理",
+        "芸術"
+      ],
+      "feature_summary": "横浜市に本部を置き、グローバル教養学部の1学部と大学院3研究科で学ぶ大学です。",
+      "operator": "学校法人フェリス女学院",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000185",
+      "name": "横浜商科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "230-8577",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市鶴見区東寺尾4-11-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 公式サイト",
+          "source_url": "https://www.shodai.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 公式入試情報",
+          "source_url": "https://www.shodai.ac.jp/exam_event/schedule/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 建学の精神・大学のポリシー",
+          "source_url": "https://www.shodai.ac.jp/university/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜商科大学 学生数・教職員数（2026年5月現在）",
+          "source_url": "https://www.shodai.ac.jp/university/number/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.shodai.ac.jp/",
+      "admissions_url": "https://www.shodai.ac.jp/exam_event/schedule/",
+      "university_goal": "実学重視の商学教育を通じ、高度な専門知識、社会への奉仕、職業上の使命感と責任感を備え、託された責任を果たせる人材を育成する。",
+      "philosophy": "「安んじて事を托さるる人となれ」を建学の精神とし、高度な専門性、高潔な倫理、使命感・責任感、奉仕の精神を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 1359,
+        "graduate": 8,
+        "total": 1367,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "経済・経営・商学",
+        "観光",
+        "情報・AI"
+      ],
+      "feature_summary": "横浜市に本部を置き、商学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人横浜商科大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320301000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000186",
+      "name": "八洲学園大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "220-0021",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市西区桜木町7-42"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 公式サイト",
+          "source_url": "https://www.yashima.ac.jp/univ/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 公式入試情報",
+          "source_url": "https://www.yashima.ac.jp/univ/entrance/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 建学の精神・教育の理念",
+          "source_url": "https://www.yashima.ac.jp/univ/about/information/policy.php",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "八洲学園大学 学生数（令和8年5月1日現在）",
+          "source_url": "https://www.yashima.ac.jp/univ/files/students.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.yashima.ac.jp/univ/",
+      "admissions_url": "https://www.yashima.ac.jp/univ/entrance/",
+      "university_goal": "人間性豊かなeラーニングを通じ、個人や社会の学習課題を発見・解決し、新たな道を拓くための人間性、基礎力、問題解決力、創造力を育成する。",
+      "philosophy": "「教育の原点は家庭である」という考えに基づき、家庭教育・学校教育・社会教育の融合と、生涯学習社会の実現、すべての人への高等教育機会の提供を目指す。",
+      "student_counts": {
+        "undergraduate": 1177,
+        "graduate": 0,
+        "total": 1177,
+        "as_of": "2026-05-01",
+        "note": "生涯学習学部正科生1,177人（科目等履修生510人・特修生1人を除く、含めた全在籍者は1,688人）"
+      },
+      "academic_field_tags": [
+        "教育"
+      ],
+      "feature_summary": "横浜市に本部を置き、生涯学習学部の1学部で学ぶ大学です。",
+      "operator": "学校法人八洲学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000535701000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000187",
+      "name": "情報セキュリティ大学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "221-0835",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市神奈川区鶴屋町2-14-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 公式サイト",
+          "source_url": "https://www.iisec.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 公式入試情報",
+          "source_url": "https://www.iisec.ac.jp/admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 情報セキュリティ基本方針",
+          "source_url": "https://www.iisec.ac.jp/about/info_release/isbasicpolicy.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 育成する人材像",
+          "source_url": "https://www.iisec.ac.jp/education/objective/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "情報セキュリティ大学院大学 入学者数・在学者数（2026年5月1日現在）",
+          "source_url": "https://www.iisec.ac.jp/about/info_release/pdf/gakuseisu2026.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.iisec.ac.jp/",
+      "admissions_url": "https://www.iisec.ac.jp/admissions/",
+      "university_goal": "情報セキュリティを技術・管理運営・法制度・心理・倫理などの総合科学として捉え、現実の問題解決を担う高度専門技術者・実務家と、将来を先導する研究者を育成する。",
+      "philosophy": "高度な知識と技術、豊かな人間性を兼ね備えた職業人の育成を建学の理念とし、情報セキュリティの理論と応用を教育研究して科学技術の進展に寄与する。",
+      "student_counts": {
+        "undergraduate": 0,
+        "graduate": 78,
+        "total": 78,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "情報・AI"
+      ],
+      "feature_summary": "横浜市に本部を置く大学院大学で、情報セキュリティ研究科を設けています。",
+      "operator": "学校法人岩崎学園",
+      "operator_source": "大学改革支援・学位授与機構 資料 https://www.niad.ac.jp/josei/media-download/9076/423478a113b20a59",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000188",
+      "name": "横浜薬科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "245-0066",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市戸塚区俣野町字東原601-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 公式サイト",
+          "source_url": "https://www.hamayaku.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 公式入試情報",
+          "source_url": "https://www.hamayaku.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 教育研究上の目的",
+          "source_url": "https://www.hamayaku.ac.jp/about/purpose/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 大学の3つの方針",
+          "source_url": "https://www.hamayaku.ac.jp/about/policies/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜薬科大学 学生状況の公表（2026年5月1日現在）",
+          "source_url": "https://www.hamayaku.ac.jp/images/material/56/files/gakusei_jokyo.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "学校法人都築第一学園 令和7年度事業報告書 入学者及び在学者の状況（令和8年5月1日現在）",
+          "source_url": "https://www.hamayaku.ac.jp/images/material/56/files/r7_jigyouhoukokusyo.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.hamayaku.ac.jp/",
+      "admissions_url": "https://www.hamayaku.ac.jp/admission/",
+      "university_goal": "薬学を研究教授し、臨床で実践できる人間性豊かな薬剤師と、薬学の専門知識・技術を備えた研究者・技術者を育成して、学術の深化と人類の福祉に貢献する。",
+      "philosophy": "「個性の伸展による人生練磨」を建学の精神とし、自己の専門性とアイデンティティを確立し、生涯を通じて自己の完成を目指すことを教育理念とする。",
+      "student_counts": {
+        "undergraduate": 2173,
+        "graduate": 21,
+        "total": 2194,
+        "as_of": "2026-05-01"
+      },
+      "academic_field_tags": [
+        "薬学"
+      ],
+      "feature_summary": "横浜市に本部を置き、薬学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人都築第一学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000691401000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000189",
+      "name": "麻布大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市",
+      "headquarters": {
+        "postal_code": "252-5201",
+        "prefecture": "神奈川県",
+        "municipality": "相模原市",
+        "address": "神奈川県相模原市中央区淵野辺1-17-71"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 公式サイト",
+          "source_url": "https://www.azabu-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 公式入試情報",
+          "source_url": "https://fanclub.azabu-u.ac.jp/exam/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 大学情報公開・各種方針",
+          "source_url": "https://www.azabu-u.ac.jp/about/open/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 大学の歴史・建学の精神",
+          "source_url": "https://www.azabu-u.ac.jp/about/history.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "麻布大学 入学者数、収容定員、在籍学生数（2025年5月1日現在）",
+          "source_url": "https://www.azabu-u.ac.jp/about/files/current20250501.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.azabu-u.ac.jp/",
+      "admissions_url": "https://fanclub.azabu-u.ac.jp/exam/",
+      "university_goal": "獣医学、畜産学、獣医保健看護学、動物応用科学、生命科学、環境科学の専門教育研究を通じて応用力と人格を養い、学術の進歩、生活の向上、平和社会の建設に貢献する。",
+      "philosophy": "「学理の討究と誠実なる実践」を建学の精神とし、「地球共生系―人と動物と環境の共生をめざして―」を教育理念として掲げる。",
+      "student_counts": {
+        "undergraduate": 2491,
+        "graduate": 115,
+        "total": 2606,
+        "as_of": "2025-05-01"
+      },
+      "academic_field_tags": [
+        "理学",
+        "農学",
+        "獣医学",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "feature_summary": "相模原市に本部を置き、獣医学部・生命・環境科学部の2学部と大学院2研究科で学ぶ大学です。",
+      "operator": "学校法人麻布獣医学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319401000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000190",
+      "name": "神奈川歯科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横須賀市",
+      "headquarters": {
+        "postal_code": "238-8580",
+        "prefecture": "神奈川県",
+        "municipality": "横須賀市",
+        "address": "神奈川県横須賀市稲岡町82番地"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 公式サイト",
+          "source_url": "https://www.kdu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 公式入試情報",
+          "source_url": "https://www.kdu.ac.jp/dental/exams/outline/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 理念・精神",
+          "source_url": "https://www.kdu.ac.jp/corporations/outline/ideal/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学 情報公開 学生数（令和8年5月1日現在）",
+          "source_url": "https://www.kdu.ac.jp/dental/outline/info/studentcount.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川歯科大学大学院 情報公開 大学院学生数（令和8年5月1日現在）",
+          "source_url": "https://graduate.kdu.ac.jp/info/studentcount/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kdu.ac.jp/",
+      "admissions_url": "https://www.kdu.ac.jp/dental/exams/outline/",
+      "university_goal": "歯科医師としての熟練と人間としての優しさを身につけるため、学問・技術・人への理解を統合した教育を行う。",
+      "philosophy": "すべてのものへの慈しみと生命を大切にする「愛の精神」の実践を建学の精神とし、「学をまなび、技を習い、人を識る愛の教育」を教育理念とする。",
+      "student_counts": {
+        "undergraduate": 715,
+        "graduate": 67,
+        "total": 782,
+        "as_of": "2026-05-01",
+        "note": "学部は歯学部715人（男430・女285）、大学院は歯学研究科67人（男42・女25、研究生1人を除く）。短期大学部（354人）を除く大学・大学院の在籍者数"
+      },
+      "academic_field_tags": [
+        "歯学"
+      ],
+      "feature_summary": "横須賀市に本部を置き、歯学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人神奈川歯科大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319601000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000191",
+      "name": "鎌倉女子大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "鎌倉市",
+      "headquarters": {
+        "postal_code": "247-8512",
+        "prefecture": "神奈川県",
+        "municipality": "鎌倉市",
+        "address": "神奈川県鎌倉市大船6-1-3"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 公式サイト",
+          "source_url": "https://www.kamakura-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 公式入試情報",
+          "source_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 建学の精神",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/spirit/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 教育方針",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/policy/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "鎌倉女子大学 情報公開 入学者数、収容定員、在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.kamakura-u.ac.jp/profile/disclosure/student/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kamakura-u.ac.jp/",
+      "admissions_url": "https://www.kamakura-u.ac.jp/prospective/admission_info/",
+      "university_goal": "高度で専門的な学術と応用の教育研究を通じて、科学的教養と優雅な性情を養い、人類の福祉と文化の向上発展に寄与する。",
+      "philosophy": "「感謝と奉仕に生きる人づくり」を教育理念、「科学的教養の向上と優雅な性情の涵養」を教育目標とし、徳育・知育・体育の調和を重視する。",
+      "student_counts": {
+        "undergraduate": 2167,
+        "graduate": 17,
+        "total": 2184,
+        "as_of": "2026-05-01",
+        "note": "学部は家政学部921人・児童学部887人・教育学部332人・教育メディアクリエーション学環27人の計2,167人、大学院は児童学研究科修士課程17人。短期大学部・専攻科を除く"
+      },
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学",
+        "食・栄養",
+        "家政・生活科学"
+      ],
+      "feature_summary": "鎌倉市に本部を置き、家政学部・児童学部・教育学部の3学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人鎌倉女子大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320501000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000192",
+      "name": "湘南工科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "藤沢市",
+      "headquarters": {
+        "postal_code": "251-8511",
+        "prefecture": "神奈川県",
+        "municipality": "藤沢市",
+        "address": "神奈川県藤沢市辻堂西海岸1-1-25"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 公式サイト",
+          "source_url": "https://www.shonan-it.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 公式入試情報",
+          "source_url": "https://www.shonan-it.ac.jp/examination/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 ミッション・教育理念・各種方針",
+          "source_url": "https://www.shonan-it.ac.jp/outline/idea/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 ブランド・ステートメント",
+          "source_url": "https://www.shonan-it.ac.jp/outline/idea/statement/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南工科大学 高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.shonan-it.ac.jp/media/syugaku_report_R8_2026.07.07.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.shonan-it.ac.jp/",
+      "admissions_url": "https://www.shonan-it.ac.jp/examination/",
+      "university_goal": "工学に関する教育研究を通じて学問研究を推進し、社会の規範となる人格を形成するとともに、夢と理想を科学の場で実現できる人材を育成する。",
+      "philosophy": "「社会に貢献する技術者の育成」をミッションに掲げ、技術力と人間力を備え、自ら未来を描いて挑戦し実現する人材の育成を目指す。",
+      "student_counts": {
+        "undergraduate": 2060,
+        "graduate": 47,
+        "total": 2107,
+        "as_of": "2026-05-01",
+        "note": "学部は工学部949人・情報学部1,111人の計2,060人、大学院は工学研究科47人（博士前期課程42人・博士後期課程5人）"
+      },
+      "academic_field_tags": [
+        "工学",
+        "情報・AI",
+        "建築・デザイン"
+      ],
+      "feature_summary": "藤沢市に本部を置き、工学部・情報学部の2学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人湘南工科大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319801000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000193",
+      "name": "相模女子大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "相模原市",
+      "headquarters": {
+        "postal_code": "252-0383",
+        "prefecture": "神奈川県",
+        "municipality": "相模原市",
+        "address": "神奈川県相模原市南区文京2-1-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 公式サイト",
+          "source_url": "https://www.sagami-wu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 公式入試情報",
+          "source_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 大学概要・建学の精神・各種ポリシー",
+          "source_url": "https://www.sagami-wu.ac.jp/university/outline/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 情報の公開 収容定員・在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.sagami-wu.ac.jp/public/capacity/index.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "相模女子大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.sagami-wu.ac.jp/media/2026_syuugakusien_university_0713.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.sagami-wu.ac.jp/",
+      "admissions_url": "https://www.sagami-wu.ac.jp/exam/exam-info/",
+      "university_goal": "女子に高度な知識と専門の学芸を教授研究し、知的・道徳的・応用的能力を伸ばして、建学の精神に基づく教養ある人材を育成する。",
+      "philosophy": "「高潔善美」を建学の精神とし、「見つめる人になる。見つける人になる。」のスローガンのもと、しなやかな発想力と豊かな包容力を備え、社会に貢献する人材を育成する。",
+      "student_counts": {
+        "undergraduate": 2685,
+        "graduate": 36,
+        "total": 2721,
+        "as_of": "2026-05-01",
+        "note": "学部は学芸学部1,333人・人間社会学部704人・栄養科学部648人の計2,685人、大学院は栄養科学研究科4人・社会起業研究科32人の計36人。短期大学部（37人）を除く"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "経済・経営・商学",
+        "社会学",
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学",
+        "情報・AI",
+        "建築・デザイン",
+        "食・栄養",
+        "家政・生活科学"
+      ],
+      "feature_summary": "相模原市に本部を置き、学芸学部・人間社会学部・栄養科学部の3学部と大学院2研究科で学ぶ大学です。",
+      "operator": "学校法人相模女子大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000319901000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000194",
+      "name": "洗足学園音楽大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "213-8580",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市高津区久本2-3-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 公式サイト",
+          "source_url": "https://www.senzoku.ac.jp/music/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 公式入試情報",
+          "source_url": "https://www.senzoku.ac.jp/music/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 教育理念・建学の精神",
+          "source_url": "https://www.senzoku.ac.jp/music/about/philosophy.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 教育情報",
+          "source_url": "https://www.senzoku.ac.jp/music/about/data.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "洗足学園音楽大学 情報公開 在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.senzoku.ac.jp/music/about/pdf/data/2026/students.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.senzoku.ac.jp/music/",
+      "admissions_url": "https://www.senzoku.ac.jp/music/admission/",
+      "university_goal": "音楽の専門的な知識・技術に加えて豊かな人間性を養い、個性と創造性を発揮しながら、自らの目的を見いだして自立して生きる人材を育成する。",
+      "philosophy": "「理想は高遠に、実行は卑近に」を建学の実践標語とし、創造性と人間性豊かな人材の育成を教育理念に掲げる。",
+      "student_counts": {
+        "undergraduate": 2606,
+        "graduate": 229,
+        "total": 2835,
+        "as_of": "2026-05-01",
+        "note": "学部は音楽学部音楽学科2,606人、大学院は音楽研究科修士課程229人（器楽専攻119人・声楽専攻22人・音楽教育学専攻14人・作曲専攻74人）"
+      },
+      "academic_field_tags": [
+        "教育",
+        "芸術"
+      ],
+      "feature_summary": "川崎市に本部を置き、音楽学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人洗足学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320401000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000195",
+      "name": "聖マリアンナ医科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "216-8511",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市宮前区菅生2-16-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "聖マリアンナ医科大学 公式サイト",
+          "source_url": "https://www.marianna-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "聖マリアンナ医科大学 公式入試情報",
+          "source_url": "https://www.marianna-u.ac.jp/univ/ent_info/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "聖マリアンナ医科大学 建学の精神・目的・使命",
+          "source_url": "https://www.marianna-u.ac.jp/univ/uni_info/prospectus.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）聖マリアンナ医科大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000320101000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.marianna-u.ac.jp/",
+      "admissions_url": "https://www.marianna-u.ac.jp/univ/ent_info/",
+      "university_goal": "医学の教育研究を行い、高度な知識・技術と確固たる倫理観を備えた臨床医・医学研究者を養成し、医学の発展と社会の福祉に貢献する。",
+      "philosophy": "キリスト教的人類愛に根ざした「生命の尊厳」を基調とし、医師としての使命を自覚して人類社会に奉仕し、研究成果を人類の福祉に生かす医師を育成する。",
+      "student_counts": {
+        "undergraduate": 720,
+        "graduate": 94,
+        "total": 814,
+        "as_of": "2026-05-01",
+        "note": "学部は医学部医学科720人（男307・女413）、大学院は医学研究科94人（男58・女36）"
+      },
+      "academic_field_tags": [
+        "医学"
+      ],
+      "feature_summary": "川崎市に本部を置き、医学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人聖マリアンナ医科大学",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000196",
+      "name": "神奈川工科大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "厚木市",
+      "headquarters": {
+        "postal_code": "243-0292",
+        "prefecture": "神奈川県",
+        "municipality": "厚木市",
+        "address": "神奈川県厚木市下荻野1030"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川工科大学 公式サイト",
+          "source_url": "https://www.kait.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川工科大学 公式入試情報",
+          "source_url": "https://op.kait.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川工科大学 大学・学部等の教育目的と方針",
+          "source_url": "https://www.kait.jp/about/information/aim/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "神奈川工科大学 情報公開 在籍学生数・収容定員（2026年5月1日現在）",
+          "source_url": "https://www.kait.jp/about/information/faculty/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.kait.jp/",
+      "admissions_url": "https://op.kait.jp/",
+      "university_goal": "自然科学・情報・データサイエンスの基礎と専門知識・技能を備え、課題を発見して論理的に解決し、他者と協働しながら社会で活躍できる技術系職業人を育成する。",
+      "philosophy": "「考え・行動する人材の育成―社会で活躍できる人づくり―」を大学の教育目的とし、主体性、探究姿勢、協働力、社会的責任と倫理観を重視する。",
+      "student_counts": {
+        "undergraduate": 4117,
+        "graduate": 118,
+        "total": 4235,
+        "as_of": "2026-05-01",
+        "note": "学部は工学部1,209人・情報学部2,148人・創造工学部116人・応用バイオ科学部83人・健康医療科学部561人の計4,117人（男3,402・女715）、大学院は工学研究科118人（男106・女12）"
+      },
+      "academic_field_tags": [
+        "社会学",
+        "理学",
+        "工学",
+        "情報・AI",
+        "看護・医療",
+        "食・栄養"
+      ],
+      "feature_summary": "厚木市に本部を置き、工学部・情報学部・健康医療科学部の3学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人幾徳学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320601000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000197",
+      "name": "昭和音楽大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-8558",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区上麻生1-11-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "昭和音楽大学 公式サイト",
+          "source_url": "https://www.tosei-showa-music.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "昭和音楽大学 公式入試情報",
+          "source_url": "https://www.tosei-showa-music.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "昭和音楽大学 建学の精神・教育目的",
+          "source_url": "https://www.tosei-showa-music.ac.jp/guide/policy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "昭和音楽大学 大学情報の公表 在学生数（2026年度5月1日現在）",
+          "source_url": "https://www.tosei-showa-music.ac.jp/files/03e0351672bdbfaee6a58a5f63104b8dd1464239.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.tosei-showa-music.ac.jp/",
+      "admissions_url": "https://www.tosei-showa-music.ac.jp/admission/",
+      "university_goal": "音楽を中心とする幅広い領域の技能・理論・応用を深く教育研究し、広い視野と高い識見を持つ人材を育成して、文化の向上と社会の福祉に寄与する。",
+      "philosophy": "「礼・節・技の人間教育」を建学の精神とし、礼儀、節度、技術・技能を備え、高い品性とコミュニケーション能力を持つ音楽家・音楽人を養成する。",
+      "student_counts": {
+        "undergraduate": 1229,
+        "graduate": 159,
+        "total": 1388,
+        "as_of": "2026-05-01",
+        "note": "学部は音楽学部1,229人（音楽芸術表現学科889人・音楽芸術運営学科340人）、大学院は音楽研究科159人（修士課程151人・博士後期課程8人）。音楽専攻科（3人）および短期大学部（111人）を除く"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "芸術"
+      ],
+      "feature_summary": "川崎市に本部を置き、音楽学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人東成学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320801000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000198",
+      "name": "桐蔭横浜大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "225-8503",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市青葉区鉄町1614"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 公式サイト",
+          "source_url": "https://toin.ac.jp/univ/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 公式入試情報",
+          "source_url": "https://toin.ac.jp/ouen/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 建学の精神・学園訓",
+          "source_url": "https://toin.ac.jp/univ/about/spirit/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 大学憲章",
+          "source_url": "https://toin.ac.jp/univ/about/charter/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "桐蔭横浜大学 教育研究組織図・学生数（令和8年5月1日現在）",
+          "source_url": "https://toin.ac.jp/univ/wp-content/uploads/sites/10/2026/09/02_R8_organization_chart-1.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://toin.ac.jp/univ/",
+      "admissions_url": "https://toin.ac.jp/ouen/",
+      "university_goal": "日本と世界の将来を見据えて社会に貢献し、自ら判断して実行するとともに、仲間と協働できる人材を育成し、市民性と人権意識を養う。",
+      "philosophy": "社会連帯、求学、道義、平和と国際性を重んじる建学の精神を基盤に、「個の充実」「実務家養成」「開かれた大学」「国際交流」を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 2216,
+        "graduate": 42,
+        "total": 2258,
+        "as_of": "2026-05-01",
+        "note": "学部は法学部607人・医用工学部204人・スポーツ科学部1,173人・現代教養学環232人の計2,216人（男1,692・女524）、大学院は法学研究科10人・工学研究科23人・スポーツ科学研究科9人の計42人（男22・女20）"
+      },
+      "academic_field_tags": [
+        "法学",
+        "教育",
+        "理学",
+        "工学",
+        "看護・医療",
+        "体育・スポーツ"
+      ],
+      "feature_summary": "横浜市に本部を置き、法学部・医用工学部・スポーツ科学部の3学部と大学院3研究科で学ぶ大学です。",
+      "operator": "学校法人桐蔭学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000320701000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000199",
+      "name": "東洋英和女学院大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "226-0015",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市緑区三保町32"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 公式サイト",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 公式入試情報",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 建学の精神・教育目標",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/about/kengaku.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigaku/about/jyoho/05.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "東洋英和女学院大学大学院 情報公開 在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.toyoeiwa.ac.jp/daigakuin/jyoho.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.toyoeiwa.ac.jp/daigaku/",
+      "admissions_url": "https://www.toyoeiwa.ac.jp/daigaku/prospect/nyushi/",
+      "university_goal": "専門に根ざした幅広い教養を備え、国際化・情報化した社会に適応し、キリスト教精神に基づいて他者を思いやり奉仕できる自立した女性を育成する。",
+      "philosophy": "「敬神奉仕」を建学の精神とし、神を敬い隣人を愛して仕える姿勢を土台に、キリスト教による人間形成と人格形成を重視する。",
+      "student_counts": {
+        "undergraduate": 776,
+        "graduate": 70,
+        "total": 846,
+        "as_of": "2026-05-01",
+        "note": "学部は人間科学部365人・国際社会学部225人・人間社会学部186人の計776人、大学院は人間科学研究科44人（修士40・博士後期4）・国際協力研究科26人の計70人（六本木校地開講分を含む）"
+      },
+      "academic_field_tags": [
+        "国際関係",
+        "社会学",
+        "教育",
+        "幼児教育・保育",
+        "心理"
+      ],
+      "feature_summary": "横浜市に本部を置き、人間科学部・国際社会学部の2学部と大学院2研究科で学ぶ大学です。",
+      "operator": "学校法人東洋英和女学院",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000269901000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000200",
+      "name": "松蔭大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "厚木市",
+      "headquarters": {
+        "postal_code": "243-0124",
+        "prefecture": "神奈川県",
+        "municipality": "厚木市",
+        "address": "神奈川県厚木市森の里若宮9-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 公式サイト",
+          "source_url": "https://www.shoin-u.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 公式入試情報",
+          "source_url": "https://www.shoin-u.ac.jp/exam/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 建学の精神と大学の基本理念",
+          "source_url": "https://www.shoin-u.ac.jp/introduction/principle/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "松蔭大学 情報公開 R8学生に関するデータ（2026年度在学生数）",
+          "source_url": "https://www.shoin-u.ac.jp/cms_wp/wp-content/uploads/R8%E5%AD%A6%E7%94%9F%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "大学ポートレート（私学版）松蔭大学 学生情報（2026年度在籍者数）",
+          "source_url": "https://up-j.shigaku.go.jp/school/category06/00000000271301000.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.shoin-u.ac.jp/",
+      "admissions_url": "https://www.shoin-u.ac.jp/exam/",
+      "university_goal": "広い教養と専門性を養い、ホスピタリティを基盤に人間性を磨き、知識を実践に生かして社会で活躍できる、心身ともに健全な人材を育成する。",
+      "philosophy": "吉田松陰の実学精神に基づく「知行合一」を校是とし、学んだ知識を行動に生かし、実践を通じて知識を深める生きた学問を重視する。",
+      "student_counts": {
+        "undergraduate": 537,
+        "graduate": 9,
+        "total": 546,
+        "as_of": "2026-05-01",
+        "note": "大学公式「R8学生に関するデータ」における2026年度在学生数（学部537人・大学院9人・計546人）。なお大学ポートレート掲載の2026年度学部・研究科別内訳は経営文化学部202人・コミュニケーション文化学部170人・観光メディア文化学部53人・看護学部96人（学部計521人）、経営管理研究科5人・看護学研究科3人（大学院計8人）"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "国際・語学",
+        "法学",
+        "経済・経営・商学",
+        "社会学",
+        "観光",
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学",
+        "情報・AI",
+        "看護・医療",
+        "家政・生活科学"
+      ],
+      "feature_summary": "厚木市に本部を置き、経営文化学部・コミュニケーション文化学部・観光メディア文化学部・看護学部の4学部と大学院2研究科で学ぶ大学です。",
+      "operator": "学校法人松蔭学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000201",
+      "name": "田園調布学園大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-8542",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区東百合丘3-4-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 公式サイト",
+          "source_url": "https://www.dcu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 公式入試情報",
+          "source_url": "https://www.dcu.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 大学概要・建学の精神・3方針",
+          "source_url": "https://www.dcu.ac.jp/overview/about/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "田園調布学園大学 情報公開 入学者数・収容定員・在籍者数（2026年5月1日現在）",
+          "source_url": "https://www.dcu.ac.jp/cms/files/dcu/kanri/0150/BMOeNuPV.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.dcu.ac.jp/",
+      "admissions_url": "https://www.dcu.ac.jp/admission/",
+      "university_goal": "福祉・保育・心理の専門性と実践力を備え、一人ひとりの尊厳と人間性を尊重し、社会の多様なニーズに柔軟かつ的確に応えて貢献できる人材を育成する。",
+      "philosophy": "「捨我精進」を建学の精神とし、自我を慎み、目前の事柄に純粋にまい進する姿勢を通じて、柔軟で寛容な心と真剣に取り組む力を養う。",
+      "student_counts": {
+        "undergraduate": 1072,
+        "graduate": 40,
+        "total": 1112,
+        "as_of": "2026-05-01",
+        "note": "学部は人間福祉学部548人・子ども未来学部109人・子ども教育学部168人・人間科学部247人の計1,072人、大学院は人間学研究科40人（子ども人間学専攻10人・心理学専攻30人）"
+      },
+      "academic_field_tags": [
+        "文学・人文",
+        "社会学",
+        "社会福祉",
+        "教育",
+        "幼児教育・保育",
+        "心理",
+        "理学"
+      ],
+      "feature_summary": "川崎市に本部を置き、人間福祉学部・人間科学部・子ども教育学部の3学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人調布学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000273201000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000202",
+      "name": "横浜美術大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "227-0033",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市青葉区鴨志田町1204"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 公式サイト",
+          "source_url": "https://www.yokohama-art.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 公式入試情報",
+          "source_url": "https://www.yokohama-art.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 教育研究上の目的",
+          "source_url": "https://www.yokohama-art.ac.jp/about/public_information/educational_research",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜美術大学 情報公開 在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.yokohama-art.ac.jp/about/public_information/number_of_students/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.yokohama-art.ac.jp/",
+      "admissions_url": "https://www.yokohama-art.ac.jp/admission/",
+      "university_goal": "美術・デザインの専門的な表現技術と理論的知識、社会性と幅広い教養を修得させ、創造的に社会へ貢献できる人材を育成する。",
+      "philosophy": "「美術による創造性豊かな人間形成」を建学の精神とし、表現技術・理論・教養を統合して、創造力、洞察力、問題解決力、倫理観を養う。",
+      "student_counts": {
+        "undergraduate": 839,
+        "graduate": 0,
+        "total": 839,
+        "as_of": "2026-05-01",
+        "note": "美術学部美術・デザイン学科839人（男250・女589）。大学院は未設置"
+      },
+      "academic_field_tags": [
+        "建築・デザイン",
+        "芸術"
+      ],
+      "feature_summary": "横浜市に本部を置き、美術学部の1学部で学ぶ大学です。",
+      "operator": "学校法人トキワ松学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000274301000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000203",
+      "name": "日本映画大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "215-0004",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市麻生区万福寺1-16-30"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 公式サイト",
+          "source_url": "https://www.eiga.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 公式入試情報",
+          "source_url": "https://www.eiga.ac.jp/admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 理念と建学の精神",
+          "source_url": "https://www.eiga.ac.jp/about/mission",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 教育の方針と課程",
+          "source_url": "https://www.eiga.ac.jp/about/data/education",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "日本映画大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://www.eiga.ac.jp/about/data/overview/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.eiga.ac.jp/",
+      "admissions_url": "https://www.eiga.ac.jp/admissions/",
+      "university_goal": "「人間重視」を基本に、高度化する知識・技術への対応力と問題解決能力を備え、実学と現場を結ぶ幅広い映画制作能力を持つ専門職業人・研究者を養成する。",
+      "philosophy": "人間の尊厳、公平、自由と個性を尊重し、人間を深く観察する姿勢と、既成の枠を越えて未踏の地へ踏み込む自由な精神と勇気を重視する。",
+      "student_counts": {
+        "undergraduate": 468,
+        "graduate": 0,
+        "total": 468,
+        "as_of": "2026-05-01",
+        "note": "映画学部映画学科468人（男310・女158）。大学院は未設置"
+      },
+      "academic_field_tags": [
+        "芸術"
+      ],
+      "feature_summary": "川崎市に本部を置き、映画学部の1学部で学ぶ大学です。",
+      "operator": "学校法人神奈川映像学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000317001000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000204",
+      "name": "横浜創英大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "226-0015",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市緑区三保町1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 公式サイト",
+          "source_url": "https://www.soei.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 公式入試情報",
+          "source_url": "https://www.soei.ac.jp/exam/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 理念・特徴",
+          "source_url": "https://www.soei.ac.jp/guide/vision/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "横浜創英大学 情報公開 定員・在籍学生数（2026年5月1日現在）",
+          "source_url": "https://www.soei.ac.jp/guide/info/capacity/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.soei.ac.jp/",
+      "admissions_url": "https://www.soei.ac.jp/exam/",
+      "university_goal": "科学的思考に基づく判断力、人間への多面的理解、専門的な知識・技能を備え、地域社会に貢献できる人材を育成する。",
+      "philosophy": "「考えて行動のできる人」の育成を建学の精神とし、深く考えることを生活行動と自己完成につなげる教育を重視する。",
+      "student_counts": {
+        "undergraduate": 521,
+        "graduate": 7,
+        "total": 528,
+        "as_of": "2026-05-01",
+        "note": "学部は看護学部332人・こども教育学部189人の計521人（男100・女421）、大学院は看護学研究科7人（男1・女6）"
+      },
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育",
+        "看護・医療"
+      ],
+      "feature_summary": "横浜市に本部を置き、看護学部・こども教育学部の2学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人堀井学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000321601000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000205",
+      "name": "湘南医療大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "244-0806",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市戸塚区上品濃16-48"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 公式サイト",
+          "source_url": "https://sums.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 公式入試情報",
+          "source_url": "https://sums.ac.jp/examinee-support/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 理念",
+          "source_url": "https://sums.ac.jp/html/about/idea.html",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南医療大学 情報公開 学生数（2026年5月1日現在）",
+          "source_url": "https://sums.ac.jp/html/disclosure/02/02/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://sums.ac.jp/",
+      "admissions_url": "https://sums.ac.jp/examinee-support/admission/",
+      "university_goal": "高度な知識・技術と豊かな人間性を育み、創造的かつ実践的な教育研究を通じて、チーム医療と地域医療に貢献できる医療従事者を養成する。",
+      "philosophy": "「人を尊び、命を尊び、個を敬愛す」を建学の理念とし、幅広い教養と根拠に基づく専門知識・技術、責任感、使命感、主体的な実践力を重視する。",
+      "student_counts": {
+        "undergraduate": 1274,
+        "graduate": 41,
+        "total": 1315,
+        "as_of": "2026-05-01",
+        "note": "学部は薬学部324人・保健医療学部950人（看護学科618人・リハビリテーション学科理学療法学専攻186人・作業療法学専攻146人）の計1,274人、大学院は保健医療学研究科41人（修士課程28人・博士後期課程13人）。専攻科（35人）および介護福祉別科（65人）を除く"
+      },
+      "academic_field_tags": [
+        "薬学",
+        "看護・医療"
+      ],
+      "feature_summary": "横浜市に本部を置き、保健医療学部・薬学部の2学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人湘南ふれあい学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000318201000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000206",
+      "name": "湘南鎌倉医療大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "鎌倉市",
+      "headquarters": {
+        "postal_code": "247-0066",
+        "prefecture": "神奈川県",
+        "municipality": "鎌倉市",
+        "address": "神奈川県鎌倉市山崎1195-3"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 公式サイト",
+          "source_url": "https://www.sku.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 公式入試情報",
+          "source_url": "https://www.sku.ac.jp/admissions",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 大学概要・建学の精神",
+          "source_url": "https://www.sku.ac.jp/over_view/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "湘南鎌倉医療大学 情報公開 入学者数、収容定員、在籍者数（令和8年5月1日現在）",
+          "source_url": "https://www.sku.ac.jp/wp-content/uploads/2026/08/R8.5.1%E5%85%A5%E5%AD%A6%E8%80%85%E6%95%B0%E3%80%81%E5%8F%8E%E5%AE%B9%E5%AE%9A%E5%93%A1%E3%80%81%E5%9C%A8%E7%B1%8D%E8%80%85%E6%95%B0.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.sku.ac.jp/",
+      "admissions_url": "https://www.sku.ac.jp/admissions",
+      "university_goal": "幅広い教養と哲学的思考を基盤に豊かな人間性と高い倫理性を養い、医療・ケアの進歩や地域の多様なニーズに対応できる高度な知識・技術を持つ医療専門職を育成する。",
+      "philosophy": "「生命だけは平等だ」という理念のもと、いつでも、どこでも、誰もが最善の医療・ケアを受けられる社会を目指し、研鑽を続ける医療人を育成する。",
+      "student_counts": {
+        "undergraduate": 405,
+        "graduate": 18,
+        "total": 423,
+        "as_of": "2026-05-01",
+        "note": "学部は看護学部看護学科405人、大学院は看護学研究科18人（博士前期課程10人・博士後期課程8人）"
+      },
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "feature_summary": "鎌倉市に本部を置き、看護学部の1学部と大学院1研究科で学ぶ大学です。",
+      "operator": "学校法人徳洲会",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/school/category08/00000000479801000.html",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000207",
+      "name": "ビューティ＆ウェルネス専門職大学",
+      "establishment_type": "private",
+      "university_type": "professional_university",
+      "prefecture": "神奈川県",
+      "municipality": "横浜市",
+      "headquarters": {
+        "postal_code": "224-0012",
+        "prefecture": "神奈川県",
+        "municipality": "横浜市",
+        "address": "神奈川県横浜市都筑区牛久保3-9-3"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 公式サイト",
+          "source_url": "https://www.b-w.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 公式入試情報",
+          "source_url": "https://www.b-w.ac.jp/admission/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 本学について",
+          "source_url": "https://www.b-w.ac.jp/about/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 情報公開",
+          "source_url": "https://www.b-w.ac.jp/disclosure/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ビューティ＆ウェルネス専門職大学 2026年度高等教育の修学支援新制度更新確認申請書（令和8年5月1日現在）",
+          "source_url": "https://www.b-w.ac.jp/wp/wp-content/uploads/2026/06/e6ab56186a5934968daf5dc8ba4848b8.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://www.b-w.ac.jp/",
+      "admissions_url": "https://www.b-w.ac.jp/admission/",
+      "university_goal": "心身の美と健康に関する理論・技術と高度な専門知識、洗練された技術、ホスピタリティを備え、人々の健康とQOL向上に貢献し新たな価値を創造できる専門職人材を養成する。",
+      "philosophy": "「美しく聡明で品格あるプロフェッショナルの育成」を教育理念とし、心身の健康、相手を理解したサービス、礼節と信頼を重視する。",
+      "student_counts": {
+        "undergraduate": 546,
+        "graduate": 0,
+        "total": 546,
+        "as_of": "2026-05-01",
+        "note": "ビューティ＆ウェルネス学部ビューティ＆ウェルネス学科546人（収容定員868人）。大学院は未設置"
+      },
+      "academic_field_tags": [
+        "家政・生活科学"
+      ],
+      "feature_summary": "横浜市に本部を置き、ビューティ＆ウェルネス学部の1学部で学ぶ大学です。",
+      "operator": "学校法人ミスパリ学園",
+      "operator_source": "大学ポートレート（私学版）基本情報「法人名」 https://up-j.shigaku.go.jp/",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000208",
+      "name": "グローバルＢｉｚ専門職大学",
+      "establishment_type": "private",
+      "university_type": "professional_university",
+      "prefecture": "神奈川県",
+      "municipality": "川崎市",
+      "headquarters": {
+        "postal_code": "210-0007",
+        "prefecture": "神奈川県",
+        "municipality": "川崎市",
+        "address": "神奈川県川崎市川崎区駅前本町22-1"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-4.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルＢｉｚ専門職大学 公式サイト",
+          "source_url": "https://gpu.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルＢｉｚ専門職大学 公式入試情報",
+          "source_url": "https://gpu.ac.jp/admissions/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルBiz専門職大学 設立の背景・建学の精神",
+          "source_url": "https://gpu.ac.jp/information/spirit/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルBiz専門職大学 入学者受け入れ方針",
+          "source_url": "https://gpu.ac.jp/admissions/policy/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "グローバルＢｉｚ専門職大学 高等教育の修学支援新制度確認更新申請書（令和8年5月1日現在）",
+          "source_url": "https://gpu.ac.jp/wp/wp-content/uploads/2026/09/shugakushien_20260904.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://gpu.ac.jp/",
+      "admissions_url": "https://gpu.ac.jp/admissions/",
+      "university_goal": "経営・財務・法務、語学、デジタル技術などの知識と実務能力を備え、多様な人々と協働して事業を構想・実行し、新たな価値を生み出すリーダーを育成する。",
+      "philosophy": "斬新な発想力と豊かな想像力をもってリーダーシップを発揮し、国際社会でイノベーションを起こせる人材の育成を教育理念とする。",
+      "student_counts": {
+        "undergraduate": 92,
+        "graduate": 0,
+        "total": 92,
+        "as_of": "2026-05-01",
+        "note": "グローバルビジネス学部グローバルビジネス学科92人（収容定員392人）。大学院は未設置"
+      },
+      "academic_field_tags": [
+        "国際関係",
+        "経済・経営・商学"
+      ],
+      "feature_summary": "川崎市に本部を置き、グローバルビジネス学部の1学部で学ぶ大学です。",
+      "operator": "学校法人深堀学園",
+      "operator_source": "文部科学省 設置認可資料 https://www.mext.go.jp/content/20221201-mxt_gakushi_000026235_2.pdf",
+      "operator_verified_at": "2026-11-08"
+    },
+    {
+      "id": "u000209",
+      "name": "ZEN大学",
+      "establishment_type": "private",
+      "university_type": "university",
+      "prefecture": "神奈川県",
+      "municipality": "逗子市",
+      "headquarters": {
+        "postal_code": "249-0007",
+        "prefecture": "神奈川県",
+        "municipality": "逗子市",
+        "address": "神奈川県逗子市新宿３丁目１２番１１号"
+      },
+      "status": "active",
+      "verification_status": "official_and_mext_verified",
+      "verified_at": "2026-11-07",
+      "sources": [
+        {
+          "source_name": "文部科学省 令和7年度全国大学一覧",
+          "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 公式サイト",
+          "source_url": "https://zen.ac.jp/",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 公式入試情報",
+          "source_url": "https://zen.ac.jp/admission",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 情報公開",
+          "source_url": "https://zen.ac.jp/disclosures",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        },
+        {
+          "source_name": "ZEN大学 情報公開 在籍者数（2026年5月1日現在）",
+          "source_url": "https://img.zen-univ.jp/disclosure/enrolled-students_260717.pdf",
+          "verified_at": "2026-11-07",
+          "role": "primary"
+        }
+      ],
+      "official_url": "https://zen.ac.jp/",
+      "admissions_url": "https://zen.ac.jp/admission",
+      "university_goal": "数理、情報、文化・思想、社会、経済、デジタル産業を横断して学び、複雑で変化の速いAI社会を生き抜き、個性と価値を発揮して社会で活躍できる自立した人材を育成する。",
+      "philosophy": "オンライン教育の力で、世界の多様な学習者に開かれた学びの機会を提供し、高等教育の民主化、学びの個別化、デジタル時代への適応を教育の柱とする。",
+      "student_counts": {
+        "undergraduate": 6976,
+        "graduate": 0,
+        "total": 6976,
+        "as_of": "2026-05-01",
+        "note": "知能情報社会学部知能情報社会学科（通信教育課程）正科生6,976人（収容定員7,000人・2学年分）。大学院は未設置"
+      },
+      "academic_field_tags": [
+        "社会学",
+        "情報・AI"
+      ],
+      "feature_summary": "逗子市に本部を置き、知能情報社会学部の1学部で学ぶ大学です。",
+      "operator": "学校法人日本財団ドワンゴ学園",
+      "operator_source": "大学発表（PR TIMES転載）「設置：学校法人日本財団ドワンゴ学園」 https://resemom.jp/release/prtimes/20241218/131365.html",
+      "operator_verified_at": "2026-11-08"
+    }
+  ]
+}

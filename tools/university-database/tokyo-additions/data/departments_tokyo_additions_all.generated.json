@@ -1,0 +1,250 @@
+[
+ {
+  "id": "d300001",
+  "university_id": "u000173",
+  "faculty_id": "f300001",
+  "name": "マーケティング学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300002",
+  "university_id": "u000173",
+  "faculty_id": "f300001",
+  "name": "経営学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300003",
+  "university_id": "u000173",
+  "faculty_id": "f300002",
+  "name": "経済学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300004",
+  "university_id": "u000173",
+  "faculty_id": "f300003",
+  "name": "国際関係学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "国際関係"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300005",
+  "university_id": "u000173",
+  "faculty_id": "f300003",
+  "name": "国際メディア学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "国際関係",
+   "情報・AI"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300006",
+  "university_id": "u000173",
+  "faculty_id": "f300004",
+  "name": "福祉心理学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "心理",
+   "社会福祉",
+   "社会学",
+   "理学"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300007",
+  "university_id": "u000173",
+  "faculty_id": "f300004",
+  "name": "人間スポーツ学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "社会学",
+   "体育・スポーツ"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300008",
+  "university_id": "u000173",
+  "faculty_id": "f300004",
+  "name": "スポーツ科学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "社会学",
+   "体育・スポーツ"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300009",
+  "university_id": "u000173",
+  "faculty_id": "f300005",
+  "name": "英語コミュニケーション学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "国際・語学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "豊島区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300010",
+  "university_id": "u000173",
+  "faculty_id": "f300006",
+  "name": "理学療法学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "看護・医療"
+  ],
+  "campus_prefecture": "埼玉県",
+  "campus_municipality": "川越市",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京国際大学）",
+    "source_url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ },
+ {
+  "id": "d300011",
+  "university_id": "u000174",
+  "faculty_id": "f300007",
+  "name": "経営マネジメント学科",
+  "department_type": "department",
+  "academic_field_tags": [
+   "経済・経営・商学"
+  ],
+  "campus_prefecture": "東京都",
+  "campus_municipality": "千代田区",
+  "status": "active",
+  "verification_status": "verified",
+  "verified_at": "2026-10-30",
+  "sources": [
+   {
+    "source_name": "文部科学省 令和7年度全国大学一覧（東京経営大学）",
+    "source_url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+    "source_date": "2026-10-30"
+   }
+  ]
+ }
+]

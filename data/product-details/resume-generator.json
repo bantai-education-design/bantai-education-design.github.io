@@ -49,7 +49,7 @@
   "images": [
     "/assets/images/resume-generator/booth-1-main.png",
     "/assets/images/resume-generator/booth-2-complete.png",
-    "/assets/images/resume-generator/booth-3-steps.png",
+    "/assets/images/resume-generator/booth-3-career-docs.png",
     "/assets/images/resume-generator/booth-4-features.png",
     "/assets/images/resume-generator/booth-5-trial-license.png"
   ],
@@ -231,7 +231,7 @@
           "gridStyle": "margin-top:24px;",
           "images": [
             {
-              "src": "/assets/images/resume-generator/booth-3-steps.png",
+              "src": "/assets/images/resume-generator/booth-3-career-docs.png",
               "alt": "スマート履歴書ジェネレーターのかんたん3ステップ",
               "wrapClass": "visual"
             },

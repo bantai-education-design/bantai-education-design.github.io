@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000219",
+  "id": "u000219",
+  "name": "千葉工業大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "習志野市",
+  "operator": "学校法人千葉工業大学",
+  "feature_summary": "習志野市に本部を置き、工学部・創造工学部・先進工学部・情報変革科学部など5学部と大学院5研究科で学ぶ大学です。",
+  "official_url": "https://chibatech.ac.jp/",
+  "admissions_url": "https://chibatech.ac.jp/entrance/",
+  "academic_field_tags": [
+    "工学",
+    "情報・AI",
+    "建築・デザイン",
+    "理学",
+    "経済・経営・商学",
+    "社会学",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400038",
+      "name": "工学部",
+      "academic_field_tags": [
+        "工学",
+        "情報・AI",
+        "理学"
+      ],
+      "campus_municipality": "習志野市",
+      "departments": [
+        {
+          "department_id": "d400061",
+          "name": "機械工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400062",
+          "name": "宇宙・半導体工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400063",
+          "name": "先端材料工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400064",
+          "name": "電気電子工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400065",
+          "name": "情報通信システム工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400066",
+          "name": "応用化学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400039",
+      "name": "創造工学部",
+      "academic_field_tags": [
+        "工学",
+        "建築・デザイン"
+      ],
+      "campus_municipality": "習志野市",
+      "departments": [
+        {
+          "department_id": "d400067",
+          "name": "建築学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400068",
+          "name": "都市環境工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400069",
+          "name": "デザイン科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400040",
+      "name": "先進工学部",
+      "academic_field_tags": [
+        "工学",
+        "情報・AI",
+        "理学",
+        "芸術"
+      ],
+      "campus_municipality": "習志野市",
+      "departments": [
+        {
+          "department_id": "d400070",
+          "name": "未来ロボティクス学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400071",
+          "name": "生命科学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400072",
+          "name": "知能メディア工学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400041",
+      "name": "情報変革科学部",
+      "academic_field_tags": [
+        "工学",
+        "情報・AI"
+      ],
+      "campus_municipality": "習志野市",
+      "departments": [
+        {
+          "department_id": "d400073",
+          "name": "情報工学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400074",
+          "name": "認知情報科学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400075",
+          "name": "高度応用情報科学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400042",
+      "name": "未来変革科学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "建築・デザイン",
+        "理学",
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "習志野市",
+      "departments": [
+        {
+          "department_id": "d400076",
+          "name": "デジタル変革化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400077",
+          "name": "経営デザイン科学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400021",
+      "name": "工学研究科",
+      "programs": [
+        "機械工学専攻",
+        "機械電子創成工学専攻",
+        "先端材料工学専攻",
+        "電気電子工学専攻",
+        "情報通信システム工学専攻",
+        "応用化学専攻",
+        "工学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400022",
+      "name": "創造工学研究科",
+      "programs": [
+        "建築学専攻",
+        "都市環境工学専攻",
+        "デザイン科学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400023",
+      "name": "先進工学研究科",
+      "programs": [
+        "未来ロボティクス専攻",
+        "生命科学専攻",
+        "知能メディア工学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400024",
+      "name": "情報科学研究科",
+      "programs": [
+        "情報科学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400025",
+      "name": "社会システム科学研究科",
+      "programs": [
+        "マネジメント工学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "津田沼校舎",
+      "postal_code": "275-0016",
+      "address": "千葉県習志野市津田沼2-17-1",
+      "prefecture": "千葉県",
+      "municipality": "習志野市",
+      "nearest_stations": [
+        {
+          "station": "津田沼駅",
+          "line": "JR総武線",
+          "access": "南口徒歩1分"
+        },
+        {
+          "station": "新習志野駅",
+          "line": "JR京葉線",
+          "access": "新習志野キャンパス徒歩6分"
+        }
+      ]
+    },
+    {
+      "name": "新習志野校舎",
+      "postal_code": "275-0023",
+      "address": "千葉県習志野市芝園2-1-1",
+      "prefecture": "千葉県",
+      "municipality": "習志野市",
+      "nearest_stations": []
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "一級・二級建築士（受験資格）",
+      "department": "創造工学部 建築学科",
+      "group": "建築士",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "千葉工業大学 公式サイト",
+      "url": "https://chibatech.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "千葉工業大学 公式入試情報",
+      "url": "https://chibatech.ac.jp/entrance/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「世界文化に技術で貢献する」を建学の精神とし、ものづくりと科学技術による社会貢献を重視する。",
+  "mission": "工学・情報・デザイン・経営の高度な専門力を培い、次世代の産業と社会を切り拓く技術者・研究者を育成する。",
+  "student_counts": {
+    "undergraduate": 9541,
+    "graduate": 989,
+    "total": 10530,
+    "as_of": "2026-05-01"
+  }
+}

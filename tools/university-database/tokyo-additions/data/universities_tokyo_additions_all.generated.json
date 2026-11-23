@@ -1,0 +1,20 @@
+[
+ {
+  "id": "u000173",
+  "name": "東京国際大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "東京都",
+  "municipality": "豊島区",
+  "status": "active"
+ },
+ {
+  "id": "u000174",
+  "name": "東京経営大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "東京都",
+  "municipality": "千代田区",
+  "status": "active"
+ }
+]

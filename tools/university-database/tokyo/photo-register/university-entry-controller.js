@@ -19,7 +19,7 @@ const optionMarkup=(rows,selected='')=>'<option value="">大学を選択</option
 const matches=q=>{const n=norm(q);if(!n)return universities;return universities.filter(u=>norm(u.id).includes(n)||norm(u.name).includes(n)||norm(label(u)).includes(n));};
 const exact=q=>{const n=norm(q);if(!n)return null;return universities.find(u=>norm(u.id)===n||norm(u.name)===n||norm(label(u))===n)||null;};
 function selectedUniversity(select){return universities.find(u=>u.id===select.value)||null;}
-function setFirstStatus(){const u=selectedUniversity(firstSelect);firstButton.disabled=!u;firstStatus.textContent=u?`${u.name} を選択中。写真を選べます。`:'大学名を入力するか、下の144大学一覧から選択してください。';}
+function setFirstStatus(){const u=selectedUniversity(firstSelect);firstButton.disabled=!u;firstStatus.textContent=u?`${u.name} を選択中。写真を選べます。`:'大学名を入力するか、下の大学一覧から選択してください。';}
 function renderFirst(rows,selected=''){
   const before=firstSelect.value;
   firstSelect.innerHTML=optionMarkup(rows,selected);

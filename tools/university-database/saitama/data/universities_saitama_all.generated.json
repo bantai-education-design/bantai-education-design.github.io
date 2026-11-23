@@ -1,0 +1,254 @@
+[
+ {
+  "id": "u000145",
+  "name": "埼玉大学",
+  "establishment_type": "national",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "さいたま市",
+  "status": "active"
+ },
+ {
+  "id": "u000146",
+  "name": "埼玉県立大学",
+  "establishment_type": "public",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "越谷市",
+  "status": "active"
+ },
+ {
+  "id": "u000147",
+  "name": "ものつくり大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "行田市",
+  "status": "active"
+ },
+ {
+  "id": "u000148",
+  "name": "人間総合科学大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "さいたま市",
+  "status": "active"
+ },
+ {
+  "id": "u000149",
+  "name": "共栄大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "春日部市",
+  "status": "active"
+ },
+ {
+  "id": "u000150",
+  "name": "十文字学園女子大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "新座市",
+  "status": "active"
+ },
+ {
+  "id": "u000151",
+  "name": "城西大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "坂戸市",
+  "status": "active"
+ },
+ {
+  "id": "u000152",
+  "name": "埼玉医科大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "入間郡毛呂山町",
+  "status": "active"
+ },
+ {
+  "id": "u000153",
+  "name": "埼玉学園大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "川口市",
+  "status": "active"
+ },
+ {
+  "id": "u000154",
+  "name": "埼玉工業大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "深谷市",
+  "status": "active"
+ },
+ {
+  "id": "u000155",
+  "name": "日本栄養大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "坂戸市",
+  "status": "active"
+ },
+ {
+  "id": "u000156",
+  "name": "尚美学園大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "川越市",
+  "status": "active"
+ },
+ {
+  "id": "u000157",
+  "name": "平成国際大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "加須市",
+  "status": "active"
+ },
+ {
+  "id": "u000158",
+  "name": "教育テック大学院大学",
+  "establishment_type": "private",
+  "university_type": "graduate_university",
+  "prefecture": "埼玉県",
+  "municipality": "入間市",
+  "status": "active"
+ },
+ {
+  "id": "u000159",
+  "name": "文教大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "越谷市",
+  "status": "active"
+ },
+ {
+  "id": "u000160",
+  "name": "日本保健医療大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "幸手市",
+  "status": "active"
+ },
+ {
+  "id": "u000161",
+  "name": "日本医療科学大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "入間郡毛呂山町",
+  "status": "active"
+ },
+ {
+  "id": "u000162",
+  "name": "日本工業大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "南埼玉郡宮代町",
+  "status": "active"
+ },
+ {
+  "id": "u000163",
+  "name": "日本薬科大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "北足立郡伊奈町",
+  "status": "active"
+ },
+ {
+  "id": "u000164",
+  "name": "明海大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "坂戸市",
+  "status": "active"
+ },
+ {
+  "id": "u000165",
+  "name": "東邦音楽大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "川越市",
+  "status": "active"
+ },
+ {
+  "id": "u000166",
+  "name": "東都大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "深谷市",
+  "status": "active"
+ },
+ {
+  "id": "u000167",
+  "name": "武蔵野学院大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "狭山市",
+  "status": "active"
+ },
+ {
+  "id": "u000168",
+  "name": "浦和大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "さいたま市",
+  "status": "active"
+ },
+ {
+  "id": "u000169",
+  "name": "獨協大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "草加市",
+  "status": "active"
+ },
+ {
+  "id": "u000170",
+  "name": "聖学院大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "上尾市",
+  "status": "active"
+ },
+ {
+  "id": "u000171",
+  "name": "西武文理大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "狭山市",
+  "status": "active"
+ },
+ {
+  "id": "u000172",
+  "name": "駿河台大学",
+  "establishment_type": "private",
+  "university_type": "university",
+  "prefecture": "埼玉県",
+  "municipality": "飯能市",
+  "status": "active"
+ }
+]

@@ -1,0 +1,17 @@
+{
+  "bantai-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command|write_file|edit_file|write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/bantai_guard.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

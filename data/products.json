@@ -1,6 +1,38 @@
 {
   "products": [
     {
+      "id": "class-canvas",
+      "name": "学級経営支援システム「みんなのクラス・キャンバス」",
+      "category": "featured",
+      "order": 0,
+      "status": "10日間無料体験",
+      "recommendation": "新登場",
+      "badges": [
+        "10日間無料体験",
+        "先行モニター版"
+      ],
+      "targetUsers": [
+        "学級担任",
+        "小・中学校教員"
+      ],
+      "summary": "座席表・グループ編成・名簿管理を直感的に。先生の放課後業務を支える、完全オフライン・安全設計の学級経営支援システム。",
+      "features": [],
+      "image": "/assets/images/class-canvas-card.webp?v=20261121v2",
+      "imageAlt": "学級経営支援システム「みんなのクラス・キャンバス」の実際の操作画面",
+      "detailUrl": "/products/class-canvas/",
+      "categoryUrl": "/products/school-work/",
+      "primaryActionLabel": "詳しく見る",
+      "secondaryActionLabel": "10日間無料お試し",
+      "published": true,
+      "monitorUrl": "/downloads/minnano_class_canvas_v0.16.0.zip",
+      "trialDownloadUrl": "/downloads/minnano_class_canvas_v0.16.0.zip",
+      "boothUrl": "https://bantai3.booth.pm/items/9191154",
+      "vectorUrl": null,
+      "noteUrl": null,
+      "hasTrial": true,
+      "isFlagship": true
+    },
+    {
       "id": "education-planning",
       "name": "小学校教育計画作成・運営システム",
       "category": "featured",
@@ -26,6 +58,7 @@
       "published": true,
       "monitorUrl": "/products/education-planning/monitor-download/",
       "boothUrl": "https://bantai3.booth.pm/items/8893790",
+      "boothActive": false,
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
@@ -55,6 +88,7 @@
       "secondaryActionLabel": null,
       "published": true,
       "boothUrl": "https://bantai3.booth.pm/items/8587307",
+      "trialUrl": "https://bantai3.booth.pm/items/8587307",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
@@ -65,16 +99,16 @@
       "name": "楽譜・五線紙 作成メーカー",
       "category": "standard",
       "order": 3,
-      "status": "販売中",
+      "status": "一時休止中",
       "recommendation": null,
       "badges": [
-        "体験版あり"
+        "一時休止中"
       ],
       "targetUsers": [
         "音楽教員",
         "一般利用者"
       ],
-      "summary": "授業・練習・作曲に使える、A4・B5の五線紙・ピアノ譜を作るWindowsアプリ。体験版はVector、製品版ライセンスはBOOTHで販売しています。",
+      "summary": "現在、通常版楽譜作成メーカーはバージョンアップ準備のため、一時的にご案内を休止しています。",
       "features": [],
       "image": "/assets/images/staff-paper-v13-card.jpg",
       "imageAlt": "楽譜・五線紙 作成メーカー",
@@ -83,10 +117,10 @@
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": null,
       "published": true,
-      "boothUrl": "https://bantai3.booth.pm/items/9069579",
-      "vectorUrl": "http://www.vector.co.jp/soft/winnt/art/se528799.html",
+      "boothUrl": "https://bantai3.booth.pm/items/8302315",
+      "vectorUrl": null,
       "noteUrl": null,
-      "hasTrial": true,
+      "hasTrial": false,
       "isFlagship": false
     },
     {
@@ -113,6 +147,7 @@
       "secondaryActionLabel": null,
       "published": true,
       "boothUrl": "https://bantai3.booth.pm/items/8305799",
+      "trialUrl": "https://bantai3.booth.pm/items/8305799",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
@@ -143,6 +178,7 @@
       "published": true,
       "trialDownloadUrl": null,
       "boothUrl": "https://bantai3.booth.pm/items/8479863",
+      "trialUrl": "https://bantai3.booth.pm/items/8479863",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
@@ -171,7 +207,7 @@
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": "詳細を見る",
       "published": true,
-      "trialDownloadUrl": "/downloads/trials/bantai_observation_card_trial_v1.2.1.zip",
+      "trialDownloadUrl": "/downloads/trials/bantai_observation_card_trial_v1.2.2.zip",
       "boothUrl": "https://bantai3.booth.pm/items/8579732",
       "vectorUrl": null,
       "noteUrl": null,
@@ -191,7 +227,7 @@
       "targetUsers": [
         "一般利用者"
       ],
-      "summary": "入力・写真配置・印刷までの不便を減らし、書き損じや両面印刷の天地ズレなく履歴書を仕上げられます。",
+      "summary": "厚生労働省様式の履歴書と、職務経歴書・送付状をまとめて作成。表裏PDFやA3見開きPDFで、書き損じなく仕上げられます。",
       "features": [],
       "image": "/assets/images/resume-generator/booth-1-main.png",
       "imageAlt": "スマート履歴書ジェネレーター",
@@ -201,6 +237,7 @@
       "secondaryActionLabel": null,
       "published": true,
       "boothUrl": "https://booth.pm/ja/items/8551539",
+      "trialUrl": "https://booth.pm/ja/items/8551539",
       "vectorUrl": null,
       "noteUrl": null,
       "hasTrial": true,
@@ -231,6 +268,7 @@
       "published": true,
       "boothUrl": null,
       "vectorUrl": "https://www.vector.co.jp/soft/winnt/art/se528755.html",
+      "trialUrl": "https://www.vector.co.jp/soft/winnt/art/se528755.html",
       "noteUrl": null,
       "hasTrial": true,
       "isFlagship": false
@@ -373,6 +411,7 @@
       "image": "/assets/images/books/school-schedule-changes-cover.png",
       "imageAlt": "書籍『学校の時間割が変わる。』表紙",
       "detailUrl": "/books/school-schedule-changes/",
+      "amazonUrl": "https://www.amazon.co.jp/dp/B0HLSZPLPQ",
       "categoryUrl": null,
       "primaryActionLabel": "詳しく見る",
       "secondaryActionLabel": "Amazonで購入する",

@@ -1223,6 +1223,14 @@
     "course": [
       "全日制",
       "通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1265,6 +1273,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1328,6 +1350,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1391,6 +1421,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1895,6 +1933,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2070,7 +2116,15 @@
     "source_url": "https://www.pref.yamanashi.jp/kyouiku/27458338247.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "yamanashi-公立-小学校-都留市-谷村第二",
@@ -2494,6 +2548,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2919,6 +2981,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2940,6 +3010,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3880,6 +3958,14 @@
     "course": [
       "全日制",
       "通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3901,6 +3987,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -4324,6 +4418,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -4725,6 +4827,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -4744,7 +4854,15 @@
     "source_url": "https://www.pref.yamanashi.jp/kyouiku/27458338247.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "yamanashi-私立-幼稚園-上野原市-上野原",
@@ -5818,6 +5936,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -5993,6 +6119,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {

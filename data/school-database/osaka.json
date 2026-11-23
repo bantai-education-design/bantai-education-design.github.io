@@ -73,7 +73,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "中学校・合奏第1部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-交野市-交野市立倉治小学校",
@@ -381,6 +389,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1411,6 +1427,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1474,6 +1498,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -2177,7 +2209,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-吹田市-吹田市立吹田第一小学校",
@@ -2979,6 +3019,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "グランプリ"
+      }
     ]
   },
   {
@@ -3000,6 +3048,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3021,6 +3077,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3219,7 +3283,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-和泉市-和泉市立石尾中学校",
@@ -4082,6 +4154,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -4525,6 +4611,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -4563,7 +4657,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-堺市北区-堺市立八下中学校",
@@ -5287,7 +5389,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-堺市南区-帝塚山学院泉ケ丘中学校",
@@ -5363,7 +5473,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-堺市南区-堺市立原山ひかり小学校",
@@ -5916,6 +6034,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -6078,7 +6204,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-堺市堺区-堺市立旭中学校",
@@ -6287,7 +6421,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-堺市堺区-堺市立安井小学校",
@@ -6667,7 +6809,15 @@
     "source_url": "https://www.schoolnavi.osaka-c.ed.jp/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-特別支援学校-堺市堺区-大阪府立堺支援学校",
@@ -6728,6 +6878,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -6749,6 +6913,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -6770,6 +6942,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -7388,6 +7568,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -7464,7 +7652,27 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-堺市西区-堺市立福泉中学校",
@@ -7964,6 +8172,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -8561,6 +8777,26 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -9006,6 +9242,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -9276,7 +9526,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市住之江区-大阪市立北粉浜小学校",
@@ -9778,7 +10036,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市住吉区-大阪市立大和川中学校",
@@ -10196,7 +10462,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 研究校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-私立-小学校-大阪市住吉区-帝塚山学院小学校",
@@ -10504,6 +10778,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -10588,6 +10870,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -10647,7 +10937,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "不登校の未然防止・解決",
+        "designation": "大阪市総合教育センター 研究校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市北区-大阪市立大淀中学校",
@@ -11126,6 +11424,14 @@
     "verified_date": "",
     "course": [
       "通信制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -11168,6 +11474,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -11282,7 +11596,27 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市城東区-大阪市立鯰江中学校",
@@ -11301,7 +11635,21 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-大阪市城東区-開明中学校",
@@ -11759,6 +12107,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -11915,7 +12271,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市大正区-大阪市立中泉尾小学校",
@@ -12202,7 +12566,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市天王寺区-大阪市立夕陽丘中学校",
@@ -12297,7 +12669,15 @@
     "source_url": "https://osaka-kyoiku.ac.jp/university/center/school/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-大阪市天王寺区-大阪星光学院中学校",
@@ -12449,7 +12829,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市天王寺区-大阪市立生魂小学校",
@@ -12468,7 +12856,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市天王寺区-大阪市立真田山小学校",
@@ -12645,6 +13041,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -12666,6 +13070,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -12687,6 +13099,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -12708,6 +13128,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -12729,6 +13157,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -12750,6 +13186,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -12769,7 +13219,15 @@
     "source_url": "https://osaka-kyoiku.ac.jp/university/center/school/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-私立-高等学校-大阪市天王寺区-大阪星光学院高等学校",
@@ -12811,6 +13269,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -12853,6 +13319,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -13081,7 +13555,15 @@
     "source_url": "https://osaka-kyoiku.ac.jp/university/center/school/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市平野区-大阪市立加美北小学校",
@@ -13423,7 +13905,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市平野区-大阪市立長吉出戸小学校",
@@ -13714,6 +14204,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -13792,7 +14290,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市旭区-大阪市立旭東中学校",
@@ -14273,6 +14779,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -14349,7 +14863,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市東住吉区-大阪市立白鷺中学校",
@@ -14463,7 +14985,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市東住吉区-大阪市立北田辺小学校",
@@ -14539,7 +15069,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市東住吉区-大阪市立桑津小学校",
@@ -15415,7 +15953,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "不登校の未然防止・解決",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-大阪市東淀川区-関西大学北陽中学校",
@@ -15930,6 +16476,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -16052,7 +16606,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市此花区-大阪市立此花中学校",
@@ -16166,7 +16728,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ICT活用・個別最適な学び",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市此花区-大阪市立梅香小学校",
@@ -16341,6 +16911,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -16609,6 +17187,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -16723,7 +17309,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市淀川区-大阪市立三国小学校",
@@ -17181,6 +17775,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -17223,6 +17825,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -17415,7 +18025,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市港区-大阪市立弁天小学校",
@@ -17894,7 +18512,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "生成AI活用（校務・教育）",
+        "designation": "大阪市 生成AIパイロット校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市生野区-大阪市立巽小学校",
@@ -18284,7 +18910,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市福島区-大阪市立野田中学校",
@@ -18379,7 +19013,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "ESD・グローバル・シティズンシップ",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市福島区-大阪市立海老江西小学校",
@@ -18590,7 +19232,33 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市西区-大阪市立花乃井中学校",
@@ -18742,7 +19410,28 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞",
+        "detail": "浜松市長賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西区-大阪市立明治小学校",
@@ -18970,7 +19659,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西成区-大阪市立まつば小学校",
@@ -19200,6 +19897,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -19221,6 +19926,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -19297,7 +20010,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "教育DX・ICT活用",
+        "designation": "リーディングDXスクール事業指定校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西淀川区-大阪市立佃小学校",
@@ -19411,7 +20132,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "教育DX・ICT活用",
+        "designation": "リーディングDXスクール事業指定校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西淀川区-大阪市立川北小学校",
@@ -19622,6 +20351,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -20025,6 +20762,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -20046,6 +20791,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -20105,7 +20858,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市阿倍野区-大阪市立昭和中学校",
@@ -20641,6 +21402,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -20662,6 +21431,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・文理融合基礎枠）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -20683,6 +21460,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -20919,7 +21710,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "理科教育",
+        "designation": "大阪市総合教育センター 実践校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市鶴見区-大阪市立横堤小学校",
@@ -21438,6 +22237,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -22130,6 +22937,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -22151,6 +22966,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -22801,6 +23624,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -23130,7 +23961,16 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞",
+        "detail": "奨励賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-寝屋川市-寝屋川市立三井小学校",
@@ -23725,6 +24565,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -24666,6 +25514,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -24687,6 +25543,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和4",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -24997,7 +25867,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-摂津市-摂津市立第三中学校",
@@ -25322,6 +26200,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -26580,7 +27466,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-東大阪市-東大阪市立英田南小学校",
@@ -27223,6 +28117,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -27265,6 +28167,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -27286,6 +28196,26 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -27803,6 +28733,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -27824,6 +28762,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -27845,6 +28797,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -29409,6 +30369,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -29430,6 +30398,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -29514,6 +30490,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -29535,6 +30519,26 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -29708,7 +30712,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-柏原市-柏原市立国分小学校",
@@ -29917,7 +30929,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-私立-幼保連携型認定こども園-柏原市-第二白鳩幼稚園",
@@ -30417,6 +31437,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -30438,6 +31466,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -30651,7 +31687,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・重唱部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-河内長野市-河内長野市立三日市小学校",
@@ -31071,6 +32115,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -31092,6 +32144,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -31113,6 +32173,26 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -32225,6 +33305,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -32436,6 +33524,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -33065,6 +34161,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -33086,6 +34190,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -33588,6 +34700,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -34871,6 +35991,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -34934,6 +36062,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -34955,6 +36091,28 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -35305,6 +36463,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -35537,7 +36703,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-豊中市-豊中市立第十七中学校",
@@ -35575,7 +36749,21 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-豊中市-豊中市立第十二中学校",
@@ -36964,6 +38152,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -37006,6 +38202,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -37048,6 +38252,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "継続指定",
+        "subject": "グローバル・文理学科探究",
+        "designation": "グローバルリーダーズハイスクール（GLHS）",
+        "authority": "大阪府"
+      }
     ]
   },
   {
@@ -37132,6 +38350,26 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -37670,7 +38908,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-門真市-門真市立二島小学校",
@@ -37860,7 +39106,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "osaka-私立-幼稚園-門真市-さくら幼稚園",
@@ -37976,6 +39230,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {

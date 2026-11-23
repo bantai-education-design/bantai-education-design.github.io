@@ -14,6 +14,7 @@ DATA_PATH = ROOT / "data" / "products.json"
 CARD_TEMPLATE_PATH = ROOT / "templates" / "product-card.html"
 PAGE_TEMPLATE_PATH = ROOT / "templates" / "products-page.html"
 OUTPUT_PATH = ROOT / "products" / "index.html"
+SITE_ORIGIN = "https://bantai-education-design.github.io"
 
 
 def html_text(value: object) -> str:
@@ -37,13 +38,6 @@ def render_recommend(product: dict) -> str:
 
 
 def render_badges(product: dict) -> str:
-    # 絵日記・観察カードは一時除外のため旧互換処理
-    if product.get("id") == "observation-card":
-        badges = product.get("badges") or []
-        if badges:
-            return f'    <span class="status-badge">{html_text(badges[0])}</span>'
-        return ""
-
     status = product.get("status")
     if status:
         return f'    <span class="status-badge">{html_text(status)}</span>'
@@ -68,72 +62,61 @@ def render_media(product: dict) -> str:
     return f'    <img src="{html_attr(image)}" alt="{html_attr(alt)}" class="card-img">'
 
 
+def link_attrs(url: str) -> str:
+    """ZIPは直接ダウンロード、外部サイトは別タブ、HP内のページはそのまま開く。"""
+    if url.endswith(".zip"):
+        return " download"
+    if url.startswith("http") and not url.startswith(SITE_ORIGIN):
+        return ' target="_blank" rel="noopener noreferrer"'
+    return ""
+
+
+def free_action(product: dict) -> tuple[str, str] | None:
+    """無料の入り口。試用版・モニター版・無料ツールが実際に手に入る場所へ案内する。
+    trialDownloadUrl（公式HPのZIP）を優先し、なければ trialUrl（BOOTHの0円体験版やVectorなど、確認済みの配布先）。
+    購入ページを試用の代わりにはしない（trialUrl はデータで明示したものだけを使う）。"""
+    trial = product.get("trialDownloadUrl") or product.get("trialUrl")
+    if trial:
+        return "10日間無料で試す", trial
+    if product.get("status") == "無料ツール":
+        url = product.get("webUrl") or product.get("downloadUrl")
+        if url:
+            return "無料で使う", url
+    if product.get("monitorUrl"):
+        return "無料モニター版を入手", product["monitorUrl"]
+    return None
+
+
+def purchase_action(product: dict) -> tuple[str, str] | None:
+    """購入先。BOOTHの商品が見つからないもの（boothActive が false）は出さない。書籍はAmazon。"""
+    if product.get("boothUrl") and product.get("boothActive", True):
+        return "BOOTHで購入する", product["boothUrl"]
+    if product.get("amazonUrl"):
+        return "Amazonで購入する", product["amazonUrl"]
+    return None
+
+
 def render_actions(product: dict) -> str:
-    # 絵日記・観察カード作成メーカーは今回は統一対象から一時除外（既存の3ボタンを維持）
-    if product.get("id") == "observation-card":
-        trial_download_url = product.get("trialDownloadUrl")
-        booth_url = product.get("boothUrl")
-        detail_url = product.get("detailUrl")
-        links: list[str] = []
-        if trial_download_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_download_url)}" download>試用版をダウンロード</a>')
-        if booth_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHでライセンスを購入</a>')
-        if detail_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳細を見る</a>')
-        return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
-
-    status = product.get("status")
-    detail_url = product.get("detailUrl")
+    """全製品同じ並び：①詳しく見る（黒）②無料の入り口（緑）③購入（金）。縦に並べる。
+    一時休止中は①だけ。"""
     links: list[str] = []
-
-    # 1. 第1ボタン: 詳しく見る
+    detail_url = product.get("detailUrl")
     if detail_url:
         links.append(f'      <a class="catalog-btn catalog-btn-secondary secondary-button" href="{html_attr(detail_url)}">詳しく見る</a>')
 
-    # 教育計画システムは無料モニター（Vector案内ページ）と製品版（BOOTH）を併記する。
-    if product.get("id") == "education-planning":
-        monitor_url = product.get("monitorUrl")
-        booth_url = product.get("boothUrl")
-        if monitor_url:
-            target = ' target="_blank" rel="noopener noreferrer"' if monitor_url.startswith("http") else ""
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}"{target}>無料モニター版を見る</a>')
-        if booth_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth_url)}" target="_blank" rel="noopener noreferrer">BOOTHで製品版を見る</a>')
-        return '<div class="catalog-card-actions is-three-actions">\n' + "\n".join(links) + "\n    </div>"
-
-    # 2. 第2ボタン (状態に応じて厳密に決定)
-    if status == "一時休止中":
-        pass  # 一時休止中は外部ボタンを出さず「詳しく見る」のみ
-    elif status == "モニター募集中":
-        monitor_url = product.get("monitorUrl")
-        if monitor_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(monitor_url)}" target="_blank" rel="noopener noreferrer">モニターに参加する</a>')
-    elif status == "10日間無料体験":
-        # 実際に無料体験/試用版をダウンロードできるURLが存在する場合のみ表示 (BOOTH購入ページやVectorページへの誤導線を排除)
-        trial_url = product.get("trialDownloadUrl") or product.get("trialUrl")
-        if trial_url:
-            dl_attr = " download" if trial_url.startswith("/") or trial_url.endswith(".zip") else ""
-            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr and trial_url.startswith("http") else ""
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(trial_url)}"{dl_attr}{rel_attr}>10日間無料で試す</a>')
-    elif status == "無料ツール":
-        web_url = product.get("webUrl")
-        download_url = product.get("downloadUrl")
-        if web_url:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(web_url)}">無料で使う</a>')
-        elif download_url:
-            dl_attr = " download" if download_url.startswith("/") or download_url.endswith(".zip") else ""
-            rel_attr = ' target="_blank" rel="noopener noreferrer"' if not dl_attr and download_url.startswith("http") else ""
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(download_url)}"{dl_attr}{rel_attr}>無料で使う</a>')
-    elif status == "販売中":
-        booth = product.get("boothUrl")
-        if booth:
-            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(booth)}" target="_blank" rel="noopener noreferrer">BOOTHで購入する</a>')
+    if product.get("status") != "一時休止中":
+        free = free_action(product)
+        if free:
+            label, url = free
+            links.append(f'      <a class="catalog-btn catalog-btn-free" href="{html_attr(url)}"{link_attrs(url)}>{html_text(label)}</a>')
+        buy = purchase_action(product)
+        if buy:
+            label, url = buy
+            links.append(f'      <a class="catalog-btn catalog-btn-primary" href="{html_attr(url)}"{link_attrs(url)}>{html_text(label)}</a>')
 
     if not links:
         return ""
-    
-    return '<div class="catalog-card-actions">\n' + "\n".join(links) + "\n    </div>"
+    return '<div class="catalog-card-actions is-stacked">\n' + "\n".join(links) + "\n    </div>"
 
 
 def render_card(product: dict, template: Template) -> str:

@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000174",
+  "id": "u000174",
+  "name": "東京経営大学",
+  "name_en": "Tokyo Management University",
+  "establishment_type": "private",
+  "status": "active",
+  "prefecture": "東京都",
+  "municipality": "千代田区",
+  "operator": "学校法人大原学園",
+  "philosophy": "「いつでも、どこでも、誰もが」学べる学修機会を提供し、将来の社会発展・平和に寄与できる人材の育成を建学の精神としています。",
+  "history_summary": "オンラインのみで卒業できる通信制の大学です（経営学部 経営マネジメント学科）。",
+  "feature_summary": "千代田区に本部を置き、経営学部の1学部で学ぶ大学です。",
+  "official_url": "https://tokyomanagement-u.ac.jp/",
+  "admissions_url": "https://tokyomanagement-u.ac.jp/admission/",
+  "academic_field_tags": [
+    "経済・経営・商学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f300007",
+      "name": "経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "千代田区",
+      "departments": [
+        {
+          "department_id": "d300011",
+          "name": "経営マネジメント学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "campus_id": "c00017401",
+      "name": "本部",
+      "postal_code": "101-0065",
+      "prefecture": "東京都",
+      "municipality": "千代田区",
+      "address": "東京都千代田区西神田2丁目2-10",
+      "official_url": null,
+      "nearest_stations": []
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s00017401",
+      "title": "東京経営大学 公式サイト",
+      "url": "https://tokyomanagement-u.ac.jp/",
+      "publisher": "東京経営大学",
+      "source_type": "official_university",
+      "verified_at": "2026-10-30",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017402",
+      "title": "文部科学省 令和7年度全国大学一覧（東京経営大学）",
+      "url": "https://www.mext.go.jp/content/20260620-mxt_daigakuc01-000050331_03-8.xlsx",
+      "publisher": "文部科学省",
+      "source_type": "government",
+      "verified_at": "2026-10-31",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017403",
+      "title": "東京経営大学 大学紹介",
+      "url": "https://tokyomanagement-u.ac.jp/about/",
+      "publisher": "東京経営大学",
+      "source_type": "official_university",
+      "verified_at": "2026-10-31",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017404",
+      "title": "東京経営大学 学部・学科紹介",
+      "url": "https://tokyomanagement-u.ac.jp/faculty/",
+      "publisher": "東京経営大学",
+      "source_type": "official_university",
+      "verified_at": "2026-10-31",
+      "status": "active"
+    },
+    {
+      "source_id": "s00017405",
+      "title": "東京経営大学 入学をお考えの方",
+      "url": "https://tokyomanagement-u.ac.jp/admission/",
+      "publisher": "東京経営大学",
+      "source_type": "official_university",
+      "verified_at": "2026-10-31",
+      "status": "active"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-10-30",
+    "verification_status": "partial",
+    "verified_sections": [
+      "basic",
+      "academics",
+      "campuses"
+    ],
+    "pending_sections": [
+      "tuition",
+      "admissions",
+      "careers",
+      "research",
+      "notable_alumni"
+    ],
+    "notes": "所在地・設置者・学部学科・研究科は文部科学省「令和7年度全国大学一覧」、2026年度の改組・名称変更・入試導線は大学公式サイトで確認。学費・入試日程・就職実績などは未掲載。"
+  },
+  "graduate_schools": [],
+  "application_guidelines_url": "https://tokyomanagement-u.ac.jp/pdf/bosyu_2027sp.pdf",
+  "open_campus_url": "https://tokyomanagement-u.ac.jp/event/online/",
+  "brochure_request_url": "https://tokyomanagement-u.ac.jp/form/",
+  "tuition": [
+    {
+      "academic_year": 2027,
+      "admission_fee": 50000,
+      "annual_tuition": 360000,
+      "first_year_total": 410000,
+      "currency": "JPY",
+      "as_of": "2026-10-30",
+      "note": "入学検定料20,000円および教材費（目安年額40,000円〜60,000円）が別途必要。オンデマンド型（メディア）授業の受講料は不要。",
+      "source_id": "s00017405"
+    }
+  ],
+  "admissions": {
+    "admission_year": 2027,
+    "admissions_url": "https://tokyomanagement-u.ac.jp/admission/",
+    "application_guidelines_url": "https://tokyomanagement-u.ac.jp/pdf/bosyu_2027sp.pdf",
+    "web_application_url": "https://admission.tokyomanagement-u.ac.jp/can/",
+    "methods": [
+      {
+        "method_id": "a174001",
+        "category": "general",
+        "name": "一般入学（2027年春学期募集・書類選考）",
+        "application_period": "2026年11月1日〜2027年3月31日",
+        "exam_date": "書類選考（学力選抜試験なし：入学志願書・志望動機書・作文・調査書または自己評価票）",
+        "result_date": "募集要項記載の各出願期間ごとの選考結果通知日",
+        "common_test_required": false,
+        "official_url": "https://tokyomanagement-u.ac.jp/pdf/bosyu_2027sp.pdf",
+        "source_id": "s00017405"
+      },
+      {
+        "method_id": "a174002",
+        "category": "general",
+        "name": "一般入学（2026年秋学期募集・書類選考）",
+        "application_period": "2026年5月1日〜2026年9月30日",
+        "exam_date": "書類選考（学力選抜試験なし）",
+        "result_date": "募集要項記載の選考結果通知日",
+        "common_test_required": false,
+        "official_url": "https://tokyomanagement-u.ac.jp/pdf/bosyu_2026au.pdf",
+        "source_id": "s00017405"
+      }
+    ]
+  }
+}

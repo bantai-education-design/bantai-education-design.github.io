@@ -586,7 +586,21 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "nagano-0032",
@@ -1346,7 +1360,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "nagano-0072",
@@ -2156,6 +2178,14 @@
     "verified_date": "2026-07-26",
     "course": [
       "総合"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -3191,7 +3221,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0166",
@@ -3324,7 +3362,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0173",
@@ -3400,7 +3446,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0177",
@@ -3609,7 +3663,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "nagano-0188",
@@ -3704,7 +3766,27 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "nagano-0193",
@@ -4306,7 +4388,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0223",
@@ -4597,7 +4687,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0238",
@@ -4711,7 +4809,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0244",
@@ -4901,7 +5007,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0254",
@@ -4939,7 +5053,21 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "nagano-0256",
@@ -4958,7 +5086,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0257",
@@ -5558,7 +5694,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-saku.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0287",
@@ -6149,7 +6293,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0318",
@@ -6244,7 +6396,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0323",
@@ -6320,7 +6480,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0327",
@@ -6358,7 +6526,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0329",
@@ -6453,7 +6629,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0334",
@@ -7164,7 +7348,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/toshin-ueda.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0370",
@@ -7183,7 +7375,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0371",
@@ -7601,7 +7801,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0393",
@@ -7876,7 +8084,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0407",
@@ -8383,7 +8599,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0433",
@@ -9432,7 +9656,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "nagano-0487",
@@ -9470,7 +9702,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0489",
@@ -9549,7 +9789,21 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "小学校・重唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "nagano-0493",
@@ -9722,7 +9976,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ina.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0502",
@@ -10651,7 +10913,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0550",
@@ -10959,7 +11229,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0566",
@@ -10978,7 +11256,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ida.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0567",
@@ -11016,7 +11302,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0569",
@@ -11054,7 +11348,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/nanshin-ida.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0571",
@@ -11073,7 +11375,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0572",
@@ -12268,7 +12578,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0634",
@@ -12287,7 +12605,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0635",
@@ -12424,7 +12750,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0642",
@@ -12545,7 +12879,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0648",
@@ -12950,7 +13292,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0669",
@@ -13007,7 +13357,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/chushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0672",
@@ -13162,7 +13520,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0680",
@@ -13390,7 +13756,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0692",
@@ -14112,7 +14486,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0729",
@@ -14384,7 +14766,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0743",
@@ -14424,7 +14814,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0745",
@@ -14443,7 +14841,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/chu.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0746",
@@ -14462,7 +14868,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0747",
@@ -14481,7 +14895,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0748",
@@ -14500,7 +14922,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "授業改善・学びの改革",
+        "designation": "学びの改革支援課研究校",
+        "authority": "長野県"
+      }
+    ]
   },
   {
     "id": "nagano-0749",
@@ -14751,7 +15181,15 @@
     "source_url": "https://www.pref.nagano.lg.jp/kyoiku/kyoiku/link/sho/hokushin.html",
     "source_date": "2026-07-26",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "nagano-0762",
