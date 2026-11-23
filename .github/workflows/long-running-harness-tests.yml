@@ -1,0 +1,30 @@
+name: Long-Running Harness tests
+
+on:
+  pull_request:
+    paths:
+      - 'tools/school-database/long_running_harness.py'
+      - 'scripts/test_long_running_harness.py'
+      - 'docs/ANTIGRAVITY_LONG_RUNNING_HARNESS_20261123.md'
+      - '.github/workflows/long-running-harness-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/school-database/long_running_harness.py'
+      - 'scripts/test_long_running_harness.py'
+      - 'docs/ANTIGRAVITY_LONG_RUNNING_HARNESS_20261123.md'
+      - '.github/workflows/long-running-harness-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  harness-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Long-Running Harness unit and CLI tests
+        run: python -m unittest discover -s scripts -p 'test_long_running_harness.py' -v
