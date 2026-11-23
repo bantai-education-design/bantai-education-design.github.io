@@ -2306,6 +2306,18 @@
         "year": "2026年（第79回）",
         "division": "小学生部門",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
       }
     ]
   },
@@ -2325,7 +2337,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-128",
@@ -3545,6 +3565,30 @@
         "year": "2026年（第93回）",
         "division": "小学校の部",
         "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
       }
     ]
   },
@@ -5576,6 +5620,18 @@
         "contest": "全日本合唱コンクール",
         "year": "2026年（第79回）",
         "division": "中学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
         "award": "銅賞"
       }
     ]
@@ -7718,7 +7774,15 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyazaki-425",

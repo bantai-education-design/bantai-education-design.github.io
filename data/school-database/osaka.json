@@ -7659,6 +7659,18 @@
         "year": "2026年（第79回）",
         "division": "中学生部門",
         "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
       }
     ]
   },
@@ -8772,6 +8784,18 @@
         "year": "2026年（第74回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -10846,6 +10870,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -11568,15 +11600,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "中学生の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },
@@ -11597,7 +11635,21 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-私立-中学校-大阪市城東区-開明中学校",
@@ -12506,7 +12558,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市天王寺区-大阪市立夕陽丘中学校",
@@ -16538,7 +16598,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市此花区-大阪市立此花中学校",
@@ -19159,12 +19227,6 @@
     "course": [],
     "music_awards": [
       {
-        "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "中学生の部",
-        "award": "金賞"
-      },
-      {
         "contest": "全日本吹奏楽コンクール",
         "year": "2026年（第74回）",
         "division": "中学校の部",
@@ -19175,6 +19237,18 @@
         "year": "2026年（第39回）",
         "division": "中学生の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "金賞"
       }
     ]
   },
@@ -19336,6 +19410,18 @@
         "division": "小学生部門",
         "award": "金賞",
         "detail": "浜松市長賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
       }
     ]
   },
@@ -25773,7 +25859,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-摂津市-摂津市立第三中学校",
@@ -28101,6 +28195,18 @@
         "year": "2026年（第74回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -30412,6 +30518,18 @@
         "year": "2026年（第39回）",
         "division": "高等学校以上の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -31561,7 +31679,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・重唱部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-河内長野市-河内長野市立三日市小学校",
@@ -32046,6 +32172,18 @@
         "year": "2026年（第79回）",
         "division": "高等学校部門",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
       }
     ]
   },
@@ -35957,15 +36095,15 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "高等学校以上の部",
-        "award": "銀賞"
-      },
-      {
-        "contest": "全日本マーチングコンテスト",
         "year": "2026年（第39回）",
         "division": "高等学校以上の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -36607,15 +36745,15 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2025年（第38回）",
-        "division": "中学生の部",
-        "award": "金賞"
-      },
-      {
-        "contest": "全日本マーチングコンテスト",
         "year": "2026年（第39回）",
         "division": "中学生の部",
         "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
       }
     ]
   },
@@ -38208,15 +38346,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "高等学校以上の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "高等学校以上の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },

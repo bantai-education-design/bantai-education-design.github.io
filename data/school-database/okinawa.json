@@ -137,6 +137,12 @@
         "year": "2026年（第79回）",
         "division": "小学生部門",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
       }
     ]
   },
@@ -195,7 +201,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "okinawa-公立-小学校-那覇市-那覇市立古蔵小学校",
@@ -659,6 +673,18 @@
         "division": "小学生部門",
         "award": "金賞",
         "detail": "文部科学大臣賞/カワイ出版賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
       }
     ]
   },
@@ -964,7 +990,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "okinawa-公立-中学校-那覇市-那覇市立寄宮中学校",
@@ -9040,7 +9074,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "okinawa-公立-小学校-中頭郡読谷村-読谷村立喜名小学校",

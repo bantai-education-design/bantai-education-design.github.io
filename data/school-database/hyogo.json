@@ -2976,6 +2976,18 @@
         "year": "2026年（第79回）",
         "division": "小学生部門",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銀賞"
       }
     ]
   },
@@ -5536,7 +5548,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hyogo-公立-中学校-神戸市-神戸市立夢野中学校",
@@ -7715,15 +7735,21 @@
     "music_awards": [
       {
         "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
         "division": "高等学校以上の部",
         "award": "金賞"
       },
       {
         "contest": "全日本マーチングコンテスト",
-        "year": "2026年（第39回）",
+        "year": "2024年（第37回）",
         "division": "高等学校以上の部",
-        "award": "全国大会出場"
+        "award": "金賞"
       }
     ]
   },
@@ -8300,6 +8326,36 @@
         "contest": "全日本合唱コンクール",
         "year": "2026年（第79回）",
         "division": "高等学校部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（混声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Bグループ",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
         "award": "銅賞"
       }
     ]
@@ -11000,7 +11056,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hyogo-公立-中学校-姫路市-姫路市立飾磨西中学校",
@@ -17254,7 +17318,27 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2024年（第91回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hyogo-私立-中学校-西宮市-甲子園学院中学校",
@@ -17354,6 +17438,12 @@
       {
         "contest": "全日本マーチングコンテスト",
         "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
         "division": "中学生の部",
         "award": "金賞"
       }
@@ -17966,6 +18056,24 @@
         "year": "2026年（第79回）",
         "division": "高等学校部門",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2024年（第91回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
       }
     ]
   },
@@ -21999,7 +22107,21 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hyogo-公立-中学校-加古川市-加古川市立別府中学校",
@@ -24137,7 +24259,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hyogo-公立-中学校-宝塚市-宝塚市立光ガ丘中学校",

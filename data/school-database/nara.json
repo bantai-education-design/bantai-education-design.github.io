@@ -2779,7 +2779,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "小学校・重奏部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "nara-公立-小学校-天理市立丹波市小学校",
@@ -5957,7 +5965,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和6年度（第72期）",
+        "division": "中学校・合奏第1部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "nara-公立-中学校-天理市立北中学校",
@@ -7356,6 +7372,18 @@
         "year": "2026年（第74回）",
         "division": "中学校の部",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "金賞"
       }
     ]
   },
@@ -8743,6 +8771,12 @@
         "year": "2025年（第12回）",
         "division": "全国大会",
         "award": "準グランプリ"
+      },
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
+        "division": "全国大会",
+        "award": "奨励賞"
       }
     ]
   },

@@ -10420,6 +10420,24 @@
         "year": "2026年（第79回）",
         "division": "中学生部門",
         "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
       }
     ]
   },
@@ -12953,6 +12971,12 @@
       {
         "contest": "全国高等学校軽音楽コンテスト",
         "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      },
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
         "division": "全国大会",
         "award": "奨励賞"
       }
@@ -20062,6 +20086,18 @@
         "year": "2026年（第79回）",
         "division": "小学生部門",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
       }
     ]
   },
@@ -20329,7 +20365,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#08_r8_juniorhighschool_kawasaki.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-中学校-川崎市高津区-洗足学園中学校",
@@ -22659,6 +22703,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -24628,7 +24680,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#09_r8_juniorhighschool_sagamihara.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-相模原市中央区-相模原市立由野台中学校",
@@ -25986,6 +26046,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
+        "division": "全国大会",
+        "award": "準グランプリ"
+      }
     ]
   },
   {
@@ -29096,6 +29164,30 @@
         "year": "2026年（第93回）",
         "division": "中学校の部",
         "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
       }
     ]
   },
@@ -29421,6 +29513,36 @@
         "year": "2026年（第93回）",
         "division": "高等学校の部",
         "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2024年（第91回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
       }
     ]
   },
