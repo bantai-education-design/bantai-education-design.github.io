@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000227",
+  "id": "u000227",
+  "name": "秀明大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "八千代市",
+  "operator": "学校法人秀明学園",
+  "feature_summary": "八千代市に本部を置き、総合経営学部・グローバルマネジメント学部・学校教師学部・観光ビジネス学部など5学部で学ぶ大学です。",
+  "official_url": "https://www.shumei-u.ac.jp/",
+  "admissions_url": "https://www.shumei-u.ac.jp/admission",
+  "academic_field_tags": [
+    "看護・医療",
+    "経済・経営・商学",
+    "国際関係",
+    "教育",
+    "社会学",
+    "観光"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400063",
+      "name": "総合経営学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "八千代市",
+      "departments": [
+        {
+          "department_id": "d400110",
+          "name": "企業経営学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400064",
+      "name": "グローバルマネジメント学部",
+      "academic_field_tags": [
+        "国際関係"
+      ],
+      "campus_municipality": "八千代市",
+      "departments": [
+        {
+          "department_id": "d400111",
+          "name": "グローバルマネジメント学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400065",
+      "name": "学校教師学部",
+      "academic_field_tags": [
+        "教育"
+      ],
+      "campus_municipality": "八千代市",
+      "departments": [
+        {
+          "department_id": "d400112",
+          "name": "中等教育教員養成課程",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400066",
+      "name": "観光ビジネス学部",
+      "academic_field_tags": [
+        "社会学",
+        "観光"
+      ],
+      "campus_municipality": "八千代市",
+      "departments": [
+        {
+          "department_id": "d400113",
+          "name": "観光ビジネス学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400067",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "八千代市",
+      "departments": [
+        {
+          "department_id": "d400114",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "276-0003",
+      "address": "千葉県八千代市大学町1-1",
+      "prefecture": "千葉県",
+      "municipality": "八千代市",
+      "nearest_stations": [
+        {
+          "station": "八千代緑が丘駅",
+          "line": "東葉高速線",
+          "access": "無料スクールバス約20分"
+        },
+        {
+          "station": "勝田台駅",
+          "line": "京成本線・東葉高速線",
+          "access": "無料スクールバス約20分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "秀明大学 公式サイト",
+      "url": "https://www.shumei-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "秀明大学 公式入試情報",
+      "url": "https://www.shumei-u.ac.jp/admission",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「知徳一体」と実学重視の人間教育を建学の精神とし、広い国際視野と強い実行力を育む。",
+  "mission": "教員養成・看護・観光・国際ビジネスなどの専門教育を通じて、現代社会の課題に応える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 1544,
+    "graduate": 0,
+    "total": 1544,
+    "as_of": "2026-05-01"
+  }
+}

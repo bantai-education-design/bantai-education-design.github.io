@@ -1,0 +1,79 @@
+/* 大学紹介ページの「駅伝の成績」欄（assets/ekiden-detail.js が差し込む） */
+.ekiden-detail{
+  border-top:5px solid var(--team-bg,#c9a227);
+  position:relative;
+}
+.ekiden-detail-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+.ekiden-detail-tasuki{
+  display:inline-block;
+  width:10px;
+  height:24px;
+  border-radius:3px;
+  background-color:var(--team-bg,#0f766e);
+  background-image:linear-gradient(135deg,transparent 36%,var(--team-stripe,#fff) 36%,var(--team-stripe,#fff) 64%,transparent 64%);
+  box-shadow:0 0 0 1px rgba(15,23,42,.15);
+}
+.ekiden-detail h2{margin:0;font-size:1.15rem}
+.ekiden-detail-color-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 9px;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:700;
+  background:#f4f2ea;
+  color:#4b5563;
+  border:1px solid #e5e0d4;
+}
+.ekiden-detail-subhead{
+  margin:14px 0 8px;
+  font-size:.95rem;
+  color:#be185d;
+}
+.ekiden-detail-list{margin:0;display:grid;gap:6px}
+.ekiden-detail-row{
+  display:grid;
+  grid-template-columns:10em 1fr;
+  gap:8px;
+  padding:9px 12px;
+  border-radius:10px;
+  background:#f7f9fb;
+  border-left:4px solid #cbd5e1;
+}
+.ekiden-detail-row[data-series="izumo"]{border-left-color:#c2410c}
+.ekiden-detail-row[data-series="zennihon"]{border-left-color:#1d4ed8}
+.ekiden-detail-row[data-series="hakone"]{border-left-color:#0f766e}
+.ekiden-detail-row[data-series="wzennihon"]{border-left-color:#be185d}
+.ekiden-detail-row[data-series="wfujisan"]{border-left-color:#6d28d9}
+.ekiden-detail-row dt{font-weight:700;color:#34495c;font-size:.88rem}
+.ekiden-detail-row dd{margin:0;font-size:.9rem;font-variant-numeric:tabular-nums;font-weight:600}
+.ekiden-detail-crown{
+  margin:10px 0 0;
+  padding:9px 12px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+  border:1px solid #f59e0b;
+  color:#78350f;
+  font-weight:800;
+}
+.ekiden-detail-note{margin:10px 0;color:#6b7785;font-size:.8rem}
+.ekiden-detail-actions{display:flex;flex-wrap:wrap;gap:8px}
+.ekiden-detail-link{display:inline-flex;align-items:center;min-height:42px;padding:8px 16px;border-radius:999px;background:#101216;color:#fff;font-weight:700;text-decoration:none;font-size:.88rem}
+.ekiden-detail-link:hover{background:#2b2f36}
+.ekiden-detail-link.is-women{background:#9d174d}
+.ekiden-detail-link.is-women:hover{background:#be185d}
+@media(max-width:560px){.ekiden-detail-row{grid-template-columns:1fr;gap:2px}}
+/* 大学データベース トップの入口（tokyo/index.html） */
+.ekiden-entry{max-width:1180px;margin:0 auto;padding-top:8px;padding-bottom:8px}
+.ekiden-entry-card{display:grid;gap:4px;padding:18px 22px;border-radius:20px;background:#101216;color:#fff;text-decoration:none;border-left:6px solid #c9a227}
+.ekiden-entry-card strong{font-size:1.15rem}
+.ekiden-entry-card span{color:#d6d8dc;font-size:.9rem}
+.ekiden-entry-kicker{color:#c9a227!important;font-weight:700;font-size:.78rem!important;letter-spacing:.12em}
+.ekiden-entry-go{color:#f2e7b7!important;font-weight:700}
+.ekiden-entry-card:hover{background:#1c1f25}

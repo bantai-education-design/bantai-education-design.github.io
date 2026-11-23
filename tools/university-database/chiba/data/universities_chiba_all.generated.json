@@ -1,0 +1,226 @@
+[
+  {
+    "id": "u000210",
+    "name": "千葉大学",
+    "establishment_type": "national",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000211",
+    "name": "千葉県立保健医療大学",
+    "establishment_type": "public",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000212",
+    "name": "千葉科学大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "銚子市"
+  },
+  {
+    "id": "u000213",
+    "name": "愛国学園大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "四街道市"
+  },
+  {
+    "id": "u000214",
+    "name": "開智国際大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "柏市"
+  },
+  {
+    "id": "u000215",
+    "name": "清和大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "木更津市"
+  },
+  {
+    "id": "u000216",
+    "name": "城西国際大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "東金市"
+  },
+  {
+    "id": "u000217",
+    "name": "淑徳大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000218",
+    "name": "敬愛大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000219",
+    "name": "千葉工業大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "習志野市"
+  },
+  {
+    "id": "u000220",
+    "name": "千葉商科大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "市川市"
+  },
+  {
+    "id": "u000221",
+    "name": "中央学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "我孫子市"
+  },
+  {
+    "id": "u000222",
+    "name": "麗澤大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "柏市"
+  },
+  {
+    "id": "u000223",
+    "name": "和洋女子大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "市川市"
+  },
+  {
+    "id": "u000224",
+    "name": "国際武道大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "勝浦市"
+  },
+  {
+    "id": "u000225",
+    "name": "神田外語大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000226",
+    "name": "千葉経済大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000227",
+    "name": "秀明大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "八千代市"
+  },
+  {
+    "id": "u000228",
+    "name": "川村学園女子大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "我孫子市"
+  },
+  {
+    "id": "u000229",
+    "name": "東京情報大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000230",
+    "name": "東京基督教大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "印西市"
+  },
+  {
+    "id": "u000231",
+    "name": "聖徳大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "松戸市"
+  },
+  {
+    "id": "u000232",
+    "name": "江戸川大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "流山市"
+  },
+  {
+    "id": "u000233",
+    "name": "SBC東京医療大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "浦安市"
+  },
+  {
+    "id": "u000234",
+    "name": "植草学園大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  },
+  {
+    "id": "u000235",
+    "name": "三育学院大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "夷隅郡大多喜町"
+  },
+  {
+    "id": "u000236",
+    "name": "亀田医療大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "鴨川市"
+  },
+  {
+    "id": "u000237",
+    "name": "放送大学",
+    "establishment_type": "private",
+    "university_type": "university",
+    "prefecture": "千葉県",
+    "municipality": "千葉市"
+  }
+]

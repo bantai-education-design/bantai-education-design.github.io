@@ -1,0 +1,75 @@
+{
+ "schema": "ekiden-public-v1",
+ "source_repository": "bantai-education-design/daigaku_DB",
+ "source_commit": "ff9de54ca6819b4d4686471bbe3df8c0897f45b3",
+ "generated_at": "2026-11-08T12:49:32+09:00",
+ "coverage": {
+  "izumo": {
+   "editions": 19,
+   "from_edition": 18,
+   "to_edition": 38,
+   "from_year": 2006,
+   "to_year": 2026
+  },
+  "zennihon": {
+   "editions": 21,
+   "from_edition": 38,
+   "to_edition": 58,
+   "from_year": 2006,
+   "to_year": 2026
+  },
+  "hakone": {
+   "editions": 20,
+   "from_edition": 83,
+   "to_edition": 102,
+   "from_year": 2007,
+   "to_year": 2026
+  }
+ },
+ "kukan_coverage": {
+  "izumo": {
+   "editions": 19,
+   "from_edition": 18,
+   "to_edition": 38
+  },
+  "zennihon": {
+   "editions": 15,
+   "from_edition": 44,
+   "to_edition": 58
+  },
+  "hakone": {
+   "editions": 20,
+   "from_edition": 83,
+   "to_edition": 102
+  }
+ },
+ "counts": {
+  "taikai": 198,
+  "teams": 148,
+  "teams_linked_to_university_db": 44,
+  "results": {
+   "izumo": 402,
+   "zennihon": 557,
+   "hakone": 422
+  }
+ },
+ "files": [
+  "basics.json",
+  "kukan_hakone.json",
+  "kukan_izumo.json",
+  "kukan_wfujisan.json",
+  "kukan_wzennihon.json",
+  "kukan_zennihon.json",
+  "qualifier_runners.json",
+  "qualifiers.json",
+  "results_hakone.json",
+  "results_izumo.json",
+  "results_wfujisan.json",
+  "results_wzennihon.json",
+  "results_zennihon.json",
+  "taikai.json",
+  "team_summary.json",
+  "teams.json",
+  "women.json"
+ ]
+}

@@ -10,7 +10,7 @@ document.body.classList.add('owner-photo-registration');
 document.documentElement.dataset.ownerPhotoRegister='ready';
 document.title='Ban.Tai 本人撮影写真を登録 | Ban.Tai';
 
-setText(document.querySelector('.topbar span'),'東京都大学DB 本人撮影写真登録');
+setText(document.querySelector('.topbar span'),'全国大学DB 本人撮影写真登録');
 const topbar=document.querySelector('.topbar');
 if(topbar&&!topbar.querySelector('.owner-review-link')){
   const reviewLink=document.createElement('a');

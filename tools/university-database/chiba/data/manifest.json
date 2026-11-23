@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-11-21",
+  "source": "文部科学省 令和7年度全国大学一覧・各大学公式サイト",
+  "prefecture": "千葉県",
+  "universities": 28,
+  "type_counts": {
+    "national": 1,
+    "public": 1,
+    "private": 26
+  },
+  "faculties": 87,
+  "departments": 146,
+  "graduate_schools": 51,
+  "official_urls": 28,
+  "admissions_urls": 28,
+  "core_shards": [
+    {
+      "file": "chiba_core_01.json",
+      "count": 28,
+      "first_id": "u000210",
+      "last_id": "u000237"
+    }
+  ],
+  "scope_note": "文部科学省 令和7年度全国大学一覧および各大学公式サイトに基づき、千葉県に本部を置く全28大学（国立1・公立1・私立26、放送大学含む）の基本情報・公式URL・入試URL・87学部・146学科・51研究科・42キャンパス・全28校の建学の精神/理念・全28校の最寄り駅・24校の公式在学生数・14校28件の養成課程資格・全28校のWikimedia Commons権利確認済みカード写真を収録。未確認の4校の在学生数および学費等は推測補完を行わず未調査として管理。",
+  "campus_records": 28,
+  "campus_items": 42,
+  "complete_profiles": 28,
+  "verified_profiles": 28,
+  "access_records": 28,
+  "student_count_records": 24,
+  "qualification_records": 14,
+  "qualification_items": 28,
+  "photo_records": 28
+}

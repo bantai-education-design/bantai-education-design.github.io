@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000221",
+  "id": "u000221",
+  "name": "中央学院大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "我孫子市",
+  "operator": "学校法人中央学院",
+  "feature_summary": "我孫子市に本部を置き、商学部・法学部・現代教養学部の3学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.cgu.ac.jp/",
+  "admissions_url": "https://www.cgu.ac.jp/admissions/",
+  "academic_field_tags": [
+    "法学",
+    "経済・経営・商学",
+    "社会学"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400047",
+      "name": "商学部",
+      "academic_field_tags": [
+        "経済・経営・商学"
+      ],
+      "campus_municipality": "我孫子市",
+      "departments": [
+        {
+          "department_id": "d400084",
+          "name": "商学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400048",
+      "name": "法学部",
+      "academic_field_tags": [
+        "法学"
+      ],
+      "campus_municipality": "我孫子市",
+      "departments": [
+        {
+          "department_id": "d400085",
+          "name": "法学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400049",
+      "name": "現代教養学部",
+      "academic_field_tags": [
+        "社会学"
+      ],
+      "campus_municipality": "我孫子市",
+      "departments": [
+        {
+          "department_id": "d400086",
+          "name": "現代教養学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400029",
+      "name": "商学研究科",
+      "programs": [
+        "商学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "中央学院大学 我孫子キャンパス",
+      "postal_code": "270-1196",
+      "address": "千葉県我孫子市久寺家451",
+      "prefecture": "千葉県",
+      "municipality": "我孫子市",
+      "nearest_stations": [
+        {
+          "station": "我孫子駅",
+          "line": "JR常磐線",
+          "access": "北口バス約7分（徒歩20分）"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "中央学院大学 公式サイト",
+      "url": "https://www.cgu.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "中央学院大学 公式入試情報",
+      "url": "https://www.cgu.ac.jp/admissions/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「公正な社会観・倫理観の涵養」を建学の精神とし、誠実さと奉仕の心、不断の研鑽を重んじる。",
+  "mission": "商学・法学・現代教養の学びを通じて、社会の変化に対応し誠実に貢献できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 3317,
+    "graduate": 0,
+    "total": 3317,
+    "as_of": "2025-05-01"
+  }
+}

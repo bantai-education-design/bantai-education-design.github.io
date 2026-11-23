@@ -18,19 +18,27 @@ function makeToggle(cls){
 }
 const toggles=[];
 function place(){
+  const slot=document.querySelector('#campus-filter-slot');
+  if(slot&&!slot.querySelector('.campus-toggle')){
+    slot.innerHTML='';
+    const t=makeToggle('campus-toggle-list');
+    slot.appendChild(t);
+    toggles.push(t);
+    return;
+  }
   const listGroup=document.querySelector('#pref-filters')?.closest('.filter-group');
   if(listGroup&&!listGroup.querySelector('.campus-toggle')){const t=makeToggle('campus-toggle-list');listGroup.appendChild(t);toggles.push(t);}
-  const quick=document.querySelector('.ref-pref-filter');
-  if(quick&&!quick.querySelector('.campus-toggle')){const t=makeToggle('campus-toggle-quick');quick.appendChild(t);toggles.push(t);}
 }
 function sync(){
   const n=extraCount();
   for(const t of toggles){
-    t.querySelector('input').checked=state.withCampus;
-    t.hidden=state.pref==='all';
-    const label=state.pref==='all'?'':`${state.pref}にキャンパスがある大学も含める`;
+    const box=t.querySelector('input');
+    box.checked=state.withCampus&&state.pref!=='all';
+    box.disabled=state.pref==='all';
+    t.hidden=false;
+    const label=state.pref==='all'?'都道府県を選ぶと、他県本部でその都県にキャンパスがある大学も含めて検索できます':`${state.pref}にキャンパスがある大学も含める`;
     t.querySelector('.campus-toggle-text').textContent=label;
-    t.querySelector('.campus-toggle-count').textContent=n?`（本部が他県の大学 ＋${n}校）`:'';
+    t.querySelector('.campus-toggle-count').textContent=state.pref!=='all'&&n?`（本部が他県の大学 ＋${n}校）`:'';
   }
 }
 function decorate(){
@@ -51,10 +59,11 @@ function decorate(){
 fetch(INDEX_URL).then(r=>r.ok?r.json():null).then(doc=>{
   if(!doc)return;
   state.campusIdx=new Map(Object.entries(doc.universities||{}));
-  const wait=()=>{if(!state.rows.length||!document.querySelector('.ref-pref-filter')){setTimeout(wait,100);return;}place();sync();if(typeof render==='function')render();};
+  const wait=()=>{if(!state.rows.length||!document.querySelector('#pref-filters')){setTimeout(wait,100);return;}place();sync();if(typeof render==='function')render();};
   wait();
 }).catch(err=>console.error('campus index load failed',err));
-document.addEventListener('click',e=>{if(e.target.closest('[data-pref],[data-ref-pref],#clear-filters'))setTimeout(()=>{if(e.target.closest('#clear-filters')){state.withCampus=false;if(typeof render==='function')render();}sync();decorate();},0)});
+document.addEventListener('bantai:pref-change',()=>setTimeout(()=>{sync();decorate();},0));
+document.addEventListener('click',e=>{if(e.target.closest('[data-pref],[data-ref-pref],#clear-filters,[data-clear-filter]'))setTimeout(()=>{if(e.target.closest('#clear-filters')){state.withCampus=false;if(typeof render==='function')render();}sync();decorate();},0)});
 const grid=document.querySelector('#tokyo-grid');
 if(grid)new MutationObserver(()=>decorate()).observe(grid,{childList:true});
 })();

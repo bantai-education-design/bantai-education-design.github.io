@@ -1802,7 +1802,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-大津市-滋賀県立北大津高等学校",
@@ -1935,7 +1943,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-大津市-滋賀県立瀬田工業高等学校",
@@ -1954,7 +1970,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-大津市-滋賀県立石山高等学校",
@@ -1992,7 +2016,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和3",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-私立-高等学校-大津市-滋賀短期大学附属高等学校",
@@ -2505,7 +2537,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-私立-高等学校-守山市-立命館守山高等学校",
@@ -2524,7 +2564,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-特別支援学校-守山市-滋賀県立守山養護学校",
@@ -2790,7 +2838,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-小学校-彦根市-彦根市立城西小学校",
@@ -2847,7 +2903,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-小学校-彦根市-彦根市立旭森小学校",
@@ -3018,7 +3082,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-中学校-彦根市-彦根市立中央中学校",
@@ -3208,7 +3280,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-彦根市-滋賀県立彦根東高等学校",
@@ -3227,7 +3307,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-彦根市-滋賀県立彦根翔西館高等学校",
@@ -3265,7 +3353,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-私立-高等学校-彦根市-近江高等学校",
@@ -4044,7 +4140,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-東近江市-滋賀県立八日市南高等学校",
@@ -4424,7 +4528,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-栗東市-滋賀県立栗東高等学校",
@@ -4576,7 +4688,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-小学校-湖南市-湖南市立水戸小学校",
@@ -5374,7 +5494,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-甲賀市-滋賀県立水口東高等学校",
@@ -6514,7 +6642,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-草津市-滋賀県立草津高等学校",
@@ -7027,7 +7163,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-近江八幡市-滋賀県立八幡工業高等学校",
@@ -7084,7 +7228,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-幼稚園-野洲市-野洲市立中主幼稚園",
@@ -7901,7 +8053,27 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "shiga-公立-小学校-長浜市-長浜市立高時小学校",
@@ -8205,7 +8377,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH・文理融合基礎枠）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-高等学校-長浜市-滋賀県立長浜北星高等学校",
@@ -8756,7 +8936,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "shiga-公立-特別支援学校-高島市-滋賀県立新旭養護学校",

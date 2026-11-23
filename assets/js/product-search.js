@@ -59,8 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardStatus = card.getAttribute('data-status') || '';
       const matchesStatus = checkedStatuses.length === 0 || checkedStatuses.some(status => {
         if (status === '販売中') {
-          // 「販売中」と「10日間無料体験」を内包する
-          return cardStatus === '販売中' || cardStatus === '10日間無料体験';
+          // 「販売中」に「10日間無料体験」と書籍の「発売中」を含める
+          return cardStatus === '販売中' || cardStatus === '10日間無料体験' || cardStatus === '発売中';
+        }
+        if (status === '無料') {
+          // 「無料」チェックは「無料ツール」の製品に合わせる（以前は一致する製品がなく0件になっていた）
+          return cardStatus === '無料ツール';
         }
         return cardStatus === status;
       });

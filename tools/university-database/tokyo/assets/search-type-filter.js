@@ -1,7 +1,7 @@
 // 検索欄の絞り込み（都道府県・設置区分）。一覧の #pref-filters / #type-filters と常に同じ状態を保つ。
 (()=>{
 const GROUPS=[
-  {key:'pref',label:'都道府県',list:'#pref-filters',options:[['all','すべて'],['東京都','東京都'],['埼玉県','埼玉県'],['神奈川県','神奈川県']]},
+  {key:'pref',label:'都道府県',list:'#pref-filters',options:[['all','すべて'],['東京都','東京都'],['埼玉県','埼玉県'],['神奈川県','神奈川県'],['千葉県','千葉県']]},
   {key:'type',label:'設置区分',list:'#type-filters',options:[['all','すべて'],['national','国立'],['public','公立'],['private','私立']]},
 ];
 const form=document.querySelector('.ref-quick-form');

@@ -20,11 +20,17 @@ function makeSelect(id){
 const selects=[];
 function sync(){for(const s of selects)s.value=state.qual;}
 function place(){
+  const slot=document.querySelector('#qual-filter-slot');
+  if(slot&&!document.querySelector('#qual-select')){
+    const w=makeSelect('qual-select');
+    slot.replaceWith(w);
+    w.id='qual-filter-slot';
+    selects.push(w.querySelector('select'));
+    return;
+  }
   const panel=document.querySelector('.filter-panel');
   const typeGroup=document.querySelector('#type-filters')?.closest('.filter-group');
   if(panel&&typeGroup&&!document.querySelector('#qual-select')){const w=makeSelect('qual-select');typeGroup.insertAdjacentElement('afterend',w);selects.push(w.querySelector('select'));}
-  const quick=document.querySelector('.ref-type-filter.ref-type-filter:last-of-type')||document.querySelector('.ref-quick-form');
-  if(quick&&!document.querySelector('#qual-select-quick')){const w=makeSelect('qual-select-quick');w.className='ref-type-filter qual-filter-quick';const lab=w.querySelector('label');lab.className='ref-type-label';quick.insertAdjacentElement('afterend',w);selects.push(w.querySelector('select'));}
 }
 function decorate(){
   for(const card of document.querySelectorAll('.tokyo-card[data-id]')){

@@ -1,0 +1,25 @@
+name: GA4 tracking and self-exclusion guard
+
+on:
+  pull_request:
+    paths:
+      - '**.html'
+      - 'scripts/check_ga_tracking.py'
+      - '.github/workflows/ga-tracking-guard.yml'
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'scripts/check_ga_tracking.py'
+      - '.github/workflows/ga-tracking-guard.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check-ga:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check GA4 tag and bantai_admin exclusion on public pages
+        run: python3 scripts/check_ga_tracking.py

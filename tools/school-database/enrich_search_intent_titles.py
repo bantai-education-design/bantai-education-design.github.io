@@ -43,7 +43,7 @@ def build_description(pref_name: str, meta: dict) -> str:
         f"{pref_name}の学校一覧・住所検索データベースです。小学校・中学校・高等学校など"
         f"国公私立{school_type_count}種類、合計{format_number(total)}校・園を収録し、"
         f"学校名・市区町村・郵便番号・電話番号で検索できます。学校名簿の作成、転校先の確認、"
-        f"封筒印刷用の宛名コピー、CSVダウンロードにも便利です。"
+        f"封筒印刷用の宛名コピーや、Google Mapsでの所在地確認にも便利です。"
     )
 
 
@@ -104,7 +104,7 @@ def build_portal_description(national_total: int) -> str:
         f"全国47都道府県対応、学校一覧・住所検索データベースです"
         f"（掲載校・園数 合計{format_number(national_total)}件）。都道府県を選んで、"
         "学校名・住所・郵便番号・電話番号で検索でき、学校名簿の作成、転校先の確認、"
-        "封筒印刷用の宛名コピー、CSV出力にも便利です。"
+        "封筒印刷用の宛名コピーや、Google Mapsでの所在地確認にも便利です。"
     )
 
 
