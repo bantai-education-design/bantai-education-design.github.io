@@ -2701,7 +2701,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2025年（第33回）",
+        "division": "女子",
+        "award": "優勝"
+      },
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2024年（第32回）",
+        "division": "女子",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "okayama-公立-中学校-岡山市-岡山市立光南台中学校",

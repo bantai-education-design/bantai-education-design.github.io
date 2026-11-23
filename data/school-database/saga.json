@@ -2084,7 +2084,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2024年（令和6年度）",
+        "division": "女子学校対抗",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "saga-公立-高等学校-佐賀市-佐賀県立佐賀工業高等学校",

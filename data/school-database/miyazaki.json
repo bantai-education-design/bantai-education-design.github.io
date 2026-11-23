@@ -5714,6 +5714,15 @@
         "division": "中学生部門",
         "award": "銅賞"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2025年（第33回）",
+        "division": "男子",
+        "award": "準優勝"
+      }
     ]
   },
   {
@@ -7854,7 +7863,16 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校サッカー大会",
+        "year": "2025年（第56回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "miyazaki-429",

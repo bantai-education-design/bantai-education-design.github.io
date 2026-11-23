@@ -8496,7 +8496,16 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2024年（令和6年度）",
+        "division": "男子学校対抗",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-気仙沼市-宮城県気仙沼高等学校定時制",

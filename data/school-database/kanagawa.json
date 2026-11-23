@@ -19629,6 +19629,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2026年（令和8年度）",
+        "division": "男子学校対抗",
+        "award": "優勝"
+      }
     ]
   },
   {
@@ -40251,7 +40260,16 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2025年（第33回）",
+        "division": "男子",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-高等学校-伊勢原市-向上高等学校-全日制",
