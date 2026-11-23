@@ -8464,6 +8464,22 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "culture_awards": [
+      {
+        "category": "ロボット",
+        "contest": "全国高等学校ロボット競技大会",
+        "year": "2026年（第34回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "category": "ロボット",
+        "contest": "全国高等学校ロボット競技大会",
+        "year": "2025年（第33回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
     ]
   },
   {

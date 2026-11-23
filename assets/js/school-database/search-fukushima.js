@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const musicContestSelect = document.getElementById('music-contest');
   const sportsOnlyCheckbox = document.getElementById('sports-only');
   const sportsCategorySelect = document.getElementById('sports-category');
+  const cultureOnlyCheckbox = document.getElementById('culture-only');
+  const cultureCategorySelect = document.getElementById('culture-category');
   const resultsContainer = document.getElementById('results-list');
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
@@ -226,6 +228,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  if (cultureOnlyCheckbox) {
+    cultureOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'culture_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (cultureCategorySelect) {
+    cultureCategorySelect.addEventListener('change', () => {
+      if (cultureCategorySelect.value && cultureOnlyCheckbox && !cultureOnlyCheckbox.checked) {
+        cultureOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'culture_category',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
   });
 
   honorificRadios.forEach(radio => {
@@ -307,11 +332,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedContest = musicContestSelect ? musicContestSelect.value : '';
     const sportsOnly = sportsOnlyCheckbox ? sportsOnlyCheckbox.checked : false;
     const selectedSport = sportsCategorySelect ? sportsCategorySelect.value : '';
+    const cultureOnly = cultureOnlyCheckbox ? cultureOnlyCheckbox.checked : false;
+    const selectedCulture = cultureCategorySelect ? cultureCategorySelect.value : '';
 
     const filtered = schoolData.filter(school => {
       const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
       const musicAwards = Array.isArray(school.music_awards) ? school.music_awards : [];
       const sportsAwards = Array.isArray(school.sports_awards) ? school.sports_awards : [];
+      const cultureAwards = Array.isArray(school.culture_awards) ? school.culture_awards : [];
+      const matchesCultureKeyword = keyword && cultureAwards.some(cu =>
+        (cu.category && cu.category.toLowerCase().includes(keyword)) ||
+        (cu.contest && cu.contest.toLowerCase().includes(keyword)) ||
+        (cu.year && cu.year.toLowerCase().includes(keyword)) ||
+        (cu.division && cu.division.toLowerCase().includes(keyword)) ||
+        (cu.award && cu.award.toLowerCase().includes(keyword))
+      );
       const matchesSportsKeyword = keyword && sportsAwards.some(sp =>
         (sp.sport && sp.sport.toLowerCase().includes(keyword)) ||
         (sp.contest && sp.contest.toLowerCase().includes(keyword)) ||
@@ -342,7 +377,8 @@ document.addEventListener('DOMContentLoaded', () => {
         (school.phone && school.phone.includes(keyword)) ||
         matchesResearchKeyword ||
         matchesMusicKeyword ||
-        matchesSportsKeyword;
+        matchesSportsKeyword ||
+        matchesCultureKeyword;
 
       const matchesCity = !selectedCity || school.municipality === selectedCity;
       const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
@@ -357,7 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesSports = (!sportsOnly || sportsAwards.length > 0) &&
         (!selectedSport || sportsAwards.some(sp => sp.sport === selectedSport));
 
-      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch && matchesMusic && matchesSports;
+      const matchesCulture = (!cultureOnly || cultureAwards.length > 0) &&
+        (!selectedCulture || cultureAwards.some(cu => cu.category === selectedCulture));
+
+      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch && matchesMusic && matchesSports && matchesCulture;
     });
 
     const sortedResults = applySorting(filtered, sortMode);
@@ -395,6 +434,39 @@ document.addEventListener('DOMContentLoaded', () => {
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             公式HP
           </a>
+        `;
+      }
+
+      const cultureAwards = Array.isArray(school.culture_awards) ? school.culture_awards : [];
+      const cultureBadgeHtml = cultureAwards.length > 0
+        ? '<span class="school-badge-culture">文化部全国実績</span>'
+        : '';
+
+      let cultureListHtml = '';
+      if (cultureAwards.length > 0) {
+        const topCu = cultureAwards[0];
+        const cuSummaryMeta = [topCu.category, topCu.award, topCu.year].filter(Boolean).join('・');
+        const cuItemsHtml = cultureAwards.map(cu => {
+          const aw = cu.award || '';
+          const awClass = (aw.includes('最優秀') || (aw.includes('優勝') && !aw.includes('準優勝')))
+            ? 'culture-award-tag--top'
+            : (aw.includes('準優勝') || aw.includes('優秀'))
+              ? 'culture-award-tag--second'
+              : 'culture-award-tag--other';
+          const metaParts = [cu.year, cu.division].filter(Boolean).join(' / ');
+          return `
+            <div class="school-culture-item">
+              <span class="culture-award-tag ${awClass}">${escapeHtml(aw)}</span>
+              <span class="culture-contest-name">${escapeHtml(cu.contest || cu.category || '')}</span>
+              ${metaParts ? `<span class="culture-meta">${escapeHtml(metaParts)}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+        cultureListHtml = `
+          <details class="school-culture-details">
+            <summary class="school-culture-summary">文化部全国実績（${cultureAwards.length}件） ${escapeHtml(cuSummaryMeta)}</summary>
+            <div class="school-culture-list">${cuItemsHtml}</div>
+          </details>
         `;
       }
 
@@ -514,6 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${researchBadgeHtml}
             ${musicBadgeHtml}
             ${sportsBadgeHtml}
+            ${cultureBadgeHtml}
           </div>
           <h3 class="school-name">${escapeHtml(school.name)}</h3>
           <div class="school-address-row">
@@ -524,6 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ${researchListHtml}
           ${musicListHtml}
           ${sportsListHtml}
+          ${cultureListHtml}
         </div>
         <div class="school-actions">
           <div class="action-buttons-group">

@@ -3802,6 +3802,22 @@
         "division": "団体",
         "award": "準優勝"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "書道",
+        "contest": "書道パフォーマンス甲子園",
+        "year": "2026年（第19回）",
+        "division": "全国大会",
+        "award": "3位"
+      },
+      {
+        "category": "書道",
+        "contest": "書道パフォーマンス甲子園",
+        "year": "2024年（第17回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
     ]
   },
   {

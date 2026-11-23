@@ -3567,6 +3567,15 @@
         "designation": "学習サポーターの配置",
         "authority": "埼玉県"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2024年（第60回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
     ]
   },
   {
@@ -25341,7 +25350,16 @@
     "website": "",
     "source_name": "埼玉県学事課「埼玉県内の私立学校一覧」",
     "source_url": "https://www.pref.saitama.lg.jp/a0204/shiritsuitiran/index.html",
-    "source_date": "2026-04-01"
+    "source_date": "2026-04-01",
+    "culture_awards": [
+      {
+        "category": "演劇",
+        "contest": "全国高等学校演劇大会",
+        "year": "2026年（第72回）",
+        "division": "全国大会",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "ST_私_幼_0311",

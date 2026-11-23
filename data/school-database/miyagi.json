@@ -1465,7 +1465,16 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2024年（第48回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市青葉区-宮城県宮城広瀬高等学校",

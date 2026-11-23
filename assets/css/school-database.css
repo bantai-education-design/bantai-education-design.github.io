@@ -2070,3 +2070,88 @@ h3.region-header {
   color: #64748b;
   font-size: 0.78rem;
 }
+
+/* Cultural club national tournament awards (compact collapsible UI) */
+.filter-chip--culture {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+  color: #5b21b6;
+}
+.school-badge-culture {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #c4b5fd;
+  margin-left: 4px;
+}
+.school-culture-details {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #faf5ff;
+  border: 1px solid #ddd6fe;
+  font-size: 0.84rem;
+}
+.school-culture-summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #4c1d95;
+  list-style: none;
+}
+.school-culture-summary::-webkit-details-marker {
+  display: none;
+}
+.school-culture-summary::before {
+  content: "▸ ";
+  color: #7c3aed;
+}
+.school-culture-details[open] .school-culture-summary::before {
+  content: "▾ ";
+}
+.school-culture-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.school-culture-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+.culture-award-tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.culture-award-tag--top {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+.culture-award-tag--second {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #c4b5fd;
+}
+.culture-award-tag--other {
+  background: #e2e8f0;
+  color: #334155;
+  border: 1px solid #94a3b8;
+}
+.culture-contest-name {
+  color: #1e293b;
+  font-weight: 600;
+}
+.culture-meta {
+  color: #64748b;
+  font-size: 0.78rem;
+}

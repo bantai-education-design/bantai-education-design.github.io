@@ -397,6 +397,15 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "culture_awards": [
+      {
+        "category": "箏曲・日本音楽",
+        "contest": "全国高等学校総合文化祭 日本音楽部門（箏曲）",
+        "year": "2025年（第49回）",
+        "division": "全国大会",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -28391,6 +28400,15 @@
         "year": "2024年（第72回）",
         "division": "高等学校の部",
         "award": "銀賞"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2026年（第62回）",
+        "division": "女子団体",
+        "award": "優勝"
       }
     ]
   },

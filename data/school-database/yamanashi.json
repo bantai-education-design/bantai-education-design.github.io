@@ -1482,6 +1482,15 @@
     "course": [
       "全日制",
       "通信制"
+    ],
+    "culture_awards": [
+      {
+        "category": "将棋",
+        "contest": "全国高等学校将棋選手権大会",
+        "year": "2024年（第60回）",
+        "division": "女子団体",
+        "award": "優勝"
+      }
     ]
   },
   {
