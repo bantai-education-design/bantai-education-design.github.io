@@ -16,7 +16,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "外国語・保健体育・理 科・自立活動",
+        "designation": "ブロック公開研究会：児童生徒が主体的に学びながらねらいを達成する学びの創造 ~「R80を核とした授業デザイン」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%A4%A7%E5%92%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -54,7 +69,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%B9%B8%E5%B4%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -73,7 +96,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "ブロック公開研究会：自律的に学ぶ生徒の育成 ~協働的に学ぶ集団づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9C%AC%E9%83%B7%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -92,7 +124,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学・理科・保健体育",
+        "designation": "公開授業研究会 (ブロック公開研究会)：主体的な学びを促進し、学力の向上を図る授業づくり ~「深い生徒理解」を基盤にした「話合い活…",
+        "authority": "広島県",
+        "presentation": "R8.9.29"
+      },
+      {
+        "year": "令和8",
+        "subject": "学習指導・生徒指導",
+        "designation": "学習指導と生徒指導の一体的推進プロジェクト",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E7%AC%AC%E4%B8%80%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -130,7 +177,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E7%AC%AC%E4%BA%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -263,7 +318,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E4%B8%AD%E4%B9%8B%E7%94%BA%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -282,7 +345,28 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "指導方法工夫改善",
+        "designation": "指導方法工夫改善指定校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：主体的・対話的で深い学びによる確かな学力の定着を目指した算数科の授業づくり ~UDLの視点を取り入れた授業改善…",
+        "authority": "市町村",
+        "presentation": "R8.10.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E4%B9%85%E4%BA%95%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -301,7 +385,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：児童生徒が主体的に学びながらねらいを達成する学びの創造 ~「R80を核とした授業デザイン」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -320,7 +413,28 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：児童自ら考え、表現する算数科の授業づくり ~「伝え合う」活動を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%A4%A7%E5%92%8C%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -339,7 +453,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%B0%8F%E6%B3%89%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -377,7 +499,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "ICT活用",
+        "designation": "デジタル学習基盤活用研修サポート",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：学ぶ楽しさを感じ、自律的に学ぶ児童の育成 ―自ら考え選択し決定する学び・認め合い支え合える学習集団作りを通して…",
+        "authority": "市町村",
+        "presentation": "R8.10.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9C%A8%E5%8E%9F%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -415,7 +552,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9C%AC%E9%83%B7%E8%A5%BF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -434,7 +579,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%B2%BC%E5%8C%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -491,7 +644,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：「数学的な見方・考え方」を生かし、主体的に学ぶ児童の育成 ~「ズレ」を生かした問いの設定と、自らの考えを広げ、…",
+        "authority": "市町村",
+        "presentation": "R8.10.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%B2%BC%E7%94%B0%E8%A5%BF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -510,7 +678,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：自ら考えをもち、深い学びのある算数科授業づくり ~既習・未習の相違点と共通点に着目させ、数学的な見方・考え方を…",
+        "authority": "市町村",
+        "presentation": "R9.1.28"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%B7%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -529,7 +706,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：算数科における『自ら学びを推し進める子』の育成 ~間接指導を支える「ガイド型教具」の活用を通して~",
+        "authority": "市町村",
+        "presentation": "R8.12.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E7%94%B0%E9%87%8E%E6%B5%A6%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -567,7 +753,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学びの変革",
+        "designation": "市町の「学びの変革」チャレンジ加配",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "ブロック公開研究会：主体的・対話的で深く学び合う教育活動の創造 ~「学びをつなげる」授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E8%A5%BF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -586,7 +787,21 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "指導方法工夫改善",
+        "designation": "指導方法工夫改善指定校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E4%B8%89%E5%8E%9F%E5%B8%82%E7%AB%8B%E9%A0%88%E6%B3%A2%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -624,7 +839,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "第10回中国・四国地 区へき地教育研究大 会広島大会：児童が主体的に活動し、「わかる」「できる」を実感する算数科授業の創造 ~個々…",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E5%8E%9F%E5%B8%82-%E5%BA%83%E5%B3%B6%E4%B8%89%E8%82%B2%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%92%8C%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -935,7 +1159,23 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育の考え方を 生かした個別最適な学び",
+        "designation": "すべての生徒に学びがある授業の創造 ~安心して学べる学習環境づくりと個別最適な学びを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.29"
+      },
+      {
+        "year": "令和8",
+        "subject": "数学・保健体育・外国語",
+        "designation": "ともに学び合いながら理解を深め、主体的に学ぶ子どもの姿をめざして ~課題発見・対話・振り返りの工夫を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.1"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E4%B8%89%E6%AC%A1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -954,7 +1194,23 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳等",
+        "designation": "広島県中学校教育研究会人権 教育研究大会：主体的な学びにつながる自己指導能力の育成 ~コミュニティ・スクールとの協働を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      },
+      {
+        "year": "令和8",
+        "subject": "外国語",
+        "designation": "思考力を育成する授業づくり ~中高6年間の系統性を踏まえて~",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E4%B8%89%E8%89%AF%E5%9D%82%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -992,7 +1248,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語・音楽",
+        "designation": "思考力・判断力・表現力を高める指導の在り方 ~教科の「見方・考え方」を働かせる授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.8"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E5%85%AB%E6%AC%A1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1106,7 +1371,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学・総合的な学習の時 間・社会・生活単元学習",
+        "designation": "主体的・協働的に探究する児童・生徒の育成 ~布野style(問い・対話・振り返り)の授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E7%94%B2%E5%A5%B4%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1201,7 +1475,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "主体的・対話的で深い学びを実現する学習指導 -算数科における授業づくりを通して-",
+        "authority": "市町村",
+        "presentation": "R8.10.8"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E5%85%AB%E6%AC%A1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1353,7 +1636,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数・総合的な学習 の時間",
+        "designation": "主体的・協働的に探究する児童の育成 ~布野style(問い・対話・振り返り)の授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%89%E6%AC%A1%E5%B8%82-%E4%B8%89%E6%AC%A1%E5%B8%82%E7%AB%8B%E6%B2%B3%E5%86%85%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1635,7 +1927,21 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "学習指導・生徒指導",
+        "designation": "学習指導と生徒指導の一体的推進プロジェクト",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA%E7%AB%8B%E4%B8%96%E7%BE%85%E8%A5%BF%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1673,7 +1979,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "世羅町教育委員会指定公開研 究会：授業のユニバーサルデザインを基盤にした授業づくりの創造",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA%E7%AB%8B%E3%81%9B%E3%82%89%E3%81%AB%E3%81%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1692,7 +2013,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "第10回中国・四国地 区へき地教育研究大 会広島大会：「考える」授業を創造し、児童の主体性・思考力・表現力を高める ~正しく読み取…",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA%E7%AB%8B%E3%81%9B%E3%82%89%E3%81%B2%E3%81%8C%E3%81%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1711,7 +2041,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "世羅町指定公開研究 会：児童自ら学びを深める算数科授業の創造 ~一斉授業を軸とした協働的な学びや個別(最適)な学びの取組を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA%E7%AB%8B%E4%B8%96%E7%BE%85%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1730,7 +2069,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "根拠を基に、自分の言葉で表現できる児童の育成 ~数学的な見方・考え方を働かせる『問い・見通し・まとめ』の充実を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.11"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA%E7%AB%8B%E7%94%B2%E5%B1%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -1749,7 +2103,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学びの変革",
+        "designation": "市町の「学びの変革」チャレンジ加配",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "世羅町指定公開研究 会：自立した学び手の育成(三年目) ~教師がリードする場面と、児童に委ねる場面の明確化を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1-%E4%B8%96%E7%BE%85%E9%83%A1%E4%B8%96%E7%BE%85%E7%94%BA-%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B%E4%B8%96%E7%BE%85%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1",
@@ -1827,7 +2196,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・総合的な 学習の時間等",
+        "designation": "呉市小中で創る「未来の学 び」実践事業研究会：主体的に学ぶ児童生徒の育成 ~「自分の問い」と「協働的な学び」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%90%89%E6%B5%A6%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1846,7 +2224,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "音楽",
+        "designation": "第56回広島県中学校音楽教育 研究大会 呉・賀茂・廿日 市・大竹大会：感じて つくって 響き合う ~生徒の思いが音になる、音でつな…",
+        "authority": "市町村",
+        "presentation": "R8.11.10"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%91%89%E4%B8%AD%E5%A4%AE%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1960,7 +2347,23 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・ユニバー サルデザイン",
+        "designation": "呉市小中で創る「未来の学 び」実践事業研究会：主体的に学び、心豊かにたくましく生きる児童生徒の育成 ~個を大切にした支援の工夫と豊…",
+        "authority": "市町村",
+        "presentation": "R8.10.27"
+      },
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・特別の教 科 道徳",
+        "designation": "呉市小中で創る「未来の学 び」実践事業研究会：主体的に学び、心豊かにたくましく生きる児童生徒の育成 ~個を大切にした支援の工夫と豊…",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%BA%83%E5%8D%97%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -1979,7 +2382,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "Society5.0を生きる資質・能力の育成 ~主体的に考え、議論し、自己の生き方を考える道徳科の授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.6.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E6%98%8E%E5%BE%B3%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -2264,7 +2676,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・全教 科",
+        "designation": "呉市小中で創る「未 来の学び」実践事業 研究会：主体的に学び、心豊かにたくましく生きる児童生徒の育成 ~個を大切にした支援の工夫と…",
+        "authority": "市町村",
+        "presentation": "R8.10.27"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E4%B8%A1%E5%9F%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2321,7 +2742,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・総合 的な学習の時間等",
+        "designation": "呉市小中で創る「未 来の学び」実践事業 研究会：主体的に学ぶ児童生徒の育成 ~「自分の問い」と「協働的な学び」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%8E%9F%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2340,7 +2770,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "確かな学力と、郷土に誇りをもつ児童生徒の育成 ~個を大切にする「考える授業づくり」と、協働的な活動と適切な評価を通して~",
+        "authority": "市町村",
+        "presentation": "R8.6.26"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%90%89%E6%B5%A6%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2366,6 +2805,13 @@
         "subject": "調整授業時数・教育課程柔軟化",
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "社会・家庭",
+        "designation": "金融経済教育研究校：互いに高め合いながら、自ら考え表現する児童生徒の育成 ~「伝え合い」と「振り返り」の充実を通して~",
+        "authority": "市町村",
+        "presentation": "R9.2.19"
       }
     ]
   },
@@ -2519,7 +2965,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "Society5.0を生きる資質・能力の育成 ~主体的に考え、議論し、自己の生き方を考える道徳科の授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E5%BA%83%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2538,7 +2993,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育・全教 科",
+        "designation": "呉市小中で創る「未 来の学び」実践事業 研究会：主体的に学び、心豊かにたくましく生きる児童生徒の育成 ~個を大切にした支援の工夫と…",
+        "authority": "市町村",
+        "presentation": "R8.10.27"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E6%98%8E%E5%BE%B3%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2576,7 +3040,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "自他を大切にし 主体的に学ぶ児童生徒の育成 ~「あたたかい集団づくり」を基盤とした「考える授業づくり」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.22"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E6%98%AD%E5%92%8C%E5%8C%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2652,7 +3125,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中一貫教育",
+        "designation": "主体的・協働的に学び、思考を働かせ表現する児童生徒の育成",
+        "authority": "市町村",
+        "presentation": "R8.10.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E6%A8%AA%E8%B7%AF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2709,7 +3191,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数等",
+        "designation": "自ら進んで学び合い、認め合う児童・生徒の育成 ~「自ら考え表現する授業づくり」と「自信を育む教育活動の充実」を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.30"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E7%99%BD%E5%B2%B3%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2804,7 +3295,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数・総合的な学習 の時間",
+        "designation": "主体的・対話的に深く学び、思いを表現する児童生徒の育成 ~一人一人が問いをもち、かかわり合いを通して学びを深める授業の実現~",
+        "authority": "市町村",
+        "presentation": "R8.9.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E5%91%89%E5%B8%82%E7%AB%8B%E9%83%B7%E5%8E%9F%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -2880,7 +3380,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "主体的に学び合う児童生徒の育成",
+        "authority": "市町村",
+        "presentation": "R8.11.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%91%89%E5%B8%82-%E6%98%8E%E7%AB%8B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -3772,7 +4281,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "令和8年度道徳教育推進事業：日常生活に生かされる道徳教育の指導の在り方 ~道徳科学習プログラムの作成を通して~",
+        "authority": "広島県",
+        "presentation": "R9.2.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%A4%A7%E7%AB%B9%E5%B8%82-%E5%A4%A7%E7%AB%B9%E5%B8%82%E7%AB%8B%E7%8E%96%E6%B3%A2%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -3829,7 +4347,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "令和8年度道徳教育 推進事業：日常生活に生かされる道徳教育の指導の在り方 ~道徳科学習プログラムの作成を通して~",
+        "authority": "広島県",
+        "presentation": "R9.2.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%A4%A7%E7%AB%B9%E5%B8%82-%E5%A4%A7%E7%AB%B9%E5%B8%82%E7%AB%8B%E7%8E%96%E6%B3%A2%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -3983,7 +4510,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数他",
+        "designation": "主体的に学び よりよく生きる児童生徒の育成",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%9D%82%E7%94%BA-%E5%BA%83%E5%B3%B6%E7%BF%94%E6%B4%8B%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1",
@@ -4023,7 +4559,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中連携",
+        "designation": "令和8年度府中町立府中中学 校区公開研究会：志をもちみらいをデザインする学びの創造 ~探究的な学習の更なる充実を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.12.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA%E7%AB%8B%E5%BA%9C%E4%B8%AD%E7%B7%91%E3%82%B1%E4%B8%98%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -4080,7 +4625,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中連携",
+        "designation": "令和8年度府中町立 府中中学校区公開研 究会：志をもちみらいをデザインする学びの創造 ~探究的な学習の更なる充実を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.12.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA%E7%AB%8B%E5%BA%9C%E4%B8%AD%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -4118,7 +4672,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中連携",
+        "designation": "令和8年度府中町立 府中中学校区公開研 究会：志をもちみらいをデザインする学びの創造 ~探究的な学習の更なる充実を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.12.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA%E7%AB%8B%E5%BA%9C%E4%B8%AD%E6%9D%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -4137,7 +4700,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小中連携",
+        "designation": "令和8年度府中町立 府中中学校区公開研 究会：志をもちみらいをデザインする学びの創造 ~探究的な学習の更なる充実を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.12.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E5%BA%9C%E4%B8%AD%E7%94%BA-%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B%E5%AE%89%E8%8A%B8%E5%BA%9C%E4%B8%AD%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1",
@@ -4177,7 +4749,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳・理 科・外国語",
+        "designation": "令和8年度道徳教育推進事業 令和8年度海田版「学びの変 革」推進事業 海田中学校区 公開研究会(海田中)：主体的・協働的に学び、自…",
+        "authority": "広島県",
+        "presentation": "R8.10.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E6%B5%B7%E7%94%B0%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E6%B5%B7%E7%94%B0%E7%94%BA%E7%AB%8B%E6%B5%B7%E7%94%B0%E8%A5%BF%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -4253,7 +4834,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "「学びの変革」チャ レンジ加配 海田西 中学校区公開研究会 (海田小)：主体的に学びを深める児童・生徒の育成 ~つながりを意識した…",
+        "authority": "広島県",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E6%B5%B7%E7%94%B0%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E6%B5%B7%E7%94%B0%E7%94%BA%E7%AB%8B%E6%B5%B7%E7%94%B0%E6%9D%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -4428,7 +5018,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "令和8年度道徳教育 推進事業 熊野中学 校区道徳教育公開研 究会：自己の生き方についての考えを深め、よりよく生きようとする児童生徒…",
+        "authority": "広島県",
+        "presentation": "R8.10.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%AE%89%E8%8A%B8%E9%83%A1%E7%86%8A%E9%87%8E%E7%94%BA-%E5%AE%89%E8%8A%B8%E9%83%A1%E7%86%8A%E9%87%8E%E7%94%BA%E7%AB%8B%E7%86%8A%E9%87%8E%E7%AC%AC%E5%9B%9B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -4947,7 +5546,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "主体的に学ぶ生徒を育成する授業の創造 ~ユニバーサルデザインの視点を活かした授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%90%91%E5%B3%B6%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -4966,7 +5580,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%90%91%E6%9D%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5004,7 +5626,28 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜10",
+        "subject": "研究開発学校",
+        "designation": "研究開発学校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "理科・数学・外国語",
+        "designation": "自ら考え、判断し、表現できる生徒の育成 ~根拠と理由を明確にする活動の充実を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%9B%A0%E5%B3%B6%E5%8D%97%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5023,7 +5666,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%B0%BE%E9%81%93%E3%81%BF%E3%81%AA%E3%81%A8%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5042,7 +5693,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%BE%A1%E8%AA%BF%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5061,7 +5720,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "基礎的・基本的な学習内容の定着 ~自己調整学習を基盤とした教育活動を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.7"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%97%A5%E6%AF%94%E5%B4%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5080,7 +5748,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "第68回広島県中学校理科教育 研究大会：主体的・対話的で深い学びの実現を通して、科学的に探究するために必要な資質・能 力を育む理科…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%A0%97%E5%8E%9F%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5099,7 +5776,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "未来に向けてよりよい選択をする生徒の育成 ~個別最適な学びを通して~",
+        "authority": "市町村",
+        "presentation": "R9.1.22"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%B5%A6%E5%B4%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5137,7 +5829,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "第10回中国・四国地区へき地 教育研究大会広島大会：主体的に学び続ける児童生徒の育成 ~小中高連携の強みをいかす教育活動を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E7%99%BE%E5%B3%B6%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5175,7 +5876,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E9%87%8D%E4%BA%95%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -5213,7 +5922,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "第68回広島県中学校理科教育 研究大会：主体的・対話的で深い学びの実現を通して、科学的に探究するために必要な資質・能 力を育む理科…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E4%B8%89%E5%B9%B8%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5251,7 +5975,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "自立的に問題解決に向かう(自分でやる)子供の育成 ~「価値づけ」と「終末場面」に焦点化した授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%90%89%E5%92%8C%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5270,7 +6003,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "体育",
+        "designation": "第49回広島県小学校 体育研究大会：深い学びを実現する体育科の授業づくり -協働的な学習を促す解決タイムを通して-",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%90%91%E5%B3%B6%E4%B8%AD%E5%A4%AE%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5289,7 +6037,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "確かな学力の育成 ~数学的な見方・考え方を働かせて、学びをつなぐ授業の創造~",
+        "authority": "市町村",
+        "presentation": "R8.10.30"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%90%91%E6%9D%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5308,7 +6065,21 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "学びの変革",
+        "designation": "市町の「学びの変革」チャレンジ加配",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%9B%A0%E5%8C%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5327,7 +6098,27 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜10",
+        "subject": "研究開発学校",
+        "designation": "研究開発学校",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%9B%A0%E5%B3%B6%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5365,7 +6156,21 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%B1%B1%E6%B3%A2%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5384,7 +6189,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E5%BE%A1%E8%AA%BF%E4%B8%AD%E5%A4%AE%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5441,7 +6254,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%A0%97%E5%8E%9F%E5%8C%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5460,7 +6281,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%A0%97%E5%8E%9F%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5479,7 +6308,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "社会",
+        "designation": "第63回広島県小学校 社会科教育研究大会：社会を見つめ、よりよい未来を共創する社会科教育の創造 ~社会の事象を自分事として捉え、協…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E6%B5%A6%E5%B4%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5517,7 +6361,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語・総合的な学習 の時間",
+        "designation": "第10回中国・四国地 区へき地教育研究大 会広島大会：主体的に学び続ける児童生徒の育成 ~小中高連携の強みをいかす教育活動を通して…",
+        "authority": "市町村",
+        "presentation": "R8.11.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E7%99%BE%E5%B3%B6%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5574,7 +6427,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "自立的に問題を解決する児童の育成 ~西藤版 個別最適な学びの創造~",
+        "authority": "市町村",
+        "presentation": "R8.10.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E9%87%8D%E4%BA%95%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5593,7 +6455,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "児童の社会性と主体性を高める指導の工夫 ~児童が読みを深め、自身の考えを適切に表現する学びの創造~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E5%B8%82%E7%AB%8B%E9%AB%98%E8%A6%8B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -5631,7 +6502,21 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語教育",
+        "designation": "小学校外国語教育推進研修",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "生徒指導",
+        "designation": "生徒指導サポート実践校",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B9%BC%E4%BF%9D%E9%80%A3%E6%90%BA%E5%9E%8B%E8%AA%8D%E5%AE%9A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92-%E5%B0%BE%E9%81%93%E5%B8%82-%E5%B0%BE%E9%81%93%E3%82%81%E3%81%90%E3%81%BF%E8%AA%8D%E5%AE%9A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92",
@@ -6288,7 +7173,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "令和8年度新しい学びプロ ジェクト授業研究会in安芸太 田：教科の見方・考え方を働かせ、対話を通して問題解決する生徒の育成",
+        "authority": "広島県",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA%E7%AB%8B%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -6307,7 +7201,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "保健体育",
+        "designation": "令和8年度広島県中学校教育 研究会保健体育科研究大会：「体育や保健の見方・考え方を働かせた主体的・対話的で深い学びを促す保健体育学…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA%E7%AB%8B%E5%8A%A0%E8%A8%88%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -6326,7 +7229,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "令和8年度新しい学 びプロジェクト授業 研究会in安芸太田 【兼 令和9年度広 島県小学校理科教育 研究大会プレ大会】：教科の見方…",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA%E7%AB%8B%E6%88%B8%E6%B2%B3%E5%86%85%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -6345,7 +7257,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "令和8年度新しい学 びプロジェクト授業 研究会in安芸太田 【兼 令和9年度広 島県小学校理科教育 研究大会プレ大会】：教科の見方…",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA%E7%AB%8B%E7%AD%92%E8%B3%80%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -6364,7 +7285,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "令和8年度新しい学 びプロジェクト授業 研究会in安芸太田 【兼 令和9年度広 島県小学校理科教育 研究大会プレ大会】：教科の見方…",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1-%E5%B1%B1%E7%9C%8C%E9%83%A1%E5%AE%89%E8%8A%B8%E5%A4%AA%E7%94%B0%E7%94%BA-%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B%E5%8A%A0%E8%A8%88%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1",
@@ -8361,7 +9291,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/14map-challenge-index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生活単元学習、自立活動等",
+        "designation": "令和8年度 広島市立広島特別支援学校 公開授業研究会（児童生徒の主体的な学びを大切にした授業づくり ~児童生徒が気付く場面を通して…",
+        "authority": "市町村",
+        "presentation": "R8.12.11"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E7%89%B9%E5%88%A5%E6%94%AF%E6%8F%B4%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82-%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B%E5%BA%83%E5%B3%B6%E4%B8%AD%E5%A4%AE%E7%89%B9%E5%88%A5%E6%94%AF%E6%8F%B4%E5%AD%A6%E6%A0%A1",
@@ -8832,6 +9771,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "探究",
+        "designation": "学力向上実践研究校（新しい時代に求められる力を身に付けるための豊かで深い学びの創造 ~自己の在り方生き方を考えながら、よりよく課題…",
+        "authority": "市町村",
+        "presentation": "R9.2.10"
+      }
     ]
   },
   {
@@ -8979,6 +9927,13 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "商業",
+        "designation": "特色ある教育実践研究校（商業の見方・考え方を働かせたビジネス活動による地域課題の解決 ~実践的・体験的な外部連携を通じた探究活動に…",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
       }
     ]
   },
@@ -9014,6 +9969,13 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "商業",
+        "designation": "特色ある教育実践研究校（商業の見方・考え方を働かせたビジネス活動による地域課題の解決 ~実践的・体験的な外部連携を通じた探究活動に…",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
       }
     ]
   },
@@ -9265,6 +10227,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "探究",
+        "designation": "特色ある教育実践研究校（「地域共生社会」の担い手を育む探究の自律化とチームによる組織的な伴走支援体制の構築 ~「学びの自走」を促す…",
+        "authority": "市町村",
+        "presentation": "R8.11.5"
+      }
     ]
   },
   {
@@ -9286,6 +10257,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "探究",
+        "designation": "特色ある教育実践研究校（本校の歴史や長崎における連携協力校から被爆の実相を学び、グローバルな視点から平和を自分ごととして捉え、 自…",
+        "authority": "市町村",
+        "presentation": "R9.2.10"
+      }
     ]
   },
   {
@@ -9497,7 +10477,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "平和教育推進研究校（平和な社会の実現を目指して主体的に行動する生徒の育成 ~多様な視点から「平和」を再発見する~）",
+        "authority": "市町村",
+        "presentation": "R8.10.30"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%9B%BD%E6%B3%B0%E5%AF%BA%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -9535,7 +10524,23 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "平和教育推進研究校（協同的な学びによる人間関係づくり ~平和教育の推進と活動プログラムの構築を目指して~）",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      },
+      {
+        "year": "令和8",
+        "subject": "社会科・数学科",
+        "designation": "日本語指導拠点校（グローバルな人材育成をめざして ~多文化共生を基盤とする日本語指導~）",
+        "authority": "市町村",
+        "presentation": "R8.10.28"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%B1%9F%E6%B3%A2%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -9630,7 +10635,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "先行カリキュラムデザイン研究校（学びを楽しみ、自ら学び取る子ども育成 ~STEAMを生かした習得・活用の体系化による探究と学力の接…",
+        "authority": "市町村",
+        "presentation": "R8.12.11"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%9F%BA%E7%94%BA%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -9706,7 +10720,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生活科・総合的な学習の時間",
+        "designation": "平和教育推進研究校（平和について自分の考えをもち、自分の言葉で発信できる子供の育成 ~探究的な学びのサイクルを踏まえた授業づくり~…",
+        "authority": "市町村",
+        "presentation": "R9.1.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%B1%9F%E6%B3%A2%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -9782,7 +10805,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "体育科",
+        "designation": "体力向上重点指定校（対話的・主体的で深い学びを実現する体育科の授業づくり ~関わり合いを基盤に 教室と体育をつなぐ~）",
+        "authority": "市町村",
+        "presentation": "R8.11.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E8%88%9F%E5%85%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -9820,7 +10852,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "平和教育推進研究校（「自分事」として学び、自分の言葉で表現できる子どもの育成(2年次) ~「問い」を軸にした探究的な学びを通して、…",
+        "authority": "市町村",
+        "presentation": "R9.2.1"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%BD%90%E4%BC%AF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%B8%89%E5%92%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -9839,7 +10880,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育の考え方を 生かした個別最適な学び",
+        "designation": "すべての生徒に学びがある授業の創造 ~安心して学べる学習環境づくりと個別最適な学びを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%BD%90%E4%BC%AF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BA%94%E6%97%A5%E5%B8%82%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -9934,7 +10984,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "学力向上重点指定校（「生徒が『わかった』と実感することができる授業」 ~生徒の言葉でつなぎ、一人ひとりの学びを深める~）",
+        "authority": "市町村",
+        "presentation": "R8.12.11"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%BD%90%E4%BC%AF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%B9%AF%E6%9D%A5%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -9979,6 +11038,13 @@
         "subject": "調整授業時数・教育課程柔軟化",
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "裁量的な時間",
+        "designation": "先行カリキュラムデザイン研究校 ~教育課程の工夫~ 教育課程柔軟化サキドリ研究校（今後の目標や夢を持ち、主体的に学習に取り組む生徒…",
+        "authority": "市町村",
+        "presentation": "R9.2.5"
       }
     ]
   },
@@ -10322,7 +11388,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科・外国語科",
+        "designation": "小中連携教育推進校A（共に学び合い、自ら考え続ける児童の育成 ~「解きたい」気持ちが継続する、協働的な授業づくりを通して~）",
+        "authority": "市町村",
+        "presentation": "R8.11.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E4%BD%90%E4%BC%AF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E8%97%A4%E3%81%AE%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -10417,7 +11492,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "保健体育科",
+        "designation": "体力向上重点指定校（仲間とのかかわり合いを通して、運動の楽しさや喜びを味わうことのできる保健体育授業の実践 ~豊かなスポーツライフ…",
+        "authority": "市町村",
+        "presentation": "R8.12.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%AE%87%E5%93%81%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -10550,7 +11634,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "児童発表・フィールドワーク",
+        "designation": "平和教育推進研究校（似島だからこそできる平和教育 ~教職員・児童みんなで似島を知る・考える・発信する~）",
+        "authority": "市町村",
+        "presentation": "R8.10.28"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%85%83%E5%AE%87%E5%93%81%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -10835,7 +11928,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "先行カリキュラムデザイン研究校 ~個別最適な学びと校種間連携の推進~（どの生徒も自分の可能性を信じ挑戦する全員参加の授業づくり ~…",
+        "authority": "市町村",
+        "presentation": "R8.12.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BA%80%E5%B1%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -10911,7 +12013,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "学力向上重点指定校（既習事項を活用しながら主体的に考え表現する生徒の育成 ~単元のつながりを意識した課題設定とかかわり合い活動を通…",
+        "authority": "市町村",
+        "presentation": "R8.12.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%97%A5%E6%B5%A6%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -10930,7 +12041,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "人権教育推進研究校（「ともに学び合い、高め合い、解決する」集団づくり ~協働学習および人間関係づくりを中心に~）",
+        "authority": "市町村",
+        "presentation": "R9.2.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%B8%85%E5%92%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -10949,7 +12069,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語科",
+        "designation": "学力向上重点指定校（生徒が主体的に考える授業実践による基礎学力の定着 ~生徒のつまずきや実態に応じたスモールステップの構築~）",
+        "authority": "市町村",
+        "presentation": "R8.11.27"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%99%BD%E6%9C%A8%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -10987,7 +12116,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "学力向上重点指定校（生徒の学びを見取り、次につなげる授業づくり ~見通しと振り返りを生かした主体的な学びの実現~）",
+        "authority": "市町村",
+        "presentation": "R9.1.25"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E9%AB%98%E9%99%BD%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11082,7 +12220,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科",
+        "designation": "学力向上重点指定校（「わかる」「できる」を実感する児童の育成）",
+        "authority": "市町村",
+        "presentation": "R8.11.12"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BA%80%E5%B1%B1%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -11139,7 +12286,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "図画工作科",
+        "designation": "先行カリキュラムデザイン研究校（学びに向かい自己肯定感を高めるカリキュラムの創造 ~学年を越えた「合同授業」と個別最適で協働的な「…",
+        "authority": "市町村",
+        "presentation": "R9.1.22"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8C%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BA%95%E5%8E%9F%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -11519,7 +12675,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語科",
+        "designation": "英語教育推進研究校（自分の考えや意見を構成して人に伝える能力の育成 ~AIの活用と小中連携を通して~）",
+        "authority": "市町村",
+        "presentation": "R8.12.3"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%9F%8E%E5%B1%B1%E5%8C%97%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11614,7 +12779,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "先行カリキュラムデザイン研究校 ~情報活用能力の育成~（課題解決場面でのICTの効果的な活用）",
+        "authority": "市町村",
+        "presentation": "R8.12.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%88%B8%E5%B1%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11652,7 +12826,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "保健体育科",
+        "designation": "体力向上重点指定校（運動意欲向上を目指した保健体育の授業改善）",
+        "authority": "市町村",
+        "presentation": "R8.11.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%A5%87%E5%9C%92%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11690,7 +12873,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語科",
+        "designation": "英語教育推進研究校（自分の思いや考えを積極的に伝え合う力の育成 ~AIによる個別最適な準備学習とALTとの協働的な実践を通して~）",
+        "authority": "市町村",
+        "presentation": "R9.1.20"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E9%95%B7%E6%9D%9F%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11747,7 +12939,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科",
+        "designation": "学力向上重点指定校（主体的に学び、自分の考えを深め合う児童の育成 ~一人一人が『分かった』を深める授業づくり~）",
+        "authority": "市町村",
+        "presentation": "R8.12.10"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%B8%AD%E7%AD%8B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12203,7 +13404,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科",
+        "designation": "幼保小連携推進校（一人一人が安心して自分を表現できる集団づくり ~安心感のある活動を通して~）",
+        "authority": "市町村",
+        "presentation": "R8.11.26"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E9%95%B7%E6%9D%9F%E8%A5%BF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12241,7 +13451,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語科",
+        "designation": "英語教育推進研究校（自分や地域のことについて、思いや考えを主体的に英語で伝え合うコミュニケーション能力の育成 ~小・中7年間を通し…",
+        "authority": "市町村",
+        "presentation": "R8.11.12"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E8%8A%B8%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%80%AC%E9%87%8E%E5%B7%9D%E6%9D%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12260,7 +13479,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "情報活用推進研究校 先行カリキュラムデザイン研究校 ~探究的な学習の充実~（「情報活用能力」と「言語能力」の育成を基盤とした質の高…",
+        "authority": "市町村",
+        "presentation": "R9.1.14"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E8%8A%B8%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%9F%A2%E9%87%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12419,6 +13647,13 @@
         "subject": "調整授業時数・教育課程柔軟化",
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "算数科・総合的な学習の時間",
+        "designation": "先行カリキュラムデザイン研究校 教育課程柔軟化サキドリ研究校（自ら問い自ら動くこどもの育成 ~見方・考え方を働かせる探究的な学びを…",
+        "authority": "市町村",
+        "presentation": "R9.1.28"
       }
     ]
   },
@@ -12572,7 +13807,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語科",
+        "designation": "情報活用推進研究校（自分の考えを形成し、伝えることができる生徒の育成 ~協働的な学習とデジタル学習基盤の活用を通して~）",
+        "authority": "市町村",
+        "presentation": "R8.12.9"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%B8%A9%E5%93%81%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12591,7 +13835,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "学力向上重点指定校（生徒の理解の深まりをみとる指導の工夫 ~振り返りシート・お助けシートの工夫と活用(3年次)~）",
+        "authority": "市町村",
+        "presentation": "R8.11.27"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%89%9B%E7%94%B0%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12648,7 +13901,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科",
+        "designation": "学力向上重点指定校（「わかる」「できる」楽しい算数、主体的に学ぶ児童の育成）",
+        "authority": "市町村",
+        "presentation": "R8.12.3"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%B8%AD%E5%B1%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12743,7 +14005,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科・音楽科・体育科",
+        "designation": "情報活用推進研究校（主体的にかかわり合い、共に探究する児童の育成 ~ICTによる共有の日常化とかかわり合いの充実を通して~）",
+        "authority": "市町村",
+        "presentation": "R8.11.25"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%9D%B1%E6%B5%84%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12807,6 +14078,13 @@
         "subject": "調整授業時数・教育課程柔軟化",
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "裁量的な時間",
+        "designation": "先行カリキュラムデザイン研究校 教育課程柔軟化サキドリ研究校（自ら学びに向かい、未来を切り拓く児童の育成 ~「好き」を育み、「得意…",
+        "authority": "市町村",
+        "presentation": "R8.12.11"
       }
     ]
   },
@@ -12827,7 +14105,23 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語科・社会科・生活科・ 体育科・特別活動・自立活動",
+        "designation": "人権教育推進研究校",
+        "authority": "市町村",
+        "presentation": "R9.1.25"
+      },
+      {
+        "year": "令和8",
+        "subject": "国語科・社会科",
+        "designation": "情報活用推進研究校（自分の考えをもち,進んで表現する子供の育成 ~ICT活用と人権教育の統合的推進~）",
+        "authority": "市町村",
+        "presentation": "R8.12.3"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%9F%A2%E8%B3%80%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12846,7 +14140,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "道徳科",
+        "designation": "平和教育推進研究校（平和な社会の実現に向けて主体的に発信できる児童の育成 ~発信を軸とし、年間を通じた継続的な平和学習の実践を通し…",
+        "authority": "市町村",
+        "presentation": "R8.12.10"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E6%9D%B1%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E7%A6%8F%E6%9C%A8%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12884,7 +14187,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "数学科",
+        "designation": "先行カリキュラムデザイン研究校 ~地域連携・キャリア教育の充実~（課題対応能力を伸ばし、キャリア発達を促す授業づくり）",
+        "authority": "市町村",
+        "presentation": "R8.11.24"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E8%A5%BF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BA%95%E5%8F%A3%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12960,7 +14272,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "人権教育推進研究校（多様性を尊重した学級づくり ~子ども同士の対話を通して~）",
+        "authority": "市町村",
+        "presentation": "R9.1.22"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E8%A5%BF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%B7%B1%E6%96%90%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -12979,7 +14300,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "平和教育推進研究校（文化的平和を振興できる生徒の育成）",
+        "authority": "市町村",
+        "presentation": "R9.1.20"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E8%A5%BF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%BA%9A%E5%8D%88%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13226,7 +14556,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数科",
+        "designation": "学力向上重点指定校（「一人でできた」と実感できる子どもの育成 ~「楽しい・伝えたい・達成できた(3T)」の授業づくりを通して~）",
+        "authority": "市町村",
+        "presentation": "R8.12.17"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E8%A5%BF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%B7%B1%E6%96%90%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13283,7 +14622,16 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "体育科",
+        "designation": "体力向上重点指定校（主体的・対話的で深い学びを実現する体育科の授業づくり ~マット運動におけるできた喜びを実感する授業づくりを目指…",
+        "authority": "市町村",
+        "presentation": "R8.9.25"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E8%A5%BF%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E8%8D%89%E6%B4%A5%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13366,6 +14714,13 @@
         "subject": "調整授業時数・教育課程柔軟化",
         "designation": "教育課程柔軟化サキドリ研究校事業",
         "authority": "文部科学省"
+      },
+      {
+        "year": "令和8",
+        "subject": "裁量的な時間",
+        "designation": "先行カリキュラムデザイン研究校 教育課程柔軟化サキドリ研究校（子どもの『よしやろう!』を引き出す仕掛けづくり ~柔軟な教育課程の編…",
+        "authority": "市町村",
+        "presentation": "R8.11.27"
       }
     ]
   },
@@ -13386,7 +14741,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "ひと・こと・ものをつなぐキャリア教育の創造 ~口和町の元気をつくる児童生徒の育成をめざして~",
+        "authority": "広島県",
+        "presentation": "R8.11.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%BA%84%E5%8E%9F%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13405,7 +14769,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "教科の「見方・考え方」を働かせながら主体的に学ぶ生徒の育成 ~庄原中学びのプロセスによる授業改善を通して~",
+        "authority": "広島県",
+        "presentation": "R9.1.22"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9D%B1%E5%9F%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13424,7 +14797,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語・数学",
+        "designation": "主体的な学びを促し、生徒の学力を育成する授業の創造 ~UDの視点を活かした授業づくりと、個別最適な学びを通して~",
+        "authority": "広島県",
+        "presentation": "R8.10.28"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%AF%94%E5%92%8C%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13443,7 +14825,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間・ 特別の教科 道徳",
+        "designation": "少人数指導を生かした授業の創造 ~自己調整力を促す取組を通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E7%B7%8F%E9%A0%98%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13462,7 +14853,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "自主公開 (総領中学校区小中合同公開 研究会)：様々な人との関りを通して学び、自ら考え、表現する生徒の育成 ~探究的な学びを生かし…",
+        "authority": "市町村",
+        "presentation": "R8.10.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E8%A5%BF%E5%9F%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13481,7 +14881,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "表現力の向上を目指した「探究的な学習」の充実 ~他者や自己との対話を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.20"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E9%AB%98%E9%87%8E%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -13500,7 +14909,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳・外国 語",
+        "designation": "主体的・対話的に学びを深める生徒の育成 ~「個別最適な学び」と「協働的な学び」を支える高野中UDを生かした授業づくり~",
+        "authority": "市町村",
+        "presentation": "R8.11.17"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%B7%9D%E5%8C%97%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%A4%A2%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13538,7 +14956,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "「表現力」を高める国語科教育の創造 ~他教科とのつながりを意識した単元構成の工夫を通して~",
+        "authority": "広島県",
+        "presentation": "R8.10.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%B0%8F%E5%A5%B4%E5%8F%AF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13557,7 +14984,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "自ら考え、論理的に説明できる児童の育成 〜図、言葉、根拠の一体化による説明する力の向上を目指して〜",
+        "authority": "市町村",
+        "presentation": "R8.10.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%B1%B1%E5%86%85%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13576,7 +15012,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "自ら学ぶ児童の育成 ~対話による学びづくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E5%B3%B0%E7%94%B0%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13614,7 +15059,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "自ら学び進める児童の育成 ~読み解く力を高める国語科の授業づくり~",
+        "authority": "広島県",
+        "presentation": "R8.11.12"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9D%B1%E5%9F%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13633,7 +15087,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語・特別の教科 道徳",
+        "designation": "主体的に学び続ける児童の育成 ~単元構成の工夫により考えを深め、表現力を高めることを目指した国語科と道徳科の 授業づくり~",
+        "authority": "市町村",
+        "presentation": "R8.11.19"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9D%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13652,7 +15115,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "学ぶ意義を感じ、主体的に学ぶ児童の育成 ~児童の実態把握を生かした個別最適な学びの充実~",
+        "authority": "広島県",
+        "presentation": "R8.9.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%9D%BF%E6%A9%8B%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13671,7 +15143,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生活・総合的な学習 の時間",
+        "designation": "広島県小学校生活 科・総合的な学習の 時間教育研究大会：主体的に学び、表現する児童の育成 ~学びをつなぐ単元づくりと振り返りの充実…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%AF%94%E5%92%8C%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13690,7 +15171,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "少人数、複式学級のよさを活かした学びの創造 ~個別学習と学び合いの充実を通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.2"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E6%B0%B8%E6%9C%AB%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13709,7 +15199,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "国語・算数・生活単 元学習",
+        "designation": "特別支援教育の視点を踏まえた“授業づくり”・“集団づくり” ~ユニバーサルデザインの考えを取り入れた実践の工夫~",
+        "authority": "市町村",
+        "presentation": "R8.11.20"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E7%B2%9F%E7%94%B0%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13747,7 +15246,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "自主公開 (総領中学校区小中 合同公開研究会)：対話を通して「深い学び」を実現する授業づくり ~自律した学習者の育成を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.10.6"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E8%A5%BF%E5%9F%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13766,7 +15274,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "主体的に学ぶ児童の育成 ~確かな知識・技能の定着を図る算数科の指導の工夫を通して~",
+        "authority": "市町村",
+        "presentation": "R8.9.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E9%AB%98%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13785,7 +15302,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "かかわり合いながら主体的に学ぶ授業の創造 ~「分かる・できる」を支える手立ての工夫~",
+        "authority": "市町村",
+        "presentation": "R8.10.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B8%82%E7%AB%8B%E9%AB%98%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13804,7 +15330,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "主体的・対話的に学びを深める児童の育成 -算数科における「焦点化した問い」と「評価問題」を連動させた授業改善を通して-",
+        "authority": "市町村",
+        "presentation": "R8.10.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B9%BC%E7%A8%9A%E5%9C%92-%E5%BA%84%E5%8E%9F%E5%B8%82-%E5%BA%84%E5%8E%9F%E5%B9%BC%E7%A8%9A%E5%9C%92",
@@ -13980,7 +15515,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "不登校支援",
+        "designation": "不登校SSR推進校",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "総合的な学習の時間",
+        "designation": "主体的な学びの実現 ~自分の考えをもち、それを表現できる生徒の育成~",
+        "authority": "市町村",
+        "presentation": "R8.9.25"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E5%B8%82%E7%AB%8B%E4%B8%8A%E4%B8%8B%E5%8C%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -13999,7 +15549,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "第40回広島県小学校 道徳教育研究大会：自他を認め合い、共によりよく生きようとする児童の育成 ~家庭・地域社会との連携による道徳科…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E5%B8%82%E7%AB%8B%E4%B8%8A%E4%B8%8B%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14018,7 +15577,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別の教科 道徳",
+        "designation": "第40回広島県小学校 道徳教育研究大会：自他を認め合い、共によりよく生きようとする児童の育成 ~家庭・地域社会との連携による道徳科…",
+        "authority": "市町村",
+        "presentation": "R8.11.13"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E5%B8%82%E7%AB%8B%E5%8D%97%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14037,7 +15605,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "主体的に学び 自分の考えが語れる児童の育成 ~教科の見方・考え方を生かしたつながりのある授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E5%B8%82%E7%AB%8B%E5%9B%BD%E5%BA%9C%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14056,7 +15633,28 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "外国語教育",
+        "designation": "小学校外国語教育推進研修",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "小学校教科担任制",
+        "designation": "小学校教科担任制推進事業",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "国語",
+        "designation": "自ら学びに向かう児童の育成 ~フレームリーディングを取り入れた対話的な授業を通して~",
+        "authority": "市町村",
+        "presentation": "R9.1.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E5%B8%82%E7%AB%8B%E6%97%AD%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14094,7 +15692,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "生活・総合的な学習 の時間",
+        "designation": "主体的に学び、思考力・表現力を身に付けた児童の育成 ~つながりのある授業づくりを通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.11"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B9%BC%E7%A8%9A%E5%9C%92-%E5%BA%9C%E4%B8%AD%E5%B8%82-%E5%BA%9C%E4%B8%AD%E3%81%99%E3%81%B0%E3%82%8B%E5%B9%BC%E7%A8%9A%E5%9C%92",
@@ -14575,7 +16182,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科",
+        "designation": "四季が丘中学校区 小中合同授業研究会：協働し、主体的に学ぶ児童生徒の育成",
+        "authority": "市町村",
+        "presentation": "R8.6.26"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E7%AB%8B%E5%AE%AE%E5%B3%B6%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14632,7 +16248,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "全教科等",
+        "designation": "廿日市中学校区 三校合同研究会：主体的に学び合う児童の育成 ~「集団づくりを基盤とした個別の学びと協働する学びを効果的に組み合わせ…",
+        "authority": "市町村",
+        "presentation": "R9.1.21"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E7%AB%8B%E6%B4%A5%E7%94%B0%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14670,7 +16295,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "七尾中学校区 合同研究会：自律し、協働しながら学習を進めることができる児童の育成 ~対話を通して自ら考え、学び合う児童を育てる授業…",
+        "authority": "市町村",
+        "presentation": "R8.10.1"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E7%AB%8B%E9%98%BF%E5%93%81%E5%8F%B0%E6%9D%B1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -14689,7 +16323,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "体育",
+        "designation": "阿品台中学校区 3校合同研修会：「自ら学びたくなる教育活動の創造」深い学びを実現する体育科の授業づくり ~かかわり合いを通して「気…",
+        "authority": "市町村",
+        "presentation": "R8.11.4"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82-%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E7%AB%8B%E9%98%BF%E5%93%81%E5%8F%B0%E8%A5%BF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -15315,7 +16958,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "各教科",
+        "designation": "東広島市教育推進指定校：自己調整できる「力ある人間」の育成 ~振り返りシートの活用を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.20"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%90%91%E9%99%BD%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -15505,7 +17157,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "各教科",
+        "designation": "東広島市教育推進指定校：主体的・協働的に学ぶ生徒の育成 ~「学び合い」の活動を通して~",
+        "authority": "市町村",
+        "presentation": "R8.11.12"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E9%AB%98%E7%BE%8E%E3%81%8C%E4%B8%98%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -15942,7 +17603,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数・国語",
+        "designation": "東広島市教育推進指 定校：自律した学び手を育てる個別最適な学びの創造 ~メタ認知的視点での振り返りと、自己調整の機会を設定した学習…",
+        "authority": "市町村",
+        "presentation": "R8.10.30"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%9D%B1%E8%A5%BF%E6%9D%A1%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -15961,7 +17631,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数・国語・社会",
+        "designation": "東広島市教育推進指 定校：学び続ける児童の育成 ~ 「学びのエンゲージメント」を高めるための「自己決定」と「振り返り」 ~",
+        "authority": "市町村",
+        "presentation": "R8.11.5"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E6%9D%BF%E5%9F%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -16170,7 +17849,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数・理科・生活・ 特別支援教育",
+        "designation": "東広島市教育推進指 定校：学ぶ楽しさを感じ、豊かに表現し合う児童の育成 ~対話と協働を位置付けた算数科・理科・生活科の単元デザイン…",
+        "authority": "市町村",
+        "presentation": "R8.10.28"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82-%E6%9D%B1%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E9%AB%98%E7%BE%8E%E3%81%8C%E4%B8%98%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -16947,7 +18635,22 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "ICT活用",
+        "designation": "デジタル学習基盤活用研修サポート",
+        "authority": "広島県"
+      },
+      {
+        "year": "令和8",
+        "subject": "特別支援教育の考え方を 生かした個別最適な学び",
+        "designation": "すべての生徒に学びがある授業の創造 ~安心して学べる学習環境づくりと個別最適な学びを通して~",
+        "authority": "市町村",
+        "presentation": "R8.10.29"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A5%9E%E7%9F%B3%E9%83%A1%E7%A5%9E%E7%9F%B3%E9%AB%98%E5%8E%9F%E7%94%BA-%E7%A5%9E%E7%9F%B3%E9%83%A1%E7%A5%9E%E7%9F%B3%E9%AB%98%E5%8E%9F%E7%94%BA%E7%AB%8B%E7%A5%9E%E7%9F%B3%E9%AB%98%E5%8E%9F%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -16966,7 +18669,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "ICT活用",
+        "designation": "デジタル学習基盤活用研修サポート",
+        "authority": "広島県"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A5%9E%E7%9F%B3%E9%83%A1%E7%A5%9E%E7%9F%B3%E9%AB%98%E5%8E%9F%E7%94%BA-%E7%A5%9E%E7%9F%B3%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -17158,7 +18869,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "第66回広島県特別支援教育研 究大会福山大会：自立に向けて一人一人の教育的ニーズに応じた指導・支援の在り方",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E4%B8%AD%E5%A4%AE%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -17234,7 +18954,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "第66回広島県特別支援教育研 究大会福山大会：自立に向けて一人一人の教育的ニーズに応じた指導・支援の在り方",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E5%9F%8E%E5%8D%97%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -17405,7 +19134,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "美術",
+        "designation": "令和8年度第64回広島県造形 教育研究大会(福山大会)：ふくやまから発信!! 心をつなぐ造形教育",
+        "authority": "市町村",
+        "presentation": "R8.11.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E6%9D%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -17424,7 +19162,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "第66回広島県特別支援教育研 究大会福山大会：自立に向けて一人一人の教育的ニーズに応じた指導・支援の在り方",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E6%9D%B1%E6%9C%8B%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -17538,7 +19285,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "第66回広島県特別支援教育研 究大会福山大会：自立に向けて一人一人の教育的ニーズに応じた指導・支援の在り方",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E7%A6%8F%E5%B1%B1%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -18078,7 +19834,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "理科",
+        "designation": "第61回広島県小学校 理科教育研究大会 (福山大会)：「山手発!夢中になる授業」 ~育てよう!教科の目と芽~",
+        "authority": "市町村",
+        "presentation": "R8.11.5"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E5%B7%9D%E5%8F%A3%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -18306,7 +20071,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "図画工作",
+        "designation": "令和8年度第64回広島 県造形教育研究大会 (福山大会)：ふくやまから発信!!心をつなぐ造形教育",
+        "authority": "市町村",
+        "presentation": "R8.11.18"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E6%96%B0%E6%B6%AF%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -19104,7 +20878,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "特別支援教育",
+        "designation": "第66回広島県特別支 援教育研究大会福山 大会：自立に向けて一人一人の教育的ニーズに応じた指導・支援の在り方",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%A6%8F%E5%B1%B1%E5%B8%82-%E7%A6%8F%E5%B1%B1%E5%B8%82%E7%AB%8B%E9%AB%98%E5%B3%B6%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -20225,7 +22008,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "「自立した学習者の育成」 ~中通学びのデザインを通した協働解決力のアップデート~",
+        "authority": "市町村",
+        "presentation": "R8.10.23"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E7%AB%B9%E5%8E%9F%E5%B8%82-%E7%AB%B9%E5%8E%9F%E5%B8%82%E7%AB%8B%E4%BB%81%E8%B3%80%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -20320,7 +22112,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "算数",
+        "designation": "主体的に学び合う児童生徒の育成 ~数学的な見方・考え方を働かせ、自他の学びを深める授業づくり~",
+        "authority": "市町村",
+        "presentation": "R8.9.17"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E5%B9%BC%E4%BF%9D%E9%80%A3%E6%90%BA%E5%9E%8B%E8%AA%8D%E5%AE%9A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92-%E7%AB%B9%E5%8E%9F%E5%B8%82-%E8%AA%8D%E5%AE%9A%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92%E4%B8%AD%E5%A4%AE%E3%81%93%E3%81%A9%E3%82%82%E5%9C%92",
@@ -20438,7 +22239,16 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/kyouiku/fr-gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "道徳教育",
+        "designation": "「主体的に取り組む児童の育成」 ~対話的な学びを通じて考えを広げ深める道徳教育を目指して~",
+        "authority": "市町村",
+        "presentation": "R8.10.16"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E8%B1%8A%E7%94%B0%E9%83%A1%E5%A4%A7%E5%B4%8E%E4%B8%8A%E5%B3%B6%E7%94%BA-%E8%B1%8A%E7%94%B0%E9%83%A1%E5%A4%A7%E5%B4%8E%E4%B8%8A%E5%B3%B6%E7%94%BA%E7%AB%8B%E6%9D%B1%E9%87%8E%E5%B0%8F%E5%AD%A6%E6%A0%A1",

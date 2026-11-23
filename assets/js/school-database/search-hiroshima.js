@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('');
         researchListHtml = `
           <div class="school-research-list">
-            <div class="school-research-heading">研究指定校（令和8年度）</div>
+            <div class="school-research-heading">研究指定・公開校（令和8年度）</div>
             ${itemsHtml}
           </div>
         `;
