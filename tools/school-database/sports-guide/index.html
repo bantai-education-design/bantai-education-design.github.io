@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="canonical" href="https://bantai-education-design.github.io/tools/school-database/sports-guide/">
   <!-- Google tag (gtag.js) -->
@@ -44,43 +44,82 @@
   </script>
   <script src="/assets/js/analytics-events.js" defer></script>
   <style>
-    body { background: #f4f7fa; color: #10263a; }
-    .tg-wrap { max-width: 1080px; margin: 0 auto; padding: 24px 18px 64px; }
-    .tg-nav-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-bottom: 12px; font-size: .86rem; font-weight: 700; }
+    :root { --tg-accent: #047857; --tg-accent-dark: #065f46; --tg-soft: #ecfdf5; --tg-border: #a7f3d0; }
+    body { background: #f3f6fa; color: #0f172a; }
+    .tg-wrap { max-width: 1120px; margin: 0 auto; padding: 22px 18px 68px; }
+    .tg-nav-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; font-size: .85rem; font-weight: 700; }
     .tg-nav-row a { color: #0369a1; text-decoration: none; }
     .tg-nav-row a:hover { text-decoration: underline; }
-    .tg-hero { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #bbf7d0; border-radius: 20px; padding: 26px 28px; box-shadow: 0 10px 26px rgba(15,39,61,.05); margin-bottom: 18px; }
-    .tg-kicker { font-size: .74rem; letter-spacing: .12em; font-weight: 800; color: #166534; }
-    .tg-hero h1 { font-size: clamp(1.45rem, 2.8vw, 2.05rem); margin: 8px 0 10px; line-height: 1.3; color: #0c1b33; }
-    .tg-hero p { margin: 0; color: #475569; font-size: .92rem; line-height: 1.75; }
+    .tg-hero { background: linear-gradient(135deg, #064e3b 0%, #047857 60%, #0f766e 100%); color: #fff; border-radius: 22px; padding: 26px 28px; box-shadow: 0 14px 30px rgba(6,78,59,.16); margin-bottom: 18px; }
+    .tg-kicker { display: inline-block; font-size: .72rem; letter-spacing: .12em; font-weight: 800; color: #a7f3d0; background: rgba(255,255,255,.12); padding: 4px 10px; border-radius: 999px; }
+    .tg-hero h1 { font-size: clamp(1.45rem, 2.7vw, 2.05rem); margin: 10px 0 8px; line-height: 1.3; color: #fff; }
+    .tg-hero p { margin: 0; color: rgba(255,255,255,.88); font-size: .9rem; line-height: 1.7; max-width: 820px; }
+
+    /* Annual Calendar Timeline */
+    .tg-cal-card { background: #fff; border: 1px solid #dbe5ec; border-radius: 18px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(15,39,61,.04); }
+    .tg-cal-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .tg-cal-head h2 { font-size: .96rem; margin: 0; color: #0f172a; }
+    .tg-cal-sub { font-size: .76rem; color: #64748b; }
+    .tg-cal-scroll { overflow-x: auto; }
+    .tg-cal-grid { min-width: 680px; display: flex; flex-direction: column; gap: 5px; }
+    .tg-cal-months { display: grid; grid-template-columns: 200px repeat(12, 1fr); gap: 4px; font-size: .72rem; font-weight: 800; color: #64748b; text-align: center; padding-bottom: 4px; border-bottom: 1px solid #e2e8f0; }
+    .tg-cal-months span:first-child { text-align: left; }
+    .tg-cal-row { display: grid; grid-template-columns: 200px repeat(12, 1fr); gap: 4px; align-items: center; padding: 4px 2px; border-radius: 8px; text-decoration: none; color: inherit; transition: background .15s ease; }
+    .tg-cal-row:hover { background: #f1f5f9; }
+    .tg-cal-name { font-size: .78rem; font-weight: 700; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 6px; }
+    .tg-cal-cell { height: 18px; border-radius: 5px; background: #f1f5f9; }
+    .tg-cal-cell.is-on { background: var(--tg-accent); }
+    .tg-cal-cell.is-spring { background: #10b981; }
+    .tg-cal-cell.is-summer { background: #0284c7; }
+    .tg-cal-cell.is-autumn { background: #d97706; }
+    .tg-cal-cell.is-winter { background: #4f46e5; }
+
     .tg-controls { background: #fff; border: 1px solid #dbe5ec; border-radius: 16px; padding: 16px 18px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px; }
     .tg-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tg-chip { padding: 7px 14px; border-radius: 999px; border: 1px solid #cbd5e1; background: #fff; color: #334155; font-size: .84rem; font-weight: 700; cursor: pointer; font-family: inherit; }
-    .tg-chip.is-active { background: #166534; color: #fff; border-color: #166534; }
+    .tg-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 999px; border: 1px solid #cbd5e1; background: #f8fafc; color: #334155; font-size: .83rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+    .tg-chip-cnt { font-size: .72rem; padding: 1px 6px; border-radius: 999px; background: rgba(15,23,42,.08); }
+    .tg-chip.is-active { background: var(--tg-accent); color: #fff; border-color: var(--tg-accent); }
+    .tg-chip.is-active .tg-chip-cnt { background: rgba(255,255,255,.22); color: #fff; }
     .tg-search-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
-    .tg-search-row input { flex: 1 1 280px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: .9rem; font-family: inherit; }
-    .tg-count { font-size: .86rem; font-weight: 700; color: #475569; }
+    .tg-search-row input { flex: 1 1 280px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: .88rem; font-family: inherit; }
+    .tg-count { font-size: .86rem; font-weight: 800; color: #334155; }
+
     .tg-list { display: flex; flex-direction: column; gap: 18px; }
-    .tg-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 22px 24px; box-shadow: 0 4px 16px rgba(15,39,61,.04); }
+    .tg-card { background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid var(--tg-accent); border-radius: 18px; padding: 20px 22px; box-shadow: 0 6px 18px rgba(15,39,61,.05); scroll-margin-top: 24px; }
+    .tg-card-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
     .tg-card-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .tg-cat-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .74rem; font-weight: 800; background: #dcfce7; color: #166534; border: 1px solid #86efac; }
-    .tg-org { font-size: .8rem; color: #64748b; font-weight: 600; }
-    .tg-card h2 { font-size: 1.24rem; margin: 4px 0 14px; color: #0c1b33; line-height: 1.35; }
-    .tg-meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
-    .tg-meta-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; }
-    .tg-meta-label { font-size: .74rem; font-weight: 800; color: #64748b; margin-bottom: 4px; }
-    .tg-meta-val { font-size: .88rem; font-weight: 700; color: #0f172a; line-height: 1.45; }
-    .tg-sections { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .tg-sec { background: #fbfdff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
-    .tg-sec--advice { background: #f0fdf4; border-color: #bbf7d0; }
-    .tg-sec h3 { font-size: .86rem; margin: 0 0 6px; color: #0f172a; }
-    .tg-sec--advice h3 { color: #14532d; }
-    .tg-sec p { margin: 0; font-size: .86rem; color: #334155; line-height: 1.65; }
-    .tg-card-foot { margin-top: 14px; display: flex; justify-content: flex-end; }
-    .tg-db-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; background: #166534; color: #fff; font-size: .84rem; font-weight: 700; text-decoration: none; }
-    .tg-db-btn:hover { background: #14532d; }
-    .tg-note { margin-top: 24px; background: #fff; border: 1px solid #dbe5ec; border-radius: 14px; padding: 16px 18px; font-size: .84rem; color: #475569; line-height: 1.7; }
-    @media (max-width: 760px) { .tg-meta-grid, .tg-sections { grid-template-columns: 1fr; } }
+    .tg-cat-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .74rem; font-weight: 800; background: var(--tg-soft); color: var(--tg-accent-dark); border: 1px solid var(--tg-border); }
+    .tg-org { font-size: .78rem; color: #64748b; font-weight: 600; }
+    .tg-card h2 { font-size: 1.2rem; margin: 0; color: #0c1b33; line-height: 1.35; }
+    .tg-db-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 15px; border-radius: 999px; background: var(--tg-accent); color: #fff; font-size: .82rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .tg-db-btn:hover { background: var(--tg-accent-dark); }
+
+    /* Visual Meta Strip */
+    .tg-meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+    .tg-meta-box { display: flex; align-items: flex-start; gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 12px; }
+    .tg-meta-ic { font-size: 1.15rem; line-height: 1.2; flex: 0 0 auto; }
+    .tg-meta-label { font-size: .72rem; font-weight: 800; color: #64748b; margin-bottom: 2px; }
+    .tg-meta-val { font-size: .86rem; font-weight: 700; color: #0f172a; line-height: 1.45; }
+
+    /* 3-Step Visual Roadmap */
+    .tg-roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+    .tg-step { background: #fbfdff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 13px 14px; display: flex; flex-direction: column; gap: 6px; }
+    .tg-step--advice { background: var(--tg-soft); border-color: var(--tg-border); }
+    .tg-step-head { display: flex; align-items: center; gap: 7px; }
+    .tg-step-num { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #0f172a; color: #fff; font-size: .72rem; font-weight: 800; flex: 0 0 auto; }
+    .tg-step--advice .tg-step-num { background: var(--tg-accent); }
+    .tg-step h3 { font-size: .85rem; margin: 0; color: #0f172a; }
+    .tg-step--advice h3 { color: var(--tg-accent-dark); }
+    .tg-step p { margin: 0; font-size: .83rem; color: #334155; line-height: 1.65; }
+
+    /* History Collapsible Strip */
+    .tg-history { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 8px 12px; }
+    .tg-history summary { cursor: pointer; font-size: .82rem; font-weight: 700; color: #475569; list-style: none; display: flex; align-items: center; gap: 6px; }
+    .tg-history summary::-webkit-details-marker { display: none; }
+    .tg-history p { margin: 8px 0 2px; font-size: .83rem; color: #334155; line-height: 1.65; }
+
+    .tg-note { margin-top: 22px; background: #fff; border: 1px solid #dbe5ec; border-radius: 14px; padding: 16px 18px; font-size: .83rem; color: #475569; line-height: 1.7; }
+    @media (max-width: 860px) { .tg-meta-grid, .tg-roadmap { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -99,13 +138,23 @@
   <main class="tg-wrap" id="guide-app" data-json-url="/data/school-database/sports-tournaments-guide.json" data-default-tab="sports">
     <div class="tg-nav-row">
       <a href="/tools/school-database/">← 全国学校データベースへ戻る</a>
-      <a href="/tools/school-database/culture-guide/">文化部・音楽大会ガイドを見る →</a>
+      <a href="/tools/school-database/culture-guide/">🎭 文化部・音楽大会ガイドを見る →</a>
     </div>
 
     <section class="tg-hero">
       <div class="tg-kicker">SPORTS &amp; BUDO TOURNAMENT GUIDE</div>
       <h1>運動・武道 全国大会出場ガイド</h1>
-      <p>高校・中学校の主要全国スポーツ・武道大会について、開催時期・期間・会場・予選の仕組み・出場手続き・大会の歴史、そして参加校や顧問の先生に役立つ実践アドバイスをまとめました。各大会から全国実績校データベースへ直接移動できます。</p>
+      <p>年間カレンダーで開催時期を一覧しながら、各大会の「①予選・代表枠 → ②出場手続き → ③参加校アドバイス」を3ステップで分かりやすく確認できます。</p>
+    </section>
+
+    <section class="tg-cal-card" aria-label="年間大会カレンダー">
+      <div class="tg-cal-head">
+        <h2>📅 年間 全国大会カレンダー（1月〜12月）</h2>
+        <span class="tg-cal-sub">大会名をクリックすると下の詳細カードへ移動します</span>
+      </div>
+      <div class="tg-cal-scroll">
+        <div id="guide-calendar" class="tg-cal-grid"></div>
+      </div>
     </section>
 
     <section class="tg-controls" aria-label="大会ガイド絞り込み">
