@@ -2760,6 +2760,29 @@
     "verified_date": "",
     "course": [
       "普通科"
+    ],
+    "sports_awards": [
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2025年（第76回）",
+        "division": "男子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2024年（第36回）",
+        "division": "女子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2024年（第75回）",
+        "division": "男子",
+        "award": "3位"
+      }
     ]
   },
   {

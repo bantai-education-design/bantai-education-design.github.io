@@ -3380,7 +3380,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "サッカー",
+        "contest": "全国高等学校サッカー選手権大会",
+        "year": "2024年（第102回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "shiga-公立-特別支援学校-彦根市-滋賀県立盲学校",

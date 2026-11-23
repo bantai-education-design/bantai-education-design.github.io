@@ -1985,3 +1985,88 @@ h3.region-header {
   color: #4a5568;
   font-size: 0.79rem;
 }
+
+/* Sports national tournament awards (compact collapsible UI) */
+.filter-chip--sports {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #166534;
+}
+.school-badge-sports {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+  margin-left: 4px;
+}
+.school-sports-details {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  font-size: 0.84rem;
+}
+.school-sports-summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #14532d;
+  list-style: none;
+}
+.school-sports-summary::-webkit-details-marker {
+  display: none;
+}
+.school-sports-summary::before {
+  content: "▸ ";
+  color: #16a34a;
+}
+.school-sports-details[open] .school-sports-summary::before {
+  content: "▾ ";
+}
+.school-sports-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.school-sports-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+.sports-award-tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.sports-award-tag--champ {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+.sports-award-tag--runnerup {
+  background: #e2e8f0;
+  color: #334155;
+  border: 1px solid #94a3b8;
+}
+.sports-award-tag--semi {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+.sports-contest-name {
+  color: #1e293b;
+  font-weight: 600;
+}
+.sports-meta {
+  color: #64748b;
+  font-size: 0.78rem;
+}

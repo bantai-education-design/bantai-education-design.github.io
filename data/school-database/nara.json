@@ -7933,7 +7933,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2026年（第108回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "nara-私立-高等学校-奈良大学附属高等学校",
@@ -8888,6 +8897,15 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2026年（第98回）",
+        "division": "全国大会",
+        "award": "準優勝"
       }
     ]
   },

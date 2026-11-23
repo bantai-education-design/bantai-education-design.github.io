@@ -3485,6 +3485,29 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2026年（第78回）",
+        "division": "女子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2025年（第77回）",
+        "division": "女子",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2024年（第76回）",
+        "division": "女子",
+        "award": "優勝"
+      }
     ]
   },
   {
@@ -7119,7 +7142,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2025年（第76回）",
+        "division": "男子",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "okayama-公立-高等学校-倉敷市-岡山県立倉敷中央高等学校",

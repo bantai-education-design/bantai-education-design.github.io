@@ -6966,7 +6966,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2026年（第78回）",
+        "division": "男子",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-鹿角市-秋田県立鹿角高等学校",

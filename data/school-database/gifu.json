@@ -12772,7 +12772,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2025年（第107回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "gifu-公立-高等学校-岐阜県立岐阜城北高等学校",

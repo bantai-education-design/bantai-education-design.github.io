@@ -16207,7 +16207,23 @@
     "source_name": "文部科学省",
     "source_url": "",
     "source_date": "2026-05-29",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "サッカー",
+        "contest": "全国高等学校サッカー選手権大会",
+        "year": "2026年（第104回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2024年（第106回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "kagoshima-879",

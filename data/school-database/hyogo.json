@@ -13820,7 +13820,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2025年（第77回）",
+        "division": "男子",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "hyogo-公立-高等学校-尼崎市-尼崎市立琴ノ浦高等学校",
@@ -18022,7 +18031,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2024年（第96回）",
+        "division": "全国大会",
+        "award": "準優勝"
+      },
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2024年（第103回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "hyogo-私立-高等学校-西宮市-武庫川女子大学附属高等学校",
