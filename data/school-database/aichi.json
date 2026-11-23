@@ -1055,6 +1055,26 @@
     "verified_date": "2026-07-26",
     "course": [
       "全"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -2264,7 +2284,21 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "aichi-0116",
@@ -4681,7 +4715,16 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "大阪市教育委員会教育長賞"
+      }
+    ]
   },
   {
     "id": "aichi-0241",
@@ -5040,6 +5083,15 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "大阪府教育委員会賞"
       }
     ]
   },
@@ -10046,7 +10098,21 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "aichi-0516",
@@ -10236,7 +10302,21 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "aichi-0526",
@@ -11042,7 +11122,21 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582999.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "準グランプリ"
+      },
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "aichi-0568",
@@ -13175,6 +13269,14 @@
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -14637,7 +14739,16 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582997.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞",
+        "detail": "浜松市教育委員会教育長賞"
+      }
+    ]
   },
   {
     "id": "aichi-0746",
@@ -15660,6 +15771,20 @@
         "subject": "理数・科学技術",
         "designation": "スーパーサイエンスハイスクール（SSH・基礎枠）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
       }
     ]
   },
@@ -17372,6 +17497,14 @@
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -18997,6 +19130,14 @@
     "verified_date": "2026-07-26",
     "course": [
       "全"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -20658,6 +20799,14 @@
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -22277,6 +22426,14 @@
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -22561,6 +22718,20 @@
     "verified_date": "2026-07-26",
     "course": [
       "全"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -23222,7 +23393,15 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "aichi-1164",
@@ -23368,7 +23547,15 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582999.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "aichi-1170",
@@ -26057,7 +26244,15 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "aichi-1305",
@@ -27348,6 +27543,32 @@
     "verified_date": "2026-07-26",
     "course": [
       "全"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -28588,6 +28809,14 @@
         "designation": "Over The Top 昨日の自分より今日の自分・今日の中部より明日の中 部 ~セルフコントロールができる心も体もたくましい生徒…",
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
       }
     ]
   },
@@ -33319,6 +33548,14 @@
         "authority": "愛知県",
         "presentation": "令和8年10月2日(金)"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -33878,7 +34115,15 @@
     "source_url": "https://www.pref.aichi.jp/uploaded/attachment/582998.xlsx",
     "source_date": "2025-05-01",
     "verified_date": "2026-07-26",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "aichi-1691",

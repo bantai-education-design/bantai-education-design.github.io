@@ -3864,6 +3864,14 @@
         "designation": "研究パイロット校",
         "authority": "区市町村"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -22597,6 +22605,14 @@
         "designation": "人権尊重教育推進校",
         "authority": "東京都"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -23971,6 +23987,14 @@
         "designation": "教育課程特例校",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -24464,6 +24488,14 @@
         "designation": "教育課題研究開発校",
         "authority": "区市町村"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -24712,7 +24744,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -24982,7 +25022,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -26008,7 +26056,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -27932,7 +27988,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -28469,7 +28533,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -29130,7 +29202,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -29526,7 +29606,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -29781,7 +29869,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "school_type": "小学校",
@@ -34525,6 +34621,14 @@
         "authority": "区市町村",
         "presentation": "09.01.20"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -37386,7 +37490,15 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -37808,6 +37920,20 @@
         "subject": "全教科",
         "designation": "板橋区教育委員会研究奨励校",
         "authority": "区市町村"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
       }
     ]
   },
@@ -38824,6 +38950,20 @@
         "subject": "読書活動",
         "designation": "学校図書館利活用推進校",
         "authority": "区市町村"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
       }
     ]
   },
@@ -42460,7 +42600,22 @@
     "tags": [
       "宛名印刷"
     ],
-    "website": ""
+    "website": "",
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "中学校・合唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -47231,6 +47386,14 @@
         "subject": "",
         "designation": "エンジョイスポーツプロジェクト",
         "authority": "東京都"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞"
       }
     ]
   },
@@ -52886,6 +53049,14 @@
         "designation": "都立中学校等における地域展開促進事業",
         "authority": "東京都"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -53119,6 +53290,15 @@
         "subject": "",
         "designation": "芸術系大学等と連携した芸術教育の推進事業",
         "authority": "東京都"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞",
+        "detail": "奨励賞"
       }
     ]
   },
@@ -71067,7 +71247,15 @@
       "宛名印刷"
     ],
     "website": "https://www.kgc.keio.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -72811,7 +72999,21 @@
       "宛名印刷"
     ],
     "website": "https://www.toshimagaoka.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/index.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/index.html",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "school_type": "中学校",
@@ -74132,7 +74334,15 @@
       "高校連携"
     ],
     "website": "https://www.edojo.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -74250,7 +74460,15 @@
       "高校連携"
     ],
     "website": "https://www.otsumanakano.ac.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -76726,7 +76944,21 @@
       "高校連携"
     ],
     "website": "https://www.takanawadai.tokai.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77205,7 +77437,16 @@
       "高校連携"
     ],
     "website": "https://www.toshimagaoka.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "大阪府教育委員会賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77483,7 +77724,15 @@
       "高校連携"
     ],
     "website": "https://www.nichidai3.ed.jp/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77563,7 +77812,21 @@
       "高校連携"
     ],
     "website": "https://www.hachioji.ed.jp/senr/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -77843,7 +78106,15 @@
       "高校連携"
     ],
     "website": "https://www.hosei.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "準グランプリ"
+      }
+    ]
   },
   {
     "school_type": "高等学校",

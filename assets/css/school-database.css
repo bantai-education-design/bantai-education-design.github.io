@@ -1889,3 +1889,99 @@ h3.region-header {
   font-size: 0.74rem;
   color: #718096;
 }
+
+/* 音楽コンクール実績フィルター・表示エリア */
+.music-filter-group {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(7, 27, 54, 0.1);
+}
+
+.filter-chip--music {
+  border-color: rgba(139, 92, 246, 0.35);
+  background: #f9f7ff;
+}
+
+.school-badge-music {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #f3effe;
+  color: #5b21b6;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+}
+
+.school-music-list {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #faf9ff;
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-left: 3px solid #6d28d9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.school-music-heading {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #4c1d95;
+  letter-spacing: 0.02em;
+}
+
+.school-music-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink, #2d3748);
+}
+
+.music-award-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.71rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.music-award-tag--gold {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+.music-award-tag--silver {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #94a3b8;
+}
+
+.music-award-tag--bronze {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #ea580c;
+}
+
+.music-award-tag--other {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #c4b5fd;
+}
+
+.music-contest-name {
+  font-weight: 700;
+  color: var(--navy, #0c1b33);
+}
+
+.music-meta {
+  color: #4a5568;
+  font-size: 0.79rem;
+}

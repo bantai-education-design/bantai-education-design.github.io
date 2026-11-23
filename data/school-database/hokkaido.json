@@ -4467,7 +4467,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/nky/kannnaikouritugaltukou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-別海町-別海町立上風連中学校",
@@ -15372,7 +15380,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立永山南中学校",
@@ -15391,7 +15407,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kkk/kamikawayouran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-旭川市-旭川市立神居中学校",
@@ -17323,6 +17347,14 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -18080,7 +18112,21 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "小学校・合唱部門",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市中央区-札幌市立日新小学校",
@@ -20783,7 +20829,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-中学校-札幌市厚別区-星槎もみじ中学校",
@@ -21315,7 +21369,15 @@
     "source_url": "https://www.pref.hokkaido.lg.jp/sm/gkj/allschoolseach.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-高等学校-札幌市厚別区-北海道立札幌厚別高等学校",
@@ -22052,6 +22114,14 @@
         "subject": "情報・数学・DX探究",
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銅賞"
       }
     ]
   },
@@ -23244,7 +23314,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市清田区-札幌市立平岡中央中学校",
@@ -23434,7 +23512,21 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市清田区-札幌市立平岡公園小学校",
@@ -24593,7 +24685,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-札幌市西区-札幌市立福井野中学校",
@@ -25350,6 +25450,14 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "優良賞"
+      }
     ]
   },
   {
@@ -25749,7 +25857,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市豊平区-札幌市立月寒東小学校",
@@ -25768,7 +25884,15 @@
     "source_url": "https://www.city.sapporo.jp/kyoiku/top/school/ichiran/shogaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-札幌市豊平区-札幌市立東園小学校",
@@ -32096,7 +32220,22 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/okh/school.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞",
+        "detail": "文部科学大臣賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-網走市-網走市立第三中学校",
@@ -35453,7 +35592,21 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/okh/school.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-遠軽町-遠軽町立丸瀬布小学校",

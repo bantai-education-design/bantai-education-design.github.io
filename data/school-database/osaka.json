@@ -73,7 +73,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "こども音楽コンクール",
+        "year": "令和7年度（第73期）",
+        "division": "中学校・合奏第1部門",
+        "award": "文部科学大臣賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-交野市-交野市立倉治小学校",
@@ -2201,7 +2209,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-吹田市-吹田市立吹田第一小学校",
@@ -3003,6 +3019,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2026年（第13回）",
+        "division": "全国大会",
+        "award": "グランプリ"
+      }
     ]
   },
   {
@@ -6180,7 +6204,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-堺市堺区-堺市立旭中学校",
@@ -7620,7 +7652,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-堺市西区-堺市立福泉中学校",
@@ -8725,6 +8765,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -11516,7 +11564,21 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市城東区-大阪市立鯰江中学校",
@@ -12911,6 +12973,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -19086,7 +19156,27 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市西区-大阪市立花乃井中学校",
@@ -19238,7 +19328,16 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞",
+        "detail": "浜松市長賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-大阪市西区-大阪市立明治小学校",
@@ -20665,7 +20764,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-大阪市阿倍野区-大阪市立昭和中学校",
@@ -23760,7 +23867,16 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180160/shigaku/syoutyuukou/itiran-chugaku.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞",
+        "detail": "奨励賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-小学校-寝屋川市-寝屋川市立三井小学校",
@@ -27978,6 +28094,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -30281,6 +30405,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -31907,6 +32039,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -35813,6 +35953,20 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -36403,7 +36557,15 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-豊中市-豊中市立第十七中学校",
@@ -36441,7 +36603,21 @@
     "source_url": "https://www.pref.osaka.lg.jp/o180080/shochugakko/jyuusho/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "osaka-公立-中学校-豊中市-豊中市立第十二中学校",
@@ -38028,6 +38204,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {

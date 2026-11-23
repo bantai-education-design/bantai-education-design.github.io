@@ -2097,7 +2097,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-北上市-北上市立北上中学校",
@@ -2116,7 +2124,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-北上市-北上市立北上北中学校",
@@ -2135,7 +2151,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-北上市-北上市立南中学校",
@@ -2458,7 +2482,22 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞",
+        "detail": "静岡県知事賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-北上市-北上市立黒沢尻東小学校",
@@ -5919,7 +5958,15 @@
     "source_url": "https://www.edu.iwate-u.ac.jp/gakubu/huzoku/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-小学校-盛岡市-盛岡市立上田小学校",
@@ -7180,6 +7227,14 @@
         "designation": "高等学校DX加速化推進事業（DXハイスクール）",
         "authority": "文部科学省"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞"
+      }
     ]
   },
   {
@@ -7475,6 +7530,14 @@
         "designation": "研究指定校等（盛岡教育事務所管内）",
         "authority": "市町村"
       }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "銀賞"
+      }
     ]
   },
   {
@@ -7597,7 +7660,15 @@
     "source_url": "https://www.pref.iwate.jp/kyouikubunka/kyouiku/ippan/toukei/1006311.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "iwate-公立-中学校-紫波町-紫波町立紫波第一中学校",

@@ -1,0 +1,299 @@
+{
+  "updated_at": "2026-11-23",
+  "sources": [
+    "一般社団法人 全日本吹奏楽連盟 第74回（2026年）・第73回（2025年）全日本吹奏楽コンクール大学の部",
+    "一般社団法人 全日本合唱連盟 第79回（2026年）全日本合唱コンクール全国大会 大学ユース合唱の部"
+  ],
+  "records": [
+    {
+      "pref": "岐阜県",
+      "branch": "東海",
+      "university_name": "中部学院大学",
+      "org_name": "中部学院大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "長野県",
+      "branch": "東海",
+      "university_name": "信州大学",
+      "org_name": "信州大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "福岡県",
+      "branch": "九州",
+      "university_name": "日本経済大学",
+      "org_name": "日本経済大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "埼玉県",
+      "branch": "西関東",
+      "university_name": "埼玉大学",
+      "org_name": "埼玉大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": "",
+      "university_id": "u000145"
+    },
+    {
+      "pref": "京都府",
+      "branch": "関西",
+      "university_name": "龍谷大学",
+      "org_name": "龍谷大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "広島県",
+      "branch": "中国",
+      "university_name": "広島大学",
+      "org_name": "広島大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "秋田県",
+      "branch": "東北",
+      "university_name": "秋田大学",
+      "org_name": "秋田大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "福井県",
+      "branch": "北陸",
+      "university_name": "福井工業大学応援団",
+      "org_name": "福井工業大学応援団吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "大阪府",
+      "branch": "関西",
+      "university_name": "立命館大学応援団",
+      "org_name": "立命館大学応援団吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "神奈川県",
+      "branch": "東関東",
+      "university_name": "神奈川大学",
+      "org_name": "神奈川大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": "",
+      "university_id": "u000181"
+    },
+    {
+      "pref": "北海道",
+      "branch": "北海道",
+      "university_name": "北海道教育大学函館校",
+      "org_name": "北海道教育大学函館校吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "徳島県",
+      "branch": "四国",
+      "university_name": "四国大学",
+      "org_name": "四国大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "福岡県",
+      "branch": "九州",
+      "university_name": "福岡工業大学",
+      "org_name": "福岡工業大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2026年（第74回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "徳島県",
+      "branch": "四国",
+      "university_name": "四国大学",
+      "org_name": "四国大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "静岡県",
+      "branch": "東海",
+      "university_name": "静岡大学",
+      "org_name": "静岡大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "岐阜県",
+      "branch": "東海",
+      "university_name": "中部学院大学",
+      "org_name": "中部学院大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "神奈川県",
+      "branch": "東関東",
+      "university_name": "神奈川大学",
+      "org_name": "神奈川大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": "",
+      "university_id": "u000181"
+    },
+    {
+      "pref": "大阪府",
+      "branch": "関西",
+      "university_name": "立命館大学応援団",
+      "org_name": "立命館大学応援団吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銀賞",
+      "detail": ""
+    },
+    {
+      "pref": "富山県",
+      "branch": "北陸",
+      "university_name": "富山大学",
+      "org_name": "富山大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "福岡県",
+      "branch": "九州",
+      "university_name": "福岡工業大学",
+      "org_name": "福岡工業大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "京都府",
+      "branch": "関西",
+      "university_name": "龍谷大学",
+      "org_name": "龍谷大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "埼玉県",
+      "branch": "西関東",
+      "university_name": "文教大学",
+      "org_name": "文教大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": "",
+      "university_id": "u000159"
+    },
+    {
+      "pref": "福岡県",
+      "branch": "九州",
+      "university_name": "日本経済大学",
+      "org_name": "日本経済大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "金賞",
+      "detail": ""
+    },
+    {
+      "pref": "広島県",
+      "branch": "中国",
+      "university_name": "広島大学",
+      "org_name": "広島大学吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "北海道",
+      "branch": "北海道",
+      "university_name": "北海道教育大学函館校",
+      "org_name": "北海道教育大学函館校吹奏楽団",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    },
+    {
+      "pref": "宮城県",
+      "branch": "東北",
+      "university_name": "東北福祉大学",
+      "org_name": "東北福祉大学吹奏楽部",
+      "contest": "全日本吹奏楽コンクール",
+      "year": "2025年（第73回）",
+      "division": "大学の部",
+      "award": "銅賞",
+      "detail": ""
+    }
+  ]
+}

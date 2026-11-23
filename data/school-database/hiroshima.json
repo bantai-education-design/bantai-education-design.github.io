@@ -4540,6 +4540,20 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
     ]
   },
   {
@@ -7372,7 +7386,15 @@
     "source_url": "https://www.pref.hiroshima.lg.jp/site/hiroshimakennsiritugakkou/",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E7%A7%81%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82-%E5%AE%89%E7%94%B0%E5%A5%B3%E5%AD%90%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -11577,7 +11599,21 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E5%B0%8F%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E4%BB%81%E4%BF%9D%E5%B0%8F%E5%AD%A6%E6%A0%A1",
@@ -12741,7 +12777,21 @@
     "source_url": "https://www.city.hiroshima.lg.jp/education/school/index.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "hiroshima-%E5%85%AC%E7%AB%8B-%E4%B8%AD%E5%AD%A6%E6%A0%A1-%E5%BA%83%E5%B3%B6%E5%B8%82%E5%AE%89%E4%BD%90%E5%8D%97%E5%8C%BA-%E5%BA%83%E5%B3%B6%E5%B8%82%E7%AB%8B%E5%AE%89%E4%BD%90%E5%8D%97%E4%B8%AD%E5%AD%A6%E6%A0%A1",
@@ -14085,6 +14135,20 @@
         "designation": "先行カリキュラムデザイン研究校 教育課程柔軟化サキドリ研究校（自ら学びに向かい、未来を切り拓く児童の育成 ~「好き」を育み、「得意…",
         "authority": "市町村",
         "presentation": "R8.12.11"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "小学校の部",
+        "award": "優良賞"
       }
     ]
   },
