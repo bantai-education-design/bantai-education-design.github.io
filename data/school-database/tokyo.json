@@ -53527,6 +53527,13 @@
         "division": "高等学校の部",
         "award": "優秀賞",
         "detail": "奨励賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞",
+        "detail": "奨励賞"
       }
     ]
   },
@@ -71499,6 +71506,12 @@
       },
       {
         "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "最優秀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
         "year": "2024年（第13回）",
         "division": "高等学校の部",
         "award": "優秀賞"
@@ -78769,7 +78782,16 @@
       "高校連携"
     ],
     "website": "https://www.nakanogakuen.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞",
+        "detail": "福島県教育長賞"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
