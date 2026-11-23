@@ -1699,7 +1699,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/ibk/ichiran_date.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-小学校-伊達市-伊達市立関内小学校",
@@ -1946,7 +1954,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sbk/youran.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-公立-中学校-余市-余市立西中学校",
@@ -21556,7 +21572,16 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞",
+        "detail": "Berry Pickin'「余光」"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-高等学校-札幌市厚別区-星槎国際高等学校",
@@ -32397,6 +32422,12 @@
         "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
         "year": "2026年（第15回）",
         "division": "中学校の部",
+        "award": "文部科学大臣賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
         "award": "優秀賞"
       }
     ]
@@ -35985,7 +36016,15 @@
     "source_url": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/kki/gakkou.html",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "hokkaido-私立-中学校-釧路市-武修館中学校",
