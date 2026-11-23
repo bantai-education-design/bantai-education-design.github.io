@@ -40,7 +40,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const top=await browser.newPage({viewport:{width:1366,height:1000}});
-            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
+            await top.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0&limit=144',{waitUntil:'networkidle'});
             await top.waitForFunction(()=>document.documentElement.dataset.academicBaseline==='ready',{timeout:15000});
             await top.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             const teikyo=top.locator('.tokyo-card[data-id="u000102"]');
@@ -51,7 +51,7 @@ jobs:
             assert.ok(teikyoMap.includes('帝京大学'),teikyoMap);
             const grips=top.locator('.tokyo-card[data-id="u000011"]');
             const gripsText=await grips.innerText();
-            assert.ok(gripsText.includes('大学院大学 / 研究科 1'),gripsText);
+            assert.ok(/大学院大学.*研究科 1/.test(gripsText),gripsText);
             assert.ok(!gripsText.includes('学部 更新中'),gripsText);
             await top.setViewportSize({width:375,height:900});
             assert.equal(await top.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true);

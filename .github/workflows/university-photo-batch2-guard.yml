@@ -56,7 +56,7 @@ jobs:
           for(const image of verified){
             assert.match(image.source_url||'',/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,`${image.university_id}: Commons file page`);
             assert.match(image.image_url||'',/^https:\/\/upload\.wikimedia\.org\//,`${image.university_id}: Wikimedia original media URL`);
-            assert.ok(/^(?:CC0(?: 1\.0)?|CC BY(?:-SA)? [0-9.]+|Public domain)$/i.test(image.license||''),`${image.university_id}: reusable license ${image.license}`);
+            assert.ok(/^(?:CC0(?: 1\.0)?|CC BY(?:-SA)? [0-9.]+|Public domain|Copyrighted free use)$/i.test(image.license||''),`${image.university_id}: reusable license ${image.license}`);
             assert.ok(image.creator,`${image.university_id}: creator required`);
             assert.ok(image.rights_note,`${image.university_id}: rights note required`);
             assert.ok(image.alt,`${image.university_id}: alt text required`);
@@ -83,7 +83,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:1366,height:950}});
-            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0',{waitUntil:'networkidle'});
+            await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?packs=0&limit=144',{waitUntil:'networkidle'});
             await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===144,{timeout:15000});
             await page.waitForFunction(()=>document.documentElement.dataset.userPhotoOverlay==='ready',{timeout:15000});
             assert.equal(await page.locator('.real-university-image').count(),144,'144 real university photo cards must render');

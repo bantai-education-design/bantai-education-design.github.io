@@ -77,7 +77,7 @@ jobs:
           assert '/tools/university-database/tokyo/photo-register/' not in hub_html
           assert '補正・掲載写真の選択・大学DBへの登録はBan.Tai管理者が行います' in hub_html
           assert '/tools/university-database/tokyo/photo-submit/' in top_entry
-          assert '大学写真を投稿' in top_entry
+          assert '大学写真を送る' in top_entry
           assert 'detail-photo-submit-entry.js' in detail_html
           assert 'photo-submit/?university=' in detail_entry
           assert 'university_id' not in json.dumps(cfg, ensure_ascii=False)

@@ -1,0 +1,32 @@
+name: Antigravity guard tests
+
+on:
+  pull_request:
+    paths:
+      - '.agents/hooks.json'
+      - '.agents/scripts/bantai_guard.py'
+      - 'scripts/test_bantai_guard.py'
+      - '.github/workflows/antigravity-guard-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.agents/hooks.json'
+      - '.agents/scripts/bantai_guard.py'
+      - 'scripts/test_bantai_guard.py'
+      - '.github/workflows/antigravity-guard-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  guard-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate hook JSON
+        run: python -m json.tool .agents/hooks.json > /dev/null
+      - name: Run guard regression tests
+        run: python -m unittest discover -s scripts -p 'test_bantai_guard.py' -v

@@ -30,3 +30,91 @@
 .access-label{font-size:.66rem;font-weight:900;color:#2f6fa3}
 .access-station b{font-weight:900;color:#0b2c4a}
 .access-bus{font-size:.64rem;font-weight:800;padding:1px 7px;border-radius:999px;background:#eef4fb;border:1px solid #c8d9ec;color:#2f5f8f}
+/* 工程2：検索・絞り込みの一本化 */
+.result-count-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.result-count-label{font-size:.7rem;font-weight:800;color:#526476}
+.filter-group-keyword{align-items:flex-start!important}
+.keyword-search-col{flex:1;min-width:0;width:100%}
+.filter-panel .unified-search-shell{display:grid!important;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;width:100%;max-width:none;margin:0;padding:0;background:transparent;border:0;box-shadow:none}
+.filter-panel .unified-search-shell input{min-width:0;width:100%;min-height:44px;padding:10px 14px;border:2px solid #8ea4b8;border-radius:10px;background:#fff;color:#10283f;font-size:.94rem;font-weight:600}
+.filter-panel .unified-search-shell input:focus{outline:3px solid rgba(212,165,31,.28);border-color:#082844}
+.filter-panel .unified-search-shell button[type="submit"]{min-height:44px;padding:0 20px;border:0;border-radius:10px;background:#082844;color:#fff;font-weight:800;font-size:.9rem;cursor:pointer;white-space:nowrap}
+.clear-query-btn{min-height:38px;padding:0 11px;border:1px solid #c5d1dc;border-radius:8px;background:#f3f6f9;color:#2d4358;font-size:1rem;font-weight:800;cursor:pointer}
+.clear-query-btn[hidden]{display:none!important}
+.filter-panel .quick-search-row{display:flex!important;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
+.filter-panel .quick-search-row span{font-size:.74rem;font-weight:800;color:#4a5d70}
+.filter-panel .quick-search-row button{border:1px solid #c7d3df;background:#fff;color:#16334c;border-radius:999px;padding:4px 11px;font-size:.74rem;font-weight:700;cursor:pointer}
+.filter-panel .quick-search-row button:hover{border-color:#082844;background:#f4f8fc}
+.advanced-filters{margin-top:10px;border:1px solid #d5e0ea;border-radius:12px;background:#f9fbfd;overflow:hidden}
+.advanced-filters-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 15px;font-size:.86rem;font-weight:800;color:#0b2c4a;cursor:pointer;list-style:none}
+.advanced-filters-summary::-webkit-details-marker{display:none}
+.advanced-filters-summary::before{content:'＋';display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:#082844;color:#fff;font-weight:900;margin-right:8px;flex-shrink:0}
+.advanced-filters[open] .advanced-filters-summary::before{content:'－'}
+.advanced-filters-summary>span:first-child{margin-right:auto}
+.advanced-active-count{padding:3px 10px;border-radius:999px;background:#082844;color:#f5c84c;font-size:.72rem;font-weight:900;white-space:nowrap}
+.advanced-active-count[hidden]{display:none!important}
+.advanced-filters-body{padding:12px 15px 14px;border-top:1px solid #dde6ef;display:grid;gap:12px;background:#fff}
+.dept-input-wrap{flex:1;min-width:0;width:100%}
+.dept-search-input{width:100%;max-width:480px;min-height:38px;padding:7px 12px;border:1px solid #c2d0dc;border-radius:9px;font-size:.84rem;color:#10283f;background:#fff}
+.filter-loading-note{font-size:.76rem;color:#66788a}
+.active-filters-bar{margin-top:12px;padding-top:12px;border-top:1px solid #dde6ef;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.active-filters-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0;flex:1}
+.active-filters-title{font-size:.76rem;font-weight:800;color:#33475b}
+.no-active-filters{font-size:.78rem;font-weight:700;color:#586b7d}
+.active-filter-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;border:1px solid #082844;background:#082844;color:#fff;font-size:.76rem;font-weight:800;cursor:pointer}
+.active-filter-chip:hover,.active-filter-chip:focus-visible{background:#123d63}
+.clear-all-btn:disabled{opacity:.45;cursor:not-allowed}
+.card-match-reasons{margin:6px 0 8px;padding:6px 10px;border-radius:9px;background:#f0f6fc;border:1px solid #c5daee;font-size:.73rem;line-height:1.45;color:#11324d}
+.card-match-reasons strong{display:inline-block;margin-right:6px;padding:1px 6px;border-radius:5px;background:#082844;color:#f5c84c;font-size:.66rem;font-weight:900}
+.empty-guide{padding:26px 20px;text-align:left;max-width:760px;margin:12px auto;border:1px solid #d5e0ea;border-radius:16px;background:#fff}
+.empty-guide strong{display:block;font-size:1.05rem;color:#0b2c4a;margin-bottom:6px}
+.empty-guide p{margin:0 0 14px;color:#4a5d70;font-size:.86rem}
+.empty-actions{display:flex;flex-wrap:wrap;gap:8px}
+.empty-relax-btn{border:1px solid #082844;background:#f4f8fc;color:#082844;font-weight:800;font-size:.8rem;padding:8px 13px;border-radius:999px;cursor:pointer}
+@media(max-width:620px){
+  .result-count-wrap{align-items:flex-start}
+  .filter-panel .unified-search-shell{grid-template-columns:minmax(0,1fr) auto}
+  .filter-panel .unified-search-shell button[type="submit"]{grid-column:1/-1;width:100%}
+  .active-filters-bar{flex-direction:column;align-items:stretch}
+  .active-filters-bar .sort-row{width:100%;justify-content:space-between;flex-wrap:wrap}
+}
+/* 工程3：検索状態の保存・表示件数制御・簡潔一覧／詳細カード切替 */
+.view-mode-switch{display:inline-flex;align-items:center;gap:4px;padding:3px;border:1px solid #c5d1dc;border-radius:999px;background:#f4f7fa}
+.view-mode-label{font-size:.72rem;font-weight:800;color:#4a5d70;padding:0 6px}
+.view-mode-btn{border:0;background:transparent;color:#1d3349;font-size:.74rem;font-weight:800;padding:5px 11px;border-radius:999px;cursor:pointer;line-height:1.2}
+.view-mode-btn.active{background:#082844;color:#fff;box-shadow:0 2px 6px rgba(8,40,68,.18)}
+.pagination-bar{margin:22px auto 6px;padding:18px 20px;border:1px solid #d5e0ea;border-radius:16px;background:#fff;box-shadow:0 6px 18px rgba(13,37,58,.06);display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.pagination-bar[hidden]{display:none!important}
+.pagination-status{width:100%;max-width:440px;display:grid;gap:7px;font-size:.86rem;color:#284158}
+.pagination-status strong{color:#082844;font-weight:900}
+.pagination-track{height:7px;border-radius:999px;background:#e6edf4;overflow:hidden}
+.pagination-track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#082844,#c99b27)}
+.pagination-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.pagination-more-btn{min-height:44px;padding:10px 22px;border-radius:999px;background:#082844;color:#fff;font-weight:900;border:0;cursor:pointer}
+.pagination-all-btn,.pagination-collapse-btn{min-height:42px;padding:9px 16px;border-radius:999px;border:1px solid #b8c7d6;background:#f7fafc;color:#15324b;font-weight:800;cursor:pointer}
+#tokyo-grid.is-compact-view{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+.tokyo-card.is-compact-card{min-height:0!important;border-radius:14px!important;padding:0!important}
+.tokyo-card.is-compact-card .compact-card-body{padding:14px 16px!important;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}
+.tokyo-card.is-compact-card .compact-card-top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-bottom:6px}
+.compact-type-pill{padding:2px 9px;border-radius:999px;font-size:.7rem;font-weight:900;background:#082844;color:#fff}
+.compact-type-pill.type-public{background:#1b6a53}
+.compact-type-pill.type-private{background:#3a4f66}
+.compact-meta-fact{font-size:.74rem;font-weight:800;color:#354c63}
+.tokyo-card.is-compact-card h3{margin:0 0 4px!important;font-size:1.08rem!important}
+.compact-tags-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.compact-card-side{display:flex;flex-direction:column;gap:6px;min-width:220px}
+.tokyo-card.is-compact-card .finished-card-actions{margin:0!important}
+@media(max-width:760px){
+  .tokyo-card.is-compact-card .compact-card-body{grid-template-columns:1fr}
+  .compact-card-side{min-width:0;width:100%}
+}
+/* 工程4：一覧カード上のデータ状態バッジと基準日・確認日表示 */
+.dq-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:.68rem;font-weight:900;line-height:1.25;border:1px solid transparent;white-space:nowrap}
+.dq-verified{background:#e8f6ee;color:#1b5e3c;border-color:#b7dfc7}
+.dq-uninvestigated{background:#fff6e0;color:#7a520b;border-color:#e8ce8e}
+.dq-not-published{background:#f2eff8;color:#4f3878;border-color:#d4cae8}
+.dq-not-applicable{background:#eef2f6;color:#425568;border-color:#cfd9e3}
+.dq-updating{background:#e7f2fc;color:#144d82;border-color:#b6d5f2}
+.dq-expired{background:#fdecec;color:#8c2323;border-color:#f1b9b9}
+.card-fact-sub{display:block;font-size:.64rem;color:#5a6d7e;font-weight:700;margin-top:1px}
+.card-verified-meta{margin:4px 0 8px;font-size:.68rem;color:#52667a;display:flex;flex-wrap:wrap;gap:6px;align-items:center}

@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000231",
+  "id": "u000231",
+  "name": "聖徳大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "松戸市",
+  "operator": "学校法人東京聖徳学園",
+  "feature_summary": "松戸市に本部を置き、教育学部・心理・福祉学部・文学部・人間栄養学部など6学部と大学院7研究科で学ぶ大学です。",
+  "official_url": "https://www.seitoku-u.ac.jp/",
+  "admissions_url": "https://ouen.seitoku.ac.jp/",
+  "academic_field_tags": [
+    "看護・医療",
+    "理学",
+    "食・栄養",
+    "国際・語学",
+    "教育",
+    "幼児教育・保育",
+    "心理",
+    "福祉",
+    "社会学",
+    "文学・人文",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400073",
+      "name": "教育学部",
+      "academic_field_tags": [
+        "教育",
+        "幼児教育・保育"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400124",
+          "name": "児童学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400125",
+          "name": "教育学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400074",
+      "name": "心理・福祉学部",
+      "academic_field_tags": [
+        "理学",
+        "心理",
+        "福祉",
+        "社会学"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400126",
+          "name": "心理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400127",
+          "name": "社会福祉学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400075",
+      "name": "文学部",
+      "academic_field_tags": [
+        "文学・人文"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400128",
+          "name": "文学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400076",
+      "name": "人間栄養学部",
+      "academic_field_tags": [
+        "食・栄養"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400129",
+          "name": "人間栄養学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400077",
+      "name": "看護学部",
+      "academic_field_tags": [
+        "看護・医療"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400130",
+          "name": "看護学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400078",
+      "name": "音楽学部",
+      "academic_field_tags": [
+        "芸術"
+      ],
+      "campus_municipality": "松戸市",
+      "departments": [
+        {
+          "department_id": "d400131",
+          "name": "音楽学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400042",
+      "name": "児童学研究科",
+      "programs": [
+        "児童学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400043",
+      "name": "臨床心理学研究科",
+      "programs": [
+        "臨床心理学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400044",
+      "name": "言語文化研究科",
+      "programs": [
+        "日本文化専攻",
+        "英米文化専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400045",
+      "name": "人間栄養学研究科",
+      "programs": [
+        "人間栄養学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400046",
+      "name": "看護学研究科",
+      "programs": [
+        "看護学専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400047",
+      "name": "音楽文化研究科",
+      "programs": [
+        "音楽表現専攻",
+        "音楽教育専攻",
+        "音楽専攻"
+      ]
+    },
+    {
+      "graduate_school_id": "g400048",
+      "name": "教職研究科",
+      "programs": [
+        "教職実践専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "松戸キャンパス",
+      "postal_code": "271-8555",
+      "address": "千葉県松戸市岩瀬550",
+      "prefecture": "千葉県",
+      "municipality": "松戸市",
+      "nearest_stations": [
+        {
+          "station": "松戸駅",
+          "line": "JR常磐線・新京成線",
+          "access": "東口徒歩5分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "name": "栄養士",
+      "department": "人間栄養学部 人間栄養学科",
+      "group": "栄養士",
+      "source_id": "src-mext"
+    },
+    {
+      "name": "看護師（国家試験受験資格）",
+      "department": "看護学部 看護学科",
+      "group": "看護師",
+      "source_id": "src-mext"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "聖徳大学 公式サイト",
+      "url": "https://www.seitoku-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "聖徳大学 公式入試情報",
+      "url": "https://ouen.seitoku.ac.jp/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "qualifications",
+      "student_counts"
+    ]
+  },
+  "philosophy": "聖徳太子の「和」の精神を建学の理念とし、思いやりと協調性を備えた人間教育・女性教育を重視する。",
+  "mission": "教育・心理・福祉・文学・栄養・看護・音楽の幅広い専門性を生かし、社会を支える人材を育成する。",
+  "student_counts": {
+    "undergraduate": 2560,
+    "graduate": 0,
+    "total": 2560,
+    "as_of": "2026-05-01"
+  }
+}

@@ -220,8 +220,8 @@
         },
         {
           "number": "6",
-          "heading": "ライセンスキーを発行・メール送信",
-          "text": "管理者が申請内容（注文番号等）を確認し、個別ライセンスキー（BT-MFSP-XXXX-XXXX-XXXX-XXXX）をご登録のメールアドレス宛に送信します（2〜3営業日以内）。"
+          "heading": "ライセンスキーがメールで自動的に届く",
+          "text": "申請フォームを送信すると、あなた専用のライセンスキー（BT-MFSP-XXXX-XXXX-XXXX-XXXX）が、ご登録のメールアドレスに自動で届きます。数分たっても届かない場合は、迷惑メールフォルダもご確認ください。"
         },
         {
           "number": "7",
@@ -309,6 +309,11 @@
             "rel": "noopener",
             "style": "background:linear-gradient(135deg,var(--navy),#1e3d6b); color:#fff; font-weight:bold; min-width:240px; padding:14px 28px; border-radius:99px; text-decoration:none; box-shadow:0 4px 15px rgba(7, 27, 54, 0.15);"
           }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ（買い方の案内）"
         }
       ],
       "note": "※ 10日試用版のインストール後は、ライセンス認証を行わずにすぐにお試しいただけます。",

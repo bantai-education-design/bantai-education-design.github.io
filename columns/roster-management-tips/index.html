@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>名前は、一文字も欠けてはいけない | Ban.Tai Education Design</title><meta name="description" content="無料で公開している「学級名簿メーカー」と「学級座席デザイナー」。氏名を欠けずに表示するための作り直し、学校のCSVへの対応、座席を全自動で決めない設計、児童の情報を外へ送らない作りまで、工夫と苦労を書きます。"><link rel="canonical" href="https://bantai-education-design.github.io/columns/roster-management-tips/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Ban.Tai Education Design">
+<meta property="og:title" content="名前は、一文字も欠けてはいけない">
+<meta property="og:description" content="無料で公開している「学級名簿メーカー」と「学級座席デザイナー」。氏名を欠けずに表示するための作り直し、学校のCSVへの対応、座席を全自動で決めない設計、児童の情報を外へ送らない作りまで、工夫と苦労を書きます。">
+<meta property="og:url" content="https://bantai-education-design.github.io/columns/roster-management-tips/">
+<meta property="og:image" content="https://bantai-education-design.github.io/assets/images/columns/roster-management-tips/thumbnail.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="名前は、一文字も欠けてはいけない">
+<meta name="twitter:description" content="無料で公開している「学級名簿メーカー」と「学級座席デザイナー」。氏名を欠けずに表示するための作り直し、学校のCSVへの対応、座席を全自動で決めない設計、児童の情報を外へ送らない作りまで、工夫と苦労を書きます。">
+<meta name="twitter:image" content="https://bantai-education-design.github.io/assets/images/columns/roster-management-tips/thumbnail.webp">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "名前は、一文字も欠けてはいけない", "description": "無料で公開している「学級名簿メーカー」と「学級座席デザイナー」。氏名を欠けずに表示するための作り直し、学校のCSVへの対応、座席を全自動で決めない設計、児童の情報を外へ送らない作りまで、工夫と苦労を書きます。", "image": ["https://bantai-education-design.github.io/assets/images/columns/roster-management-tips/thumbnail.webp"], "datePublished": "2026-08-05", "dateModified": "2026-11-21", "author": {"@type": "Person", "name": "磐田井"}, "publisher": {"@type": "Organization", "name": "Ban.Tai Education Design", "url": "https://bantai-education-design.github.io/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://bantai-education-design.github.io/columns/roster-management-tips/"}}</script>
+<link rel="stylesheet" href="/assets/style.css"><style>*{box-sizing:border-box}body{margin:0;background:#faf8f3;color:#243041;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif}main{max-width:960px;margin:auto;padding:30px 22px 72px;line-height:2}h1{font-size:clamp(1.65rem,3.5vw,2.5rem);line-height:1.5;margin:24px 0 4px}h2{margin-top:2.1em;font-size:clamp(1.3rem,2.8vw,1.8rem);line-height:1.55}h3{margin-top:1.5em}a{color:#175c9a;overflow-wrap:anywhere}.article-nav{position:sticky;top:0;z-index:20;background:#17334e;padding:10px max(16px,calc((100vw - 960px)/2 + 22px));box-shadow:0 2px 8px rgba(0,0,0,.16)}.article-nav a{display:inline-flex;align-items:center;min-height:42px;padding:8px 14px;border-radius:7px;background:#fff;color:#17334e;font-weight:700;text-decoration:none}.article-nav a:hover{background:#f0e5cc}.subtitle{font-size:1.15rem;color:#5c6672;margin-top:0}.meta{color:#606773;font-size:.9rem}.article-paragraph{margin:1.15em 0;overflow-wrap:anywhere}figure{margin:30px 0}figure img,.hero{display:block;width:100%;height:auto;border-radius:10px}figcaption{font-size:.85rem;line-height:1.7;color:#626a73;margin-top:10px}.table-wrap{overflow-x:auto;margin:24px 0;border:1px solid #d7d9d5;border-radius:8px;background:white}table{width:100%;border-collapse:collapse;line-height:1.7}th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid #e1e3df}th{background:#193654;color:#fff}tr:last-child td{border-bottom:0}.timeline{padding-left:1.4em}.timeline li{margin:8px 0}.sources{margin-top:40px;padding:20px;background:#eef1ed;border-radius:10px;font-size:.92rem;line-height:1.9}.sources h2{font-size:1.1rem;margin:0 0 12px}.sources ul{padding-left:1.4em}.byline{margin-top:2.3em}@media(max-width:560px){main{padding:18px 16px 50px}th,td{padding:9px 10px;font-size:.9rem}}img.hero{padding:0;background:none;min-height:0;height:auto;margin:0}main{max-width:744px}.article-paragraph{font-size:1.06rem;line-height:2.05;margin:0 0 1.3em}.lead-sub{font-size:1.1rem;line-height:1.9;color:#5c6672;margin-top:.4em}.citation{font-size:.84em;text-decoration:none;white-space:nowrap}.table-block{margin:32px 0}.table-block h3{font-size:1.12rem;line-height:1.6;margin:0 0 10px}.table-block .note{font-size:.88rem;line-height:1.8;color:#5b6570;margin:8px 0 0}.updates{margin:0 0 1.4em;padding:16px 22px;background:#fff;border:1px solid #dcd6c9;border-radius:10px;list-style:none}.updates li{line-height:1.85;padding:6px 0;border-bottom:1px dashed #e2dccf}.updates li:last-child{border-bottom:0}.updates b{display:inline-block;min-width:5.2em;color:#7c612c}.memo{margin:0 0 1.4em;padding:16px 22px;background:#fffaf0;border-left:4px solid #c6b58e;border-radius:6px}.memo p{margin:0 0 .4em;line-height:1.9}.memo p:last-child{margin:0}.memo b{color:#7c612c}.sources p{margin:0 0 .6em}@media(max-width:560px){.article-paragraph{font-size:1rem;line-height:1.95}.updates b{display:block}.updates,.memo{padding:12px 16px}} .memo h3{font-size:1.05rem;margin:0 0 .7em;color:#7c612c}.memo .article-paragraph{font-size:1rem}.article-paragraph{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif}.subtitle{margin:.6em 0 1em}.meta{margin-bottom:1.5em}</style>
+<script>(function(){try{var u=new URL(location.href),a=u.searchParams.get('bantai_admin');if(a==='true')localStorage.setItem('bantai_admin','true');else if(a==='clear')localStorage.removeItem('bantai_admin');if(a!==null){u.searchParams.delete('bantai_admin');var s=u.searchParams.toString();history.replaceState(null,'',u.pathname+(s?'?'+s:'')+u.hash);}}catch(e){}var l=location.hostname==='localhost'||location.hostname==='127.0.0.1'||location.protocol==='file:',x=false;try{x=localStorage.getItem('bantai_admin')==='true';}catch(e){}if(l||x)window['ga-disable-G-KPGJ0R2KXR']=true;})();</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KPGJ0R2KXR');</script><script src="/assets/js/analytics-events.js" defer></script></head>
+<body><nav class="article-nav" aria-label="記事ナビゲーション"><a href="/columns/">← コラム一覧へ戻る</a></nav><main><article><h1>名前は、一文字も欠けてはいけない</h1><p class="subtitle">学級名簿メーカーと学級座席デザイナーで工夫したこと、苦労したこと</p><p class="meta">文・磐田井｜Ban.Tai Education Design<br><time datetime="2026-08-05">2026年8月5日</time>（2026年11月21日 改訂）｜現場の工夫｜約5分</p><figure><img src="/assets/images/columns/roster-management-tips/thumbnail.webp" width="1600" height="900" alt="学級名簿メーカーの提出物チェック表と、学級座席デザイナーの座席表作成画面を並べた紹介画像" fetchpriority="high"><figcaption>左が学級名簿メーカー、右が学級座席デザイナー。どちらも無料で使える。</figcaption></figure>
+<h2>毎年、同じ名前を何度も打ち直している</h2>
+<p class="article-paragraph">4月の学級担任は、同じ子どもの名前を何度も書く。</p>
+<p class="article-paragraph">名簿、提出物のチェック表、集金の確認表、誕生日の一覧、班ごとの名簿、そして座席表。どれも元になるのは同じ名簿なのに、用途が変わるたびに表を作り直し、名前を打ち直している。</p>
+<p class="article-paragraph">学級名簿メーカーと学級座席デザイナーは、この繰り返しを減らすために作った二つの道具である。どちらも小学校の先生のために、無料で公開している。</p>
+<h2>1　いちばん苦労したのは、名前の表示だった</h2>
+<p class="article-paragraph">名簿を作るソフトと聞くと、簡単そうに思えるかもしれない。実際、表を作って名前を並べるところまでは、すぐにできた。</p>
+<p class="article-paragraph">手間取ったのは、その先である。名前が、きれいに収まらない。</p>
+<h3>長い名前が、右端で切れる</h3>
+<p class="article-paragraph">名簿は、チェック欄をできるだけ多く取りたい。そのぶん、氏名欄は狭くなる。すると、5文字、6文字の氏名や、ひらがなで書いた長い名前が、欄の右端で欠けたり、「…」で省略されたりする。</p>
+<p class="article-paragraph">名簿で名前が欠けるのは、致命的である。子ども本人や保護者の目に触れる紙なら、なおさらである。</p>
+<p class="article-paragraph">そこで、氏名の文字数に応じて、文字の大きさ、字と字の間隔、横方向の詰め方を段階的に切り替えるようにした。ただ小さくするだけでは、短い名前と長い名前で大きさがばらばらになり、かえって見苦しい。大きさはなるべく下げず、まず字間と横幅で調整する。この加減を、何度も試しては直した。</p>
+<h3>ふりがなが、ずれる</h3>
+<p class="article-paragraph">もう一つが、ふりがなである。</p>
+<p class="article-paragraph">最初は、ウェブの標準的なふりがなの仕組みを使っていた。ところが、名前の字間を詰めると、姓のふりがなが名のほうへずれていく。ふりがなは、姓の上に姓の読み、名の上に名の読みがなければ意味がない。</p>
+<p class="article-paragraph">最終的には標準の仕組みをやめ、姓と名それぞれについて、ふりがなと漢字を上下2段で組む独自の配置に作り直した。公開から最初の数日だけで、表示の調整に関わる改訂は十回を超えている。名前を正しく出すことは、それだけ手のかかる仕事だった。</p>
+<h2>2　学級名簿メーカーで工夫したこと</h2>
+<h3>一つの名簿から、用途の違う表を作る</h3>
+<p class="article-paragraph">児童名簿を一度用意すれば、通常の学級名簿、提出物チェック表、集金確認表、誕生日順の一覧、班別名簿を、書き直さずに作り分けられる。</p>
+<p class="article-paragraph">並び順は、出席番号順、男女別、五十音順、誕生日順を切り替えられる。チェック欄は0列から15列まで。明朝体とゴシック体、ふりがなの有無、行間や余白、1段組みと2段組みも選べる。</p>
+<h3>学校にある名簿を、そのまま使えるように</h3>
+<p class="article-paragraph">名簿は、多くの学校でExcelにある。それを手で打ち直していては意味がない。</p>
+<p class="article-paragraph">ExcelからCSVで書き出した名簿を読み込めるようにし、学校のパソコンでよく使われる文字コード（Shift-JIS）にも対応した。Excelの表をコピーして、そのまま貼り付けることもできる。</p>
+<p class="article-paragraph">貼り付けた名簿では、性別の書き方がそろっていないことが多い。「男子」「男の子」「M」などの表記の違いはアプリの側でそろえ、氏名の入れ忘れや番号の重複は一覧で分かるようにした。</p>
+<h3>1年生には、ひらがなの名簿を</h3>
+<p class="article-paragraph">氏名は「漢字とふりがな」「ひらがな」「漢字のみ」から選べる。所属に1年を入れると、ひらがな表示を案内するようにした。入学したばかりの子どもが、自分の名前を見つけられる名簿にしたかったからである。</p>
+<h2>3　学級座席デザイナーで工夫したこと</h2>
+<h3>座席を、全自動では決めない</h3>
+<p class="article-paragraph">座席表のソフトというと、ボタン一つで席を決めてくれるものを想像するかもしれない。学級座席デザイナーにも自動配置はある。ランダム、身長順、男女交互などで、席のたたき台を作ることができる。</p>
+<p class="article-paragraph">しかし、最後に席を決めるのは担任である。視力のこと、友だち関係のこと、その子がいま教室のどこにいると落ち着くのか。それを知っているのは、ソフトではなく担任である。</p>
+<p class="article-paragraph">そこで、このアプリは担任の判断を助ける道具として作った。前の席を希望する子、近くにしたい子、離したい子といった配慮条件を設定しておくと、条件に合わない配置に注意を出す。席を勝手に入れ替えることはしない。特定の席に固定した子は、自動配置でも動かさない。</p>
+<h3>先生が見る表と、教室に貼る表を分ける</h3>
+<p class="article-paragraph">印刷は「教師用」と「掲示用」を切り替えられる。教師用には出席番号やチェック欄、配慮の確認欄も出せる。掲示用には、名前だけを大きく、すっきりと出す。</p>
+<p class="article-paragraph">配慮の情報は、子どもや保護者の目に触れてはいけない。だから掲示用には、内部の情報を一切出さないようにした。どちらもA4縦1枚に、できるだけ大きく収まるよう調整している。低学年向けには、ひらがな表示と大きめの文字も選べる。</p>
+<h2>4　子どもの情報を、外へ出さない</h2>
+<p class="article-paragraph">名簿も座席表も、子どもの名前を扱う。だから二つのアプリとも、入力した情報を外部のサーバーへ送らない作りにしている。データはお使いのパソコンの中に保存される。</p>
+<p class="article-paragraph">インストールせずに起動できるWindows版を用意したのも、そのためである。学校のパソコンは、ソフトを入れるのに許可が必要なことが多い。インターネットにつながらない環境でも、そのまま使える。</p>
+<p class="article-paragraph">ただし、保存したファイルには子どもの氏名が含まれる。保存場所や共有のしかた、不要になったファイルの削除は、学校の情報管理のきまりに沿ってお願いしたい。</p>
+<h2>5　届けたいこと</h2>
+<p class="article-paragraph">名簿を作る時間は、子どもと過ごす時間ではない。座席表を清書する時間も、そうである。</p>
+<p class="article-paragraph">その時間を少しでも減らし、浮いた時間で、子どもの顔を思い浮かべながら席を考えてほしい。二つのアプリを無料にしたのは、学校の「ちょっとした手間」を、少しでも軽くしたいと考えたからである。</p>
+<p class="article-paragraph">そして、名簿の名前は、一文字も欠けずに、正しく、読みやすく。それが、名前を書かれる子どもへの礼儀だと思っている。</p>
+<h2>6　使ってみるには</h2>
+<div class="table-wrap"><table><tr><th>学級名簿メーカー</th><td>Windows版（インストール不要）を無料でダウンロード</td></tr><tr><th>学級座席デザイナー</th><td>ブラウザで使えるWeb版と、インストール不要のWindows版を無料で公開</td></tr><tr><th>登録</th><td>どちらもライセンスキー、アカウント登録は不要</td></tr></table></div>
+<p class="article-paragraph">使い勝手で気になるところがあれば、ぜひお知らせいただきたい。名前の表示がおかしい、という報告は特にありがたい。</p>
+<section class="sources"><h2>関連ページ</h2><p><a href="/products/class-roster/">学級名簿メーカー 製品紹介ページ</a></p><p><a href="/products/classroom-seat-designer/">学級座席デザイナー 製品紹介ページ</a></p><p><a href="https://bantai-education-design.github.io/classroom-seat-designer/" target="_blank" rel="noopener noreferrer">学級座席デザイナー Web版</a></p></section><p><a href="/columns/">コラム一覧へ戻る</a></p></article></main></body></html>

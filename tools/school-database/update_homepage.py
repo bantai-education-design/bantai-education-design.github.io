@@ -9,7 +9,7 @@ start_idx = text.find(start_marker)
 end_idx = text.find(end_marker)
 
 if start_idx != -1 and end_idx != -1:
-    new_html = '''<p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 20px;">文部科学省のデータおよび各都道府県教育委員会等の公式公開データをもとに、全国の学校・園の住所や電話番号をデータベース化しています（都道府県ごとに順次対応中）。自治体・学校種・設置区分で絞り込み、封筒宛名コピーやCSVダウンロード、Google Maps連携が可能です。</p>
+    new_html = '''<p style="color:rgba(255,255,255,0.8); font-size:0.86rem; line-height:1.75; margin:0 0 20px;">文部科学省のデータおよび各都道府県教育委員会等の公式公開データをもとに、全国の学校・園の住所や電話番号をデータベース化しています（都道府県ごとに順次対応中）。自治体・学校種・設置区分で絞り込み、封筒宛名コピーやGoogle Maps連携が可能です。</p>
 
           <!-- 収録範囲 -->
           <div style="margin-bottom:24px; padding:16px; background:rgba(0,0,0,0.25); border-radius:8px; border:1px solid rgba(197,160,89,0.3);">

@@ -187,6 +187,11 @@
             "target": "_blank",
             "rel": "noopener noreferrer"
           }
+        },
+        {
+          "class": "btn",
+          "href": "/guide/booth/",
+          "label": "はじめてBOOTHで買う方へ（買い方の案内）"
         }
       ],
       "note": "シリアルキーをアプリに入力するだけで即座に制限が解除され、永続的にご利用いただけます。"

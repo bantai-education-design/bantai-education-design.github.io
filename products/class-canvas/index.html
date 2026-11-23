@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>みんなのクラス・キャンバス | 学級経営・座席表・班編成支援システム 公式サイト | Ban.Tai Education Design</title>
+  <meta name="description" content="先生の放課後をもっと豊かに。視力配慮や人間関係を考慮した席替え、男女比や相性を考慮した班編成、係活動、子ども向け投影モードまでを直感的に。完全オフライン・安全設計の学級経営支援システム「みんなのクラス・キャンバス」公式サイトです。10日間無料お試し可能。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .badge-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0 20px 0;
+    }
+    .badge-pill {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .price-card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: #047857;
+      box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.15);
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 25%);
+    }
+    .price-ribbon {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: #047857;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+    }
+    .price-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .price-lead {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .price-amount {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .price-amount span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #64748b;
+    }
+    .price-tax {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+    .price-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+    .price-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .price-features li::before {
+      content: "✓";
+      color: #047857;
+      font-weight: 900;
+    }
+    .btn-buy {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-buy-primary {
+      background: #047857;
+      color: #ffffff;
+    }
+    .btn-buy-primary:hover {
+      background: #065f46;
+      color: #ffffff;
+    }
+    .btn-buy-outline {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+    .btn-buy-outline:hover {
+      background: #f8fafc;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+    .faq-q {
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .faq-q::before {
+      content: "Q";
+      background: #047857;
+      color: #ffffff;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.6;
+      padding-left: 32px;
+    }
+    .screen-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      margin-top: 36px;
+    }
+    .screen-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .screen-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    }
+    .screen-media-container {
+      position: relative;
+      background: #0f172a;
+      cursor: pointer;
+      overflow: hidden;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .screen-media-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .screen-media-container:hover img {
+      transform: scale(1.02);
+    }
+    .zoom-hint-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.75);
+      color: #ffffff;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .screen-card-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .screen-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #047857;
+      background: #ecfdf5;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    .screen-card-body h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .screen-card-body p {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      max-width: 96vw;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .modal-content img {
+      max-width: 100%;
+      max-height: 82vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .modal-caption {
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-top: 14px;
+      text-align: center;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/assets/images/brand-logo.png" alt="Ban.Tai Education Design">
+        <span>Ban.Tai Education Design</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+      <nav id="global-menu" class="menu" aria-label="グローバルナビゲーション">
+        <a href="/">ホーム</a>
+        <a href="/products/" class="active">製品一覧</a>
+        <a href="#features">できること</a>
+        <a href="#screens">操作画面</a>
+        <a href="#trial">10日間無料体験</a>
+        <a href="#pricing">価格・購入</a>
+        <a href="#faq">よくある質問</a>
+        <a href="/contact/" class="mini">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+<!-- ヒーローエリア -->
+<section class="page-hero" style="background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%); padding: 60px 0 40px 0;">
+  <div class="container">
+    <div class="kicker" style="color: #047857; font-weight: 800;">学級経営支援システム 2026年正式版</div>
+    <h1 style="font-size: 2.4rem; font-weight: 900; line-height: 1.25; margin-bottom: 12px; color: #0f172a;">
+      みんなのクラス・キャンバス
+    </h1>
+    <p class="lead" style="font-size: 1.25rem; font-weight: 700; color: #047857; margin-bottom: 8px;">
+      先生の放課後をもっと豊かに。完全オフライン・安全設計の座席表＆グループ編成ツール
+    </p>
+    <p class="lead" style="font-weight: 400; font-size: 0.95rem; color: #475569; max-width: 780px;">
+      視力配慮や人間関係を考慮した席替え、男女比や相性を考慮した班編成、係活動の決定、投影用黒板表示までを直感的に。学校の厳しいセキュリティ環境（閉域網・外部通信制限）でもすぐにお使いいただける完全端末内完結の安心設計です。
+    </p>
+
+    <div class="badge-pill-row">
+      <span class="badge-pill">🔒 完全オフライン動作（外部通信ゼロ）</span>
+      <span class="badge-pill">🛡️ 個人情報・指導配慮メモの漏洩防止</span>
+      <span class="badge-pill">⏱️ 10日間無料お試し可能</span>
+      <span class="badge-pill">📖 高品質操作マニュアルPDF同梱</span>
+      <span class="badge-pill">📦 買い切り・追加課金なし</span>
+    </div>
+
+    <div class="actions" style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;">
+      <a class="btn btn-primary" href="/downloads/minnano_class_canvas_v0.16.0.zip" download="" style="background: #047857; border-color: #047857; box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35);">
+        <span>📥 10日間無料お試し版をダウンロード（ZIP）</span>
+      </a>
+      <a class="btn btn-secondary" href="#screens">
+        <span>操作画面を見る</span>
+      </a>
+      <a class="btn btn-secondary" href="#pricing">
+        <span>料金プラン・BOOTHで購入</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 概要セクション -->
+<section class="section" id="features">
+  <div class="container grid grid-2">
+    <div>
+      <div class="sub" style="color: #047857;">Features</div>
+      <h2 style="font-size: 1.8rem; font-weight: 900; line-height: 1.3; color: #0f172a; margin-bottom: 16px;">
+        席替えの悩みをゼロに。<br>担任の先生の判断を、やさしく支える4つの特徴。
+      </h2>
+      <p style="margin-bottom: 12px; line-height: 1.7; color: #334155;">
+        毎学期・毎月の席替えや班編成は、子どもの視力、身長、人間関係、特別な配慮事項など、考慮すべき要素が無数にあり、放課後の先生方の大きな負担となっていました。
+      </p>
+      <p style="margin-bottom: 12px; line-height: 1.7; color: #334155;">
+        「みんなのクラス・キャンバス」は、複雑な条件を数学的アルゴリズムが瞬時に満たす「条件付き自動配置」と、1手ずつ自由に直せる直感的なドラッグ＆ドロップを融合。最後は担任の先生が納得いくまで細かく調整できる、学校現場のための実用システムです。
+      </p>
+    </div>
+    <div class="box" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px;">
+      <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 14px;">現場で選ばれる4大特長</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #334155; display: flex; flex-direction: column; gap: 12px;">
+        <li style="display: flex; gap: 10px; align-items: flex-start;">
+          <span style="background: #047857; color: #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; margin-top: 2px;">1</span>
+          <div><strong>完全オフライン・外部通信ゼロ:</strong> 児童生徒の個人情報や指導メモがお使いのPC外へ送信されることは絶対にありません。</div>
+        </li>
+        <li style="display: flex; gap: 10px; align-items: flex-start;">
+          <span style="background: #047857; color: #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; margin-top: 2px;">2</span>
+          <div><strong>4つの条件付き自動席替え:</strong> 視力配慮優先、男女交互、身長順、席替え履歴考慮（直近の隣同士を回避）をワンクリックで実行。</div>
+        </li>
+        <li style="display: flex; gap: 10px; align-items: flex-start;">
+          <span style="background: #047857; color: #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; margin-top: 2px;">3</span>
+          <div><strong>投影モード＆スマート安全印刷:</strong> 電子黒板や印刷時に、配慮事項バッジや指導メモを自動非表示にする多層防御。</div>
+        </li>
+        <li style="display: flex; gap: 10px; align-items: flex-start;">
+          <span style="background: #047857; color: #fff; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; margin-top: 2px;">4</span>
+          <div><strong>3ステップ初期設定＆30名サンプル:</strong> 迷わず1分で座席表が立ち上がり、架空児童データですぐに操作感を体験できます。</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 操作画面ギャラリー・詳細紹介セクション -->
+<section id="screens" class="section" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 36px auto;">
+      <div class="sub" style="color: #047857;">Actual Screens & Details</div>
+      <h2 style="font-size: 2.1rem; font-weight: 900; line-height: 1.3; color: #0f172a; margin-bottom: 12px;">
+        実際の操作画面で見る、学級経営支援システムの全貌
+      </h2>
+      <p style="font-size: 1rem; color: #475569; line-height: 1.7;">
+        直感的なドラッグ＆ドロップ、見やすいカラーパレット、そして指導メモの保護。先生が毎日ストレスなく使えるよう細部まで磨き上げた実務画面をご覧ください。（画像をクリックすると拡大表示できます）
+      </p>
+    </div>
+
+    <div class="screen-gallery-grid">
+      <!-- 01: 初期設定ウィザード -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-wizard-step1.webp" data-zoom-caption="01｜迷わせない3ステップ初期設定ウィザード（学級名・机配置・サンプル名簿）">
+          <img src="/assets/images/products/class-canvas/screen-wizard-step1.webp" alt="迷わせない3ステップ初期設定ウィザード" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">01 / INITIAL SETUP</span>
+          <h3>わずか1分でセットアップ完了。迷わせない3ステップ初期設定</h3>
+          <p>学級名、年度、机の配置形式（6×6、5×6、グループ島型）、名簿の登録方法を順を追って選択するだけで、すぐに席替えキャンバスが立ち上がります。30名分の架空サンプル名簿も同梱されており、導入直後からすぐに操作感を体験できます。</p>
+        </div>
+      </article>
+
+      <!-- 02: 席替え・座席表 -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-seating-detail.webp" data-zoom-caption="02｜視力配慮・人間関係を考慮した直感的ドラッグ＆ドロップ座席表">
+          <img src="/assets/images/products/class-canvas/screen-seating-detail.webp" alt="視力配慮・人間関係を考慮した直感的座席表" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">02 / SEATING CANVAS</span>
+          <h3>視力配慮・人間関係を考慮した直感的ドラッグ＆ドロップ</h3>
+          <p>児童カードをマウスで自由に移動。メガネマークの視力配慮や指導メモを視覚的に把握しながら、前列優先配置や男女交互などの自動配置アルゴリズムと手動微調整をシームレスに組み合わせられます。</p>
+        </div>
+      </article>
+
+      <!-- 03: 班編成・グループ活動 -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-groups.webp" data-zoom-caption="03｜男女比やバランスを考慮した均等グループ・班編成">
+          <img src="/assets/images/products/class-canvas/screen-groups.webp" alt="男女比やバランスを考慮した均等グループ編成" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">03 / GROUP ASSIGNMENT</span>
+          <h3>男女比やバランスを考慮した均等グループ編成</h3>
+          <p>4〜6人の生活班や学習班をワンクリックで編成。班ごとの男女比、配慮事項の偏りを防ぐ自動均等割り振りに対応し、探究学習や給食・掃除の当番班づくりもスムーズに行えます。</p>
+        </div>
+      </article>
+
+      <!-- 04: 児童名簿管理 -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-students.webp" data-zoom-caption="04｜校内完結・安心の完全オフライン名簿データベース">
+          <img src="/assets/images/products/class-canvas/screen-students.webp" alt="完全オフライン名簿データベース" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">04 / STUDENT ROSTER</span>
+          <h3>校内完結・安心の完全オフライン名簿データベース</h3>
+          <p>出席番号、氏名、性別、視力・配慮メモを一元管理。外部クラウドへデータを一切送信しない完全ローカル保存のため、自治体や校内の厳しいセキュリティ規程を確実にクリアします。</p>
+        </div>
+      </article>
+
+      <!-- 05: 子ども向け投影モード -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-projector.webp" data-zoom-caption="05｜子ども向け投影モード・大画面席替え抽選演出">
+          <img src="/assets/images/products/class-canvas/screen-projector.webp" alt="子ども向け投影モード・大画面席替え抽選" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">05 / PROJECTOR MODE</span>
+          <h3>教室の大型モニターや電子黒板で魅せるワクワク演出</h3>
+          <p>席替え発表時に子どもたちを惹きつける抽選・発表演出モード。指導配慮メモや機微な個人情報は自動的にマスクされ、教室全体で楽しく安全に新しい席を確認できます。</p>
+        </div>
+      </article>
+
+      <!-- 06: 当番・係活動管理 -->
+      <article class="screen-card">
+        <div class="screen-media-container" data-zoom-src="/assets/images/products/class-canvas/screen-roles.webp" data-zoom-caption="06｜当番・係活動の役割分担と担当児童のスマート整理">
+          <img src="/assets/images/products/class-canvas/screen-roles.webp" alt="当番・係活動の役割分担と担当児童のスマート整理" loading="lazy">
+          <span class="zoom-hint-badge">🔍 拡大して見る</span>
+        </div>
+        <div class="screen-card-body">
+          <span class="screen-badge">06 / ROLES & DUTIES</span>
+          <h3>学級の役割分担と担当児童をスマートに整理</h3>
+          <p>日直、給食、掃除、生き物係など、学級運営に必要な役割と児童の配置を直感的に管理。学期ごとのローテーションや役割の重複確認も一覧で直感的に把握できます。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 10日間無料お試しセクション -->
+<section id="trial" class="section" style="background: #f0fdf4; border-top: 1px solid #bbf7d0; border-bottom: 1px solid #bbf7d0;">
+  <div class="container" style="text-align: center; max-width: 800px;">
+    <div class="sub" style="color: #047857;">Free 10-Day Trial</div>
+    <h2 style="font-size: 2rem; font-weight: 900; color: #0f172a; margin-bottom: 12px;">
+      まずは10日間、教室でお気軽にお試しください
+    </h2>
+    <p style="font-size: 1rem; color: #334155; line-height: 1.7; margin-bottom: 24px;">
+      本ソフトウェアは、初回起動から10日間、有料製品版と全く同じフル機能（自動配置・関係性マップ・子ども向け投影・印刷）を無料でお試しいただけます。<br>
+      クレジットカードの事前登録や会員登録は一切不要。解凍して「index.html」を開くだけですぐにご利用いただけます。
+    </p>
+
+    <div style="background: #ffffff; border: 1px solid #86efac; border-radius: 16px; padding: 24px; text-align: left; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(4, 120, 87, 0.06);">
+      <h4 style="font-weight: 800; color: #065f46; margin-bottom: 8px;">お試し版の安心設計（先生のデータを人質に取りません）</h4>
+      <p style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+        10日間の試用期間が終了しても、それまでに作成された座席データや名簿が消去されることは絶対にありません。印刷やJSONファイルのバックアップ保存はそのまま行っていただけますので、安心してお試しください。
+      </p>
+    </div>
+
+    <div class="actions" style="justify-content: center; gap: 16px;">
+      <a class="btn-download-large" href="/downloads/minnano_class_canvas_v0.16.0.zip" download="" style="background: #047857; color: #ffffff; padding: 18px 40px; border-radius: 14px; font-size: 1.15rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 6px 20px rgba(4, 120, 87, 0.35);">
+        <span>📥 10日間無料お試し版をダウンロード（ZIP・操作マニュアル同梱）</span>
+      </a>
+    </div>
+    <p style="font-size: 0.85rem; color: #64748b; margin-top: 14px;">
+      ファイルサイズ: 約2.6MB | Windows 10/11・Mac対応 | 完全オフライン動作・インストール不要
+    </p>
+  </div>
+</section>
+
+<!-- 料金・販売プラン -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+      <div class="sub" style="color: #047857;">Pricing &amp; Editions</div>
+      <h2 style="font-size: 2rem; font-weight: 900; color: #0f172a; margin-bottom: 10px;">
+        安心の買い切り価格。追加課金・月額費用ゼロ。
+      </h2>
+      <p style="color: #64748b; font-size: 0.95rem;">
+        教育書籍1冊分相当の自己投資で、1年間の席替え・班決めの激務を激減させます。販売プラットフォームは安心・確実なBOOTHにてご提供しております。
+      </p>
+    </div>
+
+    <div class="price-grid">
+      <!-- 先行モニター版 -->
+      <div class="price-card featured">
+        <div class="price-ribbon">先行リリース記念特別価格</div>
+        <div>
+          <div class="price-title">先行モニター版</div>
+          <div class="price-lead">早期にご利用いただき、現場のご感想やご意見をいただける先生向けの限定特別価格です。</div>
+          <div class="price-amount">1,980<span> 円</span></div>
+          <div class="price-tax">税込・買い切り（追加費用なし）</div>
+
+          <ul class="price-features">
+            <li>すべてのフル機能（座席・班・係・投影）</li>
+            <li>前列配慮・履歴考慮の自動配置アルゴリズム</li>
+            <li>子ども向け黒板投影＆スマート安全印刷</li>
+            <li>A4フルカラー公式操作マニュアルPDF同梱</li>
+            <li>最新版への無償アップデート保証</li>
+          </ul>
+        </div>
+        <a class="btn-buy btn-buy-primary" href="https://bantai3.booth.pm/items/9191154" target="_blank" rel="noopener noreferrer">
+          先行モニター版をBOOTHで購入（1,980円）
+        </a>
+      </div>
+
+      <!-- 通常版 -->
+      <div class="price-card">
+        <div>
+          <div class="price-title">通常版（教員個人向け）</div>
+          <div class="price-lead">先生ご自身のパソコンで末永くご活用いただける標準ライセンスです。</div>
+          <div class="price-amount">2,480<span> 円</span></div>
+          <div class="price-tax">税込・買い切り（追加費用なし）</div>
+
+          <ul class="price-features">
+            <li>すべてのフル機能（座席・班・係・投影）</li>
+            <li>前列配慮・履歴考慮の自動配置アルゴリズム</li>
+            <li>子ども向け黒板投影＆スマート安全印刷</li>
+            <li>A4フルカラー公式操作マニュアルPDF同梱</li>
+            <li>個人PCでの永続利用ライセンス</li>
+          </ul>
+        </div>
+        <a class="btn-buy btn-buy-outline" href="https://bantai3.booth.pm/items/9191154" target="_blank" rel="noopener noreferrer">
+          BOOTH商品ページを見る
+        </a>
+      </div>
+
+      <!-- 校内・学年フリー版 -->
+      <div class="price-card">
+        <div>
+          <div class="price-title">校内・学年フリー版</div>
+          <div class="price-lead">学年全クラスや学校内のすべての先生のPCで自由に共有・利用できる包括ライセンスです。</div>
+          <div class="price-amount">9,800<span> 円</span></div>
+          <div class="price-tax">税込・買い切り（公費・学年費対応）</div>
+
+          <ul class="price-features">
+            <li>同一学校内の全教職員PCで利用可能</li>
+            <li>学年主任・専科教員とのデータ引き継ぎ対応</li>
+            <li>公費・学年費・PTA費での決済にも安心の領収書対応</li>
+            <li>A4フルカラー公式操作マニュアルPDF同梱</li>
+            <li>優先サポート窓口</li>
+          </ul>
+        </div>
+        <a class="btn-buy btn-buy-outline" href="https://bantai3.booth.pm/items/9191154" target="_blank" rel="noopener noreferrer">
+          BOOTH商品ページを見る
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- よくある質問 -->
+<section id="faq" class="section" style="background: #f8fafc;">
+  <div class="container" style="max-width: 840px;">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <div class="sub" style="color: #047857;">FAQ</div>
+      <h2 style="font-size: 1.8rem; font-weight: 900; color: #0f172a;">よくあるご質問</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">学校のインターネットに繋がらないパソコンでも使えますか？</div>
+        <div class="faq-a">
+          はい、全く問題なく動作します。本アプリは外部サーバーとの通信を一切行わない「完全オフライン設計」を採用しております。LANケーブルを抜いた状態や自治体のセキュリティ閉域網でも快適にご利用いただけます。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">ライセンスの登録方法を教えてください。</div>
+        <div class="faq-a">
+          BOOTHでのご購入後、画面右上のライセンスバッジをクリックし、「BOOTH注文番号（数字）」と「先生のお名前」を入力して登録ボタンを押すだけです。外部通信なしで瞬時にフル機能が永続アンロックされ、画面上部に正規所有者名が刻印されます。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">パソコンを買い替えた場合、データはどうなりますか？</div>
+        <div class="faq-a">
+          設定画面から「バックアップ（JSONファイル）」を保存して新しいパソコンへ移すだけで、名簿も座席表もそのまま数秒で復元されます。また、ライセンスも同じ注文番号とお名前で再認証いただけます。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">学校の公費や学年費で購入できますか？</div>
+        <div class="faq-a">
+          はい、可能です。BOOTHの購入明細書・領収データをご利用いただけるほか、公費・学校購入用の個別見積・請求書発行が必要な場合はお問い合わせフォームよりお気軽にご相談ください。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="image-zoom-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" aria-label="閉じる">&times;</button>
+      <img id="modal-img" src="" alt="">
+      <p id="modal-caption" class="modal-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var modal = document.getElementById('image-zoom-modal');
+      var modalImg = document.getElementById('modal-img');
+      var modalCaption = document.getElementById('modal-caption');
+      var closeBtn = modal.querySelector('.modal-close-btn');
+
+      document.querySelectorAll('[data-zoom-src]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var src = el.getAttribute('data-zoom-src');
+          var caption = el.getAttribute('data-zoom-caption') || '';
+          modalImg.src = src;
+          modalCaption.textContent = caption;
+          modal.classList.add('active');
+          modal.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        modalImg.src = '';
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+
+<a class="home-floating" href="/">ホームへ</a>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>Ban.Tai Education Design</h2>
+      <p>教育現場の実務知に基づき、先生方の日常事務を軽くし、子どもたちと向き合う時間を生み出すためのソフトウェアを開発しています。</p>
+    </div>
+    <div>
+      <p><strong>お問い合わせ</strong><br><a href="mailto:ban.tai3educationdesign@gmail.com">ban.tai3educationdesign@gmail.com</a></p>
+      <p><a href="/legal/">利用規約・免責事項</a></p>
+    </div>
+  </div>
+  <div class="container copyright">© Ban.Tai Education Design. All Rights Reserved.</div>
+</footer>
+</body>
+</html>

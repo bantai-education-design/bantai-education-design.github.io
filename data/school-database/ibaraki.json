@@ -339,7 +339,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立寿小学校",
@@ -358,7 +366,27 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "人権教育",
+        "designation": "児童生徒支援加配教員配置校訪問",
+        "authority": "茨城県"
+      },
+      {
+        "year": "令和5",
+        "subject": "学力向上",
+        "designation": "授業力パワーアップ訪問",
+        "authority": "茨城県"
+      },
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立常磐小学校",
@@ -434,7 +462,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "小学校社会",
+        "designation": "学びのイノベーション推進プロジェクトモデル校(小学校社会)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立河和田小学校",
@@ -529,7 +565,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "外国語活動・外国語",
+        "designation": "教育課程実践検証協力校(外国語活動・外国語)",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立稲荷第二小学校",
@@ -605,7 +649,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-水戸市-水戸市立赤塚小学校",
@@ -738,7 +790,21 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育",
+        "designation": "教育課程実践検証協力校(保健体育)教育課程実践検証協力校(技術)",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "保健体育課計画訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立千波中学校",
@@ -776,7 +842,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立常澄中学校",
@@ -814,7 +888,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校外国語",
+        "designation": "エリア型(中学校外国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立笠原中学校",
@@ -833,7 +915,21 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "人権教育",
+        "designation": "児童生徒支援加配教員配置校訪問",
+        "authority": "茨城県"
+      },
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立第一中学校",
@@ -871,7 +967,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立第二中学校",
@@ -890,7 +994,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "社会教育",
+        "designation": "中学生防災講座",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立第五中学校",
@@ -966,7 +1078,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校美術",
+        "designation": "新規採用教員〔初任者〕研修講座(中学校美術)授業参観校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-水戸市-水戸市立赤塚中学校",
@@ -1004,7 +1124,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校外国語",
+        "designation": "エリア型(中学校外国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-私立-中学校-水戸市-水戸英宏中学校",
@@ -1099,7 +1227,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校外国語",
+        "designation": "エリア型(中学校外国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-私立-高等学校-水戸市-eikoデジタル-クリエイティブ高等学校-通信制",
@@ -2853,7 +2989,27 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-土浦市-土浦市立大岩田小学校",
@@ -4051,7 +4207,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-古河市-古河市立総和北中学校",
@@ -7289,7 +7453,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "学校保健・学校安全研究推進校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-笠間市-笠間市立岩間第一小学校",
@@ -7327,7 +7499,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "社会教育",
+        "designation": "学校・家庭・地域連携支援事業",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-笠間市-笠間市立岩間第二小学校",
@@ -7346,7 +7526,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-笠間市-笠間市立稲田小学校",
@@ -7384,7 +7572,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "人権教育",
+        "designation": "児童生徒支援加配教員配置校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-笠間市-笠間市立友部中学校",
@@ -7479,7 +7675,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-義務教育学校-笠間市-笠間市立みなみ学園",
@@ -10089,7 +10293,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-ひたちなか市-ひたちなか市立外野小学校",
@@ -10108,7 +10320,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-ひたちなか市-ひたちなか市立市毛小学校",
@@ -10241,7 +10461,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "栄養教諭",
+        "designation": "新規採用教員〔初任者〕研修講座(栄養教諭)授業参観校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-ひたちなか市-ひたちなか市立那珂湊第二小学校",
@@ -10317,7 +10545,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-ひたちなか市-ひたちなか市立勝田第一中学校",
@@ -10374,7 +10610,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "学校体育研究推進校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-ひたちなか市-ひたちなか市立大島中学校",
@@ -10412,7 +10656,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-ひたちなか市-ひたちなか市立那珂湊中学校",
@@ -10431,7 +10683,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校外国語",
+        "designation": "授業力アップサポート訪問(中学校外国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-国立-中学校-ひたちなか市-茨城大学教育学部附属特別支援学校",
@@ -11653,7 +11913,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-常陸大宮市-常陸大宮市立大宮北小学校",
@@ -11691,7 +11959,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "人権教育",
+        "designation": "児童生徒支援加配教員配置校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-常陸大宮市-常陸大宮市立大宮西小学校",
@@ -11710,7 +11986,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-常陸大宮市-常陸大宮市立大賀小学校",
@@ -11767,7 +12051,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "学力向上",
+        "designation": "授業力パワーアップ訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-常陸大宮市-常陸大宮市立御前山小学校",
@@ -11805,7 +12097,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-常陸大宮市-常陸大宮市立緒川小学校",
@@ -11919,7 +12219,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校外国語",
+        "designation": "授業力アップサポート訪問(中学校外国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-高等学校-常陸大宮市-茨城県立小瀬高等学校-全日制",
@@ -12037,7 +12345,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂市-那珂市立瓜連小学校",
@@ -12056,7 +12372,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂市-那珂市立芳野小学校",
@@ -12132,7 +12456,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "体育大好き推進事業拠点校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂市-那珂市立額田小学校",
@@ -12151,7 +12483,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "社会教育",
+        "designation": "「測量の日」関連事業経緯度標設置事業",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-那珂市-那珂市立瓜連中学校",
@@ -12189,7 +12529,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校国語",
+        "designation": "学びのイノベーション推進プロジェクトモデル校(中学校国語)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-那珂市-那珂市立第三中学校",
@@ -12227,7 +12575,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "キャリア教育",
+        "designation": "教職に関する研究協力校(キャリア教育)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-那珂市-那珂市立第四中学校",
@@ -12246,7 +12602,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "学力向上",
+        "designation": "授業力パワーアップ訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-高等学校-那珂市-茨城県立水戸農業高等学校-全日制-定時制",
@@ -15159,7 +15523,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-小美玉市-小美玉市立小川南小学校",
@@ -15178,7 +15550,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学校",
+        "designation": "新規採用教員〔初任者〕研修講座(特別支援学校)授業参観校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-小美玉市-小美玉市立竹原小学校",
@@ -15273,7 +15653,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育",
+        "designation": "教育課程実践検証協力校(保健体育)教育課程実践検証協力校(技術)",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-義務教育学校-小美玉市-小美玉市立小川北義務教育学校",
@@ -15292,7 +15680,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-義務教育学校-小美玉市-小美玉市立玉里学園",
@@ -15370,7 +15766,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-東茨城郡茨城町-茨城町立長岡小学校",
@@ -15427,7 +15831,21 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "プログラミング",
+        "designation": "ピンポイント型(プログラミング)",
+        "authority": "茨城県"
+      },
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "保健体育課計画訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-東茨城郡茨城町-茨城町立青葉中学校",
@@ -15446,7 +15864,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "プログラミング",
+        "designation": "ピンポイント型(プログラミング)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-高等学校-東茨城郡茨城町-茨城県立茨城東高等学校-全日制",
@@ -15486,7 +15912,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "体育大好き推進事業拠点校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-東茨城郡大洗町-大洗町立大洗小学校",
@@ -15505,7 +15939,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-東茨城郡大洗町-大洗町立南中学校",
@@ -15602,7 +16044,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "保健体育課計画訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-東茨城郡城里町-城里町立桂小学校",
@@ -15659,7 +16109,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-東茨城郡城里町-城里町立常北中学校",
@@ -15678,7 +16136,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-東茨城郡城里町-城里町立桂中学校",
@@ -15756,7 +16222,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "集合指導訪問会場校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂郡東海村-東海村立村松小学校",
@@ -15775,7 +16249,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "体育大好き推進事業拠点校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂郡東海村-東海村立照沼小学校",
@@ -15794,7 +16276,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂郡東海村-東海村立白方小学校",
@@ -15832,7 +16322,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "学力向上",
+        "designation": "授業力パワーアップ訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-那珂郡東海村-東海村立舟石川小学校",
@@ -15870,7 +16368,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "中学校理科",
+        "designation": "学びのイノベーション推進プロジェクトモデル校(中学校理科)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-中学校-那珂郡東海村-東海村立東海南中学校",
@@ -15889,7 +16395,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "教育研修センター",
+        "designation": "教育研修センター教育相談協力校",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-高等学校-那珂郡東海村-茨城県立東海高等学校-全日制",
@@ -15948,7 +16462,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "保健体育課",
+        "designation": "保健体育課計画訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-久慈郡大子町-大子町立上小川小学校",
@@ -16005,7 +16527,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援教育",
+        "designation": "特別支援教育に係る学校訪問",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-公立-小学校-久慈郡大子町-大子町立袋田小学校",
@@ -16043,7 +16573,15 @@
     "source_url": "https://kyoiku.pref.ibaraki.jp/about/survey/school-list/",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5",
+        "subject": "特別支援学級・通級指導教室",
+        "designation": "新設校訪問(特別支援学級・通級指導教室)",
+        "authority": "茨城県"
+      }
+    ]
   },
   {
     "id": "ibaraki-私立-高等学校-久慈郡大子町-ルネサンス高等学校-通信制",

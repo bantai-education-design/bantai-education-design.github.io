@@ -13,8 +13,8 @@ function install(){
   const link=document.createElement('a');
   link.className='secondary university-photo-submit-link';
   link.href=`photo-submit/?university=${encodeURIComponent(universityName)}`;
-  link.textContent='📷 写真を投稿';
-  link.setAttribute('aria-label',`${universityName}へ写真を投稿`);
+  link.textContent='📷 この大学の写真を送る';
+  link.setAttribute('aria-label',`${universityName}の写真を送る`);
   actions.appendChild(link);
 }
 
