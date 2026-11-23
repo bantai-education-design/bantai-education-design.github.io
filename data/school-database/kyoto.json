@@ -5821,7 +5821,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜10",
+        "subject": "研究開発学校",
+        "designation": "文部科学省研究開発学校",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "kyoto-公立-小学校-京都市立御所東小学校",
@@ -5973,7 +5981,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "人権教育",
+        "designation": "京都市 人権教育研究指定校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "kyoto-公立-小学校-京都市立朱雀第七小学校",
@@ -15247,6 +15263,12 @@
     "verified_date": "",
     "course": [],
     "research_designations": [
+      {
+        "year": "令和8〜10",
+        "subject": "研究開発学校",
+        "designation": "文部科学省研究開発学校",
+        "authority": "文部科学省"
+      },
       {
         "year": "令和8",
         "subject": "情報・数学・DX探究",
