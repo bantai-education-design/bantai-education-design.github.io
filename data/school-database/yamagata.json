@@ -1568,7 +1568,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "冬期競技（スキー・スケート・アイスホッケー）",
+        "contest": "全国高等学校スキー大会（インターハイ）",
+        "year": "2026年（第75回）",
+        "division": "女子総合",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "id": "yamagata-私立-高等学校-山形市-東北文教大学山形城北高等学校",

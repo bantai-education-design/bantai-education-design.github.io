@@ -76250,7 +76250,16 @@
       "高校連携"
     ],
     "website": "https://www.shukusu.ed.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）競泳",
+        "year": "2026年（第94回）",
+        "division": "女子総合",
+        "award": "準優勝"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -78335,7 +78344,23 @@
       "高校連携"
     ],
     "website": "https://www.buzan.hs.nihon-u.ac.jp",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）競泳",
+        "year": "2026年（第94回）",
+        "division": "男子総合",
+        "award": "優勝"
+      },
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）競泳",
+        "year": "2024年（令和6年度）",
+        "division": "男子総合",
+        "award": "3位"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -78921,7 +78946,16 @@
       "高校連携"
     ],
     "website": "https://www.musashino.ac.jp/mjhs/",
-    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html"
+    "source_url": "https://www.tokyoshigaku.com/schools/highschool.html",
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）競泳",
+        "year": "2024年（令和6年度）",
+        "division": "女子総合",
+        "award": "3位"
+      }
+    ]
   },
   {
     "school_type": "高等学校",
@@ -79029,6 +79063,15 @@
         "division": "高等学校の部",
         "award": "最優秀賞",
         "detail": "福島県教育長賞"
+      }
+    ],
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）水球",
+        "year": "2024年（令和6年度）",
+        "division": "全国大会",
+        "award": "3位"
       }
     ]
   },
