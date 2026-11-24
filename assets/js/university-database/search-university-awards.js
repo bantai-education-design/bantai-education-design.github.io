@@ -46,6 +46,10 @@
       { value: '剣道', label: '剣道', icon: '⚔️' },
       { value: '陸上競技', label: '陸上', icon: '🏃' },
       { value: '水泳', label: '水泳', icon: '🏊' },
+      { value: 'テニス', label: 'テニス', icon: '🎾' },
+      { value: '卓球', label: '卓球', icon: '🏓' },
+      { value: 'バドミントン', label: 'バドミントン', icon: '🏸' },
+      { value: 'アメリカンフットボール', label: 'アメフト', icon: '🏈' },
     ],
     culture: [
       { value: '将棋', label: '将棋', icon: '♟️' },
@@ -54,6 +58,8 @@
       { value: '競技かるた', label: '競技かるた', icon: '🎴' },
       { value: '競技プログラミング', label: 'ICPCプログラミング', icon: '💻' },
       { value: '書道', label: '書道', icon: '🖌️' },
+      { value: '軽音楽・ジャズ', label: '軽音・ジャズ', icon: '🎷' },
+      { value: 'ダンス・パフォーマンス', label: 'ダンス', icon: '💃' },
     ],
     music: [
       { value: '全日本吹奏楽コンクール', label: '全日本吹奏楽', icon: '🎺' },
