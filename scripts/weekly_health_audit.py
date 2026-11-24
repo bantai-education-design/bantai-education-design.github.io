@@ -31,6 +31,8 @@ def check_json_and_sitemap() -> tuple[str, bool, str]:
     try:
         tree = ET.parse(ROOT / "sitemap.xml")
         locs = [el.text.strip() for el in tree.getroot().iter() if el.tag.endswith("loc") and el.text]
+        if not locs:
+            errors.append("sitemap.xml contains no URLs")
         if len(locs) != len(set(locs)):
             errors.append(f"Duplicate <loc> entries in sitemap.xml ({len(locs)} total, {len(set(locs))} unique)")
     except Exception as exc:
@@ -42,11 +44,24 @@ def check_json_and_sitemap() -> tuple[str, bool, str]:
         ROOT / "data" / "products.json",
         ROOT / "tools" / "university-database" / "music" / "data" / "university_music_contests.json",
     ]
-    json_targets.extend(sorted((ROOT / "data" / "school-database").glob("*.json")))
+    school_db_dir = ROOT / "data" / "school-database"
+    # Required prefecture records must not silently disappear.
+    required_prefectures = (
+        "hokkaido aomori iwate miyagi akita yamagata fukushima "
+        "ibaraki tochigi gunma saitama chiba tokyo kanagawa niigata "
+        "toyama ishikawa fukui yamanashi nagano gifu shizuoka aichi "
+        "mie shiga kyoto osaka hyogo nara wakayama tottori shimane "
+        "okayama hiroshima yamaguchi tokushima kagawa ehime kochi "
+        "fukuoka saga nagasaki kumamoto oita miyazaki kagoshima okinawa"
+    ).split()
+    json_targets.extend(school_db_dir / f"{slug}.json" for slug in required_prefectures)
+    json_targets.extend(sorted(school_db_dir.glob("*.json")))
+    json_targets = list(dict.fromkeys(json_targets))
 
     checked = 0
     for path in json_targets:
         if not path.is_file():
+            errors.append(f"Missing required JSON: {path.relative_to(ROOT)}")
             continue
         try:
             json.loads(path.read_text(encoding="utf-8"))
