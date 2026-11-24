@@ -5,15 +5,16 @@
     "全日本大学サッカー連盟（インカレ 2024〜2025年度）・日本ラグビーフットボール協会（全国大学選手権 2024〜2025年度）",
     "全日本大学バレーボール連盟・全日本大学バスケットボール連盟（インカレ 2024〜2025年度）",
     "全日本学生柔道連盟・全日本学生剣道連盟（2024〜2026年）・日本学生陸上競技連合・日本水泳連盟（日本インカレ 2024〜2026年）",
-    "全日本学生将棋連盟・全日本学生囲碁連盟・NHK学生ロボコン・全日本かるた協会・ICPCアジア横浜大会・日本書芸院（2024〜2026年）",
+    "全日本学生テニス連盟（王座決定試合）・日本学生卓球連盟・全日本学生バドミントン連盟（2024〜2026年）・日本学生アメリカンフットボール協会（甲子園ボウル 2024〜2025年）",
+    "全日本学生将棋連盟・全日本学生囲碁連盟・NHK学生ロボコン・全日本かるた協会・ICPCアジア横浜大会・日本書芸院・ヤマノビッグバンドジャズコンテスト・UNIDOL（2024〜2026年）",
     "全日本吹奏楽連盟（第72〜74回）・全日本合唱連盟（第77〜79回）大学部門"
   ],
   "stats": {
-    "total_universities": 63,
-    "sports_entries": 63,
-    "culture_entries": 21,
+    "total_universities": 66,
+    "sports_entries": 102,
+    "culture_entries": 28,
     "music_entries": 64,
-    "matched_237_db": 22
+    "matched_237_db": 23
   },
   "prefectures": [
     {
@@ -184,6 +185,46 @@
           "division": "男子",
           "award": "準優勝",
           "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2025年（第79回）",
+          "division": "男子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2025年（第61回）",
+          "division": "女子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2026年（第80回）",
+          "division": "男子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2026年（第62回）",
+          "division": "女子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2025年（第94回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
         }
       ],
       "culture_awards": [
@@ -194,6 +235,22 @@
           "division": "団体戦",
           "award": "準優勝",
           "detail": ""
+        },
+        {
+          "category": "ダンス・パフォーマンス",
+          "contest": "UNIDOL（大学対抗ダンス全国決勝）",
+          "year": "2024年夏",
+          "division": "全国決勝",
+          "award": "優勝",
+          "detail": "夏目坂46"
+        },
+        {
+          "category": "ダンス・パフォーマンス",
+          "contest": "UNIDOL（大学対抗ダンス全国決勝）",
+          "year": "2024-25年冬",
+          "division": "全国決勝",
+          "award": "優勝",
+          "detail": "夏目坂46（夏冬連覇）"
         }
       ],
       "music_awards": [
@@ -224,6 +281,113 @@
       ]
     },
     {
+      "university_name": "筑波大学",
+      "university_id": "",
+      "pref": "茨城県",
+      "pref_slug": "ibaraki",
+      "establishment": "国立",
+      "sports_awards": [
+        {
+          "category": "サッカー",
+          "contest": "全日本大学サッカー選手権大会（インカレ）",
+          "year": "2025年度（第74回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "8大会ぶり10回目"
+        },
+        {
+          "category": "バレーボール",
+          "contest": "全日本バレーボール大学男女選手権大会",
+          "year": "2024年度（第71回）",
+          "division": "女子",
+          "award": "優勝",
+          "detail": "2年連続10回目"
+        },
+        {
+          "category": "剣道",
+          "contest": "全日本学生剣道優勝大会",
+          "year": "2024年（第72回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": ""
+        },
+        {
+          "category": "剣道",
+          "contest": "全日本学生剣道優勝大会",
+          "year": "2025年（第73回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "剣道",
+          "contest": "全日本学生剣道優勝大会",
+          "year": "2026年（第74回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": ""
+        },
+        {
+          "category": "剣道",
+          "contest": "全日本女子学生剣道優勝大会",
+          "year": "2026年（第45回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2024年（第78回）",
+          "division": "男子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2024年（第60回）",
+          "division": "女子",
+          "award": "優勝",
+          "detail": "2連覇"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2024年（第93回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2025年（第76回）",
+          "division": "女子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2026年（第77回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2026年（第77回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": "3年ぶり10回目"
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
       "university_name": "立命館大学",
       "university_id": "",
       "pref": "京都府",
@@ -237,6 +401,22 @@
           "division": "大学の部",
           "award": "準優勝",
           "detail": ""
+        },
+        {
+          "category": "アメリカンフットボール",
+          "contest": "全日本大学アメリカンフットボール選手権（甲子園ボウル）",
+          "year": "2024年（第79回）",
+          "division": "全国決勝",
+          "award": "優勝",
+          "detail": "9年ぶり9回目"
+        },
+        {
+          "category": "アメリカンフットボール",
+          "contest": "全日本大学アメリカンフットボール選手権（甲子園ボウル）",
+          "year": "2025年（第80回）",
+          "division": "全国決勝",
+          "award": "優勝",
+          "detail": "2年連続10回目"
         }
       ],
       "culture_awards": [
@@ -291,6 +471,148 @@
           "detail": "立命館大学応援団吹奏楽部"
         }
       ]
+    },
+    {
+      "university_name": "明治大学",
+      "university_id": "u000080",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "ラグビー",
+          "contest": "全国大学ラグビーフットボール選手権大会",
+          "year": "2025年度（第62回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "7年ぶり14回目"
+        },
+        {
+          "category": "柔道",
+          "contest": "全日本学生柔道優勝大会",
+          "year": "2026年（第75回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "25年ぶり"
+        },
+        {
+          "category": "水泳",
+          "contest": "日本学生選手権水泳競技大会（競泳）",
+          "year": "2024年（第100回）",
+          "division": "男子総合（天皇杯）",
+          "award": "優勝",
+          "detail": "2年連続"
+        },
+        {
+          "category": "水泳",
+          "contest": "日本学生選手権水泳競技大会（競泳）",
+          "year": "2025年（第101回）",
+          "division": "男子総合（天皇杯）",
+          "award": "優勝",
+          "detail": "3年連続"
+        },
+        {
+          "category": "水泳",
+          "contest": "日本学生選手権水泳競技大会（競泳）",
+          "year": "2026年（第102回）",
+          "division": "男子総合（天皇杯）",
+          "award": "優勝",
+          "detail": "4年連続"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2026年（第95回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2024年（第75回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2026年（第77回）",
+          "division": "女子団体",
+          "award": "準優勝",
+          "detail": ""
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
+      "university_name": "日本大学",
+      "university_id": "u000066",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "バスケットボール",
+          "contest": "全日本大学バスケットボール選手権大会",
+          "year": "2024年度（第76回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "15年ぶり13回目"
+        },
+        {
+          "category": "柔道",
+          "contest": "全日本学生柔道優勝大会",
+          "year": "2025年（第74回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "28年ぶり"
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2024年（第78回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "20年ぶり4回目"
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2025年（第79回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "2年連続"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2024年（第93回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2024年（第75回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "11年ぶり8回目"
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2025年（第76回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
     },
     {
       "university_name": "東京大学",
@@ -360,6 +682,66 @@
       "music_awards": []
     },
     {
+      "university_name": "青山学院大学",
+      "university_id": "u000020",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "野球",
+          "contest": "全日本大学野球選手権大会",
+          "year": "2024年（第73回）",
+          "division": "大学の部",
+          "award": "優勝",
+          "detail": "2年連続6回目"
+        },
+        {
+          "category": "野球",
+          "contest": "明治神宮野球大会",
+          "year": "2024年（第55回）",
+          "division": "大学の部",
+          "award": "優勝",
+          "detail": "初優勝・大学4冠"
+        },
+        {
+          "category": "野球",
+          "contest": "明治神宮野球大会",
+          "year": "2025年（第56回）",
+          "division": "大学の部",
+          "award": "優勝",
+          "detail": "2年連続2回目"
+        },
+        {
+          "category": "バレーボール",
+          "contest": "全日本バレーボール大学男女選手権大会",
+          "year": "2024年度（第71回）",
+          "division": "女子",
+          "award": "準優勝",
+          "detail": ""
+        }
+      ],
+      "culture_awards": [
+        {
+          "category": "軽音楽・ジャズ",
+          "contest": "ヤマノ・ビッグバンド・ジャズ・コンテスト（YBBJC）",
+          "year": "2024年（第55回）",
+          "division": "大学対抗",
+          "award": "最優秀賞（1位）",
+          "detail": "Royal Sounds Jazz Orchestra"
+        },
+        {
+          "category": "軽音楽・ジャズ",
+          "contest": "ヤマノ・ビッグバンド・ジャズ・コンテスト（YBBJC）",
+          "year": "2025年（第56回）",
+          "division": "大学対抗",
+          "award": "最優秀賞（1位）",
+          "detail": "Royal Sounds Jazz Orchestra（2連覇）"
+        }
+      ],
+      "music_awards": []
+    },
+    {
       "university_name": "神奈川大学",
       "university_id": "u000181",
       "pref": "神奈川県",
@@ -420,110 +802,147 @@
       ]
     },
     {
-      "university_name": "筑波大学",
+      "university_name": "龍谷大学",
       "university_id": "",
-      "pref": "茨城県",
-      "pref_slug": "ibaraki",
-      "establishment": "国立",
+      "pref": "京都府",
+      "pref_slug": "kyoto",
+      "establishment": "私立",
       "sports_awards": [
         {
-          "category": "サッカー",
-          "contest": "全日本大学サッカー選手権大会（インカレ）",
-          "year": "2025年度（第74回）",
-          "division": "男子",
-          "award": "優勝",
-          "detail": "8大会ぶり10回目"
-        },
-        {
-          "category": "バレーボール",
-          "contest": "全日本バレーボール大学男女選手権大会",
-          "year": "2024年度（第71回）",
-          "division": "女子",
-          "award": "優勝",
-          "detail": "2年連続10回目"
-        },
-        {
-          "category": "剣道",
-          "contest": "全日本学生剣道優勝大会",
-          "year": "2024年（第72回）",
-          "division": "男子団体",
-          "award": "優勝",
-          "detail": ""
-        },
-        {
-          "category": "剣道",
-          "contest": "全日本学生剣道優勝大会",
-          "year": "2025年（第73回）",
-          "division": "男子団体",
-          "award": "準優勝",
-          "detail": ""
-        },
-        {
-          "category": "剣道",
-          "contest": "全日本学生剣道優勝大会",
-          "year": "2026年（第74回）",
-          "division": "男子団体",
-          "award": "優勝",
-          "detail": ""
-        },
-        {
-          "category": "剣道",
-          "contest": "全日本女子学生剣道優勝大会",
-          "year": "2026年（第45回）",
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2024年（第75回）",
           "division": "女子団体",
           "award": "優勝",
-          "detail": ""
+          "detail": "初優勝"
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2025年（第76回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": "2連覇"
         }
       ],
       "culture_awards": [],
-      "music_awards": []
+      "music_awards": [
+        {
+          "category": "全日本吹奏楽コンクール",
+          "contest": "全日本吹奏楽コンクール",
+          "year": "2026年（第74回）",
+          "division": "大学の部",
+          "award": "金賞",
+          "detail": "龍谷大学吹奏楽部"
+        },
+        {
+          "category": "全日本吹奏楽コンクール",
+          "contest": "全日本吹奏楽コンクール",
+          "year": "2025年（第73回）",
+          "division": "大学の部",
+          "award": "金賞",
+          "detail": "龍谷大学吹奏楽部"
+        },
+        {
+          "category": "全日本吹奏楽コンクール",
+          "contest": "全日本吹奏楽コンクール",
+          "year": "2024年（第72回）",
+          "division": "大学の部",
+          "award": "金賞",
+          "detail": "龍谷大学吹奏楽部"
+        }
+      ]
     },
     {
-      "university_name": "明治大学",
-      "university_id": "u000080",
+      "university_name": "慶應義塾大学",
+      "university_id": "u000025",
       "pref": "東京都",
       "pref_slug": "tokyo",
       "establishment": "私立",
       "sports_awards": [
         {
-          "category": "ラグビー",
-          "contest": "全国大学ラグビーフットボール選手権大会",
-          "year": "2025年度（第62回）",
-          "division": "男子",
-          "award": "優勝",
-          "detail": "7年ぶり14回目"
-        },
-        {
-          "category": "柔道",
-          "contest": "全日本学生柔道優勝大会",
+          "category": "野球",
+          "contest": "全日本大学野球選手権大会",
           "year": "2026年（第75回）",
-          "division": "男子団体",
+          "division": "大学の部",
+          "award": "準優勝",
+          "detail": ""
+        }
+      ],
+      "culture_awards": [
+        {
+          "category": "将棋",
+          "contest": "全日本学生将棋団体対抗戦（学生王座戦）",
+          "year": "2025年度（第56回）",
+          "division": "団体戦",
           "award": "優勝",
-          "detail": "25年ぶり"
+          "detail": ""
         },
         {
-          "category": "水泳",
-          "contest": "日本学生選手権水泳競技大会（競泳）",
-          "year": "2024年（第100回）",
-          "division": "男子総合（天皇杯）",
-          "award": "優勝",
-          "detail": "2年連続"
+          "category": "競技プログラミング",
+          "contest": "ICPC アジア地区横浜大会",
+          "year": "2025年",
+          "division": "大学対抗",
+          "award": "準優勝（国内1位）",
+          "detail": "チーム Rinshan Solution"
         },
         {
-          "category": "水泳",
-          "contest": "日本学生選手権水泳競技大会（競泳）",
-          "year": "2025年（第101回）",
-          "division": "男子総合（天皇杯）",
-          "award": "優勝",
-          "detail": "3年連続"
+          "category": "軽音楽・ジャズ",
+          "contest": "ヤマノ・ビッグバンド・ジャズ・コンテスト（YBBJC）",
+          "year": "2026年（第57回）",
+          "division": "大学対抗",
+          "award": "最優秀賞（1位）",
+          "detail": "Light Music Society"
         },
         {
-          "category": "水泳",
-          "contest": "日本学生選手権水泳競技大会（競泳）",
-          "year": "2026年（第102回）",
-          "division": "男子総合（天皇杯）",
+          "category": "ダンス・パフォーマンス",
+          "contest": "UNIDOL（大学対抗ダンス全国決勝）",
+          "year": "2025年夏",
+          "division": "全国決勝",
           "award": "優勝",
-          "detail": "4年連続"
+          "detail": "さよならモラトリアム"
+        }
+      ],
+      "music_awards": []
+    },
+    {
+      "university_name": "関西大学",
+      "university_id": "",
+      "pref": "大阪府",
+      "pref_slug": "osaka",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "野球",
+          "contest": "全日本大学野球選手権大会",
+          "year": "2026年（第75回）",
+          "division": "大学の部",
+          "award": "優勝",
+          "detail": "54年ぶり3回目"
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2024年（第60回）",
+          "division": "女子",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2025年（第61回）",
+          "division": "女子",
+          "award": "優勝",
+          "detail": "初優勝"
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2026年（第62回）",
+          "division": "女子",
+          "award": "優勝",
+          "detail": "2年連続2回目"
         }
       ],
       "culture_awards": [],
@@ -617,41 +1036,84 @@
       "music_awards": []
     },
     {
-      "university_name": "青山学院大学",
-      "university_id": "u000020",
+      "university_name": "日本体育大学",
+      "university_id": "u000072",
       "pref": "東京都",
       "pref_slug": "tokyo",
       "establishment": "私立",
       "sports_awards": [
         {
-          "category": "野球",
-          "contest": "全日本大学野球選手権大会",
-          "year": "2024年（第73回）",
-          "division": "大学の部",
+          "category": "剣道",
+          "contest": "全日本女子学生剣道優勝大会",
+          "year": "2025年（第44回）",
+          "division": "女子団体",
           "award": "優勝",
-          "detail": "2年連続6回目"
+          "detail": "8年ぶり3回目"
         },
         {
-          "category": "野球",
-          "contest": "明治神宮野球大会",
-          "year": "2024年（第55回）",
-          "division": "大学の部",
-          "award": "優勝",
-          "detail": "初優勝・大学4冠"
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2026年（第95回）",
+          "division": "女子団体",
+          "award": "準優勝",
+          "detail": ""
         },
         {
-          "category": "野球",
-          "contest": "明治神宮野球大会",
-          "year": "2025年（第56回）",
-          "division": "大学の部",
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2025年（第76回）",
+          "division": "男子団体",
           "award": "優勝",
-          "detail": "2年連続2回目"
+          "detail": "13年ぶり17回目"
         },
         {
-          "category": "バレーボール",
-          "contest": "全日本バレーボール大学男女選手権大会",
-          "year": "2024年度（第71回）",
-          "division": "女子",
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2026年（第77回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "2連覇・18回目"
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
+      "university_name": "法政大学",
+      "university_id": "u000075",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "剣道",
+          "contest": "全日本学生剣道優勝大会",
+          "year": "2026年（第74回）",
+          "division": "男子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "テニス",
+          "contest": "全日本大学対抗テニス王座決定試合",
+          "year": "2026年（第80回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "42年ぶり"
+        },
+        {
+          "category": "バドミントン",
+          "contest": "全日本学生バドミントン選手権大会（団体）",
+          "year": "2024年（第75回）",
+          "division": "女子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "アメリカンフットボール",
+          "contest": "全日本大学アメリカンフットボール選手権（甲子園ボウル）",
+          "year": "2024年（第79回）",
+          "division": "全国決勝",
           "award": "準優勝",
           "detail": ""
         }
@@ -746,41 +1208,6 @@
       "music_awards": []
     },
     {
-      "university_name": "龍谷大学",
-      "university_id": "",
-      "pref": "京都府",
-      "pref_slug": "kyoto",
-      "establishment": "",
-      "sports_awards": [],
-      "culture_awards": [],
-      "music_awards": [
-        {
-          "category": "全日本吹奏楽コンクール",
-          "contest": "全日本吹奏楽コンクール",
-          "year": "2026年（第74回）",
-          "division": "大学の部",
-          "award": "金賞",
-          "detail": "龍谷大学吹奏楽部"
-        },
-        {
-          "category": "全日本吹奏楽コンクール",
-          "contest": "全日本吹奏楽コンクール",
-          "year": "2025年（第73回）",
-          "division": "大学の部",
-          "award": "金賞",
-          "detail": "龍谷大学吹奏楽部"
-        },
-        {
-          "category": "全日本吹奏楽コンクール",
-          "contest": "全日本吹奏楽コンクール",
-          "year": "2024年（第72回）",
-          "division": "大学の部",
-          "award": "金賞",
-          "detail": "龍谷大学吹奏楽部"
-        }
-      ]
-    },
-    {
       "university_name": "北海道教育大学函館校",
       "university_id": "",
       "pref": "北海道",
@@ -852,6 +1279,41 @@
       ]
     },
     {
+      "university_name": "愛知工業大学",
+      "university_id": "",
+      "pref": "愛知県",
+      "pref_slug": "aichi",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2024年（第93回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "2年連続10回目"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2025年（第94回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": "2年ぶり6回目"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2026年（第95回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "2年ぶり11回目"
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
       "university_name": "豊橋技術科学大学",
       "university_id": "",
       "pref": "愛知県",
@@ -887,6 +1349,41 @@
       "music_awards": []
     },
     {
+      "university_name": "専修大学",
+      "university_id": "u000043",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "バレーボール",
+          "contest": "全日本バレーボール大学男女選手権大会",
+          "year": "2024年度（第77回）",
+          "division": "男子",
+          "award": "優勝",
+          "detail": "初優勝"
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2024年（第93回）",
+          "division": "女子団体",
+          "award": "準優勝",
+          "detail": ""
+        },
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2026年（第95回）",
+          "division": "女子団体",
+          "award": "優勝",
+          "detail": "11年ぶり16回目"
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
       "university_name": "帝京大学",
       "university_id": "u000102",
       "pref": "東京都",
@@ -918,42 +1415,6 @@
           "division": "大学の部 団体",
           "award": "優秀校（7位）",
           "detail": ""
-        }
-      ],
-      "music_awards": []
-    },
-    {
-      "university_name": "慶應義塾大学",
-      "university_id": "u000025",
-      "pref": "東京都",
-      "pref_slug": "tokyo",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "野球",
-          "contest": "全日本大学野球選手権大会",
-          "year": "2026年（第75回）",
-          "division": "大学の部",
-          "award": "準優勝",
-          "detail": ""
-        }
-      ],
-      "culture_awards": [
-        {
-          "category": "将棋",
-          "contest": "全日本学生将棋団体対抗戦（学生王座戦）",
-          "year": "2025年度（第56回）",
-          "division": "団体戦",
-          "award": "優勝",
-          "detail": ""
-        },
-        {
-          "category": "競技プログラミング",
-          "contest": "ICPC アジア地区横浜大会",
-          "year": "2025年",
-          "division": "大学対抗",
-          "award": "準優勝（国内1位）",
-          "detail": "チーム Rinshan Solution"
         }
       ],
       "music_awards": []
@@ -1081,6 +1542,34 @@
           "detail": "同志社グリークラブ"
         }
       ]
+    },
+    {
+      "university_name": "関西学院大学",
+      "university_id": "",
+      "pref": "兵庫県",
+      "pref_slug": "hyogo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "アメリカンフットボール",
+          "contest": "全日本大学アメリカンフットボール選手権（甲子園ボウル）",
+          "year": "2025年（第80回）",
+          "division": "全国決勝",
+          "award": "準優勝",
+          "detail": ""
+        }
+      ],
+      "culture_awards": [
+        {
+          "category": "ダンス・パフォーマンス",
+          "contest": "UNIDOL（大学対抗ダンス全国決勝）",
+          "year": "2025-26年冬",
+          "division": "全国決勝",
+          "award": "優勝",
+          "detail": "星空パレット"
+        }
+      ],
+      "music_awards": []
     },
     {
       "university_name": "北海道大学",
@@ -1297,33 +1786,6 @@
           "detail": "愛媛大学合唱団"
         }
       ]
-    },
-    {
-      "university_name": "日本大学",
-      "university_id": "u000066",
-      "pref": "東京都",
-      "pref_slug": "tokyo",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "バスケットボール",
-          "contest": "全日本大学バスケットボール選手権大会",
-          "year": "2024年度（第76回）",
-          "division": "男子",
-          "award": "優勝",
-          "detail": "15年ぶり13回目"
-        },
-        {
-          "category": "柔道",
-          "contest": "全日本学生柔道優勝大会",
-          "year": "2025年（第74回）",
-          "division": "男子団体",
-          "award": "優勝",
-          "detail": "28年ぶり"
-        }
-      ],
-      "culture_awards": [],
-      "music_awards": []
     },
     {
       "university_name": "東京医療保健大学",
@@ -1664,25 +2126,6 @@
       "music_awards": []
     },
     {
-      "university_name": "関西大学",
-      "university_id": "",
-      "pref": "大阪府",
-      "pref_slug": "osaka",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "野球",
-          "contest": "全日本大学野球選手権大会",
-          "year": "2026年（第75回）",
-          "division": "大学の部",
-          "award": "優勝",
-          "detail": "54年ぶり3回目"
-        }
-      ],
-      "culture_awards": [],
-      "music_awards": []
-    },
-    {
       "university_name": "仙台大学",
       "university_id": "",
       "pref": "宮城県",
@@ -1797,6 +2240,25 @@
       ]
     },
     {
+      "university_name": "中央大学",
+      "university_id": "u000049",
+      "pref": "東京都",
+      "pref_slug": "tokyo",
+      "establishment": "私立",
+      "sports_awards": [
+        {
+          "category": "卓球",
+          "contest": "全日本大学総合卓球選手権大会（団体の部）",
+          "year": "2025年（第94回）",
+          "division": "男子団体",
+          "award": "優勝",
+          "detail": "33年ぶり7回目"
+        }
+      ],
+      "culture_awards": [],
+      "music_awards": []
+    },
+    {
       "university_name": "創価大学",
       "university_id": "u000114",
       "pref": "東京都",
@@ -1810,44 +2272,6 @@
           "division": "大学の部",
           "award": "準優勝",
           "detail": ""
-        }
-      ],
-      "culture_awards": [],
-      "music_awards": []
-    },
-    {
-      "university_name": "専修大学",
-      "university_id": "u000043",
-      "pref": "東京都",
-      "pref_slug": "tokyo",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "バレーボール",
-          "contest": "全日本バレーボール大学男女選手権大会",
-          "year": "2024年度（第77回）",
-          "division": "男子",
-          "award": "優勝",
-          "detail": "初優勝"
-        }
-      ],
-      "culture_awards": [],
-      "music_awards": []
-    },
-    {
-      "university_name": "日本体育大学",
-      "university_id": "u000072",
-      "pref": "東京都",
-      "pref_slug": "tokyo",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "剣道",
-          "contest": "全日本女子学生剣道優勝大会",
-          "year": "2025年（第44回）",
-          "division": "女子団体",
-          "award": "優勝",
-          "detail": "8年ぶり3回目"
         }
       ],
       "culture_awards": [],
@@ -1905,25 +2329,6 @@
           "division": "男子",
           "award": "優勝",
           "detail": "初優勝"
-        }
-      ],
-      "culture_awards": [],
-      "music_awards": []
-    },
-    {
-      "university_name": "法政大学",
-      "university_id": "u000075",
-      "pref": "東京都",
-      "pref_slug": "tokyo",
-      "establishment": "私立",
-      "sports_awards": [
-        {
-          "category": "剣道",
-          "contest": "全日本学生剣道優勝大会",
-          "year": "2026年（第74回）",
-          "division": "男子団体",
-          "award": "準優勝",
-          "detail": ""
         }
       ],
       "culture_awards": [],
