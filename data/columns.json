@@ -1,5 +1,26 @@
 [
   {
+    "id": "column-windows-ai-os-20261125",
+    "slug": "windows-ai-os-20261125",
+    "title": "Windows 3.1から30余年――AIの登場で変わるパソコンの「当たり前」と、これからの学びの本質",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.25",
+    "excerpt": "Windows 3.1から30年以上パソコンを使い続けてきた実体験と教育の視点から、AIエージェントやCopilot新画面「Home」、ハイブリッド・インテリジェンスが示すOSの変容と、人間に残る「考える力」の本質を考察します。",
+    "thumbnail": "/assets/images/columns/windows-ai-os-20261125/thumbnail.jpg",
+    "readTime": "約10分",
+    "tags": [
+      "AIと学び",
+      "Windows",
+      "OS",
+      "AIエージェント",
+      "Copilot",
+      "教育とICT",
+      "パソコンの歴史"
+    ],
+    "url": "/columns/windows-ai-os-20261125/"
+  },
+  {
     "id": "column-national-tournament-guides-20261123",
     "slug": "national-tournament-guides-20261123",
     "title": "「全国大会って、いつ・どうすれば出られる？」運動・武道／文化部・音楽の出場ガイドを公開しました",
