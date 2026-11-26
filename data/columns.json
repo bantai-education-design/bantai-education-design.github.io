@@ -1,5 +1,26 @@
 [
   {
+    "id": "column-school-dx-gariban-to-ai-20261126",
+    "slug": "school-dx-gariban-to-ai-20261126",
+    "title": "学校は本当にデジタル化が遅れているのか――鉄筆からAIまで、40年の学校現場を見つめて",
+    "category": "教育動向",
+    "categorySlug": "trends",
+    "date": "2026.11.26",
+    "excerpt": "若手教員の86.2％が学校のアナログ業務に驚いたという調査をきっかけに、鉄筆でガリ版原紙を切っていた最後の世代であり40年にわたり学校現場を見つめてきた著者が、ファクシミリからAIまでの歩みとこれからの校務DXを考えます。",
+    "thumbnail": "/assets/images/columns/school-dx-gariban-to-ai-20261126/thumbnail.webp",
+    "readTime": "約11分",
+    "tags": [
+      "教育動向",
+      "校務DX",
+      "ICT活用",
+      "ガリ版",
+      "ファクシミリ",
+      "AIと教育",
+      "働き方改革"
+    ],
+    "url": "/columns/school-dx-gariban-to-ai-20261126/"
+  },
+  {
     "id": "column-windows-ai-os-20261125",
     "slug": "windows-ai-os-20261125",
     "title": "Windows 3.1から30余年――AIの登場で変わるパソコンの「当たり前」と、これからの学びの本質",
