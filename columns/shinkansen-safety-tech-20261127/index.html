@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>速く走る技術と、安全に止まる技術――日本の新幹線は、なぜ世界で勝ち切れないのか｜Ban.Tai Education Design</title>
+  <meta name="description" content="中国の時速400キロへの挑戦と、日本の次世代新幹線（S0系・E10系）が目指す「安全に止まる技術」。スペインの高速鉄道事故の事実整理、日本方式と欧州の上下分離方式の違い、安全技術の価値を世界に伝える課題を掘り下げます。">
+  <link rel="canonical" href="https://bantai-education-design.github.io/columns/shinkansen-safety-tech-20261127/">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Ban.Tai Education Design">
+  <meta property="og:title" content="速く走る技術と、安全に止まる技術――日本の新幹線は、なぜ世界で勝ち切れないのか">
+  <meta property="og:description" content="スペインの事故車両と運行方式の事実整理、日本方式と欧州方式の構造的な違い、そして「安全という技術」を世界にどう売るのかを考察します。">
+  <meta property="og:url" content="https://bantai-education-design.github.io/columns/shinkansen-safety-tech-20261127/">
+  <meta property="og:image" content="https://bantai-education-design.github.io/assets/images/columns/shinkansen-safety-tech-20261127/thumbnail.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bantai-education-design.github.io/assets/images/columns/shinkansen-safety-tech-20261127/thumbnail.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "速く走る技術と、安全に止まる技術――日本の新幹線は、なぜ世界で勝ち切れないのか",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "author": { "@type": "Person", "name": "磐 田井" },
+      "publisher": { "@type": "Organization", "name": "Ban.Tai Education Design", "url": "https://bantai-education-design.github.io/" },
+      "image": "https://bantai-education-design.github.io/assets/images/columns/shinkansen-safety-tech-20261127/thumbnail.webp",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bantai-education-design.github.io/columns/shinkansen-safety-tech-20261127/" }
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try { isExcluded = localStorage.getItem('bantai_admin') === 'true'; } catch (e) {}
+      if (isLocal || isExcluded) { window['ga-disable-G-KPGJ0R2KXR'] = true; }
+    })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf8f3; color: #243041; font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif; }
+    .article-nav { position: sticky; top: 0; z-index: 20; background: #17334e; padding: 10px max(16px, calc((100vw - 780px)/2 + 22px)); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .article-nav a { display: inline-flex; padding: 8px 14px; border-radius: 8px; background: #fff; color: #17334e; font-size: .86rem; font-weight: 700; text-decoration: none; }
+    .article-nav a.nav-sub { background: rgba(255,255,255,.14); color: #fff; }
+    main { max-width: 780px; margin: auto; padding: 28px 22px 76px; line-height: 1.95; }
+    .kicker { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #e0f2fe; color: #0369a1; font-size: .78rem; font-weight: 800; letter-spacing: .06em; }
+    h1 { font-family: "Noto Serif JP", serif; font-size: clamp(1.5rem, 3.6vw, 2.15rem); line-height: 1.48; margin: .55em 0 .4em; color: #0c1b33; }
+    .meta { color: #64748b; font-size: .88rem; margin: 0 0 22px; }
+    .hero-wrap { margin: 0 0 30px; }
+    .hero { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 10px 28px rgba(12,27,51,.14); object-fit: contain; }
+    figure { margin: 30px 0; }
+    figure img { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 8px 24px rgba(15,39,61,.12); }
+    figcaption { font-size: .84rem; color: #64748b; margin-top: 10px; line-height: 1.65; }
+    h2 { font-family: "Noto Serif JP", serif; font-size: 1.34rem; margin: 2.35em 0 .85em; padding-left: 12px; border-left: 4px solid #17334e; color: #0c1b33; line-height: 1.48; }
+    p.article-paragraph { font-size: 1.02rem; line-height: 2.05; margin: 0 0 1.55em; }
+    .table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid #d7e4ec; border-radius: 12px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; line-height: 1.68; font-size: .92rem; }
+    th, td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid #e2e8f0; }
+    th { background: #17334e; color: #fff; font-weight: 700; }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
+    .spec-card { background: #fff; border: 1px solid #dbe5ec; border-top: 4px solid #17334e; border-radius: 12px; padding: 18px 20px; box-shadow: 0 4px 14px rgba(15,39,61,.05); }
+    .spec-card h3 { margin: 0 0 10px; font-size: 1rem; color: #0c1b33; }
+    .spec-card ul { margin: 0; padding-left: 1.2em; font-size: .9rem; line-height: 1.75; color: #334155; }
+    .author-sign { margin-top: 36px; padding: 18px 22px; background: #fff; border: 1px solid #dbe5ec; border-radius: 12px; text-align: right; font-size: .95rem; color: #1e293b; line-height: 1.8; }
+    .sources { margin-top: 32px; padding: 22px 24px; background: #eef2f6; border-radius: 12px; font-size: .88rem; line-height: 1.8; color: #334155; }
+    .sources h2 { margin-top: 0; font-size: 1.05rem; border-left-color: #475569; }
+    .sources a { color: #0369a1; font-weight: 700; word-break: break-all; }
+    .note-box { margin-top: 12px; font-size: .83rem; color: #475569; }
+    @media (max-width: 680px) {
+      main { padding: 18px 16px 56px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      th, td { padding: 9px 10px; font-size: .86rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="article-nav" aria-label="コラムナビゲーション">
+    <a href="/columns/">← コラム一覧へ</a>
+    <a class="nav-sub" href="/">ホームへ</a>
+  </nav>
+
+  <main>
+    <article>
+      <span class="kicker">日常の気づき</span>
+      <h1>速く走る技術と、安全に止まる技術――日本の新幹線は、なぜ世界で勝ち切れないのか</h1>
+      <p class="meta">公開日：2026年11月27日　カテゴリー：日常の気づき</p>
+
+      <div class="hero-wrap">
+        <img class="hero" src="/assets/images/columns/shinkansen-safety-tech-20261127/thumbnail.webp" alt="技術と社会の現在地：速く走る技術と、安全に止まる技術。――日本の新幹線は、なぜ世界で勝ち切れないのか">
+      </div>
+
+      <p class="article-paragraph">　中国が営業最高速度の時速400キロメートルを目指して次世代高速鉄道の開発を進めているというニュースを目にしました。<br>きっかけとなったのは、2026年11月26日にnippon.comに掲載された「中国は時速400キロへ、日本は何を競う？ 次世代新幹線が目指す『速さではない世界一』」という記事です。</p>
+
+      <p class="article-paragraph">　時速400キロという数字は、誰が見ても分かりやすく、強烈なインパクトがあります。<br>一方で日本の次世代新幹線は、ただ最高速度の数字を競うのではなく、車両・線路・信号・運行管理・保守・防災を一体化した、鉄道システム全体としての安全性や信頼性で世界一を目指そうとしています。</p>
+
+      <p class="article-paragraph">　けれども、ここでふと立ち止まって考えてしまいます。<br>日本はこれほどまでにトータルな安全技術で勝負しようと努力しているにもかかわらず、海外の高速鉄道市場を見渡すと、ヨーロッパ方式に傾いている場面が少なくないように感じられるのです。<br>さらに2026年にスペインで相次いだ高速鉄道事故のニュースを見て、「事故に遭った車両は、日本製の新幹線だったのではなかったか」「運行方式はヨーロッパ方式だったのか」と疑問を持った方も多いのではないでしょうか。</p>
+
+      <p class="article-paragraph">　本コラムでは、スペインの事故に関する事実関係を冷静に整理したうえで、日本方式とヨーロッパ方式の構造的な違い、海外市場で欧州方式が選ばれやすい背景、そして日本の次世代新幹線が磨いている「安全に止まる技術」の価値を世界にどう伝えていくべきか、日本礼賛にとどまらない視点から掘り下げてみたいと思います。</p>
+
+      <h2>1. スペインの事故車両は「日本製の新幹線」だったのか</h2>
+
+      <p class="article-paragraph">　海外への高速鉄道輸出や安全性を考えるとき、まず大切になるのは「車両を輸出すること」と「運行システム全体を輸出すること」を明確に分けて考えることです。<br>スペインで起きた事故についても、車両の製造元と、その路線で採用されていた運行方式を切り分けて確認する必要があります。</p>
+
+      <p class="article-paragraph">　2026年、スペインの高速鉄道網では大きな事故が相次ぎました。<br>1月18日に発生した脱線衝突事故では、日立レールおよびボンバルディア系の車両と、スペインのCAF製車両が関係したと報じられています。<br>また10月28日に発生した追突事故では、日立レールおよびボンバルディア系の車両と、ドイツのシーメンス製車両が関係しました。</p>
+
+      <p class="article-paragraph">　ここで「日立」という名前を目にすると、日本国内で造られた新幹線が現地で走っていたように受け止められがちです。<br>しかし、実際に日立レールが関わった車両は、イタリアの高速鉄道向けに開発された「フレッチャロッサ1000」をベースとしたものです。<br>日本の日立製作所グループ傘下の企業が製造に関わってはいるものの、日本国内で製造された新幹線車両そのものではなく、欧州の鉄道技術と規格を基盤として開発された車両なのです。</p>
+
+      <p class="article-paragraph">　さらに10月の追突事故をめぐっては、列車制御システムであるLZBの通信障害や停止、そして運行再開時における指令側の人的判断が大きな問題として報じられています。<br>車両そのものの欠陥が原因と確定したわけではありませんし、最終的な事故原因については、引き続き現地当局による正式な調査結果を待つ必要があります。<br>断片的な印象だけで「日本製が危ない」あるいは「欧州製が劣っている」と短絡的に結びつけない冷静さが求められます。</p>
+
+      <h2>2. 運行方式の違い――日本の一体管理と、欧州の上下分離</h2>
+
+      <p class="article-paragraph">　では、スペインをはじめヨーロッパの高速鉄道では、どのような運行方式が採られているのでしょうか。<br>欧州で広く採用されているのは、「上下分離方式」と呼ばれる仕組みです。</p>
+
+      <p class="article-paragraph">　上下分離方式では、線路や信号、変電設備といったインフラ（下）を管理する主体と、実際に車両を保有して列車を走らせる運行事業者（上）が分かれています。<br>そのため、同じ高速鉄道路線の上を、国営系の事業者だけでなく複数の民間事業者の列車が乗り入れて走ることも珍しくありません。</p>
+
+      <p class="article-paragraph">　これに対して日本の新幹線は、原則として線路・信号・運行管理・車両・保守点検をひとつの鉄道事業者が一体的に設計し、管理する思想を基本としています。<br>もちろん、日本国内にも整備新幹線区間のようにインフラ保有と運行が制度上分かれている「上下分離」に相当する区間は存在しますが、日常の運行管理や安全制御、保守の一貫性という点では、きわめて緊密な一体運用が貫かれています。</p>
+
+      <p class="article-paragraph">　両者の違いを整理すると、それぞれの思想の輪郭がはっきり見えてきます。</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th>日本の新幹線方式</th>
+              <th>欧州型高速鉄道方式</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>基本思想</td>
+              <td>一体的なシステム設計</td>
+              <td>相互運用性・共通規格</td>
+            </tr>
+            <tr>
+              <td>運行体制</td>
+              <td>主に一体的な管理</td>
+              <td>複数事業者による運行</td>
+            </tr>
+            <tr>
+              <td>安全制御</td>
+              <td>ATCなど</td>
+              <td>ETCS・LZBなど</td>
+            </tr>
+            <tr>
+              <td>在来線との関係</td>
+              <td>原則として独立</td>
+              <td>直通運転にも対応</td>
+            </tr>
+            <tr>
+              <td>車両調達</td>
+              <td>路線システムに合わせる</td>
+              <td>共通規格による調達</td>
+            </tr>
+            <tr>
+              <td>主な強み</td>
+              <td>安全性・定時性・高密度輸送</td>
+              <td>柔軟性・国際接続・競争促進</td>
+            </tr>
+            <tr>
+              <td>主な課題</td>
+              <td>他国の既存設備との互換性</td>
+              <td>事業者間の連携・責任分担</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="article-paragraph">　ここで誤解してはならないのは、欧州方式が安全性を軽視しているわけではないという点です。<br>ヨーロッパにもETCS（欧州列車制御システム）やLZBといった高度な自動列車制御技術と、厳格な安全基準が存在します。<br>今回のスペインの事故についても、上下分離方式そのものが直接の原因だったと断定することはできません。<br>ただ、複数の事業者や異なるメーカーの車両、さらに新旧の信号システムが混在する環境では、異常発生時の情報共有や責任分担、指令と現場の連携がいっそう複雑になりやすいという構造的な難しさがあるのも事実です。</p>
+
+      <figure>
+        <img src="/assets/images/columns/shinkansen-safety-tech-20261127/europe-rail.webp" alt="異なる事業者の高速列車が共通規格の線路を行き交う欧州ターミナル駅のイメージ" loading="lazy">
+        <figcaption>共通規格のもとで複数事業者の列車が国境や路線を越えて行き交う、欧州型高速鉄道のイメージ。</figcaption>
+      </figure>
+
+      <h2>3. なぜ海外ではヨーロッパ方式が選ばれやすいのか</h2>
+
+      <p class="article-paragraph">　日本の新幹線システムは、開業以来、乗客の死亡につながる脱線・衝突事故を一度も起こしていないという、世界でも類を見ない実績を持っています。<br>それにもかかわらず、海外市場でヨーロッパ方式が選ばれやすい背景には、純粋な技術力だけでは語れない現実的な理由があります。</p>
+
+      <p class="article-paragraph">　第一に、既存の鉄道網をそのまま活用できる点です。<br>ヨーロッパのように古くから都市間鉄道網が張り巡らされ、いくつもの国が陸続きで接している地域では、専用線をゼロから完全に独立して敷設するよりも、既存の在来線と直通運転できる仕組みのほうが現実的です。</p>
+
+      <p class="article-paragraph">　第二に、国境を越えた相互運用性です。<br>共通規格を採用していれば、列車は国境を越えてそのまま隣国の主要都市まで乗り入れることができます。<br>欧州連合（EU）が進めてきた鉄道市場の統合や国際接続の理念と、共通規格を前提とした欧州方式はきわめて相性が良いのです。</p>
+
+      <p class="article-paragraph">　第三に、調達と価格競争の柔軟性です。<br>共通規格の上であれば、鉄道事業者は単一の国のシステムに縛られることなく、複数のメーカーから条件の合う車両を競争入札で調達できます。<br>既存の駅や線路設備を活用することで、巨額になりがちな初期投資を抑えられる場合もあります。</p>
+
+      <p class="article-paragraph">　日本の新幹線は、独立した専用の高速鉄道システムとして極めて高い完成度を誇ります。<br>しかし裏を返せば、「システム全体を丸ごと導入して初めて真価を発揮する」という特性は、すでに鉄道網が発達している国や、初期投資を厳しく抑えたい国にとっては導入のハードルになりやすいのです。</p>
+
+      <p class="article-paragraph">　もっとも、世界全体がヨーロッパ方式一色に向かっていると断定することもできません。<br>日本方式を採用して安定した運行を続ける台湾高速鉄道や、日本方式の導入を進めるインドの高速鉄道計画のような事例も確かに存在します。<br>それぞれの国の地理的条件、既存インフラの有無、財政事情、そして鉄道に何を求めるかによって、最適解は異なってくるのです。</p>
+
+      <h2>4. 日本の次世代新幹線が競う「速さではない世界一」</h2>
+
+      <p class="article-paragraph">　こうした世界の潮流の中で、日本の次世代新幹線は何を磨こうとしているのでしょうか。<br>nippon.com（2026年11月26日）の記事が伝えているのは、最高速度の記録更新ではなく、「危険をいち早く察知し、確実に、安全に止まる技術」のさらなる進化です。</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3>JR東海・S0系の開発目標</h3>
+          <ul>
+            <li>地震検知からブレーキ開始：0.2秒（従来は約2秒）</li>
+            <li>消費電力量：約6％減（N700Sとの比較）</li>
+          </ul>
+        </div>
+        <div class="spec-card">
+          <h3>JR東日本・E10系の開発目標</h3>
+          <ul>
+            <li>停止距離：約15％短縮（E5系との比較）</li>
+            <li>地震時の脱線リスク：最大約50％減（一定の地震条件での評価）</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="article-paragraph">　たとえば、JR東海が開発を進める次世代車両「S0系」では、地震を検知してからブレーキが作動し始めるまでの時間を、従来の約2秒から「0.2秒」へと劇的に短縮する目標が掲げられています。<br>時速300キロ近くで走る列車にとって、ブレーキ開始の1.8秒の短縮は、およそ150メートルもの走行距離の差に直結します。<br>あわせて消費電力量についても、現行のN700Sと比較して約6％削減する目標が示されています。</p>
+
+      <p class="article-paragraph">　一方、JR東日本が開発を進める次世代車両「E10系」では、現行のE5系と比較して地震時などの停止距離を約15％短縮し、一定の地震条件下における脱線リスクを最大約50％低減するという開発目標・評価値が示されています。</p>
+
+      <p class="article-paragraph">　いずれも現時点では開発段階における性能目標や評価値ではありますが、ここに日本の鉄道技術が向かっている方向性が鮮やかに表れています。<br>日本は世界有数の地震大国であり、なおかつ人口密集地を縫うように新幹線が走っています。<br>厳しい騒音基準を守りながら、数分間隔という世界最高水準の高密度ダイヤを秒単位の正確さで維持し、万一の地震の瞬間には0.2秒でブレーキを立ち上げて乗客の命を守る。<br>それは単なる「速く走る技術」ではなく、日本の風土と社会の要請に鍛え抜かれた「安全に止め切る総合技術」なのです。</p>
+
+      <figure>
+        <img src="/assets/images/columns/shinkansen-safety-tech-20261127/shinkansen-system.webp" alt="車両・線路・信号・防災が一体となって安全を支える日本の新幹線システムのイメージ" loading="lazy">
+        <figcaption>車両単体の性能だけでなく、軌道・信号・地震検知・保守が一体となって機能する日本の新幹線システムのイメージ。</figcaption>
+      </figure>
+
+      <h2>5. 「安全という技術」を、世界にどう売るのか</h2>
+
+      <p class="article-paragraph">　けれども、ここに日本の産業界全体が直面している、根深く大きな課題が浮かび上がります。<br>それは、「目に見えにくい安全の価値を、どうやって世界に伝え、選んでもらうのか」という問題です。</p>
+
+      <p class="article-paragraph">　営業最高速度の時速400キロという数字は、ひと目で比較できます。<br>建設費や一編成あたりの車両価格も、入札の場で明確な数字として並びます。<br>しかし、安全管理の思想、日々の保守点検を支える現場の文化、長い年月をかけて培われる人材育成、異常発生時に的確な判断を下す組織力、そして何十年にもわたる運行の信頼性は、契約前の見積書に単純な数字として書き込むことがきわめて難しいのです。</p>
+
+      <p class="article-paragraph">　「日本は良いものを造っているのだから、分かってもらえるはずだ」という姿勢だけでは、国際標準と価格競争が激しくぶつかり合う世界市場では勝ち切れません。<br>優れた車両や安全装置を単体で売り込むのではなく、数十年にわたるライフサイクル全体の維持管理コスト、事故を防ぎ続けることによる社会的損失の回避、高頻度かつ定時運行が生み出す経済効果まで含めて、説得力のある言葉とデータで世界に提示していく力が問われています。</p>
+
+      <p class="article-paragraph">　同時に、日本側にも学ぶべき視点があります。<br>自国の完璧な一体システムをそのまま押し出すだけでなく、現地の既存インフラや国際規格とどう折り合いをつけ、どこを標準化し、どこに日本ならではの安全の核を組み込むのか。<br>「すべてを自前で抱え込む強さ」と「世界とつながる柔軟性」をどう両立させるかという問いは、鉄道にとどまらず、日本のものづくりやデジタル技術全般に共通するテーマと言えるでしょう。</p>
+
+      <h2>6. おわりに――「速さ」の先に問われる人間の知恵</h2>
+
+      <p class="article-paragraph">　私は長年、教育の現場に身を置いてきました。<br>だからこそ、新幹線の「速く走る技術」と「安全に止まる技術」の話を読みながら、つい人間の学びや社会のあり方とも重ね合わせてしまいます。</p>
+
+      <p class="article-paragraph">　世の中ではどうしても、テストの点数やランキング、処理のスピードといった「分かりやすい数字」が注目されがちです。<br>もちろん、速さや効率には確かな価値があります。<br>しかし、本当に人や社会を支え続けるのは、表には見えにくい土台の確かさであり、いざというときに立ち止まって安全を確かめる力であり、日々の地道な点検と誠実な積み重ねではないでしょうか。</p>
+
+      <p class="article-paragraph">　中国の時速400キロへの挑戦も、ヨーロッパの国際接続と標準化の知恵も、それぞれに合理的な背景と強みがあります。<br>そのうえで、日本が磨き続けてきた「安全に止まる技術」と、それを支える人と仕組みの総合力は、これからの世界にとっても決して色あせることのない貴重な財産です。</p>
+
+      <p class="article-paragraph">　その価値を内輪の誇りにとどめず、世界の多様な現実と向き合いながら、どう翻訳し、どう届けていくか。<br>次世代新幹線が挑む「速さではない世界一」の行方を、私たちは日本の技術と社会の未来を映す鏡として、これからも静かに見守っていきたいと思います。</p>
+
+      <div class="author-sign">
+        文：磐 田井（ばん たい）<br>
+        Ban.Tai Education Design
+      </div>
+
+      <section class="sources">
+        <h2>参考記事・出典</h2>
+        <p>・nippon.com（2026年11月26日）「中国は時速400キロへ、日本は何を競う？ 次世代新幹線が目指す『速さではない世界一』」<br>
+        <a href="https://share.google/sQ6u1bpOSx6MMSuYF" target="_blank" rel="noopener noreferrer">https://share.google/sQ6u1bpOSx6MMSuYF</a></p>
+        <p>・2026年スペイン高速鉄道事故（1月18日・10月28日）および欧州の鉄道運行方式に関する各種報道（東洋経済オンライン、ダイヤモンド・オンライン、CNN.co.jp 等）</p>
+        <p class="note-box">※本コラムに記載したJR東海・S0系およびJR東日本・E10系の数値は、nippon.com（2026年11月26日）に基づく開発段階の性能目標・評価値です。また、2026年にスペインで発生した高速鉄道事故の最終的な原因については、現地当局による正式な調査結果の公表を待つ必要があります。</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
