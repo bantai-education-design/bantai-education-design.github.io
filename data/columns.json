@@ -1,5 +1,26 @@
 [
   {
+    "id": "column-camera-convenience-inconvenience",
+    "slug": "camera-convenience-inconvenience",
+    "title": "便利になったカメラが、なぜ不便さを売るのか",
+    "category": "歴史・PCと想い",
+    "categorySlug": "history",
+    "date": "2026.11.28",
+    "excerpt": "ミノルタXDとα-7000、富士フイルム X half。露出やピントの自動化から、あえて不便さを楽しむ撮影へ。三台の機能と価格を通して、撮る喜びを振り返ります。",
+    "thumbnail": "/columns/images/camera-eyecatch.jpg",
+    "readTime": "約13分",
+    "tags": [
+      "カメラ",
+      "ミノルタ",
+      "XD",
+      "α-7000",
+      "富士フイルム",
+      "X half",
+      "フィルム写真"
+    ],
+    "url": "/columns/camera-convenience-inconvenience.html"
+  },
+  {
     "id": "column-ai-words-book-introduction-2026",
     "slug": "ai-words-book-introduction-2026",
     "title": "AIを使う前に、言葉に迷っていませんか――『言葉からわかるAI入門』に込めた思い",
