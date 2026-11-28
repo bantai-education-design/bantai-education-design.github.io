@@ -5,7 +5,7 @@ import {Table,TableRow,TableHeader,TableCell} from '@tiptap/extension-table';
 import {renderDoc} from './content.js';
 const $=s=>document.querySelector(s), publicSite='https://bantai-education-design.github.io';
 let profiles=[],maxImageBytes=5*1024*1024;
-let csrf='',article=null,editor=null,timer=null,dirty=false,saving=null,generation=0,conflict=false,busyPublication=false;
+let csrf='',article=null,editor=null,timer=null,dirty=false,saving=null,generation=0,conflict=false,busyPublication=false,saveErrorMessage='';
 const notice=s=>{$('#notice').textContent=s;};
 const run=fn=>async(...args)=>{try{await fn(...args);}catch(e){notice(e.message);}};
 async function api(path,method='GET',body) {
@@ -76,7 +76,8 @@ async function save(){
     try {
       const result=await api('articles/'+id,'PUT',snapshot);article=result;dirty=generation!==sentGeneration;
       $('#save-status').textContent=dirty?'未保存…':`第${result.revision}版 保存済み`;
-    }catch(e){conflict=e.status===409;$('#save-status').textContent=conflict?'競合・未保存（本文をコピーして保護）':'保存失敗・未保存';throw e;}
+      if(!dirty){if($('#notice').textContent===saveErrorMessage)notice('');saveErrorMessage='';}
+    }catch(e){saveErrorMessage=e.message;conflict=e.status===409;$('#save-status').textContent=conflict?'競合・未保存（本文をコピーして保護）':'保存失敗・未保存';throw e;}
     finally{saving=null;}
   })();
   await saving;

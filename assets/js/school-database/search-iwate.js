@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortSelect = document.getElementById('sort-order');
   const typeCheckboxes = document.querySelectorAll('.type-checkbox');
   const estCheckboxes = document.querySelectorAll('.est-checkbox');
+  const researchOnlyCheckbox = document.getElementById('research-only');
+  const researchAuthoritySelect = document.getElementById('research-authority');
+  const musicOnlyCheckbox = document.getElementById('music-only');
+  const musicContestSelect = document.getElementById('music-contest');
+  const sportsOnlyCheckbox = document.getElementById('sports-only');
+  const sportsCategorySelect = document.getElementById('sports-category');
+  const cultureOnlyCheckbox = document.getElementById('culture-only');
+  const cultureCategorySelect = document.getElementById('culture-category');
   const resultsContainer = document.getElementById('results-list');
   const countSpan = document.getElementById('count');
   const honorificRadios = document.querySelectorAll('.honorific-radio');
@@ -130,6 +138,98 @@ document.addEventListener('DOMContentLoaded', () => {
         'results_count': currentFilteredResults.length
       });
     });
+
+  if (researchOnlyCheckbox) {
+    researchOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'research_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (researchAuthoritySelect) {
+    researchAuthoritySelect.addEventListener('change', () => {
+      if (researchAuthoritySelect.value && researchOnlyCheckbox && !researchOnlyCheckbox.checked) {
+        researchOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'research_authority',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (musicOnlyCheckbox) {
+    musicOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'music_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (musicContestSelect) {
+    musicContestSelect.addEventListener('change', () => {
+      if (musicContestSelect.value && musicOnlyCheckbox && !musicOnlyCheckbox.checked) {
+        musicOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'music_contest',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (sportsOnlyCheckbox) {
+    sportsOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'sports_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (sportsCategorySelect) {
+    sportsCategorySelect.addEventListener('change', () => {
+      if (sportsCategorySelect.value && sportsOnlyCheckbox && !sportsOnlyCheckbox.checked) {
+        sportsOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'sports_category',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (cultureOnlyCheckbox) {
+    cultureOnlyCheckbox.addEventListener('change', () => {
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'culture_only',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
+
+  if (cultureCategorySelect) {
+    cultureCategorySelect.addEventListener('change', () => {
+      if (cultureCategorySelect.value && cultureOnlyCheckbox && !cultureOnlyCheckbox.checked) {
+        cultureOnlyCheckbox.checked = true;
+      }
+      performSearch();
+      trackEvent('school_filter', {
+        'filter_type': 'culture_category',
+        'results_count': currentFilteredResults.length
+      });
+    });
+  }
   });
 
   honorificRadios.forEach(radio => {
@@ -205,20 +305,77 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(cb => cb.checked)
       .map(cb => cb.value);
 
+    const researchOnly = researchOnlyCheckbox ? researchOnlyCheckbox.checked : false;
+    const selectedAuthority = researchAuthoritySelect ? researchAuthoritySelect.value : '';
+    const musicOnly = musicOnlyCheckbox ? musicOnlyCheckbox.checked : false;
+    const selectedContest = musicContestSelect ? musicContestSelect.value : '';
+    const sportsOnly = sportsOnlyCheckbox ? sportsOnlyCheckbox.checked : false;
+    const selectedSport = sportsCategorySelect ? sportsCategorySelect.value : '';
+    const cultureOnly = cultureOnlyCheckbox ? cultureOnlyCheckbox.checked : false;
+    const selectedCulture = cultureCategorySelect ? cultureCategorySelect.value : '';
+
     const filtered = schoolData.filter(school => {
+      const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
+      const musicAwards = Array.isArray(school.music_awards) ? school.music_awards : [];
+      const sportsAwards = Array.isArray(school.sports_awards) ? school.sports_awards : [];
+      const cultureAwards = Array.isArray(school.culture_awards) ? school.culture_awards : [];
+      const matchesCultureKeyword = keyword && cultureAwards.some(cu =>
+        (cu.category && cu.category.toLowerCase().includes(keyword)) ||
+        (cu.contest && cu.contest.toLowerCase().includes(keyword)) ||
+        (cu.year && cu.year.toLowerCase().includes(keyword)) ||
+        (cu.division && cu.division.toLowerCase().includes(keyword)) ||
+        (cu.award && cu.award.toLowerCase().includes(keyword))
+      );
+      const matchesSportsKeyword = keyword && sportsAwards.some(sp =>
+        (sp.sport && sp.sport.toLowerCase().includes(keyword)) ||
+        (sp.contest && sp.contest.toLowerCase().includes(keyword)) ||
+        (sp.year && sp.year.toLowerCase().includes(keyword)) ||
+        (sp.division && sp.division.toLowerCase().includes(keyword)) ||
+        (sp.award && sp.award.toLowerCase().includes(keyword))
+      );
+      const matchesMusicKeyword = keyword && musicAwards.some(m =>
+        (m.contest && m.contest.toLowerCase().includes(keyword)) ||
+        (m.year && m.year.toLowerCase().includes(keyword)) ||
+        (m.division && m.division.toLowerCase().includes(keyword)) ||
+        (m.award && m.award.toLowerCase().includes(keyword)) ||
+        (m.detail && m.detail.toLowerCase().includes(keyword))
+      );
+      const matchesResearchKeyword = keyword && designations.some(d =>
+        (d.subject && d.subject.toLowerCase().includes(keyword)) ||
+        (d.designation && d.designation.toLowerCase().includes(keyword)) ||
+        (d.year && d.year.toLowerCase().includes(keyword)) ||
+        (d.authority && d.authority.toLowerCase().includes(keyword))
+      );
+
       const matchesKeyword = !keyword ||
         school.name.toLowerCase().includes(keyword) ||
         (school.name_kana && school.name_kana.toLowerCase().includes(keyword)) ||
         (school.municipality && school.municipality.toLowerCase().includes(keyword)) ||
         (school.postal_code && school.postal_code.includes(keyword)) ||
         (school.address && school.address.toLowerCase().includes(keyword)) ||
-        (school.phone && school.phone.includes(keyword));
+        (school.phone && school.phone.includes(keyword)) ||
+        matchesResearchKeyword ||
+        matchesMusicKeyword ||
+        matchesSportsKeyword ||
+        matchesCultureKeyword;
 
       const matchesCity = !selectedCity || school.municipality === selectedCity;
       const matchesType = checkedTypes.length === 0 || checkedTypes.includes(school.school_type);
       const matchesEst = checkedEsts.length === 0 || checkedEsts.includes(school.establishment);
 
-      return matchesKeyword && matchesCity && matchesType && matchesEst;
+      const matchesResearch = (!researchOnly || designations.length > 0) &&
+        (!selectedAuthority || designations.some(d => d.authority === selectedAuthority));
+
+      const matchesMusic = (!musicOnly || musicAwards.length > 0) &&
+        (!selectedContest || musicAwards.some(m => m.contest === selectedContest));
+
+      const matchesSports = (!sportsOnly || sportsAwards.length > 0) &&
+        (!selectedSport || sportsAwards.some(sp => sp.sport === selectedSport));
+
+      const matchesCulture = (!cultureOnly || cultureAwards.length > 0) &&
+        (!selectedCulture || cultureAwards.some(cu => cu.category === selectedCulture));
+
+      return matchesKeyword && matchesCity && matchesType && matchesEst && matchesResearch && matchesMusic && matchesSports && matchesCulture;
     });
 
     const sortedResults = applySorting(filtered, sortMode);
@@ -259,6 +416,145 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
+      const cultureAwards = Array.isArray(school.culture_awards) ? school.culture_awards : [];
+      const cultureBadgeHtml = cultureAwards.length > 0
+        ? '<span class="school-badge-culture">文化部全国実績</span>'
+        : '';
+
+      let cultureListHtml = '';
+      if (cultureAwards.length > 0) {
+        const topCu = cultureAwards[0];
+        const cuSummaryMeta = [topCu.category, topCu.award, topCu.year].filter(Boolean).join('・');
+        const cuItemsHtml = cultureAwards.map(cu => {
+          const aw = cu.award || '';
+          const awClass = (aw.includes('最優秀') || (aw.includes('優勝') && !aw.includes('準優勝')))
+            ? 'culture-award-tag--top'
+            : (aw.includes('準優勝') || aw.includes('優秀'))
+              ? 'culture-award-tag--second'
+              : 'culture-award-tag--other';
+          const metaParts = [cu.year, cu.division].filter(Boolean).join(' / ');
+          return `
+            <div class="school-culture-item">
+              <span class="culture-award-tag ${awClass}">${escapeHtml(aw)}</span>
+              <span class="culture-contest-name">${escapeHtml(cu.contest || cu.category || '')}</span>
+              ${metaParts ? `<span class="culture-meta">${escapeHtml(metaParts)}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+        cultureListHtml = `
+          <details class="school-culture-details">
+            <summary class="school-culture-summary">文化部全国実績（${cultureAwards.length}件） ${escapeHtml(cuSummaryMeta)}</summary>
+            <div class="school-culture-list">${cuItemsHtml}</div>
+          </details>
+        `;
+      }
+
+      const sportsAwards = Array.isArray(school.sports_awards) ? school.sports_awards : [];
+      const sportsBadgeHtml = sportsAwards.length > 0
+        ? '<span class="school-badge-sports">スポーツ全国実績</span>'
+        : '';
+
+      let sportsListHtml = '';
+      if (sportsAwards.length > 0) {
+        const topSp = sportsAwards[0];
+        const summaryMeta = [topSp.sport, topSp.award, topSp.year].filter(Boolean).join('・');
+        const spItemsHtml = sportsAwards.map(sp => {
+          const aw = sp.award || '';
+          const awClass = aw.includes('優勝') && !aw.includes('準優勝')
+            ? 'sports-award-tag--champ'
+            : aw.includes('準優勝')
+              ? 'sports-award-tag--runnerup'
+              : 'sports-award-tag--semi';
+          const metaParts = [sp.year, sp.division].filter(Boolean).join(' / ');
+          return `
+            <div class="school-sports-item">
+              <span class="sports-award-tag ${awClass}">${escapeHtml(aw)}</span>
+              <span class="sports-contest-name">${escapeHtml(sp.contest || sp.sport || '')}</span>
+              ${metaParts ? `<span class="sports-meta">${escapeHtml(metaParts)}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+        sportsListHtml = `
+          <details class="school-sports-details">
+            <summary class="school-sports-summary">スポーツ全国実績（${sportsAwards.length}件） ${escapeHtml(summaryMeta)}</summary>
+            <div class="school-sports-list">${spItemsHtml}</div>
+          </details>
+        `;
+      }
+
+      const musicAwards = Array.isArray(school.music_awards) ? school.music_awards : [];
+      const musicBadgeHtml = musicAwards.length > 0
+        ? '<span class="school-badge-music">音楽コンクール</span>'
+        : '';
+
+      let musicListHtml = '';
+      if (musicAwards.length > 0) {
+        const mItemsHtml = musicAwards.map(m => {
+          const aw = m.award || '';
+          const awClass = (aw.includes('金賞') || aw.includes('文部科学大臣賞') || aw.includes('グランプリ') || aw.includes('最優秀'))
+            ? 'music-award-tag--gold'
+            : (aw.includes('銀賞') || aw.includes('準グランプリ') || aw.includes('優秀'))
+              ? 'music-award-tag--silver'
+              : (aw.includes('銅賞') || aw.includes('奨励賞'))
+                ? 'music-award-tag--bronze'
+                : 'music-award-tag--other';
+          const metaParts = [m.year, m.division, m.detail].filter(Boolean).join(' / ');
+          return `
+            <div class="school-music-item">
+              <span class="music-award-tag ${awClass}">${escapeHtml(aw)}</span>
+              <span class="music-contest-name">${escapeHtml(m.contest || '')}</span>
+              ${metaParts ? `<span class="music-meta">${escapeHtml(metaParts)}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+        musicListHtml = `
+          <div class="school-music-list">
+            <div class="school-music-heading">音楽コンクール全国大会実績</div>
+            ${mItemsHtml}
+          </div>
+        `;
+      }
+
+      const designations = Array.isArray(school.research_designations) ? school.research_designations : [];
+      const researchBadgeHtml = designations.length > 0
+        ? '<span class="school-badge-research">研究指定校</span>'
+        : '';
+
+      let researchListHtml = '';
+      if (designations.length > 0) {
+        const itemsHtml = designations.map(d => {
+          const auth = d.authority || '';
+          const authClass = auth === '文部科学省'
+            ? 'research-authority-tag--mext'
+            : /[都道府県]$/.test(auth)
+              ? 'research-authority-tag--pref'
+              : 'research-authority-tag--muni';
+          const yearLabel = formatResearchYear(d.year);
+          const subjectHtml = d.subject
+            ? `<span class="research-subject">${escapeHtml(d.subject)}</span>`
+            : '';
+          const desigHtml = d.designation
+            ? `<span class="research-designation">${d.subject ? `（${escapeHtml(d.designation)}）` : escapeHtml(d.designation)}</span>`
+            : '';
+          const presHtml = d.presentation
+            ? `<span class="research-presentation">発表予定: ${escapeHtml(d.presentation)}</span>`
+            : '';
+          return `
+            <div class="school-research-item">
+              <span class="research-authority-tag ${authClass}">${escapeHtml(auth)}</span>
+              ${yearLabel ? `<span class="research-year">${escapeHtml(yearLabel)}</span>` : ''}
+              ${subjectHtml}${desigHtml}${presHtml}
+            </div>
+          `;
+        }).join('');
+        researchListHtml = `
+          <div class="school-research-list">
+            <div class="school-research-heading">研究指定校（令和8年度）</div>
+            ${itemsHtml}
+          </div>
+        `;
+      }
+
       card.innerHTML = `
         <div class="school-info">
           <div class="school-badges">
@@ -266,6 +562,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="school-badge-type">${school.school_type}</span>
             ${school.municipality ? `<span class="school-badge-city">${school.municipality}</span>` : ''}
             ${courseText ? `<span class="school-badge-city">${escapeHtml(courseText)}</span>` : ''}
+            ${researchBadgeHtml}
+            ${musicBadgeHtml}
+            ${sportsBadgeHtml}
+            ${cultureBadgeHtml}
           </div>
           <h3 class="school-name">${escapeHtml(school.name)}</h3>
           <div class="school-address-row">
@@ -273,6 +573,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="addr">${escapeHtml(school.address)}</span>
           </div>
           <div class="school-tel-row">TEL: ${school.phone ? escapeHtml(school.phone) : 'なし'}</div>
+          ${researchListHtml}
+          ${musicListHtml}
+          ${sportsListHtml}
+          ${cultureListHtml}
         </div>
         <div class="school-actions">
           <div class="action-buttons-group">
@@ -456,6 +760,16 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
+  }
+
+  function formatResearchYear(year) {
+    if (!year) return '';
+    const trimmed = String(year).trim();
+    if (!trimmed) return '';
+    if (trimmed.endsWith('年度') || trimmed.endsWith('年') || trimmed.endsWith('〜') || trimmed.endsWith('～')) {
+      return trimmed;
+    }
+    return `${trimmed}年度`;
   }
 
   function escapeHtml(str) {

@@ -1,7 +1,80 @@
 {
- "generated_at": "2026-11-07",
+ "generated_at": "2026-11-21",
  "note": "各大学公式アクセスページの記載。時刻表・運行日は各大学でご確認ください。",
  "universities": {
+  "u000001": {
+   "campus": "本郷地区キャンパス",
+   "stations": [
+    {
+     "station": "本郷三丁目駅",
+     "line": "東京メトロ丸ノ内線",
+     "access": "徒歩8分",
+     "walk_minutes": 8
+    },
+    {
+     "station": "本郷三丁目駅",
+     "line": "都営大江戸線",
+     "access": "徒歩6分",
+     "walk_minutes": 6
+    },
+    {
+     "station": "湯島駅・根津駅",
+     "line": "東京メトロ千代田線",
+     "access": "徒歩8分",
+     "walk_minutes": 8
+    },
+    {
+     "station": "東大前駅",
+     "line": "東京メトロ南北線",
+     "access": "徒歩1分",
+     "walk_minutes": 1
+    },
+    {
+     "station": "春日駅",
+     "line": "都営三田線",
+     "access": "徒歩10分",
+     "walk_minutes": 10
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-tokyo.ac.jp/ja/about/campus-guide/map01_02.html"
+  },
+  "u000002": {
+   "campus": "府中キャンパス",
+   "stations": [
+    {
+     "station": "多磨駅",
+     "line": "西武多摩川線",
+     "access": "徒歩5分",
+     "walk_minutes": 5
+    },
+    {
+     "station": "飛田給駅",
+     "line": "京王線",
+     "access": "北口から京王バス約10分、『東京外国語大学前』下車",
+     "walk_minutes": null
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.tufs.ac.jp/abouttufs/contactus/access.html"
+  },
+  "u000050": {
+   "campus": "湘南キャンパス",
+   "stations": [
+    {
+     "station": "東海大学前駅",
+     "line": "小田急線",
+     "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
+    },
+    {
+     "station": "平塚駅",
+     "line": "JR東海道線",
+     "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/"
+  },
   "u000145": {
    "campus": "本部キャンパス",
    "stations": [
@@ -272,23 +345,6 @@
    ],
    "school_bus": false,
    "source_url": "https://www.tiu.ac.jp/about/access/"
-  },
-  "u000050": {
-   "campus": "湘南キャンパス",
-   "stations": [
-    {
-     "station": "東海大学前駅",
-     "line": "小田急線",
-     "access": "南口から徒歩約15分、またはバス約5分「東海大学1号館前」「東海大学北門」下車すぐ"
-    },
-    {
-     "station": "平塚駅",
-     "line": "JR東海道線",
-     "access": "北口からバス約40分「東海大学1号館前」下車すぐ、または約30分「東海大学正門前」下車徒歩約5分"
-    }
-   ],
-   "school_bus": false,
-   "source_url": "https://www.u-tokai.ac.jp/about/campus/campus-shonan/"
   },
   "u000175": {
    "campus": "常盤台キャンパス",
@@ -884,6 +940,473 @@
    ],
    "school_bus": false,
    "source_url": "https://zen.ac.jp/zmc/topics/vw4vejx2nl"
+  },
+  "u000210": {
+   "campus": "西千葉キャンパス",
+   "stations": [
+    {
+     "station": "西千葉駅",
+     "line": "JR総武線",
+     "access": "徒歩2分",
+     "walk_minutes": 2
+    },
+    {
+     "station": "みどり台駅",
+     "line": "京成千葉線",
+     "access": "徒歩7分",
+     "walk_minutes": 7
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.chiba-u.ac.jp/about/campus/"
+  },
+  "u000211": {
+   "campus": "幕張キャンパス",
+   "stations": [
+    {
+     "station": "海浜幕張駅",
+     "line": "JR京葉線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "幕張駅",
+     "line": "JR総武線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "京成幕張駅",
+     "line": "京成千葉線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.pref.chiba.lg.jp/hoken/"
+  },
+  "u000212": {
+   "campus": "本部・マリーナキャンパス",
+   "stations": [
+    {
+     "station": "外川駅",
+     "line": "銚子電鉄",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "銚子駅",
+     "line": "JR総武本線",
+     "access": "バス約15分"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.cis.ac.jp/"
+  },
+  "u000213": {
+   "campus": "四街道キャンパス",
+   "stations": [
+    {
+     "station": "四街道駅",
+     "line": "JR総武本線・成田線",
+     "access": "北口徒歩7分",
+     "walk_minutes": 7
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://aikoku-u.ac.jp/"
+  },
+  "u000214": {
+   "campus": "柏キャンパス",
+   "stations": [
+    {
+     "station": "柏駅",
+     "line": "JR常磐線・東武アーバンパークライン",
+     "access": "東口バス「柏学園前」下車徒歩3分（徒歩20分）",
+     "walk_minutes": 20
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kaichi.ac.jp/"
+  },
+  "u000215": {
+   "campus": "木更津キャンパス",
+   "stations": [
+    {
+     "station": "木更津駅",
+     "line": "JR内房線",
+     "access": "東口スクールバス約7分"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.seiwa-univ.ac.jp/"
+  },
+  "u000216": {
+   "campus": "千葉東金キャンパス",
+   "stations": [
+    {
+     "station": "求名駅",
+     "line": "JR東金線",
+     "access": "徒歩5分",
+     "walk_minutes": 5
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.jiu.ac.jp/"
+  },
+  "u000217": {
+   "campus": "千葉キャンパス",
+   "stations": [
+    {
+     "station": "蘇我駅",
+     "line": "JR京葉線・外房線・内房線",
+     "access": "東口バス約8分"
+    },
+    {
+     "station": "鎌取駅",
+     "line": "JR外房線",
+     "access": "バス利用"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.shukutoku.ac.jp/"
+  },
+  "u000218": {
+   "campus": "稲毛キャンパス",
+   "stations": [
+    {
+     "station": "稲毛駅",
+     "line": "JR総武線",
+     "access": "東口徒歩13分（バス5分）",
+     "walk_minutes": 13
+    },
+    {
+     "station": "穴川駅",
+     "line": "千葉都市モノレール",
+     "access": "徒歩12分",
+     "walk_minutes": 12
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.u-keiai.ac.jp/"
+  },
+  "u000219": {
+   "campus": "津田沼キャンパス",
+   "stations": [
+    {
+     "station": "津田沼駅",
+     "line": "JR総武線",
+     "access": "南口徒歩1分",
+     "walk_minutes": 1
+    },
+    {
+     "station": "新習志野駅",
+     "line": "JR京葉線",
+     "access": "新習志野キャンパス徒歩6分",
+     "walk_minutes": 6
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://chibatech.ac.jp/"
+  },
+  "u000220": {
+   "campus": "市川キャンパス",
+   "stations": [
+    {
+     "station": "国府台駅",
+     "line": "京成本線",
+     "access": "徒歩10分",
+     "walk_minutes": 10
+    },
+    {
+     "station": "市川駅",
+     "line": "JR総武線",
+     "access": "北口バス約10分（徒歩20分）",
+     "walk_minutes": 20
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.cuc.ac.jp/"
+  },
+  "u000221": {
+   "campus": "我孫子キャンパス",
+   "stations": [
+    {
+     "station": "我孫子駅",
+     "line": "JR常磐線",
+     "access": "北口バス約7分（徒歩20分）",
+     "walk_minutes": 20
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.cgu.ac.jp/"
+  },
+  "u000222": {
+   "campus": "柏キャンパス",
+   "stations": [
+    {
+     "station": "南柏駅",
+     "line": "JR常磐線・東京メトロ千代田線",
+     "access": "東口バス4分（徒歩13分）",
+     "walk_minutes": 13
+    },
+    {
+     "station": "新柏駅",
+     "line": "東武アーバンパークライン",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.reitaku-u.ac.jp/"
+  },
+  "u000223": {
+   "campus": "国府台キャンパス",
+   "stations": [
+    {
+     "station": "国府台駅",
+     "line": "京成本線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "市川駅",
+     "line": "JR総武線",
+     "access": "北口バス「和洋女子大前」下車すぐ"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.wayo.ac.jp/"
+  },
+  "u000224": {
+   "campus": "勝浦キャンパス",
+   "stations": [
+    {
+     "station": "勝浦駅",
+     "line": "JR外房線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.budo-u.ac.jp/"
+  },
+  "u000225": {
+   "campus": "幕張キャンパス",
+   "stations": [
+    {
+     "station": "海浜幕張駅",
+     "line": "JR京葉線",
+     "access": "北口徒歩15分（バス5分）",
+     "walk_minutes": 15
+    },
+    {
+     "station": "幕張駅",
+     "line": "JR総武線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.kandagaigo.ac.jp/kuis/"
+  },
+  "u000226": {
+   "campus": "千葉キャンパス",
+   "stations": [
+    {
+     "station": "作草部駅",
+     "line": "千葉都市モノレール",
+     "access": "徒歩5分",
+     "walk_minutes": 5
+    },
+    {
+     "station": "西千葉駅",
+     "line": "JR総武線",
+     "access": "北口徒歩13分",
+     "walk_minutes": 13
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.cku.ac.jp/"
+  },
+  "u000227": {
+   "campus": "八千代キャンパス",
+   "stations": [
+    {
+     "station": "八千代緑が丘駅",
+     "line": "東葉高速線",
+     "access": "無料スクールバス約20分"
+    },
+    {
+     "station": "勝田台駅",
+     "line": "京成本線・東葉高速線",
+     "access": "無料スクールバス約20分"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.shumei-u.ac.jp/"
+  },
+  "u000228": {
+   "campus": "我孫子キャンパス",
+   "stations": [
+    {
+     "station": "天王台駅",
+     "line": "JR常磐線",
+     "access": "北口バス約5分（徒歩20分）",
+     "walk_minutes": 20
+    },
+    {
+     "station": "東我孫子駅",
+     "line": "JR成田線",
+     "access": "徒歩20分",
+     "walk_minutes": 20
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.kgwu.ac.jp/"
+  },
+  "u000229": {
+   "campus": "千葉キャンパス",
+   "stations": [
+    {
+     "station": "千城台駅",
+     "line": "千葉都市モノレール",
+     "access": "バス約7分"
+    },
+    {
+     "station": "千葉駅",
+     "line": "JR総武線",
+     "access": "直通バス約25分"
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.tuis.ac.jp/"
+  },
+  "u000230": {
+   "campus": "印西キャンパス",
+   "stations": [
+    {
+     "station": "千葉ニュータウン中央駅",
+     "line": "北総線",
+     "access": "バス「電話局」下車徒歩7分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.tci.ac.jp/"
+  },
+  "u000231": {
+   "campus": "松戸キャンパス",
+   "stations": [
+    {
+     "station": "松戸駅",
+     "line": "JR常磐線・新京成線",
+     "access": "東口徒歩5分",
+     "walk_minutes": 5
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.seitoku-u.ac.jp/"
+  },
+  "u000232": {
+   "campus": "駒木キャンパス",
+   "stations": [
+    {
+     "station": "豊四季駅",
+     "line": "東武アーバンパークライン",
+     "access": "徒歩12分",
+     "walk_minutes": 12
+    },
+    {
+     "station": "流山おおたかの森駅",
+     "line": "つくばエクスプレス・東武アーバンパークライン",
+     "access": "スクールバスまたは徒歩18分",
+     "walk_minutes": 18
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.edogawa-u.ac.jp/"
+  },
+  "u000233": {
+   "campus": "浦安キャンパス",
+   "stations": [
+    {
+     "station": "新浦安駅",
+     "line": "JR京葉線",
+     "access": "バス「明海南小学校」下車徒歩4分（徒歩25分）",
+     "walk_minutes": 25
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.sbctmu.ac.jp/"
+  },
+  "u000234": {
+   "campus": "小倉キャンパス",
+   "stations": [
+    {
+     "station": "千城台北駅",
+     "line": "千葉都市モノレール",
+     "access": "徒歩10分",
+     "walk_minutes": 10
+    },
+    {
+     "station": "都賀駅",
+     "line": "JR総武本線",
+     "access": "バス約15分"
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.uekusa.ac.jp/"
+  },
+  "u000235": {
+   "campus": "大多喜キャンパス",
+   "stations": [
+    {
+     "station": "久我原駅",
+     "line": "いすみ鉄道",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "荻窪駅",
+     "line": "JR中央線・東京メトロ丸ノ内線",
+     "access": "東京校舎徒歩7分",
+     "walk_minutes": 7
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.saniku.ac.jp/"
+  },
+  "u000236": {
+   "campus": "鴨川キャンパス",
+   "stations": [
+    {
+     "station": "安房鴨川駅",
+     "line": "JR外房線",
+     "access": "徒歩12分",
+     "walk_minutes": 12
+    }
+   ],
+   "school_bus": true,
+   "source_url": "https://www.kameda.ac.jp/"
+  },
+  "u000237": {
+   "campus": "本部（幕張）",
+   "stations": [
+    {
+     "station": "海浜幕張駅",
+     "line": "JR京葉線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    },
+    {
+     "station": "幕張駅",
+     "line": "JR総武線",
+     "access": "徒歩15分",
+     "walk_minutes": 15
+    }
+   ],
+   "school_bus": false,
+   "source_url": "https://www.ouj.ac.jp/"
   }
  }
 }

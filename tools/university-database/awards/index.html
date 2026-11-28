@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>全国大学 運動・武道・文化・音楽 全国大会実績検索 | 全国大学データベース | Ban.Tai Education Design</title>
+  <meta name="description" content="大学野球・サッカー・ラグビー・バレー・バスケ・柔道・剣道・陸上・水泳の運動系から、将棋・囲碁・ロボコン・競技かるた・競技プログラミング・書道・吹奏楽・合唱の文科系まで、全国大会実績大学をグラフと競技チップで横断検索できます。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
+  <link rel="canonical" href="https://bantai-education-design.github.io/tools/university-database/awards/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try { isExcluded = localStorage.getItem('bantai_admin') === 'true'; } catch (e) {}
+      if (isLocal || isExcluded) { window['ga-disable-G-KPGJ0R2KXR'] = true; }
+    })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+  <style>
+    *{box-sizing:border-box}
+    body{background:#e9eff6;color:#0f172a;font-family:"Noto Sans JP",system-ui,-apple-system,sans-serif}
+    .ua-wrap{max-width:1140px;margin:0 auto;padding:20px 18px 68px}
+    .ua-top-nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+    .ua-back{font-size:.86rem;font-weight:700;color:#0369a1;text-decoration:none}
+    .ua-back:hover{text-decoration:underline}
+    .ua-sub-links{display:flex;flex-wrap:wrap;gap:8px}
+    .ua-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;font-size:.8rem;font-weight:700;text-decoration:none}
+    .ua-pill--ekiden{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+    .ua-pill--music{background:#ede9fe;color:#5b21b6;border:1px solid #ddd6fe}
+    .ua-pill--school{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}
+
+    .ua-hero{background:linear-gradient(135deg,#0c1e35 0%,#163558 58%,#1e40af 100%);color:#fff;border-radius:22px;padding:24px 28px;box-shadow:0 14px 32px rgba(12,30,53,.16);margin-bottom:16px}
+    .ua-kicker{display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.12);color:#fcd34d;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+    .ua-hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(1.4rem,2.6vw,2rem);margin:10px 0 6px;color:#fff;line-height:1.3}
+    .ua-hero-sub{margin:0 0 16px;color:rgba(241,245,249,.88);font-size:.88rem;line-height:1.65;max-width:820px}
+
+    .ua-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .ua-kpi{text-align:left;border:2px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);color:#fff;border-radius:16px;padding:13px 15px;cursor:pointer;font-family:inherit;transition:all .16s ease;display:flex;flex-direction:column;gap:4px}
+    .ua-kpi:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+    .ua-kpi.is-active{background:#fff;color:#0f172a;border-color:#fff;box-shadow:0 8px 22px rgba(12,30,53,.22)}
+    .ua-kpi-top{display:flex;align-items:center;justify-content:space-between;font-size:.78rem;font-weight:700}
+    .ua-kpi-icon{width:28px;height:28px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;background:rgba(255,255,255,.18)}
+    .ua-kpi.is-active[data-tab="all"] .ua-kpi-icon{background:#e0f2fe}
+    .ua-kpi.is-active[data-tab="sports"] .ua-kpi-icon{background:#dcfce7}
+    .ua-kpi.is-active[data-tab="culture"] .ua-kpi-icon{background:#ede9fe}
+    .ua-kpi.is-active[data-tab="music"] .ua-kpi-icon{background:#fef3c7}
+    .ua-kpi-num{font-size:1.55rem;font-weight:800;line-height:1.15}
+    .ua-kpi-unit{font-size:.8rem;font-weight:600;margin-left:3px;opacity:.82}
+    .ua-kpi-hint{font-size:.72rem;opacity:.8}
+
+    .ua-panel{background:#fff;border:1px solid #dbe5ec;border-radius:18px;padding:18px 20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(15,39,61,.04)}
+    .ua-panel-title{font-size:.8rem;font-weight:800;color:#475569;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
+    .ua-quick-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+    .ua-qchip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid #cbd5e1;background:#f8fafc;color:#334155;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s ease}
+    .ua-qchip:hover{border-color:#94a3b8;background:#f1f5f9}
+    .ua-qchip-cnt{font-size:.72rem;padding:1px 6px;border-radius:999px;background:rgba(15,23,42,.08)}
+    .ua-qchip.is-active{background:#0f172a;color:#fff;border-color:#0f172a}
+    .ua-qchip.is-active .ua-qchip-cnt{background:rgba(255,255,255,.22);color:#fff}
+    .ua-qchip--sports.is-active{background:#047857;border-color:#047857}
+    .ua-qchip--culture.is-active{background:#6d28d9;border-color:#6d28d9}
+    .ua-qchip--music.is-active{background:#b45309;border-color:#b45309}
+
+    .ua-controls{display:grid;grid-template-columns:1.5fr 1fr 1.1fr auto;gap:10px;align-items:end;padding-top:12px;border-top:1px solid #eef2f6}
+    .ua-controls label{display:block;font-size:.76rem;font-weight:700;color:#475569;margin-bottom:5px}
+    .ua-controls input,.ua-controls select{width:100%;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:.88rem;font-family:inherit;background:#fff}
+    .ua-reset-btn{padding:9px 14px;border-radius:10px;border:1px solid #cbd5e1;background:#f8fafc;color:#475569;font-size:.82rem;font-weight:700;cursor:pointer;font-family:inherit}
+    .ua-reset-btn:hover{background:#e2e8f0;color:#0f172a}
+
+    .ua-viz-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:14px;margin-bottom:16px}
+    .ua-viz-card{background:#fff;border:1px solid #dbe5ec;border-radius:16px;padding:16px 18px;box-shadow:0 4px 14px rgba(15,39,61,.04)}
+    .ua-viz-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .ua-viz-head h2{font-size:.9rem;margin:0;color:#0f172a}
+    .ua-viz-sub{font-size:.74rem;color:#64748b}
+    .ua-bar-list{display:flex;flex-direction:column;gap:7px}
+    .ua-bar-row{display:grid;grid-template-columns:98px 1fr 48px;align-items:center;gap:8px;padding:4px 6px;border-radius:8px;border:none;background:transparent;cursor:pointer;text-align:left;font-family:inherit}
+    .ua-bar-row:hover{background:#f1f5f9}
+    .ua-bar-row.is-active{background:#e0f2fe}
+    .ua-bar-label{font-size:.78rem;font-weight:700;color:#334155;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ua-bar-track{height:12px;background:#eef2f6;border-radius:999px;overflow:hidden}
+    .ua-bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#1d4ed8,#0284c7)}
+    .ua-bar-fill--sports{background:linear-gradient(90deg,#10b981,#047857)}
+    .ua-bar-fill--culture{background:linear-gradient(90deg,#8b5cf6,#6d28d9)}
+    .ua-bar-fill--music{background:linear-gradient(90deg,#f59e0b,#b45309)}
+    .ua-bar-val{font-size:.78rem;font-weight:800;color:#0f172a;text-align:right}
+
+    .ua-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+    .ua-count{font-size:.92rem;font-weight:800;color:#0f172a}
+    .ua-active-filters{display:flex;flex-wrap:wrap;gap:6px}
+    .ua-af-pill{padding:3px 10px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-size:.76rem;font-weight:700}
+
+    .ua-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .ua-card{background:#fff;border:1.5px solid #cbd5e1;border-left:6px solid #1d4ed8;border-radius:16px;padding:16px 18px;box-shadow:0 6px 18px rgba(15,23,42,.08);display:flex;flex-direction:column;gap:9px}
+    .ua-card--sports{border-left-color:#059669}
+    .ua-card--culture{border-left-color:#7c3aed}
+    .ua-card--music{border-left-color:#d97706}
+    .ua-card--multi{border-left-color:#0f766e}
+    .ua-card-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding-bottom:8px;border-bottom:1px solid #e2e8f0}
+    .ua-pref-badge{padding:2px 9px;border-radius:99px;font-size:.74rem;font-weight:800;background:#e0f2fe;color:#075985}
+    .ua-type-badge{padding:2px 8px;border-radius:99px;font-size:.72rem;font-weight:700;background:#f1f5f9;color:#475569}
+    .ua-domain-pill{padding:2px 8px;border-radius:99px;font-size:.72rem;font-weight:800}
+    .ua-domain-pill--sports{background:#dcfce7;color:#166534}
+    .ua-domain-pill--culture{background:#ede9fe;color:#5b21b6}
+    .ua-domain-pill--music{background:#fef3c7;color:#92400e}
+    .ua-card h3{font-size:1.1rem;margin:0;color:#0c1b33}
+
+    .ua-highlights{display:flex;flex-direction:column;gap:6px}
+    .ua-aw-row{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:10px;background:#f8fafc;border:1px solid #eef2f6;font-size:.82rem;line-height:1.4}
+    .ua-medal{flex:0 0 auto;padding:2px 8px;border-radius:6px;font-size:.73rem;font-weight:800;white-space:nowrap}
+    .ua-medal--gold{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+    .ua-medal--silver{background:#f1f5f9;color:#334155;border:1px solid #cbd5e1}
+    .ua-medal--bronze{background:#ffedd5;color:#9a3412;border:1px solid #fdba74}
+    .ua-medal--other{background:#e0f2fe;color:#075985;border:1px solid #bae6fd}
+    .ua-aw-body{flex:1;min-width:0}
+    .ua-aw-title{font-weight:700;color:#0f172a}
+    .ua-aw-meta{display:block;font-size:.75rem;color:#64748b;margin-top:1px}
+
+    .ua-more-awards summary{cursor:pointer;font-size:.78rem;font-weight:700;color:#0369a1;padding:4px 2px;list-style:none}
+    .ua-more-awards summary::-webkit-details-marker{display:none}
+    .ua-more-awards summary::before{content:"＋ "}
+    .ua-more-awards[open] summary::before{content:"－ "}
+    .ua-more-awards-list{display:flex;flex-direction:column;gap:5px;margin-top:6px}
+
+    .ua-card-foot{margin-top:auto;padding-top:8px;border-top:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center}
+    .ua-aw-total{font-size:.76rem;color:#64748b;font-weight:700}
+    .ua-card-foot a{font-size:.8rem;font-weight:700;color:#0369a1;text-decoration:none;padding:4px 10px;border-radius:999px;background:#f0f9ff}
+    .ua-card-foot a:hover{background:#e0f2fe}
+
+    .ua-sources{margin-top:24px;background:#fff;border:1px solid #dbe5ec;border-radius:14px;padding:16px 18px;font-size:.8rem;color:#475569;line-height:1.7}
+    .ua-sources h2{font-size:.9rem;margin:0 0 6px;color:#0f172a}
+
+    @media(max-width:900px){.ua-kpi-grid{grid-template-columns:repeat(2,1fr)}.ua-viz-grid{grid-template-columns:1fr}.ua-controls{grid-template-columns:1fr 1fr}}
+    @media(max-width:680px){.ua-controls,.ua-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt=""><span>Ban.Tai Education Design</span></a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+      <nav id="global-menu" class="menu" aria-label="サイトメニュー">
+        <a href="/">ホーム</a>
+        <a href="/tools/university-database/">大学DBトップ</a>
+        <a href="/tools/university-database/tokyo/">大学を探す</a>
+        <a class="active" href="/tools/university-database/awards/">全国大会実績</a>
+        <a href="/tools/university-database/guide/">大会出場ガイド</a>
+        <a href="/tools/university-database/ekiden/">大学駅伝</a>
+        <a href="/tools/school-database/">全国学校DB</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ua-wrap">
+    <div class="ua-top-nav">
+      <a class="ua-back" href="/tools/university-database/">← 全国大学データベース トップへ戻る</a>
+      <div class="ua-sub-links">
+        <a class="ua-pill ua-pill--music" href="/tools/university-database/guide/">📅 大学 大会出場ガイド</a>
+        <a class="ua-pill ua-pill--ekiden" href="/tools/university-database/ekiden/">🏃 大学駅伝DB</a>
+        <a class="ua-pill ua-pill--school" href="/tools/school-database/awards/">🏫 中高 実績校検索</a>
+      </div>
+    </div>
+
+    <section class="ua-hero">
+      <span class="ua-kicker">UNIVERSITY NATIONAL AWARDS DASHBOARD</span>
+      <h1>全国大学 運動・武道・文化・音楽 全国大会実績検索</h1>
+      <p class="ua-hero-sub">2024〜2026年の主要全国大会（野球・サッカー・ラグビー・バレー・バスケ・柔道・剣道・陸上・水泳／将棋・囲碁・ロボコン・競技かるた・ICPC・書道／吹奏楽・合唱）の実績大学を横断検索できます。大学駅伝は専用DBと連携しています。</p>
+
+      <div class="ua-kpi-grid" role="tablist" aria-label="実績系統">
+        <button type="button" class="ua-kpi is-active" data-tab="all" role="tab" aria-selected="true">
+          <div class="ua-kpi-top"><span>すべての実績大学</span><span class="ua-kpi-icon">🎓</span></div>
+          <div><span class="ua-kpi-num" id="ua-kpi-all">--</span><span class="ua-kpi-unit">大学</span></div>
+          <div class="ua-kpi-hint">全国の主要大会を横断</div>
+        </button>
+        <button type="button" class="ua-kpi" data-tab="sports" role="tab" aria-selected="false">
+          <div class="ua-kpi-top"><span>運動・武道</span><span class="ua-kpi-icon">🏆</span></div>
+          <div><span class="ua-kpi-num" id="ua-kpi-sports">--</span><span class="ua-kpi-unit">件</span></div>
+          <div class="ua-kpi-hint">野球・サッカー・ラグビー・武道・インカレ</div>
+        </button>
+        <button type="button" class="ua-kpi" data-tab="culture" role="tab" aria-selected="false">
+          <div class="ua-kpi-top"><span>文化・学術</span><span class="ua-kpi-icon">🎨</span></div>
+          <div><span class="ua-kpi-num" id="ua-kpi-culture">--</span><span class="ua-kpi-unit">件</span></div>
+          <div class="ua-kpi-hint">将棋・囲碁・ロボコン・かるた・ICPC・書道</div>
+        </button>
+        <button type="button" class="ua-kpi" data-tab="music" role="tab" aria-selected="false">
+          <div class="ua-kpi-top"><span>音楽コンクール</span><span class="ua-kpi-icon">🎵</span></div>
+          <div><span class="ua-kpi-num" id="ua-kpi-music">--</span><span class="ua-kpi-unit">件</span></div>
+          <div class="ua-kpi-hint">全日本吹奏楽・全日本合唱</div>
+        </button>
+      </div>
+    </section>
+
+    <section class="ua-panel" aria-label="クイック絞り込み">
+      <div class="ua-panel-title">
+        <span>競技・分野をワンクリックで選ぶ</span>
+        <span style="font-weight:600;color:#64748b;font-size:.75rem;">数字は該当大学数</span>
+      </div>
+      <div id="ua-quick-chips" class="ua-quick-chips"></div>
+
+      <div class="ua-controls">
+        <div>
+          <label for="ua-keyword">フリーワード検索（大学名・競技・大会・賞）</label>
+          <input type="search" id="ua-keyword" placeholder="例：野球、柔道、ロボコン、将棋、吹奏楽、筑波大学 など">
+        </div>
+        <div>
+          <label for="ua-pref">都道府県</label>
+          <select id="ua-pref">
+            <option value="">全国（すべて）</option>
+          </select>
+        </div>
+        <div>
+          <label for="ua-category">競技・分野・大会</label>
+          <select id="ua-category">
+            <option value="">すべての競技・分野</option>
+          </select>
+        </div>
+        <button type="button" id="ua-reset" class="ua-reset-btn">条件クリア</button>
+      </div>
+    </section>
+
+    <section class="ua-viz-grid" aria-label="全国分布グラフ">
+      <div class="ua-viz-card">
+        <div class="ua-viz-head">
+          <h2>エリア別の実績大学数</h2>
+          <span class="ua-viz-sub">バーをクリックでエリア絞込</span>
+        </div>
+        <div id="ua-region-bars" class="ua-bar-list"></div>
+      </div>
+      <div class="ua-viz-card">
+        <div class="ua-viz-head">
+          <h2>実績大学が多い都道府県（上位6）</h2>
+          <span class="ua-viz-sub">バーをクリックで都道府県絞込</span>
+        </div>
+        <div id="ua-top-prefs" class="ua-bar-list"></div>
+      </div>
+    </section>
+
+    <div class="ua-bar">
+      <div id="ua-count" class="ua-count">読み込み中...</div>
+      <div id="ua-active-filters" class="ua-active-filters"></div>
+    </div>
+
+    <div id="ua-results" class="ua-grid"></div>
+
+    <section class="ua-sources">
+      <h2>収録データの出典・確認範囲（2024〜2026年）</h2>
+      <div id="ua-sources-list">読み込み中...</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h2>Ban.Tai Education Design</h2><p>教育に関わる道具と情報を、探しやすい形へ。</p></div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/js/university-database/search-university-awards.js" defer></script>
+</body>
+</html>

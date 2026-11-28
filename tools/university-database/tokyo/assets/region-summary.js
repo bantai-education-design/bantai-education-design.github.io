@@ -1,7 +1,7 @@
 // 収録件数・品質表示を、読み込んだ全地域（東京都・埼玉県・神奈川県）の実データから表示する。
 (()=>{
 if(typeof state==='undefined')return;
-const PREFS=['東京都','埼玉県','神奈川県'];
+const PREFS=['東京都','埼玉県','神奈川県','千葉県'];
 const NOTES={};
 const byPref=p=>state.rows.filter(r=>(r.prefecture||r.headquarters?.prefecture||'東京都')===p);
 const count=(rows,t)=>rows.filter(r=>r.establishment_type===t).length;
@@ -12,7 +12,7 @@ function apply(){
   const h3=[...document.querySelectorAll('.ref-panel h3')].find(h=>h.textContent.startsWith('収録エリア'));
   if(h3)h3.textContent=`収録エリア：${areas}`;
   const list=document.querySelector('.ref-area-list');
-  if(list)list.innerHTML=PREFS.map(p=>{const r=byPref(p);return r.length?`<span>📍 ${p} <b>${r.length}</b><small>${NOTES[p]||`国立${count(r,'national')}・公立${count(r,'public')}・私立${count(r,'private')}`}</small></span>`:''}).join('');
+  if(list)list.innerHTML=PREFS.map(p=>{const r=byPref(p);return r.length?`<span class="ref-area-row"><span class="ref-area-name">📍 ${p}</span><b class="ref-area-num">${r.length}</b><small class="ref-area-breakdown">${NOTES[p]||`国立${count(r,'national')}・公立${count(r,'public')}・私立${count(r,'private')}`}</small></span>`:''}).join('');
   const tot=document.querySelector('.ref-area-total strong');if(tot)tot.textContent=String(total);
   const set=(sel,v)=>{const el=document.querySelector(sel);if(el)el.textContent=v};
   set('#quality-official',`${rows.filter(r=>r.official_url).length}/${total}`);
@@ -22,6 +22,25 @@ function apply(){
   const fourth=[...document.querySelectorAll('.trust-item strong')].find(s=>/公開完成|学部・学科/.test(s.textContent));
   if(fourth){const b=fourth.querySelector('b');if(b)b.textContent=`${total}/${total}`}
   const extra=PREFS.some(p=>NOTES[p]&&byPref(p).length);const lead=extra?`${areas}を中心に${total}大学`:`${areas}の${total}大学`;
+  const heroBox=document.querySelector('.hero-copy');
+  if(heroBox){
+    const sub=PREFS.map(p=>{const r=byPref(p);return r.length?`${p.replace(/[都県]$/,'')}${r.length}`:''}).filter(Boolean).join('・');
+    heroBox.dataset.heroBadge=`🏫 ${areas} ${total}大学収録（${sub}）`;
+  }
+  if(typeof searchable==='function'){
+    document.querySelectorAll('.discovery-card').forEach(btn=>{
+      const s=btn.querySelector('strong');
+      if(!s)return;
+      if(btn.dataset.field&&typeof window.matchesField==='function'){
+        const n=rows.filter(r=>window.matchesField(r,btn.dataset.field)).length;
+        s.dataset.count=`${n} 大学`;
+      }else if(btn.dataset.query){
+        const q=String(btn.dataset.query||'').trim().toLowerCase();
+        const n=rows.filter(r=>searchable(r).includes(q)).length;
+        s.dataset.count=`${n} 大学`;
+      }
+    });
+  }
   const hero=document.querySelector('.hero-copy p');if(hero)hero.innerHTML=`${lead}を、学びたいこと・地域・設置区分・大学の特色から探せるデータベースです。<br>大学公式情報や公的資料を優先し、比較しやすい形に整理しています。`;
   const notice=document.querySelector('.ref-notice');if(notice&&/公開中/.test(notice.textContent))notice.innerHTML=`ⓘ ${lead}を公開中です。大学情報は更新される場合があります。出願・入試の最新情報は各大学の公式情報もご確認ください。`;
   const foot=document.querySelector('.footer-inner span');if(foot)foot.textContent=`${lead} · 全国大学データベース`;

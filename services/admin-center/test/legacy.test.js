@@ -26,6 +26,23 @@ test('editing a legacy article preserves its document shell, images and unknown 
  const html=legacyPage(changed,origin);assert.match(html,/<h1>新しい題名<\/h1>/);assert.match(html,/変更後&lt;script&gt;/);assert.match(html,/<nav>メニュー<\/nav>/);assert.match(html,/<footer>フッター<\/footer>/);assert.match(html,/<figure class="custom"><img src="\/assets\/images\/x.png"><figcaption>写真<\/figcaption><\/figure>/);assert.match(html,/content="新しい概要"/);
  assert.equal(origin.sourceHtml,source);
 });
+test('title-only edits preserve existing heading IDs and their accessible references',()=>{
+ const rows=JSON.parse(readFileSync(new URL('data/columns.json',root)));
+ for(const [slug,id] of [['meta-muse-ai-agent-20261103','sources-title'],['parent-teacher-conference','related-book-title']]){
+  const path=`columns/${slug}/index.html`,source=readFileSync(new URL(path,root),'utf8');
+  const entry=rows.find(e=>legacyCandidatePath(e)===path);assert.ok(entry,slug);
+  const {origin,body}=importLegacy(entry,source,path),html=legacyPage({...body,title:body.title+'（改題）'},origin);
+  const heading=source.match(new RegExp(`<h2[^>]*id="${id}"[^>]*>[\\s\\S]*?<\\/h2>`))?.[0];assert.ok(heading,slug);
+  assert.ok(html.includes(heading),`${slug}: original heading and attributes must remain`);
+  assert.ok(html.includes(`aria-labelledby="${id}"`),`${slug}: accessible reference must remain`);
+ }
+ const source='<article><h1>元</h1><section aria-labelledby="detail"><h3 id="detail" class="detail-heading">詳しい説明</h3></section><h2>編集可能な見出し</h2></article>';
+ const {origin,body}=importLegacy({id:'heading-attributes',title:'元'},source,null);
+ const html=legacyPage({...body,title:'改題'},origin);
+ assert.ok(html.includes('<h3 id="detail" class="detail-heading">詳しい説明</h3>'));
+ assert.ok(html.includes('aria-labelledby="detail"'));
+ assert.ok(body.doc.content.some(n=>n.type==='heading'),'headings without attributes remain editable');
+});
 test('university field application preserves unrelated structure, compares old value, records source',()=>{
  const p=JSON.parse(readFileSync(new URL('tools/university-database/tokyo/data/complete/u000001.json',root)));
  const proposal={region:'tokyo',universityId:p.university_id,field:'feature_summary',before:p.feature_summary,after:'テスト用の説明',reason:'公式情報確認',source:p.official_url,sourceConfirmed:true};

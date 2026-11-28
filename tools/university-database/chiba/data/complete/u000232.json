@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000232",
+  "id": "u000232",
+  "name": "江戸川大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "流山市",
+  "operator": "学校法人江戸川学園",
+  "feature_summary": "流山市に本部を置き、社会学部・メディアコミュニケーション学部の2学部で学ぶ大学です。",
+  "official_url": "https://www.edogawa-u.ac.jp/",
+  "admissions_url": "https://www.edogawa-u.ac.jp/jukensei/index.html",
+  "academic_field_tags": [
+    "情報・AI",
+    "理学",
+    "経済・経営・商学",
+    "心理",
+    "社会学",
+    "芸術"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400079",
+      "name": "社会学部",
+      "academic_field_tags": [
+        "理学",
+        "経済・経営・商学",
+        "心理",
+        "社会学"
+      ],
+      "campus_municipality": "流山市",
+      "departments": [
+        {
+          "department_id": "d400132",
+          "name": "人間心理学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400133",
+          "name": "現代社会学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400134",
+          "name": "経営社会学科",
+          "programs": []
+        }
+      ]
+    },
+    {
+      "faculty_id": "f400080",
+      "name": "メディアコミュニケーション学部",
+      "academic_field_tags": [
+        "情報・AI",
+        "理学",
+        "芸術"
+      ],
+      "campus_municipality": "流山市",
+      "departments": [
+        {
+          "department_id": "d400135",
+          "name": "マス・コミュニケーション学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400136",
+          "name": "情報文化学科",
+          "programs": []
+        },
+        {
+          "department_id": "d400137",
+          "name": "こどもコミュニケーション学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [],
+  "campuses": [
+    {
+      "name": "駒木キャンパス",
+      "postal_code": "270-0198",
+      "address": "千葉県流山市駒木474",
+      "prefecture": "千葉県",
+      "municipality": "流山市",
+      "nearest_stations": [
+        {
+          "station": "豊四季駅",
+          "line": "東武アーバンパークライン",
+          "access": "徒歩12分"
+        },
+        {
+          "station": "流山おおたかの森駅",
+          "line": "つくばエクスプレス・東武アーバンパークライン",
+          "access": "スクールバスまたは徒歩18分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "江戸川大学 公式サイト",
+      "url": "https://www.edogawa-u.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "江戸川大学 公式入試情報",
+      "url": "https://www.edogawa-u.ac.jp/jukensei/index.html",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "student_counts"
+    ]
+  },
+  "philosophy": "「人間陶冶」を基盤に、情報教育と国際教育を重視した実践的な学びを展開する。",
+  "mission": "社会学およびメディアコミュニケーションの専門力を培い、現代社会で活躍できる人材を育成する。",
+  "student_counts": {
+    "undergraduate": 2510,
+    "graduate": 0,
+    "total": 2510,
+    "as_of": "2026-05-01"
+  }
+}

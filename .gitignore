@@ -12,3 +12,4 @@ services/admin-center/cloudflare/public/
 services/admin-center/cloudflare/.wrangler/
 services/admin-center/cloudflare/.dev.vars*
 services/admin-center/cloudflare/generated-legacy.json
+scratch/

@@ -472,7 +472,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/aobaku-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "（仮称）国際探究科",
+        "designation": "仙台市 新教科「（仮称）国際探究科」実践研究協力校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-仙台市青葉区-仙台市立台原小学校",
@@ -909,7 +917,33 @@
     "source_url": "https://www.pref.miyagi.jp/documents/6697/r7_meibo.pdf",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立三条中学校",
@@ -1042,7 +1076,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/aobaku-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "（仮称）国際探究科",
+        "designation": "仙台市 新教科「（仮称）国際探究科」実践研究協力校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立台原中学校",
@@ -1118,7 +1160,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/aobaku-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "中学生の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立広陵中学校",
@@ -1194,7 +1244,21 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/aobaku-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（混声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市青葉区-仙台市立第二中学校",
@@ -1332,6 +1396,14 @@
       "福祉未来創志科",
       "食文化創志科",
       "普通科"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
     ]
   },
   {
@@ -1393,7 +1465,16 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "囲碁",
+        "contest": "全国高等学校囲碁選手権大会",
+        "year": "2024年（第48回）",
+        "division": "男子団体",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市青葉区-宮城県宮城広瀬高等学校",
@@ -1431,7 +1512,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市青葉区-宮城県工業高等学校",
@@ -1512,6 +1601,30 @@
     "course": [
       "普通科",
       "音楽科"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
     ]
   },
   {
@@ -1573,7 +1686,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/koukou_chuto_turutoku_youtien.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-国立-特別支援学校-仙台市青葉区-宮城教育大学附属特別支援学校",
@@ -2431,7 +2552,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/miyagino-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市宮城野区-仙台市立東華中学校",
@@ -2469,7 +2598,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/miyagino-02.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市宮城野区-仙台市立西山中学校",
@@ -2648,6 +2785,29 @@
     "verified_date": "",
     "course": [
       "普通科"
+    ],
+    "sports_awards": [
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2025年（第76回）",
+        "division": "男子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2024年（第36回）",
+        "division": "女子",
+        "award": "準優勝"
+      },
+      {
+        "sport": "駅伝（都大路）",
+        "contest": "全国高等学校駅伝競走大会",
+        "year": "2024年（第75回）",
+        "division": "男子",
+        "award": "3位"
+      }
     ]
   },
   {
@@ -2686,7 +2846,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-私立-高等学校-仙台市宮城野区-東北学院高等学校-普通科",
@@ -3413,7 +3581,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市若林区-宮城県仙台東高等学校",
@@ -3472,6 +3648,38 @@
     "verified_date": "",
     "course": [
       "普通科"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -3968,7 +4176,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/taihaku-04.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "（仮称）国際探究科",
+        "designation": "仙台市 新教科「（仮称）国際探究科」実践研究協力校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-仙台市太白区-仙台市立四郎丸小学校",
@@ -4481,7 +4697,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/taihaku-04.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "（仮称）国際探究科",
+        "designation": "仙台市 新教科「（仮称）国際探究科」実践研究協力校",
+        "authority": "市町村"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市太白区-仙台市立柳生中学校",
@@ -4519,7 +4743,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/taihaku-04.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市太白区-仙台市立秋保中学校",
@@ -4557,7 +4789,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/taihaku-04.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市太白区-仙台市立袋原中学校",
@@ -4655,6 +4895,29 @@
     "course": [
       "普通科",
       "科学技術科"
+    ],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      },
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "高等学校の部",
+        "award": "優秀賞",
+        "detail": "奨励賞"
+      }
     ]
   },
   {
@@ -4712,7 +4975,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市太白区-宮城県仙台西高等学校",
@@ -5130,7 +5401,15 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/izumi-03.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-仙台市泉区-仙台市立八乙女小学校",
@@ -5795,7 +6074,27 @@
     "source_url": "https://www.city.sendai.jp/shogakuchose/kurashi/manabu/kyoiku/inkai/kanren/shiritsu/izumi-03.html",
     "source_date": "2026-07-13",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-仙台市泉区-仙台市立寺岡中学校",
@@ -6086,7 +6385,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-仙台市泉区-宮城県泉高等学校",
@@ -7213,7 +7520,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-石巻市-宮城県石巻北高等学校",
@@ -7612,7 +7927,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/lss.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-塩竈市-塩竈市立第二中学校",
@@ -8144,7 +8467,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-気仙沼市-宮城県気仙沼向洋高等学校",
@@ -8163,7 +8494,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-気仙沼市-宮城県気仙沼高等学校",
@@ -8182,7 +8521,16 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2024年（令和6年度）",
+        "division": "男子学校対抗",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-気仙沼市-宮城県気仙沼高等学校定時制",
@@ -8412,7 +8760,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/es.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-白石市-白石市立白石第二小学校",
@@ -8431,7 +8787,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/es.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-白石市-白石市立福岡小学校",
@@ -8583,7 +8947,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/lss.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-白石市-白石市立白石中学校",
@@ -8602,7 +8974,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/lss.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-白石市-白石市立白石南中学校",
@@ -9096,7 +9476,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-特別支援学校-名取市-宮城県立名取支援学校",
@@ -9324,7 +9712,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-特別支援学校-角田市-宮城県立角田支援学校",
@@ -9666,7 +10062,27 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2025年（第38回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2024年（第37回）",
+        "division": "高等学校以上の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-多賀城市-宮城県貞山高等学校",
@@ -9742,7 +10158,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/es.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-岩沼市-岩沼市立岩沼小学校",
@@ -10673,7 +11097,15 @@
     "source_url": "https://www.pref.miyagi.jp/documents/6697/r7_meibo.pdf",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-中学校-大崎市-大崎市立三本木中学校",
@@ -10926,6 +11358,14 @@
     "course": [
       "普通科",
       "情報ビジネス科"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞"
+      }
     ]
   },
   {
@@ -10966,7 +11406,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-大崎市-宮城県古川工業高等学校定時制",
@@ -11745,7 +12193,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-高等学校-登米市-宮城県登米高等学校",
@@ -12564,7 +13020,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-刈田郡蔵王町-蔵王町立円田小学校",
@@ -13041,7 +13505,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-私立-幼稚園-柴田郡柴田町-たんぽぽ幼稚園",
@@ -13554,7 +14026,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-私立-幼稚園-亘理郡亘理町-いちょうの実幼稚園",
@@ -14903,7 +15383,15 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "miyagi-公立-小学校-遠田郡涌谷町-涌谷町立月将館小学校",
@@ -15435,6 +15923,14 @@
     "source_url": "https://www.pref.miyagi.jp/site/kyouiku/koukou.html",
     "source_date": "2025-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   }
 ]

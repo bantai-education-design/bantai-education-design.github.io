@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/base.css">
   <link rel="stylesheet" href="assets/vendor/leaflet.css?v=1.9.4">
-  <link rel="stylesheet" href="assets/ekiden.css?v=20261109-16">
+  <link rel="stylesheet" href="assets/ekiden.css?v=20261122-2">
   <link rel="stylesheet" href="../assets/db-nav.css?v=20261108">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
@@ -68,9 +68,15 @@
 
 <main>
   <section class="ekiden-hero">
+    <svg class="ekiden-hero-art" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,192 L380,180 L620,162 L810,38 L920,158 L1200,174 L1200,220 L0,220 Z" fill="rgba(201,162,39,0.13)"/>
+      <line x1="0" y1="168" x2="360" y2="152" stroke="#c2410c" stroke-width="3.5" stroke-opacity="0.55"/>
+      <line x1="0" y1="180" x2="660" y2="156" stroke="#1d4ed8" stroke-width="3.5" stroke-opacity="0.55"/>
+      <line x1="0" y1="192" x2="1200" y2="162" stroke="#0f766e" stroke-width="3.5" stroke-opacity="0.65"/>
+    </svg>
     <div class="ekiden-hero-inner">
       <div>
-        <span class="section-kicker">UNIVERSITY EKIDEN ARCHIVE</span>
+        <span class="section-kicker">全国大学データベース 特別付録</span>
         <h1>大学駅伝を、<br><em>男子・女子から調べる。</em></h1>
         <p>男子三大駅伝、全日本大学女子駅伝、富士山女子駅伝、予選会・選考会の出場校と成績を調べられます。</p>
       </div>
@@ -89,19 +95,19 @@
 
   <section class="section ekiden-entry" aria-labelledby="ekiden-entry-title">
     <div class="entry-heading">
-      <span class="section-kicker">CHOOSE YOUR EKIDEN</span>
+      <span class="section-kicker">男子・女子の大学駅伝</span>
       <h2 id="ekiden-entry-title">男子・女子から選ぶ</h2>
       <p>見たい大学駅伝を選ぶと、それぞれの大会・出場校・記録を表示します。</p>
     </div>
     <div class="entry-grid">
       <a class="entry-card entry-men" data-entry-gender="men" href="./">
-        <span class="entry-label">MEN</span>
+        <span class="entry-label">男子駅伝</span>
         <strong>男子大学駅伝</strong>
         <span>出雲駅伝・全日本大学駅伝・箱根駅伝・予選会</span>
         <b>男子の記録を見る <span aria-hidden="true">→</span></b>
       </a>
       <a class="entry-card entry-women" data-entry-gender="women" href="./?g=women">
-        <span class="entry-label">WOMEN</span>
+        <span class="entry-label">女子駅伝</span>
         <strong>女子大学駅伝</strong>
         <span>全日本大学女子駅伝・富士山女子駅伝・選考会</span>
         <b>女子の記録を見る <span aria-hidden="true">→</span></b>
@@ -111,7 +117,7 @@
 
   <section class="section ekiden-guide-entry" aria-labelledby="basics-entry-title">
     <div>
-      <span class="section-kicker">LEARN EKIDEN</span>
+      <span class="section-kicker">はじめての方へ</span>
       <h2 id="basics-entry-title">駅伝の基本を知る</h2>
       <p>駅伝のルール、たすきリレー、各大会のコースと区間を図と表で確認できます。</p>
     </div>
@@ -120,7 +126,7 @@
 
   <section id="finder" class="section ekiden-finder" aria-labelledby="finder-title">
     <div class="finder-heading">
-      <span class="section-kicker">SEARCH EKIDEN</span>
+      <span class="section-kicker">出場校・記録検索</span>
       <h2 id="finder-title">大会・大学・記録を探す</h2>
       <p>男子・女子を選び、3つの探し方から記録を検索できます。</p>
     </div>
@@ -188,7 +194,7 @@
 
   <section id="basics-guide" class="section basics-guide" aria-labelledby="basics-guide-title">
     <div class="basics-guide-heading">
-      <span class="section-kicker">LEARN EKIDEN</span>
+      <span class="section-kicker">ルールとコース図解</span>
       <h2 id="basics-guide-title">駅伝の基本</h2>
       <p>検索とは別に、大学駅伝の仕組みを順に学べる解説です。</p>
     </div>
@@ -199,7 +205,7 @@
       <section class="basics-block"><h2>出場までの道</h2><p class="basics-sub">どんなチームが走るのか。1本の帯が出場チーム全体です。</p><div id="basics-teams" class="figure-scroll"></div></section>
       <section class="basics-block"><h2>コースと区間</h2>
         <div class="basics-pills" role="group" aria-label="大会を選ぶ"><button type="button" data-course="izumo">出雲駅伝</button><button type="button" data-course="zennihon">全日本大学駅伝</button><button type="button" data-course="hakone" aria-pressed="true">箱根駅伝</button></div>
-        <p class="basics-sub">地図で地点を確かめ、高低差の特徴図で区間ごとの起伏を読み取れます。標高値が公表されていない地点は、推測で数値化していません。</p>
+        <p class="basics-sub">国土地理院の地図と数値標高モデル（DEM）に基づき、コースの実際の地形を輪切りにした標高断面図を表示しています。区間別ガイドの断面図にマウスを重ねると、地図上の位置と実測標高を連動して確認できます。</p>
         <div id="basics-course" class="figure-scroll"></div>
         <div class="table-scroll"><table id="basics-legs" class="race-table basics-table"></table></div>
         <p id="basics-course-src" class="basics-src"></p>
@@ -224,7 +230,7 @@
 
 <footer class="site-footer"><div class="footer-inner">Ban.Tai Education Design 全国大学データベース 付録「大学駅伝 出場校・記録」　<a href="../tokyo/">大学データベースへ戻る</a></div></footer>
 <script src="assets/vendor/leaflet.js?v=1.9.4"></script>
-<script src="assets/ekiden.js?v=20261108-17"></script>
+<script src="assets/ekiden.js?v=20261122-2"></script>
 </body>
 </html>
 

@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bantai-education-design.github.io/columns/ai-teacher-daily-records-20261127/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/shinkansen-safety-tech-20261127/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/school-dx-gariban-to-ai-20261126/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/windows-ai-os-20261125/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/tools/university-database/guide/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/tools/university-database/awards/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/national-tournament-guides-20261123/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/tools/school-database/awards/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/tools/school-database/sports-guide/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/tools/school-database/culture-guide/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bantai-education-design.github.io/columns/waiting-with-children-2026/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -469,6 +529,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://bantai-education-design.github.io/books/tannin-handbook/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://bantai-education-design.github.io/columns/x1-epson-school-pc/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -560,7 +626,7 @@
   </url>
   <url>
     <loc>https://bantai-education-design.github.io/columns/weekly-lesson-practice-worksheet-templates/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2086,5 +2152,47 @@
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/teacher-route-school-type-20261119/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/parent-teacher-conference/</loc>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/products/class-canvas/</loc>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/audio-makers-where-2026/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/first-music-staff-method/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/roster-management-tips/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/annual-plan-efficiency/</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/shutoken-university-db-237-20261121/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bantai-education-design.github.io/columns/tannin-handbook-guide/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

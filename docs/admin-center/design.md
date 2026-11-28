@@ -65,6 +65,6 @@ GitHubからマージを確認して初めて履歴をマージ済みにし、�
 5. 自動/結合/ブラウザーテスト、自己レビュー、未マージPRを更新。
 6. Cloudflare無料アカウントへの接続後、専用D1の作成、GitHub OAuthとSecrets、Free枠の受入検証を行う。利用者は自前サーバー・有料契約を準備しない。管理センター公開・スキーマ適用・入口有効化は対象アカウントと設定をレビューしてから実施する。
 
-無料配置設定は `services/admin-center/cloudflare/wrangler.jsonc`、初期スキーマは同ディレクトリの `migrations/`、手順とFree上限は `cloudflare/README.md`。クラウド資源の作成・プラン変更・デプロイは未実施。Render/Dockerは参考・検証用として保持する。
+無料配置設定は `services/admin-center/cloudflare/wrangler.jsonc`、初期スキーマは同ディレクトリの `migrations/`、手順とFree上限は `cloudflare/README.md`。2026-11-11の設計時点ではクラウド資源の作成・デプロイは未実施。その後、利用者のFreeプランを確認して11月12日に専用D1とテストWorkerを配置済み。11月28日時点のOAuth設定・受入検証の残件は cloudflare/README.md を参照。プラン変更は行っていない。Render/Dockerは参考・検証用として保持する。
 
 本番接続、学部等の複雑な構造化データの直接編集、原本保持ブロックの完全な視覚編集、複数ユーザー/SSO/MFAは未対応。これらを実装済み・本番検証済みと扱わない。

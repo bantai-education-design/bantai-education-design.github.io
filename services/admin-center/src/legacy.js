@@ -64,7 +64,11 @@ export function importLegacy(entry,sourceHtml=null,sourcePath=legacyPath(entry))
         const saved=preserve(n);origin.blocks[saved.attrs.index].kind='container';
         return {type:'legacyContainer',attrs:{index:saved.attrs.index},content:children(n).map(block).filter(Boolean)};
       }
-      if(['h2','h3'].includes(n.tagName))return {type:'heading',attrs:{level:Number(n.tagName[1])},content:children(n).flatMap(c=>inline(c))};
+      if(['h2','h3'].includes(n.tagName)){
+        // Preserve IDs, classes and accessibility hooks that ordinary editor headings cannot round-trip.
+        if(n.attrs?.length)return preserve(n);
+        return {type:'heading',attrs:{level:Number(n.tagName[1])},content:children(n).flatMap(c=>inline(c))};
+      }
       if(n.tagName==='hr')return {type:'horizontalRule'};
       // Layouts, images, tables and scripts remain exact immutable source blocks.
       return preserve(n);

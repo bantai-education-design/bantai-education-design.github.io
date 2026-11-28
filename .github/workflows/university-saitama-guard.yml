@@ -8,6 +8,7 @@ on:
       - 'tools/university-database/tokyo/**'
       - 'tools/university-database/tokyo-additions/**'
       - 'tools/university-database/kanagawa/**'
+      - 'tools/university-database/chiba/**'
       - 'tools/university-database/campuses/**'
       - 'tools/university-database/qualifications/**'
       - '.github/workflows/university-saitama-guard.yml'
@@ -112,7 +113,7 @@ jobs:
           const kcampuses=JSON.parse(fs.readFileSync(kdir+'kanagawa_campuses_01.json','utf8')).universities;
           const allCampuses=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
           assert.equal(Object.keys(kcampuses).length,36,'Kanagawa campuses 36 universities');
-          assert.equal(Object.keys(allCampuses).length,209,'Total 209 universities in campus_index');
+          assert.equal(Object.keys(allCampuses).length,237,'Total 237 universities in campus_index');
           const kscIds=['u000050','u000175','u000176','u000177','u000178','u000179','u000180','u000181','u000182','u000183','u000184','u000185','u000186','u000187','u000188','u000189','u000190','u000191','u000192','u000193','u000194','u000195','u000196','u000197','u000198','u000199','u000200','u000201','u000202','u000203','u000204','u000205','u000206','u000207','u000208','u000209'];
           assert.equal(kcore.filter(x=>Number.isInteger(x.student_counts?.total)&&x.student_counts.total>0).length,36,'Kanagawa student counts verified');
           for(const id of kscIds){
@@ -157,8 +158,9 @@ jobs:
           const saitama=readRows('tools/university-database/saitama/data/universities_saitama_all.generated.json');
           const extra=readRows('tools/university-database/tokyo-additions/data/universities_tokyo_additions_all.generated.json');
           const kanagawa=readRows('tools/university-database/kanagawa/data/universities_kanagawa_all.generated.json');
+          const chiba=readRows('tools/university-database/chiba/data/universities_chiba_all.generated.json');
           const tokyoRows=readRows('tools/university-database/tokyo/data/universities_tokyo_all.generated.json');
-          const total=new Set([...tokyoRows,...saitama,...extra,...kanagawa].map(x=>x.id)).size;
+          const total=new Set([...tokyoRows,...saitama,...extra,...kanagawa,...chiba].map(x=>x.id)).size;
           const movedToKanagawa=kanagawa.filter(k=>[...tokyoRows,...extra].some(x=>x.id===k.id)).length;
           const tokyoTotal=tokyoN+extra.filter(x=>x.prefecture==='東京都').length-movedToKanagawa;
           (async()=>{
@@ -167,61 +169,82 @@ jobs:
             const watch=(pg,tag)=>{pg.on('pageerror',e=>errors.push(`${tag} pageerror ${e.message}`));pg.on('response',r=>{if(r.status()===404&&r.url().startsWith('http://127.0.0.1')&&!/(faculties|departments)_tokyo_all\.generated\.json|\/data\/complete\/u\d+\.json/.test(r.url()))errors.push(`${tag} 404 `+r.url().replace('http://127.0.0.1:4173',''))})};
             const page=await browser.newPage({viewport:{width:1366,height:950}});watch(page,'list');
             await page.goto('http://127.0.0.1:4173/tools/university-database/tokyo/',{waitUntil:'networkidle'});
-            await page.waitForFunction(n=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length===n,total,{timeout:30000});
-            const count=async()=>page.locator('.tokyo-card').count();
+            await page.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=24,{timeout:30000});
+            const matchedCount=async()=>{
+              const t=await page.locator('#tokyo-result-count').innerText();
+              const m=t.match(/該当\s*(\d+)校/);
+              return m?Number(m[1]):-1;
+            };
+            const expandAll=async()=>{
+              for(let i=0;i<3;i++){
+                const allBtn=page.locator('#show-all-btn');
+                if(await allBtn.count()){await allBtn.click();await page.waitForTimeout(350);continue;}
+                const moreBtn=page.locator('#load-more-btn');
+                if(await moreBtn.count()){await moreBtn.click();await page.waitForTimeout(350);continue;}
+                break;
+              }
+            };
+            const openAdvanced=async()=>{
+              const adv=page.locator('#advanced-filters');
+              if(await adv.count()){await adv.evaluate(el=>{el.open=true;});await page.waitForTimeout(150);}
+            };
+            assert.equal(await matchedCount(),total,'initial unified total');
             const body=await page.locator('body').innerText();
             assert.ok(!body.includes('読込エラー'),'no load error');
             assert.ok(body.includes(`${total}大学`)&&body.includes('東京都・埼玉県・神奈川県'),'hero shows unified count');
             for(const [pref,expected] of [['埼玉県',saitama.length],['東京都',tokyoTotal],['all',total]]){
-              await page.locator(`.ref-pref-filter [data-ref-pref="${pref}"]`).click();await page.waitForTimeout(300);
-              assert.equal(await count(),expected,`quick pref ${pref}`);
-              assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),pref,`list pref synced ${pref}`);
+              await page.locator(`#pref-filters [data-pref="${pref}"]`).click();await page.waitForTimeout(300);
+              assert.equal(await matchedCount(),expected,`pref filter ${pref}`);
+              assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),pref,`list pref active ${pref}`);
             }
             await page.locator('#pref-filters [data-pref="埼玉県"]').click();await page.waitForTimeout(300);
-            assert.equal(await count(),saitama.length,'list pref saitama');
-            assert.equal(await page.locator('.ref-pref-filter .active').getAttribute('data-ref-pref'),'埼玉県','quick pref synced from list');
+            assert.equal(await matchedCount(),saitama.length,'list pref saitama');
             for(const [type,expected] of [['national',1],['public',1],['private',saitama.length-2]]){
-              await page.locator(`.ref-type-filter [data-ref-type="${type}"]`).click();await page.waitForTimeout(250);
-              assert.equal(await count(),expected,`saitama ${type}`);
+              await page.locator(`#type-filters [data-type="${type}"]`).click();await page.waitForTimeout(250);
+              assert.equal(await matchedCount(),expected,`saitama ${type}`);
             }
-            await page.locator('.ref-type-filter [data-ref-type="all"]').click();
-            await page.fill('.ref-quick-form input[name="q"]','看護');
-            await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(300);
-            const nurse=await count();
+            await page.locator('#type-filters [data-type="all"]').click();await page.waitForTimeout(250);
+            await page.fill('#tokyo-search-input','看護');
+            await page.locator('#tokyo-search button[type="submit"]').click();await page.waitForTimeout(300);
+            const nurse=await matchedCount();
             assert.ok(nurse>=5&&nurse<saitama.length,`search 看護 within Saitama: ${nurse}`);
             const cards=await page.locator('.tokyo-card').evaluateAll(cs=>cs.map(c=>c.innerText));
             assert.ok(cards.every(t=>t.includes('埼玉県')),'Saitama cards show prefecture');
-            await page.locator('.ref-type-filter [data-ref-type="all"]').click();
-            await page.fill('.ref-quick-form input[name="q"]','');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(300);
+            await page.fill('#tokyo-search-input','');await page.locator('#tokyo-search button[type="submit"]').click();await page.waitForTimeout(300);
             const campusIdx=JSON.parse(fs.readFileSync('tools/university-database/campuses/campus_index.json','utf8')).universities;
             const expectCampus=Object.values(campusIdx).filter(v=>v.prefectures.includes('埼玉県')).length;
+            await openAdvanced();
             assert.ok(await page.locator('.campus-toggle-list').isVisible(),'campus toggle visible for Saitama');
             await page.locator('.campus-toggle-list input').check();await page.waitForTimeout(400);
-            assert.equal(await count(),expectCampus,'Saitama incl. campuses');
-            assert.equal(await page.locator('.campus-toggle-quick input').isChecked(),true,'quick toggle synced');
+            assert.equal(await matchedCount(),expectCampus,'Saitama incl. campuses');
+            await expandAll();
             const rikkyo=await page.locator('.tokyo-card[data-id="u000110"] .campus-badge, .tokyo-card .campus-badge').first().innerText();
             assert.ok(rikkyo.includes('埼玉県で学べる'),'campus badge shown: '+rikkyo);
             await page.locator('.campus-toggle-list input').uncheck();await page.waitForTimeout(300);
-            assert.equal(await count(),saitama.length,'toggle off returns to HQ-based list');
+            assert.equal(await matchedCount(),saitama.length,'toggle off returns to HQ-based list');
             await page.locator('#clear-filters').click();await page.waitForTimeout(300);
-            assert.equal(await count(),total,'clear filters');
+            assert.equal(await matchedCount(),total,'clear filters');
             assert.equal(await page.locator('#pref-filters .active').getAttribute('data-pref'),'all','clear resets prefecture');
             await page.locator('#pref-filters [data-pref="神奈川県"]').click();await page.waitForTimeout(300);
-            assert.equal(await count(),kanagawa.length,'kanagawa filter');
+            assert.equal(await matchedCount(),kanagawa.length,'kanagawa filter');
             const expectKanagawaCampus=Object.values(campusIdx).filter(v=>v.prefectures.includes('神奈川県')).length;
+            await openAdvanced();
             await page.locator('.campus-toggle-list input').check();await page.waitForTimeout(400);
-            assert.equal(await count(),expectKanagawaCampus,'Kanagawa incl. campuses');
+            assert.equal(await matchedCount(),expectKanagawaCampus,'Kanagawa incl. campuses');
             await page.locator('.campus-toggle-list input').uncheck();await page.waitForTimeout(300);
-            assert.equal(await count(),kanagawa.length,'Kanagawa toggle off returns to HQ-based list');
+            assert.equal(await matchedCount(),kanagawa.length,'Kanagawa toggle off returns to HQ-based list');
+            await expandAll();
             const tokai=await page.locator('.tokyo-card[data-id="u000050"]').innerText();
             assert.ok(tokai.includes('神奈川県')&&tokai.includes('平塚市'),'Tokai shown as Kanagawa: '+tokai.slice(0,120));
             await page.locator('#pref-filters [data-pref="all"]').click();await page.waitForTimeout(300);
+            await expandAll();
             const dokkyo=page.locator('.tokyo-card[data-id="u000169"]');
             assert.ok((await dokkyo.innerText()).includes('草加市'),'Dokkyo card');
             assert.ok((await dokkyo.locator('.card-actions a.primary').getAttribute('href')).startsWith('https://nyushi.dokkyo.ac.jp'),'admissions link');
             assert.ok((await page.locator('.tokyo-card[data-id="u000155"]').innerText()).includes('日本栄養大学'),'renamed university');
             const photos=await page.locator('.tokyo-card .real-university-image').count();
             await page.locator('#pref-filters [data-pref="埼玉県"]').click();await page.waitForTimeout(300);
+            await expandAll();
             const saitamaPhotos=await page.locator('.tokyo-card .real-university-image').count();
             assert.ok(saitamaPhotos>=26,`Saitama cards with verified photos: ${saitamaPhotos}`);
             const src=await page.locator('.tokyo-card[data-id="u000169"] img.university-card-image').getAttribute('src');
@@ -231,21 +254,21 @@ jobs:
             console.log('::notice title=Photos::all '+photos+' / saitama '+saitamaPhotos);
             const quals=JSON.parse(fs.readFileSync('tools/university-database/qualifications/qualifications.json','utf8')).universities;
             const nurseN=Object.values(quals).filter(v=>v.qualifications.some(x=>x.group==='看護師')).length;
+            await openAdvanced();
             await page.waitForSelector('#qual-select');
             await page.selectOption('#qual-select','看護師');await page.waitForTimeout(400);
-            assert.equal(await count(),nurseN,'qualification filter 看護師');
-            assert.equal(await page.locator('#qual-select-quick').inputValue(),'看護師','quick qualification select synced');
+            assert.equal(await matchedCount(),nurseN,'qualification filter 看護師');
             assert.ok((await page.locator('.tokyo-card .qual-chip.is-match').count())>=1,'matching qualification chip');
             await page.selectOption('#qual-select','');await page.waitForTimeout(300);
-            assert.equal(await count(),total,'qualification cleared');
+            assert.equal(await matchedCount(),total,'qualification cleared');
             const access=JSON.parse(fs.readFileSync('tools/university-database/access/access.json','utf8')).universities;
             assert.ok(Object.keys(access).length>=18,'access records');
             await page.waitForSelector('.tokyo-card .access-line',{timeout:15000});
-            await page.fill('.ref-quick-form input[name="q"]','獨協大学前');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(400);
-            assert.equal(await count(),1,'station name search');
+            await page.fill('#tokyo-search-input','獨協大学前');await page.locator('#tokyo-search button[type="submit"]').click();await page.waitForTimeout(400);
+            assert.equal(await matchedCount(),1,'station name search');
             assert.ok((await page.locator('.tokyo-card .access-line').first().innerText()).includes('獨協大学前'),'station shown on card');
-            await page.fill('.ref-quick-form input[name="q"]','');await page.locator('.ref-quick-form button[type="submit"]').click();await page.waitForTimeout(400);
-            assert.equal(await count(),total,'station search cleared');
+            await page.fill('#tokyo-search-input','');await page.locator('#tokyo-search button[type="submit"]').click();await page.waitForTimeout(400);
+            assert.equal(await matchedCount(),total,'station search cleared');
             const area=await page.locator('.ref-area').innerText();
             assert.ok(area.includes('東京都')&&area.includes('埼玉県')&&area.includes(String(total)),area);
             // 静的に書かれた大学数（DBトップ・一覧の初期表示・サイトトップ）が実データと一致すること
@@ -255,7 +278,8 @@ jobs:
             assert.ok(dbTop.includes(`<strong>${tokyoN}</strong><span>東京都の大学`),'DB top Tokyo count '+tokyoN);
             assert.ok(dbTop.includes(`<strong>${saitamaN}</strong><span>埼玉県の大学`),'DB top Saitama count '+saitamaN);
             assert.ok(dbTop.includes(`<strong>${kanagawa.length}</strong><span>神奈川県の大学`),'DB top Kanagawa count '+kanagawa.length);
-            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式・入試導線確認済み`),'DB top total '+total);
+            assert.ok(dbTop.includes(`<strong>${chiba.length}</strong><span>千葉県の大学`),'DB top Chiba count '+chiba.length);
+            assert.ok(dbTop.includes(`<strong>${total}</strong><span>収録大学の合計`)&&dbTop.includes(`${total}大学 公式情報・所在地確認済み`),'DB top total '+total);
             assert.ok(fs.readFileSync('tools/university-database/tokyo/index.html','utf8').includes(`合計 <strong>${total}</strong> 大学`),'list static total '+total);
             assert.ok(fs.readFileSync('index.html','utf8').includes(`${total}校`),'site top count '+total);
             await page.setViewportSize({width:375,height:900});await page.waitForTimeout(300);
@@ -263,11 +287,15 @@ jobs:
             await page.close();
             const deep=await browser.newPage();watch(deep,'deeplink');
             await deep.goto('http://127.0.0.1:4173/tools/university-database/tokyo/?pref=saitama',{waitUntil:'networkidle'});
+            await deep.waitForFunction(n=>(document.querySelector('#tokyo-result-count')?.innerText||'').includes(`該当 ${n}校`),saitama.length,{timeout:30000});
+            await deep.locator('#load-more-btn').click();
             await deep.waitForFunction(n=>document.querySelectorAll('.tokyo-card').length===n,saitama.length,{timeout:30000});
             await deep.close();
             const redirect=await browser.newPage();
             await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/',{waitUntil:'networkidle'});
             assert.ok(redirect.url().includes('/tokyo/'),'saitama/ redirects to unified page: '+redirect.url());
+            await redirect.waitForFunction(n=>(document.querySelector('#tokyo-result-count')?.innerText||'').includes(`該当 ${n}校`),saitama.length,{timeout:30000});
+            await redirect.locator('#load-more-btn').click();
             await redirect.waitForFunction(n=>document.querySelectorAll('.tokyo-card').length===n,saitama.length,{timeout:30000});
             await redirect.goto('http://127.0.0.1:4173/tools/university-database/saitama/detail.html?id=u000169',{waitUntil:'networkidle'});
             assert.ok(redirect.url().includes('/tokyo/detail.html?id=u000169'),'saitama detail redirects: '+redirect.url());
@@ -304,6 +332,7 @@ jobs:
             await entry.goto('http://127.0.0.1:4173/tools/university-database/',{waitUntil:'networkidle'});
             assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=saitama"]').count(),1,'entry links to Saitama filter');
             assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=kanagawa"]').count(),1,'entry links to Kanagawa filter');
+            assert.equal(await entry.locator('a[href="/tools/university-database/tokyo/?pref=chiba"]').count(),1,'entry links to Chiba filter');
             await entry.close();
             assert.deepEqual([...new Set(errors)],[],'no script errors or missing local files');
             await browser.close();

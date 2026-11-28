@@ -1,5 +1,5 @@
 {
-  "pageTitle": "小学校教育計画作成・運営システム | Ban.Tai Education Design",
+  "pageTitle": "小学校教育計画運営システム | Ban.Tai Education Design",
   "metaDescription": "先生方の実務を支える教育支援アプリブランド Ban.Tai Education Design の公式サイトです。",
   "styleVersion": "education-monitor-conversion-phase1-20260722-1",
   "scriptVersion": "education-monitor-pv-20260925-2",
@@ -41,7 +41,7 @@
       "class": "mini"
     }
   ],
-  "productName": "小学校教育計画作成・運営システム",
+  "productName": "小学校教育計画運営システム",
   "sections": [
     {
       "type": "hero",
@@ -58,7 +58,7 @@
       "kickerClass": "education-detail-kicker",
       "headingLines": [
         "小学校教育計画",
-        "作成・運営システム"
+        "運営システム"
       ],
       "lead": "年間教育計画から週案、授業時数、提出書類まで。教務と担任の仕事を一つの流れにつなぐ学校業務支援システムです。",
       "actions": [
@@ -76,7 +76,7 @@
       "imageContainerClass": "education-detail-visual",
       "image": {
         "src": "/assets/images/education-hero.png",
-        "alt": "小学校教育計画作成・運営システムの実際の画面"
+        "alt": "小学校教育計画運営システムの実際の画面"
       }
     },
     {
@@ -84,7 +84,7 @@
       "id": "official-pv",
       "class": "education-pv-section",
       "eyebrow": "OFFICIAL PROMOTION VIDEO",
-      "heading": "約43秒で分かる 小学校教育計画作成・運営システム",
+      "heading": "約43秒で分かる 小学校教育計画運営システム",
       "description": "年間教育計画、週案作成、授業時数の集計、提出書類の作成まで。教務と担任の仕事を一つの流れにつなぐ仕組みを、短い動画でご紹介します。",
       "video": {
         "src": "/assets/videos/education-planning-monitor-pv.mp4",

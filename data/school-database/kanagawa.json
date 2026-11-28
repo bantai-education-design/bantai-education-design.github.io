@@ -1972,7 +1972,23 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-中学校-横浜市神奈川区-神奈川学園中学校",
@@ -2033,6 +2049,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "優秀賞"
+      }
     ]
   },
   {
@@ -2054,6 +2078,22 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
     ]
   },
   {
@@ -2096,6 +2136,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -2140,6 +2188,14 @@
     "course": [
       "全日",
       "定時単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "STEAM教育",
+        "designation": "STEAM教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -2161,6 +2217,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "グローバル教育",
+        "designation": "グローバル教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -3353,6 +3417,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "授業力向上推進重点校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -4315,6 +4387,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -5330,6 +5410,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "ICT利活用",
+        "designation": "ICT利活用授業研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -5372,6 +5460,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜8",
+        "subject": "",
+        "designation": "確かな学力育成推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -6311,6 +6407,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "STEAM教育",
+        "designation": "STEAM教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -8312,6 +8416,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "グローバル教育",
+        "designation": "グローバル教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -9271,6 +9383,22 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "sports_awards": [
+      {
+        "sport": "野球（甲子園）",
+        "contest": "全国高等学校野球選手権大会（夏の甲子園）",
+        "year": "2026年（第108回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      },
+      {
+        "sport": "野球（甲子園）",
+        "contest": "選抜高等学校野球大会（春のセンバツ）",
+        "year": "2025年（第97回）",
+        "division": "全国大会",
+        "award": "優勝"
+      }
     ]
   },
   {
@@ -10341,7 +10469,33 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#07_r8_juniorhighschool_yokohama.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市港北区-横浜市立新田中学校",
@@ -11522,6 +11676,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "高等学校の部",
+        "award": "最優秀賞",
+        "detail": "郡山市長賞"
+      }
     ]
   },
   {
@@ -12647,7 +12810,16 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#07_r8_juniorhighschool_yokohama.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市青葉区-横浜市立山内中学校",
@@ -12704,7 +12876,16 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#07_r8_juniorhighschool_yokohama.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市青葉区-横浜市立美しが丘中学校",
@@ -12801,6 +12982,50 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "sports_awards": [
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2026年（第105回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2025年（第104回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）柔道",
+        "year": "2025年（令和7年度）",
+        "division": "女子団体",
+        "award": "準優勝"
+      },
+      {
+        "sport": "ラグビー（花園）",
+        "contest": "全国高等学校ラグビーフットボール大会（花園）",
+        "year": "2024年（第103回）",
+        "division": "全国大会",
+        "award": "優勝"
+      },
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）柔道",
+        "year": "2024年（令和6年度）",
+        "division": "女子団体",
+        "award": "3位"
+      },
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）剣道",
+        "year": "2024年（第71回）",
+        "division": "男子団体",
+        "award": "3位"
+      }
     ]
   },
   {
@@ -12822,6 +13047,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "授業力向上推進重点校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -12843,6 +13076,28 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2025年（第12回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      },
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
+        "division": "全国大会",
+        "award": "奨励賞"
+      }
     ]
   },
   {
@@ -13606,7 +13861,16 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市都筑区-横浜市立中川中学校",
@@ -13800,6 +14064,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
     ]
   },
   {
@@ -15014,6 +15287,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間（SDGs）",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -15451,7 +15732,16 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-横浜市栄区-横浜市立上郷中学校",
@@ -15605,6 +15895,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
     ]
   },
   {
@@ -15647,6 +15946,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "プログラミング教育",
+        "designation": "プログラミング教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -16259,6 +16566,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "学習評価",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -16839,6 +17154,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -17911,6 +18234,14 @@
     "course": [
       "全日単位",
       "定時単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間（SDGs）",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -19405,6 +19736,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "sports_awards": [
+      {
+        "sport": "フェンシング（インターハイ）",
+        "contest": "全国高等学校総合体育大会（インターハイ）フェンシング",
+        "year": "2026年（令和8年度）",
+        "division": "男子学校対抗",
+        "award": "優勝"
+      }
     ]
   },
   {
@@ -19426,6 +19766,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "プログラミング教育",
+        "designation": "プログラミング教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -19468,6 +19816,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "学習評価",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -19886,7 +20242,27 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#03_r8_primaryschool_kawasaki.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-川崎市高津区-川崎市立子母口小学校",
@@ -20152,7 +20528,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#08_r8_juniorhighschool_kawasaki.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2024年（第13回）",
+        "division": "中学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-中学校-川崎市高津区-洗足学園中学校",
@@ -21584,7 +21968,23 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      },
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-高等学校-川崎市多摩区-カリタス女子高等学校-全日制",
@@ -21626,6 +22026,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
     ]
   },
   {
@@ -21690,6 +22099,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "ICT利活用",
+        "designation": "ICT利活用授業研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -21711,6 +22128,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "理数教育",
+        "designation": "理数教育推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -21753,6 +22178,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "確かな学力育成推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -22228,7 +22661,16 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#03_r8_primaryschool_kawasaki.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "特別賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-川崎市麻生区-川崎市立麻生小学校",
@@ -22458,6 +22900,14 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -23457,6 +23907,14 @@
     "course": [
       "全日",
       "定時"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -23499,6 +23957,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "プログラミング教育",
+        "designation": "プログラミング教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -24411,7 +24877,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#09_r8_juniorhighschool_sagamihara.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-相模原市中央区-相模原市立由野台中学校",
@@ -24470,6 +24944,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "授業力向上推進重点校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -24491,6 +24973,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "学習評価",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -24512,6 +25002,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "STEAM教育",
+        "designation": "STEAM教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -24554,6 +25052,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -25354,7 +25860,16 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "最優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-相模原市南区-分校",
@@ -25660,6 +26175,43 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "中学生の部",
+        "award": "全国大会出場"
+      },
+      {
+        "contest": "全日本マーチングコンテスト",
+        "year": "2026年（第39回）",
+        "division": "高等学校以上の部",
+        "award": "全国大会出場"
+      }
+    ],
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）陸上競技",
+        "year": "2026年（令和8年度）",
+        "division": "女子総合",
+        "award": "優勝"
+      },
+      {
+        "sport": "武道（柔道・剣道・相撲・空手）",
+        "contest": "全国高等学校総合体育大会（インターハイ）柔道",
+        "year": "2026年（令和8年度）",
+        "division": "男子団体",
+        "award": "3位"
+      },
+      {
+        "sport": "サッカー",
+        "contest": "全国高等学校サッカー選手権大会",
+        "year": "2025年（第103回）",
+        "division": "全国大会",
+        "award": "ベスト4"
+      }
     ]
   },
   {
@@ -25723,6 +26275,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "music_awards": [
+      {
+        "contest": "全国高等学校軽音楽コンテスト",
+        "year": "2024年（第11回）",
+        "division": "全国大会",
+        "award": "準グランプリ"
+      }
     ]
   },
   {
@@ -25745,6 +26305,14 @@
     "course": [
       "全日単位",
       "定時単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "ICT利活用",
+        "designation": "ICT利活用授業研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -27819,6 +28387,14 @@
     "course": [
       "全日",
       "定時"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "STEAM教育",
+        "designation": "STEAM教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -27883,6 +28459,14 @@
     "course": [
       "全日",
       "定時"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "授業力向上推進重点校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -28795,7 +29379,46 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "中学生部門",
+        "award": "金賞",
+        "detail": "大阪市長賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-中学校-鎌倉市-鎌倉国際文理中学校",
@@ -28852,7 +29475,16 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2025年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-鎌倉市-鎌倉市立大船中学校",
@@ -29105,6 +29737,51 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "高等学校部門",
+        "award": "金賞",
+        "detail": "大阪府知事賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2026年（第93回）",
+        "division": "高等学校の部",
+        "award": "優良賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "高等学校部門Aグループ",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      },
+      {
+        "contest": "NHK全国学校音楽コンクール（Nコン）",
+        "year": "2024年（第91回）",
+        "division": "高等学校の部",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "高等学校部門Aグループ",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "中学生部門（同声）",
+        "award": "銅賞"
+      }
     ]
   },
   {
@@ -29147,6 +29824,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間（SDGs）",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -29189,6 +29874,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "理数教育",
+        "designation": "理数教育推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -29596,6 +30289,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "学習評価",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -29695,7 +30396,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立上宮田小学校",
@@ -29714,7 +30423,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立初声小学校",
@@ -29733,7 +30450,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立南下浦小学校",
@@ -29752,7 +30477,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立名向小学校",
@@ -29771,7 +30504,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立岬陽小学校",
@@ -29790,7 +30531,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦市-三浦市立旭小学校",
@@ -29809,7 +30558,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-三浦市-三浦市立三崎中学校",
@@ -29828,7 +30585,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-三浦市-三浦市立初声中学校",
@@ -29847,7 +30612,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-三浦市-三浦市立南下浦中学校",
@@ -29866,7 +30639,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-高等学校-三浦市-神奈川県立三浦初声高等学校-全日単位",
@@ -30999,6 +31780,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -31999,6 +32788,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "グローバル教育",
+        "designation": "グローバル教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -32020,6 +32817,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -32615,6 +33420,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間（SDGs）",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -33459,7 +34272,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-綾瀬市-綾瀬市立土棚小学校",
@@ -33497,7 +34318,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-綾瀬市-綾瀬市立寺尾小学校",
@@ -33516,7 +34345,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-綾瀬市-綾瀬市立早園小学校",
@@ -33554,7 +34391,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-綾瀬市-綾瀬市立綾南小学校",
@@ -33592,7 +34437,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-綾瀬市-綾瀬市立綾西小学校",
@@ -33649,7 +34502,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-綾瀬市-綾瀬市立城山中学校",
@@ -33706,7 +34567,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-綾瀬市-綾瀬市立綾瀬中学校",
@@ -35048,6 +35917,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "確かな学力育成推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -35069,6 +35946,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "学習評価",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -35851,7 +36736,16 @@
     "source_url": "https://www.pref.kanagawa.jp/documents/22470/r80501~meibo.xlsx",
     "source_date": "2026-05-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "優秀団体賞"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-藤沢市-藤沢市立中里小学校",
@@ -35870,7 +36764,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-藤沢市-藤沢市立亀井野小学校",
@@ -36136,7 +37038,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-藤沢市-藤沢市立新林小学校",
@@ -36725,7 +37635,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-藤沢市-藤沢市立明治中学校",
@@ -37033,6 +37951,15 @@
     "verified_date": "",
     "course": [
       "全日制"
+    ],
+    "sports_awards": [
+      {
+        "sport": "夏期競技（水泳・水球・陸上）",
+        "contest": "全国高等学校総合体育大会（インターハイ）競泳",
+        "year": "2024年（令和6年度）",
+        "division": "女子総合",
+        "award": "準優勝"
+      }
     ]
   },
   {
@@ -37160,6 +38087,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "ICT利活用",
+        "designation": "ICT利活用授業研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -37202,6 +38137,14 @@
     "verified_date": "",
     "course": [
       "全日単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -37223,6 +38166,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -37782,7 +38733,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-茅ヶ崎市-茅ヶ崎市立柳島小学校",
@@ -37839,7 +38798,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-茅ヶ崎市-茅ヶ崎市立浜之郷小学校",
@@ -37896,7 +38863,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-茅ヶ崎市-茅ヶ崎市立茅ヶ崎小学校",
@@ -37934,7 +38909,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-茅ヶ崎市-茅ヶ崎市立香川小学校",
@@ -38105,7 +39088,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-茅ヶ崎市-茅ヶ崎市立梅田中学校",
@@ -38200,7 +39191,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-茅ヶ崎市-茅ヶ崎市立赤羽根中学校",
@@ -38320,6 +39319,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "プログラミング教育",
+        "designation": "プログラミング教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -38363,6 +39370,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "グローバル教育",
+        "designation": "グローバル教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -38743,7 +39758,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-秦野市-秦野市立西小学校",
@@ -38914,7 +39937,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-秦野市-秦野市立西中学校",
@@ -38973,6 +40004,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "授業力向上推進重点校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -38995,6 +40034,14 @@
     "course": [
       "全日単位",
       "定時単位"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -39016,6 +40063,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "STEAM教育",
+        "designation": "STEAM教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -39396,7 +40451,16 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "中学校全国大会（全中・駅伝）",
+        "contest": "全国中学校駅伝大会",
+        "year": "2025年（第33回）",
+        "division": "男子",
+        "award": "3位"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-高等学校-伊勢原市-向上高等学校-全日制",
@@ -39439,6 +40503,14 @@
     "course": [
       "全日",
       "定時"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "ICT利活用",
+        "designation": "ICT利活用授業研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -40571,6 +41643,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "シチズンシップ教育",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -40614,6 +41694,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "プログラミング教育",
+        "designation": "プログラミング教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -40690,7 +41778,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-南足柄市-南足柄市立向田小学校",
@@ -40709,7 +41805,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-南足柄市-南足柄市立岡本小学校",
@@ -40728,7 +41832,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-南足柄市-南足柄市立岩原小学校",
@@ -40747,7 +41859,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-南足柄市-南足柄市立福沢小学校",
@@ -40766,7 +41886,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-南足柄市-南足柄市立南足柄中学校",
@@ -40785,7 +41913,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-南足柄市-南足柄市立岡本中学校",
@@ -40804,7 +41940,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-南足柄市-南足柄市立足柄台中学校",
@@ -40823,7 +41967,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-高等学校-南足柄市-神奈川県立足柄高等学校-全日",
@@ -40996,7 +42148,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-三浦郡葉山町-葉山町立長柄小学校",
@@ -41053,7 +42213,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-幼稚園-高座郡寒川町-一之宮相和幼稚園",
@@ -41110,7 +42278,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-高座郡寒川町-寒川町立南小学校",
@@ -41129,7 +42305,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-高座郡寒川町-寒川町立寒川小学校",
@@ -41148,7 +42332,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-高座郡寒川町-寒川町立小谷小学校",
@@ -41167,7 +42359,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-高座郡寒川町-寒川町立旭小学校",
@@ -41186,7 +42386,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-高座郡寒川町-寒川町立寒川中学校",
@@ -41205,7 +42413,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-高座郡寒川町-寒川町立寒川東中学校",
@@ -41224,7 +42440,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-高座郡寒川町-寒川町立旭が丘中学校",
@@ -41243,7 +42467,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-高等学校-高座郡寒川町-神奈川県立寒川高等学校-全日",
@@ -41264,6 +42496,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "確かな学力育成推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -41494,6 +42734,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "グローバル教育",
+        "designation": "グローバル教育研究推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -41762,7 +43010,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-愛甲郡愛川町-愛川町立中津第二小学校",
@@ -41838,7 +43094,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-愛甲郡愛川町-愛川町立高峰小学校",
@@ -41914,7 +43178,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-高等学校-愛甲郡愛川町-神奈川県立愛川高等学校-全日",
@@ -41935,6 +43207,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "",
+        "designation": "確かな学力育成推進校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -41973,7 +43253,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-愛甲郡清川村-清川村立緑中学校",
@@ -41992,7 +43280,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-足柄上郡中井町-中井町立中村小学校",
@@ -42106,7 +43402,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-足柄上郡大井町-大井町立大井小学校",
@@ -42125,7 +43429,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-足柄上郡大井町-大井町立相和小学校",
@@ -42144,7 +43456,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-足柄上郡大井町-大井町立湘光中学校",
@@ -42163,7 +43483,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-特別支援学校-足柄上郡大井町-小田原支援学校大井分教室",
@@ -42239,7 +43567,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-小学校-足柄上郡松田町-松田町立松田小学校",
@@ -42258,7 +43594,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-足柄上郡松田町-松田町立松田中学校",
@@ -42277,7 +43621,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-高等学校-足柄上郡松田町-立花学園高等学校-全日制",
@@ -42336,7 +43688,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-足柄上郡山北町-山北町立山北中学校",
@@ -42355,7 +43715,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-高等学校-足柄上郡山北町-神奈川県立山北高等学校-全日",
@@ -42376,6 +43744,14 @@
     "verified_date": "",
     "course": [
       "全日"
+    ],
+    "research_designations": [
+      {
+        "year": "令和7〜9",
+        "subject": "総合的な探究の時間（SDGs）",
+        "designation": "教育課程研究開発校",
+        "authority": "神奈川県"
+      }
     ]
   },
   {
@@ -42665,7 +44041,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#05_r8_primaryschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-公立-中学校-足柄下郡真鶴町-真鶴町立真鶴中学校",
@@ -42684,7 +44068,15 @@
     "source_url": "https://www.pref.kanagawa.jp/docs/u5t/gakkoumeibo/index.html#10_r8_juniorhighschool.xlsx",
     "source_date": "2026-04-01",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和7",
+        "subject": "学力向上・授業改善",
+        "designation": "かながわ学びづくり推進地域 推進校",
+        "authority": "神奈川県"
+      }
+    ]
   },
   {
     "id": "kanagawa-私立-幼稚園-足柄下郡湯河原町-宮上幼稚園",

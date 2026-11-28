@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIで楽をすることは悪いことなのか――教師にしかできない仕事と、日々の記録｜Ban.Tai Education Design</title>
+  <meta name="description" content="教員がAIを使って楽をすること自体は悪いことではない。大切なのは「何を楽にするのか」。目の前の子どもを観察し、日々の小さな姿を書き留める記録の大切さと、教師の評価を支える教育支援アプリのあり方を考えます。">
+  <link rel="canonical" href="https://bantai-education-design.github.io/columns/ai-teacher-daily-records-20261127/">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Ban.Tai Education Design">
+  <meta property="og:title" content="AIで楽をすることは悪いことなのか――教師にしかできない仕事と、日々の記録">
+  <meta property="og:description" content="AIは目の前の子どもを知らない。日々の小さな観察記録を土台にし、教師が教師にしかできない仕事に専念するためのAI活用と教育支援アプリの考え方を綴ります。">
+  <meta property="og:url" content="https://bantai-education-design.github.io/columns/ai-teacher-daily-records-20261127/">
+  <meta property="og:image" content="https://bantai-education-design.github.io/assets/images/columns/ai-teacher-daily-records-20261127/thumbnail.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bantai-education-design.github.io/assets/images/columns/ai-teacher-daily-records-20261127/thumbnail.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AIで楽をすることは悪いことなのか――教師にしかできない仕事と、日々の記録",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "author": { "@type": "Person", "name": "磐 田井" },
+      "publisher": { "@type": "Organization", "name": "Ban.Tai Education Design", "url": "https://bantai-education-design.github.io/" },
+      "image": "https://bantai-education-design.github.io/assets/images/columns/ai-teacher-daily-records-20261127/thumbnail.webp",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bantai-education-design.github.io/columns/ai-teacher-daily-records-20261127/" }
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try { isExcluded = localStorage.getItem('bantai_admin') === 'true'; } catch (e) {}
+      if (isLocal || isExcluded) { window['ga-disable-G-KPGJ0R2KXR'] = true; }
+    })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf8f3; color: #243041; font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif; }
+    .article-nav { position: sticky; top: 0; z-index: 20; background: #17334e; padding: 10px max(16px, calc((100vw - 780px)/2 + 22px)); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .article-nav a { display: inline-flex; padding: 8px 14px; border-radius: 8px; background: #fff; color: #17334e; font-size: .86rem; font-weight: 700; text-decoration: none; }
+    .article-nav a.nav-sub { background: rgba(255,255,255,.14); color: #fff; }
+    main { max-width: 780px; margin: auto; padding: 28px 22px 76px; line-height: 1.95; }
+    .kicker { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #e0f2fe; color: #0369a1; font-size: .78rem; font-weight: 800; letter-spacing: .06em; }
+    h1 { font-family: "Noto Serif JP", serif; font-size: clamp(1.5rem, 3.6vw, 2.15rem); line-height: 1.48; margin: .55em 0 .4em; color: #0c1b33; }
+    .meta { color: #64748b; font-size: .88rem; margin: 0 0 22px; }
+    .hero-wrap { margin: 0 0 30px; }
+    .hero { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 10px 28px rgba(12,27,51,.12); object-fit: contain; }
+    figure { margin: 30px 0; }
+    figure img { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 8px 24px rgba(15,39,61,.1); }
+    figcaption { font-size: .84rem; color: #64748b; margin-top: 10px; line-height: 1.65; }
+    h2 { font-family: "Noto Serif JP", serif; font-size: 1.34rem; margin: 2.35em 0 .85em; padding-left: 12px; border-left: 4px solid #17334e; color: #0c1b33; line-height: 1.48; }
+    p.article-paragraph { font-size: 1.02rem; line-height: 2.05; margin: 0 0 1.4em; }
+    .memo-box { margin: 22px 0; padding: 18px 22px; background: #fff; border: 1px solid #dbe5ec; border-left: 4px solid #0f766e; border-radius: 10px; font-size: .96rem; line-height: 1.95; color: #1e293b; }
+    .quote-box { margin: 22px 0; padding: 18px 22px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; font-size: .98rem; line-height: 1.95; color: #0f172a; }
+    .author-sign { margin-top: 36px; padding: 18px 22px; background: #fff; border: 1px solid #dbe5ec; border-radius: 12px; text-align: right; font-size: .95rem; color: #1e293b; line-height: 1.8; }
+    .sources { margin-top: 32px; padding: 22px 24px; background: #eef2f6; border-radius: 12px; font-size: .88rem; line-height: 1.8; color: #334155; }
+    .sources h2 { margin-top: 0; font-size: 1.05rem; border-left-color: #475569; }
+    .sources a { color: #0369a1; font-weight: 700; word-break: break-all; }
+    @media (max-width: 680px) {
+      main { padding: 18px 16px 56px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="article-nav" aria-label="コラムナビゲーション">
+    <a href="/columns/">← コラム一覧へ</a>
+    <a class="nav-sub" href="/">ホームへ</a>
+  </nav>
+
+  <main>
+    <article>
+      <span class="kicker">AIと学び</span>
+      <h1>AIで楽をすることは悪いことなのか――教師にしかできない仕事と、日々の記録</h1>
+      <p class="meta">公開日：2026年11月27日　カテゴリー：AIと学び</p>
+
+      <div class="hero-wrap">
+        <img class="hero" src="/assets/images/columns/ai-teacher-daily-records-20261127/thumbnail.webp" alt="AIで楽をすることは悪いこと？ 教師にしかできない仕事と、日々の記録">
+      </div>
+
+      <p class="article-paragraph">　「楽をしようと」生成した授業案、子どもは退屈。<br>通知表の所見欄の下書きもAIに指示し、「頼ってしまっている」という教諭についての記事を目にした。</p>
+
+      <p class="article-paragraph">　ああ、あるかもしれないね。<br>AIを使っている私にも、十分理解できることだ。</p>
+
+      <p class="article-paragraph">　AIは実によくできている。<br>こちらが頼めば、わずかな時間で授業案を作ってくれる。<br>通知表の所見も、それらしい文章にまとめてくれる。<br>しかも、なかなか立派な文章なのだ。</p>
+
+      <p class="article-paragraph">　しかし、その文章の中に、目の前にいる子どもの姿はあるのだろうか。<br>そこが大切なところだと思うんだ。</p>
+
+      <h2>楽をすることは悪いことではない</h2>
+
+      <p class="article-paragraph">　私は、教員がAIを使って楽をすること自体は、決して悪いことではないと思っている。<br>長い間、学校現場で働いてきた。<br>鉄筆でガリ版の原紙を切り、電卓で成績を集計し、通知表の所見を手書きで清書していた時代も知っている。<br>ワープロが登場し、パソコンが普及したとき、どれほど仕事が楽になったことか。</p>
+
+      <p class="article-paragraph">　もし、教員が楽をすることが悪いのであれば、私たちは今も鉄筆を使い、電卓で成績を集計していなければならないことになる。<br>そんなことはないよね。<br>道具を使って仕事の効率を上げることは、人間が長い歴史の中で積み重ねてきた知恵でもある。</p>
+
+      <p class="article-paragraph">　問題は、楽をすることではない。<br>何を楽にするのか、ということなのだ。</p>
+
+      <h2>AIは、目の前の子どもを知らない</h2>
+
+      <p class="article-paragraph">　学級担任をしていると、毎日さまざまな子どもの姿に出会う。<br>これまでなかなか手を挙げられなかった子が、勇気を出して発表した。<br>休み時間に一人でいた友だちに、そっと声をかけた子がいた。<br>何度も失敗しながら、鉄棒の逆上がりができるようになった子もいた。<br>テストの点数だけでは分からない、その子なりの成長がある。<br>そうした姿に気付くことは、教師の大切な仕事だと思う。</p>
+
+      <figure>
+        <img src="/assets/images/columns/ai-teacher-daily-records-20261127/illust-2.webp" alt="教室で発表する子どもや友だちと関わる姿を温かく見つめる教師のイラスト" loading="lazy">
+        <figcaption>テストの点数だけでは分からない、日々の教室に表れるその子なりの成長を見つめるのは教師の仕事です。</figcaption>
+      </figure>
+
+      <p class="article-paragraph">　AIは、たくさんの言葉を知っている。<br>教育に関する知識も持っている。<br>しかし、今日、教室でどんなことが起きたのかは、教えてあげなければ分からない。</p>
+
+      <p class="article-paragraph">　いつも発表できる子が手を挙げることと、なかなか発表できなかった子が初めて手を挙げること。<br>行動だけを見れば、同じことかもしれない。<br>でも、その子がこれまでどのように過ごしてきたかを知っている教師には、その意味の違いが分かる。<br>AIに渡すべきなのは、まさにその情報なのだ。</p>
+
+      <h2>通知表を書くために、子どもを見るのではない</h2>
+
+      <p class="article-paragraph">　学期末になると、通知表の所見を書く仕事が待っている。<br>一人一人の子どもの顔を思い浮かべながら、どんなことを書こうかと考える。<br>何十人もの所見を書くのだから、時間のかかる仕事でもある。</p>
+
+      <p class="article-paragraph">　しかし、学期末になってから、数か月間の子どもの姿を思い出すことには限界がある。<br>どうしても最近の出来事や、印象の強かった出来事に目が向いてしまう。<br>だからこそ、普段から記録しておくことが大切なのだと思う。</p>
+
+      <figure>
+        <img src="/assets/images/columns/ai-teacher-daily-records-20261127/illust-3.webp" alt="元気に手を挙げる子どもたちの姿を見ながら、日々の記録をノートに書き留める教師のイラスト" loading="lazy">
+        <figcaption>長い文章でなくても、ほんの一言、二言の日々の観察メモが、子どもを理解し次の指導へつなぐ土台になります。</figcaption>
+      </figure>
+
+      <p class="article-paragraph">　今日の授業で気付いたこと。<br>友だちとの関わりの中で見つけたよさ。<br>昨日まではできなかったことが、今日できるようになったこと。<br>長い文章でなくてもいい。<br>ほんの一言、二言のメモでもいいんだ。</p>
+
+      <p class="article-paragraph">　通知表を書くためだけに記録するのではない。<br>子どもを理解し、次の指導に生かすために記録する。<br>その積み重ねが、結果として通知表の所見にもつながっていくのである。</p>
+
+      <h2>一行のメモが、子どもの成長を伝える文章になる</h2>
+
+      <p class="article-paragraph">　例えば、こんな記録があったとしよう。</p>
+
+      <div class="memo-box">
+        ４月　算数。自分の考えは書けるが、発表には消極的。<br>
+        ５月　グループ活動で友だちに解き方を説明した。<br>
+        ６月　全体の前で自分から手を挙げ、考えを発表した。<br>
+        ７月　友だちの考えを聞き、自分の解き方を見直した。
+      </div>
+
+      <p class="article-paragraph">　どれも短い記録だ。<br>しかし、時間の流れに沿って並べてみると、その子の成長が見えてくる。<br>この記録をもとにAIの力を借りれば、次のような所見の下書きを作ることができる。</p>
+
+      <div class="quote-box">
+        「算数の学習では、グループで自分の考えを説明する経験を重ね、進んで全体の前でも発表できるようになりました。友だちの考えを取り入れながら、自分の解き方を見直す姿も見られました。」
+      </div>
+
+      <p class="article-paragraph">　これは、単にAIが考え出した文章ではない。<br>教師が観察し、記録してきた子どもの姿を、AIが整理して文章にしたものだ。</p>
+
+      <p class="article-paragraph">　もちろん、最後には教師自身が読み直す。<br>記録と異なる内容が加わっていないか。<br>その子の成長を適切に伝えているか。<br>保護者に伝えたいことが、きちんと表現されているか。<br>必要に応じて、自分の言葉で書き直す。<br>文章の下書きはAIに手伝ってもらっても、評価の責任は教師にある。</p>
+
+      <h2>なぜ私は、日常記録を中心としたアプリを作っているのか</h2>
+
+      <p class="article-paragraph">　現在、私はBan.Tai Education Designで、学校現場で役立つ教育支援アプリの開発に取り組んでいる。<br>その一つが、小学校評価・所見作成システムである。</p>
+
+      <p class="article-paragraph">　このシステムを考えるとき、私が大切にしているのは、所見を簡単に作ることだけではない。<br>一人一人の子どもの日常の姿を記録し、その情報を評価や指導に生かせるようにすることだ。<br>日常の記録の中から、所見の材料として使いたいものを選ぶ。<br>必要な記録を取り出し、所見を作成する際に活用する。<br>そうした仕組みを取り入れている。</p>
+
+      <figure>
+        <img src="/assets/images/columns/ai-teacher-daily-records-20261127/illust-4.webp" alt="日々の教室や運動場での子どもの成長記録をもとに、パソコンとAIの力を借りて整理する教師のイラスト" loading="lazy">
+        <figcaption>教師が日々見つけて書き留めた子どもの姿を土台に、AIの文章整理の力を組み合わせて評価を支える考え方。</figcaption>
+      </figure>
+
+      <p class="article-paragraph">　教師が子どもを見て、気付き、記録するという教育活動が出発点になっているんだ。<br>学期末に突然、AIに所見を考えさせるのではない。<br>普段から蓄積してきた記録を土台にする。<br>そこにAIによる文章整理を組み合わせることも考えられる。<br>AIに子どもの評価そのものを任せるシステムを作りたいのではない。<br>教師が行う評価を支えるシステムを作りたいのだ。</p>
+
+      <h2>授業案にも、目の前の子どもの姿が必要だ</h2>
+
+      <p class="article-paragraph">　授業案についても同じことが言える。<br>AIに「小学校４年生の算数の授業案を作って」と指示すれば、目標や導入、展開、まとめを含んだ授業案が出てくる。<br>一見すると、よくできた授業案だ。</p>
+
+      <p class="article-paragraph">　しかし、小学校４年生というだけで、どの学級にも同じ授業が成り立つわけではない。<br>子どもたちがこれまで何を学んできたのか。<br>どんなことにつまずいているのか。<br>何に興味を持ち、どのような問いを持っているのか。<br>その実態によって、授業の組み立て方は変わってくる。</p>
+
+      <p class="article-paragraph">　前の授業で、どんな発言があったのか。<br>どんなところで子どもたちの手が止まったのか。<br>どんな教材に興味を示したのか。<br>教師がそうしたことを普段から記録し、AIに伝えて一緒に授業を考える。<br>それならば、目の前の子どもたちに合った授業案に近づけるのではないだろうか。</p>
+
+      <p class="article-paragraph">　教員が考えなくても授業ができるようにするのではない。<br>教員がより深く授業について考えるために、AIを使うのだ。</p>
+
+      <h2>記録することを、新たな負担にしない</h2>
+
+      <p class="article-paragraph">　ただし、日常記録が大切だからといって、教師の仕事をさらに増やしてしまってはいけない。<br>毎日、すべての子どもについて立派な文章を書こうとすれば、それだけで大変な仕事になってしまう。</p>
+
+      <p class="article-paragraph">　短い言葉で記録できる。<br>必要なときに簡単に取り出せる。<br>同じ内容を何度も入力しなくてよい。<br>そうした仕組みを作ることも、教育支援アプリの役割だと考えている。<br>日常の小さな気付きが蓄積され、それが指導や評価に結び付いていく。<br>記録することと、記録を利用することが、自然につながっていく仕組みが望ましい。</p>
+
+      <p class="article-paragraph">　また、児童の記録には個人情報が含まれる。<br>学校で認められたシステムや利用ルールに従い、外部のAIに児童の氏名や成績、家庭事情などを安易に入力しないことも欠かせない。<br>便利さと安全性の両方を考えながら、学校で利用できる仕組みを作っていきたい。</p>
+
+      <h2>AI時代だからこそ、教師の観察力が大切になる</h2>
+
+      <p class="article-paragraph">　AIが普及すれば、教師の専門性は必要なくなるのだろうか。<br>私は、むしろ逆だと思っている。<br>誰もがそれなりの文章を作れる時代になるからこそ、その文章のもとになる事実や経験が大切になる。</p>
+
+      <p class="article-paragraph">　子どもの小さな変化に気付く力。<br>なぜそのような行動をしたのかを考える力。<br>子どもの成長を長い時間の中で捉える力。<br>そして、その子に今、何が必要なのかを判断する力。<br>これらはAIが文章を作ってくれるようになっても、教師に求められる専門性である。</p>
+
+      <p class="article-paragraph">　教師が日々見つけた子どもの姿を記録することは、AI時代において、これまで以上に価値のある仕事になるのかもしれない。</p>
+
+      <h2>教師が教師であるために</h2>
+
+      <p class="article-paragraph">　AIに仕事を手伝ってもらうことは、恥ずかしいことではない。<br>教師がすべての仕事を一人で抱え込む必要もない。<br>むしろ、技術の力を借りて、子どもと向き合う時間を増やしていきたいものだ。</p>
+
+      <p class="article-paragraph">　しかし、子どもを見ることまでAIに任せてはいけない。<br>子どもの成長を喜ぶことまでAIに任せてはいけない。</p>
+
+      <p class="article-paragraph">　日々の小さな姿を書き留める。<br>その記録をもとに、AIの力を借りる。<br>そして、最後は自分で考え、自分で判断する。<br>そんなAIとの付き合い方が、学校には必要なのではないだろうか。</p>
+
+      <p class="article-paragraph">　AIは、教師の仕事を奪うものではなく、教師が教師にしかできない仕事に専念するための道具であってほしい。<br>それが、私が教育支援アプリを作り続けている理由でもあるんだ。</p>
+
+      <div class="author-sign">
+        磐 田井（ばん たい）<br>
+        Ban.Tai Education Design
+      </div>
+
+      <section class="sources">
+        <h2>参考記事</h2>
+        <p>・「教諭『楽をしようと』生成した授業案、子どもは退屈…通知表の所見欄下書き指示『頼ってしまっている』」<br>
+        <a href="https://l.smartnews.com/m-8X8gvLAA/Oob2qv" target="_blank" rel="noopener noreferrer">https://l.smartnews.com/m-8X8gvLAA/Oob2qv</a></p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

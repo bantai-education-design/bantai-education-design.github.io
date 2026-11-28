@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大学 全国大会出場ガイド（運動・武道／文化・演劇・音楽） | 全国大学データベース | Ban.Tai Education Design</title>
+  <meta name="description" content="大学野球・サッカー・ラグビー・甲子園ボウル・テニス・卓球・バドミントン・武道・駅伝から、全国学生演劇祭・YBBJC軽音ジャズ・吹奏楽・合唱・将棋・囲碁・ロボコン・かるた・ICPC・書道まで。年間カレンダー、予選、学連手続き、実践アドバイスをまとめた大学向け出場ガイドです。">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=product-image-links-20260722-1">
+  <link rel="canonical" href="https://bantai-education-design.github.io/tools/university-database/guide/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPGJ0R2KXR"></script>
+  <script>
+    (function() {
+      try {
+        var url = new URL(window.location.href);
+        var adminParam = url.searchParams.get('bantai_admin');
+        if (adminParam === 'true') {
+          localStorage.setItem('bantai_admin', 'true');
+        } else if (adminParam === 'clear') {
+          localStorage.removeItem('bantai_admin');
+        }
+        if (adminParam !== null) {
+          url.searchParams.delete('bantai_admin');
+          var cleanSearch = url.searchParams.toString();
+          var newUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+          window.history.replaceState(null, '', newUrl);
+        }
+      } catch (e) {}
+      var isLocal = window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.protocol === 'file:';
+      var isExcluded = false;
+      try { isExcluded = localStorage.getItem('bantai_admin') === 'true'; } catch (e) {}
+      if (isLocal || isExcluded) { window['ga-disable-G-KPGJ0R2KXR'] = true; }
+    })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KPGJ0R2KXR');
+  </script>
+  <script src="/assets/js/analytics-events.js" defer></script>
+  <style>
+    *{box-sizing:border-box}
+    body{background:#f3f6fa;color:#0f172a;font-family:"Noto Sans JP",system-ui,-apple-system,sans-serif}
+    .ug-wrap{max-width:1120px;margin:0 auto;padding:20px 18px 68px}
+    .ug-nav-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;font-size:.85rem;font-weight:700}
+    .ug-nav-row a{color:#0369a1;text-decoration:none}
+    .ug-nav-row a:hover{text-decoration:underline}
+
+    .ug-hero{background:linear-gradient(135deg,#0c1e35 0%,#153456 58%,#0f766e 100%);color:#fff;border-radius:22px;padding:24px 28px;box-shadow:0 14px 30px rgba(12,30,53,.16);margin-bottom:16px}
+    .ug-kicker{display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.12);color:#5eead4;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+    .ug-hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(1.4rem,2.6vw,2rem);margin:10px 0 8px;color:#fff;line-height:1.3}
+    .ug-hero p{margin:0 0 16px;color:rgba(241,245,249,.88);font-size:.9rem;line-height:1.7;max-width:840px}
+
+    .ug-domain-tabs{display:flex;flex-wrap:wrap;gap:8px}
+    .ug-dtab{padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.1);color:#fff;font-size:.84rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s ease}
+    .ug-dtab:hover{background:rgba(255,255,255,.2)}
+    .ug-dtab.is-active{background:#fff;color:#0c1e35;border-color:#fff}
+
+    .ug-cal-card{background:#fff;border:1px solid #dbe5ec;border-radius:18px;padding:18px 20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(15,39,61,.04)}
+    .ug-cal-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .ug-cal-head h2{font-size:.96rem;margin:0;color:#0f172a}
+    .ug-cal-sub{font-size:.76rem;color:#64748b}
+    .ug-cal-scroll{overflow-x:auto}
+    .ug-cal-grid{min-width:680px;display:flex;flex-direction:column;gap:5px}
+    .ug-cal-months{display:grid;grid-template-columns:210px repeat(12,1fr);gap:4px;font-size:.72rem;font-weight:800;color:#64748b;text-align:center;padding-bottom:4px;border-bottom:1px solid #e2e8f0}
+    .ug-cal-months span:first-child{text-align:left}
+    .ug-cal-row{display:grid;grid-template-columns:210px repeat(12,1fr);gap:4px;align-items:center;padding:4px 2px;border-radius:8px;text-decoration:none;color:inherit}
+    .ug-cal-row:hover{background:#f1f5f9}
+    .ug-cal-name{font-size:.78rem;font-weight:700;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px}
+    .ug-cal-cell{height:18px;border-radius:5px;background:#f1f5f9}
+    .ug-cal-cell.is-spring{background:#10b981}
+    .ug-cal-cell.is-summer{background:#0284c7}
+    .ug-cal-cell.is-autumn{background:#d97706}
+    .ug-cal-cell.is-winter{background:#4f46e5}
+
+    .ug-controls{background:#fff;border:1px solid #dbe5ec;border-radius:16px;padding:16px 18px;margin-bottom:16px;display:flex;flex-direction:column;gap:12px}
+    .ug-chips{display:flex;flex-wrap:wrap;gap:7px}
+    .ug-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;border:1px solid #cbd5e1;background:#f8fafc;color:#334155;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit}
+    .ug-chip-cnt{font-size:.72rem;padding:1px 6px;border-radius:999px;background:rgba(15,23,42,.08)}
+    .ug-chip.is-active{background:#0c1e35;color:#fff;border-color:#0c1e35}
+    .ug-chip.is-active .ug-chip-cnt{background:rgba(255,255,255,.22);color:#fff}
+    .ug-search-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+    .ug-search-row input{flex:1 1 280px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:.88rem;font-family:inherit}
+    .ug-count{font-size:.86rem;font-weight:800;color:#334155}
+
+    .ug-list{display:flex;flex-direction:column;gap:18px}
+    .ug-card{background:#fff;border:1px solid #e2e8f0;border-top:4px solid #047857;border-radius:18px;padding:20px 22px;box-shadow:0 6px 18px rgba(15,39,61,.05);scroll-margin-top:24px}
+    .ug-card--culture{border-top-color:#6d28d9}
+    .ug-card--music{border-top-color:#b45309}
+    .ug-card-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+    .ug-card-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+    .ug-cat-badge{padding:2px 10px;border-radius:999px;font-size:.74rem;font-weight:800;background:#dcfce7;color:#166534;border:1px solid #86efac}
+    .ug-card--culture .ug-cat-badge{background:#ede9fe;color:#5b21b6;border-color:#c4b5fd}
+    .ug-card--music .ug-cat-badge{background:#fef3c7;color:#92400e;border-color:#fcd34d}
+    .ug-org{font-size:.78rem;color:#64748b;font-weight:600}
+    .ug-card h2{font-size:1.18rem;margin:0;color:#0c1b33;line-height:1.35}
+    .ug-db-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:999px;background:#0c1e35;color:#fff;font-size:.82rem;font-weight:700;text-decoration:none;white-space:nowrap}
+    .ug-db-btn:hover{background:#1e3a5f}
+
+    .ug-meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+    .ug-meta-box{display:flex;align-items:flex-start;gap:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px}
+    .ug-meta-ic{font-size:1.15rem;line-height:1.2}
+    .ug-meta-label{font-size:.72rem;font-weight:800;color:#64748b;margin-bottom:2px}
+    .ug-meta-val{font-size:.85rem;font-weight:700;color:#0f172a;line-height:1.45}
+
+    .ug-roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+    .ug-step{background:#fbfdff;border:1px solid #e2e8f0;border-radius:12px;padding:13px 14px;display:flex;flex-direction:column;gap:6px}
+    .ug-step--advice{background:#f0fdf4;border-color:#bbf7d0}
+    .ug-card--culture .ug-step--advice{background:#f5f3ff;border-color:#ddd6fe}
+    .ug-card--music .ug-step--advice{background:#fffbeb;border-color:#fde68a}
+    .ug-step-head{display:flex;align-items:center;gap:7px}
+    .ug-step-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#0f172a;color:#fff;font-size:.72rem;font-weight:800;flex:0 0 auto}
+    .ug-step h3{font-size:.85rem;margin:0;color:#0f172a}
+    .ug-step p{margin:0;font-size:.83rem;color:#334155;line-height:1.65}
+
+    .ug-history{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:8px 12px}
+    .ug-history summary{cursor:pointer;font-size:.82rem;font-weight:700;color:#475569;list-style:none}
+    .ug-history summary::-webkit-details-marker{display:none}
+    .ug-history p{margin:8px 0 2px;font-size:.83rem;color:#334155;line-height:1.65}
+
+    .ug-note{margin-top:22px;background:#fff;border:1px solid #dbe5ec;border-radius:14px;padding:16px 18px;font-size:.82rem;color:#475569;line-height:1.7}
+    @media(max-width:860px){.ug-meta-grid,.ug-roadmap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/"><img src="/assets/images/brand-logo.png" alt=""><span>Ban.Tai Education Design</span></a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-menu"><span></span><span></span><span></span></button>
+      <nav id="global-menu" class="menu" aria-label="サイトメニュー">
+        <a href="/">ホーム</a>
+        <a href="/tools/university-database/">大学DBトップ</a>
+        <a href="/tools/university-database/tokyo/">大学を探す</a>
+        <a href="/tools/university-database/awards/">全国大会実績</a>
+        <a class="active" href="/tools/university-database/guide/">大会出場ガイド</a>
+        <a href="/tools/university-database/ekiden/">大学駅伝</a>
+        <a href="/tools/school-database/">全国学校DB</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ug-wrap">
+    <div class="ug-nav-row">
+      <a href="/tools/university-database/">← 全国大学データベース トップへ戻る</a>
+      <a href="/tools/university-database/awards/">🏆 大学 全国大会実績検索を見る →</a>
+    </div>
+
+    <section class="ug-hero">
+      <span class="ug-kicker">UNIVERSITY TOURNAMENT GUIDE</span>
+      <h1>大学 全国大会出場ガイド（運動・武道／文化・演劇・音楽）</h1>
+      <p>大学スポーツ・武道・駅伝から、演劇・軽音楽ジャズ・吹奏楽・合唱・将棋・囲碁・ロボコン・競技かるた・ICPC・書道まで、18の主要全国大会について「年間カレンダー」と「①予選・代表枠 → ②学連登録・手続き → ③参加校・学生幹部アドバイス」を分かりやすく整理しました。</p>
+      <div class="ug-domain-tabs" role="tablist" aria-label="分野切替">
+        <button type="button" class="ug-dtab is-active" data-domain="all">すべて表示（18大会）</button>
+        <button type="button" class="ug-dtab" data-domain="sports">🏆 運動・武道・駅伝</button>
+        <button type="button" class="ug-dtab" data-domain="culture">🎭 文化・演劇・軽音・学術</button>
+        <button type="button" class="ug-dtab" data-domain="music">🎵 吹奏楽・合唱</button>
+      </div>
+    </section>
+
+    <section class="ug-cal-card" aria-label="年間 大学全国大会カレンダー">
+      <div class="ug-cal-head">
+        <h2>📅 年間 大学全国大会カレンダー（1月〜12月）</h2>
+        <span class="ug-cal-sub">大会名をクリックすると下の詳細カードへ移動します</span>
+      </div>
+      <div class="ug-cal-scroll">
+        <div id="ug-calendar" class="ug-cal-grid"></div>
+      </div>
+    </section>
+
+    <section class="ug-controls" aria-label="大会ガイド絞り込み">
+      <div id="ug-chips" class="ug-chips"></div>
+      <div class="ug-search-row">
+        <input type="search" id="ug-keyword" placeholder="大会名・競技・手続き・アドバイスを検索（例：甲子園ボウル、演劇祭、ロボコン、学連登録 など）">
+        <div id="ug-count" class="ug-count">読み込み中...</div>
+      </div>
+    </section>
+
+    <div id="ug-list" class="ug-list"></div>
+
+    <section class="ug-note">
+      ご注意：大学全国大会の日程・学連登録期限・出場枠・安全規定は年度ごとに改定されます。エントリーおよび参加準備の際は、必ず各全日本学生連盟・主催団体の最新公式要項をご確認ください。
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h2>Ban.Tai Education Design</h2><p>教育に関わる道具と情報を、探しやすい形へ。</p></div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/js/university-database/university-tournament-guide.js" defer></script>
+</body>
+</html>

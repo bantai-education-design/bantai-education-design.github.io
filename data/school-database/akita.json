@@ -301,7 +301,27 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2026年（第79回）",
+        "division": "小学生部門",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2025年（第78回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      },
+      {
+        "contest": "全日本合唱コンクール",
+        "year": "2024年（第77回）",
+        "division": "小学生部門",
+        "award": "金賞"
+      }
+    ]
   },
   {
     "id": "akita-公立-小学校-秋田市-秋田市立上北手小学校",
@@ -757,7 +777,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "日本学校合奏コンクール（全国学校合奏コンクール）",
+        "year": "2026年（第15回）",
+        "division": "小学校の部",
+        "award": "優秀賞"
+      }
+    ]
   },
   {
     "id": "akita-公立-小学校-秋田市-秋田市立桜小学校",
@@ -1175,7 +1203,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "中学校の部",
+        "award": "銀賞"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-秋田市-秋田市立岩見三内中学校",
@@ -1460,7 +1496,27 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2026年（第74回）",
+        "division": "高等学校の部",
+        "award": "銀賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      },
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2024年（第72回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "akita-私立-高等学校-秋田市-国学館高等学校",
@@ -1574,7 +1630,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和5〜9",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-秋田市-秋田県立秋田北高等学校",
@@ -1612,7 +1676,23 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ],
+    "music_awards": [
+      {
+        "contest": "全日本吹奏楽コンクール",
+        "year": "2025年（第73回）",
+        "division": "高等学校の部",
+        "award": "銅賞"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-秋田市-秋田県立秋田工業高等学校",
@@ -1631,7 +1711,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-秋田市-秋田県立秋田明徳館高等学校",
@@ -1669,7 +1757,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-秋田市-秋田県立金足農業高等学校",
@@ -1688,7 +1784,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-私立-高等学校-秋田市-聖霊女子短期大学付属高等学校",
@@ -2163,7 +2267,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全・通学路",
+        "designation": "学校安全総合支援事業（通学路安全推進事業）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-小学校-にかほ市-にかほ市立院内小学校",
@@ -2315,7 +2427,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全",
+        "designation": "学校安全総合支援事業（地域連携安全・安心推進事業）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-小学校-仙北市-仙北市立桧木内小学校",
@@ -3949,7 +4069,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "道徳教育",
+        "designation": "よりよい生き方を実践する力を育む道徳教育の推進事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-小学校-由利本荘市-由利本荘市立矢島小学校",
@@ -4538,7 +4666,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全・通学路",
+        "designation": "学校安全総合支援事業（通学路安全推進事業）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-三種町-三種町立三種中学校",
@@ -4557,7 +4693,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "ICT活用",
+        "designation": "ICTを活用した授業力向上事業",
+        "authority": "秋田県"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-上小阿仁村-上小阿仁村立上小阿仁中学校",
@@ -4595,7 +4739,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全",
+        "designation": "学校安全総合支援事業（地域連携安全・安心推進事業）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-仙北市-仙北市立桧木内中学校",
@@ -5184,7 +5336,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8〜9",
+        "subject": "調整授業時数・教育課程柔軟化",
+        "designation": "教育課程柔軟化サキドリ研究校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-横手市-横手市立十文字中学校",
@@ -5336,7 +5496,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "中学校 数学",
+        "designation": "教育課程実践検証協力校事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-湯沢市-湯沢市立皆瀬中学校",
@@ -5583,7 +5751,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "道徳教育",
+        "designation": "よりよい生き方を実践する力を育む道徳教育の推進事業",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-中学校-由利本荘市-由利本荘市立矢島中学校",
@@ -6039,7 +6215,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全",
+        "designation": "学校安全総合支援事業（地域連携安全・安心推進事業）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-にかほ市-秋田県立仁賀保高等学校",
@@ -6058,7 +6242,21 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "学校安全・通学路",
+        "designation": "学校安全総合支援事業（通学路安全推進事業）",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和7〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-美郷町-秋田県立六郷高等学校",
@@ -6115,7 +6313,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-大仙市-秋田県立大曲農業高等学校",
@@ -6134,7 +6340,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-大仙市-秋田県立大曲農業高等学校太田分校",
@@ -6191,7 +6405,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-大館市-秋田県立大館桂桜高等学校",
@@ -6229,7 +6451,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-横手市-秋田県立平成高等学校",
@@ -6305,7 +6535,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-横手市-秋田県立横手高等学校",
@@ -6324,7 +6562,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜10",
+        "subject": "理数・科学技術",
+        "designation": "スーパーサイエンスハイスクール（SSH）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-湯沢市-秋田県立湯沢翔北高等学校",
@@ -6381,7 +6627,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-由利本荘市-秋田県立由利工業高等学校",
@@ -6400,7 +6654,21 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和8",
+        "subject": "道徳教育",
+        "designation": "よりよい生き方を実践する力を育む道徳教育の推進事業",
+        "authority": "文部科学省"
+      },
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-由利本荘市-秋田県立由利高等学校",
@@ -6419,7 +6687,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-男鹿市-秋田県立男鹿工業高等学校",
@@ -6457,7 +6733,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-由利本荘市-秋田県立矢島高等学校",
@@ -6495,7 +6779,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "冬期競技（スキー・スケート・アイスホッケー）",
+        "contest": "全国高等学校スキー大会（インターハイ）",
+        "year": "2025年（第74回）",
+        "division": "女子総合",
+        "award": "優勝"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-潟上市-秋田県立秋田西高等学校",
@@ -6571,7 +6864,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-能代市-秋田県立能代高等学校",
@@ -6590,7 +6891,15 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "research_designations": [
+      {
+        "year": "令和6〜8",
+        "subject": "情報・数学・DX探究",
+        "designation": "高等学校DX加速化推進事業（DXハイスクール）",
+        "authority": "文部科学省"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-大仙市-秋田県立西仙北高等学校",
@@ -6666,7 +6975,16 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "バレーボール（春高）",
+        "contest": "全日本バレーボール高等学校選手権大会（春高バレー）",
+        "year": "2026年（第78回）",
+        "division": "男子",
+        "award": "ベスト4"
+      }
+    ]
   },
   {
     "id": "akita-公立-高等学校-鹿角市-秋田県立鹿角高等学校",
@@ -6685,7 +7003,25 @@
     "source_url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
     "source_date": "2026-05-29",
     "verified_date": "",
-    "course": []
+    "course": [],
+    "sports_awards": [
+      {
+        "sport": "冬期競技（スキー・スケート・アイスホッケー）",
+        "contest": "全国高等学校スキー大会（インターハイ）",
+        "year": "2025年（第74回）",
+        "division": "女子総合",
+        "award": "準優勝"
+      }
+    ],
+    "culture_awards": [
+      {
+        "category": "漢検（準会場・団体表彰）",
+        "contest": "日本漢字能力検定（漢検）準会場 団体表彰",
+        "year": "2024年度",
+        "division": "団体の部（準会場校）",
+        "award": "奨励賞"
+      }
+    ]
   },
   {
     "id": "akita-公立-特別支援学校-由利本荘市-秋田県立ゆり支援学校",

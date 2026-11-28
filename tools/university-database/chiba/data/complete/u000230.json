@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "university_id": "u000230",
+  "id": "u000230",
+  "name": "東京基督教大学",
+  "establishment_type": "private",
+  "status": "active",
+  "admissions_status": "active",
+  "prefecture": "千葉県",
+  "municipality": "印西市",
+  "operator": "学校法人東京キリスト教学園",
+  "feature_summary": "印西市に本部を置き、神学部の1学部と大学院1研究科で学ぶ大学です。",
+  "official_url": "https://www.tci.ac.jp/",
+  "admissions_url": "https://www.tci.ac.jp/future_student/",
+  "academic_field_tags": [
+    "国際関係",
+    "社会学",
+    "文学・人文"
+  ],
+  "academics": [
+    {
+      "faculty_id": "f400072",
+      "name": "神学部",
+      "academic_field_tags": [
+        "国際関係",
+        "社会学",
+        "文学・人文"
+      ],
+      "campus_municipality": "印西市",
+      "departments": [
+        {
+          "department_id": "d400123",
+          "name": "神学・国際教養学科",
+          "programs": []
+        }
+      ]
+    }
+  ],
+  "graduate_schools": [
+    {
+      "graduate_school_id": "g400041",
+      "name": "神学研究科",
+      "programs": [
+        "神学専攻"
+      ]
+    }
+  ],
+  "campuses": [
+    {
+      "name": "-",
+      "postal_code": "270-1347",
+      "address": "千葉県印西市内野3-301-5",
+      "prefecture": "千葉県",
+      "municipality": "印西市",
+      "nearest_stations": [
+        {
+          "station": "千葉ニュータウン中央駅",
+          "line": "北総線",
+          "access": "バス「電話局」下車徒歩7分"
+        }
+      ]
+    }
+  ],
+  "qualifications": [],
+  "sources": [
+    {
+      "source_id": "src-mext",
+      "title": "文部科学省 令和7年度全国大学一覧",
+      "url": "https://www.mext.go.jp/content/20261021-mxt_daigakuc01-000050331_03-2.xlsx",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-official",
+      "title": "東京基督教大学 公式サイト",
+      "url": "https://www.tci.ac.jp/",
+      "checked_at": "2026-11-21"
+    },
+    {
+      "source_id": "src-admissions",
+      "title": "東京基督教大学 公式入試情報",
+      "url": "https://www.tci.ac.jp/future_student/",
+      "checked_at": "2026-11-21"
+    }
+  ],
+  "verification": {
+    "last_verified_at": "2026-11-21",
+    "verified_fields": [
+      "academics",
+      "access",
+      "admissions_url",
+      "basic_info",
+      "campuses",
+      "headquarters",
+      "official_url",
+      "philosophy",
+      "student_counts"
+    ]
+  },
+  "philosophy": "聖書に基づく福音主義キリスト教信仰に立ち、世界と日本の教会および社会に仕える人材の養成を建学の精神とする。",
+  "mission": "神学と国際教養の深い学びを通じて、誠実に他者と社会へ仕える指導者を育成する。",
+  "student_counts": {
+    "undergraduate": 94,
+    "graduate": 44,
+    "total": 138,
+    "as_of": "2025-05-01"
+  }
+}

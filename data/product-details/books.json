@@ -4,7 +4,7 @@
   "menuToggle": true,
   "outputPath": "books/index.html",
   "pageTitle": "書籍 | Ban.Tai Education Design",
-  "metaDescription": "Ban.Tai Education Design の書籍の紹介です。『その一言、保護者にどう届く？』（連絡帳・電話・面談で迷ったときの 121場面の文例集）ほか。",
+  "metaDescription": "Ban.Tai Education Design の書籍一覧。新刊『担任の実務ハンドブック』（小学校学級経営・B5フルカラー全302頁）、『その一言、保護者にどう届く？』ほか。",
   "navLinks": [
     {
       "href": "/",
@@ -44,6 +44,60 @@
       "kicker": "Books",
       "heading": "書籍",
       "lead": "教育現場40年の経験から、学校の仕事を「わかる」から「できる」へ。制度解説だけでなく、明日からの実務につながる書籍を届けます。"
+    },
+    {
+      "type": "imageText",
+      "id": "tannin-handbook",
+      "class": "section",
+      "imagePosition": "left",
+      "containerStyle": "align-items:center; gap:48px;",
+      "image": {
+        "src": "/assets/images/books/tannin-handbook-cover.webp",
+        "alt": "書籍 小学校学級経営『担任の実務ハンドブック』の表紙"
+      },
+      "badge": "新刊・B5フルカラー全302頁（ペーパーバック / Kindle版）",
+      "headingLines": [
+        "小学校学級経営",
+        "担任の実務ハンドブック"
+      ],
+      "paragraphs": [
+        {
+          "text": "日々の声かけ・記録・家庭連携を忘れないための実務備忘録",
+          "style": "font-weight:700; margin-bottom:10px;"
+        },
+        "「細かいことだからこそ、ベテランでも忘れる。」――傘・落とし物・集金袋・和語の声かけ・放課後5分の3行記録・1〜6年生の発達段階別指導・コピーできる巻末書式まで全302頁に凝縮しました。",
+        {
+          "text": "著者　磐田井（教育現場40年・教務主幹）",
+          "style": "color:#666; font-size:0.95em;"
+        }
+      ],
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "/books/tannin-handbook/",
+          "label": "詳しく見る・実ページを試し読み"
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "https://www.amazon.co.jp/dp/B0HT3VVJY3",
+          "label": "Amazonでペーパーバックを見る",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "/books/tannin-handbook/#contents",
+          "label": "目次を見る"
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "/columns/tannin-handbook-guide/",
+          "label": "実ページ紹介コラム"
+        }
+      ],
+      "actionsStyle": "flex-wrap:wrap;"
     },
     {
       "type": "imageText",
