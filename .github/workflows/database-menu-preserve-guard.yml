@@ -54,24 +54,27 @@ jobs:
               assert.ok((await page.evaluate(()=>window.scrollY)) < 2, `${viewport.name}: direct load must start at page top`);
               assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,`${viewport.name}: horizontal overflow`);
 
-              const gateway=page.locator('.db-gateway');
+              // PR #595 restored the image menu. Verify its actual four accessible routes.
+              const gateway=page.locator('.db-visual-menu');
               await gateway.waitFor({state:'visible'});
-              assert.equal(await page.locator('#database-gateway-art').count(),0,`${viewport.name}: obsolete gateway artwork remains`);
-              assert.equal(await page.locator('.db-service').count(),4,`${viewport.name}: service card count changed`);
+              const art=gateway.locator('#database-gateway-art');
+              await art.waitFor({state:'visible'});
+              assert.ok(await art.evaluate(img=>img.complete&&img.naturalWidth>0&&img.naturalHeight>0),`${viewport.name}: gateway image failed to load`);
+              const expected=[
+                ['.hot-school-card','/tools/school-database/','全国学校データベースを開く'],
+                ['.hot-textbook-card','/resources/textbook-plans/','教科書会社・年間指導計画を開く'],
+                ['.hot-stats-card','/tools/school-database/analytics/','全国47都道府県 教育・地域統計比較ダッシュボードを開く'],
+                ['.hot-university-card','/tools/university-database/','全国大学データベースを開く']
+              ];
+              for(const [selector,href,label] of expected){
+                const card=gateway.locator(selector);
+                assert.equal(await card.count(),1,`${viewport.name}: missing ${label}`);
+                assert.equal(await card.getAttribute('href'),href);
+                assert.equal(await card.getAttribute('aria-label'),label);
+                await card.click({trial:true});
+              }
               const bodyText=await page.locator('body').innerText();
               assert.equal(bodyText.includes('東京144大学'),false,`${viewport.name}: obsolete Tokyo-only wording remains`);
-              const expected=[
-                ['/tools/school-database/','学校情報'],
-                ['/resources/textbook-plans/','教科書・年間指導計画'],
-                ['/tools/school-database/analytics/','地域・統計データ'],
-                ['/tools/university-database/','全国大学データベース']
-              ];
-              for(const [href,label] of expected){
-                const card=page.locator(`.db-service[href="${href}"]`);
-                assert.equal(await card.count(),1,`${viewport.name}: missing ${label}`);
-                assert.ok((await card.innerText()).includes(label),`${viewport.name}: missing label ${label}`);
-              }
-              assert.ok(bodyText.includes('全国の大学情報')&&bodyText.includes('地域を限定せず'),`${viewport.name}: nationwide university guidance missing`);
 
               if(viewport.width<=860){
                 const toggle=page.locator('.menu-toggle');
@@ -89,7 +92,7 @@ jobs:
 
             const route=await browser.newPage({viewport:{width:904,height:633}});
             await route.goto('http://127.0.0.1:4173/databases/',{waitUntil:'networkidle'});
-            await route.locator('.db-service[href="/tools/university-database/"]').click();
+            await route.locator('.hot-university-card').click();
             await route.waitForURL('**/tools/university-database/');
             const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-submit/"]').first();
             await photoEntry.waitFor({state:'visible'});
@@ -97,11 +100,11 @@ jobs:
             const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
             await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
-            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=24,{timeout:25000});
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=24,null,{timeout:25000});
             const countText=await route.locator('#tokyo-result-count').innerText();
             assert.ok(countText.includes('237'),`University database result count must show 237 published universities: ${countText}`);
             await route.locator('#show-all-btn').click();
-            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=237,{timeout:25000});
+            await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=237,null,{timeout:25000});
             assert.ok(await route.locator('.tokyo-card[data-card-ready="true"]').count()>=237,'University database must remain reachable with all 237 published cards');
             await route.close();
 
