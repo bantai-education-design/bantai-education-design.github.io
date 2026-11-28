@@ -1,5 +1,26 @@
 [
   {
+    "id": "column-ai-words-book-introduction-2026",
+    "slug": "ai-words-book-introduction-2026",
+    "title": "AIを使う前に、言葉に迷っていませんか――『言葉からわかるAI入門』に込めた思い",
+    "category": "AIと学び",
+    "categorySlug": "ai",
+    "date": "2026.11.28",
+    "excerpt": "プロンプト、トークン、LLM、API、エージェント。難しい言葉から読み解き、全18章と語句事典で『使って確かめる』ところまでをめざした新刊の紹介。",
+    "thumbnail": "/assets/images/columns/ai-words-book-introduction-2026/thumbnail.jpg",
+    "readTime": "約7分",
+    "tags": [
+      "AI入門",
+      "言葉",
+      "LLM",
+      "プロンプト",
+      "トークン",
+      "AI用語",
+      "新刊"
+    ],
+    "url": "/columns/ai-words-book-introduction-2026/"
+  },
+  {
     "id": "column-tannin-handbook-guide",
     "slug": "tannin-handbook-guide",
     "title": "「細かいことだからこそ、ベテランでも忘れる」｜新刊『担任の実務ハンドブック』の実ページ紹介",
