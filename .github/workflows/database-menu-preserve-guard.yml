@@ -97,7 +97,8 @@ jobs:
             const photoEntry=route.locator('a[href="/tools/university-database/tokyo/photo-submit/"]').first();
             await photoEntry.waitFor({state:'visible'});
             assert.ok((await photoEntry.innerText()).includes('大学写真を送る'),'university hub must expose simple visitor photo submission');
-            const tokyoEntry=route.locator('a[href="/tools/university-database/tokyo/"]').first();
+            const tokyoEntry=route.locator('.uni-hero a.uni-cta-primary[href="/tools/university-database/tokyo/"]');
+            await tokyoEntry.waitFor({state:'visible'});
             await tokyoEntry.click();
             await route.waitForURL('**/tools/university-database/tokyo/');
             await route.waitForFunction(()=>document.querySelectorAll('.tokyo-card[data-card-ready="true"]').length>=24,null,{timeout:25000});
