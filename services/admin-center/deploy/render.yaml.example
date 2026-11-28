@@ -1,0 +1,34 @@
+# Managed hosting proposal. Applying this Blueprint creates PAID resources.
+# Do not apply before the owner approves the service and current pricing.
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+services:
+  - type: web
+    name: bantai-admin-center
+    runtime: node
+    repo: https://github.com/bantai-education-design/bantai-education-design.github.io
+    branch: feat/bantai-admin-center
+    region: singapore
+    plan: 0.5c-512mb
+    numInstances: 1
+    autoDeployTrigger: 'off'
+    maxShutdownDelaySeconds: 120
+    buildCommand: npm ci --prefix services/admin-center --omit=dev --ignore-scripts
+    startCommand: node services/admin-center/src/server.js
+    healthCheckPath: /healthz
+    disk:
+      name: bantai-admin-data
+      mountPath: /var/data/bantai-admin
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 24.22.2
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_BIND_HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: '10000'
+      - key: ADMIN_DATA_DIR
+        value: /var/data/bantai-admin/live
+      - key: ADMIN_PASSWORD_HASH
+        sync: false

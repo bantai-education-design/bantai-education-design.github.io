@@ -1,0 +1,8 @@
+# Use with compose.yml when the host already has an HTTPS reverse proxy.
+# This does not start Caddy and exposes the application to host loopback only.
+services:
+  admin:
+    ports:
+      - '127.0.0.1:${ADMIN_LOCAL_PORT:-8787}:8787'
+  proxy:
+    profiles: [managed-proxy]

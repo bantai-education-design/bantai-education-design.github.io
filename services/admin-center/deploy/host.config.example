@@ -1,0 +1,4 @@
+# This is an example only. Set a real hostname before starting.
+# No passwords, hashes, GitHub tokens, or other secret values belong in this file.
+ADMIN_DOMAIN=admin.example.invalid
+ADMIN_SECRET_DIR=/etc/bantai-admin/secrets
