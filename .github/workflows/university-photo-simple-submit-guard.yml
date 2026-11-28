@@ -75,7 +75,7 @@ jobs:
           assert 'この大学へ写真を送る' in html
           assert '/tools/university-database/tokyo/photo-submit/' in hub_html
           assert '/tools/university-database/tokyo/photo-register/' not in hub_html
-          assert '補正・掲載写真の選択・大学DBへの登録はBan.Tai管理者が行います' in hub_html
+          assert '大学名を確認して写真を選び、掲載に同意して送信するだけ。補正と登録は管理者が行います。' in hub_html
           assert '/tools/university-database/tokyo/photo-submit/' in top_entry
           assert '大学写真を送る' in top_entry
           assert 'detail-photo-submit-entry.js' in detail_html
