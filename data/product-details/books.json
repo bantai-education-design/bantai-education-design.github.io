@@ -4,7 +4,7 @@
   "menuToggle": true,
   "outputPath": "books/index.html",
   "pageTitle": "書籍 | Ban.Tai Education Design",
-  "metaDescription": "Ban.Tai Education Design の書籍一覧。新刊『担任の実務ハンドブック』（小学校学級経営・B5フルカラー全302頁）、『その一言、保護者にどう届く？』ほか。",
+  "metaDescription": "Ban.Tai Education Designの書籍。『言葉からわかるAI入門』、小学校学級経営『担任の実務ハンドブック』などをご紹介します。",
   "navLinks": [
     {
       "href": "/",
@@ -44,6 +44,60 @@
       "kicker": "Books",
       "heading": "書籍",
       "lead": "教育現場40年の経験から、学校の仕事を「わかる」から「できる」へ。制度解説だけでなく、明日からの実務につながる書籍を届けます。"
+    },
+    {
+      "type": "imageText",
+      "id": "ai-words-intro",
+      "class": "section",
+      "imagePosition": "left",
+      "containerStyle": "align-items:center; gap:48px;",
+      "image": {
+        "src": "/assets/images/books/ai-words-cover-kdp-extract.jpg",
+        "alt": "『言葉からわかるAI入門』の書影（KDP登録画面の表紙部分を抜粋）"
+      },
+      "badge": "新刊・ペーパーバック販売中／Kindle版は設定中",
+      "headingLines": [
+        "言葉からわかる",
+        "AI入門"
+      ],
+      "paragraphs": [
+        {
+          "text": "AIの難しい言葉が、使う前の壁になっていませんか。",
+          "style": "font-weight:700;margin-bottom:10px;"
+        },
+        "「プロンプト」「トークン」「LLM」「エージェント」。英語やカタカナの名前に迷ったとき、身近な例から言葉を読み解くための入門書です。",
+        "全18章で、人間の言葉と文化、AIの成り立ち、言語モデルの仕組み、画面で出会う機能や言葉、答えを確かめる方法までを扱います。「小さく試す」例、製品別案内、カナ・英数字の索引、語句事典も備えています。",
+        {
+          "text": "著者　磐田井　｜　ペーパーバック 1,500円（税込）／Kindle版 980円（設定中・未発売）",
+          "style": "color:#475569;font-size:.95em;"
+        },
+        {
+          "text": "※書影はKDP管理画面の表紙部分からの抜粋です。正式な高解像度表紙に後日差し替えます。",
+          "style": "font-size:.85em;color:#687587;"
+        }
+      ],
+      "actions": [
+        {
+          "class": "btn btn-primary",
+          "href": "/books/ai-words-intro/",
+          "label": "書籍の詳しい紹介"
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "https://www.amazon.co.jp/dp/B0HT5QPSXY",
+          "label": "Amazonでペーパーバックを見る",
+          "attrs": {
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        {
+          "class": "btn btn-secondary",
+          "href": "/columns/ai-words-book-introduction-2026/",
+          "label": "この本の紹介コラム"
+        }
+      ],
+      "actionsStyle": "flex-wrap:wrap;"
     },
     {
       "type": "imageText",
