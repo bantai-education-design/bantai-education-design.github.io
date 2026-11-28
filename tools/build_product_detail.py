@@ -133,7 +133,11 @@ def render_visual(section: dict[str, Any], spaces: int = 8) -> str:
 
 def render_nav_links(data: dict[str, Any]) -> str:
     lines = []
-    for item in data["navLinks"]:
+    nav_links = list(data["navLinks"])
+    if not any(item["href"] == "/books/" for item in nav_links):
+        index = next((i + 1 for i, item in enumerate(nav_links) if item["href"] == "/products/"), len(nav_links))
+        nav_links.insert(index, {"href": "/books/", "label": "📖 書籍"})
+    for item in nav_links:
         attrs = {"href": item["href"]}
         if item.get("class"):
             attrs["class"] = item["class"]

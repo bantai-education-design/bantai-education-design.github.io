@@ -144,6 +144,8 @@ def validate_common(slug: str, data: dict, html: str, parser: DetailPageParser) 
     require(data["metaDescription"] in html, "meta description missing from generated HTML")
     require(data["productName"] in "".join(parser.headings) or data["productName"] in html, "product name missing")
     require(not re.search(r"\$[a-zA-Z_][a-zA-Z0-9_]*", html), "unresolved template variable found")
+    header = re.search(r"<header\b[^>]*>.*?</header>", html, re.DOTALL)
+    require(header is not None and re.search(r'href="/books/"', header.group(0)) is not None, "book navigation missing from header")
     for link in data["navLinks"]:
         validate_url(link["href"], f"navLinks {link['label']}")
     for src in {image["src"] for image in parser.images if image["src"].startswith("/assets/")}:
